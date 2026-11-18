@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVideoDetextJobResponseBody extends TeaModel {
     /**
-     * <p>The video text erasure task.</p>
+     * <p>The video text removal job.</p>
      */
     @NameInMap("Job")
     public GetVideoDetextJobResponseBodyJob job;
@@ -42,7 +42,7 @@ public class GetVideoDetextJobResponseBody extends TeaModel {
 
     public static class GetVideoDetextJobResponseBodyJob extends TeaModel {
         /**
-         * <p>The business error code returned when the task fails. This field is typically not returned for non-failure states.</p>
+         * <p>The business error code returned when the job fails. This field is typically not returned when the job is not in a failed state.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidInput</p>
@@ -51,7 +51,7 @@ public class GetVideoDetextJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The business error message returned when the task fails. This field is typically not returned for non-failure states.</p>
+         * <p>The business error message returned when the job fails. This field is typically not returned when the job is not in a failed state.</p>
          * 
          * <strong>example:</strong>
          * <p>Input video is invalid.</p>
@@ -60,7 +60,7 @@ public class GetVideoDetextJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The normalized input configuration JSON string saved at submission time.</p>
+         * <p>The normalized JSON string of the input configuration saved during submission.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VideoUrl&quot;:&quot;<a href="https://example.com/input.mp4%22%7D">https://example.com/input.mp4&quot;}</a></p>
@@ -69,7 +69,7 @@ public class GetVideoDetextJobResponseBody extends TeaModel {
         public String input;
 
         /**
-         * <p>The video text erasure task ID.</p>
+         * <p>The ID of the video text removal job.</p>
          * 
          * <strong>example:</strong>
          * <p>vdt_0123456789abcdef0123456789abcdef</p>
@@ -78,7 +78,7 @@ public class GetVideoDetextJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The normalized text erasure parameter JSON string.</p>
+         * <p>The normalized JSON string of the text removal parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;EraseAllText&quot;:false,&quot;TextTargets&quot;:[{&quot;Box&quot;:[0.1,0.8,0.8,0.15],&quot;TimeRanges&quot;:[[0,30]]}]}</p>
@@ -87,7 +87,7 @@ public class GetVideoDetextJobResponseBody extends TeaModel {
         public String jobParameters;
 
         /**
-         * <p>The task type. The value is fixed to VIDEO_DETEXT.</p>
+         * <p>The job type. The value is fixed as VIDEO_DETEXT.</p>
          * 
          * <strong>example:</strong>
          * <p>VIDEO_DETEXT</p>
@@ -96,7 +96,7 @@ public class GetVideoDetextJobResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The task result JSON string. When Status is Finished, deserialize this field and read AiResult.DetextVideoURL to obtain the URL of the video after text erasure. The video URL is not guaranteed to be included when the task has not completed successfully. If Output.OssUri is specified at submission time, the result is stored in the specified OSS location. Otherwise, a signed URL is returned.</p>
+         * <p>The JSON character string of the task result. When Status is Finished, deserialize the sequence of this field and read AiResult.DetextVideoURL to obtain the URL of the video with text removed. If the node is not successfully completed, the video URL is not guaranteed to be included. If Output.OssUri is specified during commit, the result is stored in the specified OSS bucket. Otherwise, a signed URL is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AiResult&quot;:{&quot;DetextVideoURL&quot;:&quot;<a href="https://example.com/detext/detext.mp4%22%7D%7D">https://example.com/detext/detext.mp4&quot;}}</a></p>
@@ -105,7 +105,7 @@ public class GetVideoDetextJobResponseBody extends TeaModel {
         public String output;
 
         /**
-         * <p>The task status. Valid values: Created, Queuing, Executing, Finished, and Failed.</p>
+         * <p>The job status. Valid values: Created, Queuing, Executing, Finished, and Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>

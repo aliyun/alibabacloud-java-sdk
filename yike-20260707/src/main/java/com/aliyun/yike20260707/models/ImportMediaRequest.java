@@ -8,6 +8,8 @@ public class ImportMediaRequest extends TeaModel {
     public String bizConfig;
 
     /**
+     * <p>The category ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,7 +17,7 @@ public class ImportMediaRequest extends TeaModel {
     public Long categoryId;
 
     /**
-     * <p>The cover image URL. This parameter is valid only for video media assets.</p>
+     * <p>The URL of the cover image. This parameter is valid only for video media assets.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png">https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png</a></p>
@@ -24,7 +26,7 @@ public class ImportMediaRequest extends TeaModel {
     public String coverURL;
 
     /**
-     * <p>The description of the media asset.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -69,10 +71,10 @@ public class ImportMediaRequest extends TeaModel {
     public String inputURL;
 
     /**
-     * <p>The tags of the media asset. Separate multiple tags with commas (,).</p>
+     * <p>The tags. Separate multiple tags with commas.</p>
      * 
      * <strong>example:</strong>
-     * <p>AdvancedImageToVideo,AIGenerated</p>
+     * <p>Advanced image-to-video, AI-generated</p>
      */
     @NameInMap("MediaTags")
     public String mediaTags;
@@ -96,6 +98,15 @@ public class ImportMediaRequest extends TeaModel {
     public Boolean overwrite;
 
     /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pd_123456</p>
+     */
+    @NameInMap("ProjectId")
+    public String projectId;
+
+    /**
      * <p>The configuration for registering the media asset.</p>
      * 
      * <strong>example:</strong>
@@ -105,7 +116,7 @@ public class ImportMediaRequest extends TeaModel {
     public String registerConfig;
 
     /**
-     * <p>The title of the media asset.</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
      * <p>title</p>
@@ -114,7 +125,7 @@ public class ImportMediaRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>The user data. Maximum length: 1024 bytes.</p>
+     * <p>The user data. Maximum size: 1024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -216,6 +227,14 @@ public class ImportMediaRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public ImportMediaRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
     public ImportMediaRequest setRegisterConfig(String registerConfig) {

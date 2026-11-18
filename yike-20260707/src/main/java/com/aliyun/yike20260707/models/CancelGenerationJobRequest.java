@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelGenerationJobRequest extends TeaModel {
     /**
-     * <p>The task ID. Only queued tasks can be canceled.</p>
+     * <p>The ID of the task. Only queued tasks can be canceled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

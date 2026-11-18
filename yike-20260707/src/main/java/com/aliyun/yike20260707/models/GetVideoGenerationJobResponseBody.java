@@ -14,7 +14,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The video generation task.</p>
+     * <p>The video generation job.</p>
      */
     @NameInMap("VideoGenerationJob")
     public GetVideoGenerationJobResponseBodyVideoGenerationJob videoGenerationJob;
@@ -51,7 +51,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String aspectRatio;
 
         /**
-         * <p>The video duration. Unit: seconds.</p>
+         * <p>The video duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -60,7 +60,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The error message. This parameter is returned only when the task is in the Failed state.</p>
+         * <p>The error message. The value is a string. This parameter is returned only when the job status is Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>Input file not found.</p>
@@ -69,16 +69,16 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The task input.</p>
+         * <p>The job input.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Prompt&quot;:&quot;Person in image 1 is on a basketball court, dunking with image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
+         * <p>{&quot;Prompt&quot;:&quot;Image 1 is on the basketball court, performing a slam dunk with Image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
          */
         @NameInMap("Input")
         public String input;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fdc7f121056249c2b64e04bba27bcc8c</p>
@@ -87,7 +87,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The task feature configuration. No configuration is required at this time.</p>
+         * <p>The job feature configurations. This parameter does not require configuration at this time.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -96,7 +96,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String jobParameters;
 
         /**
-         * <p>The task type.</p>
+         * <p>The job type.</p>
          * 
          * <strong>example:</strong>
          * <p>first_last_frame</p>
@@ -123,10 +123,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public Integer n;
 
         /**
-         * <p>The generation result in JsonString format, which contains:</p>
-         * <p>Medias: a list of media information (Media objects). Fields of a Media object:
+         * <p>The generation result. The value is a JSON string that contains the following fields:</p>
+         * <p>Medias: the list of media information (Media objects). Fields of a Media object:
          * MediaId: String. The media asset ID.
-         * OutputUrl: String. The media URL (with authentication string).</p>
+         * OutputUrl: String. The media URL, including the authentication string.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Medias\&quot;:[{\&quot;MediaId\&quot;:\&quot;<em><strong><strong>470732171f1bfcaf7f6d44</strong></strong></em>\&quot;,\&quot;OutputUrl\&quot;:\&quot;<a href="https://xxxxxxx/.../xxxxx.mp4?Expires=xxxx&OSSAccessKeyId=xxx&Signature=xxxx%5C%5C%22%7D%5D%7D">https://xxxxxxx/.../xxxxx.mp4?Expires=xxxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxxx\\&quot;}]}</a></p>
@@ -144,7 +144,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String resolution;
 
         /**
-         * <p>The scene type. Currently only general is supported.</p>
+         * <p>The scene type. Currently, only general is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>
@@ -153,13 +153,13 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>Created: The task is created.</li>
-         * <li>Queuing: The task is queuing.</li>
-         * <li>Executing: The task is being executed.</li>
-         * <li>Finished: The task is completed.</li>
-         * <li>Failed: The task failed.</li>
+         * <li>Created: The job is created.</li>
+         * <li>Queuing: The job is queued.</li>
+         * <li>Executing: The job is executing.</li>
+         * <li>Finished: The job succeeded.</li>
+         * <li>Failed: The job failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

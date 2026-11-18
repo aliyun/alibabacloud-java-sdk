@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMediaRequest extends TeaModel {
     /**
-     * <p>The business configuration. The value is a JSON string that can contain ProductionId (project ID).</p>
+     * <p>The business configuration. A JSON string that can contain ProductionId (project ID).</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ProductionId&quot;:&quot;pd_abc1234567&quot;}</p>
@@ -27,7 +27,7 @@ public class SearchMediaRequest extends TeaModel {
     public Long categoryId;
 
     /**
-     * <p>The filter conditions. For the syntax rules, see <a href="https://www.alibabacloud.com/help/en/ims/developer-reference/media-asset-search-filter-description">Media asset search protocol</a>.</p>
+     * <p>The filter conditions. For syntax rules, see <a href="https://www.alibabacloud.com/help/en/ims/developer-reference/media-asset-search-filter-description">Media asset search protocol</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>title = \&quot;China\&quot; and utcCreate = [\&quot;1693367158561\&quot;,\&quot;1693367158562\&quot;]</p>
@@ -36,7 +36,7 @@ public class SearchMediaRequest extends TeaModel {
     public String match;
 
     /**
-     * <p>The current page number. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,7 +54,16 @@ public class SearchMediaRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The pagination token, which is a 32-character string. You do not need to specify this parameter when you send a search request for the first time. If the search request returns data, the server returns this parameter to record the position of the current search data. Record the returned value and specify this parameter in subsequent searches based on the following requirements or recommendations: This parameter is required if you need to traverse all data that matches the search conditions. If the value of the PageNo parameter exceeds 200, specify this parameter to optimize search performance. You can only page forward, and the maximum paging distance is 1,000 media assets.</p>
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pd_123456</p>
+     */
+    @NameInMap("ProjectId")
+    public String projectId;
+
+    /**
+     * <p>The scroll token, which is a 32-character string. You do not need to specify this parameter when you make a search request for the first time. If the search request returns data, the server returns this parameter to record the position of the current search data. Record the returned value and specify this parameter in subsequent searches based on the following requirements or suggestions: This parameter is required to traverse all data that matches the search conditions. If the value of the PageNo parameter exceeds 200, specify this parameter to optimize search performance. You can only scroll forward. The maximum scroll distance is 1,000 media assets.</p>
      * 
      * <strong>example:</strong>
      * <p>F8C4F642184DBDA5D93907A70AAE****</p>
@@ -63,7 +72,7 @@ public class SearchMediaRequest extends TeaModel {
     public String scrollToken;
 
     /**
-     * <p>The sort fields and sort orders. Separate multiple values with commas (,). Format: field1:Desc,field2:Asc. The sort direction can only be Asc or Desc.</p>
+     * <p>The sort fields and sort order. Separate multiple fields with commas (,). Format: field1:Desc,field2:Asc. The sort direction can only be Asc or Desc.</p>
      * 
      * <strong>example:</strong>
      * <p>utcCreate:Desc</p>
@@ -114,6 +123,14 @@ public class SearchMediaRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public SearchMediaRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
     public SearchMediaRequest setScrollToken(String scrollToken) {

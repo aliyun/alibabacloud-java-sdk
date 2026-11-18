@@ -11,7 +11,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
     public GetVideoTranslationJobResponseBodyJob job;
 
     /**
-     * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
+     * <p>The request ID used for Tracing Analysis and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>req-vt-get-20260820-001</p>
@@ -51,7 +51,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public Double duration;
 
         /**
-         * <p>The editing project ID for single-target-language jobs. For multi-target-language results, retrieve the value from Output.AiResult.ResultMap.</p>
+         * <p>The ID of the editing project for a single-target-language job. For multi-target-language results, obtain the IDs from Output.AiResult.ResultMap.</p>
          * 
          * <strong>example:</strong>
          * <p>editing-project-001</p>
@@ -60,7 +60,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String editingProjectId;
 
         /**
-         * <p>The business error code returned when the job fails. This field is not returned when the job is not in a failed state.</p>
+         * <p>The business error code returned when the job fails. This parameter is usually not returned for non-failed states.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidInput</p>
@@ -69,7 +69,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The business error message returned when the job fails. This field is not returned when the job is not in a failed state.</p>
+         * <p>The business error message returned when the job fails. This parameter is usually not returned for non-failed states.</p>
          * 
          * <strong>example:</strong>
          * <p>Input video is invalid.</p>
@@ -78,7 +78,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The normalized input configuration JSON string saved at submission time.</p>
+         * <p>The normalized JSON string of the input configuration saved upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VideoMediaId&quot;:&quot;media-video-001&quot;}</p>
@@ -87,7 +87,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String input;
 
         /**
-         * <p>The video translation job ID.</p>
+         * <p>The ID of the video translation job.</p>
          * 
          * <strong>example:</strong>
          * <p>vtj_0123456789abcdef0123456789abcdef</p>
@@ -96,7 +96,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The normalized job parameters JSON string, including default values supplemented by the service.</p>
+         * <p>The normalized JSON string of the job parameters, including the default values supplemented by the service.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;SubtitleFrom&quot;:&quot;default&quot;,&quot;NeedDetext&quot;:false,&quot;NeedVisualTranslate&quot;:false}</p>
@@ -114,7 +114,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The job output JSON string. On success, AiResult.ResultMap organizes the final video, subtitle, and audio outputs by target language.</p>
+         * <p>The JSON string of the job output. If the job is successful, AiResult.ResultMap organizes the final video, subtitle, and audio outputs by target language.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AiResult&quot;:{&quot;ResultMap&quot;:{&quot;en&quot;:{&quot;EditingProjectId&quot;:&quot;editing-project-001&quot;,&quot;MediaURL&quot;:&quot;<a href="https://example.com/video-translation/en/result.mp4%22,%22MediaId%22:%22media-output-001%22%7D%7D%7D%7D">https://example.com/video-translation/en/result.mp4&quot;,&quot;MediaId&quot;:&quot;media-output-001&quot;}}}}</a></p>

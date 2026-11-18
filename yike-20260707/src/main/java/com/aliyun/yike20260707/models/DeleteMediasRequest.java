@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMediasRequest extends TeaModel {
     /**
-     * <p>The business configuration. It is a JSON string that can contain ProductionId (the project ID).</p>
+     * <p>The business configuration. A JSON string that can include ProductionId (the project ID).</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ProductionId&quot;:&quot;pd_abc1234567&quot;}</p>
@@ -14,7 +14,7 @@ public class DeleteMediasRequest extends TeaModel {
     public String bizConfig;
 
     /**
-     * <p>Specifies whether to delete physical files at the same time.</p>
+     * <p>Specifies whether to delete the physical files at the same time.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,13 +23,13 @@ public class DeleteMediasRequest extends TeaModel {
     public Boolean deletePhysicalFiles;
 
     /**
-     * <p>Not supported.</p>
+     * <p>This parameter is not supported.</p>
      */
     @NameInMap("InputURLs")
     public String inputURLs;
 
     /**
-     * <p>The media asset IDs, separated by commas. Invalid IDs are added to IgnoredList.</p>
+     * <p>The media asset IDs, separated by commas. Invalid IDs are added to the IgnoredList.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>

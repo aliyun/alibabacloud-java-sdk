@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVideoRenderJobRequest extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The ID of the job returned by SubmitVideoRenderJob.</p>
      * 
      * <strong>example:</strong>
      * <p>68ca759e798b40b4903b255*******</p>

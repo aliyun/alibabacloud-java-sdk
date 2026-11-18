@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoRenderJobRequest extends TeaModel {
     /**
-     * <p>The complete creative script confirmed or edited by the user, provided as a JSON string. The structure aligns with the JSON content in the Result file returned by the GetRemakeScriptJob API.</p>
+     * <p>The complete creative script confirmed or edited by the user, formatted as a JSON string. The structure must align with the JSON content in the Result file returned by the GetRemakeScriptJob API.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -18,18 +18,18 @@ public class SubmitVideoRenderJobRequest extends TeaModel {
     public String script;
 
     /**
-     * <p>The rendering settings, provided as a JSON string.</p>
+     * <p>The rendering settings, formatted as a JSON string.</p>
      * <ul>
-     * <li><strong>Resolution</strong> (String, required): The resolution. Valid values: <code>720P</code> and <code>1080P</code>.<ul>
-     * <li><p><strong>AspectRatio</strong> (String, optional): The video aspect ratio. Valid values: <code>9:16</code>, <code>16:9</code>, and <code>1:1</code>. Default value: <code>9:16</code>.</p>
+     * <li><strong>Resolution</strong> (String, required): The resolution. Valid values: 720P and 1080P.<ul>
+     * <li><p><strong>AspectRatio</strong> (String, optional): The video aspect ratio. Valid values: 9:16, 16:9, and 1:1. Default value: 9:16.</p>
      * </li>
-     * <li><p><strong>VoiceoverLanguage</strong> (String, optional): The voiceover language. Valid values: <code>zh</code> (Chinese), <code>en</code> (English), <code>es</code> (Spanish), <code>pt</code> (Portuguese), <code>fr</code> (French), <code>de</code> (German), <code>ja</code> (Japanese), <code>ko</code> (Korean), and <code>ar</code> (Arabic). Default value: <code>zh</code>.</p>
+     * <li><p><strong>VoiceoverLanguage</strong> (String, optional): The voiceover language. Valid values: zh (Chinese), en (English), es (Spanish), pt (Portuguese), fr (French), de (German), ja (Japanese), ko (Korean), and ar (Arabic). Default value: zh.</p>
      * </li>
-     * <li><p><strong>WithSubtitles</strong> (Boolean, optional): Specifies whether to generate subtitles. Default value: <code>true</code>.</p>
+     * <li><p><strong>WithSubtitles</strong> (Boolean, optional): Specifies whether to generate subtitles. Default value: true.</p>
      * </li>
-     * <li><p><strong>TTS</strong> (Object, optional): The text-to-speech (TTS) configuration. If this parameter is not specified, the default voice is used. This parameter applies only to single-person scenarios and pure voiceovers.</p>
+     * <li><p><strong>TTS</strong> (Object, optional): The text-to-speech (TTS) configuration. If you do not specify this parameter, the default voice is used. This parameter applies only to single-person and voiceover-only scenarios.</p>
      * <ul>
-     * <li><strong>VoiceUrl</strong> (String, optional): The URL of the voice file, which must be an HTTP or HTTPS URL. If specified, this voice is used for the voiceover throughout the entire video.</li>
+     * <li><strong>VoiceUrl</strong> (String, optional): The URL of the voice file, which must be an HTTP or HTTPS address. If specified, this voice is used for the voiceover throughout the entire video.</li>
      * </ul>
      * </li>
      * <li><p><strong>Bgm</strong> (String, optional): The URL or 32-character media asset ID of the background music.</p>
@@ -54,7 +54,7 @@ public class SubmitVideoRenderJobRequest extends TeaModel {
     public String settings;
 
     /**
-     * <p>The user-defined parameters, provided as a JSON string.</p>
+     * <p>The user-defined parameters, formatted as a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>

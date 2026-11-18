@@ -5,16 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetAssetCategoryRequest extends TeaModel {
     /**
-     * <p>The category ID. You can obtain the category ID by using the following methods:</p>
+     * <p>The category ID. You can obtain the category ID by using one of the following methods:</p>
      * <ul>
-     * <li><p>When you create a category by calling the CreateAssetCategory operation, the category ID is the value of CategoryId in the response.</p>
-     * </li>
-     * <li><p>When you query the category list by calling the ListAssetCategories operation, the category ID is the value of CategoryId in the corresponding entry in the response.</p>
-     * </li>
+     * <li>When you create a category by calling the CreateAssetCategory operation, the category ID is the value of the CategoryId response parameter.</li>
+     * <li>When you query the category list by calling the ListAssetCategories operation, the category ID is the value of the CategoryId parameter in the corresponding returned entry.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>scenery</p>
+     * <p>45</p>
      */
     @NameInMap("CategoryId")
     public Long categoryId;

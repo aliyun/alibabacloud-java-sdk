@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRemakeScriptJobRequest extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID returned by SubmitRemakeScriptJob.</p>
      * 
      * <strong>example:</strong>
      * <p>68ca759e798b40b4903b255*******</p>

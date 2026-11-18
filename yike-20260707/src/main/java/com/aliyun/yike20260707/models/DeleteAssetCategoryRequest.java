@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteAssetCategoryRequest extends TeaModel {
     /**
-     * <p>The category ID. You can obtain the value by using one of the following methods:</p>
+     * <p>The category ID. You can obtain the category ID by using one of the following methods:</p>
      * <ul>
-     * <li>When you create a category by calling the CreateAssetCategory operation, the category ID is the value of CategoryId in the response.</li>
-     * <li>When you query categories by calling the ListAssetCategories operation, the category ID is the value of CategoryId in the corresponding entry in the response.</li>
+     * <li>When you create a category by calling the CreateAssetCategory operation, the category ID is the value of the CategoryId response parameter.</li>
+     * <li>When you query categories by calling the ListAssetCategories operation, the category ID is the value of the CategoryId parameter in the corresponding returned entry.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

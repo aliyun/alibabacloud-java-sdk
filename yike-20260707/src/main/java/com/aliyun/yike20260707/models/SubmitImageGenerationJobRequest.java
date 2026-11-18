@@ -7,7 +7,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     /**
      * <p>The aspect ratio. Valid values: 16:9 (default), 9:16, 4:3, 3:4, 1:1, and 21:9.</p>
      * <ul>
-     * <li>qwen-image-3.0 additionally supports: 4:5, 5:4, 2:3, and 3:2.</li>
+     * <li>The qwen-image-3.0 model also supports the following values: 4:5, 5:4, 2:3, and 3:2.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String aspectRatio;
 
     /**
-     * <p>The idempotency token. A unique, case-sensitive string of up to 32 characters. This token ensures that the request is processed only once, preventing duplicate operations caused by multiple retries.</p>
+     * <p>The idempotency parameter. A unique, case-sensitive, 32-character random string used to ensure that the request is completed only once. This prevents duplicate operations caused by multiple retries.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>3e761e9d11edba640c42a1b7</strong></strong></p>
@@ -26,26 +26,26 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The task input. This parameter is required. The value is a JSON string that contains the following fields:</p>
+     * <p>The task input. Required. A JSON string that contains the following fields:</p>
      * <ul>
-     * <li>Prompt: String. Required. The prompt text.</li>
-     * <li>Medias: A list of media items. Required when the task type is <code>image_to_image</code>. A maximum of 9 items are supported.<blockquote>
-     * <p>The Media structure contains the following fields: Type, the media type, String, valid value: image. URL, the media download URL, String. MediaId, the media asset ID, String.</p>
+     * <li>Prompt: the prompt. String. Required.</li>
+     * <li>Medias: the list of media files. Required when the task type is <code>image_to_image</code>. Up to 9 files.<blockquote>
+     * <p>The Media structure contains the following fields: Type, the media type. String. Valid value: image. URL, the download URL of the media file. String. MediaId, the media asset ID. String.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Prompt&quot;:&quot;xxx&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;URL&quot;:&quot;xxx&quot;}]}</p>
+     * <p>{&quot;Prompt&quot;:&quot;xxx&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;URL&quot;:&quot;<a href="http://test.oss-cn-shanghai.aliyuncs.com/test.png%22%7D%5D%7D">http://test.oss-cn-shanghai.aliyuncs.com/test.png&quot;}]}</a></p>
      */
     @NameInMap("Input")
     public String input;
 
     /**
-     * <p>The task parameters. The value is a JSON string.</p>
+     * <p>The task feature parameters. A JSON string that contains the following fields:</p>
      * <ul>
-     * <li>PromptExtend: Specifies whether to enable prompt optimization. Boolean. Valid values: <code>true</code> and <code>false</code>.</li>
-     * <li>PromptExtendMode: The prompt extension mode. Valid values: <code>direct</code> (default) and <code>agent</code> (supported for text-to-image generation). Only qwen-image-3.0 supports this parameter.</li>
+     * <li>PromptExtend: specifies whether to optimize the prompt. Boolean. Valid values: <code>true</code> and <code>false</code>.</li>
+     * <li>PromptExtendMode: the prompt optimization mode. Valid values: <code>direct</code> (default) and <code>agent</code> (supported only for text-to-image). Only the qwen-image-3.0 model supports this parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,10 +55,10 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String jobParameters;
 
     /**
-     * <p>The type of the generation task. This parameter is required. Valid values:</p>
+     * <p>The type of the generation task. Required. Valid values:</p>
      * <ul>
-     * <li>text_to_image: text-to-image generation.</li>
-     * <li>image_to_image: image-to-image generation.</li>
+     * <li>text_to_image: text-to-image</li>
+     * <li>image_to_image: image-to-image</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,8 +68,11 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The model name. This parameter is required. Valid values:</p>
+     * <p>The name of the model. Required. Valid values:</p>
      * <ul>
+     * <li>Wonder-Image-2.5-Pro</li>
+     * <li>Wonder-Image-2.5-Fast</li>
+     * <li>Wonder-Image-2</li>
      * <li>qwen-image-3.0</li>
      * <li>qwen-image-2.0-pro</li>
      * <li>qwen-image-2.0</li>
@@ -101,7 +104,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String resolution;
 
     /**
-     * <p>The scenario. This is an enumeration type. Currently, only <code>general</code> is supported.</p>
+     * <p>The scene. Valid values: <code>general</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>general</p>

@@ -77,7 +77,7 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
         public String categoryName;
 
         /**
-         * <p>The category level. A level-1 category has a value of 0, a level-2 category has a value of 1, and a level-3 category has a value of 2.</p>
+         * <p>The category level. A value of 0 indicates a level-1 category, 1 indicates a level-2 category, and 2 indicates a level-3 category.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

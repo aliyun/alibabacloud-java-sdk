@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentJobResponseBody extends TeaModel {
     /**
-     * <p>The task information.</p>
+     * <p>The job information.</p>
      */
     @NameInMap("Job")
     public GetAgentJobResponseBodyJob job;
@@ -42,7 +42,7 @@ public class GetAgentJobResponseBody extends TeaModel {
 
     public static class GetAgentJobResponseBodyJob extends TeaModel {
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bc30a1080b21434f961a0d9a391b30b9</p>
@@ -51,7 +51,7 @@ public class GetAgentJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The task output JSON string. Different tasks return different structures, which are defined by the business side.</p>
+         * <p>The output JSON string of the job. The returned structure varies by job and is defined by the service provider.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;OssUri\&quot;:\&quot;oss://ice-ai-saas/ice-ai-saas-prd/1123668546389636/210606863/generate/ag_3a506706a33f44008aec6274d2e38d58/\&quot;}</p>
@@ -60,14 +60,7 @@ public class GetAgentJobResponseBody extends TeaModel {
         public String output;
 
         /**
-         * <p>The task status. Valid values:</p>
-         * <ul>
-         * <li>Created</li>
-         * <li>Queuing</li>
-         * <li>Executing</li>
-         * <li>Finished</li>
-         * <li>Failed</li>
-         * </ul>
+         * <p>The job status. Valid values: Created, Queuing, Executing, Finished, and Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>

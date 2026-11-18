@@ -60,7 +60,7 @@ public class CreateAssetCategoryResponseBody extends TeaModel {
         public String categoryName;
 
         /**
-         * <p>The category level. The first-level category has a level of 0, the second-level category has a level of 1, and the third-level category has a level of 2.</p>
+         * <p>The level of the category. The level is 0 for level-1 categories, 1 for level-2 categories, and 2 for level-3 categories.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -69,7 +69,7 @@ public class CreateAssetCategoryResponseBody extends TeaModel {
         public Long level;
 
         /**
-         * <p>The parent category ID. If the ParentId parameter is set to empty or a value less than 1, the default return value is -1, which indicates that the created category is a root directory.</p>
+         * <p>The ID of the parent category. If the ParentId parameter is left empty or set to a value less than 1, the default return value is -1, which indicates that the created category is the root folder.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>

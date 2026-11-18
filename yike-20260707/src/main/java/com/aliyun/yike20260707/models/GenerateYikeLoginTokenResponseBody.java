@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateYikeLoginTokenResponseBody extends TeaModel {
     /**
-     * <p>The session expiration time (millisecond timestamp).</p>
+     * <p>The session expiration time (timestamp in milliseconds).</p>
      * 
      * <strong>example:</strong>
      * <p>1782008128000</p>
@@ -23,7 +23,7 @@ public class GenerateYikeLoginTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The login token.</p>
+     * <p>The logon token.</p>
      * 
      * <strong>example:</strong>
      * <p>*<em><strong><strong>d6931ff7e89b5eb19484</strong></strong></em></p>

@@ -14,7 +14,7 @@ public class SubmitAgentJobRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The callback URL. Currently, only HTTP and HTTPS addresses are supported.</p>
+     * <p>The callback URL. Only HTTP and HTTPS URLs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://api.ai-x.vip/callback">https://api.ai-x.vip/callback</a></p>
@@ -23,17 +23,17 @@ public class SubmitAgentJobRequest extends TeaModel {
     public String notifyUrl;
 
     /**
-     * <p>The prompt. Defined by the business as needed.</p>
+     * <p>The prompt. The specific content is defined by your business.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Compare the battle records of Yue Jin and Guan Yu in real history to determine who was stronger</p>
+     * <p>Compare the military records of Yue Jin and Guan Yu in real history to determine who was stronger</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
-     * <p>The skill identifier, provided by the skill provider.</p>
+     * <p>The skill identifier used for the task, which is provided by the skill provider.</p>
      * 
      * <strong>example:</strong>
      * <p>wf://xxx</p>
@@ -42,7 +42,7 @@ public class SubmitAgentJobRequest extends TeaModel {
     public String skill;
 
     /**
-     * <p>The custom user data. This value is returned as-is in the callback.</p>
+     * <p>The user-defined information. This information is returned as-is in the callback.</p>
      * 
      * <strong>example:</strong>
      * <p>{“x”: 1}</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteMediasResponseBody extends TeaModel {
     /**
-     * <p>The IDs or inputUrls that are forbidden to be deleted.</p>
+     * <p>The IDs or input URLs that are prohibited from deletion.</p>
      */
     @NameInMap("ForbiddenList")
     public java.util.List<String> forbiddenList;
 
     /**
-     * <p>The ignored IDs or inputUrls (invalid items or items with retrieval errors).</p>
+     * <p>The ignored IDs or input URLs, including invalid items or items with retrieval errors.</p>
      */
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;

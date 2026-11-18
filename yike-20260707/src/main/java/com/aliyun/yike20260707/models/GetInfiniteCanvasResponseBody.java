@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInfiniteCanvasResponseBody extends TeaModel {
     /**
-     * <p>The infinite canvas details.</p>
+     * <p>The details of the infinite canvas.</p>
      */
     @NameInMap("InfiniteCanvas")
     public GetInfiniteCanvasResponseBodyInfiniteCanvas infiniteCanvas;

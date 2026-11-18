@@ -31,10 +31,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <p>Adds users under the same Alibaba Cloud account to a specified project in the default workspace of the Alibaba Cloud account, and grants the Edit permission by default. ProjectId specifies the project ID. YikeUserIds specifies a comma-separated list of Yike user IDs, which are not Alibaba Cloud UIDs. Currently, only the default workspace of the Alibaba Cloud account is supported, and projects in newly created workspaces are not supported. This operation follows the behavior of the original member API operation: adding an existing member resets the project permissions. Regular members are assigned the Edit permission, and SuperAdmins of the default workspace retain the Manage permission. Only Alibaba Cloud accounts that have activated ProductionOpenAPI are supported. Default Alibaba Cloud account projects (pd_Alibaba Cloud account ID) are not supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about multiple media assets in a batch.</p>
+     * <p>Adds members to a project.</p>
+     * 
+     * @param request AddProjectMembersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddProjectMembersResponse
+     */
+    public AddProjectMembersResponse addProjectMembersWithOptions(AddProjectMembersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.yikeUserIds)) {
+            query.put("YikeUserIds", request.yikeUserIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddProjectMembers"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddProjectMembersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Adds users under the same Alibaba Cloud account to a specified project in the default workspace of the Alibaba Cloud account, and grants the Edit permission by default. ProjectId specifies the project ID. YikeUserIds specifies a comma-separated list of Yike user IDs, which are not Alibaba Cloud UIDs. Currently, only the default workspace of the Alibaba Cloud account is supported, and projects in newly created workspaces are not supported. This operation follows the behavior of the original member API operation: adding an existing member resets the project permissions. Regular members are assigned the Edit permission, and SuperAdmins of the default workspace retain the Manage permission. Only Alibaba Cloud accounts that have activated ProductionOpenAPI are supported. Default Alibaba Cloud account projects (pd_Alibaba Cloud account ID) are not supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds members to a project.</p>
+     * 
+     * @param request AddProjectMembersRequest
+     * @return AddProjectMembersResponse
+     */
+    public AddProjectMembersResponse addProjectMembers(AddProjectMembersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addProjectMembersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API operation queries media asset content understanding jobs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the information of multiple media assets.</p>
      * 
      * @param request BatchGetMediasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -78,10 +133,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about multiple media assets in a batch.</p>
+     * <p>Retrieves the information of multiple media assets.</p>
      * 
      * @param request BatchGetMediasRequest
      * @return BatchGetMediasResponse
@@ -92,8 +148,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the status and results of multiple video character replacement jobs. JobIds is a comma-separated string of job IDs. The response includes a JobList. The input parameters for each job are located in the AppInputConfig field. For the single query operation GetVideoCharacterReplaceJob, the corresponding field is AppParams. When the Status is Finished, you can retrieve the output media assets from the Result field.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Cancels an AI generation task.</p>
+     * <p>Queries multiple video character replacement jobs.</p>
+     * 
+     * @param request BatchGetVideoCharacterReplaceJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchGetVideoCharacterReplaceJobsResponse
+     */
+    public BatchGetVideoCharacterReplaceJobsResponse batchGetVideoCharacterReplaceJobsWithOptions(BatchGetVideoCharacterReplaceJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobIds)) {
+            query.put("JobIds", request.jobIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchGetVideoCharacterReplaceJobs"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGetVideoCharacterReplaceJobsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the status and results of multiple video character replacement jobs. JobIds is a comma-separated string of job IDs. The response includes a JobList. The input parameters for each job are located in the AppInputConfig field. For the single query operation GetVideoCharacterReplaceJob, the corresponding field is AppParams. When the Status is Finished, you can retrieve the output media assets from the Result field.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries multiple video character replacement jobs.</p>
+     * 
+     * @param request BatchGetVideoCharacterReplaceJobsRequest
+     * @return BatchGetVideoCharacterReplaceJobsResponse
+     */
+    public BatchGetVideoCharacterReplaceJobsResponse batchGetVideoCharacterReplaceJobs(BatchGetVideoCharacterReplaceJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchGetVideoCharacterReplaceJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels a generation task.</p>
      * 
      * @param request CancelGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -125,7 +231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels an AI generation task.</p>
+     * <p>Cancels a generation task.</p>
      * 
      * @param request CancelGenerationJobRequest
      * @return CancelGenerationJobResponse
@@ -137,7 +243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
+     * <p>Categories support up to three levels of hierarchy, and each level supports up to 100 subcategories.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a media asset category.</p>
@@ -176,7 +282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
+     * <p>Categories support up to three levels of hierarchy, and each level supports up to 100 subcategories.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a media asset category.</p>
@@ -191,8 +297,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an infinite canvas.</p>
@@ -210,6 +316,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.productionId)) {
             query.put("ProductionId", request.productionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {
@@ -239,8 +349,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an infinite canvas.</p>
@@ -255,7 +365,115 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</p>
+     * <p>Creates a project in a specified workspace and returns the project ID. If WorkspaceId is not specified, the default workspace of the current account is used. After the project is created, you can call GetProject to query the details or call ListProjects to list projects.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a project.</p>
+     * 
+     * @param request CreateProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProjectResponse
+     */
+    public CreateProjectResponse createProjectWithOptions(CreateProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProject"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a project in a specified workspace and returns the project ID. If WorkspaceId is not specified, the default workspace of the current account is used. After the project is created, you can call GetProject to query the details or call ListProjects to list projects.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a project.</p>
+     * 
+     * @param request CreateProjectRequest
+     * @return CreateProjectResponse
+     */
+    public CreateProjectResponse createProject(CreateProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a studio and triggers the automatic creation of a default project for the studio. Returns the WorkspaceId and the ProjectId of the default project. You can use the ProjectId directly without creating the default project again.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a studio.</p>
+     * 
+     * @param request CreateWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkspaceResponse
+     */
+    public CreateWorkspaceResponse createWorkspaceWithOptions(CreateWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userCountLimit)) {
+            query.put("UserCountLimit", request.userCountLimit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkspace"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a studio and triggers the automatic creation of a default project for the studio. Returns the WorkspaceId and the ProjectId of the default project. You can use the ProjectId directly without creating the default project again.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a studio.</p>
+     * 
+     * @param request CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    public CreateWorkspaceResponse createWorkspace(CreateWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation also deletes its subcategories, including level-2 and level-3 subcategories. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a media asset category.</p>
@@ -290,7 +508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</p>
+     * <p>This operation also deletes its subcategories, including level-2 and level-3 subcategories. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a media asset category.</p>
@@ -305,8 +523,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an infinite canvas.</p>
@@ -341,8 +559,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an infinite canvas.</p>
@@ -413,12 +631,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Deletes a project by ProjectId. The caller must have project management permissions.
+     * Default projects cannot be deleted. If you attempt to delete a default project, DefaultProductionNotSupported is returned. This operation marks the project as deleted and does not physically delete all assets in the project.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a project.</p>
+     * 
+     * @param request DeleteProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteProjectResponse
+     */
+    public DeleteProjectResponse deleteProjectWithOptions(DeleteProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProject"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a project by ProjectId. The caller must have project management permissions.
+     * Default projects cannot be deleted. If you attempt to delete a default project, DefaultProductionNotSupported is returned. This operation marks the project as deleted and does not physically delete all assets in the project.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a project.</p>
+     * 
+     * @param request DeleteProjectRequest
+     * @return DeleteProjectResponse
+     */
+    public DeleteProjectResponse deleteProject(DeleteProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
-     * <p>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></p>
+     * <p>Notice:  The AI generation-related API operations in the current 2026-03-19 API version will be retired soon. Upgrade to the 2026-07-07 API version.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a login token for an enterprise account.</p>
+     * <p>Retrieves the logon token for an enterprise account.</p>
      * 
      * @param request GenerateYikeLoginTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -479,11 +749,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></p>
+     * <p>Notice:  The AI generation-related API operations in the current 2026-03-19 API version will be retired soon. Upgrade to the 2026-07-07 API version.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a login token for an enterprise account.</p>
+     * <p>Retrieves the logon token for an enterprise account.</p>
      * 
      * @param request GenerateYikeLoginTokenRequest
      * @return GenerateYikeLoginTokenResponse
@@ -495,7 +765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an agent asynchronous task.</p>
+     * <p>Queries an asynchronous task of the agent node.</p>
      * 
      * @param request GetAgentJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -527,7 +797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an agent asynchronous task.</p>
+     * <p>Queries an asynchronous task of the agent node.</p>
      * 
      * @param request GetAgentJobRequest
      * @return GetAgentJobResponse
@@ -539,7 +809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</p>
+     * <p>Retrieves the details of a specified category and a list of its subcategories.</p>
      * 
      * @param request GetAssetCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -571,7 +841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</p>
+     * <p>Retrieves the details of a specified category and a list of its subcategories.</p>
      * 
      * @param request GetAssetCategoryRequest
      * @return GetAssetCategoryResponse
@@ -627,8 +897,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This API is used to query a media asset content understanding job.</p>
+     * <h2>Request description</h2>
+     * <p>This API queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries an infinite canvas.</p>
@@ -663,8 +933,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This API is used to query a media asset content understanding job.</p>
+     * <h2>Request description</h2>
+     * <p>This API queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries an infinite canvas.</p>
@@ -679,11 +949,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation is used to query a media content analysis job.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a media asset.</p>
+     * <p>Queries media assets.</p>
      * 
      * @param request GetMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -727,11 +997,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation is used to query a media content analysis job.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a media asset.</p>
+     * <p>Queries media assets.</p>
      * 
      * @param request GetMediaRequest
      * @return GetMediaResponse
@@ -744,10 +1014,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API operation queries media content understanding jobs.</p>
+     * <p>This operation queries media content comprehension jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries media content understanding jobs.</p>
+     * <p>Queries media content comprehension jobs.</p>
      * 
      * @param request GetMediaComprehensionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -780,10 +1050,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API operation queries media content understanding jobs.</p>
+     * <p>This operation queries media content comprehension jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries media content understanding jobs.</p>
+     * <p>Queries media content comprehension jobs.</p>
      * 
      * @param request GetMediaComprehensionJobRequest
      * @return GetMediaComprehensionJobResponse
@@ -791,6 +1061,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetMediaComprehensionJobResponse getMediaComprehensionJob(GetMediaComprehensionJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMediaComprehensionJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the basic information of a project and the permissions of the current caller on the project based on the ProjectId. The project information is contained in the Project object of the response and does not include the list of project assets.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a project.</p>
+     * 
+     * @param request GetProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProjectResponse
+     */
+    public GetProjectResponse getProjectWithOptions(GetProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProject"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the basic information of a project and the permissions of the current caller on the project based on the ProjectId. The project information is contained in the Project object of the response and does not include the list of project assets.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a project.</p>
+     * 
+     * @param request GetProjectRequest
+     * @return GetProjectResponse
+     */
+    public GetProjectResponse getProject(GetProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProjectWithOptions(request, runtime);
     }
 
     /**
@@ -838,8 +1158,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the status and result of a single task by using the JobId returned by the submit operation. When the Status is Finished, you can read the output media assets in Result. Executing indicates that the task is still running.
+     * This operation uses AppParams to return the task input parameters. The corresponding field name in the batch query operation is AppInputConfig. The output results are categorized into ImageResult, VideoResult, and AudioResult. Each category contains MediaId and OutputUrl.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a video creative generation job.</p>
+     * <p>Queries a video character replacement task.</p>
+     * 
+     * @param request GetVideoCharacterReplaceJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoCharacterReplaceJobResponse
+     */
+    public GetVideoCharacterReplaceJobResponse getVideoCharacterReplaceJobWithOptions(GetVideoCharacterReplaceJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoCharacterReplaceJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoCharacterReplaceJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the status and result of a single task by using the JobId returned by the submit operation. When the Status is Finished, you can read the output media assets in Result. Executing indicates that the task is still running.
+     * This operation uses AppParams to return the task input parameters. The corresponding field name in the batch query operation is AppInputConfig. The output results are categorized into ImageResult, VideoResult, and AudioResult. Each category contains MediaId and OutputUrl.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a video character replacement task.</p>
+     * 
+     * @param request GetVideoCharacterReplaceJobRequest
+     * @return GetVideoCharacterReplaceJobResponse
+     */
+    public GetVideoCharacterReplaceJobResponse getVideoCharacterReplaceJob(GetVideoCharacterReplaceJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVideoCharacterReplaceJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries video creative generation jobs.</p>
      * 
      * @param request GetVideoCreativeGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -871,7 +1243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a video creative generation job.</p>
+     * <p>Queries video creative generation jobs.</p>
      * 
      * @param request GetVideoCreativeGenerationJobRequest
      * @return GetVideoCreativeGenerationJobResponse
@@ -883,10 +1255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, input, parameters, and desired state result of a video text erasure task based on <code>JobId</code>.</p>
+     * <p>Queries the status, input, parameters, and final results of a video text removal job based on the <code>JobId</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status, input parameters, and video result of a video text erasure task.</p>
+     * <p>Queries the status, input parameters, and video results of a video text removal job.</p>
      * 
      * @param request GetVideoDetextJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -918,10 +1290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, input, parameters, and desired state result of a video text erasure task based on <code>JobId</code>.</p>
+     * <p>Queries the status, input, parameters, and final results of a video text removal job based on the <code>JobId</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status, input parameters, and video result of a video text erasure task.</p>
+     * <p>Queries the status, input parameters, and video results of a video text removal job.</p>
      * 
      * @param request GetVideoDetextJobRequest
      * @return GetVideoDetextJobResponse
@@ -933,7 +1305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a video generation task.</p>
+     * <p>Queries a video generation job.</p>
      * 
      * @param request GetVideoGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -969,7 +1341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a video generation task.</p>
+     * <p>Queries a video generation job.</p>
      * 
      * @param request GetVideoGenerationJobRequest
      * @return GetVideoGenerationJobResponse
@@ -980,8 +1352,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the task status based on the JobId returned by SubmitVideoRemakeJob. Upon completion, returns the download URLs of the JSON files for the video content understanding results and the creative script. If the task fails, returns ErrorCode and ErrorMessage.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Submits a video rendering and compositing task.</p>
+     * <p>Queries a content understanding and creative script generation task.</p>
+     * 
+     * @param request GetVideoRemakeJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoRemakeJobResponse
+     */
+    public GetVideoRemakeJobResponse getVideoRemakeJobWithOptions(GetVideoRemakeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoRemakeJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoRemakeJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the task status based on the JobId returned by SubmitVideoRemakeJob. Upon completion, returns the download URLs of the JSON files for the video content understanding results and the creative script. If the task fails, returns ErrorCode and ErrorMessage.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a content understanding and creative script generation task.</p>
+     * 
+     * @param request GetVideoRemakeJobRequest
+     * @return GetVideoRemakeJobResponse
+     */
+    public GetVideoRemakeJobResponse getVideoRemakeJob(GetVideoRemakeJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVideoRemakeJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a video rendering and compositing job.</p>
      * 
      * @param request GetVideoRenderJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1013,7 +1435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a video rendering and compositing task.</p>
+     * <p>Submits a video rendering and compositing job.</p>
      * 
      * @param request GetVideoRenderJobRequest
      * @return GetVideoRenderJobResponse
@@ -1025,7 +1447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, input, parameters, and final results of a video translation job by <code>JobId</code>.</p>
+     * <p>Queries the status, input, parameters, and final results of a video translation job based on JobId.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the status, input parameters, and multilingual outputs of a video translation job.</p>
@@ -1060,7 +1482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, input, parameters, and final results of a video translation job by <code>JobId</code>.</p>
+     * <p>Queries the status, input, parameters, and final results of a video translation job based on JobId.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the status, input parameters, and multilingual outputs of a video translation job.</p>
@@ -1075,7 +1497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the membership plan and credit information for a Yike primary account.</p>
+     * <p>Retrieves the membership plan and credit information of the Yike main account.</p>
      * 
      * @param request GetYikeAccountCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1100,7 +1522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the membership plan and credit information for a Yike primary account.</p>
+     * <p>Retrieves the membership plan and credit information of the Yike main account.</p>
      * 
      * @param request GetYikeAccountCreditRequest
      * @return GetYikeAccountCreditResponse
@@ -1112,7 +1534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the actual credit consumption of a task.</p>
+     * <p>Queries the actual credits consumed by a task.</p>
      * 
      * @param request GetYikeJobCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1144,7 +1566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the actual credit consumption of a task.</p>
+     * <p>Queries the actual credits consumed by a task.</p>
      * 
      * @param request GetYikeJobCreditRequest
      * @return GetYikeJobCreditResponse
@@ -1157,10 +1579,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API is used to query media content analysis jobs.</p>
+     * <p>This API operation queries media content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Imports a media asset.</p>
+     * <p>Imports media assets.</p>
      * 
      * @param request ImportMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1213,6 +1635,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Overwrite", request.overwrite);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.registerConfig)) {
             query.put("RegisterConfig", request.registerConfig);
         }
@@ -1249,10 +1675,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API is used to query media content analysis jobs.</p>
+     * <p>This API operation queries media content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Imports a media asset.</p>
+     * <p>Imports media assets.</p>
      * 
      * @param request ImportMediaRequest
      * @return ImportMediaResponse
@@ -1264,7 +1690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paged list of categories.</p>
+     * <p>Retrieves a paginated list of categories.</p>
      * 
      * @param request ListAssetCategoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1300,7 +1726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paged list of categories.</p>
+     * <p>Retrieves a paginated list of categories.</p>
      * 
      * @param request ListAssetCategoriesRequest
      * @return ListAssetCategoriesResponse
@@ -1313,7 +1739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API operation queries media asset content understanding jobs.</p>
+     * <p>This operation queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of infinite canvases.</p>
@@ -1373,7 +1799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API operation queries media asset content understanding jobs.</p>
+     * <p>This operation queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of infinite canvases.</p>
@@ -1387,8 +1813,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of projects accessible to the current caller. You can use WorkspaceId to filter projects by workspace. For pagination, specify both PageNo and PageSize as positive integers starting from 1. If valid values are not provided for both parameters, the query defaults to page 1 with 10 entries per page. The response includes ProjectList but does not include TotalCount. MaxResults and NextToken are retained for backward compatibility and are not used for pagination.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries media assets that match the specified parameters.</p>
+     * <p>Queries the list of projects.</p>
+     * 
+     * @param request ListProjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProjectsResponse
+     */
+    public ListProjectsResponse listProjectsWithOptions(ListProjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjects"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of projects accessible to the current caller. You can use WorkspaceId to filter projects by workspace. For pagination, specify both PageNo and PageSize as positive integers starting from 1. If valid values are not provided for both parameters, the query defaults to page 1 with 10 entries per page. The response includes ProjectList but does not include TotalCount. MaxResults and NextToken are retained for backward compatibility and are not used for pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of projects.</p>
+     * 
+     * @param request ListProjectsRequest
+     * @return ListProjectsResponse
+     */
+    public ListProjectsResponse listProjects(ListProjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of workspaces accessible to the current caller. You can use PageNo and PageSize to paginate the results. The default page number is 1, and the default page size is 10. The response includes WorkspaceList and TotalCount. The ID of the default project for a workspace is returned in the DefaultProjectId field.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of workspaces.</p>
+     * 
+     * @param request ListWorkspacesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWorkspacesResponse
+     */
+    public ListWorkspacesResponse listWorkspacesWithOptions(ListWorkspacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWorkspaces"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWorkspacesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of workspaces accessible to the current caller. You can use PageNo and PageSize to paginate the results. The default page number is 1, and the default page size is 10. The response includes WorkspaceList and TotalCount. The ID of the default project for a workspace is returned in the DefaultProjectId field.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of workspaces.</p>
+     * 
+     * @param request ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
+    public ListWorkspacesResponse listWorkspaces(ListWorkspacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWorkspacesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before submitting a task, validates the input materials for a specified application. AppParams is a JSON-serialized string. The field names must match the input definition of the application corresponding to the AppId. Image, audio, and video materials must match the input types and be accessible.
+     * If Status is Success, the validation passes and Result is an empty array. If Status is Failed, Result returns the failed parameter keys and error codes for each item. This operation does not create a task. After the validation passes, call SubmitVideoCharacterReplaceJob to submit the task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Pre-validates a video character replacement task.</p>
+     * 
+     * @param request PrecheckVideoCharacterReplaceJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PrecheckVideoCharacterReplaceJobResponse
+     */
+    public PrecheckVideoCharacterReplaceJobResponse precheckVideoCharacterReplaceJobWithOptions(PrecheckVideoCharacterReplaceJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appParams)) {
+            query.put("AppParams", request.appParams);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PrecheckVideoCharacterReplaceJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PrecheckVideoCharacterReplaceJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before submitting a task, validates the input materials for a specified application. AppParams is a JSON-serialized string. The field names must match the input definition of the application corresponding to the AppId. Image, audio, and video materials must match the input types and be accessible.
+     * If Status is Success, the validation passes and Result is an empty array. If Status is Failed, Result returns the failed parameter keys and error codes for each item. This operation does not create a task. After the validation passes, call SubmitVideoCharacterReplaceJob to submit the task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Pre-validates a video character replacement task.</p>
+     * 
+     * @param request PrecheckVideoCharacterReplaceJobRequest
+     * @return PrecheckVideoCharacterReplaceJobResponse
+     */
+    public PrecheckVideoCharacterReplaceJobResponse precheckVideoCharacterReplaceJob(PrecheckVideoCharacterReplaceJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.precheckVideoCharacterReplaceJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves media asset information that matches the specified parameters.</p>
      * 
      * @param request SearchMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1415,6 +2009,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scrollToken)) {
@@ -1444,7 +2042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries media assets that match the specified parameters.</p>
+     * <p>Retrieves media asset information that matches the specified parameters.</p>
      * 
      * @param request SearchMediaRequest
      * @return SearchMediaResponse
@@ -1456,7 +2054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an agent asynchronous node.</p>
+     * <p>Submits an asynchronous task for an agent node.</p>
      * 
      * @param request SubmitAgentJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1508,7 +2106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an agent asynchronous node.</p>
+     * <p>Submits an asynchronous task for an agent node.</p>
      * 
      * @param request SubmitAgentJobRequest
      * @return SubmitAgentJobResponse
@@ -1520,7 +2118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an image generation request.</p>
+     * <p>Submits an image generation task.</p>
      * 
      * @param request SubmitImageGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1588,7 +2186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an image generation request.</p>
+     * <p>Submits an image generation task.</p>
      * 
      * @param request SubmitImageGenerationJobRequest
      * @return SubmitImageGenerationJobResponse
@@ -1601,10 +2199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation performs content understanding based on the provided media asset files, such as video URLs. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <p>This API operation performs content understanding based on provided media files, such as video URLs. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a media asset content understanding job.</p>
+     * <p>Submits a media content understanding job.</p>
      * 
      * @param request SubmitMediaComprehensionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1649,10 +2247,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation performs content understanding based on the provided media asset files, such as video URLs. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <p>This API operation performs content understanding based on provided media files, such as video URLs. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a media asset content understanding job.</p>
+     * <p>Submits a media content understanding job.</p>
      * 
      * @param request SubmitMediaComprehensionJobRequest
      * @return SubmitMediaComprehensionJobResponse
@@ -1664,7 +2262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</p>
+     * <p>This API generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits a creative script generation task.</p>
@@ -1707,7 +2305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</p>
+     * <p>This API generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits a creative script generation task.</p>
@@ -1718,6 +2316,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitRemakeScriptJobResponse submitRemakeScriptJob(SubmitRemakeScriptJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitRemakeScriptJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs an asynchronous commit for a video character replacement node. First, call PrecheckVideoCharacterReplaceJob with the same AppId and AppParams to check the input materials.
+     * A returned JobId only indicates that the node has been submitted, not that it has been completed. Use GetVideoCharacterReplaceJob or BatchGetVideoCharacterReplaceJobs to query the status and output results. ProjectId is used to specify a project, and FolderId is used to specify a file folder.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a video character replacement job.</p>
+     * 
+     * @param request SubmitVideoCharacterReplaceJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoCharacterReplaceJobResponse
+     */
+    public SubmitVideoCharacterReplaceJobResponse submitVideoCharacterReplaceJobWithOptions(SubmitVideoCharacterReplaceJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appParams)) {
+            body.put("AppParams", request.appParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
+            body.put("FolderId", request.folderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoCharacterReplaceJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoCharacterReplaceJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs an asynchronous commit for a video character replacement node. First, call PrecheckVideoCharacterReplaceJob with the same AppId and AppParams to check the input materials.
+     * A returned JobId only indicates that the node has been submitted, not that it has been completed. Use GetVideoCharacterReplaceJob or BatchGetVideoCharacterReplaceJobs to query the status and output results. ProjectId is used to specify a project, and FolderId is used to specify a file folder.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a video character replacement job.</p>
+     * 
+     * @param request SubmitVideoCharacterReplaceJobRequest
+     * @return SubmitVideoCharacterReplaceJobResponse
+     */
+    public SubmitVideoCharacterReplaceJobResponse submitVideoCharacterReplaceJob(SubmitVideoCharacterReplaceJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitVideoCharacterReplaceJobWithOptions(request, runtime);
     }
 
     /**
@@ -1798,10 +2460,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</p>
+     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</p>
+     * <p>Submits an asynchronous video text erasure task that supports full-area erasure, time ranges, and specified regions.</p>
      * 
      * @param request SubmitVideoDetextJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1849,10 +2511,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</p>
+     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</p>
+     * <p>Submits an asynchronous video text erasure task that supports full-area erasure, time ranges, and specified regions.</p>
      * 
      * @param request SubmitVideoDetextJobRequest
      * @return SubmitVideoDetextJobResponse
@@ -1951,6 +2613,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Submits the original video and remake information such as new products and characters to asynchronously complete video content understanding and creative script generation. Uses the returned JobId to call GetVideoRemakeJob to query the progress and outputs. Video rendering requires a separate call to SubmitVideoRenderJob.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a content understanding and creative script generation task.</p>
+     * 
+     * @param request SubmitVideoRemakeJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoRemakeJobResponse
+     */
+    public SubmitVideoRemakeJobResponse submitVideoRemakeJobWithOptions(SubmitVideoRemakeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            query.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remakeParams)) {
+            query.put("RemakeParams", request.remakeParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoRemakeJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoRemakeJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Submits the original video and remake information such as new products and characters to asynchronously complete video content understanding and creative script generation. Uses the returned JobId to call GetVideoRemakeJob to query the progress and outputs. Video rendering requires a separate call to SubmitVideoRenderJob.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a content understanding and creative script generation task.</p>
+     * 
+     * @param request SubmitVideoRemakeJobRequest
+     * @return SubmitVideoRemakeJobResponse
+     */
+    public SubmitVideoRemakeJobResponse submitVideoRemakeJob(SubmitVideoRemakeJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitVideoRemakeJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Submits a video rendering and compositing task.</p>
      * 
@@ -2004,10 +2724,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</p>
+     * <p>Submits an asynchronous video translation task. The input supports a media URL or a Yike media asset ID. The task parameters are used to select the source language, target language, and the translation capabilities to be enabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</p>
+     * <p>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle removal, and on-screen text translation.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2067,10 +2787,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</p>
+     * <p>Submits an asynchronous video translation task. The input supports a media URL or a Yike media asset ID. The task parameters are used to select the source language, target language, and the translation capabilities to be enabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</p>
+     * <p>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle removal, and on-screen text translation.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @return SubmitVideoTranslationJobResponse
@@ -2082,7 +2802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</p>
+     * <p>After you create a media asset category, you can call this operation to update the name of the category by specifying its ID.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a media asset category.</p>
@@ -2121,7 +2841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</p>
+     * <p>After you create a media asset category, you can call this operation to update the name of the category by specifying its ID.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a media asset category.</p>
@@ -2136,8 +2856,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the information of an infinite canvas.</p>
@@ -2180,8 +2900,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the information of an infinite canvas.</p>
@@ -2196,8 +2916,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation is used to query media content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates media asset information.</p>
@@ -2272,8 +2992,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation is used to query media content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates media asset information.</p>
@@ -2284,5 +3004,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateMediaResponse updateMedia(UpdateMediaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateMediaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the name of a project based on the ProjectId and uses Title to specify the new name. This operation only supports modifying the name and does not support modifying the description or cover image. The caller must have edit permissions for the project.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name of a project.</p>
+     * 
+     * @param request UpdateProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateProjectResponse
+     */
+    public UpdateProjectResponse updateProjectWithOptions(UpdateProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateProject"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the name of a project based on the ProjectId and uses Title to specify the new name. This operation only supports modifying the name and does not support modifying the description or cover image. The caller must have edit permissions for the project.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name of a project.</p>
+     * 
+     * @param request UpdateProjectRequest
+     * @return UpdateProjectResponse
+     */
+    public UpdateProjectResponse updateProject(UpdateProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateProjectWithOptions(request, runtime);
     }
 }

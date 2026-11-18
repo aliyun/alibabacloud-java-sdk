@@ -56,7 +56,7 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
 
     public static class GetYikeAccountCreditResponseBodyCreditInfo extends TeaModel {
         /**
-         * <p>The total granted credits.</p>
+         * <p>The total granted credit quota.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -65,7 +65,7 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
         public Double grantedCreditQuota;
 
         /**
-         * <p>The remaining granted credits.</p>
+         * <p>The granted credit balance.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -74,7 +74,7 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
         public Double grantedCreditQuotaUsage;
 
         /**
-         * <p>The total credits of the booster pack.</p>
+         * <p>The total credit quota of the top-up package.</p>
          * 
          * <strong>example:</strong>
          * <p>20000</p>
@@ -83,7 +83,7 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
         public Double packCreditQuota;
 
         /**
-         * <p>The remaining credits of the booster pack.</p>
+         * <p>The credit balance of the top-up package.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -92,7 +92,7 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
         public Double packCreditQuotaUsage;
 
         /**
-         * <p>The total credits of the membership plan.</p>
+         * <p>The total credit quota of the membership plan.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -101,7 +101,7 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
         public Double resourceCreditQuota;
 
         /**
-         * <p>The remaining credits of the membership plan.</p>
+         * <p>The credit balance of the membership plan.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -177,10 +177,10 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
         /**
          * <p>The membership level. Valid values:</p>
          * <ul>
-         * <li>basic: Basic Edition.</li>
-         * <li>standard: Standard Edition.</li>
-         * <li>professional: Ultimate Edition.</li>
-         * <li>ultra: Ultra Edition.</li>
+         * <li>basic: Basic Edition</li>
+         * <li>standard: Standard Edition</li>
+         * <li>professional: Ultimate Edition</li>
+         * <li>ultra: Supreme Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>

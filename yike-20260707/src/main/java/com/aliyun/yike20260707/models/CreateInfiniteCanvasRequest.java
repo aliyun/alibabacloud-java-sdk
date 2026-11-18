@@ -14,13 +14,22 @@ public class CreateInfiniteCanvasRequest extends TeaModel {
     public String coverUrl;
 
     /**
-     * <p>The project ID.</p>
+     * <p>The project ID. <strong>[Deprecated]</strong> Use ProjectId instead.</p>
      * 
      * <strong>example:</strong>
      * <p>pd_061716****</p>
      */
     @NameInMap("ProductionId")
     public String productionId;
+
+    /**
+     * <p>The project ID. This field takes precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pd_061716****</p>
+     */
+    @NameInMap("ProjectId")
+    public String projectId;
 
     /**
      * <p>The project title.</p>
@@ -60,6 +69,14 @@ public class CreateInfiniteCanvasRequest extends TeaModel {
     }
     public String getProductionId() {
         return this.productionId;
+    }
+
+    public CreateInfiniteCanvasRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
     public CreateInfiniteCanvasRequest setTitle(String title) {

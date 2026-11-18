@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentJobRequest extends TeaModel {
     /**
-     * <p>The task ID.</p>
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

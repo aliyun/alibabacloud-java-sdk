@@ -5,27 +5,49 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaComprehensionJobRequest extends TeaModel {
     /**
-     * <p>The input material. It is a JSON string with the following structure:</p>
+     * <p>The input media. The value is a JSON string with the following structure:</p>
      * <ul>
-     * <li>Medias (Array<Object>, required): The list of media assets. It contains 1 to 10 elements. Each element includes the following fields:<ul>
-     * <li>Type (String, required): The type of the media asset. Valid values: video and image. The value is not case-sensitive.</li>
-     * <li>Url (String, mutually exclusive with MediaId): The URL of the media asset. It must start with http:// or https:// and be up to 2,048 characters in length. Unregistered URLs are automatically registered as media assets.</li>
-     * <li>MediaId (String, mutually exclusive with Url): The ID of the registered media asset. If both Url and MediaId are specified, MediaId takes precedence.</li>
+     * <li>Medias (Array<Object>, required): The list of media files. The array must contain 1 to 10 elements. Each element contains the following fields:<ul>
+     * <li>Type (String, required): The media type. Valid values: video and image. The value is not case-sensitive.</li>
+     * <li>Url (String, mutually exclusive with MediaId): The URL of the media file. The URL must start with http:// or https:// and be up to 2,048 characters in length. Unregistered URLs are automatically registered as media files.</li>
+     * <li>MediaId (String, mutually exclusive with Url): The ID of the registered media file. If both Url and MediaId are specified, MediaId takes precedence.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Medias&quot;:[{&quot;Type&quot;:&quot;video&quot;,&quot;Url&quot;:&quot;<a href="https://xxx.mp4%22%7D%5D%7D">https://xxx.mp4&quot;}]}</a></p>
+     * <p>{
+     *   &quot;Medias&quot;: [
+     *     {
+     *       &quot;Type&quot;: &quot;video&quot;,
+     *       &quot;Url&quot;: &quot;<a href="https://example.com/source.mp4">https://example.com/source.mp4</a>&quot;
+     *     }
+     *   ]
+     * }</p>
      */
     @NameInMap("Input")
     public String input;
 
     /**
-     * <p>The analysis parameters. It is a JSON string with a maximum length of 65,536 characters and a maximum of 20 fields.</p>
+     * <p>The analysis parameters. The value is a JSON string up to 65,536 characters in length.</p>
+     * <ul>
+     * <li>VideoBreakdown: Supports the ResultType parameter (String, optional). Valid value: Standard (default).</li>
+     * <li>ProductRecognition: Uses parameters such as product information and prompts. The total number of fields cannot exceed 20. Example fields for product parameters include ProductName, BrandName, and SellingPoints.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;ProductName&quot;:&quot;Quiet Blender Soymilk Maker&quot;,&quot;BrandName&quot;:&quot;LiangChu&quot;,&quot;SellingPoints&quot;:[&quot;Low-noise blending&quot;,&quot;One-touch self-cleaning&quot;]}</p>
+     * <p>{
+     *   &quot;ResultType&quot;: &quot;Standard&quot;
+     * }
+     * or
+     * {
+     *   &quot;ProductName&quot;: &quot;Quiet Blender Soymilk Maker&quot;,
+     *   &quot;BrandName&quot;: &quot;LiangChu&quot;,
+     *   &quot;SellingPoints&quot;: [
+     *     &quot;Low-noise blending&quot;,
+     *     &quot;One-touch self-cleaning&quot;
+     *   ]
+     * }</p>
      */
     @NameInMap("JobParams")
     public String jobParams;
@@ -33,8 +55,8 @@ public class SubmitMediaComprehensionJobRequest extends TeaModel {
     /**
      * <p>The job type. Valid values:</p>
      * <ul>
-     * <li>VideoBreakdown: viral video breakdown. The Medias array must contain exactly one element with Type set to video.</li>
-     * <li>ProductRecognition: product image information recognition. All elements in the Medias array must have Type set to image.</li>
+     * <li>VideoBreakdown: Viral video breakdown. The Medias array must contain exactly one element with Type set to video.</li>
+     * <li>ProductRecognition: Product image information recognition. All elements in the Medias array must have Type set to image.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,10 +66,12 @@ public class SubmitMediaComprehensionJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The custom parameters. It is a JSON string that is returned as-is in the callback result, such as newsKey. NotifyAddress is a system-reserved field for the callback URL. A callback is triggered to this URL after the job is completed.</p>
+     * <p>The custom parameters. The value is a JSON string. The custom parameters are returned as-is in the callback result (for example, newsKey). NotifyAddress is a system-reserved field for the callback URL. A callback is triggered after the job is completed.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
+     * <p>{
+     *   &quot;NotifyAddress&quot;: &quot;<a href="https://example.com/callback">https://example.com/callback</a>&quot;
+     * }</p>
      */
     @NameInMap("UserData")
     public String userData;

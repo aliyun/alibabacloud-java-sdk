@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaComprehensionJobResponseBody extends TeaModel {
     /**
-     * <p>The business error code. It is an empty string if the submission is successful.</p>
+     * <p>The business error code. This parameter is an empty string if the job is submitted successfully.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>

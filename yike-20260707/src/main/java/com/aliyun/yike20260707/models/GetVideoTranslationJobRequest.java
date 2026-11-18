@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVideoTranslationJobRequest extends TeaModel {
     /**
-     * <p>The video translation job ID returned by SubmitVideoTranslationJob.</p>
+     * <p>The ID of the video translation job returned by SubmitVideoTranslationJob.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

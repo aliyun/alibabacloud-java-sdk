@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateAssetCategoryRequest extends TeaModel {
     /**
-     * <p>The category name.</p>
-     * <p>Maximum length: 64 bytes.</p>
-     * <p>UTF-8 encoding.</p>
+     * <p>The name of the category.</p>
+     * <p>The name can be up to 64 bytes in length.</p>
+     * <p>The name must be encoded in UTF-8.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateAssetCategoryRequest extends TeaModel {
     public String categoryName;
 
     /**
-     * <p>The parent category ID.</p>
+     * <p>The ID of the parent category.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

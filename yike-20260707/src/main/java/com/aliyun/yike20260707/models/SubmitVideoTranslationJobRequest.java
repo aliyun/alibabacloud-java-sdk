@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoTranslationJobRequest extends TeaModel {
     /**
-     * <p>The user-level idempotency token, which can be up to 40 characters in length. If the same user submits the request repeatedly with the same token, the original task is returned.</p>
+     * <p>The user-level idempotency token, which can be up to 40 characters in length. If the same user repeatedly submits a request with the same token, the original task is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>vt-client-20260820-001</p>
@@ -33,7 +33,7 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String input;
 
     /**
-     * <p>The job parameters JSON string. It must include at least SourceLanguage and TargetLanguage. You can also configure primary subtitle erasure, voice translation, on-screen text translation, and final editing.</p>
+     * <p>The job parameters JSON string. It must include at least SourceLanguage and TargetLanguage. You can also configure primary subtitle removal, voice translation, on-screen text translation, lip sync, and final editing.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The output configuration JSON string. OssUri is the optional customer OSS output directory. If OssUri is not specified, a signed URL for the service-owned output is returned.</p>
+     * <p>The output configuration JSON string. OssUri is the optional OSS output directory for the customer. If OssUri is not specified, a signed URL for the service-owned output is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;OssUri&quot;:&quot;oss://example-bucket/video-translation/output/&quot;}</p>
@@ -65,13 +65,13 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
      * <p>The job title. If not specified, the service generates a default title.</p>
      * 
      * <strong>example:</strong>
-     * <p>English translation of product introduction video</p>
+     * <p>Product introduction video English translation</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
-     * <p>The user-defined data JSON string. When specifying an MNS queue to receive asynchronous notifications, set <code>NotifyAddress</code> to the pure queue name starting with <code>yike-callback-</code> instead of the full queue URL. You can optionally set <code>NotifyMnsEndpoint</code> to the MNS endpoint of the task account.</p>
+     * <p>The user-defined data JSON string. When specifying a Message Service (MNS) queue to receive asynchronous notifications, set NotifyAddress to the pure queue name starting with yike-callback- instead of the full queue URL. You can optionally set NotifyMnsEndpoint to the MNS endpoint of the task account.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;NotifyAddress&quot;:&quot;yike-callback-test&quot;,&quot;NotifyMnsEndpoint&quot;:&quot;<a href="https://1234567890123456.mns.cn-shanghai.aliyuncs.com%22%7D">https://1234567890123456.mns.cn-shanghai.aliyuncs.com&quot;}</a></p>

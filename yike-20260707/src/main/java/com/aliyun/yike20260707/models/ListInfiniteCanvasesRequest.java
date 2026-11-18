@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInfiniteCanvasesRequest extends TeaModel {
     /**
-     * <p>The keyword used to query site monitoring tasks. Note: Fuzzy match is supported based on the task name or task address.</p>
+     * <p>The keyword used to query site monitoring tasks. Note: Fuzzy match is supported based on the task name or task URL.</p>
      * 
      * <strong>example:</strong>
      * <p>v2_</p>
@@ -41,7 +41,7 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     public String productionId;
 
     /**
-     * <p>The sort field and sort order. Separate multiple values with commas (,).</p>
+     * <p>The sort fields and sort orders. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>utcCreate:Desc</p>
@@ -50,10 +50,11 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The sort direction. Valid values:</p>
+     * <p>The sort direction.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>Asc: ascending order</li>
-     * <li>Desc: descending order</li>
+     * <li>Asc: Ascending order.</li>
+     * <li>Desc: Descending order.</li>
      * </ul>
      * <p>Default value: Desc.</p>
      * 
