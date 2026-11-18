@@ -23177,10 +23177,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a later edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes multiple upstream dependencies from a node instance in a single call.</p>
+     * <p>Removes multiple upstream dependencies of a node instance.</p>
      * 
      * @param tmpReq RemoveTaskInstanceDependenciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23228,10 +23228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a later edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes multiple upstream dependencies from a node instance in a single call.</p>
+     * <p>Removes multiple upstream dependencies of a node instance.</p>
      * 
      * @param request RemoveTaskInstanceDependenciesRequest
      * @return RemoveTaskInstanceDependenciesResponse
@@ -23673,10 +23673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>DataWorks Basic Edition or later is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resumes multiple paused task instances.</p>
+     * <p>Resumes multiple paused node instances.</p>
      * 
      * @param tmpReq ResumeTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23718,10 +23718,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>DataWorks Basic Edition or later is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resumes multiple paused task instances.</p>
+     * <p>Resumes multiple paused node instances.</p>
      * 
      * @param request ResumeTaskInstancesRequest
      * @return ResumeTaskInstancesResponse

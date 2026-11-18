@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeTaskInstancesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17****</p>
@@ -14,7 +14,7 @@ public class ResumeTaskInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The results of the batch operation. The results are returned as a map where the keys are task instance IDs and the values are the result details.</p>
+     * <p>The results of the batch operation. The results are returned as a map where the keys are node instance IDs and the values are the result details.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;10001&quot;: {&quot;Success&quot;: false, &quot;Message&quot;: &quot;The instance does not exist.&quot;}}</p>

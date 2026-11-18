@@ -24,7 +24,7 @@ public class RemoveTaskInstanceDependenciesRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The list of upstream node instance IDs.</p>
+     * <p>The upstream node instance IDs.</p>
      */
     @NameInMap("UpstreamTaskInstanceIds")
     public java.util.List<Long> upstreamTaskInstanceIds;

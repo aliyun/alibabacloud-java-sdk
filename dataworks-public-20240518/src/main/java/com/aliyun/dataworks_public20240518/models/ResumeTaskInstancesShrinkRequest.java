@@ -14,7 +14,7 @@ public class ResumeTaskInstancesShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The list of task instance IDs.</p>
+     * <p>The list of node instance IDs.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
