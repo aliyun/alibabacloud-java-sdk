@@ -15,7 +15,7 @@ public class UpdateCalendarRequest extends TeaModel {
     public String calendarName;
 
     /**
-     * <p>A client-generated token that ensures request idempotence. This token must be unique for each request and be no more than 64 ASCII characters long.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>D0DE9C33-992A-580B-89C4-B609A292748D</p>
@@ -34,12 +34,10 @@ public class UpdateCalendarRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to perform an incremental update. Default value: <code>false</code>.</p>
+     * <p>Specifies whether the update is incremental. Default value: false. Valid values:</p>
      * <ul>
-     * <li><p><code>false</code>: Replaces all existing calendar data with the data in this request, deleting configurations for any unspecified months.</p>
-     * </li>
-     * <li><p><code>true</code>: Updates only the data for the specified months, preserving existing configurations for all other months.</p>
-     * </li>
+     * <li>false: Updates the data for the specified months and deletes the configurations for other months.</li>
+     * <li>true: Updates only the data for the specified months and retains the existing configurations for other months.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +47,7 @@ public class UpdateCalendarRequest extends TeaModel {
     public Boolean incremental;
 
     /**
-     * <p>A JSON string that defines the days for one or more months.</p>
+     * <p>The months.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

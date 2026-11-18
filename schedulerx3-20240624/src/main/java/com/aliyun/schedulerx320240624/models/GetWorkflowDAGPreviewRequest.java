@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkflowDAGPreviewRequest extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetWorkflowDAGPreviewRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The unique identifier for the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetWorkflowDAGPreviewRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The version of the workflow DAG.</p>
+     * <p>The version number of the workflow DAG.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class GetWorkflowDAGPreviewRequest extends TeaModel {
     public String dagVersion;
 
     /**
-     * <p>The unique identifier for the workflow.</p>
+     * <p>The workflow ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

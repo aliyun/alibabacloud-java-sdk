@@ -15,7 +15,7 @@ public class ListScheduleTimesRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The name of the calendar to use for scheduling, such as a business day calendar.</p>
+     * <p>The calendar.</p>
      * 
      * <strong>example:</strong>
      * <p>workday</p>
@@ -34,7 +34,7 @@ public class ListScheduleTimesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The time expression, such as a cron expression.</p>
+     * <p>The time expression. For cron scheduling, use the Quartz cron format (second minute hour day-of-month month day-of-week).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,9 +44,9 @@ public class ListScheduleTimesRequest extends TeaModel {
     public String timeExpression;
 
     /**
-     * <p>The time type. The only supported type is cron.</p>
+     * <p>The time type. Currently, only cron is supported. Valid values:</p>
      * <ul>
-     * <li>1: cron</li>
+     * <li>1: cron.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -57,7 +57,7 @@ public class ListScheduleTimesRequest extends TeaModel {
     public Integer timeType;
 
     /**
-     * <p>The time zone used to evaluate the time expression.</p>
+     * <p>The time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>Asia/Beijing</p>

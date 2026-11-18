@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDatasourceResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteDatasourceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
@@ -23,7 +23,7 @@ public class DeleteDatasourceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CF99C381-C8F6-5A8D-8C24-57F46B706D2D</p>
@@ -32,10 +32,10 @@ public class DeleteDatasourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the invocation succeeded.  </p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: The invocation succeeded.  </li>
-     * <li>false: The invocation failed.</li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

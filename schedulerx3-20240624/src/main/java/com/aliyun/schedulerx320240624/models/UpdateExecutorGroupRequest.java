@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateExecutorGroupRequest extends TeaModel {
     /**
+     * <p>The client secret.</p>
+     * 
      * <strong>example:</strong>
      * <p>K4KWGINZVY9JwcZT0/vpSg==</p>
      */
@@ -12,16 +14,22 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The authentication type.</p>
+     * 
      * <strong>example:</strong>
      * <p>APP</p>
      */
     @NameInMap("AuthType")
     public String authType;
 
+    /**
+     * <p>Specifies whether to enable auto scaling.</p>
+     */
     @NameInMap("AutoScale")
     public Boolean autoScale;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,10 +38,15 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The CMS workspace ID.</p>
+     */
     @NameInMap("CmsWorkspaceId")
     public String cmsWorkspaceId;
 
     /**
+     * <p>The description of the executor group.</p>
+     * 
      * <strong>example:</strong>
      * <p>group1</p>
      */
@@ -41,6 +54,7 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,10 +64,18 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     @Deprecated
     public String id;
 
+    /**
+     * <p>The name of the executor group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group1</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The network configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>public</p>
      */
@@ -61,6 +83,8 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     public String network;
 
     /**
+     * <p>The protocol.</p>
+     * 
      * <strong>example:</strong>
      * <p>openai</p>
      */
@@ -68,6 +92,8 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The executor type.</p>
+     * 
      * <strong>example:</strong>
      * <p>openclaw</p>
      */
@@ -75,12 +101,20 @@ public class UpdateExecutorGroupRequest extends TeaModel {
     public String workerType;
 
     /**
+     * <p>The list of specified machines in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;address&quot;:&quot;<a href="http://47.111.188.191:18789%22%7D%5D">http://47.111.188.191:18789&quot;}]</a></p>
      */
     @NameInMap("Workers")
     public String workers;
 
+    /**
+     * <p>The extended configuration of the executor group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Not publicly available</p>
+     */
     @NameInMap("XAttrs")
     public String XAttrs;
 

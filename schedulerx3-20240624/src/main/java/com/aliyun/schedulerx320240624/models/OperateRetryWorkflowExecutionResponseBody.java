@@ -23,7 +23,7 @@ public class OperateRetryWorkflowExecutionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
@@ -32,12 +32,10 @@ public class OperateRetryWorkflowExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The call succeeded.</p>
-     * </li>
-     * <li><p>false: The call failed.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

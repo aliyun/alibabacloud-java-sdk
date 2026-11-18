@@ -15,7 +15,7 @@ public class UpdateExecutorsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateExecutorsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The Worker type.</p>
+     * <p>The executor type.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s_service</p>
@@ -34,7 +34,7 @@ public class UpdateExecutorsRequest extends TeaModel {
     public String workerType;
 
     /**
-     * <p>A JSON-formatted string that contains a list of Workers.</p>
+     * <p>The list of specified machines in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>

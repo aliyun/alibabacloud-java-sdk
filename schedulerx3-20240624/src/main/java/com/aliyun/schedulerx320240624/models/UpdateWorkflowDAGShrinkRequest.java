@@ -25,14 +25,14 @@ public class UpdateWorkflowDAGShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The directed acyclic graph (DAG) of the workflow.</p>
+     * <p>The workflow DAG information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Dag")
     public String dagShrink;
 
     /**
-     * <p>The version of the DAG. To obtain this value, call the <a href="https://help.aliyun.com/document_detail/465989.html">ListDAGVersions</a> operation.</p>
+     * <p>The workflow version number. You can call the <a href="https://help.aliyun.com/document_detail/465989.html">ListDAGVersions</a> operation to obtain the value of this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1137005</p>

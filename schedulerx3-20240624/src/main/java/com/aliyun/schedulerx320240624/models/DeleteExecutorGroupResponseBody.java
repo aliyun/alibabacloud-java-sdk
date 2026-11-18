@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteExecutorGroupResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteExecutorGroupResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -19,6 +23,8 @@ public class DeleteExecutorGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
      */
@@ -26,6 +32,12 @@ public class DeleteExecutorGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful.</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

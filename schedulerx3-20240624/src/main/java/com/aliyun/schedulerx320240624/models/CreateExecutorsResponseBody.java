@@ -14,13 +14,13 @@ public class CreateExecutorsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public CreateExecutorsResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
@@ -29,7 +29,7 @@ public class CreateExecutorsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F131C3E0-3FAA-5FA4-A6F3-E974D69EF3C5</p>
@@ -38,12 +38,10 @@ public class CreateExecutorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request succeeded.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +97,7 @@ public class CreateExecutorsResponseBody extends TeaModel {
 
     public static class CreateExecutorsResponseBodyData extends TeaModel {
         /**
-         * <p>The App Group ID.</p>
+         * <p>The task group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test-app</p>
@@ -117,7 +115,7 @@ public class CreateExecutorsResponseBody extends TeaModel {
         public Integer appType;
 
         /**
-         * <p>A list of Kubernetes Services that failed to import.</p>
+         * <p>The Kubernetes services that failed to be imported.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
@@ -126,7 +124,7 @@ public class CreateExecutorsResponseBody extends TeaModel {
         public String failedService;
 
         /**
-         * <p>The ID of the worker. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2712224.html">ListWorkerResource</a> operation.</p>
+         * <p>The worker ID of the deployment task. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2712224.html">ListWorkerResource</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>ins-95mfvqrtg6fkijt1uko000</p>
@@ -135,7 +133,7 @@ public class CreateExecutorsResponseBody extends TeaModel {
         public Long workerId;
 
         /**
-         * <p>The worker type.</p>
+         * <p>The executor type.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s_service</p>
@@ -144,7 +142,7 @@ public class CreateExecutorsResponseBody extends TeaModel {
         public String workerType;
 
         /**
-         * <p>A JSON string that represents the list of imported workers.</p>
+         * <p>The list of specified machines in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>

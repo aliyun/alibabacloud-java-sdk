@@ -32,7 +32,7 @@ public class GetJobExecutionThreadDumpRequest extends TeaModel {
     public String executorAddr;
 
     /**
-     * <p>The job execution ID.</p>
+     * <p>The task execution ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1310630367761285120</p>

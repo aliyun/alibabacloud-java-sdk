@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportAgentJobsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ImportAgentJobsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The detailed information.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -19,6 +23,8 @@ public class ImportAgentJobsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</p>
      */
@@ -26,6 +32,12 @@ public class ImportAgentJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateHoldWorkflowExecutionRequest extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class OperateHoldWorkflowExecutionRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class OperateHoldWorkflowExecutionRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the Workflow Execution.</p>
+     * <p>The workflow instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

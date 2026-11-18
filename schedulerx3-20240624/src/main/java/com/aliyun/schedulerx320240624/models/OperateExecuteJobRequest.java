@@ -4,6 +4,12 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class OperateExecuteJobRequest extends TeaModel {
+    /**
+     * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1625</p>
+     */
     @NameInMap("AppGroupId")
     public Long appGroupId;
 
@@ -37,7 +43,7 @@ public class OperateExecuteJobRequest extends TeaModel {
     public String instanceParameters;
 
     /**
-     * <p>The node ID.</p>
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +62,7 @@ public class OperateExecuteJobRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The workerAddr of the specified machine.</p>
+     * <p>The worker address of the specified machine.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://192.168.***.5:9999/">http://192.168.***.5:9999/</a></p>

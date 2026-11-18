@@ -15,7 +15,7 @@ public class ImportCalendarRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The days of each month, in JSON format.</p>
+     * <p>The month.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateExecutorGroupRequest extends TeaModel {
     /**
+     * <p>The client secret.</p>
+     * 
      * <strong>example:</strong>
      * <p>HfGUG/Qf8qRCCWlv5RT6WA==</p>
      */
@@ -12,16 +14,22 @@ public class CreateExecutorGroupRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The authentication type.</p>
+     * 
      * <strong>example:</strong>
      * <p>api_key</p>
      */
     @NameInMap("AuthType")
     public String authType;
 
+    /**
+     * <p>The auto scaling configuration.</p>
+     */
     @NameInMap("AutoScale")
     public Boolean autoScale;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,20 +38,32 @@ public class CreateExecutorGroupRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The CloudMonitor Service (CMS) workspace ID.</p>
+     */
     @NameInMap("CmsWorkspaceId")
     public String cmsWorkspaceId;
 
     /**
+     * <p>The description of the worker group.</p>
+     * 
      * <strong>example:</strong>
      * <p>group1</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The integration method of the executor. Valid values: manual (indicates manual entry) and acs (indicates ACS integration).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>manual</p>
+     */
     @NameInMap("IntegrationType")
     public String integrationType;
 
     /**
+     * <p>The name of the worker group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +73,8 @@ public class CreateExecutorGroupRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The network type. Valid values: public and private.</p>
+     * 
      * <strong>example:</strong>
      * <p>public</p>
      */
@@ -60,6 +82,19 @@ public class CreateExecutorGroupRequest extends TeaModel {
     public String network;
 
     /**
+     * <p>The backend protocol. Valid values:</p>
+     * <ul>
+     * <li><p><strong>HTTP</strong> (default): Supports association with HTTPS, HTTP, and QUIC listeners.</p>
+     * </li>
+     * <li><p><strong>HTTPS</strong>: Supports association with HTTPS listeners.</p>
+     * </li>
+     * <li><p><strong>gRPC</strong>: Supports association with HTTPS and QUIC listeners.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If <strong>ServerGroupType</strong> is set to <strong>Fc</strong>, you do not need to configure the backend protocol.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>HTTPS</p>
      */
@@ -67,6 +102,7 @@ public class CreateExecutorGroupRequest extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The worker type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,6 +112,7 @@ public class CreateExecutorGroupRequest extends TeaModel {
     public String workerType;
 
     /**
+     * <p>The list of workers in JSON format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +121,12 @@ public class CreateExecutorGroupRequest extends TeaModel {
     @NameInMap("Workers")
     public String workers;
 
+    /**
+     * <p>The extended configuration of the executor group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Not publicly available</p>
+     */
     @NameInMap("XAttrs")
     public String XAttrs;
 

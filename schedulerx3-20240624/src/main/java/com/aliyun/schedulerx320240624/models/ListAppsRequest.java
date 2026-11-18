@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAppsRequest extends TeaModel {
     /**
      * <p>The application name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-app</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -13,6 +16,9 @@ public class ListAppsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxljob-b6ec1xxxx</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -30,13 +36,16 @@ public class ListAppsRequest extends TeaModel {
      * <p>The page size.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test application</p>
      */
     @NameInMap("Title")
     public String title;

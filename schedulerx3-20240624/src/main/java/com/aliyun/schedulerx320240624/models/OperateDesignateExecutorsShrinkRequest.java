@@ -11,6 +11,12 @@ public class OperateDesignateExecutorsShrinkRequest extends TeaModel {
     @NameInMap("AddressList")
     public String addressListShrink;
 
+    /**
+     * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1625</p>
+     */
     @NameInMap("AppGroupId")
     public Long appGroupId;
 
@@ -35,10 +41,10 @@ public class OperateDesignateExecutorsShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the designated machine. Valid values:</p>
+     * <p>The type of machine to designate. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: designated worker.</li>
-     * <li><strong>2</strong>: designated label.</li>
+     * <li><strong>1</strong>: Designates a worker.</li>
+     * <li><strong>2</strong>: Designates a label.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +55,7 @@ public class OperateDesignateExecutorsShrinkRequest extends TeaModel {
     public Integer designateType;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +65,7 @@ public class OperateDesignateExecutorsShrinkRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>Specifies whether to enable failover.</p>
+     * <p>Specifies whether failover is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

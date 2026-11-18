@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateUnholdJobExecutionRequest extends TeaModel {
     /**
-     * <p>The Application name.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class OperateUnholdJobExecutionRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class OperateUnholdJobExecutionRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The Job Execution ID.</p>
+     * <p>The job execution ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1310630367761285120</p>

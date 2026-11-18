@@ -9,7 +9,7 @@ public class UpdateClusterRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxljob-c20f7ec9a78</p>
+     * <p>xxljob-b6ec1xxxx</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -18,12 +18,14 @@ public class UpdateClusterRequest extends TeaModel {
      * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
-     * <p>xx-test-1107</p>
+     * <p>qianxi-test-0812</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
+     * <p>The instance-level IP whitelist.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.1.0/24</p>
      */

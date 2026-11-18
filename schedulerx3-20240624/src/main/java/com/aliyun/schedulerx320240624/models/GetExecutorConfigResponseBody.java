@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetExecutorConfigResponseBody extends TeaModel {
     /**
-     * <p>The status code returned for the request.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetExecutorConfigResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The configuration data for the Executor.</p>
+     * <p>The query result.</p>
      */
     @NameInMap("Data")
     public GetExecutorConfigResponseBodyData data;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>not support query script history, please upgrade engine version to 2.2.2+</p>
@@ -29,7 +29,7 @@ public class GetExecutorConfigResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>39938688-0BAB-5AD8-BF02-F4910FAC7589</p>
@@ -93,37 +93,25 @@ public class GetExecutorConfigResponseBody extends TeaModel {
 
     public static class GetExecutorConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The default global configuration for Data Integration tasks. This configuration specifies the default handling policies for different types of DDL messages. Example:
-         * <code>{&quot;RENAMECOLUMN&quot;:&quot;WARNING&quot;,&quot;DROPTABLE&quot;:&quot;WARNING&quot;,&quot;CREATETABLE&quot;:&quot;WARNING&quot;,&quot;MODIFYCOLUMN&quot;:&quot;WARNING&quot;,&quot;TRUNCATETABLE&quot;:&quot;WARNING&quot;,&quot;DROPCOLUMN&quot;:&quot;WARNING&quot;,&quot;ADDCOLUMN&quot;:&quot;WARNING&quot;,&quot;RENAMETABLE&quot;:&quot;WARNING&quot;}</code></p>
-         * <p>The DDL message types are as follows:</p>
+         * <p>The default global configuration content for the Data Integration synchronization Solutions node, which specifies the default processing policy for different DDL message types. Example:
+         * {&quot;RENAMECOLUMN&quot;:&quot;WARNING&quot;,&quot;DROPTABLE&quot;:&quot;WARNING&quot;,&quot;CREATETABLE&quot;:&quot;WARNING&quot;,&quot;MODIFYCOLUMN&quot;:&quot;WARNING&quot;,&quot;TRUNCATETABLE&quot;:&quot;WARNING&quot;,&quot;DROPCOLUMN&quot;:&quot;WARNING&quot;,&quot;ADDCOLUMN&quot;:&quot;WARNING&quot;,&quot;RENAMETABLE&quot;:&quot;WARNING&quot;}</p>
+         * <p>DDL message types:</p>
          * <ul>
-         * <li><p>RENAMECOLUMN: <code>RENAME COLUMN</code></p>
-         * </li>
-         * <li><p>DROPTABLE: <code>DROP TABLE</code></p>
-         * </li>
-         * <li><p>CREATETABLE: <code>CREATE TABLE</code></p>
-         * </li>
-         * <li><p>MODIFYCOLUMN: <code>MODIFY COLUMN</code></p>
-         * </li>
-         * <li><p>TRUNCATETABLE: <code>TRUNCATE TABLE</code></p>
-         * </li>
-         * <li><p>DROPCOLUMN: <code>DROP COLUMN</code></p>
-         * </li>
-         * <li><p>ADDCOLUMN: <code>ADD COLUMN</code></p>
-         * </li>
-         * <li><p>RENAMETABLE: <code>RENAME TABLE</code></p>
-         * </li>
+         * <li>RENAMECOLUMN: Rename a column.</li>
+         * <li>DROPTABLE: Delete a table.</li>
+         * <li>CREATETABLE: Create a table.</li>
+         * <li>MODIFYCOLUMN: Modify a column type.</li>
+         * <li>TRUNCATETABLE: Truncate a table.</li>
+         * <li>DROPCOLUMN: Delete a column.</li>
+         * <li>ADDCOLUMN: Add a column.</li>
+         * <li>RENAMETABLE: Rename a table.</li>
          * </ul>
-         * <p>When DataWorks receives a DDL message, it applies one of the following handling policies:</p>
+         * <p>When DataWorks receives a DDL message of the corresponding type, the processing policy is as follows:</p>
          * <ul>
-         * <li><p>WARNING: Discards the message and logs a warning in the Real-time Synchronization Task log.</p>
-         * </li>
-         * <li><p>IGNORE: Discards the message without sending it to the Destination Data Source.</p>
-         * </li>
-         * <li><p>CRITICAL: Causes the Real-time Synchronization Task to fail.</p>
-         * </li>
-         * <li><p>NORMAL: Forwards the message to the Destination Data Source. Because handling of DDL messages can vary by Destination Data Source, DataWorks only forwards the message.</p>
-         * </li>
+         * <li>WARNING: Discard the message directly and record alerting information in the real-time synchronization log, indicating that the message was discarded due to an execute error.</li>
+         * <li>IGNORE: Discard the message directly without sending it to the destination data source.</li>
+         * <li>CRITICAL: Set the real-time synchronization node to the error state and stop the node.</li>
+         * <li>NORMAL: Forward the message to the destination data source for processing. Because different destination data sources may have a different processing policy for DDL messages, DataWorks only forwards the message.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +121,7 @@ public class GetExecutorConfigResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The type of the Executor.</p>
+         * <p>The executor type.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s_service</p>

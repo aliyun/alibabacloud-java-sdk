@@ -25,7 +25,7 @@ public class UpdateWorkflowDAGVersionRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The Workflow DAG version.</p>
+     * <p>The workflow DAG version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpdateWorkflowDAGVersionRequest extends TeaModel {
     public String dagVersion;
 
     /**
-     * <p>The Workflow ID.</p>
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

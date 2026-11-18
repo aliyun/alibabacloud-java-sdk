@@ -24,7 +24,7 @@ public class ListJobExecutionsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-11-12 20:50:56</p>
@@ -78,7 +78,7 @@ public class ListJobExecutionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-11-12 20:50:55</p>

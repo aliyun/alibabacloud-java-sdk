@@ -4,6 +4,12 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class OperateRerunJobRequest extends TeaModel {
+    /**
+     * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1625</p>
+     */
     @NameInMap("AppId")
     public Long appId;
 
@@ -28,7 +34,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The data timestamp.</p>
+     * <p>The data timestamp, in the HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +44,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public String dataTime;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time, specified as a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +54,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public Long endDate;
 
     /**
-     * <p>The node ID.</p>
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +64,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time, specified as a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

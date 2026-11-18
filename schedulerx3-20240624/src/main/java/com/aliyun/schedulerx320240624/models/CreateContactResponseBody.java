@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateContactResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public CreateContactResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
      */
@@ -22,6 +29,8 @@ public class CreateContactResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</p>
      */
@@ -29,6 +38,12 @@ public class CreateContactResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,7 +97,7 @@ public class CreateContactResponseBody extends TeaModel {
 
     public static class CreateContactResponseBodyData extends TeaModel {
         /**
-         * <p>新建联系人的 id，后续 Update/Delete 时使用</p>
+         * <p>The contact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>

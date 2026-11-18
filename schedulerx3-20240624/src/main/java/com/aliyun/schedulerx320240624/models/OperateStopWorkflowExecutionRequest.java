@@ -25,7 +25,7 @@ public class OperateStopWorkflowExecutionRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The workflow execution ID.</p>
+     * <p>The workflow instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

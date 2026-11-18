@@ -25,7 +25,7 @@ public class ExportJobsShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of jobs to export. The default value is 1.</p>
+     * <p>The export task type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,7 +34,7 @@ public class ExportJobsShrinkRequest extends TeaModel {
     public Integer exportJobType;
 
     /**
-     * <p>A list of job IDs.</p>
+     * <p>The list of task IDs.</p>
      */
     @NameInMap("JobIds")
     public String jobIdsShrink;

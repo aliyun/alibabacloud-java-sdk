@@ -25,7 +25,7 @@ public class DeleteWorkflowsShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>If set to <code>true</code>, all jobs within the specified workflows are also deleted.</p>
+     * <p>Specifies whether to delete all jobs in the workflow.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,7 +34,7 @@ public class DeleteWorkflowsShrinkRequest extends TeaModel {
     public Boolean deleteJobs;
 
     /**
-     * <p>A list of workflow IDs to delete.</p>
+     * <p>The list of workflow IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("WorkflowIds")

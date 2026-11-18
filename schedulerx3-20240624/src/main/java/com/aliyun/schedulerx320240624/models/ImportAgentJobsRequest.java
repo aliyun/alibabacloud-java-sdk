@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ImportAgentJobsRequest extends TeaModel {
     /**
+     * <p>agentname</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>名称</p>
+     * <p>Name</p>
      */
     @NameInMap("AgentName")
     public String agentName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,12 @@ public class ImportAgentJobsRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The strategy for synchronizing scheduled tasks. Valid values:  </p>
+     * <ul>
+     * <li>1: Migrates both the content and the scheduling time of local scheduled tasks from the agent to the cloud.  </li>
+     * <li>2: Migrates only the scheduling time to the cloud. When the scheduled time arrives, the platform notifies the agent, and the agent executes the task based on the local task content. The task content is always retained locally.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

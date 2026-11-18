@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContactRequest extends TeaModel {
     /**
-     * <p>渠道参数配置 JSON 字符串（可选，传入则更新）</p>
+     * <p>The JSON character string for channel parameter settings. This parameter is optional. If specified, the settings are updated.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;channels&quot;:[{&quot;channelType&quot;:&quot;dingtalk&quot;,&quot;clientId&quot;:&quot;xxx&quot;,&quot;clientSecret&quot;:&quot;xxx&quot;,&quot;targetType&quot;:&quot;group&quot;,&quot;targetId&quot;:&quot;xxx&quot;,&quot;robotCode&quot;:&quot;xxx&quot;}]}</p>
@@ -14,6 +14,7 @@ public class UpdateContactRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The name of the contact to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +24,7 @@ public class UpdateContactRequest extends TeaModel {
     public String contactName;
 
     /**
-     * <p>是否启用（true/false，可选）</p>
+     * <p>Specifies whether to enable or disable the notification channel for the contact.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +33,7 @@ public class UpdateContactRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>渠道大类（可选，传入则更新）</p>
+     * <p>The type of the contact.</p>
      * 
      * <strong>example:</strong>
      * <p>IM</p>

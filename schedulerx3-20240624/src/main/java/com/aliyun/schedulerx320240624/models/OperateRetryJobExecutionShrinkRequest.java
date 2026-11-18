@@ -4,6 +4,12 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class OperateRetryJobExecutionShrinkRequest extends TeaModel {
+    /**
+     * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1625</p>
+     */
     @NameInMap("AppGroupId")
     public Long appGroupId;
 
@@ -38,9 +44,9 @@ public class OperateRetryJobExecutionShrinkRequest extends TeaModel {
     public String jobExecutionId;
 
     /**
-     * <p>The list of subtask execution IDs (for broadcast jobs).</p>
+     * <p>The list of subtask execution IDs for sharded broadcast tasks.</p>
      * <blockquote>
-     * <p>To rerun a subtask of a broadcast job, set this field to the execution ID of the corresponding subtask.</p>
+     * <p>To rerun a subtask of a sharded broadcast task, set this field to the execution ID of the corresponding subtask.</p>
      * </blockquote>
      */
     @NameInMap("TaskList")

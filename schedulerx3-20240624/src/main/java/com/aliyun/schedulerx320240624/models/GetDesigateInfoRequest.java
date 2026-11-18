@@ -4,6 +4,12 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class GetDesigateInfoRequest extends TeaModel {
+    /**
+     * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1625</p>
+     */
     @NameInMap("AppGroupId")
     public Long appGroupId;
 
@@ -28,7 +34,7 @@ public class GetDesigateInfoRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,9 +14,7 @@ public class ListCalendarNamesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The list of calendar names.</p>
      */
     @NameInMap("Data")
     public java.util.List<String> data;
@@ -40,12 +38,10 @@ public class ListCalendarNamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

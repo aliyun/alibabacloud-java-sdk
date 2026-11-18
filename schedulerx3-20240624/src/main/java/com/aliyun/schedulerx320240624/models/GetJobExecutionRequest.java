@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobExecutionRequest extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetJobExecutionRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetJobExecutionRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the job execution.</p>
+     * <p>The job execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +34,12 @@ public class GetJobExecutionRequest extends TeaModel {
     @NameInMap("JobExecutionId")
     public String jobExecutionId;
 
+    /**
+     * <p>The MSE session ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890123456_1794190484000</p>
+     */
     @NameInMap("MseSessionId")
     public String mseSessionId;
 

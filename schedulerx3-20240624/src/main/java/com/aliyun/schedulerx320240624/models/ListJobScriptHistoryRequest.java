@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobScriptHistoryRequest extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListJobScriptHistoryRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListJobScriptHistoryRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the job.</p>
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ListJobScriptHistoryRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>The maximum number of entries to return per page. Default value: 10.</p>
+     * <p>The maximum number of entries to return for this request. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +44,7 @@ public class ListJobScriptHistoryRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. You do not need to set this parameter for the first request.</p>
+     * <p>The token that indicates the position from which the current call returns data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>

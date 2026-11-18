@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateExecutorGroupResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The updated executor group information.</p>
+     */
     @NameInMap("Data")
     public UpdateExecutorGroupResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
      */
@@ -22,6 +29,8 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>C78E2AD2-5985-515B-BAD2-31A248AFC263</p>
      */
@@ -29,6 +38,12 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,15 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
 
     public static class UpdateExecutorGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The authentication type. Valid values:</p>
+         * <ul>
+         * <li><strong>Anonymous</strong>: No authentication is required.</li>
+         * <li><strong>Application</strong>: Authentication is required.<blockquote>
+         * <p>The default value is <strong>Anonymous</strong>.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>EDIT</p>
          */
@@ -89,6 +113,8 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         public String authType;
 
         /**
+         * <p>The workflow description.</p>
+         * 
          * <strong>example:</strong>
          * <p>my first workflow</p>
          */
@@ -96,6 +122,8 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The Kubernetes services that failed to be imported.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
          */
@@ -103,6 +131,8 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         public String failedService;
 
         /**
+         * <p>The workflow name.</p>
+         * 
          * <strong>example:</strong>
          * <p>myWorkflow</p>
          */
@@ -110,6 +140,8 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The network data.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;OfficeSiteId\&quot;:\&quot;cn-hangzhou+dir-8801187585\&quot;,\&quot;VSwitchIds\&quot;:[null]}</p>
          */
@@ -117,6 +149,8 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         public String network;
 
         /**
+         * <p>The protocol types supported by the domain name. HTTP: Only the HTTP protocol is supported. HTTPS: Only the HTTPS protocol is supported. HTTP,HTTPS: Both HTTP and HTTPS protocols are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>TCP</p>
          */
@@ -124,13 +158,17 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The worker ID of the deployment task. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2712224.html">ListWorkerResource</a> operation.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ins-95mfvqrtg6fkijt1uko000</p>
+         * <p>12</p>
          */
         @NameInMap("WorkerId")
         public Long workerId;
 
         /**
+         * <p>The executor type.</p>
+         * 
          * <strong>example:</strong>
          * <p>k8s_service</p>
          */
@@ -138,6 +176,8 @@ public class UpdateExecutorGroupResponseBody extends TeaModel {
         public String workerType;
 
         /**
+         * <p>The list of specified machines in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</p>
          */

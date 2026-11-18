@@ -15,7 +15,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The retry interval upon failure. Unit: seconds. Default value: 30.</p>
+     * <p>The retry interval for errors. Unit: seconds. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -24,7 +24,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer attemptInterval;
 
     /**
-     * <p>The custom calendar. This parameter is optional for the cron time type.</p>
+     * <p>The custom calendar. You can specify a custom calendar for the cron type.</p>
      * 
      * <strong>example:</strong>
      * <p>workday</p>
@@ -33,7 +33,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String calendar;
 
     /**
-     * <p>The child node IDs. Separate multiple IDs with commas.</p>
+     * <p>The IDs of child jobs. Separate multiple IDs with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2</p>
@@ -52,7 +52,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The node coordinate in the workflow.</p>
+     * <p>The coordinates of the node in the workflow.</p>
      */
     @NameInMap("Coordinate")
     public String coordinateShrink;
@@ -67,7 +67,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer dependentStrategy;
 
     /**
-     * <p>The node description.</p>
+     * <p>The job description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -80,7 +80,7 @@ public class CreateJobShrinkRequest extends TeaModel {
      * <ul>
      * <li>1: serial execution on a single machine</li>
      * <li>2: ignore subsequent scheduling</li>
-     * <li>3: override previous scheduling</li>
+     * <li>3: overwrite previous scheduling</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer executorBlockStrategy;
 
     /**
-     * <p>The jobhandler name.</p>
+     * <p>The name of the job handler.</p>
      * 
      * <strong>example:</strong>
      * <p>testJobVoidHandler</p>
@@ -99,7 +99,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String jobHandler;
 
     /**
-     * <p>The node type.</p>
+     * <p>The job type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The node label information.</p>
+     * <p>The job label information.</p>
      * 
      * <strong>example:</strong>
      * <p>{key:value}</p>
@@ -118,7 +118,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The maximum number of retry attempts upon failure. Set this parameter based on your business requirements.</p>
+     * <p>The maximum number of retries for errors. Set this parameter based on your business requirements.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -127,7 +127,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer maxAttempt;
 
     /**
-     * <p>The maximum number of concurrent instances.</p>
+     * <p>The maximum concurrency.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -136,7 +136,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer maxConcurrency;
 
     /**
-     * <p>The node name.</p>
+     * <p>The job name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -147,9 +147,6 @@ public class CreateJobShrinkRequest extends TeaModel {
 
     /**
      * <p>The notification configuration.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("NoticeConfig")
     public String noticeConfigShrink;
@@ -161,7 +158,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String noticeContactsShrink;
 
     /**
-     * <p>The node parameters.</p>
+     * <p>The job parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -187,14 +184,14 @@ public class CreateJobShrinkRequest extends TeaModel {
     /**
      * <p>The routing strategy. Valid values:</p>
      * <ul>
-     * <li>1: round robin</li>
+     * <li>1: round-robin</li>
      * <li>2: random</li>
      * <li>3: first</li>
      * <li>4: last</li>
      * <li>5: least frequently used</li>
      * <li>6: least recently used</li>
      * <li>7: consistent hashing</li>
-     * <li>8: shard broadcast</li>
+     * <li>8: sharding broadcast</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -204,7 +201,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer routeStrategy;
 
     /**
-     * <p>The script content for non-BEAN node types. Use this field to pass the script content.</p>
+     * <p>The script content for non-BEAN job types.</p>
      * 
      * <strong>example:</strong>
      * <p>echo &quot;hello world&quot;</p>
@@ -213,7 +210,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String script;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. Use a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1701310327000</p>
@@ -231,7 +228,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer startTimeType;
 
     /**
-     * <p>The node status. Default value: enabled. Valid values:</p>
+     * <p>The job status. Default value: enabled. Valid values:</p>
      * <ul>
      * <li>0: disabled</li>
      * <li>1: enabled</li>
@@ -244,13 +241,13 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The time expression. Set this parameter based on the selected time type.</p>
+     * <p>The time expression. Set the time expression based on the selected time type.</p>
      * <ul>
-     * <li><strong>none</strong>: No value is required.</li>
-     * <li><strong>cron</strong>: Specify a standard cron expression. Online verification is supported.</li>
-     * <li><strong>api</strong>: No value is required.</li>
-     * <li><strong>fixed_rate</strong>: Specify a fixed frequency value in seconds. For example, 200 indicates that the node is triggered every 200 seconds.</li>
-     * <li><strong>one_time</strong>: Specify a scheduling time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
+     * <li><strong>none</strong>: Leave this parameter empty.</li>
+     * <li><strong>cron</strong>: Enter a standard cron expression. Online verification is supported.</li>
+     * <li><strong>api</strong>: Leave this parameter empty.</li>
+     * <li><strong>fixed_rate</strong>: Enter a specific fixed frequency value. Unit: seconds. For example, 200 indicates that the job is triggered once every 200 seconds.</li>
+     * <li><strong>one_time</strong>: Enter the scheduling time in the yyyy-MM-dd HH:mm:ss format or a timestamp in milliseconds. Example: &quot;2022-10-10 10:10:00&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -286,7 +283,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The node weight.</p>
+     * <p>The job weight.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -295,12 +292,12 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer weight;
 
     /**
-     * <p>The configuration for K8s node types. This parameter is required for K8s node types.
-     * Job node: {&quot;resource&quot;:&quot;job&quot;}
-     * Shell node: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
+     * <p>The extended attributes. This parameter is required for Kubernetes job types.
+     * Job: {&quot;resource&quot;:&quot;job&quot;}
+     * Shell: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;resource&quot;:&quot;job&quot;}</p>
+     * <p>{&quot;responseMode&quot;:&quot;streaming&quot;}</p>
      */
     @NameInMap("XAttrs")
     public String XAttrs;

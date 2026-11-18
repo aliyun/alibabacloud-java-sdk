@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteContactRequest extends TeaModel {
     /**
+     * <p>The name of the alert contact.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>黄永丰</p>
+     * <p>Huang Yongfeng</p>
      */
     @NameInMap("ContactName")
     public String contactName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowExecutionsResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of <code>200</code> indicates a successful request.</p>
+     * <p>The total number of entries that meet the request conditions. This parameter is optional and is not returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,15 +14,13 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The paginated results of workflow execution records.</p>
      */
     @NameInMap("Data")
     public ListWorkflowExecutionsResponseBodyData data;
 
     /**
-     * <p>The maximum number of entries to return per page.</p>
+     * <p>The maximum number of entries to return for this request. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -31,7 +29,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. If the request fails, this parameter provides details about the error.</p>
+     * <p>The position from which the current call returns data. An empty value indicates that all data has been read.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +39,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token to retrieve the next page of results. If this parameter is not returned, all results have been returned.</p>
+     * <p>The token that specifies the position from which the query starts. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
@@ -50,7 +48,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique request ID. Use this ID to troubleshoot issues.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</p>
@@ -59,12 +57,10 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The request failed.</p>
-     * </li>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,7 +141,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The data time of the workflow execution.</p>
+         * <p>The node data timestamp. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-12 14:52:42</p>
@@ -154,7 +150,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         public String dataTime;
 
         /**
-         * <p>The end time of the workflow execution.</p>
+         * <p>The task end time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-12 14:52:42</p>
@@ -172,7 +168,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         public String executor;
 
         /**
-         * <p>The schedule time of the workflow execution.</p>
+         * <p>The task scheduling time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-12 14:52:42</p>
@@ -181,7 +177,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         public String scheduleTime;
 
         /**
-         * <p>The start time of the workflow execution.</p>
+         * <p>The start time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-04 01:09:27</p>
@@ -190,34 +186,21 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the workflow execution. Valid values:</p>
+         * <p>The task execution status. Valid values:</p>
          * <ul>
-         * <li><p>0: UNKNOWN</p>
-         * </li>
-         * <li><p>1: WAITING</p>
-         * </li>
-         * <li><p>2: READY</p>
-         * </li>
-         * <li><p>3: RUNNING</p>
-         * </li>
-         * <li><p>4: SUCCESS</p>
-         * </li>
-         * <li><p>5: FAILED</p>
-         * </li>
-         * <li><p>6: PAUSED</p>
-         * </li>
-         * <li><p>7: SUBMITTED</p>
-         * </li>
-         * <li><p>8: REJECTED</p>
-         * </li>
-         * <li><p>9: ACCEPTED</p>
-         * </li>
-         * <li><p>10: PARTIAL_FAILED</p>
-         * </li>
-         * <li><p>11: SKIPPED</p>
-         * </li>
-         * <li><p>12: REMOVED</p>
-         * </li>
+         * <li>0: UNKNOWN (Unknown).</li>
+         * <li>1: WAITING (Waiting).</li>
+         * <li>2: READY (Ready).</li>
+         * <li>3: RUNNING (Running).</li>
+         * <li>4: SUCCESS (Successful).</li>
+         * <li>5: FAILED (Failed).</li>
+         * <li>6: PAUSED (Paused).</li>
+         * <li>7: SUBMITTED (Submitted).</li>
+         * <li>8: REJECTED (Rejected).</li>
+         * <li>9: ACCEPTED (Accepted).</li>
+         * <li>10: PARTIAL_FAILED (Partially failed).</li>
+         * <li>11: SKIPPED (Skipped).</li>
+         * <li>12: REMOVED (Removed).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,7 +210,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The workflow execution ID.</p>
+         * <p>The workflow instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -351,7 +334,7 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -360,15 +343,13 @@ public class ListWorkflowExecutionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The workflow execution records on the current page.</p>
          */
         @NameInMap("Records")
         public java.util.List<ListWorkflowExecutionsResponseBodyDataRecords> records;
 
         /**
-         * <p>The total number of matching workflow executions.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>65</p>

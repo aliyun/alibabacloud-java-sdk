@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPageLogRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */
@@ -12,6 +14,7 @@ public class GetPageLogRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class GetPageLogRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The end timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1777292662000</p>
      */
@@ -28,6 +33,8 @@ public class GetPageLogRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The job execution ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1310630367761285120</p>
      */
@@ -35,6 +42,8 @@ public class GetPageLogRequest extends TeaModel {
     public String jobExecutionId;
 
     /**
+     * <p>The job name.</p>
+     * 
      * <strong>example:</strong>
      * <p>job01</p>
      */
@@ -42,6 +51,8 @@ public class GetPageLogRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The search keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>hello word</p>
      */
@@ -49,6 +60,8 @@ public class GetPageLogRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -56,6 +69,8 @@ public class GetPageLogRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -63,6 +78,12 @@ public class GetPageLogRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies whether to sort the results in descending order. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Sorts the results in descending order.</li>
+     * <li><strong>false</strong>: Sorts the results in ascending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -70,6 +91,8 @@ public class GetPageLogRequest extends TeaModel {
     public Boolean reverse;
 
     /**
+     * <p>The start timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1777292662000</p>
      */
@@ -77,6 +100,8 @@ public class GetPageLogRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The executor address.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.1.100</p>
      */

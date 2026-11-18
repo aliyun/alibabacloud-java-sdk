@@ -23,7 +23,7 @@ public class OperateStopWorkflowExecutionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D0DE9C33-992A-580B-89C4-B609A292748D</p>
@@ -32,12 +32,10 @@ public class OperateStopWorkflowExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The request failed.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

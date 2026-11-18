@@ -14,7 +14,7 @@ public class CreateCalendarResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>CalendarName is already existed</p>
@@ -23,7 +23,7 @@ public class CreateCalendarResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>B880122A-B0E4-52E8-8F54-87DB7779EB74</p>
@@ -32,12 +32,10 @@ public class CreateCalendarResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The call was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The call failed.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -23,6 +23,8 @@ public class ListClustersRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>The cluster type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,7 +41,7 @@ public class ListClustersRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,6 +49,9 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of tags used to filter clusters.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListClustersRequestTag> tag;
 
@@ -104,9 +109,21 @@ public class ListClustersRequest extends TeaModel {
     }
 
     public static class ListClustersRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>environment</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 

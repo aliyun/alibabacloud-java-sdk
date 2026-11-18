@@ -14,9 +14,7 @@ public class GetCalendarResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li>The data returned.</li>
-     * </ul>
+     * <p>The calendar information for the specified year.</p>
      */
     @NameInMap("Data")
     public GetCalendarResponseBodyData data;
@@ -31,7 +29,7 @@ public class GetCalendarResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</p>
@@ -40,12 +38,10 @@ public class GetCalendarResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +97,7 @@ public class GetCalendarResponseBody extends TeaModel {
 
     public static class GetCalendarResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the calendar.</p>
+         * <p>The calendar name.</p>
          * 
          * <strong>example:</strong>
          * <p>workday</p>
@@ -110,7 +106,7 @@ public class GetCalendarResponseBody extends TeaModel {
         public String calendarName;
 
         /**
-         * <p>A JSON string that represents an array of objects. Each object specifies the days for a particular month.</p>
+         * <p>The months.</p>
          * 
          * <strong>example:</strong>
          * <p>[

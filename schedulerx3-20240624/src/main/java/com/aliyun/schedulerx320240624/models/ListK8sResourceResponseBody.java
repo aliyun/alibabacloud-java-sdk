@@ -14,9 +14,7 @@ public class ListK8sResourceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li>An array of k8s resources.</li>
-     * </ul>
+     * <p>The list of Kubernetes resources.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListK8sResourceResponseBodyData> data;
@@ -31,7 +29,7 @@ public class ListK8sResourceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The Request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2ECA6FC9-7557-5576-AF5F-FC3E7BCC9C21</p>
@@ -40,12 +38,10 @@ public class ListK8sResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +97,7 @@ public class ListK8sResourceResponseBody extends TeaModel {
 
     public static class ListK8sResourceResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the k8s resource.</p>
+         * <p>The ID of the Kubernetes resource.</p>
          * 
          * <strong>example:</strong>
          * <p>xxljob-01632622cda2f</p>
@@ -110,7 +106,7 @@ public class ListK8sResourceResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the k8s resource.</p>
+         * <p>The name of the Kubernetes resource.</p>
          * 
          * <strong>example:</strong>
          * <p>q_ecs_enterprise_spot_c</p>

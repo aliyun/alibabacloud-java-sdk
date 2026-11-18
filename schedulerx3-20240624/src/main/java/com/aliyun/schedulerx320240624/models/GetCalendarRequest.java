@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCalendarRequest extends TeaModel {
     /**
-     * <p>The name of the calendar.</p>
+     * <p>The calendar name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetCalendarRequest extends TeaModel {
     public String calendarName;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

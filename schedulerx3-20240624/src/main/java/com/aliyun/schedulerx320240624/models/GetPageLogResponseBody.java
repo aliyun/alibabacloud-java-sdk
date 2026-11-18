@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPageLogResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The paginated log results.</p>
+     */
     @NameInMap("Data")
     public GetPageLogResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>CalendarName is already existed</p>
      */
@@ -22,6 +29,8 @@ public class GetPageLogResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
      */
@@ -29,6 +38,12 @@ public class GetPageLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetPageLogResponseBody extends TeaModel {
 
     public static class GetPageLogResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-app</p>
          */
@@ -89,6 +106,8 @@ public class GetPageLogResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The job execution ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */
@@ -96,6 +115,8 @@ public class GetPageLogResponseBody extends TeaModel {
         public String jobExecutionId;
 
         /**
+         * <p>The job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -103,6 +124,8 @@ public class GetPageLogResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The content output by the current command in the current output stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>[2026-02-10 10:23:36]tStart writing to Recall Enginen</p>
          */
@@ -110,6 +133,8 @@ public class GetPageLogResponseBody extends TeaModel {
         public String log;
 
         /**
+         * <p>The print time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-31 16:43:51</p>
          */
@@ -117,6 +142,8 @@ public class GetPageLogResponseBody extends TeaModel {
         public String time;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
@@ -124,6 +151,8 @@ public class GetPageLogResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The worker address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:030225016025_9357_60125@127.0.0.1">030225016025_9357_60125@127.0.0.1</a>:51363</p>
          */
@@ -195,6 +224,8 @@ public class GetPageLogResponseBody extends TeaModel {
 
     public static class GetPageLogResponseBodyData extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -202,16 +233,23 @@ public class GetPageLogResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The list of log records on the current page.</p>
+         */
         @NameInMap("Records")
         public java.util.List<GetPageLogResponseBodyDataRecords> records;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>65</p>
          */

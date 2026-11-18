@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteExecutorGroupRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class DeleteExecutorGroupRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>Specifies whether to synchronously delete tasks.</p>
+     */
     @NameInMap("DeleteJobs")
     public Boolean deleteJobs;
 
     /**
+     * <p>The ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +30,12 @@ public class DeleteExecutorGroupRequest extends TeaModel {
     @NameInMap("Id")
     public Integer id;
 
+    /**
+     * <p>The name of the executor group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group1</p>
+     */
     @NameInMap("Name")
     public String name;
 

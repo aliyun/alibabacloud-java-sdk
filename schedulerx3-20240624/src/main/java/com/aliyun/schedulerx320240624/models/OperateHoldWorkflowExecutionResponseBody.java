@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateHoldWorkflowExecutionResponseBody extends TeaModel {
     /**
-     * <p>The Response Code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class OperateHoldWorkflowExecutionResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The Error Message returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>not support query script history, please upgrade engine version to 2.2.2+</p>
@@ -23,7 +23,7 @@ public class OperateHoldWorkflowExecutionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID generated for this request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D0DE9C33-992A-580B-89C4-B609A292748D</p>
@@ -32,12 +32,10 @@ public class OperateHoldWorkflowExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

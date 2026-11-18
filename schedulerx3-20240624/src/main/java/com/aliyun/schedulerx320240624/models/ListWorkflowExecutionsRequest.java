@@ -24,7 +24,7 @@ public class ListWorkflowExecutionsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range for filtering executions. The time must be in <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+     * <p>The end time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-13 16:00:00</p>
@@ -33,7 +33,7 @@ public class ListWorkflowExecutionsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The maximum number of results to return. Defaults to 10.</p>
+     * <p>The maximum number of entries to return for this request. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +42,7 @@ public class ListWorkflowExecutionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. For the first request, do not specify this parameter. If the response does not include a <code>NextToken</code>, no more results are available.</p>
+     * <p>The token that specifies the position from which the query starts. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
@@ -51,7 +51,7 @@ public class ListWorkflowExecutionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +69,7 @@ public class ListWorkflowExecutionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start of the time range for filtering executions. The time must be in <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+     * <p>The start time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-27 02:15:00</p>
@@ -78,28 +78,18 @@ public class ListWorkflowExecutionsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The workflow execution status. Use this parameter to filter executions by status. Valid values:</p>
+     * <p>The workflow execution status. Valid values:</p>
      * <ul>
-     * <li><p>0: unknown</p>
-     * </li>
-     * <li><p>1: waiting</p>
-     * </li>
-     * <li><p>2: queued</p>
-     * </li>
-     * <li><p>3: running</p>
-     * </li>
-     * <li><p>4: success</p>
-     * </li>
-     * <li><p>5: failed</p>
-     * </li>
-     * <li><p>6: killed</p>
-     * </li>
-     * <li><p>7: held</p>
-     * </li>
-     * <li><p>8: mark_success</p>
-     * </li>
-     * <li><p>9: skipped</p>
-     * </li>
+     * <li>0: unknown</li>
+     * <li>1: waiting</li>
+     * <li>2: queued</li>
+     * <li>3: running</li>
+     * <li>4: success</li>
+     * <li>5: failed</li>
+     * <li>6: killed</li>
+     * <li>7: held</li>
+     * <li>8: mark_success</li>
+     * <li>9: skipped</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +99,7 @@ public class ListWorkflowExecutionsRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The workflow execution ID.</p>
+     * <p>The workflow instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

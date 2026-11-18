@@ -25,7 +25,7 @@ public class OperateDisableWorkflowsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>A list of workflow IDs.</p>
+     * <p>The list of workflow IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("WorkflowIds")

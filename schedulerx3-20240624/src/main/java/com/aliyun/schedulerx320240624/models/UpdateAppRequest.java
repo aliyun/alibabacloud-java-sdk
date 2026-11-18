@@ -8,7 +8,7 @@ public class UpdateAppRequest extends TeaModel {
      * <p>The access token.</p>
      * 
      * <strong>example:</strong>
-     * <p>f312159702f4469585586ed5a6904163v3</p>
+     * <p>demo-app-key-20261109</p>
      */
     @NameInMap("AccessToken")
     public String accessToken;
@@ -36,9 +36,9 @@ public class UpdateAppRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable logging.</p>
      * <ul>
-     * <li><p><code>true</code>: Enables logging.</p>
+     * <li><p>true: Enabled.</p>
      * </li>
-     * <li><p><code>false</code>: Disables logging.</p>
+     * <li><p>false: Disabled.</p>
      * </li>
      * </ul>
      * 
@@ -49,6 +49,8 @@ public class UpdateAppRequest extends TeaModel {
     public Boolean enableLog;
 
     /**
+     * <p>The label routing strategy.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -56,9 +58,9 @@ public class UpdateAppRequest extends TeaModel {
     public Integer labelRouteStrategy;
 
     /**
-     * <p>The task execution queue size.</p>
+     * <p>The size of the task execution queue.</p>
      * <blockquote>
-     * <p>Sets the maximum number of concurrent task instances in the application group. Additional task instances are queued for execution and not discarded.</p>
+     * <p>The maximum number of task instances that can run concurrently for an application. Task instances that exceed the concurrency limit are not discarded, but are placed in a queue to wait for execution.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,12 +74,14 @@ public class UpdateAppRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试应用</p>
+     * <p>Test application</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>The primary key ID of the worker group.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

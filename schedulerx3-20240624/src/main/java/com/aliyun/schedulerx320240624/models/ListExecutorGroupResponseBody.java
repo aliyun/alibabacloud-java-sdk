@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListExecutorGroupResponseBody extends TeaModel {
     /**
+     * <p>The total count of data under the current request conditions. This parameter is optional and is not returned by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The query results.</p>
+     */
     @NameInMap("Data")
     public ListExecutorGroupResponseBodyData data;
 
     /**
+     * <p>The maximum number of entries to return for this request. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,7 @@ public class ListExecutorGroupResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The position from which the current call returns data. An empty value indicates that all data has been read.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +39,8 @@ public class ListExecutorGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The token that specifies the position from which the current call returns data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</p>
+     * 
      * <strong>example:</strong>
      * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
      */
@@ -38,6 +48,8 @@ public class ListExecutorGroupResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</p>
      */
@@ -45,6 +57,8 @@ public class ListExecutorGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -114,6 +128,8 @@ public class ListExecutorGroupResponseBody extends TeaModel {
 
     public static class ListExecutorGroupResponseBodyDataRecordsCiteList extends TeaModel {
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>Tornado</p>
          */
@@ -121,6 +137,8 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The description of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>group1</p>
          */
@@ -152,6 +170,8 @@ public class ListExecutorGroupResponseBody extends TeaModel {
 
     public static class ListExecutorGroupResponseBodyDataRecords extends TeaModel {
         /**
+         * <p>The client key.</p>
+         * 
          * <strong>example:</strong>
          * <p>f/HElmWgOgmb0mlbRRkNuQ==</p>
          */
@@ -159,25 +179,54 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The authentication type.</p>
+         * 
          * <strong>example:</strong>
          * <p>api_key</p>
          */
         @NameInMap("AuthType")
         public String authType;
 
+        /**
+         * <p>Specifies whether to enable <strong>automatic start and stop</strong>. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled. If no tasks are scheduled for a period of time, the agent automatically hibernates. If tasks are scheduled for a period of time, the agent wakes up in advance.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoScale")
         public Boolean autoScale;
 
+        /**
+         * <p>The list of referenced applications.</p>
+         */
         @NameInMap("CiteList")
         public java.util.List<ListExecutorGroupResponseBodyDataRecordsCiteList> citeList;
 
+        /**
+         * <p>The CloudMonitor workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scx-workspace-acd09a5d-4133-43cc-889d-c33a122afb6e</p>
+         */
         @NameInMap("CmsWorkspaceId")
         public String cmsWorkspaceId;
 
+        /**
+         * <p>The current number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("CurrentJobs")
         public Integer currentJobs;
 
         /**
+         * <p>The description of the executor group.</p>
+         * 
          * <strong>example:</strong>
          * <p>my first workflow</p>
          */
@@ -187,13 +236,32 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @NameInMap("EnableJobs")
         public Integer enableJobs;
 
+        /**
+         * <p>The integration method. Valid values:</p>
+         * <ul>
+         * <li>manual</li>
+         * <li>acs_sandbox</li>
+         * <li>k8s_service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_sandbox</p>
+         */
         @NameInMap("IntegrationType")
         public String integrationType;
 
+        /**
+         * <p>The maximum number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("MaxJobs")
         public Integer maxJobs;
 
         /**
+         * <p>The name of the executor group.</p>
+         * 
          * <strong>example:</strong>
          * <p>job01</p>
          */
@@ -201,6 +269,8 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The network configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>public</p>
          */
@@ -208,16 +278,26 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         public String network;
 
         /**
+         * <p>The protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>openai</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The list of resolved workers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;address&quot;:&quot;<a href="http://192.168.2.34:8084%22%7D%5D">http://192.168.2.34:8084&quot;}]</a></p>
+         */
         @NameInMap("ResolvedWorkers")
         public String resolvedWorkers;
 
         /**
+         * <p>The ID of the executor group.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -225,6 +305,8 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         public Long workerId;
 
         /**
+         * <p>The executor type.</p>
+         * 
          * <strong>example:</strong>
          * <p>k8s_service</p>
          */
@@ -232,12 +314,20 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         public String workerType;
 
         /**
+         * <p>The list of specified machines in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;address&quot;:&quot;<a href="http://47.111.188.191:18789%22%7D%5D">http://47.111.188.191:18789&quot;}]</a></p>
          */
         @NameInMap("Workers")
         public String workers;
 
+        /**
+         * <p>The extended parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("XAttrs")
         public String XAttrs;
 
@@ -394,6 +484,8 @@ public class ListExecutorGroupResponseBody extends TeaModel {
 
     public static class ListExecutorGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -401,16 +493,25 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Records")
         public java.util.List<ListExecutorGroupResponseBodyDataRecords> records;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

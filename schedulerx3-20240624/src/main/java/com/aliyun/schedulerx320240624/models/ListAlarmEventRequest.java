@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListAlarmEventRequest extends TeaModel {
     /**
-     * <p>The channel for sending alarm notifications. Valid values:</p>
+     * <p>The alert channel. Valid values:</p>
      * <ul>
-     * <li><p><code>sms</code>: SMS</p>
-     * </li>
-     * <li><p><code>mail</code>: Email</p>
-     * </li>
-     * <li><p><code>phone</code>: Phone call</p>
-     * </li>
-     * <li><p><code>webhook</code>: Webhook</p>
-     * </li>
+     * <li><code>sms</code>: SMS.</li>
+     * <li><code>mail</code>: Email.</li>
+     * <li><code>phone</code>: Phone call.</li>
+     * <li><code>webhook</code>: Webhook.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,11 +20,11 @@ public class ListAlarmEventRequest extends TeaModel {
     public String alarmChannel;
 
     /**
-     * <p>The delivery status of the alarm notification. Valid values:</p>
+     * <p>The alert status. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The notification delivery succeeded.</p>
+     * <li><p><code>true</code>: The alert message is sent successfully.</p>
      * </li>
-     * <li><p><code>false</code>: The notification delivery failed.</p>
+     * <li><p><code>false</code>: The alert message fails to be sent.</p>
      * </li>
      * </ul>
      * 
@@ -39,20 +35,14 @@ public class ListAlarmEventRequest extends TeaModel {
     public String alarmStatus;
 
     /**
-     * <p>The type of the alarm. Valid values:</p>
+     * <p>The alert type. Valid values:</p>
      * <ul>
-     * <li><p><strong><code>schedulerx3_no_designate_machine_alarm</code></strong>: The Designated Machine is unavailable.</p>
-     * </li>
-     * <li><p><strong><code>schedulerx3_all_busy_alarm</code></strong>: All available machines are busy.</p>
-     * </li>
-     * <li><p><strong><code>schedulerx3_no_machine_alarm</code></strong>: No machines are available to run the job.</p>
-     * </li>
-     * <li><p><strong><code>schedulerx3_timeout_alarm</code></strong>: The job timed out.</p>
-     * </li>
-     * <li><p><strong><code>schedulerx3_fail_alarm</code></strong>: The job failed to run.</p>
-     * </li>
-     * <li><p><strong><code>schedulerx3_job_success_notice</code></strong>: The job ran successfully.</p>
-     * </li>
+     * <li><strong><code>schedulerx3_no_designate_machine_alarm</code></strong>: Unavailable designated machine alert.</li>
+     * <li><strong><code>schedulerx3_all_busy_alarm</code></strong>: All machines busy alert.</li>
+     * <li><strong><code>schedulerx3_no_machine_alarm</code></strong>: No available machine alert.</li>
+     * <li><strong><code>schedulerx3_timeout_alarm</code></strong>: Job timeout alert.</li>
+     * <li><strong><code>schedulerx3_fail_alarm</code></strong>: Job execution failure alert.</li>
+     * <li><strong><code>schedulerx3_job_success_notice</code></strong>: Job execution success notice.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +52,7 @@ public class ListAlarmEventRequest extends TeaModel {
     public String alarmType;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-app</p>
@@ -71,7 +61,7 @@ public class ListAlarmEventRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +71,7 @@ public class ListAlarmEventRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range for querying events. This value is a Unix timestamp in milliseconds.</p>
+     * <p>The end time of the retrieved events. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1731636011558</p>
@@ -90,7 +80,7 @@ public class ListAlarmEventRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The name of the job.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-job</p>
@@ -117,7 +107,7 @@ public class ListAlarmEventRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Set to true to return results in descending order.</p>
+     * <p>Specifies whether to sort the results in descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -126,7 +116,7 @@ public class ListAlarmEventRequest extends TeaModel {
     public Boolean reverse;
 
     /**
-     * <p>The start of the time range for querying events. This value is a Unix timestamp in milliseconds.</p>
+     * <p>The start time of the retrieved events. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1690419316000</p>

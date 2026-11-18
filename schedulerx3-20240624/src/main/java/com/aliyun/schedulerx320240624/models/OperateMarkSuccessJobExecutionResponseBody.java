@@ -23,7 +23,7 @@ public class OperateMarkSuccessJobExecutionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>AA3538A0-FBE6-5E31-AD88-A02C6FF0DACC</p>
@@ -32,12 +32,10 @@ public class OperateMarkSuccessJobExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call was successful.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The call was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The call failed.</p>
-     * </li>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

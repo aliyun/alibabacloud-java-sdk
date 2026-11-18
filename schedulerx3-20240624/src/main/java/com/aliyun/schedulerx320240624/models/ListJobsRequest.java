@@ -14,7 +14,7 @@ public class ListJobsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,13 +27,13 @@ public class ListJobsRequest extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>job01 standalone task</p>
+     * <p>job01 standalone job</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The <code>jobhandler</code> name.</p>
+     * <p>The jobhandler name.</p>
      * 
      * <strong>example:</strong>
      * <p>jobDemoHandler</p>
@@ -42,7 +42,7 @@ public class ListJobsRequest extends TeaModel {
     public String jobHandler;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +51,7 @@ public class ListJobsRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>The task name.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
      * <p>job01</p>
@@ -60,7 +60,7 @@ public class ListJobsRequest extends TeaModel {
     public String jobName;
 
     /**
-     * <p>The task label filter condition.</p>
+     * <p>The job label condition.</p>
      * 
      * <strong>example:</strong>
      * <p>{key:value}</p>
@@ -94,6 +94,15 @@ public class ListJobsRequest extends TeaModel {
      */
     @NameInMap("Status")
     public String status;
+
+    /**
+     * <p>The list of time types.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("TimeType")
+    public java.util.List<Integer> timeType;
 
     /**
      * <p>The workflow ID.</p>
@@ -187,6 +196,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListJobsRequest setTimeType(java.util.List<Integer> timeType) {
+        this.timeType = timeType;
+        return this;
+    }
+    public java.util.List<Integer> getTimeType() {
+        return this.timeType;
     }
 
     public ListJobsRequest setWorkflowId(Long workflowId) {

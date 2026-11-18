@@ -15,7 +15,7 @@ public class UpdateWorkflowRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The name of a custom calendar to exclude specific dates from the schedule.</p>
+     * <p>The custom calendar.</p>
      * 
      * <strong>example:</strong>
      * <p>workday</p>
@@ -24,7 +24,7 @@ public class UpdateWorkflowRequest extends TeaModel {
     public String calendar;
 
     /**
-     * <p>A unique token that you provide to ensure the request is idempotent. The token can be up to 64 ASCII characters long.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the value on the client side. Ensure that the value is unique across different requests and contains a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>D0DE9C33-992A-580B-89C4-B609A292748D</p>
@@ -52,9 +52,9 @@ public class UpdateWorkflowRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The maximum concurrency for the workflow.</p>
+     * <p>The maximum concurrency.</p>
      * <blockquote>
-     * <p>The maximum number of concurrent instances that can run for the same workflow. A value of <code>1</code> prevents overlapping runs. If the number of running instances reaches this limit, subsequent scheduled runs are skipped.</p>
+     * <p>The maximum number of instances that can run concurrently for the same workflow. A value of 1 indicates that concurrent execution is not allowed. If the concurrency limit is exceeded, the current scheduling task is skipped.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,14 +73,11 @@ public class UpdateWorkflowRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The cron expression for the schedule. This parameter is required only when <code>TimeType</code> is set to <code>1</code> (cron).</p>
+     * <p>The time expression. Configure the time expression based on the selected time type.</p>
      * <ul>
-     * <li><p>If <code>TimeType</code> is <code>-1</code> (none), this parameter is not required.</p>
-     * </li>
-     * <li><p>If <code>TimeType</code> is <code>1</code> (cron), specify a standard cron expression.</p>
-     * </li>
-     * <li><p>If <code>TimeType</code> is <code>100</code> (api), this parameter is not required.</p>
-     * </li>
+     * <li>none: Leave this parameter empty.</li>
+     * <li>cron: Enter a standard cron expression. Online verification is supported.</li>
+     * <li>api: Leave this parameter empty.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,12 +89,9 @@ public class UpdateWorkflowRequest extends TeaModel {
     /**
      * <p>The scheduling type. Valid values:</p>
      * <ul>
-     * <li><p><code>-1</code> (none): The workflow is not scheduled and must be triggered on demand.</p>
-     * </li>
-     * <li><p><code>1</code> (cron): The workflow runs based on the cron expression in the <code>TimeExpression</code> parameter.</p>
-     * </li>
-     * <li><p><code>100</code> (api): The workflow is triggered by an API call.</p>
-     * </li>
+     * <li>-1: none</li>
+     * <li>1: cron</li>
+     * <li>100: api</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,9 +101,9 @@ public class UpdateWorkflowRequest extends TeaModel {
     public Integer timeType;
 
     /**
-     * <p>The time zone for the schedule.</p>
+     * <p>The time zone.</p>
      * <blockquote>
-     * <p>Defaults to the time zone of the SchedulerX server.</p>
+     * <p>By default, the time zone of the SchedulerX server is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

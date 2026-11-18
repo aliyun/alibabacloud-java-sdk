@@ -4,6 +4,9 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class OperateStopJobExecutionRequest extends TeaModel {
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("AppGroupId")
     public Long appGroupId;
 
@@ -38,7 +41,7 @@ public class OperateStopJobExecutionRequest extends TeaModel {
     public String jobExecutionId;
 
     /**
-     * <p>The subtask IDs.</p>
+     * <p>The subtask ID.</p>
      */
     @NameInMap("TaskList")
     public java.util.List<String> taskList;

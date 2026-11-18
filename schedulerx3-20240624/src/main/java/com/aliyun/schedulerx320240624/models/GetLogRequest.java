@@ -24,7 +24,7 @@ public class GetLogRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end time. This value is a UNIX timestamp.</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1721636220</p>
@@ -42,7 +42,7 @@ public class GetLogRequest extends TeaModel {
     public String jobExecutionId;
 
     /**
-     * <p>The keyword to search for.</p>
+     * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>hello word</p>
@@ -60,7 +60,7 @@ public class GetLogRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The number of log entries to return.</p>
+     * <p>The LineNum.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -87,12 +87,10 @@ public class GetLogRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>Specifies whether to sort the results in descending order.</p>
+     * <p>Specifies whether to sort the results in descending order. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: sorts the results in descending order.</p>
-     * </li>
-     * <li><p><strong>false</strong>: sorts the results in ascending order.</p>
-     * </li>
+     * <li><strong>true</strong>: Sorts the results in descending order.</li>
+     * <li><strong>false</strong>: Sorts the results in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,16 +100,16 @@ public class GetLogRequest extends TeaModel {
     public Boolean reverse;
 
     /**
-     * <p>The time when the job was scheduled. This value is a UNIX timestamp.</p>
+     * <p>The scheduling time.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-10-01 12:00:00</p>
+     * <p>1696132800000</p>
      */
     @NameInMap("ScheduleTime")
     public Long scheduleTime;
 
     /**
-     * <p>The start time. This value is a UNIX timestamp.</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1721636220</p>

@@ -25,7 +25,7 @@ public class OperateBackfillWorkflowRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end date of the backfill, in YYYY-MM-DD format.</p>
+     * <p>The end date for backfilling data. The format is YYYY-MM-DD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class OperateBackfillWorkflowRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The start date of the backfill, in YYYY-MM-DD format.</p>
+     * <p>The start date for backfilling data. The format is YYYY-MM-DD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterShrinkRequest extends TeaModel {
     /**
-     * <p>The billing type.</p>
+     * <p>The billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
@@ -16,6 +16,9 @@ public class CreateClusterShrinkRequest extends TeaModel {
     /**
      * <p>The name of the cluster.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qianxi-test-0812</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
@@ -27,8 +30,11 @@ public class CreateClusterShrinkRequest extends TeaModel {
      * <li>scx.small.x1</li>
      * <li>scx.small.x2</li>
      * <li>scx.medium.x1</li>
-     * <li>scx.medium.x2.</li>
+     * <li>scx.medium.x2</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>scx.dev.x1</p>
      */
     @NameInMap("ClusterSpec")
     public String clusterSpec;
@@ -53,6 +59,9 @@ public class CreateClusterShrinkRequest extends TeaModel {
 
     /**
      * <p>The engine type. Valid values: xxljob.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxljob</p>
      */
     @NameInMap("EngineType")
     public String engineType;
@@ -76,19 +85,22 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The list of tags. A maximum of 20 tags are supported.</p>
+     * <p>The list of tags. You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateClusterShrinkRequestTag> tag;
 
     /**
-     * <p>The information about the vSwitches.</p>
+     * <p>The vSwitch information.</p>
      */
     @NameInMap("VSwitches")
     public String vSwitchesShrink;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-aa1a18236n90rqhuhhnhh</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -189,12 +201,18 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public static class CreateClusterShrinkRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>environment</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

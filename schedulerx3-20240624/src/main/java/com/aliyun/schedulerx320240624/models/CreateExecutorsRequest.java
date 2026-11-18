@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExecutorsRequest extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateExecutorsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateExecutorsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The worker type. The only valid value is <code>k8s_service</code>.</p>
+     * <p>The executor type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateExecutorsRequest extends TeaModel {
     public String workerType;
 
     /**
-     * <p>A JSON string that contains an array of workers.</p>
+     * <p>The list of specified machines in JSON format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

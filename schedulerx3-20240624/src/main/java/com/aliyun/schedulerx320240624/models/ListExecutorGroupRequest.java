@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExecutorGroupRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListExecutorGroupRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The maximum number of entries to return for this request. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +24,8 @@ public class ListExecutorGroupRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The name of the executor group.</p>
+     * 
      * <strong>example:</strong>
      * <p>group1</p>
      */
@@ -28,6 +33,8 @@ public class ListExecutorGroupRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The token that specifies the position from which the current call returns data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</p>
+     * 
      * <strong>example:</strong>
      * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
      */
@@ -35,6 +42,8 @@ public class ListExecutorGroupRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +51,8 @@ public class ListExecutorGroupRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -49,6 +60,17 @@ public class ListExecutorGroupRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The list of time types.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("TimeType")
+    public java.util.List<Integer> timeType;
+
+    /**
+     * <p>The executor type.</p>
+     * 
      * <strong>example:</strong>
      * <p>openclaw</p>
      */
@@ -106,6 +128,14 @@ public class ListExecutorGroupRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListExecutorGroupRequest setTimeType(java.util.List<Integer> timeType) {
+        this.timeType = timeType;
+        return this;
+    }
+    public java.util.List<Integer> getTimeType() {
+        return this.timeType;
     }
 
     public ListExecutorGroupRequest setWorkerType(String workerType) {

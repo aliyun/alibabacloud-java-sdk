@@ -14,9 +14,7 @@ public class ListCalendarsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li>The returned data.</li>
-     * </ul>
+     * <p>The calendar list and pagination information.</p>
      */
     @NameInMap("Data")
     public ListCalendarsResponseBodyData data;
@@ -31,7 +29,7 @@ public class ListCalendarsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>3835AA29-2298-5434-BC53-9CC377CDFD2C</p>
@@ -40,12 +38,10 @@ public class ListCalendarsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +97,7 @@ public class ListCalendarsResponseBody extends TeaModel {
 
     public static class ListCalendarsResponseBodyDataRecords extends TeaModel {
         /**
-         * <p>The name of the calendar.</p>
+         * <p>The calendar name.</p>
          * 
          * <strong>example:</strong>
          * <p>workday</p>
@@ -110,7 +106,7 @@ public class ListCalendarsResponseBody extends TeaModel {
         public String calendarName;
 
         /**
-         * <p>A JSON string that represents an array of months and their corresponding days.</p>
+         * <p>The calendar for each month in JSON array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -173,7 +169,7 @@ public class ListCalendarsResponseBody extends TeaModel {
 
     public static class ListCalendarsResponseBodyData extends TeaModel {
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of entries to return for the current request. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -182,7 +178,7 @@ public class ListCalendarsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token for the next page of results. If this parameter is not returned, all results have been retrieved.</p>
+         * <p>The token that is returned by the server when the data that meets the query conditions is not completely read. You can use this token to continue reading the remaining data. You do not need to specify this parameter for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>eCKqVlS5FKF5EWGGOo8EgQ==</p>
@@ -191,7 +187,7 @@ public class ListCalendarsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>A list of calendars.</p>
+         * <p>The list of records.</p>
          */
         @NameInMap("Records")
         public java.util.List<ListCalendarsResponseBodyDataRecords> records;

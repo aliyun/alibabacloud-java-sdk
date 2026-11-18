@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasourceRequest extends TeaModel {
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateDatasourceRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Data source connection parameters</p>
+     * <p>The datasource connection parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;host&quot;:&quot;rm-bp1f03mxxxxx.mysql.rds.aliyuncs.com&quot;,&quot;port&quot;:3306,&quot;userName&quot;:&quot;test01&quot;,&quot;database&quot;:&quot;test01&quot;,&quot;other&quot;:{&quot;useSSL&quot;:&quot;false&quot;}}</p>
@@ -24,7 +24,7 @@ public class UpdateDatasourceRequest extends TeaModel {
     public String connectionParams;
 
     /**
-     * <p>DataSource ID, which can be obtained by calling the ListDatasources API.</p>
+     * <p>The datasource ID. You can obtain this ID by calling the ListDatasources operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdateDatasourceRequest extends TeaModel {
     public Long datasourceId;
 
     /**
-     * <p>Data source description</p>
+     * <p>The datasource description.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -43,16 +43,16 @@ public class UpdateDatasourceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Datasource Name</p>
+     * <p>The datasource name.</p>
      * 
      * <strong>example:</strong>
-     * <p>账单拉取-支付宝团购</p>
+     * <p>Bill pull - Alipay group buying</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>Database password</p>
+     * <p>The database password.</p>
      * 
      * <strong>example:</strong>
      * <p>2F9e9@a69c!e18b569c8</p>
