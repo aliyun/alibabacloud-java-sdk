@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyAuditLogConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable audit logging. Valid values:</p>
+     * <p>Specifies whether to enable the audit log feature. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): Enabled.</li>
-     * <li><strong>false</strong>: Disabled.</li>
+     * <li><strong>true</strong>: enables the feature. This is the default value.</li>
+     * <li><strong>false</strong>: disables the feature.</li>
      * </ul>
      * <blockquote>
-     * <p>If the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting architecture</a>, audit logs for data nodes and proxy nodes are enabled or disabled at the same time. You cannot enable them separately.</p>
+     * <p>If the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting</a> architecture, the audit logs of data nodes and proxy nodes are enabled or disabled at the same time. You cannot enable the audit logs for data nodes or proxy nodes separately.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     public Boolean dbAudit;
 
     /**
-     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>This parameter is required when <strong>DbAudit</strong> is set to <strong>true</strong>.</li>
-     * <li>This parameter takes effect on all instances in the current region.</li>
+     * <li>The setting of this parameter takes effect on all instances in the current region.</li>
      * </ul>
      * </blockquote>
      * 

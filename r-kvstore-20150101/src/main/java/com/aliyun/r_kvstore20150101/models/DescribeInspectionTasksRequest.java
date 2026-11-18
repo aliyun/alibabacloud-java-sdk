@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInspectionTasksRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the assistant instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +13,21 @@ public class DescribeInspectionTasksRequest extends TeaModel {
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    /**
+     * <p>The summary of risk levels for inspection results. You can specify multiple values. Valid values:</p>
+     * <ul>
+     * <li>Normal: Normal.</li>
+     * <li>Warning: Warning.</li>
+     * <li>Error: High-risk.</li>
+     * <li>Failed: Failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Error</p>
+     */
+    @NameInMap("LevelSummary")
+    public String levelSummary;
 
     /**
      * <p>The page number.</p>
@@ -36,10 +51,10 @@ public class DescribeInspectionTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The task type.</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li>1: manual task</li>
-     * <li>2: scheduled task</li>
+     * <li>1: Manual task.</li>
+     * <li>2: Scheduled task.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,6 +74,14 @@ public class DescribeInspectionTasksRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInspectionTasksRequest setLevelSummary(String levelSummary) {
+        this.levelSummary = levelSummary;
+        return this;
+    }
+    public String getLevelSummary() {
+        return this.levelSummary;
     }
 
     public DescribeInspectionTasksRequest setPageNum(String pageNum) {

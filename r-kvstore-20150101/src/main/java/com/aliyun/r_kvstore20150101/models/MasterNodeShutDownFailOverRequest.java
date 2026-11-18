@@ -16,7 +16,7 @@ public class MasterNodeShutDownFailOverRequest extends TeaModel {
     /**
      * <ul>
      * <li><strong>Specify</strong>: Specifies the data nodes.</li>
-     * <li><strong>Random</strong>: The system randomly simulates a failure for one-fourth of the data nodes (rounded up to the nearest integer, with a minimum of 1). This parameter takes effect only when no data nodes are specified.</li>
+     * <li><strong>Random</strong>: The system randomly simulates a failure for one-fourth of the data nodes (rounded up, with a minimum of 1). This parameter takes effect only when no data nodes are specified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,8 +36,8 @@ public class MasterNodeShutDownFailOverRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><strong>Hard</strong>: Simulates an unrecoverable hardware failure. A switchover (HA) is directly triggered.</li>
-     * <li><strong>Soft</strong> (default): Simulates a recoverable hardware failure. The system preferentially attempts to recover the failed node. If the recovery fails, a switchover (HA) is triggered.</li>
+     * <li><strong>Hard</strong>: Simulates an unrecoverable hardware failure and directly triggers a switchover.</li>
+     * <li><strong>Soft</strong> (default): Simulates a recoverable hardware failure. The system preferentially attempts to recover the failed node and triggers a switchover if the recovery fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class MasterNodeShutDownFailOverRequest extends TeaModel {
     /**
      * <ul>
      * <li><strong>Specify</strong>: Specifies the proxy nodes.</li>
-     * <li><strong>Random</strong>: The system randomly simulates a failure for one-fourth of the proxy nodes (rounded up to the nearest integer, with a minimum of 1). This parameter takes effect only when no proxy nodes are specified.</li>
+     * <li><strong>Random</strong>: The system randomly simulates a failure for one-fourth of the proxy nodes (rounded up, with a minimum of 1). This parameter takes effect only when no proxy nodes are specified.</li>
      * </ul>
      * 
      * <strong>example:</strong>

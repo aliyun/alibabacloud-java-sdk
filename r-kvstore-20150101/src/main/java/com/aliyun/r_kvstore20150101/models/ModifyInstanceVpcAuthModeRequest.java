@@ -30,7 +30,7 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The authentication mode in a VPC. Valid values:</p>
+     * <p>The authentication mode in the VPC. Valid values:</p>
      * <ul>
      * <li><strong>Open</strong>: Uses password authentication.</li>
      * <li><strong>Close</strong>: Disables password authentication and enables password-free access.</li>

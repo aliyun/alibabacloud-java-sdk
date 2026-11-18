@@ -7,8 +7,8 @@ public class RenewAdditionalBandwidthRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Automatic payment is enabled. This is the default value.</li>
-     * <li><strong>false</strong>: Automatic payment is disabled. You must manually pay for the order. On the top menu bar of the console, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; <strong>My Orders</strong>. Find the order and complete the payment.</li>
+     * <li><strong>true</strong>: Automatic payment. This is the default value.</li>
+     * <li><strong>false</strong>: Manual payment. You must choose <strong>Expenses and Costs</strong> &gt; <strong>Renewals</strong> in the top navigation bar of the console, and then choose <strong>Order Management</strong> &gt; <strong>My Orders</strong> in the left-side navigation pane to find and pay for the order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class RenewAdditionalBandwidthRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class RenewAdditionalBandwidthRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The request source. This parameter is used only for internal maintenance and does not need to be specified.</p>
+     * <p>The source of the API call. This parameter is used only for internal maintenance and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>SDK</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
     /**
-     * <p>This group of parameters is deprecated. Ignore it.</p>
+     * <p>These parameters are deprecated. Ignore them.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeBackupsResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -14,9 +14,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public DescribeBackupsResponseBodyBackups backups;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The free backup quota for the instance. Unit: bytes. The free quota is equal to the default memory capacity of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2664017.html">Notice on backup commercialization</a>.
+     * <p>&lt;props=&quot;china&quot;&gt;The free backup quota for the instance. Unit: bytes. The free quota is equal to the default memory capacity of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2664017.html">Announcement on the commercialization of backups</a>.
      * Full backups and log backups share this free quota. When you change the instance type, the free quota of the instance changes accordingly.
-     * &lt;props=&quot;intl&quot;&gt;This parameter is not in effect. Ignore this parameter.</p>
+     * &lt;props=&quot;intl&quot;&gt;This parameter is invalid. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -37,9 +37,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Long fullStorageSize;
 
     /**
-     * <p>The size of instance log backup files for the current instance. Unit: bytes. This value is valid only when the flashback feature is enabled.</p>
+     * <p>The size of the instance log backup files for the current instance. Unit: bytes. This value is valid only when the flashback feature is enabled.</p>
      * <blockquote>
-     * <p>This value is independent of the number and size of backup sets returned in the current response. It represents the total size of all valid instance log backups for the instance.</p>
+     * <p>This value is independent of the number and size of backup sets returned in the current response. It represents the total size of all valid log backups for the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of backups.</p>
+     * <p>The total number of backup sets.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

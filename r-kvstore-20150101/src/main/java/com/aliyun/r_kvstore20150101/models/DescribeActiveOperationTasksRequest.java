@@ -7,9 +7,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>Specifies whether the event can be canceled. Default value: -1. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: all events.</li>
-     * <li><strong>0</strong>: returns only O&amp;M events that cannot be canceled.</li>
-     * <li><strong>1</strong>: returns only O&amp;M events that can be canceled.</li>
+     * <li><strong>-1</strong>: All events.</li>
+     * <li><strong>0</strong>: Only O&amp;M events that cannot be canceled are returned.</li>
+     * <li><strong>1</strong>: Only O&amp;M events that can be canceled are returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowCancel;
 
     /**
-     * <p>Specifies whether the event time can be modified. Default value: -1. Valid values:</p>
+     * <p>Specifies whether the execution time can be modified. Default value: -1. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: all events.</li>
-     * <li><strong>0</strong>: returns only O&amp;M events whose time cannot be modified.</li>
-     * <li><strong>1</strong>: returns only O&amp;M events whose time can be modified.</li>
+     * <li><strong>-1</strong>: All events.</li>
+     * <li><strong>0</strong>: Only O&amp;M events whose execution time cannot be modified are returned.</li>
+     * <li><strong>1</strong>: Only O&amp;M events whose execution time can be modified are returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,9 +35,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>The change level. Default value: all. Valid values:</p>
      * <ul>
-     * <li><strong>all</strong>: all levels including exception recovery and system O&amp;M.</li>
-     * <li><strong>S0</strong>: exception recovery.</li>
-     * <li><strong>S1</strong>: system O&amp;M.</li>
+     * <li><strong>all</strong>: All exception repair and system O&amp;M levels.</li>
+     * <li><strong>S0</strong>: Exception repair.</li>
+     * <li><strong>S1</strong>: System O&amp;M.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String changeLevel;
 
     /**
-     * <p>The database type. Set this parameter to <strong>redis</strong>.</p>
+     * <p>The database engine. Set the value to <strong>redis</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>redis</p>
@@ -56,7 +56,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String dbType;
 
     /**
-     * <p>The instance name. This parameter is optional. If specified, only one instance name is allowed.</p>
+     * <p>The name of the instance. This parameter is optional. If you specify this parameter, you can specify only one instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>r-wz96fzmpvpr2qnqnlb</p>
@@ -89,7 +89,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product name. Valid values: RDS, POLARDB, MongoDB, and Redis. For Redis instances, set this parameter to Redis.</p>
+     * <p>The name of the service. Valid values: RDS, POLARDB, MongoDB, and Redis. For Redis instances, set the value to Redis.</p>
      * 
      * <strong>example:</strong>
      * <p>Redis</p>
@@ -98,9 +98,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region ID of the pending event. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query available region IDs.</p>
+     * <p>The region ID of the pending events. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
      * <blockquote>
-     * <p>Set this parameter to <strong>all</strong> to query events in all regions.</p>
+     * <p>A value of <strong>all</strong> specifies all region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -119,14 +119,14 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The status of the O&amp;M event. This parameter is used to filter the returned events. Valid values:</p>
+     * <p>The status of the O&amp;M event, which is used to filter the returned tasks. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: all events.</li>
-     * <li><strong>3</strong>: pending events.</li>
-     * <li><strong>4</strong>: events being processed.</li>
-     * <li><strong>5</strong>: events that ended successfully.</li>
-     * <li><strong>6</strong>: events that ended with failures.</li>
-     * <li><strong>7</strong>: canceled events.</li>
+     * <li><strong>-1</strong>: All events.</li>
+     * <li><strong>3</strong>: Pending events.</li>
+     * <li><strong>4</strong>: Processing events.</li>
+     * <li><strong>5</strong>: Successfully completed events.</li>
+     * <li><strong>6</strong>: Failed events.</li>
+     * <li><strong>7</strong>: Canceled events.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The event type of the O&amp;M event. If this parameter is left empty, all types are queried.</p>
+     * <p>The event type. If this parameter is left empty, all event types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_apsradb_transfer</p>

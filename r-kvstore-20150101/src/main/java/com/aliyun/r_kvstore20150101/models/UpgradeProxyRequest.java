@@ -21,7 +21,7 @@ public class UpgradeProxyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IDs of the proxy nodes to upgrade, separated by commas (,). This parameter is valid only for Classic Edition instances.</p>
+     * <p>The IDs of the proxy nodes to be upgraded. Separate multiple IDs with commas. This parameter is valid only for classic instances.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1vgja77wl7pb****-proxy-0</p>
@@ -39,17 +39,17 @@ public class UpgradeProxyRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The time when the upgrade is performed. Valid values:</p>
+     * <p>The execution time for the proxy node upgrade. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: The upgrade is immediately performed. This is the default value.</li>
-     * <li><strong>MaintainTime</strong>: The upgrade is performed within the O&amp;M window of the instance.</li>
+     * <li><strong>0</strong>: Default value. The upgrade is executed immediately.</li>
+     * <li><strong>1</strong>: The upgrade is executed within the maintenance window of the instance.</li>
      * </ul>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> to modify the O&amp;M window of a Redis instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> to modify the maintenance window of the Redis instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Immediately</p>
+     * <p>0</p>
      */
     @NameInMap("SwitchTimeMode")
     public Integer switchTimeMode;

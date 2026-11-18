@@ -19,7 +19,7 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     public Integer authorizationState;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A501A191-BD70-5E50-98A9-C2A486A82****</p>

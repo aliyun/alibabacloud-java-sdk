@@ -133,7 +133,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
          * <ul>
          * <li><strong>db</strong>: Data node.</li>
          * <li><strong>proxy</strong>: Proxy node.</li>
-         * <li><strong>normal</strong>: Regular node. This value is returned for instances that use the standard architecture.</li>
+         * <li><strong>normal</strong>: Regular node. This value is returned for instances of the standard architecture.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String customId;
 
         /**
-         * <p>The database engine. The value is fixed as <strong>redis</strong>.</p>
+         * <p>The database engine type. The value is fixed as <strong>redis</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>redis</p>
@@ -377,7 +377,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Normal</strong>: Normal.</li>
          * <li><strong>Creating</strong>: Creating.</li>
-         * <li><strong>Changing</strong>: Changing.</li>
+         * <li><strong>Changing</strong>: Modifying.</li>
          * <li><strong>Inactive</strong>: Disabled.</li>
          * <li><strong>Flushing</strong>: Purge in progress.</li>
          * <li><strong>Released</strong>: Released.</li>
@@ -386,9 +386,9 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
          * <li><strong>Error</strong>: Creation failed.</li>
          * <li><strong>Migrating</strong>: Migrating.</li>
          * <li><strong>BackupRecovering</strong>: Restoring from backup.</li>
-         * <li><strong>MinorVersionUpgrading</strong>: Minor version upgrade in progress.</li>
-         * <li><strong>NetworkModifying</strong>: Changing the network.</li>
-         * <li><strong>SSLModifying</strong>: Changing SSL configurations.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: Upgrading the minor engine version.</li>
+         * <li><strong>NetworkModifying</strong>: Modifying the network.</li>
+         * <li><strong>SSLModifying</strong>: Modifying SSL settings.</li>
          * <li><strong>MajorVersionUpgrading</strong>: Major engine version upgrade in progress. The instance remains accessible.</li>
          * </ul>
          * 
@@ -453,7 +453,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public Integer shardCount;
 
         /**
-         * <p>The storage type. The value is fixed as LOCAL_SSD (<a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disk (standard SSD)</a>).</p>
+         * <p>The storage type. The value is fixed as LOCAL_SSD (<a href="https://help.aliyun.com/document_detail/122389.html">ESSD standard SSD</a>).</p>
          * 
          * <strong>example:</strong>
          * <p>LOCAL_SSD</p>

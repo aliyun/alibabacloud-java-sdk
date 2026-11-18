@@ -8,7 +8,7 @@ public class TransformToPrePaidRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: enables automatic payment.</li>
-     * <li><strong>false</strong>: disables automatic payment (default). You must manually renew the instance in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</li>
+     * <li><strong>false</strong>: disables automatic payment (default). You must manually renew the instance in the console. For more information, refer to <a href="https://help.aliyun.com/document_detail/26352.html">Manually renew an instance</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class TransformToPrePaidRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The auto-renewal epoch. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+     * <p>The Unified Auto Renewal Cycle. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
@@ -42,11 +42,17 @@ public class TransformToPrePaidRequest extends TeaModel {
     @NameInMap("AutoRenewPeriod")
     public Long autoRenewPeriod;
 
+    /**
+     * <p>The coupon code. Default value: default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
-     * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance ID.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

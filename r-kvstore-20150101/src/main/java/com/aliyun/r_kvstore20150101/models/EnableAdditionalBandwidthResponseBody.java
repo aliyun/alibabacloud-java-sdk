@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableAdditionalBandwidthResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2084452111111</p>
@@ -14,7 +14,7 @@ public class EnableAdditionalBandwidthResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D622714-AEDD-4609-9167-F5DDD3D1****</p>

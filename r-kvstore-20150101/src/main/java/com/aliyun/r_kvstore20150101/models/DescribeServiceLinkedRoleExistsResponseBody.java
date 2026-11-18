@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceLinkedRoleExistsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the service-linked role has been authorized for the current account. Valid values:</p>
+     * <p>Indicates whether the service-linked role is activated for the current account. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Authorized.</p>
+     * <li><p><strong>true</strong>: The role is activated.</p>
      * </li>
-     * <li><p><strong>false</strong>: Not authorized.</p>
+     * <li><p><strong>false</strong>: The role is not activated.</p>
      * </li>
      * </ul>
      * 

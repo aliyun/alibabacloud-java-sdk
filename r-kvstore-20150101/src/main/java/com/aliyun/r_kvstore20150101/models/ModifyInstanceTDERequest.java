@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceTDERequest extends TeaModel {
     /**
-     * <p>The ID of the custom key. You can call <a href="https://help.aliyun.com/document_detail/473860.html">DescribeEncryptionKeyList</a> to query the key ID.</p>
+     * <p>The ID of the custom key. You can call the <a href="https://help.aliyun.com/document_detail/473860.html">DescribeEncryptionKeyList</a> operation to obtain the key ID.</p>
      * <blockquote>
      * <ul>
-     * <li>If you do not specify this parameter, <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service</a> automatically generates a key.</li>
-     * <li>To create a custom key, call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service.</li>
+     * <li>If you do not specify this parameter, <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a> automatically generates a key.</li>
+     * <li>To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</li>
      * </ul>
      * </blockquote>
      * 
@@ -22,7 +22,7 @@ public class ModifyInstanceTDERequest extends TeaModel {
     /**
      * <p>The encryption algorithm. Default value: AES-CTR-256.</p>
      * <blockquote>
-     * <p>This parameter is available only when <strong>TDEStatus</strong> is set to <strong>Enabled</strong>.</p>
+     * <p>This parameter is available only when the <strong>TDEStatus</strong> parameter is set to <strong>Enabled</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class ModifyInstanceTDERequest extends TeaModel {
     public String encryptionName;
 
     /**
-     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,11 +54,11 @@ public class ModifyInstanceTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The global resource descriptor Alibaba Cloud Resource Name (ARN) of the role to be authorized. After the authorization is complete, the related Key Management Service can be used. Format: <code>acs:ram::$accountID:role/$roleName</code>.</p>
+     * <p>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the RAM role to authorize. After authorization, you can use the related Key Management Service (KMS) features. Format: <code>acs:ram::$accountID:role/$roleName</code>.</p>
      * <blockquote>
      * <ul>
-     * <li><code>$accountID</code>: the Alibaba Cloud account ID. Log on to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and then click <strong>Security Settings</strong> to view the account ID.</li>
-     * <li><code>$roleName</code>: the RAM role name. Set this value to <strong>AliyunRdsInstanceEncryptionDefaultRole</strong>.</li>
+     * <li><code>$accountID</code>: the Alibaba Cloud account ID. You can logon to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and click <strong>Security Settings</strong> to view the account ID.</li>
+     * <li><code>$roleName</code>: the name of the RAM role. Set the value to <strong>AliyunRdsInstanceEncryptionDefaultRole</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -72,9 +72,9 @@ public class ModifyInstanceTDERequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Enables the transparent data encryption feature. Set the value to <strong>Enabled</strong>.</p>
+     * <p>The TDE status. Valid value: <strong>Enabled</strong>.</p>
      * <blockquote>
-     * <p>The TDE feature cannot be disabled after it is enabled. Before enabling TDE, evaluate whether it affects your business. For more information, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable transparent data encryption TDE</a>.</p>
+     * <p>After TDE is enabled, it cannot be disabled. Evaluate the impact on your business before you enable TDE. For more information, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable Transparent Data Encryption (TDE)</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

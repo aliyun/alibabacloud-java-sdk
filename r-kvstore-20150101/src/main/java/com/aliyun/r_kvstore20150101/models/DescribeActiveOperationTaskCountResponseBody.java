@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether there are O&amp;M tasks that require a pop-up notification for user action. Valid values:</p>
+     * <p>Indicates whether there are O&amp;M tasks that require a pop-up notification for user operations. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: No pop-up notification.</li>
-     * <li><strong>1</strong>: A pop-up notification exists.</li>
+     * <li><strong>0</strong>: No pop-up window.</li>
+     * <li><strong>1</strong>: Pop-up window.</li>
      * </ul>
      * 
      * <strong>example:</strong>

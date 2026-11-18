@@ -20,9 +20,9 @@ public class ModifyGlobalSecurityIPGroupRequest extends TeaModel {
     /**
      * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-     * <li>The name must start with a letter and end with a letter or digit.</li>
-     * <li>The name must be 2 to 120 characters in length.<blockquote>
+     * <li>Consist of lowercase letters, digits, and underscores (_).</li>
+     * <li>Start with a letter and end with a letter or a digit.</li>
+     * <li>Be 2 to 120 characters in length.<blockquote>
      * <p>This parameter overwrites the original value.</p>
      * </blockquote>
      * </li>

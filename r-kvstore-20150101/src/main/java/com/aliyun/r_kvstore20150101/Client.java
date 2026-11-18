@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "R-kvstore";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-hangzhou", "r-kvstore.aliyuncs.com"),
@@ -62,7 +65,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds data shard nodes to a cluster instance. This operation supports only cloud-native Cluster Edition instances.</p>
+     * <p>Adds data shard nodes to a cluster instance. This operation is supported only for cloud-native cluster instances.</p>
      * 
      * @param request AddShardingNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -142,7 +145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds data shard nodes to a cluster instance. This operation supports only cloud-native Cluster Edition instances.</p>
+     * <p>Adds data shard nodes to a cluster instance. This operation is supported only for cloud-native cluster instances.</p>
      * 
      * @param request AddShardingNodeRequest
      * @return AddShardingNodeResponse
@@ -154,17 +157,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Clients can use the direct connection endpoint to bypass the proxy and connect to the cluster instance in the same way as they connect to a native Redis cluster. This reduces link overhead and further improves the response speed of the ApsaraDB Tair (Redis® OSS-Compatible) database service.
-     * The instance for which you invoke this operation must meet the following conditions:</p>
+     * <p>Clients can use the direct connection endpoint to bypass the proxy and connect to the cluster instance in the same way as they connect to a native Redis cluster. This reduces link overhead and further improves the response speed of the Tair (Redis® OSS-Compatible) database service.
+     * To call this operation, the instance must meet the following conditions:</p>
      * <ul>
      * <li>The instance uses the cluster architecture.</li>
-     * <li>The deployment pattern is classic.</li>
-     * <li>The network type of the instance is VPC. If the instance is connected to the classic network, you can invoke the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to switch the network type to VPC.</li>
-     * <li>The Secure Sockets Layer (SSL) encryption feature is disabled for the instance. If the Secure Sockets Layer (SSL) encryption feature is enabled, you can invoke the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation for shutdown.</li>
+     * <li>The deployment mode is classic.</li>
+     * <li>The network type of the instance is VPC. If the instance is connected to the classic network, you can call the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to switch the network type to VPC.</li>
+     * <li>The Secure Sockets Layer (SSL) encryption feature is disabled for the instance. If the Secure Sockets Layer (SSL) encryption feature is enabled, you can call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation to shut down the feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Applies for a direct connection endpoint for an ApsaraDB Tair (Redis® OSS-Compatible) database cluster instance.</p>
+     * <p>Applies for a direct connection endpoint for a Tair (Redis® OSS-Compatible) database cluster instance.</p>
      * 
      * @param request AllocateDirectConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -224,17 +227,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Clients can use the direct connection endpoint to bypass the proxy and connect to the cluster instance in the same way as they connect to a native Redis cluster. This reduces link overhead and further improves the response speed of the ApsaraDB Tair (Redis® OSS-Compatible) database service.
-     * The instance for which you invoke this operation must meet the following conditions:</p>
+     * <p>Clients can use the direct connection endpoint to bypass the proxy and connect to the cluster instance in the same way as they connect to a native Redis cluster. This reduces link overhead and further improves the response speed of the Tair (Redis® OSS-Compatible) database service.
+     * To call this operation, the instance must meet the following conditions:</p>
      * <ul>
      * <li>The instance uses the cluster architecture.</li>
-     * <li>The deployment pattern is classic.</li>
-     * <li>The network type of the instance is VPC. If the instance is connected to the classic network, you can invoke the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to switch the network type to VPC.</li>
-     * <li>The Secure Sockets Layer (SSL) encryption feature is disabled for the instance. If the Secure Sockets Layer (SSL) encryption feature is enabled, you can invoke the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation for shutdown.</li>
+     * <li>The deployment mode is classic.</li>
+     * <li>The network type of the instance is VPC. If the instance is connected to the classic network, you can call the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to switch the network type to VPC.</li>
+     * <li>The Secure Sockets Layer (SSL) encryption feature is disabled for the instance. If the Secure Sockets Layer (SSL) encryption feature is enabled, you can call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation to shut down the feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Applies for a direct connection endpoint for an ApsaraDB Tair (Redis® OSS-Compatible) database cluster instance.</p>
+     * <p>Applies for a direct connection endpoint for a Tair (Redis® OSS-Compatible) database cluster instance.</p>
      * 
      * @param request AllocateDirectConnectionRequest
      * @return AllocateDirectConnectionResponse
@@ -249,7 +252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/124920.html">Apply for a public endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Applies for a public endpoint for a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Applies for a public endpoint for a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request AllocateInstancePublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -312,7 +315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/124920.html">Apply for a public endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Applies for a public endpoint for a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Applies for a public endpoint for a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request AllocateInstancePublicConnectionRequest
      * @return AllocateInstancePublicConnectionResponse
@@ -324,15 +327,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Scenarios in which O&amp;M events cannot be canceled</p>
+     * <p>Scenarios where O&amp;M events cannot be canceled:</p>
      * <ul>
      * <li>allowCancel is 0.</li>
      * <li>The current time is later than the start time of the O&amp;M event.</li>
-     * <li>The status of the O&amp;M event is not 3 (waiting for execution).</li>
+     * <li>The status of the O&amp;M event is not 3 (Pending execution).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels O&amp;M events in batches.</p>
+     * <p>Cancels multiple O&amp;M events.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -384,15 +387,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Scenarios in which O&amp;M events cannot be canceled</p>
+     * <p>Scenarios where O&amp;M events cannot be canceled:</p>
      * <ul>
      * <li>allowCancel is 0.</li>
      * <li>The current time is later than the start time of the O&amp;M event.</li>
-     * <li>The status of the O&amp;M event is not 3 (waiting for execution).</li>
+     * <li>The status of the O&amp;M event is not 3 (Pending execution).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels O&amp;M events in batches.</p>
+     * <p>Cancels multiple O&amp;M events.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
@@ -456,13 +459,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about Transparent Data Encryption (TDE) and related precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>For more information about Transparent Data Encryption (TDE) and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * <ul>
-     * <li>After you call this operation to confirm that the authorization is complete, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</li>
+     * <li>After you call this operation to confirm the authorization, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether an ApsaraDB for Redis (Tair) instance has been granted authorization to use the Key Management Service (KMS).</p>
+     * <p>Queries whether an ApsaraDB Tair (Redis-compatible) database instance is granted authorization to use Key Management Service (KMS).</p>
      * 
      * @param request CheckCloudResourceAuthorizedRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -518,13 +521,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about Transparent Data Encryption (TDE) and related precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>For more information about Transparent Data Encryption (TDE) and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * <ul>
-     * <li>After you call this operation to confirm that the authorization is complete, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</li>
+     * <li>After you call this operation to confirm the authorization, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether an ApsaraDB for Redis (Tair) instance has been granted authorization to use the Key Management Service (KMS).</p>
+     * <p>Queries whether an ApsaraDB Tair (Redis-compatible) database instance is granted authorization to use Key Management Service (KMS).</p>
      * 
      * @param request CheckCloudResourceAuthorizedRequest
      * @return CheckCloudResourceAuthorizedResponse
@@ -536,17 +539,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only instances that are compatible with Redis 4.0 or later.</p>
+     * <p>This API operation is supported only by instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
-     * <li>The instance status must be Running when you call this operation. </li>
+     * <li>This API operation requires the instance to be in the Running state. </li>
      * <li>You can create up to 18 accounts for each instance.<blockquote>
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an account for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Creates an account for a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request CreateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -626,17 +629,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only instances that are compatible with Redis 4.0 or later.</p>
+     * <p>This API operation is supported only by instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
-     * <li>The instance status must be Running when you call this operation. </li>
+     * <li>This API operation requires the instance to be in the Running state. </li>
      * <li>You can create up to 18 accounts for each instance.<blockquote>
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an account for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Creates an account for a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request CreateAccountRequest
      * @return CreateAccountResponse
@@ -648,10 +651,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</p>
+     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data backup for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Creates a data backup for an ApsaraDB for Tair (Redis OSS-Compatible) instance.</p>
      * 
      * @param request CreateBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -707,10 +710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</p>
+     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data backup for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Creates a data backup for an ApsaraDB for Tair (Redis OSS-Compatible) instance.</p>
      * 
      * @param request CreateBackupRequest
      * @return CreateBackupResponse
@@ -722,10 +725,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer recommended. Use the new operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time Top Key Statistics and Offline Full Key Analysis</a> instead.</p>
+     * <p>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Manually initiates a cache analysis task for an instance.</p>
+     * <p>Initiates a manual cache analysis task for an instance.</p>
      * 
      * @param request CreateCacheAnalysisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -777,10 +780,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer recommended. Use the new operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time Top Key Statistics and Offline Full Key Analysis</a> instead.</p>
+     * <p>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Manually initiates a cache analysis task for an instance.</p>
+     * <p>Initiates a manual cache analysis task for an instance.</p>
      * 
      * @param request CreateCacheAnalysisTaskRequest
      * @return CreateCacheAnalysisTaskResponse
@@ -795,9 +798,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to convert an existing instance into the first child instance of a distributed instance. After the conversion, the distributed instance to which the instance belongs is created.
      * The instance to be converted must meet the following requirements:</p>
      * <ul>
-     * <li>The instance is a Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-optimized</a> (Classic Edition) instance.</li>
-     * <li>If the instance uses a cluster architecture, you must disable the direct connection mode. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a direct connection endpoint</a>.<blockquote>
-     * <p>You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which it belongs is created.</p>
+     * <li>The instance to be converted is a Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-optimized</a> (Classic Edition) instance.</li>
+     * <li>If the instance to be converted uses the cluster architecture, the direct connection mode must be disabled. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a direct connection endpoint</a>.<blockquote>
+     * <p>You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to purchase a new instance as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -866,9 +869,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to convert an existing instance into the first child instance of a distributed instance. After the conversion, the distributed instance to which the instance belongs is created.
      * The instance to be converted must meet the following requirements:</p>
      * <ul>
-     * <li>The instance is a Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-optimized</a> (Classic Edition) instance.</li>
-     * <li>If the instance uses a cluster architecture, you must disable the direct connection mode. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a direct connection endpoint</a>.<blockquote>
-     * <p>You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which it belongs is created.</p>
+     * <li>The instance to be converted is a Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-optimized</a> (Classic Edition) instance.</li>
+     * <li>If the instance to be converted uses the cluster architecture, the direct connection mode must be disabled. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a direct connection endpoint</a>.<blockquote>
+     * <p>You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to purchase a new instance as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -886,7 +889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a global IP address whitelist template.</p>
+     * <p>Creates a global IP whitelist template.</p>
      * 
      * @param request CreateGlobalSecurityIPGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -950,7 +953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a global IP address whitelist template.</p>
+     * <p>Creates a global IP whitelist template.</p>
      * 
      * @param request CreateGlobalSecurityIPGroupRequest
      * @return CreateGlobalSecurityIPGroupResponse
@@ -962,7 +965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scheduled inspection task configuration.</p>
+     * <p>Creates a configuration for a scheduled inspection task.</p>
      * 
      * @param request CreateInspectionScheduleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1026,7 +1029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scheduled inspection task configuration.</p>
+     * <p>Creates a configuration for a scheduled inspection task.</p>
      * 
      * @param request CreateInspectionScheduleRequest
      * @return CreateInspectionScheduleResponse
@@ -1038,7 +1041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a manual inspection task.</p>
+     * <p>Manually creates an inspection task.</p>
      * 
      * @param request CreateInspectionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1090,7 +1093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a manual inspection task.</p>
+     * <p>Manually creates an inspection task.</p>
      * 
      * @param request CreateInspectionTaskRequest
      * @return CreateInspectionTaskResponse
@@ -1102,14 +1105,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
-     * This operation can be used to create an ApsaraDB for Redis Community Edition instance or a Tair in-memory instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis (Tair) before you call this operation.
+     * This operation allows you to create a Redis Community Edition instance or a Tair memory-optimized instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</p>
      * <blockquote>
-     * <p>For information about how to create an ApsaraDB for Redis instance in the console and how to select an instance type, see <a href="https://help.aliyun.com/document_detail/26351.html">Create an ApsaraDB for Redis instance</a>.</p>
+     * <p>For information about how to create a Redis instance and select instance types in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates an ApsaraDB for Redis Community Edition instance with the classic or cloud-native architecture, or a Tair in-memory instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the CreateTairInstance operation.</p>
+     * <p>Creates a Redis Community Edition instance with the classic or cloud-native architecture, or a Tair in-memory instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the CreateTairInstance operation.</p>
      * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1341,14 +1344,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
-     * This operation can be used to create an ApsaraDB for Redis Community Edition instance or a Tair in-memory instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis (Tair) before you call this operation.
+     * This operation allows you to create a Redis Community Edition instance or a Tair memory-optimized instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</p>
      * <blockquote>
-     * <p>For information about how to create an ApsaraDB for Redis instance in the console and how to select an instance type, see <a href="https://help.aliyun.com/document_detail/26351.html">Create an ApsaraDB for Redis instance</a>.</p>
+     * <p>For information about how to create a Redis instance and select instance types in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates an ApsaraDB for Redis Community Edition instance with the classic or cloud-native architecture, or a Tair in-memory instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the CreateTairInstance operation.</p>
+     * <p>Creates a Redis Community Edition instance with the classic or cloud-native architecture, or a Tair in-memory instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the CreateTairInstance operation.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -1360,7 +1363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates multiple VIPs for an instance.</p>
+     * <p>Creates multiple virtual IP addresses for an instance.</p>
      * 
      * @param request CreateInstanceMultiVIPRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1412,7 +1415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates multiple VIPs for an instance.</p>
+     * <p>Creates multiple virtual IP addresses for an instance.</p>
      * 
      * @param request CreateInstanceMultiVIPRequest
      * @return CreateInstanceMultiVIPResponse
@@ -1424,18 +1427,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the ApsaraDB for Tair (Redis OSS-compatible) database before you call this API operation.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the ApsaraDB for Tair (Redis-compatible) database.</p>
      * <blockquote>
-     * <p>This API operation only supports creating Classic Edition instances.
-     * Use the following operations to create a single instance:</p>
+     * <p>This operation only supports creating Classic Edition instances.
+     * Use the following API operations to create a single instance:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates an open-source Redis instance or a Tair memory-optimized Classic Edition instance.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair cloud-native instance (including memory-optimized, persistent memory-optimized, and disk-optimized instances).</li>
+     * <li><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: Creates an open-source Redis instance or a Tair memory-optimized Classic Edition instance.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: Creates a Tair cloud-native instance (including memory-optimized, persistent memory-optimized, and disk-optimized instances).</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates multiple ApsaraDB for Tair (Redis OSS-compatible) database Classic Edition instances.</p>
+     * <p>Creates multiple ApsaraDB for Tair (Redis-compatible) database Classic Edition instances.</p>
      * 
      * @param request CreateInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1519,18 +1522,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the ApsaraDB for Tair (Redis OSS-compatible) database before you call this API operation.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the ApsaraDB for Tair (Redis-compatible) database.</p>
      * <blockquote>
-     * <p>This API operation only supports creating Classic Edition instances.
-     * Use the following operations to create a single instance:</p>
+     * <p>This operation only supports creating Classic Edition instances.
+     * Use the following API operations to create a single instance:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates an open-source Redis instance or a Tair memory-optimized Classic Edition instance.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair cloud-native instance (including memory-optimized, persistent memory-optimized, and disk-optimized instances).</li>
+     * <li><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: Creates an open-source Redis instance or a Tair memory-optimized Classic Edition instance.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: Creates a Tair cloud-native instance (including memory-optimized, persistent memory-optimized, and disk-optimized instances).</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates multiple ApsaraDB for Tair (Redis OSS-compatible) database Classic Edition instances.</p>
+     * <p>Creates multiple ApsaraDB for Tair (Redis-compatible) database Classic Edition instances.</p>
      * 
      * @param request CreateInstancesRequest
      * @return CreateInstancesResponse
@@ -1542,7 +1545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Parameter templates are applicable only to instances deployed in cloud-native deployment mode (formerly cloud disk instances).</p>
+     * <p>Parameter templates apply only to instances in cloud-native deployment mode (formerly cloud disk instances).</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a parameter template.</p>
@@ -1621,7 +1624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Parameter templates are applicable only to instances deployed in cloud-native deployment mode (formerly cloud disk instances).</p>
+     * <p>Parameter templates apply only to instances in cloud-native deployment mode (formerly cloud disk instances).</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a parameter template.</p>
@@ -1783,13 +1786,137 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a Tair AI Gateway instance.</p>
+     * 
+     * @param request CreateTairAIGatewayInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTairAIGatewayInstanceResponse
+     */
+    public CreateTairAIGatewayInstanceResponse createTairAIGatewayInstanceWithOptions(CreateTairAIGatewayInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenewPeriod)) {
+            query.put("AutoRenewPeriod", request.autoRenewPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessInfo)) {
+            query.put("BusinessInfo", request.businessInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.couponNo)) {
+            query.put("CouponNo", request.couponNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayName)) {
+            query.put("GatewayName", request.gatewayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
+            query.put("GatewayType", request.gatewayType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginParams)) {
+            query.put("PluginParams", request.pluginParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginType)) {
+            query.put("PluginType", request.pluginType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTairAIGatewayInstance"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTairAIGatewayInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Tair AI Gateway instance.</p>
+     * 
+     * @param request CreateTairAIGatewayInstanceRequest
+     * @return CreateTairAIGatewayInstanceResponse
+     */
+    public CreateTairAIGatewayInstanceResponse createTairAIGatewayInstance(CreateTairAIGatewayInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTairAIGatewayInstanceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>For selection reference, see <a href="https://help.aliyun.com/document_detail/223808.html">Must-read for selecting Tair database (Redis OSS-Compatible)</a>.
-     * Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair database (Redis OSS-Compatible) before you invoke this operation.</p>
+     * <p>For selection reference, see <a href="https://help.aliyun.com/document_detail/223808.html">Must-read for selecting the ApsaraDB Tair database (Redis OSS-compatible)</a>.
+     * Make sure you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the ApsaraDB Tair database (Redis OSS-compatible) before you invoke this operation.</p>
      * <blockquote>
      * <ul>
-     * <li>For instructions on how to perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</li>
-     * <li>To create other types of instances, such as open-source instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-optimized</a> classic instances, you can invoke the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</li>
+     * <li>For console operations, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</li>
+     * <li>To create other types of instances, such as open-source or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-optimized</a> classic edition instances, you can invoke the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</li>
      * </ul>
      * </blockquote>
      * 
@@ -2018,12 +2145,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For selection reference, see <a href="https://help.aliyun.com/document_detail/223808.html">Must-read for selecting Tair database (Redis OSS-Compatible)</a>.
-     * Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair database (Redis OSS-Compatible) before you invoke this operation.</p>
+     * <p>For selection reference, see <a href="https://help.aliyun.com/document_detail/223808.html">Must-read for selecting the ApsaraDB Tair database (Redis OSS-compatible)</a>.
+     * Make sure you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the ApsaraDB Tair database (Redis OSS-compatible) before you invoke this operation.</p>
      * <blockquote>
      * <ul>
-     * <li>For instructions on how to perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</li>
-     * <li>To create other types of instances, such as open-source instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-optimized</a> classic instances, you can invoke the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</li>
+     * <li>For console operations, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</li>
+     * <li>To create other types of instances, such as open-source or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-optimized</a> classic edition instances, you can invoke the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</li>
      * </ul>
      * </blockquote>
      * 
@@ -2184,9 +2311,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
+     * <li>Before calling this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing details</a> of ApsaraDB for Redis.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2278,9 +2405,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
+     * <li>Before calling this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing details</a> of ApsaraDB for Redis.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2299,7 +2426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing details</a> of ApsaraDB for Redis.</li>
-     * <li>To create a Tair Serverless KV table instance, call the <code>CreateTairSkvDdbTable</code> operation.</li>
+     * <li>To create a Tair Serverless KV table instance, use the <code>CreateTairSkvDdbTable</code> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2394,7 +2521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing details</a> of ApsaraDB for Redis.</li>
-     * <li>To create a Tair Serverless KV table instance, call the <code>CreateTairSkvDdbTable</code> operation.</li>
+     * <li>To create a Tair Serverless KV table instance, use the <code>CreateTairSkvDdbTable</code> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2410,13 +2537,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation supports only instances that are compatible with Redis 4.0 or later.</p>
+     * <p>This operation is supported only for instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
-     * <li>You can call this API operation only when the instance is in the Running state.</li>
+     * <li>You can call this operation only when the instance is in the Running state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an account of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Deletes an account from an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2476,13 +2603,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation supports only instances that are compatible with Redis 4.0 or later.</p>
+     * <p>This operation is supported only for instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
-     * <li>You can call this API operation only when the instance is in the Running state.</li>
+     * <li>You can call this operation only when the instance is in the Running state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an account of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Deletes an account from an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -2494,7 +2621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only cloud-native edition instances.</p>
+     * <p>This operation is supported only for cloud-native instances.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a specified backup set. Only manual backup sets can be deleted.</p>
@@ -2549,7 +2676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only cloud-native edition instances.</p>
+     * <p>This operation is supported only for cloud-native instances.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a specified backup set. Only manual backup sets can be deleted.</p>
@@ -2564,7 +2691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete an IP whitelist template, dissociate all instances that are associated with the template.</p>
+     * <p>Before deleting an IP address whitelist template, disassociate the instances that are associated with the template.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a global IP address whitelist template.</p>
@@ -2631,7 +2758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete an IP whitelist template, dissociate all instances that are associated with the template.</p>
+     * <p>Before deleting an IP address whitelist template, disassociate the instances that are associated with the template.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a global IP address whitelist template.</p>
@@ -2646,18 +2773,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
      * When you invoke this operation, the instance must meet the following conditions:</p>
      * <ul>
      * <li>The instance status is Running.</li>
-     * <li>The payer of the instance is pay-as-you-go.<blockquote>
-     * <p>Upfront (subscription) instances cannot be deleted by invoking this operation. They will undergo automatic release when they expire. To release a subscription instance in advance, perform the operation in the console.</p>
+     * <li>The payer of the instance uses the pay-as-you-go billing method.<blockquote>
+     * <p>You cannot invoke this operation to delete an upfront (subscription) instance. An upfront instance is subject to automatic release upon expiration. To delete an upfront instance in advance, use the console.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a scheduled inspection task.</p>
+     * <p>Deletes a specified scheduled inspection task configuration. ScheduleId specifies the ID of the scheduling configuration to delete, and InstanceId specifies the ID of the AI assistant instance. This operation does not release the database instance.</p>
      * 
      * @param request DeleteInspectionScheduleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2697,18 +2824,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
      * When you invoke this operation, the instance must meet the following conditions:</p>
      * <ul>
      * <li>The instance status is Running.</li>
-     * <li>The payer of the instance is pay-as-you-go.<blockquote>
-     * <p>Upfront (subscription) instances cannot be deleted by invoking this operation. They will undergo automatic release when they expire. To release a subscription instance in advance, perform the operation in the console.</p>
+     * <li>The payer of the instance uses the pay-as-you-go billing method.<blockquote>
+     * <p>You cannot invoke this operation to delete an upfront (subscription) instance. An upfront instance is subject to automatic release upon expiration. To delete an upfront instance in advance, use the console.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a scheduled inspection task.</p>
+     * <p>Deletes a specified scheduled inspection task configuration. ScheduleId specifies the ID of the scheduling configuration to delete, and InstanceId specifies the ID of the AI assistant instance. This operation does not release the database instance.</p>
      * 
      * @param request DeleteInspectionScheduleRequest
      * @return DeleteInspectionScheduleResponse
@@ -2720,12 +2847,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
      * When you invoke this operation, the instance must meet the following conditions:</p>
      * <ul>
      * <li>The instance status is Running.</li>
-     * <li>The payer uses the pay-as-you-go billing method.<blockquote>
-     * <p>Upfront (subscription) instances cannot be deleted by invoking this operation. They will undergo automatic release after they expire. To release a subscription instance in advance, perform the operation in the console.</p>
+     * <li>The payer of the instance uses the pay-as-you-go billing method.<blockquote>
+     * <p>You cannot invoke this operation to manually delete an upfront (subscription) instance. Such instances undergo automatic release upon expiration. To release an upfront instance in advance, use the console.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -2787,12 +2914,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
      * When you invoke this operation, the instance must meet the following conditions:</p>
      * <ul>
      * <li>The instance status is Running.</li>
-     * <li>The payer uses the pay-as-you-go billing method.<blockquote>
-     * <p>Upfront (subscription) instances cannot be deleted by invoking this operation. They will undergo automatic release after they expire. To release a subscription instance in advance, perform the operation in the console.</p>
+     * <li>The payer of the instance uses the pay-as-you-go billing method.<blockquote>
+     * <p>You cannot invoke this operation to manually delete an upfront (subscription) instance. Such instances undergo automatic release upon expiration. To release an upfront instance in advance, use the console.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -3094,10 +3221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation to check whether O&amp;M tasks exist, you can call <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> to modify the scheduled switchover time of an O&amp;M task.</p>
+     * <p>After you call this operation to query existing O&amp;M tasks, you can call <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> to modify the scheduled switchover time of an O&amp;M task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of O&amp;M tasks for an ApsaraDB for Redis (Tair) instance.</p>
+     * <p>Queries the details of O&amp;M tasks for ApsaraDB Tair (Redis® OSS-Compatible) instances.</p>
      * 
      * @param request DescribeActiveOperationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3165,10 +3292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation to check whether O&amp;M tasks exist, you can call <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> to modify the scheduled switchover time of an O&amp;M task.</p>
+     * <p>After you call this operation to query existing O&amp;M tasks, you can call <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> to modify the scheduled switchover time of an O&amp;M task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of O&amp;M tasks for an ApsaraDB for Redis (Tair) instance.</p>
+     * <p>Queries the details of O&amp;M tasks for ApsaraDB Tair (Redis® OSS-Compatible) instances.</p>
      * 
      * @param request DescribeActiveOperationTaskRequest
      * @return DescribeActiveOperationTaskResponse
@@ -3348,10 +3475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, audit logging must be enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Audit logs</a>.</p>
+     * <p>When you call this operation, the audit log feature must be enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Audit logs</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the audit log configuration of a Tair (Redis® OSS-Compatible) instance, such as whether audit logging is enabled and the log retention period.</p>
+     * <p>Queries the audit log configurations of a Tair (Redis® OSS-Compatible) database instance, such as whether audit logging is enabled and the log retention period.</p>
      * 
      * @param request DescribeAuditLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3407,10 +3534,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, audit logging must be enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Audit logs</a>.</p>
+     * <p>When you call this operation, the audit log feature must be enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Audit logs</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the audit log configuration of a Tair (Redis® OSS-Compatible) instance, such as whether audit logging is enabled and the log retention period.</p>
+     * <p>Queries the audit log configurations of a Tair (Redis® OSS-Compatible) database instance, such as whether audit logging is enabled and the log retention period.</p>
      * 
      * @param request DescribeAuditLogConfigRequest
      * @return DescribeAuditLogConfigResponse
@@ -3425,7 +3552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call this operation, the audit log feature must be enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the audit logs of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the audit logs of an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeAuditRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3516,7 +3643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call this operation, the audit log feature must be enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the audit logs of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the audit logs of an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeAuditRecordsRequest
      * @return DescribeAuditRecordsResponse
@@ -3632,7 +3759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup policy of a Tair (Redis® OSS-Compatible) instance, including the backup cycle and backup time.</p>
+     * <p>Queries the backup policy of an ApsaraDB Tair (Redis® OSS-Compatible) database instance, including the backup cycle and backup time.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3684,7 +3811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup policy of a Tair (Redis® OSS-Compatible) instance, including the backup cycle and backup time.</p>
+     * <p>Queries the backup policy of an ApsaraDB Tair (Redis® OSS-Compatible) database instance, including the backup cycle and backup time.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
@@ -3768,10 +3895,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not applicable to cloud-native cluster architecture instances. If needed, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</p>
+     * <p>This operation is not applicable to cloud-native cluster architecture instances. To query the backup sets of such instances, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup file information of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the backup file information of an ApsaraDB for Tair (compatible with Redis) database instance.</p>
      * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3851,10 +3978,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not applicable to cloud-native cluster architecture instances. If needed, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</p>
+     * <p>This operation is not applicable to cloud-native cluster architecture instances. To query the backup sets of such instances, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup file information of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the backup file information of an ApsaraDB for Tair (compatible with Redis) database instance.</p>
      * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -3956,10 +4083,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer recommended. Use the new operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a>.</p>
+     * <p>This API operation is deprecated. Use the new API operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of cache analysis reports of an instance.</p>
+     * <p>Queries the cache analysis reports of an instance.</p>
      * 
      * @param request DescribeCacheAnalysisReportListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4027,10 +4154,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer recommended. Use the new operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a>.</p>
+     * <p>This API operation is deprecated. Use the new API operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of cache analysis reports of an instance.</p>
+     * <p>Queries the cache analysis reports of an instance.</p>
      * 
      * @param request DescribeCacheAnalysisReportListRequest
      * @return DescribeCacheAnalysisReportListResponse
@@ -4045,7 +4172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is applicable only to cloud-native instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup list of an ApsaraDB for Tair (Redis-compatible) database cluster instance.</p>
+     * <p>Queries the backup list of an ApsaraDB Tair (Redis® OSS-Compatible) database cluster instance.</p>
      * 
      * @param request DescribeClusterBackupListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4076,7 +4203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is applicable only to cloud-native instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup list of an ApsaraDB for Tair (Redis-compatible) database cluster instance.</p>
+     * <p>Queries the backup list of an ApsaraDB Tair (Redis® OSS-Compatible) database cluster instance.</p>
      * 
      * @param request DescribeClusterBackupListRequest
      * @return DescribeClusterBackupListResponse
@@ -4093,7 +4220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the node configuration information of a Tair (Redis® OSS-Compatible) cluster instance, such as specifications and maximum connections.</p>
+     * <p>Queries the node configuration information of an ApsaraDB for Tair (Redis OSS-compatible) database cluster instance, such as the instance specifications and maximum number of connections.</p>
      * 
      * @param request DescribeClusterMemberInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4158,7 +4285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the node configuration information of a Tair (Redis® OSS-Compatible) cluster instance, such as specifications and maximum connections.</p>
+     * <p>Queries the node configuration information of an ApsaraDB for Tair (Redis OSS-compatible) database cluster instance, such as the instance specifications and maximum number of connections.</p>
      * 
      * @param request DescribeClusterMemberInfoRequest
      * @return DescribeClusterMemberInfoResponse
@@ -4170,7 +4297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring collection granularity of a Tair instance.</p>
+     * <p>Queries the monitoring data collection granularity of a Tair instance.</p>
      * 
      * @param request DescribeDBInstanceMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4222,7 +4349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring collection granularity of a Tair instance.</p>
+     * <p>Queries the monitoring data collection granularity of a Tair instance.</p>
      * 
      * @param request DescribeDBInstanceMonitorRequest
      * @return DescribeDBInstanceMonitorResponse
@@ -4234,7 +4361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network information of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the network information of a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeDBInstanceNetInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4290,7 +4417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network information of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the network information of a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeDBInstanceNetInfoRequest
      * @return DescribeDBInstanceNetInfoResponse
@@ -4305,7 +4432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><notice>Only cloud-native instances support this operation.</notice></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the virtual IP address (VIP) information of the child instances of a cluster instance in direct connection mode.</p>
+     * <p>Queries the virtual IP address (VIP) information of child instances for a Cluster Edition direct-connected instance.</p>
      * 
      * @param request DescribeDBNodeDirectVipInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4356,7 +4483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><notice>Only cloud-native instances support this operation.</notice></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the virtual IP address (VIP) information of the child instances of a cluster instance in direct connection mode.</p>
+     * <p>Queries the virtual IP address (VIP) information of child instances for a Cluster Edition direct-connected instance.</p>
      * 
      * @param request DescribeDBNodeDirectVipInfoRequest
      * @return DescribeDBNodeDirectVipInfoResponse
@@ -4368,7 +4495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the connectivity from a source client IP address to an instance.</p>
+     * <p>Checks the connectivity from the source client IP address to the instance.</p>
      * 
      * @param request DescribeDbInstanceConnectivityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4424,7 +4551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the connectivity from a source client IP address to an instance.</p>
+     * <p>Checks the connectivity from the source client IP address to the instance.</p>
      * 
      * @param request DescribeDbInstanceConnectivityRequest
      * @return DescribeDbInstanceConnectivityResponse
@@ -4441,7 +4568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about ApsaraDB for Tair (Redis-compatible) database instances in a dedicated cluster.</p>
+     * <p>Queries the information about ApsaraDB Tair (Redis® OSS-Compatible) database instances in a dedicated cluster.</p>
      * 
      * @param request DescribeDedicatedClusterInstanceListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4538,7 +4665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about ApsaraDB for Tair (Redis-compatible) database instances in a dedicated cluster.</p>
+     * <p>Queries the information about ApsaraDB Tair (Redis® OSS-Compatible) database instances in a dedicated cluster.</p>
      * 
      * @param request DescribeDedicatedClusterInstanceListRequest
      * @return DescribeDedicatedClusterInstanceListResponse
@@ -4550,13 +4677,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that TDE (Transparent Data Encryption) has been enabled for the instance by using a custom key. For more information about the related operation, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</p>
+     * <p>When you call this operation, the instance must have Transparent Data Encryption (TDE) enabled by using a custom key. For more information about the related operation, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</p>
      * <blockquote>
      * <p>For more information about TDE and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a custom Transparent Data Encryption (TDE) key for an ApsaraDB for Redis (Tair) instance.</p>
+     * <p>Queries the details of the custom key for Transparent Data Encryption (TDE) of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeEncryptionKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4612,13 +4739,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that TDE (Transparent Data Encryption) has been enabled for the instance by using a custom key. For more information about the related operation, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</p>
+     * <p>When you call this operation, the instance must have Transparent Data Encryption (TDE) enabled by using a custom key. For more information about the related operation, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</p>
      * <blockquote>
      * <p>For more information about TDE and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a custom Transparent Data Encryption (TDE) key for an ApsaraDB for Redis (Tair) instance.</p>
+     * <p>Queries the details of the custom key for Transparent Data Encryption (TDE) of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeEncryptionKeyRequest
      * @return DescribeEncryptionKeyResponse
@@ -4630,13 +4757,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable transparent data encryption (TDE), you can use a custom key. This operation helps you query the custom keys used by an instance. To create a custom key, invoke the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service.</p>
+     * <p>When you invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable transparent data encryption (TDE), you can use custom keys. This operation helps you query the custom keys used by the instance. To create a custom key, invoke the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</p>
      * <ul>
-     * <li>For more information about transparent data encryption (TDE) and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</li>
+     * <li>For more information and precautions about transparent data encryption (TDE), see <a href="https://help.aliyun.com/document_detail/265913.html">Enable transparent data encryption (TDE)</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of custom keys used by an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the list of custom keys used by an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeEncryptionKeyListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4688,13 +4815,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable transparent data encryption (TDE), you can use a custom key. This operation helps you query the custom keys used by an instance. To create a custom key, invoke the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service.</p>
+     * <p>When you invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable transparent data encryption (TDE), you can use custom keys. This operation helps you query the custom keys used by the instance. To create a custom key, invoke the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</p>
      * <ul>
-     * <li>For more information about transparent data encryption (TDE) and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</li>
+     * <li>For more information and precautions about transparent data encryption (TDE), see <a href="https://help.aliyun.com/document_detail/265913.html">Enable transparent data encryption (TDE)</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of custom keys used by an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the list of custom keys used by an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeEncryptionKeyListRequest
      * @return DescribeEncryptionKeyListResponse
@@ -4770,7 +4897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a distributed instance.</p>
+     * <p>Queries the details of distributed instances.</p>
      * 
      * @param request DescribeGlobalDistributeCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4834,7 +4961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a distributed instance.</p>
+     * <p>Queries the details of distributed instances.</p>
      * 
      * @param request DescribeGlobalDistributeCacheRequest
      * @return DescribeGlobalDistributeCacheResponse
@@ -4922,7 +5049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about global IP whitelist templates associated with an instance.</p>
+     * <p>Queries the global IP whitelist templates associated with an instance.</p>
      * 
      * @param request DescribeGlobalSecurityIPGroupRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4982,7 +5109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about global IP whitelist templates associated with an instance.</p>
+     * <p>Queries the global IP whitelist templates associated with an instance.</p>
      * 
      * @param request DescribeGlobalSecurityIPGroupRelationRequest
      * @return DescribeGlobalSecurityIPGroupRelationResponse
@@ -5114,7 +5241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries historical event statistics.</p>
+     * <p>Queries the statistics of historical events.</p>
      * 
      * @param request DescribeHistoryEventsStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5178,7 +5305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries historical event statistics.</p>
+     * <p>Queries the statistics of historical events.</p>
      * 
      * @param request DescribeHistoryEventsStatRequest
      * @return DescribeHistoryEventsStatResponse
@@ -5388,7 +5515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries task statistics in the task center.</p>
+     * <p>Queries task statistics in Task Center.</p>
      * 
      * @param request DescribeHistoryTasksStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5460,7 +5587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries task statistics in the task center.</p>
+     * <p>Queries task statistics in Task Center.</p>
      * 
      * @param request DescribeHistoryTasksStatRequest
      * @return DescribeHistoryTasksStatResponse
@@ -5483,6 +5610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.levelSummary)) {
+            query.put("LevelSummary", request.levelSummary);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
@@ -5596,7 +5727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the report of a specific inspection task.</p>
+     * <p>Queries the report for a specific inspection task.</p>
      * 
      * @param request DescribeInspectionTaskReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5611,6 +5742,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.levelSummary)) {
+            query.put("LevelSummary", request.levelSummary);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
@@ -5640,7 +5775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the report of a specific inspection task.</p>
+     * <p>Queries the report for a specific inspection task.</p>
      * 
      * @param request DescribeInspectionTaskReportRequest
      * @return DescribeInspectionTaskReportResponse
@@ -5652,7 +5787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of smart inspection tasks</p>
+     * <p>Queries the list of intelligent inspection tasks.</p>
      * 
      * @param request DescribeInspectionTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5663,6 +5798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.levelSummary)) {
+            query.put("LevelSummary", request.levelSummary);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
@@ -5700,7 +5839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of smart inspection tasks</p>
+     * <p>Queries the list of intelligent inspection tasks.</p>
      * 
      * @param request DescribeInspectionTasksRequest
      * @return DescribeInspectionTasksResponse
@@ -5712,7 +5851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the details of an ApsaraDB Tair (Redis OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5764,7 +5903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the details of an ApsaraDB Tair (Redis OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
      * @return DescribeInstanceAttributeResponse
@@ -5776,7 +5915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether auto-renewal is enabled for a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries whether enable auto-renewal is enabled for ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
      * 
      * @param request DescribeInstanceAutoRenewalAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5840,7 +5979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether auto-renewal is enabled for a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries whether enable auto-renewal is enabled for ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
      * 
      * @param request DescribeInstanceAutoRenewalAttributeRequest
      * @return DescribeInstanceAutoRenewalAttributeResponse
@@ -5852,7 +5991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries some default configuration parameters of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries some default configuration parameters of an ApsaraDB Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request DescribeInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5904,7 +6043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries some default configuration parameters of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries some default configuration parameters of an ApsaraDB Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request DescribeInstanceConfigRequest
      * @return DescribeInstanceConfigResponse
@@ -5916,10 +6055,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about multiple LBs, see.</p>
+     * <p>For more information about multiple load balancers, see.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the load balancer (LB) information of an instance.</p>
+     * <p>Queries the load balancer information of an instance.</p>
      * 
      * @param request DescribeInstanceMultiVIPRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5967,10 +6106,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about multiple LBs, see.</p>
+     * <p>For more information about multiple load balancers, see.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the load balancer (LB) information of an instance.</p>
+     * <p>Queries the load balancer information of an instance.</p>
      * 
      * @param request DescribeInstanceMultiVIPRequest
      * @return DescribeInstanceMultiVIPResponse
@@ -5982,7 +6121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether TLS (SSL) encryption authentication is enabled for a Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries whether TLS (SSL) encryption authentication is enabled for an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeInstanceSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6034,7 +6173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether TLS (SSL) encryption authentication is enabled for a Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries whether TLS (SSL) encryption authentication is enabled for an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeInstanceSSLRequest
      * @return DescribeInstanceSSLResponse
@@ -6046,13 +6185,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about the transparent data encryption (TDE) feature and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable transparent data encryption TDE</a>.</p>
+     * <p>For detailed information and precautions about Transparent Data Encryption (TDE), see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * <blockquote>
-     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or shutdown the TDE encrypt feature.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or disable TDE.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether the TDE data encryption feature is enabled for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries whether the Transparent Data Encryption (TDE) feature is enabled for an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeInstanceTDEStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6104,13 +6243,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about the transparent data encryption (TDE) feature and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable transparent data encryption TDE</a>.</p>
+     * <p>For detailed information and precautions about Transparent Data Encryption (TDE), see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * <blockquote>
-     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or shutdown the TDE encrypt feature.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or disable TDE.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether the TDE data encryption feature is enabled for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries whether the Transparent Data Encryption (TDE) feature is enabled for an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeInstanceTDEStatusRequest
      * @return DescribeInstanceTDEStatusResponse
@@ -6122,7 +6261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of one or more Tair (Redis® OSS-Compatible) instances.</p>
+     * <p>Queries the information of one or more Tair (Redis OSS-compatible) instances.</p>
      * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6258,7 +6397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of one or more Tair (Redis® OSS-Compatible) instances.</p>
+     * <p>Queries the information of one or more Tair (Redis OSS-compatible) instances.</p>
      * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -6270,13 +6409,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you do not specify any request parameters, the overview information of all instances is returned.</p>
+     * <p>If you do not specify request parameters, the overview information of all instances is returned.</p>
      * <blockquote>
-     * <p>This operation does not support pagination for the returned results.</p>
+     * <p>The response of this operation is not paginated.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the overview information of one or more ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
+     * <p>Queries the overview information of one or more Tair (Redis® OSS-Compatible) instances.</p>
      * 
      * @param request DescribeInstancesOverviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6392,13 +6531,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you do not specify any request parameters, the overview information of all instances is returned.</p>
+     * <p>If you do not specify request parameters, the overview information of all instances is returned.</p>
      * <blockquote>
-     * <p>This operation does not support pagination for the returned results.</p>
+     * <p>The response of this operation is not paginated.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the overview information of one or more ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
+     * <p>Queries the overview information of one or more Tair (Redis® OSS-Compatible) instances.</p>
      * 
      * @param request DescribeInstancesOverviewRequest
      * @return DescribeInstancesOverviewResponse
@@ -6413,7 +6552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase bandwidth for an instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the current bandwidth of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the current bandwidth of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeIntranetAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6472,7 +6611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase bandwidth for an instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the current bandwidth of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the current bandwidth of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeIntranetAttributeRequest
      * @return DescribeIntranetAttributeResponse
@@ -6484,10 +6623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for cluster and read/write splitting instances.</p>
+     * <p>This operation is supported only by instances that use the cluster or read/write splitting architecture.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the logical topology structure of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the logical topology structure of an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeLogicInstanceTopologyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6539,10 +6678,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for cluster and read/write splitting instances.</p>
+     * <p>This operation is supported only by instances that use the cluster or read/write splitting architecture.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the logical topology structure of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the logical topology structure of an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeLogicInstanceTopologyRequest
      * @return DescribeLogicInstanceTopologyResponse
@@ -6555,12 +6694,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>To improve user experience, Tair (Redis® OSS-Compatible) has upgraded its performance monitoring. This operation will be taken offline. For more information, see <a href="https://help.aliyun.com/document_detail/189893.html">Notice: Tair (Redis® OSS-Compatible) DescribeMonitorItems operation offline</a>.
-     * After you call this operation to obtain the list of monitoring items, you can call the <a href="https://help.aliyun.com/document_detail/473827.html">DescribeHistoryMonitorValues</a> operation to query the historical monitoring information of an instance.</p>
+     * <p>To improve user experience, the ApsaraDB for Tair (Redis® OSS-Compatible) database has upgraded its performance monitoring feature, and this API operation will be taken offline. For more information, see <a href="https://help.aliyun.com/document_detail/189893.html">Notice: The DescribeMonitorItems API operation for ApsaraDB for Tair (Redis® OSS-Compatible) is taken offline</a>.
+     * After you invoke this API operation to obtain the list of monitoring metrics, you can invoke the <a href="https://help.aliyun.com/document_detail/473827.html">DescribeHistoryMonitorValues</a> API operation to query the historical monitoring information of the instance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of monitoring items supported by a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the list of monitoring metrics supported by ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
      * 
      * @param request DescribeMonitorItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6609,12 +6748,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>To improve user experience, Tair (Redis® OSS-Compatible) has upgraded its performance monitoring. This operation will be taken offline. For more information, see <a href="https://help.aliyun.com/document_detail/189893.html">Notice: Tair (Redis® OSS-Compatible) DescribeMonitorItems operation offline</a>.
-     * After you call this operation to obtain the list of monitoring items, you can call the <a href="https://help.aliyun.com/document_detail/473827.html">DescribeHistoryMonitorValues</a> operation to query the historical monitoring information of an instance.</p>
+     * <p>To improve user experience, the ApsaraDB for Tair (Redis® OSS-Compatible) database has upgraded its performance monitoring feature, and this API operation will be taken offline. For more information, see <a href="https://help.aliyun.com/document_detail/189893.html">Notice: The DescribeMonitorItems API operation for ApsaraDB for Tair (Redis® OSS-Compatible) is taken offline</a>.
+     * After you invoke this API operation to obtain the list of monitoring metrics, you can invoke the <a href="https://help.aliyun.com/document_detail/473827.html">DescribeHistoryMonitorValues</a> API operation to query the historical monitoring information of the instance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of monitoring items supported by a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the list of monitoring metrics supported by ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
      * 
      * @param request DescribeMonitorItemsRequest
      * @return DescribeMonitorItemsResponse
@@ -6626,7 +6765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about a query parameter template.</p>
+     * <p>Queries the basic information of a query parameter template.</p>
      * 
      * @param request DescribeParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6682,7 +6821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about a query parameter template.</p>
+     * <p>Queries the basic information of a query parameter template.</p>
      * 
      * @param request DescribeParameterGroupRequest
      * @return DescribeParameterGroupResponse
@@ -6694,7 +6833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of parameters that can be configured in parameter templates of different versions.</p>
+     * <p>Queries the parameters that can be configured in parameter templates of different versions.</p>
      * 
      * @param request DescribeParameterGroupSupportParamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6754,7 +6893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of parameters that can be configured in parameter templates of different versions.</p>
+     * <p>Queries the parameters that can be configured in parameter templates of different versions.</p>
      * 
      * @param request DescribeParameterGroupSupportParamRequest
      * @return DescribeParameterGroupSupportParamResponse
@@ -6766,7 +6905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of configurable query parameters in a parameter template, such as default values, value ranges, and descriptions.</p>
+     * <p>Queries the details of a configurable query parameter in a parameter template, such as the default value, valid values, and description.</p>
      * 
      * @param request DescribeParameterGroupTemplateListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6830,7 +6969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of configurable query parameters in a parameter template, such as default values, value ranges, and descriptions.</p>
+     * <p>Queries the details of a configurable query parameter in a parameter template, such as the default value, valid values, and description.</p>
      * 
      * @param request DescribeParameterGroupTemplateListRequest
      * @return DescribeParameterGroupTemplateListResponse
@@ -6994,10 +7133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation to retrieve the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of a Redis instance as needed.</p>
+     * <p>After you call this operation to query the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of the instance based on your business requirements.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the parameters and default values of ApsaraDB Tair (Redis® OSS-Compatible) database instances across different architectures and major engine versions.</p>
+     * <p>Queries the parameter list and default values for ApsaraDB Tair (Redis® OSS-Compatible) database instances across different architectures and major versions.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7069,10 +7208,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation to retrieve the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of a Redis instance as needed.</p>
+     * <p>After you call this operation to query the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of the instance based on your business requirements.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the parameters and default values of ApsaraDB Tair (Redis® OSS-Compatible) database instances across different architectures and major engine versions.</p>
+     * <p>Queries the parameter list and default values for ApsaraDB Tair (Redis® OSS-Compatible) database instances across different architectures and major versions.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
@@ -7084,7 +7223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration parameters and running parameters of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the configuration and runtime parameters of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7144,7 +7283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration parameters and running parameters of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the configuration and runtime parameters of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeParametersRequest
      * @return DescribeParametersResponse
@@ -7156,7 +7295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fees generated by operations such as creating a Tair (Redis® OSS-Compatible) database instance, upgrading the instance configuration, or renewing the instance.</p>
+     * <p>Queries the fees incurred by operations such as creation, upgrade, or renewal of ApsaraDB Tair (Redis OSS-Compatible) database instances.</p>
      * 
      * @param request DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7199,6 +7338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
             query.put("Instances", request.instances);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needUnavailableCoupon)) {
+            query.put("NeedUnavailableCoupon", request.needUnavailableCoupon);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
@@ -7276,7 +7419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fees generated by operations such as creating a Tair (Redis® OSS-Compatible) database instance, upgrading the instance configuration, or renewing the instance.</p>
+     * <p>Queries the fees incurred by operations such as creation, upgrade, or renewal of ApsaraDB Tair (Redis OSS-Compatible) database instances.</p>
      * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
@@ -7352,7 +7495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the roles, types, minor versions, and zones of nodes in a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the roles, types, minor engine versions, and active zones of nodes in a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request DescribeRoleZoneInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7416,7 +7559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the roles, types, minor versions, and zones of nodes in a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the roles, types, minor engine versions, and active zones of nodes in a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request DescribeRoleZoneInfoRequest
      * @return DescribeRoleZoneInfoResponse
@@ -7428,10 +7571,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation of this API, see <a href="https://help.aliyun.com/document_detail/101713.html">Query running logs</a>. The maximum call frequency of DescribeRunningLogRecords is 100 calls per minute.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/101713.html">Query running logs</a>.
+     * The maximum number of calls to the DescribeRunningLogRecords operation is 100 per minute.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the running logs of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the running logs of an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeRunningLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7527,10 +7671,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation of this API, see <a href="https://help.aliyun.com/document_detail/101713.html">Query running logs</a>. The maximum call frequency of DescribeRunningLogRecords is 100 calls per minute.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/101713.html">Query running logs</a>.
+     * The maximum number of calls to the DescribeRunningLogRecords operation is 100 per minute.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the running logs of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the running logs of an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request DescribeRunningLogRecordsRequest
      * @return DescribeRunningLogRecordsResponse
@@ -7542,7 +7687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the security groups in the Settings of the whitelist for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the security groups configured in the whitelist Settings of an ApsaraDB Tair (Redis® OSS-Compatible) database.</p>
      * 
      * @param request DescribeSecurityGroupConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7594,7 +7739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the security groups in the Settings of the whitelist for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Queries the security groups configured in the whitelist Settings of an ApsaraDB Tair (Redis® OSS-Compatible) database.</p>
      * 
      * @param request DescribeSecurityGroupConfigurationRequest
      * @return DescribeSecurityGroupConfigurationResponse
@@ -7606,7 +7751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP address whitelist of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the IP whitelists of an ApsaraDB Tair (Redis OSS-compatible) database instance.</p>
      * 
      * @param request DescribeSecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7658,7 +7803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP address whitelist of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Queries the IP whitelists of an ApsaraDB Tair (Redis OSS-compatible) database instance.</p>
      * 
      * @param request DescribeSecurityIpsRequest
      * @return DescribeSecurityIpsResponse
@@ -7670,10 +7815,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation to query whether the associated role named AliyunServiceRoleForKvstore has been authorized for use by Tair (Redis® OSS-Compatible) database under the current account. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for Tair (Redis® OSS-Compatible) database</a>.</p>
+     * <p>You can invoke this operation to query whether the authorization of the service-linked role named AliyunServiceRoleForKvstore is associated with the ApsaraDB Tair (Redis® OSS-Compatible) database within the current account. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role associated with ApsaraDB Tair (Redis® OSS-Compatible)</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether the service-linked role has been authorized for Tair (Redis® OSS-Compatible).</p>
+     * <p>Queries the authorization of the service-linked role associated with the ApsaraDB Tair (Redis® OSS-Compatible) database.</p>
      * 
      * @param request DescribeServiceLinkedRoleExistsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7729,10 +7874,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation to query whether the associated role named AliyunServiceRoleForKvstore has been authorized for use by Tair (Redis® OSS-Compatible) database under the current account. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for Tair (Redis® OSS-Compatible) database</a>.</p>
+     * <p>You can invoke this operation to query whether the authorization of the service-linked role named AliyunServiceRoleForKvstore is associated with the ApsaraDB Tair (Redis® OSS-Compatible) database within the current account. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role associated with ApsaraDB Tair (Redis® OSS-Compatible)</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether the service-linked role has been authorized for Tair (Redis® OSS-Compatible).</p>
+     * <p>Queries the authorization of the service-linked role associated with the ApsaraDB Tair (Redis® OSS-Compatible) database.</p>
      * 
      * @param request DescribeServiceLinkedRoleExistsRequest
      * @return DescribeServiceLinkedRoleExistsResponse
@@ -7744,11 +7889,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow query logs</a>.
-     * The maximum number of calls to DescribeSlowLogRecords is 100 per minute.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs</a>.
+     * The rate limit for the DescribeSlowLogRecords operation is 100 calls per minute.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the slow query logs generated by a Tair (Redis® OSS-Compatible) database instance within a specified time period.</p>
+     * <p>Queries the slow logs generated by a Tair (Redis® OSS-Compatible) instance within a specified time period.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7840,11 +7985,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow query logs</a>.
-     * The maximum number of calls to DescribeSlowLogRecords is 100 per minute.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs</a>.
+     * The rate limit for the DescribeSlowLogRecords operation is 100 calls per minute.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the slow query logs generated by a Tair (Redis® OSS-Compatible) database instance within a specified time period.</p>
+     * <p>Queries the slow logs generated by a Tair (Redis® OSS-Compatible) instance within a specified time period.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -7920,6 +8065,202 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeTagsResponse describeTags(DescribeTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTagsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries AI gateway instances.</p>
+     * 
+     * @param request DescribeTairAIGatewayInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTairAIGatewayInstancesResponse
+     */
+    public DescribeTairAIGatewayInstancesResponse describeTairAIGatewayInstancesWithOptions(DescribeTairAIGatewayInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expired)) {
+            query.put("Expired", request.expired);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceStatus)) {
+            query.put("InstanceStatus", request.instanceStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTairAIGatewayInstances"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTairAIGatewayInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries AI gateway instances.</p>
+     * 
+     * @param request DescribeTairAIGatewayInstancesRequest
+     * @return DescribeTairAIGatewayInstancesResponse
+     */
+    public DescribeTairAIGatewayInstancesResponse describeTairAIGatewayInstances(DescribeTairAIGatewayInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTairAIGatewayInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the parameters of an AI gateway.</p>
+     * 
+     * @param request DescribeTairAIGatewayParametersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTairAIGatewayParametersResponse
+     */
+    public DescribeTairAIGatewayParametersResponse describeTairAIGatewayParametersWithOptions(DescribeTairAIGatewayParametersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginType)) {
+            query.put("PluginType", request.pluginType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTairAIGatewayParameters"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTairAIGatewayParametersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the parameters of an AI gateway.</p>
+     * 
+     * @param request DescribeTairAIGatewayParametersRequest
+     * @return DescribeTairAIGatewayParametersResponse
+     */
+    public DescribeTairAIGatewayParametersResponse describeTairAIGatewayParameters(DescribeTairAIGatewayParametersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTairAIGatewayParametersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the AI gateway plug-in switch.</p>
+     * 
+     * @param request DescribeTairAIGatewayPluginSwitchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTairAIGatewayPluginSwitchResponse
+     */
+    public DescribeTairAIGatewayPluginSwitchResponse describeTairAIGatewayPluginSwitchWithOptions(DescribeTairAIGatewayPluginSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTairAIGatewayPluginSwitch"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTairAIGatewayPluginSwitchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the AI gateway plug-in switch.</p>
+     * 
+     * @param request DescribeTairAIGatewayPluginSwitchRequest
+     * @return DescribeTairAIGatewayPluginSwitchResponse
+     */
+    public DescribeTairAIGatewayPluginSwitchResponse describeTairAIGatewayPluginSwitch(DescribeTairAIGatewayPluginSwitchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTairAIGatewayPluginSwitchWithOptions(request, runtime);
     }
 
     /**
@@ -8132,8 +8473,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>You must specify the <code>InstanceId</code> parameter when you call this operation.</li>
-     * <li>The response includes basic information about each table, such as the table ID, name, bandwidth, and maximum number of connections.</li>
+     * <li>When you call this operation, you must specify the <code>InstanceId</code> parameter.</li>
+     * <li>The response includes the basic information of each table, such as the table ID, name, bandwidth, and maximum number of connections.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8175,8 +8516,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>You must specify the <code>InstanceId</code> parameter when you call this operation.</li>
-     * <li>The response includes basic information about each table, such as the table ID, name, bandwidth, and maximum number of connections.</li>
+     * <li>When you call this operation, you must specify the <code>InstanceId</code> parameter.</li>
+     * <li>The response includes the basic information of each table, such as the table ID, name, bandwidth, and maximum number of connections.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8192,12 +8533,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation queries the table schema configuration of a Tair Serverless KV table instance.</li>
-     * <li>When you invoke this operation, you must specify the InstanceId parameter. The value of this parameter is the instance ID of the instance that you want to query.</li>
-     * <li>The BackupId parameter specifies the backup set of the table to query.</li>
-     * <li>The response packet includes the time-to-live (TTL) specifications and detailed table structure definition.</li>
+     * <li>This operation queries the table schema and configuration information of a Tair Serverless KV table instance.</li>
+     * <li>You must specify the <code>InstanceId</code> parameter when you call this operation, and set it to the ID of the instance that you want to query.</li>
+     * <li>The <code>BackupId</code> parameter specifies the backup set of the table to query.</li>
+     * <li>The returned data includes the time-to-live (TTL) specifications and detailed table schema definitions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8257,12 +8598,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation queries the table schema configuration of a Tair Serverless KV table instance.</li>
-     * <li>When you invoke this operation, you must specify the InstanceId parameter. The value of this parameter is the instance ID of the instance that you want to query.</li>
-     * <li>The BackupId parameter specifies the backup set of the table to query.</li>
-     * <li>The response packet includes the time-to-live (TTL) specifications and detailed table structure definition.</li>
+     * <li>This operation queries the table schema and configuration information of a Tair Serverless KV table instance.</li>
+     * <li>You must specify the <code>InstanceId</code> parameter when you call this operation, and set it to the ID of the instance that you want to query.</li>
+     * <li>The <code>BackupId</code> parameter specifies the backup set of the table to query.</li>
+     * <li>The returned data includes the time-to-live (TTL) specifications and detailed table schema definitions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8278,7 +8619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a node.</p>
+     * <p>Queries the details of a task.</p>
      * 
      * @param request DescribeTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8314,7 +8655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a node.</p>
+     * <p>Queries the details of a task.</p>
      * 
      * @param request DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse
@@ -8326,7 +8667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the zones supported by Tair (Redis® OSS-Compatible) in a specified region. To query the zones that are active for purchase, call the DescribeAvailableResource operation.</p>
+     * <p>Queries the zones supported by the ApsaraDB Tair (Redis® OSS-Compatible) database in a specified region. To query the active zones for purchase, call the DescribeAvailableResource operation.</p>
      * 
      * @param request DescribeZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8382,7 +8723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the zones supported by Tair (Redis® OSS-Compatible) in a specified region. To query the zones that are active for purchase, call the DescribeAvailableResource operation.</p>
+     * <p>Queries the zones supported by the ApsaraDB Tair (Redis® OSS-Compatible) database in a specified region. To query the active zones for purchase, call the DescribeAvailableResource operation.</p>
      * 
      * @param request DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -8394,14 +8735,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, the instance must exist in the recycle bin. For more information, see <a href="https://help.aliyun.com/document_detail/86114.html">Cluster recycle bin</a>.</p>
+     * <p>When you call this operation, the instances must exist in the recycle bin. For more information, see <a href="https://help.aliyun.com/document_detail/86114.html">Instance recycle bin</a>.</p>
      * <blockquote>
-     * <p>After you call this operation, the instance and its data backups in the recycle bin are permanently deleted.
-     * <danger>After this operation is performed, the data of the instance is permanently deleted and cannot be recovered. Proceed with caution.</p>
+     * <p>After you call this operation, the instances and their data backups in the recycle bin are permanently deleted.
+     * <danger>After this operation is performed, the data of the instances is permanently deleted and cannot be recovered. Proceed with caution.</danger></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Permanently destroys an instance and its data backups from the recycle bin.</p>
+     * <p>Permanently destroys instances and their data backups in the recycle bin.</p>
      * 
      * @param request DestroyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8453,14 +8794,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, the instance must exist in the recycle bin. For more information, see <a href="https://help.aliyun.com/document_detail/86114.html">Cluster recycle bin</a>.</p>
+     * <p>When you call this operation, the instances must exist in the recycle bin. For more information, see <a href="https://help.aliyun.com/document_detail/86114.html">Instance recycle bin</a>.</p>
      * <blockquote>
-     * <p>After you call this operation, the instance and its data backups in the recycle bin are permanently deleted.
-     * <danger>After this operation is performed, the data of the instance is permanently deleted and cannot be recovered. Proceed with caution.</p>
+     * <p>After you call this operation, the instances and their data backups in the recycle bin are permanently deleted.
+     * <danger>After this operation is performed, the data of the instances is permanently deleted and cannot be recovered. Proceed with caution.</danger></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Permanently destroys an instance and its data backups from the recycle bin.</p>
+     * <p>Permanently destroys instances and their data backups in the recycle bin.</p>
      * 
      * @param request DestroyInstanceRequest
      * @return DestroyInstanceResponse
@@ -8472,13 +8813,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you enable the elastic elastic scaling feature for the instance while calling this operation, the instance preferentially uses the elastic elastic scaling feature. When the bandwidth is elastically scaled down, it is scaled down to the default bandwidth of the instance specifications. For more information about the limits, billing, and FAQ of this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</p>
+     * <p>If you enable the elastic bandwidth scaling feature for the instance when calling this operation, the elastic bandwidth scaling feature takes precedence. During an elastic bandwidth scale-down, the bandwidth reverts to the default bandwidth of the instance type. For more information about the limits, billing, and FAQs of this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust instance bandwidth</a>.</p>
      * <blockquote>
-     * <p>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> to query the current bandwidth of each data node in the instance.</p>
+     * <p>Before calling this operation, you can call <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> to query the current bandwidth of each data node in the instance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Adjusts the bandwidth of an ApsaraDB Tair (Redis® OSS-Compatible) instance. Currently, only the pay-as-you-go billing method is supported. You only need to specify the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</p>
+     * <p>Adjusts the bandwidth of an ApsaraDB Tair (Redis OSS-compatible) instance. Currently, only the pay-as-you-go billing method is supported. You need to specify only the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</p>
      * 
      * @param request EnableAdditionalBandwidthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8570,13 +8911,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you enable the elastic elastic scaling feature for the instance while calling this operation, the instance preferentially uses the elastic elastic scaling feature. When the bandwidth is elastically scaled down, it is scaled down to the default bandwidth of the instance specifications. For more information about the limits, billing, and FAQ of this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</p>
+     * <p>If you enable the elastic bandwidth scaling feature for the instance when calling this operation, the elastic bandwidth scaling feature takes precedence. During an elastic bandwidth scale-down, the bandwidth reverts to the default bandwidth of the instance type. For more information about the limits, billing, and FAQs of this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust instance bandwidth</a>.</p>
      * <blockquote>
-     * <p>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> to query the current bandwidth of each data node in the instance.</p>
+     * <p>Before calling this operation, you can call <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> to query the current bandwidth of each data node in the instance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Adjusts the bandwidth of an ApsaraDB Tair (Redis® OSS-Compatible) instance. Currently, only the pay-as-you-go billing method is supported. You only need to specify the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</p>
+     * <p>Adjusts the bandwidth of an ApsaraDB Tair (Redis OSS-compatible) instance. Currently, only the pay-as-you-go billing method is supported. You need to specify only the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</p>
      * 
      * @param request EnableAdditionalBandwidthRequest
      * @return EnableAdditionalBandwidthResponse
@@ -8594,7 +8935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Purges expired keys from a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Purges expired keys from an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request FlushExpireKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8656,7 +8997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Purges expired keys from a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Purges expired keys from an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request FlushExpireKeysRequest
      * @return FlushExpireKeysResponse
@@ -8668,13 +9009,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/43881.html">Purge data</a>.</p>
+     * <p>For the corresponding operation in the console, refer to <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</p>
      * <blockquote>
-     * <p>Before calling this API to delete data, back up your data or confirm that a backup is not required.</p>
+     * <p>Before calling this API to delete data, back up your data or confirm that no backup is required.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Flushes all data from an ApsaraDB for Tair (Redis® OSS-Compatible) database instance. The data cannot be recovered.</p>
+     * <p>Clears the data in an ApsaraDB for Tair (Redis® OSS-Compatible) database instance. The data cannot be recovered.</p>
      * 
      * @param request FlushInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8726,13 +9067,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/43881.html">Purge data</a>.</p>
+     * <p>For the corresponding operation in the console, refer to <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</p>
      * <blockquote>
-     * <p>Before calling this API to delete data, back up your data or confirm that a backup is not required.</p>
+     * <p>Before calling this API to delete data, back up your data or confirm that no backup is required.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Flushes all data from an ApsaraDB for Tair (Redis® OSS-Compatible) database instance. The data cannot be recovered.</p>
+     * <p>Clears the data in an ApsaraDB for Tair (Redis® OSS-Compatible) database instance. The data cannot be recovered.</p>
      * 
      * @param request FlushInstanceRequest
      * @return FlushInstanceResponse
@@ -8744,13 +9085,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ApsaraDB for Tair (Redis® OSS-Compatible) instances support 256 databases, from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity available to a database is subject to the total memory limit of the instance. You can run the <code>SELECT</code> command to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">Tair DB</a>.</p>
+     * <p>An ApsaraDB Tair (Redis® OSS-Compatible) instance supports 256 databases, from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity available for a database is constrained by the total memory of the instance. You can use the <code>SELECT</code> command to switch databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">Tair DB</a>.</p>
      * <blockquote>
-     * <p>This operation supports only cloud-native instances (formerly cloud disk-based instances) in cluster architecture.</p>
+     * <p>This operation is supported only by cloud-native instances (formerly cloud disk instances) in a cluster architecture.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Clears data from a specified database in an ApsaraDB for Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Clears the data in a specified database of an ApsaraDB Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request FlushInstanceForDBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8802,13 +9143,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ApsaraDB for Tair (Redis® OSS-Compatible) instances support 256 databases, from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity available to a database is subject to the total memory limit of the instance. You can run the <code>SELECT</code> command to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">Tair DB</a>.</p>
+     * <p>An ApsaraDB Tair (Redis® OSS-Compatible) instance supports 256 databases, from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity available for a database is constrained by the total memory of the instance. You can use the <code>SELECT</code> command to switch databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">Tair DB</a>.</p>
      * <blockquote>
-     * <p>This operation supports only cloud-native instances (formerly cloud disk-based instances) in cluster architecture.</p>
+     * <p>This operation is supported only by cloud-native instances (formerly cloud disk instances) in a cluster architecture.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Clears data from a specified database in an ApsaraDB for Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Clears the data in a specified database of an ApsaraDB Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request FlushInstanceForDBRequest
      * @return FlushInstanceForDBResponse
@@ -8820,7 +9161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the permissions of an ApsaraDB for Tair (Redis® OSS-Compatible) database account.</p>
+     * <p>Modifies the permissions of an account for the ApsaraDB Tair (Redis® OSS-Compatible) database.</p>
      * 
      * @param request GrantAccountPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8884,7 +9225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the permissions of an ApsaraDB for Tair (Redis® OSS-Compatible) database account.</p>
+     * <p>Modifies the permissions of an account for the ApsaraDB Tair (Redis® OSS-Compatible) database.</p>
      * 
      * @param request GrantAccountPrivilegeRequest
      * @return GrantAccountPrivilegeResponse
@@ -8896,10 +9237,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The Log Management feature of Tair (Redis® OSS-Compatible) database requires resources from <a href="https://help.aliyun.com/document_detail/48869.html">Simple Log Service</a>. Before using the Log Management feature, call this operation to associate the service-linked role named AliyunServiceRoleForKvstore with Tair (Redis® OSS-Compatible) database. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for Tair (Redis® OSS-Compatible) database</a>.</p>
+     * <p>The log management feature of the ApsaraDB for Tair (Redis® OSS-Compatible) database requires resources from <a href="https://help.aliyun.com/document_detail/48869.html">Simple Log Service</a>. Before using the log management feature, invoke this operation to associate the service-linked role named AliyunServiceRoleForKvstore with the ApsaraDB for Tair (Redis® OSS-Compatible) database and grant the required authorization. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for ApsaraDB for Tair (Redis® OSS-Compatible)</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates the service-linked role named AliyunServiceRoleForKvstore with Tair (Redis® OSS-Compatible) database.</p>
+     * <p>Grants authorization to associate the service-linked role with the ApsaraDB for Tair (Redis® OSS-Compatible) database.</p>
      * 
      * @param request InitializeKvstorePermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8951,10 +9292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The Log Management feature of Tair (Redis® OSS-Compatible) database requires resources from <a href="https://help.aliyun.com/document_detail/48869.html">Simple Log Service</a>. Before using the Log Management feature, call this operation to associate the service-linked role named AliyunServiceRoleForKvstore with Tair (Redis® OSS-Compatible) database. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for Tair (Redis® OSS-Compatible) database</a>.</p>
+     * <p>The log management feature of the ApsaraDB for Tair (Redis® OSS-Compatible) database requires resources from <a href="https://help.aliyun.com/document_detail/48869.html">Simple Log Service</a>. Before using the log management feature, invoke this operation to associate the service-linked role named AliyunServiceRoleForKvstore with the ApsaraDB for Tair (Redis® OSS-Compatible) database and grant the required authorization. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for ApsaraDB for Tair (Redis® OSS-Compatible)</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates the service-linked role named AliyunServiceRoleForKvstore with Tair (Redis® OSS-Compatible) database.</p>
+     * <p>Grants authorization to associate the service-linked role with the ApsaraDB for Tair (Redis® OSS-Compatible) database.</p>
      * 
      * @param request InitializeKvstorePermissionRequest
      * @return InitializeKvstorePermissionResponse
@@ -8969,7 +9310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For the corresponding console operations of this API, refer to <a href="https://help.aliyun.com/document_detail/119160.html">Filter instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the labels you attach to ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
+     * <p>Queries the attach relationships between ApsaraDB for Tair (Redis® OSS-Compatible) database instances and labels.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9036,7 +9377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For the corresponding console operations of this API, refer to <a href="https://help.aliyun.com/document_detail/119160.html">Filter instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the labels you attach to ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
+     * <p>Queries the attach relationships between ApsaraDB for Tair (Redis® OSS-Compatible) database instances and labels.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -9048,7 +9389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Locks an instance so that it supports only data reads and does not support writes.</p>
+     * <p>Locks an instance to read-only mode, disabling write operations.</p>
      * 
      * @param request LockDBInstanceWriteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9104,7 +9445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Locks an instance so that it supports only data reads and does not support writes.</p>
+     * <p>Locks an instance to read-only mode, disabling write operations.</p>
      * 
      * @param request LockDBInstanceWriteRequest
      * @return LockDBInstanceWriteResponse
@@ -9123,7 +9464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Simulates a failure of a specified data node or proxy node in Tair (Redis® OSS-Compatible). The instance automatically performs a primary/secondary switchover to ensure high availability.</p>
+     * <p>Performs impersonation of a specified data node or proxy node failure in the ApsaraDB for Tair (Redis® OSS-Compatible) database. The instance automatically performs a primary/secondary switchover to ensure high availability and keep the system active.</p>
      * 
      * @param request MasterNodeShutDownFailOverRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9186,7 +9527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Simulates a failure of a specified data node or proxy node in Tair (Redis® OSS-Compatible). The instance automatically performs a primary/secondary switchover to ensure high availability.</p>
+     * <p>Performs impersonation of a specified data node or proxy node failure in the ApsaraDB for Tair (Redis® OSS-Compatible) database. The instance automatically performs a primary/secondary switchover to ensure high availability and keep the system active.</p>
      * 
      * @param request MasterNodeShutDownFailOverRequest
      * @return MasterNodeShutDownFailOverResponse
@@ -9201,13 +9542,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, you must release the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/106272.html">Migrate an instance across zones</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>If the instance was switched from the classic network to a VPC and retains the classic network endpoint, you must wait until the classic network endpoint expires and is released before you can migrate the instance across zones.</li>
+     * <li>If the instance was switched from the classic network to a VPC and the classic network endpoint is retained, you must wait until the classic network endpoint expires and is released before you can migrate the instance across zones.</li>
      * <li>After the migration, the endpoint of the instance remains unchanged, but the virtual IP address (VIP) changes. Use the endpoint instead of the VIP to connect to the instance in your business applications.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Migrates an ApsaraDB Tair (Redis OSS-Compatible) instance to another zone in the same region.</p>
+     * <p>Migrates an ApsaraDB for Tair (Redis-compatible) instance to another zone within the same region.</p>
      * 
      * @param request MigrateToOtherZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9294,13 +9635,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, you must release the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/106272.html">Migrate an instance across zones</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>If the instance was switched from the classic network to a VPC and retains the classic network endpoint, you must wait until the classic network endpoint expires and is released before you can migrate the instance across zones.</li>
+     * <li>If the instance was switched from the classic network to a VPC and the classic network endpoint is retained, you must wait until the classic network endpoint expires and is released before you can migrate the instance across zones.</li>
      * <li>After the migration, the endpoint of the instance remains unchanged, but the virtual IP address (VIP) changes. Use the endpoint instead of the VIP to connect to the instance in your business applications.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Migrates an ApsaraDB Tair (Redis OSS-Compatible) instance to another zone in the same region.</p>
+     * <p>Migrates an ApsaraDB for Tair (Redis-compatible) instance to another zone within the same region.</p>
      * 
      * @param request MigrateToOtherZoneRequest
      * @return MigrateToOtherZoneResponse
@@ -9315,7 +9656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation supports only instances that are compatible with Redis 4.0 or later.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the account description of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Modifies the description of an account for a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request ModifyAccountDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9382,7 +9723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation supports only instances that are compatible with Redis 4.0 or later.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the account description of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Modifies the description of an account for a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
@@ -9394,10 +9735,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only Tair Serverless KV instances are supported.</p>
+     * <p>This operation is supported only for Tair Serverless KV instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies account parameters.</p>
+     * <p>Modifies the account parameters.</p>
      * 
      * @param request ModifyAccountParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9441,10 +9782,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only Tair Serverless KV instances are supported.</p>
+     * <p>This operation is supported only for Tair Serverless KV instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies account parameters.</p>
+     * <p>Modifies the account parameters.</p>
      * 
      * @param request ModifyAccountParameterRequest
      * @return ModifyAccountParameterResponse
@@ -9456,7 +9797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the password of a specified account in a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Updates the password of a specified account in an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9524,7 +9865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the password of a specified account in a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Updates the password of a specified account in an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyAccountPasswordRequest
      * @return ModifyAccountPasswordResponse
@@ -9616,7 +9957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>O&amp;M events of Tair (Redis® OSS-Compatible) instances, such as instance migration and version upgrades, are notified through text messages, phone calls, emails, or internal messages, and are also displayed in the console. In addition to invoking this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</p>
+     * <p>O&amp;M events for ApsaraDB for Tair (Redis® OSS-Compatible) database instances, such as instance migration and version upgrades, are notified through SMS, voice calls, emails, or internal messages, as well as in the console. You can invoke this operation to modify the scheduled switchover time. Alternatively, you can modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the scheduled switchover time of an O&amp;M task.</p>
@@ -9675,7 +10016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>O&amp;M events of Tair (Redis® OSS-Compatible) instances, such as instance migration and version upgrades, are notified through text messages, phone calls, emails, or internal messages, and are also displayed in the console. In addition to invoking this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</p>
+     * <p>O&amp;M events for ApsaraDB for Tair (Redis® OSS-Compatible) database instances, such as instance migration and version upgrades, are notified through SMS, voice calls, emails, or internal messages, as well as in the console. You can invoke this operation to modify the scheduled switchover time. Alternatively, you can modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the scheduled switchover time of an O&amp;M task.</p>
@@ -9690,7 +10031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the switchover time of scheduled O&amp;M events for an instance.</p>
+     * <p>Modifies the switchover time of scheduled O&amp;M events for instances.</p>
      * 
      * @param request ModifyActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9750,7 +10091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the switchover time of scheduled O&amp;M events for an instance.</p>
+     * <p>Modifies the switchover time of scheduled O&amp;M events for instances.</p>
      * 
      * @param request ModifyActiveOperationTasksRequest
      * @return ModifyActiveOperationTasksResponse
@@ -9762,10 +10103,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of audit logs.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of audit logs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or modifies the audit log settings of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Enables or modifies the audit log settings for a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyAuditLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9825,10 +10166,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of audit logs.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of audit logs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or modifies the audit log settings of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Enables or modifies the audit log settings for a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyAuditLogConfigRequest
      * @return ModifyAuditLogConfigResponse
@@ -9988,7 +10329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the automatic minor engine version update switch for an instance.</p>
+     * <p>Modifies the automatic minor version upgrade switch for an instance.</p>
      * 
      * @param request ModifyDBInstanceAutoUpgradeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10044,7 +10385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the automatic minor engine version update switch for an instance.</p>
+     * <p>Modifies the automatic minor version upgrade switch for an instance.</p>
      * 
      * @param request ModifyDBInstanceAutoUpgradeRequest
      * @return ModifyDBInstanceAutoUpgradeResponse
@@ -10056,10 +10397,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/85683.html">Modify an endpoint</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/85683.html">Modify endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the endpoint and port of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Modifies the endpoint and port of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10127,10 +10468,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/85683.html">Modify an endpoint</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/85683.html">Modify endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the endpoint and port of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Modifies the endpoint and port of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @return ModifyDBInstanceConnectionStringResponse
@@ -10270,7 +10611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a global IP address whitelist template.</p>
+     * <p>Modifies a global IP whitelist template.</p>
      * 
      * @param request ModifyGlobalSecurityIPGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10338,7 +10679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a global IP address whitelist template.</p>
+     * <p>Modifies a global IP whitelist template.</p>
      * 
      * @param request ModifyGlobalSecurityIPGroupRequest
      * @return ModifyGlobalSecurityIPGroupResponse
@@ -10350,7 +10691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name of a global IP address whitelist template.</p>
+     * <p>Updates the name of a global IP whitelist template.</p>
      * 
      * @param request ModifyGlobalSecurityIPGroupNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10414,7 +10755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name of a global IP address whitelist template.</p>
+     * <p>Updates the name of a global IP whitelist template.</p>
      * 
      * @param request ModifyGlobalSecurityIPGroupNameRequest
      * @return ModifyGlobalSecurityIPGroupNameResponse
@@ -10582,7 +10923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies partial information of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance, including the instance password and name.</p>
+     * <p>Modifies specific information of a Tair (Redis® OSS-Compatible) database instance, such as the instance password and name.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10646,7 +10987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies partial information of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance, including the instance password and name.</p>
+     * <p>Modifies specific information of a Tair (Redis® OSS-Compatible) database instance, such as the instance password and name.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @return ModifyInstanceAttributeResponse
@@ -10663,7 +11004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the auto-renewal feature for a Tair (Redis® OSS-Compatible) instance before it expires.</p>
+     * <p>Enables or disables the auto-renewal feature for ApsaraDB for Tair (Redis® OSS-Compatible) instances before expiration.</p>
      * 
      * @param request ModifyInstanceAutoRenewalAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10732,7 +11073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the auto-renewal feature for a Tair (Redis® OSS-Compatible) instance before it expires.</p>
+     * <p>Enables or disables the auto-renewal feature for ApsaraDB for Tair (Redis® OSS-Compatible) instances before expiration.</p>
      * 
      * @param request ModifyInstanceAutoRenewalAttributeRequest
      * @return ModifyInstanceAutoRenewalAttributeResponse
@@ -10745,12 +11086,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before calling this operation, make sure that you fully understand the bandwidth billing method and pricing of the instance. Tair (Redis® OSS-Compatible) charges fees on an hourly basis based on the increased bandwidth and usage duration. The pricing varies by region. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</li>
-     * <li>The bandwidth of an instance (or a single shard) can be increased by up to 6 times the default bandwidth of the instance, with a maximum increase of 192 MB/s. For example, the default bandwidth of a Tair memory-optimized 2 GB standard architecture instance is 96 MB/s. The bandwidth of this instance type can be increased by up to 192 MB/s, resulting in a maximum bandwidth of 288 MB/s. The default bandwidth of a Redis Community Edition 256 MB standard architecture instance is 10 MB/s. The bandwidth of this instance type can be increased by up to 60 MB/s, resulting in a maximum bandwidth of 70 MB/s.</li>
+     * <li>Before calling this operation, make sure that you fully understand the bandwidth billing method and pricing of the instance. Tair (Redis® OSS-Compatible) charges hourly fees based on the increased bandwidth and usage duration. Billing standards vary by region. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</li>
+     * <li>An instance or a single shard supports an additional bandwidth increase of up to 6 times the default bandwidth of the original instance, with a maximum increase limit of 192 MB/s. For example, the default bandwidth of a 2 GB standard-architecture Tair memory-optimized instance is 96 MB/s. The bandwidth for this specification can be increased by up to 192 MB/s, resulting in a maximum instance bandwidth of 288 MB/s. The default bandwidth of a 256 MB standard-architecture open-source Redis instance is 10 MB/s. The bandwidth for this specification can be increased by up to 60 MB/s, resulting in a maximum instance bandwidth of 70 MB/s.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sets the target bandwidth value for a Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Configures the target bandwidth settings for a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request ModifyInstanceBandwidthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10807,12 +11148,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before calling this operation, make sure that you fully understand the bandwidth billing method and pricing of the instance. Tair (Redis® OSS-Compatible) charges fees on an hourly basis based on the increased bandwidth and usage duration. The pricing varies by region. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</li>
-     * <li>The bandwidth of an instance (or a single shard) can be increased by up to 6 times the default bandwidth of the instance, with a maximum increase of 192 MB/s. For example, the default bandwidth of a Tair memory-optimized 2 GB standard architecture instance is 96 MB/s. The bandwidth of this instance type can be increased by up to 192 MB/s, resulting in a maximum bandwidth of 288 MB/s. The default bandwidth of a Redis Community Edition 256 MB standard architecture instance is 10 MB/s. The bandwidth of this instance type can be increased by up to 60 MB/s, resulting in a maximum bandwidth of 70 MB/s.</li>
+     * <li>Before calling this operation, make sure that you fully understand the bandwidth billing method and pricing of the instance. Tair (Redis® OSS-Compatible) charges hourly fees based on the increased bandwidth and usage duration. Billing standards vary by region. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</li>
+     * <li>An instance or a single shard supports an additional bandwidth increase of up to 6 times the default bandwidth of the original instance, with a maximum increase limit of 192 MB/s. For example, the default bandwidth of a 2 GB standard-architecture Tair memory-optimized instance is 96 MB/s. The bandwidth for this specification can be increased by up to 192 MB/s, resulting in a maximum instance bandwidth of 288 MB/s. The default bandwidth of a 256 MB standard-architecture open-source Redis instance is 10 MB/s. The bandwidth for this specification can be increased by up to 60 MB/s, resulting in a maximum instance bandwidth of 70 MB/s.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sets the target bandwidth value for a Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Configures the target bandwidth settings for a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request ModifyInstanceBandwidthRequest
      * @return ModifyInstanceBandwidthResponse
@@ -10824,7 +11165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the parameter settings of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Modifies the parameter settings of an ApsaraDB for Tair (Redis OSS-compatible) instance.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10904,7 +11245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the parameter settings of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Modifies the parameter settings of an ApsaraDB for Tair (Redis OSS-compatible) instance.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @return ModifyInstanceConfigResponse
@@ -10916,10 +11257,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/55252.html">Set the maintenance window</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the maintenance window of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance. Alibaba Cloud performs routine maintenance on the instance within the specified maintenance window.</p>
+     * <p>Modifies the maintenance window of a Tair (Redis® OSS-Compatible) database instance. Alibaba Cloud performs routine maintenance on the instance during the specified maintenance window.</p>
      * 
      * @param request ModifyInstanceMaintainTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10979,10 +11320,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/55252.html">Set the maintenance window</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the maintenance window of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance. Alibaba Cloud performs routine maintenance on the instance within the specified maintenance window.</p>
+     * <p>Modifies the maintenance window of a Tair (Redis® OSS-Compatible) database instance. Alibaba Cloud performs routine maintenance on the instance during the specified maintenance window.</p>
      * 
      * @param request ModifyInstanceMaintainTimeRequest
      * @return ModifyInstanceMaintainTimeResponse
@@ -10994,10 +11335,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the precautions and impacts of this API operation, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</p>
+     * <p>For precautions and impacts of this API operation, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the major engine version of a Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Upgrades the major version of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyInstanceMajorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11057,10 +11398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the precautions and impacts of this API operation, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</p>
+     * <p>For precautions and impacts of this API operation, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the major engine version of a Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Upgrades the major version of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyInstanceMajorVersionRequest
      * @return ModifyInstanceMajorVersionResponse
@@ -11072,16 +11413,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The upgrade process varies by architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">How minor version upgrades work</a>.</p>
+     * <p>The upgrade process varies based on the architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version upgrade principles</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the instance.</li>
-     * <li>During an instance switchover or primary/secondary switchover, the instance enters a read-only state for up to 60 seconds to wait for full data synchronization. Transient disconnections that last for a few seconds may also occur. Perform the upgrade during off-peak hours and ensure that your application has a reconnection mechanism.</li>
+     * <li>Before calling this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor engine version of the instance.</li>
+     * <li>During an instance switchover or primary/secondary switchover, the instance remains in a read-only state for up to 60 seconds while waiting for data to be fully synchronized. Transient disconnections that last for a few seconds may also occur. Perform the upgrade during off-peak hours and ensure that your application is configured with a reconnection mechanism.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the minor version of an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Upgrades the minor engine version of a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyInstanceMinorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11141,16 +11482,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The upgrade process varies by architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">How minor version upgrades work</a>.</p>
+     * <p>The upgrade process varies based on the architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version upgrade principles</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the instance.</li>
-     * <li>During an instance switchover or primary/secondary switchover, the instance enters a read-only state for up to 60 seconds to wait for full data synchronization. Transient disconnections that last for a few seconds may also occur. Perform the upgrade during off-peak hours and ensure that your application has a reconnection mechanism.</li>
+     * <li>Before calling this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor engine version of the instance.</li>
+     * <li>During an instance switchover or primary/secondary switchover, the instance remains in a read-only state for up to 60 seconds while waiting for data to be fully synchronized. Transient disconnections that last for a few seconds may also occur. Perform the upgrade during off-peak hours and ensure that your application is configured with a reconnection mechanism.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the minor version of an ApsaraDB Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Upgrades the minor engine version of a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyInstanceMinorVersionRequest
      * @return ModifyInstanceMinorVersionResponse
@@ -11162,13 +11503,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation of this API, refer to <a href="https://help.aliyun.com/document_detail/60062.html">Modify the retention period of the original classic network endpoint</a>.</p>
+     * <p>For the corresponding console operation of this API operation, refer to <a href="https://help.aliyun.com/document_detail/60062.html">Modify the validity period of the original classic network endpoint</a>.</p>
      * <blockquote>
      * <p>For information about how to switch an instance from the classic network to a VPC, refer to <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Extends the retention period of the classic network endpoint for a Tair (Redis® OSS-Compatible) database instance that retains the classic network endpoint after a switch from the classic network to a VPC.</p>
+     * <p>Extends the retention period of the classic network endpoint for a Tair (Redis® OSS-Compatible) database instance. You can call this API operation if the instance previously executed a switch from the classic network to a VPC and the classic network endpoint was retained.</p>
      * 
      * @param request ModifyInstanceNetExpireTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11228,13 +11569,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation of this API, refer to <a href="https://help.aliyun.com/document_detail/60062.html">Modify the retention period of the original classic network endpoint</a>.</p>
+     * <p>For the corresponding console operation of this API operation, refer to <a href="https://help.aliyun.com/document_detail/60062.html">Modify the validity period of the original classic network endpoint</a>.</p>
      * <blockquote>
      * <p>For information about how to switch an instance from the classic network to a VPC, refer to <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Extends the retention period of the classic network endpoint for a Tair (Redis® OSS-Compatible) database instance that retains the classic network endpoint after a switch from the classic network to a VPC.</p>
+     * <p>Extends the retention period of the classic network endpoint for a Tair (Redis® OSS-Compatible) database instance. You can call this API operation if the instance previously executed a switch from the classic network to a VPC and the classic network endpoint was retained.</p>
      * 
      * @param request ModifyInstanceNetExpireTimeRequest
      * @return ModifyInstanceNetExpireTimeResponse
@@ -11246,7 +11587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies a parameter template to a specified instance. This assigns the parameter values from the template to the specified instance. After you modify a parameter template, you must reapply it to the specified instance for the modified parameter values to take effect.</p>
+     * <p>Applies a parameter template to a specified instance to assign the values in the parameter template to the instance. If you modify a parameter template, you must reapply it to the specified instance for the modified parameter values to take effect.</p>
      * 
      * @param request ModifyInstanceParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11310,7 +11651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies a parameter template to a specified instance. This assigns the parameter values from the template to the specified instance. After you modify a parameter template, you must reapply it to the specified instance for the modified parameter values to take effect.</p>
+     * <p>Applies a parameter template to a specified instance to assign the values in the parameter template to the instance. If you modify a parameter template, you must reapply it to the specified instance for the modified parameter values to take effect.</p>
      * 
      * @param request ModifyInstanceParameterRequest
      * @return ModifyInstanceParameterResponse
@@ -11322,9 +11663,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/84898.html">Secure Sockets Layer (SSL) encryption settings</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/84898.html">Settings for Secure Sockets Layer (SSL) encryption</a>.</p>
      * <blockquote>
-     * <p>To specify the minimum SSL version, you can invoke the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the relevant parameter.</p>
+     * <p>To specify the minimum SSL version, you can invoke the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameter.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -11384,9 +11725,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/84898.html">Secure Sockets Layer (SSL) encryption settings</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/84898.html">Settings for Secure Sockets Layer (SSL) encryption</a>.</p>
      * <blockquote>
-     * <p>To specify the minimum SSL version, you can invoke the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the relevant parameter.</p>
+     * <p>To specify the minimum SSL version, you can invoke the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameter.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -11403,11 +11744,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For information about the execution process, impacts, feature limits, and billing of modifying instance specifications, refer to <a href="https://help.aliyun.com/document_detail/26353.html">Change instance configurations</a>.</p>
+     * <p>For information about the execution process, impacts, feature limits, and billing of changing instance specifications, see <a href="https://help.aliyun.com/document_detail/26353.html">Change the configurations of an instance</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the specifications of an ApsaraDB Tair (Redis OSS-Compatible) instance.</p>
+     * <p>Changes the specifications of an ApsaraDB Tair (Redis OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11544,11 +11885,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For information about the execution process, impacts, feature limits, and billing of modifying instance specifications, refer to <a href="https://help.aliyun.com/document_detail/26353.html">Change instance configurations</a>.</p>
+     * <p>For information about the execution process, impacts, feature limits, and billing of changing instance specifications, see <a href="https://help.aliyun.com/document_detail/26353.html">Change the configurations of an instance</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the specifications of an ApsaraDB Tair (Redis OSS-Compatible) instance.</p>
+     * <p>Changes the specifications of an ApsaraDB Tair (Redis OSS-Compatible) database instance.</p>
      * 
      * @param request ModifyInstanceSpecRequest
      * @return ModifyInstanceSpecResponse
@@ -11561,11 +11902,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about Transparent Data Encryption (TDE) and the impacts of enabling TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>For detailed information about Transparent Data Encryption (TDE) and the impacts of enabling it, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable Transparent Data Encryption (TDE)</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Enables the transparent data encryption (TDE) feature for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance, with support for custom keys.</p>
+     * <p>Enables the Transparent Data Encryption (TDE) feature for an ApsaraDB Tair (Redis® OSS-Compatible) database instance and supports custom keys.</p>
      * 
      * @param request ModifyInstanceTDERequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11634,11 +11975,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about Transparent Data Encryption (TDE) and the impacts of enabling TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>For detailed information about Transparent Data Encryption (TDE) and the impacts of enabling it, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable Transparent Data Encryption (TDE)</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Enables the transparent data encryption (TDE) feature for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance, with support for custom keys.</p>
+     * <p>Enables the Transparent Data Encryption (TDE) feature for an ApsaraDB Tair (Redis® OSS-Compatible) database instance and supports custom keys.</p>
      * 
      * @param request ModifyInstanceTDERequest
      * @return ModifyInstanceTDEResponse
@@ -11653,7 +11994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For information about how to perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/85168.html">Enable password-free access</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or initiates a shutdown of password-free access over a VPC. After this feature is enabled, cloud servers in the same VPC can connect to the ApsaraDB for Tair (Redis® OSS-Compatible) database instance without a password. Connections using a username and password are still supported.</p>
+     * <p>Enables or performs shutdown of password-free access over a virtual private cloud (VPC). After this feature is enabled, cloud servers in the same VPC can connect to a Tair (Redis® OSS-Compatible) instance without a password, while connections using a username and password remain supported.</p>
      * 
      * @param request ModifyInstanceVpcAuthModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11712,7 +12053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For information about how to perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/85168.html">Enable password-free access</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or initiates a shutdown of password-free access over a VPC. After this feature is enabled, cloud servers in the same VPC can connect to the ApsaraDB for Tair (Redis® OSS-Compatible) database instance without a password. Connections using a username and password are still supported.</p>
+     * <p>Enables or performs shutdown of password-free access over a virtual private cloud (VPC). After this feature is enabled, cloud servers in the same VPC can connect to a Tair (Redis® OSS-Compatible) instance without a password, while connections using a username and password remain supported.</p>
      * 
      * @param request ModifyInstanceVpcAuthModeRequest
      * @return ModifyInstanceVpcAuthModeResponse
@@ -11726,12 +12067,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>This operation applies only to instances created in dedicated clusters&lt;props=&quot;china&quot;&gt;. For information about the related console operations and limits, see <a href="https://help.aliyun.com/document_detail/206257.html">Modify bandwidth policy</a>. To adjust the bandwidth of a regular instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</li>
+     * <li>This operation applies only to instances created in dedicated clusters&lt;props=&quot;china&quot;&gt;. For information about the related console operations and limits, see <a href="https://help.aliyun.com/document_detail/206257.html">Modify bandwidth policies</a>. To adjust the bandwidth of a regular instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Temporarily adjusts the internal network bandwidth of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance in a dedicated cluster.</p>
+     * <p>Temporarily adjusts the internal network bandwidth of an ApsaraDB Tair (Redis® OSS-Compatible) database instance in a dedicated cluster.</p>
      * 
      * @param request ModifyIntranetAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11793,12 +12134,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>This operation applies only to instances created in dedicated clusters&lt;props=&quot;china&quot;&gt;. For information about the related console operations and limits, see <a href="https://help.aliyun.com/document_detail/206257.html">Modify bandwidth policy</a>. To adjust the bandwidth of a regular instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</li>
+     * <li>This operation applies only to instances created in dedicated clusters&lt;props=&quot;china&quot;&gt;. For information about the related console operations and limits, see <a href="https://help.aliyun.com/document_detail/206257.html">Modify bandwidth policies</a>. To adjust the bandwidth of a regular instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Temporarily adjusts the internal network bandwidth of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance in a dedicated cluster.</p>
+     * <p>Temporarily adjusts the internal network bandwidth of an ApsaraDB Tair (Redis® OSS-Compatible) database instance in a dedicated cluster.</p>
      * 
      * @param request ModifyIntranetAttributeRequest
      * @return ModifyIntranetAttributeResponse
@@ -11894,13 +12235,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Move resources across resource groups</a>.</p>
+     * <p>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Transfer resources across resource groups</a>.</p>
      * <blockquote>
-     * <p>A resource group is a mechanism for managing resources in groups within an Alibaba Cloud account. Resource groups help you address the complexity of resource grouping and authorization management within a single Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * <p>A resource group is a mechanism for grouping and managing resources within an Alibaba Cloud account. Resource groups help you simplify resource grouping and authorization management within a single Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the resource group to which a Tair (Redis® OSS-Compatible) instance belongs.</p>
+     * <p>Modifies the resource group to which an ApsaraDB Tair (Redis® OSS-Compatible) database instance belongs.</p>
      * 
      * @param request ModifyResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11960,13 +12301,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Move resources across resource groups</a>.</p>
+     * <p>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Transfer resources across resource groups</a>.</p>
      * <blockquote>
-     * <p>A resource group is a mechanism for managing resources in groups within an Alibaba Cloud account. Resource groups help you address the complexity of resource grouping and authorization management within a single Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * <p>A resource group is a mechanism for grouping and managing resources within an Alibaba Cloud account. Resource groups help you simplify resource grouping and authorization management within a single Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the resource group to which a Tair (Redis® OSS-Compatible) instance belongs.</p>
+     * <p>Modifies the resource group to which an ApsaraDB Tair (Redis® OSS-Compatible) database instance belongs.</p>
      * 
      * @param request ModifyResourceGroupRequest
      * @return ModifyResourceGroupResponse
@@ -11978,10 +12319,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation overwrites the existing security groups in the instance whitelist and adds the security groups specified by the <strong>SecurityGroupId</strong> parameter to the whitelist. For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/148267.html">Add a security group</a>.</p>
+     * <p>Calling this operation overwrites the existing security groups in the instance whitelist and adds the security groups specified in the <strong>SecurityGroupId</strong> parameter to the whitelist. For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/148267.html">Add security groups</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Settings the security groups in the whitelist of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Configures the security group settings in the whitelist of an ApsaraDB Tair (Redis OSS-Compatible) database instance.</p>
      * 
      * @param request ModifySecurityGroupConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12037,10 +12378,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation overwrites the existing security groups in the instance whitelist and adds the security groups specified by the <strong>SecurityGroupId</strong> parameter to the whitelist. For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/148267.html">Add a security group</a>.</p>
+     * <p>Calling this operation overwrites the existing security groups in the instance whitelist and adds the security groups specified in the <strong>SecurityGroupId</strong> parameter to the whitelist. For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/148267.html">Add security groups</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Settings the security groups in the whitelist of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Configures the security group settings in the whitelist of an ApsaraDB Tair (Redis OSS-Compatible) database instance.</p>
      * 
      * @param request ModifySecurityGroupConfigurationRequest
      * @return ModifySecurityGroupConfigurationResponse
@@ -12052,10 +12393,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure an IP whitelist</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure the IP whitelist</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Configures the IP whitelist of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Configures the IP whitelist Settings for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifySecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12123,10 +12464,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure an IP whitelist</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure the IP whitelist</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Configures the IP whitelist of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Configures the IP whitelist Settings for an ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ModifySecurityIpsRequest
      * @return ModifySecurityIpsResponse
@@ -12134,6 +12475,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifySecurityIpsResponse modifySecurityIps(ModifySecurityIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifySecurityIpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of an AI gateway instance.</p>
+     * 
+     * @param request ModifyTairAIGatewayParameterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyTairAIGatewayParameterResponse
+     */
+    public ModifyTairAIGatewayParameterResponse modifyTairAIGatewayParameterWithOptions(ModifyTairAIGatewayParameterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyTairAIGatewayParameter"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTairAIGatewayParameterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of an AI gateway instance.</p>
+     * 
+     * @param request ModifyTairAIGatewayParameterRequest
+     * @return ModifyTairAIGatewayParameterResponse
+     */
+    public ModifyTairAIGatewayParameterResponse modifyTairAIGatewayParameter(ModifyTairAIGatewayParameterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyTairAIGatewayParameterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the plug-in switches of the AI gateway.</p>
+     * 
+     * @param request ModifyTairAIGatewayPluginSwitchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyTairAIGatewayPluginSwitchResponse
+     */
+    public ModifyTairAIGatewayPluginSwitchResponse modifyTairAIGatewayPluginSwitchWithOptions(ModifyTairAIGatewayPluginSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyTairAIGatewayPluginSwitch"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTairAIGatewayPluginSwitchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the plug-in switches of the AI gateway.</p>
+     * 
+     * @param request ModifyTairAIGatewayPluginSwitchRequest
+     * @return ModifyTairAIGatewayPluginSwitchResponse
+     */
+    public ModifyTairAIGatewayPluginSwitchResponse modifyTairAIGatewayPluginSwitch(ModifyTairAIGatewayPluginSwitchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyTairAIGatewayPluginSwitchWithOptions(request, runtime);
     }
 
     /**
@@ -12210,7 +12663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a node operation. Currently, this operation supports modifying the execution time of a node.</p>
+     * <p>Performs an operation on a task. Currently, modifying the task execution time is supported.</p>
      * 
      * @param request ModifyTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12270,7 +12723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a node operation. Currently, this operation supports modifying the execution time of a node.</p>
+     * <p>Performs an operation on a task. Currently, modifying the task execution time is supported.</p>
      * 
      * @param request ModifyTaskInfoRequest
      * @return ModifyTaskInfoResponse
@@ -12285,7 +12738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is supported only for instances that use the cluster architecture in proxy mode or the read/write splitting architecture. For more information, see <a href="https://help.aliyun.com/document_detail/164224.html">Restart or rebuild proxy nodes</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Restarts the proxy nodes of a running Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Restarts the proxy nodes of a running ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request RebootProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12352,7 +12805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is supported only for instances that use the cluster architecture in proxy mode or the read/write splitting architecture. For more information, see <a href="https://help.aliyun.com/document_detail/164224.html">Restart or rebuild proxy nodes</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Restarts the proxy nodes of a running Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Restarts the proxy nodes of a running ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request RebootProxyRequest
      * @return RebootProxyResponse
@@ -12364,10 +12817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A client can use the direct connection address to bypass the proxy and connect to a Tair (Redis® OSS-Compatible) database cluster in the same way as connecting to a native Redis cluster. This reduces link overhead and further improves the response speed of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable direct connection access</a>.</p>
+     * <p>Clients can use the direct connection endpoint to bypass proxies and connect to an ApsaraDB for Tair (Redis® OSS-Compatible) database cluster in the same way as connecting to a native Redis cluster. This reduces link overhead and further improves the response speed of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable direct connection access</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases the direct connection address of a Tair (Redis® OSS-Compatible) cluster instance.</p>
+     * <p>Releases the direct connection endpoint of an ApsaraDB for Tair (Redis® OSS-Compatible) database cluster instance.</p>
      * 
      * @param request ReleaseDirectConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12419,10 +12872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A client can use the direct connection address to bypass the proxy and connect to a Tair (Redis® OSS-Compatible) database cluster in the same way as connecting to a native Redis cluster. This reduces link overhead and further improves the response speed of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable direct connection access</a>.</p>
+     * <p>Clients can use the direct connection endpoint to bypass proxies and connect to an ApsaraDB for Tair (Redis® OSS-Compatible) database cluster in the same way as connecting to a native Redis cluster. This reduces link overhead and further improves the response speed of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable direct connection access</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases the direct connection address of a Tair (Redis® OSS-Compatible) cluster instance.</p>
+     * <p>Releases the direct connection endpoint of an ApsaraDB for Tair (Redis® OSS-Compatible) database cluster instance.</p>
      * 
      * @param request ReleaseDirectConnectionRequest
      * @return ReleaseDirectConnectionResponse
@@ -12434,10 +12887,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/125424.html">Release a public endpoint</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/125424.html">Release a public endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases the public endpoint of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Releases the public endpoint of a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ReleaseInstancePublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12493,10 +12946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/125424.html">Release a public endpoint</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/125424.html">Release a public endpoint</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases the public endpoint of a Tair (Redis® OSS-Compatible) instance.</p>
+     * <p>Releases the public endpoint of a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request ReleaseInstancePublicConnectionRequest
      * @return ReleaseInstancePublicConnectionResponse
@@ -12509,11 +12962,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After the conversion is complete, the child instance becomes a standard instance. You can find and manage the instance in the instance list of the corresponding region.</p>
+     * <p>After the conversion is complete, the child instance becomes a regular instance. You can find and manage the instance in the instance list of the corresponding region.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Removes a child instance from a distributed instance and converts it to a standard instance. Data is retained.</p>
+     * <p>Removes a child instance from a distributed instance and converts it into a regular instance. The data is retained.</p>
      * 
      * @param request RemoveSubInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12566,11 +13019,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After the conversion is complete, the child instance becomes a standard instance. You can find and manage the instance in the instance list of the corresponding region.</p>
+     * <p>After the conversion is complete, the child instance becomes a regular instance. You can find and manage the instance in the instance list of the corresponding region.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Removes a child instance from a distributed instance and converts it to a standard instance. Data is retained.</p>
+     * <p>Removes a child instance from a distributed instance and converts it into a regular instance. The data is retained.</p>
      * 
      * @param request RemoveSubInstanceRequest
      * @return RemoveSubInstanceResponse
@@ -12582,10 +13035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer recommended. You can adjust instance bandwidth through the console (<a href="https://help.aliyun.com/document_detail/102588.html">Modify instance bandwidth</a>) or by calling <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a>.</p>
+     * <p>This operation is deprecated. You can purchase bandwidth for an instance by using the console (<a href="https://help.aliyun.com/document_detail/102588.html">Adjust instance bandwidth</a>) or by calling the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>The bandwidth of ApsaraDB for Tair (Redis® OSS-Compatible) database instances has been upgraded to the pay-as-you-go pattern. This operation is no longer recommended.</p>
+     * <p>Renews the bandwidth of a Tair (Redis® OSS-Compatible) instance. This operation is deprecated because the bandwidth has been upgraded to the pay-as-you-go billing method.</p>
      * 
      * @param request RenewAdditionalBandwidthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12653,10 +13106,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer recommended. You can adjust instance bandwidth through the console (<a href="https://help.aliyun.com/document_detail/102588.html">Modify instance bandwidth</a>) or by calling <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a>.</p>
+     * <p>This operation is deprecated. You can purchase bandwidth for an instance by using the console (<a href="https://help.aliyun.com/document_detail/102588.html">Adjust instance bandwidth</a>) or by calling the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>The bandwidth of ApsaraDB for Tair (Redis® OSS-Compatible) database instances has been upgraded to the pay-as-you-go pattern. This operation is no longer recommended.</p>
+     * <p>Renews the bandwidth of a Tair (Redis® OSS-Compatible) instance. This operation is deprecated because the bandwidth has been upgraded to the pay-as-you-go billing method.</p>
      * 
      * @param request RenewAdditionalBandwidthRequest
      * @return RenewAdditionalBandwidthResponse
@@ -12769,11 +13222,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is supported only for Redis instances that run version 4.0 or later.</p>
+     * <p>This operation is supported only by Redis instances of version 4.0 or later.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Resets the password of an ApsaraDB for Tair (Redis® OSS-Compatible) database account.</p>
+     * <p>Resets the password of an account for a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request ResetAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12838,11 +13291,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is supported only for Redis instances that run version 4.0 or later.</p>
+     * <p>This operation is supported only by Redis instances of version 4.0 or later.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Resets the password of an ApsaraDB for Tair (Redis® OSS-Compatible) database account.</p>
+     * <p>Resets the password of an account for a Tair (Redis® OSS-Compatible) instance.</p>
      * 
      * @param request ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
@@ -13002,7 +13455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts a running Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Restarts a running ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request RestartInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13062,7 +13515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts a running Tair (Redis® OSS-Compatible) database instance.</p>
+     * <p>Restarts a running ApsaraDB for Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request RestartInstanceRequest
      * @return RestartInstanceResponse
@@ -13138,13 +13591,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If your instance is a Tair (Enterprise Edition) memory-optimized instance of the classic architecture, you can call this operation to restore specified keys in the current instance to a specific point in time accurate to seconds. This enables more fine-grained data restoration.</p>
+     * <p>If your instance is a Tair (Enterprise Edition) memory-optimized instance with the classic architecture, you can call this operation to restore specified keys in the current instance to a specific point in time accurate to seconds. This enables more fine-grained data restoration.</p>
      * <ul>
-     * <li>For instances other than the preceding type, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</li>
+     * <li>For other types of instances, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores data from a specified backup file to a Tair (Redis OSS-Compatible) database instance.</p>
+     * <p>Recovers data from a specified backup file to a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request RestoreInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13216,13 +13669,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If your instance is a Tair (Enterprise Edition) memory-optimized instance of the classic architecture, you can call this operation to restore specified keys in the current instance to a specific point in time accurate to seconds. This enables more fine-grained data restoration.</p>
+     * <p>If your instance is a Tair (Enterprise Edition) memory-optimized instance with the classic architecture, you can call this operation to restore specified keys in the current instance to a specific point in time accurate to seconds. This enables more fine-grained data restoration.</p>
      * <ul>
-     * <li>For instances other than the preceding type, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</li>
+     * <li>For other types of instances, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores data from a specified backup file to a Tair (Redis OSS-Compatible) database instance.</p>
+     * <p>Recovers data from a specified backup file to a Tair (Redis® OSS-Compatible) database instance.</p>
      * 
      * @param request RestoreInstanceRequest
      * @return RestoreInstanceResponse
@@ -13415,17 +13868,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about nearest access for applications in multi-zone deployment scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
+     * <p>For more information about nearest access for applications in multi-zone scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
      * When you call this operation, the instance must be of the high-availability or dual-replica type.
      * Calling this operation has the following impacts:</p>
      * </blockquote>
      * <ul>
      * <li>After the node role switchover is triggered, the data node on which the switchover is performed will enter a read-only state for a few seconds and experience transient disconnections. Make sure that your application has a reconnection mechanism.</li>
-     * <li>While the instance is in the switching state, you cannot perform instance-level operations, such as changing configurations or migrating zones.</li>
+     * <li>While the instance is in the switching state, you cannot perform instance-level operations, such as modifying configurations or migrating zones.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs a primary/secondary switchover to switch node roles. This operation is applicable to scenarios such as disaster recovery drills and nearest access for applications in multi-zone deployments.</p>
+     * <p>Performs a primary/secondary switchover to switch node roles. This operation applies to scenarios such as disaster recovery drills and nearest access for applications in multi-zone deployments.</p>
      * 
      * @param request SwitchInstanceHARequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13502,17 +13955,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about nearest access for applications in multi-zone deployment scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
+     * <p>For more information about nearest access for applications in multi-zone scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
      * When you call this operation, the instance must be of the high-availability or dual-replica type.
      * Calling this operation has the following impacts:</p>
      * </blockquote>
      * <ul>
      * <li>After the node role switchover is triggered, the data node on which the switchover is performed will enter a read-only state for a few seconds and experience transient disconnections. Make sure that your application has a reconnection mechanism.</li>
-     * <li>While the instance is in the switching state, you cannot perform instance-level operations, such as changing configurations or migrating zones.</li>
+     * <li>While the instance is in the switching state, you cannot perform instance-level operations, such as modifying configurations or migrating zones.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs a primary/secondary switchover to switch node roles. This operation is applicable to scenarios such as disaster recovery drills and nearest access for applications in multi-zone deployments.</p>
+     * <p>Performs a primary/secondary switchover to switch node roles. This operation applies to scenarios such as disaster recovery drills and nearest access for applications in multi-zone deployments.</p>
      * 
      * @param request SwitchInstanceHARequest
      * @return SwitchInstanceHAResponse
@@ -13525,17 +13978,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Proxy features</a>.
-     * Before calling this operation, ensure that the following conditions are met:</p>
+     * To call this operation, the following conditions must be met:</p>
      * <ul>
-     * <li>The instance is created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB MyBase dedicated cluster</a>.</li>
+     * <li>The instance is created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB MyBase</a>.</li>
      * <li>The instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.<blockquote>
-     * <p>Before calling this operation, call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and check the value of the <strong>ProxyCount</strong> response parameter to determine whether the proxy mode is enabled for the instance. For example, a value of 0 indicates that the proxy mode is disabled. A value greater than 0 indicates that the proxy mode is enabled.</p>
+     * <p>Before calling this operation, call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and check the value of the <strong>ProxyCount</strong> response parameter to determine whether the proxy mode is enabled for the instance. For example, a value of 0 indicates that the proxy mode is disabled, and a value greater than 0 indicates that the proxy mode is enabled.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or shuts down the proxy mode for a Tair (Redis® OSS-Compatible) database cluster instance in a dedicated cluster.</p>
+     * <p>Enables or shutdown the proxy mode for a Tair (Redis® OSS-Compatible) cluster instance in a dedicated cluster.</p>
      * 
      * @param request SwitchInstanceProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13588,17 +14041,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Proxy features</a>.
-     * Before calling this operation, ensure that the following conditions are met:</p>
+     * To call this operation, the following conditions must be met:</p>
      * <ul>
-     * <li>The instance is created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB MyBase dedicated cluster</a>.</li>
+     * <li>The instance is created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB MyBase</a>.</li>
      * <li>The instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.<blockquote>
-     * <p>Before calling this operation, call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and check the value of the <strong>ProxyCount</strong> response parameter to determine whether the proxy mode is enabled for the instance. For example, a value of 0 indicates that the proxy mode is disabled. A value greater than 0 indicates that the proxy mode is enabled.</p>
+     * <p>Before calling this operation, call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and check the value of the <strong>ProxyCount</strong> response parameter to determine whether the proxy mode is enabled for the instance. For example, a value of 0 indicates that the proxy mode is disabled, and a value greater than 0 indicates that the proxy mode is enabled.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or shuts down the proxy mode for a Tair (Redis® OSS-Compatible) database cluster instance in a dedicated cluster.</p>
+     * <p>Enables or shutdown the proxy mode for a Tair (Redis® OSS-Compatible) cluster instance in a dedicated cluster.</p>
      * 
      * @param request SwitchInstanceProxyRequest
      * @return SwitchInstanceProxyResponse
@@ -13610,10 +14063,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for cloud-native architecture instances.</p>
+     * <p>This operation supports only cloud-native architecture instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Switches an instance to a specified zone.</p>
+     * <p>Switches an instance to a specified target zone.</p>
      * 
      * @param request SwitchInstanceToTargetZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13657,10 +14110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for cloud-native architecture instances.</p>
+     * <p>This operation supports only cloud-native architecture instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Switches an instance to a specified zone.</p>
+     * <p>Switches an instance to a specified target zone.</p>
      * 
      * @param request SwitchInstanceToTargetZoneRequest
      * @return SwitchInstanceToTargetZoneResponse
@@ -13673,12 +14126,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation applies only to active multi-zone (dual-zone) cluster architecture instances.</li>
-     * <li>The node subjected to failure impersonation automatically recovers later. However, the primary node is located in the secondary zone and the secondary node is located in the primary zone. This may cause cross-data-center access between the instance and other services. To resolve this issue, you can perform a manual switchover of zones on the Service Availability page in the console.</li>
+     * <li>This operation is applicable only to multi-zone (dual-zone) cluster architecture instances.</li>
+     * <li>The node where the failure is simulated automatically recovers later. However, the primary node is located in the secondary zone and the secondary node is located in the primary zone, which may result in cross-data center access between the instance and other workloads. To resolve this issue, you can manually switch zones on the Service Availability page in the console.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs an impersonation of a zone-level failure of an active ApsaraDB for Tair (Redis® OSS-Compatible) cluster architecture database instance, triggering an automatic switchover to the secondary zone.</p>
+     * <p>Simulates a zone-level failure for a Tair (Redis® OSS-Compatible) cluster architecture instance, triggering an automatic switchover to the secondary zone.</p>
      * 
      * @param request SwitchInstanceZoneFailOverRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13719,12 +14172,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation applies only to active multi-zone (dual-zone) cluster architecture instances.</li>
-     * <li>The node subjected to failure impersonation automatically recovers later. However, the primary node is located in the secondary zone and the secondary node is located in the primary zone. This may cause cross-data-center access between the instance and other services. To resolve this issue, you can perform a manual switchover of zones on the Service Availability page in the console.</li>
+     * <li>This operation is applicable only to multi-zone (dual-zone) cluster architecture instances.</li>
+     * <li>The node where the failure is simulated automatically recovers later. However, the primary node is located in the secondary zone and the secondary node is located in the primary zone, which may result in cross-data center access between the instance and other workloads. To resolve this issue, you can manually switch zones on the Service Availability page in the console.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs an impersonation of a zone-level failure of an active ApsaraDB for Tair (Redis® OSS-Compatible) cluster architecture database instance, triggering an automatic switchover to the secondary zone.</p>
+     * <p>Simulates a zone-level failure for a Tair (Redis® OSS-Compatible) cluster architecture instance, triggering an automatic switchover to the secondary zone.</p>
      * 
      * @param request SwitchInstanceZoneFailOverRequest
      * @return SwitchInstanceZoneFailOverResponse
@@ -13736,7 +14189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Switches the virtual private cloud (VPC) or vSwitch of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance. If the instance uses the classic network, the instance is switched to a VPC.</p>
+     * <p>Switches the VPC or vSwitch of a Tair (Redis® OSS-Compatible) instance. If the instance is in the classic network, it is switched to a VPC.</p>
      * 
      * @param request SwitchNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13808,7 +14261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Switches the virtual private cloud (VPC) or vSwitch of an ApsaraDB for Tair (Redis® OSS-Compatible) database instance. If the instance uses the classic network, the instance is switched to a VPC.</p>
+     * <p>Switches the VPC or vSwitch of a Tair (Redis® OSS-Compatible) instance. If the instance is in the classic network, it is switched to a VPC.</p>
      * 
      * @param request SwitchNetworkRequest
      * @return SwitchNetworkResponse
@@ -13826,7 +14279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Before you use Data Transmission Service (DTS) to migrate or synchronize data of an ApsaraDB for Tair (Redis OSS-Compatible) database instance, you can invoke this operation to restrict the instance so that it does not execute Upgrade/Downgrade operations. This prevents data migration or synchronization nodes from becoming failed due to Upgrade/Downgrade.</p>
+     * <p>Before you use Data Transmission Service (DTS) to migrate or synchronize data of an ApsaraDB Tair (Redis® OSS-Compatible) instance, you can call this operation to restrict the instance so that it cannot execute Upgrade/Downgrade operations, preventing data migration or synchronization tasks from failing due to Upgrade/Downgrade.</p>
      * 
      * @param request SyncDtsStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13896,7 +14349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Before you use Data Transmission Service (DTS) to migrate or synchronize data of an ApsaraDB for Tair (Redis OSS-Compatible) database instance, you can invoke this operation to restrict the instance so that it does not execute Upgrade/Downgrade operations. This prevents data migration or synchronization nodes from becoming failed due to Upgrade/Downgrade.</p>
+     * <p>Before you use Data Transmission Service (DTS) to migrate or synchronize data of an ApsaraDB Tair (Redis® OSS-Compatible) instance, you can call this operation to restrict the instance so that it cannot execute Upgrade/Downgrade operations, preventing data migration or synchronization tasks from failing due to Upgrade/Downgrade.</p>
      * 
      * @param request SyncDtsStatusRequest
      * @return SyncDtsStatusResponse
@@ -13908,18 +14361,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you have a large number of instances, you can create multiple labels and attach different labels to the instances for categorization. You can then filter instances by label.</p>
+     * <p>If you manage a large number of instances, you can create multiple labels and attach different labels to instances for categorization. You can then filter instances by label.</p>
      * <ul>
-     * <li>A label consists of a key-value pair. The key must be unique within the same account and region, while the value has no such restriction.</li>
-     * <li>If the label in Settings does not exist, automatic creation of the label is performed and it is attached to the target instance.</li>
-     * <li>If the instance is already attached to a label with the same key, the new label overwrites the existing one.</li>
+     * <li>A label consists of a key-value pair. Keys must be unique within the same account and region, whereas values have no such restriction.</li>
+     * <li>If the label in Settings does not exist, automatic creation of the label is performed and it is attached to the target instances.</li>
+     * <li>If an instance already has a label with the same key attached, the new label overwrites the existing one.</li>
      * <li>You can attach up to 20 labels to each instance.</li>
      * <li>You can attach labels to up to 50 instances each time you invoke the API.
      * For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a label</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches labels to one or more ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
+     * <p>Attaches labels to one or more ApsaraDB for Tair (Redis-compatible) database instances.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13979,18 +14432,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you have a large number of instances, you can create multiple labels and attach different labels to the instances for categorization. You can then filter instances by label.</p>
+     * <p>If you manage a large number of instances, you can create multiple labels and attach different labels to instances for categorization. You can then filter instances by label.</p>
      * <ul>
-     * <li>A label consists of a key-value pair. The key must be unique within the same account and region, while the value has no such restriction.</li>
-     * <li>If the label in Settings does not exist, automatic creation of the label is performed and it is attached to the target instance.</li>
-     * <li>If the instance is already attached to a label with the same key, the new label overwrites the existing one.</li>
+     * <li>A label consists of a key-value pair. Keys must be unique within the same account and region, whereas values have no such restriction.</li>
+     * <li>If the label in Settings does not exist, automatic creation of the label is performed and it is attached to the target instances.</li>
+     * <li>If an instance already has a label with the same key attached, the new label overwrites the existing one.</li>
      * <li>You can attach up to 20 labels to each instance.</li>
      * <li>You can attach labels to up to 50 instances each time you invoke the API.
      * For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a label</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches labels to one or more ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
+     * <p>Attaches labels to one or more ApsaraDB for Tair (Redis-compatible) database instances.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -14004,12 +14457,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the precautions and billing instructions. For more information, see:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/54542.html">Switch from pay-as-you-go to subscription</a>.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/211549.html">Switch from subscription to pay-as-you-go</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method from pay-as-you-go to subscription</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/211549.html">Change the billing method from subscription to pay-as-you-go</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of a Tair (Redis® OSS-Compatible) database instance. You can switch between the pay-as-you-go and subscription billing methods.</p>
+     * <p>Changes the billing method of an ApsaraDB for Tair (Redis OSS-Compatible) instance. You can switch the billing method between pay-as-you-go and subscription.</p>
      * 
      * @param request TransformInstanceChargeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14087,12 +14540,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the precautions and billing instructions. For more information, see:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/54542.html">Switch from pay-as-you-go to subscription</a>.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/211549.html">Switch from subscription to pay-as-you-go</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method from pay-as-you-go to subscription</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/211549.html">Change the billing method from subscription to pay-as-you-go</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of a Tair (Redis® OSS-Compatible) database instance. You can switch between the pay-as-you-go and subscription billing methods.</p>
+     * <p>Changes the billing method of an ApsaraDB for Tair (Redis OSS-Compatible) instance. You can switch the billing method between pay-as-you-go and subscription.</p>
      * 
      * @param request TransformInstanceChargeTypeRequest
      * @return TransformInstanceChargeTypeResponse
@@ -14104,7 +14557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Converts a classic architecture instance to cloud-native.</p>
+     * <p>Converts a local disk instance to a cloud-native instance.</p>
      * 
      * @param request TransformToEcsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14204,7 +14657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Converts a classic architecture instance to cloud-native.</p>
+     * <p>Converts a local disk instance to a cloud-native instance.</p>
      * 
      * @param request TransformToEcsRequest
      * @return TransformToEcsResponse
@@ -14216,10 +14669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</p>
+     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Transforms a pay-as-you-go Tair (Redis® OSS-Compatible) database instance into a subscription instance.</p>
+     * <p>Transforms a pay-as-you-go ApsaraDB for Tair (Redis® OSS-Compatible) database instance to a subscription (upfront) instance.</p>
      * 
      * @param request TransformToPrePaidRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14291,10 +14744,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</p>
+     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Transforms a pay-as-you-go Tair (Redis® OSS-Compatible) database instance into a subscription instance.</p>
+     * <p>Transforms a pay-as-you-go ApsaraDB for Tair (Redis® OSS-Compatible) database instance to a subscription (upfront) instance.</p>
      * 
      * @param request TransformToPrePaidRequest
      * @return TransformToPrePaidResponse
@@ -14306,7 +14759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unlocks a write-locked instance. After the instance is unlocked, the instance supports both reading and writing data.</p>
+     * <p>Unlocks a write-locked instance. After the instance is unlocked, it supports data read and write operations.</p>
      * 
      * @param request UnlockDBInstanceWriteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14358,7 +14811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unlocks a write-locked instance. After the instance is unlocked, the instance supports both reading and writing data.</p>
+     * <p>Unlocks a write-locked instance. After the instance is unlocked, it supports data read and write operations.</p>
      * 
      * @param request UnlockDBInstanceWriteRequest
      * @return UnlockDBInstanceWriteResponse
@@ -14370,14 +14823,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can remove up to 20 tags at a time.</p>
+     * <p>You can remove a maximum of 20 tags at a time.</p>
      * <ul>
      * <li>If a tag is removed from an instance and is not attached to any other instances, the tag is automatically deleted.
      * For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove tags</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes labels from an ApsaraDB for Tair (Redis OSS-compatible) database instance.</p>
+     * <p>Removes tags from Tair (Redis® OSS-Compatible) database instances.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14441,14 +14894,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can remove up to 20 tags at a time.</p>
+     * <p>You can remove a maximum of 20 tags at a time.</p>
      * <ul>
      * <li>If a tag is removed from an instance and is not attached to any other instances, the tag is automatically deleted.
      * For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove tags</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes labels from an ApsaraDB for Tair (Redis OSS-compatible) database instance.</p>
+     * <p>Removes tags from Tair (Redis® OSS-Compatible) database instances.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -14460,16 +14913,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The upgrade process and impact vary depending on the architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version update</a>.</p>
+     * <p>The upgrade process and impact vary based on the architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Principles of minor version updates</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the proxy nodes.</li>
-     * <li>The upgrade causes connection interruptions. Perform the upgrade during off-peak hours and make sure that your application has a reconnection mechanism. For more information about the impact, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version update</a>.</li>
+     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the proxy node.</li>
+     * <li>Upgrades cause connection interruptions. Perform upgrades during off-peak hours and ensure that your applications have a reconnection mechanism. For more information about the impact, see <a href="https://help.aliyun.com/document_detail/56450.html">Principles of minor version updates</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the proxy nodes of a cluster instance to the latest version.</p>
+     * <p>Upgrades the proxy node of a cluster instance to the latest version.</p>
      * 
      * @param request UpgradeProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14529,16 +14982,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The upgrade process and impact vary depending on the architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version update</a>.</p>
+     * <p>The upgrade process and impact vary based on the architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Principles of minor version updates</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the proxy nodes.</li>
-     * <li>The upgrade causes connection interruptions. Perform the upgrade during off-peak hours and make sure that your application has a reconnection mechanism. For more information about the impact, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version update</a>.</li>
+     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the proxy node.</li>
+     * <li>Upgrades cause connection interruptions. Perform upgrades during off-peak hours and ensure that your applications have a reconnection mechanism. For more information about the impact, see <a href="https://help.aliyun.com/document_detail/56450.html">Principles of minor version updates</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the proxy nodes of a cluster instance to the latest version.</p>
+     * <p>Upgrades the proxy node of a cluster instance to the latest version.</p>
      * 
      * @param request UpgradeProxyRequest
      * @return UpgradeProxyResponse

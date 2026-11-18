@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTaskRequest extends TeaModel {
     /**
-     * <p>The O&amp;M task IDs, separated by commas (,).</p>
+     * <p>The IDs of the O&amp;M tasks. Separate multiple IDs with commas (,).</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> to obtain the O&amp;M task IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> operation to obtain the O&amp;M task IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,9 +33,9 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The scheduled switchover time to set. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <p>The scheduled switchover time to set. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>The time cannot be later than the latest operation time. You can call <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> and check the value of the <strong>Deadline</strong> response parameter to obtain the latest operation time.</p>
+     * <p>The time cannot be later than the deadline. You can call the <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> operation and check the value of the <strong>Deadline</strong> response parameter to obtain the deadline.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

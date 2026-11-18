@@ -5,16 +5,18 @@ import com.aliyun.tea.*;
 
 public class ModifyEventInfoRequest extends TeaModel {
     /**
-     * <p>The parameters related to the action in JSON format.
+     * <p>The parameters related to the action, in JSON format.
      * When <strong>TaskAction</strong> is set to <strong>modifySwitchTime</strong>, set this parameter to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
      * <ul>
-     * <li><strong>recoverMode</strong>: the task recovery mode. Valid values:<ul>
-     * <li><strong>imePoint</strong>: executes the task at a specified point in time.</li>
-     * <li><strong>immediate</strong>: executes the task immediately.</li>
-     * <li><strong>maintainTime</strong>: executes the task during the O&amp;M window.</li>
+     * <li><p><strong>recoverMode</strong>: the task recovery mode. Valid values:</p>
+     * <ul>
+     * <li><strong>imePoint</strong>: Executes the task at the specified point in time.</li>
+     * <li><strong>immediate</strong>: Executes the task immediately.</li>
+     * <li><strong>maintainTime</strong>: Executes the task during the O&amp;M window.</li>
      * </ul>
      * </li>
-     * <li><strong>recoverTime</strong>: the specified point in time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ. This parameter is required when <strong>recoverMode</strong> is set to <strong>timePoint</strong>.</li>
+     * <li><p><strong>recoverTime</strong>: the specified point in time. The time must be in UTC and in the yyyy-MM-ddTHH:mm:ssZ format. This parameter is required when <strong>recoverMode</strong> is set to <strong>timePoint</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,10 +26,10 @@ public class ModifyEventInfoRequest extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>The action to process the event. Valid values:</p>
+     * <p>The action to be performed on the event. Valid values:</p>
      * <ul>
      * <li><strong>archive</strong>: Archives the event.</li>
-     * <li><strong>undo</strong>: Does not process the event.</li>
+     * <li><strong>undo</strong>: Takes no action.</li>
      * </ul>
      * 
      * <strong>example:</strong>

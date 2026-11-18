@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateInspectionTaskRequest extends TeaModel {
     /**
      * <p>The end time of the inspection time range.</p>
-     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and in UTC.</p>
+     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-07-29T06:59:26Z</p>
@@ -32,7 +32,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String inspectionItems;
 
     /**
-     * <p>The ID of the assistant instance.</p>
+     * <p>The assistant instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The language of the report.</p>
+     * <p>The report language.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -62,7 +62,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
 
     /**
      * <p>The start time of the inspection time range.</p>
-     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and in UTC.</p>
+     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-07-29T05:59:26Z</p>

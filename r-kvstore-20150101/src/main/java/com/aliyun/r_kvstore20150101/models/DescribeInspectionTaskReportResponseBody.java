@@ -59,7 +59,7 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
 
     public static class DescribeInspectionTaskReportResponseBodyDataSummary extends TeaModel {
         /**
-         * <p>The number of high-risk items.</p>
+         * <p>The high-risk count.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -68,7 +68,7 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
         public Long error;
 
         /**
-         * <p>The number of failed items.</p>
+         * <p>The failed count.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -77,7 +77,7 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>The number of normal items.</p>
+         * <p>The normal count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -86,7 +86,7 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
         public Long normal;
 
         /**
-         * <p>The number of warning items.</p>
+         * <p>The warning count.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -144,7 +144,7 @@ public class DescribeInspectionTaskReportResponseBody extends TeaModel {
          * <p>The Markdown text of the report details.</p>
          * 
          * <strong>example:</strong>
-         * <h1>Tair Intelligent Inspection Report\n\n## Overview..</h1>
+         * <h1>Tair intelligent inspection report\n\n## Overview..</h1>
          */
         @NameInMap("MarkdownText")
         public String markdownText;

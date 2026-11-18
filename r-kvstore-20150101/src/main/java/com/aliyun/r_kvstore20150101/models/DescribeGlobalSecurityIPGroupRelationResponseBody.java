@@ -14,7 +14,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
     public String DBClusterId;
 
     /**
-     * <p>The information about the associated global IP whitelist templates.</p>
+     * <p>The global IP whitelist templates associated with the instance.</p>
      */
     @NameInMap("GlobalSecurityIPGroupRel")
     public java.util.List<DescribeGlobalSecurityIPGroupRelationResponseBodyGlobalSecurityIPGroupRel> globalSecurityIPGroupRel;
@@ -59,10 +59,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
 
     public static class DescribeGlobalSecurityIPGroupRelationResponseBodyGlobalSecurityIPGroupRel extends TeaModel {
         /**
-         * <p>The IP addresses in the whitelist template.</p>
-         * <blockquote>
-         * <p>Separate multiple IP addresses with commas (,).</p>
-         * </blockquote>
+         * <p>The IP addresses in the whitelist template. Separate multiple IP addresses with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1,10.10.10.10</p>

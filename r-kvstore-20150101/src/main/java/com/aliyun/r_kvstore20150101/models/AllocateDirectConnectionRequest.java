@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateDirectConnectionRequest extends TeaModel {
     /**
-     * <p>The prefix of the direct connection endpoint. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter. Default value: the instance ID followed by <code>-direct</code>. For example, if the instance ID is r-8vbwsicr5d5gse****, the default value is <code>r-8vbwsicr5d5gse****-direct</code>.</p>
+     * <p>The prefix of the direct connection endpoint. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter. The default value is the instance ID followed by <code>-direct</code>. For example, if the instance ID is r-8vbwsicr5d5gse****, the default value is <code>r-8vbwsicr5d5gse****-direct</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>redisdirect123</p>
@@ -14,7 +14,7 @@ public class AllocateDirectConnectionRequest extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The instance ID. Only cluster instances deployed in classic mode are supported. For instances deployed in classic mode, the value of the ComputingType parameter is Machine. You can call the DescribeInstances operation to query the ComputingType parameter.</p>
+     * <p>The instance ID. Only cluster instances in the classic deployment mode are supported. In the classic deployment mode, the ComputingType parameter is set to Machine. You can call the DescribeInstances operation to query the ComputingType value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

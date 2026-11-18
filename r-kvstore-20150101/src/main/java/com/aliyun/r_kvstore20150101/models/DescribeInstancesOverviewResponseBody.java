@@ -61,9 +61,9 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The architecture type. Valid values:</p>
          * <ul>
-         * <li><strong>cluster</strong>: Cluster Edition.</li>
-         * <li><strong>standard</strong>: Standard Edition.</li>
-         * <li><strong>rwsplit</strong>: read/write splitting Edition.</li>
+         * <li><strong>cluster</strong>: Cluster.</li>
+         * <li><strong>standard</strong>: Standard.</li>
+         * <li><strong>rwsplit</strong>: Read/write splitting.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -84,8 +84,8 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>PrePaid</strong>: subscription.</li>
-         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+         * <li><strong>PrePaid</strong>: Subscription.</li>
+         * <li><strong>PostPaid</strong>: Pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The internal endpoint of the instance.</p>
+         * <p>The internal network endpoint of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
@@ -143,7 +143,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         public String globalInstanceId;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The instance specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>redis.logic.sharding.2g.2db.0rodb.4proxy.default</p>
@@ -172,21 +172,21 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: The instance is running.</li>
-         * <li><strong>Creating</strong>: The instance is being created.</li>
-         * <li><strong>Changing</strong>: The instance is being modified.</li>
-         * <li><strong>Inactive</strong>: The instance is disabled.</li>
-         * <li><strong>Flushing</strong>: The instance is being purged.</li>
-         * <li><strong>Released</strong>: The instance is released.</li>
-         * <li><strong>Transforming</strong>: The instance is being transformed.</li>
-         * <li><strong>Unavailable</strong>: The instance is unavailable.</li>
-         * <li><strong>Error</strong>: The instance failed to be created.</li>
-         * <li><strong>Migrating</strong>: The instance is being migrated.</li>
-         * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
-         * <li><strong>MinorVersionUpgrading</strong>: A minor version upgrade is in progress.</li>
-         * <li><strong>NetworkModifying</strong>: The network configuration is being modified.</li>
-         * <li><strong>SSLModifying</strong>: The SSL configuration is being modified.</li>
-         * <li><strong>MajorVersionUpgrading</strong>: A major engine version upgrade is in progress. The instance can be accessed normally.</li>
+         * <li><strong>Normal</strong>: Running.</li>
+         * <li><strong>Creating</strong>: Being created.</li>
+         * <li><strong>Changing</strong>: Being modified.</li>
+         * <li><strong>Inactive</strong>: Disabled.</li>
+         * <li><strong>Flushing</strong>: Being purged.</li>
+         * <li><strong>Released</strong>: Released.</li>
+         * <li><strong>Transforming</strong>: Being transformed.</li>
+         * <li><strong>Unavailable</strong>: Service stopped.</li>
+         * <li><strong>Error</strong>: Creation failed.</li>
+         * <li><strong>Migrating</strong>: Being migrated.</li>
+         * <li><strong>BackupRecovering</strong>: Recovering from a backup.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: Minor version upgrade in progress.</li>
+         * <li><strong>NetworkModifying</strong>: Modifying the network.</li>
+         * <li><strong>SSLModifying</strong>: Modifying SSL configurations.</li>
+         * <li><strong>MajorVersionUpgrading</strong>: Major engine version upgrade in progress. The instance remains accessible.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,9 +198,9 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><strong>Tair</strong>: Tair (Enterprise Edition).</li>
-         * <li><strong>Redis</strong>: Redis Community Edition.</li>
-         * <li><strong>Memcache</strong></li>
+         * <li><strong>Tair</strong>: Tair (Enterprise Edition)</li>
+         * <li><strong>Redis</strong>: Open-source Redis</li>
+         * <li><strong>Memcache</strong>: Memcache</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,8 +212,8 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><strong>CLASSIC</strong>: classic network.</li>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+         * <li><strong>CLASSIC</strong>: Classic network.</li>
+         * <li><strong>VPC</strong>: VPC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The private IP address of the instance in a VPC. The IP address may change. Use ConnectionDomain (the internal endpoint) to connect to the instance.</p>
+         * <p>The VPC IP address. The IP address may change. Connect to the instance by using the internal network endpoint specified by ConnectionDomain.</p>
          * <blockquote>
          * <ul>
          * <li>This parameter is not returned if the network type of the instance is classic network.</li>
@@ -250,7 +250,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource group ID to which the instance belongs.</p>
+         * <p>The resource group ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyiu4ekp****</p>

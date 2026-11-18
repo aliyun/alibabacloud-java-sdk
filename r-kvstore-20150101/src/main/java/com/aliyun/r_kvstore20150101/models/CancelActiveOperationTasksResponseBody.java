@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelActiveOperationTasksResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the canceled O&amp;M events. Multiple IDs are separated by commas (,).</p>
+     * <p>The IDs of the O&amp;M events canceled in batches. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>1508850,1508310,1507849,1506274</p>

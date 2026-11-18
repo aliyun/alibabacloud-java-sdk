@@ -7,8 +7,8 @@ public class ModifyActiveOperationMaintainConfigRequest extends TeaModel {
     /**
      * <p>The cycle time.</p>
      * <ul>
-     * <li>If CycleType is set to Month, the value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,). If the configuration does not take effect, the value is 0.</li>
-     * <li>If CycleType is set to Week, the value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,). If the configuration does not take effect, the value is 0.</li>
+     * <li>If CycleType is set to Month, the value is a number from 1 to 28 that indicates the day of the month. Multiple values are separated by commas (,). The value is 0 when the configuration does not take effect.</li>
+     * <li>If CycleType is set to Week, the value is a number from 1 to 7 that indicates the day of the week. Multiple values are separated by commas (,). The value is 0 when the configuration does not take effect.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class ModifyActiveOperationMaintainConfigRequest extends TeaModel {
     /**
      * <p>The cycle type. Valid values:</p>
      * <ul>
-     * <li>Month: Monthly.</li>
-     * <li>Week: Weekly.</li>
+     * <li>Month: monthly</li>
+     * <li>Week: weekly</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ModifyActiveOperationMaintainConfigRequest extends TeaModel {
     public String cycleType;
 
     /**
-     * <p>The end time of the O&amp;M time window. The time is in the HH:mm:ssZ format (UTC time).</p>
+     * <p>The end time of the O&amp;M time window. The time is in the HH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>20:00:00Z</p>
@@ -40,7 +40,7 @@ public class ModifyActiveOperationMaintainConfigRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the O&amp;M time window. The time is in the <i>HH:mm:ss</i>Z format (UTC time).</p>
+     * <p>The start time of the O&amp;M time window. The time is in the <i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>16:00:00Z</p>
@@ -66,8 +66,8 @@ public class ModifyActiveOperationMaintainConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether the configuration takes effect. Valid values:</p>
      * <ul>
-     * <li>1: Effective.</li>
-     * <li>2: Ineffective.</li>
+     * <li>1: The configuration takes effect.</li>
+     * <li>2: The configuration does not take effect.</li>
      * </ul>
      * 
      * <strong>example:</strong>

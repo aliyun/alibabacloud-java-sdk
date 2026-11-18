@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
     /**
-     * <p>The information about the global IP address whitelist template.</p>
+     * <p>The global IP whitelist template information.</p>
      */
     @NameInMap("GlobalSecurityIPGroup")
     public java.util.List<CreateGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> globalSecurityIPGroup;
@@ -51,7 +51,7 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         public String GIpList;
 
         /**
-         * <p>The name of the IP address whitelist template.</p>
+         * <p>The name of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>test_123</p>
@@ -60,7 +60,7 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
         public String globalIgName;
 
         /**
-         * <p>The ID of the IP address whitelist template.</p>
+         * <p>The ID of the IP whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>g-sdgwqyp4f5j1x3qk****</p>

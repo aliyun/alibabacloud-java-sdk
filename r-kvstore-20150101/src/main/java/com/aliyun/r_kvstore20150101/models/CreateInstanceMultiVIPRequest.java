@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceMultiVIPRequest extends TeaModel {
     /**
-     * <p>The number of LBs to add.</p>
+     * <p>The number of load balancers to add.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,9 +15,9 @@ public class ModifyInstanceMaintainTimeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The end time of the maintenance window. Specify the time in the <i>HH:mm</i>Z format in UTC. For example, to set the end time to 02:00 (UTC+8), specify <code>18:00Z</code>.</p>
+     * <p>The end time of the maintenance window. The time must be in the <i>HH:mm</i>Z format (UTC). For example, if you want the maintenance window to end at 02:00 (UTC+8), set this parameter to <code>18:00Z</code>.</p>
      * <blockquote>
-     * <p>The interval between the start time and end time must be at least 1 hour.</p>
+     * <p>The interval between the start time and the end time must be at least 1 hour.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class ModifyInstanceMaintainTimeRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the maintenance window. Specify the time in the <i>HH:mm</i>Z format in UTC. For example, to set the start time to 01:00 (UTC+8), specify <code>17:00Z</code>. After you call this operation, you can view the actual time in the console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</p>
+     * <p>The start time of the maintenance window. The time must be in the <i>HH:mm</i>Z format (UTC). For example, if you want the maintenance window to start at 01:00 (UTC+8), set this parameter to <code>17:00Z</code>. After you call this API operation, you can view the actual time in the console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set the maintenance window</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

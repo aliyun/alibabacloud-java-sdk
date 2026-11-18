@@ -7,7 +7,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     /**
      * <p>The token used to start the next query.</p>
      * <blockquote>
-     * <p>This parameter is returned if a single query does not return all results. You can pass the value of this parameter in a subsequent query to continue the query.</p>
+     * <p>This parameter is returned if a query does not return all results. You can pass the value of this parameter in a subsequent query to continue the query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

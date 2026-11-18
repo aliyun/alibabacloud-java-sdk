@@ -45,7 +45,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The internal network connection endpoint of the ApsaraDB for Redis instance.</p>
+     * <p>The internal network endpoint of the Redis instance.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
@@ -54,7 +54,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String connectionDomain;
 
     /**
-     * <p>The maximum number of connections supported by the instance.</p>
+     * <p>The maximum number of connections to the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -63,7 +63,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public Long connections;
 
     /**
-     * <p>The time when the subscription instance expires. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
+     * <p>The time when the subscription instance expires. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-01-18T16:00:00Z</p>
@@ -72,7 +72,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The globally unique instance ID.</p>
+     * <p>Instance ID of the instance. Instance ID is globally unique.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -90,7 +90,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The current status of the instance. The return value is fixed to Creating.</p>
+     * <p>The current status of the instance. The value is fixed to Creating.</p>
      * 
      * <strong>example:</strong>
      * <p>Creating</p>
@@ -135,7 +135,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The service port of ApsaraDB for Redis.</p>
+     * <p>The Redis service port.</p>
      * 
      * <strong>example:</strong>
      * <p>6379</p>
@@ -162,7 +162,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public Long QPS;
 
     /**
-     * <p>The region where the instance resides.</p>
+     * <p>The region where the instance is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hongkong</p>
@@ -180,7 +180,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The username used to connect to ApsaraDB for Redis. By default, an account named after the instance ID is included.</p>
+     * <p>The username used to connect to the Redis instance. By default, an account named after the instance ID is included.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -198,7 +198,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The ID of the virtual private cloud (VPC).</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1nme44gek34slfc****</p>

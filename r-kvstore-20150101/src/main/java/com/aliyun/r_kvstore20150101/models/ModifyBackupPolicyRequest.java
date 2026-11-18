@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The number of days for which data backups are retained. Default value: 7. Valid values: 7 to 730.</p>
+     * <p>The retention period of data backups in days. Valid values: 7 to 730. Default value: 7.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -16,8 +16,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the data flashback feature. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Enabled. Make sure that append-only file (AOF) persistence is enabled in the parameter settings of the instance (<code>appendonly</code> is set to <code>yes</code>). The data flashback feature is available only after AOF persistence is enabled.</li>
-     * <li><strong>0</strong>: Disabled. This is the default value.<blockquote>
+     * <li><strong>1</strong>: enables the feature. You must also enable AOF persistence by setting the <code>appendonly</code> parameter to <code>yes</code> in the parameter settings of the instance before you can use the data flashback feature.</li>
+     * <li><strong>0</strong>: disables the feature. This is the default value.<blockquote>
      * <p>This parameter is supported only by Tair (Enterprise Edition) memory-optimized and persistent memory-optimized instances. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Data flashback</a>.</p>
      * </blockquote>
      * </li>
@@ -48,16 +48,16 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The backup cycle. Valid values:</p>
      * <ul>
-     * <li><strong>Monday</strong></li>
-     * <li><strong>Tuesday</strong></li>
-     * <li><strong>Wednesday</strong></li>
-     * <li><strong>Thursday</strong></li>
-     * <li><strong>Friday</strong></li>
-     * <li><strong>Saturday</strong></li>
-     * <li><strong>Sunday</strong></li>
+     * <li><strong>Monday</strong>: Monday.</li>
+     * <li><strong>Tuesday</strong>: Tuesday.</li>
+     * <li><strong>Wednesday</strong>: Wednesday.</li>
+     * <li><strong>Thursday</strong>: Thursday.</li>
+     * <li><strong>Friday</strong>: Friday.</li>
+     * <li><strong>Saturday</strong>: Saturday.</li>
+     * <li><strong>Sunday</strong>: Sunday.</li>
      * </ul>
      * <blockquote>
-     * <p>You can specify multiple values. Separate them with commas (,).</p>
+     * <p>You can specify multiple values. Separate multiple values with commas (,).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -68,10 +68,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The backup time. Specify the time in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC).</p>
-     * <blockquote>
-     * <p>The time must be on the hour, and the interval must be 1 hour.</p>
-     * </blockquote>
+     * <p>The backup time in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC). The time must be on the hour, and the interval must be 1 hour.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,10 +7,10 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
      * <p>The architecture of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86132.html">Architecture overview</a>. Valid values:</p>
      * <ul>
-     * <li><strong>logic</strong>: cluster or read/write splitting architecture</li>
-     * <li><strong>normal</strong>: standard architecture (primary/secondary)</li>
+     * <li><strong>logic</strong>: cluster or read/write splitting architecture.</li>
+     * <li><strong>normal</strong>: standard primary/secondary architecture.</li>
      * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;When <strong>EngineVersion</strong> is set to <strong>6.0</strong>, this parameter does not support the <strong>logic</strong> value.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;If <strong>EngineVersion</strong> is set to <strong>6.0</strong>, you cannot set this parameter to <strong>logic</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public String characterType;
 
     /**
-     * <p>The database engine. Set the value to <strong>Redis</strong>.</p>
+     * <p>The database engine type. Set the value to <strong>Redis</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The major engine version of the instance. Valid values: <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
+     * <p>The major version of the instance. Valid values: <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,9 +64,9 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public String parameterCategory;
 
     /**
-     * <p>The ID of the resource group. You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the ID of the resource group.</p>
+     * <p>The ID of the resource group. You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the resource group ID.</p>
      * <blockquote>
-     * <p>You can also obtain the resource group ID in the console. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+     * <p>You can also obtain the resource group ID from the console. Related operations: see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

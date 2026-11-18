@@ -41,7 +41,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The attribute of the IP whitelist group. This parameter is empty by default. The console does not display the whitelist group if the value is set to <strong>hidden</strong>.</p>
+     * <p>The attribute of the IP whitelist group. Default value: empty. This parameter is used to distinguish different attribute values. The console does not display whitelist groups whose attribute value is <strong>hidden</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>hidden</p>
@@ -50,8 +50,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String securityIpGroupAttribute;
 
     /**
-     * <p>The name of the IP whitelist group.
-     * <warning>You cannot modify a system-generated whitelist group. If you do not specify this parameter, the whitelist of the default group is modified.</warning></p>
+     * <p>The name of the IP whitelist group. <warning>You cannot modify a system-generated whitelist group. If you do not specify this parameter, the whitelist of the default group is modified by default.</warning></p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -60,7 +59,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String securityIpGroupName;
 
     /**
-     * <p>The IP addresses in the IP whitelist group. You can add up to 1,000 IP addresses. Separate multiple IP addresses with commas (,). The following formats are supported: 0.0.0.0/0,10.23.12.24 or 10.23.12.24/24 (CIDR notation, where /24 specifies the prefix length, which ranges from 1 to 32).</p>
+     * <p>The list of IP addresses in the IP whitelist group. A maximum of 1,000 IP addresses can be added. Separate multiple IP addresses with commas (,). Valid formats: 0.0.0.0/0, 10.23.12.24, or 10.23.12.24/24 (CIDR format, where /24 specifies the prefix length of the address, ranging from 1 to 32).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

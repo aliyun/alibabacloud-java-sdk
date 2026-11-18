@@ -23,9 +23,6 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -47,7 +44,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags of the instances.</p>
+     * <p>The tag information of the instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -124,11 +121,11 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the label.</p>
+         * <p>The label key.</p>
          * <blockquote>
          * <ul>
          * <li><strong>N</strong> specifies the sequence number of the label key. For example, <strong>Tag.1.Key</strong> specifies the key of the first label, and <strong>Tag.2.Key</strong> specifies the key of the second label.</li>
-         * <li>If the label key does not exist, automatic creation of the key is performed.</li>
+         * <li>If the label key does not exist, automatic creation is performed.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -140,7 +137,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * <blockquote>
          * <p><strong>N</strong> specifies the sequence number of the tag value. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
          * </blockquote>

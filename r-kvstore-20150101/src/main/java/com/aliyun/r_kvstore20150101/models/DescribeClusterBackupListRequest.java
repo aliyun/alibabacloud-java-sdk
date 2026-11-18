@@ -34,10 +34,10 @@ public class DescribeClusterBackupListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether to display the details of the backup sets for cluster nodes. Valid values:</p>
+     * <p>Specifies whether to display the backup set details of cluster nodes. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): displays the backup set information of cluster nodes.</li>
-     * <li><strong>true</strong>: does not display the backup set information of cluster nodes.</li>
+     * <li><strong>false</strong> (default): Displays the backup set information of cluster nodes.</li>
+     * <li><strong>true</strong>: Does not display the backup set information of cluster nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DescribeClusterBackupListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -7,7 +7,7 @@ public class DescribeParameterGroupSupportParamRequest extends TeaModel {
     /**
      * <p>The product category. Valid values:</p>
      * <ul>
-     * <li><strong>standard</strong>: ApsaraDB for Redis Community Edition.</li>
+     * <li><strong>standard</strong>: Open-source Redis.</li>
      * <li><strong>enterprise</strong>: Tair (Redis Enterprise Edition).</li>
      * </ul>
      * 
@@ -20,9 +20,9 @@ public class DescribeParameterGroupSupportParamRequest extends TeaModel {
     /**
      * <p>The engine type. Valid values:</p>
      * <ul>
-     * <li><strong>redis</strong>: ApsaraDB for Redis Community Edition or Tair memory-optimized instances.</li>
-     * <li><strong>tair_pena</strong>: Tair persistent memory-optimized instances.</li>
-     * <li><strong>tair_pdb</strong>: Tair cloud-native (ESSD/SSD) instances.</li>
+     * <li><strong>redis</strong>: Open-source Redis or memory-optimized Tair.</li>
+     * <li><strong>tair_pena</strong>: Persistent memory-optimized Tair.</li>
+     * <li><strong>tair_pdb</strong>: Disk-optimized Tair (ESSD/SSD).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,12 +32,12 @@ public class DescribeParameterGroupSupportParamRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The compatible version. Valid values:</p>
+     * <p>The compatible engine version. Valid values:</p>
      * <ul>
-     * <li>ApsaraDB for Redis Community Edition supports <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</li>
-     * <li>Tair memory-optimized instances are compatible with Redis 5.0 and Redis 6.0 protocols. Set this parameter to <strong>5.0</strong> or <strong>6.0</strong>.</li>
-     * <li>Tair persistent memory-optimized instances are compatible with the Redis 6.0 protocol. Set this parameter to <strong>1.0</strong>.</li>
-     * <li>Tair cloud-native (ESSD/SSD) instances are compatible with the Redis 6.0 protocol. To create a parameter template for ESSD-based instances, set this parameter to <strong>1.0</strong>. To create a parameter template for SSD-based instances, set this parameter to <strong>2.0</strong>.</li>
+     * <li>Open-source Redis supports <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</li>
+     * <li>Memory-optimized Tair is compatible with the Redis 5.0 and Redis 6.0 protocols. Set the value to <strong>5.0</strong> or <strong>6.0</strong>.</li>
+     * <li>Persistent memory-optimized Tair is compatible with the Redis 6.0 protocol. Set the value to <strong>1.0</strong>.</li>
+     * <li>Disk-optimized Tair (ESSD/SSD) is compatible with the Redis 6.0 protocol. Set the value to <strong>1.0</strong> for ESSD-based parameter templates or <strong>2.0</strong> for SSD-based parameter templates.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

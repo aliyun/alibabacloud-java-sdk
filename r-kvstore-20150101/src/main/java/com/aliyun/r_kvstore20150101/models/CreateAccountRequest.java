@@ -7,9 +7,9 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The description of the account.</p>
      * <ul>
-     * <li>The description must start with a Chinese character or an English letter. It cannot start with <code>http: //</code> or <code>https: //</code>.</li>
-     * <li>The description can contain Chinese characters, English letters, digits, underscores (_), and hyphens (-). </li>
-     * <li>The description must be 2 to 256 characters in length.</li>
+     * <li>It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It can contain Chinese characters, letters, digits, underscores (_), and hyphens (-). </li>
+     * <li>It must be 2 to 256 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class CreateAccountRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The account name. The name must meet the following requirements:</p>
+     * <p>The account name. The account name must meet the following requirements:</p>
      * <ul>
-     * <li>The name starts with a lowercase letter and can contain lowercase letters, digits, or underscores (_).</li>
-     * <li>The name is up to 100 characters in length.</li>
-     * <li>The name cannot be a &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">reserved word for Redis account names</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">reserved word for Redis account names</a>.</li>
+     * <li>It must start with a letter and consist of lowercase letters, digits, and underscores (_).</li>
+     * <li>It can be up to 100 characters in length.</li>
+     * <li>It cannot be a &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">reserved word for Redis usernames</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">reserved word for Redis usernames</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +34,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Allowed special characters include <code>!@#$%^&amp;*()_+-=</code>.</p>
+     * <p>The password of the account. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, special characters, and digits. The allowed special characters include <code>!@#$%^&amp;*()_+-=</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
-     * <p>The account type. Set the value to <strong>Normal</strong> (standard account).</p>
+     * <p>The account type. Set the value to <strong>Normal</strong>, which indicates a standard account.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -82,9 +82,9 @@ public class CreateAccountRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The account parameters to modify in JSON format. The new values overwrite the original values.</p>
+     * <p>The account parameters to modify. The parameters must be in JSON format. The modified values overwrite the original values.</p>
      * <blockquote>
-     * <p>Notice: This parameter is supported only for Tair Serverless KV instances.</p>
+     * <p>Notice: This parameter is supported only by Tair Serverless KV instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

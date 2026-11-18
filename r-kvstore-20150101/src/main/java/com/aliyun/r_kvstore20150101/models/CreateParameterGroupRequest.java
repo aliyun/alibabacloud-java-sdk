@@ -7,7 +7,7 @@ public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The product category. Valid values:</p>
      * <ul>
-     * <li><strong>standard</strong>: Redis Community Edition.</li>
+     * <li><strong>standard</strong>: Open-source Redis.</li>
      * <li><strong>enterprise</strong>: Tair (Enterprise Edition).</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -21,9 +21,9 @@ public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The engine type. Valid values:</p>
      * <ul>
-     * <li><strong>redis</strong>: Redis Community Edition or Tair memory-optimized.</li>
-     * <li><strong>tair_pena</strong>: Tair persistent memory-optimized.</li>
-     * <li><strong>tair_pdb</strong>: Tair disk-optimized (ESSD/SSD).</li>
+     * <li><strong>redis</strong>: Open-source Redis or Tair memory-based.</li>
+     * <li><strong>tair_pena</strong>: Tair persistent memory-based.</li>
+     * <li><strong>tair_pdb</strong>: Tair disk-based (ESSD/SSD).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,10 +36,10 @@ public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The compatible version. Valid values:</p>
      * <ul>
-     * <li>Redis Community Edition supports <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</li>
-     * <li>Tair memory-optimized is compatible with Redis 5.0, 6.0, and 7.0 protocols. Set this parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
-     * <li>Tair persistent memory-optimized is compatible with the Redis 6.0 protocol. Set this parameter to <strong>1.0</strong>.</li>
-     * <li>Tair disk-optimized (ESSD/SSD) is compatible with the Redis 6.0 protocol. To create a parameter template for the ESSD type, set this parameter to <strong>1.0</strong>. To create a parameter template for the SSD type, set this parameter to <strong>2.0</strong>.</li>
+     * <li>Open-source Redis supports <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</li>
+     * <li>Tair memory-based instances are compatible with the Redis 5.0, 6.0, and 7.0 protocols. Set the value to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
+     * <li>Tair persistent memory-based instances are compatible with the Redis 6.0 protocol. Set the value to <strong>1.0</strong>.</li>
+     * <li>Tair disk-based (ESSD/SSD) instances are compatible with the Redis 6.0 protocol. To create a parameter template for ESSD-based instances, set the value to <strong>1.0</strong>. To create a parameter template for SSD-based instances, set the value to <strong>2.0</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,7 +56,7 @@ public class CreateParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the parameter template. The description can be 0 to 200 characters in length.</p>
+     * <p>The description of the parameter template. The description must be 0 to 200 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -67,8 +67,8 @@ public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The name of the parameter template. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name can contain letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.</li>
-     * <li>The name must be 8 to 64 characters in length.</li>
+     * <li>It must contain only letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.</li>
+     * <li>It must be 8 to 64 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -79,7 +79,7 @@ public class CreateParameterGroupRequest extends TeaModel {
     public String parameterGroupName;
 
     /**
-     * <p>A JSON string that consists of parameters and their values, in the following format: {&quot;Parameter 1&quot;:&quot;Value of Parameter 1&quot;,&quot;Parameter 2&quot;:&quot;Value of Parameter 2&quot;...}.</p>
+     * <p>The parameters and their corresponding values in JSON format. Format: {&quot;Parameter1&quot;:&quot;Value1&quot;,&quot;Parameter2&quot;:&quot;Value2&quot;...}.</p>
      * <blockquote>
      * <p>The parameters that can be added vary by version. Refer to the console for details.</p>
      * </blockquote>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     /**
-     * <p>The number of days within which analysis results are queried. By default, analysis results of the last 7 days are queried.</p>
+     * <p>Specifies the number of recent days for which to query analysis results. By default, the analysis results of the last 7 days are queried.</p>
      * <blockquote>
-     * <p>If the automatic analysis for the current day has not started when you query and no manual analysis task has been initiated, no records exist for the current day.</p>
+     * <p>If the automatic analysis for the current day has not started and no manual analysis task has been initiated, no records are available for the current day.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The child node ID of a cluster instance.</p>
+     * <p>The ID of the child node in a cluster instance.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the analysis results of all child nodes are returned.</p>
      * </blockquote>
@@ -45,7 +45,7 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

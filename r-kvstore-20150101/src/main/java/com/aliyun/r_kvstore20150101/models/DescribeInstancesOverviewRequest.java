@@ -7,9 +7,9 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The architecture type. Valid values:</p>
      * <ul>
-     * <li><strong>cluster</strong>: Cluster Edition.</li>
-     * <li><strong>standard</strong>: Standard Edition.</li>
-     * <li><strong>rwsplit</strong>: read/write splitting Edition.</li>
+     * <li><strong>cluster</strong>: Cluster.</li>
+     * <li><strong>standard</strong>: Standard.</li>
+     * <li><strong>rwsplit</strong>: Read/write splitting.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,8 +21,8 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription.</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+     * <li><strong>PrePaid</strong>: Subscription.</li>
+     * <li><strong>PostPaid</strong>: Pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The edition type. Valid values:</p>
+     * <p>The edition. Valid values:</p>
      * <ul>
      * <li><strong>Community</strong>: Community Edition.</li>
      * <li><strong>Enterprise</strong>: Enterprise Edition.</li>
@@ -54,7 +54,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</p>
+     * <p>The instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance specifications</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>redis.master.small.default</p>
@@ -65,7 +65,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The IDs of the instances that you want to query.</p>
      * <blockquote>
-     * <p>By default, all instances under the current account are queried. To specify multiple instance IDs, separate them with commas (,).</p>
+     * <p>By default, all instances under the account are queried. To specify multiple instance IDs, separate the IDs with commas (,).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,22 +77,22 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: The instance is running.</li>
-     * <li><strong>Creating</strong>: The instance is being created.</li>
-     * <li><strong>Changing</strong>: The instance is being modified.</li>
-     * <li><strong>Inactive</strong>: The instance is disabled.</li>
-     * <li><strong>Flushing</strong>: The instance is being purged.</li>
-     * <li><strong>Released</strong>: The instance is released.</li>
-     * <li><strong>Transforming</strong>: The instance is being transformed.</li>
-     * <li><strong>Migrating</strong>: The instance is being migrated.</li>
-     * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
-     * <li><strong>MinorVersionUpgrading</strong>: A minor version upgrade is in progress.</li>
-     * <li><strong>NetworkModifying</strong>: The network configuration is being modified.</li>
-     * <li><strong>SSLModifying</strong>: The SSL configuration is being modified.</li>
-     * <li><strong>MajorVersionUpgrading</strong>: A major engine version upgrade is in progress. The instance can be accessed normally.</li>
+     * <li><strong>Normal</strong>: Running.</li>
+     * <li><strong>Creating</strong>: Being created.</li>
+     * <li><strong>Changing</strong>: Being modified.</li>
+     * <li><strong>Inactive</strong>: Disabled.</li>
+     * <li><strong>Flushing</strong>: Being purged.</li>
+     * <li><strong>Released</strong>: Released.</li>
+     * <li><strong>Transforming</strong>: Being transformed.</li>
+     * <li><strong>Migrating</strong>: Being migrated.</li>
+     * <li><strong>BackupRecovering</strong>: Recovering from a backup.</li>
+     * <li><strong>MinorVersionUpgrading</strong>: Minor version upgrade in progress.</li>
+     * <li><strong>NetworkModifying</strong>: Modifying the network.</li>
+     * <li><strong>SSLModifying</strong>: Modifying SSL configurations.</li>
+     * <li><strong>MajorVersionUpgrading</strong>: Major engine version upgrade in progress. The instance remains accessible.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
+     * <p>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance statuses and impacts</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -118,8 +118,8 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><strong>CLASSIC</strong>: classic network.</li>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+     * <li><strong>CLASSIC</strong>: Classic network.</li>
+     * <li><strong>VPC</strong>: VPC.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The private IP address.</p>
+     * <p>The VPC IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.49.***</p>
@@ -158,7 +158,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The resource group ID.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the resource group ID. Related operations: see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or go to the console to obtain the resource group ID. Related operations: <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The keyword used for fuzzy search by instance ID or instance description.</p>
+     * <p>The keyword used for fuzzy search based on the instance ID or description.</p>
      * 
      * <strong>example:</strong>
      * <p>apitest</p>

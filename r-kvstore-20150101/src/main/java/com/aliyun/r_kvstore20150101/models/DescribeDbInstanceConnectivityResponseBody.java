@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDbInstanceConnectivityResponseBody extends TeaModel {
     /**
-     * <p>The connectivity diagnostics error code. Valid values:</p>
+     * <p>The connectivity diagnostic error code. Valid values:</p>
      * <ul>
      * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the whitelist.</li>
-     * <li><strong>CONNECTION_ABNORMAL</strong>: The connection is normal.</li>
+     * <li><strong>CONNECTION_ABNORMAL</strong>: The connection is abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeDbInstanceConnectivityResponseBody extends TeaModel {
     public String connCheckErrorCode;
 
     /**
-     * <p>The connectivity diagnostics error message.</p>
+     * <p>The connectivity diagnostic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Src ip:172.28.134.96 not in user whitelist</p>
@@ -27,7 +27,7 @@ public class DescribeDbInstanceConnectivityResponseBody extends TeaModel {
     public String connCheckErrorMessage;
 
     /**
-     * <p>The connectivity diagnostics result. Valid values:</p>
+     * <p>The connectivity diagnostic result. Valid values:</p>
      * <ul>
      * <li><strong>Success</strong></li>
      * <li><strong>Failed</strong></li>

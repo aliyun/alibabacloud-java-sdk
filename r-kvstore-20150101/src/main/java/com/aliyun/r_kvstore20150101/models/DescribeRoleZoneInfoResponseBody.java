@@ -26,7 +26,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>224B97FB-A275-4EAC-86E9-8922FEA2****</p>

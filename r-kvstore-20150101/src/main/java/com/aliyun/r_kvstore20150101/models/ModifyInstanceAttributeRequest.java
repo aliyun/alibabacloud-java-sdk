@@ -15,7 +15,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new instance name. The name must be 2 to 80 characters in length and must start with an uppercase letter, a lowercase letter, or a Chinese character. The name cannot contain spaces or the following special characters: <code>@/:=&quot;&lt;&gt;{[]}</code></p>
+     * <p>The new instance name. The name must be 2 to 80 characters in length and start with an uppercase or lowercase letter or a Chinese character. It cannot contain spaces or the following special characters: <code>@/:=&quot;&lt;&gt;{[]}</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>newinstancename</p>
@@ -40,9 +40,9 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public Boolean instanceReleaseProtection;
 
     /**
-     * <p>The new password of the default account. The default account is named after the instance ID (for example, r-bp10noxlhcoim2****).</p>
+     * <p>The new password of the default account. The default account is named after the instance ID, such as r-bp10noxlhcoim2****.</p>
      * <blockquote>
-     * <p>The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (<code>!@#$%^&amp;*()_+-=</code>).</p>
+     * <p>The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Supported special characters include <code>!@#$%^&amp;*()_+-=</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: enables automatic payment. This is the default value. Make sure that your account has sufficient balance.</li>
-     * <li><strong>false</strong>: disables automatic payment. You must manually complete the payment.</li>
+     * <li><strong>false</strong>: manual payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,11 +31,11 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period, in months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, <strong>7</strong>, <strong>8</strong>, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
+     * <p>The auto-renewal cycle. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, <strong>7</strong>, <strong>8</strong>, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
      * <blockquote>
      * <ul>
      * <li>This parameter is available and required only when the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</li>
-     * <li>After this parameter is configured, it cannot be queried by calling API operations. To query the auto-renewal period, choose <strong>Billing</strong> &gt; <strong>Renewal Management</strong> in the top navigation bar of the console, and then enter the instance ID with the <code>-bw</code> suffix (for example, r-bp1zxszhcgatnx****-bw) in the <strong>Instance ID</strong> text box.</li>
+     * <li>After this parameter is configured, it cannot be queried by calling API operations. You can log on to the console, choose <strong>Billing</strong> &gt; <strong>Renewal Management</strong> in the top menu bar, and enter the instance ID with the <code>-bw</code> suffix (for example, r-bp1zxszhcgatnx****-bw) in the <strong>Instance ID</strong> text box to query the auto-renewal cycle.</li>
      * </ul>
      * </blockquote>
      * 
@@ -46,7 +46,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>Specifies whether to enable burstable (second-level) elastic bandwidth. After elastic scaling for bandwidth is enabled, burstable (second-level) elastic bandwidth cannot be enabled, and vice versa.</p>
+     * <p>Specifies whether burstable (second-level) elastic bandwidth is enabled. After you enable elastic scaling for bandwidth, you cannot enable burstable (second-level) elastic bandwidth, and vice versa.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -55,11 +55,11 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public Boolean bandWidthBurst;
 
     /**
-     * <p>The bandwidth to be increased, in MB/s. The value must be an integer greater than or equal to <strong>0</strong>. The maximum value is six times the default bandwidth of the instance (or a single shard) specifications, but the upper limit of the increase is 192 MB/s. For example, if the default bandwidth of the instance is 10 MB/s, the value range is <strong>0</strong> to <strong>60</strong>.</p>
+     * <p>The bandwidth to be added. Unit: MB/s. The value must be an integer greater than or equal to <strong>0</strong>. The maximum value is six times the default bandwidth of the instance (or a single shard) specification, but the upper limit of the added bandwidth is 192 MB/s. For example, if the default bandwidth of the instance is 10 MB/s, the value range is <strong>0</strong> to <strong>60</strong>.</p>
      * <blockquote>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation and use the <strong>DefaultBandWidth</strong> response parameter to obtain the default maximum bandwidth. For more information about instance specifications, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview of instance specifications</a>.</li>
-     * <li>If multiple data shard IDs are specified in the <strong>NodeId</strong> request parameter, the bandwidth values specified in this parameter must correspond to the order of the shard IDs. Separate multiple bandwidth values with commas (,).</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation and use the <strong>DefaultBandWidth</strong> response parameter to query the default maximum bandwidth. For more information about instance specifications, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview of instance specifications</a>.</li>
+     * <li>If you specify multiple data shard IDs in the <strong>NodeId</strong> request parameter, the bandwidth values specified in this parameter must correspond to the order of the data shard IDs. Separate multiple bandwidth values with commas (,).</li>
      * </ul>
      * </blockquote>
      * 
@@ -73,7 +73,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
      * <p>The billing method for the additional bandwidth. Valid values:</p>
      * <ul>
      * <li><strong>PrePaid</strong>: subscription.</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go. Currently, only this billing method is supported.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go. Only this billing method is currently supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The ID of the coupon.</p>
+     * <p>The coupon code.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -92,7 +92,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to obtain the instance ID.</p>
+     * <p>Instance ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the data shard. You can call <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> to obtain the shard ID. Separate multiple shard IDs with commas (,). You can also set this parameter to <strong>All</strong> to specify all data shards.</p>
+     * <p>The ID of the data shard. You can call <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> to query the ID. Separate multiple IDs with commas (,). You can also set this parameter to <strong>All</strong> to specify all data shards.</p>
      * <blockquote>
      * <p>This parameter is available and required only when the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting architecture</a>.</p>
      * </blockquote>
@@ -114,7 +114,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The subscription duration, in days. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>7</strong>, <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, <strong>90</strong>, <strong>180</strong>, <strong>365</strong>, <strong>730</strong>, <strong>1095</strong>, and <strong>1825</strong>.</p>
+     * <p>The subscription duration. Unit: days. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>7</strong>, <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, <strong>90</strong>, <strong>180</strong>, <strong>365</strong>, <strong>730</strong>, <strong>1095</strong>, and <strong>1825</strong>.</p>
      * <blockquote>
      * <p>To continue using the purchased bandwidth, you must call the <a href="https://help.aliyun.com/document_detail/473804.html">RenewAdditionalBandwidth</a> operation to renew the bandwidth before it expires.</p>
      * </blockquote>
@@ -141,7 +141,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The source of the call. This parameter is used only for internal maintenance and does not need to be specified.</p>
+     * <p>The call source. This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SDK</p>

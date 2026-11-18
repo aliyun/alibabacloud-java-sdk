@@ -7,8 +7,8 @@ public class DescribeParameterGroupTemplateListRequest extends TeaModel {
     /**
      * <p>The product category. Valid values:</p>
      * <ul>
-     * <li><strong>standard</strong>: Redis Community Edition.</li>
-     * <li><strong>enterprise</strong>: Tair (Enhanced Edition).</li>
+     * <li><strong>standard</strong>: Open-source Redis.</li>
+     * <li><strong>enterprise</strong>: Tair (Enterprise Edition).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,11 +21,11 @@ public class DescribeParameterGroupTemplateListRequest extends TeaModel {
     /**
      * <p>The role type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>logic</strong>: cluster logical instance.</li>
-     * <li><strong>db</strong>: cluster DB instance.</li>
-     * <li><strong>proxy</strong>: cluster proxy instance.</li>
-     * <li><strong>cs</strong>: cluster CS instance.</li>
-     * <li><strong>normal</strong>: primary/secondary DB instance.</li>
+     * <li><strong>logic</strong>: Cluster logical instance.</li>
+     * <li><strong>db</strong>: Cluster DB instance.</li>
+     * <li><strong>proxy</strong>: Cluster proxy instance.</li>
+     * <li><strong>cs</strong>: Cluster CS instance.</li>
+     * <li><strong>normal</strong>: Primary/secondary DB instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,9 +37,9 @@ public class DescribeParameterGroupTemplateListRequest extends TeaModel {
     /**
      * <p>The engine type. Valid values:</p>
      * <ul>
-     * <li><strong>redis</strong>: Redis Community Edition or Tair memory-optimized.</li>
-     * <li><strong>tair_pena</strong>: Tair persistent memory-optimized.</li>
-     * <li><strong>tair_pdb</strong>: Tair disk-based (ESSD/SSD).</li>
+     * <li><strong>redis</strong>: Open-source Redis or memory-optimized Tair.</li>
+     * <li><strong>tair_pena</strong>: Persistent memory-optimized Tair.</li>
+     * <li><strong>tair_pdb</strong>: Disk-based Tair (ESSD/SSD).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -52,10 +52,10 @@ public class DescribeParameterGroupTemplateListRequest extends TeaModel {
     /**
      * <p>The compatible version. Valid values:</p>
      * <ul>
-     * <li>Redis Community Edition supports <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</li>
-     * <li>Tair memory-optimized instances are compatible with Redis 5.0, 6.0, and 7.0 protocols. Set this parameter to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
-     * <li>Tair persistent memory-optimized instances are compatible with the Redis 6.0 protocol. Set this parameter to <strong>1.0</strong>.</li>
-     * <li>Tair disk-based (ESSD/SSD) instances are compatible with the Redis 6.0 protocol. To create an ESSD-based parameter template, set this parameter to <strong>1.0</strong>. To create an SSD-based parameter template, set this parameter to <strong>2.0</strong>.</li>
+     * <li>Open-source Redis supports <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</li>
+     * <li>Memory-optimized Tair is compatible with Redis 5.0, 6.0, and 7.0 protocols. Set the value to <strong>5.0</strong>, <strong>6.0</strong>, or <strong>7.0</strong>.</li>
+     * <li>Persistent memory-optimized Tair is compatible with the Redis 6.0 protocol. Set the value to <strong>1.0</strong>.</li>
+     * <li>Disk-based Tair (ESSD/SSD) is compatible with the Redis 6.0 protocol. To create a parameter template for ESSD-based instances, set the value to <strong>1.0</strong>. To create a parameter template for SSD-based instances, set the value to <strong>2.0</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

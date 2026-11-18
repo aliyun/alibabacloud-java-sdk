@@ -14,7 +14,7 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
     public String masterDns;
 
     /**
-     * <p>The list of IP addresses corresponding to all LBs of the current instance.</p>
+     * <p>The list of IP addresses for all load balancers of the instance.</p>
      */
     @NameInMap("MasterDnsRecord")
     public java.util.List<String> masterDnsRecord;
@@ -29,7 +29,7 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
     public Long maxQuota;
 
     /**
-     * <p>The list of multiple LB VIPs.</p>
+     * <p>The list of virtual IP addresses (VIPs) for multiple load balancers.</p>
      */
     @NameInMap("MultiVIPList")
     public java.util.List<DescribeInstanceMultiVIPResponseBodyMultiVIPList> multiVIPList;

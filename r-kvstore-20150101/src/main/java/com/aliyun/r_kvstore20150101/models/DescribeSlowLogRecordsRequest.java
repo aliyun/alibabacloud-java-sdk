@@ -14,7 +14,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end time of the query. The end time must be later than the start time, and the time range cannot exceed 1 day. The recommended time range is 1 hour. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time, and the time range cannot exceed one day. Set the time range to one hour. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The node ID in the instance. Specify this parameter to query the slow query logs of a specific node.</p>
+     * <p>The node ID in the instance. Specify this parameter to query the slow logs of a specific node.</p>
      * <blockquote>
      * <p>This parameter is available only when the instance uses the read/write splitting or cluster architecture.</p>
      * </blockquote>
@@ -46,10 +46,10 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The field based on which the returned results are sorted. Valid values:</p>
+     * <p>The sort criterion of the returned results. Valid values:</p>
      * <ul>
-     * <li><strong>execution_time</strong>: sorts the results based on the start time of request execution. This is the default value.</li>
-     * <li><strong>latency</strong>: sorts the results based on the execution duration of requests.</li>
+     * <li><strong>execution_time</strong>: execution start time of the request (default)</li>
+     * <li><strong>latency</strong>: execution duration of the request</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,8 +61,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
      * <p>The sort order of the returned results. Valid values:</p>
      * <ul>
-     * <li><strong>ASC</strong>: ascending order.</li>
-     * <li><strong>DESC</strong>: descending order. This is the default value.</li>
+     * <li><strong>ASC</strong>: ascending order</li>
+     * <li><strong>DESC</strong>: descending order (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,7 +96,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The keyword used to search the returned results.</p>
+     * <p>The keyword used to search the returned results. Specify a string value.</p>
      * 
      * <strong>example:</strong>
      * <p>keyword1</p>
@@ -116,8 +116,8 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
      * <p>The slow log type. Valid values:</p>
      * <ul>
-     * <li><strong>proxy</strong>: Slow query logs on proxy nodes.</li>
-     * <li><strong>db</strong>: Slow query logs on data nodes. This is the default value.</li>
+     * <li><strong>proxy</strong>: slow logs of proxy nodes</li>
+     * <li><strong>db</strong>: slow logs of data nodes (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>

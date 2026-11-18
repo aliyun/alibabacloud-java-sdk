@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>This parameter is deprecated. Ignore this parameter.</p>
+     * <p><strong>[Deprecated]</strong> This group of parameters is deprecated. Ignore it.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeBackupPolicyResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The earliest point in time for data flashback, in the yyyy-MM-ddTHH:mm:ssZ format (UTC). This parameter is returned only when the data flashback feature is enabled for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-07-06T05:49:55Z</p>
+     */
     @NameInMap("BackupLogStartTime")
     public String backupLogStartTime;
 
     /**
-     * <p>The number of days for which backup data is retained.</p>
+     * <p>The backup retention period in days.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -51,13 +57,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The backup cycle. Valid values:</p>
      * <ul>
-     * <li><strong>Monday</strong></li>
-     * <li><strong>Tuesday</strong></li>
-     * <li><strong>Wednesday</strong></li>
-     * <li><strong>Thursday</strong></li>
-     * <li><strong>Friday</strong></li>
-     * <li><strong>Saturday</strong></li>
-     * <li><strong>Sunday</strong></li>
+     * <li><strong>Monday</strong>: Monday.</li>
+     * <li><strong>Tuesday</strong>: Tuesday.</li>
+     * <li><strong>Wednesday</strong>: Wednesday.</li>
+     * <li><strong>Thursday</strong>: Thursday.</li>
+     * <li><strong>Friday</strong>: Friday.</li>
+     * <li><strong>Saturday</strong>: Saturday.</li>
+     * <li><strong>Sunday</strong>: Sunday.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +73,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The backup time. The time is in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC).</p>
+     * <p>The backup time, in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>05:00Z-06:00Z</p>
@@ -76,7 +82,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupTime;
 
     /**
-     * <p>The next backup time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
+     * <p>The time of the next backup, in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2019-03-14T05:28Z</p>
@@ -172,7 +178,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     public static class DescribeBackupPolicyResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -183,7 +189,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -194,7 +200,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -205,7 +211,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -216,7 +222,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -227,7 +233,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -238,7 +244,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>

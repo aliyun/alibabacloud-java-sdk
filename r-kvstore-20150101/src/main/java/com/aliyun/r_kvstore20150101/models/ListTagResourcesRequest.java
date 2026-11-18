@@ -7,7 +7,7 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token used to start the next query to return more results.</p>
      * <blockquote>
-     * <p>You do not need to provide this parameter for the first query. If a query does not return all results, you can pass the <strong>NextToken</strong> value returned from the previous query in subsequent queries to continue the query.</p>
+     * <p>You do not need to specify this parameter for the first query. If a query does not return all results, you can pass the <strong>NextToken</strong> value returned from the previous query in subsequent queries to continue the query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,12 +36,9 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>The list of instance IDs.</p>
      * <blockquote>
      * <ul>
-     * <li>You must specify at least one of this parameter and the <strong>Tag</strong> parameter.</li>
+     * <li>You must specify either this parameter or the <strong>Tag</strong> parameter.</li>
      * </ul>
      * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -63,7 +60,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag information of the instance. You must specify at least one of this parameter and the <strong>ResourceId</strong> parameter.</p>
+     * <p>The tag information of the instance. You must specify either this parameter or the <strong>ResourceId</strong> parameter.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -147,7 +144,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>demokey</p>
@@ -156,7 +153,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>demovalue</p>

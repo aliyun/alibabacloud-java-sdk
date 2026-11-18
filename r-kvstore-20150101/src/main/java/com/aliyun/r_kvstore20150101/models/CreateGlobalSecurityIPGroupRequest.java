@@ -7,7 +7,7 @@ public class CreateGlobalSecurityIPGroupRequest extends TeaModel {
     /**
      * <p>The IP addresses in the whitelist template.</p>
      * <blockquote>
-     * <p>Separate multiple IP addresses with commas (,). IP addresses cannot be duplicated. You can add up to 1,000 IP addresses.</p>
+     * <p>Separate multiple IP addresses with commas (,). The IP addresses must be unique. You can specify up to 1,000 IP addresses.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,11 +18,11 @@ public class CreateGlobalSecurityIPGroupRequest extends TeaModel {
     public String GIpList;
 
     /**
-     * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
+     * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-     * <li>The name must start with a letter and end with a letter or digit.</li>
-     * <li>The name must be 2 to 120 characters in length.</li>
+     * <li>It must consist of lowercase letters, digits, and underscores (_).</li>
+     * <li>It must start with a letter and end with a letter or a digit.</li>
+     * <li>It must be 2 to 120 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

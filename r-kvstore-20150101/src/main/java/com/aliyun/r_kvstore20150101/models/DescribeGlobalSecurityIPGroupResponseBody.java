@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
     /**
-     * <p>The IP whitelist template information.</p>
+     * <p>The information about the IP whitelist templates.</p>
      */
     @NameInMap("GlobalSecurityIPGroup")
     public java.util.List<DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> globalSecurityIPGroup;

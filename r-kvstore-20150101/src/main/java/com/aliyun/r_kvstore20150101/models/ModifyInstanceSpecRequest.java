@@ -8,7 +8,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Automatic payment is enabled. This is the default value.</li>
-     * <li><strong>false</strong>: Manual payment is enabled. If this parameter is set to <strong>false</strong>, you must manually renew the instance in the console before the instance expires. For more information, refer to <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</li>
+     * <li><strong>false</strong>: Manual payment is enabled. If this parameter is set to <strong>false</strong>, you must manually renew the instance in the console before the instance expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +45,10 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The time when the modification takes effect. Valid values:</p>
+     * <p>The time when the specification change is executed. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: The modification takes effect immediately. This is the default value.</li>
-     * <li><strong>MaintainTime</strong>: The modification takes effect during the maintenance window of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window.</li>
+     * <li><strong>Immediately</strong>: The change is executed immediately. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: The change is executed during the maintenance window of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,8 +60,8 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable forced transmission. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Before the specification change, the system checks the current minor engine version of the instance. If the minor engine version is too low, an error is reported. You must upgrade the minor engine version and retry.</li>
-     * <li><strong>true</strong>: The check is skipped, and the system directly executes the specification change.</li>
+     * <li><strong>false</strong> (default): Before the specification change, the system checks the current minor kernel version of the instance. If the Milvus version is too low, an error is reported. You must upgrade the minor kernel version and retry.</li>
+     * <li><strong>true</strong>: The check is skipped and the specification change is directly executed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,10 +71,10 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Boolean forceTrans;
 
     /**
-     * <p>Specifies whether to forcibly modify the specifications. Valid values:</p>
+     * <p>Specifies whether to forcibly change the specifications. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: No.</li>
-     * <li><strong>true</strong>: Yes. This is the default value.</li>
+     * <li><strong>false</strong>: The specifications are not forcibly changed.</li>
+     * <li><strong>true</strong>: The specifications are forcibly changed. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,9 +84,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Boolean forceUpgrade;
 
     /**
-     * <p>The instance type code after the modification. You can call the <a href="https://help.aliyun.com/document_detail/473765.html">DescribeAvailableResource</a> operation to query the instance types available for modification in the zone to which the instance belongs.</p>
+     * <p>The instance type code after the change. You can call the <a href="https://help.aliyun.com/document_detail/473765.html">DescribeAvailableResource</a> operation to query the available instance types in the zone to which the instance belongs.</p>
      * <blockquote>
-     * <p>For more information about instance types, refer to <a href="https://help.aliyun.com/document_detail/26350.html">Instance type overview</a>.</p>
+     * <p>For more information about instance types, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance types</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,9 +106,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The major engine version to which you want to upgrade a classic instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+     * <p>The major version to which you want to upgrade a classic instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
      * <blockquote>
-     * <p>When you upgrade the major engine version, the <strong>InstanceClass</strong> parameter is required. This indicates that this operation only supports upgrading the major engine version when you update the instance specifications. If you only need to upgrade the major engine version, call the <a href="https://help.aliyun.com/document_detail/473776.html">ModifyInstanceMajorVersion</a> operation.</p>
+     * <p>When you upgrade the major version, the <strong>InstanceClass</strong> parameter is required. This indicates that this operation only supports upgrading the major version when you update the instance specifications. If you only need to upgrade the major version, call the <a href="https://help.aliyun.com/document_detail/473776.html">ModifyInstanceMajorVersion</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -120,11 +120,11 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><strong>MASTER_SLAVE</strong>: high-availability (dual-replica)</li>
-     * <li><strong>STAND_ALONE</strong>: single-replica</li>
-     * <li><strong>double</strong>: dual-replica</li>
-     * <li><strong>single</strong>: single-replica<blockquote>
-     * <p>Select <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong> for cloud-native instances, and select <strong>double</strong> or <strong>single</strong> for classic instances.</p>
+     * <li><strong>MASTER_SLAVE</strong>: The high-availability (dual-replica) architecture.</li>
+     * <li><strong>STAND_ALONE</strong>: The single-replica architecture.</li>
+     * <li><strong>double</strong>: The dual-replica architecture.</li>
+     * <li><strong>single</strong>: The single-replica architecture.<blockquote>
+     * <p>For cloud-native instances, select <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. For classic instances, select <strong>double</strong> or <strong>single</strong>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -136,7 +136,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>The modification type. This parameter is required when you modify the specifications of a subscription instance. Valid values:</p>
+     * <p>The type of the specification change. This parameter is required when you change the specifications of a subscription instance. Valid values:</p>
      * <ul>
      * <li><strong>UPGRADE</strong>: Upgrades the configurations. This is the default value.</li>
      * <li><strong>DOWNGRADE</strong>: Downgrades the configurations.</li>
@@ -144,7 +144,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>When you downgrade the configurations of a subscription instance, you must set this parameter to <strong>DOWNGRADE</strong>.</li>
-     * <li>If the price of the target instance type is higher than that of the current instance type, the configurations are upgraded. Otherwise, the configurations are downgraded. For example, the price of the 8 GB read/write splitting edition (5 read-only nodes) is higher than that of the 16 GB cluster edition. Changing the instance type from the latter to the former is considered an upgrade.</li>
+     * <li>If the price of the target specifications is higher than that of the current specifications, the operation is an upgrade. Otherwise, the operation is a downgrade. For example, the price of the 8 GB read/write splitting edition with 5 read-only nodes is higher than that of the 16 GB cluster edition. Changing the specifications from the latter to the former is an upgrade.</li>
      * </ul>
      * </blockquote>
      * 
@@ -161,9 +161,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of read-only nodes in the primary zone. This parameter applies only when you create a cloud-native read/write splitting instance.</p>
+     * <p>The number of read-only nodes in the primary zone. This parameter applies only to creating cloud-native read/write splitting instances.</p>
      * <ul>
-     * <li>If the instance uses the standard architecture, valid values are 0 to 9. A value of 0 indicates the shutdown of read/write splitting and an instance switchover to the standard architecture.</li>
+     * <li>If the instance uses the standard architecture, valid values are 0 to 9. A value of 0 indicates that read/write splitting is disabled and the instance is switched to the standard architecture.</li>
      * <li>If the instance uses the cluster architecture, valid values are 1 to 4, which indicates the number of read-only nodes per shard.<blockquote>
      * <p>If you create a multi-zone instance, you can use this parameter and the SlaveReadOnlyCount parameter to specify the number of read-only nodes in the primary and secondary zones.</p>
      * <ul>
@@ -181,7 +181,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Integer readOnlyCount;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID. Use this parameter to specify the region of the instance that you want to modify.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query available regions. Use this parameter to specify the region of the instance whose specifications you want to change.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -208,9 +208,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the secondary zone. This parameter is required when you modify the specifications of a single-zone instance and migrate it to multiple zones. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the zone ID.</p>
+     * <p>The ID of the secondary zone. When you change the specifications of a single-zone instance and migrate it to multiple zones, you must specify the secondary zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the zone ID.</p>
      * <blockquote>
-     * <p>The value of this parameter cannot be the same as the value of the ZoneId parameter, and you cannot specify the ID of a multi-zone deployment.</p>
+     * <p>The value of this parameter cannot be the same as that of the ZoneId parameter, and you cannot specify the ID of a multi-zone deployment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -265,9 +265,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String sourceBiz;
 
     /**
-     * <p>The storage capacity of the disk instance. The value range varies based on the instance type. For more information, refer to <a href="https://help.aliyun.com/document_detail/2527111.html">Disk instance types</a>.</p>
+     * <p>The storage capacity of the disk instance. The value range varies based on the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2527111.html">Disk instance types</a>.</p>
      * <blockquote>
-     * <p>This parameter is required only when <strong>InstanceType</strong> is set to <strong>tair_essd</strong> and you create a Tair ESSD instance. When you create a Tair SSD instance, the capacity field is defined as different fixed values based on different instance types, and you do not need to specify this field.</p>
+     * <p>This parameter is required only when <strong>InstanceType</strong> is set to <strong>tair_essd</strong> and you create a Tair ESSD instance. When you create a Tair SSD instance, the capacity field is defined as a fixed value based on the instance type, and you do not need to specify this field.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

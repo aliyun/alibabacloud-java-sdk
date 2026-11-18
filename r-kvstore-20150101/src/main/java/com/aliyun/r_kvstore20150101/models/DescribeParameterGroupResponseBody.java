@@ -42,7 +42,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
     public static class DescribeParameterGroupResponseBodyParameterGroupParamGroupsDetails extends TeaModel {
         /**
-         * <p>The parameter name.</p>
+         * <p>The name of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>timeout</p>
@@ -51,7 +51,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         public String paramName;
 
         /**
-         * <p>The parameter value.</p>
+         * <p>The value of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -86,8 +86,8 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         /**
          * <p>The product category. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Redis Community Edition.</li>
-         * <li><strong>1</strong>: Tair (Enterprise Edition).</li>
+         * <li><strong>0</strong>: open-source Redis</li>
+         * <li><strong>1</strong>: Tair (Enterprise Edition)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The engine-compatible version.</p>
+         * <p>The compatible engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.0</p>

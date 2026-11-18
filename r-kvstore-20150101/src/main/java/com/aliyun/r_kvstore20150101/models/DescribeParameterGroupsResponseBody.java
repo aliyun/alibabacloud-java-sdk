@@ -66,9 +66,9 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         /**
          * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><strong>redis</strong>: open-source Redis or Tair (Memory-optimized).</li>
-         * <li><strong>tair_pena</strong>: Tair (Persistent Memory-optimized).</li>
-         * <li><strong>tair_pdb</strong>: Tair (Disk-optimized).</li>
+         * <li><strong>redis</strong>: open-source Redis or Tair (memory-optimized).</li>
+         * <li><strong>tair_pena</strong>: Tair (persistent memory-optimized).</li>
+         * <li><strong>tair_pdb</strong>: Tair (disk-optimized).</li>
          * </ul>
          * 
          * <strong>example:</strong>

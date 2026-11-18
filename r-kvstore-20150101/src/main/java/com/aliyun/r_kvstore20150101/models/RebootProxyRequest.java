@@ -21,7 +21,7 @@ public class RebootProxyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IDs of the proxy nodes to operate. Separate multiple IDs with commas.</p>
+     * <p>The IDs of the proxy nodes to be operated on. Separate multiple IDs with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>90310144,90310144</p>
@@ -30,7 +30,7 @@ public class RebootProxyRequest extends TeaModel {
     public String proxyList;
 
     /**
-     * <p>The IDs of the hosts on which the proxy nodes to operate reside. Separate multiple IDs with commas.</p>
+     * <p>The IDs of the hosts where the proxy nodes to be operated on reside. Separate multiple IDs with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>36912280,36912282</p>

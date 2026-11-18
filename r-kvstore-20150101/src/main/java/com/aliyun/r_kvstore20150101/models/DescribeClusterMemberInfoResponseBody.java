@@ -54,7 +54,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         public Long bandWidth;
 
         /**
-         * <p>The number of days for which binary logs are retained.</p>
+         * <p>The binary log retention period in days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -114,7 +114,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         /**
          * <p>The storage space of the <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disk</a> for the data node. Unit: MB.</p>
          * <blockquote>
-         * <p>The ESSD cloud disk is used only for system operations, such as data persistence, and is not used as a medium for data access.</p>
+         * <p>The ESSD cloud disk is used only for system operations, such as data persistence, and is not used as a medium for data storage and access.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -162,8 +162,8 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>redis</strong>: data node.</li>
-         * <li><strong>redis_cs</strong>: configuration server node.</li>
+         * <li><strong>redis</strong>: data node</li>
+         * <li><strong>redis_cs</strong>: configuration server node</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>The major version of the node.</p>
+         * <p>The major engine version of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>5.0</p>

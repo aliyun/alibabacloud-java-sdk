@@ -7,8 +7,8 @@ public class RestartInstanceRequest extends TeaModel {
     /**
      * <p>The time when the instance is restarted. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: The instance is restarted immediately. This is the default value.</li>
-     * <li><strong>MaintainTime</strong>: The instance is restarted during the maintenance window.</li>
+     * <li><strong>Immediately</strong>: Restarts the instance immediately. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: Restarts the instance during the maintenance window.</li>
      * </ul>
      * 
      * <strong>example:</strong>

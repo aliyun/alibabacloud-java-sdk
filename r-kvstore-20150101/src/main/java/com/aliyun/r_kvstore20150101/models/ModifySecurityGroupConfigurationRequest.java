@@ -27,9 +27,9 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the security groups that you want to set. You can specify up to 10 security group IDs, separated by commas (,).</p>
+     * <p>The IDs of the security groups to be configured. You can specify up to 10 security group IDs. Separate multiple IDs with commas (,).</p>
      * <blockquote>
-     * <p>This operation overwrites the existing settings. For valid values, query the basic information about the security groups that you created by calling <a href="https://next.api.aliyun.com/api/Ecs/2014-05-26/DescribeSecurityGroups">DescribeSecurityGroups</a>.</p>
+     * <p>This overwrites the existing settings. For valid values, call <a href="https://next.api.aliyun.com/api/Ecs/2014-05-26/DescribeSecurityGroups">DescribeSecurityGroups</a> to query the basic information of the security groups you created.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

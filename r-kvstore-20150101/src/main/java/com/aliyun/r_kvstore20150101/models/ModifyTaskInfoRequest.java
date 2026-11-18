@@ -6,16 +6,16 @@ import com.aliyun.tea.*;
 public class ModifyTaskInfoRequest extends TeaModel {
     /**
      * <p>The parameters related to the action, in JSON format.
-     * If <strong>TaskAction</strong> is set to <strong>modifySwitchTime</strong>, the ActionParams value is <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
+     * If <strong>TaskAction</strong> is set to <strong>modifySwitchTime</strong>, set this parameter to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
      * <ul>
-     * <li><p><strong>recoverMode</strong> specifies the task recovery mode. Valid values:</p>
+     * <li><p><strong>recoverMode</strong>: the recovery mode of the task. Valid values:</p>
      * <ul>
-     * <li><strong>imePoint</strong>: Execute at a specified point in time.</li>
-     * <li><strong>immediate</strong>: Execute immediately.</li>
-     * <li><strong>maintainTime</strong>: Execute during the O&amp;M window.</li>
+     * <li><strong>imePoint</strong>: executes the task at a specified point in time.</li>
+     * <li><strong>immediate</strong>: executes the task immediately.</li>
+     * <li><strong>maintainTime</strong>: executes the task during the O&amp;M window.</li>
      * </ul>
      * </li>
-     * <li><p><strong>recoverTime</strong> specifies the point in time, in UTC+0, in the yyyy-MM-ddTHH:mm:ssZ format. This parameter is required when <strong>recoverMode</strong> is set to <strong>timePoint</strong>.</p>
+     * <li><p><strong>recoverTime</strong>: the specified point in time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. This parameter is required when <strong>recoverMode</strong> is set to <strong>timePoint</strong>.</p>
      * </li>
      * </ul>
      * 
@@ -45,7 +45,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the current execution step. You can call <a href="https://help.aliyun.com/document_detail/2400077.html">DescribeHistoryTasks</a> to query the current execution step of a specified node ID. A common value is <strong>do_pause</strong>, which indicates waiting for the preset time to execute.</p>
+     * <p>The name of the current execution step. You can call the <a href="https://help.aliyun.com/document_detail/2400077.html">DescribeHistoryTasks</a> operation to query the current execution step of a specified task. A common value is <strong>do_pause</strong>, which indicates that the task is waiting to be executed at a preset time.</p>
      * 
      * <strong>example:</strong>
      * <p>do_pause</p>
@@ -54,7 +54,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String stepName;
 
     /**
-     * <p>The operation name. Currently, the valid value is <strong>modifySwitchTime</strong>, which indicates modifying the switchover time or recovery time.</p>
+     * <p>The operation name. Valid value: <strong>modifySwitchTime</strong>, which indicates modifying the switchover time or recovery time.</p>
      * 
      * <strong>example:</strong>
      * <p>modifySwitchTime</p>
@@ -63,7 +63,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String taskAction;
 
     /**
-     * <p>The node ID. To specify multiple IDs, separate them with commas (,). You can specify up to 30 IDs.</p>
+     * <p>The task ID. Separate multiple task IDs with commas (,). A maximum of 30 task IDs are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

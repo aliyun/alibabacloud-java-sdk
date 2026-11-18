@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,11 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The global resource descriptor Alibaba Cloud Resource Name (ARN) of the role to be authorized. After the role is granted authorization, the related KMS can be used. Format: <code>acs:ram::$accountID:role/$roleName</code>.</p>
+     * <p>Specifies the global resource descriptor ARN (Alibaba Cloud Resource Name) of the role to be granted authorization. After the role authorization is completed, you can use the related Key Management Service (KMS). Format: <code>acs:ram::$accountID:role/$roleName</code>.</p>
      * <blockquote>
      * <ul>
-     * <li><code>$accountID</code>: the ID of the Alibaba Cloud account. Log on to the Alibaba Cloud Management Console, move the mouse pointer over the profile picture in the upper-right corner, and then click <strong>Security Settings</strong> to view the account ID.</li>
-     * <li><code>$roleName</code>: the name of the RAM role. Set this value to <strong>AliyunRdsInstanceEncryptionDefaultRole</strong>.</li>
+     * <li><code>$accountID</code>: the Alibaba Cloud account ID. You can logon to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and click <strong>Security Settings</strong> to view the ID.</li>
+     * <li><code>$roleName</code>: the name of the RAM role. Set the value to <strong>AliyunRdsInstanceEncryptionDefaultRole</strong>.</li>
      * </ul>
      * </blockquote>
      * 

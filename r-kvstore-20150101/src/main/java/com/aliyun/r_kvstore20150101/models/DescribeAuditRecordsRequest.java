@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditRecordsRequest extends TeaModel {
     /**
-     * <p>The name of the account. If you do not specify this parameter, the audit logs of all accounts are queried.</p>
+     * <p>The name of the account. If you leave this parameter empty, the audit logs of all accounts are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>
@@ -14,7 +14,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The database in the instance. If you do not specify this parameter, the audit logs of all databases are queried. Valid values: 0 to 255. For example, 0 indicates database 0.</p>
+     * <p>The database in the instance. If you leave this parameter empty, the audit logs of all databases are queried. Valid values: 0 to 255. For example, 0 indicates database 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -25,7 +25,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     /**
      * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>Because audit logs contain a large number of entries, specify a time range of up to 10 minutes and a maximum of 1 day.</p>
+     * <p>Because audit logs contain a large number of entries, specify a time range of up to 10 minutes and a maximum of 1 day for a query.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +36,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The IP address of the client. If you do not specify this parameter, the audit logs of all IP addresses are queried.</p>
+     * <p>The IP address of the client. If you leave this parameter empty, the audit logs from all IP addresses are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
@@ -94,9 +94,9 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The keyword used to query audit logs based on a specific command. By default, the audit logs of all executed commands are queried.</p>
+     * <p>The keyword used to query audit logs based on a specific command. By default, all executed commands are queried.</p>
      * <blockquote>
-     * <p>You can specify only one keyword.</p>
+     * <p>Only a single keyword can be specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

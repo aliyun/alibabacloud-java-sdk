@@ -14,7 +14,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long backupId;
 
     /**
-     * <p>The ID of the backup job. This ID is returned by the CreateBackup operation. If CreateBackup returns multiple BackupJobIds, you must call this operation to query each of them separately.</p>
+     * <p>The ID of the backup task. This ID is returned by the CreateBackup operation. If the CreateBackup operation returns multiple BackupJobIds, you must call this operation to query each of them separately.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>
@@ -45,8 +45,8 @@ public class DescribeBackupsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable AOF persistence. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Disabled.</li>
-     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
+     * <li><strong>1</strong>: enabled.</li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>0</strong>.</p>

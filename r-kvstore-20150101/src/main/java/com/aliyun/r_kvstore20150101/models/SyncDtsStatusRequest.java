@@ -39,10 +39,10 @@ public class SyncDtsStatusRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Specifies whether to restrict specification changes on the instance. Valid values:</p>
+     * <p>Specifies whether to restrict specification changes for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Unrestricted.</li>
-     * <li><strong>1</strong>: Restricted. Users are prompted when they perform a specification change.</li>
+     * <li><strong>0</strong>: No restriction.</li>
+     * <li><strong>1</strong>: Restricted. Users receive a prompt when performing a specification change.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class SyncDtsStatusRequest extends TeaModel {
     /**
      * <p>Instance ID of the DTS instance. You can log on to the <a href="https://dts.console.aliyun.com/">DTS console</a> to view instance ID.</p>
      * <blockquote>
-     * <p>An instance may be involved in multiple DTS migration or synchronization tasks simultaneously. To remove the specification change restrictions on the instance, pass this parameter to avoid calling this operation multiple times.</p>
+     * <p>An instance may be involved in multiple DTS migration or synchronization tasks. When you need to remove the specification change restriction for the instance, you can pass this parameter to avoid calling this operation multiple times.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

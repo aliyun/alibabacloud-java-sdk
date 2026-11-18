@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyGlobalSecurityIPGroupNameRequest extends TeaModel {
     /**
-     * <p>The new name of the IP address whitelist template. The name must meet the following requirements:</p>
+     * <p>The new name of the IP whitelist template. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-     * <li>The name must start with a letter and end with a letter or digit.</li>
-     * <li>The name must be 2 to 120 characters in length.</li>
+     * <li>It can contain only lowercase letters, digits, and underscores (_).</li>
+     * <li>It must start with a letter and end with a letter or a digit.</li>
+     * <li>It must be 2 to 120 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class ModifyGlobalSecurityIPGroupNameRequest extends TeaModel {
     public String globalIgName;
 
     /**
-     * <p>The ID of the IP address whitelist template. You can call the <a href="https://help.aliyun.com/document_detail/2400079.html">DescribeGlobalSecurityIPGroup</a> operation to obtain this parameter.</p>
+     * <p>The ID of the IP whitelist template. You can call the <a href="https://help.aliyun.com/document_detail/2400079.html">DescribeGlobalSecurityIPGroup</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ModifyGlobalSecurityIPGroupNameRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4ekp****</p>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class SwitchNetworkRequest extends TeaModel {
     /**
-     * <p>The retention period of the classic network connectivity endpoint. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: days.</p>
+     * <p>The retention period of the classic network endpoint. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: days.</p>
      * <blockquote>
      * <ul>
      * <li>This parameter is active and required only when <strong>RetainClassic</strong> is set to <strong>True</strong>.</li>
-     * <li>After the switchover is complete, you can invoke <a href="https://help.aliyun.com/document_detail/473793.html">ModifyInstanceNetExpireTime</a> to modify the retention period of the classic network connectivity endpoint.</li>
+     * <li>After the switchover is complete, you can call the <a href="https://help.aliyun.com/document_detail/473793.html">ModifyInstanceNetExpireTime</a> operation to change the retention period of the classic network endpoint.</li>
      * </ul>
      * </blockquote>
      * 
@@ -20,7 +20,7 @@ public class SwitchNetworkRequest extends TeaModel {
     public String classicExpiredDays;
 
     /**
-     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,13 +42,13 @@ public class SwitchNetworkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to retain the classic network connectivity endpoint when you switch the instance from the classic network to a VPC. Valid values:</p>
+     * <p>Specifies whether to retain the original classic network endpoint when you switch the instance from the classic network to a VPC. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong>: The classic network endpoint is retained.</li>
-     * <li><strong>False</strong>: The classic network endpoint is not retained. This is the default value.</li>
+     * <li><strong>True</strong>: Retained.</li>
+     * <li><strong>False</strong>: Not retained. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is active only when the network type of the instance is classic network.</p>
+     * <p>This parameter is active only when the network type of the instance is the classic network.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class SwitchNetworkRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The network type to which you want to switch. Set the value to <strong>VPC</strong>.</p>
+     * <p>The network type to which you want to switch the instance. Set the value to <strong>VPC</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -70,9 +70,9 @@ public class SwitchNetworkRequest extends TeaModel {
     public String targetNetworkType;
 
     /**
-     * <p>The ID of the vSwitch in the destination VPC. You can call <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> to query vSwitch IDs.</p>
+     * <p>The ID of the vSwitch in the destination VPC. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the vSwitch ID.</p>
      * <blockquote>
-     * <p>The vSwitch must be in the same zone as the instance.</p>
+     * <p>The destination vSwitch must be in the same zone as the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,11 +82,11 @@ public class SwitchNetworkRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC to which you want to switch. You can call <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> to query VPC IDs.</p>
+     * <p>The ID of the destination VPC. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the VPC ID.</p>
      * <blockquote>
      * <ul>
-     * <li>The VPC must be in the same region as the instance.</li>
-     * <li>After you specify this parameter, you must also specify the <strong>VSwitchId</strong> parameter.</li>
+     * <li>The destination VPC must be in the same region as the instance.</li>
+     * <li>If you specify this parameter, you must also specify the <strong>VSwitchId</strong> parameter.</li>
      * </ul>
      * </blockquote>
      * 

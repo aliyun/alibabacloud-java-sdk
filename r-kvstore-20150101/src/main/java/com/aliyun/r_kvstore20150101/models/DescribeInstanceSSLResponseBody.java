@@ -55,7 +55,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
 
     /**
      * <p>The expiration time of the CA certificate.</p>
-     * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+     * <p>The time follows the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-08-05T09:05:53Z</p>

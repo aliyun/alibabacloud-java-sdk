@@ -54,7 +54,7 @@ public class DescribeAccountsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The fuzzy match string for the account name.</p>
+     * <p>The keyword for fuzzy search of the account name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

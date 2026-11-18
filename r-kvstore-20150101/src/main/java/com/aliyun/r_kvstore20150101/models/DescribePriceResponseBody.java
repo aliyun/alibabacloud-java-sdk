@@ -11,7 +11,7 @@ public class DescribePriceResponseBody extends TeaModel {
     public DescribePriceResponseBodyOrder order;
 
     /**
-     * <p>The order parameters. This parameter is returned when OrderParamOut is set to <code>true</code>.</p>
+     * <p>The order parameters. Returned when OrderParamOut is set to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>String</p>
@@ -80,11 +80,17 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyOrderCouponsCoupon extends TeaModel {
+        @NameInMap("ActivityExtInfo")
+        public java.util.Map<String, ?> activityExtInfo;
+
         @NameInMap("CouponNo")
         public String couponNo;
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("Effective")
+        public Boolean effective;
 
         @NameInMap("IsSelected")
         public String isSelected;
@@ -95,6 +101,14 @@ public class DescribePriceResponseBody extends TeaModel {
         public static DescribePriceResponseBodyOrderCouponsCoupon build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceResponseBodyOrderCouponsCoupon self = new DescribePriceResponseBodyOrderCouponsCoupon();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyOrderCouponsCoupon setActivityExtInfo(java.util.Map<String, ?> activityExtInfo) {
+            this.activityExtInfo = activityExtInfo;
+            return this;
+        }
+        public java.util.Map<String, ?> getActivityExtInfo() {
+            return this.activityExtInfo;
         }
 
         public DescribePriceResponseBodyOrderCouponsCoupon setCouponNo(String couponNo) {
@@ -111,6 +125,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribePriceResponseBodyOrderCouponsCoupon setEffective(Boolean effective) {
+            this.effective = effective;
+            return this;
+        }
+        public Boolean getEffective() {
+            return this.effective;
         }
 
         public DescribePriceResponseBodyOrderCouponsCoupon setIsSelected(String isSelected) {
@@ -183,13 +205,13 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>The promotion name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Contract_Discount_Order_xxxOff</p>
+         * <p>Contract discount_Entire order_xxx% off</p>
          */
         @NameInMap("ActivityName")
         public String activityName;
 
         /**
-         * <p>The price after the discount.</p>
+         * <p>The final price after the discount.</p>
          */
         @NameInMap("FinalFee")
         public Double finalFee;
@@ -286,7 +308,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyOrderDepreciateInfo extends TeaModel {
         /**
-         * <p>The price reduction ratio.</p>
+         * <p>The price reduction rate.</p>
          * 
          * <strong>example:</strong>
          * <p>30%</p>
@@ -310,7 +332,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public DescribePriceResponseBodyOrderDepreciateInfoContractActivity contractActivity;
 
         /**
-         * <p>The price difference discount, displayed in the order total.</p>
+         * <p>The price difference discount (displayed in the total order price).</p>
          * 
          * <strong>example:</strong>
          * <p>**</p>
@@ -328,7 +350,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String differentialName;
 
         /**
-         * <p>Indicates whether a contract-based discount is applied.</p>
+         * <p>Indicates whether a contract discount is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -337,7 +359,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Boolean isContractActivity;
 
         /**
-         * <p>Indicates whether the price reduction is displayed.</p>
+         * <p>Indicates whether to display the price reduction extent.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -492,7 +514,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public DescribePriceResponseBodyOrderCoupons coupons;
 
         /**
-         * <p>The currency. The value is CNY (Chinese Yuan) for the China site and USD (US Dollar) for the international site.</p>
+         * <p>The currency. CNY for the China site and USD for the international site.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -525,7 +547,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String handlingFeeAmount;
 
         /**
-         * <p>Indicates whether a contract-based discount is applied.</p>
+         * <p>Indicates whether a contract discount is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -555,7 +577,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public DescribePriceResponseBodyOrderRuleIds ruleIds;
 
         /**
-         * <p>Indicates whether discount information is displayed.</p>
+         * <p>Indicates whether to display the discount information.</p>
          */
         @NameInMap("ShowDiscountInfo")
         public Boolean showDiscountInfo;
@@ -1349,6 +1371,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Effective")
+        public Boolean effective;
+
         @NameInMap("Name")
         public String name;
 
@@ -1402,6 +1427,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderOptionalPromotionsOptionalPromotion setEffective(Boolean effective) {
+            this.effective = effective;
+            return this;
+        }
+        public Boolean getEffective() {
+            return this.effective;
         }
 
         public DescribePriceResponseBodySubOrdersSubOrderOptionalPromotionsOptionalPromotion setName(String name) {

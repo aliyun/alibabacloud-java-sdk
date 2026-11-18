@@ -8,8 +8,8 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
      * <p>The event status. Valid values:</p>
      * <ul>
      * <li><strong>Archived</strong>: Archived.</li>
-     * <li><strong>UnArchived</strong>: Not archived.</li>
-     * <li><strong>All</strong>: All events.</li>
+     * <li><strong>UnArchived</strong>: Unarchived.</li>
+     * <li><strong>All</strong>: All.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String archiveStatus;
 
     /**
-     * <p>The beginning of the time range for the task start time. Only tasks whose start time is later than this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0. The earliest supported time is 30 days before the current time. If the specified time is more than 30 days before the current time, it is automatically converted to 30 days before the current time.</p>
+     * <p>The lower bound of the time range for task start times. Only tasks that started after this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days before the current time, it is automatically adjusted to 30 days ago.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-02T11:31:03Z</p>
@@ -53,7 +53,7 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The end of the time range for the task start time. Only tasks whose start time is earlier than this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <p>The upper bound of the time range for task start times. Only tasks that started before this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-02-02T11:31:03Z</p>

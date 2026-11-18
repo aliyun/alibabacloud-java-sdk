@@ -7,8 +7,8 @@ public class AddShardingNodeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account has sufficient balance.</li>
-     * <li><strong>false</strong>: Automatic payment is disabled. You must manually complete the payment in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</li>
+     * <li><strong>true</strong>: enables automatic payment. Make sure that your account has sufficient balance.</li>
+     * <li><strong>false</strong>: disables automatic payment. You must manually renew the instance in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>true</strong>.</p>
@@ -21,7 +21,7 @@ public class AddShardingNodeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The additional parameter for business information.</p>
+     * <p>The additional parameter that contains business information.</p>
      * 
      * <strong>example:</strong>
      * <p>000000000</p>
@@ -39,10 +39,10 @@ public class AddShardingNodeRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>Specifies whether to enable forced transmission. Valid values:</p>
+     * <p>Specifies whether to enable forced transition. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Before the Upgrade/Downgrade, the system checks the current minor engine version of the instance. If the minor engine version is outdated, an error is returned. You must upgrade the minor engine version and retry.</li>
-     * <li><strong>true</strong>: Skips the check and directly executes the Upgrade/Downgrade operation.</li>
+     * <li><strong>false</strong> (default): Before the upgrade/downgrade, the system checks the current minor engine version of the instance. If the engine version is too low, an error is reported. You must upgrade the minor engine version and retry.</li>
+     * <li><strong>true</strong>: skips the check to directly execute the upgrade/downgrade operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class AddShardingNodeRequest extends TeaModel {
     /**
      * <p>The number of shards to add. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p>The minimum total number of shards for an instance is 2. You can add up to 64 shards in a single operation, and the total number of shards for an instance cannot exceed 256. Make sure that the number of shards does not exceed this limit.</p>
+     * <p>The total number of shards in the instance must be at least 2. The maximum number of shards that can be added in a single operation is 64, and the maximum total number of shards for an instance is 256. Make sure that the number of shards does not exceed these limits.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class AddShardingNodeRequest extends TeaModel {
     public Integer shardCount;
 
     /**
-     * <p>The request source. This parameter is used only for internal maintenance and does not need to be specified.</p>
+     * <p>The source of the call. This parameter is used only for internal maintenance and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>SDK</p>
@@ -98,8 +98,8 @@ public class AddShardingNodeRequest extends TeaModel {
     public String sourceBiz;
 
     /**
-     * <p>The ID of a different vSwitch within the same VPC. The new data shards are created under the specified vSwitch.
-     * If you leave this parameter empty, the new data shards are created under the original vSwitch.</p>
+     * <p>The ID of a different vSwitch in the same VPC. The new data shards are created in the specified vSwitch.
+     * If you do not specify this parameter, the new data shards are created in the original vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1e7clcw529l773d****</p>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeAuditRecordsResponseBody extends TeaModel {
     /**
      * <p>The end time of the query.</p>
-     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</p>
+     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-03-25T12:10:00Z</p>
@@ -55,7 +55,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The start time of the query.</p>
-     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</p>
+     * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-03-24T12:10:00Z</p>

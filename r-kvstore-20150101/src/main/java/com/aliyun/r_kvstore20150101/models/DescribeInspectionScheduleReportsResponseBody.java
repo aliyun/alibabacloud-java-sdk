@@ -64,7 +64,7 @@ public class DescribeInspectionScheduleReportsResponseBody extends TeaModel {
     public static class DescribeInspectionScheduleReportsResponseBodyDataItems extends TeaModel {
         /**
          * <p>The creation time of the task.</p>
-         * <p>The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1773211755000</p>
@@ -74,7 +74,7 @@ public class DescribeInspectionScheduleReportsResponseBody extends TeaModel {
 
         /**
          * <p>The end time of the task.</p>
-         * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+         * <p>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-29T02:12:02Z</p>
@@ -84,7 +84,7 @@ public class DescribeInspectionScheduleReportsResponseBody extends TeaModel {
 
         /**
          * <p>The completion time of the task.</p>
-         * <p>The time is displayed in the ISO 8601 format with an explicit time zone offset.</p>
+         * <p>The time is in the ISO 8601 format and includes a specific time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-16T13:52:35+08:00</p>
@@ -112,7 +112,7 @@ public class DescribeInspectionScheduleReportsResponseBody extends TeaModel {
 
         /**
          * <p>The start time of the task.</p>
-         * <p>The time is displayed in the YYYY-MM-DDTHH:mmZ format in UTC.</p>
+         * <p>The time is in the YYYY-MM-DDTHH:mmZ format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-26T21:10Z</p>
@@ -226,7 +226,7 @@ public class DescribeInspectionScheduleReportsResponseBody extends TeaModel {
         public Long pageNum;
 
         /**
-         * <p>The page size. Default value: 25.</p>
+         * <p>The number of entries per page. Default value: 25.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

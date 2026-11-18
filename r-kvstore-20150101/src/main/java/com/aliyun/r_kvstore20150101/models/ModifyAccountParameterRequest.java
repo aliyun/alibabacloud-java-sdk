@@ -25,10 +25,9 @@ public class ModifyAccountParameterRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The account parameters to modify, in JSON format. The modified values overwrite the original values. For example, if you want to modify only the access-db-id parameter to 1, pass in {&quot;access-db-id&quot;:&quot;1&quot;}.
-     * Only two parameters are supported: access-db-id (accessible DB ID) and cu-limit (CU Limit).</p>
+     * <p>The account parameters to modify. The parameters must be in JSON format, and the modified values overwrite the original values. For example, if you want to modify only the access-db-id parameter to 1, you can pass {&quot;access-db-id&quot;:&quot;1&quot;}. Currently, only two parameters are supported: access-db-id (accessible DB ID) and cu-limit (throttling value (CU limit)).</p>
      * <blockquote>
-     * <p>Notice: Currently, only Tair Serverless KV instances are supported.</p>
+     * <p>Notice: This operation is supported only for Tair Serverless KV instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

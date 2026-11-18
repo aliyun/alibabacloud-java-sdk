@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksStatRequest extends TeaModel {
     /**
-     * <p>The minimum execution duration used to filter tasks whose execution duration is greater than this value. Unit: seconds. Default value: 0, which indicates no restriction.</p>
+     * <p>The minimum execution duration of a task. This parameter is used to filter tasks whose execution duration is greater than the specified value. Unit: seconds. Default value: 0. A value of 0 indicates that no limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public Integer fromExecTime;
 
     /**
-     * <p>The beginning of the query time range. Specify the time in the <i>yyyy-mm-dd</i>t<i>hh:mm</i>z format (UTC).</p>
+     * <p>The start time of the query period. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The ID of the region to which the pending events belong. You can call the DescribeRegions operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,16 +51,14 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     /**
      * <p>The task status. This parameter is used to filter tasks by status. Valid values:</p>
      * <ul>
-     * <li><strong>Scheduled</strong>: Waiting to be executed.</li>
+     * <li><strong>Scheduled</strong>: Pending execution.</li>
      * <li><strong>Running</strong>: Running.</li>
      * <li><strong>Succeed</strong>: Succeeded.</li>
      * <li><strong>Failed</strong>: Failed.</li>
-     * <li><strong>Cancelling</strong>: Being stopped.</li>
-     * <li><strong>Canceled</strong>: Stopped.</li>
-     * <li><strong>Waiting</strong>: Waiting for the scheduled time.<blockquote>
-     * <p>By default, this parameter is empty, which indicates that tasks in all statuses are queried. To specify multiple statuses, separate them with commas (,).</p>
-     * </blockquote>
-     * </li>
+     * <li><strong>Cancelling</strong>: Cancelling.</li>
+     * <li><strong>Canceled</strong>: Canceled.</li>
+     * <li><strong>Waiting</strong>: Waiting for the scheduled time.
+     * Default value: empty. An empty value indicates that all statuses are selected. Separate multiple statuses with commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +68,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The task ID. This parameter is used to query a task with a known ID. By default, this parameter is empty, which indicates no restriction. To specify multiple task IDs, separate them with commas (,). A maximum of 30 task IDs are supported.</p>
+     * <p>The task ID. This parameter is used to query tasks with known IDs. Default value: empty. An empty value indicates that no limit is applied. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>t-0mq1yyhm3ffl2bxxxx</p>
@@ -88,7 +86,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The maximum execution duration used to filter tasks whose execution duration is not less than this value. Unit: seconds. Default value: 0, which indicates no restriction.</p>
+     * <p>The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is less than or equal to the specified value. Unit: seconds. Default value: 0. A value of 0 indicates that no limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -97,7 +95,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public Integer toExecTime;
 
     /**
-     * <p>The end of the query time range. Specify the time in the <i>yyyy-mm-dd</i>t<i>hh:mm</i>z format (UTC).</p>
+     * <p>The end time of the query period. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

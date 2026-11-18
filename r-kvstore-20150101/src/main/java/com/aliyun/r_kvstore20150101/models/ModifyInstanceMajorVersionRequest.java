@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMajorVersionRequest extends TeaModel {
     /**
-     * <p>The time when the upgrade is performed. Valid values:</p>
+     * <p>The time when the upgrade is executed. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: The upgrade is performed immediately. This is the default value.</li>
-     * <li><strong>MaintainTime</strong>: The upgrade is performed during the maintenance window.</li>
+     * <li><strong>Immediately</strong>: The upgrade is executed immediately. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: The upgrade is executed during the maintenance window.</li>
      * </ul>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</p>
@@ -31,10 +31,10 @@ public class ModifyInstanceMajorVersionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The major version to which the instance is upgraded.</p>
+     * <p>The target major version for the instance upgrade.</p>
      * <ul>
-     * <li>Valid values for cloud-native instances: 6.0 or 7.0.</li>
-     * <li>Valid values for classic instances: 4.0 (not recommended) or 5.0.<blockquote>
+     * <li>For cloud-native instances, valid values are 6.0 and 7.0.</li>
+     * <li>For classic instances, valid values are 4.0 (not recommended) and 5.0.<blockquote>
      * <p>Only upgrades to the same deployment mode are supported.</p>
      * </blockquote>
      * </li>

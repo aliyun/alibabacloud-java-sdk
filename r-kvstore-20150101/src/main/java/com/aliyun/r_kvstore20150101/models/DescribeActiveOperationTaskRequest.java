@@ -7,8 +7,8 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     /**
      * <p>Specifies whether to return historical tasks. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong> (default): Returns current tasks.</li>
-     * <li><strong>1</strong>: Returns historical tasks.</li>
+     * <li><strong>0</strong>: returns current tasks. This is the default value.</li>
+     * <li><strong>1</strong>: returns historical tasks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong> and not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries per page. The value must be greater than <strong>10</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The maximum number of entries to return on each page. The value must be greater than <strong>10</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -42,9 +42,9 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the pending event. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The ID of the region to which the pending events belong. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
      * <blockquote>
-     * <p>Set this parameter to <strong>all</strong> to specify all region IDs.</p>
+     * <p>A value of <strong>all</strong> specifies all region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -66,9 +66,9 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     /**
      * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>rds_apsaradb_ha</strong>: node failover.</li>
+     * <li><strong>rds_apsaradb_ha</strong>: switch of primary and secondary nodes.</li>
      * <li><strong>rds_apsaradb_transfer</strong>: instance migration.</li>
-     * <li><strong>rds_apsaradb_upgrade</strong>: minor engine version update.</li>
+     * <li><strong>rds_apsaradb_upgrade</strong>: minor version update.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

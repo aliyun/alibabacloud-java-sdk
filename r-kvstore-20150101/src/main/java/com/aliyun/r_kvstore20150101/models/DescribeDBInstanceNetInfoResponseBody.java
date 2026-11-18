@@ -7,8 +7,8 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><strong>CLASSIC</strong>: classic network.</li>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+     * <li><strong>CLASSIC</strong>: Classic network.</li>
+     * <li><strong>VPC</strong>: VPC.</li>
      * </ul>
      * 
      * <strong>example:</strong>

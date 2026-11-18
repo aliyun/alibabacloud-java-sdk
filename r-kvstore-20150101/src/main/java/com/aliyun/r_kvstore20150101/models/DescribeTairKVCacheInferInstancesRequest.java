@@ -18,10 +18,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The expiration status of the instance. Valid values:</p>
+     * <p>Specifies whether the instance has expired. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Expired.</li>
-     * <li><strong>false</strong>: Not expired.</li>
+     * <li><strong>true</strong>: The instance has expired.</li>
+     * <li><strong>false</strong>: The instance has not expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     /**
      * <p>The IDs of the instances to query.</p>
      * <blockquote>
-     * <p>If you specify multiple instance IDs, separate them with commas (,). You can specify up to 30 instance IDs in a single request.</p>
+     * <p>Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs in a single request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The instance status. Valid values:</p>
+     * <p>The status of the instance. Valid values:</p>
      * <ul>
      * <li><strong>Normal</strong>: Normal.</li>
      * <li><strong>Creating</strong>: Creating.</li>
@@ -70,7 +70,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: Virtual Private Cloud (VPC). This is the default value.</li>
+     * <li><strong>VPC</strong>: VPC. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p><strong>[Deprecated]</strong> The private IP address of the VPC.</p>
+     * <p>The private IP address in the VPC. <strong>[Deprecated]</strong> This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.49.***</p>
@@ -138,7 +138,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The search keyword. You can use this parameter to perform a fuzzy search by instance name or instance ID.</p>
+     * <p>The keyword for fuzzy search by instance name or instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>apitest</p>

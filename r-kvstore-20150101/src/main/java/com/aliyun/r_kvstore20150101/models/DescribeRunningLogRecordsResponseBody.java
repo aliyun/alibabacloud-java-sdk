@@ -62,7 +62,8 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query. The time is in the YYYY-MM-DDTHH:mmZ format and is in UTC.</p>
+     * <p>The start time of the query.</p>
+     * <p>The time is in the YYYY-MM-DDTHH:mmZ format and is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-12-03T07:01Z</p>

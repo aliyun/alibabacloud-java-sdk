@@ -14,10 +14,10 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The reason for locking the instance.</p>
+     * <p>The reason for the lock.</p>
      * 
      * <strong>example:</strong>
-     * <p>Lock write operation test</p>
+     * <p>Write operation lock test</p>
      */
     @NameInMap("LockReason")
     public String lockReason;

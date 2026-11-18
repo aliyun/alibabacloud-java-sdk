@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceAutoUpgradeRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+     * <p>The ID of the instance. You can call the DescribeDBInstances operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class ModifyDBInstanceAutoUpgradeRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The automatic minor engine version update switch. Valid values:</p>
+     * <p>The automatic minor version upgrade switch. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: Enabled.</li>
      * <li><strong>0</strong>: Disabled.</li>

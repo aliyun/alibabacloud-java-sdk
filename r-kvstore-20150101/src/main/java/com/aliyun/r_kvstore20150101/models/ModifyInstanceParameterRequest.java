@@ -21,9 +21,9 @@ public class ModifyInstanceParameterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The parameter template ID.</p>
+     * <p>The ID of the parameter template.</p>
      * <blockquote>
-     * <p>You can call the DescribeParameterGroups operation to query the list of parameter templates in the target region, including parameter template IDs.</p>
+     * <p>You can call the DescribeParameterGroups operation to query the parameter templates in the target region, including the parameter template IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

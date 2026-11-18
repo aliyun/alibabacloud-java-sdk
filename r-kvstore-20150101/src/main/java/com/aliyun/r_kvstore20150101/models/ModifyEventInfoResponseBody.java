@@ -14,7 +14,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error event IDs.</p>
+     * <p>The error event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12343</p>
@@ -41,7 +41,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
     public Integer successCount;
 
     /**
-     * <p>The success event IDs.</p>
+     * <p>The success event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>234221</p>

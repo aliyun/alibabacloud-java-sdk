@@ -36,7 +36,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The internal network connection endpoint of the Redis instance.</p>
+     * <p>The internal endpoint of the Redis instance.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx**.redis.rds.aliyuncs.com</p>
@@ -108,7 +108,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public Long QPS;
 
     /**
-     * <p>The region where the instance is deployed.</p>
+     * <p>The region ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hongkong</p>
@@ -126,7 +126,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task flow executed for creation.</p>
+     * <p>The ID of the creation task flow.</p>
      * 
      * <strong>example:</strong>
      * <p>1111</p>
@@ -135,7 +135,7 @@ public class CreateTairSkvDdbWorkspaceResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The ID of the zone where the instance is deployed.</p>
+     * <p>The zone ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInspectionTaskReportRequest extends TeaModel {
     /**
-     * <p>The ID of the inspection instance.</p>
+     * <p>The inspection instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp19f4f6994813xxx</p>
@@ -22,6 +22,21 @@ public class DescribeInspectionTaskReportRequest extends TeaModel {
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    /**
+     * <p>The summary of risk levels for inspection results. You can specify multiple values. Valid values:</p>
+     * <ul>
+     * <li>Normal: normal</li>
+     * <li>Warning: warning</li>
+     * <li>Error: high-risk</li>
+     * <li>Failed: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Error,Warning</p>
+     */
+    @NameInMap("LevelSummary")
+    public String levelSummary;
 
     @NameInMap("SecurityToken")
     public String securityToken;
@@ -55,6 +70,14 @@ public class DescribeInspectionTaskReportRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInspectionTaskReportRequest setLevelSummary(String levelSummary) {
+        this.levelSummary = levelSummary;
+        return this;
+    }
+    public String getLevelSummary() {
+        return this.levelSummary;
     }
 
     public DescribeInspectionTaskReportRequest setSecurityToken(String securityToken) {

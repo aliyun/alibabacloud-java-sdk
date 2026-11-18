@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInspectionScheduleReportsRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +13,21 @@ public class DescribeInspectionScheduleReportsRequest extends TeaModel {
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    /**
+     * <p>The summary of risk levels in the inspection results. You can specify multiple values. Valid values:</p>
+     * <ul>
+     * <li>Normal: Normal.</li>
+     * <li>Warning: Alert.</li>
+     * <li>Error: High-risk.</li>
+     * <li>Failed: Failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Error</p>
+     */
+    @NameInMap("LevelSummary")
+    public String levelSummary;
 
     /**
      * <p>The page number. Default value: 1.</p>
@@ -55,6 +70,14 @@ public class DescribeInspectionScheduleReportsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInspectionScheduleReportsRequest setLevelSummary(String levelSummary) {
+        this.levelSummary = levelSummary;
+        return this;
+    }
+    public String getLevelSummary() {
+        return this.levelSummary;
     }
 
     public DescribeInspectionScheduleReportsRequest setPageNum(Long pageNum) {
