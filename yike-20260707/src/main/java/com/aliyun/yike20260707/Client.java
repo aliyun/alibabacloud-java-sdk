@@ -365,6 +365,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</li>
+     * <li>The <code>FileExt</code> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</li>
+     * <li>The <code>FileType</code> parameter is optional and defaults to <code>Media</code>. It affects the path segment in the returned <code>ObjectKey</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates OSS upload credentials for client-side direct upload without registering media assets or creating media asset records.</p>
+     * 
+     * @param request CreateOssUploadRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateOssUploadResponse
+     */
+    public CreateOssUploadResponse createOssUploadWithOptions(CreateOssUploadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizConfig)) {
+            query.put("BizConfig", request.bizConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialType)) {
+            query.put("CredentialType", request.credentialType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileExt)) {
+            query.put("FileExt", request.fileExt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            query.put("FileType", request.fileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetBucket)) {
+            query.put("TargetBucket", request.targetBucket);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateOssUpload"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOssUploadResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</li>
+     * <li>The <code>FileExt</code> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</li>
+     * <li>The <code>FileType</code> parameter is optional and defaults to <code>Media</code>. It affects the path segment in the returned <code>ObjectKey</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates OSS upload credentials for client-side direct upload without registering media assets or creating media asset records.</p>
+     * 
+     * @param request CreateOssUploadRequest
+     * @return CreateOssUploadResponse
+     */
+    public CreateOssUploadResponse createOssUpload(CreateOssUploadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createOssUploadWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Creates a project in a specified workspace and returns the project ID. If WorkspaceId is not specified, the default workspace of the current account is used. After the project is created, you can call GetProject to query the details or call ListProjects to list projects.</p>
      * 
      * <b>summary</b> : 
@@ -415,6 +491,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateProjectResponse createProject(CreateProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</li>
+     * <li>When creating a new media asset, the <code>FileInfo</code> and <code>MediaMetaData</code> parameters are required.</li>
+     * <li>When overwriting an existing media asset, you must set <code>Overwrite</code> to true and provide <code>MediaId</code>.</li>
+     * <li>You can specify the credential type by using <code>CredentialType</code>. The default value is STS_TOKEN.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates or overwrites a media asset for upload and obtains upload credentials.</p>
+     * 
+     * @param request CreateUploadMediaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateUploadMediaResponse
+     */
+    public CreateUploadMediaResponse createUploadMediaWithOptions(CreateUploadMediaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialType)) {
+            query.put("CredentialType", request.credentialType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            query.put("EntityId", request.entityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileInfo)) {
+            query.put("FileInfo", request.fileInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaMetaData)) {
+            query.put("MediaMetaData", request.mediaMetaData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overwrite)) {
+            query.put("Overwrite", request.overwrite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageLocation)) {
+            query.put("StorageLocation", request.storageLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateUploadMedia"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUploadMediaResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</li>
+     * <li>When creating a new media asset, the <code>FileInfo</code> and <code>MediaMetaData</code> parameters are required.</li>
+     * <li>When overwriting an existing media asset, you must set <code>Overwrite</code> to true and provide <code>MediaId</code>.</li>
+     * <li>You can specify the credential type by using <code>CredentialType</code>. The default value is STS_TOKEN.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates or overwrites a media asset for upload and obtains upload credentials.</p>
+     * 
+     * @param request CreateUploadMediaRequest
+     * @return CreateUploadMediaResponse
+     */
+    public CreateUploadMediaResponse createUploadMedia(CreateUploadMediaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createUploadMediaWithOptions(request, runtime);
     }
 
     /**
@@ -1810,6 +1980,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInfiniteCanvasesResponse listInfiniteCanvases(ListInfiniteCanvasesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInfiniteCanvasesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation retrieves a list of all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
+     * <li>If <code>ProductionId</code> is not provided, the default project of the current account is used.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a paginated list of media folders in a specified project.</p>
+     * 
+     * @param request ListMediaFoldersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMediaFoldersResponse
+     */
+    public ListMediaFoldersResponse listMediaFoldersWithOptions(ListMediaFoldersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productionId)) {
+            query.put("ProductionId", request.productionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMediaFolders"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMediaFoldersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation retrieves a list of all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
+     * <li>If <code>ProductionId</code> is not provided, the default project of the current account is used.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a paginated list of media folders in a specified project.</p>
+     * 
+     * @param request ListMediaFoldersRequest
+     * @return ListMediaFoldersResponse
+     */
+    public ListMediaFoldersResponse listMediaFolders(ListMediaFoldersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMediaFoldersWithOptions(request, runtime);
     }
 
     /**
