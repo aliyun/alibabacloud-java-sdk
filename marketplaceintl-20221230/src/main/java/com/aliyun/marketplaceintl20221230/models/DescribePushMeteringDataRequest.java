@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class DescribePushMeteringDataRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>pushData123456</p>
      */
     @NameInMap("PushOrderBizId")
     public String pushOrderBizId;

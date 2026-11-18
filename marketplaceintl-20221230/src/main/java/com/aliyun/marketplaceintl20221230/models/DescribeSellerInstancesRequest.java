@@ -4,24 +4,12 @@ package com.aliyun.marketplaceintl20221230.models;
 import com.aliyun.tea.*;
 
 public class DescribeSellerInstancesRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>5000002763123</p>
-     */
     @NameInMap("InstanceId")
     public Long instanceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OPENED</p>
-     */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
@@ -32,10 +20,6 @@ public class DescribeSellerInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>5322460655123456</p>
-     */
     @NameInMap("UserId")
     public Long userId;
 

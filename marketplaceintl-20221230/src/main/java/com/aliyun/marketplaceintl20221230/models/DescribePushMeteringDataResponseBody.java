@@ -4,48 +4,24 @@ package com.aliyun.marketplaceintl20221230.models;
 import com.aliyun.tea.*;
 
 public class DescribePushMeteringDataResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>parameter \&quot;service\&quot; can not be blank.</p>
-     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("ForceFatal")
     public Boolean forceFatal;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Instance 5723f7ee-952d-411f-94f4-b942a550d9b8 does not exist.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>A6A33748-D573-593C-A3BC-593E33D68311</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribePushMeteringDataResponseBodyResult result;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -111,48 +87,24 @@ public class DescribePushMeteringDataResponseBody extends TeaModel {
     }
 
     public static class DescribePushMeteringDataResponseBodyResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2024-09-18T03:15:00Z</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5000002763123</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("IsPushBilling")
         public Boolean isPushBilling;
 
-        /**
-         * <strong>example:</strong>
-         * <p>sgcmgj0003XXXX-Period-1</p>
-         */
         @NameInMap("MeteringAssist")
         public String meteringAssist;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{&quot;Frequency&quot;:1}</p>
-         */
         @NameInMap("MeteringEntity")
         public String meteringEntity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>pushData123456</p>
-         */
         @NameInMap("PushOrderBizId")
         public String pushOrderBizId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-01-09T02:04:58Z</p>
-         */
         @NameInMap("StartTime")
         public Long startTime;
 

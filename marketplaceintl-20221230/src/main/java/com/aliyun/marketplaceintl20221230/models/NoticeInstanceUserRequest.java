@@ -4,20 +4,12 @@ package com.aliyun.marketplaceintl20221230.models;
 import com.aliyun.tea.*;
 
 public class NoticeInstanceUserRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>5000000264872</p>
-     */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     @NameInMap("NoticeParam")
     public String noticeParam;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("NoticeType")
     public Long noticeType;
 

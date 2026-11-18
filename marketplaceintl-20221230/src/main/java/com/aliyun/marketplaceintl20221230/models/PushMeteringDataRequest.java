@@ -4,12 +4,11 @@ package com.aliyun.marketplaceintl20221230.models;
 import com.aliyun.tea.*;
 
 public class PushMeteringDataRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>2023-01-11 10:31:00</p>
-     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
+
+    @NameInMap("Metering")
+    public String metering;
 
     @NameInMap("MeteringData")
     public java.util.List<PushMeteringDataRequestMeteringData> meteringData;
@@ -27,6 +26,14 @@ public class PushMeteringDataRequest extends TeaModel {
         return this.gmtCreate;
     }
 
+    public PushMeteringDataRequest setMetering(String metering) {
+        this.metering = metering;
+        return this;
+    }
+    public String getMetering() {
+        return this.metering;
+    }
+
     public PushMeteringDataRequest setMeteringData(java.util.List<PushMeteringDataRequestMeteringData> meteringData) {
         this.meteringData = meteringData;
         return this;
@@ -36,31 +43,15 @@ public class PushMeteringDataRequest extends TeaModel {
     }
 
     public static class PushMeteringDataRequestMeteringData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1666854480406</p>
-         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>gtm-cn-20p314k5h05</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test001</p>
-         */
         @NameInMap("MeteringAssist")
         public String meteringAssist;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{&quot;VirtualCpu&quot;:10}</p>
-         */
         @NameInMap("MeteringEntity")
         public String meteringEntity;
 
@@ -71,10 +62,6 @@ public class PushMeteringDataRequest extends TeaModel {
         @NameInMap("PushOrderBizId")
         public String pushOrderBizId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1662284820000</p>
-         */
         @NameInMap("StartTime")
         public Long startTime;
 
