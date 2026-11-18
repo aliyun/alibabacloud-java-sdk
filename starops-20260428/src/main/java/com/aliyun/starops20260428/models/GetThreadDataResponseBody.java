@@ -32,7 +32,7 @@ public class GetThreadDataResponseBody extends TeaModel {
      * <p>The token to retrieve the next page of results. If this parameter is not returned, there are no more results.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxxxxx</p>
+     * <p>aKUAyTHGXpEZRpRTd3OQd4HvmpjgPV****uAYTHgXPeZR5RTD32qDQhVMP-GpvJZ</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

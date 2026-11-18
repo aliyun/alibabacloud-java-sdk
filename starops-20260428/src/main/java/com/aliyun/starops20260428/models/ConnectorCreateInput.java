@@ -12,7 +12,7 @@ public class ConnectorCreateInput extends TeaModel {
     public ConnectorAuthenticationInput authentication;
 
     /**
-     * <p>The list of capabilities granted to the connector.</p>
+     * <p>The list of capabilities granted to the Connector.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("capabilityGrants")
@@ -68,13 +68,13 @@ public class ConnectorCreateInput extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Specifies whether to enable the connector after creation.</p>
+     * <p>Specifies whether to enable the Connector after creation.</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
-     * <p>The execution policy for the connector.</p>
+     * <p>The execution policy of the Connector.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("policy")
@@ -91,7 +91,7 @@ public class ConnectorCreateInput extends TeaModel {
     public String provider;
 
     /**
-     * <p>The runtime configuration for the connector.</p>
+     * <p>The runtime configuration of the Connector.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("runtime")

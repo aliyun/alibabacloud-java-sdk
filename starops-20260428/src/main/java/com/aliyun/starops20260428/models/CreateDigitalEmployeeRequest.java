@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDigitalEmployeeRequest extends TeaModel {
     /**
-     * <p>The digital employee properties.</p>
+     * <p>The attributes of the digital employee.</p>
      */
     @NameInMap("attributes")
     public java.util.Map<String, String> attributes;
@@ -63,7 +63,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ae******ey</p>
@@ -72,7 +72,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The RAM role ARN.</p>
+     * <p>The ARN of the RAM role.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>The sandbox network ACL policy configuration of the digital employee.</p>
+     * <p>The sandbox network ACL policy configuration for the digital employee.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
@@ -208,7 +208,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     public static class CreateDigitalEmployeeRequestKnowledgesBailian extends TeaModel {
         /**
-         * <p>The knowledge base properties.</p>
+         * <p>The attributes of the knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -217,7 +217,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public String attributes;
 
         /**
-         * <p>The Bailian index ID.</p>
+         * <p>The ID of the Bailian index.</p>
          * 
          * <strong>example:</strong>
          * <p>index-xxxx</p>
@@ -235,7 +235,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The Bailian workspace ID.</p>
+         * <p>The ID of the Bailian workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>llm-xxxxx</p>
@@ -320,7 +320,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     public static class CreateDigitalEmployeeRequestSandboxNetworkPolicy extends TeaModel {
         /**
-         * <p>The list of allowed CIDRs or IP addresses.</p>
+         * <p>The list of allowed CIDR blocks or IP addresses.</p>
          */
         @NameInMap("allowCidrs")
         public java.util.List<String> allowCidrs;
@@ -382,7 +382,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public java.util.List<String> actions;
 
         /**
-         * <p>The Aliyun OpenAPI version that this statement applies to.</p>
+         * <p>The Aliyun OpenAPI version corresponding to this statement.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-30</p>
@@ -392,7 +392,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public String apiVersion;
 
         /**
-         * <p>The execution policy when the API is matched.</p>
+         * <p>The execution policy after the API is matched.</p>
          * 
          * <strong>example:</strong>
          * <p>user_ack</p>
@@ -401,7 +401,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public String decision;
 
         /**
-         * <p>The Aliyun OpenAPI product name that this statement applies to.</p>
+         * <p>The Aliyun OpenAPI product name corresponding to this statement.</p>
          * 
          * <strong>example:</strong>
          * <p>Sls</p>
@@ -451,7 +451,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     public static class CreateDigitalEmployeeRequestToolPolicyAliyun extends TeaModel {
         /**
-         * <p>The RAM actions that are automatically allowed. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
+         * <p>The auto-passed RAM actions. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -460,7 +460,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public java.util.List<String> autoPassPolicy;
 
         /**
-         * <p>The RAM actions that are denied. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
+         * <p>The denied RAM actions. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -478,7 +478,7 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p><strong>[Deprecated]</strong> Use denyPolicy and autoPassPolicy instead. This field is still returned during the transition period. Original description: The list of Aliyun OpenAPI tool policy statements.</p>
+         * <p><strong>[Deprecated]</strong> Use denyPolicy and autoPassPolicy instead. This field is still read during the transition period. Original description: The list of Aliyun OpenAPI tool policy statements.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
@@ -527,6 +527,31 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
 
     }
 
+    public static class CreateDigitalEmployeeRequestToolPolicyGlobal extends TeaModel {
+        /**
+         * <p>The array of auto-pass policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;fullCommand&quot;:&quot;starops tool list&quot;},{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;commandPrefix&quot;:[&quot;starops sls&quot;]}]</p>
+         */
+        @NameInMap("autoPassPolicy")
+        public java.util.List<AutoPassPolicy> autoPassPolicy;
+
+        public static CreateDigitalEmployeeRequestToolPolicyGlobal build(java.util.Map<String, ?> map) throws Exception {
+            CreateDigitalEmployeeRequestToolPolicyGlobal self = new CreateDigitalEmployeeRequestToolPolicyGlobal();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicyGlobal setAutoPassPolicy(java.util.List<AutoPassPolicy> autoPassPolicy) {
+            this.autoPassPolicy = autoPassPolicy;
+            return this;
+        }
+        public java.util.List<AutoPassPolicy> getAutoPassPolicy() {
+            return this.autoPassPolicy;
+        }
+
+    }
+
     public static class CreateDigitalEmployeeRequestToolPolicy extends TeaModel {
         /**
          * <p>The security policy configuration for Aliyun CLI tool invocation.</p>
@@ -536,6 +561,18 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
          */
         @NameInMap("aliyun")
         public CreateDigitalEmployeeRequestToolPolicyAliyun aliyun;
+
+        /**
+         * <p>The global auto-pass rules for tool invocation.</p>
+         */
+        @NameInMap("global")
+        public CreateDigitalEmployeeRequestToolPolicyGlobal global;
+
+        /**
+         * <p>The hook configuration.</p>
+         */
+        @NameInMap("hooks")
+        public java.util.List<Hook> hooks;
 
         public static CreateDigitalEmployeeRequestToolPolicy build(java.util.Map<String, ?> map) throws Exception {
             CreateDigitalEmployeeRequestToolPolicy self = new CreateDigitalEmployeeRequestToolPolicy();
@@ -548,6 +585,22 @@ public class CreateDigitalEmployeeRequest extends TeaModel {
         }
         public CreateDigitalEmployeeRequestToolPolicyAliyun getAliyun() {
             return this.aliyun;
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicy setGlobal(CreateDigitalEmployeeRequestToolPolicyGlobal global) {
+            this.global = global;
+            return this;
+        }
+        public CreateDigitalEmployeeRequestToolPolicyGlobal getGlobal() {
+            return this.global;
+        }
+
+        public CreateDigitalEmployeeRequestToolPolicy setHooks(java.util.List<Hook> hooks) {
+            this.hooks = hooks;
+            return this;
+        }
+        public java.util.List<Hook> getHooks() {
+            return this.hooks;
         }
 
     }

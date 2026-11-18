@@ -12,7 +12,7 @@ public class ConnectorInfo extends TeaModel {
     public ConnectorAuthentication authentication;
 
     /**
-     * <p>The list of capabilities granted to the Connector.</p>
+     * <p>The list of capabilities granted to the connector.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("capabilityGrants")
@@ -68,7 +68,7 @@ public class ConnectorInfo extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Specifies whether the Connector is enabled.</p>
+     * <p>Specifies whether the connector is enabled.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("enabled")
@@ -95,7 +95,7 @@ public class ConnectorInfo extends TeaModel {
     public String name;
 
     /**
-     * <p>The execution policy of the Connector.</p>
+     * <p>The execution policy of the connector.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("policy")
@@ -122,7 +122,7 @@ public class ConnectorInfo extends TeaModel {
     public Long revision;
 
     /**
-     * <p>The runtime configuration of the Connector.</p>
+     * <p>The runtime configuration of the connector.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("runtime")

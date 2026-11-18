@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class ConnectorRuntime extends TeaModel {
     /**
+     * <p>The native client capability referenced by the SATELLITE runtime. This parameter is mutually exclusive with extensionName.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bash</p>
+     */
+    @NameInMap("capabilityId")
+    public String capabilityId;
+
+    /**
+     * <p>The environment agent extension name referenced by the SATELLITE runtime. This parameter is mutually exclusive with capabilityId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gitlab-corp</p>
+     */
+    @NameInMap("extensionName")
+    public String extensionName;
+
+    /**
      * <p>Runtime mode</p>
      * <p>This parameter is required.</p>
      * 
@@ -35,6 +53,22 @@ public class ConnectorRuntime extends TeaModel {
     public static ConnectorRuntime build(java.util.Map<String, ?> map) throws Exception {
         ConnectorRuntime self = new ConnectorRuntime();
         return TeaModel.build(map, self);
+    }
+
+    public ConnectorRuntime setCapabilityId(String capabilityId) {
+        this.capabilityId = capabilityId;
+        return this;
+    }
+    public String getCapabilityId() {
+        return this.capabilityId;
+    }
+
+    public ConnectorRuntime setExtensionName(String extensionName) {
+        this.extensionName = extensionName;
+        return this;
+    }
+    public String getExtensionName() {
+        return this.extensionName;
     }
 
     public ConnectorRuntime setMode(String mode) {

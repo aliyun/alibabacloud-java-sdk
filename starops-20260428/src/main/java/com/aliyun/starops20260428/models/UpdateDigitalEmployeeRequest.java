@@ -11,7 +11,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public java.util.Map<String, String> attributes;
 
     /**
-     * <p>The default rule of the digital employee.</p>
+     * <p>The default rules for the digital employee.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -38,7 +38,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The knowledge base list.</p>
+     * <p>The list of knowledge bases.</p>
      */
     @NameInMap("knowledges")
     public UpdateDigitalEmployeeRequestKnowledges knowledges;
@@ -53,7 +53,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>The list of CIDRs or IP addresses that are allowed to be accessed.</p>
+     * <p>The list of allowed CIDR blocks or IP addresses.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
@@ -62,7 +62,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public UpdateDigitalEmployeeRequestSandboxNetworkPolicy sandboxNetworkPolicy;
 
     /**
-     * <p>The security policy configuration for tool calling of the digital employee.</p>
+     * <p>The security policy configuration for tool calling by the digital employee.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
@@ -141,7 +141,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestKnowledgesBailian extends TeaModel {
         /**
-         * <p>The knowledge base attributes.</p>
+         * <p>The attributes of the knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -150,7 +150,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String attributes;
 
         /**
-         * <p>The Bailian index ID.</p>
+         * <p>The ID of the Model Studio index.</p>
          * 
          * <strong>example:</strong>
          * <p>index-xxxx</p>
@@ -168,7 +168,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The Bailian workspace ID.</p>
+         * <p>The ID of the Model Studio workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>llm-xxxx</p>
@@ -217,13 +217,13 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestKnowledges extends TeaModel {
         /**
-         * <p>The Bailian knowledge base list.</p>
+         * <p>The list of Model Studio knowledge bases.</p>
          */
         @NameInMap("bailian")
         public java.util.List<UpdateDigitalEmployeeRequestKnowledgesBailian> bailian;
 
         /**
-         * <p>The SOP knowledge base list.</p>
+         * <p>The list of SOP knowledge bases.</p>
          */
         @NameInMap("sop")
         public java.util.List<java.util.Map<String, ?>> sop;
@@ -253,13 +253,13 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestSandboxNetworkPolicy extends TeaModel {
         /**
-         * <p>The list of CIDRs or IP addresses that are allowed to be accessed.</p>
+         * <p>The list of allowed CIDR blocks or IP addresses.</p>
          */
         @NameInMap("allowCidrs")
         public java.util.List<String> allowCidrs;
 
         /**
-         * <p>The list of FQDNs that are allowed to be accessed.</p>
+         * <p>The list of allowed FQDNs.</p>
          */
         @NameInMap("allowFqdns")
         public java.util.List<String> allowFqdns;
@@ -325,12 +325,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String apiVersion;
 
         /**
-         * <p>The execution policy. Valid values:</p>
-         * <ul>
-         * <li>allow: Allowed.</li>
-         * <li>deny: Denied.</li>
-         * <li>user_ack: Requires user confirmation before execution.</li>
-         * </ul>
+         * <p>The execution policy.</p>
          * 
          * <strong>example:</strong>
          * <p>user_ack</p>
@@ -339,7 +334,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String decision;
 
         /**
-         * <p>The cloud service code.</p>
+         * <p>The code of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>Cms</p>
@@ -389,7 +384,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestToolPolicyAliyun extends TeaModel {
         /**
-         * <p>The list of auto-approved RAM actions in the format of <em>, product:ApiName, or product:Prefix</em>.</p>
+         * <p>The list of auto-approved RAM actions. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -398,7 +393,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public java.util.List<String> autoPassPolicy;
 
         /**
-         * <p>The list of denied RAM actions in the format of <em>, product:ApiName, or product:Prefix</em>.</p>
+         * <p>The list of denied RAM actions. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -465,6 +460,31 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     }
 
+    public static class UpdateDigitalEmployeeRequestToolPolicyGlobal extends TeaModel {
+        /**
+         * <p>The array of auto-approval policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;fullCommand&quot;:&quot;starops tool list&quot;},{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;commandPrefix&quot;:[&quot;starops sls&quot;]}]</p>
+         */
+        @NameInMap("autoPassPolicy")
+        public java.util.List<AutoPassPolicy> autoPassPolicy;
+
+        public static UpdateDigitalEmployeeRequestToolPolicyGlobal build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDigitalEmployeeRequestToolPolicyGlobal self = new UpdateDigitalEmployeeRequestToolPolicyGlobal();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateDigitalEmployeeRequestToolPolicyGlobal setAutoPassPolicy(java.util.List<AutoPassPolicy> autoPassPolicy) {
+            this.autoPassPolicy = autoPassPolicy;
+            return this;
+        }
+        public java.util.List<AutoPassPolicy> getAutoPassPolicy() {
+            return this.autoPassPolicy;
+        }
+
+    }
+
     public static class UpdateDigitalEmployeeRequestToolPolicy extends TeaModel {
         /**
          * <p>The security policy configuration for Aliyun CLI tool calling.</p>
@@ -474,6 +494,18 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
          */
         @NameInMap("aliyun")
         public UpdateDigitalEmployeeRequestToolPolicyAliyun aliyun;
+
+        /**
+         * <p>The global auto-approval rules for tool calling.</p>
+         */
+        @NameInMap("global")
+        public UpdateDigitalEmployeeRequestToolPolicyGlobal global;
+
+        /**
+         * <p>The hook configuration.</p>
+         */
+        @NameInMap("hooks")
+        public java.util.List<Hook> hooks;
 
         public static UpdateDigitalEmployeeRequestToolPolicy build(java.util.Map<String, ?> map) throws Exception {
             UpdateDigitalEmployeeRequestToolPolicy self = new UpdateDigitalEmployeeRequestToolPolicy();
@@ -486,6 +518,22 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         }
         public UpdateDigitalEmployeeRequestToolPolicyAliyun getAliyun() {
             return this.aliyun;
+        }
+
+        public UpdateDigitalEmployeeRequestToolPolicy setGlobal(UpdateDigitalEmployeeRequestToolPolicyGlobal global) {
+            this.global = global;
+            return this;
+        }
+        public UpdateDigitalEmployeeRequestToolPolicyGlobal getGlobal() {
+            return this.global;
+        }
+
+        public UpdateDigitalEmployeeRequestToolPolicy setHooks(java.util.List<Hook> hooks) {
+            this.hooks = hooks;
+            return this;
+        }
+        public java.util.List<Hook> getHooks() {
+            return this.hooks;
         }
 
     }
