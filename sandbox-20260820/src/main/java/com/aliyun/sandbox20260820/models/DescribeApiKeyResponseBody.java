@@ -14,7 +14,7 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     public ApiKey apiKey;
 
     /**
-     * <p>The response code. A value of 200 indicates success.</p>
+     * <p>The response code. The value is 200 when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -35,7 +35,7 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     public java.util.List<IPConfig> ipWhitelist;
 
     /**
-     * <p>The response message. The value is success for a successful request.</p>
+     * <p>The response message. The value is success when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

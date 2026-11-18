@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateRuntimeConfig extends TeaModel {
     /**
-     * <p>The CPU specification of the sandboxed container instance, in cores.</p>
+     * <p>The CPU specifications of the sandbox instance, in cores.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class CreateTemplateRuntimeConfig extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The disk specification of the sandboxed container instance, in MB.</p>
+     * <p>The disk specifications of the sandbox instance, in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -23,19 +23,19 @@ public class CreateTemplateRuntimeConfig extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>Specifies whether the sandboxed container instance is allowed to access the Internet.</p>
+     * <p>Specifies whether the sandbox instance is allowed to access the Internet.</p>
      */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
     /**
-     * <p>The log delivery configuration of the sandboxed container instance.</p>
+     * <p>The log delivery configuration of the sandbox instance.</p>
      */
     @NameInMap("logConfig")
     public CreateTemplateLogConfig logConfig;
 
     /**
-     * <p>The memory specification of the sandboxed container instance, in MB.</p>
+     * <p>The memory specifications of the sandbox instance, in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -44,13 +44,22 @@ public class CreateTemplateRuntimeConfig extends TeaModel {
     public Integer memorySize;
 
     /**
-     * <p>The image and startup configuration of the sandboxed container instance.</p>
+     * <p>The image and startup configuration of the sandbox instance.</p>
      */
     @NameInMap("sandboxConfig")
     public CreateTemplateSandboxConfig sandboxConfig;
 
     /**
-     * <p>The VPC configuration of the sandboxed container instance.</p>
+     * <p>A non-empty array configures the set of source VPCs that are allowed to access the sandbox data endpoint. Omitting the field, setting it to null, or providing an empty array indicates that no inbound bindings are configured. This configuration is independent of the egress network vpcConfig and does not modify the API key source policy. A null value is treated as omitted to maintain compatibility with SDK requests where the field is not set. You can update or clear the list by calling UpdateTemplate. The changes take effect after a new version is successfully built, and existing sandboxes continue to use the original configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;vpc-examplea&quot;,&quot;vpc-exampleb&quot;]</p>
+     */
+    @NameInMap("vpcBindings")
+    public java.util.List<String> vpcBindings;
+
+    /**
+     * <p>The VPC configuration of the sandbox instance.</p>
      */
     @NameInMap("vpcConfig")
     public CreateTemplateVPCConfig vpcConfig;
@@ -106,6 +115,14 @@ public class CreateTemplateRuntimeConfig extends TeaModel {
     }
     public CreateTemplateSandboxConfig getSandboxConfig() {
         return this.sandboxConfig;
+    }
+
+    public CreateTemplateRuntimeConfig setVpcBindings(java.util.List<String> vpcBindings) {
+        this.vpcBindings = vpcBindings;
+        return this;
+    }
+    public java.util.List<String> getVpcBindings() {
+        return this.vpcBindings;
     }
 
     public CreateTemplateRuntimeConfig setVpcConfig(CreateTemplateVPCConfig vpcConfig) {

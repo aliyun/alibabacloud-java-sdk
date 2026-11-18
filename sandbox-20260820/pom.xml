@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>sandbox20260820</artifactId>
-  <version>1.2.4</version>
+  <version>1.3.0</version>
   <packaging>jar</packaging>
   <name>sandbox20260820</name>
   <description>Alibaba Cloud Sandbox (20260820) SDK for Java
@@ -179,7 +179,7 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.10.0</version>
+        <version>0.12.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>

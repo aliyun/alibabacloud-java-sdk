@@ -14,7 +14,7 @@ public class ListQuotaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The maximum number of entries returned per page. This field is returned only if a positive integer is specified for maxResults in the request.</p>
+     * <p>The maximum number of entries to return per page. This field is returned only if a positive integer is specified for maxResults in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListQuotaResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. The value is success if the request is successful.</p>
+     * <p>The response message. A value of success indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class ListQuotaResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page, which can be used in subsequent queries.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>qxGrXje86XMrYQ51aJMy</p>

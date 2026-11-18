@@ -14,7 +14,7 @@ public class PublicTemplate extends TeaModel {
     public String createdTime;
 
     /**
-     * <p>The name of the template, which is unique within a team.</p>
+     * <p>The template name, which is unique within a team.</p>
      * 
      * <strong>example:</strong>
      * <p>python-data-analysis</p>
@@ -38,7 +38,7 @@ public class PublicTemplate extends TeaModel {
     public java.util.List<PublicTemplateResourceTags> resourceTags;
 
     /**
-     * <p>The runtime configuration of the template, which determines the specifications and environment of the sandbox instances created from the template.</p>
+     * <p>The runtime configuration of the template, which determines the specifications and environment of sandbox instances created from this template.</p>
      */
     @NameInMap("runtimeConfig")
     public PublicTemplateRuntimeConfig runtimeConfig;
@@ -59,7 +59,7 @@ public class PublicTemplate extends TeaModel {
     public String teamID;
 
     /**
-     * <p>The name of the team.</p>
+     * <p>The team name.</p>
      * 
      * <strong>example:</strong>
      * <p>sandbox-dev</p>
@@ -68,13 +68,22 @@ public class PublicTemplate extends TeaModel {
     public String teamName;
 
     /**
-     * <p>The ID of the sandbox template.</p>
+     * <p>The sandbox template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tm-8f3a2c7b5e14d806</p>
      */
     @NameInMap("templateID")
     public String templateID;
+
+    /**
+     * <p>The templatetype. An empty value indicates a runtime template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>layer</p>
+     */
+    @NameInMap("templateType")
+    public String templateType;
 
     public static PublicTemplate build(java.util.Map<String, ?> map) throws Exception {
         PublicTemplate self = new PublicTemplate();
@@ -151,6 +160,14 @@ public class PublicTemplate extends TeaModel {
     }
     public String getTemplateID() {
         return this.templateID;
+    }
+
+    public PublicTemplate setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
     public static class PublicTemplateResourceTags extends TeaModel {

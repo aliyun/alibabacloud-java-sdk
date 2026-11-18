@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
     /**
-     * <p>The number of vCPUs.</p>
+     * <p>The number of vCPU cores.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The system cloud disk size, in MB.</p>
+     * <p>The system cloud disk size in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>512</p>
@@ -35,7 +35,7 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
     public PublicUpdateTemplateLogConfig logConfig;
 
     /**
-     * <p>The memory size, in MB.</p>
+     * <p>The memory size in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -48,6 +48,15 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
      */
     @NameInMap("sandboxConfig")
     public PublicUpdateTemplateSandboxConfig sandboxConfig;
+
+    /**
+     * <p>If omitted or set to null, the original list is retained. A non-empty array replaces the entire allowed set. An explicit empty array [] clears the inbound VPC restrictions for the new version. This field is independent of vpcConfig. An empty request body {}, an empty runtimeConfig, or a runtimeConfig that contains only vpcBindings: null returns a 400 error and does not clear the bindings. The actual JSON received by the server prevails. An empty array omitted by the SDK cannot clear the list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;vpc-examplea&quot;,&quot;vpc-exampleb&quot;]</p>
+     */
+    @NameInMap("vpcBindings")
+    public java.util.List<String> vpcBindings;
 
     /**
      * <p>The VPC network configuration.</p>
@@ -106,6 +115,14 @@ public class PublicUpdateTemplateRuntimeConfig extends TeaModel {
     }
     public PublicUpdateTemplateSandboxConfig getSandboxConfig() {
         return this.sandboxConfig;
+    }
+
+    public PublicUpdateTemplateRuntimeConfig setVpcBindings(java.util.List<String> vpcBindings) {
+        this.vpcBindings = vpcBindings;
+        return this;
+    }
+    public java.util.List<String> getVpcBindings() {
+        return this.vpcBindings;
     }
 
     public PublicUpdateTemplateRuntimeConfig setVpcConfig(PublicUpdateTemplateVPCConfig vpcConfig) {

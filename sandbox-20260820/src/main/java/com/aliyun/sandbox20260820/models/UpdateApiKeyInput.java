@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyInput extends TeaModel {
     /**
-     * <p>The new name of the API key. The name can be up to 128 characters in length and can contain letters, digits, spaces, hyphens (-), underscores (_), and periods (.).</p>
+     * <p>The new name of the API key. The name can be up to 128 characters in length and can contain only letters, digits, spaces, hyphens (-), underscores (_), and periods (.).</p>
      * 
      * <strong>example:</strong>
      * <p>ci-pipeline-key-v2</p>
@@ -14,7 +14,7 @@ public class UpdateApiKeyInput extends TeaModel {
     public String apiKeyName;
 
     /**
-     * <p>The expiration time of the API key, in UTC, in RFC 3339 format. Leave this parameter empty to indicate that the API key never expires.</p>
+     * <p>The expiration time of the API key in UTC. The time must be in RFC 3339 format. An empty value indicates that the API key never expires.</p>
      * 
      * <strong>example:</strong>
      * <p>2099-12-31T23:59:59Z</p>
@@ -23,13 +23,19 @@ public class UpdateApiKeyInput extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>The IP blacklist. If specified, the existing blacklist is entirely overwritten. This parameter is mutually exclusive with ipWhitelist.</p>
+     * <p>The IP address blacklist. If you specify this parameter, the existing blacklist is completely overwritten. This parameter is mutually exclusive with ipWhitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ipAddress&quot;:&quot;192.0.2.1&quot;,&quot;description&quot;:&quot;example client&quot;}]</p>
      */
     @NameInMap("ipBlacklist")
     public java.util.List<IPConfig> ipBlacklist;
 
     /**
-     * <p>The IP whitelist. If specified, the existing whitelist is entirely overwritten. This parameter is mutually exclusive with ipBlacklist.</p>
+     * <p>The IP address whitelist. If you specify this parameter, the existing whitelist is completely overwritten. This parameter is mutually exclusive with ipBlacklist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ipAddress&quot;:&quot;192.0.2.1&quot;,&quot;description&quot;:&quot;example client&quot;}]</p>
      */
     @NameInMap("ipWhitelist")
     public java.util.List<IPConfig> ipWhitelist;
@@ -46,6 +52,15 @@ public class UpdateApiKeyInput extends TeaModel {
      */
     @NameInMap("status")
     public String status;
+
+    /**
+     * <p>The set of allowed source VPC IDs. This set is updated independently of the IP blacklists and whitelists. If you omit this parameter or set it to null, the original set is retained. A non-empty array completely replaces the original set. An explicit empty array [] purges the VPC restrictions. Updating only this parameter does not affect the IP address lists, and updating the IP address lists does not affect the VPC restrictions. An empty request body {} purges all IP address and VPC source restrictions. You can update this parameter along with other parameters such as the name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;vpc-examplea&quot;,&quot;vpc-exampleb&quot;]</p>
+     */
+    @NameInMap("vpcBindings")
+    public java.util.List<String> vpcBindings;
 
     public static UpdateApiKeyInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateApiKeyInput self = new UpdateApiKeyInput();
@@ -90,6 +105,14 @@ public class UpdateApiKeyInput extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public UpdateApiKeyInput setVpcBindings(java.util.List<String> vpcBindings) {
+        this.vpcBindings = vpcBindings;
+        return this;
+    }
+    public java.util.List<String> getVpcBindings() {
+        return this.vpcBindings;
     }
 
 }

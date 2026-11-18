@@ -8,7 +8,7 @@ public class PublicUpdateTemplateRegistryAuthConfig extends TeaModel {
      * <p>The repository password.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>Demo****Pass</p>
      */
     @NameInMap("password")
     public String password;

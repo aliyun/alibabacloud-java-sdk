@@ -73,6 +73,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a custom domain name.</p>
+     * 
+     * @param request CreateCustomDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCustomDomainResponse
+     */
+    public CreateCustomDomainResponse createCustomDomainWithOptions(CreateCustomDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCustomDomain"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/custom-domains"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom domain name.</p>
+     * 
+     * @param request CreateCustomDomainRequest
+     * @return CreateCustomDomainResponse
+     */
+    public CreateCustomDomainResponse createCustomDomain(CreateCustomDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createCustomDomainWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a team.</p>
      * 
      * @param request CreateTeamRequest
@@ -114,6 +156,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a template. If runtimeConfig.vpcBindings is null, it is treated as omitted. Inbound bindings are independent of the egress vpcConfig and API key source policy.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a template.</p>
      * 
@@ -143,6 +188,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a template. If runtimeConfig.vpcBindings is null, it is treated as omitted. Inbound bindings are independent of the egress vpcConfig and API key source policy.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a template.</p>
      * 
@@ -241,6 +289,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a warm pool.</p>
+     * 
+     * @param request CreateWarmPoolRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWarmPoolResponse
+     */
+    public CreateWarmPoolResponse createWarmPoolWithOptions(String teamID, CreateWarmPoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWarmPool"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/teams/" + com.aliyun.openapiutil.Client.getEncodeParam(teamID) + "/warmPools"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWarmPoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a warm pool.</p>
+     * 
+     * @param request CreateWarmPoolRequest
+     * @return CreateWarmPoolResponse
+     */
+    public CreateWarmPoolResponse createWarmPool(String teamID, CreateWarmPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createWarmPoolWithOptions(teamID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a specified API key.</p>
      * 
      * @param request DeleteApiKeyRequest
@@ -278,6 +368,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteApiKeyWithOptions(apiKeyID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a custom domain name.</p>
+     * 
+     * @param request DeleteCustomDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomDomainResponse
+     */
+    public DeleteCustomDomainResponse deleteCustomDomainWithOptions(String domainName, DeleteCustomDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomDomain"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(domainName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a custom domain name.</p>
+     * 
+     * @param request DeleteCustomDomainRequest
+     * @return DeleteCustomDomainResponse
+     */
+    public DeleteCustomDomainResponse deleteCustomDomain(String domainName, DeleteCustomDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteCustomDomainWithOptions(domainName, request, headers, runtime);
     }
 
     /**
@@ -511,6 +642,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a warm-up pool.</p>
+     * 
+     * @param request DeleteWarmPoolRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWarmPoolResponse
+     */
+    public DeleteWarmPoolResponse deleteWarmPoolWithOptions(String teamID, String templateID, DeleteWarmPoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWarmPool"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/teams/" + com.aliyun.openapiutil.Client.getEncodeParam(teamID) + "/warmPools/" + com.aliyun.openapiutil.Client.getEncodeParam(templateID) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWarmPoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a warm-up pool.</p>
+     * 
+     * @param request DeleteWarmPoolRequest
+     * @return DeleteWarmPoolResponse
+     */
+    public DeleteWarmPoolResponse deleteWarmPool(String teamID, String templateID, DeleteWarmPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteWarmPoolWithOptions(teamID, templateID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of a specified API key.</p>
      * 
      * @param request DescribeApiKeyRequest
@@ -642,6 +814,278 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeTemplateCacheWithOptions(templateID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the warm pool.</p>
+     * 
+     * @param request DescribeWarmPoolRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWarmPoolResponse
+     */
+    public DescribeWarmPoolResponse describeWarmPoolWithOptions(String teamID, String templateID, DescribeWarmPoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWarmPool"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/teams/" + com.aliyun.openapiutil.Client.getEncodeParam(teamID) + "/warmPools/" + com.aliyun.openapiutil.Client.getEncodeParam(templateID) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWarmPoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the warm pool.</p>
+     * 
+     * @param request DescribeWarmPoolRequest
+     * @return DescribeWarmPoolResponse
+     */
+    public DescribeWarmPoolResponse describeWarmPool(String teamID, String templateID, DescribeWarmPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeWarmPoolWithOptions(teamID, templateID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries custom domain names.</p>
+     * 
+     * @param request GetCustomDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomDomainResponse
+     */
+    public GetCustomDomainResponse getCustomDomainWithOptions(String domainName, GetCustomDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomDomain"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(domainName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries custom domain names.</p>
+     * 
+     * @param request GetCustomDomainRequest
+     * @return GetCustomDomainResponse
+     */
+    public GetCustomDomainResponse getCustomDomain(String domainName, GetCustomDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCustomDomainWithOptions(domainName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Views monitoring metrics at a specific point in time or queries trends over a period of time. Supports querying by account, team, template, or sandbox.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries monitoring metrics.</p>
+     * 
+     * @param tmpReq GetMetricDataRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMetricDataResponse
+     */
+    public GetMetricDataResponse getMetricDataWithOptions(GetMetricDataRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetMetricDataShrinkRequest request = new GetMetricDataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.groupBy)) {
+            request.groupByShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.groupBy, "groupBy", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.metricNames)) {
+            request.metricNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metricNames, "metricNames", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupByShrink)) {
+            query.put("groupBy", request.groupByShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricNamesShrink)) {
+            query.put("metricNames", request.metricNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sandboxID)) {
+            query.put("sandboxID", request.sandboxID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sandboxPlan)) {
+            query.put("sandboxPlan", request.sandboxPlan);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.teamID)) {
+            query.put("teamID", request.teamID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateID)) {
+            query.put("templateID", request.templateID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.time)) {
+            query.put("time", request.time);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMetricData"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/metrics"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetricDataResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Views monitoring metrics at a specific point in time or queries trends over a period of time. Supports querying by account, team, template, or sandbox.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries monitoring metrics.</p>
+     * 
+     * @param request GetMetricDataRequest
+     * @return GetMetricDataResponse
+     */
+    public GetMetricDataResponse getMetricData(GetMetricDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMetricDataWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries resource usage.</p>
+     * 
+     * @param tmpReq GetResourceUsageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResourceUsageResponse
+     */
+    public GetResourceUsageResponse getResourceUsageWithOptions(GetResourceUsageRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetResourceUsageShrinkRequest request = new GetResourceUsageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.groupBy)) {
+            request.groupByShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.groupBy, "groupBy", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.usageNames)) {
+            request.usageNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.usageNames, "usageNames", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.granularity)) {
+            query.put("granularity", request.granularity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupByShrink)) {
+            query.put("groupBy", request.groupByShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sandboxPlan)) {
+            query.put("sandboxPlan", request.sandboxPlan);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.teamID)) {
+            query.put("teamID", request.teamID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateID)) {
+            query.put("templateID", request.templateID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usageNamesShrink)) {
+            query.put("usageNames", request.usageNamesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResourceUsage"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/resource-usage"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceUsageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries resource usage.</p>
+     * 
+     * @param request GetResourceUsageRequest
+     * @return GetResourceUsageResponse
+     */
+    public GetResourceUsageResponse getResourceUsage(GetResourceUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getResourceUsageWithOptions(request, headers, runtime);
     }
 
     /**
@@ -852,7 +1296,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query to retrieve the quota configuration list for the current account.</p>
+     * <p>Performs a paging query of custom domain names.</p>
+     * 
+     * @param request ListCustomDomainsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomDomainsResponse
+     */
+    public ListCustomDomainsResponse listCustomDomainsWithOptions(ListCustomDomainsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomDomains"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/custom-domains"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomDomainsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query of custom domain names.</p>
+     * 
+     * @param request ListCustomDomainsRequest
+     * @return ListCustomDomainsResponse
+     */
+    public ListCustomDomainsResponse listCustomDomains(ListCustomDomainsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listCustomDomainsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the quota configuration list for the current account by using paging.</p>
      * 
      * @param request ListQuotaRequest
      * @param headers map
@@ -890,7 +1385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query to retrieve the quota configuration list for the current account.</p>
+     * <p>Queries the quota configuration list for the current account by using paging.</p>
      * 
      * @param request ListQuotaRequest
      * @return ListQuotaResponse
@@ -966,7 +1461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on template caches with paging support.</p>
+     * <p>Queries template caches by paging.</p>
      * 
      * @param request ListTemplateCacheRequest
      * @param headers map
@@ -1016,7 +1511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on template caches with paging support.</p>
+     * <p>Queries template caches by paging.</p>
      * 
      * @param request ListTemplateCacheRequest
      * @return ListTemplateCacheResponse
@@ -1029,15 +1524,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the template list with paging.</p>
+     * <p>Performs a paging query to retrieve the template list.</p>
      * 
-     * @param request ListTemplatesRequest
+     * @param tmpReq ListTemplatesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTemplatesResponse
      */
-    public ListTemplatesResponse listTemplatesWithOptions(ListTemplatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListTemplatesResponse listTemplatesWithOptions(ListTemplatesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListTemplatesShrinkRequest request = new ListTemplatesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceTags)) {
+            request.resourceTagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceTags, "resourceTags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
@@ -1045,6 +1546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTagsShrink)) {
+            query.put("resourceTags", request.resourceTagsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.teamID)) {
@@ -1071,7 +1576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the template list with paging.</p>
+     * <p>Performs a paging query to retrieve the template list.</p>
      * 
      * @param request ListTemplatesRequest
      * @return ListTemplatesResponse
@@ -1084,7 +1589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of storage volumes by using paging.</p>
+     * <p>Queries a list of storage volumes by using paging.</p>
      * 
      * @param request ListVolumesRequest
      * @param headers map
@@ -1146,7 +1651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of storage volumes by using paging.</p>
+     * <p>Queries a list of storage volumes by using paging.</p>
      * 
      * @param request ListVolumesRequest
      * @return ListVolumesResponse
@@ -1158,6 +1663,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of warm pools.</p>
+     * 
+     * @param request ListWarmPoolsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWarmPoolsResponse
+     */
+    public ListWarmPoolsResponse listWarmPoolsWithOptions(String teamID, ListWarmPoolsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWarmPools"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/teams/" + com.aliyun.openapiutil.Client.getEncodeParam(teamID) + "/warmPools"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWarmPoolsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of warm pools.</p>
+     * 
+     * @param request ListWarmPoolsRequest
+     * @return ListWarmPoolsResponse
+     */
+    public ListWarmPoolsResponse listWarmPools(String teamID, ListWarmPoolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWarmPoolsWithOptions(teamID, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Rotates the credential value of an API key while retaining the original API key ID, IP address whitelist, IP address blacklist, and vpcBindings source policy. The apiKey field in the response returns the retained policy.</p>
+     * 
      * <b>summary</b> : 
      * <p>Resets a specified API key.</p>
      * 
@@ -1186,6 +1745,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Rotates the credential value of an API key while retaining the original API key ID, IP address whitelist, IP address blacklist, and vpcBindings source policy. The apiKey field in the response returns the retained policy.</p>
+     * 
      * <b>summary</b> : 
      * <p>Resets a specified API key.</p>
      * 
@@ -1199,6 +1761,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates an API key. IP blacklists and whitelists follow a paired replacement rule. If you commit a non-null array for one list and omit the other list or set it to null, the omitted list is cleared. If both lists are omitted or set to null, they are retained. The vpcBindings field is updated independently. If it is omitted or set to null, the current value is retained. A non-empty array replaces the current value, and an empty array [] clears it. Updates to IP addresses and VPCs do not clear each other. Source restrictions are retained if the source is null or if you update only other fields. An empty request body {} clears the IP address whitelist, IP blacklist, and VPC restrictions. You can also explicitly commit empty IP and VPC arrays to clear all source restrictions. To update the access policy, you must commit only the permissionPolicy and expectedPolicyVersion fields. Do not include other fields, including source fields with null values.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates the configuration of a specified API key.</p>
      * 
@@ -1228,6 +1793,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates an API key. IP blacklists and whitelists follow a paired replacement rule. If you commit a non-null array for one list and omit the other list or set it to null, the omitted list is cleared. If both lists are omitted or set to null, they are retained. The vpcBindings field is updated independently. If it is omitted or set to null, the current value is retained. A non-empty array replaces the current value, and an empty array [] clears it. Updates to IP addresses and VPCs do not clear each other. Source restrictions are retained if the source is null or if you update only other fields. An empty request body {} clears the IP address whitelist, IP blacklist, and VPC restrictions. You can also explicitly commit empty IP and VPC arrays to clear all source restrictions. To update the access policy, you must commit only the permissionPolicy and expectedPolicyVersion fields. Do not include other fields, including source fields with null values.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates the configuration of a specified API key.</p>
      * 
@@ -1238,6 +1806,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateApiKeyWithOptions(apiKeyID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a custom domain name.</p>
+     * 
+     * @param request UpdateCustomDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCustomDomainResponse
+     */
+    public UpdateCustomDomainResponse updateCustomDomainWithOptions(String domainName, UpdateCustomDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCustomDomain"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(domainName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a custom domain name.</p>
+     * 
+     * @param request UpdateCustomDomainRequest
+     * @return UpdateCustomDomainResponse
+     */
+    public UpdateCustomDomainResponse updateCustomDomain(String domainName, UpdateCustomDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateCustomDomainWithOptions(domainName, request, headers, runtime);
     }
 
     /**
@@ -1325,6 +1935,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a template. For runtimeConfig.vpcBindings, you can omit the field or set it to null to retain the current bindings, provide a non-empty array to replace the entire list, or provide an empty array [] to clear the list. The new list takes effect when the new version is successfully built. Existing sandboxes continue to use the original configuration. If the build fails, the original effective version is retained.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates a template.</p>
      * 
@@ -1360,6 +1973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a template. For runtimeConfig.vpcBindings, you can omit the field or set it to null to retain the current bindings, provide a non-empty array to replace the entire list, or provide an empty array [] to clear the list. The new list takes effect when the new version is successfully built. Existing sandboxes continue to use the original configuration. If the build fails, the original effective version is retained.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates a template.</p>
      * 
@@ -1418,5 +2034,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateVolumeWithOptions(volumeID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the capacity policy of a warm pool.</p>
+     * 
+     * @param request UpdateWarmPoolRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWarmPoolResponse
+     */
+    public UpdateWarmPoolResponse updateWarmPoolWithOptions(String teamID, String templateID, UpdateWarmPoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWarmPool"),
+            new TeaPair("version", "2026-08-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-08-20/teams/" + com.aliyun.openapiutil.Client.getEncodeParam(teamID) + "/warmPools/" + com.aliyun.openapiutil.Client.getEncodeParam(templateID) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWarmPoolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the capacity policy of a warm pool.</p>
+     * 
+     * @param request UpdateWarmPoolRequest
+     * @return UpdateWarmPoolResponse
+     */
+    public UpdateWarmPoolResponse updateWarmPool(String teamID, String templateID, UpdateWarmPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateWarmPoolWithOptions(teamID, templateID, request, headers, runtime);
     }
 }

@@ -32,13 +32,7 @@ public class ListVolumesRequest extends TeaModel {
     public String resourceGroupID;
 
     /**
-     * <p>Filters by storage volume status. Valid values:</p>
-     * <ul>
-     * <li>CREATING: The storage volume is being created.</li>
-     * <li>AVAILABLE: The storage volume is available.</li>
-     * <li>ERROR: The storage volume is in an error state.</li>
-     * <li>DELETING: The storage volume is being deleted.</li>
-     * </ul>
+     * <p>Filters storage volumes by status. Valid values: CREATING (creating), AVAILABLE (available), ERROR (error), and DELETING (deleting).</p>
      * 
      * <strong>example:</strong>
      * <p>CREATING</p>

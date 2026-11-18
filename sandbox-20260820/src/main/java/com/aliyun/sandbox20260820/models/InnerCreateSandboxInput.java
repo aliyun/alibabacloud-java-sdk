@@ -33,6 +33,9 @@ public class InnerCreateSandboxInput extends TeaModel {
 
     /**
      * <p>The environment variable configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;APP_MODE&quot;:&quot;demo&quot;}</p>
      */
     @NameInMap("envVars")
     public java.util.Map<String, String> envVars;
@@ -48,6 +51,12 @@ public class InnerCreateSandboxInput extends TeaModel {
      */
     @NameInMap("network")
     public E2BNetwork network;
+
+    /**
+     * <p>The resource tags.</p>
+     */
+    @NameInMap("resourceTags")
+    public java.util.List<InnerCreateSandboxInputResourceTags> resourceTags;
 
     /**
      * <p>The runtime configuration.</p>
@@ -101,7 +110,7 @@ public class InnerCreateSandboxInput extends TeaModel {
     public String templateID;
 
     /**
-     * <p>The timeout period, in seconds.</p>
+     * <p>The timeout period in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>180</p>
@@ -168,6 +177,14 @@ public class InnerCreateSandboxInput extends TeaModel {
         return this.network;
     }
 
+    public InnerCreateSandboxInput setResourceTags(java.util.List<InnerCreateSandboxInputResourceTags> resourceTags) {
+        this.resourceTags = resourceTags;
+        return this;
+    }
+    public java.util.List<InnerCreateSandboxInputResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
     public InnerCreateSandboxInput setRuntime(InnerSandboxRuntimeConfig runtime) {
         this.runtime = runtime;
         return this;
@@ -230,6 +247,48 @@ public class InnerCreateSandboxInput extends TeaModel {
     }
     public InnerCreateSandboxVolumeMounts getVolumeMounts() {
         return this.volumeMounts;
+    }
+
+    public static class InnerCreateSandboxInputResourceTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static InnerCreateSandboxInputResourceTags build(java.util.Map<String, ?> map) throws Exception {
+            InnerCreateSandboxInputResourceTags self = new InnerCreateSandboxInputResourceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public InnerCreateSandboxInputResourceTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public InnerCreateSandboxInputResourceTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

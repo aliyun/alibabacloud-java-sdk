@@ -32,7 +32,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The template name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-template</p>
@@ -71,7 +71,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public PublicTemplateRuntimeConfig runtimeConfig;
 
     /**
-     * <p>The status of the template.</p>
+     * <p>The template status.</p>
      */
     @NameInMap("status")
     public PublicTemplateStatus status;
@@ -86,7 +86,7 @@ public class GetTemplateResponseBody extends TeaModel {
     public String teamID;
 
     /**
-     * <p>The name of the team.</p>
+     * <p>The team name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-team</p>
@@ -102,6 +102,15 @@ public class GetTemplateResponseBody extends TeaModel {
      */
     @NameInMap("templateID")
     public String templateID;
+
+    /**
+     * <p>The templatetype. The default value is runtime template if it is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>layer</p>
+     */
+    @NameInMap("templateType")
+    public String templateType;
 
     public static GetTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTemplateResponseBody self = new GetTemplateResponseBody();
@@ -204,9 +213,17 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.templateID;
     }
 
+    public GetTemplateResponseBody setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
     public static class GetTemplateResponseBodyResourceTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>project</p>
@@ -215,7 +232,7 @@ public class GetTemplateResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>

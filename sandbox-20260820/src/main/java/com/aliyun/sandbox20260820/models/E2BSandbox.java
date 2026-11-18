@@ -14,7 +14,7 @@ public class E2BSandbox extends TeaModel {
     public String accessEndpoint;
 
     /**
-     * <p>Specifies whether the sandbox is allowed to access the external network.</p>
+     * <p>Specifies whether the sandbox is allowed to access the Internet.</p>
      */
     @NameInMap("allowInternetAccess")
     public Boolean allowInternetAccess;
@@ -57,12 +57,15 @@ public class E2BSandbox extends TeaModel {
 
     /**
      * <p>The environment variables.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;APP_MODE&quot;:&quot;demo&quot;}</p>
      */
     @NameInMap("envVars")
     public java.util.Map<String, String> envVars;
 
     /**
-     * <p>The authentication token for accessing the envd daemon process in the sandbox, in UUID format. This token is automatically generated only when secure is set to true.</p>
+     * <p>The authentication credential for accessing the envd daemon process in the sandbox in UUID format. This credential is automatically generated only when secure is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>4b1e9d07-****</p>
@@ -89,7 +92,7 @@ public class E2BSandbox extends TeaModel {
     public String fcInstanceID;
 
     /**
-     * <p>The Function Compute session ID of the sandbox, in UUID format. This ID is used to locate the underlying session when pausing, resuming, or deleting the sandbox.</p>
+     * <p>The Function Compute session ID of the sandbox in UUID format. This ID is used to locate the underlying session when pausing, resuming, or deleting the sandbox.</p>
      * 
      * <strong>example:</strong>
      * <p>3a7ecd09-****</p>
@@ -178,15 +181,15 @@ public class E2BSandbox extends TeaModel {
     /**
      * <p>The sandbox state. Valid values:</p>
      * <ul>
-     * <li>running: Running.</li>
-     * <li>pausing: Pausing.</li>
-     * <li>paused: Paused.</li>
-     * <li>resuming: Resuming.</li>
-     * <li>pause_fail: Pause failed.</li>
-     * <li>resume_fail: Resume failed.</li>
-     * <li>snapshotting: Snapshotting.</li>
-     * <li>snapshot_failed: Snapshot failed.</li>
-     * <li>terminated: Terminated.</li>
+     * <li>running: The sandbox is running.</li>
+     * <li>pausing: The sandbox is being paused.</li>
+     * <li>paused: The sandbox is paused.</li>
+     * <li>resuming: The sandbox is being resumed.</li>
+     * <li>pause_fail: The pause operation failed.</li>
+     * <li>resume_fail: The resume operation failed.</li>
+     * <li>snapshotting: A snapshot is being created.</li>
+     * <li>snapshot_failed: Snapshot creation failed.</li>
+     * <li>terminated: The sandbox is terminated.</li>
      * </ul>
      * 
      * <strong>example:</strong>

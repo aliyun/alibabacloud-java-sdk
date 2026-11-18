@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuotaUsage extends TeaModel {
     /**
-     * <p>已占用的 CPU 配额，单位为 vCPU，不是 CPU 使用率。</p>
+     * <p>The consumed CPU quota in vCPUs, not the CPU utilization.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class QuotaUsage extends TeaModel {
     public Double cpuCores;
 
     /**
-     * <p>尚未释放的实例授权数量。</p>
+     * <p>The number of unreleased instance authorizations.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class QuotaUsage extends TeaModel {
     public Long instanceCount;
 
     /**
-     * <p>已占用的内存配额，单位为 GB，不是进程实际内存。</p>
+     * <p>The consumed memory quota in GB, not the actual memory used by processes.</p>
      * 
      * <strong>example:</strong>
      * <p>1.5</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublicTemplateRuntimeConfig extends TeaModel {
     /**
-     * <p>The CPU specification of the sandbox instance, in cores.</p>
+     * <p>The CPU specifications of the sandbox instance, in cores.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The disk specification of the sandbox instance, in MB.</p>
+     * <p>The disk specifications of the sandbox instance, in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -35,7 +35,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
     public PublicTemplateLogConfig logConfig;
 
     /**
-     * <p>The memory specification of the sandbox instance, in MB.</p>
+     * <p>The memory specifications of the sandbox instance, in MB.</p>
      * 
      * <strong>example:</strong>
      * <p>2048</p>
@@ -48,6 +48,15 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
      */
     @NameInMap("sandboxConfig")
     public PublicTemplateSandboxConfig sandboxConfig;
+
+    /**
+     * <p>The collection of inbound source VPCs allowed by the current template configuration. Omitting this field or providing an empty array indicates that no inbound VPC bindings are configured. This configuration is independent of the egress network vpcConfig. Subsequent template updates do not change the inbound VPC bindings of existing sandbox instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;vpc-examplea&quot;,&quot;vpc-exampleb&quot;]</p>
+     */
+    @NameInMap("vpcBindings")
+    public java.util.List<String> vpcBindings;
 
     /**
      * <p>The VPC configuration of the sandbox instance.</p>
@@ -106,6 +115,14 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
     }
     public PublicTemplateSandboxConfig getSandboxConfig() {
         return this.sandboxConfig;
+    }
+
+    public PublicTemplateRuntimeConfig setVpcBindings(java.util.List<String> vpcBindings) {
+        this.vpcBindings = vpcBindings;
+        return this;
+    }
+    public java.util.List<String> getVpcBindings() {
+        return this.vpcBindings;
     }
 
     public PublicTemplateRuntimeConfig setVpcConfig(PublicTemplateVPCConfig vpcConfig) {

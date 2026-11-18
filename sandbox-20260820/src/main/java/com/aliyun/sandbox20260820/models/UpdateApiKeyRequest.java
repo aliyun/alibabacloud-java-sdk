@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyRequest extends TeaModel {
     /**
-     * <p>The request parameters for updating the API key.</p>
+     * <p>The request parameters for updating an API key.</p>
      */
     @NameInMap("body")
     public UpdateApiKeyInput body;

@@ -11,7 +11,7 @@ public class ListApiKeysResponseBody extends TeaModel {
     public java.util.List<ApiKey> apiKeys;
 
     /**
-     * <p>The response code. A value of 200 indicates success.</p>
+     * <p>The response code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class ListApiKeysResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message. The value is success if the request succeeds.</p>
+     * <p>The response message. The value is success if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class ListApiKeysResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page used in the current query.</p>
+     * <p>The number of entries per page for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class IPConfig extends TeaModel {
     /**
-     * <p>The description of the IP rule. The description can be up to 128 characters in length.</p>
+     * <p>The description of the IP rule. The length cannot exceed 128 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>Office network egress address</p>
+     * <p>办公网出口地址</p>
      */
     @NameInMap("description")
     public String description;

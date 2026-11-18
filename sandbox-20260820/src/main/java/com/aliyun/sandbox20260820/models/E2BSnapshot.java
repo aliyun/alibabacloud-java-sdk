@@ -59,6 +59,12 @@ public class E2BSnapshot extends TeaModel {
     public String resourceGroupID;
 
     /**
+     * <p>The resource tags.</p>
+     */
+    @NameInMap("resourceTags")
+    public java.util.List<E2BSnapshotResourceTags> resourceTags;
+
+    /**
      * <p>The snapshot ID.</p>
      * 
      * <strong>example:</strong>
@@ -174,6 +180,14 @@ public class E2BSnapshot extends TeaModel {
         return this.resourceGroupID;
     }
 
+    public E2BSnapshot setResourceTags(java.util.List<E2BSnapshotResourceTags> resourceTags) {
+        this.resourceTags = resourceTags;
+        return this;
+    }
+    public java.util.List<E2BSnapshotResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
     public E2BSnapshot setSnapshotID(String snapshotID) {
         this.snapshotID = snapshotID;
         return this;
@@ -228,6 +242,48 @@ public class E2BSnapshot extends TeaModel {
     }
     public String getUserID() {
         return this.userID;
+    }
+
+    public static class E2BSnapshotResourceTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
+         */
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static E2BSnapshotResourceTags build(java.util.Map<String, ?> map) throws Exception {
+            E2BSnapshotResourceTags self = new E2BSnapshotResourceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public E2BSnapshotResourceTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public E2BSnapshotResourceTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }
