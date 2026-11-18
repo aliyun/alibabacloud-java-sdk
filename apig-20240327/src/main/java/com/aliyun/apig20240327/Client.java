@@ -5511,7 +5511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the access overview of a consumer.</p>
+     * <p>Queries the consumer access overview.</p>
      * 
      * @param request GetConsumerAccessOverviewRequest
      * @param headers map
@@ -5545,7 +5545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the access overview of a consumer.</p>
+     * <p>Queries the consumer access overview.</p>
      * 
      * @param request GetConsumerAccessOverviewRequest
      * @return GetConsumerAccessOverviewResponse
@@ -6320,6 +6320,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getGatewayResourceQuotaUsageWithOptions(gatewayId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current cycle usage of the configured metering policy for a dedicated Professional AI gateway. Returns a specific error if cycle metering is not configured, and does not pad with zeros when no cycle data is available.</p>
+     * 
+     * @param request GetGatewayWebsocketUsageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGatewayWebsocketUsageResponse
+     */
+    public GetGatewayWebsocketUsageResponse getGatewayWebsocketUsageWithOptions(String gatewayId, GetGatewayWebsocketUsageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGatewayWebsocketUsage"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/websocket-observability/usage"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGatewayWebsocketUsageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current cycle usage of the configured metering policy for a dedicated Professional AI gateway. Returns a specific error if cycle metering is not configured, and does not pad with zeros when no cycle data is available.</p>
+     * 
+     * @param request GetGatewayWebsocketUsageRequest
+     * @return GetGatewayWebsocketUsageResponse
+     */
+    public GetGatewayWebsocketUsageResponse getGatewayWebsocketUsage(String gatewayId, GetGatewayWebsocketUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getGatewayWebsocketUsageWithOptions(gatewayId, request, headers, runtime);
     }
 
     /**
@@ -9356,6 +9403,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listGatewayQuotaRulesWithOptions(gatewayId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</p>
+     * 
+     * @param request ListGatewayWebsocketEventsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGatewayWebsocketEventsResponse
+     */
+    public ListGatewayWebsocketEventsResponse listGatewayWebsocketEventsWithOptions(String gatewayId, ListGatewayWebsocketEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionId)) {
+            query.put("connectionId", request.connectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            query.put("provider", request.provider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.turnId)) {
+            query.put("turnId", request.turnId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGatewayWebsocketEvents"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/websocket-observability/events"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGatewayWebsocketEventsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</p>
+     * 
+     * @param request ListGatewayWebsocketEventsRequest
+     * @return ListGatewayWebsocketEventsResponse
+     */
+    public ListGatewayWebsocketEventsResponse listGatewayWebsocketEvents(String gatewayId, ListGatewayWebsocketEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listGatewayWebsocketEventsWithOptions(gatewayId, request, headers, runtime);
     }
 
     /**

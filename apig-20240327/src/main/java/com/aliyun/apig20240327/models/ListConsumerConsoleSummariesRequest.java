@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerConsoleSummariesRequest extends TeaModel {
     /**
-     * <p>The filter condition. Valid values: all, granted, and disabled. Default value: all.</p>
+     * <p>The filter condition. Valid values: all, granted, and disabled. If you do not specify this parameter, all is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>all</p>
@@ -14,7 +14,7 @@ public class ListConsumerConsoleSummariesRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The target AI gateway instance ID. Consumer identities are shared across the region, while authorizations are isolated by instance.</p>
+     * <p>The target AI gateway instance ID. Consumer identities are shared across the region, and authorizations are isolated by instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListConsumerConsoleSummariesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The keyword for fuzzy search by consumer name. This parameter does not affect the total count.</p>
+     * <p>The keyword for fuzzy search by consumer name. This parameter does not affect the total counts.</p>
      * 
      * <strong>example:</strong>
      * <p>beta</p>
@@ -43,7 +43,7 @@ public class ListConsumerConsoleSummariesRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The pagination token returned from the previous page. Omit this parameter when querying the first page. An empty or omitted value indicates the last page.</p>
+     * <p>The pagination token returned from the previous page. Omit this parameter when you query the first page. If the value is empty or omitted, it indicates the last page.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjIwfQ==</p>

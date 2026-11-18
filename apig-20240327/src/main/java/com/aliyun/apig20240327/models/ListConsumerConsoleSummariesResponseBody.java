@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
     /**
-     * <p>The response status code. A value of Ok indicates a successful request. A specific business error code is returned for a failed request.</p>
+     * <p>The response status code. A value of Ok indicates success, and a specific business error code indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -20,7 +20,7 @@ public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
     public ListConsumerConsoleSummariesResponseBodyData data;
 
     /**
-     * <p>The response message that describes the result of the request.</p>
+     * <p>The response message that describes the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -161,7 +161,7 @@ public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
-         * <p>The description of the consumer.</p>
+         * <p>The purpose description of the consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>Consumer for service integration</p>
@@ -371,7 +371,7 @@ public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
 
     public static class ListConsumerConsoleSummariesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>Indicates whether the authorization scope of the resource includes all models.</p>
+         * <p>Specifies whether the authorization scope of the resource includes all models.</p>
          */
         @NameInMap("allModels")
         public Boolean allModels;
@@ -383,7 +383,7 @@ public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
         public java.util.List<ListConsumerConsoleSummariesResponseBodyDataItemsConsumerGroups> consumerGroups;
 
         /**
-         * <p>The consumer ID returned by the create or query consumer API operation.</p>
+         * <p>The consumer ID, which is the identifier returned by the consumer creation or query API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-d00000000000000000000</p>
@@ -401,13 +401,13 @@ public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The summary of credential types and quantities for the consumer. The credential content is not returned.</p>
+         * <p>The summary of credential types and counts for the consumer. The credential content is not returned.</p>
          */
         @NameInMap("credentials")
         public java.util.List<ListConsumerConsoleSummariesResponseBodyDataItemsCredentials> credentials;
 
         /**
-         * <p>The deployment status of the consumer configuration. An empty string is returned if no deployment status is available.</p>
+         * <p>The deployment status of the consumer configuration. If no deployment status is available, an empty string is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -416,7 +416,7 @@ public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
         public String deployStatus;
 
         /**
-         * <p>The description of the consumer.</p>
+         * <p>The purpose description of the consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>Consumer for service integration</p>
@@ -425,7 +425,7 @@ public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the consumer is enabled.</p>
+         * <p>Specifies whether the consumer is enabled.</p>
          */
         @NameInMap("enable")
         public Boolean enable;
@@ -582,7 +582,7 @@ public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
 
     public static class ListConsumerConsoleSummariesResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the query result is complete. A successful response returns a complete projection.</p>
+         * <p>Specifies whether the query result is complete. A successful response returns a complete projection.</p>
          */
         @NameInMap("complete")
         public Boolean complete;
@@ -609,7 +609,7 @@ public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The pagination token returned from the previous page. Omit this parameter when querying the first page.</p>
+         * <p>The pagination token returned from the previous page. Do not specify this parameter when you query the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJvZmZzZXQiOjIwfQ==</p>
@@ -618,7 +618,7 @@ public class ListConsumerConsoleSummariesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of records that match the current query conditions.</p>
+         * <p>The total number of entries that match the current query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
