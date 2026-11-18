@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class GetIqsUsageResult extends TeaModel {
+    /**
+     * <p>The daily call volume records.</p>
+     */
     @NameInMap("records")
     public java.util.List<GetIqsUsageResultRecords> records;
 
@@ -21,42 +24,120 @@ public class GetIqsUsageResult extends TeaModel {
     }
 
     public static class GetIqsUsageResultRecords extends TeaModel {
+        /**
+         * <p>The API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnifiedSearch</p>
+         */
         @NameInMap("api")
         public String api;
 
+        /**
+         * <p>The queries per second (QPS) for tiered billing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("billingQps")
         public Integer billingQps;
 
+        /**
+         * <p>The metering date in the YYYYMMDD format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20250716</p>
+         */
         @NameInMap("date")
         public String date;
 
+        /**
+         * <p>The search engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Generic</p>
+         */
         @NameInMap("engineType")
         public String engineType;
 
+        /**
+         * <p>The number of failed calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("failedCalls")
         public Integer failedCalls;
 
+        /**
+         * <p>The matched metering tier. Valid values: 1001, 1002, 1003, and 1004.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("ladderType")
         public String ladderType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138608930******0</p>
+         */
         @NameInMap("mainAccountId")
         public String mainAccountId;
 
+        /**
+         * <p>The sub-account that initiates the call (RAM user or API key identifier).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2193843763***9272</p>
+         */
         @NameInMap("subAccountId")
         public String subAccountId;
 
+        /**
+         * <p>The number of successful calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("successCalls")
         public Integer successCalls;
 
+        /**
+         * <p>The total number of calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("totalBillStatCalls")
         public Integer totalBillStatCalls;
 
+        /**
+         * <p>The total number of calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("totalCalls")
         public Integer totalCalls;
 
+        /**
+         * <p>The value-added package usage for calling enhanced APIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("valueAddedAdvanced")
         public Integer valueAddedAdvanced;
 
+        /**
+         * <p>The number of value-added package calls used for the summarization feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("valueAddedSummary")
         public Integer valueAddedSummary;
 

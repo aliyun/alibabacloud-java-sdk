@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class WeiboItem extends TeaModel {
     /**
+     * <p>The search result template. Fixed as weibo_strong for Weibo scenarios.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class WeiboItem extends TeaModel {
     public String cardType;
 
     /**
+     * <p>The Weibo homepage of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://m.weibo.cn/u/7761793874?luicode=20000061&lfid=5024099350350075">https://m.weibo.cn/u/7761793874?luicode=20000061&amp;lfid=5024099350350075</a></p>
      */
@@ -21,18 +24,25 @@ public class WeiboItem extends TeaModel {
     public String homepageLink;
 
     /**
+     * <p>The content of the Weibo post.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>【小调查：你会买<em>小米SU7</em>吗？】#小米SU7路测覆盖300多城市#4月17日，@小米汽车 发文称SU7道路测试覆盖全国300多个城市，涵盖极寒，极热天气，总里程数高达540万公里，目前仍在进行中。  网页链接</p>
+     * <p>[Quick poll: Would you buy the Xiaomi SU7?]
+     * #Xiaomi SU7 road tests now cover more than 300 cities#
+     * On April 17, @Xiaomi Auto posted that SU7 road testing now covers over 300 cities nationwide, including tests in extremely cold and extremely hot weather. The total test mileage has reached 5.4 million kilometers and is still ongoing. Web link</p>
      */
     @NameInMap("htmlSnippet")
     public String htmlSnippet;
 
+    /**
+     * <p>The image information.</p>
+     */
     @NameInMap("images")
     public java.util.List<String> images;
 
     /**
+     * <p>The Weibo URL of the search result.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,17 +52,20 @@ public class WeiboItem extends TeaModel {
     public String link;
 
     /**
+     * <p>The publish time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1小时前</p>
+     * <p>An hour ago</p>
      */
     @NameInMap("publishDisplayTime")
     public String publishDisplayTime;
 
     /**
+     * <p>The Weibo username.</p>
+     * 
      * <strong>example:</strong>
-     * <p>白鹿科技</p>
+     * <p>Bailu Tech</p>
      */
     @NameInMap("username")
     public String username;

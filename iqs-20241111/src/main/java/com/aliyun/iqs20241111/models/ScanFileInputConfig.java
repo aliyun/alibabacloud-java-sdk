@@ -4,9 +4,21 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class ScanFileInputConfig extends TeaModel {
+    /**
+     * <p>The automatic trim.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoCrop")
     public String autoCrop;
 
+    /**
+     * <p>The automatic rotation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoRotate")
     public String autoRotate;
 

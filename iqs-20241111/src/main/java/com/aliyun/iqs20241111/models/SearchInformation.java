@@ -4,9 +4,21 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class SearchInformation extends TeaModel {
+    /**
+     * <p>The search time, in milliseconds (ms).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>700</p>
+     */
     @NameInMap("searchTime")
     public Long searchTime;
 
+    /**
+     * <p>The total count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13</p>
+     */
     @NameInMap("total")
     public Long total;
 

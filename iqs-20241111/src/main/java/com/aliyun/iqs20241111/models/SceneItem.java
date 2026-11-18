@@ -4,9 +4,21 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class SceneItem extends TeaModel {
+    /**
+     * <p>The result details for vertical scenarios. Different scenarios return different JSON string structures.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;title&quot;:&quot;London time&quot;,&quot;targetTimeZone&quot;:&quot;Europe/London&quot;}</p>
+     */
     @NameInMap("detail")
     public String detail;
 
+    /**
+     * <p>The result type for vertical scenarios, such as weather or time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>time</p>
+     */
     @NameInMap("type")
     public String type;
 

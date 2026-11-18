@@ -4,27 +4,69 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class UnifiedSearchInput extends TeaModel {
+    /**
+     * <p>The advanced search parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;numResults&quot;:&quot;10&quot;}</p>
+     */
     @NameInMap("advancedParams")
     public java.util.Map<String, ?> advancedParams;
 
+    /**
+     * <p>The query category. If specified, only search results from sites of the corresponding category are returned. Separate multiple categories with commas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>medical</p>
+     */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <p>The options for controlling the returned content.</p>
+     */
     @NameInMap("contents")
     public RequestContents contents;
 
+    /**
+     * <p>The engine type. Default value: Generic. Valid values: Generic, GenericAdvanced. GenericAdvanced is billed separately and returns more records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Generic</p>
+     */
     @NameInMap("engineType")
     public String engineType;
 
+    /**
+     * <p><strong>[Deprecated]</strong> The location parameter. Use locationInfo to specify a city or IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60.194.214.228</p>
+     */
     @NameInMap("location")
     public String location;
 
+    /**
+     * <p>The location information, used for scenario-based searches such as weather.</p>
+     */
     @NameInMap("locationInfo")
     public LocationInfo locationInfo;
 
+    /**
+     * <p>The query content. The length limit is 1 to 100 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Apsara Conference</p>
+     */
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>The publication time range for the content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NoLimit</p>
+     */
     @NameInMap("timeRange")
     public String timeRange;
 

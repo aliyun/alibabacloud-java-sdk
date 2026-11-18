@@ -25,7 +25,7 @@ public class GlobalQueryContext extends TeaModel {
 
     public static class GlobalQueryContextOriginalQuery extends TeaModel {
         /**
-         * <p>页码</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -34,16 +34,16 @@ public class GlobalQueryContext extends TeaModel {
         public String page;
 
         /**
-         * <p>查询关键字</p>
+         * <p>The query keyword.</p>
          * 
          * <strong>example:</strong>
-         * <p>特朗普关税最新消息</p>
+         * <p>Latest news on Trump tariffs</p>
          */
         @NameInMap("query")
         public String query;
 
         /**
-         * <p>时间范围</p>
+         * <p>The time range.</p>
          * 
          * <strong>example:</strong>
          * <p>NoLimit</p>

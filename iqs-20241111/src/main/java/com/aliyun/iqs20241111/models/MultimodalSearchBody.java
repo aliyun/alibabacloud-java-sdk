@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MultimodalSearchBody extends TeaModel {
     /**
-     * <p>Additional query parameters, such as blocked sites</p>
+     * <p>The additional query items, such as blocked sites.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -15,14 +15,20 @@ public class MultimodalSearchBody extends TeaModel {
     @NameInMap("advancedParams")
     public java.util.Map<String, ?> advancedParams;
 
+    /**
+     * <p>The search engine type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Generic</p>
+     */
     @NameInMap("engineType")
     public String engineType;
 
     /**
-     * <p>Query content</p>
+     * <p>The query content.</p>
      * 
      * <strong>example:</strong>
-     * <p>阿里巴巴</p>
+     * <p>Alibaba</p>
      */
     @NameInMap("query")
     public String query;

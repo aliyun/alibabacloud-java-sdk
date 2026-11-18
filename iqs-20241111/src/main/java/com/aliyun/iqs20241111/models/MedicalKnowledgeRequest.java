@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MedicalKnowledgeRequest extends TeaModel {
     /**
-     * <p>Health Graph query conditions</p>
+     * <p>The query conditions for the health graph.</p>
      */
     @NameInMap("body")
     public MedicalKnowInput body;

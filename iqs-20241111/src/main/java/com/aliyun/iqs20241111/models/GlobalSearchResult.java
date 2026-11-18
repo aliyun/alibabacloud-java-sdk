@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalSearchResult extends TeaModel {
     /**
-     * <p>The list of web page content.</p>
+     * <p>The web page content list.</p>
      */
     @NameInMap("pageItems")
     public java.util.List<GlobalPageItem> pageItems;
@@ -17,7 +17,7 @@ public class GlobalSearchResult extends TeaModel {
     public GlobalQueryContext queryContext;
 
     /**
-     * <p>The request ID.</p>
+     * <p>requestId</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -26,7 +26,7 @@ public class GlobalSearchResult extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The scenario-specific vertical API recall results.</p>
+     * <p>The scenario-specific vertical API recall.</p>
      */
     @NameInMap("sceneItems")
     public java.util.List<GlobalSceneItem> sceneItems;

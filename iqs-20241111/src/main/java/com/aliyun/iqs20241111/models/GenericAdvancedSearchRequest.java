@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class GenericAdvancedSearchRequest extends TeaModel {
     /**
-     * <p>The industry. After you specify this parameter, only content from websites within the specified industries is recalled. Separate multiple industries with commas.</p>
+     * <p>The industry. If you specify this parameter, only website content specific to the specified industry is recalled. Separate multiple industries with commas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>medical</p>
      */
     @NameInMap("industry")
     public String industry;
 
     /**
-     * <p>The query text to search for.</p>
+     * <p>The search query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>苹果手机</p>
+     * <p>iPhone</p>
      */
     @NameInMap("query")
     public String query;
@@ -30,7 +33,7 @@ public class GenericAdvancedSearchRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The time range for filtering web pages by publish time.</p>
+     * <p>The relative query range for the web page publication time. Valid values: OneDay, OneWeek, OneMonth, OneYear, and NoLimit. A value of NoLimit indicates that no time limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>OneWeek</p>

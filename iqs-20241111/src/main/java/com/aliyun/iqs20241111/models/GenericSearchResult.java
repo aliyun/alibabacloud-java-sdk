@@ -4,25 +4,42 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class GenericSearchResult extends TeaModel {
+    /**
+     * <p>The web content list.</p>
+     */
     @NameInMap("pageItems")
     public java.util.List<ScorePageItem> pageItems;
 
+    /**
+     * <p>The query context information.</p>
+     */
     @NameInMap("queryContext")
     public QueryContext queryContext;
 
     /**
+     * <p>requestId</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of scenario-specific query results, such as structured results for time and weather.</p>
+     */
     @NameInMap("sceneItems")
     public java.util.List<SceneItem> sceneItems;
 
+    /**
+     * <p>The search information.</p>
+     */
     @NameInMap("searchInformation")
     public SearchInformation searchInformation;
 
+    /**
+     * <p>The Weibo list.</p>
+     */
     @NameInMap("weiboItems")
     public java.util.List<WeiboItem> weiboItems;
 

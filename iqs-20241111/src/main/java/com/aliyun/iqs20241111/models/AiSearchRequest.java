@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AiSearchRequest extends TeaModel {
     /**
-     * <p>The industry. After you specify an industry, only content from websites within the specified industry is recalled. Separate multiple industries with commas.</p>
+     * <p>The industry. If specified, only site content restricted to the specified industry is recalled. Separate multiple industries with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>finance</p>
@@ -14,26 +14,26 @@ public class AiSearchRequest extends TeaModel {
     public String industry;
 
     /**
-     * <p>The page number. Pages start from 1.</p>
+     * <p>The page number. Starts from 1.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;total_count\&quot;: 6851, \&quot;page_number\&quot;: 54, \&quot;page_size\&quot;: 100}</p>
+     * <p>1</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>The query to search for.</p>
+     * <p>The search query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>苹果手机</p>
+     * <p>iPhone</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
-     * <p>The time range for filtering web page publication dates.</p>
+     * <p>The query range for the web page publish time.</p>
      * 
      * <strong>example:</strong>
      * <p>17dc8bcd-f34a-46d1-a7a3-0fa3d1ce3824</p>
@@ -42,7 +42,7 @@ public class AiSearchRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The session ID for multi-turn interactions.</p>
+     * <p>The session ID for multi-turn interaction.</p>
      * 
      * <strong>example:</strong>
      * <p>OneWeek</p>

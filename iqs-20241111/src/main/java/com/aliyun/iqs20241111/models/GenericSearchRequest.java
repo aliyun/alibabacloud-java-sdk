@@ -4,20 +4,32 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class GenericSearchRequest extends TeaModel {
+    /**
+     * <p>The advanced search parameters. Filters search results by the start and end dates of the webpage publication time. The date format is YYYY-MM-DD. This parameter takes precedence over timeRange.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;startPublishedDate&quot;:&quot;2025-07-01&quot;,&quot;endPublishedDate&quot;:&quot;2025-07-31&quot;}</p>
+     */
     @NameInMap("advancedParams")
     public java.util.Map<String, ?> advancedParams;
 
+    /**
+     * <p>Specifies whether to rerank the search results. Default value: true.</p>
+     */
     @NameInMap("enableRerank")
     public Boolean enableRerank;
 
     /**
-     * <p>The industry. After you specify an industry, only site content related to the specified industry is recalled. Separate multiple industries with commas.</p>
+     * <p>The industry. If specified, only site content restricted to the specified industries is recalled. Separate multiple industries with commas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>finance,law</p>
      */
     @NameInMap("industry")
     public String industry;
 
     /**
-     * <p>The page number. Pages start from 1.</p>
+     * <p>The page number. The value starts from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,42 +38,50 @@ public class GenericSearchRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The search keyword.</p>
+     * <p>The search keywords.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>苹果手机</p>
+     * <p>iPhone</p>
      */
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>Specifies whether to return the main text of the webpage. Default value: true.</p>
+     */
     @NameInMap("returnMainText")
     public Boolean returnMainText;
 
+    /**
+     * <p>Specifies whether to return the webpage content in Markdown format. Default value: true.</p>
+     */
     @NameInMap("returnMarkdownText")
     public Boolean returnMarkdownText;
 
+    /**
+     * <p>Specifies whether to return the full rich text body. Default value: false.</p>
+     */
     @NameInMap("returnRichMainBody")
     public Boolean returnRichMainBody;
 
+    /**
+     * <p>Specifies whether to return the enhanced summary. Default value: true.</p>
+     */
     @NameInMap("returnSummary")
     public Boolean returnSummary;
 
     /**
-     * <p>The session ID for multi-turn interaction.</p>
+     * <p>The session ID for multi-turn interactions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>282j3h3434j23hdw9sd72j3</p>
      */
     @NameInMap("sessionId")
     public String sessionId;
 
     /**
-     * <p>The time range for filtering results. Valid values:</p>
-     * <ul>
-     * <li>OneDay: last day</li>
-     * <li>OneWeek: last week</li>
-     * <li>OneMonth: last month</li>
-     * <li>OneYear: last year</li>
-     * <li>NoLimit: no limit.</li>
-     * </ul>
+     * <p>The time range.</p>
      * 
      * <strong>example:</strong>
      * <p>OneWeek</p>

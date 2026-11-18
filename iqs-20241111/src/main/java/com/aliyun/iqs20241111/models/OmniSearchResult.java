@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OmniSearchResult extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35E5608A-A737-2038-AFB6-D9D34C6BFD9E</p>
      */
@@ -12,6 +14,8 @@ public class OmniSearchResult extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

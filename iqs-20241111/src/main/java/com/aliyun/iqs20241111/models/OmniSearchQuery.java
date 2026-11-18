@@ -5,20 +5,39 @@ import com.aliyun.tea.*;
 
 public class OmniSearchQuery extends TeaModel {
     /**
+     * <p>The request parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>今天杭州天气</p>
+     * <p>What is the weather in Hangzhou today?</p>
      */
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>The session ID. This is a reserved field and is not currently supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>session_id_123</p>
+     */
     @NameInMap("sessionId")
     public String sessionId;
 
+    /**
+     * <p>Specifies whether to use CoT. This is a reserved field and is not currently supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("useCot")
     public Boolean useCot;
 
+    /**
+     * <p>The model version to use. Valid values: pro for the deep version, and lite for the fast version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pro</p>
+     */
     @NameInMap("useModel")
     public String useModel;
 

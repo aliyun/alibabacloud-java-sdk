@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ReadPageBasicResponseBody extends TeaModel {
     /**
-     * <p>Parsing result of the target URL</p>
+     * <p>The parsing result of the destination URL.</p>
      */
     @NameInMap("data")
     public ReadPageItem data;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     /**
-     * <p>Request ID. Provide this information when troubleshooting issues.</p>
+     * <p>The request ID. Provide this ID for troubleshooting.</p>
      */
     @NameInMap("requestId")
     public String requestId;

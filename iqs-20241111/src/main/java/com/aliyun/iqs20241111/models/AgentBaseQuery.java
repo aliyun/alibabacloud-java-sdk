@@ -4,6 +4,12 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class AgentBaseQuery extends TeaModel {
+    /**
+     * <p>The natural language question used to retrieve nearby locations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Luxury hotels within 5 km of Lingyin Temple in Hangzhou</p>
+     */
     @NameInMap("query")
     public String query;
 

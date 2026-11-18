@@ -4,15 +4,30 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class MedicalKnowResult extends TeaModel {
+    /**
+     * <p>The list of recognized entity property results. An empty array is returned if no entities are recognized.</p>
+     */
     @NameInMap("messages")
     public java.util.List<MedicalKnowledgeInfo> messages;
 
+    /**
+     * <p>The query context information, such as the original query content.</p>
+     */
     @NameInMap("queryContext")
     public MultimodalQueryContext queryContext;
 
+    /**
+     * <p>The ID of the request, which can be provided for troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>35E5608A-A737-2038-AFB6-D9D34C6BFD9E</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The search information for the query, such as the search duration.</p>
+     */
     @NameInMap("searchInformation")
     public UnifiedSearchInformation searchInformation;
 

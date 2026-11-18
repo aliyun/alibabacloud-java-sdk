@@ -8,7 +8,7 @@ public class UnifiedOriginalQuery extends TeaModel {
      * <p>The request query.</p>
      * 
      * <strong>example:</strong>
-     * <p>杭州美食</p>
+     * <p>Hangzhou cuisine</p>
      */
     @NameInMap("query")
     public String query;

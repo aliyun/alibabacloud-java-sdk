@@ -11,22 +11,25 @@ public class RequestContents extends TeaModel {
     public Boolean mainText;
 
     /**
-     * <p>Specifies whether to return markdown. Default value: false.</p>
+     * <p>Specifies whether to return Markdown. Default value: false.</p>
      */
     @NameInMap("markdownText")
     public Boolean markdownText;
 
     /**
-     * <p>Specifies whether to enable Rerank and return the RerankScore. Default value: true.</p>
+     * <p>Specifies whether to enable reranking and return the rerank score. Default value: true.</p>
      */
     @NameInMap("rerankScore")
     public Boolean rerankScore;
 
+    /**
+     * <p>Specifies whether to return the full rich text content.</p>
+     */
     @NameInMap("richMainBody")
     public Boolean richMainBody;
 
     /**
-     * <p>Specifies whether to return an enhanced summary. Default value: false. The summary feature is billed separately.</p>
+     * <p>Specifies whether to return the enhanced summary. Default value: false. The summary feature is billed separately.</p>
      */
     @NameInMap("summary")
     public Boolean summary;

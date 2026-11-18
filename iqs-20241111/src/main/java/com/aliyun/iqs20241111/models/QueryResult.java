@@ -4,9 +4,18 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class QueryResult extends TeaModel {
+    /**
+     * <p>The list of returned locations.</p>
+     */
     @NameInMap("data")
     public java.util.List<QueryResultData> data;
 
+    /**
+     * <p>The unique request ID for troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15A85F99-408F-5BFA-B617-0C7D3E732ABD</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class QueryResult extends TeaModel {
     }
 
     public static class QueryResultDataImages extends TeaModel {
+        /**
+         * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lobby</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>The image URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://store.example.com/showpic/e76beb3bedca3fe0375cef12742ea23e">http://store.example.com/showpic/e76beb3bedca3fe0375cef12742ea23e</a></p>
+         */
         @NameInMap("url")
         public String url;
 
@@ -62,24 +83,66 @@ public class QueryResult extends TeaModel {
     }
 
     public static class QueryResultDataMetadata extends TeaModel {
+        /**
+         * <p>The average spend in CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("averageSpend")
         public String averageSpend;
 
+        /**
+         * <p>The business area.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Central Area of West Lake Tourist Zone</p>
+         */
         @NameInMap("businessArea")
         public String businessArea;
 
+        /**
+         * <p>The business hours for today.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:00-18:00</p>
+         */
         @NameInMap("dailyOpeningHours")
         public String dailyOpeningHours;
 
+        /**
+         * <p>The main tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Luxury</p>
+         */
         @NameInMap("mainTag")
         public String mainTag;
 
+        /**
+         * <p>The contact phone numbers. Multiple numbers are separated by vertical bars.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571-8732****</p>
+         */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <p>The rating.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.7</p>
+         */
         @NameInMap("score")
         public String score;
 
+        /**
+         * <p>The weekly opening days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday to Sunday</p>
+         */
         @NameInMap("weeklyOpeningDays")
         public String weeklyOpeningDays;
 
@@ -147,51 +210,141 @@ public class QueryResult extends TeaModel {
     }
 
     public static class QueryResultData extends TeaModel {
+        /**
+         * <p>The detailed address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No. 22 Fayun Lane, West Lake Scenic Area</p>
+         */
         @NameInMap("address")
         public String address;
 
+        /**
+         * <p>The city code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571</p>
+         */
         @NameInMap("cityCode")
         public String cityCode;
 
+        /**
+         * <p>The city name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
+         */
         @NameInMap("cityName")
         public String cityName;
 
+        /**
+         * <p>The distance from the center point in meters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>815</p>
+         */
         @NameInMap("distanceMeter")
         public String distanceMeter;
 
+        /**
+         * <p>The district code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>330106</p>
+         */
         @NameInMap("districtCode")
         public String districtCode;
 
+        /**
+         * <p>The district name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Xihu District</p>
+         */
         @NameInMap("districtName")
         public String districtName;
 
+        /**
+         * <p>The internal identifier of the location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B023B0BI3J</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The list of images.</p>
+         */
         @NameInMap("images")
         public java.util.List<QueryResultDataImages> images;
 
+        /**
+         * <p>The latitude of the location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.234403</p>
+         */
         @NameInMap("latitude")
         public String latitude;
 
+        /**
+         * <p>The longitude of the location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.097327</p>
+         */
         @NameInMap("longitude")
         public String longitude;
 
+        /**
+         * <p>The related business information.</p>
+         */
         @NameInMap("metadata")
         public QueryResultDataMetadata metadata;
 
+        /**
+         * <p>The location name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Amanfayun Hangzhou</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The province code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>330000</p>
+         */
         @NameInMap("provinceCode")
         public String provinceCode;
 
+        /**
+         * <p>The province name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang Province</p>
+         */
         @NameInMap("provinceName")
         public String provinceName;
 
+        /**
+         * <p>The location type code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100102</p>
+         */
         @NameInMap("typeCode")
         public String typeCode;
 
+        /**
+         * <p>The location types. Multiple types are separated by vertical bars.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Accommodation|Hotel|Five-star hotel</p>
+         */
         @NameInMap("types")
         public String types;
 

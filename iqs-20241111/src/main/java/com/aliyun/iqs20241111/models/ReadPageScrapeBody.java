@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class ReadPageScrapeBody extends TeaModel {
     /**
-     * <p>The format of the parsing result.</p>
+     * <p>The formats of the parsed result. Valid values:</p>
      * <ul>
-     * <li>rawHtml: the HTML of the target site.</li>
-     * <li>html: the page content processed based on readabilityMode.</li>
-     * <li>markdown: the Markdown content converted from the HTML.</li>
-     * <li>text: the text content extracted from the HTML.</li>
-     * <li>screenshot: a screenshot of the target site.</li>
+     * <li>rawHtml: The HTML of the target site.</li>
+     * <li>html: The page content processed based on the readabilityMode.</li>
+     * <li>markdown: The Markdown content converted from the HTML.</li>
+     * <li>text: The text content in the HTML.</li>
+     * <li>screenshot: The screenshot of the target site.</li>
      * </ul>
      */
     @NameInMap("formats")
     public java.util.List<String> formats;
 
     /**
-     * <p>This parameter does not need to be specified.</p>
+     * <p>This parameter is not required.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -27,11 +27,12 @@ public class ReadPageScrapeBody extends TeaModel {
     public String location;
 
     /**
-     * <p>The maximum cache validity period. Unit: seconds. Default value: 1296000.</p>
-     * <ol>
-     * <li>If the cache duration is less than the value of maxAge, cached content is returned.</li>
-     * <li>If maxAge is set to 0, caching is not used.</li>
-     * </ol>
+     * <p>The maximum cache duration, in seconds.</p>
+     * <ul>
+     * <li>If the cache duration is less than the maxAge value, the cached content is returned.</li>
+     * <li>If the maxAge value is set to 0, the cache is not used.</li>
+     * </ul>
+     * <p>Default value: 1296000.</p>
      * 
      * <strong>example:</strong>
      * <p>1296000</p>
@@ -40,7 +41,7 @@ public class ReadPageScrapeBody extends TeaModel {
     public Integer maxAge;
 
     /**
-     * <p>The timeout period for waiting for the target site resources to fully load. The value of pageTimeout must be less than the value of timeout.</p>
+     * <p>The timeout period for waiting for the resources of the target site to fully load. The pageTimeout value must be less than the timeout value.</p>
      * <p>Default value: 15000.</p>
      * 
      * <strong>example:</strong>
@@ -50,14 +51,14 @@ public class ReadPageScrapeBody extends TeaModel {
     public Integer pageTimeout;
 
     /**
-     * <p>The readability configuration for the parsing result.</p>
+     * <p>The readability configuration of the parsed result.</p>
      */
     @NameInMap("readability")
     public ReadPageScrapeBodyReadability readability;
 
     /**
-     * <p>The end-to-end processing timeout period. Unit: ms.</p>
-     * <p>Valid values: [0, 180000].</p>
+     * <p>The end-to-end processing timeout period, in milliseconds.</p>
+     * <p>Valid values: 0 to 180000.</p>
      * <p>Default value: 60000.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +68,7 @@ public class ReadPageScrapeBody extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The target URL to parse. The URL must start with http:// or https://.</p>
+     * <p>The target URL to parse. It must start with http:// or https://.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -139,8 +140,8 @@ public class ReadPageScrapeBody extends TeaModel {
 
     public static class ReadPageScrapeBodyReadability extends TeaModel {
         /**
-         * <p>是否剔除所有图片</p>
-         * <p>默认值：false</p>
+         * <p>Specifies whether to remove all images.</p>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -149,8 +150,8 @@ public class ReadPageScrapeBody extends TeaModel {
         public Boolean excludeAllImages;
 
         /**
-         * <p>是否剔除所有链接</p>
-         * <p>默认值：false</p>
+         * <p>Specifies whether to remove all links.</p>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -159,15 +160,18 @@ public class ReadPageScrapeBody extends TeaModel {
         public Boolean excludeAllLinks;
 
         /**
-         * <p>指定排除的标签</p>
+         * <p>The tags to exclude.</p>
          */
         @NameInMap("excludedTags")
         public java.util.List<String> excludedTags;
 
         /**
-         * <p>none：不删除信息，默认为 none</p>
-         * <p>normal: 基于自研算法，剔除目标页面无关信息（页头/页脚，导航等）</p>
-         * <p>article: 基于自研算法，获取站点主要正文内容(适用于博客、新闻站点，不适用于目录页、导航页)</p>
+         * <p>The readability mode. Valid values:</p>
+         * <ul>
+         * <li>none: Does not remove any information. This is the default value.</li>
+         * <li>normal: Removes irrelevant information from the target page, such as headers, footers, and navigation elements, based on a proprietary algorithm.</li>
+         * <li>article: Extracts the main body content of the site based on a proprietary algorithm. This mode is suitable for blogs and news sites, but not for directory or navigation pages.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>none</p>

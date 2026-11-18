@@ -4,9 +4,15 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class QueryContext extends TeaModel {
+    /**
+     * <p>The initial query condition.</p>
+     */
     @NameInMap("originalQuery")
     public QueryContextOriginalQuery originalQuery;
 
+    /**
+     * <p>The query rewrite information.</p>
+     */
     @NameInMap("rewrite")
     public QueryContextRewrite rewrite;
 
@@ -32,15 +38,39 @@ public class QueryContext extends TeaModel {
     }
 
     public static class QueryContextOriginalQuery extends TeaModel {
+        /**
+         * <p>The industry classification of the original request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>medical</p>
+         */
         @NameInMap("industry")
         public String industry;
 
+        /**
+         * <p>The page number of the original request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("page")
         public String page;
 
+        /**
+         * <p>The query content of the original request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apsara Conference</p>
+         */
         @NameInMap("query")
         public String query;
 
+        /**
+         * <p>The time range of the original request. Valid values: OneDay, OneWeek, OneMonth, OneYear, and NoLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoLimit</p>
+         */
         @NameInMap("timeRange")
         public String timeRange;
 
@@ -84,9 +114,18 @@ public class QueryContext extends TeaModel {
     }
 
     public static class QueryContextRewrite extends TeaModel {
+        /**
+         * <p>Specifies whether query rewrite is enabled.</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The rewritten time range. An empty value indicates that no rewrite is performed or the rewrite result is the same as the original result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OneYear</p>
+         */
         @NameInMap("timeRange")
         public String timeRange;
 

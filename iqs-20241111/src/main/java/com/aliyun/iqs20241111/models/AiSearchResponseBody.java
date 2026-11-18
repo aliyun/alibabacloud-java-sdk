@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AiSearchResponseBody extends TeaModel {
     /**
-     * <p>The header of the response.</p>
+     * <p>The header of the returned result.</p>
      */
     @NameInMap("header")
     public AiSearchResponseBodyHeader header;
 
     /**
-     * <p>The payload of the response. The value is a JSON structure that varies by event type.</p>
+     * <p>The payload of the returned result in JSON format. The structure varies based on the event.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;header&quot;:{&quot;eventId&quot;:&quot;6f617de0-204f-406f-a9be-34779c06d498&quot;,&quot;event&quot;:&quot;on_common_search_start&quot;,&quot;responseTime&quot;:120},&quot;payload&quot;:&quot;&quot;,&quot;requestId&quot;:&quot;715d01a0-de7e-42c3-abca-b901fcd79b39&quot;}</p>
@@ -60,24 +60,36 @@ public class AiSearchResponseBody extends TeaModel {
     public static class AiSearchResponseBodyHeaderQueryContextOriginalQuery extends TeaModel {
         /**
          * <p>The industry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>medical</p>
          */
         @NameInMap("industry")
         public String industry;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("page")
         public Integer page;
 
         /**
-         * <p>The query condition.</p>
+         * <p>The query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou cuisine</p>
          */
         @NameInMap("query")
         public String query;
 
         /**
          * <p>The time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoLimit</p>
          */
         @NameInMap("timeRange")
         public String timeRange;
@@ -123,13 +135,16 @@ public class AiSearchResponseBody extends TeaModel {
 
     public static class AiSearchResponseBodyHeaderQueryContextRewrite extends TeaModel {
         /**
-         * <p>Indicates whether query rewriting is enabled.</p>
+         * <p>Specifies whether query rewrite is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
          * <p>The rewritten time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OneMonth</p>
          */
         @NameInMap("timeRange")
         public String timeRange;
@@ -219,7 +234,7 @@ public class AiSearchResponseBody extends TeaModel {
         public AiSearchResponseBodyHeaderQueryContext queryContext;
 
         /**
-         * <p>The response time, in milliseconds.</p>
+         * <p>The time taken (ms).</p>
          * 
          * <strong>example:</strong>
          * <p>1293</p>

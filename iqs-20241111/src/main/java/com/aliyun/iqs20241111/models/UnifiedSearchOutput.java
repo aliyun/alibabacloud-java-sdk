@@ -4,21 +4,42 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class UnifiedSearchOutput extends TeaModel {
+    /**
+     * <p>The consumed credits information.</p>
+     */
     @NameInMap("costCredits")
     public UnifiedCostCredits costCredits;
 
+    /**
+     * <p>The web page search results.</p>
+     */
     @NameInMap("pageItems")
     public java.util.List<UnifiedPageItem> pageItems;
 
+    /**
+     * <p>The search context information.</p>
+     */
     @NameInMap("queryContext")
     public UnifiedQueryContext queryContext;
 
+    /**
+     * <p>The web page results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>35E5608A-A737-2038-****-D9D34C6BFD9E</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The vertical API scenario-based results.</p>
+     */
     @NameInMap("sceneItems")
     public java.util.List<UnifiedSceneItem> sceneItems;
 
+    /**
+     * <p>The basic search information.</p>
+     */
     @NameInMap("searchInformation")
     public UnifiedSearchInformation searchInformation;
 

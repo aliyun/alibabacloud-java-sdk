@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OmniAnswerRequest extends TeaModel {
     /**
-     * <p>Search information</p>
+     * <p>The search information.</p>
      */
     @NameInMap("body")
     public OmniSearchQuery body;
