@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterTasksRequest extends TeaModel {
     /**
-     * <p>The type of the model operator.</p>
+     * <p>The model operator type.</p>
      * 
      * <strong>example:</strong>
      * <p>aitrain</p>
@@ -29,7 +29,7 @@ public class DescribeAIDBClusterTasksRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items to display on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -47,7 +47,7 @@ public class DescribeAIDBClusterTasksRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instance ID of the associated PolarDB instance.</p>
+     * <p>The ID of the associated PolarDB cluster. This parameter is required. If you do not specify this parameter, the service returns the InvalidDBClusterId.NotFound (404) error.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>

@@ -16,18 +16,13 @@ public class CreateDatabaseZonalRequest extends TeaModel {
     /**
      * <p>The permissions of the account. Valid values:</p>
      * <ul>
-     * <li><p>ReadWrite: read and write permissions.</p>
-     * </li>
-     * <li><p>ReadOnly: read-only permissions.</p>
-     * </li>
-     * <li><p>DMLOnly: DML permissions only.</p>
-     * </li>
-     * <li><p>DDLOnly: DDL permissions only.</p>
-     * </li>
-     * <li><p>ReadIndex: read-only and index permissions.</p>
-     * </li>
+     * <li>ReadWrite: read and write permissions.</li>
+     * <li>ReadOnly: read-only permissions.</li>
+     * <li>DMLOnly: DML-only permissions.</li>
+     * <li>DDLOnly: DDL-only permissions.</li>
+     * <li>ReadIndex: read and index permissions.</li>
      * </ul>
-     * <p>If you do not specify this parameter, the default value is ReadWrite.</p>
+     * <p>Default value: ReadWrite.</p>
      * 
      * <strong>example:</strong>
      * <p>ReadWrite</p>
@@ -46,7 +41,7 @@ public class CreateDatabaseZonalRequest extends TeaModel {
     public String characterSetName;
 
     /**
-     * <p>A client token to ensure request idempotence. The client generates this token. The token must be unique across requests. It is case-sensitive and can be up to 64 ASCII characters long.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and is case-sensitive. It can contain up to 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -55,7 +50,7 @@ public class CreateDatabaseZonalRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The locale setting. This specifies the collation for the new database.</p>
+     * <p>The locale setting used to specify the collation of the new database.</p>
      * 
      * <strong>example:</strong>
      * <p>C</p>
@@ -64,7 +59,7 @@ public class CreateDatabaseZonalRequest extends TeaModel {
     public String collate;
 
     /**
-     * <p>The locale setting. This specifies the character classification for the database.</p>
+     * <p>The locale setting used to specify the character classification of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>C</p>
@@ -73,7 +68,7 @@ public class CreateDatabaseZonalRequest extends TeaModel {
     public String ctype;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the PolarDB on ENS edge cluster. Regular PolarDB cluster IDs are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,10 +80,8 @@ public class CreateDatabaseZonalRequest extends TeaModel {
     /**
      * <p>The description of the database. The description must meet the following requirements:</p>
      * <ul>
-     * <li><p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * </li>
-     * <li><p>It must be 2 to 256 characters in length.</p>
-     * </li>
+     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It must be 2 to 256 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,10 +93,8 @@ public class CreateDatabaseZonalRequest extends TeaModel {
     /**
      * <p>The name of the database. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>It must consist of lowercase letters, digits, hyphens (-), and underscores (_).</p>
-     * </li>
-     * <li><p>It must start with a letter and end with a letter or a digit. The name can be up to 64 characters long.</p>
-     * </li>
+     * <li>It can contain lowercase letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>It must start with a letter and end with a letter or digit. It can be up to 64 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

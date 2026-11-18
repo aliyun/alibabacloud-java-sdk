@@ -14,7 +14,7 @@ public class DisablePolarClawPluginResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class DisablePolarClawPluginResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class DisablePolarClawPluginResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
-     * <p>The ID of the disabled plugin.</p>
+     * <p>The ID of the disabled plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>openclaw-lark</p>
@@ -59,7 +59,7 @@ public class DisablePolarClawPluginResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the gateway was restarted.</p>
+     * <p>Indicates whether the gateway is restarted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

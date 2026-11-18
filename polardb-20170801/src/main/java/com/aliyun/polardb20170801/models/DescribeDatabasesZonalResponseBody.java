@@ -11,7 +11,7 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
     public java.util.List<DescribeDatabasesZonalResponseBodyDatabases> databases;
 
     /**
-     * <p>The maximum number of entries returned for the current request.</p>
+     * <p>The maximum number of entries to return in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. This is the NextToken value from the previous API call. If there are no more results, do not specify this parameter.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous API call. If no subsequent query is required, do not specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>
@@ -47,7 +47,7 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2FED790E-FB61-4721-8C1C-07C627******</p>
@@ -110,7 +110,7 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
 
     public static class DescribeDatabasesZonalResponseBodyDatabasesAccounts extends TeaModel {
         /**
-         * <p>The account name.</p>
+         * <p>The name of the account.</p>
          * <blockquote>
          * <p>If the cluster is a PolarDB for MySQL cluster, privileged accounts are not included.</p>
          * </blockquote>
@@ -124,16 +124,11 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         /**
          * <p>The permissions of the account. Valid values:</p>
          * <ul>
-         * <li><p><strong>ReadWrite</strong></p>
-         * </li>
-         * <li><p><strong>ReadOnly</strong></p>
-         * </li>
-         * <li><p><strong>DMLOnly</strong></p>
-         * </li>
-         * <li><p><strong>DDLOnly</strong></p>
-         * </li>
-         * <li><p><strong>ReadIndex</strong></p>
-         * </li>
+         * <li><strong>ReadWrite</strong>: read and write</li>
+         * <li><strong>ReadOnly</strong>: read-only </li>
+         * <li><strong>DMLOnly</strong>: DML only</li>
+         * <li><strong>DDLOnly</strong>: DDL only</li>
+         * <li><strong>ReadIndex</strong>: read and index</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,14 +138,11 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         public String accountPrivilege;
 
         /**
-         * <p>The status of the account. Valid values:</p>
+         * <p>The status of the account. Valid values: </p>
          * <ul>
-         * <li><p><strong>Creating</strong></p>
-         * </li>
-         * <li><p><strong>Available</strong></p>
-         * </li>
-         * <li><p><strong>Deleting</strong></p>
-         * </li>
+         * <li><strong>Creating</strong>: The account is being created.</li>
+         * <li><strong>Available</strong>: The account is available.</li>
+         * <li><strong>Deleting</strong>: The account is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,14 +152,11 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         public String accountStatus;
 
         /**
-         * <p>The authorization status. Valid values:</p>
+         * <p>The authorization status. Valid values: </p>
          * <ul>
-         * <li><p><strong>Empowering</strong>: Permissions are being granted.</p>
-         * </li>
-         * <li><p><strong>Empowered</strong>: Permissions are granted.</p>
-         * </li>
-         * <li><p><strong>Removing</strong>: Permissions are being revoked.</p>
-         * </li>
+         * <li><strong>Empowering</strong>: The account is being authorized.</li>
+         * <li><strong>Empowered</strong>: The account is authorized.</li>
+         * <li><strong>Removing</strong>: The permissions are being revoked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +215,7 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         public java.util.List<DescribeDatabasesZonalResponseBodyDatabasesAccounts> accounts;
 
         /**
-         * <p>The character set.</p>
+         * <p>The name of the character set.</p>
          * 
          * <strong>example:</strong>
          * <p>utf8mb4</p>
@@ -253,14 +242,11 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The status of the database. Valid values:</p>
+         * <p>The status of the database. Valid values: </p>
          * <ul>
-         * <li><p><strong>Creating</strong></p>
-         * </li>
-         * <li><p><strong>Running</strong></p>
-         * </li>
-         * <li><p><strong>Deleting</strong></p>
-         * </li>
+         * <li><strong>Creating</strong>: The database is being created.</li>
+         * <li><strong>Running</strong>: The database is running.</li>
+         * <li><strong>Deleting</strong>: The database is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,14 +256,11 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         public String DBStatus;
 
         /**
-         * <p>The database engine type. Valid values:</p>
+         * <p>The type of the database engine. Valid values:</p>
          * <ul>
-         * <li><p><strong>MySQL</strong></p>
-         * </li>
-         * <li><p><strong>Oracle</strong></p>
-         * </li>
-         * <li><p><strong>PostgreSQL</strong></p>
-         * </li>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +270,7 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The ID of the primary node that corresponds to the database in a Multi-master Cluster (Database/Table) edition cluster.</p>
+         * <p>The ID of the primary node that corresponds to the database in a Multi-master Cluster (Database/Table) Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

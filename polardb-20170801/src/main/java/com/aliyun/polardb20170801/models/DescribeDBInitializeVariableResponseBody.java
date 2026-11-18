@@ -7,12 +7,9 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
     /**
      * <p>The database type. Valid values:</p>
      * <ul>
-     * <li><p>Oracle</p>
-     * </li>
-     * <li><p>PostgreSQL</p>
-     * </li>
-     * <li><p>MySQL</p>
-     * </li>
+     * <li>Oracle</li>
+     * <li>PostgreSQL</li>
+     * <li>MySQL</li>
      * </ul>
      * 
      * <strong>example:</strong>

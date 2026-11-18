@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     /**
-     * <p>The cluster edition. Valid values:</p>
-     * <ul>
-     * <li>Normal: Cluster Edition.</li>
-     * <li>Basic: Single Node Edition.</li>
-     * <li>ArchiveNormal: Archive Database.</li>
-     * <li>SENormal: Standard Edition.</li>
-     * <li>NormalMultimaster: Multi-master Cluster.</li>
-     * </ul>
+     * <p>The cluster edition. Valid values: Normal (Cluster Edition), Basic (Single Node Edition), ArchiveNormal (Archive Database Cluster Edition), SENormal (Standard Edition), and NormalMultimaster (Multi-master Cluster).</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -42,13 +35,13 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
      * <p>The list of node IDs to delete. Used when ModifyType is set to DELETE.</p>
      * 
      * <strong>example:</strong>
-     * <p>pi-**************</p>
+     * <p>[&quot;pi-***************&quot;]</p>
      */
     @NameInMap("DBNodeIds")
     public java.util.List<String> DBNodeIds;
 
     /**
-     * <p>The number of nodes. Valid for the BUY scenario. This value includes the read/write node. Minimum value: 1. Default value: 1.</p>
+     * <p>The number of nodes. Valid for the BUY scenario. This number includes read/write nodes. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -57,7 +50,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public Integer DBNodeNum;
 
     /**
-     * <p>The list of heterogeneous specification change nodes. Used for specification change scenarios to specify the target specifications for each node.</p>
+     * <p>The list of nodes for heterogeneous specification changes. Used in specification change scenarios to specify the target specifications for each node.</p>
      */
     @NameInMap("DBNodes")
     public String DBNodesShrink;
@@ -81,12 +74,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>Specifies whether to enable the hot standby cluster. Valid values:</p>
-     * <ul>
-     * <li>ON: Enable.</li>
-     * <li>OFF: Disable.</li>
-     * </ul>
-     * <p>Valid for the BUY and specification change scenarios.</p>
+     * <p>Specifies whether to enable the hot standby cluster. Valid values: ON and OFF. Valid for the BUY and specification change scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -95,16 +83,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String hotStandbyCluster;
 
     /**
-     * <p>The specification change direction. Valid values:</p>
-     * <ul>
-     * <li>ADD: add nodes.</li>
-     * <li>DELETE: remove nodes.</li>
-     * <li>UPGRADE: upgrade specifications.</li>
-     * <li>DOWNGRADE: downgrade specifications.</li>
-     * <li>HOT_STANDBY: hot standby change.</li>
-     * <li>STORAGE: storage space change.</li>
-     * <li>STORAGE_TYPE: storage type change.</li>
-     * </ul>
+     * <p>The modification type. Valid values: ADD (add nodes), DELETE (remove nodes), UPGRADE (upgrade), DOWNGRADE (downgrade), HOT_STANDBY (hot standby change), STORAGE (storage space change), and STORAGE_TYPE (storage type change).</p>
      * 
      * <strong>example:</strong>
      * <p>UPGRADE</p>
@@ -113,14 +92,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String modifyType;
 
     /**
-     * <p>The order type. Valid values:</p>
-     * <ul>
-     * <li>BUY: new purchase.</li>
-     * <li>CONVERT: billing method conversion.</li>
-     * <li>RENEW: renewal.</li>
-     * <li>UPGRADE: upgrade specifications or add nodes.</li>
-     * <li>DOWNGRADE: downgrade specifications or remove nodes.</li>
-     * </ul>
+     * <p>The order type. Valid values: BUY (new purchase), CONVERT (billing method change), RENEW (renewal), UPGRADE (upgrade or add nodes), and DOWNGRADE (downgrade or remove nodes).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,11 +102,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The billing method. Required for the BUY and CONVERT scenarios. Valid values:</p>
-     * <ul>
-     * <li>Prepaid: subscription.</li>
-     * <li>Postpaid: pay-as-you-go.</li>
-     * </ul>
+     * <p>The billing method. Required for the BUY and CONVERT scenarios. Valid values: Prepaid (subscription) and Postpaid (pay-as-you-go).</p>
      * 
      * <strong>example:</strong>
      * <p>Prepaid</p>
@@ -143,11 +111,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The subscription cycle. Valid values:</p>
-     * <ul>
-     * <li>Month: monthly.</li>
-     * <li>Year: yearly.</li>
-     * </ul>
+     * <p>The subscription period. Valid values: Month and Year.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -175,7 +139,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The serverless type. Valid values: AgileServerless.</p>
+     * <p>The Serverless type. Valid value: AgileServerless.</p>
      * 
      * <strong>example:</strong>
      * <p>AgileServerless</p>
@@ -184,11 +148,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String serverlessType;
 
     /**
-     * <p>The storage billing type. Valid values:</p>
-     * <ul>
-     * <li>Prepaid: subscription.</li>
-     * <li>Postpaid: pay-as-you-go.</li>
-     * </ul>
+     * <p>The storage billing method. Valid values: Prepaid (subscription) and Postpaid (pay-as-you-go).</p>
      * 
      * <strong>example:</strong>
      * <p>Prepaid</p>
@@ -197,7 +157,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String storageChargeType;
 
     /**
-     * <p>The storage space, in GB. Used for prepaid storage or storage specification change scenarios.</p>
+     * <p>The storage space. Unit: GB. Used for prepaid storage or storage specification change scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -206,16 +166,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String storageSpace;
 
     /**
-     * <p>The storage type. Valid values:</p>
-     * <ul>
-     * <li>PSL5: high performance.</li>
-     * <li>PSL4: standard.</li>
-     * <li>ESSDPL0</li>
-     * <li>ESSDPL1</li>
-     * <li>ESSDPL2</li>
-     * <li>ESSDPL3</li>
-     * <li>ESSDAUTOPL</li>
-     * </ul>
+     * <p>The storage type. Valid values: PSL5 (premium performance), PSL4 (standard performance), ESSDPL0, ESSDPL1, ESSDPL2, ESSDPL3, and ESSDAUTOPL.</p>
      * 
      * <strong>example:</strong>
      * <p>PSL5</p>
@@ -224,7 +175,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The subscription duration. Used together with Period. Valid for the BUY, CONVERT, and RENEW scenarios when the billing method is Prepaid.</p>
+     * <p>The purchase duration. Used in combination with Period. Valid for the BUY, CONVERT, and RENEW scenarios when the billing method is Prepaid.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -233,7 +184,7 @@ public class DescribeDBClusterPriceShrinkRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The zone ID. We recommend that you specify this parameter for the BUY scenario.</p>
+     * <p>The zone ID. Recommended for the BUY scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>

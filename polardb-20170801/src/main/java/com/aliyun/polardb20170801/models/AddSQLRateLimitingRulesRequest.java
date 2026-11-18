@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddSQLRateLimitingRulesRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The cluster ID. Usage notes: SQL throttling is supported only for PostgreSQL and Oracle engines, and is not supported for MySQL engines.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,14 +27,11 @@ public class AddSQLRateLimitingRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The configuration of the SQL throttling rule to add or modify, specified as a JSON string. The values of the parameters must be strings. Example: <code>{&quot;id&quot;:&quot;test&quot;,&quot;enabled&quot;:&quot;true&quot;,&quot;match_mode&quot;:&quot;0&quot;,&quot;template&quot;:&quot;dXBkYXRlIHQgc2V0IGEgPSAxIHdoZXJlIGlkID0gMQ==&quot;,&quot;user&quot;:&quot;&quot;,&quot;database&quot;:&quot;&quot;,&quot;waiting&quot;:1024,&quot;endpoint&quot;:&quot;[{&quot;EndpointName&quot;:&quot;pe-***********&quot;,&quot;EndpointType&quot;:&quot;Cluster&quot;,&quot;DBEndpointDescription&quot;:&quot;Cluster Address&quot;}]&quot;,&quot;throttle_mode&quot;:0,&quot;concurrency&quot;:1}</code>. The JSON string contains the following parameters:</p>
+     * <p>The JSON string of the configuration parameters and their values for the SQL throttling rule to be modified. All parameter values are of the string type. Example: <code>{&quot;id&quot;:&quot;test&quot;,&quot;enabled&quot;:&quot;true&quot;,&quot;match_mode&quot;:&quot;0&quot;,&quot;template&quot;:&quot;dXBkYXRlIHQgc2V0IGEgPSAxIHdoZXJlIGlkID0gMQ==&quot;,&quot;user&quot;:&quot;&quot;,&quot;database&quot;:&quot;&quot;,&quot;waiting&quot;:1024,&quot;endpoint&quot;:&quot;[{&quot;EndpointName&quot;:&quot;pe-***********&quot;,&quot;EndpointType&quot;:&quot;Cluster&quot;,&quot;DBEndpointDescription&quot;:&quot;Cluster Address&quot;}]&quot;,&quot;throttle_mode&quot;:0,&quot;concurrency&quot;:1}</code>. Parameters:</p>
      * <ul>
-     * <li><p><code>&quot;id&quot;</code>: Required. The name of the throttling rule. The name must meet the following requirements:</p>
-     * <ul>
-     * <li><p>It cannot exceed 30 characters in length.</p>
-     * </li>
-     * <li><p>It must consist of uppercase letters, lowercase letters, and digits.</p>
-     * </li>
+     * <li><code>&quot;id&quot;</code>: Required. The name of the throttling rule. The name must meet the following requirements:<ul>
+     * <li>The name cannot exceed 30 characters in length.</li>
+     * <li>The name must consist of uppercase and lowercase letters and digits.</li>
      * </ul>
      * </li>
      * </ul>
@@ -50,10 +47,8 @@ public class AddSQLRateLimitingRulesRequest extends TeaModel {
      * <p>The name of the SQL throttling rule. You can specify only one rule name at a time.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeSQLRateLimitingRules</a> operation to view the details of all SQL throttling rules for the target cluster, including the rule names.</p>
-     * </li>
-     * <li><p>If the specified rule name does not exist in the current cluster, the system automatically creates a new SQL throttling rule based on the rule name and the value of the <code>RuleConfig</code> parameter.</p>
-     * </li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeSQLRateLimitingRules</a> operation to query the details of all SQL throttling rules in the specified cluster, including the rule names.</li>
+     * <li>If the specified rule name does not exist in the current cluster, the system automatically creates an SQL throttling rule based on the name and the <code>RuleConfig</code> value.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>

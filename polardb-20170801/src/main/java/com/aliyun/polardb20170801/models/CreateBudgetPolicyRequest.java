@@ -35,10 +35,10 @@ public class CreateBudgetPolicyRequest extends TeaModel {
     /**
      * <p>The budget type. Valid values:</p>
      * <ul>
-     * <li><strong>GlobalTotal</strong>: Global total budget.</li>
-     * <li><strong>ConsumerGroupTotal</strong>: Total budget for a consumer group.</li>
-     * <li><strong>ConsumerGroupMemberDefault</strong>: Default budget for a consumer group member.</li>
-     * <li><strong>Consumer</strong>: Budget for a single consumer.</li>
+     * <li><strong>GlobalTotal</strong>: global total budget</li>
+     * <li><strong>ConsumerGroupTotal</strong>: total budget of a consumer group</li>
+     * <li><strong>ConsumerGroupMemberDefault</strong>: default budget for consumer group members</li>
+     * <li><strong>Consumer</strong>: budget for a single consumer</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

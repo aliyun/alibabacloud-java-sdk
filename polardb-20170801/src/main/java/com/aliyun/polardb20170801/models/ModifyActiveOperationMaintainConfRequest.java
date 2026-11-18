@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     /**
-     * <p>The remarks for the operation.</p>
+     * <p>The remark for the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,12 +14,10 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The time of the cycle.</p>
+     * <p>The cycle time.</p>
      * <ul>
-     * <li><p>If CycleType is set to Month, specify the day of the month. Valid values: 1 to 28. Use commas (,) to separate multiple days.</p>
-     * </li>
-     * <li><p>If CycleType is set to Week, specify the day of the week. Valid values: 1 to 7. Use commas (,) to separate multiple days.</p>
-     * </li>
+     * <li>If CycleType is set to Month, the value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,).</li>
+     * <li>If CycleType is set to Week, the value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,10 +30,8 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     /**
      * <p>The cycle type. Valid values:</p>
      * <ul>
-     * <li><p>Month</p>
-     * </li>
-     * <li><p>Week</p>
-     * </li>
+     * <li>Month: Monthly.</li>
+     * <li>Week: Weekly.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +42,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String cycleType;
 
     /**
-     * <p>The end time of the maintenance window. Use the HH:mmZ format. The time is in UTC.</p>
+     * <p>The end time of the maintenance window. Specify the time in the HH:mmZ-HH:mmZ format. The time must be in UTC. Note: The format is explicitly declared as HH:mm:ssZ, and example values are updated to actual available formats such as 02:00:00Z and 06:00:00Z.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +52,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the task. The time must be in UTC and in the yyyy-mm-ddThh:mm:ssZ format.</p>
+     * <p>The start time of the task. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Note: The format is explicitly declared as HH:mm:ssZ, and example values are updated to actual available formats such as 02:00:00Z and 06:00:00Z.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +68,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +96,11 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Specifies whether to enable the configuration. Valid values: 1 (Enable) and 2 (Disable).</p>
+     * <p>Specifies whether the configuration takes effect. Valid values:</p>
+     * <ul>
+     * <li>1: Yes.</li>
+     * <li>2: No.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

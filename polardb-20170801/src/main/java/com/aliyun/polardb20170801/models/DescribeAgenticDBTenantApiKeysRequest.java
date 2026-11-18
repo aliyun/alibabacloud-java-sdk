@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBTenantApiKeysRequest extends TeaModel {
     /**
-     * <p>The AgenticDB cluster ID.</p>
+     * <p>The cluster ID. Both pagc- and pc- prefixes are supported. The pagc- prefix indicates an AgenticDB dedicated cluster. The pc- prefix indicates a standard PolarDB cluster that supports AgenticDB tenant capabilities.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeAgenticDBTenantApiKeysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Default value: 30. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -43,7 +43,7 @@ public class DescribeAgenticDBTenantApiKeysRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Filters results by tenant name.</p>
+     * <p>Filters the results by tenant name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-saas-app</p>

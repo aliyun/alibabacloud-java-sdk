@@ -24,6 +24,9 @@ public class DescribeApplicationAvailableVersionRequest extends TeaModel {
 
     /**
      * <p>The list of application subcomponents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Components")
     public java.util.List<DescribeApplicationAvailableVersionRequestComponents> components;
@@ -85,7 +88,7 @@ public class DescribeApplicationAvailableVersionRequest extends TeaModel {
         public String componentClass;
 
         /**
-         * <p>The maximum number of application subcomponents of the same specifications. Default value: the value of ComponentReplica. This parameter is supported only for raycluster applications.</p>
+         * <p>The maximum number of application subcomponents of the same specifications. Default value: the value of ComponentReplica. This parameter is supported only by raycluster applications.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBProjectsRequest extends TeaModel {
     /**
-     * <p>The ID of the AgenticDB cluster.</p>
+     * <p>The ID of the AgenticDB cluster. The ID starts with pagc-. You can create the cluster by calling CreateDBCluster and setting AgenticDbType to dedicated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeAgenticDBProjectsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Default value: 30. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -33,7 +33,7 @@ public class DescribeAgenticDBProjectsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The project ID for exact match.</p>
+     * <p>The project ID for exact matching.</p>
      * 
      * <strong>example:</strong>
      * <p>proj-a1b2c3d4e5f6</p>
@@ -42,7 +42,7 @@ public class DescribeAgenticDBProjectsRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The project name for fuzzy match.</p>
+     * <p>The project name for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>analytics</p>

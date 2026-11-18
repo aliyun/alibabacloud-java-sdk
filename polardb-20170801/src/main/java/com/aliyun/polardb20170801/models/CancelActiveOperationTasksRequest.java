@@ -11,15 +11,7 @@ public class CancelActiveOperationTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID.</p>
-     * <blockquote>
-     * </blockquote>
-     * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information about all clusters within a specified account.</p>
-     * </li>
-     * <li><p>If you do not specify this parameter, scheduled tasks on your clusters that are deployed in all regions are queried.</p>
-     * </li>
-     * </ul>
+     * <p>The region ID. This parameter is required. You can call the DescribeRegions operation to query the region ID. If you leave this parameter empty, the system queries scheduled tasks in all regions under the current account by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +30,7 @@ public class CancelActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The IDs of O\&amp;M events that are canceled at a time. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the O&amp;M events to cancel in batches. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

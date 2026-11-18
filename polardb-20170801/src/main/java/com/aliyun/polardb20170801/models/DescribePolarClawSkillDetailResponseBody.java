@@ -38,13 +38,13 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The Skill author information.</p>
+     * <p>The skill author information.</p>
      */
     @NameInMap("Owner")
     public DescribePolarClawSkillDetailResponseBodyOwner owner;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F45FFACC-xxx</p>
@@ -53,7 +53,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The core information of the Skill.</p>
+     * <p>The core skill information.</p>
      */
     @NameInMap("Skill")
     public DescribePolarClawSkillDetailResponseBodySkill skill;
@@ -130,7 +130,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         public String changelog;
 
         /**
-         * <p>The version publish timestamp in Unix milliseconds.</p>
+         * <p>The version release timestamp in Unix milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1767545394459</p>
@@ -198,7 +198,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         public String handle;
 
         /**
-         * <p>The profile picture URL.</p>
+         * <p>The avatar URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://avatars.githubusercontent.com/u/58493?v=4">https://avatars.githubusercontent.com/u/58493?v=4</a></p>
@@ -274,7 +274,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         public Long downloads;
 
         /**
-         * <p>The total number of installations of all time.</p>
+         * <p>The total number of historical installations.</p>
          * 
          * <strong>example:</strong>
          * <p>3787</p>
@@ -283,7 +283,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         public Long installsAllTime;
 
         /**
-         * <p>The current number of installations.</p>
+         * <p>The number of current installations.</p>
          * 
          * <strong>example:</strong>
          * <p>3664</p>
@@ -366,7 +366,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
 
     public static class DescribePolarClawSkillDetailResponseBodySkill extends TeaModel {
         /**
-         * <p>The first publish timestamp in Unix milliseconds.</p>
+         * <p>The initial release timestamp in Unix milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1767545394459</p>
@@ -384,7 +384,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The Skill identifier.</p>
+         * <p>The skill identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>weather</p>
@@ -399,7 +399,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         public DescribePolarClawSkillDetailResponseBodySkillStats stats;
 
         /**
-         * <p>The brief description.</p>
+         * <p>The short description.</p>
          * 
          * <strong>example:</strong>
          * <p>Get current weather and forecasts (no API key required).</p>
@@ -419,7 +419,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The last update timestamp in Unix milliseconds.</p>
+         * <p>The last updated timestamp in Unix milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1778485729679</p>

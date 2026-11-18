@@ -14,7 +14,8 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
     public String branchComputeClusterId;
 
     /**
-     * <p>The time when the project was created. The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The time when the project was created.</p>
+     * <p>The time follows the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-06-10T11:00:00Z</p>
@@ -41,7 +42,7 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
     public String defaultBranchName;
 
     /**
-     * <p>The retention period for recent records of the project. This parameter may be empty for older projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</p>
+     * <p>The retention period of historical data, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>604800</p>

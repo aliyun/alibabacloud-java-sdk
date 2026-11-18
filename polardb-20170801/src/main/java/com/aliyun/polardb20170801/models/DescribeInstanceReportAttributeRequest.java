@@ -14,7 +14,7 @@ public class DescribeInstanceReportAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the instance inspection report to query.</p>
+     * <p>The ID of the instance inspection report.</p>
      * 
      * <strong>example:</strong>
      * <p>report-001</p>

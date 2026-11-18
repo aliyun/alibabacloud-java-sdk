@@ -25,7 +25,7 @@ public class DescribeApplicationComponentPerformanceRequest extends TeaModel {
     public String componentId;
 
     /**
-     * <p>The end time of the query. The end time must be later than or equal to the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC.</p>
+     * <p>The end time of the query. The end time must not be earlier than the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class DescribeApplicationComponentPerformanceRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The type of the performance data.</p>
+     * <p>The type of performance data. Note: Add the valid values, the meaning of each value, and the correspondence with ApplicationType to the description of the Type parameter, and explicitly specify that this parameter should be omitted in most scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>supabase</p>

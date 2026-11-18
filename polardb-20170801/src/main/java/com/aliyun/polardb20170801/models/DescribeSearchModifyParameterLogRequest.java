@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSearchModifyParameterLogRequest extends TeaModel {
     /**
-     * <p>The ID of the PolarDB primary cluster. This ID is used to query the parameter modification history of the Search cluster associated with the current account.</p>
+     * <p>The ID of the PolarDB for MySQL primary cluster, which is used to query the parameter modification history of the associated Search cluster. Before you call this operation, ensure that PolarSearch is enabled for the target cluster. You can add a search node on the basic information page of the cluster in the console. This operation is not applicable to clusters for which PolarSearch is not enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeSearchModifyParameterLogRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. Only records modified before this time are returned. The end time cannot be earlier than the start time.</p>
+     * <p>The end time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. Only records modified before this time are returned. The end time must not be earlier than the start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeSearchModifyParameterLogRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. Only records modified after this time are returned.</p>
+     * <p>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. Only records modified after this time are returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -24,6 +24,9 @@ public class DescribeApplicationAvailableVersionShrinkRequest extends TeaModel {
 
     /**
      * <p>The list of application subcomponents.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Components")
     public String componentsShrink;

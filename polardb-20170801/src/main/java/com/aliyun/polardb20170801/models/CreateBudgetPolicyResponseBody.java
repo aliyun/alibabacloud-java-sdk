@@ -23,7 +23,7 @@ public class CreateBudgetPolicyResponseBody extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>

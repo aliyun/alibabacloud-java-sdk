@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActivationCodeDetailsRequest extends TeaModel {
     /**
-     * <p>The ID of the activation code.</p>
+     * <p>The activation code ID. This parameter is required. If it is not provided, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

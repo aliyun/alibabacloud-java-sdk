@@ -40,13 +40,16 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The skill template group.</p>
+     * <p>The skill templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("SkillTemplates")
     public java.util.List<DescribePolarClawSkillTemplatesResponseBodySkillTemplates> skillTemplates;
 
     /**
-     * <p>The total number of entries. This parameter is returned only when you query a list.</p>
+     * <p>The total number of entries. This parameter is returned only for list queries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -101,7 +104,7 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
 
     public static class DescribePolarClawSkillTemplatesResponseBodySkillTemplates extends TeaModel {
         /**
-         * <p>The time when the skill template was created in UTC.</p>
+         * <p>The time when the skill template was created. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-15T16:00Z</p>
@@ -119,7 +122,7 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The time when the skill template was last modified in UTC.</p>
+         * <p>The time when the skill template was last modified. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-16T16:00Z</p>
@@ -164,7 +167,11 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
         public String skillTemplateName;
 
         /**
-         * <p>The skill templatetype. Valid values: 0: system template. 1: user template.</p>
+         * <p>The skill templatetype. Valid values:</p>
+         * <ul>
+         * <li>0: System template.</li>
+         * <li>1: User template.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>

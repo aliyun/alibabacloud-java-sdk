@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class TempModifyDBNodeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically use coupons. Valid values:</p>
+     * <p>Specifies whether to automatically use a coupon. Valid values:</p>
      * <ul>
-     * <li>true (default): Uses coupons.</li>
-     * <li>false: Does not use coupons.</li>
+     * <li><strong>true</strong>: uses a coupon. This is the default value.</li>
+     * <li><strong>false</strong>: does not use a coupon.</li>
      * </ul>
      */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can contain only ASCII characters. The token can be up to 64 characters in length.</p>
+     * <p>The client token that ensures the idempotence of the request. The client generates the token to ensure uniqueness across different requests. The token is case-sensitive and can contain up to 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
@@ -41,7 +41,7 @@ public class TempModifyDBNodeRequest extends TeaModel {
     public java.util.List<TempModifyDBNodeRequestDBNode> DBNode;
 
     /**
-     * <p>The change type. The value is fixed as <strong>TempUpgrade</strong>.</p>
+     * <p>The modification type. Set the value to <strong>TempUpgrade</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,8 +53,8 @@ public class TempModifyDBNodeRequest extends TeaModel {
     /**
      * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><strong>Modify</strong>: temporarily upgrades specifications.</li>
-     * <li><strong>Add</strong>: temporarily adds nodes.</li>
+     * <li><strong>Modify</strong>: temporarily upgrades the configuration.</li>
+     * <li><strong>Add</strong>: temporarily adds a node.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,7 +71,7 @@ public class TempModifyDBNodeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+     * <p>The coupon ID. If you do not specify this parameter, the default coupon is used.</p>
      * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
@@ -86,9 +86,9 @@ public class TempModifyDBNodeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The restore time for the temporary upgrade. Specify the time in the YYYY-MM-DD hh:mm:ss format.</p>
+     * <p>The time when the temporary upgrade is restored. Specify the time in the YYYY-MM-DD hh:mm:ss format.</p>
      * <blockquote>
-     * <p>The restore time cannot be earlier than 1 hour after the current time or later than 1 day before the cluster expiration time.</p>
+     * <p>The restore time must be at least 1 hour later than the current time and at least 1 day earlier than the cluster expiration time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -205,7 +205,7 @@ public class TempModifyDBNodeRequest extends TeaModel {
          * <blockquote>
          * <ul>
          * <li>When you add a node, the node specifications must be the same as those of the existing nodes.</li>
-         * <li>For the specifications of existing cluster nodes, see <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a>.</li>
+         * <li>For more information about the specifications of existing nodes in the cluster, see <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a>.</li>
          * </ul>
          * </blockquote>
          * 

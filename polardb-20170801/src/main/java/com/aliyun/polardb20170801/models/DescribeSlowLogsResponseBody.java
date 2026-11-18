@@ -15,7 +15,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
 
     /**
      * <p>The end date of the query.</p>
-     * <p>The date is in UTC. Format: YYYY-MM-DDZ.</p>
+     * <p>The date is in UTC and formatted as YYYY-MM-DDZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-30Z</p>
@@ -64,7 +64,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
 
     /**
      * <p>The start date of the query.</p>
-     * <p>The date is in UTC. Format: YYYY-MM-DDZ.</p>
+     * <p>The date is in UTC and formatted as YYYY-MM-DDZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-05-01Z</p>
@@ -73,7 +73,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

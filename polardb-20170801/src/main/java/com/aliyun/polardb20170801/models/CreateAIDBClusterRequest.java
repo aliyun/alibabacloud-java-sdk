@@ -16,13 +16,13 @@ public class CreateAIDBClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables auto-renewal.</li>
-     * <li><strong>false</strong>: disables auto-renewal.</li>
-     * </ul>
-     * <p>Default value: <strong>false</strong>.</p>
-     * <blockquote>
+     * <li><strong>true</strong>: enables auto-renewal</li>
+     * <li><strong>false</strong>: disables auto-renewal
+     * Default value: <strong>false</strong>.<blockquote>
      * <p>This parameter takes effect only when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -31,10 +31,10 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>Specifies whether to automatically use coupons. Valid values:</p>
+     * <p>Specifies whether to automatically apply coupons. Valid values:</p>
      * <ul>
-     * <li>true (default): uses coupons.</li>
-     * <li>false: does not use coupons.</li>
+     * <li><strong>true</strong> (default): applies coupons</li>
+     * <li><strong>false</strong>: does not apply coupons</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String createPublicEndpoint;
 
     /**
-     * <p>The description of the cluster. Fuzzy match is supported.</p>
+     * <p>The cluster description. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -89,7 +89,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The node specifications.</p>
+     * <p>The node specifications. Call DescribeAvailableModels to query the specifications supported by the target ModelName, and select a DBNodeClass that is compatible with the model, such as polar.pg.g4.6xlarge.gu4.</p>
      * 
      * <strong>example:</strong>
      * <p>polar.pg.g4.6xlarge.gu4</p>
@@ -116,10 +116,10 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String inferenceEngine;
 
     /**
-     * <p>The ID of the ACK cluster.</p>
+     * <p>The ACK cluster ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxxxxxxxxxxxxxxxxxxx</p>
+     * <p>c1234567890abcdef</p>
      */
     @NameInMap("KubeClusterId")
     public String kubeClusterId;
@@ -128,13 +128,17 @@ public class CreateAIDBClusterRequest extends TeaModel {
      * <p>The Kubernetes configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>apiVersion: v1
+     * clusters: []
+     * contexts: []
+     * kind: Config
+     * users: []</p>
      */
     @NameInMap("KubeConfig")
     public String kubeConfig;
 
     /**
-     * <p>The management mode of the Kubernetes cluster.</p>
+     * <p>The Kubernetes cluster management mode.</p>
      * 
      * <strong>example:</strong>
      * <p>self_k8s</p>
@@ -143,7 +147,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String kubeManagement;
 
     /**
-     * <p>aideploy</p>
+     * <p>The deployment type.</p>
      * 
      * <strong>example:</strong>
      * <p>aideploy</p>
@@ -155,7 +159,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
      * <p>The Kubernetes configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>{&quot;namespace&quot;:&quot;default&quot;}</p>
      */
     @NameInMap("KubernetesConfig")
     public String kubernetesConfig;
@@ -170,7 +174,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String managementMode;
 
     /**
-     * <p>The name of the model.</p>
+     * <p>The model name.</p>
      * 
      * <strong>example:</strong>
      * <p>Qwen3-30B-A3B</p>
@@ -197,16 +201,16 @@ public class CreateAIDBClusterRequest extends TeaModel {
      * <p>The password.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>Example@123</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>The billing method. Valid values: </p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -217,10 +221,10 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>This parameter is required when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>. Specifies the billing cycle of the subscription cluster. Valid values: </p>
+     * <p>If the billing method is <strong>Prepaid</strong>, this parameter is required. Specifies the billing cycle of the subscription cluster. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: yearly subscription.</li>
-     * <li><strong>Month</strong>: monthly subscription.</li>
+     * <li><strong>Year</strong>: yearly. The unit is year when you select the subscription billing method.</li>
+     * <li><strong>Month</strong>: monthly. The unit is month when you select the subscription billing method.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -255,7 +259,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID. This parameter is actually required. If it is not provided, the service returns MethodArgumentNotValidException (400). You can call the ECS DescribeSecurityGroups operation to obtain the security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp**************</p>
@@ -283,15 +287,18 @@ public class CreateAIDBClusterRequest extends TeaModel {
 
     /**
      * <p>The pay-as-you-go time ranges.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("TimeSlices")
     public java.util.List<CreateAIDBClusterRequestTimeSlices> timeSlices;
 
     /**
-     * <p>The subscription duration. This parameter is required when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
+     * <p>The subscription duration. This parameter is required when the billing method is <strong>Prepaid</strong>.</p>
      * <ul>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> must be an integer in the range of <code>[1-9]</code>.</li>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> must be an integer in the range of <code>[1-3]</code>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> is an integer ranging from <code>1</code> to <code>9</code>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> is an integer ranging from <code>1</code> to <code>3</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -301,7 +308,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -311,7 +318,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -633,7 +640,7 @@ public class CreateAIDBClusterRequest extends TeaModel {
         public Long beginTime;
 
         /**
-         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC.</p>
+         * <p>The end time. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1758733200</p>

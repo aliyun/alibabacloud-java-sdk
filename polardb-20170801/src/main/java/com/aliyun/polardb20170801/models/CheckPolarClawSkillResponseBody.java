@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CheckPolarClawSkillResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Message")
     public java.util.List<String> message;
@@ -38,7 +41,7 @@ public class CheckPolarClawSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
      * <li><p><strong>true</strong>: The request is successful.</p>
      * </li>

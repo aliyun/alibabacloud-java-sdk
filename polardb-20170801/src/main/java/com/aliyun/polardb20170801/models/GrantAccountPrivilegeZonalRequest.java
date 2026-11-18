@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeZonalRequest extends TeaModel {
     /**
-     * <p>The account name.</p>
+     * <p>The name of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,18 +15,13 @@ public class GrantAccountPrivilegeZonalRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The account permissions. Valid values:</p>
+     * <p>The privileges of the account. Valid values:</p>
      * <ul>
-     * <li><p>ReadWrite: Read and write permissions.</p>
-     * </li>
-     * <li><p>ReadOnly: Read-only permissions.</p>
-     * </li>
-     * <li><p>DMLOnly: DML-only permissions.</p>
-     * </li>
-     * <li><p>DDLOnly: DDL-only permissions.</p>
-     * </li>
-     * <li><p>ReadIndex: Read-only and index permissions.</p>
-     * </li>
+     * <li>ReadWrite: read and write</li>
+     * <li>ReadOnly: read-only</li>
+     * <li>DMLOnly: DML only</li>
+     * <li>DDLOnly: DDL only</li>
+     * <li>ReadIndex: read-only and index</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +32,7 @@ public class GrantAccountPrivilegeZonalRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
-     * <p>A client-generated token that ensures the idempotence of the request. Make sure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token is case-sensitive and up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f5********************</p>
@@ -46,7 +41,7 @@ public class GrantAccountPrivilegeZonalRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the PolarDB on ENS cluster. This operation applies only to edge clusters. For standard PolarDB clusters, use GrantAccountPrivilege. You can create an edge cluster by calling CreateDBCluster and setting CloudProvider to ENS and specifying EnsRegionId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +51,7 @@ public class GrantAccountPrivilegeZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the database for which to grant permissions. To grant permissions for multiple databases, separate the database names with a comma (,).</p>
+     * <p>The name of the database to which privileges are granted. You can grant privileges to one or more databases at a time. Separate multiple database names with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

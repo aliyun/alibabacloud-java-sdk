@@ -7,7 +7,10 @@ public class RestoreTableRequest extends TeaModel {
     /**
      * <p>The backup set ID.</p>
      * <blockquote>
-     * <p>This parameter is required if you want to restore databases and tables from a backup set. Call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query backup set IDs.</p>
+     * <p>This parameter is required if you want to restore the destination databases and tables from a backup set. You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the backup set ID.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>To obtain the backup set ID, call the DescribeBackups operation and specify the StartTime and EndTime parameters. Then, call the DescribeMetaList operation to obtain the metadata of the restorable databases and tables. Operation description: Dependency chain description: To obtain the BackupId, you must call the DescribeBackups operation (the StartTime and EndTime parameters are required). To obtain the database and table names required for TableMeta, you must call the DescribeMetaList operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +22,10 @@ public class RestoreTableRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters within your account.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>The destination cluster must be in the Running state. You can call the DescribeDBClusterAttribute operation to query the current state. Operation description: Status prerequisite: The cluster must be in the Running state. You can call the DescribeDBClusterAttribute operation to query the current state.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -42,13 +48,11 @@ public class RestoreTableRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which you want to restore data. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+     * <p>The point in time to which you want to restore the data. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is required if you want to restore data to a specific point in time.</p>
-     * </li>
-     * <li><p>Data can be restored to any point in time within the last seven days.</p>
-     * </li>
+     * <li>This parameter is required if you want to restore data to a specific point in time.</li>
+     * <li>You can restore data to any point in time within the last seven days.</li>
      * </ul>
      * </blockquote>
      * 
@@ -62,10 +66,10 @@ public class RestoreTableRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>A JSON string that specifies the destination databases and tables to restore. All values in the JSON string must be strings.
-     * For example: <code>[ { &quot;tables&quot;:[ { &quot;name&quot;:&quot;testtb&quot;, &quot;type&quot;:&quot;table&quot;, &quot;newname&quot;:&quot;testtb_restore&quot; } ], &quot;name&quot;:&quot;testdb&quot;, &quot;type&quot;:&quot;db&quot;, &quot;newname&quot;:&quot;testdb_restore&quot; } ]</code>.</p>
+     * <p>The JSON string that contains the information about the destination databases and tables to be restored. All values in the database and table information are of the string type.
+     * Example: <code>[    {        &quot;tables&quot;:[            {                &quot;name&quot;:&quot;testtb&quot;,                &quot;type&quot;:&quot;table&quot;,                &quot;newname&quot;:&quot;testtb_restore&quot;            }        ],        &quot;name&quot;:&quot;testdb&quot;,        &quot;type&quot;:&quot;db&quot;,        &quot;newname&quot;:&quot;testdb_restore&quot;    } ]</code>.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to query the names of the databases and tables that can be restored. Then, enter the information into the example format.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to view the details of the databases and tables that can be restored, and fill in the restorable database and table information in the corresponding positions in the preceding example.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

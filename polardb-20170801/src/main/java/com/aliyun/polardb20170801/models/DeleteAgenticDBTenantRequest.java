@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAgenticDBTenantRequest extends TeaModel {
     /**
-     * <p>The AgenticDB cluster ID.</p>
+     * <p>The AgenticDB cluster ID, which must start with pagc-. You must first call CreateDBCluster and set AgenticDbType to dedicated to create a cluster, and then use the returned DBClusterId. Regular PolarDB cluster IDs are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

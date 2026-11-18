@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBLinksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-a*************</p>
@@ -14,13 +14,13 @@ public class DescribeDBLinksResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>Details about the database links.</p>
+     * <p>The DBLink information set.</p>
      */
     @NameInMap("DBLinkInfos")
     public java.util.List<DescribeDBLinksResponseBodyDBLinkInfos> DBLinkInfos;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>45D24263-7E3A-4140-9472-************</p>
@@ -59,7 +59,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
 
     public static class DescribeDBLinksResponseBodyDBLinkInfos extends TeaModel {
         /**
-         * <p>The ID of the source cluster that the database link connects.</p>
+         * <p>The ID of the source cluster for the DBLink.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-a*************</p>
@@ -68,7 +68,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The name of the database link.</p>
+         * <p>The name of the DBLink.</p>
          * 
          * <strong>example:</strong>
          * <p>dblink_test</p>
@@ -77,7 +77,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         public String DBLinkName;
 
         /**
-         * <p>The name of the source database of the database link.</p>
+         * <p>The name of the source database for the DBLink.</p>
          * 
          * <strong>example:</strong>
          * <p>testdb1</p>
@@ -86,7 +86,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         public String sourceDBName;
 
         /**
-         * <p>The account of the destination database of the database link.</p>
+         * <p>The target database account for the DBLink.</p>
          * 
          * <strong>example:</strong>
          * <p>testacc</p>
@@ -95,9 +95,9 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         public String targetAccount;
 
         /**
-         * <p>The ID of the destination cluster that the database link connects.</p>
+         * <p>The ID of the target cluster for the DBLink.</p>
          * <blockquote>
-         * <p>If the destination cluster is not a PolarDB for Oracle cluster, the returned value is empty.</p>
+         * <p>If the target is not a PolarDB for PostgreSQL (Compatible with Oracle) cluster, this parameter is empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         public String targetDBInstanceName;
 
         /**
-         * <p>The name of the destination database of the database link.</p>
+         * <p>The name of the target database for the DBLink.</p>
          * 
          * <strong>example:</strong>
          * <p>testdb2</p>

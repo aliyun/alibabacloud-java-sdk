@@ -41,7 +41,7 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     public Boolean ok;
 
     /**
-     * <p>The operation name. This parameter is returned when Async is set to true.</p>
+     * <p>The name of the operation. This parameter is returned when Async is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>InstallPolarClawSkill</p>
@@ -50,7 +50,7 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     public String operation;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F45FFACC-xxx</p>

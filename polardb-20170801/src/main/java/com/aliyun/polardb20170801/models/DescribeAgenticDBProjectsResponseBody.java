@@ -20,7 +20,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -38,7 +38,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of projects.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
 
     public static class DescribeAgenticDBProjectsResponseBodyItems extends TeaModel {
         /**
-         * <p>The number of all undeleted branches in the project, including hibernated branches and branches not bound to compute nodes. This parameter is empty if not provided by earlier backend versions, which does not indicate zero branches.</p>
+         * <p>The number of undeleted branches.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -102,8 +102,8 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public Long branchCount;
 
         /**
-         * <p>The creation time.</p>
-         * <p>The time follows the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time when the project was created.</p>
+         * <p>The time is in ISO 8601 format in the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T11:00:00Z</p>
@@ -139,7 +139,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String defaultBranchName;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>Production analytics database</p>
@@ -148,7 +148,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The retention period of recent records for the project. This parameter may be empty for earlier projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</p>
+         * <p>The retention period of historical data, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>604800</p>
@@ -157,7 +157,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public Long historyRetentionSeconds;
 
         /**
-         * <p>Project ID</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>proj-a1b2c3d4e5f6</p>

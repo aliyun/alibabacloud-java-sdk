@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGlobalDatabaseNetworkRequest extends TeaModel {
     /**
-     * <p>The ID of the GDN.</p>
+     * <p>The ID of the global database network (GDN).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

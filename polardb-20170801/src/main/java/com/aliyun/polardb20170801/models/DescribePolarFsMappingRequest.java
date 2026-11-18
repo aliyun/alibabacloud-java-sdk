@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsMappingRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster ID.</p>
-     * </blockquote>
+     * <p>The cluster ID. This parameter is required. If you do not specify this parameter, the API returns InvalidDBClusterId.Malformed (HTTP 400). You can call the DescribeDBClusters operation to query the cluster IDs within your account.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-**************</p>

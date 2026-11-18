@@ -15,7 +15,7 @@ public class DescribePolarClawSkillDetailRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The Skill identifier.</p>
+     * <p>The skill identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

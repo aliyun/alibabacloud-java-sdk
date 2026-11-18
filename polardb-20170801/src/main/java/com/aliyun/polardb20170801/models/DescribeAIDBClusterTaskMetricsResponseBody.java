@@ -14,7 +14,7 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format in UTC.</p>
+     * <p>The end time of the query. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC time).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-15T15:00:00Z</p>
@@ -24,6 +24,9 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
 
     /**
      * <p>The list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Items")
     public DescribeAIDBClusterTaskMetricsResponseBodyItems items;
@@ -38,7 +41,7 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
     public String metricType;
 
     /**
-     * <p>The page number of the returned page. The default value is 1.</p>
+     * <p>The page number of the returned page. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +50,7 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The total number of entries that match the query conditions. This parameter is optional and is not returned by default.</p>
+     * <p>The total number of entries that meet the query conditions. This parameter is optional and is not returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -74,7 +77,7 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
     public String relativeDbClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5E71541A-6007-4DCC-A38A-F872C31FEB45</p>
@@ -83,7 +86,7 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format in UTC.</p>
+     * <p>The start time of the query. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC time).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-15T14:00:00Z</p>
@@ -196,7 +199,7 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         public Double epoch;
 
         /**
-         * <p>The total number of steps.</p>
+         * <p>The global step.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -206,6 +209,7 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
 
         /**
          * <p>The log time.</p>
+         * <p>The time is in the ISO 8601 format and the UTC time zone. The seconds part can include a fractional component.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-15T14:16:49.52140317Z</p>
@@ -232,7 +236,7 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         public String metricType;
 
         /**
-         * <p>The specific point in time when the monitoring metric was collected. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The specific time point of the monitoring metrics. The format is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1742090703</p>
@@ -306,6 +310,9 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
     public static class DescribeAIDBClusterTaskMetricsResponseBodyItems extends TeaModel {
         /**
          * <p>The list of metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("SlsMetricsItems")
         public java.util.List<DescribeAIDBClusterTaskMetricsResponseBodyItemsSlsMetricsItems> slsMetricsItems;

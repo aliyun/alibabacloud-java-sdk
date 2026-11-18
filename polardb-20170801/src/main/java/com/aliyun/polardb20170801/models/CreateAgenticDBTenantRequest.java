@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgenticDBTenantRequest extends TeaModel {
     /**
-     * <p>The AgenticDB cluster ID.</p>
+     * <p>The AgenticDB cluster ID, which starts with pagc-. You can obtain this ID after creating a cluster by calling CreateDBCluster with AgenticDbType set to dedicated. Standard PolarDB cluster IDs start with pc- and are not supported by this operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateAgenticDBTenantRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The description of the tenant. The description can be up to 256 characters in length.</p>
+     * <p>The tenant description. The description can be up to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Sample tenant</p>
@@ -34,7 +34,7 @@ public class CreateAgenticDBTenantRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tenant name. The name must be 1 to 64 characters in length, start with a letter, and contain only letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The tenant name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

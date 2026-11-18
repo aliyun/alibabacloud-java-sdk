@@ -58,6 +58,10 @@ public class DescribeApplicationComponentPerformanceResponseBody extends TeaMode
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("PerformanceKeys")
     public DescribeApplicationComponentPerformanceResponseBodyPerformanceKeys performanceKeys;
 

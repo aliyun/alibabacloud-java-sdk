@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeActivationCodesResponseBody extends TeaModel {
     /**
-     * <p>List of activation codes</p>
+     * <p>The list of activation codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActivationCodesResponseBodyItems> items;
 
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +23,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of records on the current page</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +32,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The unique ID generated for this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>65D7ACE6-4A61-4B6E-B357-8CB24A******</p>
@@ -38,7 +41,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of records</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +96,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
 
     public static class DescribeActivationCodesResponseBodyItems extends TeaModel {
         /**
-         * <p>Effective period</p>
+         * <p>The effective period.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -102,7 +105,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String activateAt;
 
         /**
-         * <p>Activation code description</p>
+         * <p>The description of the activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>testCode</p>
@@ -111,7 +114,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Expiration time</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2054-10-16 16:46:20</p>
@@ -120,7 +123,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String expireAt;
 
         /**
-         * <p>Creation time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -129,7 +132,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>Update time</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -138,7 +141,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Activation code ID</p>
+         * <p>The ID of the activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -147,7 +150,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>MAC address</p>
+         * <p>The MAC address.</p>
          * 
          * <strong>example:</strong>
          * <p>12:34:56:78:98:00</p>
@@ -156,7 +159,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String macAddress;
 
         /**
-         * <p>Activation code name</p>
+         * <p>The name of the activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -165,7 +168,7 @@ public class DescribeActivationCodesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Unique identifier in the database</p>
+         * <p>The unique identifier of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>

@@ -15,6 +15,9 @@ public class DescribeInspectionTaskListResponseBody extends TeaModel {
 
     /**
      * <p>The list of inspection tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("TaskLists")
     public java.util.List<DescribeInspectionTaskListResponseBodyTaskLists> taskLists;
@@ -42,7 +45,7 @@ public class DescribeInspectionTaskListResponseBody extends TeaModel {
 
     public static class DescribeInspectionTaskListResponseBodyTaskLists extends TeaModel {
         /**
-         * <p>The last modification date of the task.</p>
+         * <p>The last modification date of the task, in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-01</p>
@@ -51,7 +54,7 @@ public class DescribeInspectionTaskListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The cron expression for periodically executing the inspection.</p>
+         * <p>The cron expression for scheduled inspections.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 2 * * ?</p>
@@ -69,7 +72,7 @@ public class DescribeInspectionTaskListResponseBody extends TeaModel {
         public String DBClusterIds;
 
         /**
-         * <p>The expiration date of the inspection task.</p>
+         * <p>The expiration date of the inspection task, in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-31</p>
@@ -81,7 +84,7 @@ public class DescribeInspectionTaskListResponseBody extends TeaModel {
          * <p>The description of the inspection task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Periodic inspection task</p>
+         * <p>Scheduled inspection task</p>
          */
         @NameInMap("TaskDescription")
         public String taskDescription;

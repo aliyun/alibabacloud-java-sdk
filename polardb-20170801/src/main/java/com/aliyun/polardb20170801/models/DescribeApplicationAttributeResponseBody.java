@@ -57,7 +57,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The PolarDB instance ID on which the application depends.</p>
+     * <p>The instance ID of the PolarDB instance that the application depends on.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
@@ -75,7 +75,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The NAT mapping: the list of DNAT mapping entries.</p>
+     * <p>The list of DNAT mapping entries for NAT mapping.</p>
      */
     @NameInMap("DnatMappings")
     public java.util.List<DescribeApplicationAttributeResponseBodyDnatMappings> dnatMappings;
@@ -127,8 +127,8 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     /**
      * <p>The lock mode. Valid values:</p>
      * <ul>
-     * <li>Unlock: unlocked.</li>
-     * <li>Lock: locked.</li>
+     * <li>Unlock: Unlocked.</li>
+     * <li>Lock: Locked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String minorVersion;
 
     /**
-     * <p>The NAT gateway ID.</p>
+     * <p>The ID of the NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-xxx</p>
@@ -182,7 +182,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The NAT mapping: the SNAT IP address bound to the vSwitch where the application resides. This refers to a customer-managed SNAT entry that is discovered and returned in real time by the control plane, and is unrelated to the SNAT of the Internet NAT gateway.</p>
+     * <p>The SNAT IP address bound to the vSwitch where the application resides. This address is from a customer-managed SNAT entry, which is discovered and returned in real time by the control plane. It is independent of the SNAT configuration of the Internet NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>10.64.0.20</p>
@@ -212,7 +212,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public DescribeApplicationAttributeResponseBodyPolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute;
 
     /**
-     * <p>The instance ID of the PolarFS Cold Storage Edition or High-performance Edition.</p>
+     * <p>The instance ID of the PolarFS Archive or High-performance Edition.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-**************</p>
@@ -253,7 +253,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     /**
      * <p>The Serverless type. Valid values:</p>
      * <ul>
-     * <li>2: Agile.</li>
+     * <li>2: Dynamic.</li>
      * <li>3: Stable.</li>
      * </ul>
      * 
@@ -264,7 +264,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String serverlessType;
 
     /**
-     * <p>The SNAT status. Valid values: on, off.</p>
+     * <p>The SNAT status. Valid values: on and off.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -278,7 +278,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
      * <li>Creating: The application is being created.</li>
      * <li>Activated: The application is running.</li>
      * <li>Maintaining: The application is under maintenance.</li>
-     * <li>ClassChanging: The application configuration is being changed.</li>
+     * <li>ClassChanging: The configurations of the application are being changed.</li>
      * <li>Transing: The application is being migrated.</li>
      * <li>MinorVersionUpgrading: The minor version of the application is being upgraded.</li>
      * <li>NetCreating: The endpoint of the application is being created.</li>
@@ -298,7 +298,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The storage resource description.</p>
+     * <p>The storage resources.</p>
      */
     @NameInMap("Storages")
     public java.util.List<DescribeApplicationAttributeResponseBodyStorages> storages;
@@ -313,7 +313,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String upgradeAvailable;
 
     /**
-     * <p>VPC ID</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-*******************</p>
@@ -322,7 +322,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>VSwitch ID</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-*******************</p>
@@ -340,7 +340,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String version;
 
     /**
-     * <p>The NAT mapping: the customer-managed VPC NAT gateway ID.</p>
+     * <p>The customer-managed VPC NAT gateway ID for NAT mapping.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-xxx</p>
@@ -349,7 +349,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     public String vpcNatGatewayId;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing-l</p>
@@ -910,7 +910,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String componentClass;
 
         /**
-         * <p>The description of the application subcomponent specifications.</p>
+         * <p>The description of the specifications for the application subcomponent.</p>
          * 
          * <strong>example:</strong>
          * <p>2C4GB</p>
@@ -1089,7 +1089,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     public static class DescribeApplicationAttributeResponseBodyDnatMappings extends TeaModel {
         /**
-         * <p>The access address in the NatIp:FrontPort format, which can be directly used on the office network.</p>
+         * <p>The access address in the NatIp:FrontPort format, which can be directly used in the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>10.64.0.10:10001</p>
@@ -1330,7 +1330,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     public static class DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore extends TeaModel {
         /**
-         * <p>The account source. Valid values: reuse_vector, existing. This parameter is returned only when the status is ENABLED.</p>
+         * <p>The account source. Valid values: reuse_vector and existing. This parameter is returned only when the status is ENABLED.</p>
          * 
          * <strong>example:</strong>
          * <p>existing</p>
@@ -1357,7 +1357,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The session storage status. Valid values: DISABLED, ENABLING, ENABLED, DISABLING.</p>
+         * <p>The status of the session store. Valid values: DISABLED, ENABLING, ENABLED, and DISABLING.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLED</p>
@@ -1442,7 +1442,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String llmModelName;
 
         /**
-         * <p>The currently active memory type.</p>
+         * <p>The active memory type.</p>
          * 
          * <strong>example:</strong>
          * <p>MULTIMODAL_TEXT</p>
@@ -1451,7 +1451,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String memoryType;
 
         /**
-         * <p>Indicates whether multimodal capabilities are currently enabled.</p>
+         * <p>Indicates whether multimodal capabilities are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1469,7 +1469,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The name of the Reranker model.</p>
+         * <p>The name of the reranker model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
@@ -1493,7 +1493,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>The current VisualEmbedder dimensions.</p>
+         * <p>The current dimensions of the VisualEmbedder.</p>
          * 
          * <strong>example:</strong>
          * <p>2560</p>
@@ -1646,7 +1646,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     public static class DescribeApplicationAttributeResponseBodyPolarClawApplicationAttributeLangfuseBinding extends TeaModel {
         /**
-         * <p>The effective period of the attachment. The value is a UNIX timestamp.</p>
+         * <p>The attachment effective period (UNIX timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1788771141</p>
@@ -1655,7 +1655,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public Long activatedAt;
 
         /**
-         * <p>Langfuse API Key ID</p>
+         * <p>The Langfuse API key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-key-xxx</p>
@@ -1673,7 +1673,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public Integer bindingTaskId;
 
         /**
-         * <p>The Langfuse application ID.</p>
+         * <p>The ID of the Langfuse application.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-xxx</p>
@@ -1682,7 +1682,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String langfuseApplicationId;
 
         /**
-         * <p>The binding phase.</p>
+         * <p>The phase of the binding.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -1691,7 +1691,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The Langfuse project ID.</p>
+         * <p>The ID of the Langfuse project.</p>
          * 
          * <strong>example:</strong>
          * <p>project-xxx</p>
@@ -1793,7 +1793,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         public java.util.List<String> authProviders;
 
         /**
-         * <p>The Supabase cluster identifier.</p>
+         * <p>The identifier of the Supabase cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-**************</p>

@@ -35,7 +35,7 @@ public class CreateRateLimitPolicyRequest extends TeaModel {
     public String rateLimitTpm;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -44,7 +44,7 @@ public class CreateRateLimitPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the consumer group or consumer.</p>
+     * <p>The ID of the throttling dimension (ConsumerGroup ID or Consumer ID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,11 +54,11 @@ public class CreateRateLimitPolicyRequest extends TeaModel {
     public String scopeRefId;
 
     /**
-     * <p>The rate limiting dimension. Valid values:</p>
+     * <p>The throttling dimension. Valid values:</p>
      * <ul>
-     * <li><p><strong>ConsumerGroup</strong>: Consumer group</p>
+     * <li><p><strong>ConsumerGroup</strong>: user group</p>
      * </li>
-     * <li><p><strong>Consumer</strong>: Consumer</p>
+     * <li><p><strong>Consumer</strong>: user</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

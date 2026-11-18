@@ -20,7 +20,7 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -38,7 +38,7 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -102,7 +102,7 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String apiKeyId;
 
         /**
-         * <p>The masked API key value.</p>
+         * <p>The masked API key.</p>
          * 
          * <strong>example:</strong>
          * <p>pagc_key_cGFnYy1icDFhMmIz****</p>
@@ -111,8 +111,7 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String apiKeyMasked;
 
         /**
-         * <p>The time when the API key was created.</p>
-         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T10:30:00Z</p>
@@ -121,7 +120,7 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the API key.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>MCP server token</p>
@@ -130,8 +129,7 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the API key expires.</p>
-         * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The expiration time. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2027-01-01T00:00:00Z</p>
@@ -140,7 +138,7 @@ public class DescribeAgenticDBTenantApiKeysResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The status of the API key.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

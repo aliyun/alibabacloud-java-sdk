@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalDataNetworkRequest extends TeaModel {
     /**
-     * <p>The description or remarks for the GDN.</p>
+     * <p>The description or remark of the GDN.</p>
      * 
      * <strong>example:</strong>
      * <p>mygdn</p>
@@ -14,7 +14,7 @@ public class CreateGlobalDataNetworkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Destination path</p>
+     * <p>The destination path.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -23,7 +23,7 @@ public class CreateGlobalDataNetworkRequest extends TeaModel {
     public String destinationFileSystemPath;
 
     /**
-     * <p>Target PolarFileSystem (PolarFS) instance</p>
+     * <p>The destination Polarlakebase instance. Note: This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-xxx</p>
@@ -32,7 +32,7 @@ public class CreateGlobalDataNetworkRequest extends TeaModel {
     public String destinationId;
 
     /**
-     * <p>The region of the destination PolarFS instance.</p>
+     * <p>The region of the destination Polarlakebase instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -41,12 +41,10 @@ public class CreateGlobalDataNetworkRequest extends TeaModel {
     public String destinationRegion;
 
     /**
-     * <p>The type of the destination instance. Valid values:</p>
+     * <p>The destination type. Valid values:</p>
      * <ul>
-     * <li><p><strong>pfs</strong>: PolarFS High-Performance Edition.</p>
-     * </li>
-     * <li><p><strong>pcs</strong>: PolarFS Cold Storage Edition.</p>
-     * </li>
+     * <li><strong>pfs</strong>: Polarlakebase High-performance Edition.</li>
+     * <li><strong>pcs</strong>: Polarlakebase Cold Storage Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,15 +54,13 @@ public class CreateGlobalDataNetworkRequest extends TeaModel {
     public String destinationType;
 
     /**
-     * <p>Whether to freeze the source path during transmission. Valid values:</p>
+     * <p>Specifies whether to freeze the source path during data transmission. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Freeze.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Do not freeze.</p>
-     * </li>
+     * <li><strong>true</strong>: Freezes the source path.</li>
+     * <li><strong>false</strong>: Does not freeze the source path.</li>
      * </ul>
      * <blockquote>
-     * <p>Currently only supports oss source.</p>
+     * <p>Currently, only OSS sources are supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,7 +79,7 @@ public class CreateGlobalDataNetworkRequest extends TeaModel {
     public String sourceFileSystemPath;
 
     /**
-     * <p>Source PolarFileSystem (PolarFS) instance.</p>
+     * <p>The source Polarlakebase instance. Note: This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>pcs-xxx</p>
@@ -92,7 +88,7 @@ public class CreateGlobalDataNetworkRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The region of the source PolarFS instance.</p>
+     * <p>The region of the source Polarlakebase instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-wulanchabu</p>
@@ -101,12 +97,10 @@ public class CreateGlobalDataNetworkRequest extends TeaModel {
     public String sourceRegion;
 
     /**
-     * <p>The type of the source instance. Valid values:</p>
+     * <p>The source type. Valid values:</p>
      * <ul>
-     * <li><p><strong>pfs</strong>: PolarFS High-Performance Edition.</p>
-     * </li>
-     * <li><p><strong>pcs</strong>: PolarFS Cold Storage Edition.</p>
-     * </li>
+     * <li><strong>pfs</strong>: Polarlakebase High-performance Edition.</li>
+     * <li><strong>pcs</strong>: Polarlakebase Cold Storage Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>

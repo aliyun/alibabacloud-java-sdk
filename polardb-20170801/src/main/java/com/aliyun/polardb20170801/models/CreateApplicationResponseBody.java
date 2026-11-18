@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-********************</p>
@@ -20,7 +20,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public java.util.List<CreateApplicationResponseBodyComponents> components;
 
     /**
-     * <p>The description of the application.</p>
+     * <p>The application description.</p>
      * 
      * <strong>example:</strong>
      * <p>myapp</p>
@@ -38,7 +38,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
@@ -47,7 +47,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the resources are sufficient. This parameter is returned only when DryRun is set to true.</p>
+     * <p>Indicates whether the resources are sufficient. This parameter is returned only when <code>DryRun</code> is set to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +127,7 @@ public class CreateApplicationResponseBody extends TeaModel {
 
     public static class CreateApplicationResponseBodyComponents extends TeaModel {
         /**
-         * <p>The ID of the subcomponent.</p>
+         * <p>The subcomponent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pac-********************</p>

@@ -7,7 +7,7 @@ public class DescribePolarFsQuotaRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Enterprise Edition, Basic Edition, and Data Lakehouse Edition: You can call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation to query the cluster ID.</p>
+     * <p>For Enterprise Edition, Basic Edition, and Data Lakehouse Edition: You can call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation to query the cluster ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribePolarFsQuotaRequest extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>The quota type to query.</p>
+     * <p>The type of the quota to query.</p>
      * 
      * <strong>example:</strong>
      * <p>quotaPolicy</p>
@@ -47,7 +47,7 @@ public class DescribePolarFsQuotaRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view all available regions under the current account, including the region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

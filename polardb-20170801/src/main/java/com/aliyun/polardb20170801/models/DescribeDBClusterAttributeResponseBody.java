@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The start time of the free AI feature.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-13T01:20:28Z</p>
@@ -14,7 +15,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String aiCreatingTime;
 
     /**
-     * <p>The AI node type. Valid values:</p>
+     * <p>The type of the AI node. Valid values:</p>
+     * <ul>
+     * <li><strong>SearchNode</strong>: Search node.</li>
+     * <li><strong>DLNode</strong>: AI node.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DLNode</p>
@@ -24,6 +29,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The CPU architecture. Valid values:</p>
+     * <ul>
+     * <li><strong>X86</strong></li>
+     * <li><strong>ARM</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>X86</p>
@@ -32,7 +41,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String architecture;
 
     /**
-     * <p>The minor version update policy.</p>
+     * <p>The minor engine version update method. Valid values:</p>
+     * <ul>
+     * <li>Auto: Automatic update.</li>
+     * <li>Manual: Manual update.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Manual</p>
@@ -44,7 +57,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      * <p>The maximum number of blktags in the file system.</p>
      * 
      * <strong>example:</strong>
-     * <p>7,864,320</p>
+     * <p>7864320</p>
      */
     @NameInMap("BlktagTotal")
     public Long blktagTotal;
@@ -53,16 +66,26 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      * <p>The current blktag usage.</p>
      * 
      * <strong>example:</strong>
-     * <p>5,242,880</p>
+     * <p>5242880</p>
      */
     @NameInMap("BlktagUsed")
     public Long blktagUsed;
 
+    /**
+     * <p>The branch information of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Branch")
     public DescribeDBClusterAttributeResponseBodyBranch branch;
 
     /**
      * <p>Indicates whether I/O performance burst is enabled for the ESSD AutoPL cloud disk. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -71,19 +94,19 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String burstingEnabled;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/183258.html">product edition</a>. Valid values:</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/183258.html">edition</a>. Valid values:</p>
      * <ul>
      * <li><strong>Normal</strong>: Cluster Edition</li>
      * <li><strong>Basic</strong>: Single Node Edition</li>
-     * <li><strong>Archive</strong>: PolarDB X-Engine Edition</li>
+     * <li><strong>Archive</strong>: X-Engine Edition</li>
      * <li><strong>NormalMultimaster</strong>: Multi-master Cluster Edition</li>
-     * <li><strong>SENormal</strong>: PolarDB for MySQL Standard Edition</li>
+     * <li><strong>SENormal</strong>: Standard Edition</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>PolarDB for PostgreSQL 11 does not support Single Node Edition.</li>
-     * <li>PolarDB for MySQL 8.0, PolarDB for MySQL 5.7, and PolarDB for PostgreSQL 14 support PolarDB for MySQL Standard Edition.</li>
-     * <li>PolarDB for MySQL 8.0 supports PolarDB X-Engine Edition and Multi-master Cluster Edition.</li>
+     * <li>PolarDB for PostgreSQL 11 does not support the Single Node Edition.</li>
+     * <li>PolarDB for MySQL 8.0 and 5.7, and PolarDB for PostgreSQL 14 support the Standard Edition.</li>
+     * <li>PolarDB for MySQL 8.0 supports the X-Engine Edition and Multi-master Cluster Edition.</li>
      * </ul>
      * </blockquote>
      * 
@@ -104,6 +127,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether storage compression is enabled. Valid values:</p>
+     * <ul>
+     * <li>ON: Enabled.</li>
+     * <li>OFF: Disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -112,7 +139,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String compressStorageMode;
 
     /**
-     * <p>The size of the storage data after compression.</p>
+     * <p>The size of the compressed storage data.</p>
+     * <blockquote>
+     * <p>This parameter is returned only when the storage compression feature is enabled for the cluster.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>15529410560</p>
@@ -121,7 +151,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Long compressStorageUsed;
 
     /**
-     * <p>The connection resource quota (AgenticDB exclusive).</p>
+     * <p>The quota for connection resources (exclusive to AgenticDB).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -130,7 +160,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Long connectionResourceQuota;
 
     /**
-     * <p>The number of connection resources used (AgenticDB exclusive).</p>
+     * <p>The number of used connection resources (exclusive to AgenticDB).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -140,6 +170,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The time when the cluster was created.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-08-14T05:58:42Z</p>
@@ -148,7 +179,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The cluster description.</p>
+     * <p>The description of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -157,7 +188,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String DBClusterDescription;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-*****************</p>
@@ -175,7 +206,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String DBClusterNetworkType;
 
     /**
-     * <p>The cluster status. For more information, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster status table</a>.</p>
+     * <p>The status of the cluster. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster status table</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -184,13 +215,16 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String DBClusterStatus;
 
     /**
-     * <p>The node information.</p>
+     * <p>The details of the nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("DBNodes")
     public java.util.List<DescribeDBClusterAttributeResponseBodyDBNodes> DBNodes;
 
     /**
-     * <p>The database engine type.</p>
+     * <p>The type of the database engine.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -208,16 +242,16 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The status of the current minor version. Valid values:</p>
+     * <p>The status of the current minor database engine version. Valid values:</p>
      * <ul>
      * <li><strong>Stable</strong>: The current version is stable.</li>
      * <li><strong>Old</strong>: The current version is outdated. Upgrade to the latest version.</li>
      * <li><strong>HighRisk</strong>: The current version has critical defects. Upgrade to the latest version immediately.</li>
-     * <li><strong>Beta</strong>: The current version is a Beta version.</li>
+     * <li><strong>Beta</strong>: The current version is a beta version.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>For more information about how to upgrade the minor version, see <a href="https://help.aliyun.com/document_detail/158572.html">Version upgrade</a>.</li>
+     * <li>For more information about how to upgrade the minor database engine version, see <a href="https://help.aliyun.com/document_detail/158572.html">Version upgrade</a>.</li>
      * <li>This parameter is returned only when the database engine type (<strong>DBType</strong>) is <strong>MySQL</strong>.</li>
      * </ul>
      * </blockquote>
@@ -238,10 +272,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Long dataLevel1BackupChainSize;
 
     /**
-     * <p>The data replication mode. Valid values:</p>
+     * <p>The data replication relationship pattern. Valid values:</p>
      * <ul>
-     * <li><strong>AsyncSync</strong>: asynchronous</li>
-     * <li><strong>SemiSync</strong>: semi-synchronous</li>
+     * <li><strong>AsyncSync</strong>: Asynchronous.</li>
+     * <li><strong>SemiSync</strong>: Semi-synchronous.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -251,7 +285,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String dataSyncMode;
 
     /**
-     * <p>The lock status of cluster deletion. Valid values:</p>
+     * <p>The lock status for cluster deletion. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: Unlocked. The cluster can be deleted.</li>
      * <li><strong>1</strong>: Locked. The cluster cannot be deleted.</li>
@@ -264,7 +298,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Integer deletionLock;
 
     /**
-     * <p>The cluster engine.</p>
+     * <p>The engine of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>POLARDB</p>
@@ -275,8 +309,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The expiration time of the cluster.</p>
      * <blockquote>
-     * <p>Only clusters whose billing method is <strong>Prepaid</strong> (subscription) return a specific value for this parameter. <strong>Postpaid</strong> (pay-as-you-go) clusters return an empty value.</p>
+     * <p>A specific value is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). For <strong>Postpaid</strong> (pay-as-you-go) clusters, an empty value is returned.</p>
      * </blockquote>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-14T16:00:00Z</p>
@@ -286,6 +321,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the cluster has expired.</p>
+     * <blockquote>
+     * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -294,10 +332,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String expired;
 
     /**
-     * <p>Indicates whether resources for the new primary database are replenished after a cross-zone failover. Valid values:</p>
+     * <p>Indicates whether resources for the new primary database are replenished after a cross-zone switch. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Resources are replenished.</li>
-     * <li><strong>false</strong>: Resources are not replenished.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -307,10 +345,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Boolean hasCompleteStandbyRes;
 
     /**
-     * <p>Indicates whether the hot standby storage cluster (and Standby compute nodes) is enabled. Valid values:</p>
+     * <p>Indicates whether the storage Hot Standby Cluster (and standby compute nodes) is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>StandbyClusterON</strong>: The hot standby storage cluster and Standby compute nodes are enabled.</li>
-     * <li><strong>StandbyClusterOFF</strong>: The hot standby storage cluster and Standby compute nodes are disabled.</li>
+     * <li><strong>StandbyClusterON</strong>: The hot standby storage cluster or both the hot standby storage cluster and standby compute nodes are enabled. </li>
+     * <li><strong>StandbyClusterOFF</strong>: The hot standby storage cluster or both the hot standby storage cluster and standby compute nodes are disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -321,6 +359,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The automatic IMCI-based query acceleration feature. Valid values:</p>
+     * <ul>
+     * <li><code>ON</code>: Enabled.</li>
+     * <li><code>OFF</code>: Disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>OFF</p>
@@ -329,7 +371,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String imciAutoIndex;
 
     /**
-     * <p>The failover with hot replica feature. Valid values:</p>
+     * <p>The seamless switchover feature. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: Enabled.</li>
+     * <li><code>false</code>: Disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -341,7 +387,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      * <p>The maximum number of inodes in the file system.</p>
      * 
      * <strong>example:</strong>
-     * <p>6,291,456</p>
+     * <p>6291456</p>
      */
     @NameInMap("InodeTotal")
     public Long inodeTotal;
@@ -350,13 +396,19 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      * <p>The current inode usage.</p>
      * 
      * <strong>example:</strong>
-     * <p>4,194,304</p>
+     * <p>4194304</p>
      */
     @NameInMap("InodeUsed")
     public Long inodeUsed;
 
     /**
-     * <p>Indicates whether the cluster is running the latest kernel version. Valid values:</p>
+     * <p>Indicates whether the latest kernel version is used. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -365,7 +417,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Boolean isLatestVersion;
 
     /**
-     * <p>Indicates whether the database proxy is the latest version. Valid values:</p>
+     * <p>Indicates whether the latest version of PolarProxy is used. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -374,7 +430,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Boolean isProxyLatestVersion;
 
     /**
-     * <p>The lock mode. Valid values:</p>
+     * <p>The lock mode. Valid values: </p>
+     * <ul>
+     * <li><strong>Unlock</strong>: Unlocked.</li>
+     * <li><strong>ManualLock</strong>: Manually locked. </li>
+     * <li><strong>LockByExpiration</strong>: Automatically locked due to cluster expiration.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Unlock</p>
@@ -383,7 +444,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String lockMode;
 
     /**
-     * <p>The maintenance window of the cluster. The time is in the <code>HH:mmZ-HH:mmZ</code> format (UTC). For example, <code>16:00Z-17:00Z</code> indicates that routine maintenance can be performed from 00:00 to 01:00 (UTC+08:00).</p>
+     * <p>The maintenance window of the cluster. The time is in the <code>HH:mmZ-HH:mmZ</code> format and displayed in UTC. For example, <code>16:00Z-17:00Z</code> indicates that routine maintenance can be performed from 00:00 to 01:00 (UTC+8).</p>
      * 
      * <strong>example:</strong>
      * <p>18:00Z-19:00Z</p>
@@ -393,6 +454,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The Orca feature. Valid values:</p>
+     * <ul>
+     * <li><p>on: Enabled.</p>
+     * </li>
+     * <li><p>off: Disabled.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -402,6 +469,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
+     * <li><strong>Prepaid</strong>: Subscription.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Prepaid</p>
@@ -410,7 +481,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String payType;
 
     /**
-     * <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</p>
+     * <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read and write IOPS for the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</p>
+     * <p id="p_6de_jxy_k2g" props="china" icmsditafragmentmagic=1>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
+     * <note id="note_7kj_j0o_rgs" props="china" icmsditafragmentmagic=1>This parameter is supported only when StorageType is set to ESSDAUTOPL.</note>
      * 
      * <strong>example:</strong>
      * <p>2500</p>
@@ -419,7 +492,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String provisionedIops;
 
     /**
-     * <p>The number of CPU cores of the database proxy.</p>
+     * <p>The number of CPU cores for PolarProxy.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -430,8 +503,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The serverless type of the database proxy. Valid values:</p>
      * <ul>
-     * <li>AgileServerless: agile serverless, which indicates a serverless cluster.</li>
-     * <li>SteadyServerless: steady serverless, which indicates a cluster with defined specifications (a subscription or pay-as-you-go cluster).</li>
+     * <li>AgileServerless: Agile state, which refers to serverless clusters.</li>
+     * <li>SteadyServerless: Steady state, which refers to cluster with defined specifications (clusters whose billing method is subscription or pay-as-you-go).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -441,7 +514,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String proxyServerlessType;
 
     /**
-     * <p>The number of CPU cores in the standard configuration of the database proxy.</p>
+     * <p>The number of CPU cores for the standard configuration of the database proxy.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -451,6 +524,19 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The status of the database proxy. Valid values:</p>
+     * <ul>
+     * <li><strong>Creating</strong>: Creating.</li>
+     * <li><strong>Running</strong>: Running.</li>
+     * <li><strong>Deleting</strong>: Releasing.</li>
+     * <li><strong>Rebooting</strong>: Restarting.</li>
+     * <li><strong>DBNodeCreating</strong>: Increasing nodes.</li>
+     * <li><strong>DBNodeDeleting</strong>: Deleting nodes.</li>
+     * <li><strong>ClassChanging</strong>: Changing node specifications.</li>
+     * <li><strong>NetAddressCreating</strong>: Creating network connectivity.</li>
+     * <li><strong>NetAddressDeleting</strong>: Deleting network connectivity.</li>
+     * <li><strong>NetAddressModifying</strong>: Modifying network connectivity.</li>
+     * <li><strong>Deleted</strong>: Released.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -460,6 +546,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The type of the database proxy. Valid values:</p>
+     * <ul>
+     * <li><strong>Exclusive</strong>: Dedicated Enterprise Edition.</li>
+     * <li><strong>General</strong>: Standard Enterprise Edition.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Exclusive</p>
@@ -477,7 +567,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>074467EF-86B9-4C23-ACBF-E9B81A******</p>
@@ -486,7 +576,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-***************</p>
@@ -496,10 +586,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li>If RestoreType is <strong>RestoreByTime</strong> or <strong>RestoreByTimeOss</strong>, this value indicates the point in time to which the cluster is restored.</li>
-     * <li>If RestoreType is <strong>RestoreByBackupSet</strong> or <strong>RestoreByBackupSetOss</strong>, this value indicates the ID of the backup set from which the cluster is restored.</li>
+     * <li>If RestoreType is set to <strong>RestoreByTime</strong> or <strong>RestoreByTimeOss</strong>, this value indicates the point in time to which the cluster is restored.</li>
+     * <li>If RestoreType is set to <strong>RestoreByBackupSet</strong> or <strong>RestoreByBackupSetOss</strong>, this value indicates the ID of the backup set from which the cluster is restored.</li>
      * </ul>
-     * <p><note>This parameter is supported only for clusters that are restored from a backup set or to a point in time after June 1, 2024.</note></p>
+     * <p><note>This parameter is supported only for clusters restored from backup sets or points in time after June 1, 2024.</note></p>
      * 
      * <strong>example:</strong>
      * <p>2179639137</p>
@@ -508,15 +598,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String restoreDataPoint;
 
     /**
-     * <p>The cluster restoration method. Valid values:</p>
+     * <p>The restoration method of the cluster. Valid values:</p>
      * <ul>
-     * <li><strong>RestoreByTime</strong>: Restores from a point in time based on a level-1 backup.</li>
-     * <li><strong>RestoreByBackupSet</strong>: Restores from a backup set based on a level-1 backup.</li>
-     * <li><strong>RestoreByTimeOss</strong>: Restores from a point in time based on a level-2 backup.</li>
-     * <li><strong>RestoreByBackupSetOss</strong>: Restores from a backup set based on a level-2 backup.</li>
-     * <li><strong>CloneFromSourceCluster</strong>: Clones from the source cluster.</li>
+     * <li><strong>RestoreByTime</strong>: Point-in-time restore based on level-1 backups.</li>
+     * <li><strong>RestoreByBackupSet</strong>: Restoration from a backup set based on level-1 backups.</li>
+     * <li><strong>RestoreByTimeOss</strong>: Point-in-time restore based on level-2 backups.</li>
+     * <li><strong>RestoreByBackupSetOss</strong>: Restoration from a backup set based on level-2 backups.</li>
+     * <li><strong>CloneFromSourceCluster</strong>: Cloned from the source cluster.</li>
      * </ul>
-     * <p><note>This parameter is supported only for clusters that are restored from a backup set or a point in time after June 1, 2024.</note></p>
+     * <p><note>This parameter is supported only for clusters restored from backup sets or points in time after June 1, 2024.</note></p>
      * 
      * <strong>example:</strong>
      * <p>RestoreByTime</p>
@@ -525,7 +615,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String restoreType;
 
     /**
-     * <p>The row compression setting.</p>
+     * <p>The row compression settings.</p>
      * 
      * <strong>example:</strong>
      * <p>OFF</p>
@@ -534,7 +624,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String rowCompression;
 
     /**
-     * <p>The storage size of SQL statements. Unit: bytes. A value of -1 indicates that no data is available.</p>
+     * <p>The storage usage of SQL statements. Unit: bytes. A value of -1 indicates that no data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -552,7 +642,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String searchClusterStatus;
 
     /**
-     * <p>The compressed storage data size of the search node.</p>
+     * <p>The size of compressed storage data on the search node.</p>
+     * <blockquote>
+     * <p>This parameter is returned only when the storage compression feature is enabled for the cluster.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>15529410560</p>
@@ -572,11 +665,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The serverless type of the cluster. Valid values:</p>
      * <ul>
-     * <li>AgileServerless: agile serverless. This value indicates a serverless cluster.</li>
-     * <li>SteadyServerless: steady serverless. This value indicates a cluster with defined specifications that has the serverless feature enabled.</li>
+     * <li>AgileServerless: Agile state, which refers to serverless clusters.</li>
+     * <li>SteadyServerless: Steady state, which refers to cluster with defined specifications that have serverless capabilities enabled.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is supported only for serverless clusters or clusters with defined specifications that have the serverless feature enabled.</p>
+     * <p>This parameter is supported only for serverless clusters or cluster with defined specifications that have the serverless feature enabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -587,7 +680,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the source cluster.
-     * <note>This parameter is supported only for clusters restored from a backup set or point in time after June 1, 2024.</note></p>
+     * <note>This parameter is supported only for clusters restored from backup sets or points in time after June 1, 2024.</note></p>
      * 
      * <strong>example:</strong>
      * <p>pc-pz51ziv48317b2880</p>
@@ -596,7 +689,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String sourceDBCluster;
 
     /**
-     * <p>The region ID of the source cluster.</p>
+     * <p>The region ID of the source cluster.
+     * <note>This parameter is returned only when the source cluster ID exists.</note></p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -607,8 +701,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The cross-zone disaster recovery mode. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong>: Cross-zone disaster recovery mode is enabled.</li>
-     * <li><strong>OFF</strong>: Cross-zone disaster recovery mode is disabled.</li>
+     * <li><strong>ON</strong>: Cross-zone disaster recovery is enabled.</li>
+     * <li><strong>OFF</strong>: Cross-zone disaster recovery is disabled.</li>
      * <li><strong>0</strong>: Customer drill mode.</li>
      * </ul>
      * 
@@ -619,6 +713,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String standbyHAMode;
 
     /**
+     * <p>Indicates whether automatic storage scaling is enabled for the Standard Edition cluster. A value of Enable indicates that the feature is enabled, and a value of Disable indicates that the feature is disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>Enable</p>
      */
@@ -635,10 +731,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Long storageMax;
 
     /**
-     * <p>The billing method for storage. Valid values:</p>
+     * <p>The storage billing method. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><strong>Postpaid</strong>: Pay-as-you-go based on storage capacity.</li>
+     * <li><strong>Prepaid</strong>: Subscription based on storage space.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -648,7 +744,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String storagePayType;
 
     /**
-     * <p>The storage space billed by space (subscription). Unit: bytes.</p>
+     * <p>The storage space for subscription billing. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -666,6 +762,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String storageType;
 
     /**
+     * <p>The upper limit for automatic storage scaling of the Standard Edition cluster, in GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>800</p>
      */
@@ -673,7 +771,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Integer storageUpperBound;
 
     /**
-     * <p>The storage usage. Unit: bytes.</p>
+     * <p>The amount of used storage space, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>3012558848</p>
@@ -682,7 +780,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Long storageUsed;
 
     /**
-     * <p>Indicates whether multi-zone strong data consistency is enabled for the cluster. Valid values:</p>
+     * <p>Indicates whether strong data consistency across multiple zones is enabled for the cluster. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ON</strong>: Strong data consistency across multiple zones is enabled. This applies to the Standard Edition in a three-zone deployment scenario.</p>
+     * </li>
+     * <li><p><strong>OFF</strong>: Strong data consistency across multiple zones is disabled.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -697,7 +801,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      * <li><strong>General</strong>: General-purpose</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is returned only for PolarDB for MySQL Cluster Edition clusters.</p>
+     * <p>This parameter is returned only for PolarDB for MySQL clusters of the Cluster Edition.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -707,7 +811,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String subCategory;
 
     /**
-     * <p>Indicates whether the failover with hot replica feature that is compatible with IMCI is supported.</p>
+     * <p>Indicates whether the failover with hot replica feature compatible with IMCI is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -716,13 +820,16 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String supportInstantSwitchWithImci;
 
     /**
-     * <p>The tag information.</p>
+     * <p>The details of the tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeDBClusterAttributeResponseBodyTags> tags;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The ID of the virtual private cloud (VPC).</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-*******************</p>
@@ -731,7 +838,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID.</p>
+     * <p>The ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-*********************</p>
@@ -1355,6 +1462,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBClusterAttributeResponseBodyBranchChildBranch extends TeaModel {
         /**
+         * <p>The log sequence number (LSN) of the child branch.</p>
+         * 
          * <strong>example:</strong>
          * <p>2/2</p>
          */
@@ -1362,6 +1471,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String branchLsn;
 
         /**
+         * <p>The branch time of the child branch. The time follows the RFC 3339 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
          */
@@ -1369,16 +1480,26 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String branchTime;
 
         /**
+         * <p>The description of the child branch cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
+        /**
+         * <p>Indicates whether lower-level child branches exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasChild")
         public Boolean hasChild;
 
         /**
+         * <p>The name of the child branch instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-2bbb22b2bb22bb222</p>
          */
@@ -1433,15 +1554,39 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAttributeResponseBodyBranch extends TeaModel {
+        /**
+         * <p>The log sequence number (LSN) of the current branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2/2</p>
+         */
         @NameInMap("BranchLsn")
         public String branchLsn;
 
+        /**
+         * <p>The branch time of the current branch. The time follows the RFC 3339 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01T00:00:00Z</p>
+         */
         @NameInMap("BranchTime")
         public String branchTime;
 
+        /**
+         * <p>The list of child branches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("ChildBranch")
         public java.util.List<DescribeDBClusterAttributeResponseBodyBranchChildBranch> childBranch;
 
+        /**
+         * <p>The name of the parent branch instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2bbb22b2bb22bb222</p>
+         */
         @NameInMap("ParentInsName")
         public String parentInsName;
 
@@ -1495,7 +1640,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String addedCpuCores;
 
         /**
-         * <p>The number of CPU cores of the node.</p>
+         * <p>The number of CPU cores for the node.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1505,6 +1650,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The time when the node was created.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-03-23T21:35:43Z</p>
@@ -1513,7 +1659,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The CXL remote memory configuration.</p>
+         * <p>The Compute Express Link (CXL) remote memory configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>3072</p>
@@ -1531,7 +1677,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String DBNodeClass;
 
         /**
-         * <p>The node description.</p>
+         * <p>The description of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1540,7 +1686,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String DBNodeDescription;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-****************</p>
@@ -1549,7 +1695,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String DBNodeId;
 
         /**
-         * <p>The role of the node. Valid values:</p>
+         * <p>The role of the node. Valid values: </p>
+         * <ul>
+         * <li><strong>Writer</strong>: Primary node.</li>
+         * <li><strong>Reader</strong>: Read-only node.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Reader</p>
@@ -1559,6 +1709,21 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The status of the node. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The node is being created. </li>
+         * <li><strong>Running</strong>: The node is running. </li>
+         * <li><strong>Deleting</strong>: The node is being deleted.  </li>
+         * <li><strong>Rebooting</strong>: The node is restarting.  </li>
+         * <li><strong>DBNodeCreating</strong>: A node is being added.  </li>
+         * <li><strong>DBNodeDeleting</strong>: A node is being deleted. </li>
+         * <li><strong>ClassChanging</strong>: The node specifications are being changed.  </li>
+         * <li><strong>NetAddressCreating</strong>: A network connection is being created.  </li>
+         * <li><strong>NetAddressDeleting</strong>: A network connection is being deleted.  </li>
+         * <li><strong>NetAddressModifying</strong>: A network connection is being modified.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: The minor version is being upgraded.</li>
+         * <li><strong>Maintaining</strong>: The instance is under maintenance.  </li>
+         * <li><strong>Switching</strong>: A switchover is in progress.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -1566,11 +1731,17 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("DBNodeStatus")
         public String DBNodeStatus;
 
+        /**
+         * <p>Indicates whether the node uses the exclusive host mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DedicatedHostModel")
         public Boolean dedicatedHostModel;
 
         /**
-         * <p>The failover priority. Each node has a failover priority that determines the probability of the node being elected as the primary node during a failover. A larger value indicates a higher priority.
+         * <p>The failover priority. Each node has a failover priority, which determines the probability of the node being elected as the primary node during a failover. A higher value indicates a higher priority.
          * Valid values: 1 to 15.</p>
          * 
          * <strong>example:</strong>
@@ -1581,6 +1752,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether hot standby is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ON</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>OFF</strong>: Disabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1589,7 +1766,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String hotReplicaMode;
 
         /**
-         * <p>Indicates whether In-Memory Column Index is enabled. Valid values:</p>
+         * <p>Indicates whether the In-Memory Column Index (IMCI) feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ON</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>OFF</strong>: Disabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1598,7 +1781,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String imciSwitch;
 
         /**
-         * <p>The primary node ID of the Multi-master Cluster Edition.</p>
+         * <p>The ID of the primary node in the Multi-master Cluster Edition.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-bp18z52akld3*****</p>
@@ -1616,7 +1799,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public Integer maxConnections;
 
         /**
-         * <p>The maximum number of I/O requests per second (IOPS).</p>
+         * <p>The maximum number of I/O requests per second, namely IOPS.</p>
          * 
          * <strong>example:</strong>
          * <p>32000</p>
@@ -1634,7 +1817,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String memorySize;
 
         /**
-         * <p>The name of the hot replica that corresponds to the node in the hot standby storage and compute architecture.</p>
+         * <p>The name of the hot replica corresponding to the node in the architecture with hot standby storage and hot standby compute enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-bp18z52mirror*****</p>
@@ -1643,7 +1826,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String mirrorInsName;
 
         /**
-         * <p>The multi-master local standby node.</p>
+         * <p>The local secondary node in the multi-master architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-****************</p>
@@ -1652,7 +1835,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String multiMasterLocalStandby;
 
         /**
-         * <p>The multi-master primary node.</p>
+         * <p>The primary node in the multi-master architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-****************</p>
@@ -1661,7 +1844,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String multiMasterPrimaryNode;
 
         /**
-         * <p>The Orca feature. Valid values:</p>
+         * <p>The Orca feature status. Valid values:</p>
+         * <ul>
+         * <li><p>on: Enabled.</p>
+         * </li>
+         * <li><p>off: Disabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1670,6 +1859,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String orca;
 
         /**
+         * <p>The maximum remote memory capacity of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1677,6 +1868,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public Integer remoteMemoryMax;
 
         /**
+         * <p>The minimum remote memory capacity of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1684,6 +1877,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public Integer remoteMemoryMin;
 
         /**
+         * <p>The recommended remote memory capacity of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1691,7 +1886,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public Integer remoteMemoryRecommended;
 
         /**
-         * <p>The remote memory size. Unit: MB.</p>
+         * <p>The size of the remote memory. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>3072</p>
@@ -1701,6 +1896,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ON</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>OFF</strong>: Disabled.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1710,7 +1911,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String sccMode;
 
         /**
-         * <p>The routing weight.</p>
+         * <p>The routing weight.
+         * Valid values: 1 to 100. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1721,12 +1923,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         /**
          * <p>The serverless type of the node. Valid values:</p>
          * <ul>
-         * <li>AgileServerless: agile serverless. The node is a serverless node.</li>
-         * <li>SteadyServerless: steady serverless. The node is a node with defined specifications that has the serverless feature enabled.</li>
+         * <li>AgileServerless: Agile state, which refers to serverless nodes.</li>
+         * <li>SteadyServerless: Steady state, which refers to nodes in a cluster with defined specifications that have serverless capabilities enabled.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This parameter is supported only for serverless clusters or clusters with defined specifications that have the serverless feature enabled. For more information, see <a href="https://help.aliyun.com/document_detail/452274.html">Serverless</a>.</li>
+         * <li>This parameter is supported only for serverless clusters or a cluster with defined specifications that have the serverless feature enabled. For more information, see <a href="https://help.aliyun.com/document_detail/452274.html">Serverless</a>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1737,11 +1939,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String serverlessType;
 
         /**
-         * <p>Indicates whether the node is in the primary zone or the secondary zone. This parameter is mainly used for resource-symmetric deployments.</p>
-         * <p>Valid values:</p>
+         * <p>Indicates whether the node is in the primary zone or secondary zone. This is mainly used for resource symmetry.
+         * Valid values:</p>
          * <ul>
-         * <li>Primary: primary zone.</li>
-         * <li>Standby: secondary zone.</li>
+         * <li>Primary: Primary zone.</li>
+         * <li>Standby: Secondary zone.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1751,7 +1953,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String subCluster;
 
         /**
-         * <p>The cluster subgroup description.</p>
+         * <p>The description of the cluster subgroup.</p>
          * 
          * <strong>example:</strong>
          * <p>test Description</p>

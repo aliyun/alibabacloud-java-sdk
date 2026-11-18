@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FailoverDBClusterZonalResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>925B84D9-CA72-432C-95CF-738C22******</p>

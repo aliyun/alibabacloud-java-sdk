@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBBranchLineageRequest extends TeaModel {
     /**
-     * <p>The ID of the anchor branch. If this parameter is not specified, the primary branch of the project is used by default.</p>
+     * <p>The ID of the anchor branch. If you do not specify this parameter, the root branch of the project is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>br-7g8h9i0j1k2l</p>
@@ -33,7 +33,7 @@ public class DescribeAgenticDBBranchLineageRequest extends TeaModel {
     public Boolean includeDestroying;
 
     /**
-     * <p>The maximum number of levels to return in the view, including the anchor branch itself. Valid values: 1 to 20. Default value: 3. The server automatically allocates the budget for ancestor and descendant levels with a downward bias.</p>
+     * <p>The maximum number of levels for the returned view, including the anchor branch itself. Valid values: 1 to 20. Default value: 3. The server automatically allocates the upward and downward budgets based on a downward bias.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -42,7 +42,7 @@ public class DescribeAgenticDBBranchLineageRequest extends TeaModel {
     public Integer maxViewDepth;
 
     /**
-     * <p>The project ID.</p>
+     * <p>The ID of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class DescribeAgenticDBBranchLineageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tenant ID.</p>
+     * <p>The ID of the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

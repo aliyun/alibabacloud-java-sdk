@@ -24,7 +24,7 @@ public class InstallPolarClawPluginRequest extends TeaModel {
     public String npmPackage;
 
     /**
-     * <p>The plug-in ID.</p>
+     * <p>The plugin identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

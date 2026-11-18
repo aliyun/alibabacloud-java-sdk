@@ -5,33 +5,34 @@ import com.aliyun.tea.*;
 
 public class ModifyDBNodeHotReplicaModeRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pc-2vc327c2a14a3u858</p>
+     * <p>pc-*****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The ID of the node in the cluster.</p>
+     * <p>The ID of the database cluster node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pi-2ze28275h9x5r4wt1</p>
+     * <p>pi-*****************</p>
      */
     @NameInMap("DBNodeId")
     public String DBNodeId;
 
     /**
-     * <p>Specifies whether to enable the hot standby feature. Valid values:</p>
+     * <p>Specifies whether to enable hot standby. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong></li>
-     * <li><strong>OFF</strong></li>
+     * <li><strong>ON</strong>: Enabled.</li>
+     * <li><strong>OFF</strong>: Disabled.
+     * Limits: This operation is supported only for non-serverless MySQL clusters. The target node must be a read-only node. Each cluster allows only one node to have HotReplicaMode (ON). Usage notes: Append the following limits to the end of the HotReplicaMode parameter description: this operation is supported only for non-serverless MySQL clusters. The target node must be a read-only node. Each cluster allows only one node to have HotReplicaMode (ON).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

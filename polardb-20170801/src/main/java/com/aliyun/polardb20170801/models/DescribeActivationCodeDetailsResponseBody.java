@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     /**
-     * <p>The effective time.</p>
+     * <p>The effective period.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16 16:46:20</p>
@@ -14,7 +14,7 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     public String activateAt;
 
     /**
-     * <p>The content of the activation code. Decode the Base64 content and save it to the license.lic file for PolarDB to read during startup.</p>
+     * <p>The content of the activation code. Decode this content from Base64 and save it to the license.lic file for PolarDB to read during startup.</p>
      * 
      * <strong>example:</strong>
      * <p>AAEAA******AAA=</p>
@@ -41,7 +41,7 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     public String expireAt;
 
     /**
-     * <p>The time when the activation code was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16 16:46:20</p>
@@ -50,7 +50,7 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     public String gmtCreated;
 
     /**
-     * <p>The time when the activation code was last updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16 16:46:20</p>
@@ -59,7 +59,7 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>The ID of the activation code.</p>
+     * <p>The activation code ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -86,7 +86,7 @@ public class DescribeActivationCodeDetailsResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F2A9EFA7-915F-4572-8299-85A307******</p>

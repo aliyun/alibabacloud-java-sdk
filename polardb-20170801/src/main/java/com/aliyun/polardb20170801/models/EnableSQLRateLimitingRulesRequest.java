@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableSQLRateLimitingRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID. Notes on invoking: The SQL throttling feature is supported only for clusters that have the database proxy enabled. Currently, the Oracle-compatible engine is verified to support this feature. For MySQL clusters, confirm whether the database proxy and the SQL throttling feature are enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,13 +17,11 @@ public class EnableSQLRateLimitingRulesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable or disable the specified SQL throttling rules. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enable.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disable.</p>
-     * </li>
+     * <li><strong>true</strong>: enables the rules.</li>
+     * <li><strong>false</strong>: disables the rules.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter applies only when you specify the <strong>RuleNameList</strong> parameter.</p>
+     * <p>This parameter takes effect only when <strong>RuleNameList</strong> is specified.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,9 +44,9 @@ public class EnableSQLRateLimitingRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The names of the SQL throttling rules to enable. To specify multiple rules, separate the names with a comma (,).</p>
+     * <p>The names of the SQL throttling rules to enable or disable. You can specify multiple rule names for batch operations. Separate multiple names with commas (,).</p>
      * <blockquote>
-     * <p>You can view all SQL throttling rules and their names on the SQL Firewall tab of the Security Management page for the cluster.</p>
+     * <p>You can view all SQL throttling rule information, including rule names, on the <strong>SQL Firewall</strong> tab of the <strong>Security Management</strong> page in the cluster console.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

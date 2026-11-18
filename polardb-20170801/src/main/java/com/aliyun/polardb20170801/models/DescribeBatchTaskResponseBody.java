@@ -23,7 +23,7 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public String batchId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>25C70FF3-D49B-594D-BECE-0DE2BA1D8BBB</p>
@@ -32,7 +32,7 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the task.</p>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -83,7 +83,7 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The type of the task.</p>
+     * <p>The task type.</p>
      * 
      * <strong>example:</strong>
      * <p>polarclaw_install_skills</p>
@@ -92,7 +92,7 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The number of entries in the list.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

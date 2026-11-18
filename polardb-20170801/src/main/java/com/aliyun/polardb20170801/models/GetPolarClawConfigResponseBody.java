@@ -23,7 +23,7 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The configuration object.</p>
+     * <p>The configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -34,7 +34,7 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
     public java.util.Map<String, ?> config;
 
     /**
-     * <p>The configuration hash.</p>
+     * <p>The configuration hash, which is used as an optimistic lock for subsequent patch operations.</p>
      * 
      * <strong>example:</strong>
      * <p>005b55a8e870aaf866598e48a6af0bdbfa3fef704770c5e1cbad99648beaa661</p>
@@ -52,7 +52,7 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The version of OpenClaw.</p>
+     * <p>The OpenClaw version.</p>
      * 
      * <strong>example:</strong>
      * <p>2026.3.28</p>

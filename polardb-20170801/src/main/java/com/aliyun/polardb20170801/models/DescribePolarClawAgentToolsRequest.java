@@ -25,7 +25,7 @@ public class DescribePolarClawAgentToolsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>Specifies whether to include plugin tools.</p>
+     * <p>Specifies whether to include plug-in tools.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

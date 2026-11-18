@@ -14,7 +14,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version.</p>
+     * <p>The DPI engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>3.1</p>
@@ -38,7 +38,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The total number of entries on the current page.</p>
+     * <p>The total number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records to display on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -56,7 +56,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the associated PolarDB cluster.</p>
+     * <p>The ID of the PolarDB cluster to which the resource belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze***</p>
@@ -65,7 +65,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public String relativeDBClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>925B84D9-CA72-432C-95CF-738C22******</p>
@@ -83,7 +83,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -179,7 +179,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     public static class DescribeAIDBClusterTasksResponseBodyItems extends TeaModel {
         /**
          * <p>The task completion time.</p>
-         * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-09T18:00:00Z</p>
@@ -189,7 +189,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
-         * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-25T09:37:10Z</p>
@@ -252,7 +252,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version.</p>
+         * <p>The DPI engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>3.1</p>
@@ -264,7 +264,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
          * <p>The model name.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Sample model</p>
          */
         @NameInMap("ModelName")
         public String modelName;
@@ -273,7 +273,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
          * <p>The path.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>/models/example-model</p>
          */
         @NameInMap("ModelPath")
         public String modelPath;
@@ -288,17 +288,17 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         public String modelSource;
 
         /**
-         * <p>The runtime parameters.</p>
+         * <p>The number of task executions.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>1</p>
          */
         @NameInMap("RunningTimes")
         public String runningTimes;
 
         /**
          * <p>The task start time.</p>
-         * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-09T18:00:00Z</p>

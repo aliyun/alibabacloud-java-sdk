@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteDBEndpointAddressRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your account, such as the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DeleteDBEndpointAddressRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the endpoint.</p>
+     * <p>The endpoint ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the endpoints of a specified PolarDB cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the endpoint ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,10 @@ public class DeleteDBEndpointAddressRequest extends TeaModel {
     public String DBEndpointId;
 
     /**
-     * <p>The network type of the endpoint. Set the value to <strong>Public</strong> (public network).</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;The network type of the endpoint. Only <strong>Public</strong> (Internet) is supported.
+     * &lt;props=&quot;china&quot;&gt;The network type of the endpoint. Valid values:
+     * &lt;props=&quot;china&quot;&gt;- <strong>Public</strong>: Internet.
+     * &lt;props=&quot;china&quot;&gt;- <strong>Inner</strong>: classic network.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

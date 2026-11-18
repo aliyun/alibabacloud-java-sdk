@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableAIDBClusterDatasetServiceRequest extends TeaModel {
     /**
-     * <p>The instance ID of the PolarFS cold storage instance attached to the dataset management service.</p>
+     * <p>The instance ID of the PolarFS cold storage instance that you attach to the dataset management service. Instructions to invoke: Note: This parameter is actually required. If it is not provided, the API returns InvalidDBClusterId.Malformed (400). Instructions to invoke: Valid ID format description: specifies the accepted prefix families (such as pcs-xxx), separator conventions (hyphen character vs. underscore character), and the corresponding resource types.</p>
      * 
      * <strong>example:</strong>
      * <p>pcs-2ze26***</p>
@@ -29,7 +29,7 @@ public class EnableAIDBClusterDatasetServiceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instance ID of the database instance attached to the dataset management service.</p>
+     * <p>The instance ID of the database instance that you attach to the dataset management service.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>

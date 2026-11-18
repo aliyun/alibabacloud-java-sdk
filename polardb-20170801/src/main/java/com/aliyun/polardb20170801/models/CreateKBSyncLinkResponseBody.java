@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKBSyncLinkResponseBody extends TeaModel {
     /**
-     * <p>The client ID.</p>
+     * <p>The client identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>cli_xxxxxxbe8</p>
@@ -14,8 +14,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The creation time.</p>
-     * <p>The time is displayed in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The creation time. The time is displayed in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-14T05:58:42Z</p>
@@ -33,11 +32,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The source channel of the synchronization link. Valid values:</p>
-     * <ul>
-     * <li>FEISHU </li>
-     * <li>SHAREPOINT</li>
-     * </ul>
+     * <p>The source channel of the synchronization link. Valid values: OSS, DINGTALK, FEISHU, and SHAREPOINT.</p>
      * 
      * <strong>example:</strong>
      * <p>FEISHU</p>

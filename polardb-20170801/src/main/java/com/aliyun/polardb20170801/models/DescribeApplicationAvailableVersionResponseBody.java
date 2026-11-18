@@ -24,6 +24,9 @@ public class DescribeApplicationAvailableVersionResponseBody extends TeaModel {
 
     /**
      * <p>The list of versions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Versions")
     public java.util.List<DescribeApplicationAvailableVersionResponseBodyVersions> versions;
@@ -59,7 +62,7 @@ public class DescribeApplicationAvailableVersionResponseBody extends TeaModel {
 
     public static class DescribeApplicationAvailableVersionResponseBodyVersions extends TeaModel {
         /**
-         * <p>The release date.</p>
+         * <p>The release date in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-08-01T00:00:00Z</p>

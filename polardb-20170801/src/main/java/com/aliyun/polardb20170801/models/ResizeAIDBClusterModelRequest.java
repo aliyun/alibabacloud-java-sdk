@@ -15,7 +15,7 @@ public class ResizeAIDBClusterModelRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to perform a read-only capacity dry run.</p>
+     * <p>Specifies whether to perform only a read-only capacity dry run.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

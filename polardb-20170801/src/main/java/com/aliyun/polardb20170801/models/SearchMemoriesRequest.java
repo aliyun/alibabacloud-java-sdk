@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMemoriesRequest extends TeaModel {
     /**
-     * <p>The application ID. Example: pa-**************. The application must be of the mem0 type. When creating the application by using CreateApplication, set ApplicationType to mem0. Calling this operation on a non-mem0 application returns the IncorrectDBInstanceEngine (403) error.</p>
+     * <p>The application ID. Example: pa-**************. The application must be of the mem0 type. When you create the application by calling CreateApplication, set ApplicationType to mem0. If you call this operation on a non-mem0 application, the IncorrectDBInstanceEngine (403) error is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,16 @@ public class SearchMemoriesRequest extends TeaModel {
     public String memoryAgentId;
 
     /**
+     * <p>The memory ID. If you specify this parameter, the complete change history of the memory is queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4d83591f-******-4efaf8c3</p>
+     */
+    @NameInMap("MemoryId")
+    public String memoryId;
+
+    /**
      * <p>The ID of the memory user.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>user1</p>
@@ -61,7 +69,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records to display on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -122,6 +130,14 @@ public class SearchMemoriesRequest extends TeaModel {
     }
     public String getMemoryAgentId() {
         return this.memoryAgentId;
+    }
+
+    public SearchMemoriesRequest setMemoryId(String memoryId) {
+        this.memoryId = memoryId;
+        return this;
+    }
+    public String getMemoryId() {
+        return this.memoryId;
     }
 
     public SearchMemoriesRequest setMemoryUserId(String memoryUserId) {

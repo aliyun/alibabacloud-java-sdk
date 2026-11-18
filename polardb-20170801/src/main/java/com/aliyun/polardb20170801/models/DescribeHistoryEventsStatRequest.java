@@ -19,7 +19,7 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String archiveStatus;
 
     /**
-     * <p>The start time of the time range for task start times to query, in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+     * <p>The start time of the query time range for the task start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC. This parameter is required. If you do not specify this parameter, the service returns a Param.Invalid (400) error.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-02T11:31:03Z</p>
@@ -37,7 +37,7 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The end time of the time range for task start times to query, in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+     * <p>The end time of the query time range for the task start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC. This parameter is required. If you do not specify this parameter, the service returns a Param.Invalid (400) error.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-03T12:31:03Z</p>

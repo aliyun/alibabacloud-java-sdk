@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeHistoryEventsStatResponseBody extends TeaModel {
     /**
      * <p>The statistical results summarized by event category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryEventsStatResponseBodyItems> items;

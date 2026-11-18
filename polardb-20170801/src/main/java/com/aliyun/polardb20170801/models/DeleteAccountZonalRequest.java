@@ -17,7 +17,7 @@ public class DeleteAccountZonalRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Note: This parameter accepts only the ID of a PolarDB on ENS cluster (CloudProvider=ENS). For standard cloud clusters, use the DeleteAccount API. You can call the DescribeDBClustersZonal operation to query existing PolarDB on ENS clusters.</p>
+     * <p>Note: This parameter accepts only the ID of a PolarDB on ENS cluster (CloudProvider=ENS). For standard cloud clusters, use the DeleteAccount operation. You can call DescribeDBClustersZonal to query existing PolarDB on ENS clusters.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

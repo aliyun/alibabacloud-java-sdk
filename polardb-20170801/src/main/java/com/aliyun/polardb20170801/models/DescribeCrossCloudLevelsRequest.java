@@ -41,7 +41,7 @@ public class DescribeCrossCloudLevelsRequest extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The resource pool ID.</p>
+     * <p>The ID of the cross-cloud resource pool. First, call DescribeCrossCloudRegion to query the cross-cloud region information based on the target cloud provider, database type, and region. Obtain a valid value (which usually starts with pj-) from CrossCloudRegionList[].ProjectId in the response, and then pass it to this operation. If CrossCloudRegionList is empty or does not contain a ProjectId, no resource pool is available under the current query conditions. Verify the cloud provider, database type, and region, and apply for a resource pool through the cross-cloud product activation process or contact product support. Do not guess the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

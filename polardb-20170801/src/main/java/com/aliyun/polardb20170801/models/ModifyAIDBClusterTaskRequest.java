@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAIDBClusterTaskRequest extends TeaModel {
     /**
-     * <p>The task ID.</p>
+     * <p>The task ID. Note: This parameter refers to the training task ID, not the cluster ID. You can obtain a valid value by calling CreateAIDBClusterTask.</p>
      * 
      * <strong>example:</strong>
      * <p>pm-2ze9***</p>
@@ -16,7 +16,7 @@ public class ModifyAIDBClusterTaskRequest extends TeaModel {
     /**
      * <p>The operation to perform. Valid values:</p>
      * <ul>
-     * <li><strong>stop</strong>: Stops training. This value takes effect only for tasks that are currently in the training state.</li>
+     * <li><strong>stop</strong>: Stops the training. This value takes effect only for tasks that are in the training state.</li>
      * </ul>
      * 
      * <strong>example:</strong>

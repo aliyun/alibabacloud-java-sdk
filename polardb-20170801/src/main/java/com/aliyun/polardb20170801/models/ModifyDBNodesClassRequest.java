@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class ModifyDBNodesClassRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically use coupons. Valid values:</p>
+     * <p>Specifies whether to automatically use a coupon. Valid values:</p>
      * <ul>
-     * <li>true (default): Uses coupons.</li>
-     * <li>false: Does not use coupons.</li>
+     * <li>true (default): Uses the coupon.</li>
+     * <li>false: Does not use the coupon.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and cannot exceed 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and is case-sensitive. It can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -24,7 +27,7 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cloud service provider to which the instance belongs.</p>
+     * <p>The cloud provider of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ENS</p>
@@ -43,14 +46,17 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The list of cluster nodes.</p>
+     * <p>The list of cluster nodes. If the cluster contains a node with HotReplicaMode set to ON, you must include all DBNodes (writer and reader nodes) in the same request, and the TargetClass of each node must be identical. Usage notes: HotReplicaMode scenario constraints: If the cluster contains a node with HotReplicaMode set to ON, you must include all DBNodes (writer and reader nodes) in the same request, and their TargetClass values must be identical.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("DBNode")
     public java.util.List<ModifyDBNodesClassRequestDBNode> DBNode;
 
     /**
-     * <p>The type of the specification change. Valid values:</p>
+     * <p>The modification type. Valid values:</p>
      * <ul>
      * <li><p><strong>Upgrade</strong>: Upgrades the specifications.</p>
      * </li>
@@ -72,11 +78,11 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The latest time to start the scheduled task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
+     * <p>The latest time to start the scheduled task. The format is <code>YYYY-MM-DDThh:mm:ssZ</code> (UTC).</p>
      * <blockquote>
      * <ul>
      * <li>The latest time must be at least 30 minutes later than the start time.</li>
-     * <li>If <code>PlannedStartTime</code> is set but this parameter is not specified, the latest time to execute the task defaults to <code>start time + 30 minutes</code>. For example, if <code>PlannedStartTime</code> is set to <code>2021-01-14T09:00:00Z</code> and this parameter is left empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</li>
+     * <li>If <code>PlannedStartTime</code> is specified but this parameter is not, the latest time to start the task defaults to the start time plus 30 minutes. For example, if <code>PlannedStartTime</code> is set to <code>2021-01-14T09:00:00Z</code> and this parameter is left empty, the task will start at <code>2021-01-14T09:30:00Z</code> at the latest.</li>
      * </ul>
      * </blockquote>
      * 
@@ -88,7 +94,7 @@ public class ModifyDBNodesClassRequest extends TeaModel {
 
     /**
      * <p>The planned transient disconnection time.</p>
-     * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The time follows the ISO 8601 standard in the UTC time zone. The format is YYYY-MM-DDTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-14T09:30:00Z</p>
@@ -97,12 +103,12 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public String plannedFlashingOffTime;
 
     /**
-     * <p>The earliest time to start the scheduled (executed within the target time period) specification upgrade task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
+     * <p>The earliest time to start the scheduled configuration upgrade task. The format is <code>YYYY-MM-DDThh:mm:ssZ</code> (UTC).</p>
      * <blockquote>
      * <ul>
      * <li>This parameter takes effect only when <code>ModifyType</code> is set to <code>Upgrade</code>.</li>
-     * <li>The start time can be any time point within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the start time can range from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
-     * <li>If this parameter is left empty, the specification upgrade task is immediately executed by default.</li>
+     * <li>The start time can be any time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the allowed start time ranges from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+     * <li>If this parameter is left empty, the configuration upgrade task is executed immediately by default.</li>
      * </ul>
      * </blockquote>
      * 
@@ -113,7 +119,7 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public String plannedStartTime;
 
     /**
-     * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+     * <p>The coupon code. If this parameter is left empty, the default coupon is used.</p>
      * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
@@ -128,7 +134,7 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The cluster sub-series. Valid values:</p>
+     * <p>The sub-edition of the cluster. Valid values:</p>
      * <ul>
      * <li><p><strong>normal_exclusive</strong>: Dedicated</p>
      * </li>
@@ -269,9 +275,9 @@ public class ModifyDBNodesClassRequest extends TeaModel {
 
     public static class ModifyDBNodesClassRequestDBNode extends TeaModel {
         /**
-         * <p>The cluster node ID.</p>
+         * <p>The ID of the cluster node.</p>
          * <blockquote>
-         * <p>If this parameter is specified, DBNode.N.TargetClass is required. N is an integer that starts from 1. Maximum value: 16 minus the current number of nodes.</p>
+         * <p>If this parameter is specified, DBNode.N.TargetClass is required. N is an integer starting from 1, and the maximum value is 16 minus the current number of nodes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -281,9 +287,9 @@ public class ModifyDBNodesClassRequest extends TeaModel {
         public String DBNodeId;
 
         /**
-         * <p>The specifications of the node to be changed. For more information about node specifications, see <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>. </p>
+         * <p>The specifications of the node to be modified. For more information about node specifications, see <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>. </p>
          * <blockquote>
-         * <p>If this parameter is specified, DBNode.N.DBNodeId is required. N is an integer that starts from 1. Maximum value: 16 minus the current number of nodes.</p>
+         * <p>If this parameter is specified, DBNode.N.DBNodeId is required. N is an integer starting from 1, and the maximum value is 16 minus the current number of nodes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

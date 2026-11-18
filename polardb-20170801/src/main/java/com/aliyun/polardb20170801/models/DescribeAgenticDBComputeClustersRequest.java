@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBComputeClustersRequest extends TeaModel {
     /**
-     * <p>The compute instance ID for fuzzy matching (pc-xxxx), such as pc-2ze8k.</p>
+     * <p>The compute instance ID used for fuzzy matching. Example: pc-2ze8k.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze8k</p>
@@ -14,7 +14,7 @@ public class DescribeAgenticDBComputeClustersRequest extends TeaModel {
     public String computeClusterId;
 
     /**
-     * <p>The AgenticDB cluster ID.</p>
+     * <p>The ID of the AgenticDB cluster. The ID must start with pagc-. You can create the cluster by calling CreateDBCluster and setting AgenticDbType to dedicated and ServerlessType to AgileServerless. Standard PolarDB cluster IDs with the pc- prefix are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ReactivateDBClusterBackupResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The ID of the generated order.</p>
      * 
      * <strong>example:</strong>
      * <p>2035629******</p>
@@ -23,7 +23,7 @@ public class ReactivateDBClusterBackupResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F2A9EFA7-915F-4572-8299-85A307******</p>

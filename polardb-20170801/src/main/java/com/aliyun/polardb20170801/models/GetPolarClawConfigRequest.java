@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPolarClawConfigRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The application ID. Usage note: In the Prerequisites section, specify that the ApplicationId can be obtained by calling DescribeApplications (filtered by ApplicationType=polardb_polarclaw), and indicate the retrieval path in the description of the ApplicationId parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetPolarClawConfigRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The path to the configuration section to retrieve, specified in JSONPath dot notation. If this parameter is empty, the entire configuration is returned.</p>
+     * <p>Filters configuration sections by a JSONPath dot-notation path. If this parameter is left empty, all configurations are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>models</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInspectionTaskRequest extends TeaModel {
     /**
-     * <p>The cron expression for the inspection task, which specifies the periodic execution schedule.</p>
+     * <p>The cron expression of the inspection task, which specifies the periodic execution schedule.</p>
      * 
      * <strong>example:</strong>
      * <p>0 0 * * *</p>
@@ -20,7 +20,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public java.util.List<CreateInspectionTaskRequestDBClusterList> DBClusterList;
 
     /**
-     * <p>The ID of the region where the task is located.</p>
+     * <p>The region ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -38,7 +38,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the inspection workspace.</p>
+     * <p>The ID of the inspection space. This parameter is required. If it is not provided, the API returns InvalidSpaceId.Malformed (HTTP 400).</p>
      * 
      * <strong>example:</strong>
      * <p>space-123</p>
@@ -119,7 +119,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The ID of the region where the cluster to be inspected is located.</p>
+         * <p>The region ID of the cluster to be inspected.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

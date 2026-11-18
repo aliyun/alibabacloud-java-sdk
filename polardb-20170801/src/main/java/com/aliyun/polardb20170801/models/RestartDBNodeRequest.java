@@ -7,7 +7,10 @@ public class RestartDBNodeRequest extends TeaModel {
     /**
      * <p>The ID of the cluster node.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including node IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to view the details of all clusters under your account, including the node ID.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>Nodes in Serverless (AgileServerless) clusters are not supported. Operation description: This operation does not support nodes in Serverless (AgileServerless) clusters. You can check the ServerlessType field in the DescribeDBClusters response to determine the cluster type. For Serverless clusters, use the alternative management operations.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,11 +21,11 @@ public class RestartDBNodeRequest extends TeaModel {
     public String DBNodeId;
 
     /**
-     * <p>Specifies whether to restart the node immediately or at a scheduled time. Valid values:</p>
+     * <p>Specifies whether to execute the node restart task immediately or at a scheduled time. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): The node is restarted at a scheduled time.</p>
+     * <li><p><strong>false</strong> (default): Executes the task at a scheduled time.</p>
      * </li>
-     * <li><p><strong>true</strong>: The node is restarted immediately.</p>
+     * <li><p><strong>true</strong>: Executes the task immediately.</p>
      * </li>
      * </ul>
      * 
@@ -39,13 +42,11 @@ public class RestartDBNodeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The latest time to start the scheduled task. The time must be in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and in UTC.</p>
+     * <p>The latest time to start the scheduled task. The time must be in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
      * <blockquote>
      * <ul>
-     * <li><p>The latest time must be at least 30 minutes later than the earliest time.</p>
-     * </li>
-     * <li><p>If PlannedStartTime is specified but this parameter is not, the latest start time of the task is PlannedStartTime plus 30 minutes by default. For example, if PlannedStartTime is set to <code>2021-01-14T09:00:00Z</code> and this parameter is empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</p>
-     * </li>
+     * <li>The end time must be at least 30 minutes later than the start time.</li>
+     * <li>If <code>PlannedStartTime</code> is specified but this parameter is not, the latest time to start the task defaults to the start time plus 30 minutes. For example, if <code>PlannedStartTime</code> is set to <code>2021-01-14T09:00:00Z</code> and this parameter is left empty, the task will start no later than <code>2021-01-14T09:30:00Z</code>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -56,13 +57,11 @@ public class RestartDBNodeRequest extends TeaModel {
     public String plannedEndTime;
 
     /**
-     * <p>The earliest time to start the scheduled node restart. The task is executed within a specified time window. The time must be in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and in UTC.</p>
+     * <p>The earliest time to start the scheduled node restart task. The time must be in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
      * <blockquote>
      * <ul>
-     * <li><p>The start time can be set to any point in time within the next 72 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the start time can be set to a value in the range from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-17T09:00:00Z</code>.</p>
-     * </li>
-     * <li><p>If this parameter is empty, the node is restarted immediately.</p>
-     * </li>
+     * <li>The start time must be within the next 72 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the allowed start time ranges from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-17T09:00:00Z</code>.</li>
+     * <li>If this parameter is left empty, the node restart task is executed immediately by default.</li>
      * </ul>
      * </blockquote>
      * 
@@ -75,7 +74,7 @@ public class RestartDBNodeRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the available regions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

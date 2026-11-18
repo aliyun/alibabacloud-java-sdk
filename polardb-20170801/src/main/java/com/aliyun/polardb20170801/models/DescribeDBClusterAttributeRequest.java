@@ -18,7 +18,7 @@ public class DescribeDBClusterAttributeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to retrieve AI-related node information.</p>
+     * <p>Specifies whether to retrieve information about AI-related nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>AI</p>

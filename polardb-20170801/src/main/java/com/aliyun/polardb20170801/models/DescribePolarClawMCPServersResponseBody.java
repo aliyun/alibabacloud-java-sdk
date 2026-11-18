@@ -23,7 +23,7 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -41,7 +41,7 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The configurations of the MCP servers.</p>
+     * <p>The MCP server configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>{

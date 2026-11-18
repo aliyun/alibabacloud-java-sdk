@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgenticDBTenantResponseBody extends TeaModel {
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time is displayed in the ISO 8601 standard in the UTC time zone. The format is YYYY-MM-DDTHH:mm:ssZ, such as 2026-10-15T08:00:00Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-15T08:00:00Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsRequest extends TeaModel {
     /**
-     * <p>The event archive status. Valid values:</p>
+     * <p>The archive status of the event. Valid values:</p>
      * <ul>
      * <li><p>Archived: The event is archived.</p>
      * </li>
@@ -22,7 +22,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String archiveStatus;
 
     /**
-     * <p>The system event category. Valid values:</p>
+     * <p>The category of the system event. Valid values:</p>
      * <ul>
      * <li><strong>Exception</strong>: Exception events.</li>
      * <li><strong>Optimize</strong>: Optimization events.</li>
@@ -37,7 +37,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String eventCategory;
 
     /**
-     * <p>The event ID.</p>
+     * <p>The ID of the event.</p>
      * 
      * <strong>example:</strong>
      * <p>5345398</p>
@@ -50,7 +50,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
      * <ul>
      * <li><strong>INFO</strong>: Notification.</li>
      * <li><strong>WARN</strong>: Warning.</li>
-     * <li><strong>CRITICAL</strong>: Critical.</li>
+     * <li><strong>CRITICAL</strong>: Alerting.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String eventLevel;
 
     /**
-     * <p>The event status. Valid values:</p>
+     * <p>The status of the event. Valid values:</p>
      * <ul>
      * <li><strong>Inquiring</strong>: Inquiring.</li>
      * <li><strong>Scheduled</strong>: Scheduled.</li>
@@ -83,11 +83,11 @@ public class DescribeHistoryEventsRequest extends TeaModel {
      * <p>The system event type. This parameter is valid only when InstanceEventType.N is not specified. Valid values: </p>
      * <ul>
      * <li><strong>SystemMaintenance.Reboot</strong>: The instance is restarted due to system maintenance.</li>
-     * <li><strong>SystemMaintenance.Redeploy</strong>: The instance is redeployed due to system maintenance.</li>
-     * <li><strong>SystemFailure.Reboot</strong>: The instance is restarted due to a system failure.</li>
-     * <li><strong>SystemFailure.Redeploy</strong>: The instance is redeployed due to a system failure.</li>
-     * <li><strong>SystemFailure.Delete</strong>: The instance is released due to a creation failure.</li>
-     * <li><strong>InstanceFailure.Reboot</strong>: The instance is restarted due to an instance failure.</li>
+     * <li><strong>SystemMaintenance.Redeploy</strong>: Redeployment of the instance due to system maintenance.</li>
+     * <li><strong>SystemFailure.Reboot</strong>: The instance is restarted due to a system fault.</li>
+     * <li><strong>SystemFailure.Redeploy</strong>: Redeployment of the instance due to a system fault.</li>
+     * <li><strong>SystemFailure.Delete</strong>: The instance is released because instance creation failed.</li>
+     * <li><strong>InstanceFailure.Reboot</strong>: The instance is restarted due to an instance fault.</li>
      * <li><strong>InstanceExpiration.Stop</strong>: The subscription instance is stopped due to expiration.</li>
      * <li><strong>InstanceExpiration.Delete</strong>: The subscription instance is released due to expiration.</li>
      * <li><strong>AccountUnbalanced.Stop</strong>: The pay-as-you-go instance is stopped due to an overdue payment.</li>
@@ -104,7 +104,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The start time of the task start time range. This parameter specifies that only tasks whose start time is later than this value are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days before the current time, it is automatically changed to 30 days ago.</p>
+     * <p>The start time of the task start time range. This parameter specifies that the start time of the queried tasks must be later than this time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days before the current time, it is automatically converted to 30 days ago. This parameter is actually required. If it is not provided, the API returns Param.Invalid (HTTP 400). Note: This parameter is required. If it is not provided, the API returns Param.Invalid (HTTP 400).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-02T11:31:03Z</p>
@@ -113,9 +113,9 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String fromStartTime;
 
     /**
-     * <p>The resource ID. This parameter is used to query tasks of the corresponding resources. Separate multiple IDs with commas (,). You can specify up to 30 IDs. By default, this parameter is left empty, which indicates that no limit is applied.</p>
+     * <p>The ID of the resource. This parameter is used to query tasks for the corresponding resource. You can specify up to 30 IDs and separate them with commas (,). Default value: empty, which indicates no limit.</p>
      * <blockquote>
-     * <p>Only cluster IDs are supported.</p>
+     * <p>Currently, only cluster IDs are supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-**********</p>
@@ -169,7 +169,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>The type of the resource. Valid values:</p>
      * <ul>
      * <li><strong>Instance</strong>: Instance resources.</li>
      * <li><strong>Instance</strong>: Host: Host resources.</li>
@@ -186,11 +186,11 @@ public class DescribeHistoryEventsRequest extends TeaModel {
      * <p>The ID of the scheduled task to be canceled.</p>
      * <blockquote>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/199648.html">DescribeScheduleTasks</a> operation to query the information about all scheduled tasks under the current account, including the task IDs.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/199648.html">DescribeScheduleTasks</a> operation to query the information of all scheduled tasks under the current account, including the task IDs.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>Only tasks in the pending state (the return value of the <code>Status</code> parameter is <code>pending</code>) can be canceled.</li>
+     * <li>Only tasks in the pending state (where the return value of the <code>Status</code> parameter is <code>pending</code>) can be canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The end time of the task start time range. This parameter specifies that only tasks whose start time is earlier than this value are queried. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The end time of the task start time range. This parameter specifies that the start time of the queried tasks must be earlier than this time. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-03T12:31:03Z</p>

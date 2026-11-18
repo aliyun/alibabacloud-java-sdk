@@ -32,7 +32,7 @@ public class ModifyModelApiRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The model API ID.</p>
+     * <p>The ID of the model API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class ModifyModelApiRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of routing rules. The value is a JSON array string.</p>
+     * <p>The list of routing rules, formatted as a JSON array string. Usage notes: Correct the value of FallbackMode in the RouteRules parameter example by replacing it with a valid value or removing the field, and add the list of valid values and their meanings for the FallbackMode subfield to the description of RouteRules.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

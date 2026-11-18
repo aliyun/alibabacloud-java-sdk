@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLakebaseMountParameterTemplateListRequest extends TeaModel {
     /**
-     * <p>The database engine. Set the value to polar_3fs.</p>
+     * <p>The engine. Set the value to polar_3fs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,7 @@ public class DescribeLakebaseMountParameterTemplateListRequest extends TeaModel 
     public String engine;
 
     /**
-     * <p>The instance category. Valid values:</p>
-     * <ul>
-     * <li>basic: Basic Edition.</li>
-     * <li>high_performance: High-performance Edition.</li>
-     * </ul>
+     * <p>The instance category. Valid values: basic (Basic Edition) and high_performance (High-performance Edition).</p>
      * 
      * <strong>example:</strong>
      * <p>basic</p>
@@ -28,7 +24,7 @@ public class DescribeLakebaseMountParameterTemplateListRequest extends TeaModel 
     public String paramGroupCategory;
 
     /**
-     * <p>The PolarFS instance ID.</p>
+     * <p>The PolarFS instance ID. You can call DescribePolarFs to query available PolarFS instances and use the returned PolarFsInstanceId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

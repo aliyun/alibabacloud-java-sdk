@@ -5,9 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDBLinksRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster for which you want to query the database links.</p>
+     * <p>The ID of the cluster for which you want to query DBLink information.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query PolarDB clusters.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query the list of PolarDB clusters.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>Use only the ID of a supported PolarDB for PostgreSQL (Compatible with Oracle) cluster. Unsupported engines or versions return InvalidEngine.Unsupported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +21,7 @@ public class DescribeDBLinksRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the database link. If you leave this parameter empty, the system returns all the database links.</p>
+     * <p>The name of the DBLink. If you do not specify this parameter, all DBLinks are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>dblink_test</p>

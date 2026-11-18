@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAIDBClusterDatasetRequest extends TeaModel {
     /**
-     * <p>The ID of the PolarDB database cluster.</p>
+     * <p>The ID of the AI database cluster. The cluster must have DBType set to polardb_ai. This parameter is required. If it is not provided, the service returns InvalidDBClusterId.Malformed (404).</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>
@@ -14,7 +14,7 @@ public class CreateAIDBClusterDatasetRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The dataset name.</p>
+     * <p>The name of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>dataset01</p>
@@ -23,12 +23,10 @@ public class CreateAIDBClusterDatasetRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The type of the dataset. Valid values:</p>
+     * <p>The dataset type. Valid values:</p>
      * <ul>
-     * <li><p><strong>train</strong>: training set</p>
-     * </li>
-     * <li><p><strong>eval</strong>: evaluation set</p>
-     * </li>
+     * <li><strong>train</strong>: training dataset</li>
+     * <li><strong>eval</strong>: evaluation dataset</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,14 +69,11 @@ public class CreateAIDBClusterDatasetRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The training mode for the dataset. The dataset format depends on the mode. Valid values:</p>
+     * <p>The training mode for the dataset. Dataset formats vary by mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>sft</strong>: supervised fine-tuning. For training sets only.</p>
-     * </li>
-     * <li><p><strong>grpo</strong>: reinforcement learning optimization. For training sets only.</p>
-     * </li>
-     * <li><p><strong>text</strong>: text generation. For validation sets only.</p>
-     * </li>
+     * <li><strong>sft</strong>: supervised fine-tuning, dedicated to training datasets</li>
+     * <li><strong>grpo</strong>: reinforcement learning optimization, dedicated to training datasets</li>
+     * <li><strong>text</strong>: text generation, dedicated to validation datasets</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -20,7 +20,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
     public java.util.List<ListPolarClawBindingsResponseBodyBindings> bindings;
 
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7F2007D3-7E74-4ECB-89A8-BF130D******</p>
@@ -93,7 +93,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
 
     public static class ListPolarClawBindingsResponseBodyBindings extends TeaModel {
         /**
-         * <p>The agent ID.</p>
+         * <p>The PolarClaw agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -111,7 +111,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The account ID.</p>
+         * <p>The channel account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

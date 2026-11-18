@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRateLimitPolicyResponseBody extends TeaModel {
     /**
-     * <p>An array of rate limit policy objects.</p>
+     * <p>The list of throttling policies.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeRateLimitPolicyResponseBodyItems> items;
 
     /**
-     * <p>The returned page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -29,7 +29,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -47,7 +47,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -119,7 +119,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-19T16:47:25+08:00</p>
@@ -128,7 +128,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the gateway instance.</p>
+         * <p>The gateway instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-xxxxxxxx</p>
@@ -137,7 +137,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
-         * <p>The ID of the rate limit policy.</p>
+         * <p>The ID of the throttling policy.</p>
          * 
          * <strong>example:</strong>
          * <p>02eccf7c61cf4d05a543075ee907f3**</p>
@@ -155,7 +155,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>The maximum requests per minute (RPM).</p>
+         * <p>The limit on the number of requests per minute.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -164,7 +164,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         public String rateLimitRpm;
 
         /**
-         * <p>The maximum tokens per minute (TPM).</p>
+         * <p>The limit on the number of tokens per minute.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -173,7 +173,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         public String rateLimitTpm;
 
         /**
-         * <p>The ID of the object within the policy\&quot;s scope, such as a consumer group or a consumer.</p>
+         * <p>The ID of the throttling dimension, which is the consumer group ID or consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-xxxxxxx</p>
@@ -182,11 +182,11 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         public String scopeRefId;
 
         /**
-         * <p>The scope of the policy. Valid values:</p>
+         * <p>The throttling dimension. Valid values:</p>
          * <ul>
-         * <li><p><strong>ConsumerGroup</strong>: The policy applies to a consumer group.</p>
+         * <li><p><strong>ConsumerGroup</strong>: consumer group</p>
          * </li>
-         * <li><p><strong>Consumer</strong>: The policy applies to a specific consumer.</p>
+         * <li><p><strong>Consumer</strong>: consumer</p>
          * </li>
          * </ul>
          * 
@@ -197,12 +197,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         public String scopeType;
 
         /**
-         * <p>The status of the policy. Valid values:</p>
+         * <p>The status of the throttling policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>Enabled</strong>: The policy is enabled.</p>
-         * </li>
-         * <li><p><strong>Disabled</strong>: The policy is disabled.</p>
-         * </li>
+         * <li><strong>Enabled</strong>: enabled</li>
+         * <li><strong>Disabled</strong>: disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>

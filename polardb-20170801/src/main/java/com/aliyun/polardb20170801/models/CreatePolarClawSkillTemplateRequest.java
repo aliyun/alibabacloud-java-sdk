@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolarClawSkillTemplateRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The application ID. This parameter is required. If this parameter is not provided, an InvalidApplicationId.Malformed (HTTP 400) error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
@@ -28,7 +28,7 @@ public class CreatePolarClawSkillTemplateRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view all available regions for the current account, including region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,11 +57,11 @@ public class CreatePolarClawSkillTemplateRequest extends TeaModel {
     public String skillTemplateName;
 
     /**
-     * <p>The skill template parameters.</p>
+     * <p>The skill template parameters. Specify a standard JSON object string with the skill identifier as the key, such as {&quot;skill1&quot;:{&quot;skillName&quot;:&quot;polarclawhub&quot;,&quot;version&quot;:&quot;0.0.0&quot;}}. JSON arrays or single-quote formats are not accepted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;skillName\&quot;:\&quot;polarclawhub\&quot;,\&quot;version\&quot;:\&quot;0.0.0\&quot;},{\&quot;skillName\&quot;:\&quot;github\&quot;,\&quot;version\&quot;:\&quot;1.0.0\&quot;}]</p>
+     * <p>{&quot;skill1&quot;:{&quot;skillName&quot;:&quot;polarclawhub&quot;,&quot;version&quot;:&quot;0.0.0&quot;}}</p>
      */
     @NameInMap("SkillTemplateParam")
     public String skillTemplateParam;

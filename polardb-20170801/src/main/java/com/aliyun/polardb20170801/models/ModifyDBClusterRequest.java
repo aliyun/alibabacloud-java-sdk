@@ -25,7 +25,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the DescribeDBClusters operation to query all clusters in the specified region, including cluster IDs.</p>
+     * <p>You can call the DescribeDBClusters operation to query all clusters in the specified region, including their cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,9 +36,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The list of drill node instance names.</p>
+     * <p>The list of instance names of the nodes to be drilled.</p>
      * <blockquote>
-     * <p>Node dimension drills support only a single node. For zone dimension drills, you can omit this parameter or pass all nodes.</p>
+     * <p>A node-level drill supports only a single node. For a zone-level drill, you can leave this parameter empty or pass all nodes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,8 +50,8 @@ public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The cross-zone data replication mode of the cluster. Valid values:</p>
      * <ul>
-     * <li><strong>AsyncSync</strong>: Asynchronous.</li>
-     * <li><strong>SemiSync</strong>: Semi-synchronous.</li>
+     * <li><strong>AsyncSync</strong>: Asynchronous replication.</li>
+     * <li><strong>SemiSync</strong>: Semi-synchronous replication.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,23 +63,23 @@ public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The fault injection method. Valid values:</p>
      * <ul>
-     * <li>0: Instance fault injection based on <code>Crash SQL</code>.</li>
+     * <li>0: instance fault injection based on <code>Crash SQL</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>CrashSQLInjection</p>
      */
     @NameInMap("FaultInjectionType")
     public String faultInjectionType;
 
     /**
-     * <p>The fault drill dimension for the cluster. Valid values:</p>
+     * <p>The fault drill dimension of the cluster. Valid values:</p>
      * <ul>
-     * <li><code>0</code> or <code>FaultInjection</code>: Primary zone dimension fault drill.</li>
-     * <li><code>1</code>: Node dimension fault drill.<blockquote>
+     * <li><code>0</code> or <code>FaultInjection</code>: fault drill at the primary zone level.</li>
+     * <li><code>1</code>: fault drill at the node level.<blockquote>
      * <ul>
-     * <li>In the <strong>primary zone dimension fault drill</strong> scenario, all compute nodes in the primary zone become unavailable, and the disaster recovery switchover in this scenario is lossy.</li>
-     * <li>In the <strong>node dimension fault drill</strong> scenario, only a single compute node can be drilled. Pass the desired compute node name through <code>DBNodeCrashList</code>.</li>
+     * <li>In the <strong>fault drill at the primary zone level</strong> scenario, all compute nodes in the primary zone become unavailable, and the disaster recovery switchover in this scenario is lossy.</li>
+     * <li>In the <strong>fault drill at the node level</strong> scenario, only a single compute node can be drilled. You can pass the desired compute node name through <code>DBNodeCrashList</code>.</li>
      * </ul>
      * </blockquote>
      * </li>
@@ -94,13 +94,13 @@ public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The automatic IMCI-based query acceleration feature. Valid values:</p>
      * <ul>
-     * <li><code>ON</code>: Enabled.</li>
-     * <li><code>OFF</code>: Disabled.</li>
+     * <li><code>ON</code>: Enables the feature.</li>
+     * <li><code>OFF</code>: Disables the feature.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Only PolarDB for MySQL clusters are supported.</li>
-     * <li>For cluster version limits, refer to <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic IMCI-based query acceleration (AutoIndex)</a>.</li>
+     * <li>This feature is supported only by PolarDB for MySQL clusters.</li>
+     * <li>For cluster version limits, refer to <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic seamless acceleration (AutoIndex)</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -160,7 +160,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The upper limit for automatic storage scaling of a Standard Edition cluster. Unit: GB.</p>
      * <blockquote>
-     * <p>The maximum value is 32000.</p>
+     * <p>The maximum value is 32,000.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class ModifyDBClusterRequest extends TeaModel {
      * <p>The JSON string of the target database and table information to be restored. The values of the database and table information are all of the string type.
      * Example: <code>[    {        &quot;tables&quot;:[            {                &quot;name&quot;:&quot;testtb&quot;,                &quot;type&quot;:&quot;table&quot;,                &quot;newname&quot;:&quot;testtb_restore&quot;            }        ],        &quot;name&quot;:&quot;testdb&quot;,        &quot;type&quot;:&quot;db&quot;,        &quot;newname&quot;:&quot;testdb_restore&quot;    } ]</code>.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to view the details of the database and table names that support restoration, and fill the supported database and table information into the corresponding positions in the preceding example.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to query the details of the database and table names that support restoration, and fill the supported database and table information into the corresponding positions in the preceding example.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

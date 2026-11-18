@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster that will become the primary cluster in the GDN.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to query the ID of the cluster in the GDN.</p>
+     * <p>The ID of the cluster to be switched to the primary cluster in the GDN.
+     * You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to view the cluster IDs in the GDN.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-wz9fb5nn44u1d****</p>
@@ -15,10 +15,12 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to forcibly switch over the primary and secondary clusters in the GDN. Valid values:</p>
+     * <p>Specifies whether to forcibly switch the primary and secondary clusters in the GDN. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Forcibly switches the primary and secondary clusters in the GDN.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Does not forcibly switch the primary and secondary clusters in the GDN.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
     public Boolean forced;
 
     /**
-     * <p>The ID of the GDN.</p>
+     * <p>The ID of the global database network (GDN).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>

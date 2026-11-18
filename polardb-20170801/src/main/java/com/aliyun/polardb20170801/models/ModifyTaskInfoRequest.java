@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTaskInfoRequest extends TeaModel {
     /**
-     * <p>The parameters for the task operation.</p>
+     * <p>The operation parameters for the task.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -33,7 +33,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the task step to update.</p>
+     * <p>The name of the task step to modify. Usage note: These two parameters are required in actual calls. If they are not provided, the Param.Invalid error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>create_instance</p>
@@ -42,7 +42,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String stepName;
 
     /**
-     * <p>The name of the API operation associated with the task.</p>
+     * <p>The name of the API operation associated with the task. Usage note: These two parameters are required in actual calls. If they are not provided, the Param.Invalid error is returned. Usage note: Provide a complete list of valid values or instructions on how to obtain them (such as by calling an associated query API), and correct the current invalid example value CreateDBInstance to an actual valid TaskAction value.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateDBInstance</p>
@@ -51,7 +51,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String taskAction;
 
     /**
-     * <p>The ID of the task to update.</p>
+     * <p>The ID of the task to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

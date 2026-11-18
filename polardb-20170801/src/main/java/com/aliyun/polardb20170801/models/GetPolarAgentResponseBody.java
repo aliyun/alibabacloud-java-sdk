@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPolarAgentResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The content returned by the agent.</p>
      * 
      * <strong>example:</strong>
      * <p>QZ-13661677-80</p>
@@ -14,7 +14,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
     public String content;
 
     /**
-     * <p>Indicates whether FunctionCall is supported.</p>
+     * <p>Specifies whether function calling is supported.</p>
      */
     @NameInMap("FunctionCall")
     public java.util.List<GetPolarAgentResponseBodyFunctionCall> functionCall;
@@ -38,10 +38,10 @@ public class GetPolarAgentResponseBody extends TeaModel {
     public String queryId;
 
     /**
-     * <p>The model\&quot;s reasoning content.</p>
+     * <p>The reasoning content of the model.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>Extract the key information based on the input content</p>
      */
     @NameInMap("ReasoningContent")
     public String reasoningContent;
@@ -65,7 +65,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>Indicates whether UiFunctionCall is supported.</p>
+     * <p>Specifies whether UI function calling is supported.</p>
      */
     @NameInMap("UiFunctionCall")
     public java.util.List<GetPolarAgentResponseBodyUiFunctionCall> uiFunctionCall;
@@ -141,7 +141,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
 
     public static class GetPolarAgentResponseBodyFunctionCall extends TeaModel {
         /**
-         * <p>The operation-related output result.</p>
+         * <p>The output results related to the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>---narguments:n  parameters: []n</p>
@@ -150,7 +150,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
         public String arguments;
 
         /**
-         * <p>The quota ID.</p>
+         * <p>The ID of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>393</p>
@@ -171,7 +171,7 @@ public class GetPolarAgentResponseBody extends TeaModel {
          * <p>The status.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
@@ -217,19 +217,19 @@ public class GetPolarAgentResponseBody extends TeaModel {
 
     public static class GetPolarAgentResponseBodyUiFunctionCall extends TeaModel {
         /**
-         * <p>xxx</p>
+         * <p>The JSON text of the tool calling parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>{&quot;RegionId&quot;:&quot;cn-hangzhou&quot;}</p>
          */
         @NameInMap("ArgsText")
         public String argsText;
 
         /**
-         * <p>The tool command that is invoked.</p>
+         * <p>The command of the called tool.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>DescribeDBClusters</p>
          */
         @NameInMap("ToolName")
         public String toolName;

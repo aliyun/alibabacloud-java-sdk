@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBClusterVersionZonalRequest extends TeaModel {
     /**
-     * <p>A unique, case-sensitive token that you provide to ensure the idempotence of the request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value on the client side. The value must be unique across different requests and is case-sensitive. It can contain up to 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -14,7 +14,7 @@ public class UpgradeDBClusterVersionZonalRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the PolarDB on ENS cluster. Only cluster IDs returned by the DescribeDBClustersZonal operation are supported. Before you call this operation, you must create an edge cluster by using ENS infrastructure. Standard PolarDB cluster IDs are not supported. Note: Only edge cluster IDs returned by DescribeDBClustersZonal are accepted, and the edge cluster must be created based on ENS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,15 +24,15 @@ public class UpgradeDBClusterVersionZonalRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to immediately perform or schedule the kernel upgrade. Valid values:</p>
+     * <p>Specifies whether to immediately execute or schedule the kernel version upgrade. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): Schedules the upgrade.</p>
+     * <li><p><strong>false</strong> (default): Scheduled execution.</p>
      * </li>
-     * <li><p><strong>true</strong>: Immediately performs the upgrade.</p>
+     * <li><p><strong>true</strong>: Immediate execution.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>You do not need to specify this parameter when you call this operation.</p>
+     * <p>You do not need to specify this parameter when you invoke this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,13 +48,11 @@ public class UpgradeDBClusterVersionZonalRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The latest time to start the scheduled task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is in UTC.</p>
+     * <p>The latest time to start the scheduled task. The time must be in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
      * <blockquote>
      * <ul>
-     * <li><p>The latest start time must be at least 30 minutes later than the earliest start time.</p>
-     * </li>
-     * <li><p>If you specify <code>PlannedStartTime</code> but not this parameter, the latest start time is 30 minutes after the value of <code>PlannedStartTime</code> by default. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and leave this parameter empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</p>
-     * </li>
+     * <li>The latest time must be at least 30 minutes later than the start time.</li>
+     * <li>If you specify <code>PlannedStartTime</code> but do not specify this parameter, the latest time to start the task defaults to 30 minutes after the start time. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and leave this parameter empty, the task starts at <code>2021-01-14T09:30:00Z</code> at the latest.</li>
      * </ul>
      * </blockquote>
      * 
@@ -65,15 +63,13 @@ public class UpgradeDBClusterVersionZonalRequest extends TeaModel {
     public String plannedEndTime;
 
     /**
-     * <p>The earliest time to start the scheduled kernel upgrade. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is in UTC.</p>
+     * <p>The earliest time to start the scheduled Milvus version upgrade task. The time must be in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
      * <blockquote>
      * <ul>
-     * <li>The start time can be any point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a time in the range of <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+     * <li>The start time must be within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the allowed start time ranges from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+     * <li>If you leave this parameter empty, the Milvus version upgrade task is immediately executed by default.</li>
      * </ul>
      * </blockquote>
-     * <ul>
-     * <li>If you do not specify this parameter, the upgrade task is executed immediately.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2022-04-28T14:00:00Z</p>
@@ -88,7 +84,7 @@ public class UpgradeDBClusterVersionZonalRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The version code of the target DB version. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation.</p>
+     * <p>The version code of the target database engine version. You can obtain the value from the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>20230707</p>
@@ -97,7 +93,7 @@ public class UpgradeDBClusterVersionZonalRequest extends TeaModel {
     public String targetDBRevisionVersionCode;
 
     /**
-     * <p>The version code of the target proxy version. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation.</p>
+     * <p>The version code of the target PolarProxy version. You can obtain the value from the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>20240702</p>
@@ -106,13 +102,11 @@ public class UpgradeDBClusterVersionZonalRequest extends TeaModel {
     public String targetProxyRevisionVersionCode;
 
     /**
-     * <p>The label for the kernel version upgrade. Set the value to <strong>INNOVATE</strong>.</p>
+     * <p>The kernel version upgrade label. Set the value to <strong>INNOVATE</strong>.</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is applicable only when you upgrade a PolarDB for MySQL 8.0.1 cluster to PolarDB for MySQL 8.0.2.</p>
-     * </li>
-     * <li><p>If you specify this parameter, you must set <code>UpgradePolicy</code> to <strong>COLD</strong>.</p>
-     * </li>
+     * <li>This parameter applies only to upgrades from PolarDB for MySQL 8.0.1 to PolarDB for MySQL 8.0.2.</li>
+     * <li>If you specify this parameter, you must set <code>UpgradePolicy</code> to <strong>COLD</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -123,11 +117,11 @@ public class UpgradeDBClusterVersionZonalRequest extends TeaModel {
     public String upgradeLabel;
 
     /**
-     * <p>The upgrade policy for the kernel version. Valid values:</p>
+     * <p>The kernel version upgrade policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>HOT</strong>: hot upgrade</p>
+     * <li><p><strong>HOT</strong>: Hot upgrade.</p>
      * </li>
-     * <li><p><strong>COLD</strong>: cold upgrade. This upgrade method is supported only for PolarDB for MySQL 8.0 clusters.</p>
+     * <li><p><strong>COLD</strong>: Cold upgrade. Only PolarDB for MySQL 8.0 Cluster Edition supports this upgrade method.</p>
      * </li>
      * </ul>
      * 
@@ -140,11 +134,11 @@ public class UpgradeDBClusterVersionZonalRequest extends TeaModel {
     /**
      * <p>The upgrade type. Valid values:</p>
      * <ul>
-     * <li><p><strong>PROXY</strong>: Upgrades only the database proxy (PolarProxy).</p>
+     * <li><p><strong>PROXY</strong>: Upgrades only PolarProxy.</p>
      * </li>
-     * <li><p><strong>DB</strong>: Upgrades only the kernel.</p>
+     * <li><p><strong>DB</strong>: Upgrades only the database engine.</p>
      * </li>
-     * <li><p><strong>ALL</strong> (default): Upgrades both the database proxy (PolarProxy) and the kernel.</p>
+     * <li><p><strong>ALL</strong> (default): Upgrades both PolarProxy and the database engine.</p>
      * </li>
      * </ul>
      * 

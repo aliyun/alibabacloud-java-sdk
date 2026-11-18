@@ -15,7 +15,7 @@ public class DisablePolarClawPluginRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The ID of the plugin to disable.</p>
+     * <p>The ID of the plug-in to disable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DisablePolarClawPluginRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Specifies whether to restart the gateway. Default value: true.</p>
+     * <p>Specifies whether to restart the gateway after the plug-in is disabled. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -14,7 +14,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
     public String page;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
     public java.util.List<SearchMemoriesResponseBodyResults> results;
 
     /**
-     * <p>The total number of entries that meet the conditions.</p>
+     * <p>The total number of records that meet the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -111,13 +111,22 @@ public class SearchMemoriesResponseBody extends TeaModel {
     public static class SearchMemoriesResponseBodyResults extends TeaModel {
         /**
          * <p>The creation time.</p>
-         * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-26T08:25:44Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        /**
+         * <p>The event information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
+        @NameInMap("Event")
+        public String event;
 
         /**
          * <p>The memory ID.</p>
@@ -127,6 +136,12 @@ public class SearchMemoriesResponseBody extends TeaModel {
          */
         @NameInMap("Id")
         public String id;
+
+        /**
+         * <p>The first input item in the result list.</p>
+         */
+        @NameInMap("Input")
+        public java.util.List<?> input;
 
         /**
          * <p>The memory content.</p>
@@ -147,6 +162,15 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String memoryAgentId;
 
         /**
+         * <p>The first memory ID in the result set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
+        @NameInMap("MemoryId")
+        public String memoryId;
+
+        /**
          * <p>The user to whom the memory belongs.</p>
          * 
          * <strong>example:</strong>
@@ -159,10 +183,28 @@ public class SearchMemoriesResponseBody extends TeaModel {
          * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;tags\&quot;:\&quot;Issue_date_2023-11-30,VD_Active\&quot;}</p>
+         * <p>{&quot;tags&quot;:&quot;Issue_date_2023-11-30,VD_Active&quot;}</p>
          */
         @NameInMap("Metadata")
         public String metadata;
+
+        /**
+         * <p>The first new memory information in the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
+        @NameInMap("NewMemory")
+        public String newMemory;
+
+        /**
+         * <p>The first old memory value in the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
+        @NameInMap("OldMemory")
+        public String oldMemory;
 
         /**
          * <p>The score.</p>
@@ -174,8 +216,17 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String score;
 
         /**
+         * <p>The number of update records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("UpdateCount")
+        public Integer updateCount;
+
+        /**
          * <p>The update time.</p>
-         * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16T02:27:33Z</p>
@@ -196,12 +247,28 @@ public class SearchMemoriesResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public SearchMemoriesResponseBodyResults setEvent(String event) {
+            this.event = event;
+            return this;
+        }
+        public String getEvent() {
+            return this.event;
+        }
+
         public SearchMemoriesResponseBodyResults setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public SearchMemoriesResponseBodyResults setInput(java.util.List<?> input) {
+            this.input = input;
+            return this;
+        }
+        public java.util.List<?> getInput() {
+            return this.input;
         }
 
         public SearchMemoriesResponseBodyResults setMemory(String memory) {
@@ -220,6 +287,14 @@ public class SearchMemoriesResponseBody extends TeaModel {
             return this.memoryAgentId;
         }
 
+        public SearchMemoriesResponseBodyResults setMemoryId(String memoryId) {
+            this.memoryId = memoryId;
+            return this;
+        }
+        public String getMemoryId() {
+            return this.memoryId;
+        }
+
         public SearchMemoriesResponseBodyResults setMemoryUserId(String memoryUserId) {
             this.memoryUserId = memoryUserId;
             return this;
@@ -236,12 +311,36 @@ public class SearchMemoriesResponseBody extends TeaModel {
             return this.metadata;
         }
 
+        public SearchMemoriesResponseBodyResults setNewMemory(String newMemory) {
+            this.newMemory = newMemory;
+            return this;
+        }
+        public String getNewMemory() {
+            return this.newMemory;
+        }
+
+        public SearchMemoriesResponseBodyResults setOldMemory(String oldMemory) {
+            this.oldMemory = oldMemory;
+            return this;
+        }
+        public String getOldMemory() {
+            return this.oldMemory;
+        }
+
         public SearchMemoriesResponseBodyResults setScore(String score) {
             this.score = score;
             return this;
         }
         public String getScore() {
             return this.score;
+        }
+
+        public SearchMemoriesResponseBodyResults setUpdateCount(Integer updateCount) {
+            this.updateCount = updateCount;
+            return this;
+        }
+        public Integer getUpdateCount() {
+            return this.updateCount;
         }
 
         public SearchMemoriesResponseBodyResults setUpdateTime(String updateTime) {

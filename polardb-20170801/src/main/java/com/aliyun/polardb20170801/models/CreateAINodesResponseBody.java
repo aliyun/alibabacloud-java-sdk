@@ -14,13 +14,13 @@ public class CreateAINodesResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The IDs of the created DB nodes.</p>
+     * <p>The list of created DBNode IDs.</p>
      */
     @NameInMap("DBNodeIds")
     public java.util.List<String> DBNodeIds;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The ID of the generated order.</p>
      * 
      * <strong>example:</strong>
      * <p>2148126708*****</p>

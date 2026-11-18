@@ -20,7 +20,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
      * <li><strong>VPC</strong>: VPC.</li>
-     * <li><strong>Classic</strong>: Classic network.</li>
+     * <li><strong>Classic</strong>: classic network.</li>
      * </ul>
      * <blockquote>
      * <p>If you do not specify this parameter, instances of all network types are returned.</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class EnableSQLRateLimitingRulesResponseBody extends TeaModel {
     /**
-     * <p>The response message.</p>
+     * <p>The message returned for the request.</p>
      * <blockquote>
-     * <p>If the request is successful, <code>Successful</code> is returned. If the request fails, an error message is returned.</p>
+     * <p>If the request is successful, <code>Successful</code> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class EnableSQLRateLimitingRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4CE6DF97-AEA4-484F-906F-C407EE******</p>
@@ -26,11 +26,11 @@ public class EnableSQLRateLimitingRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
+     * <li><p><strong>true</strong>: The request is successful.</p>
      * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
+     * <li><p><strong>false</strong>: The request fails.</p>
      * </li>
      * </ul>
      * 

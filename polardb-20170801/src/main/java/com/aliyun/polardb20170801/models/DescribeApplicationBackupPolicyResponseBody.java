@@ -32,7 +32,7 @@ public class DescribeApplicationBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The retention period of level-1 backups, in days.</p>
+     * <p>The retention period of level-1 backups. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -41,7 +41,7 @@ public class DescribeApplicationBackupPolicyResponseBody extends TeaModel {
     public Integer preferredBackupRetentionPeriod;
 
     /**
-     * <p>The time period when automatic backups are performed. The time is in the HH:mmZ-HH:mmZ format and in UTC.</p>
+     * <p>The time window when automatic backups are performed. The format is HH:mmZ-HH:mmZ in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>07:00Z-08:00Z</p>

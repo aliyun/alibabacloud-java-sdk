@@ -7,10 +7,8 @@ public class ModifyAccountLockStateRequest extends TeaModel {
     /**
      * <p>The lock status of the account. Valid values:</p>
      * <ul>
-     * <li><p><strong>UnLock</strong>: The account is not locked.</p>
-     * </li>
-     * <li><p><strong>Lock</strong>: The account is locked.</p>
-     * </li>
+     * <li><strong>UnLock</strong>: Unlocked.</li>
+     * <li><strong>Lock</strong>: Locked.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +19,7 @@ public class ModifyAccountLockStateRequest extends TeaModel {
     public String accountLockState;
 
     /**
-     * <p>The name of the database account.</p>
+     * <p>The account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +29,7 @@ public class ModifyAccountLockStateRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The expiration time of the account. The time must be in the \<code>YYYY-MM-DDThh:mm:ssZ\\</code> format.</p>
+     * <p>The expiration time of the account, in the YYYY-MM-DDThh:mm:ssZ format. The account expires at the specified time.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-09-17T10:00:00Z</p>
@@ -40,9 +38,12 @@ public class ModifyAccountLockStateRequest extends TeaModel {
     public String accountPasswordValidTime;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the details of all clusters in a region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view all clusters in the target region, including their cluster IDs.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>This operation is supported only for PostgreSQL clusters (DBType=PostgreSQL). Before calling this operation, you can query the DBType and DBClusterStatus by using DescribeDBClusters to confirm that the cluster is in the Running state.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

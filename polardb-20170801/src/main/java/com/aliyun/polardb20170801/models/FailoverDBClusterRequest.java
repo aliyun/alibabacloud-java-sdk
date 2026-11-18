@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FailoverDBClusterRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must make sure that the value is unique among different requests. The token is case-sensitive and cannot exceed 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The value is case-sensitive and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5******</p>
@@ -14,7 +14,7 @@ public class FailoverDBClusterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the database cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,8 +38,8 @@ public class FailoverDBClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to switch back to the original primary zone after a failover. Valid values:</p>
      * <ul>
-     * <li>true: Switch back to the original primary zone.</li>
-     * <li>false: Do not switch back to the original primary zone.</li>
+     * <li>true: Yes.</li>
+     * <li>false: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,10 +49,10 @@ public class FailoverDBClusterRequest extends TeaModel {
     public Boolean rollBackForDisaster;
 
     /**
-     * <p>The ID of the node that you want to promote to the primary node. If you leave this parameter empty, the system automatically elects a node. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query node IDs and other information.</p>
+     * <p>The ID of the node to be switched to the primary node. If you do not specify this parameter, the system automatically elects a primary node. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the node ID and other information.</p>
      * <blockquote>
      * <ul>
-     * <li>Automatic election of the primary node: The system identifies all read-only nodes that are eligible for election. The system selects one or more read-only nodes with the highest priority. If the switchover to the first node fails due to reasons such as network issues or abnormal replication status, the system attempts to switch to the next node until the switchover succeeds.</li>
+     * <li>Automatic primary node election: The system identifies all read-only nodes that can be elected. It selects one or more read-only nodes with the highest priority. If the switchover to the first node fails (for example, due to network issues or abnormal replication status), the system attempts to switch to the next node until the switchover succeeds.</li>
      * <li>This parameter is required when the cluster is a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster. This parameter is optional when the cluster is a PolarDB for MySQL cluster.</li>
      * </ul>
      * </blockquote>
@@ -66,8 +66,8 @@ public class FailoverDBClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether the primary/secondary switchover is performed within the primary zone. Valid values:</p>
      * <ul>
-     * <li>Primary: The primary/secondary switchover is performed within the primary zone.</li>
-     * <li>Standby: The switchover is performed to the hot standby storage cluster.</li>
+     * <li>Primary: primary/secondary switchover within the primary zone.</li>
+     * <li>Standby: switchover to the hot standby storage cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>

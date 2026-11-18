@@ -562,7 +562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds SQL throttling rules.</p>
+     * <p>Adds an SQL throttling rule.</p>
      * 
      * @param request AddSQLRateLimitingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -618,7 +618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds SQL throttling rules.</p>
+     * <p>Adds an SQL throttling rule.</p>
      * 
      * @param request AddSQLRateLimitingRulesRequest
      * @return AddSQLRateLimitingRulesResponse
@@ -881,8 +881,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section describes the prerequisites: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Attaches a specified PolarLakeBase cold-storage instance to a PolarDB application.</p>
+     * <p>Mounts a specified Polarlakebase instance to a PolarDB application.</p>
      * 
      * @param request AttachApplicationPolarFSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -925,8 +929,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section describes the prerequisites: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Attaches a specified PolarLakeBase cold-storage instance to a PolarDB application.</p>
+     * <p>Mounts a specified Polarlakebase instance to a PolarDB application.</p>
      * 
      * @param request AttachApplicationPolarFSRequest
      * @return AttachApplicationPolarFSResponse
@@ -1084,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels O\\\&amp;M events at a time.</p>
+     * <p>Cancels multiple O&amp;M events.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1140,7 +1148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels O\\\&amp;M events at a time.</p>
+     * <p>Cancels multiple O&amp;M events.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
@@ -1612,7 +1620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the ApsaraDB database name for PolarDB on ENS.</p>
+     * <p>Checks the database name for ApsaraDB PolarDB on ENS.</p>
      * 
      * @param request CheckDBNameZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1664,7 +1672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the ApsaraDB database name for PolarDB on ENS.</p>
+     * <p>Checks the database name for ApsaraDB PolarDB on ENS.</p>
      * 
      * @param request CheckDBNameZonalRequest
      * @return CheckDBNameZonalResponse
@@ -1745,7 +1753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation pre-validates a skill before uploading it to a PolarClaw instance.</p>
+     * <p>This operation performs a pre-check before uploading a skill to a PolarClaw instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Pre-checks a skill.</p>
@@ -1813,7 +1821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation pre-validates a skill before uploading it to a PolarClaw instance.</p>
+     * <p>This operation performs a pre-check before uploading a skill to a PolarClaw instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Pre-checks a skill.</p>
@@ -1828,18 +1836,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation verifies the consistency of quota configurations within a specified PolarFS instance. These configurations include storage capacity and inode limits on directory paths. If inconsistencies are found, the operation returns a list of the inconsistent paths and any related error information.</p>
-     * <h3>Usage notes</h3>
-     * <ul>
-     * <li>Ensure that the <code>PolarFsInstanceId</code> parameter correctly identifies the target PolarFS instance.</li>
-     * <li>When the system detects quota inconsistencies, it returns <code>IsConsistent=false</code> and populates the <code>InconsistentPaths</code> array.</li>
-     * <li>If the request is successful and no inconsistencies are found, the <code>InconsistentPaths</code> array is empty and <code>IsConsistent</code> is set to <code>true</code>.</li>
-     * <li>For errors such as insufficient permissions or a non-existent resource, see the error codes for details.</li>
-     * </ul>
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, you must use SetPolarFsFileQuota to configure a quota for the target path specified by the Path parameter. Otherwise, the API returns a QuotaConsistencyCheck.Failed error.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks the consistency of quota settings in a PolarFS instance.</p>
+     * <p>Checks the consistency status of quota settings in a PolarFS instance.</p>
      * 
      * @param request CheckPolarFsQuotaConsistencyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1883,18 +1884,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation verifies the consistency of quota configurations within a specified PolarFS instance. These configurations include storage capacity and inode limits on directory paths. If inconsistencies are found, the operation returns a list of the inconsistent paths and any related error information.</p>
-     * <h3>Usage notes</h3>
-     * <ul>
-     * <li>Ensure that the <code>PolarFsInstanceId</code> parameter correctly identifies the target PolarFS instance.</li>
-     * <li>When the system detects quota inconsistencies, it returns <code>IsConsistent=false</code> and populates the <code>InconsistentPaths</code> array.</li>
-     * <li>If the request is successful and no inconsistencies are found, the <code>InconsistentPaths</code> array is empty and <code>IsConsistent</code> is set to <code>true</code>.</li>
-     * <li>For errors such as insufficient permissions or a non-existent resource, see the error codes for details.</li>
-     * </ul>
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, you must use SetPolarFsFileQuota to configure a quota for the target path specified by the Path parameter. Otherwise, the API returns a QuotaConsistencyCheck.Failed error.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks the consistency of quota settings in a PolarFS instance.</p>
+     * <p>Checks the consistency status of quota settings in a PolarFS instance.</p>
      * 
      * @param request CheckPolarFsQuotaConsistencyRequest
      * @return CheckPolarFsQuotaConsistencyResponse
@@ -2029,6 +2023,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Disables a PolarDB for AI task. Prerequisites: The Category of the target cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before disabling the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to disable the task, but you must still confirm that the task is enabled and its status is 1.</p>
+     * <h2>Prerequisites</h2>
+     * <p>In the detailed description of CloseAITask, supplement the prerequisite workflow (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be 1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</p>
+     * 
      * <b>summary</b> : 
      * <p>Disables the PolarDB for AI feature.</p>
      * 
@@ -2081,6 +2080,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Disables a PolarDB for AI task. Prerequisites: The Category of the target cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before disabling the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to disable the task, but you must still confirm that the task is enabled and its status is 1.</p>
+     * <h2>Prerequisites</h2>
+     * <p>In the detailed description of CloseAITask, supplement the prerequisite workflow (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be 1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</p>
+     * 
      * <b>summary</b> : 
      * <p>Disables the PolarDB for AI feature.</p>
      * 
@@ -2487,6 +2491,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a dataset.</p>
      * 
@@ -2555,6 +2562,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a dataset.</p>
      * 
@@ -2695,8 +2705,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. The maas type is not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates AI nodes.</p>
+     * <p>Creates an AI node.</p>
      * 
      * @param request CreateAINodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2731,8 +2744,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. The maas type is not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates AI nodes.</p>
+     * <p>Creates an AI node.</p>
      * 
      * @param request CreateAINodesRequest
      * @return CreateAINodesResponse
@@ -3083,6 +3099,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Call CreateDBCluster and specify AgenticDbType=dedicated and ServerlessType=AgileServerless to create an AgenticDB cluster and obtain the DBClusterId with the pagc- prefix. Then, call CreateAgenticDBTenant to create a tenant and obtain the TenantId. Finally, call this operation to create a project.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates an AgenticDB project.</p>
      * 
@@ -3121,6 +3140,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TenantId", request.tenantId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3139,6 +3162,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Call CreateDBCluster and specify AgenticDbType=dedicated and ServerlessType=AgileServerless to create an AgenticDB cluster and obtain the DBClusterId with the pagc- prefix. Then, call CreateAgenticDBTenant to create a tenant and obtain the TenantId. Finally, call this operation to create a project.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates an AgenticDB project.</p>
      * 
@@ -3152,7 +3178,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an independent business tenant without creating an API key.</p>
+     * <p>Creates an independent business tenant without creating an API key.
+     * Before you begin: Call <a href="https://www.alibabacloud.com/help/en/polardb/api-polardb-2017-08-01-createdbcluster">CreateDBCluster</a> and set AgenticDbType to dedicated to create an AgenticDB cluster. Obtain the DBClusterId that starts with the pagc- prefix, and then use this ID to call this operation to create a tenant. The pc- prefix IDs of standard PolarDB clusters are not supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an AgenticDB tenant.</p>
@@ -3199,7 +3226,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an independent business tenant without creating an API key.</p>
+     * <p>Creates an independent business tenant without creating an API key.
+     * Before you begin: Call <a href="https://www.alibabacloud.com/help/en/polardb/api-polardb-2017-08-01-createdbcluster">CreateDBCluster</a> and set AgenticDbType to dedicated to create an AgenticDB cluster. Obtain the DBClusterId that starts with the pagc- prefix, and then use this ID to call this operation to create a tenant. The pc- prefix IDs of standard PolarDB clusters are not supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an AgenticDB tenant.</p>
@@ -3692,7 +3720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Prompt for an Application.</p>
+     * <p>Creates an application prompt policy.</p>
      * 
      * @param request CreateApplicationPromptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3736,7 +3764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Prompt for an Application.</p>
+     * <p>Creates an application prompt policy.</p>
      * 
      * @param request CreateApplicationPromptRequest
      * @return CreateApplicationPromptResponse
@@ -4790,7 +4818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom cluster endpoint for a PolarDB cluster.</p>
+     * <p>Creates a custom cluster endpoint for PolarDB.</p>
      * 
      * @param request CreateDBClusterEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4890,7 +4918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom cluster endpoint for a PolarDB cluster.</p>
+     * <p>Creates a custom cluster endpoint for PolarDB.</p>
      * 
      * @param request CreateDBClusterEndpointRequest
      * @return CreateDBClusterEndpointResponse
@@ -4901,8 +4929,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: This operation applies only to PolarDB on ENS clusters and does not apply to standard PolarDB clusters. The CreateDBClusterZonal operation is currently unavailable. To create an edge cluster, apply through the ENS or MyBase infrastructure, or call the CreateDBCluster operation with CloudProvider set to ENS. Then, call the DescribeDBClustersZonal operation to obtain the edge cluster ID. Usage notes: This operation applies only to PolarDB on ENS clusters. It outlines the concepts of edge clouds, activation methods, and how to obtain the edge cluster ID, noting that the CreateDBClusterZonal operation is unavailable and clusters must be created through alternative methods.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a custom cluster endpoint for a PolarDB on ENS cluster.</p>
+     * <p>Creates a custom cluster endpoint for an edge cluster.</p>
      * 
      * @param request CreateDBClusterEndpointZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4989,8 +5020,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: This operation applies only to PolarDB on ENS clusters and does not apply to standard PolarDB clusters. The CreateDBClusterZonal operation is currently unavailable. To create an edge cluster, apply through the ENS or MyBase infrastructure, or call the CreateDBCluster operation with CloudProvider set to ENS. Then, call the DescribeDBClustersZonal operation to obtain the edge cluster ID. Usage notes: This operation applies only to PolarDB on ENS clusters. It outlines the concepts of edge clouds, activation methods, and how to obtain the edge cluster ID, noting that the CreateDBClusterZonal operation is unavailable and clusters must be created through alternative methods.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a custom cluster endpoint for a PolarDB on ENS cluster.</p>
+     * <p>Creates a custom cluster endpoint for an edge cluster.</p>
      * 
      * @param request CreateDBClusterEndpointZonalRequest
      * @return CreateDBClusterEndpointZonalResponse
@@ -5599,8 +5633,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call DescribeDBClustersZonal to query edge clusters in ENS dedicated regions, or call CreateDBCluster with CloudProvider=ENS to create an edge cluster, and then call CreateDatabaseZonal.</p>
+     * <h2>Before you begin</h2>
+     * <p>Append the complete dependency chain description for ENS cluster creation to the detailed_description of the CreateDatabaseZonal API. Specify that you must first use the ENS product API to create a VPC and a vSwitch in an edge region, then create an ENS cluster, and finally call CreateDatabaseZonal.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a database of an edge cluster for PolarDB on ENS.</p>
+     * <p>Creates a database for an ApsaraDB for PolarDB edge cluster.</p>
      * 
      * @param request CreateDatabaseZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5679,8 +5718,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call DescribeDBClustersZonal to query edge clusters in ENS dedicated regions, or call CreateDBCluster with CloudProvider=ENS to create an edge cluster, and then call CreateDatabaseZonal.</p>
+     * <h2>Before you begin</h2>
+     * <p>Append the complete dependency chain description for ENS cluster creation to the detailed_description of the CreateDatabaseZonal API. Specify that you must first use the ENS product API to create a VPC and a vSwitch in an edge region, then create an ENS cluster, and finally call CreateDatabaseZonal.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a database of an edge cluster for PolarDB on ENS.</p>
+     * <p>Creates a database for an ApsaraDB for PolarDB edge cluster.</p>
      * 
      * @param request CreateDatabaseZonalRequest
      * @return CreateDatabaseZonalResponse
@@ -5692,7 +5736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates one or more extensions.</p>
+     * <p>Creates an extension.</p>
      * 
      * @param request CreateExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5776,7 +5820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates one or more extensions.</p>
+     * <p>Creates an extension.</p>
      * 
      * @param request CreateExtensionsRequest
      * @return CreateExtensionsResponse
@@ -5873,11 +5917,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This API creates a PolarFileSystem (PolarFS) Global Data Network (GDN). Do not confuse it with the CreateGlobalDatabaseNetwork API, which operates on a PolarDB cluster. Ensure you are using the correct API to avoid unintended actions.</p>
+     * <p>This API operation creates a Polarlakebase global database network (GDN). Note that this operation is different from creating a global database network for a PolarDB cluster by calling CreateGlobalDatabaseNetwork.</p>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>Prerequisites: You must first create a Polarlakebase instance by calling CreatePolarFs, or query an existing instance by calling DescribePolarFs, and use the returned instance ID as the SourceId or DestinationId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a new PolarLakeBase Global Data Network (GDN).</p>
+     * <p>Creates a Polarlakebase global database network (GDN).</p>
      * 
      * @param request CreateGlobalDataNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5946,11 +5992,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This API creates a PolarFileSystem (PolarFS) Global Data Network (GDN). Do not confuse it with the CreateGlobalDatabaseNetwork API, which operates on a PolarDB cluster. Ensure you are using the correct API to avoid unintended actions.</p>
+     * <p>This API operation creates a Polarlakebase global database network (GDN). Note that this operation is different from creating a global database network for a PolarDB cluster by calling CreateGlobalDatabaseNetwork.</p>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>Prerequisites: You must first create a Polarlakebase instance by calling CreatePolarFs, or query an existing instance by calling DescribePolarFs, and use the returned instance ID as the SourceId or DestinationId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a new PolarLakeBase Global Data Network (GDN).</p>
+     * <p>Creates a Polarlakebase global database network (GDN).</p>
      * 
      * @param request CreateGlobalDataNetworkRequest
      * @return CreateGlobalDataNetworkResponse
@@ -6192,7 +6240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a periodic inspection task for specified PolarDB clusters.</p>
+     * <p>Creates a periodic inspection task for a specified PolarDB cluster.</p>
      * 
      * @param request CreateInspectionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6244,7 +6292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a periodic inspection task for specified PolarDB clusters.</p>
+     * <p>Creates a periodic inspection task for a specified PolarDB cluster.</p>
      * 
      * @param request CreateInspectionTaskRequest
      * @return CreateInspectionTaskResponse
@@ -6542,7 +6590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Lakebase parameter template.</p>
+     * <p>Creates a Lakebase mount parameter template.</p>
      * 
      * @param request CreateLakebaseMountParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6594,7 +6642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Lakebase parameter template.</p>
+     * <p>Creates a Lakebase mount parameter template.</p>
      * 
      * @param request CreateLakebaseMountParameterGroupRequest
      * @return CreateLakebaseMountParameterGroupResponse
@@ -7716,7 +7764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a rate limiting policy.</p>
+     * <p>Creates a throttling policy.</p>
      * 
      * @param request CreateRateLimitPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7768,7 +7816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a rate limiting policy.</p>
+     * <p>Creates a throttling policy.</p>
      * 
      * @param request CreateRateLimitPolicyRequest
      * @return CreateRateLimitPolicyResponse
@@ -7780,10 +7828,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying CPU utilization for Resource Control.</p>
+     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the creation, modification, deletion, binding, and unbinding of resource control rules, but does not support querying Resource Control CPU utilization.</p>
      * <h3>Limits</h3>
      * <ul>
-     * <li>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
      * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
@@ -7793,7 +7841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify exactly one of the MaxCpu and CpuCount parameters when you create the rule.</p>
+     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set the maximum CPU quota percentage available to the rule by using MaxCpu, or set the maximum number of CPU cores available to the rule by using CpuCount. When you create a rule, you must specify either MaxCpu or CpuCount, but not both.</p>
      * 
      * @param request CreateResourceControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7841,10 +7889,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying CPU utilization for Resource Control.</p>
+     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the creation, modification, deletion, binding, and unbinding of resource control rules, but does not support querying Resource Control CPU utilization.</p>
      * <h3>Limits</h3>
      * <ul>
-     * <li>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
      * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
@@ -7854,7 +7902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify exactly one of the MaxCpu and CpuCount parameters when you create the rule.</p>
+     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set the maximum CPU quota percentage available to the rule by using MaxCpu, or set the maximum number of CPU cores available to the rule by using CpuCount. When you create a rule, you must specify either MaxCpu or CpuCount, but not both.</p>
      * 
      * @param request CreateResourceControlRequest
      * @return CreateResourceControlResponse
@@ -8411,6 +8459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin, call DescribeEdgeCloudRegion to query available edge regions and the CentralControlRegionId. Prepare a VPC and a vSwitch in the central control region. Call CreateDBCluster and set CloudProvider to ENS, EnsRegionId, VPCId, and VSwitchId to create a PolarDB on ENS cluster. Then, call CreateAccountZonal to create an account. After you complete these steps, call this operation by using the PolarDB on ENS cluster ID and the account name.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes an account for a PolarDB on ENS cluster.</p>
      * 
@@ -8463,6 +8514,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin, call DescribeEdgeCloudRegion to query available edge regions and the CentralControlRegionId. Prepare a VPC and a vSwitch in the central control region. Call CreateDBCluster and set CloudProvider to ENS, EnsRegionId, VPCId, and VSwitchId to create a PolarDB on ENS cluster. Then, call CreateAccountZonal to create an account. After you complete these steps, call this operation by using the PolarDB on ENS cluster ID and the account name.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes an account for a PolarDB on ENS cluster.</p>
      * 
@@ -8475,6 +8529,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Call CreateDBCluster and set AgenticDbType to dedicated to create an AgenticDB cluster and obtain the DBClusterId with the pagc- prefix. Call CreateAgenticDBTenant to create a tenant. Call CreateAgenticDBProject to create a project and obtain the TenantId and ProjectId. Call CreateAgenticDBBranch to create a branch and obtain the BranchId. Finally, call this operation to delete the branch.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes an AgenticDB branch.</p>
      * 
@@ -8523,6 +8580,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Call CreateDBCluster and set AgenticDbType to dedicated to create an AgenticDB cluster and obtain the DBClusterId with the pagc- prefix. Call CreateAgenticDBTenant to create a tenant. Call CreateAgenticDBProject to create a project and obtain the TenantId and ProjectId. Call CreateAgenticDBBranch to create a branch and obtain the BranchId. Finally, call this operation to delete the branch.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes an AgenticDB branch.</p>
      * 
@@ -8599,6 +8659,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: First, call CreateDBCluster and specify AgenticDbType=dedicated to create an AgenticDB cluster with the pagc- prefix. Then, call CreateAgenticDBTenant to create a tenant and obtain the TenantId. Next, call CreateAgenticDBProject to create a project and obtain the ProjectId. Finally, call this operation to delete the project.</p>
+     * <h2>Prerequisites</h2>
+     * <p>Complete prerequisite instructions, including how to create an AgenticDB cluster by using CreateDBCluster (AgenticDbType=dedicated), how to obtain a valid TenantId and ProjectId, and the dependencies among resources.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes an AgenticDB project.</p>
      * 
@@ -8643,6 +8708,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: First, call CreateDBCluster and specify AgenticDbType=dedicated to create an AgenticDB cluster with the pagc- prefix. Then, call CreateAgenticDBTenant to create a tenant and obtain the TenantId. Next, call CreateAgenticDBProject to create a project and obtain the ProjectId. Finally, call this operation to delete the project.</p>
+     * <h2>Prerequisites</h2>
+     * <p>Complete prerequisite instructions, including how to create an AgenticDB cluster by using CreateDBCluster (AgenticDbType=dedicated), how to obtain a valid TenantId and ProjectId, and the dependencies among resources.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes an AgenticDB project.</p>
      * 
@@ -8656,7 +8726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can only delete a tenant whose projects and branches have been cleaned up. After the tenant is deleted, all its API keys become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
+     * <p>You can delete only a tenant whose projects and branches have been completely cleaned up. After the tenant is deleted, all its API keys become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an AgenticDB tenant.</p>
@@ -8699,7 +8769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can only delete a tenant whose projects and branches have been cleaned up. After the tenant is deleted, all its API keys become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
+     * <p>You can delete only a tenant whose projects and branches have been completely cleaned up. After the tenant is deleted, all its API keys become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an AgenticDB tenant.</p>
@@ -8770,15 +8840,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Important</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation deletes a PolarDB application but does not affect the associated PolarDB instance.</li>
-     * <li>The delete operation is irreversible and permanently deletes the application. Proceed with caution.</li>
-     * <li>Ensure that you have backed up all critical data before proceeding.Before you delete an application, make sure that you have backed up all important data.</li>
+     * <li>This operation deletes an existing PolarDB application without affecting the associated PolarDB instance.</li>
+     * <li>The deletion is irreversible. Proceed with caution.</li>
+     * <li>Before you perform the deletion, make sure that all important data is backed up.</li>
      * </ul>
+     * <h2>Before you begin</h2>
+     * <p>The associated database cluster must be in the Running state. You can call DescribeDBClusterAttribute to check the DBClusterStatus field and confirm the cluster status before you delete the application. Note: The associated database cluster must be in the Running state. You can query the DBClusterStatus field by calling DescribeDBClusterAttribute to confirm the status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the specified PolarDB application. This operation does not delete the associated PolarDB instance.</p>
+     * <p>Deletes a specified PolarDB application without deleting the PolarDB instance itself.</p>
      * 
      * @param request DeleteApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8810,15 +8882,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Important</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation deletes a PolarDB application but does not affect the associated PolarDB instance.</li>
-     * <li>The delete operation is irreversible and permanently deletes the application. Proceed with caution.</li>
-     * <li>Ensure that you have backed up all critical data before proceeding.Before you delete an application, make sure that you have backed up all important data.</li>
+     * <li>This operation deletes an existing PolarDB application without affecting the associated PolarDB instance.</li>
+     * <li>The deletion is irreversible. Proceed with caution.</li>
+     * <li>Before you perform the deletion, make sure that all important data is backed up.</li>
      * </ul>
+     * <h2>Before you begin</h2>
+     * <p>The associated database cluster must be in the Running state. You can call DescribeDBClusterAttribute to check the DBClusterStatus field and confirm the cluster status before you delete the application. Note: The associated database cluster must be in the Running state. You can query the DBClusterStatus field by calling DescribeDBClusterAttribute to confirm the status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the specified PolarDB application. This operation does not delete the associated PolarDB instance.</p>
+     * <p>Deletes a specified PolarDB application without deleting the PolarDB instance itself.</p>
      * 
      * @param request DeleteApplicationRequest
      * @return DeleteApplicationResponse
@@ -8881,8 +8955,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Place an order on the purchase page or call CreateApplication (with MemApplicationSpec specified) to create an application with mem0 capabilities enabled. Then, call CreateApplicationPrompt to create a prompt and obtain the PromptId. Finally, call this operation. If CreateApplication does not currently support the automated creation of this type of application, submit a prior application on the purchase page.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes an application prompt.</p>
+     * <p>Deletes the prompt policy for an application.</p>
      * 
      * @param request DeleteApplicationPromptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8917,8 +8994,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Place an order on the purchase page or call CreateApplication (with MemApplicationSpec specified) to create an application with mem0 capabilities enabled. Then, call CreateApplicationPrompt to create a prompt and obtain the PromptId. Finally, call this operation. If CreateApplication does not currently support the automated creation of this type of application, submit a prior application on the purchase page.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes an application prompt.</p>
+     * <p>Deletes the prompt policy for an application.</p>
      * 
      * @param request DeleteApplicationPromptRequest
      * @return DeleteApplicationPromptResponse
@@ -9364,7 +9444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a cluster endpoint of a PolarDB for Edge cluster.</p>
+     * <p>Deletes the endpoint of a PolarDB on ENS cluster.</p>
      * 
      * @param request DeleteDBClusterEndpointZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9416,7 +9496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a cluster endpoint of a PolarDB for Edge cluster.</p>
+     * <p>Deletes the endpoint of a PolarDB on ENS cluster.</p>
      * 
      * @param request DeleteDBClusterEndpointZonalRequest
      * @return DeleteDBClusterEndpointZonalResponse
@@ -9430,15 +9510,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</p>
-     * </li>
-     * <li><p>Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).</p>
-     * </li>
+     * <li>You can delete the public or classic network connectivity addresses of the primary endpoint, default cluster endpoint, and custom cluster endpoints of a PolarDB cluster. </li>
+     * <li>Classic network connectivity addresses are supported only on the Alibaba Cloud China site. The Alibaba Cloud International site does not support classic network connectivity addresses. Therefore, you do not need to delete classic network connectivity addresses on the International site.</li>
      * </ul>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>After you invoke the CreateDBEndpointAddress operation, wait for about 30 to 60 seconds for the endpoint to enter the ready state before you execute the deletion. Invoke the DescribeDBClusterEndpoints operation every 10 seconds to check the endpoint status. After you confirm that the endpoint is ready, invoke the DeleteDBEndpointAddress operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases the public endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, and custom cluster endpoint.</p>
+     * <p>Releases the public endpoint of a PolarDB cluster, including the public network connection addresses of the primary endpoint, the default cluster endpoint, and custom cluster endpoints.</p>
      * 
      * @param request DeleteDBEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9496,15 +9576,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</p>
-     * </li>
-     * <li><p>Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).</p>
-     * </li>
+     * <li>You can delete the public or classic network connectivity addresses of the primary endpoint, default cluster endpoint, and custom cluster endpoints of a PolarDB cluster. </li>
+     * <li>Classic network connectivity addresses are supported only on the Alibaba Cloud China site. The Alibaba Cloud International site does not support classic network connectivity addresses. Therefore, you do not need to delete classic network connectivity addresses on the International site.</li>
      * </ul>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>After you invoke the CreateDBEndpointAddress operation, wait for about 30 to 60 seconds for the endpoint to enter the ready state before you execute the deletion. Invoke the DescribeDBClusterEndpoints operation every 10 seconds to check the endpoint status. After you confirm that the endpoint is ready, invoke the DeleteDBEndpointAddress operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases the public endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, and custom cluster endpoint.</p>
+     * <p>Releases the public endpoint of a PolarDB cluster, including the public network connection addresses of the primary endpoint, the default cluster endpoint, and custom cluster endpoints.</p>
      * 
      * @param request DeleteDBEndpointAddressRequest
      * @return DeleteDBEndpointAddressResponse
@@ -9515,8 +9595,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Database links are supported only in PolarDB for PostgreSQL (Compatible with Oracle) clusters, specifically Oracle syntax-compatible 2.0 clusters created by calling the CreateDBCluster operation with DBType set to Oracle and DBVersion set to 14. Other engine specifications such as MySQL, standard PostgreSQL, and PolarDB Oracle SENormal are not supported. Usage notes: Database links are supported only in PolarDB for PostgreSQL (Compatible with Oracle) clusters, which correspond to Oracle syntax-compatible 2.0 clusters created by calling the CreateDBCluster operation with DBType set to Oracle and DBVersion set to 14. Other engine specifications such as MySQL, PostgreSQL, and PolarDB Oracle SENormal are not supported.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a DBLink from a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
+     * <p>Deletes a database link from a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
      * 
      * @param request DeleteDBLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9567,8 +9650,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Database links are supported only in PolarDB for PostgreSQL (Compatible with Oracle) clusters, specifically Oracle syntax-compatible 2.0 clusters created by calling the CreateDBCluster operation with DBType set to Oracle and DBVersion set to 14. Other engine specifications such as MySQL, standard PostgreSQL, and PolarDB Oracle SENormal are not supported. Usage notes: Database links are supported only in PolarDB for PostgreSQL (Compatible with Oracle) clusters, which correspond to Oracle syntax-compatible 2.0 clusters created by calling the CreateDBCluster operation with DBType set to Oracle and DBVersion set to 14. Other engine specifications such as MySQL, PostgreSQL, and PolarDB Oracle SENormal are not supported.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a DBLink from a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
+     * <p>Deletes a database link from a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
      * 
      * @param request DeleteDBLinkRequest
      * @return DeleteDBLinkResponse
@@ -10169,8 +10255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>A GDN can be deleted only if it contains a single primary cluster.</p>
+     * <p>You can delete a GDN only when it contains a single primary cluster.</p>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>Prerequisites for the GDN status: The GDN must be in the active state before you delete it. You can check the GDNStatus field by calling the DescribeGlobalDatabaseNetwork operation to confirm the status. It typically takes a few minutes for the GDN to reach the active state after it is created.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a global database network (GDN).</p>
@@ -10230,8 +10318,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>A GDN can be deleted only if it contains a single primary cluster.</p>
+     * <p>You can delete a GDN only when it contains a single primary cluster.</p>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>Prerequisites for the GDN status: The GDN must be in the active state before you delete it. You can check the GDNStatus field by calling the DescribeGlobalDatabaseNetwork operation to confirm the status. It typically takes a few minutes for the GDN to reach the active state after it is created.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a global database network (GDN).</p>
@@ -11186,15 +11276,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>PolarFsInstanceId</code> 是必须提供的参数，用来指定要操作的PolarFS实例。</li>
-     * <li><code>DBClusterId</code> 参数是可选的，如果提供，则表示与特定PolarDB集群关联的操作。</li>
-     * <li><code>Objects</code> 参数是一个字符串数组，列出了所有需要被删除的对象路径，并且是必需的。</li>
+     * <li><code>PolarFsInstanceId</code> is a required parameter that specifies the PolarFS instance to operate.</li>
+     * <li>The <code>DBClusterId</code> parameter is optional. If provided, it indicates that the operation is associated with a specific PolarDB cluster.</li>
+     * <li>The <code>Objects</code> parameter is a required array of character strings that lists all object paths to delete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes objects from PolarLakebase. This operation supports only Basic Edition and Cold Storage Edition instances.</p>
+     * <p>Deletes PolarLakebase files. Currently, only the Basic Edition and Cold Storage Edition are supported.</p>
      * 
      * @param tmpReq DeletePolarFsObjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11240,15 +11330,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>PolarFsInstanceId</code> 是必须提供的参数，用来指定要操作的PolarFS实例。</li>
-     * <li><code>DBClusterId</code> 参数是可选的，如果提供，则表示与特定PolarDB集群关联的操作。</li>
-     * <li><code>Objects</code> 参数是一个字符串数组，列出了所有需要被删除的对象路径，并且是必需的。</li>
+     * <li><code>PolarFsInstanceId</code> is a required parameter that specifies the PolarFS instance to operate.</li>
+     * <li>The <code>DBClusterId</code> parameter is optional. If provided, it indicates that the operation is associated with a specific PolarDB cluster.</li>
+     * <li>The <code>Objects</code> parameter is a required array of character strings that lists all object paths to delete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes objects from PolarLakebase. This operation supports only Basic Edition and Cold Storage Edition instances.</p>
+     * <p>Deletes PolarLakebase files. Currently, only the Basic Edition and Cold Storage Edition are supported.</p>
      * 
      * @param request DeletePolarFsObjectsRequest
      * @return DeletePolarFsObjectsResponse
@@ -11260,7 +11350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a transparent acceleration path mapping.</p>
+     * <p>Deletes the transparent acceleration path mapping.</p>
      * 
      * @param request DeletePolarFsPathMappingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11300,7 +11390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a transparent acceleration path mapping.</p>
+     * <p>Deletes the transparent acceleration path mapping.</p>
      * 
      * @param request DeletePolarFsPathMappingRequest
      * @return DeletePolarFsPathMappingResponse
@@ -12051,7 +12141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of model operators.</p>
+     * <p>Queries model operator logs.</p>
      * 
      * @param request DescribeAIDBClusterTaskLogFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12111,7 +12201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logs of model operators.</p>
+     * <p>Queries model operator logs.</p>
      * 
      * @param request DescribeAIDBClusterTaskLogFilesRequest
      * @return DescribeAIDBClusterTaskLogFilesResponse
@@ -12124,11 +12214,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about kernel versions for PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Kernel versions</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
+     * <p>For more information about the Milvus versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Milvus version descriptions</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>The Prerequisites section lists the complete dependency chain: 1) Call CreateAIDBCluster to create a training AIDB cluster. 2) Call CreateAIDBClusterTask to create a training task. 3) Wait for the task to enter the Running state and generate metric data.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the metrics of model operators.</p>
+     * <p>Queries model operator metrics.</p>
      * 
      * @param request DescribeAIDBClusterTaskMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12189,11 +12281,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about kernel versions for PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Kernel versions</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
+     * <p>For more information about the Milvus versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Milvus version descriptions</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>The Prerequisites section lists the complete dependency chain: 1) Call CreateAIDBCluster to create a training AIDB cluster. 2) Call CreateAIDBClusterTask to create a training task. 3) Wait for the task to enter the Running state and generate metric data.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the metrics of model operators.</p>
+     * <p>Queries model operator metrics.</p>
      * 
      * @param request DescribeAIDBClusterTaskMetricsRequest
      * @return DescribeAIDBClusterTaskMetricsResponse
@@ -12205,14 +12299,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation allows you to filter and retrieve a list of model operators by using the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
-     * <li>Note: Make sure that the <code>RelativeDBClusterId</code> you provide matches the instance ID of an existing PolarDB database. Otherwise, the data cannot be retrieved.</li>
+     * <li>This operation filters and returns a list of model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> you provide matches an existing PolarDB instance ID. Otherwise, the data cannot be retrieved.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of model operators for a specified PolarDB instance.</p>
+     * <p>Retrieves a list of model operators for a specified PolarDB instance.</p>
      * 
      * @param request DescribeAIDBClusterTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12276,14 +12370,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation allows you to filter and retrieve a list of model operators by using the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
-     * <li>Note: Make sure that the <code>RelativeDBClusterId</code> you provide matches the instance ID of an existing PolarDB database. Otherwise, the data cannot be retrieved.</li>
+     * <li>This operation filters and returns a list of model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> you provide matches an existing PolarDB instance ID. Otherwise, the data cannot be retrieved.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of model operators for a specified PolarDB instance.</p>
+     * <p>Retrieves a list of model operators for a specified PolarDB instance.</p>
      * 
      * @param request DescribeAIDBClusterTasksRequest
      * @return DescribeAIDBClusterTasksResponse
@@ -12427,7 +12521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a database account of a PolarDB cluster.</p>
+     * <p>Queries the database account information of a PolarDB cluster.</p>
      * 
      * @param request DescribeAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12491,7 +12585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a database account of a PolarDB cluster.</p>
+     * <p>Queries the database account information of a PolarDB cluster.</p>
      * 
      * @param request DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -12587,7 +12681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an activation code.</p>
+     * <p>Queries the details of an activation code.</p>
      * 
      * @param request DescribeActivationCodeDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12639,7 +12733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an activation code.</p>
+     * <p>Queries the details of an activation code.</p>
      * 
      * @param request DescribeActivationCodeDetailsRequest
      * @return DescribeActivationCodeDetailsResponse
@@ -12651,7 +12745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of activation codes associated with your account. You can filter the results by order ID or specific hardware identifiers.</p>
+     * <p>Queries a list of activation codes.</p>
      * 
      * @param request DescribeActivationCodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12715,7 +12809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of activation codes associated with your account. You can filter the results by order ID or specific hardware identifiers.</p>
+     * <p>Queries a list of activation codes.</p>
      * 
      * @param request DescribeActivationCodesRequest
      * @return DescribeActivationCodesResponse
@@ -12727,7 +12821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the O&amp;M configuration of a user, which currently includes proactive O&amp;M window information.</p>
+     * <p>Retrieves the O&amp;M configuration information for a user, including proactive O&amp;M window information.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12783,7 +12877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the O&amp;M configuration of a user, which currently includes proactive O&amp;M window information.</p>
+     * <p>Retrieves the O&amp;M configuration information for a user, including proactive O&amp;M window information.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @return DescribeActiveOperationMaintainConfResponse
@@ -13098,6 +13192,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Call CreateDBCluster and specify AgenticDbType=dedicated and ServerlessType=AgileServerless to create an AgenticDB cluster. Then, call CreateAgenticDBTenant to obtain the TenantId, call CreateAgenticDBProject to obtain the ProjectId, and call CreateAgenticDBBranch to create a branch. Finally, call DescribeAgenticDBBranchLineage by using the IDs of the cluster, tenant, project, and branch.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the branch lineage of an AgenticDB cluster.</p>
      * 
@@ -13154,6 +13251,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Call CreateDBCluster and specify AgenticDbType=dedicated and ServerlessType=AgileServerless to create an AgenticDB cluster. Then, call CreateAgenticDBTenant to obtain the TenantId, call CreateAgenticDBProject to obtain the ProjectId, and call CreateAgenticDBBranch to create a branch. Finally, call DescribeAgenticDBBranchLineage by using the IDs of the cluster, tenant, project, and branch.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the branch lineage of an AgenticDB cluster.</p>
      * 
@@ -13397,7 +13497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AgenticDB compute instances.</p>
+     * <p>Queries the list of AgenticDB compute instances.</p>
      * 
      * @param request DescribeAgenticDBComputeClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13449,7 +13549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AgenticDB compute instances.</p>
+     * <p>Queries the list of AgenticDB compute instances.</p>
      * 
      * @param request DescribeAgenticDBComputeClustersRequest
      * @return DescribeAgenticDBComputeClustersResponse
@@ -13457,6 +13557,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAgenticDBComputeClustersResponse describeAgenticDBComputeClusters(DescribeAgenticDBComputeClustersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAgenticDBComputeClustersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance of an AgenticDB instance.</p>
+     * 
+     * @param request DescribeAgenticDBPerformanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAgenticDBPerformanceResponse
+     */
+    public DescribeAgenticDBPerformanceResponse describeAgenticDBPerformanceWithOptions(DescribeAgenticDBPerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregate)) {
+            query.put("Aggregate", request.aggregate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.branchId)) {
+            query.put("BranchId", request.branchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAgenticDBPerformance"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAgenticDBPerformanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance of an AgenticDB instance.</p>
+     * 
+     * @param request DescribeAgenticDBPerformanceRequest
+     * @return DescribeAgenticDBPerformanceResponse
+     */
+    public DescribeAgenticDBPerformanceResponse describeAgenticDBPerformance(DescribeAgenticDBPerformanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAgenticDBPerformanceWithOptions(request, runtime);
     }
 
     /**
@@ -13572,6 +13750,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, complete the following steps in sequence. Create an AgenticDB cluster by calling CreateDBCluster and setting AgenticDbType to dedicated. Create a tenant by calling CreateAgenticDBTenant. Create a project by calling CreateAgenticDBProject. Finally, call this operation to query the list of projects.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the list of AgenticDB projects.</p>
      * 
@@ -13628,6 +13809,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, complete the following steps in sequence. Create an AgenticDB cluster by calling CreateDBCluster and setting AgenticDbType to dedicated. Create a tenant by calling CreateAgenticDBTenant. Create a project by calling CreateAgenticDBProject. Finally, call this operation to query the list of projects.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the list of AgenticDB projects.</p>
      * 
@@ -13640,8 +13824,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the tenant API keys of AgenticDB dedicated clusters (with the pagc- prefix) and standard PolarDB clusters that support AgenticDB tenant capabilities (with the pc- prefix).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of API keys for an AgenticDB tenant.</p>
+     * <p>Queries the API keys of AgenticDB tenants.</p>
      * 
      * @param request DescribeAgenticDBTenantApiKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13688,8 +13875,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the tenant API keys of AgenticDB dedicated clusters (with the pagc- prefix) and standard PolarDB clusters that support AgenticDB tenant capabilities (with the pc- prefix).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of API keys for an AgenticDB tenant.</p>
+     * <p>Queries the API keys of AgenticDB tenants.</p>
      * 
      * @param request DescribeAgenticDBTenantApiKeysRequest
      * @return DescribeAgenticDBTenantApiKeysResponse
@@ -13757,10 +13947,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
+     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified PolarDB instance application.</p>
+     * <p>Retrieves the details of the specified PolarDB instance application.</p>
      * 
      * @param request DescribeApplicationAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13792,10 +13982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
+     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified PolarDB instance application.</p>
+     * <p>Retrieves the details of the specified PolarDB instance application.</p>
      * 
      * @param request DescribeApplicationAttributeRequest
      * @return DescribeApplicationAttributeResponse
@@ -13855,7 +14045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the upgradable versions for a specified application type.</p>
+     * <p>Queries the list of versions to which a specified application type can be upgraded.</p>
      * 
      * @param tmpReq DescribeApplicationAvailableVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13905,7 +14095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the upgradable versions for a specified application type.</p>
+     * <p>Queries the list of versions to which a specified application type can be upgraded.</p>
      * 
      * @param request DescribeApplicationAvailableVersionRequest
      * @return DescribeApplicationAvailableVersionResponse
@@ -14984,8 +15174,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Log backup is enabled for the destination cluster, and the required physical logs are archived. First, call DescribeBackupLogs to query valid redo log backup IDs, and then call this operation by using the cluster ID and the redo log backup IDs.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the download URLs of redo log backups.</p>
+     * <p>Queries the download links of redo log backups.</p>
      * 
      * @param request DescribeBackupLogDownloadLinksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15024,8 +15217,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Log backup is enabled for the destination cluster, and the required physical logs are archived. First, call DescribeBackupLogs to query valid redo log backup IDs, and then call this operation by using the cluster ID and the redo log backup IDs.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the download URLs of redo log backups.</p>
+     * <p>Queries the download links of redo log backups.</p>
      * 
      * @param request DescribeBackupLogDownloadLinksRequest
      * @return DescribeBackupLogDownloadLinksResponse
@@ -15177,7 +15373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the regions that store backup sets.</p>
+     * <p>Queries the region information of backup sets.</p>
      * 
      * @param request DescribeBackupRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15225,7 +15421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the regions that store backup sets.</p>
+     * <p>Queries the region information of backup sets.</p>
      * 
      * @param request DescribeBackupRegionsRequest
      * @return DescribeBackupRegionsResponse
@@ -15587,7 +15783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the used quota, statistical window, and associated budget policies for a PolarDB gateway instance by budget dimension.</p>
+     * <p>Queries the used quota, statistical window, and associated budget policies of a PolarDB gateway instance by budget dimension.</p>
      * 
      * @param request DescribeBudgetUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15631,7 +15827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the used quota, statistical window, and associated budget policies for a PolarDB gateway instance by budget dimension.</p>
+     * <p>Queries the used quota, statistical window, and associated budget policies of a PolarDB gateway instance by budget dimension.</p>
      * 
      * @param request DescribeBudgetUsageRequest
      * @return DescribeBudgetUsageResponse
@@ -15883,7 +16079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of consumer groups.</p>
+     * <p>Queries consumer groups.</p>
      * 
      * @param request DescribeConsumerGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15931,7 +16127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of consumer groups.</p>
+     * <p>Queries consumer groups.</p>
      * 
      * @param request DescribeConsumerGroupsRequest
      * @return DescribeConsumerGroupsResponse
@@ -15943,7 +16139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of consumers.</p>
+     * <p>Queries the list of consumers.</p>
      * 
      * @param request DescribeConsumersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16003,7 +16199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of consumers.</p>
+     * <p>Queries the list of consumers.</p>
      * 
      * @param request DescribeConsumersRequest
      * @return DescribeConsumersResponse
@@ -16171,7 +16367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of specifications supported for cross-cloud scenarios.</p>
+     * <p>Queries the list of specifications supported for cross-cloud.</p>
      * 
      * @param request DescribeCrossCloudLevelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16215,7 +16411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of specifications supported for cross-cloud scenarios.</p>
+     * <p>Queries the list of specifications supported for cross-cloud.</p>
      * 
      * @param request DescribeCrossCloudLevelsRequest
      * @return DescribeCrossCloudLevelsResponse
@@ -16331,7 +16527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist and security groups that are allowed to access a database cluster.</p>
+     * <p>Queries the IP address whitelists and security groups that are allowed to access a database cluster.</p>
      * 
      * @param request DescribeDBClusterAccessWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16383,7 +16579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist and security groups that are allowed to access a database cluster.</p>
+     * <p>Queries the IP address whitelists and security groups that are allowed to access a database cluster.</p>
      * 
      * @param request DescribeDBClusterAccessWhitelistRequest
      * @return DescribeDBClusterAccessWhitelistResponse
@@ -16395,7 +16591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attribute information of a cluster.</p>
+     * <p>Queries the attributes of a cluster.</p>
      * 
      * @param request DescribeDBClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16447,7 +16643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attribute information of a cluster.</p>
+     * <p>Queries the attributes of a cluster.</p>
      * 
      * @param request DescribeDBClusterAttributeRequest
      * @return DescribeDBClusterAttributeResponse
@@ -17287,7 +17483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the price of a cluster.</p>
+     * <p>Queries the pricing of a cluster.</p>
      * 
      * @param tmpReq DescribeDBClusterPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17405,7 +17601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the price of a cluster.</p>
+     * <p>Queries the pricing of a cluster.</p>
      * 
      * @param request DescribeDBClusterPriceRequest
      * @return DescribeDBClusterPriceResponse
@@ -18159,7 +18355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the supported character sets, collations, and other properties of a PolarDB database.</p>
+     * <p>Queries the attributes supported by PolarDB databases, such as character sets and collations.</p>
      * 
      * @param request DescribeDBInitializeVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18207,7 +18403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the supported character sets, collations, and other properties of a PolarDB database.</p>
+     * <p>Queries the attributes supported by PolarDB databases, such as character sets and collations.</p>
      * 
      * @param request DescribeDBInitializeVariableRequest
      * @return DescribeDBInitializeVariableResponse
@@ -18367,12 +18563,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>You can query only the database links that use a PolarDB for Oracle cluster as the source.</p>
-     * </blockquote>
+     * <p>Queries DBLink information. Currently, only PolarDB for PostgreSQL (Compatible with Oracle) clusters with Oracle syntax compatibility 2.0 (DBType=Oracle, DBVersion=14) are supported as sources. Other engines or versions may return InvalidEngine.Unsupported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the database links of a PolarDB for Oracle cluster.</p>
+     * <p>Queries the DBLink information of a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
      * 
      * @param request DescribeDBLinksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18424,12 +18618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>You can query only the database links that use a PolarDB for Oracle cluster as the source.</p>
-     * </blockquote>
+     * <p>Queries DBLink information. Currently, only PolarDB for PostgreSQL (Compatible with Oracle) clusters with Oracle syntax compatibility 2.0 (DBType=Oracle, DBVersion=14) are supported as sources. Other engines or versions may return InvalidEngine.Unsupported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the database links of a PolarDB for Oracle cluster.</p>
+     * <p>Queries the DBLink information of a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
      * 
      * @param request DescribeDBLinksRequest
      * @return DescribeDBLinksResponse
@@ -18721,7 +18913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the parameters for specified nodes in a cluster.</p>
+     * <p>Queries the parameters of a specified node in a cluster.</p>
      * 
      * @param request DescribeDBNodesParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18773,7 +18965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the parameters for specified nodes in a cluster.</p>
+     * <p>Queries the parameters of a specified node in a cluster.</p>
      * 
      * @param request DescribeDBNodesParametersRequest
      * @return DescribeDBNodesParametersResponse
@@ -19167,7 +19359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describes the databases in a PolarDB on ENS cluster.</p>
+     * <p>Queries ApsaraDB PolarDB on ENS databases.</p>
      * 
      * @param request DescribeDatabasesZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19235,7 +19427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describes the databases in a PolarDB on ENS cluster.</p>
+     * <p>Queries ApsaraDB PolarDB on ENS databases.</p>
      * 
      * @param request DescribeDatabasesZonalRequest
      * @return DescribeDatabasesZonalResponse
@@ -19311,10 +19503,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation, the PolarDB cluster must be in the <strong>Released</strong> state, and one of the following backup retention options must have been selected when the cluster was released: <strong>Long-term Retention (LTR) of All Backups</strong> or <strong>Long-term Retention (LTR) of the Last Backup (Automatic Backup Before Deletion)</strong>. If all retained backup sets of a released cluster have been manually deleted, this operation can no longer query the cluster.</p>
+     * <p>When you invoke this operation, the PolarDB cluster must be in the <strong>Released</strong> state, and you must have selected <strong>long-term retention (LTR) of all backups</strong> or <strong>long-term retention (LTR) of the last backup (automatic backup before deletion)</strong> when releasing the cluster. If all retained backup sets are manually deleted after the cluster is released, this operation can no longer query the cluster.</p>
      * <blockquote>
      * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
      * </blockquote>
+     * <h2>Obtain the ID of a released cluster</h2>
+     * <p>When you invoke CreateDBCluster to create a cluster, configure the Settings BackupRetentionPolicyOnClusterDeletion=ALL, and save the returned DBClusterId. After you invoke DeleteDBCluster to release the cluster, use the saved ID to invoke this operation. Filtering by DBClusterStatus=Deleted in DescribeDBClusters may not return released clusters. Therefore, save the ID before releasing the cluster.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of backup sets in a released PolarDB cluster.</p>
@@ -19397,10 +19591,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation, the PolarDB cluster must be in the <strong>Released</strong> state, and one of the following backup retention options must have been selected when the cluster was released: <strong>Long-term Retention (LTR) of All Backups</strong> or <strong>Long-term Retention (LTR) of the Last Backup (Automatic Backup Before Deletion)</strong>. If all retained backup sets of a released cluster have been manually deleted, this operation can no longer query the cluster.</p>
+     * <p>When you invoke this operation, the PolarDB cluster must be in the <strong>Released</strong> state, and you must have selected <strong>long-term retention (LTR) of all backups</strong> or <strong>long-term retention (LTR) of the last backup (automatic backup before deletion)</strong> when releasing the cluster. If all retained backup sets are manually deleted after the cluster is released, this operation can no longer query the cluster.</p>
      * <blockquote>
      * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
      * </blockquote>
+     * <h2>Obtain the ID of a released cluster</h2>
+     * <p>When you invoke CreateDBCluster to create a cluster, configure the Settings BackupRetentionPolicyOnClusterDeletion=ALL, and save the returned DBClusterId. After you invoke DeleteDBCluster to release the cluster, use the saved ID to invoke this operation. Filtering by DBClusterStatus=Deleted in DescribeDBClusters may not return released clusters. Therefore, save the ID before releasing the cluster.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of backup sets in a released PolarDB cluster.</p>
@@ -19516,7 +19712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries encryption key information.</p>
+     * <p>Retrieves encryption information.</p>
      * 
      * @param request DescribeEncryptionDBSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19548,7 +19744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries encryption key information.</p>
+     * <p>Retrieves encryption information.</p>
      * 
      * @param request DescribeEncryptionDBSecretRequest
      * @return DescribeEncryptionDBSecretResponse
@@ -20338,7 +20534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of events in Event Center.</p>
+     * <p>Queries the events in the event center.</p>
      * 
      * @param request DescribeHistoryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20426,7 +20622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of events in Event Center.</p>
+     * <p>Queries the events in the event center.</p>
      * 
      * @param request DescribeHistoryEventsRequest
      * @return DescribeHistoryEventsResponse
@@ -20810,7 +21006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries inspection tasks, their execution plans, and associated clusters by paging based on the inspection workspace.</p>
+     * <p>Performs a paged query of inspection nodes, their execute plans, and associated clusters by inspection space with paging.</p>
      * 
      * @param request DescribeInspectionTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20854,7 +21050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries inspection tasks, their execution plans, and associated clusters by paging based on the inspection workspace.</p>
+     * <p>Performs a paged query of inspection nodes, their execute plans, and associated clusters by inspection space with paging.</p>
      * 
      * @param request DescribeInspectionTaskListRequest
      * @return DescribeInspectionTaskListResponse
@@ -20865,8 +21061,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>In the &quot;Before you begin&quot; or &quot;Usage process&quot; section, describe the complete dependency chain: first, call CreateInspectionTask (which requires SpaceId) to create an inspection task and obtain the TaskId. Then, call DescribeInspectionReportList (passing the TaskId) to obtain the ReportId. Finally, use this API to query the report details. Also, describe how to obtain the SpaceId.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the overall score, status, and inspection results of an instance inspection report based on the report ID.</p>
+     * <p>Queries the overall score, status, and inspection results of an instance inspection report by report ID.</p>
      * 
      * @param request DescribeInstanceReportAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20901,8 +21101,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>In the &quot;Before you begin&quot; or &quot;Usage process&quot; section, describe the complete dependency chain: first, call CreateInspectionTask (which requires SpaceId) to create an inspection task and obtain the TaskId. Then, call DescribeInspectionReportList (passing the TaskId) to obtain the ReportId. Finally, use this API to query the report details. Also, describe how to obtain the SpaceId.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the overall score, status, and inspection results of an instance inspection report based on the report ID.</p>
+     * <p>Queries the overall score, status, and inspection results of an instance inspection report by report ID.</p>
      * 
      * @param request DescribeInstanceReportAttributeRequest
      * @return DescribeInstanceReportAttributeResponse
@@ -20965,8 +21169,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Prerequisites</h2>
+     * <p>This section describes the complete dependency chain for obtaining the KnowledgeBaseId: you must first create a knowledge base by calling CreateKnowledgeBase (which requires a KnowledgeSpaceId), and the KnowledgeSpaceId must be created by calling CreateKnowledgeSpace (which requires cross-product resources such as VpcId, VSwitchId, SecurityGroupId, and OSSBucket). Include links to the documentation of each dependent API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of knowledge base synchronization links.</p>
+     * <p>Queries the synchronization links of a knowledge base.</p>
      * 
      * @param request DescribeKBSyncLinksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21013,8 +21221,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Prerequisites</h2>
+     * <p>This section describes the complete dependency chain for obtaining the KnowledgeBaseId: you must first create a knowledge base by calling CreateKnowledgeBase (which requires a KnowledgeSpaceId), and the KnowledgeSpaceId must be created by calling CreateKnowledgeSpace (which requires cross-product resources such as VpcId, VSwitchId, SecurityGroupId, and OSSBucket). Include links to the documentation of each dependent API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of knowledge base synchronization links.</p>
+     * <p>Queries the synchronization links of a knowledge base.</p>
      * 
      * @param request DescribeKBSyncLinksRequest
      * @return DescribeKBSyncLinksResponse
@@ -21478,7 +21690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a parameter template attached to Lakebase.</p>
+     * <p>Queries the details of a parameter template mounted to Lakebase.</p>
      * 
      * @param request DescribeLakebaseMountParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21518,7 +21730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a parameter template attached to Lakebase.</p>
+     * <p>Queries the details of a parameter template mounted to Lakebase.</p>
      * 
      * @param request DescribeLakebaseMountParameterGroupRequest
      * @return DescribeLakebaseMountParameterGroupResponse
@@ -21594,7 +21806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of parameter templates associated with Lakebase.</p>
+     * <p>Queries the parameter templates attached to Lakebase.</p>
      * 
      * @param request DescribeLakebaseMountParameterGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21634,7 +21846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of parameter templates associated with Lakebase.</p>
+     * <p>Queries the parameter templates attached to Lakebase.</p>
      * 
      * @param request DescribeLakebaseMountParameterGroupsRequest
      * @return DescribeLakebaseMountParameterGroupsResponse
@@ -21646,7 +21858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the parameter dictionary supported by Lakebase mounted parameter templates.</p>
+     * <p>Queries the parameter dictionary supported by parameter templates mounted to Lakebase.</p>
      * 
      * @param request DescribeLakebaseMountParameterTemplateListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21690,7 +21902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the parameter dictionary supported by Lakebase mounted parameter templates.</p>
+     * <p>Queries the parameter dictionary supported by parameter templates mounted to Lakebase.</p>
      * 
      * @param request DescribeLakebaseMountParameterTemplateListRequest
      * @return DescribeLakebaseMountParameterTemplateListResponse
@@ -21754,7 +21966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a license order.</p>
+     * <p>Retrieves the details of a license order.</p>
      * 
      * @param request DescribeLicenseOrderDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21802,7 +22014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a license order.</p>
+     * <p>Retrieves the details of a license order.</p>
      * 
      * @param request DescribeLicenseOrderDetailsRequest
      * @return DescribeLicenseOrderDetailsResponse
@@ -22912,7 +23124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a session.</p>
+     * <p>Queries the session status.</p>
      * 
      * @param request DescribePolarAgentSessionStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22948,7 +23160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a session.</p>
+     * <p>Queries the session status.</p>
      * 
      * @param request DescribePolarAgentSessionStatusRequest
      * @return DescribePolarAgentSessionStatusResponse
@@ -23004,7 +23216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a PolarClaw Agent file.</p>
+     * <p>Queries PolarClaw agent files.</p>
      * 
      * @param request DescribePolarClawAgentFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23044,7 +23256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a PolarClaw Agent file.</p>
+     * <p>Queries PolarClaw agent files.</p>
      * 
      * @param request DescribePolarClawAgentFileRequest
      * @return DescribePolarClawAgentFileResponse
@@ -23108,7 +23320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all installed plug-ins and their status information under a specified application.</p>
+     * <p>Queries all installed plugins and their status information for a specified application.</p>
      * 
      * @param tmpReq DescribePolarClawAgentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23150,7 +23362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all installed plug-ins and their status information under a specified application.</p>
+     * <p>Queries all installed plugins and their status information for a specified application.</p>
      * 
      * @param request DescribePolarClawAgentsRequest
      * @return DescribePolarClawAgentsResponse
@@ -23297,8 +23509,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin, call DescribeApplications to obtain the application ID where ApplicationType is set to polardb_polarclaw, and then use it as the ApplicationId parameter to call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Lists all installed PolarClaw MCP services and their configurations.</p>
+     * <p>Lists all installed PolarClaw MCP services and configurations.</p>
      * 
      * @param request DescribePolarClawMCPServersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23333,8 +23548,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin, call DescribeApplications to obtain the application ID where ApplicationType is set to polardb_polarclaw, and then use it as the ApplicationId parameter to call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Lists all installed PolarClaw MCP services and their configurations.</p>
+     * <p>Lists all installed PolarClaw MCP services and configurations.</p>
      * 
      * @param request DescribePolarClawMCPServersRequest
      * @return DescribePolarClawMCPServersResponse
@@ -23468,7 +23686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a PolarClaw Skill.</p>
+     * <p>Queries the details of a PolarClaw skill.</p>
      * 
      * @param request DescribePolarClawSkillDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23504,7 +23722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a PolarClaw Skill.</p>
+     * <p>Queries the details of a PolarClaw skill.</p>
      * 
      * @param request DescribePolarClawSkillDetailRequest
      * @return DescribePolarClawSkillDetailResponse
@@ -23578,7 +23796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of PolarClaw skill templates. You can filter the results by template ID and time range, and the results are returned in pages.</p>
+     * <p>Queries PolarClaw skill templates. You can filter the templates by template ID and time range. The results are returned in pages.</p>
      * 
      * @param request DescribePolarClawSkillTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23638,7 +23856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of PolarClaw skill templates. You can filter the results by template ID and time range, and the results are returned in pages.</p>
+     * <p>Queries PolarClaw skill templates. You can filter the templates by template ID and time range. The results are returned in pages.</p>
      * 
      * @param request DescribePolarClawSkillTemplatesRequest
      * @return DescribePolarClawSkillTemplatesResponse
@@ -23777,6 +23995,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section explains that the TaskId is returned by asynchronous operation APIs such as LoginPolarClawChannel and provides a complete call chain example: DescribeApplications → DescribePolarClawChannels → LoginPolarClawChannel → DescribePolarClawTask.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the status of a PolarClaw asynchronous task.</p>
      * 
@@ -23813,6 +24035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section explains that the TaskId is returned by asynchronous operation APIs such as LoginPolarClawChannel and provides a complete call chain example: DescribeApplications → DescribePolarClawChannels → LoginPolarClawChannel → DescribePolarClawTask.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the status of a PolarClaw asynchronous task.</p>
      * 
@@ -23958,7 +24184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of PolarFS path mappings.</p>
+     * <p>Queries the PolarFS path mapping list.</p>
      * 
      * @param request DescribePolarFsMappingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24002,7 +24228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of PolarFS path mappings.</p>
+     * <p>Queries the PolarFS path mapping list.</p>
      * 
      * @param request DescribePolarFsMappingRequest
      * @return DescribePolarFsMappingResponse
@@ -24156,15 +24382,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation queries all quota rules for a specific Polarlakebase instance. You can use the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters for fuzzy matching.</li>
-     * <li>The pagination feature is not yet publicly available and will be released after the kernel is ready. Currently, results are returned without pagination limits.</li>
-     * <li><code>PolarFsInstanceId</code> is required and specifies the Polarlakebase instance to query.</li>
-     * <li>Optional parameters such as <code>QuotaNameMatch</code> and <code>PatternMatch</code> can be used to further filter quota rules that meet the specified conditions.</li>
-     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as rule ID, name, description, and capacity limits.</li>
+     * <li>This API operation is used to query all quota rules under a specific Polarlakebase instance. It supports fuzzy matching through the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters.</li>
+     * <li>The pagination feature is not yet public and will be available after the kernel is ready. Currently, there is no pagination limit on the returned results.</li>
+     * <li><code>PolarFsInstanceId</code> is required and is used to specify the Polarlakebase instance to query.</li>
+     * <li>Optional parameters such as <code>QuotaNameMatch</code> and <code>PatternMatch</code> can be used to further filter the matching quota rules.</li>
+     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details (such as rule ID, name, description, and capacity limit).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves all quota rule information for a specified Polarlakebase instance.</p>
+     * <p>Queries all quota rules for a specified Polarlakebase instance.</p>
      * 
      * @param request DescribePolarFsQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24214,15 +24440,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation queries all quota rules for a specific Polarlakebase instance. You can use the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters for fuzzy matching.</li>
-     * <li>The pagination feature is not yet publicly available and will be released after the kernel is ready. Currently, results are returned without pagination limits.</li>
-     * <li><code>PolarFsInstanceId</code> is required and specifies the Polarlakebase instance to query.</li>
-     * <li>Optional parameters such as <code>QuotaNameMatch</code> and <code>PatternMatch</code> can be used to further filter quota rules that meet the specified conditions.</li>
-     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as rule ID, name, description, and capacity limits.</li>
+     * <li>This API operation is used to query all quota rules under a specific Polarlakebase instance. It supports fuzzy matching through the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters.</li>
+     * <li>The pagination feature is not yet public and will be available after the kernel is ready. Currently, there is no pagination limit on the returned results.</li>
+     * <li><code>PolarFsInstanceId</code> is required and is used to specify the Polarlakebase instance to query.</li>
+     * <li>Optional parameters such as <code>QuotaNameMatch</code> and <code>PatternMatch</code> can be used to further filter the matching quota rules.</li>
+     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details (such as rule ID, name, description, and capacity limit).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves all quota rule information for a specified Polarlakebase instance.</p>
+     * <p>Queries all quota rules for a specified Polarlakebase instance.</p>
      * 
      * @param request DescribePolarFsQuotaRequest
      * @return DescribePolarFsQuotaResponse
@@ -24346,7 +24572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries rate limit policies.</p>
+     * <p>Queries throttling policies.</p>
      * 
      * @param request DescribeRateLimitPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24402,7 +24628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries rate limit policies.</p>
+     * <p>Queries throttling policies.</p>
      * 
      * @param request DescribeRateLimitPolicyRequest
      * @return DescribeRateLimitPolicyResponse
@@ -24823,7 +25049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the details of SQL throttling rules.</p>
+     * <p>Queries the information about SQL throttling rules.</p>
      * 
      * @param request DescribeSQLRateLimitingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24883,7 +25109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the details of SQL throttling rules.</p>
+     * <p>Queries the information about SQL throttling rules.</p>
      * 
      * @param request DescribeSQLRateLimitingRulesRequest
      * @return DescribeSQLRateLimitingRulesResponse
@@ -24994,6 +25220,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and PolarSearch is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the basic information page of the target cluster, select Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the parameter modification history of PolarDB Search.</p>
      * 
@@ -25034,6 +25263,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and PolarSearch is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the basic information page of the target cluster, select Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the parameter modification history of PolarDB Search.</p>
      * 
@@ -25091,7 +25323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries shared backup sets.</p>
+     * <p>Queries the list of shared backup sets.</p>
      * 
      * @param request DescribeSharedBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25167,7 +25399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries shared backup sets.</p>
+     * <p>Queries the list of shared backup sets.</p>
      * 
      * @param request DescribeSharedBackupsRequest
      * @return DescribeSharedBackupsResponse
@@ -25297,8 +25529,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Only PolarDB for MySQL supports this operation.</li>
-     * <li>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the slow SQL template algorithm</a>.</li>
+     * <li>This operation is supported only by PolarDB for MySQL.</li>
+     * <li>Starting September 1, 2024, the value of the SQLHash field will change when you call this operation due to the optimization of the SQL template algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice on the optimization of the SQL template algorithm for slow SQL queries</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -25377,8 +25609,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Only PolarDB for MySQL supports this operation.</li>
-     * <li>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the slow SQL template algorithm</a>.</li>
+     * <li>This operation is supported only by PolarDB for MySQL.</li>
+     * <li>Starting September 1, 2024, the value of the SQLHash field will change when you call this operation due to the optimization of the SQL template algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice on the optimization of the SQL template algorithm for slow SQL queries</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -25825,7 +26057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询交换机</p>
+     * <p>Queries one or more vSwitches.</p>
      * 
      * @param request DescribeVSwitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25901,7 +26133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询交换机</p>
+     * <p>Queries one or more vSwitches.</p>
      * 
      * @param request DescribeVSwitchesRequest
      * @return DescribeVSwitchesResponse
@@ -26141,7 +26373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables DynamoDB compatibility.</p>
+     * <p>Disables the DynamoDB compatibility feature.</p>
      * 
      * @param request DisableDBClusterDynamoDBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26173,7 +26405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables DynamoDB compatibility.</p>
+     * <p>Disables the DynamoDB compatibility feature.</p>
      * 
      * @param request DisableDBClusterDynamoDBRequest
      * @return DisableDBClusterDynamoDBResponse
@@ -26184,8 +26416,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Cluster status constraint: The cluster must be in the Running state. After you enable Orca, wait for the status transition to complete (about 2 minutes) before you call this API operation. You can call the DescribeDBClusterAttribute operation to query the DBClusterStatus.</p>
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, make sure that Orca is enabled for the cluster by calling the EnableDBClusterOrca operation, and add the link to the associated API operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Closes the cluster relationship.</p>
+     * <p>Disables Orca for a cluster.</p>
      * 
      * @param request DisableDBClusterOrcaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26236,8 +26474,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Cluster status constraint: The cluster must be in the Running state. After you enable Orca, wait for the status transition to complete (about 2 minutes) before you call this API operation. You can call the DescribeDBClusterAttribute operation to query the DBClusterStatus.</p>
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, make sure that Orca is enabled for the cluster by calling the EnableDBClusterOrca operation, and add the link to the associated API operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Closes the cluster relationship.</p>
+     * <p>Disables Orca for a cluster.</p>
      * 
      * @param request DisableDBClusterOrcaRequest
      * @return DisableDBClusterOrcaResponse
@@ -26433,7 +26677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the PolarClaw plugin.</p>
+     * <p>Disables the PolarClaw plug-in.</p>
      * 
      * @param request DisablePolarClawPluginRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26473,7 +26717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the PolarClaw plugin.</p>
+     * <p>Disables the PolarClaw plug-in.</p>
      * 
      * @param request DisablePolarClawPluginRequest
      * @return DisablePolarClawPluginResponse
@@ -26484,8 +26728,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Operation description: The prerequisites section describes the resource type that DBClusterId must point to, the creation API used to obtain it, the ID format requirements, and the relationship and usage scenarios between RelativeDBClusterId and DBClusterId.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Enables the dataset service for a cold storage instance.</p>
+     * <p>Enables the dataset management service for a cold storage instance.</p>
      * 
      * @param request EnableAIDBClusterDatasetServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26540,8 +26787,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Operation description: The prerequisites section describes the resource type that DBClusterId must point to, the creation API used to obtain it, the ID format requirements, and the relationship and usage scenarios between RelativeDBClusterId and DBClusterId.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Enables the dataset service for a cold storage instance.</p>
+     * <p>Enables the dataset management service for a cold storage instance.</p>
      * 
      * @param request EnableAIDBClusterDatasetServiceRequest
      * @return EnableAIDBClusterDatasetServiceResponse
@@ -27281,7 +27531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a manual primary/secondary switchover for a PolarDB cluster. You can specify a read-only node as the new primary node.</p>
+     * <p>Performs a manual primary/secondary switchover for a PolarDB cluster, allowing you to specify a read-only node as the new primary node.</p>
      * 
      * @param request FailoverDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27345,7 +27595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a manual primary/secondary switchover for a PolarDB cluster. You can specify a read-only node as the new primary node.</p>
+     * <p>Performs a manual primary/secondary switchover for a PolarDB cluster, allowing you to specify a read-only node as the new primary node.</p>
      * 
      * @param request FailoverDBClusterRequest
      * @return FailoverDBClusterResponse
@@ -27356,8 +27606,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed by using MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</p>
+     * <h2>Before you begin</h2>
+     * <p>Complete the prerequisites. Note that this API applies only to edge clusters deployed by using MyBase or ENS. Specify the method to obtain the edge cluster ID, and note that you must use FailoverDBCluster for standard clusters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Performs a manual primary/secondary switchover for an edge cluster.</p>
+     * <p>Performs a primary/secondary switchover.</p>
      * 
      * @param request FailoverDBClusterZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27420,8 +27675,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Switches the primary node of an edge cloud cluster. This operation applies only to edge clusters deployed by using MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge regions and call DescribeDBClustersZonal to obtain the edge cluster ID. For standard PolarDB clusters, use FailoverDBCluster.</p>
+     * <h2>Before you begin</h2>
+     * <p>Complete the prerequisites. Note that this API applies only to edge clusters deployed by using MyBase or ENS. Specify the method to obtain the edge cluster ID, and note that you must use FailoverDBCluster for standard clusters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Performs a manual primary/secondary switchover for an edge cluster.</p>
+     * <p>Performs a primary/secondary switchover.</p>
      * 
      * @param request FailoverDBClusterZonalRequest
      * @return FailoverDBClusterZonalResponse
@@ -27853,7 +28113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the account permissions on a PolarDB for Xscale cluster.</p>
+     * <p>Modifies the privileges of an account in a PolarDB on ENS cluster.</p>
      * 
      * @param request GrantAccountPrivilegeZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27917,7 +28177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the account permissions on a PolarDB for Xscale cluster.</p>
+     * <p>Modifies the privileges of an account in a PolarDB on ENS cluster.</p>
      * 
      * @param request GrantAccountPrivilegeZonalRequest
      * @return GrantAccountPrivilegeZonalResponse
@@ -27929,7 +28189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Installs the PolarClaw plug-in.</p>
+     * <p>Installs the PolarClaw plugin.</p>
      * 
      * @param request InstallPolarClawPluginRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27973,7 +28233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Installs the PolarClaw plug-in.</p>
+     * <p>Installs the PolarClaw plugin.</p>
      * 
      * @param request InstallPolarClawPluginRequest
      * @return InstallPolarClawPluginResponse
@@ -28434,8 +28694,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Prerequisites: You must obtain the application ID of an application whose ApplicationType is polardb_polarclaw by calling the DescribeApplications operation. The call chain is DescribeApplications(RegionId) → LoginPolarClawChannel(ApplicationId, ChannelId).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Logs into a PolarClaw channel.</p>
+     * <p>Logs on to the PolarClaw channel.</p>
      * 
      * @param request LoginPolarClawChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28470,8 +28734,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Prerequisites: You must obtain the application ID of an application whose ApplicationType is polardb_polarclaw by calling the DescribeApplications operation. The call chain is DescribeApplications(RegionId) → LoginPolarClawChannel(ApplicationId, ChannelId).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Logs into a PolarClaw channel.</p>
+     * <p>Logs on to the PolarClaw channel.</p>
      * 
      * @param request LoginPolarClawChannelRequest
      * @return LoginPolarClawChannelResponse
@@ -28678,6 +28946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Refer to the Prerequisites section in the API reference. Before you invoke ModifyAIDBClusterTask, you must create a training node and obtain the node ID by invoking CreateAIDBClusterTask.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies a task.</p>
      * 
@@ -28738,6 +29010,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Refer to the Prerequisites section in the API reference. Before you invoke ModifyAIDBClusterTask, you must create a training node and obtain the node ID by invoking CreateAIDBClusterTask.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies a task.</p>
      * 
@@ -28890,8 +29166,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the lock status of an account. Prerequisites: The target cluster must be a PolarDB for PostgreSQL cluster (DBType=PostgreSQL) and its status must be Running (DBClusterStatus=Running). You can call the DescribeDBClusters operation to verify the engine type and status. Calling this operation on a MySQL cluster may return the InvalidDBType.Malformed error (HTTP 400). Calling this operation on a cluster in a non-Running state, such as Creating or Stopped, may return the OperationDenied.DBClusterStatus error (HTTP 403).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Changes the lock status of a PolarDB database account.</p>
+     * <p>Modifies the lock status of a PolarDB database account.</p>
      * 
      * @param request ModifyAccountLockStateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28950,8 +29229,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the lock status of an account. Prerequisites: The target cluster must be a PolarDB for PostgreSQL cluster (DBType=PostgreSQL) and its status must be Running (DBClusterStatus=Running). You can call the DescribeDBClusters operation to verify the engine type and status. Calling this operation on a MySQL cluster may return the InvalidDBType.Malformed error (HTTP 400). Calling this operation on a cluster in a non-Running state, such as Creating or Stopped, may return the OperationDenied.DBClusterStatus error (HTTP 403).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Changes the lock status of a PolarDB database account.</p>
+     * <p>Modifies the lock status of a PolarDB database account.</p>
      * 
      * @param request ModifyAccountLockStateRequest
      * @return ModifyAccountLockStateResponse
@@ -29035,7 +29317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the password of an account in a PolarDB for Xscale cluster.</p>
+     * <p>Modifies the password of an account for PolarDB on ENS.</p>
      * 
      * @param request ModifyAccountPasswordZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29099,7 +29381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the password of an account in a PolarDB for Xscale cluster.</p>
+     * <p>Modifies the password of an account for PolarDB on ENS.</p>
      * 
      * @param request ModifyAccountPasswordZonalRequest
      * @return ModifyAccountPasswordZonalResponse
@@ -29111,7 +29393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the operations and maintenance (O&amp;M) settings for a user. These settings include the active maintenance window.</p>
+     * <p>Configures the O&amp;M information for a user, which currently includes the proactive O&amp;M window information.</p>
      * 
      * @param request ModifyActiveOperationMaintainConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29191,7 +29473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the operations and maintenance (O&amp;M) settings for a user. These settings include the active maintenance window.</p>
+     * <p>Configures the O&amp;M information for a user, which currently includes the proactive O&amp;M window information.</p>
      * 
      * @param request ModifyActiveOperationMaintainConfRequest
      * @return ModifyActiveOperationMaintainConfResponse
@@ -29279,7 +29561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the history retention window for an AgenticDB project.</p>
+     * <p>Modifies the history retention window of an AgenticDB project.</p>
      * 
      * @param request ModifyAgenticDBProjectHistoryRetentionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29327,7 +29609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the history retention window for an AgenticDB project.</p>
+     * <p>Modifies the history retention window of an AgenticDB project.</p>
      * 
      * @param request ModifyAgenticDBProjectHistoryRetentionRequest
      * @return ModifyAgenticDBProjectHistoryRetentionResponse
@@ -29579,7 +29861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the prompt for a specified application.</p>
+     * <p>Modifies the prompt policy of an application.</p>
      * 
      * @param request ModifyApplicationPromptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29623,7 +29905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the prompt for a specified application.</p>
+     * <p>Modifies the prompt policy of an application.</p>
      * 
      * @param request ModifyApplicationPromptRequest
      * @return ModifyApplicationPromptResponse
@@ -29635,7 +29917,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the Serverless configuration of a PolarDB application.</p>
+     * <p>Modifies the SSL configuration of a specified PolarDB application.</p>
+     * 
+     * @param request ModifyApplicationSSLRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyApplicationSSLResponse
+     */
+    public ModifyApplicationSSLResponse modifyApplicationSSLWithOptions(ModifyApplicationSSLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.caPem)) {
+            query.put("CaPem", request.caPem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certPem)) {
+            query.put("CertPem", request.certPem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPem)) {
+            query.put("KeyPem", request.keyPem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sslEnabled)) {
+            query.put("SslEnabled", request.sslEnabled);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyApplicationSSL"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyApplicationSSLResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the SSL configuration of a specified PolarDB application.</p>
+     * 
+     * @param request ModifyApplicationSSLRequest
+     * @return ModifyApplicationSSLResponse
+     */
+    public ModifyApplicationSSLResponse modifyApplicationSSL(ModifyApplicationSSLRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyApplicationSSLWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you begin: This operation applies only to applications whose Category is set to serverless. You can call DescribeApplicationAttribute and check the Category field in the response to confirm the application type. Usage notes: This operation applies only to applications whose Category is set to serverless. You can check the Category field returned by the DescribeApplicationAttribute API operation to confirm the application type.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the serverless configuration of a PolarDB application.</p>
      * 
      * @param request ModifyApplicationServerlessConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29670,8 +30015,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: This operation applies only to applications whose Category is set to serverless. You can call DescribeApplicationAttribute and check the Category field in the response to confirm the application type. Usage notes: This operation applies only to applications whose Category is set to serverless. You can check the Category field returned by the DescribeApplicationAttribute API operation to confirm the application type.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the Serverless configuration of a PolarDB application.</p>
+     * <p>Modifies the serverless configuration of a PolarDB application.</p>
      * 
      * @param request ModifyApplicationServerlessConfRequest
      * @return ModifyApplicationServerlessConfResponse
@@ -29746,6 +30094,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the auto-renewal settings for a subscription PolarDB cluster. The target cluster must be a subscription cluster. For a pay-as-you-go cluster, you must first call the TransformDBClusterPayType operation to change the billing method before calling this operation. Usage notes: Prerequisites: If the cluster uses the pay-as-you-go billing method, you must first call the TransformDBClusterPayType operation to change the billing method. A call chain diagram is provided.</p>
+     * 
      * <b>summary</b> : 
      * <p>Sets the auto-renewal status for a subscription PolarDB cluster.</p>
      * 
@@ -29818,6 +30169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the auto-renewal settings for a subscription PolarDB cluster. The target cluster must be a subscription cluster. For a pay-as-you-go cluster, you must first call the TransformDBClusterPayType operation to change the billing method before calling this operation. Usage notes: Prerequisites: If the cluster uses the pay-as-you-go billing method, you must first call the TransformDBClusterPayType operation to change the billing method. A call chain diagram is provided.</p>
+     * 
      * <b>summary</b> : 
      * <p>Sets the auto-renewal status for a subscription PolarDB cluster.</p>
      * 
@@ -30475,7 +30829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies the whitelist of a cluster, including the IP whitelist and security groups.</p>
+     * <p>Creates or modifies the whitelist of a cluster, including IP address whitelists and security groups.</p>
      * 
      * @param request ModifyDBClusterAccessWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30510,6 +30864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pfsInstanceId)) {
             query.put("PfsInstanceId", request.pfsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -30551,7 +30909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies the whitelist of a cluster, including the IP whitelist and security groups.</p>
+     * <p>Creates or modifies the whitelist of a cluster, including IP address whitelists and security groups.</p>
      * 
      * @param request ModifyDBClusterAccessWhitelistRequest
      * @return ModifyDBClusterAccessWhitelistResponse
@@ -30563,7 +30921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify cluster parameters and apply them to specified nodes.</p>
+     * <p>Modifies the parameters of a cluster and applies them to specified nodes.</p>
      * 
      * @param request ModifyDBClusterAndNodesParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30643,7 +31001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify cluster parameters and apply them to specified nodes.</p>
+     * <p>Modifies the parameters of a cluster and applies them to specified nodes.</p>
      * 
      * @param request ModifyDBClusterAndNodesParametersRequest
      * @return ModifyDBClusterAndNodesParametersResponse
@@ -30654,6 +31012,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the high-availability mode of a cluster. Before you begin: The target cluster must be a PolarDB for MySQL cluster (DBType=MySQL) with DeployUnit set to Advanced. This operation is not applicable to PostgreSQL or Oracle clusters. Before you call this operation, you can call DescribeDBClusterAttribute to verify the DBType, DeployUnit, HotStandbyCluster, and ZoneIds values.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the high-availability mode of a cluster.</p>
      * 
@@ -30706,6 +31067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the high-availability mode of a cluster. Before you begin: The target cluster must be a PolarDB for MySQL cluster (DBType=MySQL) with DeployUnit set to Advanced. This operation is not applicable to PostgreSQL or Oracle clusters. Before you call this operation, you can call DescribeDBClusterAttribute to verify the DBType, DeployUnit, HotStandbyCluster, and ZoneIds values.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the high-availability mode of a cluster.</p>
      * 
@@ -31134,8 +31498,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is applicable only to edge cloud clusters. Before you call this operation, you must have applied for an edge cloud cluster through MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge cloud regions and call DescribeDBClustersZonal to obtain the edge cloud cluster ID. This operation is not applicable to common PolarDB clusters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the connection string for an edge cluster for PolarDB on ENS.</p>
+     * <p>Modifies the endpoint of PolarDB on ENS.</p>
      * 
      * @param request ModifyDBClusterEndpointZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31222,8 +31589,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is applicable only to edge cloud clusters. Before you call this operation, you must have applied for an edge cloud cluster through MyBase or ENS infrastructure. You can call DescribeEdgeCloudRegion to query edge cloud regions and call DescribeDBClustersZonal to obtain the edge cloud cluster ID. This operation is not applicable to common PolarDB clusters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the connection string for an edge cluster for PolarDB on ENS.</p>
+     * <p>Modifies the endpoint of PolarDB on ENS.</p>
      * 
      * @param request ModifyDBClusterEndpointZonalRequest
      * @return ModifyDBClusterEndpointZonalResponse
@@ -31309,16 +31679,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>If you call this operation before the switchover, a switchover is performed.</p>
      * <ul>
-     * <li>If this operation is called before the switchover, it performs a switchover.</li>
-     * <li>If this operation is called after the switchover is complete, it performs a rollback.<blockquote>
-     * <p>A one-click upgrade task must be created for the cluster before you call this operation. To create the task, call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation and set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">One-click upgrade from RDS MySQL to PolarDB for MySQL</a>.</p>
+     * <li>If you call this operation after the switchover is completed, a rollback is performed. <blockquote>
+     * <p>When you call this operation, a one-click upgrade task must have been created for the cluster. To create a one-click upgrade task, call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation and set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade an ApsaraDB RDS for MySQL instance to a PolarDB for MySQL cluster with one click</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
+     * <h2>Before you begin</h2>
+     * <p>Complete dependency chain: You must first create a migration cluster by calling CreateDBCluster with CreationOption set to MigrationFromRDS. This step requires that AliyunDTSDefaultRole has been authorized in the DTS console.</p>
      * 
      * <b>summary</b> : 
-     * <p>Switches or rolls back a migration task for a one-click upgrade from RDS to PolarDB.</p>
+     * <p>Switches or rolls back a migration task for the one-click upgrade from ApsaraDB RDS to PolarDB.</p>
      * 
      * @param request ModifyDBClusterMigrationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31386,16 +31758,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>If you call this operation before the switchover, a switchover is performed.</p>
      * <ul>
-     * <li>If this operation is called before the switchover, it performs a switchover.</li>
-     * <li>If this operation is called after the switchover is complete, it performs a rollback.<blockquote>
-     * <p>A one-click upgrade task must be created for the cluster before you call this operation. To create the task, call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation and set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">One-click upgrade from RDS MySQL to PolarDB for MySQL</a>.</p>
+     * <li>If you call this operation after the switchover is completed, a rollback is performed. <blockquote>
+     * <p>When you call this operation, a one-click upgrade task must have been created for the cluster. To create a one-click upgrade task, call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation and set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade an ApsaraDB RDS for MySQL instance to a PolarDB for MySQL cluster with one click</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
+     * <h2>Before you begin</h2>
+     * <p>Complete dependency chain: You must first create a migration cluster by calling CreateDBCluster with CreationOption set to MigrationFromRDS. This step requires that AliyunDTSDefaultRole has been authorized in the DTS console.</p>
      * 
      * <b>summary</b> : 
-     * <p>Switches or rolls back a migration task for a one-click upgrade from RDS to PolarDB.</p>
+     * <p>Switches or rolls back a migration task for the one-click upgrade from ApsaraDB RDS to PolarDB.</p>
      * 
      * @param request ModifyDBClusterMigrationRequest
      * @return ModifyDBClusterMigrationResponse
@@ -32313,7 +32687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the vSwitch parameters for a cluster.</p>
+     * <p>Modifies the vSwitch parameters of a cluster.</p>
      * 
      * @param request ModifyDBClusterVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32373,7 +32747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the vSwitch parameters for a cluster.</p>
+     * <p>Modifies the vSwitch parameters of a cluster.</p>
      * 
      * @param request ModifyDBClusterVpcRequest
      * @return ModifyDBClusterVpcResponse
@@ -32524,8 +32898,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section describes the endpoint statuses that allow modifications, such as Active, and explains that the endpoint status is independent of the cluster status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the connection address of a PolarDB cluster. The address can be a primary address, default cluster address, custom cluster address, or private domain name.</p>
+     * <p>Modifies the endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, custom cluster endpoint, and private domain name.</p>
      * 
      * @param request ModifyDBEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32596,8 +32974,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section describes the endpoint statuses that allow modifications, such as Active, and explains that the endpoint status is independent of the cluster status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the connection address of a PolarDB cluster. The address can be a primary address, default cluster address, custom cluster address, or private domain name.</p>
+     * <p>Modifies the endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, custom cluster endpoint, and private domain name.</p>
      * 
      * @param request ModifyDBEndpointAddressRequest
      * @return ModifyDBEndpointAddressResponse
@@ -32857,7 +33239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the failover with hot replica feature for a node in a cluster.</p>
+     * <p>Modifies the hot standby replica mode of a database node in a specified cluster.</p>
      * 
      * @param request ModifyDBNodeHotReplicaModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32913,7 +33295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the failover with hot replica feature for a node in a cluster.</p>
+     * <p>Modifies the hot standby replica mode of a database node in a specified cluster.</p>
      * 
      * @param request ModifyDBNodeHotReplicaModeRequest
      * @return ModifyDBNodeHotReplicaModeResponse
@@ -32993,7 +33375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the Snapshot Consistency Cluster (SCC) mode for a specified node in a PolarDB cluster.</p>
+     * <p>Modifies the SCC settings of a node.</p>
      * 
      * @param request ModifyDBNodeSccModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33049,7 +33431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the Snapshot Consistency Cluster (SCC) mode for a specified node in a PolarDB cluster.</p>
+     * <p>Modifies the SCC settings of a node.</p>
      * 
      * @param request ModifyDBNodeSccModeRequest
      * @return ModifyDBNodeSccModeResponse
@@ -33061,7 +33443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the specifications of a single node in a PolarDB cluster.</p>
+     * <p>Modifies the specifications of a single node in a PolarDB cluster.</p>
      * 
      * @param request ModifyDBNodesClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33149,7 +33531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the specifications of a single node in a PolarDB cluster.</p>
+     * <p>Modifies the specifications of a single node in a PolarDB cluster.</p>
      * 
      * @param request ModifyDBNodesClassRequest
      * @return ModifyDBNodesClassResponse
@@ -33161,7 +33543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies and applies the parameters of one or more nodes.</p>
+     * <p>Modifies the parameters of a single node and applies them to the specified node.</p>
      * 
      * @param request ModifyDBNodesParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33233,7 +33615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies and applies the parameters of one or more nodes.</p>
+     * <p>Modifies the parameters of a single node and applies them to the specified node.</p>
      * 
      * @param request ModifyDBNodesParametersRequest
      * @return ModifyDBNodesParametersResponse
@@ -34465,7 +34847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the bucket credentials for a PolarFS path mapping.</p>
+     * <p>Modifies the bucket credentials for the PolarFS path mapping.</p>
      * 
      * @param request ModifyPolarFsMappingAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34517,7 +34899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the bucket credentials for a PolarFS path mapping.</p>
+     * <p>Modifies the bucket credentials for the PolarFS path mapping.</p>
      * 
      * @param request ModifyPolarFsMappingAuthRequest
      * @return ModifyPolarFsMappingAuthResponse
@@ -34723,7 +35105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies SQL throttling rules.</p>
+     * <p>Modifies an SQL throttling rule.</p>
      * 
      * @param request ModifySQLRateLimitingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34779,7 +35161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies SQL throttling rules.</p>
+     * <p>Modifies an SQL throttling rule.</p>
      * 
      * @param request ModifySQLRateLimitingRulesRequest
      * @return ModifySQLRateLimitingRulesResponse
@@ -34987,7 +35369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates task information in the task center.</p>
+     * <p>Modifies task information in Task Center.</p>
      * 
      * @param request ModifyTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35047,7 +35429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates task information in the task center.</p>
+     * <p>Modifies task information in Task Center.</p>
      * 
      * @param request ModifyTaskInfoRequest
      * @return ModifyTaskInfoResponse
@@ -35106,6 +35488,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enables PolarDB for AI tasks. Prerequisites: The target cluster must have AI nodes. If no AI node exists, call CreateAINodes to create one and then call DescribeAIDBClusters to verify. You can enable the free trial only once per cluster. If you call this operation again for a cluster that has already used the free trial, the OperationDenied.AiFreeDLProbation error may be returned. In this case, purchase AI nodes instead. If the DLNode is already activated, you do not need to call this operation again. Repeated calls may return the OperationDenied.AiOpenDLNode error. You can enable the free trial only once for each cluster. For clusters that have already used the free trial, purchase AI nodes by calling CreateAINodes. You do not need to call this operation again for clusters where AI is already activated. Call instructions: Before calling this operation, create AI nodes by calling CreateAINodes. You can call DescribeAIDBClusters to check whether the current cluster already has AI nodes.</p>
+     * 
      * <b>summary</b> : 
      * <p>Enables the PolarDB for AI feature.</p>
      * 
@@ -35174,6 +35559,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enables PolarDB for AI tasks. Prerequisites: The target cluster must have AI nodes. If no AI node exists, call CreateAINodes to create one and then call DescribeAIDBClusters to verify. You can enable the free trial only once per cluster. If you call this operation again for a cluster that has already used the free trial, the OperationDenied.AiFreeDLProbation error may be returned. In this case, purchase AI nodes instead. If the DLNode is already activated, you do not need to call this operation again. Repeated calls may return the OperationDenied.AiOpenDLNode error. You can enable the free trial only once for each cluster. For clusters that have already used the free trial, purchase AI nodes by calling CreateAINodes. You do not need to call this operation again for clusters where AI is already activated. Call instructions: Before calling this operation, create AI nodes by calling CreateAINodes. You can call DescribeAIDBClusters to check whether the current cluster already has AI nodes.</p>
+     * 
      * <b>summary</b> : 
      * <p>Enables the PolarDB for AI feature.</p>
      * 
@@ -35293,7 +35681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reactivates the backup feature.</p>
+     * <p>Re-enables the backup feature.</p>
      * 
      * @param request ReactivateDBClusterBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35325,7 +35713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reactivates the backup feature.</p>
+     * <p>Re-enables the backup feature.</p>
      * 
      * @param request ReactivateDBClusterBackupRequest
      * @return ReactivateDBClusterBackupResponse
@@ -35397,7 +35785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the proxy performance level of a specified PolarDB cluster. You can schedule the execution time.</p>
+     * <p>Modifies the proxy performance level of a specified PolarDB cluster and supports scheduled execution.</p>
      * 
      * @param request RefreshProxyLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35465,7 +35853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the proxy performance level of a specified PolarDB cluster. You can schedule the execution time.</p>
+     * <p>Modifies the proxy performance level of a specified PolarDB cluster and supports scheduled execution.</p>
      * 
      * @param request RefreshProxyLevelRequest
      * @return RefreshProxyLevelResponse
@@ -35578,8 +35966,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Registers an uploaded file to a knowledge base. Before you begin, activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</p>
+     * <h2>Before you begin</h2>
+     * <p>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the corresponding API operations for each step.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Registers an OSS file for a knowledge base.</p>
+     * <p>Registers an OSS file to a knowledge base.</p>
      * 
      * @param request RegisterKnowledgeBaseFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35618,8 +36011,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Registers an uploaded file to a knowledge base. Before you begin, activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</p>
+     * <h2>Before you begin</h2>
+     * <p>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the corresponding API operations for each step.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Registers an OSS file for a knowledge base.</p>
+     * <p>Registers an OSS file to a knowledge base.</p>
      * 
      * @param request RegisterKnowledgeBaseFileRequest
      * @return RegisterKnowledgeBaseFileResponse
@@ -35822,6 +36220,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, the physical device must initiate pairing through the PolarClaw mobile app and be approved by calling ApprovePolarClawDevicePair. After approval, the device is added to the paired device list returned by ListPolarClawDevicePairs. Pairing initiation relies on the physical device and the mobile app, and cannot be completed solely through API calls.</p>
+     * 
      * <b>summary</b> : 
      * <p>Removes a paired PolarClaw device.</p>
      * 
@@ -35858,6 +36259,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, the physical device must initiate pairing through the PolarClaw mobile app and be approved by calling ApprovePolarClawDevicePair. After approval, the device is added to the paired device list returned by ListPolarClawDevicePairs. Pairing initiation relies on the physical device and the mobile app, and cannot be completed solely through API calls.</p>
+     * 
      * <b>summary</b> : 
      * <p>Removes a paired PolarClaw device.</p>
      * 
@@ -36205,8 +36609,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Only privileged accounts of PolarDB for MySQL clusters can be reset.</li>
-     * <li>If the privileged account encounters issues, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore normal access.</li>
+     * <li>Only privileged accounts of PolarDB for MySQL clusters are supported.</li>
+     * <li>If an issue occurs with the privileged account itself, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore it to normal. Call instructions: In the &quot;Before you begin&quot; section, list the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL); 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw); 3) Wait for the application status to change to Activated (query through DescribeApplications); 4) Confirm that the application contains the privileged account whose password needs to be reset.</li>
      * </ul>
      * </blockquote>
      * 
@@ -36253,8 +36657,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Only privileged accounts of PolarDB for MySQL clusters can be reset.</li>
-     * <li>If the privileged account encounters issues, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore normal access.</li>
+     * <li>Only privileged accounts of PolarDB for MySQL clusters are supported.</li>
+     * <li>If an issue occurs with the privileged account itself, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore it to normal. Call instructions: In the &quot;Before you begin&quot; section, list the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL); 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw); 3) Wait for the application status to change to Activated (query through DescribeApplications); 4) Confirm that the application contains the privileged account whose password needs to be reset.</li>
      * </ul>
      * </blockquote>
      * 
@@ -36626,8 +37030,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Restarts a specified node in a PolarDB cluster. Before you begin: This operation applies only to nodes in non-serverless clusters. Nodes in clusters with ServerlessType set to AgileServerless are not supported. Before calling this operation, you can call DescribeDBClusters to query the ServerlessType and node ID of the cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Restarts a node of a PolarDB cluster.</p>
+     * <p>Restarts a node in a PolarDB cluster.</p>
      * 
      * @param request RestartDBNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36690,8 +37097,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Restarts a specified node in a PolarDB cluster. Before you begin: This operation applies only to nodes in non-serverless clusters. Nodes in clusters with ServerlessType set to AgileServerless are not supported. Before calling this operation, you can call DescribeDBClusters to query the ServerlessType and node ID of the cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Restarts a node of a PolarDB cluster.</p>
+     * <p>Restarts a node in a PolarDB cluster.</p>
      * 
      * @param request RestartDBNodeRequest
      * @return RestartDBNodeResponse
@@ -36819,7 +37229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restores a PolarDB application from a specified backup set.</p>
+     * <p>Restores a PolarDB application by using a specified backup set.</p>
      * 
      * @param request RestoreApplicationByBackupSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36863,7 +37273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restores a PolarDB application from a specified backup set.</p>
+     * <p>Restores a PolarDB application by using a specified backup set.</p>
      * 
      * @param request RestoreApplicationByBackupSetRequest
      * @return RestoreApplicationByBackupSetResponse
@@ -36875,7 +37285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restores databases or tables to a PolarDB cluster.</p>
+     * <p>Restores the databases and tables of a PolarDB cluster.</p>
      * 
      * @param request RestoreTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36939,7 +37349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restores databases or tables to a PolarDB cluster.</p>
+     * <p>Restores the databases and tables of a PolarDB cluster.</p>
      * 
      * @param request RestoreTableRequest
      * @return RestoreTableResponse
@@ -37291,6 +37701,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MemoryAgentId", request.memoryAgentId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryId)) {
+            query.put("MemoryId", request.memoryId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memoryUserId)) {
             query.put("MemoryUserId", request.memoryUserId);
         }
@@ -37406,15 +37820,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation sets file quota rules for a specific directory in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which quota rules are applied and their related attributes. When you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path from the root directory rather than a mount point path. You can also use the <code>Strategy</code> parameter to control how rules take effect on existing files. By default, rules take effect only when they are missing.</p>
-     * <h3>Notes</h3>
+     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the exact directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, make sure the path is an absolute path starting from the root directory, not a mount point path. In addition, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when they are missing.</p>
+     * <h3>Important notes</h3>
      * <ul>
      * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
-     * <li>To apply rules to multiple levels of subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
+     * <li>If you need to apply rules to multi-level subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
      * </ul>
+     * <h2>Before you begin</h2>
+     * <p>The Prerequisites section clarifies the following: (1) Only PolarFS instances of the high_performance category are supported. The cold category is not supported. (2) You must first configure a quota policy by calling AddPolarFsQuota. (3) The complete dependency call chain is CreatePolarFs(high_performance) → AddPolarFsQuota → SetPolarFsFileQuota.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets file quota rules for a specified directory in a Polarlakebase instance.</p>
+     * <p>Sets file quota rules for specified directories in a Polarlakebase instance.</p>
      * 
      * @param request SetPolarFsFileQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37455,15 +37871,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation sets file quota rules for a specific directory in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which quota rules are applied and their related attributes. When you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path from the root directory rather than a mount point path. You can also use the <code>Strategy</code> parameter to control how rules take effect on existing files. By default, rules take effect only when they are missing.</p>
-     * <h3>Notes</h3>
+     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the exact directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, make sure the path is an absolute path starting from the root directory, not a mount point path. In addition, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when they are missing.</p>
+     * <h3>Important notes</h3>
      * <ul>
      * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
-     * <li>To apply rules to multiple levels of subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
+     * <li>If you need to apply rules to multi-level subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
      * </ul>
+     * <h2>Before you begin</h2>
+     * <p>The Prerequisites section clarifies the following: (1) Only PolarFS instances of the high_performance category are supported. The cold category is not supported. (2) You must first configure a quota policy by calling AddPolarFsQuota. (3) The complete dependency call chain is CreatePolarFs(high_performance) → AddPolarFsQuota → SetPolarFsFileQuota.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets file quota rules for a specified directory in a Polarlakebase instance.</p>
+     * <p>Sets file quota rules for specified directories in a Polarlakebase instance.</p>
      * 
      * @param request SetPolarFsFileQuotaRequest
      * @return SetPolarFsFileQuotaResponse
@@ -37474,8 +37892,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section describes the requirements for the number of GDN members, the GDN status, and the status of the destination secondary cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Switches over the primary and secondary clusters in a global database network (GDN).</p>
+     * <p>Switches the primary and secondary clusters in a global database network (GDN).</p>
      * 
      * @param request SwitchOverGlobalDatabaseNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37542,8 +37964,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>This section describes the requirements for the number of GDN members, the GDN status, and the status of the destination secondary cluster.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Switches over the primary and secondary clusters in a global database network (GDN).</p>
+     * <p>Switches the primary and secondary clusters in a global database network (GDN).</p>
      * 
      * @param request SwitchOverGlobalDatabaseNetworkRequest
      * @return SwitchOverGlobalDatabaseNetworkResponse
@@ -37627,7 +38053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Temporarily changes the specifications of a cluster.</p>
+     * <p>Temporarily modifies the configuration.</p>
      * 
      * @param request TempModifyDBNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37703,7 +38129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Temporarily changes the specifications of a cluster.</p>
+     * <p>Temporarily modifies the configuration.</p>
      * 
      * @param request TempModifyDBNodeRequest
      * @return TempModifyDBNodeResponse
@@ -39121,10 +39547,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.</li>
-     * <li>You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.</li>
+     * <li>Currently, only the revision version of a PolarDB for MySQL cluster can be upgraded, such as from 8.0.1.1.3 to 8.0.1.1.4.</li>
+     * <li>Only Alibaba Cloud accounts can perform scheduled Milvus version upgrade tasks, which are executed within a specified time period. Resource Access Management (RAM) users cannot perform scheduled Milvus version upgrade tasks.</li>
      * </ul>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>The DBClusterStatus of the target cluster must be Running. You can call the DescribeDBClusters operation to query the current status. If the cluster is in the Stopped state, call the ManuallyStartDBCluster operation to resume the cluster before you upgrade it.</p>
+     * <h2>Before you begin</h2>
+     * <p>The DBCluster must be in the Running state. You can query the status by checking the DBClusterStatus field returned by the DescribeDBClusters operation. If the cluster is in the Stopped state, call the ManuallyStartDBCluster operation to resume it.</p>
      * 
      * <b>summary</b> : 
      * <p>Upgrades the kernel version of a PolarDB for MySQL cluster.</p>
@@ -39209,10 +39639,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.</li>
-     * <li>You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.</li>
+     * <li>Currently, only the revision version of a PolarDB for MySQL cluster can be upgraded, such as from 8.0.1.1.3 to 8.0.1.1.4.</li>
+     * <li>Only Alibaba Cloud accounts can perform scheduled Milvus version upgrade tasks, which are executed within a specified time period. Resource Access Management (RAM) users cannot perform scheduled Milvus version upgrade tasks.</li>
      * </ul>
      * </blockquote>
+     * <h2>Before you begin</h2>
+     * <p>The DBClusterStatus of the target cluster must be Running. You can call the DescribeDBClusters operation to query the current status. If the cluster is in the Stopped state, call the ManuallyStartDBCluster operation to resume the cluster before you upgrade it.</p>
+     * <h2>Before you begin</h2>
+     * <p>The DBCluster must be in the Running state. You can query the status by checking the DBClusterStatus field returned by the DescribeDBClusters operation. If the cluster is in the Stopped state, call the ManuallyStartDBCluster operation to resume it.</p>
      * 
      * <b>summary</b> : 
      * <p>Upgrades the kernel version of a PolarDB for MySQL cluster.</p>
@@ -39227,7 +39661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the minor version of a PolarDB cluster.</p>
+     * <p>Upgrades the minor engine version of a PolarDB on ENS cluster.</p>
      * 
      * @param request UpgradeDBClusterVersionZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -39311,7 +39745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the minor version of a PolarDB cluster.</p>
+     * <p>Upgrades the minor engine version of a PolarDB on ENS cluster.</p>
      * 
      * @param request UpgradeDBClusterVersionZonalRequest
      * @return UpgradeDBClusterVersionZonalResponse

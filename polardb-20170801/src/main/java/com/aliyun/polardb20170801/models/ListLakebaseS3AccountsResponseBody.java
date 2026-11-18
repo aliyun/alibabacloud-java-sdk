@@ -32,7 +32,7 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of S3 accounts.</p>
+     * <p>The S3 accounts.</p>
      */
     @NameInMap("S3Accounts")
     public java.util.List<ListLakebaseS3AccountsResponseBodyS3Accounts> s3Accounts;
@@ -106,7 +106,7 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The access key of the S3 account.</p>
+         * <p>The AccessKey ID of the S3 account.</p>
          * 
          * <strong>example:</strong>
          * <p>accname</p>
@@ -115,7 +115,7 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
         public String userAccAk;
 
         /**
-         * <p>The secret key of the S3 account (displayed in masked format).</p>
+         * <p>The AccessKey secret of the S3 account (masked).</p>
          * 
          * <strong>example:</strong>
          * <p>password***</p>

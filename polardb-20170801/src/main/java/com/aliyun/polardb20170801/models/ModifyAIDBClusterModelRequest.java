@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAIDBClusterModelRequest extends TeaModel {
     /**
-     * <p>The ID of the PolarDB AI 3.0 logical instance.</p>
+     * <p>The PolarDB AI 3.0 logical instance ID. Note: This operation is only supported for clusters with RayCluster-pod-based workers. MaaS clusters in the Bailian resource pool do not support this operation. Use DescribeAIDBClusterAttribute to verify cluster compatibility before calling this API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ModifyAIDBClusterModelRequest extends TeaModel {
     public String displayModelName;
 
     /**
-     * <p>Specifies whether to only preview the modification.</p>
+     * <p>Specifies whether to only preview the change.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +33,7 @@ public class ModifyAIDBClusterModelRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The target model name. Select a value from the ModelName values returned by DescribeAvailableModels.</p>
+     * <p>The target model name. Select a value from the ModelName parameter returned by DescribeAvailableModels.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

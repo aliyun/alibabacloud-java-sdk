@@ -24,7 +24,7 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end date of the query. The end date must be later than or equal to the start date. The interval between the start date and the end date cannot exceed 31 days. Format: yyyy-MM-ddZ (UTC).</p>
+     * <p>The end date of the query. The end date cannot be earlier than the start date, and the interval between the start date and the end date cannot exceed 31 days. Specify the time in the yyyy-MM-ddZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
+     * <p>The page number. Valid values: any positive integer up to the maximum value of the Integer type.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start date of the query. The interval between the start date and the current date cannot exceed 31 days. Format: yyyy-MM-ddZ (UTC).</p>
+     * <p>The start date of the query. The interval between the start date and the current date cannot exceed 31 days. Specify the time in the yyyy-MM-ddZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

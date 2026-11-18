@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApplicationPromptRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID. Usage note: Only applications of the mem0 type support prompt operations. You can verify this by checking the ApplicationType field by calling DescribeApplicationAttribute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyApplicationPromptRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The ID of the prompt.</p>
+     * <p>The prompt ID. The value is an identifier that starts with papt-.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyApplicationPromptRequest extends TeaModel {
     public String promptId;
 
     /**
-     * <p>The name of the prompt.</p>
+     * <p>The prompt name.</p>
      * 
      * <strong>example:</strong>
      * <p>prompt name</p>
@@ -34,7 +34,7 @@ public class ModifyApplicationPromptRequest extends TeaModel {
     public String promptName;
 
     /**
-     * <p>The content of the prompt.</p>
+     * <p>The prompt content.</p>
      * 
      * <strong>example:</strong>
      * <p>prompt value</p>

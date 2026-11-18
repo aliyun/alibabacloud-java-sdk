@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsRequest extends TeaModel {
     /**
-     * <p>The PolarDB instance ID that the application depends on.</p>
+     * <p>The PolarDB instance ID on which the application depends.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze8u21s03******</p>
@@ -14,7 +14,7 @@ public class DescribePolarFsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The page number. The value must be an integer greater than 0 and less than or equal to the maximum value of the Integer data type.</p>
+     * <p>The page number. The value must be an integer greater than 0 and no greater than the maximum value of the Integer data type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

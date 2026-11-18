@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerRequest extends TeaModel {
     /**
-     * <p>The consumer group ID. You can obtain the ID from the ConsumerGroupId parameter returned by the CreateConsumerGroup operation.</p>
+     * <p>The ID of the user group. You can obtain the ID from the ConsumerGroupId parameter returned by CreateConsumerGroup. This parameter is actually required. If it is not provided, the API returns an InvalidParameters.Format (400) error. Although the parameter is named ConsumerGroupName, you must pass the ConsumerGroupId in the cg-xxxx format. You can obtain the ID from the ConsumerGroupId field returned by CreateConsumerGroup or DescribeConsumerGroups.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-p3gk2oh55c**</p>
@@ -14,7 +14,7 @@ public class CreateConsumerRequest extends TeaModel {
     public String consumerGroupName;
 
     /**
-     * <p>The gateway instance ID. You can obtain the ID from the GwClusterId parameter returned by the CreateGateway operation.</p>
+     * <p>The ID of the gateway instance. You can obtain the ID from the GwClusterId parameter returned by CreateGateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateConsumerRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The key type. Default value: ApiKey. Valid values: ApiKey.</p>
+     * <p>The key type. Default value: ApiKey. Currently, only ApiKey is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>ApiKey</p>
@@ -43,7 +43,7 @@ public class CreateConsumerRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The nickname.</p>
+     * <p>The nickname of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

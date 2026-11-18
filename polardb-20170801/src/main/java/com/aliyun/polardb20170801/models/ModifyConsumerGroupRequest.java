@@ -15,7 +15,7 @@ public class ModifyConsumerGroupRequest extends TeaModel {
     public String consumerGroupName;
 
     /**
-     * <p>The ID of the gateway instance.</p>
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyConsumerGroupRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>Indicates whether the consumer group is the default group. Valid values: <code>0</code> (false) and <code>1</code> (true).</p>
+     * <p>Specifies whether the group is the default group. Valid values: 0: No. 1: Yes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

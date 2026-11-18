@@ -21,7 +21,7 @@ public class CreateBatchTaskRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The per-instance parameter overrides (JSON object: instanceId -&gt; param). This parameter is used in scenarios where multiple instances have different targets, such as different agent workspaces.</p>
+     * <p>The per-instance task parameters in JSON object format (instanceId -&gt; param). This parameter is used in scenarios where multiple instances have different targets, such as different agent workspaces.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;pa-xxx1&quot;:{&quot;agentId&quot;:&quot;test1&quot;},&quot;pa-xxx2&quot;:{&quot;scope&quot;:&quot;global&quot;}}</p>
@@ -30,7 +30,7 @@ public class CreateBatchTaskRequest extends TeaModel {
     public String instanceParams;
 
     /**
-     * <p>The archive parameters.</p>
+     * <p>The task parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;skillName&quot;:&quot;github&quot;,&quot;version&quot;:&quot;1.0.0&quot;},{&quot;skillName&quot;:&quot;skill-vetter&quot;,&quot;version&quot;:&quot;1.0.1&quot;}]</p>
@@ -39,7 +39,7 @@ public class CreateBatchTaskRequest extends TeaModel {
     public String param;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the regions of all clusters under the target account.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the region information of all clusters under the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

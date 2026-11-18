@@ -14,7 +14,7 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The status code.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -42,6 +42,9 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
 
     /**
      * <p>The task object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Task")
     public DescribePolarClawTaskResponseBodyTask task;
@@ -102,7 +105,7 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error details.</p>
          * 
          * <strong>example:</strong>
          * <p>channelId format invalid</p>
@@ -144,13 +147,16 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public Long createdAtMs;
 
         /**
-         * <p>The error object. This parameter is returned only if the task fails.</p>
+         * <p>The error object. This object is returned when the task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Error")
         public DescribePolarClawTaskResponseBodyTaskError error;
 
         /**
-         * <p>The operation name.</p>
+         * <p>The name of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>LoginPolarClawChannel</p>
@@ -159,7 +165,7 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public String operation;
 
         /**
-         * <p>The task result object. This parameter is returned only if the task succeeds. The content of this object varies by operation.</p>
+         * <p>The task result object. This object is returned when the task succeeds. The content varies based on the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -168,7 +174,7 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public java.util.Map<String, ?> result;
 
         /**
-         * <p>The task state. Valid values: pending, running, succeeded, and failed.</p>
+         * <p>The task status. Valid values: pending, running, succeeded, and failed.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -177,7 +183,7 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The task ID, which is a universally unique identifier (UUID).</p>
+         * <p>The task ID (UUID).</p>
          * 
          * <strong>example:</strong>
          * <p>5956e600-ce6e-4d11-9648-939ef3286e94</p>
@@ -186,7 +192,7 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The timestamp when the task was last updated, in milliseconds.</p>
+         * <p>The timestamp when the task was updated, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1778564750541</p>

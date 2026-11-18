@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckDBNameZonalResponseBody extends TeaModel {
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>test_db</p>
@@ -14,7 +14,7 @@ public class CheckDBNameZonalResponseBody extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>

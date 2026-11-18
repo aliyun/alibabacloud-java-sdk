@@ -33,7 +33,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The data service mode. A value of custom indicates that custom OSS is used, and a value of cold_storage indicates that cold storage is used.</p>
+     * <p>The data service mode. A value of custom indicates that custom OSS is used. A value of cold_storage indicates that cold storage is used.</p>
      * 
      * <strong>example:</strong>
      * <p>cold_storage</p>
@@ -62,7 +62,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     /**
      * <p>The type of the model service. Valid values:</p>
      * <ul>
-     * <li><strong>aitrain</strong>: model operator fine-tuning.</li>
+     * <li><strong>aitrain</strong>: model operator tuning</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -75,8 +75,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     /**
      * <p>The name of the model.</p>
      * <ul>
-     * <li><strong>For a preset model, specify the name of the selected model.</strong></li>
-     * <li><strong>For a custom model, specify the path of the model (the model trained in a cold storage instance).</strong></li>
+     * <li><strong>For a preset model, specify the selected model name.</strong></li>
+     * <li><strong>For a custom model, specify the path of the model (the trained model in a cold storage instance).</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -89,8 +89,8 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     /**
      * <p>The source of the model. Valid values:</p>
      * <ul>
-     * <li><strong>public</strong>: preset model.</li>
-     * <li><strong>custom</strong>: custom model.</li>
+     * <li><strong>public</strong>: preset model</li>
+     * <li><strong>custom</strong>: custom model</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -131,7 +131,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The runtime parameters. The value is a JSON string.</p>
+     * <p>The runtime parameters in JSON string format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String runningParameter;
 
     /**
-     * <p>The security group ID.</p>
+     * <p>The ID of the security group. This parameter is actually required. If it is not provided, the service returns InvalidEcsSecurityGroupId.Malformed (400).</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp**************</p>
@@ -153,7 +153,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
      * <p>The description of the model service.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>Model operator instance</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -168,7 +168,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String tuneArch;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The ID of the virtual private cloud (VPC). This parameter is actually required. If it is not provided, the service returns InvalidVpcId.Malformed (400).</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-*******************</p>
@@ -177,7 +177,7 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The ID of the vSwitch. This parameter is actually required and must belong to the VPC specified by VPCId.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-*********************</p>

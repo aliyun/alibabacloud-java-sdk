@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawAgentFileRequest extends TeaModel {
     /**
-     * <p>Agent ID</p>
+     * <p>The PolarClaw agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

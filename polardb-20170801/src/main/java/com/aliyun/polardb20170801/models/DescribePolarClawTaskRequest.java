@@ -15,7 +15,7 @@ public class DescribePolarClawTaskRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The asynchronous task ID.</p>
+     * <p>The ID of the asynchronous task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

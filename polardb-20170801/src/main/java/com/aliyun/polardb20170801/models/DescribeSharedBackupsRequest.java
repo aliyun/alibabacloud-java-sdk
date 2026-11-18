@@ -25,14 +25,14 @@ public class DescribeSharedBackupsRequest extends TeaModel {
     /**
      * <p>The database type. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
      * </ul>
-     * <p>To specify multiple types, separate them with a comma.</p>
+     * <p>Separate multiple types with commas (,).</p>
+     * <blockquote>
+     * <p>This parameter is required for the API call. Omitting it will result in an InvalidDBType.Malformed (HTTP 400) error.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>MySQL,PostgreSQL,Oracle</p>
@@ -56,7 +56,7 @@ public class DescribeSharedBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Valid values: positive integers up to the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,7 +76,10 @@ public class DescribeSharedBackupsRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions for the target account, including region IDs.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>This parameter is required for the API call. Omitting it may result in an InternalFailure (HTTP 500) error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -94,10 +97,8 @@ public class DescribeSharedBackupsRequest extends TeaModel {
     /**
      * <p>The share type. Valid values:</p>
      * <ul>
-     * <li><p><strong>ShareIncoming</strong>: backups shared with you.</p>
-     * </li>
-     * <li><p><strong>ShareOutgoing</strong>: backups you shared.</p>
-     * </li>
+     * <li><strong>ShareIncoming</strong>: Shared with me.</li>
+     * <li><strong>ShareOutgoing</strong>: Shared by me.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

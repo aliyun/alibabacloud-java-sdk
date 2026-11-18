@@ -14,7 +14,7 @@ public class DescribeConsumerGroupsRequest extends TeaModel {
     public String consumerGroupId;
 
     /**
-     * <p>The ID of the gateway instance.</p>
+     * <p>The ID of the gateway instance. Usage note: The description of the GwClusterId parameter in DescribeConsumerGroups is updated to specify that it is the AI gateway instance ID. You can obtain a valid ID by calling the CreateGateway or DescribeGatewayList operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeConsumerGroupsRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The page number to return. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,16 +33,13 @@ public class DescribeConsumerGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records to return per page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
-     * <p>The default value is 30.</p>
+     * <p>Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -51,7 +48,7 @@ public class DescribeConsumerGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

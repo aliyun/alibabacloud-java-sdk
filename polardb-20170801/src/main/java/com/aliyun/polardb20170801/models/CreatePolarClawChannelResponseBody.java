@@ -86,7 +86,7 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the gateway is restarted.</p>
+     * <p>Indicates whether the gateway has been restarted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

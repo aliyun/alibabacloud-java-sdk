@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLakebaseS3AccountPolicyRequest extends TeaModel {
     /**
-     * <p>The PolarFS instance ID.</p>
+     * <p>The PolarFS instance ID. You can call the DescribePolarFs operation to query available instances and their IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ModifyLakebaseS3AccountPolicyRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters under the target account.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the regions of all clusters under the target account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,6 +32,9 @@ public class ModifyLakebaseS3AccountPolicyRequest extends TeaModel {
      * <blockquote>
      * <p>You cannot modify the default account.</p>
      * </blockquote>
+     * <blockquote>
+     * <p>You can call the ListLakebaseS3Accounts operation to obtain the account access key. Select an account with AccountType set to user.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +44,7 @@ public class ModifyLakebaseS3AccountPolicyRequest extends TeaModel {
     public String userAccAk;
 
     /**
-     * <p>The user account policy.</p>
+     * <p>The user account policy in JSON object format. The Version and Statement fields are required. Statement.Action must specify explicit actions such as s3:GetObject and s3:PutObject. The s3:* wildcard is not supported. Statement.Resource must specify explicit ARNs such as arn:aws:s3:::bucket-name/<em>. A standalone asterisk (</em>) is not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

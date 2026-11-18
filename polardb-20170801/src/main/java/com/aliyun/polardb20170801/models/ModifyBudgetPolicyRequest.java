@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBudgetPolicyRequest extends TeaModel {
     /**
-     * <p>The budget usage percentage that triggers an alert. Valid values: 0 to 100.</p>
+     * <p>The alert threshold percentage. Valid values: 0 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -14,7 +14,7 @@ public class ModifyBudgetPolicyRequest extends TeaModel {
     public String alertThresholdPct;
 
     /**
-     * <p>The budget amount in points.</p>
+     * <p>The budget points.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -33,7 +33,7 @@ public class ModifyBudgetPolicyRequest extends TeaModel {
     public String budgetPolicyId;
 
     /**
-     * <p>The ID of the gateway instance.</p>
+     * <p>The instance ID of the gateway instance. Usage note: In the full API reference, the description of the GwClusterId parameter must specify the resource type (gateway instance), how to obtain the instance ID (which Describe or List API to invoke), and the difference between GwClusterId and DBClusterId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ModifyBudgetPolicyRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -52,7 +52,7 @@ public class ModifyBudgetPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The day of the month when the budget is reset. Valid values: 1 to 28.</p>
+     * <p>The day of the month when the reset occurs. Valid values: 1 to 28.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

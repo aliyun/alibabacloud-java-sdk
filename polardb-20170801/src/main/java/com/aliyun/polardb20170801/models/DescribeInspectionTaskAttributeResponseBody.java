@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInspectionTaskAttributeResponseBody extends TeaModel {
     /**
-     * <p>The creation date of the inspection task.</p>
+     * <p>The creation date of the inspection task. The format is YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-01</p>
@@ -14,7 +14,7 @@ public class DescribeInspectionTaskAttributeResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The cron expression for periodic inspections.</p>
+     * <p>The cron expression for the scheduled inspection.</p>
      * 
      * <strong>example:</strong>
      * <p>0 0 2 * * ?</p>
@@ -32,7 +32,7 @@ public class DescribeInspectionTaskAttributeResponseBody extends TeaModel {
     public String DBClusterIds;
 
     /**
-     * <p>The expiration date of the inspection task.</p>
+     * <p>The expiration date of the inspection task. The format is YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-31</p>
@@ -41,7 +41,7 @@ public class DescribeInspectionTaskAttributeResponseBody extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>The last modification date of the inspection task.</p>
+     * <p>The last modification date of the inspection task. The format is YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-01</p>
@@ -62,7 +62,7 @@ public class DescribeInspectionTaskAttributeResponseBody extends TeaModel {
      * <p>The description of the inspection task.</p>
      * 
      * <strong>example:</strong>
-     * <p>Periodic inspection task</p>
+     * <p>Scheduled inspection task</p>
      */
     @NameInMap("TaskDescription")
     public String taskDescription;

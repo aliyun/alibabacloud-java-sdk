@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationPromptResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Prompt.</p>
+     * <p>The unique identifier of the prompt.</p>
      * 
      * <strong>example:</strong>
      * <p>papt-f9lajgw765f4fnrzn1</p>
@@ -14,7 +14,7 @@ public class CreateApplicationPromptResponseBody extends TeaModel {
     public String promptId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>

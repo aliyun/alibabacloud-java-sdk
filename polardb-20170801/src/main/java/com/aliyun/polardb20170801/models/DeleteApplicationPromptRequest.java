@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationPromptRequest extends TeaModel {
     /**
-     * <p>The Application ID.</p>
+     * <p>The application ID. The ID must point to an application with mem0 capabilities enabled. You can determine this by checking whether the MemApplicationAttribute returned by DescribeApplicationAttribute is not empty. Applications such as polarclaw, supabase, and polarclawsaas that do not have mem0 enabled do not support prompt operations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteApplicationPromptRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The Prompt ID.</p>
+     * <p>The prompt ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

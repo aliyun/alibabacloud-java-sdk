@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalDataNetworkResponseBody extends TeaModel {
     /**
-     * <p>The unique ID of the newly created synchronization channel.</p>
+     * <p>The ID of the synchronization link.</p>
      * 
      * <strong>example:</strong>
      * <p>gdc-xxx</p>
@@ -14,7 +14,7 @@ public class CreateGlobalDataNetworkResponseBody extends TeaModel {
     public String channelId;
 
     /**
-     * <p>The unique ID of the newly created GDN.</p>
+     * <p>The ID of the global database network (GDN).</p>
      * 
      * <strong>example:</strong>
      * <p>gdn-xxx</p>
@@ -23,7 +23,7 @@ public class CreateGlobalDataNetworkResponseBody extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>

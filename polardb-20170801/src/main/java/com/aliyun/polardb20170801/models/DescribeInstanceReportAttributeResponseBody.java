@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the report is the latest one.</p>
+     * <p>Indicates whether the report is the latest report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Latest")
     public Boolean latest;
@@ -48,6 +51,9 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The inspection results for each item in the report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("ReportSubItems")
     public java.util.List<DescribeInstanceReportAttributeResponseBodyReportSubItems> reportSubItems;
@@ -176,7 +182,7 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
         public Long score;
 
         /**
-         * <p>The name of the inspection skill that generated the result.</p>
+         * <p>The name of the inspection skill that generated the inspection result.</p>
          * 
          * <strong>example:</strong>
          * <p>performance</p>

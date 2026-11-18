@@ -14,7 +14,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The Search engine version, which is not the MySQL version of the primary cluster.</p>
+     * <p>The Search engine version. This is not the MySQL version of the primary cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>3.0</p>
@@ -41,7 +41,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The visible parameters and their modification statuses.</p>
+     * <p>The visible parameters and their modification status.</p>
      */
     @NameInMap("RunningParameters")
     public DescribeSearchParametersResponseBodyRunningParameters runningParameters;
@@ -93,7 +93,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
 
     public static class DescribeSearchParametersResponseBodyRunningParametersParameter extends TeaModel {
         /**
-         * <p>The value rule of the template, which can be a numeric range, an enumeration, or a regular expression. This rule must be interpreted in combination with the DataType field.</p>
+         * <p>The value validation rule of the template. The rule can be a numeric range, an enumeration, or a regular expression, and must be interpreted in combination with the data type.</p>
          * 
          * <strong>example:</strong>
          * <p>[true\|false]</p>
@@ -111,7 +111,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The default value of the current active template, which is independent of the value modified by the user.</p>
+         * <p>The default value of the current active template. This value is independent of the value modified by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -120,7 +120,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
         public String defaultParameterValue;
 
         /**
-         * <p>The divisibility factor. If the value is not zero, the numeric value parsed based on the templatetype must be a multiple of this factor.</p>
+         * <p>The divisibility factor. If the value is not zero, the numeric value parsed based on the template type must be a multiple of this factor.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -129,7 +129,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
         public String factor;
 
         /**
-         * <p>Specifies whether a restart is required for the modification to take effect. The value is true for static parameters and false for dynamic parameters.</p>
+         * <p>Specifies whether a restart is required for the parameter to take effect. The value is true for static parameters and false for dynamic parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -138,7 +138,7 @@ public class DescribeSearchParametersResponseBody extends TeaModel {
         public Boolean forceRestart;
 
         /**
-         * <p>Specifies whether the user is allowed to modify the parameter.</p>
+         * <p>Specifies whether the parameter is modifiable.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupRegionsResponseBody extends TeaModel {
     /**
-     * <p>The list of regions where the backup sets are stored.</p>
+     * <p>The list of regions where backup sets are located.</p>
      */
     @NameInMap("Regions")
     public java.util.List<String> regions;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     /**
-     * <p>The number of activation codes that have been generated.</p>
+     * <p>The number of generated activation codes.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public Integer activatedCodeCount;
 
     /**
-     * <p>The quota for requesting activation codes.</p>
+     * <p>The quota of activation codes that can be requested.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -23,7 +23,7 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public Integer activationCodeQuota;
 
     /**
-     * <p>The ID of the Alibaba Cloud order, including the virtual order ID.</p>
+     * <p>The Alibaba Cloud order ID, including the virtual order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>239618016570503</p>
@@ -32,7 +32,7 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String aliyunOrderId;
 
     /**
-     * <p>Indicates whether you can leave the System Identifier parameter empty when you generate an activation code.</p>
+     * <p>Specifies whether the System Identifier can be left empty when generating an activation code.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,7 +41,7 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public Boolean allowEmptySystemIdentifier;
 
     /**
-     * <p>The database type, such as PG, Oracle, or MySQL.</p>
+     * <p>The database type, such as PostgreSQL, Oracle, or MySQL.</p>
      * 
      * <strong>example:</strong>
      * <p>PG</p>
@@ -50,7 +50,7 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The time when the order was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-19 01:13:45</p>
@@ -59,7 +59,7 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String gmtCreated;
 
     /**
-     * <p>The time when the order was last updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16 16:46:20</p>
@@ -68,7 +68,7 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>Indicates whether the order is a virtual order. You can pre-generate activation codes for virtual orders.</p>
+     * <p>Specifies whether the order is a virtual order. Virtual orders allow pre-generation of activation codes.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -77,7 +77,7 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public Boolean isVirtualOrder;
 
     /**
-     * <p>Indicates whether the virtual order is frozen. If a virtual order is frozen, you can no longer generate activation codes.</p>
+     * <p>Specifies whether the virtual order is frozen. A frozen virtual order does not allow further generation of activation codes.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -88,16 +88,11 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     /**
      * <p>The package type. Valid values:</p>
      * <ul>
-     * <li><p>single_node_subscribe: single-node (subscription)</p>
-     * </li>
-     * <li><p>single_node_long_term: single-node (long-term)</p>
-     * </li>
-     * <li><p>primary_backup_subscribe: primary/standby (subscription)</p>
-     * </li>
-     * <li><p>primary_backup_long_term: primary/standby (long-term)</p>
-     * </li>
-     * <li><p>pre_generation_long_term: pre-generation (long-term)</p>
-     * </li>
+     * <li>single_node_subscribe: single node (subscription)</li>
+     * <li>single_node_long_term: single node (long-term)</li>
+     * <li>primary_backup_subscribe: primary/secondary edition (subscription)</li>
+     * <li>primary_backup_long_term: primary/secondary edition (long-term)</li>
+     * <li>pre_generation_long_term: pre-generation (long-term)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +102,7 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The validity period of the package. The validity period is typically one year or a long-term period of 30 years.</p>
+     * <p>The validity period of the package, which is typically one year or a long-term period of 30 years.</p>
      * 
      * <strong>example:</strong>
      * <p>1 year</p>
@@ -116,7 +111,7 @@ public class DescribeLicenseOrderDetailsResponseBody extends TeaModel {
     public String packageValidity;
 
     /**
-     * <p>The purchase channel. Valid values: \<code>aliyun_market\\</code> (Alibaba Cloud Marketplace) and \<code>aliyun_public\\</code> (standard purchase page).</p>
+     * <p>The purchase channel. Valid values: aliyun_market (Alibaba Cloud Marketplace) and aliyun_public (regular purchase page).</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun_market</p>

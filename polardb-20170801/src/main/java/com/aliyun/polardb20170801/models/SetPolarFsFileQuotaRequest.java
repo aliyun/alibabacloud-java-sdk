@@ -14,8 +14,11 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The details of the quota rules to apply to directories.</p>
+     * <p>The details of the quota rules applied to directories.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("FilePathQuotas")
     public java.util.List<SetPolarFsFileQuotaRequestFilePathQuotas> filePathQuotas;
@@ -70,7 +73,7 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>The directory path.</p>
+         * <p>The directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/a/project</p>
@@ -79,7 +82,7 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public String filePathId;
 
         /**
-         * <p>The quota inodes.</p>
+         * <p>The inode quota.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -88,7 +91,7 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public Long inodes;
 
         /**
-         * <p>The number of subdirectory levels to traverse under <code>FilePathId</code>. A value of 1 indicates that only the first-level subdirectories are traversed. A value of 0 indicates that all levels are traversed to the deepest level.</p>
+         * <p>The number of directory levels to traverse under <code>FilePathId</code>. A value of 1 indicates that only the first-level subdirectories are traversed. A value of 0 indicates that the traversal goes to the deepest level.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -97,7 +100,7 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public Integer maxDepth;
 
         /**
-         * <p>The IDs of the rules to apply, separated by commas (,).</p>
+         * <p>The list of rule IDs to be applied, separated by commas (<code>,</code>).</p>
          * 
          * <strong>example:</strong>
          * <p>1,2</p>
@@ -106,10 +109,10 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public String quotaIds;
 
         /**
-         * <p>The mode in which rules take effect on existing files. Valid values:</p>
+         * <p>The mode in which the rules take effect on existing files. Valid values:</p>
          * <ul>
-         * <li><strong>missing</strong>: Rules take effect only when they are missing. This is the default value.</li>
-         * <li><strong>all</strong>: Rules take effect on all files.</li>
+         * <li><strong>missing</strong>: The rules take effect only when they are missing. This is the default value.</li>
+         * <li><strong>all</strong>: The rules take effect on all files.</li>
          * </ul>
          * 
          * <strong>example:</strong>

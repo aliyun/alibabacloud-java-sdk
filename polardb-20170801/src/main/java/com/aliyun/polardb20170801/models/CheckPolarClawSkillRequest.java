@@ -14,7 +14,7 @@ public class CheckPolarClawSkillRequest extends TeaModel {
     public String bucketRegionId;
 
     /**
-     * <p>The type of the bucket used for skill files. UserOwned indicates a user-owned bucket. Hosted indicates a hosted bucket. You must have the required permissions to use a hosted bucket.</p>
+     * <p>The type of the bucket used for skill files. UserOwned indicates a user-owned bucket. Hosted indicates a hosted bucket, which requires corresponding permissions. Usage notes: The parameter dependencies for each value specify that OSSBucket is required for UserOwned, and whitelist permissions are required for Hosted.</p>
      * 
      * <strong>example:</strong>
      * <p>UserOwned</p>
@@ -61,10 +61,10 @@ public class CheckPolarClawSkillRequest extends TeaModel {
     public String skillVersion;
 
     /**
-     * <p>The brief description of the skill.</p>
+     * <p>The brief description of the skill. This parameter is actually required. If it is not provided, the service returns InvalidParam (404).</p>
      * 
      * <strong>example:</strong>
-     * <p>An example used to manage PolarDB skills</p>
+     * <p>Sample for managing PolarDB skills</p>
      */
     @NameInMap("Summary")
     public String summary;
@@ -79,7 +79,7 @@ public class CheckPolarClawSkillRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The title.</p>
+     * <p>The title. This parameter is actually required. If it is not provided, the service returns InvalidParam (404).</p>
      * 
      * <strong>example:</strong>
      * <p>PolarClawHub</p>

@@ -214,7 +214,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
          * <p>The tool description.</p>
          * 
          * <strong>example:</strong>
-         * <p>读取指定文件内容</p>
+         * <p>Read the content of the specified file</p>
          */
         @NameInMap("Description")
         public String description;
@@ -232,7 +232,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
          * <p>The tool name.</p>
          * 
          * <strong>example:</strong>
-         * <p>读取文件</p>
+         * <p>Read file</p>
          */
         @NameInMap("Label")
         public String label;
@@ -307,13 +307,13 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
          * <p>The group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>文件操作</p>
+         * <p>File operations</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>The source, which is core or a plugin ID.</p>
+         * <p>The source: core or plug-in ID.</p>
          * 
          * <strong>example:</strong>
          * <p>core</p>
@@ -380,7 +380,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>全部工具</p>
+         * <p>All tools</p>
          */
         @NameInMap("Label")
         public String label;

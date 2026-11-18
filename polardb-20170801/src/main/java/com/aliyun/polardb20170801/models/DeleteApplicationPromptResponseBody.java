@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationPromptResponseBody extends TeaModel {
     /**
-     * <p>The Prompt ID.</p>
+     * <p>The prompt ID.</p>
      * 
      * <strong>example:</strong>
      * <p>papt-f9lajgw765f4fnrzn1</p>
@@ -14,7 +14,7 @@ public class DeleteApplicationPromptResponseBody extends TeaModel {
     public String promptId;
 
     /**
-     * <p>The Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>

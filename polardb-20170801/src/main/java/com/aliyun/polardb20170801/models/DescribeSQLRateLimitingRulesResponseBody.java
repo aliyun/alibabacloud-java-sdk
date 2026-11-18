@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
     /**
      * <p>The result set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Data")
     public DescribeSQLRateLimitingRulesResponseBodyData data;
 
     /**
-     * <p>The maximum number of entries returned for the current request. Default value: 10.</p>
+     * <p>The maximum number of entries returned in this request. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,9 +23,9 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned for the request.</p>
      * <blockquote>
-     * <p>If the request is successful, \<code>Successful\\</code> is returned. If the request fails, an error message is returned.</p>
+     * <p>If the request is successful, Successful is returned. If the request fails, an exception message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +35,7 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh0vHYf39hc0J5qELgsazkBk</p>
@@ -96,7 +99,10 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
 
     public static class DescribeSQLRateLimitingRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of rules.</p>
+         * <p>The rule list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("RuleList")
         public java.util.List<String> ruleList;

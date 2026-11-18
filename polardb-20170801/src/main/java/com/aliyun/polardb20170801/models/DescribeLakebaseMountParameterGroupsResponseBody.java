@@ -51,11 +51,7 @@ public class DescribeLakebaseMountParameterGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indicates whether the parameter template is applied. Valid values:</p>
-         * <ul>
-         * <li>0: No.</li>
-         * <li>1: Yes.</li>
-         * </ul>
+         * <p>Indicates whether the parameter template is applied. Valid values: 0 (no) and 1 (yes).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -91,7 +87,7 @@ public class DescribeLakebaseMountParameterGroupsResponseBody extends TeaModel {
         public String parameterGroupDesc;
 
         /**
-         * <p>The ID of the parameter template.</p>
+         * <p>The parameter template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pcpg-lakebase-xxx</p>
@@ -109,11 +105,7 @@ public class DescribeLakebaseMountParameterGroupsResponseBody extends TeaModel {
         public String parameterGroupName;
 
         /**
-         * <p>The templatetype. Valid values:</p>
-         * <ul>
-         * <li>0: System.</li>
-         * <li>1: User.</li>
-         * </ul>
+         * <p>The templatetype. Valid values: 0 (system) and 1 (user).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

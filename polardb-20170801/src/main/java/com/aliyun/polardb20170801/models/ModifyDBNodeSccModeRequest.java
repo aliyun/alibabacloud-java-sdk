@@ -37,7 +37,7 @@ public class ModifyDBNodeSccModeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The SCC mode to set for the node.</p>
+     * <p>SCC</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

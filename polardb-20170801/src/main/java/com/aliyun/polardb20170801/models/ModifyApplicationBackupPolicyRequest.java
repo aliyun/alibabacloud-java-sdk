@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApplicationBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyApplicationBackupPolicyRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The application type, such as polarclaw.</p>
+     * <p>The application type, such as polarclaw. This parameter is required. If it is not provided, the service returns InvalidApplicationType.Malformed. Valid values: polarclaw, supabase, and polarclawsaas. Note: The ApplicationType field in the DescribeApplications response contains the polardb_ prefix (such as polardb_polarclaw). When you call this operation, remove the prefix and use the short format.</p>
      * 
      * <strong>example:</strong>
      * <p>polarclaw</p>
@@ -33,7 +33,7 @@ public class ModifyApplicationBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The retention period of level-1 backups, in days.</p>
+     * <p>The retention period of level-1 backups. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -42,7 +42,7 @@ public class ModifyApplicationBackupPolicyRequest extends TeaModel {
     public String preferredBackupRetentionPeriod;
 
     /**
-     * <p>The time window when automatic backups are performed. The format is HH:mmZ-HH:mmZ in UTC. The start time and end time must be on the hour and exactly one hour apart.</p>
+     * <p>The time window when automatic backups are performed. Specify the time in the HH:mmZ-HH:mmZ format in UTC. The start time and end time must be on the hour and exactly one hour apart.</p>
      * 
      * <strong>example:</strong>
      * <p>07:00Z-08:00Z</p>

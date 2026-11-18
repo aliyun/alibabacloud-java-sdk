@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsMappingResponseBody extends TeaModel {
     /**
-     * <p>The instance-level default AccessKey ID.</p>
+     * <p>The default AccessKey ID for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>LTAI5tExample1234</p>
@@ -144,7 +144,7 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The AccessKey ID of the storage bucket.</p>
+         * <p>The AccessKey ID for the storage bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>LTAI5tExample1234</p>

@@ -24,7 +24,10 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether encryption is enabled. Valid values:</p>
-     * <p>Enabled: Encryption is enabled. Disabled: Encryption is disabled.</p>
+     * <ul>
+     * <li>Enabled: Encryption is enabled.</li>
+     * <li>Disabled: Encryption is disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -33,7 +36,7 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
     public String encryptionDBStatus;
 
     /**
-     * <p>The custom key ID.</p>
+     * <p>The ID of the custom key.</p>
      * 
      * <strong>example:</strong>
      * <p>2a4f4ac2-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong>********</p>
@@ -44,10 +47,8 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
     /**
      * <p>The status of the key. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enabled</strong></p>
-     * </li>
-     * <li><p><strong>Disabled</strong></p>
-     * </li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

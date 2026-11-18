@@ -7,7 +7,10 @@ public class CreateAINodesRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://api.aliyun.com/api/polardb/2017-08-01/DescribeAIDBClusters">DescribeAIDBClusters</a> operation to query information about all clusters in your account, including cluster IDs.</p>
+     * <p>You can call the <a href="https://api.aliyun.com/api/polardb/2017-08-01/DescribeAIDBClusters">DescribeAIDBClusters</a> operation to query the information about all clusters under your account, including the cluster ID.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>The AiNodeType of the target cluster must be vnode or container. The maas type is not supported. You can query the AiNodeType by calling DescribeAIDBClusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +20,10 @@ public class CreateAINodesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The information about the nodes to add.</p>
+     * <p>The list of node information to add.</p>
+     * <blockquote>
+     * <p>You must specify at least 1 and at most 100 DBNode elements when you call this operation. If you omit this parameter or pass an empty array, the InvalidNewNodeNum.Malformed error is returned.</p>
+     * </blockquote>
      */
     @NameInMap("DBNodes")
     public java.util.List<CreateAINodesRequestDBNodes> DBNodes;

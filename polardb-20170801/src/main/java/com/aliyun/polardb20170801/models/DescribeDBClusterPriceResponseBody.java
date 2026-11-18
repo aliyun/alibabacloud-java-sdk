@@ -10,7 +10,7 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
      * <li>BUY: new purchase.</li>
      * <li>UPGRADE: specification change.</li>
      * <li>RENEW: renewal.</li>
-     * <li>CONVERT: billing method conversion.</li>
+     * <li>CONVERT: billing method change.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The price details.</p>
+     * <p>The pricing details.</p>
      */
     @NameInMap("PriceInfo")
     public DescribeDBClusterPriceResponseBodyPriceInfo priceInfo;

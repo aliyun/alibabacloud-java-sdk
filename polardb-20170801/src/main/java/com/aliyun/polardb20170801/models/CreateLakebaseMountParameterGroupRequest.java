@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLakebaseMountParameterGroupRequest extends TeaModel {
     /**
-     * <p>The instance category. Valid values:</p>
+     * <p>The instance edition. Valid values:</p>
      * <ul>
      * <li>basic: Basic Edition.</li>
      * <li>high_performance: High-performance Edition.</li>
