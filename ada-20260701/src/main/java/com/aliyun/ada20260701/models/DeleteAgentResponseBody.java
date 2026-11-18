@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAgentResponseBody extends TeaModel {
     /**
-     * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
+     * <p>The request ID used for Tracing Analysis and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>
@@ -14,7 +14,7 @@ public class DeleteAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the Agent is deleted. The value <code>true</code> is returned for a successful response. An error response is returned for a failed request.</p>
+     * <p>Indicates whether the agent was successfully deleted. A successful response always returns <code>true</code>. If the operation fails, an error response is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

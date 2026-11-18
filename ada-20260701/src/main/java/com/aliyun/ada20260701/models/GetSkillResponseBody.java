@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the current caller can delete the Skill.</p>
+     * <p>Indicates whether the current caller can delete the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class GetSkillResponseBody extends TeaModel {
     public Boolean canDelete;
 
     /**
-     * <p>Indicates whether the current caller can modify the Skill.</p>
+     * <p>Indicates whether the current caller can modify the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class GetSkillResponseBody extends TeaModel {
     public Boolean canModify;
 
     /**
-     * <p>The creation time of the Skill, in Unix millisecond timestamp.</p>
+     * <p>The creation time of the skill. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1760000000000</p>
@@ -32,16 +32,16 @@ public class GetSkillResponseBody extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The description in the current Skill main record.</p>
+     * <p>The description in the current primary record of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>A Skill for performing code review and risk alerts</p>
+     * <p>A skill for performing code review and risk alerts</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The bundle download URL. Returned when a network type is specified, an accessible Artifact exists, and pre-signing succeeds.</p>
+     * <p>The download URL of the bundle. This field is returned when the network is specified, an accessible artifact exists, and presigning is successful.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/artifacts/code-review-v2.zip?signature=example">https://example.com/artifacts/code-review-v2.zip?signature=example</a></p>
@@ -50,7 +50,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String downloadUrl;
 
     /**
-     * <p>The network type used to generate the download URL.</p>
+     * <p>The network type actually used to generate the download URL.</p>
      * 
      * <strong>example:</strong>
      * <p>public</p>
@@ -59,7 +59,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String downloadUrlNetwork;
 
     /**
-     * <p>The Skill icon URL, sourced from the iconUrl in the metadata. This field may be empty if no icon is configured.</p>
+     * <p>The URL of the skill icon, which is derived from the iconUrl in the metadata. This field may be empty if no icon is configured.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/icons/code-review.png">https://example.com/icons/code-review.png</a></p>
@@ -68,7 +68,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String iconUrl;
 
     /**
-     * <p>The Skill metadata, mapped to the metadata field in the backend response.</p>
+     * <p>The metadata of the skill, which is mapped to the metadata field in the backend response.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;skillMd&quot;:&quot;# Code Review\nCheck code quality.&quot;,&quot;artifactId&quot;:&quot;artifact_example003&quot;}</p>
@@ -77,7 +77,7 @@ public class GetSkillResponseBody extends TeaModel {
     public Object metadata;
 
     /**
-     * <p>The Skill name.</p>
+     * <p>The name of the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>code-review</p>
@@ -86,7 +86,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Indicates whether the Skill is an official Skill.</p>
+     * <p>Indicates whether the skill is an official skill.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -95,7 +95,7 @@ public class GetSkillResponseBody extends TeaModel {
     public Boolean official;
 
     /**
-     * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
+     * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>
@@ -104,7 +104,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Skill ID。</p>
+     * <p>The skill ID.</p>
      * 
      * <strong>example:</strong>
      * <p>skill_example123</p>
@@ -113,7 +113,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillId;
 
     /**
-     * <p>The current Skill status. Common values are DRAFT and PUBLISHED.</p>
+     * <p>The current status of the skill. Common values are DRAFT and PUBLISHED.</p>
      * 
      * <strong>example:</strong>
      * <p>PUBLISHED</p>
@@ -122,7 +122,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The update time of the Skill, in Unix millisecond timestamp.</p>
+     * <p>The update time of the skill. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1760000300000</p>
@@ -131,7 +131,7 @@ public class GetSkillResponseBody extends TeaModel {
     public Long updatedAt;
 
     /**
-     * <p>The visibility of the current Skill. Common values are user and tenant.</p>
+     * <p>The visibility of the current skill. Common values are user and tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>

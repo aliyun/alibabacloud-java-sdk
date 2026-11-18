@@ -1,3 +1,8 @@
+2026-11-18 Version: 1.2.0
+- Support API GetWorkflowGlobalEnv.
+- Support API SaveWorkflowGlobalEnv.
+
+
 2026-09-18 Version: 1.0.0
 - Generated java 2026-07-01 for Ada.
 

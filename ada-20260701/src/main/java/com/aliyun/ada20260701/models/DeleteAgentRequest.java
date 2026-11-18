@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAgentRequest extends TeaModel {
     /**
-     * <p>The name of the Agent to delete.</p>
+     * <p>The name of the agent to be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

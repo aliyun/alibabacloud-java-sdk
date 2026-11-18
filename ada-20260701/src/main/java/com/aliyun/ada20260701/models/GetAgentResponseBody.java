@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentResponseBody extends TeaModel {
     /**
-     * <p>Agent ID。</p>
+     * <p>The agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>agent_00000000000000000000000000000001</p>
@@ -23,7 +23,7 @@ public class GetAgentResponseBody extends TeaModel {
     public Long agentVersion;
 
     /**
-     * <p>Indicates whether the current identity can delete the agent.</p>
+     * <p>Specifies whether the current identity can delete the agent.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class GetAgentResponseBody extends TeaModel {
     public Boolean canDelete;
 
     /**
-     * <p>Indicates whether the current identity can modify the agent.</p>
+     * <p>Specifies whether the current identity can modify the agent.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -62,7 +62,7 @@ public class GetAgentResponseBody extends TeaModel {
      * <p>The display name of the agent. This field may not be returned if it is not configured.</p>
      * 
      * <strong>example:</strong>
-     * <p>CR Code Review Agent</p>
+     * <p>CR code review agent</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
@@ -77,7 +77,7 @@ public class GetAgentResponseBody extends TeaModel {
     public Object knowledgeBases;
 
     /**
-     * <p>The display metadata of the agent. For specific fields, see &quot;Supplementary description of response elements&quot;.</p>
+     * <p>The display metadata of the agent. For specific fields, see the supplementary description of response parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;iconUrl&quot;:&quot;<a href="https://example.com/icons/code-review-agent.png%22%7D">https://example.com/icons/code-review-agent.png&quot;}</a></p>
@@ -86,7 +86,7 @@ public class GetAgentResponseBody extends TeaModel {
     public Object metadata;
 
     /**
-     * <p>The saved model configuration. This field is returned only for official agents. The value supports an object array and is compatible with legacy single objects and strings. An empty array returns [ \]. Object arrays preserve the original order, duplicate names, and object fields.</p>
+     * <p>The saved model configuration. This information is returned only for official agents. Object arrays are supported, and historical single objects and strings are compatible. An empty array returns [ \]. Object arrays retain the original order, duplicate names, and object fields.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;base&quot;,&quot;default&quot;:true},{&quot;name&quot;:&quot;base&quot;},{&quot;name&quot;:&quot;base&quot;,&quot;settings&quot;:{&quot;thinking&quot;:false,&quot;topK&quot;:5}}]</p>
@@ -104,7 +104,7 @@ public class GetAgentResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Indicates whether the agent is an official agent provided by the platform.</p>
+     * <p>Specifies whether the agent is an official agent provided by the platform.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -113,7 +113,7 @@ public class GetAgentResponseBody extends TeaModel {
     public Boolean official;
 
     /**
-     * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
+     * <p>The request ID. It is used for Tracing Analysis and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>
@@ -122,7 +122,7 @@ public class GetAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of skill references. For specific fields, see &quot;Supplementary description of response elements&quot;.</p>
+     * <p>The list of skill references. For specific fields, see the supplementary description of response parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;code-review&quot;}]</p>
@@ -143,13 +143,13 @@ public class GetAgentResponseBody extends TeaModel {
      * <p>The system prompt. This field may not be returned if it is not configured.</p>
      * 
      * <strong>example:</strong>
-     * <p>Check the correctness, security, and maintainability of code changes in the CR, and provide review comments by severity</p>
+     * <p>Please check the correctness, security, and maintainability of the code changes in the CR, and provide review comments based on severity</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
     /**
-     * <p>The list of MCP Server and Connector name references. For element fields, see the following section.</p>
+     * <p>The list of MCP server and connector name references. For element fields, see the following sections.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;mcpServerName&quot;:&quot;code-repository-mcp&quot;},{&quot;connectorName&quot;:&quot;code-review-data&quot;}]</p>
@@ -158,7 +158,7 @@ public class GetAgentResponseBody extends TeaModel {
     public Object tools;
 
     /**
-     * <p>The most recent update time. The value is a UNIX timestamp in milliseconds.</p>
+     * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1788332700000</p>

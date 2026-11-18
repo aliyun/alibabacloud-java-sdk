@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateAgentRequest extends TeaModel {
     /**
-     * <p>The description of the Agent.</p>
+     * <p>The description of the agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>Analyzes code changes and generates CR review comments</p>
+     * <p>Analyze code changes and generate code review comments</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The display name of the Agent.</p>
+     * <p>The display name of the agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>CR Code Review Agent</p>
+     * <p>Code review agent</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>The knowledge base reference list, which contains at most one element.</p>
+     * <p>The list of knowledge base references, which can contain at most one element.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;code-review-guidelines&quot;}]</p>
@@ -32,7 +32,7 @@ public class CreateAgentRequest extends TeaModel {
     public Object knowledgeBases;
 
     /**
-     * <p>The Agent name, which is also the unique identifier that cannot be modified after creation.</p>
+     * <p>The name of the agent, which is also the unique identifier that cannot be modified after creation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateAgentRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The Skill reference list. For specific fields, see &quot;Supplementary description of request parameters&quot;.</p>
+     * <p>The list of skill references. For specific fields, refer to the supplementary description of request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;code-review&quot;}]</p>
@@ -54,13 +54,13 @@ public class CreateAgentRequest extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>Check the correctness, security, and maintainability of code changes in the CR, and provide review comments by severity</p>
+     * <p>Check the correctness, security, and maintainability of code changes in the code review, and provide review comments based on severity</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
 
     /**
-     * <p>The reference list of MCP Server and Connector names. The same array supports both types of entries. Each entry specifies one type of reference. If items is omitted for an MCP Server, all public tools are included. Previously specified items retain their original values.</p>
+     * <p>The list of references to MCP server and connector names. The same array supports both types of entries. Specify only one type of reference for each entry. For MCP, omitting items indicates all public tools, and historically specified items retain their original values.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;mcpServerName&quot;:&quot;code-repository-mcp&quot;},{&quot;connectorName&quot;:&quot;code-review-data&quot;}]</p>
@@ -69,12 +69,7 @@ public class CreateAgentRequest extends TeaModel {
     public Object tools;
 
     /**
-     * <p>The visibility scope of the Agent. Valid values:</p>
-     * <ul>
-     * <li>user</li>
-     * <li>tenant</li>
-     * </ul>
-     * <p>Default value: user.</p>
+     * <p>The visibility scope of the agent. Valid values: user and tenant. Default value: user.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>

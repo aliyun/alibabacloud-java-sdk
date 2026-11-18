@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTransitMetaResponseBody extends TeaModel {
     /**
-     * <p>The temporary download URL. If <code>Network</code> is not specified, <code>null</code> is returned. If the file is not yet available, the URL may not be accessible. Do not write this URL to logs, persist it for long-term use, or share it with unauthorized users.</p>
+     * <p>The temporary download URL. If Network is not specified, null is returned. If the file is not yet available, the URL may be unavailable. Do not write this URL to logs, store it for a long time, or forward it to unrelated users.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://download.example.invalid/code-review.zip?signature=">https://download.example.invalid/code-review.zip?signature=</a><REDACTED></p>
@@ -14,7 +14,7 @@ public class GetTransitMetaResponseBody extends TeaModel {
     public String downloadUrl;
 
     /**
-     * <p>The expiration time of the Transit record, expressed as a UTC UNIX timestamp in milliseconds (the number of milliseconds elapsed since 1970-01-01 00:00:00 UTC). You can compare this value directly with the current UNIX timestamp in milliseconds without adding or subtracting 8 hours. Do not use the record after this time.</p>
+     * <p>The expiration time of the transit record. The value is a UTC UNIX timestamp in milliseconds, which indicates the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970. You can directly compare it with the current UNIX timestamp in milliseconds without adding or subtracting 8 hours. Do not continue to use the record after this time.</p>
      * 
      * <strong>example:</strong>
      * <p>1787734800000</p>
@@ -23,7 +23,7 @@ public class GetTransitMetaResponseBody extends TeaModel {
     public Long expireAt;
 
     /**
-     * <p>The opaque object path of the file. Do not parse or manually construct this value.</p>
+     * <p>The opaque object path corresponding to the file. Callers must not parse or construct this value.</p>
      * 
      * <strong>example:</strong>
      * <p>skill-bundle/tenant-demo/user-demo/20260904120000_code-review.zip</p>
@@ -41,7 +41,7 @@ public class GetTransitMetaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The file size in bytes. <code>null</code> may be returned if no available file has been detected.</p>
+     * <p>The file size in bytes. If no available file is detected, null may be returned.</p>
      * 
      * <strong>example:</strong>
      * <p>4096</p>
@@ -50,11 +50,7 @@ public class GetTransitMetaResponseBody extends TeaModel {
     public Long size;
 
     /**
-     * <p>The Transit file status. Valid values:</p>
-     * <ul>
-     * <li>PENDING: The file is not yet available. You can query again later.</li>
-     * <li>SUCCESS: The file is available.</li>
-     * </ul>
+     * <p>The status of the transit file. A value of PENDING indicates that the file is not yet available and the caller can query again later. A value of SUCCESS indicates that the file is available.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -63,7 +59,7 @@ public class GetTransitMetaResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Transit ID。</p>
+     * <p>The transit ID.</p>
      * 
      * <strong>example:</strong>
      * <p>transit_0123456789abcdef0123456789abcdef</p>

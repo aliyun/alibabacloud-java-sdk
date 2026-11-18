@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTransitUploadPolicyResponseBody extends TeaModel {
     /**
-     * <p>The object storage key, which is also the <code>key</code> field in the PostObject form.</p>
+     * <p>The object storage key, which is also the key in the PostObject form.</p>
      * 
      * <strong>example:</strong>
      * <p>skill-bundle/tenant-demo/user-demo/20260904120000_0123456789abcdef0123456789abcdef.zip</p>
@@ -14,13 +14,13 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
     public String filePath;
 
     /**
-     * <p>The upload policy object. For the complete list of subfields, see the following table.</p>
+     * <p>The upload policy object. For more information about the complete sub-fields, see the following table.</p>
      */
     @NameInMap("PolicyInfo")
     public CreateTransitUploadPolicyResponseBodyPolicyInfo policyInfo;
 
     /**
-     * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
+     * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>
@@ -29,7 +29,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the upload policy is generated. A successful response always returns <code>true</code>. An error response is returned upon failure.</p>
+     * <p>Indicates whether the upload policy is successfully generated. A success response always returns true. An error response is returned upon failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,7 +38,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the newly created Transit record, used for subsequent queries and storage operations.</p>
+     * <p>The ID of the newly created transit record, which can be used for subsequent queries and storage.</p>
      * 
      * <strong>example:</strong>
      * <p>transit_0123456789abcdef0123456789abcdef</p>
@@ -93,7 +93,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
 
     public static class CreateTransitUploadPolicyResponseBodyPolicyInfo extends TeaModel {
         /**
-         * <p>The <code>OSSAccessKeyId</code> field in the PostObject form. Protect this value together with the entire <code>PolicyInfo</code>.</p>
+         * <p>The OSSAccessKeyId in the PostObject form. This field must be properly protected along with the entire PolicyInfo.</p>
          * 
          * <strong>example:</strong>
          * <REDACTED>
@@ -102,7 +102,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         public String accessId;
 
         /**
-         * <p>The object storage key. The value is the same as the top-level <code>FilePath</code>.</p>
+         * <p>The object storage key. The value is the same as the top-level FilePath.</p>
          * 
          * <strong>example:</strong>
          * <p>skill-bundle/tenant-demo/user-demo/20260904120000_0123456789abcdef0123456789abcdef.zip</p>
@@ -111,7 +111,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         public String dir;
 
         /**
-         * <p>The target URL to which the client sends the PostObject request.</p>
+         * <p>The destination URL for the client to execute the PostObject request.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://upload.example.invalid">https://upload.example.invalid</a></p>
@@ -120,7 +120,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>The Base64-encoded PostObject upload policy. Protect this value together with the entire <code>PolicyInfo</code>.</p>
+         * <p>The Base64-encoded PostObject upload policy. This field must be properly protected along with the entire PolicyInfo.</p>
          * 
          * <strong>example:</strong>
          * <REDACTED>
@@ -129,7 +129,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         public String policy;
 
         /**
-         * <p>The <code>x-oss-security-token</code> field in the PostObject form when STS credentials are used. This field may be empty when STS is not used. This field contains sensitive authorization information.</p>
+         * <p>The x-oss-security-token in the PostObject form when Security Token Service (STS) credentials are used. This field may be empty if STS is not used. This field contains sensitive authorization information.</p>
          * 
          * <strong>example:</strong>
          * <REDACTED>
@@ -138,7 +138,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         public String securityToken;
 
         /**
-         * <p>The signature field in the PostObject form. This field contains sensitive authorization information.</p>
+         * <p>The signature of the PostObject form. This field contains sensitive authorization information.</p>
          * 
          * <strong>example:</strong>
          * <REDACTED>

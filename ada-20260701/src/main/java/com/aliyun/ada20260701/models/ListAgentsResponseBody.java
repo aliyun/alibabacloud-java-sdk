@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAgentsResponseBody extends TeaModel {
     /**
-     * <p>The list of agent summaries. For field details, see &quot;Supplementary description of response parameters&quot;.</p>
+     * <p>The list of agent summaries. For field details of each element, see the supplementary description of response parameters.</p>
      */
     @NameInMap("Agents")
     public java.util.List<?> agents;
 
     /**
-     * <p>The actual cursor-based pagination size used.</p>
+     * <p>The actual page size used for cursor-based pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The next page token. An empty string is returned if there is no next page.</p>
+     * <p>The next token. An empty string is returned if there are no more pages.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJwYWdlIjoyfQ.example</p>
@@ -47,7 +47,7 @@ public class ListAgentsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
+     * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>

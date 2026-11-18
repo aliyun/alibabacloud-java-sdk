@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTransitMetaRequest extends TeaModel {
     /**
-     * <p>The validity period of the temporary download URL, in milliseconds. The value must be an integer greater than or equal to 1000 and is rounded down to the nearest whole second. If <code>ExpireMs</code> is not specified, the default validity period is <code>900000</code> milliseconds (15 minutes). A download URL is generated only when <code>Network</code> is specified.</p>
+     * <p>The validity period of the temporary download URL generated for the current request, in milliseconds. The value must be an integer no less than 1000 and is rounded down to the nearest second. If ExpireMs is omitted, the default validity period is 900000 milliseconds, which indicates 15 minutes. A download URL is generated only when Network is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>900000</p>
@@ -14,7 +14,7 @@ public class GetTransitMetaRequest extends TeaModel {
     public Long expireMs;
 
     /**
-     * <p>The opaque object path returned by <code>CreateTransitUploadPolicy</code>. Specify at least one of this parameter and <code>TransitId</code>.</p>
+     * <p>The opaque object path returned by CreateTransitUploadPolicy. Specify at least one of FilePath and TransitId.</p>
      * 
      * <strong>example:</strong>
      * <p>skill-bundle/tenant-demo/user-demo/20260904120000_code-review.zip</p>
@@ -23,7 +23,7 @@ public class GetTransitMetaRequest extends TeaModel {
     public String filePath;
 
     /**
-     * <p>The network type for the download URL. Valid values: <code>public</code> and <code>internal</code>. If this parameter is not specified, no download URL is generated.</p>
+     * <p>The network type used for the download URL. Valid values: public and internal. If this parameter is omitted, no download URL is generated.</p>
      * 
      * <strong>example:</strong>
      * <p>public</p>
@@ -32,7 +32,7 @@ public class GetTransitMetaRequest extends TeaModel {
     public String network;
 
     /**
-     * <p>The Transit ID. Specify at least one of this parameter and <code>FilePath</code>. If both are specified, this parameter takes precedence.</p>
+     * <p>The transit ID. Specify at least one of TransitId and FilePath. If both are provided, TransitId takes precedence.</p>
      * 
      * <strong>example:</strong>
      * <p>transit_0123456789abcdef0123456789abcdef</p>

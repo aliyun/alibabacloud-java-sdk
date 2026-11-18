@@ -23,7 +23,7 @@ public class ListAgentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The next page token returned in the previous response.</p>
+     * <p>The next token returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJwYWdlIjoyfQ.example</p>
@@ -50,16 +50,16 @@ public class ListAgentsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The search keyword. Matches the name, display name, or description.</p>
+     * <p>The search keyword used to match the name, display name, or description.</p>
      * 
      * <strong>example:</strong>
-     * <p>code review</p>
+     * <p>Code review</p>
      */
     @NameInMap("Q")
     public String q;
 
     /**
-     * <p>Filters agents by runtime label.</p>
+     * <p>Filters agents by the runtime tag.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen</p>
@@ -68,7 +68,7 @@ public class ListAgentsRequest extends TeaModel {
     public String requiredRuntime;
 
     /**
-     * <p>The query scope. Valid values: <code>SYSTEM</code> and <code>CUSTOM</code>.</p>
+     * <p>The query scope. Valid values: SYSTEM and CUSTOM.</p>
      * 
      * <strong>example:</strong>
      * <p>CUSTOM</p>
@@ -77,7 +77,7 @@ public class ListAgentsRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>Filters agents by visibility scope. Valid values: <code>user</code> and <code>tenant</code>.</p>
+     * <p>Filters agents by visibility scope. Valid values: user and tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>

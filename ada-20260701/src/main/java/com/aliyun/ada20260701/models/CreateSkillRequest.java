@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSkillRequest extends TeaModel {
     /**
-     * <p>The description of the Skill.</p>
+     * <p>The description of the skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateSkillRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The Skill metadata in JSON object format. Exactly one content source must be provided. For more information about the fields, see &quot;Request parameter description&quot;.</p>
+     * <p>The metadata of the skill, in JSON object format. One and only one content source must be provided. For specific fields, refer to the supplementary description of request parameters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateSkillRequest extends TeaModel {
     public Object metadata;
 
     /**
-     * <p>The unique identifier of the Skill. Only letters, digits, underscores, and hyphens are supported. The value can be up to 64 characters in length.</p>
+     * <p>The unique identifier of the skill. Only letters, digits, underscores, and hyphens are supported. The length cannot exceed 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,12 +35,7 @@ public class CreateSkillRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The visibility of the Skill. Valid values:</p>
-     * <ul>
-     * <li>user</li>
-     * <li>tenant</li>
-     * </ul>
-     * <p>Default value: user.</p>
+     * <p>The visibility of the skill. Valid values: <code>user</code> and <code>tenant</code>. Default value: <code>user</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>

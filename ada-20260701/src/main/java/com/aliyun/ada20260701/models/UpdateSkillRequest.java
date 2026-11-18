@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateSkillRequest extends TeaModel {
     /**
-     * <p>The updated description of the Skill.</p>
+     * <p>The updated description of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>A Skill for performing code reviews, security checks, and risk alerts</p>
+     * <p>A skill used to perform code review, security checks, and risk alerts</p>
      */
     @NameInMap("Description")
     public String description;
@@ -23,7 +23,7 @@ public class UpdateSkillRequest extends TeaModel {
     public Long expectedVersion;
 
     /**
-     * <p>The updated Skill metadata. The JSON object is replaced as a whole. The content supports exactly one of Transit ID, bundleUrl, or skillMd.</p>
+     * <p>The updated metadata of the skill. The JSON object is replaced as a whole. The content supports one of the following: Transit ID, bundleUrl, or skillMd.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;transitId&quot;:&quot;transit_example456&quot;}</p>
@@ -32,7 +32,7 @@ public class UpdateSkillRequest extends TeaModel {
     public Object metadata;
 
     /**
-     * <p>The name of the Skill to update. This parameter is used only to locate the Skill and cannot be used to modify the name.</p>
+     * <p>The name of the skill to be updated. This parameter is used only to locate the skill and cannot be used to modify the name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

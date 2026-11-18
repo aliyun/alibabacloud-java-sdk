@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSkillResponseBody extends TeaModel {
     /**
-     * <p>The Skill name.</p>
+     * <p>The name of the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>code-review</p>
@@ -23,7 +23,7 @@ public class UpdateSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Skill ID。</p>
+     * <p>The skill ID.</p>
      * 
      * <strong>example:</strong>
      * <p>skill_example123</p>
@@ -32,7 +32,7 @@ public class UpdateSkillResponseBody extends TeaModel {
     public String skillId;
 
     /**
-     * <p>Returns <code>true</code> when the Skill update and optional bundle replacement have been fully committed and confirmed by read-back.</p>
+     * <p>Indicates whether the operation is successful. A value of <code>true</code> is returned when the skill update and optional bundle replacement are fully submitted and confirmed by read-back.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class UpdateSkillResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The time when the Skill was updated, in UNIX millisecond timestamp.</p>
+     * <p>The time when the skill was updated. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1760000200000</p>
