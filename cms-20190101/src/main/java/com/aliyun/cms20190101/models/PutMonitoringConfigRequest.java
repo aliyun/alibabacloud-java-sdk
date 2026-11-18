@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutMonitoringConfigRequest extends TeaModel {
     /**
-     * <p>Ignore this parameter.</p>
+     * <p>This parameter is not used.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -13,14 +13,25 @@ public class PutMonitoringConfigRequest extends TeaModel {
     @NameInMap("AutoInstall")
     public Boolean autoInstall;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can generate the token on your client to ensure that the token is unique across different requests. The client token supports only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>6868E9A1-56E6-5FD7-9684-E2963BBAFB5F</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Sends a dry run request without deleting the endpoint IPAM pool. The system checks whether all required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): Sends a normal request and directly deletes the endpoint IPAM pool if the request passes the check.</li>
+     * <li><strong>true</strong>: sends a check request without deleting the endpoint IPAM pool. The check items include whether required parameters are specified, the request format, and service limits. If the request fails the check, an error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default value): sends a normal request and directly deletes the endpoint IPAM pool if the request passes the check.
+     * Default value: <strong>false</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,10 +43,9 @@ public class PutMonitoringConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically install the CloudMonitor agent on newly purchased ECS instances. Valid values:</p>
      * <ul>
-     * <li><p>true (default): Automatically installs the CloudMonitor agent on newly purchased ECS instances.</p>
-     * </li>
-     * <li><p>false: Does not automatically install the CloudMonitor agent on newly purchased ECS instances.</p>
-     * </li>
+     * <li>true: Automatically installs the CloudMonitor agent on newly purchased ECS instances.</li>
+     * <li>false: Does not automatically install the CloudMonitor agent on newly purchased ECS instances.
+     * Default value: true.</li>
      * </ul>
      * 
      * <strong>example:</strong>

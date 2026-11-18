@@ -4,67 +4,24 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeExporterOutputListResponseBody extends TeaModel {
-    /**
-     * <p>The HTTP status code.</p>
-     * <blockquote>
-     * <p>A status code of 200 indicates success, and other values indicate failure.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Datapoints")
     public DescribeExporterOutputListResponseBodyDatapoints datapoints;
 
-    /**
-     * <p>The error message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sucess</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The current page number.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0E657631-CD6C-4C24-9637-98D000B9272C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful. Valid values:  </p>
-     * <ul>
-     * <li><code>true</code>: The call was successful.</li>
-     * <li><code>false</code>: The call failed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The total number of entries.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>25</p>
-     */
     @NameInMap("Total")
     public Integer total;
 

@@ -4,48 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutExporterRuleResponseBody extends TeaModel {
-    /**
-     * <p>The status code.</p>
-     * <blockquote>
-     * <p>200 indicates success.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The returned message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>The specified resource is not found.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>461CF2CD-2FC3-4B26-8645-7BD27E7D0F1D</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the operation is successful. Valid values:</p>
-     * <ul>
-     * <li><p>true: Successful.</p>
-     * </li>
-     * <li><p>false: Failed.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

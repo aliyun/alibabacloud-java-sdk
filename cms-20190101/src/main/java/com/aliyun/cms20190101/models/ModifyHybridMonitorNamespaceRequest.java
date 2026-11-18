@@ -8,7 +8,7 @@ public class ModifyHybridMonitorNamespaceRequest extends TeaModel {
      * <p>The description of the metric store.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alibaba Cloud product metric repository.</p>
+     * <p>阿里云产品指标仓库。</p>
      */
     @NameInMap("Description")
     public String description;

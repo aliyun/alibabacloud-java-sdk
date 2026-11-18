@@ -37,8 +37,8 @@ public class ModifyHybridMonitorTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The operation was successful.</li>
-     * <li>false: The operation failed.</li>
+     * <li>true: successful</li>
+     * <li>false: failed</li>
      * </ul>
      * 
      * <strong>example:</strong>

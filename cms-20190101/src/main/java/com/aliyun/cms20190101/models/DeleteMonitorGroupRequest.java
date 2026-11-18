@@ -4,14 +4,20 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupRequest extends TeaModel {
+    /**
+     * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see How to ensure idempotence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6868E9A1-56E6-5FD7-9684-E2963BBAFB5F</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run on the request. The dry run checks permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to execute a dry run on the request, including checks on permissions and instance status. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, the name and description of the route table are modified.</li>
-     * <li><strong>true</strong>: sends a dry run request. Only the check is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the check succeeds, the name and description of the routing table are directly modified.</li>
+     * <li><strong>true</strong>: Sends a check request to only perform the check, and the name and description of the routing table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchExportResponseBody extends TeaModel {
     /**
-     * <p>The timestamp when the backend requested the data. A larger timestamp indicates that the exported data is closer to the current time.</p>
+     * <p>The timestamp when the backend requests data. A larger timestamp indicates that the exported data is closer to the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>1678781819000</p>
@@ -16,7 +16,7 @@ public class BatchExportResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p>A status code of 200 indicates success.</p>
+     * <p>A status code of 200 indicates that the call was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class BatchExportResponseBody extends TeaModel {
     /**
      * <p>The cursor used for the next call to this operation.</p>
      * <blockquote>
-     * <p>If the return value is <code>null</code>, the monitoring data export is complete.</p>
+     * <p>If the value is null, the monitoring data export is complete.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class BatchExportResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the data export is complete. Valid values:</p>
      * <ul>
-     * <li><p>true: The data export is incomplete.</p>
+     * <li><p>true: The data export is not complete.</p>
      * </li>
      * <li><p>false: The data export is complete.</p>
      * </li>
@@ -86,11 +86,11 @@ public class BatchExportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p>true: The call was successful.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p>false: The call failed.</p>
      * </li>
      * </ul>
      * 

@@ -23,10 +23,10 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
     public DeleteSiteMonitorsResponseBodyData data;
 
     /**
-     * <p>The returned message. If the request is successful, a success message is returned. If the request fails, the cause of the failure is returned, such as <code>TaskId not found</code>.</p>
+     * <p>The returned message. If the request succeeds, a success message is returned. If the request fails, the cause of the failure is returned, such as <code>TaskId not found</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Request succeeded.</p>
+     * <p>Request succeeded</p>
      */
     @NameInMap("Message")
     public String message;
@@ -41,7 +41,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. A value of true indicates success, and a value of false indicates failure.</p>
+     * <p>Indicates whether the operation is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

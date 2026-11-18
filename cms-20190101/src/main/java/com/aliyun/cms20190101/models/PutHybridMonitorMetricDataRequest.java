@@ -14,7 +14,7 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
 
     /**
      * <p>The name of the metric namespace.</p>
-     * <p>For information about how to obtain the name of a metric namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+     * <p>For more information about how to obtain the name of a metric namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,11 +57,11 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
 
     public static class PutHybridMonitorMetricDataRequestMetricListLabels extends TeaModel {
         /**
-         * <p>The key of the label of the metric.</p>
+         * <p>The label key of the metric.</p>
          * <p>Valid values of N: 1 to 100.</p>
-         * <p>Format: The key can contain uppercase letters, lowercase letters, digits, and underscores (<em>). The key must start with an uppercase letter, a lowercase letter, or an underscore (</em>).</p>
+         * <p>Format: The key can contain uppercase letters, lowercase letters, digits, and underscores (_). It must start with an uppercase letter, a lowercase letter, or an underscore.</p>
          * <blockquote>
-         * <p>Key and Value must be set at the same time.</p>
+         * <p>You must specify both Key and Value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -71,10 +71,10 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the label of the metric.</p>
+         * <p>The label value of the metric.</p>
          * <p>Valid values of N: 1 to 100.</p>
          * <blockquote>
-         * <p>Key and Value must be set at the same time.</p>
+         * <p>You must specify both Key and Value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -108,11 +108,12 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
 
     public static class PutHybridMonitorMetricDataRequestMetricList extends TeaModel {
         /**
-         * <p>The list of labels of the metric.</p>
+         * <p>The list of labels for the metric.</p>
          * <p>Valid values of N: 1 to 100.</p>
+         * <p>Identifiers such as app, ip, and hostName.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Key&quot;:&quot;app&quot;,&quot;Value&quot;:&quot;testApp&quot;},{&quot;Key&quot;:&quot;ip&quot;,&quot;Value&quot;:&quot;192.168.XX.XX&quot;},{&quot;Key&quot;:&quot;hostName&quot;,&quot;Value&quot;:&quot;host01&quot;}]</p>
+         * <p>[{&quot;Key&quot;:&quot;IP&quot;,&quot;Value&quot;:&quot;192.168.XX.XX&quot;}]</p>
          */
         @NameInMap("Labels")
         public java.util.List<PutHybridMonitorMetricDataRequestMetricListLabels> labels;
@@ -120,7 +121,7 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
         /**
          * <p>The name of the metric.</p>
          * <p>Valid values of N: 1 to 100.</p>
-         * <p>Format: The name can contain uppercase letters, lowercase letters, digits, and underscores (_). The name must start with an uppercase letter or a lowercase letter.</p>
+         * <p>Format: The name can contain uppercase letters, lowercase letters, digits, and underscores (_). It must start with an uppercase or lowercase letter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,7 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The timestamp when the monitoring data was reported.</p>
+         * <p>The timestamp when the monitoring data is reported.</p>
          * <p>Valid values of N: 1 to 100.</p>
          * <p>Unit: milliseconds. Default value: the current time.</p>
          * 
@@ -143,7 +144,7 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
         /**
          * <p>The value of the metric.</p>
          * <p>Valid values of N: 1 to 100.</p>
-         * <p>Format: an integer or a floating-point number.</p>
+         * <p>Format: integer or floating-point number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

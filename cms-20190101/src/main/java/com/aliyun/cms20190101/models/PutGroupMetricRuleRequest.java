@@ -9,7 +9,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
-     * <p>For information about how to obtain the abbreviation, see the metricCategory field in the Labels response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+     * <p>For information about how to obtain the abbreviation of the Alibaba Cloud service name, see <code>metricCategory</code> in the <code>Labels</code> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
@@ -17,6 +17,12 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>Ensures the idempotence of the request. You can generate a unique value for this parameter from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -31,7 +37,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The first-level dimension of the alert rule in the application group.</p>
-     * <p>Format: a collection of key:value pairs, such as <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> and <code>{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}</code>.</p>
+     * <p>Format: a collection of <code>key:value</code> pairs. Examples: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> and <code>{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}]</p>
@@ -42,8 +48,8 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     /**
      * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: A check request is sent, and no security group is associated with the instance. The check items include whether required parameters are specified, the request format, and service limits. If the check fails, an error is returned. If the check succeeds, the error code DryRunOperation is returned.</li>
-     * <li><strong>false</strong>: A normal request is sent. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</li>
+     * <li><strong>true</strong>: sends a precheck request. The system does not bind the security group to the instance. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the system returns an error. If the request passes the precheck, the system returns the <code>DryRunOperation</code> error code.</li>
+     * <li><strong>false</strong>: sends a normal request. If the request passes the precheck, the system returns an HTTP 2xx status code and performs the operation. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +78,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The second-level or third-level dimension of the alert rule in the application group.</p>
-     * <p>Format: a collection of key:value pairs, such as <code>port:80</code> and <code>/dev/xvda:d-m5e6yphgzn3aprwu****</code>.</p>
+     * <p>Format: a collection of <code>key:value</code> pairs. Examples: <code>port:80</code> and <code>/dev/xvda:d-m5e6yphgzn3aprwu****</code>.</p>
      * <p>If the first-level dimension of the alert rule is <code>{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}</code>, the second-level dimension is the cloud disk in the instance, such as <code>{&quot;/dev/xvda&quot;:&quot;d-m5e6yphgzn3aprwu****&quot;}</code>.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +101,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     /**
      * <p>The detection period of the alert rule. Unit: seconds.</p>
      * <blockquote>
-     * <p>Set the detection period of the alert rule to the same as the data reporting period. If the detection period is shorter than the data reporting period, alerts cannot be triggered due to insufficient data.</p>
+     * <p>Set the detection period of the alert rule to the same value as the data reporting period. If the detection period is shorter than the data reporting period, alerts cannot be triggered due to insufficient data.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,7 +130,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The namespace of the Alibaba Cloud service.</p>
-     * <p>For information about how to obtain the namespace, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
+     * <p>For information about how to obtain the namespace of the Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -134,11 +140,11 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The processing method when no monitoring data is available. Valid values:</p>
+     * <p>The action to take when no monitoring data is available. Valid values:</p>
      * <ul>
-     * <li>KEEP_LAST_STATE: No action is taken. This is the default value.</li>
-     * <li>INSUFFICIENT_DATA: An alert indicating insufficient data is triggered.</li>
-     * <li>OK: The status is normal.</li>
+     * <li>KEEP_LAST_STATE: no action is taken. This is the default value.</li>
+     * <li>INSUFFICIENT_DATA: an alert indicating no data is triggered.</li>
+     * <li>OK: normal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,7 +164,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The advanced settings.</p>
-     * <p>Format: <code>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}</code>. Example: <code>{&quot;NotSendOK&quot;:true}</code>, which specifies whether to send alert recovery notifications. The key is NotSendOK, and the value is true (do not send) or false (send, which is the default value).</p>
+     * <p>Format: <code>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}</code>. Example: <code>{&quot;NotSendOK&quot;:true}</code>, which specifies whether to send alert recovery notifications. The key is <code>NotSendOK</code>, and the value is <code>true</code> (do not send) or <code>false</code> (send, default).</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;NotSendOK&quot;:true}</p>
@@ -168,7 +174,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     /**
      * <p>The reporting period of monitoring data.</p>
-     * <p>The value of Period must be 60 or an integer multiple of 60. Unit: seconds. Default value: 300.</p>
+     * <p>The value of <code>Period</code> must be 60 or an integer multiple of 60. Unit: seconds. Default value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -219,7 +225,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     public Integer silenceTime;
 
     /**
-     * <p>The webhook URL that is called when an alert is triggered.</p>
+     * <p>The alert callback URL.</p>
      * <p>Enter a publicly accessible URL. CloudMonitor pushes alert notifications to this URL by sending POST requests. Only HTTP is supported.</p>
      * 
      * <strong>example:</strong>
@@ -411,19 +417,19 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     public static class PutGroupMetricRuleRequestEscalationsCritical extends TeaModel {
         /**
-         * <p>The threshold comparison operator for Critical-level alerts. Valid values:</p>
+         * <p>The threshold comparison operator for Critical alerts. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: Greater than or equal to the threshold.</li>
-         * <li>GreaterThanThreshold: Greater than the threshold.</li>
-         * <li>LessThanOrEqualToThreshold: Less than or equal to the threshold.</li>
-         * <li>LessThanThreshold: Less than the threshold.</li>
-         * <li>NotEqualToThreshold: Not equal to the threshold.</li>
-         * <li>GreaterThanYesterday: Greater than the value at the same time yesterday.</li>
-         * <li>LessThanYesterday: Less than the value at the same time yesterday.</li>
-         * <li>GreaterThanLastWeek: Greater than the value at the same time last week.</li>
-         * <li>LessThanLastWeek: Less than the value at the same time last week.</li>
-         * <li>GreaterThanLastPeriod: Greater than the value in the last period.</li>
-         * <li>LessThanLastPeriod: Less than the value in the last period.</li>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
+         * <li>GreaterThanThreshold: greater than the threshold.</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
+         * <li>LessThanThreshold: less than the threshold.</li>
+         * <li>NotEqualToThreshold: not equal to the threshold.</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday.</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday.</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week.</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week.</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last period.</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last period.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -433,8 +439,8 @@ public class PutGroupMetricRuleRequest extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>The statistical method for Critical-level alerts. Separate multiple statistical methods with commas (,).</p>
-         * <p>The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
+         * <p>The statistical method for Critical alerts. Separate multiple statistical methods with commas (,).</p>
+         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Average</p>
@@ -443,7 +449,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Critical-level alerts.</p>
+         * <p>The threshold for Critical alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -452,7 +458,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The number of retries for Critical-level alerts.</p>
+         * <p>The number of retries for Critical alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -501,19 +507,19 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     public static class PutGroupMetricRuleRequestEscalationsInfo extends TeaModel {
         /**
-         * <p>The threshold comparison operator for Info-level alerts. Valid values:</p>
+         * <p>The threshold comparison operator for Info alerts. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: Greater than or equal to the threshold.</li>
-         * <li>GreaterThanThreshold: Greater than the threshold.</li>
-         * <li>LessThanOrEqualToThreshold: Less than or equal to the threshold.</li>
-         * <li>LessThanThreshold: Less than the threshold.</li>
-         * <li>NotEqualToThreshold: Not equal to the threshold.</li>
-         * <li>GreaterThanYesterday: Greater than the value at the same time yesterday.</li>
-         * <li>LessThanYesterday: Less than the value at the same time yesterday.</li>
-         * <li>GreaterThanLastWeek: Greater than the value at the same time last week.</li>
-         * <li>LessThanLastWeek: Less than the value at the same time last week.</li>
-         * <li>GreaterThanLastPeriod: Greater than the value in the last period.</li>
-         * <li>LessThanLastPeriod: Less than the value in the last period.</li>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
+         * <li>GreaterThanThreshold: greater than the threshold.</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
+         * <li>LessThanThreshold: less than the threshold.</li>
+         * <li>NotEqualToThreshold: not equal to the threshold.</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday.</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday.</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week.</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week.</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last period.</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last period.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -523,8 +529,8 @@ public class PutGroupMetricRuleRequest extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>The statistical method for Info-level alerts. Separate multiple statistical methods with commas (,).</p>
-         * <p>The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
+         * <p>The statistical method for Info alerts. Separate multiple statistical methods with commas (,).</p>
+         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Average</p>
@@ -533,7 +539,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Info-level alerts.</p>
+         * <p>The threshold for Info alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -542,7 +548,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The number of retries for Info-level alerts.</p>
+         * <p>The number of retries for Info alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -591,19 +597,19 @@ public class PutGroupMetricRuleRequest extends TeaModel {
 
     public static class PutGroupMetricRuleRequestEscalationsWarn extends TeaModel {
         /**
-         * <p>The threshold comparison operator for Warn-level alerts. Valid values:</p>
+         * <p>The threshold comparison operator for Warn alerts. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: Greater than or equal to the threshold.</li>
-         * <li>GreaterThanThreshold: Greater than the threshold.</li>
-         * <li>LessThanOrEqualToThreshold: Less than or equal to the threshold.</li>
-         * <li>LessThanThreshold: Less than the threshold.</li>
-         * <li>NotEqualToThreshold: Not equal to the threshold.</li>
-         * <li>GreaterThanYesterday: Greater than the value at the same time yesterday.</li>
-         * <li>LessThanYesterday: Less than the value at the same time yesterday.</li>
-         * <li>GreaterThanLastWeek: Greater than the value at the same time last week.</li>
-         * <li>LessThanLastWeek: Less than the value at the same time last week.</li>
-         * <li>GreaterThanLastPeriod: Greater than the value in the last period.</li>
-         * <li>LessThanLastPeriod: Less than the value in the last period.</li>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
+         * <li>GreaterThanThreshold: greater than the threshold.</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
+         * <li>LessThanThreshold: less than the threshold.</li>
+         * <li>NotEqualToThreshold: not equal to the threshold.</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday.</li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday.</li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week.</li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week.</li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the last period.</li>
+         * <li>LessThanLastPeriod: less than the metric value in the last period.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -613,8 +619,8 @@ public class PutGroupMetricRuleRequest extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>The statistical method for Warn-level alerts. Separate multiple statistical methods with commas (,).</p>
-         * <p>The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
+         * <p>The statistical method for Warn alerts. Separate multiple statistical methods with commas (,).</p>
+         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Average</p>
@@ -623,7 +629,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Warn-level alerts.</p>
+         * <p>The threshold for Warn alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -632,7 +638,7 @@ public class PutGroupMetricRuleRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The number of retries for Warn-level alerts.</p>
+         * <p>The number of retries for Warn alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

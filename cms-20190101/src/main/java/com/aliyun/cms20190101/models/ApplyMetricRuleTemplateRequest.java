@@ -7,9 +7,9 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     /**
      * <p>The application policy of the template. Valid values:</p>
      * <ul>
-     * <li><p>all: deletes all rules created by using alert templates for the selected application group, and then creates alert rules based on the current template. This is the default value.</p>
+     * <li><p>all: deletes all rules created by using alert templates on the selected application groups, and then creates new alert rules based on the current template. This is the default value.</p>
      * </li>
-     * <li><p>append: deletes the rules created by using the current alert template for the selected application group, and then creates alert rules based on the current template.</p>
+     * <li><p>append: deletes the rules created by using the current alert template on the selected application groups, and then creates new alert rules based on the current template.</p>
      * </li>
      * </ul>
      * 
@@ -22,9 +22,9 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     /**
      * <p>The application mode of the template. Valid values:</p>
      * <ul>
-     * <li><p>GROUP_INSTANCE_FIRST: The instances in the application group take precedence. When the alert template is applied, the instances in the application group take precedence. If an instance specified in the template does not exist in the application group, the rule for the instance in the template is ignored.</p>
+     * <li><p>GROUP_INSTANCE_FIRST: application group instances take precedence. When the alert template is applied, the instances in the application group take precedence. If an instance specified in the template does not exist in the application group, the rule for the instance in the template is ignored.</p>
      * </li>
-     * <li><p>ALARM_TEMPLATE_FIRST: The instances in the alert template take precedence. When the alert template is applied, alert rules are created regardless of whether the instances exist in the application group.</p>
+     * <li><p>ALARM_TEMPLATE_FIRST: alert template instances take precedence. When the alert template is applied, alert rules are created regardless of whether the instances exist in the application group.</p>
      * </li>
      * </ul>
      * 
@@ -34,14 +34,20 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     @NameInMap("ApplyMode")
     public String applyMode;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, and you must make sure that the token is globally unique. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). For more information, see How to ensure idempotence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6868E9A1-56E6-5FD7-9684-E2963BBAFB5F</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run and does not bind a security group to the instance. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the dry run, an error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends a normal request. If the request passes the dry run, the HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: sends a check request. No security groups are bound to instances. The check items include whether the required parameters are specified, the request format, and the service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the check succeeds, the HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +57,7 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The end time of the effective period for the alert rule. The value is a two-digit string, such as &quot;00&quot;, &quot;18&quot;, or &quot;23&quot;. Valid values: 00 to 23. The value specifies the hour of the end time, and the effective period ends at the 59th minute of the hour. For example, &quot;23&quot; indicates that the effective period ends at 23:59. The default time zone is UTC+8.</p>
+     * <p>The end hour of the effective period for the alert. The value is a two-digit string, such as &quot;00&quot;, &quot;18&quot;, or &quot;23&quot;. Valid values: 00 to 23. The value specifies the hour when the effective period ends, and the period actually ends at the 59th minute of the hour. For example, &quot;23&quot; indicates that the effective period ends at 23:59. The default time zone is UTC+8.</p>
      * 
      * <strong>example:</strong>
      * <p>23</p>
@@ -60,7 +66,7 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     public Long enableEndTime;
 
     /**
-     * <p>The start time of the effective period for the alert rule. The value is a two-digit string, such as &quot;00&quot;, &quot;09&quot;, or &quot;23&quot;. Valid values: 00 to 23, which represent 00:00 to 23:00. The default time zone is UTC+8.</p>
+     * <p>The start hour of the effective period for the alert. The value is a two-digit string, such as &quot;00&quot;, &quot;09&quot;, or &quot;23&quot;. Valid values: 00 to 23, which represent 00:00 to 23:00. The default time zone is UTC+8.</p>
      * 
      * <strong>example:</strong>
      * <p>00</p>
@@ -117,7 +123,7 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     public String templateIds;
 
     /**
-     * <p>The webhook URL. When an alert is triggered, a POST request is sent to the specified URL.</p>
+     * <p>The webhook URL to which an HTTP POST request is sent when an alert is triggered.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>

@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSiteMonitorResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
-     * <blockquote>
-     * <p>200 indicates success.</p>
-     * </blockquote>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

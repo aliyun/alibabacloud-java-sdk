@@ -30,7 +30,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
      * <p>The description of the monitoring task.</p>
      * 
      * <strong>example:</strong>
-     * <p>SLS log monitoring data</p>
+     * <p>SLS Log Monitoring data.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -45,7 +45,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     public ModifyHybridMonitorTaskRequestSLSProcessConfig SLSProcessConfig;
 
     /**
-     * <p>The monitoring task ID.</p>
+     * <p>The ID of the monitoring task.</p>
      * <p>For information about how to obtain the monitoring task ID, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</p>
      * <p>This parameter is required.</p>
      * 
@@ -56,7 +56,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The monitoring task name.</p>
+     * <p>The name of the monitoring task.</p>
      * <p>For information about how to obtain the monitoring task ID, see <a href="https://help.aliyun.com/document_detail/428624.html">DescribeHybridMonitorTaskList</a>.</p>
      * 
      * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestAttachLabels extends TeaModel {
         /**
-         * <p>The label key of the metric.</p>
+         * <p>The key of the metric label.</p>
          * 
          * <strong>example:</strong>
          * <p>app_service</p>
@@ -137,7 +137,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The label value of the metric.</p>
+         * <p>The value of the metric label.</p>
          * 
          * <strong>example:</strong>
          * <p>testValue</p>
@@ -170,7 +170,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigExpress extends TeaModel {
         /**
-         * <p>The alias of the arithmetic result of the extended fields for the SLS log statistics result.</p>
+         * <p>The alias for the result of arithmetic operations on the extended fields of the SLS log statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>SuccRate</p>
@@ -179,7 +179,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String alias;
 
         /**
-         * <p>The arithmetic result of the extended fields for the SLS log statistics result.</p>
+         * <p>The result of arithmetic operations on the extended fields of the SLS log statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>success_count</p>
@@ -212,16 +212,16 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters extends TeaModel {
         /**
-         * <p>The method used to filter parameter values in the SLS log. Valid values:</p>
+         * <p>The filter method for parameter values in SLS logs. Valid values:</p>
          * <ul>
-         * <li><code>contain</code>: contains.</li>
-         * <li><code>notContain</code>: does not contain.</li>
-         * <li><code>&gt;</code>: greater than.</li>
-         * <li><code>&lt;</code>: less than.</li>
-         * <li><code>=</code>: equal to.</li>
-         * <li><code>!=</code>: not equal to.</li>
-         * <li><code>&gt;=</code>: greater than or equal to.</li>
-         * <li><code>&lt;=</code>: less than or equal to.</li>
+         * <li><code>contain</code>: includes</li>
+         * <li><code>notContain</code>: does not include</li>
+         * <li><code>&gt;</code>: greater than</li>
+         * <li><code>&lt;</code>: less than</li>
+         * <li><code>=</code>: equal to</li>
+         * <li><code>!=</code>: not equal to</li>
+         * <li><code>&gt;=</code>: greater than or equal to</li>
+         * <li><code>&lt;=</code>: less than or equal to</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String operator;
 
         /**
-         * <p>The name of the parameter to filter in the SLS log.</p>
+         * <p>The name of the parameter to be filtered in SLS logs.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -240,7 +240,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String SLSKeyName;
 
         /**
-         * <p>The filter value of the parameter in the SLS log.</p>
+         * <p>The filter value of the parameter in SLS logs.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -287,10 +287,10 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters> filters;
 
         /**
-         * <p>The relationship between multiple filter conditions. Valid values:</p>
+         * <p>The relationship between multiple filter conditions for parameters. Valid values:</p>
          * <ul>
-         * <li>and (default): The log is processed only when all filter conditions are met.</li>
-         * <li>or: The log is processed when any filter condition is met.</li>
+         * <li>and: logs are processed only when all filter conditions are met. This is the default value.</li>
+         * <li>or: logs are processed when any filter condition is met.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -324,7 +324,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigGroupBy extends TeaModel {
         /**
-         * <p>The alias of the SLS log statistics result.</p>
+         * <p>The alias for the SLS log statistics result.</p>
          * 
          * <strong>example:</strong>
          * <p>ApiResult</p>
@@ -366,7 +366,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigStatistics extends TeaModel {
         /**
-         * <p>The alias of the SLS log statistics result.</p>
+         * <p>The alias for the SLS log statistics result.</p>
          * 
          * <strong>example:</strong>
          * <p>level_count</p>
@@ -375,19 +375,19 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String alias;
 
         /**
-         * <p>The statistical method used to aggregate log data within a statistical period. Valid values:</p>
+         * <p>The aggregation method used to process log data within the calculation period. Valid values:</p>
          * <ul>
-         * <li>count: counts the number of entries.</li>
-         * <li>sum: calculates the sum.</li>
-         * <li>avg: calculates the average.</li>
-         * <li>max: returns the maximum value.</li>
-         * <li>min: returns the minimum value.</li>
-         * <li>value: samples within the period.</li>
-         * <li>countps: calculates the average count per second for the specified field within the statistical period.</li>
-         * <li>sumps: calculates the average sum per second for the specified field within the statistical period.</li>
-         * <li>distinct: calculates the number of occurrences of the specified field after deduplication within the statistical period.</li>
-         * <li>distribution: calculates the number of occurrences of field values within a specified range.</li>
-         * <li>percentile: calculates the distribution value of field values, for example, P50.</li>
+         * <li>count: count</li>
+         * <li>sum: sum</li>
+         * <li>avg: average value</li>
+         * <li>max: maximum value</li>
+         * <li>min: minimum value</li>
+         * <li>value: sampling within the period</li>
+         * <li>countps: average count per second of the specified field within the statistical period</li>
+         * <li>sumps: average sum per second of the specified field within the statistical period</li>
+         * <li>distinct: count of occurrences of the specified field after deduplication within the statistical period</li>
+         * <li>distribution: count of occurrences of field values within a specified range</li>
+         * <li>percentile: percentile of field values, such as P50</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,9 +397,9 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String function;
 
         /**
-         * <p>The statistical value of the SLS log.</p>
+         * <p>The statistical value of SLS logs.</p>
          * <ul>
-         * <li><p>If <code>Function</code> is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 200.</p>
+         * <li><p>If <code>Function</code> is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical range. For example, to count the number of 2XX <code>HttpCode</code> status codes, enter 200.</p>
          * </li>
          * <li><p>If <code>Function</code> is set to <code>percentile</code>, this parameter specifies the percentile of the statistical distribution. For example, 0.5 indicates P50.</p>
          * </li>
@@ -412,9 +412,9 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String parameter1;
 
         /**
-         * <p>The statistical value of the SLS log.</p>
+         * <p>The statistical value of SLS logs.</p>
          * <blockquote>
-         * <p>This parameter is required only when <code>Function</code> is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 299.</p>
+         * <p>This parameter is required only when <code>Function</code> is set to <code>distribution</code>. It specifies the upper limit of the statistical range. For example, to count the number of 2XX <code>HttpCode</code> status codes, enter 299.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -481,19 +481,19 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfig extends TeaModel {
         /**
-         * <p>The arithmetic result of the extended fields for the SLS log statistics result.</p>
+         * <p>The result of arithmetic operations on the extended fields of the SLS log statistics.</p>
          */
         @NameInMap("Express")
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigExpress> express;
 
         /**
-         * <p>The filter conditions for parameters in the SLS log.</p>
+         * <p>The filter conditions for parameters in SLS logs.</p>
          */
         @NameInMap("Filter")
         public ModifyHybridMonitorTaskRequestSLSProcessConfigFilter filter;
 
         /**
-         * <p>The spatial dimension used to aggregate data, which is equivalent to the GROUP BY clause in SQL.</p>
+         * <p>The spatial dimension for data aggregation, equivalent to the GROUP BY clause in SQL.</p>
          */
         @NameInMap("GroupBy")
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigGroupBy> groupBy;

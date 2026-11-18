@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutGroupMetricRuleResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>A status code of 200 indicates success.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,9 +43,9 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation is successful.</p>
+     * <li><p>true: successful.</p>
      * </li>
-     * <li><p>false: The operation fails.</p>
+     * <li><p>false: failed.</p>
      * </li>
      * </ul>
      * 

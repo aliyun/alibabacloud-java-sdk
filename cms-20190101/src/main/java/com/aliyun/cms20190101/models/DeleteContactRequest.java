@@ -14,6 +14,15 @@ public class DeleteContactRequest extends TeaModel {
     @NameInMap("ContactName")
     public String contactName;
 
+    /**
+     * <p>Specifies whether to perform only a dry run for this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     public static DeleteContactRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteContactRequest self = new DeleteContactRequest();
         return TeaModel.build(map, self);
@@ -25,6 +34,14 @@ public class DeleteContactRequest extends TeaModel {
     }
     public String getContactName() {
         return this.contactName;
+    }
+
+    public DeleteContactRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
 }

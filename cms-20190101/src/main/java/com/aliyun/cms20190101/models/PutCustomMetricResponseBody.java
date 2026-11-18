@@ -7,7 +7,7 @@ public class PutCustomMetricResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>200 indicates success.</p>
+     * <p>A status code of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

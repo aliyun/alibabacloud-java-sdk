@@ -7,6 +7,12 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     @NameInMap("Escalations")
     public PutResourceMetricRuleShrinkRequestEscalations escalations;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the token on your client. Make sure that the token is unique across different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6868E9A1-56E6-5FD7-9684-E2963BBAFB5F</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -33,10 +39,10 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     public String contactGroups;
 
     /**
-     * <p>Specifies whether to only precheck this request. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The system only checks the request and does not bind the security group to the instance. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default value): The system sends a normal request. If the request passes the check, the system returns an HTTP 2xx status code and performs the operation.</li>
+     * <li><strong>true</strong>: sends a check request and does not bind a security group to the instance. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the check, the system returns an error. If the request passes the check, the system returns the error code <code>DryRunOperation</code>.</li>
+     * <li><strong>false</strong>: sends a normal request. If the request passes the check, the system returns an HTTP 2xx status code and performs the operation. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,7 +70,7 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     public String emailSubject;
 
     /**
-     * <p>The trigger period of the alert rule. Unit: seconds.</p>
+     * <p>The trigger epoch of the alert rule. Unit: seconds.</p>
      * <blockquote>
      * <p>For more information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
      * </blockquote>
@@ -76,7 +82,7 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The labels that are added to the metric and displayed in the alert notification when the metric meets the alert condition and an alert is triggered.</p>
+     * <p>The labels that are written to the metric and displayed in the alert notification when the metric meets the alert condition and an alert is triggered.</p>
      * <blockquote>
      * <p>This feature is the same as the Label feature in Prometheus alerts.</p>
      * </blockquote>
@@ -85,9 +91,9 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     public java.util.List<PutResourceMetricRuleShrinkRequestLabels> labels;
 
     /**
-     * <p>The metric name. For more information about how to query the metric name, see <a href="https://help.aliyun.com/document_detail/163515.html">CloudMonitor metrics</a>.</p>
+     * <p>The metric name. For more information about how to query the metric name, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
      * <blockquote>
-     * <p>If you create a Prometheus alert rule for Hybrid Cloud Monitoring, this parameter specifies the metric repository name. For more information about how to obtain the metric repository name, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+     * <p>When you create a Prometheus alert rule for Hybrid CloudMonitor, this parameter specifies the metric repository name. For more information about how to obtain the metric repository name, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -98,9 +104,9 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The data namespace of the Alibaba Cloud service. For more information about how to query the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">CloudMonitor metrics</a>.</p>
+     * <p>The data namespace of the Alibaba Cloud service. For more information about how to query the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
      * <blockquote>
-     * <p>If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to <code>acs_prometheus</code>.</p>
+     * <p>When you create a Prometheus alert rule for Hybrid CloudMonitor, you must set this parameter to <code>acs_prometheus</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -113,9 +119,9 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     /**
      * <p>The action to take when no monitoring data is available. Valid values:</p>
      * <ul>
-     * <li>KEEP_LAST_STATE (default value): No action is taken.</li>
-     * <li>INSUFFICIENT_DATA: The alert notification indicates that no data is available.</li>
-     * <li>OK: The status is normal.</li>
+     * <li>KEEP_LAST_STATE: takes no action. This is the default value.</li>
+     * <li>INSUFFICIENT_DATA: triggers an alert indicating that no data is available.</li>
+     * <li>OK: triggers an alert indicating that the status is normal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,7 +131,7 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     public String noDataPolicy;
 
     /**
-     * <p>The ineffective time range of the alert rule.</p>
+     * <p>The period during which the alert rule is inactive.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00-06:00</p>
@@ -134,7 +140,7 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     public String noEffectiveInterval;
 
     /**
-     * <p>The statistical period of the metric. Unit: seconds. The default value is the original reporting period of the metric.</p>
+     * <p>The statistical period of the metric. Unit: seconds. The default value is the original reporting epoch of the metric.</p>
      * <blockquote>
      * <p>For more information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
      * </blockquote>
@@ -146,7 +152,7 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The Prometheus alert configurations.</p>
+     * <p>The Prometheus alert.</p>
      * <blockquote>
      * <p>You need to configure this parameter only when you create a Prometheus alert rule for Hybrid Cloud Monitoring.</p>
      * </blockquote>
@@ -168,7 +174,7 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
      * <p>The alert rule ID.</p>
      * <p>You can enter a new alert rule ID or use an existing alert rule ID in CloudMonitor. For more information about how to query the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
      * <blockquote>
-     * <p>If you enter a new alert rule ID, a threshold alert rule is created.</p>
+     * <p>Entering a new alert rule ID indicates that a threshold-based alert rule is created.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -182,7 +188,7 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
      * <p>The alert rule name.</p>
      * <p>You can enter a new alert rule name or use an existing alert rule name in CloudMonitor. For more information about how to query the alert rule name, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
      * <blockquote>
-     * <p>If you enter a new alert rule name, a threshold alert rule is created.</p>
+     * <p>Entering a new alert rule name indicates that a threshold-based alert rule is created.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -193,7 +199,7 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Specifies whether to send recovery notifications.</p>
+     * <p>Specifies whether to send a recovery notification.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -204,7 +210,7 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     /**
      * <p>The mute epoch. Unit: seconds. Default value: 86400.</p>
      * <blockquote>
-     * <p>The mute epoch refers to the interval at which the system will send an alert notification again if the alert does not recover to Normal after it is triggered.</p>
+     * <p>The mute epoch refers to the interval to send an alert notification again if the alert does not recover to Normal after it is triggered.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -409,11 +415,11 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
          * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
          * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
          * <li>LessThanLastWeek: less than the value at the same time last week.</li>
-         * <li>GreaterThanLastPeriod: greater than the value in the previous period.</li>
-         * <li>LessThanLastPeriod: less than the value in the previous period.</li>
+         * <li>GreaterThanLastPeriod: greater than the value in the last period.</li>
+         * <li>LessThanLastPeriod: less than the value in the last period.</li>
          * </ul>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -423,10 +429,10 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>The statistical method for Critical-level alerts.</p>
-         * <p>The valid values are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+         * <p>The statistical method for the Critical-level alert.</p>
+         * <p>The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>You must configure the Settings for at least one of the following alert levels: Critical, Warn, and Info. For the alert level you set, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -436,9 +442,9 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Critical-level alerts.</p>
+         * <p>The Critical-level alert threshold.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -448,9 +454,9 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The number of retries for Critical-level alerts.</p>
+         * <p>The number of retries for the Critical-level alert.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -512,11 +518,11 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
          * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
          * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
          * <li>LessThanLastWeek: less than the value at the same time last week.</li>
-         * <li>GreaterThanLastPeriod: greater than the value in the previous period.</li>
-         * <li>LessThanLastPeriod: less than the value in the previous period.</li>
+         * <li>GreaterThanLastPeriod: greater than the value in the last period.</li>
+         * <li>LessThanLastPeriod: less than the value in the last period.</li>
          * </ul>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -526,10 +532,10 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>The statistical method for Info-level alerts.</p>
-         * <p>The valid values are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+         * <p>The statistical method for the Info-level alert.</p>
+         * <p>The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>You must configure the Settings for at least one of the following alert levels: Critical, Warn, and Info. For the alert level you set, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -539,9 +545,9 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Info-level alerts.</p>
+         * <p>The Info-level alert threshold.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -551,9 +557,9 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The number of retries for Info-level alerts.</p>
+         * <p>The number of retries for the Info-level alert.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -615,11 +621,11 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
          * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
          * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
          * <li>LessThanLastWeek: less than the value at the same time last week.</li>
-         * <li>GreaterThanLastPeriod: greater than the value in the previous period.</li>
-         * <li>LessThanLastPeriod: less than the value in the previous period.</li>
+         * <li>GreaterThanLastPeriod: greater than the value in the last period.</li>
+         * <li>LessThanLastPeriod: less than the value in the last period.</li>
          * </ul>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -629,10 +635,10 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>The statistical method for Warn-level alerts.</p>
-         * <p>The valid values are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+         * <p>The statistical method for the Warn-level alert.</p>
+         * <p>The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>You must configure the Settings for at least one of the following alert levels: Critical, Warn, and Info. For the alert level you set, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -642,9 +648,9 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Warn-level alerts.</p>
+         * <p>The Warn-level alert threshold.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -654,9 +660,9 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The number of retries for Warn-level alerts.</p>
+         * <p>The number of retries for the Warn-level alert.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

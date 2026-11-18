@@ -4,14 +4,20 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMetricRulesRequest extends TeaModel {
+    /**
+     * <p>Ensures the idempotence of the request. Generate a parameter value on your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and can be up to 64 characters in length. For more information, see How to ensure idempotence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6868E9A1-56E6-5FD7-9684-E2963BBAFB5F</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run only. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: A check request is sent, and no security group is bound to the instance. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): A normal request is sent. If the check succeeds, an HTTP 2xx status code is returned and the operation is directly performed.</li>
+     * <li><strong>true</strong>: Sends a check request and does not bind the security group to the instance. The check items include whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): Sends a normal request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

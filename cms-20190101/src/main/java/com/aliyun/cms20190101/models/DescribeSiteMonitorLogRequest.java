@@ -14,16 +14,16 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String browser;
 
     /**
-     * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. You can ignore this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("BrowserInfo")
     public String browserInfo;
 
     /**
-     * <p>The city ID.</p>
+     * <p>The identifier of the city.</p>
      * 
      * <strong>example:</strong>
      * <p>546</p>
@@ -32,7 +32,7 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String city;
 
     /**
-     * <p>The type of the device. This parameter specifies the screen size for impersonation.</p>
+     * <p>The device type, which indicates the simulated screen size type.</p>
      * 
      * <strong>example:</strong>
      * <p>laptop</p>
@@ -41,15 +41,13 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String device;
 
     /**
-     * <p>The end of the time range to query. The following formats are supported:</p>
+     * <p>The end time. Supported formats:</p>
      * <ul>
-     * <li><p>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</p>
-     * </li>
-     * <li><p>UTC format: YYYY-MM-DDThh:mm:ssZ.</p>
-     * </li>
+     * <li>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</li>
+     * <li>UTC format: YYYY-MM-DDThh:mm:ssZ.</li>
      * </ul>
      * <blockquote>
-     * <p>Use UNIX timestamps to prevent time zone-related issues.</p>
+     * <p>Use UNIX timestamps to avoid time zone issues.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,8 +57,8 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The filter expression for detection results.</p>
-     * <p>Simple expressions are supported. For example, you can use the <code>TotalTime&gt;100</code> expression to query the detection data whose total response time exceeds 100 milliseconds.</p>
+     * <p>The filter condition for detection values.</p>
+     * <p>Simple expressions are supported. For example, <code>TotalTime&gt;100</code> filters the detection data whose total response time exceeds 100 milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>TotalTime&gt;100</p>
@@ -69,7 +67,7 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The carrier ID.</p>
+     * <p>The identifier of the carrier.</p>
      * 
      * <strong>example:</strong>
      * <p>465</p>
@@ -78,7 +76,7 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 1440.</p>
+     * <p>The number of records to return on each page for paging. Valid values: 1 to 1440.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -97,7 +95,7 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>If the response is truncated, use the <code>NextToken</code> parameter to retrieve the next page of results.</p>
+     * <p>The pagination token. If the response is truncated, you can use <code>NextToken</code> to send another request and retrieve the remaining results.</p>
      * 
      * <strong>example:</strong>
      * <p>IWBjqMYSy0is7zSMGu16****</p>
@@ -109,16 +107,17 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. The following formats are supported:</p>
+     * <p>The start time. Supported formats:</p>
      * <ul>
-     * <li><p>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</p>
-     * </li>
-     * <li><p>UTC format: YYYY-MM-DDThh:mm:ssZ.</p>
-     * </li>
+     * <li>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</li>
+     * <li>UTC format: YYYY-MM-DDThh:mm:ssZ.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>The start time and end time follow the (StartTime, EndTime] pattern. The value of StartTime cannot be the same as or later than the value of EndTime.<br> - Use UNIX timestamps to prevent time zone-related issues.<br></li>
+     * <li>The start time and end time follow the left-open and right-closed interval pattern. The value of StartTime cannot be equal to or greater than the value of EndTime.                                                                                                                   <ul>
+     * <li>Use UNIX timestamps to avoid time zone issues.</li>
+     * </ul>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -129,7 +128,7 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the detection task. You can specify multiple task IDs. Separate them with commas (,).</p>
+     * <p>The IDs of the detection tasks. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

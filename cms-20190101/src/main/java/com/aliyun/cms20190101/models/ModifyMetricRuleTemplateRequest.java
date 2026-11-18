@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMetricRuleTemplateRequest extends TeaModel {
     /**
-     * <p>The details of the alert template.</p>
+     * <p>The list of alert templates.</p>
      */
     @NameInMap("AlertTemplates")
     public java.util.List<ModifyMetricRuleTemplateRequestAlertTemplates> alertTemplates;
@@ -21,10 +21,9 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
 
     /**
      * <p>The name of the alert template.</p>
-     * <p>For information about how to obtain the name of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Template_123</p>
+     * <p>test123</p>
      */
     @NameInMap("Name")
     public String name;
@@ -33,19 +32,20 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The version of the alert template. The version changes with the number of times that the alert template is modified.</p>
-     * <p>For information about how to obtain the version of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
+     * <p>The version of the alert template to be modified.</p>
+     * <blockquote>
+     * <p>This parameter is automatically updated based on the number of modifications.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("RestVersion")
     public Long restVersion;
 
     /**
      * <p>The ID of the alert template.</p>
-     * <p>For information about how to obtain the ID of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,34 +109,23 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
 
     public static class ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsCritical extends TeaModel {
         /**
-         * <p>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</p>
+         * <p>The comparison operator for the critical-level alert threshold. Valid values:</p>
          * <ul>
-         * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * </li>
-         * <li><p>GreaterThanThreshold: greater than the threshold</p>
-         * </li>
-         * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * </li>
-         * <li><p>LessThanThreshold: less than the threshold</p>
-         * </li>
-         * <li><p>NotEqualToThreshold: not equal to the threshold</p>
-         * </li>
-         * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * </li>
-         * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * </li>
-         * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * </li>
-         * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
-         * </li>
-         * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * </li>
-         * <li><p>LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
-         * </li>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold. </li>
+         * <li>GreaterThanThreshold: greater than the threshold. </li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold. </li>
+         * <li>LessThanThreshold: less than the threshold. </li>
+         * <li>NotEqualToThreshold: not equal to the threshold. </li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday. </li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday. </li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week. </li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week. </li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the previous period. </li>
+         * <li>LessThanLastPeriod: less than the metric value in the previous period.</li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -149,11 +138,11 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public Integer n;
 
         /**
-         * <p>The statistical method for Critical-level alerts.</p>
+         * <p>The statistical method for critical-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column that corresponds to the <code>MetricName</code> parameter of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -163,10 +152,10 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Critical-level alerts.</p>
+         * <p>The threshold that triggers a critical-level alert notification.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -176,10 +165,10 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</p>
+         * <p>The number of times that the monitoring metrics must reach the alert threshold to send a critical-level alert notification.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -237,34 +226,23 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
 
     public static class ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsInfo extends TeaModel {
         /**
-         * <p>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</p>
+         * <p>The comparison operator for the info-level alert threshold. Valid values:</p>
          * <ul>
-         * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * </li>
-         * <li><p>GreaterThanThreshold: greater than the threshold</p>
-         * </li>
-         * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * </li>
-         * <li><p>LessThanThreshold: less than the threshold</p>
-         * </li>
-         * <li><p>NotEqualToThreshold: not equal to the threshold</p>
-         * </li>
-         * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * </li>
-         * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * </li>
-         * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * </li>
-         * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
-         * </li>
-         * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * </li>
-         * <li><p>LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
-         * </li>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold. </li>
+         * <li>GreaterThanThreshold: greater than the threshold. </li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold. </li>
+         * <li>LessThanThreshold: less than the threshold. </li>
+         * <li>NotEqualToThreshold: not equal to the threshold. </li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday. </li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday. </li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week. </li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week. </li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the previous period. </li>
+         * <li>LessThanLastPeriod: less than the metric value in the previous period.</li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -277,11 +255,11 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public Integer n;
 
         /**
-         * <p>The statistical method for Info-level alerts.</p>
+         * <p>The statistical method for info-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column that corresponds to the <code>MetricName</code> parameter of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -291,10 +269,10 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Info-level alerts.</p>
+         * <p>The threshold for info-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -304,10 +282,10 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</p>
+         * <p>The number of times that the monitoring metrics must reach the alert threshold to send an info-level alert notification.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -365,34 +343,23 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
 
     public static class ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsWarn extends TeaModel {
         /**
-         * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</p>
+         * <p>The comparison operator for the warning-level alert threshold. Valid values:</p>
          * <ul>
-         * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * </li>
-         * <li><p>GreaterThanThreshold: greater than the threshold</p>
-         * </li>
-         * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * </li>
-         * <li><p>LessThanThreshold: less than the threshold</p>
-         * </li>
-         * <li><p>NotEqualToThreshold: not equal to the threshold</p>
-         * </li>
-         * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * </li>
-         * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * </li>
-         * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * </li>
-         * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
-         * </li>
-         * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * </li>
-         * <li><p>LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
-         * </li>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold. </li>
+         * <li>GreaterThanThreshold: greater than the threshold. </li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold. </li>
+         * <li>LessThanThreshold: less than the threshold. </li>
+         * <li>NotEqualToThreshold: not equal to the threshold. </li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday. </li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday. </li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week. </li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week. </li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the previous period. </li>
+         * <li>LessThanLastPeriod: less than the metric value in the previous period.</li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -405,11 +372,11 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public Integer n;
 
         /**
-         * <p>The statistical method for Warn-level alerts.</p>
+         * <p>The statistical method for warning-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column that corresponds to the <code>MetricName</code> parameter of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -419,10 +386,10 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Warn-level alerts.</p>
+         * <p>The threshold for warning-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -432,10 +399,10 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</p>
+         * <p>The number of times that the monitoring metrics must reach the alert threshold to send a warning-level alert notification.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for the selected alert level.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. The Statistics, ComparisonOperator, Threshold, and Times parameters must be specified at the same time for the specified alert level.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -537,9 +504,43 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public ModifyMetricRuleTemplateRequestAlertTemplatesEscalations escalations;
 
         /**
-         * <p>The abbreviation of the cloud service name.</p>
-         * <p>Valid values of N: 1 to 200.</p>
-         * <p>For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+         * <p>The abbreviation of the Alibaba Cloud service name. Valid values of N: 1 to 200. Valid values:</p>
+         * <ul>
+         * <li>ecs: Alibaba Cloud and non-Alibaba Cloud hosts.</li>
+         * <li>rds: ApsaraDB RDS database.</li>
+         * <li>ads: AnalyticDB database.</li>
+         * <li>slb: load balancing.</li>
+         * <li>vpc: Elastic IP Address (EIP).</li>
+         * <li>apigateway: API Gateway.</li>
+         * <li>cdn: Content Delivery Network (CDN).</li>
+         * <li>cs: Container Service for Swarm.</li>
+         * <li>dcdn: Dynamic Route for CDN (DCDN).</li>
+         * <li>ddos: Anti-DDoS.</li>
+         * <li>eip: Elastic IP Address (EIP).</li>
+         * <li>elasticsearch: Elasticsearch.</li>
+         * <li>emr: E-MapReduce (EMR).</li>
+         * <li>ess: elastic scaling.</li>
+         * <li>hbase: ApsaraDB for HBase database.</li>
+         * <li>iot_edge: IoT Edge.</li>
+         * <li>kvstore_sharding: ApsaraDB for Redis Cluster Edition.</li>
+         * <li>kvstore_splitrw: ApsaraDB for Redis Read/Write Splitting Edition.</li>
+         * <li>kvstore_standard: ApsaraDB for Redis Standard Edition.</li>
+         * <li>memcache: ApsaraDB for Memcache database.</li>
+         * <li>mns: Message Service (MNS).</li>
+         * <li>mongodb: MongoDB replica set instance.</li>
+         * <li>mongodb_cluster: MongoDB cluster edition.</li>
+         * <li>mongodb_sharding: MongoDB sharded cluster.</li>
+         * <li>mq_topic: Message Service Topic.</li>
+         * <li>ocs: legacy cloud database Memcache.</li>
+         * <li>opensearch: OpenSearch.</li>
+         * <li>oss: Object Storage Service (OSS).</li>
+         * <li>polardb: PolarDB database.</li>
+         * <li>petadata: HybridDB for MySQL.</li>
+         * <li>scdn: secure acceleration.</li>
+         * <li>sharebandwidthpackages: Internet Shared Bandwidth.</li>
+         * <li>sls: Simple Log Service (SLS).</li>
+         * <li>vpn: VPN Gateway.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -548,9 +549,10 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The metric name.</p>
-         * <p>Valid values of N: 1 to 200.</p>
-         * <p>For information about how to obtain metrics, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The name of the metric. Valid values of N: 1 to 200.</p>
+         * <blockquote>
+         * <p>For more information about the valid values of the metric name, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cpu_total</p>
@@ -559,9 +561,11 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The namespace of the cloud service.</p>
-         * <p>Valid values of N: 1 to 200.</p>
-         * <p>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The namespace of the Alibaba Cloud service, which is used to distinguish different services. Valid values of N: 1 to 200.</p>
+         * <p>Format: acs_<service name>.</p>
+         * <blockquote>
+         * <p>To obtain the namespace of each Alibaba Cloud service, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>acs_ecs_dashboard</p>
@@ -570,10 +574,9 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The statistical period of the monitoring data.</p>
-         * <p>Valid values of N: 1 to 200.</p>
+         * <p>The statistical period of the monitoring data. Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>If the value is set to 300 seconds, the monitoring data is collected every 300 seconds. If the monitoring data is reported every 1 minute, the alert system calculates the average, maximum, and minimum values of the monitoring data of 5 minutes and checks whether the aggregated values exceed the threshold. To prevent unexpected alerts, we recommend that you set this parameter together with other parameters.</p>
+         * <p>If you set this parameter to 300, the system collects and aggregates monitoring data every 300 seconds. If monitoring data is reported every minute, the system aggregates the data of 5 minutes, such as the average, maximum, and minimum values. Do not specify this parameter separately because the statistical period may cause unexpected alerts.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -583,21 +586,19 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The name of the alert rule.</p>
-         * <p>Valid values of N: 1 to 200.</p>
+         * <p>The name of the alert rule. Valid values of N: 1 to 200.</p>
          * 
          * <strong>example:</strong>
-         * <p>Rule_123</p>
+         * <p>rule1</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The dimension of the alert. It is an extended field.</p>
-         * <p>Valid values of N: 1 to 200.</p>
-         * <p>For example, an alert template is applied to an application group, this parameter is set to <code>{&quot;disk&quot;:&quot;/&quot;}</code>, and the MetricName parameter is set to <code>DiskUtilization</code>. In this case, the generated alert rule is applied to the root disk partition (<code>&quot;/&quot;</code>) of all instances in the application group to which the alert template is applied.</p>
+         * <p>The options for the extended dimension fields. Valid values of N: 1 to 200.</p>
+         * <p>For example, if the alert template is applied to an application group, this parameter is set to <code>{&quot;disk&quot;:&quot;/&quot;}</code>, and the MetricName parameter is set to <code>DiskUtilization</code>, the root partition (<code>&quot;/&quot;</code>) of the disks for all instances in the application group is associated with the corresponding alert rule.</p>
          * <blockquote>
-         * <p>For more information about the values of extended fields, see <a href="https://help.aliyun.com/document_detail/114979.html">DescribeMetricRuleTemplateAttribute</a>.</p>
+         * <p>For more information about the valid values of the extended dimension fields, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -607,12 +608,10 @@ public class ModifyMetricRuleTemplateRequest extends TeaModel {
         public String selector;
 
         /**
-         * <p>The callback URL.</p>
-         * <p>Valid values of N: 1 to 200.</p>
-         * <p>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</p>
+         * <p>The webhook URL to which a POST request is sent when an alert is triggered.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
+         * <p><a href="https://apiwebhook.hipac.cn/api/v1/alarm/aly/eregfeeferrtbnmkdszp">https://apiwebhook.hipac.cn/api/v1/alarm/aly/eregfeeferrtbnmkdszp</a></p>
          */
         @NameInMap("Webhook")
         public String webhook;

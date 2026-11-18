@@ -7,7 +7,7 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>The value 200 indicates success.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the node task result.</p>
+     * <p>The details of the node modification task result.</p>
      */
     @NameInMap("Data")
     public ModifySiteMonitorResponseBodyData data;
@@ -43,9 +43,9 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

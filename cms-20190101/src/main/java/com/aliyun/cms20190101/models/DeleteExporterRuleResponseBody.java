@@ -4,46 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteExporterRuleResponseBody extends TeaModel {
-    /**
-     * <p>The status code.</p>
-     * <blockquote>
-     * <p>A status code of 200 indicates success, and other values indicate failure.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The returned message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6A5F022D-AC7C-460E-94AE-B9E75083D023</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful. Valid values:  </p>
-     * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request failed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

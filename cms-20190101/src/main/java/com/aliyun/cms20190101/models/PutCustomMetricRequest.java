@@ -37,12 +37,12 @@ public class PutCustomMetricRequest extends TeaModel {
 
     public static class PutCustomMetricRequestMetricList extends TeaModel {
         /**
-         * <p>The dimension map, which is used to query monitoring data of a specified resource. Valid values of N: 1 to 21.</p>
-         * <p>Format: a collection of key-value pairs. A commonly used key-value pair collection is: <code>{&quot;Key&quot;:&quot;Value&quot;}</code>.</p>
-         * <p>The length of Key and Value is 1 to 64 characters. Characters beyond the first 64 are truncated.</p>
-         * <p>The values of Key and Value can contain letters, digits, periods (.), hyphens (-), underscores (_), forward slashes (/), and backslashes (\).</p>
+         * <p>The dimension map used to query the monitoring data of a specified resource. Valid values of N: 1 to 21.</p>
+         * <p>Format: a set of key-value pairs. A common key-value pair is <code>{&quot;Key&quot;:&quot;Value&quot;}</code>.</p>
+         * <p>The key and value must be 1 to 64 characters in length. If the length exceeds 64 characters, the string is truncated to 64 characters.</p>
+         * <p>The key and value can contain letters, digits, periods (.), hyphens (-), underscores (_), forward slashes (/), and backslashes (\).</p>
          * <blockquote>
-         * <p>Dimensions must be passed in as a JSON string that represents the map object, and must be passed in order.</p>
+         * <p>You must specify the Dimensions parameter as a JSON string to represent the map object. The key-value pairs must be specified in order.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -55,7 +55,7 @@ public class PutCustomMetricRequest extends TeaModel {
         /**
          * <p>The ID of the application group. Valid values of N: 1 to 21.</p>
          * <blockquote>
-         * <p>If the metric does not belong to any application group, enter 0.</p>
+         * <p>If the metric does not belong to an application group, set this parameter to 0.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -66,7 +66,7 @@ public class PutCustomMetricRequest extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The name of the metric. Valid values of N: 1 to 21. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics of cloud services</a>.</p>
+         * <p>The name of the metric. Valid values of N: 1 to 21. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class PutCustomMetricRequest extends TeaModel {
         /**
          * <p>The aggregation period. Valid values of N: 1 to 21. Unit: seconds. Valid values: 60 and 300.</p>
          * <blockquote>
-         * <p>If the type of the reported value is 1, you must set this parameter.</p>
+         * <p>If the type of the reported value is 1, you must specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -88,10 +88,10 @@ public class PutCustomMetricRequest extends TeaModel {
         public String period;
 
         /**
-         * <p>The time when the metric occurred. Valid values of N: 1 to 21. The following two types of values are supported:</p>
+         * <p>The time when the metric was generated. Valid values of N: 1 to 21. Supported formats:</p>
          * <ul>
-         * <li>UTC time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 20171012T132456.888+0800.</li>
-         * <li>A Long-type timestamp. For example: 1508136760000.</li>
+         * <li>UTC time. Format: YYYY-MM-DDThh:mm:ssZ. Example: 20171012T132456.888+0800.</li>
+         * <li>Long timestamp. Example: 1508136760000.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,11 +103,11 @@ public class PutCustomMetricRequest extends TeaModel {
         /**
          * <p>The type of the reported value. Valid values of N: 1 to 21. Valid values:</p>
          * <ul>
-         * <li>0: raw data.</li>
-         * <li>1: aggregate data.</li>
+         * <li>0: Raw data.</li>
+         * <li>1: Aggregate data.</li>
          * </ul>
          * <blockquote>
-         * <p>When you report aggregate data, we recommend that you report both data with a period of 60 seconds and data with a period of 300 seconds. Otherwise, monitoring data cannot be queried for a time span of more than 7 days.</p>
+         * <p>When reporting aggregate data, report data for both the 60-second and 300-second periods. Otherwise, you cannot query monitoring data that spans more than 7 days.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -118,9 +118,9 @@ public class PutCustomMetricRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The collection of metric values. Valid values of N: 1 to 21.</p>
+         * <p>The set of metric values. Valid values of N: 1 to 21.</p>
          * <blockquote>
-         * <p>If the type of the reported value is 0, the raw values are reported. CloudMonitor aggregates raw values into multiple values, such as maximum, count, and sum, by period.</p>
+         * <p>If the type of the reported value is 0, the reported values are raw values. CloudMonitor aggregates the raw values into multiple values such as maximum, count, and sum based on the period.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

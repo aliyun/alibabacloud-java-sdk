@@ -40,8 +40,8 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li>true: The operation is successful.</li>
-     * <li>false: The operation fails.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String countryEn;
 
         /**
-         * <p>The number of IPv4 nodes in the IDC.</p>
+         * <p>The number of IDC IPv4 nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -178,7 +178,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public Integer idcV4ProbeCount;
 
         /**
-         * <p>The number of IPv6 nodes in the IDC.</p>
+         * <p>The number of IDC IPv6 nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -187,7 +187,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public Integer idcV6ProbeCount;
 
         /**
-         * <p>The list of node IP addresses.</p>
+         * <p>The list of IP addresses of the node.</p>
          */
         @NameInMap("IpPool")
         public java.util.List<String> ipPool;
@@ -250,7 +250,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
          * <p>The Chinese name of the province.</p>
          * 
          * <strong>example:</strong>
-         * <p>Jiangxi</p>
+         * <p>Jiangxi Province</p>
          */
         @NameInMap("RegionCn")
         public String regionCn;

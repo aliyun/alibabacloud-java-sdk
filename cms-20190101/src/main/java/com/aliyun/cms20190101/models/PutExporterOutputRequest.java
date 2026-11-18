@@ -5,47 +5,20 @@ import com.aliyun.tea.*;
 
 public class PutExporterOutputRequest extends TeaModel {
     /**
-     * <p>The data export configuration. It is a JSON object string that must contain the following fields:</p>
-     * <ul>
-     * <li>endpoint: the domain name for Simple Log Service (SLS) data.</li>
-     * <li>project: the project.</li>
-     * <li>logstore: the Logstore.</li>
-     * <li>ak: the AccessKey ID.</li>
-     * <li>as: the AccessKey Secret.</li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{ &quot;endpoint&quot;: &quot;<a href="http://cn-qingdao-share.log.aliyuncs.com">http://cn-qingdao-share.log.aliyuncs.com</a>&quot;, &quot;project&quot;: &quot;exporter&quot;, &quot;logstore&quot;: &quot;exporter&quot;,&quot;ak&quot;: &quot;LTAIp*******&quot;, &quot;userId&quot;: &quot;17754********&quot;, &quot;as&quot;: &quot;TxHwuJ8yAb3AU******&quot;}</p>
      */
     @NameInMap("ConfigJson")
     public String configJson;
 
-    /**
-     * <p>The description of the configuration.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>CPU metric export</p>
-     */
     @NameInMap("Desc")
     public String desc;
 
     /**
-     * <p>The name of the configuration.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>exporterConfig</p>
      */
     @NameInMap("DestName")
     public String destName;
 
-    /**
-     * <p>The destination service for the export.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sls</p>
-     */
     @NameInMap("DestType")
     public String destType;
 

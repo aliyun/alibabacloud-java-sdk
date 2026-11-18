@@ -4,14 +4,20 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutResourceMetricRulesRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6868E9A1-56E6-5FD7-9684-E2963BBAFB5F</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck this request. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: A check request is sent, and no security group is associated with the instance. Check items include whether required parameters are specified, the request format, and service limits. If the check fails, an error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): A normal request is sent. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: The system checks the request without binding the security group to the instance. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the DryRunOperation error code is returned.</li>
+     * <li><strong>false</strong>: The system sends a normal request. After the request passes the check, the system returns an HTTP 2xx status code and performs the operation. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,22 +67,22 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The comparison operator for the Critical level. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
-         * <li>GreaterThanThreshold: greater than the threshold.</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
-         * <li>LessThanThreshold: less than the threshold.</li>
-         * <li>NotEqualToThreshold: not equal to the threshold.</li>
-         * <li>EqualToThreshold: equal to the threshold.</li>
-         * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
-         * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
-         * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
-         * <li>LessThanLastWeek: less than the value at the same time last week.</li>
-         * <li>GreaterThanLastPeriod: greater than the value in the previous period.</li>
-         * <li>LessThanLastPeriod: less than the value in the previous period.</li>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>EqualToThreshold: equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the value in the last period</li>
+         * <li>LessThanLastPeriod: less than the value in the last period</li>
          * </ul>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -94,9 +100,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The statistical method for the Critical level.</p>
          * <p>Valid values of N: 1 to 50.</p>
-         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+         * <p>The value of this parameter is determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>You must configure the Settings for at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -109,7 +115,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
          * <p>The alert threshold for the Critical level.</p>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -122,7 +128,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
          * <p>The number of alert retries for the Critical level.</p>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -190,22 +196,22 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The comparison operator for the Info level. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
-         * <li>GreaterThanThreshold: greater than the threshold.</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
-         * <li>LessThanThreshold: less than the threshold.</li>
-         * <li>NotEqualToThreshold: not equal to the threshold.</li>
-         * <li>EqualToThreshold: equal to the threshold.</li>
-         * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
-         * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
-         * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
-         * <li>LessThanLastWeek: less than the value at the same time last week.</li>
-         * <li>GreaterThanLastPeriod: greater than the value in the previous period.</li>
-         * <li>LessThanLastPeriod: less than the value in the previous period.</li>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>EqualToThreshold: equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the value in the last period</li>
+         * <li>LessThanLastPeriod: less than the value in the last period</li>
          * </ul>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -223,9 +229,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The statistical method for the Info level.</p>
          * <p>Valid values of N: 1 to 50.</p>
-         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+         * <p>The value of this parameter is determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>You must configure the Settings for at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -237,7 +243,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The alert threshold for the Info level.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -250,7 +256,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
          * <p>The number of alert retries for the Info level.</p>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -318,22 +324,22 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The comparison operator for the Warn level. Valid values:</p>
          * <ul>
-         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
-         * <li>GreaterThanThreshold: greater than the threshold.</li>
-         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
-         * <li>LessThanThreshold: less than the threshold.</li>
-         * <li>NotEqualToThreshold: not equal to the threshold.</li>
-         * <li>EqualToThreshold: equal to the threshold.</li>
-         * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
-         * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
-         * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
-         * <li>LessThanLastWeek: less than the value at the same time last week.</li>
-         * <li>GreaterThanLastPeriod: greater than the value in the previous period.</li>
-         * <li>LessThanLastPeriod: less than the value in the previous period.</li>
+         * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+         * <li>GreaterThanThreshold: greater than the threshold</li>
+         * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+         * <li>LessThanThreshold: less than the threshold</li>
+         * <li>NotEqualToThreshold: not equal to the threshold</li>
+         * <li>EqualToThreshold: equal to the threshold</li>
+         * <li>GreaterThanYesterday: greater than the value at the same time yesterday</li>
+         * <li>LessThanYesterday: less than the value at the same time yesterday</li>
+         * <li>GreaterThanLastWeek: greater than the value at the same time last week</li>
+         * <li>LessThanLastWeek: less than the value at the same time last week</li>
+         * <li>GreaterThanLastPeriod: greater than the value in the last period</li>
+         * <li>LessThanLastPeriod: less than the value in the last period</li>
          * </ul>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -351,9 +357,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The statistical method for the Warn level.</p>
          * <p>Valid values of N: 1 to 50.</p>
-         * <p>The value of this parameter is determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+         * <p>The value of this parameter is determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>You must configure the Settings for at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -366,7 +372,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
          * <p>The alert threshold for the Warn level.</p>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -379,7 +385,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
          * <p>The number of alert retries for the Warn level.</p>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+         * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -497,7 +503,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The label value.</p>
          * <blockquote>
-         * <p>Label values support template parameters. The template parameters are replaced with the actual label values.</p>
+         * <p>The label value supports template parameters. The template parameters are replaced with the actual label values.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -537,7 +543,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
          * <p>The alert contact group. Alert notifications are sent to the alert contacts in this alert contact group.</p>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p>An alert contact group contains one or more alert contacts. For more information about how to create an alert contact and an alert contact group, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>.</p>
+         * <p>An alert contact group is a group of alert contacts and can contain one or more alert contacts. For more information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -568,7 +574,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         public String emailSubject;
 
         /**
-         * <p>The trigger period of the alert rule.</p>
+         * <p>The trigger epoch of the alert rule.</p>
          * <p>Unit: seconds.</p>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
@@ -590,7 +596,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The name of the metric.</p>
          * <p>Valid values of N: 1 to 50.</p>
-         * <p>For more information about how to query the name of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+         * <p>For more information about how to query the metric name, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cpu_total</p>
@@ -611,11 +617,11 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The processing method when no monitoring data is available. Valid values:</p>
+         * <p>The handling method when no monitoring data is available. Valid values:</p>
          * <ul>
-         * <li>KEEP_LAST_STATE (default): No action is taken.</li>
+         * <li>KEEP_LAST_STATE: No action is taken. This is the default value.</li>
          * <li>INSUFFICIENT_DATA: The alert content indicates that no data is available.</li>
-         * <li>OK: Normal.</li>
+         * <li>OK: The status is normal.</li>
          * </ul>
          * <p>Valid values of N: 1 to 50.</p>
          * 
@@ -637,7 +643,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
 
         /**
          * <p>The statistical period of the metric.</p>
-         * <p>Unit: seconds. Default value: the original reporting period of the metric.</p>
+         * <p>Unit: seconds. The default value is the original reporting period of the metric.</p>
          * <p>Valid values of N: 1 to 50.</p>
          * <blockquote>
          * <p>For more information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
@@ -650,9 +656,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         public String period;
 
         /**
-         * <p>The resource information. Examples: <code>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</code> and <code>[{&quot;userId&quot;:&quot;100931896542****&quot;}]</code>.</p>
+         * <p>The resource information, such as [{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}] and [{&quot;userId&quot;:&quot;100931896542****&quot;}].</p>
          * <p>Valid values of N: 1 to 50.</p>
-         * <p>For more information about the dimensions supported by resource information, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
+         * <p>For more information about the dimensions supported by the resource information, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -664,7 +670,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The ID of the alert rule.</p>
          * <p>Valid values of N: 1 to 50.</p>
-         * <p>You can enter a new alert rule ID or use an existing alert rule ID in CloudMonitor. For more information about how to query the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <p>You can enter a new alert rule ID or use an existing alert rule ID in CloudMonitor. For more information about how to query the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
          * <blockquote>
          * <p>If you enter a new alert rule ID, a threshold alert rule is created.</p>
          * </blockquote>
@@ -679,7 +685,7 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         /**
          * <p>The name of the alert rule.</p>
          * <p>Valid values of N: 1 to 50.</p>
-         * <p>You can enter a new alert rule name or use an existing alert rule name in CloudMonitor. For more information about how to query the name of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <p>You can enter a new alert rule name or use an existing alert rule name in CloudMonitor. For more information about how to query the alert rule name, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
          * <blockquote>
          * <p>If you enter a new alert rule name, a threshold alert rule is created.</p>
          * </blockquote>

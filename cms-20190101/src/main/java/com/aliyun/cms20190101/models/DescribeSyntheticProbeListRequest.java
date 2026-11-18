@@ -23,7 +23,7 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public Boolean idcProbe;
 
     /**
-     * <p>Specifies whether to show only IPv4 nodes.</p>
+     * <p>Specifies whether to display only IPv4 nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public Boolean ipv4;
 
     /**
-     * <p>Specifies whether to show only IPv6 nodes.</p>
+     * <p>Specifies whether to display only IPv6 nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -73,7 +73,7 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     /**
      * <p>Specifies whether to return all detection points. Valid values:</p>
      * <ul>
-     * <li>false: Returns only the detection points available to the user. This is the default value.</li>
+     * <li>false: Returns the detection points available to you. This is the default value.</li>
      * <li>true: Returns all detection points.</li>
      * </ul>
      * 

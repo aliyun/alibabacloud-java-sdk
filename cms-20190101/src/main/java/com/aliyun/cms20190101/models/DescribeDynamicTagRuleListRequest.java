@@ -57,9 +57,7 @@ public class DescribeDynamicTagRuleListRequest extends TeaModel {
      * <p>For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagValueList</a>.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>production</p>
      */
     @NameInMap("TagValue")
     public String tagValue;

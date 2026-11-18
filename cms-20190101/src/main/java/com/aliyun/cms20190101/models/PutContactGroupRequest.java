@@ -9,13 +9,13 @@ public class PutContactGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Attendance system group</p>
+     * <p>Attendance System Group</p>
      */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
     /**
-     * <p>The name of the alert contact.</p>
+     * <p>The names of the alert contacts.</p>
      */
     @NameInMap("ContactNames")
     public java.util.List<String> contactNames;
@@ -30,11 +30,20 @@ public class PutContactGroupRequest extends TeaModel {
     public String describe;
 
     /**
+     * <p>Specifies whether to perform a dry run on the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>Specifies whether to enable the subscription feature. Valid values:</p>
      * <ul>
-     * <li><p>true: Enabled.</p>
+     * <li><p>true: Yes.</p>
      * </li>
-     * <li><p>false: Disabled.</p>
+     * <li><p>false: No.</p>
      * </li>
      * </ul>
      * 
@@ -71,6 +80,14 @@ public class PutContactGroupRequest extends TeaModel {
     }
     public String getDescribe() {
         return this.describe;
+    }
+
+    public PutContactGroupRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public PutContactGroupRequest setEnableSubscribed(Boolean enableSubscribed) {

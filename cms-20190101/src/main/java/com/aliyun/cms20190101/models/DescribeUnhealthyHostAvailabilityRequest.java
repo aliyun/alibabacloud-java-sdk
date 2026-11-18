@@ -7,9 +7,6 @@ public class DescribeUnhealthyHostAvailabilityRequest extends TeaModel {
     /**
      * <p>The task ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123456</p>
      */
     @NameInMap("Id")
     public java.util.List<Long> id;

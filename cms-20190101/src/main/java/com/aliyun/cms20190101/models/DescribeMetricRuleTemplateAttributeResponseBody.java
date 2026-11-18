@@ -491,7 +491,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
          * <p>The description of the alert template.</p>
          * 
          * <strong>example:</strong>
-         * <p>ECS template</p>
+         * <p>ECS模板</p>
          */
         @NameInMap("Description")
         public String description;

@@ -127,7 +127,7 @@ public class PutEventRuleTargetsRequest extends TeaModel {
          * <p>The name of the alert contact group. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
-         * <p>Default alert contact group</p>
+         * <p>默认报警联系组</p>
          */
         @NameInMap("ContactGroupName")
         public String contactGroupName;

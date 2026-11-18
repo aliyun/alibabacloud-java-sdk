@@ -19,7 +19,7 @@ public class ModifyHybridMonitorSLSGroupRequest extends TeaModel {
      * <p>The description of the Logstore group.</p>
      * 
      * <strong>example:</strong>
-     * <p>Logstore group of Alibaba Cloud products.</p>
+     * <p>阿里云产品归属的Logstore组。</p>
      */
     @NameInMap("SLSGroupDescription")
     public String SLSGroupDescription;

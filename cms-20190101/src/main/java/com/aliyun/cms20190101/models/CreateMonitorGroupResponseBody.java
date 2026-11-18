@@ -7,7 +7,7 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>200 indicates success.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,9 +46,9 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation is successful.</p>
+     * <li><p>true: Success.</p>
      * </li>
-     * <li><p>false: The operation fails.</p>
+     * <li><p>false: Failure.</p>
      * </li>
      * </ul>
      * 

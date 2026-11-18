@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
     /**
-     * <p>状态码。</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>200表示成功。</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
     public DescribeSiteMonitorISPCityListResponseBodyIspCityList ispCityList;
 
     /**
-     * <p>返回信息。</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -29,7 +29,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B35D7D84-547B-4E61-B909-48A1F8A0C756</p>
@@ -38,11 +38,11 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>操作是否成功。取值：</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true：成功。</p>
+     * <li><p>true: successful.</p>
      * </li>
-     * <li><p>false：失败。</p>
+     * <li><p>false: failed.</p>
      * </li>
      * </ul>
      * 

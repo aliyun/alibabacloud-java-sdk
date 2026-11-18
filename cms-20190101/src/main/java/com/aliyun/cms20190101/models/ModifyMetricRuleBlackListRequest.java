@@ -15,11 +15,11 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The effective period of the alert blacklist policy. The implications of the settings for this parameter are as follows:</p>
+     * <p>The effective time range of the alert blacklist policy. The behavior varies based on whether you specify this parameter:</p>
      * <ul>
-     * <li><p>If you do not configure the settings for this parameter, the alert blacklist policy is permanently valid.</p>
+     * <li><p>If you do not specify this parameter, the alert blacklist policy is permanently valid.</p>
      * </li>
-     * <li><p>If you configure the settings for this parameter, the blacklist policy is valid only within the specified time range. The following examples show two formats for this parameter:</p>
+     * <li><p>If you specify this parameter, the alert blacklist policy is valid only within the specified time range. This parameter supports the following formats:</p>
      * <ul>
      * <li><code>03:00-04:59</code>: The alert blacklist policy is valid from 03:00 to 05:00 (excluding 05:00) local time.</li>
      * <li><code>03:00-04:59 UTC+0700</code>: The alert blacklist policy is valid from 03:00 to 05:00 (excluding 05:00) UTC+7.</li>
@@ -34,7 +34,7 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The end timestamp of the effective period for the alert blacklist policy.</p>
+     * <p>The end timestamp when the alert blacklist policy takes effect.</p>
      * <p>Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
     public String enableEndTime;
 
     /**
-     * <p>The start timestamp of the effective period for the alert blacklist policy.</p>
+     * <p>The start timestamp when the alert blacklist policy takes effect.</p>
      * <p>Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert blacklist policy.</p>
-     * <p>For more information about how to obtain the ID of an alert blacklist policy, see <a href="https://help.aliyun.com/document_detail/457257.html">DescribeMetricRuleBlackList</a>.</p>
+     * <p>For information about how to obtain the ID of an alert blacklist policy, see <a href="https://help.aliyun.com/document_detail/457257.html">DescribeMetricRuleBlackList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,9 +74,9 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
     /**
      * <p>The monitoring metrics of the instances.</p>
      * <ul>
-     * <li><p>If you do not configure the settings for this parameter, the alert blacklist policy applies to all monitoring metrics of the specified Alibaba Cloud service.</p>
+     * <li><p>If you do not specify this parameter, the alert blacklist policy applies to all monitoring metrics of the specified Alibaba Cloud service.</p>
      * </li>
-     * <li><p>If you configure the settings for this parameter, the blacklist policy applies only to the current monitoring metrics.</p>
+     * <li><p>If you specify this parameter, the alert blacklist policy applies only to the specified monitoring metrics.</p>
      * </li>
      * </ul>
      */
@@ -94,8 +94,8 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The data namespace of the cloud service.</p>
-     * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
+     * <p>The data namespace of the Alibaba Cloud service.</p>
+     * <p>For information about the namespaces of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,10 +110,10 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
     /**
      * <p>The effective scope of the alert blacklist policy. Valid values:</p>
      * <ul>
-     * <li><p>USER: The alert blacklist policy takes effect only within the current Alibaba Cloud account.</p>
+     * <li><p>USER: The alert blacklist policy takes effect only in the current Alibaba Cloud account.</p>
      * </li>
-     * <li><p>GROUP (default): The alert blacklist policy takes effect within the specified application group. You must specify an application group.
-     * For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * <li><p>GROUP (default): The alert blacklist policy takes effect in the specified application group. You must specify an application group.
+     * For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
      * </li>
      * </ul>
      * 
@@ -238,7 +238,7 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
 
     public static class ModifyMetricRuleBlackListRequestMetrics extends TeaModel {
         /**
-         * <p>The name of the monitoring metrics.</p>
+         * <p>The name of the metric.</p>
          * <p>Valid values of N: 1 to 10.</p>
          * <p>This parameter is required.</p>
          * 
@@ -249,7 +249,7 @@ public class ModifyMetricRuleBlackListRequest extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The extended dimension information of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> indicates that the blacklist policy applies to all C drives of the ECS instance of the Alibaba Cloud service.</p>
+         * <p>The extended dimension information of the instance. For example, {&quot;device&quot;:&quot;C:&quot;} indicates that the blacklist policy applies to all C drives of the ECS instance.</p>
          * <p>Valid values of N: 1 to 10.</p>
          * 
          * <strong>example:</strong>

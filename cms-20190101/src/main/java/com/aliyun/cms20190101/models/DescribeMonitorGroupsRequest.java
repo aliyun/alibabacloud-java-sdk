@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the dynamic rule matching.</p>
+     * <p>The ID of the intelligent tag rule.</p>
      * 
      * <strong>example:</strong>
      * <p>6b882d9a-5117-42e2-9d0c-4749a0c6****</p>
@@ -14,7 +14,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String dynamicTagRuleId;
 
     /**
-     * <p>The tag key used to create the application group by using dynamic rule matching.</p>
+     * <p>The tag key used to create the application group by using intelligent tags.</p>
      * 
      * <strong>example:</strong>
      * <p>GroupKey1</p>
@@ -23,7 +23,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String groupFounderTagKey;
 
     /**
-     * <p>The tag value used to create the application group by using dynamic rule matching.</p>
+     * <p>The tag value used to create the application group by using intelligent tags.</p>
      * 
      * <strong>example:</strong>
      * <p>GroupValue1</p>
@@ -32,7 +32,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String groupFounderTagValue;
 
     /**
-     * <p>The application group ID. Separate multiple application group IDs with commas (,).</p>
+     * <p>The ID of the application group. Separate multiple application group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>92****</p>
@@ -41,7 +41,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The application group name.</p>
+     * <p>The name of the application group.</p>
      * 
      * <strong>example:</strong>
      * <p>testGroup124</p>
@@ -50,10 +50,10 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>Specifies whether to include the history of alert templates that have been applied to the application group in the response. Valid values:</p>
+     * <p>Specifies whether to include the history of alert templates applied to the application group in the response. Valid values:</p>
      * <ul>
-     * <li>true: Include the history.</li>
-     * <li>false: Do not include the history.</li>
+     * <li>true: Yes.</li>
+     * <li>false: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public Boolean includeTemplateHistory;
 
     /**
-     * <p>The resource instance ID. This parameter is used to query the application group to which the specified instance belongs.</p>
+     * <p>The instance ID. This parameter is used to query the application group to which the specified instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>i-abcdefgh12****</p>
@@ -106,8 +106,8 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether to include alert contact groups in the response. Valid values:</p>
      * <ul>
-     * <li>true: Include alert contact groups.</li>
-     * <li>false: Do not include alert contact groups.</li>
+     * <li>true: Yes.</li>
+     * <li>false: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,13 +125,13 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     /**
      * <p>The type of the application group. Valid values:</p>
      * <ul>
-     * <li>custom: a custom application group.</li>
-     * <li>ehpc_cluster: an application group synchronized from an EHPC cluster.</li>
-     * <li>kubernetes: an application group synchronized from Container Service for Kubernetes.</li>
-     * <li>tag: an application group automatically created by using tags.</li>
-     * <li>resMgr: an application group created from a resource group.</li>
-     * <li>ess: an application group synchronized from Auto Scaling (ESS).</li>
-     * <li>aone_group: an application group synchronized from or associated with an Aone application.</li>
+     * <li>custom: custom application group</li>
+     * <li>ehpc_cluster: application group from EHPC cluster synchronization</li>
+     * <li>kubernetes: application group from Container Service for Kubernetes synchronization</li>
+     * <li>tag: application group from automatic creation by using labels</li>
+     * <li>resMgr: application group created by using resource groups</li>
+     * <li>ess: application group from elastic scaling synchronization</li>
+     * <li>aone_group: application group synchronized from or associated with an Aone application</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,15 +141,15 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The type of the application group. Valid values:</p>
+     * <p>The types of the application groups. Valid values:</p>
      * <ul>
-     * <li>custom: a custom application group.</li>
-     * <li>ehpc_cluster: an application group synchronized from an EHPC cluster.</li>
-     * <li>kubernetes: an application group synchronized from Container Service for Kubernetes.</li>
-     * <li>tag: an application group automatically created by using tags.</li>
-     * <li>resMgr: an application group created from a resource group.</li>
-     * <li>ess: an application group synchronized from Auto Scaling (ESS).</li>
-     * <li>aone_group: an application group synchronized from or associated with an Aone application.</li>
+     * <li>custom: custom application group</li>
+     * <li>ehpc_cluster: application group from EHPC cluster synchronization</li>
+     * <li>kubernetes: application group from Container Service for Kubernetes synchronization</li>
+     * <li>tag: application group from automatic creation by using labels</li>
+     * <li>resMgr: application group created by using resource groups</li>
+     * <li>ess: application group from elastic scaling synchronization</li>
+     * <li>aone_group: application group synchronized from or associated with an Aone application</li>
      * </ul>
      * 
      * <strong>example:</strong>

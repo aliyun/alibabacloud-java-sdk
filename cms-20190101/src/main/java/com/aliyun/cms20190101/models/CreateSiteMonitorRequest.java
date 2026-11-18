@@ -24,8 +24,7 @@ public class CreateSiteMonitorRequest extends TeaModel {
     public String agentGroup;
 
     /**
-     * <p>The ID of the alert rule.</p>
-     * <p>For more information about how to obtain the ID of an existing alert rule in CloudMonitor, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <p>The ID of the alert rule. For more information about how to obtain the ID of an existing alert rule in CloudMonitor, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>SystemDefault_acs_ecs_dashboard_InternetOutRate_Percent</p>
@@ -43,9 +42,7 @@ public class CreateSiteMonitorRequest extends TeaModel {
     public String customSchedule;
 
     /**
-     * <p>The monitoring frequency.</p>
-     * <p>Valid values: 1 minute, 5 minutes, 15 minutes, 30 minutes, and 60 minutes.</p>
-     * <p>Default value: 1 minute.</p>
+     * <p>The monitoring frequency. Valid values: 1 minute, 5 minutes, 15 minutes, 30 minutes, and 60 minutes. Default value: 1 minute.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,9 +51,7 @@ public class CreateSiteMonitorRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The probe information. If this parameter is left empty, the system randomly selects three detection points.</p>
-     * <p>The value is a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>, which correspond to Beijing, Hangzhou, and Qingdao.</p>
-     * <p>For more information about how to obtain detection point information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
+     * <p>The probe information. If this parameter is left empty, the system randomly selects three detection points. The value is a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>, which correspond to Beijing, Hangzhou, and Qingdao. For more information about how to obtain detection point information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</p>
@@ -77,8 +72,7 @@ public class CreateSiteMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the monitoring task.</p>
-     * <p>The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</p>
+     * <p>The name of the monitoring task. The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,8 +82,7 @@ public class CreateSiteMonitorRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>Site monitoring type of site monitoring task.</p>
-     * <p>Valid values: HTTP(S), PING, TCP, UDP, DNS, SMTP, POP3, FTP, and WEBSOCKET.</p>
+     * <p>The monitoring type of the site monitoring node. Currently, site monitoring nodes support the following types: HTTP(S), PING, TCP, UDP, DNS, SMTP, POP3, FTP, and WEBSOCKET.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

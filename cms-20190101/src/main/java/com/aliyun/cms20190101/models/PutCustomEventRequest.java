@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutCustomEventRequest extends TeaModel {
     /**
-     * <p>The event details.</p>
+     * <p>The list of event information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EventInfo")
@@ -57,8 +57,8 @@ public class PutCustomEventRequest extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The ID of the application group. Valid values of N: 1 to 50.</p>
-         * <p>Default value: 0. This value indicates that the event to be reported does not belong to any application group.</p>
+         * <p>The ID of the application group. Valid values of N: 0 to 50.</p>
+         * <p>Default value: 0. A value of 0 indicates that the reported event does not belong to any application group.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -67,12 +67,7 @@ public class PutCustomEventRequest extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The time when the event occurred.</p>
-         * <p>Format: <code>yyyyMMddTHHmmss.SSSZ</code>.</p>
-         * <p>Valid values of N: 1 to 50.</p>
-         * <blockquote>
-         * <p>You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.</p>
-         * </blockquote>
+         * <p>The time when the event occurred. Valid values of N: 1 to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>20171013T170923.456+0800</p>

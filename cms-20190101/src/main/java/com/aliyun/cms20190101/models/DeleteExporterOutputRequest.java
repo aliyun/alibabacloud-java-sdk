@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteExporterOutputRequest extends TeaModel {
     /**
-     * <p>The destination name of the configuration.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>testName</p>
      */
     @NameInMap("DestName")
     public String destName;

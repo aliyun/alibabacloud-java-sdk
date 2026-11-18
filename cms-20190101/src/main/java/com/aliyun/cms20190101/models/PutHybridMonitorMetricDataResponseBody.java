@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p>The value 200 indicates that the request was successful.</p>
+     * <p>A status code of 200 indicates a successful call.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
 
     /**
      * <p>The details of the invalid parameters.</p>
-     * <p>If the request parameters that you specify do not meet the requirements, the details of the invalid parameters are displayed.</p>
+     * <p>If the request parameters that you specify do not meet the requirements, the details of the invalid parameters are returned.</p>
      */
     @NameInMap("ErrorDetail")
     public java.util.List<PutHybridMonitorMetricDataResponseBodyErrorDetail> errorDetail;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5DB1CBCA-D14A-55FA-814F-B4DBD9735F68</p>
@@ -63,7 +63,7 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
 
     public static class PutHybridMonitorMetricDataResponseBodyErrorDetail extends TeaModel {
         /**
-         * <p>The error message that is returned for the invalid parameter.</p>
+         * <p>The error message of the invalid parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>label name :123 not match [a-zA-Z_][a-zA-Z0-9_]*</p>
@@ -72,7 +72,7 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The position of the error information in the array.</p>
+         * <p>The position of the error message in the array.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -4,14 +4,20 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class InstallMonitoringAgentRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6868E9A1-56E6-5FD7-9684-E2963BBAFB5F</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run on the request. A dry run checks permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. The dry run includes permission and instance status checks. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Sends a normal request. After the request passes the check, the name and description of the route table are directly modified.</li>
-     * <li><strong>true</strong>: Sends a check request. Only the check is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, a corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, the name and description of the route table are modified.</li>
+     * <li><strong>true</strong>: sends a dry run request. Only a check is performed, and the name and description of the route table are not modified. Check items include whether required parameters are specified and the request format. If the request fails the check, the corresponding error is returned. If the request passes the check, the DryRunOperation error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,8 +29,8 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly install the CloudMonitor agent. Valid values:</p>
      * <ul>
-     * <li>true (default): Forcibly installs the agent.</li>
-     * <li>false: Does not forcibly install the agent.</li>
+     * <li>true (default): forcibly installs the agent.</li>
+     * <li>false: does not forcibly install the agent.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,15 +42,15 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     /**
      * <p>Installs the CloudMonitor agent on all Alibaba Cloud hosts within the current Alibaba Cloud account. Valid values:</p>
      * <ul>
-     * <li><p><code>onlyInstallNotHasAgent</code>: Installs the latest version of the agent only on Alibaba Cloud hosts on which the CloudMonitor agent is not installed.</p>
+     * <li><p>onlyInstallNotHasAgent: installs the latest version of the agent only on Alibaba Cloud hosts on which the CloudMonitor agent is not installed.</p>
      * </li>
-     * <li><p><code>onlyUpgradeAgent</code>: Upgrades the agent only on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
+     * <li><p>onlyUpgradeAgent: upgrades the agent only on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
      * </li>
-     * <li><p><code>installAndUpgrade</code>: Installs the latest version of the agent on Alibaba Cloud hosts on which the CloudMonitor agent is not installed, and upgrades the agent on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
+     * <li><p>installAndUpgrade: installs the latest version of the agent on Alibaba Cloud hosts on which the CloudMonitor agent is not installed, and upgrades the agent on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you specify this parameter, the <code>InstanceIds</code> parameter is ignored.</p>
+     * <p>If you specify this parameter, the InstanceIds parameter is ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,10 +60,10 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     public String installCommand;
 
     /**
-     * <p>The ID of the Alibaba Cloud host.</p>
+     * <p>The IDs of the Alibaba Cloud hosts.</p>
      * <p>Valid values of N: 1 to 10.</p>
      * <blockquote>
-     * <p>You must specify either <code>InstallCommand</code> or <code>InstanceIds</code>.</p>
+     * <p>You must specify either InstallCommand or InstanceIds.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

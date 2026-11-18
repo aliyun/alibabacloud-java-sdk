@@ -53,7 +53,7 @@ public class BatchCreateInstantSiteMonitorRequest extends TeaModel {
 
         /**
          * <p>The detection point information. If this parameter is left empty, the system randomly selects three detection points.</p>
-         * <p>The value is a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>. The values correspond to Beijing, Hangzhou, and Qingdao.</p>
+         * <p>The format is <code>JSONArray</code>. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>, which correspond to Beijing, Hangzhou, and Qingdao.</p>
          * <p>For more information about how to obtain detection point information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
          * 
          * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class BatchCreateInstantSiteMonitorRequest extends TeaModel {
         public String ispCities;
 
         /**
-         * <p>The advanced extension options for the protocol type of the site monitoring task. Different protocol types correspond to different extension options.</p>
+         * <p>The advanced extension options for the protocol type of the site monitoring task. Different protocol types for detection tasks correspond to different extension options.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;time_out&quot;:5000}</p>
@@ -88,7 +88,7 @@ public class BatchCreateInstantSiteMonitorRequest extends TeaModel {
 
         /**
          * <p>The monitoring type of the site monitoring task.</p>
-         * <p>Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+         * <p>The supported monitoring types include HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
          * <blockquote>
          * <p>You must create at least one site monitoring task, and you must specify <code>Address</code>, <code>TaskName</code>, and <code>TaskType</code>.</p>
          * </blockquote>

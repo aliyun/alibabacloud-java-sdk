@@ -14,7 +14,7 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The ID of the alert rule. The ID of an existing alert rule in CloudMonitor. You can call the DescribeMetricRuleList operation to query alert rule IDs. For more information, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <p>The ID of the alert rule. The alert rule must already exist in CloudMonitor. You can call the <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a> operation to query the alert rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>49f7c317-7645-4cc9-94fd-ea42e122****</p>
@@ -23,7 +23,7 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String alertIds;
 
     /**
-     * <p>The custom monitoring schedule. You can select a specific time period from Monday to Sunday for monitoring.</p>
+     * <p>The custom probing schedule. You can select a specific time period from Monday to Sunday for probing.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;start_hour&quot;:0,&quot;end_hour&quot;:24, &quot;days&quot;:[0], &quot;time_zone&quot;:&quot;Local&quot;}</p>
@@ -51,9 +51,9 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String intervalUnit;
 
     /**
-     * <p>The detection point information. The value is in JSONArray format, for example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>, where <code>city</code> corresponds to Beijing, Hangzhou, and Qingdao respectively.</p>
+     * <p>The probe information. The value is a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>. The <code>city</code> values correspond to Beijing, Hangzhou, and Qingdao.</p>
      * <blockquote>
-     * <p>You can call the DescribeSiteMonitorISPCityList operation to query detection point information. For more information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>. If this parameter is left empty, the system randomly selects three detection points.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a> operation to obtain the detection point information. If this parameter is left empty, the system randomly selects three detection points.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String ispCities;
 
     /**
-     * <p>The advanced extended options for the protocol type of the monitoring task. Different protocol types correspond to different extended options.</p>
+     * <p>The advanced extension options for the protocol type of the monitoring task. Different protocol types correspond to different extension options.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;time_out&quot;:5000}</p>

@@ -66,7 +66,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>无。</p>
      */
     @NameInMap("Success")
     public String success;
@@ -249,7 +249,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
          * <p>The description of the Logstore group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Logstore group of Alibaba Cloud products.</p>
+         * <p>阿里云产品归属的Logstore组。</p>
          */
         @NameInMap("SLSGroupDescription")
         public String SLSGroupDescription;

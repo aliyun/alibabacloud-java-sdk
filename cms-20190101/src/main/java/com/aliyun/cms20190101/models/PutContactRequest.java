@@ -28,13 +28,22 @@ public class PutContactRequest extends TeaModel {
     public String describe;
 
     /**
-     * <p>The language in which alert notifications are sent. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The language of the alert notification. Valid values:</p>
      * <ul>
-     * <li>zh-cn: simplified Chinese.</li>
+     * <li>zh-cn: Simplified Chinese.</li>
      * <li>en: English.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not set this parameter, the language is automatically determined based on the region of the account.</p>
+     * <p>If you do not specify this parameter, the system automatically determines the language based on the region of the account.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,6 +81,14 @@ public class PutContactRequest extends TeaModel {
         return this.describe;
     }
 
+    public PutContactRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public PutContactRequest setLang(String lang) {
         this.lang = lang;
         return this;
@@ -82,10 +99,10 @@ public class PutContactRequest extends TeaModel {
 
     public static class PutContactRequestChannels extends TeaModel {
         /**
-         * <p>The TradeManager ID of the alert contact.</p>
-         * <p>&lt;props=&quot;china&quot;&gt;Specify at least one of the following contact methods: phone number, email address, DingTalk chatbot, or TradeManager.
-         * &lt;props=&quot;intl&quot;&gt;Specify at least one of the following contact methods: email address or DingTalk chatbot.
-         * &lt;props=&quot;partner&quot;&gt;Specify at least one of the following contact methods: email address or DingTalk chatbot..</p>
+         * <p>The TradeManager contact.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;You must specify at least one of the following contact methods: mobile phone number, email address, DingTalk chatbot, and TradeManager.
+         * &lt;props=&quot;intl&quot;&gt;You must specify at least one of the following contact methods: email address and DingTalk chatbot.
+         * &lt;props=&quot;partner&quot;&gt;You must specify at least one of the following contact methods: email address and DingTalk chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p>Jim</p>
@@ -94,10 +111,10 @@ public class PutContactRequest extends TeaModel {
         public String aliIM;
 
         /**
-         * <p>The webhook URL of the DingTalk chatbot.</p>
-         * <p>&lt;props=&quot;china&quot;&gt;Specify at least one of the following contact methods: phone number, email address, DingTalk chatbot, or TradeManager.
-         * &lt;props=&quot;intl&quot;&gt;Specify at least one of the following contact methods: email address or DingTalk chatbot.
-         * &lt;props=&quot;partner&quot;&gt;Specify at least one of the following contact methods: email address or DingTalk chatbot..</p>
+         * <p>The DingTalk chatbot.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;You must specify at least one of the following contact methods: mobile phone number, email address, DingTalk chatbot, and TradeManager.
+         * &lt;props=&quot;intl&quot;&gt;You must specify at least one of the following contact methods: email address and DingTalk chatbot.
+         * &lt;props=&quot;partner&quot;&gt;You must specify at least one of the following contact methods: email address and DingTalk chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565">https://oapi.dingtalk.com/robot/send?access_token=7d49515e8ebf21106a80a9cc4bb3d247771305d52fb15d6201234565</a>****</p>
@@ -106,10 +123,10 @@ public class PutContactRequest extends TeaModel {
         public String dingWebHook;
 
         /**
-         * <p>The email address of the alert contact. An activation link is sent to the email address. The alert contact is added only after the link is activated.</p>
-         * <p>&lt;props=&quot;china&quot;&gt;Specify at least one of the following contact methods: phone number, email address, DingTalk chatbot, or TradeManager.
-         * &lt;props=&quot;intl&quot;&gt;Specify at least one of the following contact methods: email address or DingTalk chatbot.
-         * &lt;props=&quot;partner&quot;&gt;Specify at least one of the following contact methods: email address or DingTalk chatbot..</p>
+         * <p>The email address. The email address receives an activation link. The contact is added only after the link is activated.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;You must specify at least one of the following contact methods: mobile phone number, email address, DingTalk chatbot, and TradeManager.
+         * &lt;props=&quot;intl&quot;&gt;You must specify at least one of the following contact methods: email address and DingTalk chatbot.
+         * &lt;props=&quot;partner&quot;&gt;You must specify at least one of the following contact methods: email address and DingTalk chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
@@ -118,10 +135,10 @@ public class PutContactRequest extends TeaModel {
         public String mail;
 
         /**
-         * <p>The phone number of the alert contact. An activation link is sent to the phone number. The alert contact is added only after the link is activated.</p>
-         * <p>&lt;props=&quot;china&quot;&gt;Specify at least one of the following contact methods: phone number, email address, DingTalk chatbot, or TradeManager.
-         * &lt;props=&quot;intl&quot;&gt;Specify at least one of the following contact methods: email address or DingTalk chatbot.
-         * &lt;props=&quot;partner&quot;&gt;Specify at least one of the following contact methods: email address or DingTalk chatbot..</p>
+         * <p>The mobile phone number. The mobile phone number receives an activation link. The contact is added only after the link is activated.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;You must specify at least one of the following contact methods: mobile phone number, email address, DingTalk chatbot, and TradeManager.
+         * &lt;props=&quot;intl&quot;&gt;You must specify at least one of the following contact methods: email address and DingTalk chatbot.
+         * &lt;props=&quot;partner&quot;&gt;You must specify at least one of the following contact methods: email address and DingTalk chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p>1333333****</p>

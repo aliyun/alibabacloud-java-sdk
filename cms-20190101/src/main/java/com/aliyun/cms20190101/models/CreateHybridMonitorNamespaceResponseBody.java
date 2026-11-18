@@ -32,10 +32,10 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li>true: The operation was successful.</li>
-     * <li>false: The operation failed.</li>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

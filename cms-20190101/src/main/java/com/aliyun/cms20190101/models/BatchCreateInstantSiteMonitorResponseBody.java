@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>A value of 200 indicates that the operation is successful.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the site monitoring tasks.</p>
+     * <p>The site monitoring task information.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;taskName&quot;: &quot;HangZhou_ECS1&quot;, &quot;taskId&quot;: &quot;679fbe4f-b80b-4706-91b2-5427b43e****&quot;}]</p>
@@ -46,8 +46,8 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li>true: The operation is successful.</li>
-     * <li>false: The operation fails.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
