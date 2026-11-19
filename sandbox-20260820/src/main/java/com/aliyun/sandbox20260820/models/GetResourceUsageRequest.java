@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceUsageRequest extends TeaModel {
     /**
-     * <p>The end time of the query. This time is exclusive. Specify the time on the hour in UTC. The latest allowed end time is the start of the current hour. You can query data for a maximum of 7 days at a time. The end time must be later than the start time.</p>
+     * <p>The end time of the query. This time is exclusive. Specify the time on the hour in UTC. The latest allowed time is the start of the current hour. You can query data for a maximum of 7 days at a time. The end time must be later than the start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,12 @@ public class GetResourceUsageRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The granularity at which usage data is aggregated. Set this parameter to All to view the cumulative usage over the entire query interval, to Hour to view the hourly usage, or to Day to aggregate the usage every 24 hours from the start time. The last interval can be less than 24 hours.</p>
+     * <p>The granularity at which usage data is aggregated. Valid values:</p>
+     * <ul>
+     * <li>All: Aggregates the cumulative usage over the entire query period.</li>
+     * <li>Hour: Aggregates the usage by hour.</li>
+     * <li>Day: Aggregates the usage every 24 hours starting from the startTime. The last period may be less than 24 hours.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +30,7 @@ public class GetResourceUsageRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The grouping keys. You can group the results by any combination of teamID, templateID, and sandboxPlan. Each key can be specified only once. If you do not specify this parameter, the results are aggregated over the entire query scope.</p>
+     * <p>The keys used to group the results. You can specify any combination of teamID, templateID, and sandboxPlan. Each key can be specified only once. If you do not specify this parameter, the results are aggregated over the entire query scope.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;teamID&quot;]</p>
@@ -71,7 +76,7 @@ public class GetResourceUsageRequest extends TeaModel {
     public String templateID;
 
     /**
-     * <p>The usage items to query. You can query 1 to 6 different usage items at a time. CPU usage items include cpuActive and cpuIdle. Memory usage items include memoryActive and memoryIdle. Disk usage items include disk and diskDeepSleep. The disk item includes the usage of disks in deep sleep mode.</p>
+     * <p>The usage items to query. You can specify 1 to 6 different usage items in a single request. CPU usage items include cpuActive and cpuIdle. Memory usage items include memoryActive and memoryIdle. Disk usage items include disk and diskDeepSleep. The disk item includes the usage of deep sleep disks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

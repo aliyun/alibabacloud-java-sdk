@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetricDataResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 indicates success. If the request fails, the corresponding error code is returned.</p>
+     * <p>The response code. A value of 200 indicates success. If the request fails, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetMetricDataResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The description of the request result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

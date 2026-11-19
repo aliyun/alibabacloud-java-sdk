@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetricDataRequest extends TeaModel {
     /**
-     * <p>The end time of the time series query. This time is excluded from the query range. Specify the UTC time accurate to seconds. The end time must be later than the start time. You can query metrics for a maximum of 7 days at a time. The time range must include at least one time point aligned with the period, and these time points cannot be later than the current time.</p>
+     * <p>The end time of the time series query. This time is exclusive. Specify a UTC time accurate to seconds. The end time must be later than the start time. You can query metrics for a maximum of 7 days at a time. The time range must include at least one time point aligned with the period, and these time points cannot be later than the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-11-05T00:02:00Z</p>
@@ -23,7 +23,7 @@ public class GetMetricDataRequest extends TeaModel {
     public java.util.List<String> groupBy;
 
     /**
-     * <p>The names of the metrics to query. You can query 1 to 16 different metrics at a time. For available metrics and query scopes, see the metric catalog.</p>
+     * <p>The names of the metrics to query. You can query 1 to 16 different metrics at a time. For available metrics and query scopes, refer to the metric catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GetMetricDataRequest extends TeaModel {
     public java.util.List<String> metricNames;
 
     /**
-     * <p>The time interval for time series queries, in seconds. Valid values: 60, 300, 900, 1800, 3600, and 86400. A value of 60 corresponds to full minutes, and 86400 corresponds to midnight UTC every day. The calculation duration of some statistical metrics varies with the interval.</p>
+     * <p>The time interval for time series queries, in seconds. Valid values: 60, 300, 900, 1800, 3600, and 86400. A value of 60 corresponds to exact minutes, and 86400 corresponds to 00:00:00 UTC every day. The calculation duration of some statistical metrics varies with the interval.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class GetMetricDataRequest extends TeaModel {
     public String sandboxID;
 
     /**
-     * <p>Queries the number of sandboxes by sandbox plan. This parameter applies only to sandboxCount. Valid values: eco, std, pro, and ent.</p>
+     * <p>Queries the number of sandboxes by sandbox plan. This parameter applies only to the sandboxCount metric. Valid values: eco, std, pro, and ent.</p>
      * 
      * <strong>example:</strong>
      * <p>pro</p>
@@ -61,7 +61,7 @@ public class GetMetricDataRequest extends TeaModel {
     public String sandboxPlan;
 
     /**
-     * <p>The start time of the time series query. This time is included in the query range. Specify the UTC time accurate to seconds and also specify endTime.</p>
+     * <p>The start time of the time series query. This time is inclusive. Specify a UTC time accurate to seconds, and also specify the endTime parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-11-05T00:00:00Z</p>
@@ -88,7 +88,7 @@ public class GetMetricDataRequest extends TeaModel {
     public String templateID;
 
     /**
-     * <p>The specific point in time to query. If you query metrics at a specific point in time, specify only this parameter. Specify the current or past UTC time accurate to seconds. If you omit all time parameters, the metrics at the current time are queried.</p>
+     * <p>The specific point in time to query. If you query metrics at a specific point in time, specify only this parameter. Specify a current or past UTC time accurate to seconds. If you omit all time parameters, the metrics at the current time are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-11-05T00:01:00Z</p>
