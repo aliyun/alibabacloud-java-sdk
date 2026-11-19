@@ -33,7 +33,12 @@ public class DescribeAccountsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database to which the account belongs.</p>
+     * <p>The filter condition for the database to which the account belongs. If this parameter is left empty, all accounts are returned. If this parameter is specified, only the accounts in the specified database are returned.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Rule: When this parameter is not empty, the value must be 1 to 63 characters in length. It cannot contain <code>/</code>, <code>\\</code>, <code>.</code>, spaces, <code>&quot;</code>, or <code>$</code>, and the value cannot be <code>local</code>. Otherwise, the <code>InvalidParameter</code> error is reported.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>admin</p>

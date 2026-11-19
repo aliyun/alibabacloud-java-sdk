@@ -15,22 +15,26 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to force Secure Sockets Layer (SSL) encryption for connections. Valid values:</p>
+     * <p>Specifies whether to force SSL encryption for connections. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Forces Secure Sockets Layer (SSL) encryption.</li>
-     * <li><strong>0</strong>: Does not force Secure Sockets Layer (SSL) encryption.</li>
+     * <li><strong>1</strong>: forces SSL encryption.</li>
+     * <li><strong>0</strong>: does not force SSL encryption.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Forced Secure Sockets Layer (SSL) encryption applies only to MongoDB 7.0 and 8.0 instances that use cloud disks and meet the following minor engine version requirements:<ul>
+     * <li>Forced SSL encryption applies only to cloud disk instances running MongoDB 7.0 and 8.0, and the following minor engine version requirements must be met:</li>
+     * <li><ul>
      * <li>MongoDB 7.0: The minor engine version must be 8.0.13 or later.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
      * <li>MongoDB 8.0: The minor engine version must be 9.0.5 or later.</li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * <blockquote>
-     * <p>Warning: After you enable forced Secure Sockets Layer (SSL) encryption, you cannot connect to the instance by using non-SSL connections.</warning></p>
+     * <p>Warning: After forced SSL encryption is enabled, you cannot connect to the instance without SSL encryption.</warning></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,11 +56,11 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The operation to perform on the SSL feature. Valid values:</p>
+     * <p>Specifies the operation to perform on the SSL feature. Valid values:</p>
      * <ul>
-     * <li><strong>Open</strong>: Enables Secure Sockets Layer (SSL) encryption.</li>
-     * <li><strong>Close</strong>: Disables Secure Sockets Layer (SSL) encryption.</li>
-     * <li><strong>Update</strong>: Updates the SSL certificate.</li>
+     * <li><strong>Open</strong>: enables Secure Sockets Layer (SSL) encryption.</li>
+     * <li><strong>Close</strong>: disables Secure Sockets Layer (SSL) encryption.</li>
+     * <li><strong>Update</strong>: updates the SSL certificate.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -67,11 +71,11 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String SSLAction;
 
     /**
-     * <p>The time when the SSL configuration of the MongoDB instance is modified. Valid values:</p>
+     * <p>Specifies the time when the SSL configuration of the MongoDB instance is modified. Valid values:</p>
      * <ul>
-     * <li><p>0: Modifies the configuration immediately.</p>
+     * <li><p>0: modifies the configuration immediately.</p>
      * </li>
-     * <li><p>1: Modifies the configuration within the O&amp;M window.</p>
+     * <li><p>1: modifies the configuration within the maintenance window.</p>
      * </li>
      * </ul>
      * 

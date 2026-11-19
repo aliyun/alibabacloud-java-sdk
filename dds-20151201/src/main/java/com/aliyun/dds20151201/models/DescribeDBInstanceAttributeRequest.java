@@ -26,8 +26,8 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether the instance is deleted. Valid values: </p>
      * <ul>
-     * <li><strong>false</strong>: The instance is running. Queries the information of a running instance.</li>
-     * <li><strong>true</strong>: The instance is deleted. Queries the information of a deleted instance.</li>
+     * <li><strong>false</strong>: The instance is running. Queries the information of running instances.</li>
+     * <li><strong>true</strong>: The instance is deleted. Queries the information of deleted instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,9 +43,9 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
      * <blockquote>
-     * <p>This parameter is supported only on the China site.</p>
+     * <p>This parameter is supported only on the Alibaba Cloud China site.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferClusterBackupResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the instance is switched to the cluster backup mode. If the value of this parameter is <strong>1</strong>, the instance is switched to the cluster backup mode.</p>
+     * <p>Indicates whether the instance has been switched to cluster backup mode. <strong>1</strong> indicates that the switch is complete.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

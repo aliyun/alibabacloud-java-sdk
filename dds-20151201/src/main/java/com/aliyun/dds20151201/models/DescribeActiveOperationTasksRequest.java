@@ -7,12 +7,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>Specifies whether the task can be canceled. Valid values:</p>
      * <ul>
-     * <li><p><strong>-1</strong> (default): returns all tasks.</p>
-     * </li>
-     * <li><p><strong>0</strong>: returns only tasks that cannot be canceled.</p>
-     * </li>
-     * <li><p><strong>1</strong>: returns only tasks that can be canceled.</p>
-     * </li>
+     * <li><strong>-1</strong> (default): returns all tasks.</li>
+     * <li><strong>0</strong>: returns only tasks that cannot be canceled.</li>
+     * <li><strong>1</strong>: returns only tasks that can be canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,14 +19,11 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowCancel;
 
     /**
-     * <p>Specifies whether the time can be changed. Valid values:</p>
+     * <p>Specifies whether the execution time can be modified. Valid values:</p>
      * <ul>
-     * <li><p><strong>-1</strong> (default): returns all tasks.</p>
-     * </li>
-     * <li><p><strong>0</strong>: returns only tasks whose time cannot be changed.</p>
-     * </li>
-     * <li><p><strong>1</strong>: returns only tasks whose time can be changed.</p>
-     * </li>
+     * <li><strong>-1</strong> (default): returns all tasks.</li>
+     * <li><strong>0</strong>: returns only tasks whose execution time cannot be modified.</li>
+     * <li><strong>1</strong>: returns only tasks whose execution time can be modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,18 +33,15 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowChange;
 
     /**
-     * <p>The level of the task. Valid values:</p>
+     * <p>The change level. Valid values:</p>
      * <ul>
-     * <li><p><strong>all</strong> (default): returns all tasks.</p>
-     * </li>
-     * <li><p><strong>S0</strong>: returns tasks for exception fixing.</p>
-     * </li>
-     * <li><p><strong>S1</strong>: returns tasks for system O\&amp;M.</p>
-     * </li>
+     * <li><strong>all</strong> (default): returns all tasks.</li>
+     * <li><strong>S0</strong>: returns tasks at the exception remediation level.</li>
+     * <li><strong>S1</strong>: returns tasks at the system O&amp;M level.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>all</p>
      */
     @NameInMap("ChangeLevel")
     public String changeLevel;
@@ -65,7 +56,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String dbType;
 
     /**
-     * <p>The name of the instance. This parameter is optional. You can specify only one instance name.</p>
+     * <p>The name of the instance. This parameter is optional. If you specify this parameter, you can specify only one instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>dds-bp16aaccfe10****</p>
@@ -98,7 +89,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product name. For MongoDB instances, set this parameter to <strong>MongoDB</strong>.</p>
+     * <p>The product name. For MongoDB instances, set the value to <strong>MongoDB</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MongoDB</p>
@@ -107,9 +98,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The ID of the region where the pending event is located. Call the DescribeRegions operation to obtain the region ID.</p>
+     * <p>The ID of the region to which the pending event belongs. You can call the DescribeRegions operation to query the region ID.</p>
      * <blockquote>
-     * <p>A value of <strong>all</strong> indicates all region IDs.</p>
+     * <p>A value of <strong>all</strong> specifies all region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -119,7 +110,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4ekp****</p>
@@ -134,20 +125,14 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The task status. This parameter filters the returned tasks.</p>
+     * <p>The task status, which is used to filter the returned tasks. Valid values:</p>
      * <ul>
-     * <li><p><strong>-1</strong>: all tasks.</p>
-     * </li>
-     * <li><p><strong>3</strong>: pending tasks.</p>
-     * </li>
-     * <li><p><strong>4</strong>: running tasks.</p>
-     * </li>
-     * <li><p><strong>5</strong>: successfully completed tasks.</p>
-     * </li>
-     * <li><p><strong>6</strong>: failed tasks.</p>
-     * </li>
-     * <li><p><strong>7</strong>: canceled tasks.</p>
-     * </li>
+     * <li><strong>-1</strong>: all tasks</li>
+     * <li><strong>3</strong>: pending tasks</li>
+     * <li><strong>4</strong>: in-progress tasks</li>
+     * <li><strong>5</strong>: successfully completed tasks</li>
+     * <li><strong>6</strong>: failed tasks</li>
+     * <li><strong>7</strong>: canceled tasks</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -159,16 +144,11 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><p><strong>rds_apsaradb_ha</strong>: primary-secondary node switchover.</p>
-     * </li>
-     * <li><p><strong>rds_apsaradb_transfer</strong>: instance migration.</p>
-     * </li>
-     * <li><p><strong>rds_apsaradb_upgrade</strong>: minor version upgrade.</p>
-     * </li>
-     * <li><p><strong>rds_apsaradb_maxscale</strong>: proxy minor version upgrade.</p>
-     * </li>
-     * <li><p><strong>all</strong>: all task types.</p>
-     * </li>
+     * <li><strong>rds_apsaradb_ha</strong>: primary/secondary node switch</li>
+     * <li><strong>rds_apsaradb_transfer</strong>: instance migration</li>
+     * <li><strong>rds_apsaradb_upgrade</strong>: minor version upgrade</li>
+     * <li><strong>rds_apsaradb_maxscale</strong>: proxy minor version upgrade</li>
+     * <li><strong>all</strong>: all task types</li>
      * </ul>
      * 
      * <strong>example:</strong>

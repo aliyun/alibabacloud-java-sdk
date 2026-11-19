@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     /**
-     * <p>The domain name suffix for the connection string.</p>
+     * <p>The domain name suffix of the connection string.</p>
      * 
      * <strong>example:</strong>
      * <p>.mongodb.rds.aliyuncs.com</p>
@@ -22,9 +22,6 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>Details of the replica set.</p>
-     */
     @NameInMap("ReplicaSets")
     public DescribeReplicaSetRoleResponseBodyReplicaSets replicaSets;
 
@@ -87,6 +84,13 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.140.xxx.xx</p>
+         */
+        @NameInMap("IPAddress")
+        public String IPAddress;
+
         @NameInMap("NetworkType")
         public String networkType;
 
@@ -131,6 +135,14 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         }
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        public DescribeReplicaSetRoleResponseBodyReplicaSetsReplicaSet setIPAddress(String IPAddress) {
+            this.IPAddress = IPAddress;
+            return this;
+        }
+        public String getIPAddress() {
+            return this.IPAddress;
         }
 
         public DescribeReplicaSetRoleResponseBodyReplicaSetsReplicaSet setNetworkType(String networkType) {

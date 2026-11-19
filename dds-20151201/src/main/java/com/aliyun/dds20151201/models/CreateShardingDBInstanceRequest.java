@@ -12,7 +12,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <li>It must be 8 to 32 characters in length.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about how to troubleshoot connection failures caused by special characters in database connection string, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if database connection to an ApsaraDB for MongoDB instance fails because the username or password in database connection string contains special characters?</a>.</p>
+     * <p>For more information about how to troubleshoot connection failures caused by special characters in database connection string, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if a connection failure occurs because the username or password in database connection string contains special characters?</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,11 +24,11 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enables auto-renewal.</li>
-     * <li><strong>false</strong>: Disables auto-renewal. You must manually renew the instance. This is the default value.</li>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: disables auto-renewal. In this case, you must manually renew the instance. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is available and optional only when the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is valid and optional only when the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The ID of the cluster backup.</p>
+     * <p>The cluster backup ID.</p>
      * <blockquote>
      * <ul>
      * <li>This parameter is required only when RestoreType is set to 2 or 3.</li>
@@ -54,8 +54,8 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>PostPaid</strong>: Pay-as-you-go. This is the default value.</li>
-     * <li><strong>PrePaid</strong>: Subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go. This is the default value.</li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
      * </ul>
      * <blockquote>
      * <p>If you set this parameter to <strong>PrePaid</strong>, you must also specify the <strong>Period</strong> parameter.</p>
@@ -68,7 +68,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -77,17 +77,17 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The information about the ConfigServer nodes.</p>
+     * <p>The information about the Configserver node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigServer")
     public java.util.List<CreateShardingDBInstanceRequestConfigServer> configServer;
 
     /**
-     * <p>The name of the instance. The name must meet the following requirements:</p>
+     * <p>The instance name. The name must meet the following requirements:</p>
      * <ul>
-     * <li>It must start with a letter or a Chinese character.</li>
-     * <li>It can contain digits, letters, Chinese characters, underscores (_), periods (.), and hyphens (-).</li>
+     * <li>It must start with a letter.</li>
+     * <li>It can contain digits, letters, underscores (_), periods (.), and hyphens (-).</li>
      * <li>It must be 2 to 256 characters in length.</li>
      * </ul>
      * 
@@ -98,13 +98,23 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String DBInstanceDescription;
 
     /**
-     * <p>The region where the cross-region backup is stored.</p>
+     * <p>The region of the geo-redundant backup.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("DestRegion")
     public String destRegion;
+
+    /**
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+     * <ul>
+     * <li>true: performs a dry run without executing the actual request. The system checks the request parameters, request format, service limits, and available resources. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the DryRunOperation error code.</li>
+     * <li>false: sends a normal request and executes the operation after the request passes the dry run. This is the default value.</li>
+     * </ul>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>Specifies whether to enable cloud disk encryption.</p>
@@ -116,7 +126,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the custom key.</p>
+     * <p>The custom key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
@@ -135,7 +145,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database version number. Valid values:</p>
+     * <p>The database version. Valid values:</p>
      * <ul>
      * <li><strong>8.0</strong></li>
      * <li><strong>7.0</strong></li>
@@ -160,7 +170,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The global IP address whitelist templates of the instance. Separate multiple templates with commas (,). Duplicate templates are not supported.</p>
+     * <p>The global IP address whitelist templates of the instance. Separate multiple templates with commas (,). Each template must be unique.</p>
      * 
      * <strong>example:</strong>
      * <p>g-qxieqf40xjst1ngpr3jz</p>
@@ -192,7 +202,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter is available only when the instance uses cloud disks.</li>
+     * <li>This parameter is valid only when the instance uses cloud disks.</li>
      * <li>The value of this parameter cannot be the same as the value of <strong>ZoneId</strong> or <strong>SecondaryZoneId</strong>.</li>
      * <li>For more information about the multi-zone deployment policy for sharded cluster instances, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</li>
      * </ul>
@@ -205,6 +215,24 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String hiddenZoneId;
 
     /**
+     * <p>The maintenance end time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22:00Z</p>
+     */
+    @NameInMap("MaintainEndTime")
+    public String maintainEndTime;
+
+    /**
+     * <p>The maintenance start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18:00Z</p>
+     */
+    @NameInMap("MaintainStartTime")
+    public String maintainStartTime;
+
+    /**
      * <p>The information about the mongos nodes.</p>
      * <p>This parameter is required.</p>
      */
@@ -213,9 +241,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>VPC</strong>: VPC.</li>
-     * </ul>
+     * <p><strong>VPC</strong>: VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -233,7 +259,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <p>The subscription duration of the instance. Unit: months.</p>
      * <p>Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required and takes effect only when the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is required and valid only when the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -243,7 +269,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The type of the access protocol. Valid values:</p>
+     * <p>The access protocol type. Valid values:</p>
      * <ul>
      * <li><strong>mongodb</strong>: MongoDB protocol.</li>
      * <li><strong>dynamodb</strong>: DynamoDB protocol.</li>
@@ -293,7 +319,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     /**
      * <p>The point in time to which you want to restore the instance. You can specify any point in time within the last seven days. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>This parameter is required only when you call this operation to clone an instance. You must also specify the <strong>SrcDBInstanceId</strong> parameter.</p>
+     * <p>You must specify this parameter only when you call this operation to clone an instance. You must also specify the <strong>SrcDBInstanceId</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -305,9 +331,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     /**
      * <p>The backup restoration type. Valid values:</p>
      * <ul>
-     * <li>1: Restore the instance to a specified point in time.</li>
-     * <li>2: Restore a released instance to a specified backup set.</li>
-     * <li>3: Restore the instance to a specified cross-region backup set.</li>
+     * <li>1: restore the instance to a specified point in time.</li>
+     * <li>2: restore a released instance to a specified backup set.</li>
+     * <li>3: restore the instance to a specified geo-redundant backup set.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -338,7 +364,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <li><strong>eu-central-1b</strong>: Frankfurt Zone B.</li>
      * <li><strong>eu-central-1c</strong>: Frankfurt Zone C.<blockquote>
      * <ul>
-     * <li>This parameter is available only when the instance uses cloud disks.</li>
+     * <li>This parameter is valid only when the instance uses cloud disks.</li>
      * <li>The value of this parameter cannot be the same as the value of <strong>ZoneId</strong> or <strong>HiddenZoneId</strong>.</li>
      * <li>For more information about the multi-zone deployment policy for sharded cluster instances, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</li>
      * </ul>
@@ -353,7 +379,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String secondaryZoneId;
 
     /**
-     * <p>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,). Duplicate IP addresses are not supported. The following formats are supported:</p>
+     * <p>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,). Each IP address must be unique. The following formats are supported:</p>
      * <ul>
      * <li>0.0.0.0/0</li>
      * <li>IP addresses, such as 10.23.12.24.</li>
@@ -361,8 +387,8 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of an instance. The total number of IP addresses or CIDR blocks in all whitelist groups cannot exceed 1,000.</li>
-     * <li>0.0.0.0/0 indicates that all IP addresses can access the instance. This is a high-risk setting. Configure this parameter with caution.</li>
+     * <li>You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of an instance. The total number of IP addresses and CIDR blocks in all whitelist groups cannot exceed 1,000.</li>
+     * <li>0.0.0.0/0 indicates that all IP addresses can access the databases of the instance. This is a high-risk setting. Configure this setting with caution.</li>
      * </ul>
      * </blockquote>
      * 
@@ -373,9 +399,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The source instance ID.</p>
+     * <p>The ID of the source instance.</p>
      * <blockquote>
-     * <p>This parameter is required only when you call this operation to clone an instance. You must also specify the <strong>RestoreTime</strong> parameter.</p>
+     * <p>You must specify this parameter only when you call this operation to clone an instance. You must also specify the <strong>RestoreTime</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -385,11 +411,11 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String srcDBInstanceId;
 
     /**
-     * <p>The region where the source instance is located.</p>
+     * <p>The region of the source instance.</p>
      * <blockquote>
      * <ul>
      * <li>This parameter is required when the backup restoration type is rebuilding a deleted instance.</li>
-     * <li>This parameter is required when the backup restoration type is cross-region backup cloning.</li>
+     * <li>This parameter is required when the backup restoration type is cloning from a geo-redundant backup.</li>
      * </ul>
      * </blockquote>
      * 
@@ -420,12 +446,12 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <li><strong>cloud_essd1</strong>: PL1 ESSD.</li>
      * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
      * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
-     * <li><strong>local_ssd</strong>: local SSD.</li>
+     * <li><strong>local_ssd</strong>: Local SSD.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Instances of version 4.4 and later support only cloud disks. If you do not specify this parameter, <strong>cloud_essd1</strong> is selected by default.</li>
-     * <li>Instances of version 4.2 and earlier support only local disks. If you do not specify this parameter, <strong>local_ssd</strong> is selected by default.</li>
+     * <li>Instances of version 4.4 or later support only cloud disks. If you do not specify this parameter, <strong>cloud_essd1</strong> is selected by default.</li>
+     * <li>Instances of version 4.2 or earlier support only local disks. If you do not specify this parameter, <strong>local_ssd</strong> is selected by default.</li>
      * </ul>
      * </blockquote>
      * 
@@ -434,6 +460,12 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      */
     @NameInMap("StorageType")
     public String storageType;
+
+    /**
+     * <p>Specifies whether to enable TTL index cleanup for the restored instance. A value of true or an empty value indicates that cleanup is enabled.</p>
+     */
+    @NameInMap("TTLEnabled")
+    public Boolean TTLEnabled;
 
     /**
      * <p>The custom tags.</p>
@@ -537,6 +569,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         return this.destRegion;
     }
 
+    public CreateShardingDBInstanceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public CreateShardingDBInstanceRequest setEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -583,6 +623,22 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     }
     public String getHiddenZoneId() {
         return this.hiddenZoneId;
+    }
+
+    public CreateShardingDBInstanceRequest setMaintainEndTime(String maintainEndTime) {
+        this.maintainEndTime = maintainEndTime;
+        return this;
+    }
+    public String getMaintainEndTime() {
+        return this.maintainEndTime;
+    }
+
+    public CreateShardingDBInstanceRequest setMaintainStartTime(String maintainStartTime) {
+        this.maintainStartTime = maintainStartTime;
+        return this;
+    }
+    public String getMaintainStartTime() {
+        return this.maintainStartTime;
     }
 
     public CreateShardingDBInstanceRequest setMongos(java.util.List<CreateShardingDBInstanceRequestMongos> mongos) {
@@ -745,6 +801,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         return this.storageType;
     }
 
+    public CreateShardingDBInstanceRequest setTTLEnabled(Boolean TTLEnabled) {
+        this.TTLEnabled = TTLEnabled;
+        return this;
+    }
+    public Boolean getTTLEnabled() {
+        return this.TTLEnabled;
+    }
+
     public CreateShardingDBInstanceRequest setTag(java.util.List<CreateShardingDBInstanceRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -779,10 +843,10 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     public static class CreateShardingDBInstanceRequestConfigServer extends TeaModel {
         /**
-         * <p>The specifications of the ConfigServer node. Valid values:</p>
+         * <p>The specifications of the Configserver node. Valid values:</p>
          * <ul>
-         * <li><strong>mdb.shard.2x.xlarge.d</strong>: 4 cores, 8 GB (dedicated). This specification is supported only for instances of version 4.4 and later.</li>
-         * <li><strong>dds.cs.mid</strong>: 1 core, 2 GB (general-purpose). This specification is supported only for instances of version 4.2 and earlier.</li>
+         * <li><strong>mdb.shard.2x.xlarge.d</strong>: 4 cores, 8 GB (dedicated). This specification is supported only by instances of version 4.4 or later.</li>
+         * <li><strong>dds.cs.mid</strong>: 1 core, 2 GB (general-purpose). This specification is supported only by instances of version 4.2 or earlier.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -793,7 +857,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         public String _class;
 
         /**
-         * <p>The storage capacity of the ConfigServer node. Unit: GB.</p>
+         * <p>The storage capacity of the Configserver node. Unit: GB.</p>
          * <blockquote>
          * <p>The valid values are subject to the instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
          * </blockquote>
@@ -833,7 +897,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
          * <p>The specifications of the mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
          * <blockquote>
          * <ul>
-         * <li><strong>N</strong> in the parameter name specifies the sequence number of the mongos node. For example, <strong>Mongos.2.Class</strong> specifies the specifications of the second mongos node.</li>
+         * <li><strong>N</strong> in the parameter name specifies the Nth mongos node. For example, <strong>Mongos.2.Class</strong> specifies the specifications of the second mongos node.</li>
          * <li>Valid values of <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</li>
          * </ul>
          * </blockquote>
@@ -865,7 +929,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
          * <p>The specifications of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
          * <blockquote>
          * <ul>
-         * <li><strong>N</strong> in the parameter name specifies the sequence number of the shard node. For example, <strong>ReplicaSet.2.Class</strong> specifies the specifications of the second shard node.</li>
+         * <li><strong>N</strong> in the parameter name specifies the Nth shard node. For example, <strong>ReplicaSet.2.Class</strong> specifies the specifications of the second shard node.</li>
          * <li>Valid values of <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</li>
          * </ul>
          * </blockquote>
@@ -881,7 +945,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
          * <p>The number of read-only nodes in the shard node.</p>
          * <p>Valid values: <strong>0</strong> to <strong>5</strong>. Default value: <strong>0</strong>.</p>
          * <blockquote>
-         * <p><strong>N</strong> in the parameter name specifies the sequence number of the shard node. For example, <strong>ReplicaSet.2.ReadonlyReplicas</strong> specifies the number of read-only nodes in the second shard node.</p>
+         * <p><strong>N</strong> in the parameter name specifies the Nth shard node. For example, <strong>ReplicaSet.2.ReadonlyReplicas</strong> specifies the number of read-only nodes in the second shard node.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -895,7 +959,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
          * <blockquote>
          * <ul>
          * <li>The valid values are subject to the instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
-         * <li><strong>N</strong> in the parameter name specifies the sequence number of the shard node. For example, <strong>ReplicaSet.2.Storage</strong> specifies the storage capacity of the second shard node.</li>
+         * <li><strong>N</strong> in the parameter name specifies the Nth shard node. For example, <strong>ReplicaSet.2.Storage</strong> specifies the storage capacity of the second shard node.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -939,11 +1003,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     public static class CreateShardingDBInstanceRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * <blockquote>
-         * <ul>
-         * <li><strong>N</strong> in the parameter name specifies the sequence number of the tag. For example, <strong>Tag.1.Key</strong> specifies the key of the first tag, and <strong>Tag.2.Key</strong> specifies the key of the second tag.</li>
-         * </ul>
+         * <p><strong>N</strong> in the parameter name specifies the Nth tag. For example, <strong>Tag.1.Key</strong> specifies the key of the first tag, and <strong>Tag.2.Key</strong> specifies the key of the second tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -953,9 +1015,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * <blockquote>
-         * <p><strong>N</strong> in the parameter name specifies the sequence number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+         * <p><strong>N</strong> in the parameter name specifies the Nth tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

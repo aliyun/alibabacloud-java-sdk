@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyTaskInfoRequest extends TeaModel {
     /**
-     * <p>A action-related parameter. This parameter can be extended based on your business requirements. This parameter value varies with the value of the TaskAction parameter.</p>
+     * <p>The parameters related to the action. These parameters can be extended based on business requirements. Different values must be passed for different taskAction names.</p>
+     * <blockquote>
+     * <p>When TaskAction is set to modifySwitchTime, this parameter is required. It must be a JSON string that contains the recoverMode key. Valid values for recoverMode: immediate, maintainTime, and timePoint.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;recoverMode\&quot;:\&quot;immediate\&quot;}</p>
@@ -14,7 +17,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +33,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the step visible to the user.</p>
+     * <p>The name of the step visible to the current user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +43,10 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String stepName;
 
     /**
-     * <p>The action name that corresponds to the state described in the actionInfo parameter of the <a href="https://help.aliyun.com/document_detail/2639186.html">DescribeHistoryTasks</a> operation.</p>
+     * <p>The name of the operation. The value is the action name corresponding to the status in the actionInfo obtained from the <a href="https://help.aliyun.com/document_detail/2639186.html">DescribeHistoryTasks</a> operation.</p>
+     * <blockquote>
+     * <p>Valid values: retry, cancel, and modifySwitchTime.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +56,7 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String taskAction;
 
     /**
-     * <p>The task ID. Separate multiple IDs with commas (,). You can specify up to 10 task IDs.</p>
+     * <p>The task ID. Separate multiple IDs with commas (,). You can specify up to 10 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

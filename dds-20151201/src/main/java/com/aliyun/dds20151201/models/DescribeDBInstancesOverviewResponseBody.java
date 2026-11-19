@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     /**
-     * <p>A list of instance details.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("DBInstances")
     public java.util.List<DescribeDBInstancesOverviewResponseBodyDBInstances> DBInstances;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>52820D2B-B2DD-59F0-BDF2-83EC19C6F1CA</p>
@@ -20,7 +20,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of instances returned.</p>
+     * <p>The total number of instances returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesOverviewResponseBodyDBInstancesMongosList extends TeaModel {
         /**
-         * <p>The instance type of the mongos node.</p>
+         * <p>The node specifications of the mongos node.</p>
          * 
          * <strong>example:</strong>
          * <p>dds.mongos.standard</p>
@@ -145,7 +145,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The storage capacity of the shard node, in GB.</p>
+         * <p>The storage capacity of the shard node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -154,7 +154,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public Integer nodeStorage;
 
         /**
-         * <p>The number of read-only nodes in the shard. Valid values: <strong>0</strong> to <strong>5</strong>.</p>
+         * <p>The number of read-only nodes in the shard node. Valid values: <strong>0</strong> to <strong>5</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -211,14 +211,11 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesOverviewResponseBodyDBInstancesTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          * <ul>
-         * <li><p>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
-         * </li>
-         * <li><p>The key can be up to 64 characters in length.</p>
-         * </li>
-         * <li><p>The key cannot be an empty string.</p>
-         * </li>
+         * <li>The tag key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The tag key can be up to 64 characters in length.</li>
+         * <li>The tag key cannot be an empty string.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,14 +225,11 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          * <ul>
-         * <li><p>The value cannot start with <code>aliyun</code>, <code>acs</code>:, <code>http://</code>, or <code>https://</code>.</p>
-         * </li>
-         * <li><p>The value can be up to 128 characters in length.</p>
-         * </li>
-         * <li><p>The value can be an empty string.</p>
-         * </li>
+         * <li>The tag value cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The tag value can be up to 128 characters in length.</li>
+         * <li>The tag value can be an empty string.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -269,13 +263,11 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesOverviewResponseBodyDBInstances extends TeaModel {
         /**
-         * <p>The read/write throughput of the instance.</p>
+         * <p>The read and write throughput consumed by the instance.</p>
          * <blockquote>
          * <ul>
-         * <li><p>This parameter is returned only for Serverless instances.</p>
-         * </li>
-         * <li><p>Serverless instances are available only on the China site (aliyun.com).</p>
-         * </li>
+         * <li>This parameter is returned only if the instance is a serverless instance.</li>
+         * <li>Serverless instances are supported only on the Alibaba Cloud China site.</li>
          * </ul>
          * </blockquote>
          * 
@@ -288,10 +280,8 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>PrePaid</strong>: subscription</p>
-         * </li>
-         * <li><p><strong>PostPaid</strong>: pay-as-you-go</p>
-         * </li>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,7 +291,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The time when the instance was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is in UTC.</p>
+         * <p>The time when the instance was created. The time is displayed in UTC in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-05T03:18:53Z</p>
@@ -310,18 +300,15 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The instance type. For more information about the instance types available for different instance architectures, see:</p>
+         * <p>The instance type. For more information about the instance types of different architectures, see the following topics:</p>
          * <ul>
-         * <li><p><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></p>
-         * </li>
-         * <li><p><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></p>
-         * </li>
-         * <li><p><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></p>
-         * </li>
+         * <li><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></li>
          * </ul>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is not required for Serverless instances.</p>
+         * <p>You do not need to specify this parameter for serverless instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -349,7 +336,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+         * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance statuses</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -358,7 +345,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String DBInstanceStatus;
 
         /**
-         * <p>The storage capacity of the instance, in GB.</p>
+         * <p>The storage capacity of the instance. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -367,16 +354,12 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public Integer DBInstanceStorage;
 
         /**
-         * <p>The instance architecture. Valid values:</p>
+         * <p>The architecture of the instance. Valid values: </p>
          * <ul>
-         * <li><p><strong>sharding</strong>: sharded cluster instance</p>
-         * </li>
-         * <li><p><strong>replicate</strong>: replica set or standalone instance</p>
-         * </li>
-         * </ul>
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <ul>
-         * <li><strong>serverless</strong>: Serverless instance</li>
+         * <li><strong>sharding</strong>: sharded cluster instance.</li>
+         * <li><strong>replicate</strong>: replica set or standalone instance.
+         * &lt;props=&quot;china&quot;&gt;</li>
+         * <li><strong>serverless</strong>: serverless instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,7 +369,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String DBInstanceType;
 
         /**
-         * <p>The time when the data of the instance was destroyed. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+         * <p>The data destruction time of the instance. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-10T16:00:00Z</p>
@@ -413,7 +396,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The expiration time of the subscription instance. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is in UTC.</p>
+         * <p>The time when the instance expires. The time is displayed in UTC in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-05T16:00Z</p>
@@ -422,16 +405,12 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The instance edition. Valid values:</p>
+         * <p>The type of the instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: physical server</p>
-         * </li>
-         * <li><p><strong>1</strong>: ECS</p>
-         * </li>
-         * <li><p><strong>2</strong>: DOCKER</p>
-         * </li>
-         * <li><p><strong>18</strong>: instance on the new Kubernetes-based architecture</p>
-         * </li>
+         * <li><strong>0</strong>: physical machine</li>
+         * <li><strong>1</strong>: ECS</li>
+         * <li><strong>2</strong>: Docker</li>
+         * <li><strong>18</strong>: new Kubernetes architecture instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,7 +420,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String kindCode;
 
         /**
-         * <p>The time when the instance was last downgraded.</p>
+         * <p>The time when the instance was last downgraded. The date is in the YYYY-MM-DD format, such as 2021-05-08.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-08</p>
@@ -450,20 +429,14 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String lastDowngradeTime;
 
         /**
-         * <p>The lock mode of the instance.</p>
+         * <p>The lock status of the instance.</p>
          * <ul>
-         * <li><p><strong>Unlock</strong>: The instance is not locked.</p>
-         * </li>
-         * <li><p><strong>ManualLock</strong>: The instance is manually locked.</p>
-         * </li>
-         * <li><p><strong>LockByExpiration</strong>: The instance is automatically locked after it expires.</p>
-         * </li>
-         * <li><p><strong>LockByRestoration</strong>: The instance is automatically locked before a rollback.</p>
-         * </li>
-         * <li><p><strong>LockByDiskQuota</strong>: The instance is automatically locked after its storage space is exhausted.</p>
-         * </li>
-         * <li><p><strong>Released</strong>: The instance is released. You cannot unlock a released instance. You can only restore the data of the instance to a new instance. The restoration may take a long time.</p>
-         * </li>
+         * <li><strong>Unlock</strong>: The instance is not locked.</li>
+         * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The instance is automatically locked after it expires.</li>
+         * <li><strong>LockByRestoration</strong>: The instance is automatically locked before a rollback.</li>
+         * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked because its storage capacity is exhausted.</li>
+         * <li><strong>Released</strong>: The instance is released. In this case, you cannot unlock the instance. You can only use backup data to create a new instance. The recreation process may take a long time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -473,9 +446,9 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The details of the mongos nodes.</p>
+         * <p>The list of mongos nodes.</p>
          * <blockquote>
-         * <p>This parameter is returned only for sharded cluster instances.</p>
+         * <p>This parameter is returned only if the instance is a sharded cluster instance.</p>
          * </blockquote>
          */
         @NameInMap("MongosList")
@@ -484,10 +457,8 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>Classic</strong>: classic network</p>
-         * </li>
-         * <li><p><strong>VPC</strong>: virtual private cloud (VPC)</p>
-         * </li>
+         * <li><strong>Classic</strong>: classic network.</li>
+         * <li><strong>VPC</strong>: VPC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -508,7 +479,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         /**
          * <p>The number of nodes in the instance.</p>
          * <blockquote>
-         * <p>This parameter is returned only for replica set instances.</p>
+         * <p>This parameter is returned only if the instance is a replica set instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -527,9 +498,9 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The details of the shard nodes.</p>
+         * <p>The list of shard nodes.</p>
          * <blockquote>
-         * <p>This parameter is returned only for sharded cluster instances.</p>
+         * <p>This parameter is returned only if the instance is a sharded cluster instance.</p>
          * </blockquote>
          */
         @NameInMap("ShardList")
@@ -542,12 +513,10 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstancesOverviewResponseBodyDBInstancesTags> tags;
 
         /**
-         * <p>Indicates whether password-free access over a VPC is enabled. Valid values:</p>
+         * <p>Indicates whether password-free access within a VPC is enabled. Valid values:</p>
          * <ul>
-         * <li><p><strong>Open</strong>: enabled</p>
-         * </li>
-         * <li><p><strong>Close</strong>: disabled</p>
-         * </li>
+         * <li><strong>Open</strong>: enabled.</li>
+         * <li><strong>Close</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -557,7 +526,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         public String vpcAuthMode;
 
         /**
-         * <p>The zone of the instance.</p>
+         * <p>The zone ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>

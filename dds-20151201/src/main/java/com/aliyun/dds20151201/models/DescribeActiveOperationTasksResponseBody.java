@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     /**
-     * <p>The list of O\&amp;M tasks.</p>
+     * <p>The O&amp;M tasks.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;
@@ -38,7 +38,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of returned task records.</p>
+     * <p>The total number of returned task records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,12 +93,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>Indicates whether the task can be canceled.</p>
+         * <p>Specifies whether the task can be canceled. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: The task can be canceled.</p>
-         * </li>
-         * <li><p><strong>0</strong>: The task cannot be canceled.</p>
-         * </li>
+         * <li><strong>1</strong>: The task can be canceled.</li>
+         * <li><strong>0</strong>: The task cannot be canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,12 +106,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String allowCancel;
 
         /**
-         * <p>Indicates whether the time can be changed.</p>
+         * <p>Specifies whether the execution time can be modified. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: The time can be changed.</p>
-         * </li>
-         * <li><p><strong>0</strong>: The time cannot be changed.</p>
-         * </li>
+         * <li><strong>1</strong>: The execution time can be modified.</li>
+         * <li><strong>0</strong>: The execution time cannot be modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,12 +119,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String allowChange;
 
         /**
-         * <p>The code of the event level.</p>
+         * <p>The event level code. Valid values:</p>
          * <ul>
-         * <li><p><strong>S1</strong>: system O\&amp;M.</p>
-         * </li>
-         * <li><p><strong>S0</strong>: threat fixing.</p>
-         * </li>
+         * <li><strong>S1</strong>: system O&amp;M</li>
+         * <li><strong>S0</strong>: risk remediation</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,13 +144,13 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
          * <p>The event level in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统运维</p>
+         * <p>System O&amp;M</p>
          */
         @NameInMap("ChangeLevelZh")
         public String changeLevelZh;
 
         /**
-         * <p>The time when the task was created. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The creation time. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-30T14:30:00Z</p>
@@ -174,7 +168,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String currentAVZ;
 
         /**
-         * <p>The database engine type.</p>
+         * <p>The type of the database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>mongoDb</p>
@@ -183,7 +177,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The database engine version number.</p>
+         * <p>The database DPI engine version number.</p>
          * 
          * <strong>example:</strong>
          * <p>5.6</p>
@@ -192,7 +186,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String dbVersion;
 
         /**
-         * <p>The latest time to which the task execution time can be postponed. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The deadline for adjusting the task execution time. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-30T23:59:59Z</p>
@@ -210,7 +204,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The impact of the event in English.</p>
+         * <p>The event impact in English.</p>
          * 
          * <strong>example:</strong>
          * <p>Transient instance disconnection</p>
@@ -219,10 +213,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String impactEn;
 
         /**
-         * <p>The impact of the event in Chinese.</p>
+         * <p>The event impact in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>实例闪断</p>
+         * <p>Transient instance disconnection</p>
          */
         @NameInMap("ImpactZh")
         public String impactZh;
@@ -237,7 +231,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insComment;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dds-bp16aaccfe10****</p>
@@ -246,7 +240,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insName;
 
         /**
-         * <p>The time when the task was modified. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The modification time. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-30T14:30:00Z</p>
@@ -255,7 +249,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The preparation time required between the start time of the O\&amp;M task and the switchover time. The time is in the <em>HH:mm:ss</em> format.</p>
+         * <p>The preparation time required between the start time of the O&amp;M task and the switchover time. The time follows the <i>HH:mm:ss</i> format.</p>
          * 
          * <strong>example:</strong>
          * <p>04:00:00</p>
@@ -264,7 +258,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String prepareInterval;
 
         /**
-         * <p>The ID of the region where the pending event is located.</p>
+         * <p>The ID of the region to which the pending event belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -273,7 +267,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The information about the execution result.</p>
+         * <p>The execution result information.</p>
          * 
          * <strong>example:</strong>
          * <p>userCancel</p>
@@ -282,7 +276,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String resultInfo;
 
         /**
-         * <p>The time when the task was executed. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the backend executes the task. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-30T00:00:00Z</p>
@@ -291,18 +285,13 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The task status.</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p><strong>3</strong>: pending.</p>
-         * </li>
-         * <li><p><strong>4</strong>: running.</p>
-         * </li>
-         * <li><p><strong>5</strong>: successful.</p>
-         * </li>
-         * <li><p><strong>6</strong>: failed.</p>
-         * </li>
-         * <li><p><strong>7</strong>: canceled.</p>
-         * </li>
+         * <li><strong>3</strong>: pending tasks</li>
+         * <li><strong>4</strong>: in-progress tasks</li>
+         * <li><strong>5</strong>: successfully completed tasks</li>
+         * <li><strong>6</strong>: failed tasks</li>
+         * <li><strong>7</strong>: canceled tasks</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,13 +301,13 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The list of child instances.</p>
+         * <p>The child instances.</p>
          */
         @NameInMap("SubInsNames")
         public java.util.List<String> subInsNames;
 
         /**
-         * <p>The time when the switchover was initiated. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the backend initiates the switchover. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-30T14:30:00Z</p>
@@ -338,16 +327,11 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><p><strong>rds_apsaradb_ha</strong>: primary-secondary node switchover.</p>
-         * </li>
-         * <li><p><strong>rds_apsaradb_transfer</strong>: instance migration.</p>
-         * </li>
-         * <li><p><strong>rds_apsaradb_upgrade</strong>: minor version upgrade.</p>
-         * </li>
-         * <li><p><strong>rds_apsaradb_maxscale</strong>: proxy minor version upgrade.</p>
-         * </li>
-         * <li><p><strong>all</strong>: all task types.</p>
-         * </li>
+         * <li><strong>rds_apsaradb_ha</strong>: primary/secondary node switch</li>
+         * <li><strong>rds_apsaradb_transfer</strong>: instance migration</li>
+         * <li><strong>rds_apsaradb_upgrade</strong>: minor version upgrade</li>
+         * <li><strong>rds_apsaradb_maxscale</strong>: proxy minor version upgrade</li>
+         * <li><strong>all</strong>: all task types</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -357,7 +341,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The reason for the task in English.</p>
+         * <p>The task reason in English.</p>
          * 
          * <strong>example:</strong>
          * <p>Minor version update</p>
@@ -366,10 +350,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskTypeEn;
 
         /**
-         * <p>The reason for the task in Chinese.</p>
+         * <p>The task reason in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>小版本升级</p>
+         * <p>Minor version upgrade</p>
          */
         @NameInMap("TaskTypeZh")
         public String taskTypeZh;

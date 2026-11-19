@@ -7,15 +7,9 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enables automatic payment. Make sure that your account has a sufficient balance.</li>
-     * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <ul>
-     * <li><strong>false</strong>: Disables automatic payment. To pay for the order, log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the navigation pane on the left, choose <strong>Subscription Orders</strong> &gt; <strong>My Orders</strong>. On the <strong>Product Orders</strong> tab, find the order and complete the payment.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>false</strong>: Disables automatic payment. To pay for the order, log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the navigation pane on the left, click <strong>Order Management</strong>. On the <strong>Product Orders</strong> page, find the order and complete the payment.</li>
+     * <li><strong>true</strong>: enables automatic payment. Make sure that your account has sufficient balance.
+     * &lt;props=&quot;china&quot;&gt;- <strong>false</strong>: disables automatic payment. You can manually pay for the order in the console. Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the left-side navigation pane, choose <strong>Orders</strong> &gt; <strong>My Orders</strong>. On the <strong>Orders</strong> tab, find the target order and complete the payment.
+     * &lt;props=&quot;intl&quot;&gt;- <strong>false</strong>: disables automatic payment. You can manually pay for the order in the console. Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the left-side navigation pane, click <strong>Order Management</strong>. On the <strong>Orders</strong> page, find the target order and complete the payment.</li>
      * </ul>
      * <p>Default value: <strong>true</strong>.</p>
      * 
@@ -26,14 +20,12 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables auto-renewal.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disables auto-renewal.</p>
-     * </li>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: disables auto-renewal.</li>
      * </ul>
-     * <p>Default value: <strong>false</strong></p>
+     * <p>Default value: <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -42,7 +34,7 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The business information. This is an additional parameter.</p>
+     * <p>The additional parameter for business information.</p>
      * 
      * <strong>example:</strong>
      * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
@@ -51,7 +43,7 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The coupon code. The default value is <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+     * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -70,10 +62,13 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The disk type after the modification. Valid value:</p>
+     * <p>The new disk type. Valid values:</p>
      * <ul>
-     * <li><strong>cloud_auto</strong>: ESSD AutoPL disk.</li>
+     * <li><strong>cloud_auto</strong>: ESSD AutoPL cloud disk.</li>
      * </ul>
+     * <blockquote>
+     * <p>Prerequisite: The disk space of the instance must be at least 40 GB before you call this operation. If the disk space is insufficient, call ModifyDBInstanceSpec to expand the disk.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cloud_auto</p>
@@ -82,7 +77,7 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public String dbInstanceStorageType;
 
     /**
-     * <p>An additional parameter.</p>
+     * <p>The additional parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>async</p>
@@ -91,15 +86,13 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public String extraParam;
 
     /**
-     * <p>The order type. Valid values:</p>
+     * <p>The specification change type. Valid values:</p>
      * <ul>
-     * <li><p><strong>UPGRADE</strong>: Upgrades the instance configuration.</p>
-     * </li>
-     * <li><p><strong>DOWNGRADE</strong>: Downgrades the instance configuration.</p>
-     * </li>
+     * <li><strong>UPGRADE</strong>: upgrades the configurations.</li>
+     * <li><strong>DOWNGRADE</strong>: downgrades the configurations.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is available only when the instance uses the subscription billing method.</p>
+     * <p>This parameter is available only when the billing method of the instance is subscription.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,7 +102,10 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The provisioned IOPS. Valid values: 0 to 50000.</p>
+     * <p>The provisioned performance (IOPS). Valid values: 0 to 50,000.</p>
+     * <blockquote>
+     * <p>If DbInstanceStorageType is set to cloud_auto, this parameter is conditionally required and can be set to 0. If this parameter is not specified, the API returns InvalidParameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1960</p>

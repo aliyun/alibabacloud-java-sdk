@@ -14,7 +14,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>The scheduled deletion time of the instance key. If this value is empty, the key is not automatically deleted.</p>
+     * <p>The expected deletion time of the instance key, in the yyyy-MM-ddTHH:mm:ssZ format (UTC). If this value is empty, the key is not automatically deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-06T18:22:03Z</p>
@@ -41,7 +41,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>The status of the instance key. Valid values:</p>
+     * <p>The status of the instance key.</p>
      * <ul>
      * <li><strong>Enabled</strong>: The instance key is available.</li>
      * <li><strong>Disabled</strong>: The instance key is unavailable.</li>
@@ -54,7 +54,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String encryptionKeyStatus;
 
     /**
-     * <p>The purpose of the instance key.</p>
+     * <p>The usage of the instance key.</p>
      * 
      * <strong>example:</strong>
      * <p>ENCRYPT/DECRYPT</p>
@@ -81,7 +81,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String origin;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>783C2062-A2D3-4EA8-88AD-E43F990C23BB</p>

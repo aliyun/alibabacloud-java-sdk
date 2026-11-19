@@ -26,11 +26,21 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Specifies whether to forcibly modify the suffix of the connection string. If a suffix conflict occurs:</p>
+     * <ul>
+     * <li>true: Forcibly modifies the suffix.</li>
+     * <li>false or not specified: Uses the default validation logic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ForceModifySuffix")
     public Boolean forceModifySuffix;
 
     /**
-     * <p>The network type of the connection string when only the port number is modified.</p>
+     * <p>The network type of the connection string when only port numbers are modified.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc</p>
@@ -47,7 +57,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
      * <li>It must be 8 to 63 characters in length.</li>
      * </ul>
      * <blockquote>
-     * <p>Specify only the prefix of the endpoint. The remaining part cannot be modified.</p>
+     * <p>You only need to specify the prefix of the endpoint. The suffix cannot be modified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +67,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String newConnectionString;
 
     /**
-     * <p>The new port. Valid values: 1000 to 65535.</p>
+     * <p>The new port number. Valid values: 1000 to 65535.</p>
      * <blockquote>
      * <p>This parameter is active only when the <strong>DBInstanceId</strong> parameter is set to a cloud disk instance ID.</p>
      * </blockquote>
@@ -87,7 +97,10 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to modify only port numbers. If you modify only port numbers, batch modification is supported.</p>
+     * <p>Specifies whether to modify only port numbers. Batch modification is supported when only port numbers are modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("PortModifyOnly")
     public Boolean portModifyOnly;

@@ -7,10 +7,8 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>PrePaid</strong>: subscription</p>
-     * </li>
-     * <li><p><strong>PostPaid</strong>: pay-as-you-go</p>
-     * </li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,18 +27,15 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The instance type. For more information about the instance types available for different instance architectures, see:</p>
+     * <p>The instance type. For more information about the instance types of different architectures, see the following topics:</p>
      * <ul>
-     * <li><p><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></p>
-     * </li>
-     * <li><p><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></p>
-     * </li>
-     * <li><p><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></p>
-     * </li>
+     * <li><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></li>
      * </ul>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>This parameter is not required for Serverless instances.</p>
+     * <p>You do not need to specify this parameter for serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,13 +45,11 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public String instanceClass;
 
     /**
-     * <p>The ID of the instance whose overview you want to query.</p>
+     * <p>The IDs of the instances whose overview information you want to query.</p>
      * <blockquote>
      * <ul>
-     * <li><p>If you do not specify this parameter, an overview of all instances in your Alibaba Cloud account is returned.</p>
-     * </li>
-     * <li><p>You can specify multiple instance IDs. Separate the IDs with commas (,).</p>
-     * </li>
+     * <li>If you do not specify this parameter, the overview information of all instances within the current Alibaba Cloud account is queried by default.</li>
+     * <li>You can specify multiple instance IDs. Separate multiple instance IDs with commas (,).</li>
      * </ul>
      * </blockquote>
      * 
@@ -67,7 +60,7 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+     * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance statuses</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -76,23 +69,17 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>The instance architecture. Valid values:</p>
+     * <p>The architecture of the instance. Valid values: </p>
      * <ul>
-     * <li><p><strong>sharding</strong>: sharded cluster instance</p>
-     * </li>
-     * <li><p><strong>replicate</strong>: replica set or standalone instance</p>
-     * </li>
-     * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <ul>
-     * <li><strong>serverless</strong>: Serverless instance</li>
+     * <li><strong>sharding</strong>: sharded cluster instance.</li>
+     * <li><strong>replicate</strong>: replica set or standalone instance.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li><strong>serverless</strong>: serverless instance.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>Set this parameter as needed. For example, to query the overview of a sharded cluster instance, set this parameter to <strong>sharding</strong>.</p>
-     * </li>
-     * <li><p>If you do not specify this parameter, an overview of all instances is returned.</p>
-     * </li>
+     * <li>Specify this parameter based on your business requirements. For example, if you want to query the overview information of sharded cluster instances, set this parameter to <strong>sharding</strong>.</li>
+     * <li>If you do not specify this parameter, the overview information of all instances is queried by default.</li>
      * </ul>
      * </blockquote>
      * 
@@ -105,10 +92,8 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>Classic</strong>: classic network</p>
-     * </li>
-     * <li><p><strong>VPC</strong>: virtual private cloud (VPC)</p>
-     * </li>
+     * <li><strong>Classic</strong>: classic network.</li>
+     * <li><strong>VPC</strong>: VPC.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +109,7 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query the latest region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -134,7 +119,7 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</p>
+     * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4ekp****</p>
@@ -149,7 +134,7 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to return instance tags. The default value is false.</p>
+     * <p>Specifies whether the instance tag label is displayed. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -167,7 +152,7 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The ID of the virtual private cloud (VPC).</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1nme44gek34slfc****</p>
@@ -176,7 +161,7 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>

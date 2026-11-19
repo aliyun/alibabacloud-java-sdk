@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
     /**
-     * <p>The description of the account.</p>
+     * <p>The account description.</p>
+     * <ul>
+     * <li>Regular expression: <code>^[a-zA-Z一-龥][a-zA-Z一-龥0-9_.-]{1,255}$</code>. The description must start with an English letter or Chinese character, followed by English letters, Chinese characters, digits, underscores (_), periods (.), or hyphens (-). The length must be 2 to 256 characters.</li>
+     * <li>If the description is invalid, InvalidAccountDescription.Malformed is returned.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +18,13 @@ public class CreateAccountRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The account name. The name must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (_). It must start with a lowercase letter. The account has read-only permissions.</p>
+     * <p>The account name.</p>
+     * <ul>
+     * <li>Regular expression: <code>^[a-z]+[a-z0-9|_]*[a-z0-9]+$</code>. The name must start with a lowercase letter, end with a lowercase letter or digit, and can contain lowercase letters, digits, and underscores (_). The length must be 2 to 16 characters.</li>
+     * <li>The reserved name <code>root</code> (case-insensitive, built-in system account) cannot be used.</li>
+     * <li>The name cannot start with <code>__cloud</code> (reserved prefix for system accounts).</li>
+     * <li>If the name is invalid, <code>InvalidAccountName.Malformed</code> is returned.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,9 +34,14 @@ public class CreateAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The account password. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include ! @ # $ % ^ &amp; * ( ) _ + - =</p>
+     * <p>The account password.</p>
+     * <ul>
+     * <li>The length must be 8 to 32 characters. It can contain uppercase letters, lowercase letters, digits, and the following special characters: <code>!@#$%^&amp;*()_+-=</code>.</li>
+     * <li>The password must contain at least <strong>three</strong> of the following four character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>If the password is invalid, <code>InvalidAccountPassword.Malformed</code> is returned.</li>
+     * </ul>
      * <blockquote>
-     * <p>For information about how to handle special characters, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if a connection fails because the username or password in the connection string contains special characters?</a></p>
+     * <p>For information about how to handle special characters, see <a href="https://help.aliyun.com/document_detail/471568.html">How do I resolve the connection failure caused by special characters in the account name or password of a connection string?</a></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,15 +52,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The type of the account to be created. Valid values:</p>
-     * <ul>
-     * <li><strong>db</strong>: shard account. This is the default value.</li>
-     * <li><strong>cs</strong>: Configserver account.</li>
-     * <li><strong>normal</strong>: replica set account.</li>
-     * </ul>
-     * <blockquote>
-     * <p>Currently, only <strong>db</strong> accounts are supported.</p>
-     * </blockquote>
+     * <p>The account type.<br>Valid values:<br>- <code>normal</code>: replica set account. For a replica set instance, any value is processed as <code>normal</code>.<br>- <code>cs</code>: sharded cluster ConfigServer account.<br>- <code>db</code>: sharded cluster Shard direct connection account. For a sharded cluster instance, any value other than <code>cs</code> is processed as <code>db</code>.<br>Default value: <code>db</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>db</p>
@@ -54,7 +61,7 @@ public class CreateAccountRequest extends TeaModel {
     public String characterType;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance ID. For a sharded cluster instance, specify the sharded cluster ID. Account operations are executed from the perspective of the ConfigServer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +71,8 @@ public class CreateAccountRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database to which the account belongs. This is the database where the account is created or on which the account operates. Default value: admin. The name must be 1 to 63 characters in length and cannot contain /, \, ., spaces, double quotation marks (&quot;), or $. The name cannot be local.</p>
+     * <p>The database to which the account belongs (authentication database).<br>
+     * Default value: <code>admin</code>.<br>Rules: If this parameter is left empty, the request is allowed and the downstream system processes it as <code>admin</code>. If this parameter is specified, the length must be 1 to 63 characters. The value cannot contain <code>/</code>, <code>\\</code>, <code>.</code>, spaces, <code>&quot;</code>, or <code>$</code>, and cannot be <code>local</code>. Otherwise, <code>InvalidParameter</code> is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>admin</p>
@@ -85,7 +93,15 @@ public class CreateAccountRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of authorized roles for the account.</p>
+     * <p>The list of authorization roles for the account. <strong>Required for replica set and ConfigServer (cs) accounts</strong>. <strong>Prohibited for sharded cluster Shard direct connection (db) accounts</strong>.</p>
+     * <ul>
+     * <li><strong>Globally prohibited</strong> (returns <code>InvalidRoles.NotAllowed</code>): <code>root</code>, <code>clusterAdmin</code>, <code>hostManager</code>, <code>clusterManager</code>, <code>__system</code>, <code>__queryableBackup</code>, and <code>restore</code>.</li>
+     * <li><strong>Can be authorized to any database (including admin)</strong>: <code>read</code>, <code>userAdmin</code>, and <code>enableSharding</code>.</li>
+     * <li><strong>Can only be authorized to non-admin databases</strong> (returns <code>InvalidRoles.InvalidDB</code> if authorized to admin): <code>readWrite</code>, <code>dbAdmin</code>, and <code>dbOwner</code>.</li>
+     * <li><strong>Can only be authorized to the admin database</strong>: <code>readAnyDatabase</code>, <code>readWriteAnyDatabase</code>, <code>userAdminAnyDatabase</code>, <code>dbAdminAnyDatabase</code>, <code>clusterMonitor</code>, <code>backup</code>, and <code>alibabaCloudAdmin</code>. (<code>alibabaCloudAdmin</code> is supported only for instances with kernel version 4.4 or later. For earlier versions, <code>InvalidRoles.NotAllowed</code> is returned.)</li>
+     * <li><strong>Custom roles</strong>: Roles other than the preceding ones are considered custom roles and must already exist in the instance (you can query them by calling DescribeAccountRoles). Otherwise, <code>InvalidRoles.NotFound</code> is returned. <code>Roles.N.DBName</code> must be the same as the database where the role is defined. Otherwise, <code>InvalidRoles.DBNotMatch</code> is returned.</li>
+     * <li>If <code>Roles</code> is missing as a whole, <code>MissingRoles</code> is returned. If <code>Roles.N.Role</code> and <code>Roles.N.DBName</code> do not appear in pairs, <code>InvalidRoles.Malformed</code> is returned. If <code>Roles</code> is passed for a sharded cluster Shard direct connection account, <code>InvalidRoles.NotSupported</code> is returned.</li>
+     * </ul>
      */
     @NameInMap("Roles")
     public java.util.List<CreateAccountRequestRoles> roles;
@@ -185,7 +201,8 @@ public class CreateAccountRequest extends TeaModel {
 
     public static class CreateAccountRequestRoles extends TeaModel {
         /**
-         * <p>The authorized database.</p>
+         * <p>The database to which the account belongs (authentication database).<br>
+         * Default value: <code>admin</code>.<br>Rules: If this parameter is left empty, the request is allowed and the downstream system processes it as <code>admin</code>. If this parameter is specified, the length must be 1 to 63 characters. The value cannot contain <code>/</code>, <code>\\</code>, <code>.</code>, spaces, <code>&quot;</code>, or <code>$</code>, and cannot be <code>local</code>. Otherwise, <code>InvalidParameter</code> is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -194,7 +211,7 @@ public class CreateAccountRequest extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The granted permissions.</p>
+         * <p>The role name. It can be a built-in role or a custom role created on the instance. For value rules, see <a href="https://www.alibabacloud.com/help/en/mongodb/manage-database-accounts-through-the-console">Roles parameter description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>read</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeBatchRequest extends TeaModel {
     /**
-     * <p>The name of the account. Valid values:</p>
+     * <p>The username of the account. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name must start with a lowercase letter.</li>
      * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
@@ -26,7 +26,7 @@ public class CreateNodeBatchRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the account. Valid values:</p>
+     * <p>The password of the account. The password must meet the following requirements:</p>
      * <ul>
      * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
      * <li>Special characters include !@#$%^&amp;*()_+-=.</li>
@@ -45,8 +45,8 @@ public class CreateNodeBatchRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: (Default) Automatic payment is enabled. Make sure that your account has sufficient balance.</li>
-     * <li><strong>false</strong>: Manual payment is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/85052.html">Manually renew a subscription instance</a>.</li>
+     * <li><strong>true</strong>: Enables automatic payment. Make sure that your account has sufficient balance. This is the default value.</li>
+     * <li><strong>false</strong>: Disables automatic payment. You must manually pay the order. For more information, see <a href="https://help.aliyun.com/document_detail/85052.html">Manually renew a subscription instance</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class CreateNodeBatchRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. It cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -76,8 +76,8 @@ public class CreateNodeBatchRequest extends TeaModel {
     /**
      * <p>Specifies whether to use a coupon. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong> or <strong>null</strong>: (Default) A coupon is used.</li>
-     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: No coupon is used.</li>
+     * <li><strong>default</strong> or <strong>null</strong>: Uses a coupon. This is the default value.</li>
+     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: Does not use a coupon.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,10 +97,20 @@ public class CreateNodeBatchRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+     * <ul>
+     * <li>true: Performs a dry run without calling the operation. The system checks items such as request parameters, request format, service limits, and inventory. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
+     * <li>false: Sends the request. If the check succeeds, the operation is performed. This is the default value.</li>
+     * </ul>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The source of the request. Valid values:</p>
      * <ul>
-     * <li><strong>OpenApi</strong>: OpenAPI.</li>
-     * <li><strong>mongo_buy</strong>: The console.</li>
+     * <li><strong>OpenApi</strong>: The request is sent from OpenAPI Explorer.</li>
+     * <li><strong>mongo_buy</strong>: The request is sent from the console.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -138,7 +148,7 @@ public class CreateNodeBatchRequest extends TeaModel {
      * <p>Specifies whether to apply for a direct connection endpoint for the shard node. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Applies for a direct connection endpoint for the shard node.</li>
-     * <li><strong>false</strong>: (Default) Does not apply for a direct connection endpoint for the shard node.</li>
+     * <li><strong>false</strong>: Does not apply for a direct connection endpoint for the shard node. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -206,6 +216,14 @@ public class CreateNodeBatchRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public CreateNodeBatchRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateNodeBatchRequest setFromApp(String fromApp) {

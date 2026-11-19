@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailabilityZonesResponseBody extends TeaModel {
     /**
-     * <p>The details of the zones in which you can create ApsaraDB for MongoDB instances.</p>
+     * <p>The details of the zones where resources are available for purchase.</p>
      */
     @NameInMap("AvailableZones")
     public java.util.List<DescribeAvailabilityZonesResponseBodyAvailableZones> availableZones;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>19A13A33-0FAD-5120-8AE1-B1636F74DD80</p>
@@ -42,7 +42,7 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
 
     public static class DescribeAvailabilityZonesResponseBodyAvailableZones extends TeaModel {
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest available regions.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -51,7 +51,7 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-f</p>
@@ -60,17 +60,15 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
         public String zoneId;
 
         /**
-         * <p>The name of the zone.</p>
-         * <p>The return value of the ZoneName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the ZoneId parameter in the response is <strong>cn-hangzhou-h</strong>, the following values are returned for the ZoneName parameter:</p>
+         * <p>The zone name.</p>
+         * <p>The returned language is determined by the <strong>AcceptLanguage</strong> parameter. Take the <strong>cn-hangzhou-h</strong> zone as an example:</p>
          * <ul>
-         * <li><p>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, <strong>H</strong> is returned for the ZoneName parameter.</p>
-         * </li>
-         * <li><p>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, <strong>Hangzhou Zone H</strong> is returned for the ZoneName parameter.</p>
-         * </li>
+         * <li>If <strong>AcceptLanguage</strong> is set to <strong>zh</strong>: 杭州 可用区H</li>
+         * <li>If <strong>AcceptLanguage</strong> is set to <strong>en</strong>: Hangzhou Zone H</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Hangzhou Zone H</p>
+         * <p>杭州 可用区H</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;

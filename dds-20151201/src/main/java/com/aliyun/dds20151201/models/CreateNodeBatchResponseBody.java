@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeBatchResponseBody extends TeaModel {
     /**
-     * <p>The ID of the added Mongos or shard node.</p>
+     * <p>The ID of the newly added Mongos or shard node.</p>
      * 
      * <strong>example:</strong>
      * <p>d-bp18f7d6b6a7****</p>
@@ -14,7 +14,7 @@ public class CreateNodeBatchResponseBody extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>50179021707****</p>
@@ -23,7 +23,7 @@ public class CreateNodeBatchResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>55D41A94-1ACE-55E8-8BC7-67D622E7****</p>

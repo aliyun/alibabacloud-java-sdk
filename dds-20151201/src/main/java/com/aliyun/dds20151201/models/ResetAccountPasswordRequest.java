@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
     /**
-     * <p>The account whose password needs to be reset. Set the value to <strong>root</strong>.</p>
+     * <p>The name of the account whose password you want to reset. Set the value to <strong>root</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,11 +17,12 @@ public class ResetAccountPasswordRequest extends TeaModel {
     /**
      * <p>The new password.</p>
      * <ul>
-     * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></p>
-     * </li>
-     * <li><p>The password must be 8 to 32 characters in length.</p>
-     * </li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>!@#$%^&amp;*()_+-=</code>.</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
+     * <blockquote>
+     * <p>For more information about how to handle special characters, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if the connection fails because the username or password in the connection string contains special characters?</a></p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,12 +32,10 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The role of the instance.</p>
+     * <p>The role type of the instance.</p>
      * <ul>
-     * <li><p>If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.</p>
-     * </li>
-     * <li><p>If the instance is a replica set instance, you can leave this parameter empty or set the parameter to normal.</p>
-     * </li>
+     * <li>If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.</li>
+     * <li>If the instance is a replica set instance, this parameter can be left empty or set to normal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +55,11 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>账号所在库（账号建在/操作于哪个库），缺省 admin；规则：长度1~63，禁 /、\、.、空格、&quot;、$，禁 local</p>
+     * <p>The database to which the account belongs.</p>
+     * <ul>
+     * <li>The name cannot contain the following characters: \0, /, \, ., space, &quot;, and $.</li>
+     * <li>The name cannot be local.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>admin</p>

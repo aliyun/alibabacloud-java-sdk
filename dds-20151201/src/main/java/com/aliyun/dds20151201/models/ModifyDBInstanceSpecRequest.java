@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSpecRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically align the primary node to the primary zone for a multi-zone instance after operations such as configuration changes. If you choose not to align the node, one primary/secondary switchover (transient disconnection) is avoided. Default value: true (aligned).</p>
+     * <p>Specifies whether to automatically align the primary node to the primary zone after operations such as configuration changes for a multi-zone instance. If you choose not to align the node, one primary/secondary switchover (transient disconnection) is avoided. Default value: true, which indicates that the node is aligned.</p>
      */
     @NameInMap("AlignPrimaryZone")
     public Boolean alignPrimaryZone;
@@ -14,8 +14,8 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment for the instance. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: enables automatic payment. This is the default value. Make sure that your account has sufficient balance.
-     * &lt;props=&quot;china&quot;&gt;- <strong>false</strong>: disables automatic payment. You must manually pay for the order in the console. Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the left-side navigation pane, choose <strong>Orders</strong> &gt; <strong>My Orders</strong>. On the <strong>Orders</strong> tab, find the order and complete the payment.
-     * &lt;props=&quot;intl&quot;&gt;- <strong>false</strong>: disables automatic payment. You must manually pay for the order in the console. Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the left-side navigation pane, click <strong>Order Management</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+     * &lt;props=&quot;china&quot;&gt;- <strong>false</strong>: disables automatic payment. You can manually pay for the order in the ApsaraDB for MongoDB console. Log on to the console, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong> in the upper-right corner, choose <strong>Purchase Orders</strong> &gt; <strong>My Orders</strong> in the left-side navigation pane, and then find the target order on the <strong>Product Orders</strong> tab to complete the payment.
+     * &lt;props=&quot;intl&quot;&gt;- <strong>false</strong>: disables automatic payment. You can manually pay for the order in the ApsaraDB for MongoDB console. Log on to the console, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong> in the upper-right corner, click <strong>Order Management</strong> in the left-side navigation pane, and then find the target order on the <strong>Product Orders</strong> page to complete the payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,6 +32,15 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qwertyui1234567</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     /**
      * <p>Specifies whether to use a coupon. Valid values:</p>
@@ -74,16 +83,16 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Instance storage space of the instance. &lt;props=&quot;intl&quot;&gt;<ph>Valid values: 10 to 3000. Unit: GB. The step size is 10 GB. The valid values are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</ph></p>
+     * <p>The instance storage. &lt;props=&quot;intl&quot;&gt;<ph>Valid values: 10 to 3000. Unit: GB. Step size: 10 GB. The valid values are subject to the instance type. For details, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</ph></p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>For standalone instances and replica set instances, valid values are 10 to 3000. Unit: GB. The step size is 10 GB. The valid values are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</li>
-     * <li>For serverless instances, valid values are 1 to 100. Unit: GB. The step size is 1 GB.</li>
+     * <li>For standalone instances and replica set instances, valid values are 10 to 3000. Unit: GB. Step size: 10 GB. The valid values are subject to the instance type. For details, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</li>
+     * <li>For serverless instances, valid values are 1 to 100. Unit: GB. Step size: 1 GB.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You must specify at least one of the <strong>DBInstanceStorage</strong> and <strong>DBInstanceClass</strong> parameters.</li>
-     * <li>You cannot downgrade instance storage space.</li>
+     * <li>You must specify at least one of this parameter and the <strong>DBInstanceClass</strong> parameter.</li>
+     * <li>You cannot decrease the quota of storage space.</li>
      * </ul>
      * </blockquote>
      * 
@@ -94,7 +103,15 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     public String DBInstanceStorage;
 
     /**
-     * <p>The time when the configuration change takes effect. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:
+     * true: performs a dry run without calling the operation. The system checks the request parameters, request format, business limits, and inventory. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the DryRunOperation error code is returned.
+     * false: sends the normal request and directly performs the operation after the request passes the check. This is the default value.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The effective period of the configuration change. Valid values:</p>
      * <ul>
      * <li><strong>Immediately</strong>: takes effect immediately. This is the default value.</li>
      * <li><strong>MaintainTime</strong>: takes effect during the maintenance window of the instance.</li>
@@ -110,7 +127,7 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
      * <p>The additional parameter. Valid values:</p>
      * <ul>
      * <li><strong>async</strong>: returns the result after the configuration change order is created.</li>
-     * <li><strong>sync</strong>: returns the result when the configuration change is delivered after the order is created.</li>
+     * <li><strong>sync</strong>: returns the result when the configuration change is delivered to the instance after the order is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,13 +137,13 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     public String extraParam;
 
     /**
-     * <p>The type of configuration change. Valid values:</p>
+     * <p>The type of the configuration change. Valid values:</p>
      * <ul>
      * <li><strong>UPGRADE</strong>: upgrades the configurations. This is the default value.</li>
      * <li><strong>DOWNGRADE</strong>: downgrades the configurations.</li>
      * </ul>
      * <blockquote>
-     * <p>You can specify this parameter only when the instance uses the subscription billing method.</p>
+     * <p>This parameter is available only when the billing method of the instance is subscription.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -143,7 +160,7 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
 
     /**
      * <p>The number of read-only nodes. Valid values: <strong>0</strong> to <strong>5</strong>.</p>
-     * <p>If the instance is connected only over the <strong>classic network</strong> and a <strong>VPC</strong>, you must enable Internet access or release the classic network before you can change the <strong>number of read-only nodes</strong>.</p>
+     * <p>If the network type of the instance includes only the <strong>classic network</strong> and <strong>VPC</strong>, you must enable Internet access or release the classic network before you can change the <strong>number of read-only nodes</strong>.</p>
      * <blockquote>
      * <p>You can log on to the ApsaraDB for MongoDB console and view the enabled network types on the <strong>Database Connections</strong> page.</p>
      * </blockquote>
@@ -159,10 +176,10 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
      * <ul>
      * <li>For a replica set instance, valid values are <strong>3</strong>, <strong>5</strong>, and <strong>7</strong>.</li>
      * <li>For a standalone instance, the value is fixed to <strong>1</strong>.</li>
-     * <li>For a replica set instance that uses shared storage (supported only on the Alibaba Cloud China site), the value is fixed to <strong>2</strong>.</li>
+     * <li>For a replica set instance that uses shared storage (supported only on the China site), the value is fixed to <strong>2</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>You do not need to specify this parameter for a serverless instance (supported only on the Alibaba Cloud China site).</p>
+     * <p>You do not need to specify this parameter for a serverless instance (supported only on the China site).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -178,7 +195,7 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The specifications of the search node for the configuration change.</p>
+     * <p>The node specifications of the search node for the configuration change.</p>
      * 
      * <strong>example:</strong>
      * <p>mdb.shard.2x.xlarge.d</p>
@@ -212,7 +229,7 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
      * </blockquote>
      * <blockquote>
      * <ul>
-     * <li>You must specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</li>
+     * <li>You need to specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</li>
      * <li>This parameter is available only for multi-zone migration.</li>
      * <li>The destination zone and the current zone of the instance must be in the same region.</li>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</li>
@@ -231,7 +248,7 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
      * <p>Notice: This parameter is supported only for instances that use cloud disks.</notice>
      * Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetHiddenZoneId parameter.</notice></p>
      * <ul>
-     * <li>You must specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</li>
+     * <li>You need to specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</li>
      * <li>This parameter is available only for multi-zone migration.</li>
      * <li>The destination zone and the current zone of the instance must be in the same region.</li>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</li>
@@ -249,7 +266,7 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
      * <blockquote>
      * <p>Notice: This parameter is supported only for instances that use cloud disks.</notice></p>
      * <ul>
-     * <li>You must specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</li>
+     * <li>You need to specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</li>
      * </ul>
      * </blockquote>
      * 
@@ -260,12 +277,12 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     public String targetVswitchId;
 
     /**
-     * <p>The destination zone for instance migration when you migrate the instance across zones and change its configurations at the same time.</p>
+     * <p>The destination active zone for instance migration during a configuration change across zones.</p>
      * <blockquote>
      * <p>Notice: This parameter is supported only for cloud disk instances.</notice>
      * Notice: The value of this parameter cannot be the same as the value of the TargetSecondaryZoneId or TargetHiddenZoneId parameter.</notice></p>
      * <ul>
-     * <li>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</li>
+     * <li>You need to specify this parameter only during a configuration change across zones.</li>
      * <li>The destination zone and the current zone of the instance must be in the same region.</li>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</li>
      * </ul>
@@ -306,6 +323,14 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
         return this.businessInfo;
     }
 
+    public ModifyDBInstanceSpecRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public ModifyDBInstanceSpecRequest setCouponNo(String couponNo) {
         this.couponNo = couponNo;
         return this;
@@ -336,6 +361,14 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     }
     public String getDBInstanceStorage() {
         return this.DBInstanceStorage;
+    }
+
+    public ModifyDBInstanceSpecRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyDBInstanceSpecRequest setEffectiveTime(String effectiveTime) {

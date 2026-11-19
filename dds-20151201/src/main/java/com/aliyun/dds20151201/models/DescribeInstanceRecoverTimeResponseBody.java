@@ -14,7 +14,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of restorable time ranges. This list contains all time ranges available for point-in-time restoration.</p>
+     * <p>The list of restorable time ranges. This list includes all time ranges available for point-in-time recovery.</p>
      */
     @NameInMap("RestoreRanges")
     public java.util.List<DescribeInstanceRecoverTimeResponseBodyRestoreRanges> restoreRanges;
@@ -42,7 +42,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
 
     public static class DescribeInstanceRecoverTimeResponseBodyRestoreRanges extends TeaModel {
         /**
-         * <p>The beginning of the restorable time range.</p>
+         * <p>The start time of the restorable time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-16T19:33:20Z</p>
@@ -51,7 +51,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
         public String restoreBeginTime;
 
         /**
-         * <p>The end of the restorable time range.</p>
+         * <p>The end time of the restorable time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-16T19:43:20Z</p>
@@ -62,7 +62,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
         /**
          * <p>The restoration method. Valid values:</p>
          * <ul>
-         * <li>PointInTime (default): point-in-time restoration.</li>
+         * <li>PointInTime: point-in-time recovery. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>

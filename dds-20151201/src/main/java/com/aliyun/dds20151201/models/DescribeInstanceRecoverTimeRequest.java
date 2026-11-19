@@ -15,10 +15,10 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The region where the geo-redundancy backup set is stored.</p>
+     * <p>The region where the geo-redundancy backup set is located.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required when you query geo-redundancy backups.</li>
+     * <li>Required when you query geo-redundancy.</li>
      * </ul>
      * </blockquote>
      * 
@@ -28,6 +28,9 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     @NameInMap("DestRegion")
     public String destRegion;
 
+    /**
+     * <p>Specifies whether to query only the restorable time ranges that support database and table restoration. Default value: false.</p>
+     */
     @NameInMap("OnlyDbTableRecovery")
     public Boolean onlyDbTableRecovery;
 
@@ -56,10 +59,10 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The area where the source instance of the geo-redundancy backup resides.</p>
+     * <p>The area where the source instance of the geo-redundancy backup is located.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required when you query geo-redundancy backups.</li>
+     * <li>Required when you query geo-redundancy.</li>
      * </ul>
      * </blockquote>
      * 

@@ -7,7 +7,7 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p><strong>NodeId</strong> is required when specifying a sharded cluster instance ID</p>
+     * <p>If you specify the ID of a sharded cluster instance for this parameter, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The data granularity of the performance metrics in seconds. Valid values: 5, 30, 60, 600, 1800, 3600, and 86400.</p>
+     * <p>The data granularity. Valid values: 5, 30, 60, 600, 1800, 3600, and 86400.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -37,7 +37,7 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The performance metrics. For more information, see <a href="https://help.aliyun.com/document_detail/216973.html">Metrics</a>.</p>
+     * <p>The performance metrics. For more information, see <a href="https://help.aliyun.com/document_detail/216973.html">Monitoring metrics</a>.</p>
      * <blockquote>
      * <p>To specify multiple metrics, separate them with commas (,).</p>
      * </blockquote>
@@ -50,9 +50,9 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The ID of a mongos or shard node in the sharded cluster instance. This parameter lets you query the performance of a single node.</p>
+     * <p>Instance ID of the mongos or shard node in a sharded cluster instance. You can use this parameter to query the performance of a single node.</p>
      * <blockquote>
-     * <p>Available only when <strong>DBInstanceId</strong> is set to the ID of a sharded cluster instance.</p>
+     * <p>This parameter is available only when you specify instance ID of a sharded cluster instance for the <strong>DBInstanceId</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,19 +68,15 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The role of a node in a standalone or replica set instance. Valid values:</p>
+     * <p>The role of the node in a standalone instance or replica set instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>Primary</strong>: The primary node.</p>
-     * </li>
-     * <li><p><strong>Secondary</strong>: A secondary node.</p>
-     * </li>
+     * <li><strong>Primary</strong>: The primary node.</li>
+     * <li><strong>Secondary</strong>: The secondary node.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>Available only when <strong>DBInstanceId</strong> is set to the ID of a standalone or replica set instance.</p>
-     * </li>
-     * <li><p>If <strong>DBInstanceId</strong> is set to the ID of a standalone instance, this parameter only supports the value <strong>Primary</strong>.</p>
-     * </li>
+     * <li>This parameter is available only when you specify instance ID of a standalone instance or replica set instance for the <strong>DBInstanceId</strong> parameter.</li>
+     * <li>When you specify instance ID of a standalone instance for the <strong>DBInstanceId</strong> parameter, you can set this parameter only to <strong>Primary</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -97,9 +93,9 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The role ID of a node in a standalone or replica set instance. To query the role ID, call the <a href="https://help.aliyun.com/document_detail/62134.html">DescribeReplicaSetRole</a> operation.</p>
+     * <p>The instance ID of the node in a standalone instance or replica set instance. You can call the <a href="https://help.aliyun.com/document_detail/62134.html">DescribeReplicaSetRole</a> operation to query the instance ID.</p>
      * <blockquote>
-     * <p>Available only when <strong>DBInstanceId</strong> is set to the ID of a standalone or replica set instance.</p>
+     * <p>This parameter is available only when you specify the ID of a standalone instance or replica set instance for the <strong>DBInstanceId</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,9 +105,11 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public String roleId;
 
     /**
-     * <p>The Search node ID.</p>
+     * <p>The ID of the search node.</p>
      * <blockquote>
-     * <p>Available only after the Search feature is enabled for the instance.</p>
+     * <ul>
+     * <li>This parameter is available only when the search feature is enabled for the instance.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,7 +119,7 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public String searchId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

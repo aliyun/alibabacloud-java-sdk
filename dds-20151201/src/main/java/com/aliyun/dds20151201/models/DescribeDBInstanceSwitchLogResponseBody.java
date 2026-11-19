@@ -14,13 +14,13 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The primary/secondary switchover logs.</p>
+     * <p>The list of primary/secondary switchover logs.</p>
      */
     @NameInMap("LogItems")
     public java.util.List<DescribeDBInstanceSwitchLogResponseBodyLogItems> logItems;
 
     /**
-     * <p>The page number returned.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -38,7 +38,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ECBCA991-XXXX-XXXX-834C-B3E8007F33AA</p>
@@ -47,7 +47,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of primary/secondary switching entries.</p>
+     * <p>The total number of primary/secondary switchover records returned in the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,29 +110,24 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceSwitchLogResponseBodyLogItems extends TeaModel {
         /**
-         * <p>The ID of the replica set instance or the ID of the node on which a primary/secondary switchover is performed.</p>
+         * <p>Instance ID of the instance if the instance is a replica set instance, or instance ID of the switched node if the instance is a sharded cluster instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>NodeId-example-id-****</p>
+         * <p>If the instance is a replica set instance: dds-uf68f1b5a57exxxx.
+         * If the instance is a sharded cluster instance: d-uf652b73f554xxxx</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The code that indicates the reason of a primary/secondary switchover. Valid values:</p>
+         * <p>The cause code of the switchover. Valid values:</p>
          * <ul>
-         * <li><p>USER_CONSOLE_OPERATION: The switchover is manually performed.</p>
-         * </li>
-         * <li><p>OPERATION_AND_MAINTENANCE: Potential risks exist.</p>
-         * </li>
-         * <li><p>MACHINE_DOWNTIME: The host is offline.</p>
-         * </li>
-         * <li><p>PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.</p>
-         * </li>
-         * <li><p>SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.</p>
-         * </li>
-         * <li><p>MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.</p>
-         * </li>
+         * <li>USER_CONSOLE_OPERATION: manual operation</li>
+         * <li>OPERATION_AND_MAINTENANCE: potential risk</li>
+         * <li>MACHINE_DOWNTIME: host offline</li>
+         * <li>PRIMARY_UNHEALTHY: instance failures</li>
+         * <li>SECONDARY_UNHEALTHY: instance failures</li>
+         * <li>MULTIPLE_NODE_FAILURES: instance failures</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +137,11 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         public String switchCode;
 
         /**
-         * <p>The switchover status. Valid values: <strong>1</strong> and <strong>0</strong>. The value 1 indicates a successful primary/secondary switchover and the value 0 indicates a failed primary/secondary switchover.</p>
+         * <p>The switchover status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The switchover is successful.</li>
+         * <li><strong>0</strong>: The switchover failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -151,7 +150,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         public String switchStatus;
 
         /**
-         * <p>The point in time when a primary/secondary switchover was performed. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The switchover time. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-07T18:00:00Z</p>

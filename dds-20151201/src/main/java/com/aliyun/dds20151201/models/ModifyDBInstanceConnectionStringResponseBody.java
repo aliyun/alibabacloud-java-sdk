@@ -4,6 +4,12 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
+    /**
+     * <p>The modified endpoint of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-instance-pub.mongodb.rds.aliyuncs.com</p>
+     */
     @NameInMap("ModifiedConnectionString")
     public String modifiedConnectionString;
 

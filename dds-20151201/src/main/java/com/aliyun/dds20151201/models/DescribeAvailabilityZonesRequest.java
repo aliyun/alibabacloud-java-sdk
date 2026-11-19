@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailabilityZonesRequest extends TeaModel {
     /**
-     * <p>The language of the returned <strong>RegionName</strong> and <strong>ZoneName</strong> parameter values. Valid values:</p>
+     * <p>The language of the <strong>RegionName</strong> and <strong>ZoneName</strong> response parameters. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong>: Chinese. Default value.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The instance type of the instance.</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>dds.mongo.standard</p>
@@ -29,12 +27,10 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The architecture of the instance. Valid values:</p>
+     * <p>The database type of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>normal</strong>: replica set instance</p>
-     * </li>
-     * <li><p><strong>sharding</strong>: sharded cluster instance</p>
-     * </li>
+     * <li><strong>normal</strong>: replica set instance.</li>
+     * <li><strong>sharding</strong>: sharded cluster instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +40,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String dbType;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>5.0</p>
@@ -53,7 +49,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The secondary zone ID that is excluded from the query results. You can configure the ExcludeZoneId and ExcludeSecondaryZoneId parameters to specify the IDs of multiple zones that are excluded from the query results.</p>
+     * <p>The secondary zone ID to be excluded from the query results in the current region. This parameter is used together with ExcludeZoneId to filter multiple zones.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-b</p>
@@ -62,7 +58,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String excludeSecondaryZoneId;
 
     /**
-     * <p>The zone ID that is excluded from the query results.</p>
+     * <p>The zone ID to be excluded from the query results in the current region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-g</p>
@@ -71,12 +67,10 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String excludeZoneId;
 
     /**
-     * <p>The billing method of the product. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><p><strong>PrePaid</strong>: subscription</p>
-     * </li>
-     * <li><p><strong>PostPaid:</strong> pay-as-you-go</p>
-     * </li>
+     * <li><strong>PrePaid</strong>: subscription. Default value.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,12 +80,10 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The architecture of the instance. Valid values:</p>
+     * <p>The instance type. Valid values: </p>
      * <ul>
-     * <li><p><strong>sharding</strong>: sharded cluster instance</p>
-     * </li>
-     * <li><p><strong>replicate</strong>: replica set or standalone instance</p>
-     * </li>
+     * <li><strong>sharding</strong>: sharded cluster instance.</li>
+     * <li><strong>replicate</strong>: replica set instance or standalone instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +93,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The edition of the instance. High-Available Edition and Preview Edition (dbfs) are supported.</p>
+     * <p>The MongoDB edition, such as the high-availability edition or the test edition (dbfs).</p>
      * 
      * <strong>example:</strong>
      * <p>dbfs</p>
@@ -116,7 +108,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest available regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,21 +118,10 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of nodes in the instance.</p>
+     * <p>The number of nodes.</p>
      * <blockquote>
-     * <p>This parameter is available only for replica set instances.</p>
+     * <p>This parameter is supported only for replica set instances.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>1</p>
-     * </li>
-     * <li><p>3</p>
-     * </li>
-     * <li><p>5</p>
-     * </li>
-     * <li><p>7</p>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -149,7 +130,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String replicationFactor;
 
     /**
-     * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmx2m4rqu7pry</p>
@@ -166,12 +147,9 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     /**
      * <p>The storage type. Valid values:</p>
      * <ul>
-     * <li><p><strong>cloud</strong>: displays only zones available for instances that use cloud disks.</p>
-     * </li>
-     * <li><p><strong>local</strong>: only displays zones available for instances that use local disks instances.</p>
-     * </li>
-     * <li><p><strong>default</strong> or unspecified: displays zones available for instances that use cloud disks and those that use local disks.</p>
-     * </li>
+     * <li><strong>cloud</strong>: displays only the zones that support cloud disk instances.</li>
+     * <li><strong>local</strong>: displays only the zones that support local disk instances.</li>
+     * <li><strong>default</strong> or empty: displays the zones that support both local disk and cloud disk instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -181,23 +159,17 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String storageSupport;
 
     /**
-     * <p>The storage type. Valid values:</p>
+     * <p>The storage type. Valid values: </p>
      * <ul>
-     * <li><p><strong>cloud_essd1</strong>: PL1 Enterprise SSDs (ESSDs)</p>
-     * </li>
-     * <li><p><strong>cloud_essd2</strong>: PL2 ESSDs</p>
-     * </li>
-     * <li><p><strong>cloud_essd3</strong>: PL3 ESSDs</p>
-     * </li>
-     * <li><p><strong>local_ssd</strong>: local SSDs</p>
-     * </li>
+     * <li><strong>cloud_essd1</strong>: PL1 ESSD.</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
+     * <li><strong>local_ssd</strong>: local SSD.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <strong>cloud_essd1</strong> is used by default.</p>
-     * </li>
-     * <li><p>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <strong>local_ssd</strong> is used by default.</p>
-     * </li>
+     * <li>Instances of version 4.4 and later support only cloud disks. If you do not specify this parameter, <strong>cloud_essd1</strong> is selected by default.</li>
+     * <li>Instances of version 4.2 and earlier support only local disks. If you do not specify this parameter, <strong>local_ssd</strong> is selected by default.</li>
      * </ul>
      * </blockquote>
      * 
@@ -208,7 +180,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available zones.</p>
+     * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>

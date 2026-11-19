@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupRequest extends TeaModel {
     /**
-     * <p>The backup ID.</p>
+     * <p>The backup ID. You must specify a backup set ID, which can be obtained by calling the DescribeBackups operation. Do not use the BackupId returned by the CreateBackup operation because it is a backup task ID. If you specify a backup task ID, the BackupSetNotFound error is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
