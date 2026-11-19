@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAiproEmbedConfigRequest extends TeaModel {
     /**
+     * <p>The nickname of the agent. The default value is Intelligent Data Analytics Assistant when you create a configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class ModifyAiproEmbedConfigRequest extends TeaModel {
     public String agentName;
 
     /**
+     * <p>The AIPro configuration ID. If this parameter is not specified or is left empty, a new configuration is created. If this parameter is specified, the existing configuration is updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,13 @@ public class ModifyAiproEmbedConfigRequest extends TeaModel {
     public String aiProId;
 
     /**
+     * <p>Specifies whether to display the chat history. Valid values:</p>
+     * <ul>
+     * <li>1: Display.</li>
+     * <li>0: Do not display.</li>
+     * </ul>
+     * <p>Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +37,8 @@ public class ModifyAiproEmbedConfigRequest extends TeaModel {
     public Integer chatHistoryStatus;
 
     /**
+     * <p>The JSON string of the embedding appearance configuration saved on the frontend.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -33,6 +46,13 @@ public class ModifyAiproEmbedConfigRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>Specifies whether to enable memory. Valid values:</p>
+     * <ul>
+     * <li>1: Enable.</li>
+     * <li>0: Disable.</li>
+     * </ul>
+     * <p>Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +60,8 @@ public class ModifyAiproEmbedConfigRequest extends TeaModel {
     public Integer memoryEnabled;
 
     /**
+     * <p>The name of the configuration. This parameter is required and must be unique within the organization when you create a configuration. If this parameter is left empty when you update a configuration, the name is not updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -47,6 +69,13 @@ public class ModifyAiproEmbedConfigRequest extends TeaModel {
     public String showName;
 
     /**
+     * <p>Specifies whether to allow file uploads. Valid values:</p>
+     * <ul>
+     * <li>1: Allow.</li>
+     * <li>0: Do not allow.</li>
+     * </ul>
+     * <p>Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

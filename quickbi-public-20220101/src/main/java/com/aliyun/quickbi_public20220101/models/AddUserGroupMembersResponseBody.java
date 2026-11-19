@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddUserGroupMembersResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
@@ -14,9 +14,9 @@ public class AddUserGroupMembersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The execution result of the interface. Valid values:</p>
+     * <p>The operation result. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
+     * <li>true: The request succeeded.</li>
      * <li>false: The request failed.</li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class AddUserGroupMembersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
+     * <li>true: The request succeeded.</li>
      * <li>false: The request failed.</li>
      * </ul>
      * 

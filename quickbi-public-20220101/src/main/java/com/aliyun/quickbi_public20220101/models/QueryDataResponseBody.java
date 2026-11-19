@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDataResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>a4d1a221d-41za1-****</p>
@@ -14,24 +14,23 @@ public class QueryDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the API call. Valid values:</p>
+     * <p>The execution result of the API. Valid values:</p>
      * <ul>
-     * <li><p>true: The call was successful.</p>
-     * </li>
-     * <li><p>false: The call failed.</p>
-     * </li>
+     * <li>true: The execution is successful.</li>
+     * <li>false: The execution fails.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public QueryDataResponseBodyResult result;
 
     /**
-     * <p>Whether the request succeeded. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,28 +70,18 @@ public class QueryDataResponseBody extends TeaModel {
 
     public static class QueryDataResponseBodyResultHeaders extends TeaModel {
         /**
-         * <p>The aggregate operator. Returned only for measure fields.</p>
+         * <p>The aggregation operator. This field is available only for measure fields, such as SUM, AVG, and MAX. Valid values:</p>
          * <ul>
-         * <li><p>SUM: The sum.</p>
-         * </li>
-         * <li><p>MAX: The maximum value.</p>
-         * </li>
-         * <li><p>MIN: The minimum value.</p>
-         * </li>
-         * <li><p>AVG: The average value.</p>
-         * </li>
-         * <li><p>COUNT: The count.</p>
-         * </li>
-         * <li><p>COUNTD: The count of unique values.</p>
-         * </li>
-         * <li><p>STDDEV_POP: The population standard deviation.</p>
-         * </li>
-         * <li><p>STDDEV_SAMP: The sample standard deviation.</p>
-         * </li>
-         * <li><p>VAR_POP: The population variance.</p>
-         * </li>
-         * <li><p>VAR_SAMP: The sample variance.</p>
-         * </li>
+         * <li>SUM: Sum.</li>
+         * <li>MAX: Maximum value.</li>
+         * <li>MIN: Minimum value.</li>
+         * <li>AVG: Average value.</li>
+         * <li>COUNT: Count.</li>
+         * <li>COUNTD: Deduplicate count.</li>
+         * <li>STDDEV_POP: Population standard deviation.</li>
+         * <li>STDDEV_SAMP: Sample standard deviation.</li>
+         * <li>VAR_POP: Population variance.</li>
+         * <li>VAR_SAMP: Sample variance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,7 +91,7 @@ public class QueryDataResponseBody extends TeaModel {
         public String aggregator;
 
         /**
-         * <p>The physical table field name.</p>
+         * <p>The name of the field, which corresponds to the field name in the physical table.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -111,18 +100,13 @@ public class QueryDataResponseBody extends TeaModel {
         public String column;
 
         /**
-         * <p>The field data type. Common types:</p>
+         * <p>The data type of the field. Valid values:</p>
          * <ul>
-         * <li><p>number</p>
-         * </li>
-         * <li><p>string</p>
-         * </li>
-         * <li><p>date</p>
-         * </li>
-         * <li><p>time</p>
-         * </li>
-         * <li><p>datetime</p>
-         * </li>
+         * <li>number: Numeric.</li>
+         * <li>string: String.</li>
+         * <li>date: Date.</li>
+         * <li>time: Time.</li>
+         * <li>datetime: Date and time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,11 +116,11 @@ public class QueryDataResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The dimension granularity. Returned only for date or geographic dimensions. Valid values:</p>
+         * <p>The granularity of the dimension field. This field is returned only when the requested field is a date dimension or a geographic dimension. Valid values:</p>
          * <ul>
-         * <li><p>Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), secRegion (second)</p>
+         * <li><p>Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), and secRegion (second).</p>
          * </li>
-         * <li><p>Geographic granularity: COUNTRY (country), PROVINCE (province), CITY (city), XIAN (county/district), REGION (region)</p>
+         * <li><p>Geographic granularity: COUNTRY (country), PROVINCE (province), CITY (city), XIAN (district/county), and REGION (region).</p>
          * </li>
          * </ul>
          * 
@@ -147,7 +131,7 @@ public class QueryDataResponseBody extends TeaModel {
         public String granularity;
 
         /**
-         * <p>The field alias. Used as the key in each Values map entry.</p>
+         * <p>The alias of the field, which is the key of the map data row in the values result parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>area</p>
@@ -156,7 +140,7 @@ public class QueryDataResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The original field name in the dataset.</p>
+         * <p>The original name of the corresponding field in the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>area</p>
@@ -168,12 +152,10 @@ public class QueryDataResponseBody extends TeaModel {
         public String originalColumn;
 
         /**
-         * <p>Whether the field is a dimension or measure.</p>
+         * <p>The type of the field, which is used to distinguish whether the field is a dimension or a measure. Valid values:</p>
          * <ul>
-         * <li><p>Dimension</p>
-         * </li>
-         * <li><p>Measure</p>
-         * </li>
+         * <li>Dimension: Dimension.</li>
+         * <li>Measure: Measure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,6 +227,87 @@ public class QueryDataResponseBody extends TeaModel {
 
     }
 
+    public static class QueryDataResponseBodyResultValuesV2RowValue extends TeaModel {
+        /**
+         * <p>The field alias set in Data Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("L")
+        public String l;
+
+        /**
+         * <p>The original value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("R")
+        public String r;
+
+        /**
+         * <p>The display value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("V")
+        public String v;
+
+        public static QueryDataResponseBodyResultValuesV2RowValue build(java.util.Map<String, ?> map) throws Exception {
+            QueryDataResponseBodyResultValuesV2RowValue self = new QueryDataResponseBodyResultValuesV2RowValue();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDataResponseBodyResultValuesV2RowValue setL(String l) {
+            this.l = l;
+            return this;
+        }
+        public String getL() {
+            return this.l;
+        }
+
+        public QueryDataResponseBodyResultValuesV2RowValue setR(String r) {
+            this.r = r;
+            return this;
+        }
+        public String getR() {
+            return this.r;
+        }
+
+        public QueryDataResponseBodyResultValuesV2RowValue setV(String v) {
+            this.v = v;
+            return this;
+        }
+        public String getV() {
+            return this.v;
+        }
+
+    }
+
+    public static class QueryDataResponseBodyResultValuesV2 extends TeaModel {
+        /**
+         * <p>The row values.</p>
+         */
+        @NameInMap("RowValue")
+        public java.util.List<QueryDataResponseBodyResultValuesV2RowValue> rowValue;
+
+        public static QueryDataResponseBodyResultValuesV2 build(java.util.Map<String, ?> map) throws Exception {
+            QueryDataResponseBodyResultValuesV2 self = new QueryDataResponseBodyResultValuesV2();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDataResponseBodyResultValuesV2 setRowValue(java.util.List<QueryDataResponseBodyResultValuesV2RowValue> rowValue) {
+            this.rowValue = rowValue;
+            return this;
+        }
+        public java.util.List<QueryDataResponseBodyResultValuesV2RowValue> getRowValue() {
+            return this.rowValue;
+        }
+
+    }
+
     public static class QueryDataResponseBodyResult extends TeaModel {
         /**
          * <p>The column headers.</p>
@@ -253,9 +316,9 @@ public class QueryDataResponseBody extends TeaModel {
         public java.util.List<QueryDataResponseBodyResultHeaders> headers;
 
         /**
-         * <p>The SQL statement for the query.</p>
+         * <p>The SQL statement of the query.</p>
          * <blockquote>
-         * <p>The returned SQL includes both the filter conditions from this call and any row-level or column-level permission rules.</p>
+         * <p>In addition to the parameter conditions of the current API, the filter conditions in the returned SQL statement also include the row-level and column-level permission configurations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -265,10 +328,19 @@ public class QueryDataResponseBody extends TeaModel {
         public String sql;
 
         /**
-         * <p>The query results.</p>
+         * <p>The returned query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;area&quot;:&quot;test&quot;,&quot;city&quot;:&quot;test&quot;},{&quot;area&quot;:&quot;test&quot;,&quot;city&quot;:&quot;test&quot;}]</p>
          */
         @NameInMap("Values")
         public java.util.List<java.util.Map<String, ?>> values;
+
+        /**
+         * <p>The returned query results, including the original value fields.</p>
+         */
+        @NameInMap("ValuesV2")
+        public java.util.List<QueryDataResponseBodyResultValuesV2> valuesV2;
 
         public static QueryDataResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             QueryDataResponseBodyResult self = new QueryDataResponseBodyResult();
@@ -297,6 +369,14 @@ public class QueryDataResponseBody extends TeaModel {
         }
         public java.util.List<java.util.Map<String, ?>> getValues() {
             return this.values;
+        }
+
+        public QueryDataResponseBodyResult setValuesV2(java.util.List<QueryDataResponseBodyResultValuesV2> valuesV2) {
+            this.valuesV2 = valuesV2;
+            return this;
+        }
+        public java.util.List<QueryDataResponseBodyResultValuesV2> getValuesV2() {
+            return this.valuesV2;
         }
 
     }

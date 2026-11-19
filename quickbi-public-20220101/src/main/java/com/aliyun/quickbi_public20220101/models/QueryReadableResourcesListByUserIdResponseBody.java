@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -22,8 +22,8 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The hierarchical structure of the directory ID, which is separated with \&quot;/\&quot;.</p>
+         * <p>The hierarchical structure of directory IDs, separated by forward slashes (/).</p>
          * 
          * <strong>example:</strong>
          * <p>e4276ea5-b232-4fb1-8f0f-efcee4a2****</p>
@@ -90,7 +90,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         public String pathId;
 
         /**
-         * <p>The hierarchical structure of the directory name, which is separated with \&quot;/\&quot;.</p>
+         * <p>The hierarchical structure of directory names, separated by forward slashes (/).</p>
          * 
          * <strong>example:</strong>
          * <p>Test directory</p>
@@ -139,7 +139,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
 
     public static class QueryReadableResourcesListByUserIdResponseBodyResult extends TeaModel {
         /**
-         * <p>The timestamp of the creation time in milliseconds.</p>
+         * <p>The millisecond timestamp of the creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1611023338000</p>
@@ -148,22 +148,22 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Remarks on the work.</p>
+         * <p>The description of the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>Remarks</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The directory structure in which the work is located.</p>
+         * <p>The directory structure where the work is located.</p>
          */
         @NameInMap("Directory")
         public QueryReadableResourcesListByUserIdResponseBodyResultDirectory directory;
 
         /**
-         * <p>The name of the Alibaba Cloud account to which the modifier belongs.</p>
+         * <p>The Alibaba Cloud account name of the user who last modified the work.</p>
          * 
          * <strong>example:</strong>
          * <p>Li Si</p>
@@ -172,7 +172,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         public String modifyName;
 
         /**
-         * <p>The timestamp of the modification time in milliseconds.</p>
+         * <p>The millisecond timestamp of the last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1611023338000</p>
@@ -181,7 +181,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The Quick BI UserID of the work owner.</p>
+         * <p>The Quick BI user ID of the work owner.</p>
          * 
          * <strong>example:</strong>
          * <p>46e5374665ba4b679ee22e2a2927****</p>
@@ -190,29 +190,27 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The Alibaba Cloud account name of the owner.</p>
+         * <p>The Alibaba Cloud account name of the work owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>Tom</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
-         * <p>Security policies for collaborative authorization of works. Valid values:</p>
+         * <p>The security policy for collaborative authorization of the work. Valid values:</p>
          * <ul>
          * <li>0: private</li>
-         * <li>12: Authorize specified members</li>
-         * <li>1 or 11: Authorize all workspace members</li>
+         * <li>12: authorized to specified members</li>
+         * <li>1 or 11: authorized to all workspace members</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If you use legacy permissions, the return value is 1.</p>
-         * </li>
-         * <li><p>If you use the new permissions, the return value is 11.</p>
-         * </li>
+         * <li>If you use the legacy permission model, the value 1 is returned.</li>
+         * <li>If you use the new permission model, the value 11 is returned.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -225,8 +223,8 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
          * <ul>
          * <li>0: unpublished</li>
          * <li>1: published</li>
-         * <li>2: modified but not published</li>
-         * <li>3: unpublished</li>
+         * <li>2: modified but unpublished</li>
+         * <li>3: offline</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,10 +234,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Third-party embedding status. Valid values:</p>
+         * <p>The third-party embedding status. Valid values:</p>
          * <ul>
-         * <li>0: The embed service is not enabled.</li>
-         * <li>1: Embed is enabled.</li>
+         * <li>0: Embedding is not enabled.</li>
+         * <li>1: Embedding is enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -252,7 +250,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
          * <p>The name of the work.</p>
          * 
          * <strong>example:</strong>
-         * <p>Company Region Table</p>
+         * <p>Company region table</p>
          */
         @NameInMap("WorkName")
         public String workName;
@@ -260,10 +258,15 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         /**
          * <p>The type of the work. Valid values:</p>
          * <ul>
-         * <li>DATAPRODUCT: BI portal</li>
-         * <li>PAGE: Dashboard</li>
-         * <li>FULLPAGE: full-screen dashboards</li>
-         * <li>REPORT: workbook</li>
+         * <li>DATAPRODUCT: Data portal</li>
+         * <li>PAGE: Dashboard (legacy)</li>
+         * <li>FULLPAGE: Full-screen dashboard</li>
+         * <li>REPORT: Workbook</li>
+         * <li>DASHBOARD: Dashboard (new)</li>
+         * <li>DATAFORM: Data entry form</li>
+         * <li>dashboardOfflineQuery: Ad hoc query</li>
+         * <li>ANALYSIS: Ad hoc analysis</li>
+         * <li>SCREEN: Data screen</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,7 +297,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
          * <p>The name of the workspace to which the work belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Workspace</p>
+         * <p>Test workspace</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

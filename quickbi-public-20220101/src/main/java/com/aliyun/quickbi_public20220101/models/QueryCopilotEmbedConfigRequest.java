@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCopilotEmbedConfigRequest extends TeaModel {
     /**
-     * <p>Name of the embedded configuration module, supports fuzzy search.</p>
+     * <p>The name of the embedding configuration module. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>06-ELive</p>

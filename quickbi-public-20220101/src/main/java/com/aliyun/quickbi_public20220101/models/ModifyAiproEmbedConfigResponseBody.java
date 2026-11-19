@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAiproEmbedConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46e53746***70</p>
      */
@@ -12,6 +14,12 @@ public class ModifyAiproEmbedConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The execution result of the operation. Valid values:</p>
+     * <ul>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,12 @@ public class ModifyAiproEmbedConfigResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

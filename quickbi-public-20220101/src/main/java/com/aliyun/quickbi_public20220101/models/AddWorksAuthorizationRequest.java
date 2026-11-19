@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddWorksAuthorizationRequest extends TeaModel {
     /**
-     * <p>The permissions to grant. Valid values:</p>
-     * <p><code>1</code>: View</p>
-     * <p><code>3</code>: View and Export</p>
-     * <p><code>11</code>: Edit, View, and Export</p>
-     * <p><strong>Note</strong>: If AuthPoints is set to 11, the authorization is permanent and the ExpireDay parameter is ignored.</p>
+     * <p>The type of granted permissions. Valid values:</p>
+     * <ul>
+     * <li>1: View.</li>
+     * <li>3: View and export.</li>
+     * <li>11: Edit, view, and export.
+     * Note: When the value is set to 11, the authorization does not expire.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,16 +21,12 @@ public class AddWorksAuthorizationRequest extends TeaModel {
     public Integer authPoints;
 
     /**
-     * <p>The type of the principal. Valid values:</p>
+     * <p>The authorization scope. Valid values:</p>
      * <ul>
-     * <li><p><code>0</code>: User. Set AuthorizedId to the user ID.</p>
-     * </li>
-     * <li><p><code>1</code>: User group. Set AuthorizedId to the user group ID.</p>
-     * </li>
-     * <li><p><code>2</code>: All members of an organization. Set AuthorizedId to the organization ID.</p>
-     * </li>
-     * <li><p><code>3</code>: All members of a workspace. Set AuthorizedId to the workspace ID.</p>
-     * </li>
+     * <li>0: User. The AuthorizedId parameter corresponds to the user ID in Quick BI.</li>
+     * <li>1: User group. The AuthorizedId parameter corresponds to the user group ID in Quick BI.</li>
+     * <li>2: All organization members. The AuthorizedId parameter corresponds to the organization ID in Quick BI.</li>
+     * <li>3: All workspace members. The AuthorizedId parameter corresponds to the workspace ID in Quick BI.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +37,7 @@ public class AddWorksAuthorizationRequest extends TeaModel {
     public Integer authorizeScope;
 
     /**
-     * <p>The ID of the principal to be authorized. The AuthorizeScope parameter specifies the type of principal.</p>
+     * <p>The ID of the authorized object. For more information, see the description of AuthorizeScope.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,9 +47,7 @@ public class AddWorksAuthorizationRequest extends TeaModel {
     public String authorizedId;
 
     /**
-     * <p>The expiration date for the permissions.</p>
-     * <p>Format: <code>YYYY-MM-DD</code>.</p>
-     * <p><strong>Note</strong>: This parameter is required if AuthPoints is not 11. The authorization must be valid for at least one day after the authorization date.</p>
+     * <p>The expiration date of the authorization. Format: yyyy-MM-dd. Example: 2022-02-16. Note: The authorization period must be at least N+1 days. This parameter is required when the AuthPoints parameter is not set to 11.</p>
      * 
      * <strong>example:</strong>
      * <p>2099-12-31</p>
@@ -60,7 +56,7 @@ public class AddWorksAuthorizationRequest extends TeaModel {
     public String expireDay;
 
     /**
-     * <p>The ID of the work.</p>
+     * <p>The resource ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,24 +66,16 @@ public class AddWorksAuthorizationRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the work. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p><code>dashboard</code>: A dashboard.</p>
-     * </li>
-     * <li><p><code>report</code>: A report.</p>
-     * </li>
-     * <li><p><code>dashboardOfflineQuery</code>: An ad-hoc query.</p>
-     * </li>
-     * <li><p><code>cube</code>: A dataset.</p>
-     * </li>
-     * <li><p><code>datasource</code>: A data source.</p>
-     * </li>
-     * <li><p><code>screen</code>: A data screen.</p>
-     * </li>
-     * <li><p><code>ANALYSIS</code>: An ad-hoc analysis.</p>
-     * </li>
-     * <li><p><code>dataForm</code>: A data form.</p>
-     * </li>
+     * <li>dashboard: Dashboard.</li>
+     * <li>report: Workbook.</li>
+     * <li>dashboardOfflineQuery: Ad hoc query.</li>
+     * <li>cube: Dataset.</li>
+     * <li>datasource: Data source.</li>
+     * <li>screen: Data screen.</li>
+     * <li>ANALYSIS: Ad hoc analysis.</li>
+     * <li>dataForm: Data entry.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

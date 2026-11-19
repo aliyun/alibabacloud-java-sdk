@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDatasetInfoRequest extends TeaModel {
     /**
-     * <p>Queries information about a specified dataset.</p>
+     * <p>The unique ID of the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryApprovalInfoResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -14,16 +14,16 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return the result of the interface execution.</p>
+     * <p>The result of the API operation.</p>
      */
     @NameInMap("Result")
     public QueryApprovalInfoResponseBodyResult result;
 
     /**
-     * <p>Indicates whether the API call was successful. Possible values are:</p>
+     * <p>Indicates whether the API operation is successful. Valid values:</p>
      * <ul>
-     * <li>true: success</li>
-     * <li>false: failure</li>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
 
     public static class QueryApprovalInfoResponseBodyResultData extends TeaModel {
         /**
-         * <p>Applicant\&quot;s user ID, qbi user ID.</p>
+         * <p>The QBI user ID of the applicant.</p>
          * 
          * <strong>example:</strong>
          * <p>1359508</p>
@@ -72,7 +72,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public String applicantId;
 
         /**
-         * <p>Applicant\&quot;s nickname.</p>
+         * <p>The nickname of the applicant.</p>
          * 
          * <strong>example:</strong>
          * <p>Li Fei</p>
@@ -81,7 +81,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public String applicantName;
 
         /**
-         * <p>Application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>64813ef6da58e80eef8ed2f9</p>
@@ -90,16 +90,16 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>Application reason.</p>
+         * <p>The reason for the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>Development needs</p>
+         * <p>Required for development</p>
          */
         @NameInMap("ApplyReason")
         public String applyReason;
 
         /**
-         * <p>Approver\&quot;s user ID, qbi user ID.</p>
+         * <p>The QBI user ID of the approver.</p>
          * 
          * <strong>example:</strong>
          * <p>sdasascasxasd</p>
@@ -108,7 +108,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public String approverId;
 
         /**
-         * <p>Approver\&quot;s nickname.</p>
+         * <p>The nickname of the approver.</p>
          * 
          * <strong>example:</strong>
          * <p>data_fusion_002</p>
@@ -117,10 +117,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public String approverName;
 
         /**
-         * <p>Whether the resource has been deleted:</p>
+         * <p>Indicates whether the resource has been deleted. Valid values:</p>
          * <ul>
-         * <li>true: Deleted</li>
-         * <li>false: Not deleted</li>
+         * <li>true: The resource has been deleted.</li>
+         * <li>false: The resource has not been deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Boolean deleteFlag;
 
         /**
-         * <p>Permission expiration date, timestamp.</p>
+         * <p>The expiration time of the permission.</p>
          * 
          * <strong>example:</strong>
          * <p>1708568097135</p>
@@ -139,11 +139,11 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Long expireDate;
 
         /**
-         * <p>Permission approval status:</p>
+         * <p>The approval status of the permission. Valid values:</p>
          * <ul>
-         * <li>0: Under review, corresponding to 0 in the request parameters</li>
-         * <li>1: Approved, corresponding to 1 in the request parameters</li>
-         * <li>2: Rejected, corresponding to 1 in the request parameters</li>
+         * <li>0: Pending approval, which corresponds to 0 in the request parameters.</li>
+         * <li>1: Approved, which corresponds to 1 in the request parameters.</li>
+         * <li>2: Rejected, which corresponds to 1 in the request parameters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Integer flagStatus;
 
         /**
-         * <p>Application creation time, timestamp.</p>
+         * <p>The time when the application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1687315758</p>
@@ -162,7 +162,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Application modification time, timestamp.</p>
+         * <p>The time when the application was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1640595729000</p>
@@ -171,16 +171,16 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Handling reason.</p>
+         * <p>The reason for handling the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>Development needs</p>
+         * <p>Required for development</p>
          */
         @NameInMap("HandleReason")
         public String handleReason;
 
         /**
-         * <p>The ID of the resource for which permission is requested.</p>
+         * <p>The ID of the resource for which permissions are requested.</p>
          * 
          * <strong>example:</strong>
          * <p>acl-ct4t2e4u2x4ej1bzur</p>
@@ -189,10 +189,10 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the resource for which permission is requested (e.g., report name, space name...).</p>
+         * <p>The name of the resource for which permissions are requested, such as the report name or workspace name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Resources</p>
+         * <p>Test resource</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
@@ -210,7 +210,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
          * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Workspace</p>
+         * <p>Test workspace</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;
@@ -352,7 +352,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
 
     public static class QueryApprovalInfoResponseBodyResult extends TeaModel {
         /**
-         * <p>Array of approval flow information.</p>
+         * <p>The array of approval flow information.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryApprovalInfoResponseBodyResultData> data;
@@ -367,7 +367,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Integer page;
 
         /**
-         * <p>The number of records requested per page.</p>
+         * <p>The number of records on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -376,7 +376,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The starting position of the current page.</p>
+         * <p>The start position of the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -385,7 +385,7 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Integer start;
 
         /**
-         * <p>The total number of items.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

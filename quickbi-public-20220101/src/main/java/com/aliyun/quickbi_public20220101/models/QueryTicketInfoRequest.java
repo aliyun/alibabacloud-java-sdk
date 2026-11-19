@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTicketInfoRequest extends TeaModel {
     /**
-     * <p>The value of the bill.</p>
+     * <p>The ticket value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

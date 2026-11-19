@@ -14,10 +14,12 @@ public class AddUserGroupMemberResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of adding members to a user group is returned. Valid values:</p>
+     * <p>Indicates whether the members were added to the user group. Valid values:</p>
      * <ul>
-     * <li>true: The task is added.</li>
-     * <li>false: The tag failed to be added.</li>
+     * <li><p>true: The members were added.</p>
+     * </li>
+     * <li><p>false: The members were not added.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class AddUserGroupMemberResponseBody extends TeaModel {
     public Boolean result;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

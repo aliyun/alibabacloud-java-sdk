@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDataSourcePropertiesRequest extends TeaModel {
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>ssss</p>
      */
@@ -12,6 +14,7 @@ public class UpdateDataSourcePropertiesRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateDataSourcePropertiesRequest extends TeaModel {
     public String dsId;
 
     /**
+     * <p>The owner of the data source. Set this parameter to the user ID in Quick BI.</p>
+     * 
      * <strong>example:</strong>
      * <p>sss</p>
      */
@@ -28,6 +33,8 @@ public class UpdateDataSourcePropertiesRequest extends TeaModel {
     public String quickBIOwnerId;
 
     /**
+     * <p>The display name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>wls</p>
      */

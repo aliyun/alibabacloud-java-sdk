@@ -22,10 +22,10 @@ public class QueryUserByMobileAccountRequest extends TeaModel {
     /**
      * <p>The bound mobile user ID.</p>
      * <ul>
-     * <li>DingTalk: The unionId of the DingTalk account.</li>
-     * <li>WeCom: The userId of the WeCom account.</li>
-     * <li>Lark: The userId of the Lark account.<blockquote>
-     * <p>Notice: The mobileUserId must be obtained by calling the relevant API operations of DingTalk, WeCom, or Lark.</p>
+     * <li>DingTalk: the unionId of the DingTalk account.</li>
+     * <li>WeCom: the userId of the WeCom account.</li>
+     * <li>Lark: the userId of the Lark account.<blockquote>
+     * <p>Notice: Developers must call the relevant APIs of DingTalk, WeCom, or Lark to obtain the mobileUserId.</notice></p>
      * </blockquote>
      * </li>
      * </ul>

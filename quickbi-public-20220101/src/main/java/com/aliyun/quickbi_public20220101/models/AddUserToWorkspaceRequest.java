@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class AddUserToWorkspaceRequest extends TeaModel {
     /**
-     * <p>The ID of the role in the workspace. Predefined roles:</p>
+     * <p>The workspace role ID. Preset roles:</p>
      * <ul>
-     * <li><p>25: workspace administrator</p>
-     * </li>
-     * <li><p>26: workspace developer</p>
-     * </li>
-     * <li><p>27: workspace analyst</p>
-     * </li>
-     * <li><p>30: workspace viewer</p>
-     * </li>
+     * <li>25: Workspace administrator</li>
+     * <li>26: Workspace developer</li>
+     * <li>27: Workspace analyst</li>
+     * <li>30: Workspace viewer</li>
      * </ul>
      * <blockquote>
-     * <p>Custom role IDs are supported in version 6.0.3 and later.</p>
+     * <p>Custom role IDs are supported since 6.0.3.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +24,7 @@ public class AddUserToWorkspaceRequest extends TeaModel {
     public Long roleId;
 
     /**
-     * <p>The ID of the Quick BI user to be added.</p>
+     * <p>The ID of the Quick BI user to add.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +34,7 @@ public class AddUserToWorkspaceRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

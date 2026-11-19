@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDataRequest extends TeaModel {
     /**
-     * <p>The API ID in <a href="https://help.aliyun.com/document_detail/144980.html">DataService Studio</a>.</p>
+     * <p>The ID of the API in Data Service. For more information, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,12 @@ public class QueryDataRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>Filter conditions as a JSON map string. Each key is a request parameter name, and each value is the parameter value.</p>
+     * <p>The query conditions for Data Service. Specify the conditions as key-value pairs in a map-type string. The key is the request parameter name, and the value is the request parameter value. Keys and values must appear in pairs.</p>
      * <p><strong>Note:</strong></p>
      * <ul>
-     * <li><p>If the operator of a request parameter is set to <strong>Enumeration Filter</strong>, the value can contain multiple values. In this case, the value must be in the format of a JSON list. For example: <code>area=[&quot;East China&quot;,&quot;North China&quot;,&quot;South China&quot;]</code></p>
+     * <li><p>When the operator of the request parameter is set to <strong>enumeration filter</strong>, the value can contain multiple values. In this case, the value must be a JSON-formatted list. Example: <code>area=[&quot;East China&quot;,&quot;North China&quot;,&quot;South China&quot;]</code>     </p>
      * </li>
-     * <li><p>For dates, use the following formats based on the date type:</p>
+     * <li><p>For dates, different input formats are provided based on the type:</p>
      * <ul>
      * <li><p>Year: 2019</p>
      * </li>
@@ -49,7 +49,7 @@ public class QueryDataRequest extends TeaModel {
     public String conditions;
 
     /**
-     * <p>A JSON array of field names to return.</p>
+     * <p>The list of names of the return parameters, which is a list-type string.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;area&quot;, &quot;city&quot;, &quot;price&quot;, &quot;date&quot;]</p>
@@ -58,14 +58,13 @@ public class QueryDataRequest extends TeaModel {
     public String returnFields;
 
     /**
-     * <p>The Quick BI user ID. Obtain this value from <a href="https://next.api.aliyun.com/document/quickbi-public/2022-01-01/QueryUserInfoByAccount">QueryUserInfoByAccount</a>.</p>
+     * <p>The user ID in Quick BI. For information about how to obtain the user ID, see <a href="https://next.api.aliyun.com/document/quickbi-public/2022-01-01/QueryUserInfoByAccount">Query user information by account</a>.</p>
      * <blockquote>
-     * <p>Specifies the user identity for DataService Studio, used with row-level and column-level permission configurations.</p>
+     * <p>This parameter specifies the identity of the user who uses Data Service. It can be used in combination with the row-level and column-level permission configurations of the dataset.</p>
      * </blockquote>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: If this parameter is not specified, is left empty, or is set to null, the user ID of the owner of the current Quick BI organization is used by default.</notice></p>
      * </blockquote>
-     * <p>If omitted, empty, or null, defaults to the Quick BI organization owner\&quot;s user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b5d8fd9348cc4327****afb604</p>

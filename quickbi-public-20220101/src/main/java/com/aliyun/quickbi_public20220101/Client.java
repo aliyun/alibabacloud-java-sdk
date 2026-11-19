@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "quickbi-public";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("quickbi-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -29,11 +32,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This API operation supports only the new row-level permission model in Quick BI. If you are using the previous row-level permission model, you must migrate to the new model before you call this operation. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade Row-level Permissions, and then click <strong>One-click Upgrade</strong>.</p>
+     * <p>Note: This operation supports only the new row-column permission model of Quick BI. If you are still using the legacy row-column permissions, migrate to the new row-column permission model before you call this operation. To migrate to the new row-column permission model, go to <strong>Organization Management</strong> &gt; <strong>Security Configuration</strong> &gt; <strong>Row-Column Permission Upgrade</strong>, and click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Adds specified users and user groups to a row-level permission rule.</p>
+     * <p>Adds selected users and user groups to a specific row-column permission rule.</p>
      * 
      * @param request AddDataLevelPermissionRuleUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -66,11 +69,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This API operation supports only the new row-level permission model in Quick BI. If you are using the previous row-level permission model, you must migrate to the new model before you call this operation. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade Row-level Permissions, and then click <strong>One-click Upgrade</strong>.</p>
+     * <p>Note: This operation supports only the new row-column permission model of Quick BI. If you are still using the legacy row-column permissions, migrate to the new row-column permission model before you call this operation. To migrate to the new row-column permission model, go to <strong>Organization Management</strong> &gt; <strong>Security Configuration</strong> &gt; <strong>Row-Column Permission Upgrade</strong>, and click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Adds specified users and user groups to a row-level permission rule.</p>
+     * <p>Adds selected users and user groups to a specific row-column permission rule.</p>
      * 
      * @param request AddDataLevelPermissionRuleUsersRequest
      * @return AddDataLevelPermissionRuleUsersResponse
@@ -83,11 +86,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This API operation supports only the new permission model for row-level and column-level permissions in Quick BI. If you are using the old permission model, you must migrate to the new one before you call this operation. To perform a one-click migration, you can go to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions and click <strong>One-click Upgrade</strong>.</p>
+     * <p>: This operation only supports the new row and column permission model of Quick BI. If you are still using the legacy row and column permissions, perform a one-click migration to the new row and column permission model before calling this operation. To perform a one-click migration to the new row and column permission model, go to <strong>Organization management</strong> &gt; <strong>Security configuration</strong> &gt; <strong>Row and column permission upgrade</strong>, and click <strong>One-click upgrade</strong> to upgrade to the new row-level permissions.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the whitelist for row-level and column-level permissions of a specified dataset.</p>
+     * <p>Modifies the whitelist for row and column permissions of a specified dataset.</p>
      * 
      * @param request AddDataLevelPermissionWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -136,11 +139,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This API operation supports only the new permission model for row-level and column-level permissions in Quick BI. If you are using the old permission model, you must migrate to the new one before you call this operation. To perform a one-click migration, you can go to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions and click <strong>One-click Upgrade</strong>.</p>
+     * <p>: This operation only supports the new row and column permission model of Quick BI. If you are still using the legacy row and column permissions, perform a one-click migration to the new row and column permission model before calling this operation. To perform a one-click migration to the new row and column permission model, go to <strong>Organization management</strong> &gt; <strong>Security configuration</strong> &gt; <strong>Row and column permission upgrade</strong>, and click <strong>One-click upgrade</strong> to upgrade to the new row-level permissions.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the whitelist for row-level and column-level permissions of a specified dataset.</p>
+     * <p>Modifies the whitelist for row and column permissions of a specified dataset.</p>
      * 
      * @param request AddDataLevelPermissionWhiteListRequest
      * @return AddDataLevelPermissionWhiteListResponse
@@ -152,7 +155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a data source.</p>
+     * <p>Creates a data source connection.</p>
      * 
      * @param request AddDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -184,7 +187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a data source.</p>
+     * <p>Creates a data source connection.</p>
      * 
      * @param request AddDataSourceRequest
      * @return AddDataSourceResponse
@@ -330,7 +333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds an organization member to a specified user group.</p>
+     * <p>Adds organization members to a specified user group.</p>
      * 
      * @param request AddUserGroupMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -366,7 +369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds an organization member to a specified user group.</p>
+     * <p>Adds organization members to a specified user group.</p>
      * 
      * @param request AddUserGroupMemberRequest
      * @return AddUserGroupMemberResponse
@@ -378,7 +381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add users to a specified user group at a time.</p>
+     * <p>Adds multiple users to a specified user group.</p>
      * 
      * @param request AddUserGroupMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -414,7 +417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add users to a specified user group at a time.</p>
+     * <p>Adds multiple users to a specified user group.</p>
      * 
      * @param request AddUserGroupMembersRequest
      * @return AddUserGroupMembersResponse
@@ -426,7 +429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add organization member tag metadata.</p>
+     * <p>Creates metadata for an organization member tag.</p>
      * 
      * @param request AddUserTagMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -462,7 +465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add organization member tag metadata.</p>
+     * <p>Creates metadata for an organization member tag.</p>
      * 
      * @param request AddUserTagMetaRequest
      * @return AddUserTagMetaResponse
@@ -526,7 +529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds an authorization for a work.</p>
+     * <p>Creates a collaborative authorization record for a resource.</p>
      * 
      * @param request AddWorksAuthorizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -578,7 +581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds an authorization for a work.</p>
+     * <p>Creates a collaborative authorization record for a resource.</p>
      * 
      * @param request AddWorksAuthorizationRequest
      * @return AddWorksAuthorizationResponse
@@ -642,7 +645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Trigger the collection acceleration of the Quick engine for datasets.</p>
+     * <p>Triggers the extraction acceleration of the Quick engine for a dataset.</p>
      * 
      * @param request AllotDatasetAccelerationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -674,7 +677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Trigger the collection acceleration of the Quick engine for datasets.</p>
+     * <p>Triggers the extraction acceleration of the Quick engine for a dataset.</p>
      * 
      * @param request AllotDatasetAccelerationTaskRequest
      * @return AllotDatasetAccelerationTaskResponse
@@ -686,7 +689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch authorization of BI portal menu will be skipped automatically.</p>
+     * <p>Grants batch permissions for data portal menus. Already authorized menus are automatically skipped.</p>
      * 
      * @param request AuthorizeMenuRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -734,7 +737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch authorization of BI portal menu will be skipped automatically.</p>
+     * <p>Grants batch permissions for data portal menus. Already authorized menus are automatically skipped.</p>
      * 
      * @param request AuthorizeMenuRequest
      * @return AuthorizeMenuResponse
@@ -746,7 +749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds Lark users in batches.</p>
+     * <p>Adds multiple Lark users.</p>
      * 
      * @deprecated OpenAPI BatchAddFeishuUsers is deprecated
      * 
@@ -798,7 +801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds Lark users in batches.</p>
+     * <p>Adds multiple Lark users.</p>
      * 
      * @deprecated OpenAPI BatchAddFeishuUsers is deprecated
      * 
@@ -814,7 +817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancel the authorization records for specified users and user groups based on the portal menu ID.</p>
+     * <p>Revokes authorization records for specified users and user groups based on portal menu IDs.</p>
      * 
      * @param request CancelAuthorizationMenuRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -858,7 +861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancel the authorization records for specified users and user groups based on the portal menu ID.</p>
+     * <p>Revokes authorization records for specified users and user groups based on portal menu IDs.</p>
      * 
      * @param request CancelAuthorizationMenuRequest
      * @return CancelAuthorizationMenuResponse
@@ -870,7 +873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancel the data works from the user\&quot;s collection.</p>
+     * <p>Removes a data work from a user\&quot;s favorites.</p>
      * 
      * @param request CancelCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -906,7 +909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancel the data works from the user\&quot;s collection.</p>
+     * <p>Removes a data work from a user\&quot;s favorites.</p>
      * 
      * @param request CancelCollectionRequest
      * @return CancelCollectionResponse
@@ -918,7 +921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a share authorization for a data work.</p>
+     * <p>Deletes a sharing authorization for a data work.</p>
      * 
      * @param request CancelReportShareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -958,7 +961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a share authorization for a data work.</p>
+     * <p>Deletes a sharing authorization for a data work.</p>
      * 
      * @param request CancelReportShareRequest
      * @return CancelReportShareResponse
@@ -970,7 +973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the visibility mode of the BI portal menu and whether the menu is only authorized to be visible.</p>
+     * <p>Modifies the visibility of data portal menus and specifies whether the menus are visible only to authorized users.</p>
      * 
      * @param request ChangeVisibilityModelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1010,7 +1013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the visibility mode of the BI portal menu and whether the menu is only authorized to be visible.</p>
+     * <p>Modifies the visibility of data portal menus and specifies whether the menus are visible only to authorized users.</p>
      * 
      * @param request ChangeVisibilityModelRequest
      * @return ChangeVisibilityModelResponse
@@ -1066,7 +1069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks if a user is a member of an organization.</p>
+     * <p>Checks whether a user belongs to an organization.</p>
      * 
      * @param request CheckOrganizationMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1098,7 +1101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks if a user is a member of an organization.</p>
+     * <p>Checks whether a user belongs to an organization.</p>
      * 
      * @param request CheckOrganizationMemberRequest
      * @return CheckOrganizationMemberResponse
@@ -1158,7 +1161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the cached tag value for a single configuration.</p>
+     * <p>Deletes the tag value cache for a single configuration.</p>
      * 
      * @param request ClearDynamicTagCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1190,7 +1193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the cached tag value for a single configuration.</p>
+     * <p>Deletes the tag value cache for a single configuration.</p>
      * 
      * @param request ClearDynamicTagCacheRequest
      * @return ClearDynamicTagCacheResponse
@@ -1416,7 +1419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成AIPro超级框嵌入ticket</p>
+     * <p>Generates an AIPro Super Box embedding ticket.</p>
      * 
      * @param request CreateTicket4AiProRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1476,7 +1479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成AIPro超级框嵌入ticket</p>
+     * <p>Generates an AIPro Super Box embedding ticket.</p>
      * 
      * @param request CreateTicket4AiProRequest
      * @return CreateTicket4AiProResponse
@@ -2520,6 +2523,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves or generates a personal identification number for a user.</p>
+     * 
+     * @param request GetPersonalICodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPersonalICodeResponse
+     */
+    public GetPersonalICodeResponse getPersonalICodeWithOptions(GetPersonalICodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.quickBIUserId)) {
+            query.put("QuickBIUserId", request.quickBIUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPersonalICode"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPersonalICodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves or generates a personal identification number for a user.</p>
+     * 
+     * @param request GetPersonalICodeRequest
+     * @return GetPersonalICodeResponse
+     */
+    public GetPersonalICodeResponse getPersonalICode(GetPersonalICodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPersonalICodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Searches for user group information by user group name keyword.</p>
      * 
      * @param request GetUserGroupInfoRequest
@@ -2794,7 +2841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the collaborative authorization records of a resource.</p>
+     * <p>Queries the list of collaborative authorization records for a resource.</p>
      * 
      * @param request ListAuthConfigByResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2842,7 +2889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the collaborative authorization records of a resource.</p>
+     * <p>Queries the list of collaborative authorization records for a resource.</p>
      * 
      * @param request ListAuthConfigByResourceRequest
      * @return ListAuthConfigByResourceResponse
@@ -3780,7 +3827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改AI Pro嵌入配置</p>
+     * <p>Creates or updates an AIPro embedding configuration.</p>
      * 
      * @param request ModifyAiproEmbedConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3836,7 +3883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改AI Pro嵌入配置</p>
+     * <p>Creates or updates an AIPro embedding configuration.</p>
      * 
      * @param request ModifyAiproEmbedConfigRequest
      * @return ModifyAiproEmbedConfigResponse
@@ -4070,7 +4117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>概述</p>
+     * <p>Retrieves a list of AIPro embed configurations.</p>
      * 
      * @param request QueryAiproEmbedConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4102,7 +4149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>概述</p>
+     * <p>Retrieves a list of AIPro embed configurations.</p>
      * 
      * @param request QueryAiproEmbedConfigRequest
      * @return QueryAiproEmbedConfigResponse
@@ -4114,7 +4161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get approval flow information based on the approver.</p>
+     * <p>Retrieves the approval flow information based on the approver.</p>
      * 
      * @param request QueryApprovalInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4158,7 +4205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get approval flow information based on the approver.</p>
+     * <p>Retrieves the approval flow information based on the approver.</p>
      * 
      * @param request QueryApprovalInfoRequest
      * @return QueryApprovalInfoResponse
@@ -4314,7 +4361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the List of Configurations for Activating XiaoQ Embedding</p>
+     * <p>Retrieves the list of configurations for Xiao Q embedding.</p>
      * 
      * @param request QueryCopilotEmbedConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4346,7 +4393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the List of Configurations for Activating XiaoQ Embedding</p>
+     * <p>Retrieves the list of configurations for Xiao Q embedding.</p>
      * 
      * @param request QueryCopilotEmbedConfigRequest
      * @return QueryCopilotEmbedConfigResponse
@@ -4466,7 +4513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Dashboard\&quot;s Question Resource Information</p>
+     * <p>Queries the NL2SQL resource information of a dashboard.</p>
      * 
      * @param request QueryDashboardNl2sqlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4502,7 +4549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Dashboard\&quot;s Question Resource Information</p>
+     * <p>Queries the NL2SQL resource information of a dashboard.</p>
      * 
      * @param request QueryDashboardNl2sqlRequest
      * @return QueryDashboardNl2sqlResponse
@@ -4514,17 +4561,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Create an API in <a href="https://help.aliyun.com/document_detail/144980.html">DataService Studio</a> before calling this operation.</p>
+     * <h3>Before you begin</h3>
+     * <p>You must first create an API in the Data Service of Quick BI. For more information, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
      * <h3>Limits</h3>
      * <ul>
-     * <li>Requires Quick BI Professional Edition.</li>
-     * <li>API call timeout: 60s. QPS limit per API: 10.</li>
-     * <li>Row-level permissions on the referenced dataset also apply to API calls.</li>
+     * <li>The Data Service feature is available only to Professional Edition users.</li>
+     * <li>For Data Service API calls, the timeout period is 60 seconds, and the queries per second (QPS) limit for a single API is 10.</li>
+     * <li>If row-level permissions are enabled for the dataset referenced by a Data Service API, the row-level access policy also intercepts the request when you make the API call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls a DataService Studio API to query data.</p>
+     * <p>Calls an API created in Data Service.</p>
      * 
      * @param request QueryDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4568,17 +4615,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Create an API in <a href="https://help.aliyun.com/document_detail/144980.html">DataService Studio</a> before calling this operation.</p>
+     * <h3>Before you begin</h3>
+     * <p>You must first create an API in the Data Service of Quick BI. For more information, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
      * <h3>Limits</h3>
      * <ul>
-     * <li>Requires Quick BI Professional Edition.</li>
-     * <li>API call timeout: 60s. QPS limit per API: 10.</li>
-     * <li>Row-level permissions on the referenced dataset also apply to API calls.</li>
+     * <li>The Data Service feature is available only to Professional Edition users.</li>
+     * <li>For Data Service API calls, the timeout period is 60 seconds, and the queries per second (QPS) limit for a single API is 10.</li>
+     * <li>If row-level permissions are enabled for the dataset referenced by a Data Service API, the row-level access policy also intercepts the request when you make the API call.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls a DataService Studio API to query data.</p>
+     * <p>Calls an API created in Data Service.</p>
      * 
      * @param request QueryDataRequest
      * @return QueryDataResponse
@@ -4590,7 +4637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Data Range Catalog List</p>
+     * <p>Retrieves the list of data scope directories for the embedded configuration page.</p>
      * 
      * @param request QueryDataRangeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4626,7 +4673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Data Range Catalog List</p>
+     * <p>Retrieves the list of data scope directories for the embedded configuration page.</p>
      * 
      * @param request QueryDataRangeRequest
      * @return QueryDataRangeResponse
@@ -4638,17 +4685,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h4>Prerequisites</h4>
-     * <p>You create the data service API through Quick BI\&quot;s data service. For more details, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
-     * <h4>Usage Restrictions</h4>
+     * <h4>Before you begin</h4>
+     * <p>You have created an API in Data Service of Quick BI. For more information, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
+     * <h4>Limits</h4>
      * <ul>
-     * <li>The data service feature is only available to professional edition customers. </li>
-     * <li>The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.</li>
-     * <li>If row-level permissions are enabled on the dataset referenced by the data service API, the API call may be intercepted by the row-level permission policy.</li>
+     * <li>The Data Service feature is available only to Quick BI Professional Edition users. </li>
+     * <li>When you invoke a Data Service API, the timeout period is 60 seconds, and the queries per second (QPS) limit for a single API is 10.</li>
+     * <li>If row-level permissions are enabled for the dataset referenced by a Data Service API, the invocation may be blocked by the row-level access policy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke an already created API in the data service.</p>
+     * <p>Calls an API created in Data Service.</p>
      * 
      * @deprecated OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.
      * 
@@ -4692,17 +4739,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h4>Prerequisites</h4>
-     * <p>You create the data service API through Quick BI\&quot;s data service. For more details, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
-     * <h4>Usage Restrictions</h4>
+     * <h4>Before you begin</h4>
+     * <p>You have created an API in Data Service of Quick BI. For more information, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
+     * <h4>Limits</h4>
      * <ul>
-     * <li>The data service feature is only available to professional edition customers. </li>
-     * <li>The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.</li>
-     * <li>If row-level permissions are enabled on the dataset referenced by the data service API, the API call may be intercepted by the row-level permission policy.</li>
+     * <li>The Data Service feature is available only to Quick BI Professional Edition users. </li>
+     * <li>When you invoke a Data Service API, the timeout period is 60 seconds, and the queries per second (QPS) limit for a single API is 10.</li>
+     * <li>If row-level permissions are enabled for the dataset referenced by a Data Service API, the invocation may be blocked by the row-level access policy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invoke an already created API in the data service.</p>
+     * <p>Calls an API created in Data Service.</p>
      * 
      * @deprecated OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.
      * 
@@ -4718,7 +4765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Data Service API List</p>
+     * <p>Queries the list of data service APIs.</p>
      * 
      * @param request QueryDataServiceListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4762,7 +4809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Data Service API List</p>
+     * <p>Queries the list of data service APIs.</p>
      * 
      * @param request QueryDataServiceListRequest
      * @return QueryDataServiceListResponse
@@ -4774,10 +4821,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The response includes the data source, directory, and a dataset model containing dimensions, measures, physical fields, custom SQL text, and relationships.</p>
+     * <p>The details include the associated data source, folder, and dataset model, which contains information such as dimensions, measures, physical fields, custom SQL text, and associations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified dataset, including its data source, directory, and dataset model.</p>
+     * <p>Queries the details of a specified dataset, including the associated data source, folder, and dataset model.</p>
      * 
      * @param request QueryDatasetDetailInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4809,10 +4856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The response includes the data source, directory, and a dataset model containing dimensions, measures, physical fields, custom SQL text, and relationships.</p>
+     * <p>The details include the associated data source, folder, and dataset model, which contains information such as dimensions, measures, physical fields, custom SQL text, and associations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified dataset, including its data source, directory, and dataset model.</p>
+     * <p>Queries the details of a specified dataset, including the associated data source, folder, and dataset model.</p>
      * 
      * @param request QueryDatasetDetailInfoRequest
      * @return QueryDatasetDetailInfoResponse
@@ -4824,9 +4871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether the table is a custom SQL table. Valid values:
-     * \\*   true: custom SQL table
-     * \\*   false: non-custom SQL table</p>
+     * <p>Queries the information of a specified dataset.</p>
      * 
      * @param request QueryDatasetInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4858,9 +4903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether the table is a custom SQL table. Valid values:
-     * \\*   true: custom SQL table
-     * \\*   false: non-custom SQL table</p>
+     * <p>Queries the information of a specified dataset.</p>
      * 
      * @param request QueryDatasetInfoRequest
      * @return QueryDatasetInfoResponse
@@ -4981,11 +5024,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * <p>: This operation supports only the new row- and column-level permission model of Quick BI. If you are still using the legacy row- and column-level permissions, migrate to the new row- and column-level permission model before you call this operation. To migrate to the new model, go to <strong>Organization management</strong> &gt; <strong>Security settings</strong> &gt; <strong>Upgrade row- and column-level permissions to new version</strong>, and click <strong>One-click upgrade</strong>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Get the row-level permission switch status for a specified dataset.</p>
+     * <p>Retrieves the status of the row-level permission switch for a specified dataset.</p>
      * 
      * @param request QueryDatasetSwitchInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5018,11 +5061,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * <p>: This operation supports only the new row- and column-level permission model of Quick BI. If you are still using the legacy row- and column-level permissions, migrate to the new row- and column-level permission model before you call this operation. To migrate to the new model, go to <strong>Organization management</strong> &gt; <strong>Security settings</strong> &gt; <strong>Upgrade row- and column-level permissions to new version</strong>, and click <strong>One-click upgrade</strong>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Get the row-level permission switch status for a specified dataset.</p>
+     * <p>Retrieves the status of the row-level permission switch for a specified dataset.</p>
      * 
      * @param request QueryDatasetSwitchInfoRequest
      * @return QueryDatasetSwitchInfoResponse
@@ -5155,7 +5198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check which datasets and analysis themes the user has question authorization for</p>
+     * <p>Queries the smart query authorizations for datasets and analysis themes of a user.</p>
      * 
      * @param request QueryLlmCubeWithThemeListByUserIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5187,7 +5230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check which datasets and analysis themes the user has question authorization for</p>
+     * <p>Queries the smart query authorizations for datasets and analysis themes of a user.</p>
      * 
      * @param request QueryLlmCubeWithThemeListByUserIdRequest
      * @return QueryLlmCubeWithThemeListByUserIdResponse
@@ -5299,7 +5342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of works that a user has the permission to view, including the statements that are authorized to share in a space.</p>
+     * <p>Queries the list of works that a user has permission to view, including reports in workspaces and those shared through authorization.</p>
      * 
      * @deprecated OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.
      * 
@@ -5335,7 +5378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of works that a user has the permission to view, including the statements that are authorized to share in a space.</p>
+     * <p>Queries the list of works that a user has permission to view, including reports in workspaces and those shared through authorization.</p>
      * 
      * @deprecated OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.
      * 
@@ -5607,7 +5650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a specified ticket for a report that is not embedded in the report.</p>
+     * <p>Retrieves the details of a specified ticket for logon-free embedded reports.</p>
      * 
      * @param request QueryTicketInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5639,7 +5682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a specified ticket for a report that is not embedded in the report.</p>
+     * <p>Retrieves the details of a specified ticket for logon-free embedded reports.</p>
      * 
      * @param request QueryTicketInfoRequest
      * @return QueryTicketInfoResponse
@@ -5651,7 +5694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a UserId by the bound third-party account ID.</p>
+     * <p>Queries the user ID based on the bound third-party account ID.</p>
      * 
      * @param request QueryUserByMobileAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5687,7 +5730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a UserId by the bound third-party account ID.</p>
+     * <p>Queries the user ID based on the bound third-party account ID.</p>
      * 
      * @param request QueryUserByMobileAccountRequest
      * @return QueryUserByMobileAccountResponse
@@ -5743,7 +5786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the list of members under a user group.</p>
+     * <p>Retrieves the list of members in a user group.</p>
      * 
      * @param request QueryUserGroupMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5779,7 +5822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the list of members under a user group.</p>
+     * <p>Retrieves the list of members in a user group.</p>
      * 
      * @param request QueryUserGroupMemberRequest
      * @return QueryUserGroupMemberResponse
@@ -5971,7 +6014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata list of member tags in an organization.</p>
+     * <p>Queries the list of member tag metadata in an organization.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryUserTagMetaListResponse
@@ -5994,7 +6037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata list of member tags in an organization.</p>
+     * <p>Queries the list of member tag metadata in an organization.</p>
      * @return QueryUserTagMetaListResponse
      */
     public QueryUserTagMetaListResponse queryUserTagMetaList() throws Exception {
@@ -6088,7 +6131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the kinship of a data work, including the datasets referenced by each component and query field information. Currently, only supported data works include dashboards, workbooks, and self-service data retrieval.</p>
+     * <p>Retrieves the lineage of a data work, including the datasets referenced by each component and the query field information. Currently, only dashboards, workbooks, and ad hoc queries are supported.</p>
      * 
      * @param request QueryWorksBloodRelationshipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6120,7 +6163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the kinship of a data work, including the datasets referenced by each component and query field information. Currently, only supported data works include dashboards, workbooks, and self-service data retrieval.</p>
+     * <p>Retrieves the lineage of a data work, including the datasets referenced by each component and the query field information. Currently, only dashboards, workbooks, and ad hoc queries are supported.</p>
      * 
      * @param request QueryWorksBloodRelationshipRequest
      * @return QueryWorksBloodRelationshipResponse
@@ -7080,7 +7123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据源基础属性</p>
+     * <p>Updates the basic properties of a data source.</p>
      * 
      * @param request UpdateDataSourcePropertiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7124,7 +7167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据源基础属性</p>
+     * <p>Updates the basic properties of a data source.</p>
      * 
      * @param request UpdateDataSourcePropertiesRequest
      * @return UpdateDataSourcePropertiesResponse
@@ -7180,6 +7223,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateEmbeddedStatusResponse updateEmbeddedStatus(UpdateEmbeddedStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEmbeddedStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the personal identification number of a user.</p>
+     * 
+     * @param request UpdatePersonalICodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePersonalICodeResponse
+     */
+    public UpdatePersonalICodeResponse updatePersonalICodeWithOptions(UpdatePersonalICodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.quickBIUserId)) {
+            query.put("QuickBIUserId", request.quickBIUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePersonalICode"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePersonalICodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the personal identification number of a user.</p>
+     * 
+     * @param request UpdatePersonalICodeRequest
+     * @return UpdatePersonalICodeResponse
+     */
+    public UpdatePersonalICodeResponse updatePersonalICode(UpdatePersonalICodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePersonalICodeWithOptions(request, runtime);
     }
 
     /**
@@ -7356,7 +7443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Used for updating the metadata of organization member tags</p>
+     * <p>Updates the metadata of an organization member tag.</p>
      * 
      * @param request UpdateUserTagMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7396,7 +7483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Used for updating the metadata of organization member tags</p>
+     * <p>Updates the metadata of an organization member tag.</p>
      * 
      * @param request UpdateUserTagMetaRequest
      * @return UpdateUserTagMetaResponse

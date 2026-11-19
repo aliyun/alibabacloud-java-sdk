@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthConfigByResourceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to query only records that have permissions.</p>
+     * <p>Specifies whether to query only the records that have permissions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListAuthConfigByResourceRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The ID of the resource to authorize.</p>
+     * <p>The ID of the resource to be authorized.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,11 +36,11 @@ public class ListAuthConfigByResourceRequest extends TeaModel {
     /**
      * <p>The query granularity. Valid values:</p>
      * <ul>
-     * <li>0: user</li>
-     * <li>1: user group</li>
+     * <li>0: User.</li>
+     * <li>1: User group.</li>
      * </ul>
      * <blockquote>
-     * <p>Notice: Authorization records for organizations and workspaces are returned at the user granularity. Datasets and data sources can only be authorized to users.</p>
+     * <p>Notice: Authorization records for organizations and workspaces are returned at the user granularity. Datasets and data sources can only be authorized to users.</notice></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -51,16 +51,16 @@ public class ListAuthConfigByResourceRequest extends TeaModel {
     public Integer shareToType;
 
     /**
-     * <p>The type of the authorization resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>dashboard: dashboard</li>
-     * <li>screen: data screen</li>
-     * <li>report: electron</li>
-     * <li>ANALYSIS: ad hoc analysis</li>
-     * <li>dashboardOfflineQuery: self-service data retrieval</li>
-     * <li>dataForm: data form</li>
-     * <li>cube: dataset</li>
-     * <li>datasource: data source</li>
+     * <li>dashboard: Dashboard.</li>
+     * <li>screen: Data screen.</li>
+     * <li>report: Workbook.</li>
+     * <li>ANALYSIS: Ad hoc analysis.</li>
+     * <li>dashboardOfflineQuery: Self-service data retrieval.</li>
+     * <li>dataForm: Data entry.</li>
+     * <li>cube: Dataset.</li>
+     * <li>datasource: Data source.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class QueryDataRangeRequest extends TeaModel {
     /**
-     * <p>Name, for fuzzy search.</p>
+     * <p>The name. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>Data range type:</p>
+     * <p>The data scope type. Valid values:</p>
      * <ul>
-     * <li>llmCube: LlmCube resource.</li>
+     * <li>llmCube: Data query resource.</li>
      * <li>llmCubeTheme: Analysis theme.</li>
      * </ul>
      * <p>This parameter is required.</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AuthorizeMenuRequest extends TeaModel {
     /**
-     * <p>Authorizes the permissions of the menu. Valid values:</p>
+     * <p>The permissions to grant for the menus. Valid values:</p>
      * <ul>
-     * <li>1: view</li>
-     * <li>3: View + Export (default)</li>
+     * <li>1: View.</li>
+     * <li>3: View and export. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AuthorizeMenuRequest extends TeaModel {
     public Integer authPointsValue;
 
     /**
-     * <p>The ID of the BI portal.</p>
+     * <p>The ID of the data portal.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,11 +28,7 @@ public class AuthorizeMenuRequest extends TeaModel {
     public String dataPortalId;
 
     /**
-     * <p>The menu ID of the BI portal leaf node.</p>
-     * <ul>
-     * <li>The directory menu cannot be authorized.</li>
-     * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</li>
-     * </ul>
+     * <p>The IDs of the leaf node menus in the data portal. You can specify multiple IDs. Separate multiple IDs with commas (,). You can specify up to 100 IDs at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,11 +38,7 @@ public class AuthorizeMenuRequest extends TeaModel {
     public String menuIds;
 
     /**
-     * <p>The IDs of the user groups.</p>
-     * <ul>
-     * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</li>
-     * <li>UserGroupIds and UserIds cannot be empty at the same time</li>
-     * </ul>
+     * <p>The IDs of the user groups. You can specify multiple IDs. Separate multiple IDs with commas (,). You can specify up to 200 IDs at a time. You must specify at least one of UserGroupIds and UserIds.</p>
      * 
      * <strong>example:</strong>
      * <p>34fd141d-4598-4093-8c33-8e066dcb****,3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
@@ -55,10 +47,7 @@ public class AuthorizeMenuRequest extends TeaModel {
     public String userGroupIds;
 
     /**
-     * <p>The IDs of the end users. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
-     * <ul>
-     * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</li>
-     * </ul>
+     * <p>The IDs of the users. These are Quick BI user IDs, not Alibaba Cloud UIDs. You can specify multiple IDs. Separate multiple IDs with commas (,). You can specify up to 200 IDs at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>204627493484****,121344444790****</p>

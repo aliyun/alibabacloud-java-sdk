@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelReportShareResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DC4E1E63-B337-44F8-8C22-6F00DF67E2C3</p>
@@ -14,10 +14,10 @@ public class CancelReportShareResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The execution result of the interface is returned. Valid values:</p>
+     * <p>The execution result of the API operation. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request fails.</li>
+     * <li>true: The execution succeeded.</li>
+     * <li>false: The execution failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class CancelReportShareResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
+     * <li>true: The request succeeded.</li>
      * <li>false: The request failed.</li>
      * </ul>
      * 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryAiproEmbedConfigRequest extends TeaModel {
     /**
+     * <p>The keyword used for fuzzy search by showName.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

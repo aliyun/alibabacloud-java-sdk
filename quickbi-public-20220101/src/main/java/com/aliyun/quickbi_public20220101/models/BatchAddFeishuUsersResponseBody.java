@@ -14,11 +14,11 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of adding user group members. Valid values:</p>
+     * <p>Indicates whether the user group members are added. Valid values:</p>
      * <ul>
-     * <li><p>true: The users were added.</p>
+     * <li><p>true: The user group members are added.</p>
      * </li>
-     * <li><p>false: The users failed to be added.</p>
+     * <li><p>false: The user group members fail to be added.</p>
      * </li>
      * </ul>
      * 
@@ -29,10 +29,10 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
     public BatchAddFeishuUsersResponseBodyResult result;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error code description.</p>
+         * <p>The description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -131,7 +131,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
 
     public static class BatchAddFeishuUsersResponseBodyResultFailResults extends TeaModel {
         /**
-         * <p>The error causes.</p>
+         * <p>The causes of the errors.</p>
          */
         @NameInMap("FailInfos")
         public java.util.List<BatchAddFeishuUsersResponseBodyResultFailResultsFailInfos> failInfos;
@@ -153,7 +153,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
 
     public static class BatchAddFeishuUsersResponseBodyResult extends TeaModel {
         /**
-         * <p>The number of users that failed validation.</p>
+         * <p>The number of failures.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -168,7 +168,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         public java.util.List<BatchAddFeishuUsersResponseBodyResultFailResults> failResults;
 
         /**
-         * <p>The number of users that were added.</p>
+         * <p>The number of successes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

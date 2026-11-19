@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2EE822B***************F-F5B42DDADC12</p>
@@ -14,16 +14,16 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of datasets and analysis themes.</p>
+     * <p>The list of datasets and analysis themes.</p>
      */
     @NameInMap("Result")
     public QueryLlmCubeWithThemeListByUserIdResponseBodyResult result;
 
     /**
-     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful</li>
-     * <li>false: The request failed</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,21 +63,27 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
 
     public static class QueryLlmCubeWithThemeListByUserIdResponseBodyResult extends TeaModel {
         /**
-         * <p>Dataset map.</p>
+         * <p>The dataset map.</p>
          * <ul>
-         * <li>key - Dataset ID</li>
-         * <li>value - Dataset name</li>
+         * <li>key: The dataset ID.</li>
+         * <li>value: The dataset name.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;4d93****<em><strong>0-9614-c97adea37911&quot;:&quot;common</strong></em>value&quot;}</p>
          */
         @NameInMap("CubeIds")
         public java.util.Map<String, String> cubeIds;
 
         /**
-         * <p>Analysis theme map.</p>
+         * <p>The analysis theme map.</p>
          * <ul>
-         * <li>key - Analysis theme ID </li>
-         * <li>value - Analysis theme name</li>
+         * <li>key: The analysis theme ID. </li>
+         * <li>value: The analysis theme name.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;9aefb3***<em><strong><strong><strong><strong>75abecbe&quot;:&quot;www</strong></strong></strong></strong></em>eeee&quot;}</p>
          */
         @NameInMap("ThemeIds")
         public java.util.Map<String, String> themeIds;

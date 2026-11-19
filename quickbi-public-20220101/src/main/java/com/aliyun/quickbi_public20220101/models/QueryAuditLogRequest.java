@@ -7,14 +7,10 @@ public class QueryAuditLogRequest extends TeaModel {
     /**
      * <p>The access source. Valid values:</p>
      * <ul>
-     * <li><p>COMMON: standard access</p>
-     * </li>
-     * <li><p>IMBEDDED: embedded report</p>
-     * </li>
-     * <li><p>PUBLIC: public report</p>
-     * </li>
-     * <li><p>IMBEDDED_COMPONENT: embedded card</p>
-     * </li>
+     * <li>COMMON: Regular access.</li>
+     * <li>IMBEDDED: Embedded report.</li>
+     * <li>PUBLIC: Public report.</li>
+     * <li>IMBEDDED_COMPONENT: Embedded card.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +23,7 @@ public class QueryAuditLogRequest extends TeaModel {
     public String accessSourceFlag;
 
     /**
-     * <p>The end date for the query. Use the yyyyMMdd format.</p>
+     * <p>The end date of the query. Format: yyyyMMdd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,12 +35,9 @@ public class QueryAuditLogRequest extends TeaModel {
     /**
      * <p>The log type. Valid values:</p>
      * <ul>
-     * <li><p>dataView: access logs</p>
-     * </li>
-     * <li><p>function: operation logs</p>
-     * </li>
-     * <li><p>permission: permission logs</p>
-     * </li>
+     * <li>dataView: Access.</li>
+     * <li>function: Operation.</li>
+     * <li>permission: Permission.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -64,8 +57,7 @@ public class QueryAuditLogRequest extends TeaModel {
     public String operatorId;
 
     /**
-     * <p>The permission, access, or operation type. If left empty, all types are queried by default.</p>
-     * <p>For valid values, see audit log codes. To specify multiple types, separate them with commas.</p>
+     * <p>The permission, access, or operation type. If this parameter is left empty, all types are queried by default. For more information, see the audit log code values. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>MODIFY</p>
@@ -74,7 +66,7 @@ public class QueryAuditLogRequest extends TeaModel {
     public String operatorTypes;
 
     /**
-     * <p>The resource type. For more information, see work types.</p>
+     * <p>The resource type. For more information, see the asset type.</p>
      * 
      * <strong>example:</strong>
      * <p>cube</p>
@@ -83,7 +75,7 @@ public class QueryAuditLogRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The start date for the query. Use the yyyyMMdd format. The date cannot be more than 90 days before the current date.</p>
+     * <p>The start date of the query. Format: yyyyMMdd. The date cannot be more than 90 days before the current date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,12 +85,10 @@ public class QueryAuditLogRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The device used for access. Valid values:</p>
+     * <p>The access device. Valid values:</p>
      * <ul>
-     * <li><p>MOBILE: mobile device</p>
-     * </li>
-     * <li><p>PC: PC</p>
-     * </li>
+     * <li>MOBILE: Mobile client.</li>
+     * <li>PC: PC client.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,7 +101,7 @@ public class QueryAuditLogRequest extends TeaModel {
     public String userAccessDevice;
 
     /**
-     * <p>The ID of the workspace that contains the logs to query.</p>
+     * <p>The ID of the workspace to which the logs to be queried belong.</p>
      * 
      * <strong>example:</strong>
      * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>

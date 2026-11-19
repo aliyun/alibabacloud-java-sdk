@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryUserGroupMemberRequest extends TeaModel {
     /**
-     * <p>Keyword for the username or nickname of the user group member.</p>
+     * <p>The keyword used to search for the username or nickname of a user group member.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Xiao Liu</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>User group ID.</p>
+     * <p>The ID of the user group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

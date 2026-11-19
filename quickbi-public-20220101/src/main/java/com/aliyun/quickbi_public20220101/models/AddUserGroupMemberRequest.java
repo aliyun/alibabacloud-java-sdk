@@ -15,7 +15,7 @@ public class AddUserGroupMemberRequest extends TeaModel {
     public String userGroupId;
 
     /**
-     * <p>The ID of the Quick BI user. Separate multiple IDs with commas (,). Example: abc,efg. You can enter a maximum of 1000 entries.</p>
+     * <p>The IDs of Quick BI users. Separate multiple IDs with commas (,). Example: abc,efg. You can specify up to 1,000 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -173,7 +173,7 @@ public class GetMailTaskListResponseBody extends TeaModel {
          * <p>The next page number. A value of null or 0 indicates that there is no next page.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>0</p>
          */
         @NameInMap("Next")
         public Integer next;
@@ -200,7 +200,7 @@ public class GetMailTaskListResponseBody extends TeaModel {
          * <p>The previous page number. A value of null or 0 indicates that there is no previous page.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>0</p>
          */
         @NameInMap("Pre")
         public Integer pre;

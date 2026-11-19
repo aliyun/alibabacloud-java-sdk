@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserGroupMemberResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>48C930FF-DFCF-5986-902B-E24C202E2443</p>
@@ -14,13 +14,13 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the request for the user group member list.</p>
+     * <p>The query result of the user group member list.</p>
      */
     @NameInMap("Result")
     public java.util.List<QueryUserGroupMemberResponseBodyResult> result;
 
     /**
-     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
      * <li>true: The request was successful.</li>
      * <li>false: The request failed.</li>
@@ -63,7 +63,7 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
 
     public static class QueryUserGroupMemberResponseBodyResult extends TeaModel {
         /**
-         * <p>ID of the user group or the user group member.</p>
+         * <p>The ID of the user group or the user group member.</p>
          * 
          * <strong>example:</strong>
          * <p>3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
@@ -72,10 +72,10 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether it is a user group. Possible values:</p>
+         * <p>Indicates whether the item is a user group. Valid values:</p>
          * <ul>
-         * <li>true: It is a user group.</li>
-         * <li>false: It is a user.</li>
+         * <li>true: The item is a user group.</li>
+         * <li>false: The item is a user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,16 +85,16 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
         public Boolean isUserGroup;
 
         /**
-         * <p>Name or nickname of the user group or its member.</p>
+         * <p>The name of the user group or the nickname of the user group member.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Xiao Liu\&quot;s test user group</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>ID of the parent user group.</p>
+         * <p>The ID of the parent user group.</p>
          * 
          * <strong>example:</strong>
          * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
@@ -103,10 +103,10 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
         public String parentUserGroupId;
 
         /**
-         * <p>Name of the parent user group.</p>
+         * <p>The name of the parent user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Finance group</p>
          */
         @NameInMap("ParentUserGroupName")
         public String parentUserGroupName;

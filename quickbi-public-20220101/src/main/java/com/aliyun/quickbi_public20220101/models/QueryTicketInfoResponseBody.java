@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTicketInfoResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -22,10 +22,8 @@ public class QueryTicketInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
 
     public static class QueryTicketInfoResponseBodyResult extends TeaModel {
         /**
-         * <p>Notes.</p>
+         * <p>The ticket.</p>
          * 
          * <strong>example:</strong>
          * <p>a27a9aec-<strong><strong>-</strong></strong>-bd40-1a21ea41d7c5</p>
@@ -74,7 +72,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String accessTicket;
 
         /**
-         * <p>The ID of the component in the report.</p>
+         * <p>The component ID in the report.</p>
          * 
          * <strong>example:</strong>
          * <p>sfdgsds-<strong><strong>-</strong></strong>-a608-mghdgd</p>
@@ -83,7 +81,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String cmptId;
 
         /**
-         * <p>Global parameters.</p>
+         * <p>The global parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;paramKey&quot;:&quot;price&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;&gt;&quot;,&quot;value&quot;:&quot;0&quot;}]},{&quot;paramKey&quot;:&quot;product_type&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;in&quot;,&quot;value&quot;:[&quot;]}]}]\n</p>
@@ -92,7 +90,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String globalParam;
 
         /**
-         * <p>Expiration time of the note.</p>
+         * <p>The expiration time of the ticket.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-30 03:03:49</p>
@@ -101,7 +99,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String invalidTime;
 
         /**
-         * <p>The maximum number of supported bills.</p>
+         * <p>The maximum number of supported tickets.</p>
          * 
          * <strong>example:</strong>
          * <p>9999</p>
@@ -110,7 +108,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public Integer maxTicketNum;
 
         /**
-         * <p>The ID of the organization.</p>
+         * <p>The organization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2fe4fbd8-<strong><strong>-</strong></strong>-b3e1-e92c7af083ea</p>
@@ -128,7 +126,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String registerTime;
 
         /**
-         * <p>The number of bills that have been consumed.</p>
+         * <p>The number of consumed tickets.</p>
          * 
          * <strong>example:</strong>
          * <p>47</p>
@@ -137,7 +135,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public Integer usedTicketNum;
 
         /**
-         * <p>The user ID of the Quick BI.</p>
+         * <p>The Quick BI user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>974e50**********9033f46</p>
@@ -146,7 +144,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>Set the watermarking parameters.</p>
+         * <p>The watermark parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>ticket</p>
@@ -155,7 +153,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String watermarkParam;
 
         /**
-         * <p>The ID of the operations report.</p>
+         * <p>The report ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ccd3428c-<strong><strong>-</strong></strong>-a608-26bae29dffee</p>

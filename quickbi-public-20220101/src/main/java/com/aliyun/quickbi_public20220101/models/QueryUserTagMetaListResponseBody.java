@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserTagMetaListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -14,7 +14,7 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returns a list of user tags in an organization.</p>
+     * <p>The list of user tags in the organization.</p>
      */
     @NameInMap("Result")
     public java.util.List<QueryUserTagMetaListResponseBodyResult> result;
@@ -22,8 +22,8 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,16 +63,16 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
 
     public static class QueryUserTagMetaListResponseBodyResult extends TeaModel {
         /**
-         * <p>The description of the tag.</p>
+         * <p>The tag description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used to distinguish some positions</p>
+         * <p>Used to distinguish certain positions</p>
          */
         @NameInMap("TagDescription")
         public String tagDescription;
 
         /**
-         * <p>The ID of the label.</p>
+         * <p>The tag ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pop_001</p>
@@ -81,7 +81,7 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
         public String tagId;
 
         /**
-         * <p>The name of the tag.</p>
+         * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
          * <p>Position</p>

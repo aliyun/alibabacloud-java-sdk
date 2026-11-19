@@ -5,24 +5,24 @@ import com.aliyun.tea.*;
 
 public class AddUserTagMetaRequest extends TeaModel {
     /**
-     * <p>Tag description. Format check: maximum length of 255 characters.</p>
+     * <p>The tag description. Format requirements: The maximum length is 255 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Positions within the department</p>
      */
     @NameInMap("TagDescription")
     public String tagDescription;
 
     /**
-     * <p>Tag name. Format check:</p>
+     * <p>The tag name. Format requirements:</p>
      * <ul>
-     * <li>Maximum length of 50 characters.</li>
-     * <li>Only Chinese, English, numbers, and /\|<a href=""></a> symbols are allowed.</li>
+     * <li>The maximum length is 50 characters.</li>
+     * <li>Only Chinese characters, English letters, digits, and the /\|<a href=""></a> symbols are allowed.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Position</p>
      */
     @NameInMap("TagName")
     public String tagName;

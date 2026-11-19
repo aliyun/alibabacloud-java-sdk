@@ -20,10 +20,10 @@ public class QueryUserByMobileAccountResponseBody extends TeaModel {
     public QueryUserByMobileAccountResponseBodyResult result;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class QueryUserByMobileAccountResponseBody extends TeaModel {
         public String boundUserId;
 
         /**
-         * <p>The mobile account name.</p>
+         * <p>The name of the mobile account.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

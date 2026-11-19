@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDataLevelPermissionWhiteListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
@@ -14,12 +14,10 @@ public class AddDataLevelPermissionWhiteListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The execution result of the API operation. Valid values:</p>
+     * <p>The execution result of the operation. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request succeeded.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +29,8 @@ public class AddDataLevelPermissionWhiteListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request succeeded.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

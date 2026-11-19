@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDataLevelPermissionWhiteListRequest extends TeaModel {
     /**
-     * <p>The ID of the dataset.</p>
+     * <p>The dataset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,10 @@ public class AddDataLevelPermissionWhiteListRequest extends TeaModel {
     public String cubeId;
 
     /**
-     * <p>The operation to perform. Valid values:</p>
+     * <p>The operation type. Valid values: </p>
      * <ul>
-     * <li><p>ADD: adds users or user groups to the whitelist.</p>
-     * </li>
-     * <li><p>DELETE: removes users or user groups from the whitelist.</p>
-     * </li>
+     * <li>ADD: add entries to the whitelist</li>
+     * <li>DELETE: remove entries from the whitelist</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,12 +28,10 @@ public class AddDataLevelPermissionWhiteListRequest extends TeaModel {
     public String operateType;
 
     /**
-     * <p>The type of permission. Valid values:</p>
+     * <p>The permission type. Valid values:</p>
      * <ul>
-     * <li><p>ROW_LEVEL: row-level permission</p>
-     * </li>
-     * <li><p>COLUMN_LEVEL: column-level permission</p>
-     * </li>
+     * <li>ROW_LEVEL: row-level permissions</li>
+     * <li>COLUMN_LEVEL: column-level permissions</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,12 +41,10 @@ public class AddDataLevelPermissionWhiteListRequest extends TeaModel {
     public String ruleType;
 
     /**
-     * <p>The IDs of the users or user groups to add to the whitelist.</p>
+     * <p>The authorization targets. You can specify multiple targets separated by commas (,). Valid values:</p>
      * <ul>
-     * <li><p>If you set TargetType to 1 (user), specify the user IDs.</p>
-     * </li>
-     * <li><p>When <code>TargetType=2</code> (user group), the value is the user group ID.</p>
-     * </li>
+     * <li>If TargetType is set to 1 (user), the value is the user ID.</li>
+     * <li>If TargetType is set to 2 (user group), the value is the user group ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,12 +54,10 @@ public class AddDataLevelPermissionWhiteListRequest extends TeaModel {
     public String targetIds;
 
     /**
-     * <p>The type of object to add to the whitelist. Valid values:</p>
+     * <p>The type of the target for which the whitelist is modified. Valid values:</p>
      * <ul>
-     * <li><p>1: user</p>
-     * </li>
-     * <li><p>2: user group</p>
-     * </li>
+     * <li>1: user </li>
+     * <li>2: user group</li>
      * </ul>
      * 
      * <strong>example:</strong>

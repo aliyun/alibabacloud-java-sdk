@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelAuthorizationMenuResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
@@ -14,7 +14,7 @@ public class CancelAuthorizationMenuResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Number of menus successfully unauthorized.</p>
+     * <p>The number of menus for which authorization was successfully revoked.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class CancelAuthorizationMenuResponseBody extends TeaModel {
     public Integer result;
 
     /**
-     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
      * <li>true: The request was successful.</li>
      * <li>false: The request failed.</li>

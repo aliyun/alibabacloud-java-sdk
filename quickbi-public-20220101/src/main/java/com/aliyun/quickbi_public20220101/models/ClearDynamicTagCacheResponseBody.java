@@ -14,9 +14,9 @@ public class ClearDynamicTagCacheResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the cache is purged.</p>
+     * <p>Indicates whether the cache is cleared successfully. Valid values:</p>
      * <ul>
-     * <li>true: The cache is purged.</li>
+     * <li>true: The cache is cleared successfully.</li>
      * <li>false: No cache exists.</li>
      * </ul>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeVisibilityModelRequest extends TeaModel {
     /**
-     * <p>The ID of the BI portal.</p>
+     * <p>The ID of the data portal.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,9 @@ public class ChangeVisibilityModelRequest extends TeaModel {
     public String dataPortalId;
 
     /**
-     * <p>The menu ID of the BI portal leaf node.</p>
+     * <p>The IDs of the leaf node menus in the data portal.</p>
      * <ul>
-     * <li>The directory menu cannot be authorized.</li>
-     * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</li>
+     * <li>You can specify multiple IDs. Separate multiple IDs with commas (,). A maximum of 100 IDs can be modified at a time.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,10 +28,10 @@ public class ChangeVisibilityModelRequest extends TeaModel {
     public String menuIds;
 
     /**
-     * <p>Whether only authorization is visible. Valid values:</p>
+     * <p>Specifies whether the menus are visible only to authorized users. Valid values:</p>
      * <ul>
-     * <li>true: Only the authorization is visible.</li>
-     * <li>false: Both are visible.</li>
+     * <li>true: The menus are visible only to authorized users.</li>
+     * <li>false: The menus are visible to all users.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

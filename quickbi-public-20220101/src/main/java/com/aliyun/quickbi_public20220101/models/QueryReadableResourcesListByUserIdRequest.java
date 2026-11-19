@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryReadableResourcesListByUserIdRequest extends TeaModel {
     /**
-     * <p>Quick BI the user ID.</p>
+     * <p>The Quick BI user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

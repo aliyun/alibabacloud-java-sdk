@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryAiproEmbedConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D8749***C180FF3B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array of AIPro configurations.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryAiproEmbedConfigResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,13 +63,17 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
 
     public static class QueryAiproEmbedConfigResponseBodyResult extends TeaModel {
         /**
+         * <p>The agent nickname.</p>
+         * 
          * <strong>example:</strong>
-         * <p>小Q</p>
+         * <p>Xiao Q</p>
          */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
+         * <p>The embed configuration ID, which is used for CreateTicket4AiPro.</p>
+         * 
          * <strong>example:</strong>
          * <p>123124</p>
          */
@@ -66,6 +81,12 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
         public String aiProId;
 
         /**
+         * <p>Indicates whether chat history is displayed. Valid values:</p>
+         * <ul>
+         * <li>1: Displayed.</li>
+         * <li>0: Not displayed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -73,6 +94,8 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
         public Integer chatHistoryStatus;
 
         /**
+         * <p>The JSON string of the embed appearance configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -80,6 +103,12 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>Specifies whether memory is enabled. Valid values:</p>
+         * <ul>
+         * <li>1: Enabled.</li>
+         * <li>0: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -87,6 +116,8 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
         public Integer memoryEnabled;
 
         /**
+         * <p>The configuration name.</p>
+         * 
          * <strong>example:</strong>
          * <p>0327</p>
          */
@@ -94,6 +125,12 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
         public String showName;
 
         /**
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>1: Enabled.</li>
+         * <li>0: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -101,6 +138,12 @@ public class QueryAiproEmbedConfigResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Specifies whether file upload is allowed. Valid values:</p>
+         * <ul>
+         * <li>1: Allowed.</li>
+         * <li>0: Not allowed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

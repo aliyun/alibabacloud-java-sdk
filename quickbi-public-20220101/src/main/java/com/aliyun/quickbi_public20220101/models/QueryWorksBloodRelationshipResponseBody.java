@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -14,7 +14,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of work blood information.</p>
+     * <p>The list of data work lineage information.</p>
      */
     @NameInMap("Result")
     public java.util.List<QueryWorksBloodRelationshipResponseBodyResult> result;
@@ -22,8 +22,8 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
 
     public static class QueryWorksBloodRelationshipResponseBodyResultQueryParams extends TeaModel {
         /**
-         * <p>The ID of the owning location.</p>
+         * <p>The ID of the area.</p>
          * 
          * <strong>example:</strong>
          * <p>area_column</p>
@@ -72,7 +72,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         public String areaId;
 
         /**
-         * <p>The name of the owning location.</p>
+         * <p>The name of the area.</p>
          * 
          * <strong>example:</strong>
          * <p>Column (Measure)</p>
@@ -81,7 +81,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         public String areaName;
 
         /**
-         * <p>The display name of the field.</p>
+         * <p>The original name of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>order_number</p>
@@ -90,18 +90,18 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         public String caption;
 
         /**
-         * <p>The type of the field. Valid values:</p>
+         * <p>The field type. Valid values:</p>
          * <ul>
-         * <li>string: string type</li>
-         * <li>date: a date type that contains only the year, month, and day parts</li>
-         * <li>datetime: a common date type</li>
-         * <li>time: a date type that contains only hours, minutes, and seconds.</li>
-         * <li>number: numeric</li>
-         * <li>boolean: Boolean type</li>
-         * <li>geographical: geographical location</li>
-         * <li>url: string type</li>
-         * <li>imageUrl: the type of the image link.</li>
-         * <li>multivalue: a multi-value column</li>
+         * <li>string: String type.</li>
+         * <li>date: Date type that includes only the year, month, and day.</li>
+         * <li>datetime: General date type.</li>
+         * <li>time: Time type that includes only the hour, minute, and second.</li>
+         * <li>number: Numeric type.</li>
+         * <li>boolean: Boolean type.</li>
+         * <li>geographic: Geographic location.</li>
+         * <li>url: URL string type.</li>
+         * <li>imageUrl: Image URL type.</li>
+         * <li>multivalue: Multi-value column.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,17 +111,20 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>Calculate field expression.</p>
+         * <p>The expression of the calculated field.</p>
          * 
          * <strong>example:</strong>
-         * <p>BI_DATEADD([date], 100, \&quot;day\&quot;)</p>
+         * <p>BI_DATEADD([Time], 100, \&quot;day\&quot;)</p>
          */
         @NameInMap("Expression")
         public String expression;
 
         /**
-         * <p>Indices whether the metric. Valid values:</p>
-         * <p>true false</p>
+         * <p>Indicates whether the field is a measure. Valid values:</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -220,7 +223,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
 
     public static class QueryWorksBloodRelationshipResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the component that you want to modify.</p>
+         * <p>The component ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0696083a-ca72-4d89-8e7a-c017910e0***</p>
@@ -229,16 +232,16 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         public String componentId;
 
         /**
-         * <p>The name of the component.</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Line</p>
+         * <p>Line chart</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
 
         /**
-         * <p>The type of the image component.</p>
+         * <p>The component type.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -247,16 +250,16 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         public Integer componentType;
 
         /**
-         * <p>Chinese name of the component type</p>
+         * <p>The Chinese name of the component type.</p>
          * 
          * <strong>example:</strong>
-         * <p>ddd</p>
+         * <p>Cross table</p>
          */
         @NameInMap("ComponentTypeCnName")
         public String componentTypeCnName;
 
         /**
-         * <p>The name of the component type.</p>
+         * <p>The component type name.</p>
          * 
          * <strong>example:</strong>
          * <p>LINE</p>
@@ -265,7 +268,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         public String componentTypeName;
 
         /**
-         * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+         * <p>The dataset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dc78a4ed-880d-452e-b017-90cfc10c83e5_company_sales_record</p>
@@ -274,7 +277,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         public String datasetId;
 
         /**
-         * <p>A list of query parameter reference columns.</p>
+         * <p>The list of columns referenced by query parameters.</p>
          */
         @NameInMap("QueryParams")
         public java.util.List<QueryWorksBloodRelationshipResponseBodyResultQueryParams> queryParams;

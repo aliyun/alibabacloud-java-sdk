@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTicket4AiProResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A**********DF8D885</p>
      */
@@ -12,6 +14,8 @@ public class CreateTicket4AiProResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The embedding ticket.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,12 @@ public class CreateTicket4AiProResponseBody extends TeaModel {
     public String result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

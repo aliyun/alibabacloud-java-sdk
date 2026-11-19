@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ClearDynamicTagCacheRequest extends TeaModel {
     /**
-     * <p>The ID of the tag configuration.</p>
+     * <p>The tag configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

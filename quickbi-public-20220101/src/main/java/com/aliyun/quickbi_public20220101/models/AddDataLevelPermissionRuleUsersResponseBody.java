@@ -14,12 +14,10 @@ public class AddDataLevelPermissionRuleUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the API operation. Valid values:</p>
+     * <p>The execution result of the operation. Valid values:</p>
      * <ul>
-     * <li><p>true: The request is successful.</p>
-     * </li>
-     * <li><p>false: The request fails.</p>
-     * </li>
+     * <li>true: The request succeeded.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +29,8 @@ public class AddDataLevelPermissionRuleUsersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request is successful.</p>
-     * </li>
-     * <li><p>false: The request fails.</p>
-     * </li>
+     * <li>true: The request succeeded.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
