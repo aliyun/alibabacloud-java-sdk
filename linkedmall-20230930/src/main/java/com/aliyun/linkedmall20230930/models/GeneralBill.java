@@ -5,59 +5,86 @@ import com.aliyun.tea.*;
 
 public class GeneralBill extends TeaModel {
     /**
-     * <p>bill ID</p>
+     * <p>The bill ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bill_demo_001</p>
      */
     @NameInMap("billId")
     public String billId;
 
     /**
-     * <p>billing cycle</p>
+     * <p>The billing cycle.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08</p>
      */
     @NameInMap("billPeriod")
     public String billPeriod;
 
     /**
-     * <p>download URL for details</p>
+     * <p>The details download URL.</p>
      */
     @NameInMap("downloadUrl")
     public java.util.List<String> downloadUrl;
 
     /**
-     * <p>billing cycle End Time</p>
+     * <p>The end time of the billing cycle.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-01 00:00:00</p>
      */
     @NameInMap("endTime")
     public String endTime;
 
     /**
-     * <p>bill Creation Time</p>
+     * <p>The bill creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-01 00:00:00</p>
      */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
     /**
-     * <p>bill Updated At</p>
+     * <p>The bill modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-01 00:00:00</p>
      */
     @NameInMap("gmtModified")
     public String gmtModified;
 
     /**
-     * <p>shop ID</p>
+     * <p>The shop ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21000017</p>
      */
     @NameInMap("shopId")
     public String shopId;
 
     /**
-     * <p>shop Name</p>
+     * <p>The shop name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Children\&quot;s distribution store</p>
      */
     @NameInMap("shopName")
     public String shopName;
 
     /**
-     * <p>billing cycle Start Time</p>
+     * <p>The start time of the billing cycle.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-01 00:00:00</p>
      */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <p>The bill amount.</p>
+     */
     @NameInMap("totalAmount")
     public Money totalAmount;
 

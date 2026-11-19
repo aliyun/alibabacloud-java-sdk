@@ -15,6 +15,9 @@ public class LeavePictureList extends TeaModel {
 
     /**
      * <p>Image of the after-sales Credential&gt;Notice: If the after-sales order rendering API returns that an after-sales image is required, this field is mandatory.</notice></p>
+     * 
+     * <strong>example:</strong>
+     * <p>https://</p>
      */
     @NameInMap("picture")
     public String picture;

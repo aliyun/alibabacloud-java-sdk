@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPurchaserShopsRequest extends TeaModel {
     /**
-     * <p>Page number of the request.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListPurchaserShopsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of items per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

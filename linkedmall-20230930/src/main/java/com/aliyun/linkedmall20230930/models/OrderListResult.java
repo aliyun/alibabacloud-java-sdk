@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class OrderListResult extends TeaModel {
     /**
-     * <p>Collection of orders</p>
+     * <p>The order list.</p>
      */
     @NameInMap("orderList")
     public java.util.List<OrderResult> orderList;
 
     /**
-     * <p>The request ID for the API call</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>841471F6-5D61-1331-8C38-2****B55</p>
@@ -20,7 +20,7 @@ public class OrderListResult extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of orders</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>24</p>

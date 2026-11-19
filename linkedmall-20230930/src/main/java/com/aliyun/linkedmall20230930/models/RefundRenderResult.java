@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundRenderResult extends TeaModel {
     /**
-     * <p>The return methods supported for the order.</p>
+     * <p>The supported order return methods.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -13,11 +13,17 @@ public class RefundRenderResult extends TeaModel {
     @NameInMap("bizClaimType")
     public Integer bizClaimType;
 
+    /**
+     * <p>The refund fee.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;minRefundFee&quot;:1,&quot;maxRefundFee&quot;:100}</p>
+     */
     @NameInMap("maxRefundFeeData")
     public DistributionMaxRefundFee maxRefundFeeData;
 
     /**
-     * <p>The ID of the sub-distribution order.</p>
+     * <p>The sub-distribution order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6692****5458</p>
@@ -26,13 +32,13 @@ public class RefundRenderResult extends TeaModel {
     public String orderLineId;
 
     /**
-     * <p>A collection of refund reasons.</p>
+     * <p>The refund reason list.</p>
      */
     @NameInMap("refundReasonList")
     public java.util.List<RefundReason> refundReasonList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>841471F6-5D61-1331-8C38-2****B55</p>

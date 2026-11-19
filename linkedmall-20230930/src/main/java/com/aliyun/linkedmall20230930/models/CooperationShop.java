@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class CooperationShop extends TeaModel {
     /**
-     * <p>The partner company ID.</p>
+     * <p>The partner enterprise ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11200003</p>
      */
     @NameInMap("cooperationCompanyId")
     public String cooperationCompanyId;
 
     /**
-     * <p>The partner shop ID.</p>
+     * <p>The partner store ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21000026</p>
      */
     @NameInMap("cooperationShopId")
     public String cooperationShopId;
 
     /**
-     * <p>The shop ID.</p>
+     * <p>The store ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22000019</p>
      */
     @NameInMap("shopId")
     public String shopId;

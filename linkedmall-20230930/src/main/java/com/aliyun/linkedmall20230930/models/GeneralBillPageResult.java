@@ -5,25 +5,31 @@ import com.aliyun.tea.*;
 
 public class GeneralBillPageResult extends TeaModel {
     /**
-     * <p>List of bills.</p>
+     * <p>The list of bills.</p>
      */
     @NameInMap("generalBills")
     public java.util.List<GeneralBill> generalBills;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>Page size.</p>
+     * <p>The page size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
-     * <p>API request ID.</p>
+     * <p>The ID of the API request.</p>
      * 
      * <strong>example:</strong>
      * <p>3239281273464326823</p>
@@ -32,7 +38,7 @@ public class GeneralBillPageResult extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>24</p>

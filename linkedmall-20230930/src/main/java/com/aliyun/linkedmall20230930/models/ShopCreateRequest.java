@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ShopCreateRequest extends TeaModel {
     /**
+     * <p>The after-sales DingTalk ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12344335</p>
      */
@@ -12,15 +14,17 @@ public class ShopCreateRequest extends TeaModel {
     public String afterSaleDingTalkId;
 
     /**
+     * <p>The shop description.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>店铺描述</p>
+     * <p>Shop description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The operations DingTalk ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ShopCreateRequest extends TeaModel {
     public String operatorDingTalkId;
 
     /**
+     * <p>The pre-sales DingTalk ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12344335</p>
      */
@@ -37,10 +43,11 @@ public class ShopCreateRequest extends TeaModel {
     public String preSaleDingTalkId;
 
     /**
+     * <p>The shop name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>店铺名称</p>
+     * <p>Shop name</p>
      */
     @NameInMap("shopName")
     public String shopName;

@@ -8,7 +8,7 @@ public class GoodsShippingNoticeCreateResult extends TeaModel {
      * <p>API request requestId</p>
      * 
      * <strong>example:</strong>
-     * <p>841471F6-5D61-1331-8C38-2****B55</p>
+     * <p>3239281273464326823</p>
      */
     @NameInMap("requestId")
     public String requestId;

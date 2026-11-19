@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ShopPageDataResult extends TeaModel {
     /**
-     * <p>Partner shops</p>
+     * <p>The partner shops.</p>
      * 
      * <strong>example:</strong>
-     * <p>12****01</p>
+     * <p>[{&quot;shopId&quot;:&quot;22000019&quot;,&quot;cooperationCompanyId&quot;:&quot;11200003&quot;,&quot;cooperationShopId&quot;:&quot;21000026&quot;}]</p>
      */
     @NameInMap("cooperationShops")
     public java.util.List<CooperationShop> cooperationShops;
 
     /**
-     * <p>End time</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-09-11T12:22:24.000+08:00</p>
@@ -23,7 +23,7 @@ public class ShopPageDataResult extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Purchaser ID</p>
+     * <p>The purchaser ID.</p>
      * 
      * <strong>example:</strong>
      * <p>PID56****2304</p>
@@ -32,7 +32,7 @@ public class ShopPageDataResult extends TeaModel {
     public String purchaserId;
 
     /**
-     * <p>Shop ID</p>
+     * <p>The shop ID.</p>
      * 
      * <strong>example:</strong>
      * <p>22****09</p>
@@ -41,16 +41,16 @@ public class ShopPageDataResult extends TeaModel {
     public String shopId;
 
     /**
-     * <p>Shop name</p>
+     * <p>The shop name.</p>
      * 
      * <strong>example:</strong>
-     * <p>儿童座椅分销店铺</p>
+     * <p>Child seat distribution shop</p>
      */
     @NameInMap("shopName")
     public String shopName;
 
     /**
-     * <p>Shop type</p>
+     * <p>The shop type.</p>
      * 
      * <strong>example:</strong>
      * <p>DistributorQYG</p>
@@ -59,7 +59,7 @@ public class ShopPageDataResult extends TeaModel {
     public String shopType;
 
     /**
-     * <p>Start time</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-09-11T12:22:24.000+08:00</p>
@@ -68,7 +68,7 @@ public class ShopPageDataResult extends TeaModel {
     public String startDate;
 
     /**
-     * <p>Shop status</p>
+     * <p>The shop status.</p>
      * 
      * <strong>example:</strong>
      * <p>Working</p>

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class Money extends TeaModel {
     /**
      * <p>amount</p>
+     * 
+     * <strong>example:</strong>
+     * <p>128</p>
      */
     @NameInMap("amount")
     public Long amount;
@@ -24,6 +27,9 @@ public class Money extends TeaModel {
 
     /**
      * <p>cent</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12800</p>
      */
     @NameInMap("cent")
     public Long cent;
@@ -36,6 +42,9 @@ public class Money extends TeaModel {
 
     /**
      * <p>currencyCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CNY</p>
      */
     @NameInMap("currencyCode")
     public String currencyCode;
@@ -110,30 +119,45 @@ public class Money extends TeaModel {
     public static class MoneyCurrency extends TeaModel {
         /**
          * <p>currencyCode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("currencyCode")
         public String currencyCode;
 
         /**
          * <p>defaultFractionDigits</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("defaultFractionDigits")
         public Integer defaultFractionDigits;
 
         /**
          * <p>displayName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
          * <p>numericCode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156</p>
          */
         @NameInMap("numericCode")
         public Integer numericCode;
 
         /**
          * <p>symbol</p>
+         * 
+         * <strong>example:</strong>
+         * <p>￥</p>
          */
         @NameInMap("symbol")
         public String symbol;

@@ -32,7 +32,7 @@ public class RefundResult extends TeaModel {
      * <p>Dispute creation time</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-09-15T19:23:59.000+08:00</p>
+     * <p>2023-09-02T00:00:00.000Z</p>
      */
     @NameInMap("disputeCreateTime")
     public String disputeCreateTime;
@@ -50,7 +50,7 @@ public class RefundResult extends TeaModel {
      * <p>Reverse process end time</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-09-15T19:23:59.000+08:00</p>
+     * <p>2023-09-02T12:00:00.000Z</p>
      */
     @NameInMap("disputeEndTime")
     public String disputeEndTime;

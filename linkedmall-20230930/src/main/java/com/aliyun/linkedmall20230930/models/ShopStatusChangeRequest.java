@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ShopStatusChangeRequest extends TeaModel {
     /**
+     * <p>The shop ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ShopStatusChangeRequest extends TeaModel {
     public String shopId;
 
     /**
+     * <p>The shop status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,11 +5,10 @@ import com.aliyun.tea.*;
 
 public class PurchaseOrderCreateCmd extends TeaModel {
     /**
-     * <p>User ID in the distributor\&quot;s business, customized by the distributor.</p>
+     * <p>The user ID in the distributor business, which is defined by the distributor.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: Assign different buyerIds to different buyers.</notice></p>
      * </blockquote>
-     * <p>Allocate different buyer IDs for different buyers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,20 +18,20 @@ public class PurchaseOrderCreateCmd extends TeaModel {
     public String buyerId;
 
     /**
-     * <p>Address information.</p>
+     * <p>The address information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("deliveryAddress")
     public AddressInfo deliveryAddress;
 
     /**
-     * <p>Extension information.</p>
+     * <p>The extended information.</p>
      */
     @NameInMap("extInfo")
     public java.util.Map<String, ?> extInfo;
 
     /**
-     * <p>Order ID in the distributor\&quot;s business, customized by the distributor.</p>
+     * <p>The order ID in the distributor business, which is defined by the distributor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,9 +41,9 @@ public class PurchaseOrderCreateCmd extends TeaModel {
     public String outerPurchaseOrderId;
 
     /**
-     * <p>Product collection.</p>
+     * <p>The product list.</p>
      * <blockquote>
-     * <p>Maximum number of SKUs per purchase order: 20.</p>
+     * <p>Maximum number of SKUs per purchase order: 20</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */

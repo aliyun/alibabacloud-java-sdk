@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePurchaseOrderRequest extends TeaModel {
     /**
-     * <p>Creates a purchase order.</p>
+     * <p>The request body for creating a purchase order.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

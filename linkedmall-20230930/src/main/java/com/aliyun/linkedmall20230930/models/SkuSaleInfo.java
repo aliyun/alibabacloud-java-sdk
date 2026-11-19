@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class SkuSaleInfo extends TeaModel {
     /**
-     * <p>Reason for not being sellable</p>
+     * <p>The unsellable reason.</p>
      * 
      * <strong>example:</strong>
-     * <p>不可售</p>
+     * <p>Unsellable</p>
      */
     @NameInMap("canNotSellReason")
     public String canNotSellReason;
 
     /**
-     * <p>Indicates whether the SKU is sellable</p>
+     * <p>The sellable status of the SKU.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class SkuSaleInfo extends TeaModel {
     public Boolean canSell;
 
     /**
-     * <p>Area code</p>
+     * <p>The division code.</p>
      * 
      * <strong>example:</strong>
      * <p>330106109</p>
@@ -32,16 +32,16 @@ public class SkuSaleInfo extends TeaModel {
     public String divisionCode;
 
     /**
-     * <p>Blur inventory availability</p>
+     * <p>The fuzzy available inventory.</p>
      * 
      * <strong>example:</strong>
-     * <p>有货</p>
+     * <p>In stock</p>
      */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
     /**
-     * <p>Strikethrough price, in cents</p>
+     * <p>The strikethrough price in cents.</p>
      * 
      * <strong>example:</strong>
      * <p>999900</p>
@@ -50,7 +50,7 @@ public class SkuSaleInfo extends TeaModel {
     public Long markPrice;
 
     /**
-     * <p>Distributor purchase price, in cents</p>
+     * <p>The distributor purchase price in cents.</p>
      * 
      * <strong>example:</strong>
      * <p>19800</p>
@@ -59,7 +59,7 @@ public class SkuSaleInfo extends TeaModel {
     public Long price;
 
     /**
-     * <p>Product ID</p>
+     * <p>The product ID.</p>
      * 
      * <strong>example:</strong>
      * <p>660460842235822080</p>
@@ -68,7 +68,7 @@ public class SkuSaleInfo extends TeaModel {
     public String productId;
 
     /**
-     * <p>Available inventory</p>
+     * <p>The available inventory.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
@@ -77,7 +77,7 @@ public class SkuSaleInfo extends TeaModel {
     public Long quantity;
 
     /**
-     * <p>Shop ID</p>
+     * <p>The store ID.</p>
      * 
      * <strong>example:</strong>
      * <p>21000017</p>
@@ -95,7 +95,7 @@ public class SkuSaleInfo extends TeaModel {
     public String skuId;
 
     /**
-     * <p>SKU control status</p>
+     * <p>The control status of the SKU.</p>
      * 
      * <strong>example:</strong>
      * <p>Online</p>
@@ -104,10 +104,10 @@ public class SkuSaleInfo extends TeaModel {
     public String skuStatus;
 
     /**
-     * <p>SKU title</p>
+     * <p>The SKU title.</p>
      * 
      * <strong>example:</strong>
-     * <p>天蓝色</p>
+     * <p>Sky blue</p>
      */
     @NameInMap("title")
     public String title;

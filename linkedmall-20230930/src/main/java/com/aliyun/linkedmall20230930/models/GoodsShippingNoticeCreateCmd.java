@@ -29,7 +29,7 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>SF145****4353</p>
+     * <p>SF145****4351</p>
      */
     @NameInMap("logisticsNo")
     public String logisticsNo;

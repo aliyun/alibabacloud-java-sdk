@@ -8,7 +8,7 @@ public class OrderResult extends TeaModel {
      * <p>The order creation time.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-09-11T12:22:24.000+08:00</p>
+     * <p>2023-09-01T12:00:00.000Z</p>
      */
     @NameInMap("createDate")
     public String createDate;
@@ -77,7 +77,7 @@ public class OrderResult extends TeaModel {
      * <p>The unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>841471F6-5D61-1331-8C38-2****B55</p>
+     * <p>D12***111</p>
      */
     @NameInMap("requestId")
     public String requestId;

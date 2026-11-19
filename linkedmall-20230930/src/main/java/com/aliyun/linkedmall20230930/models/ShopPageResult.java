@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ShopPageResult extends TeaModel {
     /**
-     * <p>API request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>841471F6-5D61-1331-8C38-2****B55</p>
@@ -14,13 +14,13 @@ public class ShopPageResult extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Shop collection</p>
+     * <p>The shop list.</p>
      */
     @NameInMap("shopList")
     public java.util.List<ShopPageDataResult> shopList;
 
     /**
-     * <p>Total count</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>24</p>

@@ -4,45 +4,105 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class DistributionSku extends TeaModel {
+    /**
+     * <p>The alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例规格</p>
+     */
     @NameInMap("aliasTitle")
     public String aliasTitle;
 
+    /**
+     * <p>The barcode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6901234567892</p>
+     */
     @NameInMap("barCode")
     public String barCode;
 
+    /**
+     * <p>The maximum acceptable credit period.</p>
+     */
     @NameInMap("creditPeriod")
     public Integer creditPeriod;
 
+    /**
+     * <p>The consignment supply price.</p>
+     */
     @NameInMap("dxPrice")
     public Long dxPrice;
 
+    /**
+     * <p>Specifies whether credit periods are supported.</p>
+     */
     @NameInMap("hasCredit")
     public Boolean hasCredit;
 
+    /**
+     * <p>Specifies whether invoicing is supported.</p>
+     */
     @NameInMap("hasInvoice")
     public Boolean hasInvoice;
 
+    /**
+     * <p>The distribution supply price.</p>
+     */
     @NameInMap("jxPrice")
     public Long jxPrice;
 
+    /**
+     * <p>The image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/images/product.png">https://example.com/images/product.png</a></p>
+     */
     @NameInMap("picUrl")
     public String picUrl;
 
+    /**
+     * <p>The inventory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("quantity")
     public Integer quantity;
 
+    /**
+     * <p>sku id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>660460842235822082</p>
+     */
     @NameInMap("skuId")
     public String skuId;
 
+    /**
+     * <p>The status.</p>
+     */
     @NameInMap("skuStatus")
     public String skuStatus;
 
+    /**
+     * <p>The tax code.</p>
+     */
     @NameInMap("taxCode")
     public String taxCode;
 
+    /**
+     * <p>The tax rate.</p>
+     */
     @NameInMap("taxRate")
     public Integer taxRate;
 
+    /**
+     * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例商品名称</p>
+     */
     @NameInMap("title")
     public String title;
 

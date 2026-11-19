@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCategoriesRequest extends TeaModel {
     /**
-     * <p>Category query parameters</p>
+     * <p>The category query parameters.</p>
      */
     @NameInMap("body")
     public CategoryListQuery body;

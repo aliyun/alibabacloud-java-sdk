@@ -8,13 +8,13 @@ public class Shop extends TeaModel {
      * <p>The partner shops.</p>
      * 
      * <strong>example:</strong>
-     * <p>12***01</p>
+     * <p>[{&quot;shopId&quot;:&quot;22000019&quot;,&quot;cooperationCompanyId&quot;:&quot;11200003&quot;,&quot;cooperationShopId&quot;:&quot;21000026&quot;}]</p>
      */
     @NameInMap("cooperationShops")
     public java.util.List<CooperationShop> cooperationShops;
 
     /**
-     * <p>The ID of the distributor.</p>
+     * <p>The distributor ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12****09</p>
@@ -32,7 +32,7 @@ public class Shop extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The ID of the purchaser.</p>
+     * <p>The purchaser ID.</p>
      * 
      * <strong>example:</strong>
      * <p>PID56****2304</p>
@@ -41,7 +41,7 @@ public class Shop extends TeaModel {
     public String purchaserId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>48A34399-A72C-1E23-8388-7E63****E927</p>
@@ -50,7 +50,7 @@ public class Shop extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the shop.</p>
+     * <p>The shop ID.</p>
      * 
      * <strong>example:</strong>
      * <p>22****09</p>
@@ -59,16 +59,16 @@ public class Shop extends TeaModel {
     public String shopId;
 
     /**
-     * <p>The name of the shop.</p>
+     * <p>The shop name.</p>
      * 
      * <strong>example:</strong>
-     * <p>儿童分销店铺</p>
+     * <p>Children\&quot;s distribution shop</p>
      */
     @NameInMap("shopName")
     public String shopName;
 
     /**
-     * <p>The type of the shop.</p>
+     * <p>The shop type.</p>
      * 
      * <strong>example:</strong>
      * <p>DistributorQYG</p>
@@ -86,7 +86,7 @@ public class Shop extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The status of the shop.</p>
+     * <p>The shop status.</p>
      * 
      * <strong>example:</strong>
      * <p>Working</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PurchaseOrderRenderResult extends TeaModel {
     /**
-     * <p>A collection of addresses.</p>
+     * <p>The address list.</p>
      */
     @NameInMap("addressList")
     public java.util.List<AddressInfo> addressList;
 
     /**
-     * <p>Indicates whether the item can be sold.</p>
+     * <p>Indicates whether the item is sellable.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,28 +20,28 @@ public class PurchaseOrderRenderResult extends TeaModel {
     public Boolean canSell;
 
     /**
-     * <p>Extended information.</p>
+     * <p>The extended information.</p>
      */
     @NameInMap("extInfo")
     public java.util.Map<String, ?> extInfo;
 
     /**
-     * <p>The reason why the item cannot be sold.</p>
+     * <p>The reason why the item is unsellable.</p>
      * 
      * <strong>example:</strong>
-     * <p>库存为0</p>
+     * <p>Out of stock</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>A collection of sellable main orders.</p>
+     * <p>The list of sellable primary orders.</p>
      */
     @NameInMap("orderList")
     public java.util.List<OrderRenderResult> orderList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>841471F6-5D61-1331-8C38-2****B55</p>
@@ -50,7 +50,7 @@ public class PurchaseOrderRenderResult extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A collection of unsellable main orders.</p>
+     * <p>The list of unsellable primary orders.</p>
      */
     @NameInMap("unsellableOrderList")
     public java.util.List<OrderRenderResult> unsellableOrderList;

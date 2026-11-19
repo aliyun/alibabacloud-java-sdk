@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class MemberAccountResult extends TeaModel {
     /**
+     * <p>The signed and bound Alipay auto-debit account (masked).</p>
+     * 
      * <strong>example:</strong>
-     * <p>&quot;yue***@newburn.cn&quot;</p>
+     * <p>[&quot;yue***@newburn.cn&quot;]</p>
      */
     @NameInMap("accountNo")
     public java.util.List<String> accountNo;
 
     /**
+     * <p>The store ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProductSaleInfo extends TeaModel {
     /**
-     * <p>Is sellable, calculated value</p>
+     * <p>The calculated value that indicates whether the product is sellable.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class ProductSaleInfo extends TeaModel {
     public Boolean canSell;
 
     /**
-     * <p>Region code</p>
+     * <p>The division code.</p>
      * 
      * <strong>example:</strong>
      * <p>330106109</p>
@@ -23,22 +23,22 @@ public class ProductSaleInfo extends TeaModel {
     public String divisionCode;
 
     /**
-     * <p>Fuzzy inventory quantity.</p>
+     * <p>The fuzzy inventory.</p>
      * 
      * <strong>example:</strong>
-     * <p>有货</p>
+     * <p>In stock</p>
      */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
     /**
-     * <p>Purchase limit configuration</p>
+     * <p>The purchase limit configuration.</p>
      */
     @NameInMap("limitRules")
     public java.util.List<LimitRule> limitRules;
 
     /**
-     * <p>LM product ID</p>
+     * <p>The LM product ID.</p>
      * 
      * <strong>example:</strong>
      * <p>21000017-4580902812</p>
@@ -47,7 +47,7 @@ public class ProductSaleInfo extends TeaModel {
     public String lmItemId;
 
     /**
-     * <p>Product ID</p>
+     * <p>The product ID.</p>
      * 
      * <strong>example:</strong>
      * <p>660460842235822080</p>
@@ -56,7 +56,7 @@ public class ProductSaleInfo extends TeaModel {
     public String productId;
 
     /**
-     * <p>Product status</p>
+     * <p>The product status.</p>
      * 
      * <strong>example:</strong>
      * <p>Online</p>
@@ -65,7 +65,7 @@ public class ProductSaleInfo extends TeaModel {
     public String productStatus;
 
     /**
-     * <p>Inventory</p>
+     * <p>The inventory.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -74,7 +74,7 @@ public class ProductSaleInfo extends TeaModel {
     public Long quantity;
 
     /**
-     * <p>API request ID</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3239281273464326823</p>
@@ -83,7 +83,7 @@ public class ProductSaleInfo extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Channel shop ID</p>
+     * <p>The channel shop ID.</p>
      * 
      * <strong>example:</strong>
      * <p>21000017</p>
@@ -92,16 +92,16 @@ public class ProductSaleInfo extends TeaModel {
     public String shopId;
 
     /**
-     * <p>SKU collection</p>
+     * <p>The SKU collection.</p>
      */
     @NameInMap("skus")
     public java.util.List<SkuSaleInfo> skus;
 
     /**
-     * <p>Title</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
-     * <p>发财树</p>
+     * <p>Money tree</p>
      */
     @NameInMap("title")
     public String title;

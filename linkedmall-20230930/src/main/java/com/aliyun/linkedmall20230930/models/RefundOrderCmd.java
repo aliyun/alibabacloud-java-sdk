@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundOrderCmd extends TeaModel {
     /**
-     * <p>Refund reason ID</p>
+     * <p>The refund reason ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,16 @@ public class RefundOrderCmd extends TeaModel {
     public Long applyReasonTextId;
 
     /**
-     * <p>Refund reason text</p>
+     * <p>The refund reason text.</p>
      * 
      * <strong>example:</strong>
-     * <p>不想要了</p>
+     * <p>I no longer want it</p>
      */
     @NameInMap("applyReasonTips")
     public String applyReasonTips;
 
     /**
-     * <p>Number of items to return</p>
+     * <p>The return quantity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class RefundOrderCmd extends TeaModel {
     public Integer applyRefundCount;
 
     /**
-     * <p>Refund amount in cents</p>
+     * <p>The requested refund amount in cents.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,9 +44,11 @@ public class RefundOrderCmd extends TeaModel {
     public Long applyRefundFee;
 
     /**
-     * <p>Refund type
-     * 1: Refund only
-     * 3: Return and refund</p>
+     * <p>The refund type. Valid values:</p>
+     * <ul>
+     * <li>1: Refund only. </li>
+     * <li>3: Return and refund.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,10 +58,12 @@ public class RefundOrderCmd extends TeaModel {
     public Integer bizClaimType;
 
     /**
-     * <p>Item status
-     * 4: Not shipped
-     * 1: Not received
-     * 2: Received</p>
+     * <p>The goods status. Valid values:</p>
+     * <ul>
+     * <li>4: Not shipped. </li>
+     * <li>1: Not received.</li>
+     * <li>2: Received.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,22 +73,22 @@ public class RefundOrderCmd extends TeaModel {
     public Integer goodsStatus;
 
     /**
-     * <p>Customer message</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>不想要了</p>
+     * <p>I no longer want it</p>
      */
     @NameInMap("leaveMessage")
     public String leaveMessage;
 
     /**
-     * <p>Collection of images</p>
+     * <p>The image list.</p>
      */
     @NameInMap("leavePictureLists")
     public java.util.List<LeavePictureList> leavePictureLists;
 
     /**
-     * <p>Sub-distribution order ID</p>
+     * <p>The sub-distribution order ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

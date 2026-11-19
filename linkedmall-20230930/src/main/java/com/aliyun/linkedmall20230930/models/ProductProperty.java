@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ProductProperty extends TeaModel {
     /**
-     * <p>The text of the property.</p>
+     * <p>The attribute text.</p>
      * 
      * <strong>example:</strong>
-     * <p>颜色</p>
+     * <p>Color</p>
      */
     @NameInMap("text")
     public String text;
 
     /**
-     * <p>A collection of property values.</p>
+     * <p>The attribute value set.</p>
      */
     @NameInMap("values")
     public java.util.List<String> values;

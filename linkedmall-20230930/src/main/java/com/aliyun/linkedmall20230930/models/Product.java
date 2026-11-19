@@ -8,13 +8,13 @@ public class Product extends TeaModel {
      * <p>The brand name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Apple/苹果</p>
+     * <p>Apple</p>
      */
     @NameInMap("brandName")
     public String brandName;
 
     /**
-     * <p>Indicates whether the product is available for sale. This is a calculated value.</p>
+     * <p>The calculated value indicating whether the product is available for sale.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,7 +38,7 @@ public class Product extends TeaModel {
     public Long categoryLeafId;
 
     /**
-     * <p>The product description URL.</p>
+     * <p>The product details URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://img.alicdn.com/descpath/O1CN01wciRDp22AEU1*******f34">https://img.alicdn.com/descpath/O1CN01wciRDp22AEU1*******f34</a></p>
@@ -47,7 +47,7 @@ public class Product extends TeaModel {
     public String descPath;
 
     /**
-     * <p>The region code.</p>
+     * <p>The division code.</p>
      * 
      * <strong>example:</strong>
      * <p>110000</p>
@@ -56,28 +56,28 @@ public class Product extends TeaModel {
     public String divisionCode;
 
     /**
-     * <p>The product\&quot;s extended properties.</p>
+     * <p>The extended product properties.</p>
      */
     @NameInMap("extendProperties")
     public java.util.List<ProductExtendProperty> extendProperties;
 
     /**
-     * <p>The stock status.</p>
+     * <p>The approximate inventory.</p>
      * 
      * <strong>example:</strong>
-     * <p>有货</p>
+     * <p>In stock</p>
      */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
     /**
-     * <p>The product images.</p>
+     * <p>images</p>
      */
     @NameInMap("images")
     public java.util.List<String> images;
 
     /**
-     * <p>The warehousing status.</p>
+     * <p>The warehousing status of the product.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -101,7 +101,7 @@ public class Product extends TeaModel {
     public String lmItemId;
 
     /**
-     * <p>The main product image URL.</p>
+     * <p>The product main image.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://img.alicdn.com/imgextra/i3/221*******988/O1CN01w4vomR1QYYEx6nyr5_!!221******988.jpg">https://img.alicdn.com/imgextra/i3/221*******988/O1CN01w4vomR1QYYEx6nyr5_!!221******988.jpg</a></p>
@@ -143,7 +143,7 @@ public class Product extends TeaModel {
     public String productType;
 
     /**
-     * <p>The product attributes.</p>
+     * <p>The product properties.</p>
      */
     @NameInMap("properties")
     public java.util.List<ProductProperty> properties;
@@ -152,7 +152,7 @@ public class Product extends TeaModel {
      * <p>The inventory.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is fixed at -1 and can be ignored.</li>
+     * <li>This field is currently a fixed value of -1 and can be ignored.</li>
      * </ul>
      * </blockquote>
      * 
@@ -163,7 +163,7 @@ public class Product extends TeaModel {
     public Long quantity;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3239281273******823</p>
@@ -172,13 +172,13 @@ public class Product extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The service promises.&gt;Notice:  Suppliers maintain all service promises. If a supplier fails to update this information in a timely manner, the service promise labels for some products may be inaccurate. Distributors should display this information to their customers with caution.</p>
+     * <p>The service commitments.<notice>Service commitments are maintained by suppliers. If suppliers fail to maintain or update them promptly, the service commitment labels for some products may be inaccurate. Distributors should display these commitments to their customers with caution.</notice></p>
      */
     @NameInMap("servicePromises")
     public java.util.List<String> servicePromises;
 
     /**
-     * <p>The channel shop ID.</p>
+     * <p>The channel store ID.</p>
      * 
      * <strong>example:</strong>
      * <p>210*****7</p>
@@ -187,13 +187,13 @@ public class Product extends TeaModel {
     public String shopId;
 
     /**
-     * <p>The product SKUs.</p>
+     * <p>skus</p>
      */
     @NameInMap("skus")
     public java.util.List<Sku> skus;
 
     /**
-     * <p>The quantity sold.</p>
+     * <p>The sales volume.</p>
      * 
      * <strong>example:</strong>
      * <p>100+</p>
@@ -220,10 +220,10 @@ public class Product extends TeaModel {
     public Integer taxRate;
 
     /**
-     * <p>The product title.</p>
+     * <p>The title.</p>
      * 
      * <strong>example:</strong>
-     * <p>发财树</p>
+     * <p>Money tree</p>
      */
     @NameInMap("title")
     public String title;

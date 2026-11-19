@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ProductSpec extends TeaModel {
     /**
-     * <p>The name of the specification key.</p>
+     * <p>The specification key name.</p>
      * 
      * <strong>example:</strong>
-     * <p>颜色分类</p>
+     * <p>Color category</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
-     * <p>Specification</p>
+     * <p>The specification.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -23,7 +23,7 @@ public class ProductSpec extends TeaModel {
     public Long keyId;
 
     /**
-     * <p>The values of the rule key.</p>
+     * <p>The specification key values.</p>
      */
     @NameInMap("values")
     public java.util.List<ProductSpecValue> values;

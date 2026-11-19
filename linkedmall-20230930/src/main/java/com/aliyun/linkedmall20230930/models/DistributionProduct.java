@@ -4,39 +4,102 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class DistributionProduct extends TeaModel {
+    /**
+     * <p>The category chain name.</p>
+     */
     @NameInMap("categoryChain")
     public String categoryChain;
 
+    /**
+     * <p>The leaf category ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50016422</p>
+     */
     @NameInMap("categoryLeafId")
     public Long categoryLeafId;
 
+    /**
+     * <p>The leaf category name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例类目</p>
+     */
     @NameInMap("categoryLeafName")
     public String categoryLeafName;
 
+    /**
+     * <p>The channel ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LM_DEMO</p>
+     */
     @NameInMap("channelCode")
     public String channelCode;
 
+    /**
+     * <p>The distribution status.</p>
+     */
     @NameInMap("distributeStatus")
     public String distributeStatus;
 
+    /**
+     * <p>The main image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/images/product.png">https://example.com/images/product.png</a></p>
+     */
     @NameInMap("picUrl")
     public String picUrl;
 
+    /**
+     * <p>The product ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>660057403063402509</p>
+     */
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <p>The seller ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("sellerId")
     public String sellerId;
 
+    /**
+     * <p>The short product title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例商品</p>
+     */
     @NameInMap("shortTitle")
     public String shortTitle;
 
+    /**
+     * <p>The SKU list.</p>
+     */
     @NameInMap("skus")
     public java.util.List<DistributionSku> skus;
 
+    /**
+     * <p>The long product title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例商品名称</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>The white background image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/images/product-white.png">https://example.com/images/product-white.png</a></p>
+     */
     @NameInMap("whiteBackgroundPicUrl")
     public String whiteBackgroundPicUrl;
 

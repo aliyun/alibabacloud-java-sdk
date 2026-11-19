@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SkuSaleInfoListResult extends TeaModel {
     /**
-     * <p>Request ID of the API call</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3239281273464326823</p>
@@ -14,7 +14,7 @@ public class SkuSaleInfoListResult extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Collection of SKU inventory records</p>
+     * <p>The SKU inventory collection.</p>
      */
     @NameInMap("skuSaleInfos")
     public java.util.List<SkuSaleInfo> skuSaleInfos;

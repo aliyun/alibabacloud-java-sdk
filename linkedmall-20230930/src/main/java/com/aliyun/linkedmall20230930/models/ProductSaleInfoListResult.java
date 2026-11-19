@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ProductSaleInfoListResult extends TeaModel {
     /**
-     * <p>Product sales information</p>
+     * <p>The commodity sales information.</p>
      */
     @NameInMap("productSaleInfos")
     public java.util.List<ProductSaleInfo> productSaleInfos;
 
     /**
-     * <p>The request ID of the API call</p>
+     * <p>The ID of the API request.</p>
      * 
      * <strong>example:</strong>
      * <p>3239281273464326823</p>

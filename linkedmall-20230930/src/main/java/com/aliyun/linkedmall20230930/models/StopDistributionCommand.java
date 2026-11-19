@@ -4,22 +4,48 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class StopDistributionCommand extends TeaModel {
+    /**
+     * <p>The LM shop ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21000019</p>
+     */
     @NameInMap("lmShopId")
     public String lmShopId;
 
+    /**
+     * <p>The product ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>660057403063402509</p>
+     */
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48A34399-A72C-1E23-8388-7E63A1B2E927</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     /**
+     * <p>The submission time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-12-01 10:01:00</p>
      */
     @NameInMap("requestTime")
     public String requestTime;
 
+    /**
+     * <p>The submitter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo_user</p>
+     */
     @NameInMap("requestUser")
     public String requestUser;
 

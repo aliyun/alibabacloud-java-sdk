@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DivisionPageResult extends TeaModel {
     /**
-     * <p>Collection of regions</p>
+     * <p>The list of divisions.</p>
      */
     @NameInMap("divisionList")
     public java.util.List<Division> divisionList;
 
     /**
-     * <p>API request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>841471F6-5D61-1331-8C38-2****B55</p>

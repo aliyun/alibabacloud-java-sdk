@@ -4,15 +4,33 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class StopDistributionResult extends TeaModel {
+    /**
+     * <p>The return code.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The return message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>操作成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The product information.</p>
+     */
     @NameInMap("products")
     public java.util.List<DistributionProduct> products;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48A34399-A72C-1E23-8388-7E63A1B2E927</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ShopStatusChangeResult extends TeaModel {
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

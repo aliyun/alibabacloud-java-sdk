@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListSelectionProductsRequest extends TeaModel {
     /**
-     * <p>The page number. The value must be 1 or greater.</p>
+     * <p>The cursor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>134412333321</p>
+     */
+    @NameInMap("cursor")
+    public String cursor;
+
+    /**
+     * <p>The current page number. Pages start from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +46,14 @@ public class ListSelectionProductsRequest extends TeaModel {
     public static ListSelectionProductsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSelectionProductsRequest self = new ListSelectionProductsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListSelectionProductsRequest setCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    public String getCursor() {
+        return this.cursor;
     }
 
     public ListSelectionProductsRequest setPageNumber(Integer pageNumber) {

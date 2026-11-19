@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class LogisticsOrderListResult extends TeaModel {
     /**
-     * <p>Collection of logistics orders</p>
+     * <p>The logistics order list.</p>
      */
     @NameInMap("logisticsOrderList")
     public java.util.List<LogisticsOrderResult> logisticsOrderList;
 
     /**
-     * <p>Request ID for the API call</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>841471F6-5D61-1331-8C38-2****B55</p>

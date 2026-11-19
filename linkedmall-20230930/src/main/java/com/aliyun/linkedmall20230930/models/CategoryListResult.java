@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class CategoryListResult extends TeaModel {
     /**
-     * <p>category collection</p>
+     * <p>The category collection.</p>
      */
     @NameInMap("categories")
     public java.util.List<Category> categories;
 
     /**
-     * <p>request ID</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4D1FC14F-CE54-1A1F-A322-D6DC87D49AFE</p>
      */
     @NameInMap("requestId")
     public String requestId;

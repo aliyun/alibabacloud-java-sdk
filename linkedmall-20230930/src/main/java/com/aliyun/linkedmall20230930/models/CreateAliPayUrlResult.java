@@ -4,12 +4,30 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateAliPayUrlResult extends TeaModel {
+    /**
+     * <p>The LM account ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <p>The LM member ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>223456789</p>
+     */
     @NameInMap("memberId")
     public String memberId;
 
+    /**
+     * <p>The Alipay auto-debit signing URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/withhold/sign">https://example.com/withhold/sign</a></p>
+     */
     @NameInMap("zftWithholdSignUrl")
     public String zftWithholdSignUrl;
 

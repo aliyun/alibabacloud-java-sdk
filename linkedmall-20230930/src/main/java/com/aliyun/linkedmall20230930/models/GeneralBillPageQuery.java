@@ -12,12 +12,18 @@ public class GeneralBillPageQuery extends TeaModel {
 
     /**
      * <p>billId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bill_demo_001</p>
      */
     @NameInMap("billId")
     public String billId;
 
     /**
      * <p>billPeriod</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08</p>
      */
     @NameInMap("billPeriod")
     public String billPeriod;
@@ -42,18 +48,27 @@ public class GeneralBillPageQuery extends TeaModel {
 
     /**
      * <p>pageNumber</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
      * <p>pageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
      * <p>shopId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21000017</p>
      */
     @NameInMap("shopId")
     public String shopId;

@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "linkedmall";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-hangzhou", "linkedmall.aliyuncs.com"),
@@ -84,10 +87,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cancel a refund order.</p>
+     * <p>Cancels an after-sales ticket.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a refund order.</p>
+     * <p>Cancels an after-sales ticket.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -113,10 +116,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cancel a refund order.</p>
+     * <p>Cancels an after-sales ticket.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a refund order.</p>
+     * <p>Cancels an after-sales ticket.</p>
      * @return CancelRefundOrderResponse
      */
     public CancelRefundOrderResponse cancelRefundOrder(String disputeId) throws Exception {
@@ -127,10 +130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Confirms the receipt of goods.</p>
+     * <p>Confirms receipt.</p>
      * 
      * <b>summary</b> : 
-     * <p>Confirms the receipt of goods.</p>
+     * <p>Confirms receipt.</p>
      * 
      * @param request ConfirmDisburseRequest
      * @param headers map
@@ -159,10 +162,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Confirms the receipt of goods.</p>
+     * <p>Confirms receipt.</p>
      * 
      * <b>summary</b> : 
-     * <p>Confirms the receipt of goods.</p>
+     * <p>Confirms receipt.</p>
      * 
      * @param request ConfirmDisburseRequest
      * @return ConfirmDisburseResponse
@@ -175,10 +178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Backfill shipping notice information.</p>
+     * <p>Backfills the waybill information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Backfill shipping notice information.</p>
+     * <p>Backfills the waybill information.</p>
      * 
      * @param request CreateGoodsShippingNoticeRequest
      * @param headers map
@@ -207,10 +210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Backfill shipping notice information.</p>
+     * <p>Backfills the waybill information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Backfill shipping notice information.</p>
+     * <p>Backfills the waybill information.</p>
      * 
      * @param request CreateGoodsShippingNoticeRequest
      * @return CreateGoodsShippingNoticeResponse
@@ -223,14 +226,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a purchase order and returns the purchase order ID. Messages communicate the specific result of order creation. After the order is created, you can query the order details associated with the purchase order using the order API.</p>
+     * <p>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</p>
      * <blockquote>
-     * <p>Warning: Note: Purchase order creation is an asynchronous task. If a distributor calls this API and receives an abnormal status (such as error code 503), do not immediately process customer refunds. Distributors must wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to determine the order status—for example, by consuming the order status synchronization message—before proceeding with business logic. This prevents financial losses.
-     * Notice: Note: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after calling the purchase order creation API, submit a ticket to the technical support team to inquire about the cause.</p>
+     * <p>Warning: Because purchase order creation is an asynchronous task, if an error (such as a 503 error code) is returned when a distributor calls this API, do not immediately process consumer refunds on the business side. Wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to check the order status (for example, consume the order status synchronization message to check the order status) before you process business logic to prevent financial losses.
+     * Notice: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after you call the purchase order creation API, submit a ticket in the technical integration group to check the cause.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a purchase order and returns the purchase order ID. The specific result of order creation is communicated through messages. After the order is created, you can query the order details associated with the purchase order using the order API.</p>
+     * <p>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</p>
      * 
      * @param request CreatePurchaseOrderRequest
      * @param headers map
@@ -259,14 +262,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a purchase order and returns the purchase order ID. Messages communicate the specific result of order creation. After the order is created, you can query the order details associated with the purchase order using the order API.</p>
+     * <p>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</p>
      * <blockquote>
-     * <p>Warning: Note: Purchase order creation is an asynchronous task. If a distributor calls this API and receives an abnormal status (such as error code 503), do not immediately process customer refunds. Distributors must wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to determine the order status—for example, by consuming the order status synchronization message—before proceeding with business logic. This prevents financial losses.
-     * Notice: Note: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after calling the purchase order creation API, submit a ticket to the technical support team to inquire about the cause.</p>
+     * <p>Warning: Because purchase order creation is an asynchronous task, if an error (such as a 503 error code) is returned when a distributor calls this API, do not immediately process consumer refunds on the business side. Wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to check the order status (for example, consume the order status synchronization message to check the order status) before you process business logic to prevent financial losses.
+     * Notice: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after you call the purchase order creation API, submit a ticket in the technical integration group to check the cause.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a purchase order and returns the purchase order ID. The specific result of order creation is communicated through messages. After the order is created, you can query the order details associated with the purchase order using the order API.</p>
+     * <p>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</p>
      * 
      * @param request CreatePurchaseOrderRequest
      * @return CreatePurchaseOrderResponse
@@ -279,10 +282,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a refund order.</p>
+     * <p>Creates an after-sales ticket.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a support ticket.</p>
+     * <p>Creates an after-sales ticket.</p>
      * 
      * @param request CreateRefundOrderRequest
      * @param headers map
@@ -311,10 +314,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a refund order.</p>
+     * <p>Creates an after-sales ticket.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a support ticket.</p>
+     * <p>Creates an after-sales ticket.</p>
      * 
      * @param request CreateRefundOrderRequest
      * @return CreateRefundOrderResponse
@@ -327,7 +330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an order.</p>
+     * <p>Queries the details of the main order.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -353,7 +356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an order.</p>
+     * <p>Queries the details of the main order.</p>
      * @return GetOrderResponse
      */
     public GetOrderResponse getOrder(String orderId) throws Exception {
@@ -364,10 +367,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve the transaction order status.</p>
+     * <p>Retrieves the status of a transaction order.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve the purchase order status.</p>
+     * <p>Retrieves the status of a purchase order.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -393,10 +396,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve the transaction order status.</p>
+     * <p>Retrieves the status of a transaction order.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve the purchase order status.</p>
+     * <p>Retrieves the status of a purchase order.</p>
      * @return GetPurchaseOrderStatusResponse
      */
     public GetPurchaseOrderStatusResponse getPurchaseOrderStatus(String purchaseOrderId) throws Exception {
@@ -407,10 +410,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the purchaser\&quot;s shop.</p>
+     * <p>Retrieves the purchaser store.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the purchaser\&quot;s shop.</p>
+     * <p>Retrieves the purchaser store.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -436,10 +439,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the purchaser\&quot;s shop.</p>
+     * <p>Retrieves the purchaser store.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the purchaser\&quot;s shop.</p>
+     * <p>Retrieves the purchaser store.</p>
      * @return GetPurchaserShopResponse
      */
     public GetPurchaserShopResponse getPurchaserShop(String purchaserId) throws Exception {
@@ -450,10 +453,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve after-sales order details</p>
+     * <p>Retrieves the details of an after-sales ticket.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve details of an after-sales order.</p>
+     * <p>Retrieves the details of an after-sales ticket.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -479,10 +482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve after-sales order details</p>
+     * <p>Retrieves the details of an after-sales ticket.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve details of an after-sales order.</p>
+     * <p>Retrieves the details of an after-sales ticket.</p>
      * @return GetRefundOrderResponse
      */
     public GetRefundOrderResponse getRefundOrder(String disputeId) throws Exception {
@@ -493,10 +496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve product details from the selection pool using the product ID. You can also specify a region code to check regional inventory.</p>
+     * <p>Queries the details of products in the selection pool by product ID. You can specify a division code to query the regional inventory of the product.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the details of a product in the selection pool.</p>
+     * <p>Queries the details of products in the selection pool.</p>
      * 
      * @param request GetSelectionProductRequest
      * @param headers map
@@ -534,10 +537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve product details from the selection pool using the product ID. You can also specify a region code to check regional inventory.</p>
+     * <p>Queries the details of products in the selection pool by product ID. You can specify a division code to query the regional inventory of the product.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the details of a product in the selection pool.</p>
+     * <p>Queries the details of products in the selection pool.</p>
      * 
      * @param request GetSelectionProductRequest
      * @return GetSelectionProductResponse
@@ -550,10 +553,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries sales information for products in the selection pool. Distributors can call this operation to check product sales details, such as product status. Use the divisionCode input parameter to check whether a product is available for sale in a specific region. We recommend using a five-level administrative division code (township or subdistrict level).</p>
+     * <p>Queries the sales information of products in the selection pool. Distributors can call this operation to query product sales information, such as product status. Pass the divisionCode parameter (a level-5 address code for a town or sub-district is recommended) to check whether the product is available for sale in the specified region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries sales information for products in the selection pool.</p>
+     * <p>Queries the sales information of products in the selection pool.</p>
      * 
      * @param request GetSelectionProductSaleInfoRequest
      * @param headers map
@@ -591,10 +594,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries sales information for products in the selection pool. Distributors can call this operation to check product sales details, such as product status. Use the divisionCode input parameter to check whether a product is available for sale in a specific region. We recommend using a five-level administrative division code (township or subdistrict level).</p>
+     * <p>Queries the sales information of products in the selection pool. Distributors can call this operation to query product sales information, such as product status. Pass the divisionCode parameter (a level-5 address code for a town or sub-district is recommended) to check whether the product is available for sale in the specified region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries sales information for products in the selection pool.</p>
+     * <p>Queries the sales information of products in the selection pool.</p>
      * 
      * @param request GetSelectionProductSaleInfoRequest
      * @return GetSelectionProductSaleInfoResponse
@@ -607,11 +610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves all subcategories for a parent category ID, or the details for a specific category ID.
-     * If the parent category ID (parentCategoryId) is 0, the API returns the top-level categories under the root category.</p>
+     * <p>Queries all subcategories based on a parent category ID, or queries category details based on a category ID. If the parent category ID (parentCategoryId) is set to 0, the first-level categories under the root category are returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists categories.</p>
+     * <p>Queries a list of categories.</p>
      * 
      * @param request ListCategoriesRequest
      * @param headers map
@@ -640,11 +642,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves all subcategories for a parent category ID, or the details for a specific category ID.
-     * If the parent category ID (parentCategoryId) is 0, the API returns the top-level categories under the root category.</p>
+     * <p>Queries all subcategories based on a parent category ID, or queries category details based on a category ID. If the parent category ID (parentCategoryId) is set to 0, the first-level categories under the root category are returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists categories.</p>
+     * <p>Queries a list of categories.</p>
      * 
      * @param request ListCategoriesRequest
      * @return ListCategoriesResponse
@@ -657,10 +658,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves logistics information for an order.</p>
+     * <p>Queries the logistics information of an order.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query logistics information for an order.</p>
+     * <p>Queries the logistics information of an order.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -686,10 +687,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves logistics information for an order.</p>
+     * <p>Queries the logistics information of an order.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query logistics information for an order.</p>
+     * <p>Queries the logistics information of an order.</p>
      * @return ListLogisticsOrdersResponse
      */
     public ListLogisticsOrdersResponse listLogisticsOrders(String orderId) throws Exception {
@@ -700,10 +701,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists purchaser shops.</p>
+     * <p>Retrieves a list of purchaser shops.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists purchaser shops.</p>
+     * <p>Retrieves a list of purchaser shops.</p>
      * 
      * @param request ListPurchaserShopsRequest
      * @param headers map
@@ -741,10 +742,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists purchaser shops.</p>
+     * <p>Retrieves a list of purchaser shops.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists purchaser shops.</p>
+     * <p>Retrieves a list of purchaser shops.</p>
      * 
      * @param request ListPurchaserShopsRequest
      * @return ListPurchaserShopsResponse
@@ -757,10 +758,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query product sales information for the selection pool in batches. Distributors can call this operation to retrieve product sales details, such as product status. Use the divisionCode input parameter to check whether products are available for sale in a specific region. We recommend that you pass a five-level address code (town or street level).</p>
+     * <p>Queries the sales information of products in the selection pool in batches. Distributors can call this operation to batch query product sales information, such as product status. You can use the divisionCode parameter (we recommend passing a level-5 address code for a town or sub-district) to batch query whether a product is available for sale in a specific region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query product sales information for the selection pool in batches.</p>
+     * <p>Queries the sales information of products in the selection pool in batches.</p>
      * 
      * @param request ListSelectionProductSaleInfosRequest
      * @param headers map
@@ -789,10 +790,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query product sales information for the selection pool in batches. Distributors can call this operation to retrieve product sales details, such as product status. Use the divisionCode input parameter to check whether products are available for sale in a specific region. We recommend that you pass a five-level address code (town or street level).</p>
+     * <p>Queries the sales information of products in the selection pool in batches. Distributors can call this operation to batch query product sales information, such as product status. You can use the divisionCode parameter (we recommend passing a level-5 address code for a town or sub-district) to batch query whether a product is available for sale in a specific region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query product sales information for the selection pool in batches.</p>
+     * <p>Queries the sales information of products in the selection pool in batches.</p>
      * 
      * @param request ListSelectionProductSaleInfosRequest
      * @return ListSelectionProductSaleInfosResponse
@@ -805,7 +806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of products from a product selection pool.</p>
+     * <p>Queries the list of products in the product selection pool.</p>
      * 
      * @param request ListSelectionProductsRequest
      * @param headers map
@@ -815,6 +816,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListSelectionProductsResponse listSelectionProductsWithOptions(ListSelectionProductsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cursor)) {
+            query.put("cursor", request.cursor);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }
@@ -847,7 +852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of products from a product selection pool.</p>
+     * <p>Queries the list of products in the product selection pool.</p>
      * 
      * @param request ListSelectionProductsRequest
      * @return ListSelectionProductsResponse
@@ -860,10 +865,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query SKU sales information for items in the selection pool in batch. Distributors can call this API to retrieve batch details about SKU sales status and other attributes. To determine whether SKUs are sellable in a specific region, use the divisionCode parameter—preferably a five-level administrative division code for townships or subdistricts.</p>
+     * <p>Batch query of SKU sales information in a selection pool: Distributors can call this operation to query SKU sales information in batches, such as SKU status. You can use the divisionCode parameter to query whether SKUs are available for sale in a specific region in batches. We recommend that you specify a level-5 division code, such as a town or sub-district code.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query SKU sales information for items in the selection pool in batch.</p>
+     * <p>Queries the sales information of SKUs in a selection pool in batches.</p>
      * 
      * @param request ListSelectionSkuSaleInfosRequest
      * @param headers map
@@ -892,10 +897,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query SKU sales information for items in the selection pool in batch. Distributors can call this API to retrieve batch details about SKU sales status and other attributes. To determine whether SKUs are sellable in a specific region, use the divisionCode parameter—preferably a five-level administrative division code for townships or subdistricts.</p>
+     * <p>Batch query of SKU sales information in a selection pool: Distributors can call this operation to query SKU sales information in batches, such as SKU status. You can use the divisionCode parameter to query whether SKUs are available for sale in a specific region in batches. We recommend that you specify a level-5 division code, such as a town or sub-district code.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query SKU sales information for items in the selection pool in batch.</p>
+     * <p>Queries the sales information of SKUs in a selection pool in batches.</p>
      * 
      * @param request ListSelectionSkuSaleInfosRequest
      * @return ListSelectionSkuSaleInfosResponse
@@ -908,10 +913,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries child division codes.</p>
+     * <p>Queries the sub-region codes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries child division codes.</p>
+     * <p>Queries the sub-region codes.</p>
      * 
      * @param request QueryChildDivisionCodeRequest
      * @param headers map
@@ -940,10 +945,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries child division codes.</p>
+     * <p>Queries the sub-region codes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries child division codes.</p>
+     * <p>Queries the sub-region codes.</p>
      * 
      * @param request QueryChildDivisionCodeRequest
      * @return QueryChildDivisionCodeResponse
@@ -1058,10 +1063,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Renders a refund order.</p>
+     * <p>Renders an after-sales order.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reverse Single Rendering</p>
+     * <p>Renders a reverse order.</p>
      * 
      * @param request RenderRefundOrderRequest
      * @param headers map
@@ -1090,10 +1095,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Renders a refund order.</p>
+     * <p>Renders an after-sales order.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reverse Single Rendering</p>
+     * <p>Renders a reverse order.</p>
      * 
      * @param request RenderRefundOrderRequest
      * @return RenderRefundOrderResponse
@@ -1105,8 +1110,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Performs a paged query on the product list based on the page number and paging size.</p>
+     * 
      * <b>summary</b> : 
-     * <p>The product search API is a paginated interface for searching products based on various criteria.</p>
+     * <p>Queries products based on various conditions and returns paginated results.</p>
      * 
      * @param request SearchProductsRequest
      * @param headers map
@@ -1130,6 +1138,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.createStartTime)) {
             body.put("createStartTime", request.createStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cursor)) {
+            body.put("cursor", request.cursor);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.distributionHighPrice)) {
@@ -1255,8 +1267,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Performs a paged query on the product list based on the page number and paging size.</p>
+     * 
      * <b>summary</b> : 
-     * <p>The product search API is a paginated interface for searching products based on various criteria.</p>
+     * <p>Queries products based on various conditions and returns paginated results.</p>
      * 
      * @param request SearchProductsRequest
      * @return SearchProductsResponse
@@ -1269,13 +1284,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Distributors use this API to add products to their selection group.</p>
+     * <p>Distributors can use this API operation to add products to the selection pool.</p>
      * <blockquote>
-     * <p>We recommend that distributors who onboard on or after January 1, 2025 use this API. For more information about adding products and the related impact, see the <a href="https://help.aliyun.com/zh/linkedmall/user-guide/product-interface-best-practices?spm=a2c4g.11186623.help-menu-88587.d_2_2_0_8_0.58122056oN3crP%5C&scm=20140722.H_2869668._.OR_help-T_cn~zh-V_1#lFENl">product best practices</a>.</p>
+     * <p>Integrate this API operation if you are a distributor customer who registered on or after January 1, 2025. For details about the import operations and their impacts, refer to <a href="https://www.alibabacloud.com/help/en/linkedmall/user-guide/product-interface-best-practices#lFENl">Product best practices</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>The distributor takes delivery of goods.</p>
+     * <p>Adds products to the selection pool for a distributor.</p>
      * 
      * @param request SelectionGroupAddProductRequest
      * @param headers map
@@ -1313,13 +1328,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Distributors use this API to add products to their selection group.</p>
+     * <p>Distributors can use this API operation to add products to the selection pool.</p>
      * <blockquote>
-     * <p>We recommend that distributors who onboard on or after January 1, 2025 use this API. For more information about adding products and the related impact, see the <a href="https://help.aliyun.com/zh/linkedmall/user-guide/product-interface-best-practices?spm=a2c4g.11186623.help-menu-88587.d_2_2_0_8_0.58122056oN3crP%5C&scm=20140722.H_2869668._.OR_help-T_cn~zh-V_1#lFENl">product best practices</a>.</p>
+     * <p>Integrate this API operation if you are a distributor customer who registered on or after January 1, 2025. For details about the import operations and their impacts, refer to <a href="https://www.alibabacloud.com/help/en/linkedmall/user-guide/product-interface-best-practices#lFENl">Product best practices</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>The distributor takes delivery of goods.</p>
+     * <p>Adds products to the selection pool for a distributor.</p>
      * 
      * @param request SelectionGroupAddProductRequest
      * @return SelectionGroupAddProductResponse
@@ -1332,10 +1347,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Distributors use this API to remove products from their stock.</p>
+     * <p>Allows a distributor to dispatch products.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes products from a distributor\&quot;s stock.</p>
+     * <p>Dispatches products for a distributor.</p>
      * 
      * @param request SelectionGroupRemoveProductRequest
      * @param headers map
@@ -1373,10 +1388,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Distributors use this API to remove products from their stock.</p>
+     * <p>Allows a distributor to dispatch products.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes products from a distributor\&quot;s stock.</p>
+     * <p>Dispatches products for a distributor.</p>
      * 
      * @param request SelectionGroupRemoveProductRequest
      * @return SelectionGroupRemoveProductResponse

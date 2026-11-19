@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfirmDisburseRequest extends TeaModel {
     /**
-     * <p>The request body for confirming the receipt of goods.</p>
+     * <p>The request parameters for confirming receipt.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

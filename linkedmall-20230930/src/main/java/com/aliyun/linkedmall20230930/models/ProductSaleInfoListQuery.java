@@ -8,7 +8,7 @@ public class ProductSaleInfoListQuery extends TeaModel {
      * <p>Area code (recommended to use a five-level township/street-level address code)</p>
      * 
      * <strong>example:</strong>
-     * <p>330106109</p>
+     * <p>110000</p>
      */
     @NameInMap("divisionCode")
     public String divisionCode;

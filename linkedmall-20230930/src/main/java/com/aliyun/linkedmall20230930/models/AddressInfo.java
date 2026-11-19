@@ -27,7 +27,7 @@ public class AddressInfo extends TeaModel {
      * <p>The level-4 address code for the district or county. This parameter is recommended.</p>
      * 
      * <strong>example:</strong>
-     * <p>330106</p>
+     * <p>610102</p>
      */
     @NameInMap("divisionCode")
     public String divisionCode;
@@ -56,7 +56,7 @@ public class AddressInfo extends TeaModel {
      * <p>The level-5 address code for the town or street. This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>330106109</p>
+     * <p>61010212</p>
      */
     @NameInMap("townDivisionCode")
     public String townDivisionCode;

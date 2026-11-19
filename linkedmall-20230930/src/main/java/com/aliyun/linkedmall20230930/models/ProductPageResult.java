@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class ProductPageResult extends TeaModel {
     /**
-     * <p>Current page number</p>
+     * <p>The cursor value for the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7091510713</p>
+     */
+    @NameInMap("nextCursor")
+    public String nextCursor;
+
+    /**
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +24,7 @@ public class ProductPageResult extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size</p>
+     * <p>The page size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +34,13 @@ public class ProductPageResult extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Collection of products</p>
+     * <p>The product collection.</p>
      */
     @NameInMap("products")
     public java.util.List<Product> products;
 
     /**
-     * <p>Request ID for the API call</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3239281273464326823</p>
@@ -40,7 +49,7 @@ public class ProductPageResult extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count</p>
+     * <p>The total count.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +61,14 @@ public class ProductPageResult extends TeaModel {
     public static ProductPageResult build(java.util.Map<String, ?> map) throws Exception {
         ProductPageResult self = new ProductPageResult();
         return TeaModel.build(map, self);
+    }
+
+    public ProductPageResult setNextCursor(String nextCursor) {
+        this.nextCursor = nextCursor;
+        return this;
+    }
+    public String getNextCursor() {
+        return this.nextCursor;
     }
 
     public ProductPageResult setPageNumber(Integer pageNumber) {

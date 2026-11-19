@@ -68,7 +68,7 @@ public class OrderProductResult extends TeaModel {
      * <p>Purchaser ID</p>
      * 
      * <strong>example:</strong>
-     * <p>PID56****2304</p>
+     * <p>56****2304</p>
      */
     @NameInMap("purchaserId")
     public String purchaserId;

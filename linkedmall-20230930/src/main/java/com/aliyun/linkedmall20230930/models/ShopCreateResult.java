@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ShopCreateResult extends TeaModel {
     /**
+     * <p>The store ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -12,6 +14,8 @@ public class ShopCreateResult extends TeaModel {
     public String shopId;
 
     /**
+     * <p>The store status.</p>
+     * 
      * <strong>example:</strong>
      * <p>WORKING</p>
      */

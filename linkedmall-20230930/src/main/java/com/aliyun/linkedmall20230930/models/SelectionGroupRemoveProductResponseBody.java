@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SelectionGroupRemoveProductResponseBody extends TeaModel {
     /**
-     * <p>A collection of IDs for the products that were successfully removed.</p>
+     * <p>The set of successfully dispatched product IDs.</p>
      */
     @NameInMap("productIds")
     public java.util.List<String> productIds;

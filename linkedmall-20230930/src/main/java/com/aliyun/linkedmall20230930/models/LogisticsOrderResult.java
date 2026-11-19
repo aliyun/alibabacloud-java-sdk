@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class LogisticsOrderResult extends TeaModel {
     /**
-     * <p>The data provider.</p>
+     * <p>The data source.</p>
      * 
      * <strong>example:</strong>
-     * <p>菜鸟</p>
+     * <p>Cainiao</p>
      */
     @NameInMap("dataProvider")
     public String dataProvider;
 
     /**
-     * <p>The display title of the data provider.</p>
+     * <p>The data text.</p>
      * 
      * <strong>example:</strong>
-     * <p>菜鸟裹裹</p>
+     * <p>Cainiao Guoguo</p>
      */
     @NameInMap("dataProviderTitle")
     public String dataProviderTitle;
 
     /**
-     * <p>Details of the goods.</p>
+     * <p>The product details.</p>
      */
     @NameInMap("goods")
     public java.util.List<Good> goods;
@@ -33,56 +33,31 @@ public class LogisticsOrderResult extends TeaModel {
      * <blockquote>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><code>ZTKY</code> - China Railway Logistics</p>
-     * </li>
-     * <li><p><code>POST</code> - China Post</p>
-     * </li>
-     * <li><p><code>DBKD</code> - Deppon Express</p>
-     * </li>
-     * <li><p><code>JT</code> - J\&amp;T Express</p>
-     * </li>
-     * <li><p><code>QFKD</code> - Quanfeng Express</p>
-     * </li>
-     * <li><p><code>EYB</code> - China Post E-commerce Express</p>
-     * </li>
-     * <li><p><code>STO</code> - STO Express</p>
-     * </li>
-     * <li><p><code>SF</code> - SF Express</p>
-     * </li>
-     * <li><p><code>ZTO</code> - ZTO Express</p>
-     * </li>
-     * <li><p><code>YTO</code> - YTO Express</p>
-     * </li>
-     * <li><p><code>TTKDEX</code> - Tiantian Express</p>
-     * </li>
-     * <li><p><code>JDLEx</code> - JD Express</p>
-     * </li>
-     * <li><p><code>ETICKET</code> - e-ticket</p>
-     * </li>
-     * <li><p><code>HTKY</code> - Best Express</p>
-     * </li>
-     * <li><p><code>SHQ</code> - Huaqiang Logistics</p>
-     * </li>
-     * <li><p><code>TAOBAO</code> - Taobao Logistics</p>
-     * </li>
-     * <li><p><code>YUNDA</code> - Yunda Express</p>
-     * </li>
-     * <li><p><code>ZJS</code> - ZJS Express</p>
-     * </li>
-     * <li><p><code>FEDEX</code> - FedEx</p>
-     * </li>
-     * <li><p><code>EMS</code> - EMS</p>
-     * </li>
-     * <li><p><code>POSTB</code> - China Post Parcel</p>
-     * </li>
-     * <li><p><code>OTHER</code> - other</p>
-     * </li>
-     * <li><p><code>CNDJWL</code> - Cainiao Heavy Parcel Logistics</p>
-     * </li>
-     * <li><p><code>TN</code> - T-neng Logistics</p>
-     * </li>
-     * <li><p><code>ZMKM</code> - Cainiao Express</p>
-     * </li>
+     * <li>ZTKY: China Railway Logistics</li>
+     * <li>POST: China Post</li>
+     * <li>DBKD: Deppon Express</li>
+     * <li>JT: J&amp;T Express</li>
+     * <li>QFKD: Quanfeng Express</li>
+     * <li>EYB: China Post E-commerce Express EYB</li>
+     * <li>STO: STO Express</li>
+     * <li>SF: SF Express</li>
+     * <li>ZTO: ZTO Express</li>
+     * <li>YTO: YTO Express</li>
+     * <li>TTKDEX: Tiantian Express</li>
+     * <li>JDLEx: JD Express</li>
+     * <li>ETICKET: Electronic vouchers</li>
+     * <li>HTKY: Best Express</li>
+     * <li>SHQ: Huaqiang Logistics</li>
+     * <li>TAOBAO: Taobao Logistics</li>
+     * <li>YUNDA: Yunda Express</li>
+     * <li>ZJS: ZJS Express</li>
+     * <li>FEDEX: FedEx</li>
+     * <li>EMS: EMS</li>
+     * <li>POSTB: China Post Parcel</li>
+     * <li>OTHER: Other</li>
+     * <li>CNDJWL: Cainiao Large Item Logistics</li>
+     * <li>TN: Teneng</li>
+     * <li>ZMKM: Cainiao Express</li>
      * </ul>
      * </blockquote>
      * 
@@ -93,24 +68,24 @@ public class LogisticsOrderResult extends TeaModel {
     public String logisticsCompanyCode;
 
     /**
-     * <p>The name of the logistics company.</p>
+     * <p>The logistics company name.</p>
      * 
      * <strong>example:</strong>
-     * <p>顺丰</p>
+     * <p>SF Express</p>
      */
     @NameInMap("logisticsCompanyName")
     public String logisticsCompanyName;
 
     /**
-     * <p>A list of logistics details.</p>
+     * <p>The logistics details.</p>
      */
     @NameInMap("logisticsDetailList")
     public java.util.List<LogisticsDetail> logisticsDetailList;
 
     /**
-     * <p>The tracking number.</p>
+     * <p>The logistics tracking number.</p>
      * <blockquote>
-     * <p>For an e-ticket, the tracking number is a fixed value: \*</p>
+     * <p>The logistics tracking number for electronic vouchers is a fixed value: *.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

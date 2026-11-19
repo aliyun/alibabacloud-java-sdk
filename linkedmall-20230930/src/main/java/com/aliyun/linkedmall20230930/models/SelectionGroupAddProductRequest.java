@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class SelectionGroupAddProductRequest extends TeaModel {
     /**
-     * <p>Collection of product IDs to add</p>
+     * <p>The IDs of the products to be added to the selection pool.</p>
      * <blockquote>
      * <ul>
-     * <li>You can add up to 30 products per call.</li>
+     * <li>A maximum of 30 products can be added in a single call.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -17,7 +17,7 @@ public class SelectionGroupAddProductRequest extends TeaModel {
     public java.util.List<String> productIds;
 
     /**
-     * <p>Purchaser ID</p>
+     * <p>The ID of the purchaser.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

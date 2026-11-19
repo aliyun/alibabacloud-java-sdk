@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Sku extends TeaModel {
     /**
-     * <p>69 barcode</p>
+     * <p>The barcode.</p>
      * 
      * <strong>example:</strong>
      * <p>6922454329176</p>
@@ -14,7 +14,7 @@ public class Sku extends TeaModel {
     public String barcode;
 
     /**
-     * <p>Indicates whether the SKU is available for sale</p>
+     * <p>Indicates whether the SKU is available for sale.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,13 +23,16 @@ public class Sku extends TeaModel {
     public Boolean canSell;
 
     /**
-     * <p>Reserved field</p>
+     * <p>The reserved field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("discountRetailPrice")
     public Long discountRetailPrice;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      * 
      * <strong>example:</strong>
      * <p>110000</p>
@@ -38,18 +41,18 @@ public class Sku extends TeaModel {
     public String divisionCode;
 
     /**
-     * <p>Fuzzy inventory availability</p>
+     * <p>The fuzzy available inventory.</p>
      * 
      * <strong>example:</strong>
-     * <p>有货
-     * 无货
-     * 库存紧张</p>
+     * <p>In stock
+     * Out of stock
+     * Low stock</p>
      */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
     /**
-     * <p>Strikethrough price, in cents</p>
+     * <p>The list price in cents.</p>
      * 
      * <strong>example:</strong>
      * <p>999900</p>
@@ -58,7 +61,7 @@ public class Sku extends TeaModel {
     public Long markPrice;
 
     /**
-     * <p>SKU image URL</p>
+     * <p>The SKU image.</p>
      * 
      * <strong>example:</strong>
      * <p>https:////img.alicdn.com/imgextra///img.alicdn.com/imgextra/i2/2216003305543/O1CN010DEQCX1qokFYGRfPE_!!2216003305543.png</p>
@@ -67,7 +70,7 @@ public class Sku extends TeaModel {
     public String picUrl;
 
     /**
-     * <p>Suggested retail price, in cents</p>
+     * <p>The suggested retail price in cents.</p>
      * 
      * <strong>example:</strong>
      * <p>999900</p>
@@ -76,7 +79,7 @@ public class Sku extends TeaModel {
     public Long platformPrice;
 
     /**
-     * <p>Distributor purchase price, in cents</p>
+     * <p>The distributor purchase price in cents.</p>
      * 
      * <strong>example:</strong>
      * <p>19800</p>
@@ -85,7 +88,7 @@ public class Sku extends TeaModel {
     public Long price;
 
     /**
-     * <p>Product ID</p>
+     * <p>The product ID.</p>
      * 
      * <strong>example:</strong>
      * <p>660460842235822080</p>
@@ -94,7 +97,7 @@ public class Sku extends TeaModel {
     public String productId;
 
     /**
-     * <p>Available inventory. Note: This field is currently set to -1 for all SKUs and has no practical meaning.</p>
+     * <p>The available inventory. <notice>Currently, the value of this field is uniformly set to -1 and has no practical significance.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
@@ -103,7 +106,7 @@ public class Sku extends TeaModel {
     public Long quantity;
 
     /**
-     * <p>SKU sort order</p>
+     * <p>The SKU sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -112,7 +115,7 @@ public class Sku extends TeaModel {
     public Long rankValue;
 
     /**
-     * <p>Shop ID</p>
+     * <p>The shop ID.</p>
      * 
      * <strong>example:</strong>
      * <p>21000017</p>
@@ -121,13 +124,16 @@ public class Sku extends TeaModel {
     public String shopId;
 
     /**
-     * <p>SKU note</p>
+     * <p>The SKU remark.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample SKU remark</p>
      */
     @NameInMap("skuAlias")
     public String skuAlias;
 
     /**
-     * <p>SKU ID</p>
+     * <p>skuId</p>
      * 
      * <strong>example:</strong>
      * <p>660460842235822081</p>
@@ -136,22 +142,22 @@ public class Sku extends TeaModel {
     public String skuId;
 
     /**
-     * <p>SKU specifications</p>
+     * <p>sku</p>
      */
     @NameInMap("skuSpecs")
     public java.util.List<SkuSpec> skuSpecs;
 
     /**
-     * <p>SKU sales specification code. Used by the frontend to filter SKUs</p>
+     * <p>The SKU sales specifications used to assist frontend filtering.</p>
      * 
      * <strong>example:</strong>
-     * <p>颜色分类:天蓝色</p>
+     * <p>Color:Sky blue</p>
      */
     @NameInMap("skuSpecsCode")
     public String skuSpecsCode;
 
     /**
-     * <p>SKU control status</p>
+     * <p>The SKU control status.</p>
      * 
      * <strong>example:</strong>
      * <p>Online</p>
@@ -160,16 +166,19 @@ public class Sku extends TeaModel {
     public String skuStatus;
 
     /**
-     * <p>Reserved field</p>
+     * <p>The reserved field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("suggestedRetailPrice")
     public Long suggestedRetailPrice;
 
     /**
-     * <p>SKU title. Note: We recommend that distributors build the customer-facing SKU title by concatenating the value or valueAlias field from the SkuSpec struct (use <code>valueAlias</code> if it is present). Do not use this field directly as the customer-facing SKU title.</p>
+     * <p>The SKU title. <notice>Distributors should concatenate the value or valueAlias (if available) from the SkuSpec struct to form the SKU title for customer display. Do not use this field directly as the SKU title for customer display.</notice></p>
      * 
      * <strong>example:</strong>
-     * <p>天蓝色</p>
+     * <p>Sky blue</p>
      */
     @NameInMap("title")
     public String title;

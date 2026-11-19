@@ -1,3 +1,9 @@
+2026-11-19 Version: 3.0.5
+- Update API ListSelectionProducts: add request parameters cursor.
+- Update API SearchProducts: add request parameters body.cursor.
+- Update API SearchProducts: add response parameters Body.nextCursor.
+
+
 2026-07-27 Version: 3.0.4
 - Generated java 2023-09-30 for linkedmall.
 

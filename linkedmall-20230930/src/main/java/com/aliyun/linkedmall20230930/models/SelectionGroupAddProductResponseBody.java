@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SelectionGroupAddProductResponseBody extends TeaModel {
     /**
-     * <p>List of product IDs successfully added</p>
+     * <p>The IDs of the products that are successfully added to the selection pool.</p>
      */
     @NameInMap("productIds")
     public java.util.List<String> productIds;

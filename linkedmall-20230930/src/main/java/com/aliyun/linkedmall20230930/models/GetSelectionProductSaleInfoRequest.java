@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSelectionProductSaleInfoRequest extends TeaModel {
     /**
-     * <p>Administrative division code. We recommend using a five-level code (township or subdistrict level).</p>
+     * <p>The division code. A level-5 address code for a town or sub-district is recommended.</p>
      * 
      * <strong>example:</strong>
      * <p>330106109</p>
@@ -14,7 +14,7 @@ public class GetSelectionProductSaleInfoRequest extends TeaModel {
     public String divisionCode;
 
     /**
-     * <p>Purchaser ID</p>
+     * <p>The purchaser ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
