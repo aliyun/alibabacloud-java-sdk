@@ -69,6 +69,9 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends TeaModel {
         /**
          * <p>The list of governance object IDs.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[12345, 12346]</p>
          */
         @NameInMap("GovernObjectIds")
         public java.util.List<Long> governObjectIds;

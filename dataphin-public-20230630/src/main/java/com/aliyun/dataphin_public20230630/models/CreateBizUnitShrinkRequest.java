@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBizUnitShrinkRequest extends TeaModel {
     /**
-     * <p>The create request.</p>
+     * <p>The creation request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateBizUnitShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

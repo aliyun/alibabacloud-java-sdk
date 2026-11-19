@@ -15,6 +15,8 @@ public class UpdateKgRelationRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -121,7 +123,7 @@ public class UpdateKgRelationRequest extends TeaModel {
 
     public static class UpdateKgRelationRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The list of relationship record properties.</p>
+         * <p>The relationship record property list.</p>
          */
         @NameInMap("PropertyList")
         public java.util.List<UpdateKgRelationRequestUpdateCommandPropertyList> propertyList;

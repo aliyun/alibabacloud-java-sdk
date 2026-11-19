@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUsersResponseBody extends TeaModel {
     /**
-     * <p>The error code. OK indicates that the request is successful.</p>
+     * <p>The error code of the request. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class GetUsersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -137,7 +137,7 @@ public class GetUsersResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The display name of the user without the status.</p>
+         * <p>The display name of the user, excluding the status.</p>
          * 
          * <strong>example:</strong>
          * <p>xx test</p>
@@ -158,7 +158,7 @@ public class GetUsersResponseBody extends TeaModel {
          * <p>The Lark bot.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p><a href="https://example.com/webhook/feishu">https://example.com/webhook/feishu</a></p>
          */
         @NameInMap("FeiShuRobot")
         public String feiShuRobot;
@@ -173,7 +173,7 @@ public class GetUsersResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The time when the user was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1717343597000</p>
@@ -227,7 +227,7 @@ public class GetUsersResponseBody extends TeaModel {
         public String nickName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the user belongs.</p>
+         * <p>The ID of the primary account to which the user belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>231231</p>
@@ -245,7 +245,7 @@ public class GetUsersResponseBody extends TeaModel {
         public String realName;
 
         /**
-         * <p>The ID of the user source.</p>
+         * <p>The source ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
@@ -266,18 +266,16 @@ public class GetUsersResponseBody extends TeaModel {
          * <p>The WeCom bot.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p><a href="https://example.com/webhook/wecom">https://example.com/webhook/wecom</a></p>
          */
         @NameInMap("WeChatRobot")
         public String weChatRobot;
 
         /**
-         * <p>The whitelist.</p>
+         * <p>The IP address whitelist.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>192.168.0.1</p>
          */
         @NameInMap("WhiteIp")
         public String whiteIp;

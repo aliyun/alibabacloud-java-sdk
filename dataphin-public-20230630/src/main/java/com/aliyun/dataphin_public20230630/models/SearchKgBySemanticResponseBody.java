@@ -47,7 +47,7 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -125,7 +125,7 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
         public String itemTypeCode;
 
         /**
-         * <p>The property code that matched the semantic search.</p>
+         * <p>The code of the matched semantic search property.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -137,13 +137,13 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
          * <p>The actual value of the matched property.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John Doe</p>
          */
         @NameInMap("MatchedPropertyValue")
         public String matchedPropertyValue;
 
         /**
-         * <p>The similarity score ranging from 0.0 to 1.0, based on cosine similarity.</p>
+         * <p>The similarity score based on cosine similarity. Valid values: 0.0 to 1.0.</p>
          * 
          * <strong>example:</strong>
          * <p>0.88</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest extends TeaModel {
     /**
-     * <p>The assignment binding command.</p>
+     * <p>The binding assignment command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AssignCommand")
@@ -22,7 +22,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest extends TeaMo
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The operator user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

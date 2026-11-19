@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceApiShrinkRequest extends TeaModel {
     /**
-     * <p>The request for creating an API.</p>
+     * <p>The request to create an API.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateDataServiceApiShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operation user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

@@ -21,7 +21,7 @@ public class ListDatasetsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The operator ID.</p>
+     * <p>The operator user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

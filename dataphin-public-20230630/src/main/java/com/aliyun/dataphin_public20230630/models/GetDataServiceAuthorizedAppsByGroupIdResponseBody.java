@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel {
     /**
-     * <p>The list of API groups.</p>
+     * <p>The API group list.</p>
      */
     @NameInMap("AppInfoList")
     public java.util.List<GetDataServiceAuthorizedAppsByGroupIdResponseBodyAppInfoList> appInfoList;
@@ -29,7 +29,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -109,7 +109,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         /**
          * <p>The application key.</p>
          * <blockquote>
-         * <p>Notice: Deprecated. Use AppKeyStr instead.</notice>.</p>
+         * <p>Notice: Deprecated. Use AppKeyStr instead.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         public Integer id;
 
         /**
-         * <p>The app name.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

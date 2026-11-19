@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceAppGroupsResponseBody extends TeaModel {
     /**
-     * <p>The list of application groups.</p>
+     * <p>The application group list.</p>
      */
     @NameInMap("AppGroupList")
     public java.util.List<GetDataServiceAppGroupsResponseBodyAppGroupList> appGroupList;
@@ -20,7 +20,7 @@ public class GetDataServiceAppGroupsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetDataServiceAppGroupsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend error details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetDataServiceAppGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

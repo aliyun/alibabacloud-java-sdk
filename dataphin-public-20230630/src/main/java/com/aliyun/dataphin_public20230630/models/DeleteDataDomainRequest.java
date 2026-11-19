@@ -15,7 +15,7 @@ public class DeleteDataDomainRequest extends TeaModel {
     public Long bizUnitId;
 
     /**
-     * <p>The subject domain ID.</p>
+     * <p>The subject area ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +35,8 @@ public class DeleteDataDomainRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

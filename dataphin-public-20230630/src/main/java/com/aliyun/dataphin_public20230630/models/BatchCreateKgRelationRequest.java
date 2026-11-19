@@ -123,13 +123,13 @@ public class BatchCreateKgRelationRequest extends TeaModel {
 
     public static class BatchCreateKgRelationRequestCreateCommandRelationList extends TeaModel {
         /**
-         * <p>The relationship record property list.</p>
+         * <p>The property list of the relation record.</p>
          */
         @NameInMap("PropertyList")
         public java.util.List<BatchCreateKgRelationRequestCreateCommandRelationListPropertyList> propertyList;
 
         /**
-         * <p>The relationship type code.</p>
+         * <p>The relation type code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class BatchCreateKgRelationRequest extends TeaModel {
 
     public static class BatchCreateKgRelationRequestCreateCommand extends TeaModel {
         /**
-         * <p>The relationship list.</p>
+         * <p>The relation list.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RelationList")

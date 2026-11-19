@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTablesShrinkRequest extends TeaModel {
     /**
-     * <p>The paged query conditions.</p>
+     * <p>The paging query conditions.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;

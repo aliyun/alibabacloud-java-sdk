@@ -107,7 +107,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
 
     public static class GetQualityRuleTaskResponseBodyRuleTaskInfo extends TeaModel {
         /**
-         * <p>The business date. The format is YYYY-MM-DD.</p>
+         * <p>The business date in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
@@ -116,7 +116,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String bizDate;
 
         /**
-         * <p>The format of the business date.</p>
+         * <p>The business date format.</p>
          * 
          * <strong>example:</strong>
          * <p>yyyy-MM-dd</p>
@@ -125,7 +125,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String bizDateFormat;
 
         /**
-         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The creation time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -143,7 +143,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -161,7 +161,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The ID of the user who last updated the task.</p>
+         * <p>The ID of the last updater.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -170,7 +170,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The update time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The update time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -188,7 +188,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
-         * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -215,7 +215,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public Long templateId;
 
         /**
-         * <p>The name of the validated object.</p>
+         * <p>The name of the checked object.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -224,7 +224,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String validateObjectName;
 
         /**
-         * <p>The validated object type.</p>
+         * <p>The checked object type.</p>
          * 
          * <strong>example:</strong>
          * <p>column</p>
@@ -233,7 +233,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String validateObjectType;
 
         /**
-         * <p>The validated partition.</p>
+         * <p>The checked partition.</p>
          * 
          * <strong>example:</strong>
          * <p>20251011</p>
@@ -242,13 +242,13 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public String validatePartition;
 
         /**
-         * <p>Indicates whether the validation is successful.</p>
+         * <p>Indicates whether the check is successful.</p>
          */
         @NameInMap("ValidateSuccess")
         public Boolean validateSuccess;
 
         /**
-         * <p>The watch ID.</p>
+         * <p>The associated monitoring ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -257,7 +257,7 @@ public class GetQualityRuleTaskResponseBody extends TeaModel {
         public Long watchId;
 
         /**
-         * <p>The watch task ID. This ID is empty for rule tasks in a trial run.</p>
+         * <p>The monitoring task ID. This ID is empty for trial-run rule tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

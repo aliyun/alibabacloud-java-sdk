@@ -29,7 +29,7 @@ public class GetTableResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend response exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -134,7 +134,7 @@ public class GetTableResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The creator ID.</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>30011211</p>
@@ -143,10 +143,10 @@ public class GetTableResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The creator nickname.</p>
+         * <p>The nickname of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhang San</p>
+         * <p>John Doe</p>
          */
         @NameInMap("OwnerNickName")
         public String ownerNickName;
@@ -226,7 +226,7 @@ public class GetTableResponseBody extends TeaModel {
         public String bizUnitDisplayName;
 
         /**
-         * <p>The business unit ID.</p>
+         * <p>The ID of the business unit.</p>
          * 
          * <strong>example:</strong>
          * <p>2011</p>
@@ -235,7 +235,7 @@ public class GetTableResponseBody extends TeaModel {
         public String bizUnitId;
 
         /**
-         * <p>The business unit name.</p>
+         * <p>The name of the business unit.</p>
          * 
          * <strong>example:</strong>
          * <p>LD_test01</p>
@@ -279,7 +279,7 @@ public class GetTableResponseBody extends TeaModel {
          * <p>The display name of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhang San</p>
+         * <p>John Doe</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -383,7 +383,7 @@ public class GetTableResponseBody extends TeaModel {
         public GetTableResponseBodyDataSimpleNodeInfosBizUnit bizUnit;
 
         /**
-         * <p>The environment to which the node belongs. Valid values: DEV and PROD.</p>
+         * <p>The environment. Valid values: DEV and PROD.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -410,7 +410,7 @@ public class GetTableResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The scheduling type of the node. Valid values: NORMAL (periodic scheduling) and MANUAL (manual scheduling).</p>
+         * <p>The scheduling type. Valid values: NORMAL (periodic scheduling) and MANUAL (manual scheduling).</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -419,7 +419,7 @@ public class GetTableResponseBody extends TeaModel {
         public String nodeScheduleType;
 
         /**
-         * <p>The O&amp;M owners of the node.</p>
+         * <p>The O&amp;M owners.</p>
          */
         @NameInMap("Owners")
         public java.util.List<GetTableResponseBodyDataSimpleNodeInfosOwners> owners;
@@ -431,7 +431,7 @@ public class GetTableResponseBody extends TeaModel {
         public GetTableResponseBodyDataSimpleNodeInfosProject project;
 
         /**
-         * <p>The type of the node. Valid values: DLINK (offline integration) and PYTHON37 (Python computing node).</p>
+         * <p>The node type. Valid values: DLINK (offline integration) and PYTHON37 (Python compute node).</p>
          * 
          * <strong>example:</strong>
          * <p>DLINK</p>
@@ -560,7 +560,7 @@ public class GetTableResponseBody extends TeaModel {
         public java.util.List<String> assetTags;
 
         /**
-         * <p>The business unit ID.</p>
+         * <p>The ID of the business unit.</p>
          * 
          * <strong>example:</strong>
          * <p>2011</p>
@@ -569,7 +569,7 @@ public class GetTableResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
-         * <p>The business unit name.</p>
+         * <p>The name of the business unit.</p>
          * 
          * <strong>example:</strong>
          * <p>LD_test01</p>
@@ -578,7 +578,7 @@ public class GetTableResponseBody extends TeaModel {
         public String bizUnitName;
 
         /**
-         * <p>The table comment.</p>
+         * <p>The comment of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -596,7 +596,7 @@ public class GetTableResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The creator ID.</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>30011211</p>
@@ -605,7 +605,7 @@ public class GetTableResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The data domain ID.</p>
+         * <p>The ID of the data domain.</p>
          * 
          * <strong>example:</strong>
          * <p>211</p>
@@ -614,7 +614,7 @@ public class GetTableResponseBody extends TeaModel {
         public Long dataDomainId;
 
         /**
-         * <p>The subject domain name.</p>
+         * <p>The name of the subject domain.</p>
          * 
          * <strong>example:</strong>
          * <p>Course domain</p>
@@ -623,7 +623,7 @@ public class GetTableResponseBody extends TeaModel {
         public String dataDomainName;
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The ID of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>3301</p>
@@ -632,7 +632,7 @@ public class GetTableResponseBody extends TeaModel {
         public Long dataSourceId;
 
         /**
-         * <p>The table display name.</p>
+         * <p>The display name of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>Student</p>
@@ -641,7 +641,7 @@ public class GetTableResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The environment. Valid values: dev and prod.</p>
+         * <p>The environment to which the table belongs. Valid values: dev and prod.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -650,7 +650,7 @@ public class GetTableResponseBody extends TeaModel {
         public String env;
 
         /**
-         * <p>The file ID, which is used to redirect to the ODM model.</p>
+         * <p>The ID of the file, which is used to navigate to the ODM model.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -659,7 +659,7 @@ public class GetTableResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The table GUID.</p>
+         * <p>The GUID of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>dp_ds_table.300023201.7311626611751680256.load_test.abc</p>
@@ -686,7 +686,7 @@ public class GetTableResponseBody extends TeaModel {
         public Boolean isPartitionTable;
 
         /**
-         * <p>The time when the table DDL was last modified.</p>
+         * <p>The time when the DDL of the table was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -704,7 +704,7 @@ public class GetTableResponseBody extends TeaModel {
         public String lastDmlTime;
 
         /**
-         * <p>The time when the data was last viewed.</p>
+         * <p>The time when the data was last queried.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -722,7 +722,7 @@ public class GetTableResponseBody extends TeaModel {
         public Long lifeCycle;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>t_test01</p>
@@ -746,7 +746,7 @@ public class GetTableResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The parent model ID, which is used to redirect to the ODM model.</p>
+         * <p>The ID of the parent model, which is used to navigate to the ODM model.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -755,7 +755,7 @@ public class GetTableResponseBody extends TeaModel {
         public String parentModelId;
 
         /**
-         * <p>The logical project ID.</p>
+         * <p>The ID of the logical project.</p>
          * 
          * <strong>example:</strong>
          * <p>1011</p>
@@ -764,7 +764,7 @@ public class GetTableResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The logical project name.</p>
+         * <p>The name of the logical project.</p>
          * 
          * <strong>example:</strong>
          * <p>testPrj</p>
@@ -785,13 +785,13 @@ public class GetTableResponseBody extends TeaModel {
          * <p>The abbreviation of the security classification name.</p>
          * 
          * <strong>example:</strong>
-         * <p>High</p>
+         * <p>H</p>
          */
         @NameInMap("SecurityLevelAbbreviation")
         public String securityLevelAbbreviation;
 
         /**
-         * <p>The name of the security classification.</p>
+         * <p>The security classification name.</p>
          * 
          * <strong>example:</strong>
          * <p>High</p>
@@ -800,7 +800,7 @@ public class GetTableResponseBody extends TeaModel {
         public String securityLevelName;
 
         /**
-         * <p>The list of output nodes.</p>
+         * <p>The list of output node information.</p>
          */
         @NameInMap("SimpleNodeInfos")
         public java.util.List<GetTableResponseBodyDataSimpleNodeInfos> simpleNodeInfos;
@@ -815,7 +815,7 @@ public class GetTableResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The dynamic properties of the real-time metatable.</p>
+         * <p>The dynamic properties of the real-time metatable class.</p>
          */
         @NameInMap("StreamTableConfig")
         public java.util.List<GetTableResponseBodyDataStreamTableConfig> streamTableConfig;

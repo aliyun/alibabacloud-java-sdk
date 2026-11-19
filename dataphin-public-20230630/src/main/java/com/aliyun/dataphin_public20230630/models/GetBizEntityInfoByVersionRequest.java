@@ -25,6 +25,8 @@ public class GetBizEntityInfoByVersionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -42,7 +44,7 @@ public class GetBizEntityInfoByVersionRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The version.</p>
+     * <p>The version ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

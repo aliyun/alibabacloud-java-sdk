@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataServiceAppRequest extends TeaModel {
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class UpdateDataServiceAppRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateDataServiceAppRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The command to update the data service application.</p>
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -59,7 +61,7 @@ public class UpdateDataServiceAppRequest extends TeaModel {
 
     public static class UpdateDataServiceAppRequestUpdateCommand extends TeaModel {
         /**
-         * <p>Application group ID.</p>
+         * <p>The application group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>200000000</p>
@@ -68,7 +70,7 @@ public class UpdateDataServiceAppRequest extends TeaModel {
         public Integer appGroupId;
 
         /**
-         * <p>Application ID.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,25 +80,25 @@ public class UpdateDataServiceAppRequest extends TeaModel {
         public Integer appId;
 
         /**
-         * <p>Application name.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
-         * <p>默认应用</p>
+         * <p>Default application</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>List of owner IDs.</p>
+         * <p>The owner IDs.</p>
          */
         @NameInMap("OwnerIds")
         public java.util.List<String> ownerIds;
 
         /**
-         * <p>Application scenarios.</p>
+         * <p>The common scenarios.</p>
          * 
          * <strong>example:</strong>
-         * <p>数据分析</p>
+         * <p>Data analytics</p>
          */
         @NameInMap("Scenarios")
         public String scenarios;

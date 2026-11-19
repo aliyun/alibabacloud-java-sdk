@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStreamJobsResponseBody extends TeaModel {
     /**
-     * <p>The backend response code.</p>
+     * <p>The backend status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class GetStreamJobsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetStreamJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,11 +110,7 @@ public class GetStreamJobsResponseBody extends TeaModel {
 
     public static class GetStreamJobsResponseBodyData extends TeaModel {
         /**
-         * <p>The environment identifier. Valid values:</p>
-         * <ul>
-         * <li>DEV: development.</li>
-         * <li>PROD: production.</li>
-         * </ul>
+         * <p>The environment identifier. Valid values: DEV for development and PROD for production.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -123,7 +119,7 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public String env;
 
         /**
-         * <p>The mapping ID of the real-time node.</p>
+         * <p>The mapping ID of the real-time task.</p>
          * 
          * <strong>example:</strong>
          * <p>716555</p>
@@ -132,7 +128,7 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the real-time node.</p>
+         * <p>The name of the real-time task.</p>
          * 
          * <strong>example:</strong>
          * <p>flink_order_detail</p>
@@ -141,7 +137,7 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The ID of the user who last modified the node.</p>
+         * <p>The ID of the last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>300006788</p>
@@ -168,14 +164,7 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The node status. Valid values:</p>
-         * <ul>
-         * <li>0: draft.</li>
-         * <li>1: submitting.</li>
-         * <li>2: submitted.</li>
-         * <li>3: published.</li>
-         * <li>100: in development.</li>
-         * </ul>
+         * <p>The task status. Valid values: 0 (Draft), 1 (Submitting), 2 (Submitted), 3 (Published), and 100 (Developing).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -184,11 +173,7 @@ public class GetStreamJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The node type. Valid values:</p>
-         * <ul>
-         * <li>FLINK_SQL</li>
-         * <li>FLINK_DATASTREAM.</li>
-         * </ul>
+         * <p>The task type. Valid values: FLINK_SQL and FLINK_DATASTREAM.</p>
          * 
          * <strong>example:</strong>
          * <p>FLINK_SQL</p>

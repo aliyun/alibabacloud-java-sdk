@@ -15,6 +15,8 @@ public class RevokeDataServiceApiShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -32,7 +34,7 @@ public class RevokeDataServiceApiShrinkRequest extends TeaModel {
     public Integer projectId;
 
     /**
-     * <p>The revoke instruction.</p>
+     * <p>The authorization command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RevokeCommand")

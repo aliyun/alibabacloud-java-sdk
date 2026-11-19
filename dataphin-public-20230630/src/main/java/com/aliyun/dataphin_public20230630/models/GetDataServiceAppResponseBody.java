@@ -29,7 +29,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -203,7 +203,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         public String ipWhitelist;
 
         /**
-         * <p>Indicates whether the IP address whitelist is enabled. Valid values:</p>
+         * <p>Specifies whether the IP address whitelist is enabled. Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
          * <li>false: Disabled.</li>

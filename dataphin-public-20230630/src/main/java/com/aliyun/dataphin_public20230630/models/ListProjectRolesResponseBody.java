@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectRolesResponseBody extends TeaModel {
     /**
-     * <p>The error code. OK indicates that the request is successful.</p>
+     * <p>The error code. A value of OK indicates that the request is normal.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -110,7 +110,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
     public static class ListProjectRolesResponseBodyRoleList extends TeaModel {
         /**
-         * <p>The JSON string of the permission set.</p>
+         * <p>The JSON string of permission points.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

@@ -25,7 +25,7 @@ public class GetCheckConnectivityJobsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The operator user ID.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

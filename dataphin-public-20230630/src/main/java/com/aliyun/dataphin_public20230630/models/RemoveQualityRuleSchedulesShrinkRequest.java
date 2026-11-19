@@ -15,6 +15,8 @@ public class RemoveQualityRuleSchedulesShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class RemoveQualityRuleSchedulesShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The unbinding instruction.</p>
+     * <p>The unbind command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RemoveCommand")

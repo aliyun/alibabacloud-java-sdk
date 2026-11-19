@@ -47,7 +47,7 @@ public class CreateStandardRelationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,13 +107,13 @@ public class CreateStandardRelationsResponseBody extends TeaModel {
 
     public static class CreateStandardRelationsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of standard IDs that do not exist.</p>
+         * <p>The list of non-existent standard IDs.</p>
          */
         @NameInMap("NotExistStandardIdList")
         public java.util.List<Long> notExistStandardIdList;
 
         /**
-         * <p>The number of successfully added associations.</p>
+         * <p>The number of successful additions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

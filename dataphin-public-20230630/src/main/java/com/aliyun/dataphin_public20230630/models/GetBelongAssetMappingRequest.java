@@ -60,7 +60,7 @@ public class GetBelongAssetMappingRequest extends TeaModel {
 
     public static class GetBelongAssetMappingRequestAssetMappingQuery extends TeaModel {
         /**
-         * <p>The GUID of the owning asset.</p>
+         * <p>The GUID of the parent asset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class GetBelongAssetMappingRequest extends TeaModel {
         public String belongGuid;
 
         /**
-         * <p>The type of the mapping relationship. Valid values: VALID (mapped) and INVALID (invalid mapping).</p>
+         * <p>The mapping relationship type. Valid values: VALID for mapped, INVALID for invalid mapping.</p>
          * 
          * <strong>example:</strong>
          * <p>VALID</p>

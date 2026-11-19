@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends TeaModel {
     /**
-     * <p>The assignment binding command.</p>
+     * <p>The binding assignment command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AssignCommand")
@@ -22,7 +22,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The operator user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -61,14 +61,14 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends TeaModel {
 
     public static class AssignQualityRuleOfAllRuleScopeSchedulesRequestAssignCommand extends TeaModel {
         /**
-         * <p>The rule ID.</p>
+         * <p>The rule IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RuleIdList")
         public java.util.List<Long> ruleIdList;
 
         /**
-         * <p>The schedule ID.</p>
+         * <p>The schedule IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ScheduleIdList")
@@ -79,7 +79,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>平均值</p>
+         * <p>Average</p>
          */
         @NameInMap("WatchId")
         public Long watchId;

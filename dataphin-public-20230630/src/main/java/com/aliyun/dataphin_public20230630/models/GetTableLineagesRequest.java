@@ -11,7 +11,7 @@ public class GetTableLineagesRequest extends TeaModel {
     public GetTableLineagesRequestFilterQuery filterQuery;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +21,8 @@ public class GetTableLineagesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -82,7 +84,7 @@ public class GetTableLineagesRequest extends TeaModel {
         public Boolean needDownstream;
 
         /**
-         * <p>Specifies whether to return tables that do not exist in the asset list. Default value: false.</p>
+         * <p>Specifies whether to return tables that do not exist in the asset inventory. Default value: false.</p>
          */
         @NameInMap("NeedNotExistObject")
         public Boolean needNotExistObject;
@@ -94,7 +96,7 @@ public class GetTableLineagesRequest extends TeaModel {
         public Boolean needUpstream;
 
         /**
-         * <p>The environment to which the task belongs. This parameter is used for filtering. Valid values: dev and prod.</p>
+         * <p>The environment of the node to be queried. Valid values: dev and prod.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -103,7 +105,7 @@ public class GetTableLineagesRequest extends TeaModel {
         public String nodeEnv;
 
         /**
-         * <p>The list of task IDs used for filtering.</p>
+         * <p>The list of node IDs to be queried.</p>
          */
         @NameInMap("NodeIdList")
         public java.util.List<String> nodeIdList;

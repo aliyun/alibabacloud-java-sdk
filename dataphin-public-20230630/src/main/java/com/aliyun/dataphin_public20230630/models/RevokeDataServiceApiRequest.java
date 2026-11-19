@@ -15,6 +15,8 @@ public class RevokeDataServiceApiRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -32,7 +34,7 @@ public class RevokeDataServiceApiRequest extends TeaModel {
     public Integer projectId;
 
     /**
-     * <p>The revoke instruction.</p>
+     * <p>The authorization command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RevokeCommand")
@@ -87,7 +89,7 @@ public class RevokeDataServiceApiRequest extends TeaModel {
         public Long apiId;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The app ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1203</p>
@@ -99,7 +101,7 @@ public class RevokeDataServiceApiRequest extends TeaModel {
          * <p>The permission type. Valid values:</p>
          * <ul>
          * <li>USE: use permission</li>
-         * <li>DELEGATION: delegation permission.</li>
+         * <li>DELEGATION: delegation permission</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,7 +114,7 @@ public class RevokeDataServiceApiRequest extends TeaModel {
          * <p>The API environment. Valid values:</p>
          * <ul>
          * <li>DEV: development environment</li>
-         * <li>PROD: production environment.</li>
+         * <li>PROD: production environment</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +127,7 @@ public class RevokeDataServiceApiRequest extends TeaModel {
          * <p>The authorization object type. Valid values:</p>
          * <ul>
          * <li>APP: application</li>
-         * <li>USER: user.</li>
+         * <li>USER: user</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +137,7 @@ public class RevokeDataServiceApiRequest extends TeaModel {
         public String granteeType;
 
         /**
-         * <p>The reason for the request.</p>
+         * <p>The reason for the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

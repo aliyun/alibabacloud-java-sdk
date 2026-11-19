@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "dataphin-public";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dataphin-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -642,8 +645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds specified quality rules to schedule settings.
-     * Release version: v5.4.2.</p>
+     * <p>Binds quality rules to scheduling settings. Available since v5.4.2.</p>
      * 
      * @param tmpReq AssignQualityRuleOfAllRuleScopeSchedulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -691,8 +693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds specified quality rules to schedule settings.
-     * Release version: v5.4.2.</p>
+     * <p>Binds quality rules to scheduling settings. Available since v5.4.2.</p>
      * 
      * @param request AssignQualityRuleOfAllRuleScopeSchedulesRequest
      * @return AssignQualityRuleOfAllRuleScopeSchedulesResponse
@@ -704,7 +705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates knowledge graph entity records in batches. Released in version v6.1.1.</p>
+     * <p>Creates knowledge graph entity records in batches. Available since version v6.1.1.</p>
      * 
      * @param tmpReq BatchCreateKgEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -756,7 +757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates knowledge graph entity records in batches. Released in version v6.1.1.</p>
+     * <p>Creates knowledge graph entity records in batches. Available since version v6.1.1.</p>
      * 
      * @param request BatchCreateKgEntityRequest
      * @return BatchCreateKgEntityResponse
@@ -768,7 +769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates knowledge graph relationship records in batches. Released in version v6.1.1.</p>
+     * <p>Creates knowledge graph relation records in batches. Available since version v6.1.1.</p>
      * 
      * @param tmpReq BatchCreateKgRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -820,7 +821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates knowledge graph relationship records in batches. Released in version v6.1.1.</p>
+     * <p>Creates knowledge graph relation records in batches. Available since version v6.1.1.</p>
      * 
      * @param request BatchCreateKgRelationRequest
      * @return BatchCreateKgRelationResponse
@@ -1710,7 +1711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a data domain.</p>
+     * <p>Creates a business unit.</p>
      * 
      * @param tmpReq CreateBizUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1758,7 +1759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a data domain.</p>
+     * <p>Creates a business unit.</p>
      * 
      * @param request CreateBizUnitRequest
      * @return CreateBizUnitResponse
@@ -1950,7 +1951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a data service API and submits it.</p>
+     * <p>Creates and submits a new data service API.</p>
      * 
      * @param tmpReq CreateDataServiceApiRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1998,7 +1999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a data service API and submits it.</p>
+     * <p>Creates and submits a new data service API.</p>
      * 
      * @param request CreateDataServiceApiRequest
      * @return CreateDataServiceApiResponse
@@ -2126,7 +2127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Data Source: Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permission to perform this operation.</p>
+     * <p>Creates a data source. Only tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators are authorized to perform this operation.</p>
      * 
      * @param tmpReq CreateDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2174,7 +2175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Data Source: Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permission to perform this operation.</p>
+     * <p>Creates a data source. Only tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators are authorized to perform this operation.</p>
      * 
      * @param request CreateDataSourceRequest
      * @return CreateDataSourceResponse
@@ -2334,7 +2335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a menu tree directory. This operation supports features such as compute nodes, data integration, and synchronization tasks.</p>
+     * <p>Creates a menu tree directory to support features such as compute tasks, data integration, and synchronization tasks.</p>
      * 
      * @param tmpReq CreateDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2382,7 +2383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a menu tree directory. This operation supports features such as compute nodes, data integration, and synchronization tasks.</p>
+     * <p>Creates a menu tree directory to support features such as compute tasks, data integration, and synchronization tasks.</p>
      * 
      * @param request CreateDirectoryRequest
      * @return CreateDirectoryResponse
@@ -2394,7 +2395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a knowledge graph entity record. Online version: v6.1.1.</p>
+     * <p>Creates a knowledge graph entity record. Released in version v6.1.1.</p>
      * 
      * @param tmpReq CreateKgEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2446,7 +2447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a knowledge graph entity record. Online version: v6.1.1.</p>
+     * <p>Creates a knowledge graph entity record. Released in version v6.1.1.</p>
      * 
      * @param request CreateKgEntityRequest
      * @return CreateKgEntityResponse
@@ -2458,7 +2459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a knowledge graph relationship record. Online version: v6.1.1.</p>
+     * <p>Creates a knowledge graph relationship record. Available since v6.1.1.</p>
      * 
      * @param tmpReq CreateKgRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2510,7 +2511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a knowledge graph relationship record. Online version: v6.1.1.</p>
+     * <p>Creates a knowledge graph relationship record. Available since v6.1.1.</p>
      * 
      * @param request CreateKgRelationRequest
      * @return CreateKgRelationResponse
@@ -2654,7 +2655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Asynchronously create a pipeline/unstructured workflow.</p>
+     * <p>Asynchronously creates a pipeline or unstructured workflow.</p>
      * 
      * @param tmpReq CreatePipelineByAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2710,7 +2711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Asynchronously create a pipeline/unstructured workflow.</p>
+     * <p>Asynchronously creates a pipeline or unstructured workflow.</p>
      * 
      * @param request CreatePipelineByAsyncRequest
      * @return CreatePipelineByAsyncResponse
@@ -3148,8 +3149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a security identification result.
-     * Release version: v5.4.2.</p>
+     * <p>Creates a security identification result. Available since version 5.4.2.</p>
      * 
      * @param tmpReq CreateSecurityIdentifyResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3197,8 +3197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a security identification result.
-     * Release version: v5.4.2.</p>
+     * <p>Creates a security identification result. Available since version 5.4.2.</p>
      * 
      * @param request CreateSecurityIdentifyResultRequest
      * @return CreateSecurityIdentifyResultResponse
@@ -3390,8 +3389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates standard mapping relationships, including valid mappings and invalid mappings.
-     * Release version: v5.4.2.</p>
+     * <p>Creates standard mapping relationships, including valid and invalid mappings. Release version: v5.4.2.</p>
      * 
      * @param tmpReq CreateStandardMappingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3439,8 +3437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates standard mapping relationships, including valid mappings and invalid mappings.
-     * Release version: v5.4.2.</p>
+     * <p>Creates standard mapping relationships, including valid and invalid mappings. Release version: v5.4.2.</p>
      * 
      * @param request CreateStandardMappingRequest
      * @return CreateStandardMappingResponse
@@ -3452,8 +3449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a standard association relationship.
-     * Online version: v5.4.2.</p>
+     * <p>Creates a standard association. Release version: v5.4.2.</p>
      * 
      * @param tmpReq CreateStandardRelationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3501,8 +3497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a standard association relationship.
-     * Online version: v5.4.2.</p>
+     * <p>Creates a standard association. Release version: v5.4.2.</p>
      * 
      * @param request CreateStandardRelationsRequest
      * @return CreateStandardRelationsResponse
@@ -3514,8 +3509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a standard set.
-     * Available since: v5.4.2.</p>
+     * <p>Creates a standard set. Released in version 5.4.2.</p>
      * 
      * @param tmpReq CreateStandardSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3563,8 +3557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a standard set.
-     * Available since: v5.4.2.</p>
+     * <p>Creates a standard set. Released in version 5.4.2.</p>
      * 
      * @param request CreateStandardSetRequest
      * @return CreateStandardSetResponse
@@ -3756,7 +3749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a user-defined function.</p>
+     * <p>Creates a custom function.</p>
      * 
      * @param tmpReq CreateUdfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3804,7 +3797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a user-defined function.</p>
+     * <p>Creates a custom function.</p>
      * 
      * @param request CreateUdfRequest
      * @return CreateUdfResponse
@@ -3944,7 +3937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an ad hoc query file from the menu tree.</p>
+     * <p>Deletes the ad hoc query file in the menu tree.</p>
      * 
      * @param request DeleteAdHocFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3988,7 +3981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an ad hoc query file from the menu tree.</p>
+     * <p>Deletes the ad hoc query file in the menu tree.</p>
      * 
      * @param request DeleteAdHocFileRequest
      * @return DeleteAdHocFileResponse
@@ -4120,8 +4113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a business metric.
-     * Release version: v5.5.0.</p>
+     * <p>Deletes a business metric. Release version: v5.5.0.</p>
      * 
      * @param tmpReq DeleteBizMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4169,8 +4161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a business metric.
-     * Release version: v5.5.0.</p>
+     * <p>Deletes a business metric. Release version: v5.5.0.</p>
      * 
      * @param request DeleteBizMetricRequest
      * @return DeleteBizMetricResponse
@@ -4182,7 +4173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data domain.</p>
+     * <p>Deletes a data block.</p>
      * 
      * @param request DeleteBizUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4222,7 +4213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data domain.</p>
+     * <p>Deletes a data block.</p>
      * 
      * @param request DeleteBizUnitRequest
      * @return DeleteBizUnitResponse
@@ -4338,7 +4329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a subject domain.</p>
+     * <p>Deletes a subject area.</p>
      * 
      * @param request DeleteDataDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4382,7 +4373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a subject domain.</p>
+     * <p>Deletes a subject area.</p>
      * 
      * @param request DeleteDataDomainRequest
      * @return DeleteDataDomainResponse
@@ -4394,8 +4385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data service application. Only superusers, system administrators, or application owners can perform this operation.
-     * Online version: v6.0.0.</p>
+     * <p>Deletes a data service application. Only super administrators, system administrators, or application owners can perform this operation. Release version: v6.0.0.</p>
      * 
      * @param request DeleteDataServiceAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4435,8 +4425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data service application. Only superusers, system administrators, or application owners can perform this operation.
-     * Online version: v6.0.0.</p>
+     * <p>Deletes a data service application. Only super administrators, system administrators, or application owners can perform this operation. Release version: v6.0.0.</p>
      * 
      * @param request DeleteDataServiceAppRequest
      * @return DeleteDataServiceAppResponse
@@ -4448,8 +4437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data service application group. Only superusers and system administrators can perform this operation.
-     * Online version: v6.0.0.</p>
+     * <p>Deletes a data service application group. Only super administrators and system administrators can perform this operation. Online version: v6.0.0.</p>
      * 
      * @param request DeleteDataServiceAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4489,8 +4477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data service application group. Only superusers and system administrators can perform this operation.
-     * Online version: v6.0.0.</p>
+     * <p>Deletes a data service application group. Only super administrators and system administrators can perform this operation. Online version: v6.0.0.</p>
      * 
      * @param request DeleteDataServiceAppGroupRequest
      * @return DeleteDataServiceAppGroupResponse
@@ -4618,7 +4605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a file directory from the menu tree.</p>
+     * <p>Deletes a folder in the menu tree.</p>
      * 
      * @param request DeleteDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4662,7 +4649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a file directory from the menu tree.</p>
+     * <p>Deletes a folder in the menu tree.</p>
      * 
      * @param request DeleteDirectoryRequest
      * @return DeleteDirectoryResponse
@@ -4674,7 +4661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an entity record. Online version: v6.1.1.</p>
+     * <p>Deletes an entity record. Available since version 6.1.1.</p>
      * 
      * @param request DeleteKgEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4722,7 +4709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an entity record. Online version: v6.1.1.</p>
+     * <p>Deletes an entity record. Available since version 6.1.1.</p>
      * 
      * @param request DeleteKgEntityRequest
      * @return DeleteKgEntityResponse
@@ -5086,7 +5073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes registered data lineage. Available since v5.4.0.</p>
+     * <p>Deletes registered lineage. Available since version 5.4.0.</p>
      * 
      * @param tmpReq DeleteRegisterLineageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5134,7 +5121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes registered data lineage. Available since v5.4.0.</p>
+     * <p>Deletes registered lineage. Available since version 5.4.0.</p>
      * 
      * @param request DeleteRegisterLineageRequest
      * @return DeleteRegisterLineageResponse
@@ -5446,7 +5433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data classification level. Available since v5.4.2.</p>
+     * <p>Deletes a data classification level. Released in version 5.4.2.</p>
      * 
      * @param tmpReq DeleteSecurityLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5494,7 +5481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data classification level. Available since v5.4.2.</p>
+     * <p>Deletes a data classification level. Released in version 5.4.2.</p>
      * 
      * @param request DeleteSecurityLevelRequest
      * @return DeleteSecurityLevelResponse
@@ -5738,8 +5725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a standard set.
-     * Online version: v5.4.2.</p>
+     * <p>Deletes a standard set. Release version: v5.4.2.</p>
      * 
      * @param request DeleteStandardSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5779,8 +5765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a standard set.
-     * Online version: v5.4.2.</p>
+     * <p>Deletes a standard set. Release version: v5.4.2.</p>
      * 
      * @param request DeleteStandardSetRequest
      * @return DeleteStandardSetResponse
@@ -5852,8 +5837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data standard root word.
-     * Online version: v5.4.2.</p>
+     * <p>Deletes a data standard word root. Release version: v5.4.2.</p>
      * 
      * @param request DeleteStandardWordRootRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5893,8 +5877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data standard root word.
-     * Online version: v5.4.2.</p>
+     * <p>Deletes a data standard word root. Release version: v5.4.2.</p>
      * 
      * @param request DeleteStandardWordRootRequest
      * @return DeleteStandardWordRootResponse
@@ -6018,7 +6001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a custom Cypher query. Online version: v6.2.0.</p>
+     * <p>Executes a custom Cypher query. Available since v6.2.0.</p>
      * 
      * @param tmpReq ExecKgCypherRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6070,7 +6053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a custom Cypher query. Online version: v6.2.0.</p>
+     * <p>Executes a custom Cypher query. Available since v6.2.0.</p>
      * 
      * @param request ExecKgCypherRequest
      * @return ExecKgCypherResponse
@@ -6402,7 +6385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports knowledge graph metadata definitions. Online version: v6.1.1.</p>
+     * <p>Exports the metadata definition of a knowledge graph. Release version: v6.1.1.</p>
      * 
      * @param request ExportKgSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6450,7 +6433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports knowledge graph metadata definitions. Online version: v6.1.1.</p>
+     * <p>Exports the metadata definition of a knowledge graph. Release version: v6.1.1.</p>
      * 
      * @param request ExportKgSchemaRequest
      * @return ExportKgSchemaResponse
@@ -6462,7 +6445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reruns downstream nodes to fix data link issues. Supports forced rerun of downstream nodes. Impact: incurs compute costs and affects data output.</p>
+     * <p>Reruns downstream nodes to repair pipeline data. Supports forced reruns. Impact: incurs computing costs and affects data output.</p>
      * 
      * @param tmpReq FixDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6514,7 +6497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reruns downstream nodes to fix data link issues. Supports forced rerun of downstream nodes. Impact: incurs compute costs and affects data output.</p>
+     * <p>Reruns downstream nodes to repair pipeline data. Supports forced reruns. Impact: incurs computing costs and affects data output.</p>
      * 
      * @param request FixDataRequest
      * @return FixDataResponse
@@ -6586,7 +6569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a custom query file in the directory tree.</p>
+     * <p>Queries ad hoc query files in the directory tree.</p>
      * 
      * @param request GetAdHocFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6630,7 +6613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a custom query file in the directory tree.</p>
+     * <p>Queries ad hoc query files in the directory tree.</p>
      * 
      * @param request GetAdHocFileRequest
      * @return GetAdHocFileResponse
@@ -6930,7 +6913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the mapping relationships based on the asset object GUID. Released in version 5.4.2.</p>
+     * <p>Queries the mapping relationships based on the asset object GUID. Release version: v5.4.2.</p>
      * 
      * @param tmpReq GetAssetMappingRelationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6978,7 +6961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the mapping relationships based on the asset object GUID. Released in version 5.4.2.</p>
+     * <p>Queries the mapping relationships based on the asset object GUID. Release version: v5.4.2.</p>
      * 
      * @param request GetAssetMappingRelationsRequest
      * @return GetAssetMappingRelationsResponse
@@ -7278,7 +7261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the versions of a specified offline template. Available since v6.2.0.</p>
+     * <p>Retrieves the version list for a specified offline template ID. Available since version: v6.2.0.</p>
      * 
      * @param request GetBatchTemplateVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7326,7 +7309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the versions of a specified offline template. Available since v6.2.0.</p>
+     * <p>Retrieves the version list for a specified offline template ID. Available since version: v6.2.0.</p>
      * 
      * @param request GetBatchTemplateVersionsRequest
      * @return GetBatchTemplateVersionsResponse
@@ -7338,7 +7321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the mapping relationships based on the GUID of the owning asset. Released in v5.4.2.</p>
+     * <p>Queries the mapping relationships based on the GUID of the parent asset. Released in version 5.4.2.</p>
      * 
      * @param tmpReq GetBelongAssetMappingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7386,7 +7369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the mapping relationships based on the GUID of the owning asset. Released in v5.4.2.</p>
+     * <p>Queries the mapping relationships based on the GUID of the parent asset. Released in version 5.4.2.</p>
      * 
      * @param request GetBelongAssetMappingRequest
      * @return GetBelongAssetMappingResponse
@@ -7454,7 +7437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a business entity of a specified version.</p>
+     * <p>Queries the details of a specific version of a business entity.</p>
      * 
      * @param request GetBizEntityInfoByVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7502,7 +7485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a business entity of a specified version.</p>
+     * <p>Queries the details of a specific version of a business entity.</p>
      * 
      * @param request GetBizEntityInfoByVersionRequest
      * @return GetBizEntityInfoByVersionResponse
@@ -7626,7 +7609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries asset details. Online version: v6.1.0.</p>
+     * <p>Queries asset details. Release version: v6.1.0.</p>
      * 
      * @param tmpReq GetCatalogAssetDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7674,7 +7657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries asset details. Online version: v6.1.0.</p>
+     * <p>Queries asset details. Release version: v6.1.0.</p>
      * 
      * @param request GetCatalogAssetDetailsRequest
      * @return GetCatalogAssetDetailsResponse
@@ -7686,10 +7669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the latest status and error message of a data source connectivity check task by task ID. This operation is used to poll the asynchronous task returned by CheckDataSourceConnectivityOnResourceGroup. If the task does not exist, Data is empty.</p>
+     * <p>Queries the latest status and fault message of a data source connectivity check node by node ID. This operation is used to poll the asynchronous task returned by CheckDataSourceConnectivityOnResourceGroup. If the node does not exist, Data is empty.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a data source connectivity check task by task ID. Available since version 6.3.2.</p>
+     * <p>Queries a data source connectivity check task by task ID. Release version: v6.3.2.</p>
      * 
      * @param request GetCheckConnectivityJobByJobIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7729,10 +7712,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the latest status and error message of a data source connectivity check task by task ID. This operation is used to poll the asynchronous task returned by CheckDataSourceConnectivityOnResourceGroup. If the task does not exist, Data is empty.</p>
+     * <p>Queries the latest status and fault message of a data source connectivity check node by node ID. This operation is used to poll the asynchronous task returned by CheckDataSourceConnectivityOnResourceGroup. If the node does not exist, Data is empty.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a data source connectivity check task by task ID. Available since version 6.3.2.</p>
+     * <p>Queries a data source connectivity check task by task ID. Release version: v6.3.2.</p>
      * 
      * @param request GetCheckConnectivityJobByJobIdRequest
      * @return GetCheckConnectivityJobByJobIdResponse
@@ -7744,10 +7727,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
+     * <p>Queries the details of tested connectivity tasks for a data source ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of connectivity check tasks based on the specified data source ID, including null value validation and tenant permission verification to prevent cross-tenant access. Release version: v5.5.0.</p>
+     * <p>Queries the connectivity check tasks for a specified data source ID. Includes null value validation and tenant permission verification to prevent cross-tenant access. Release version: v5.5.0.</p>
      * 
      * @param request GetCheckConnectivityJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7787,10 +7770,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
+     * <p>Queries the details of tested connectivity tasks for a data source ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of connectivity check tasks based on the specified data source ID, including null value validation and tenant permission verification to prevent cross-tenant access. Release version: v5.5.0.</p>
+     * <p>Queries the connectivity check tasks for a specified data source ID. Includes null value validation and tenant permission verification to prevent cross-tenant access. Release version: v5.5.0.</p>
      * 
      * @param request GetCheckConnectivityJobsRequest
      * @return GetCheckConnectivityJobsResponse
@@ -7862,10 +7845,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a tested connectivity task based on the datasource ID.</p>
+     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries cluster details. Available since v6.3.0.</p>
+     * <p>Queries the details of a cluster. Available since version 6.3.0.</p>
      * 
      * @param request GetComputeClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7905,10 +7888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a tested connectivity task based on the datasource ID.</p>
+     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries cluster details. Available since v6.3.0.</p>
+     * <p>Queries the details of a cluster. Available since version 6.3.0.</p>
      * 
      * @param request GetComputeClusterRequest
      * @return GetComputeClusterResponse
@@ -7972,10 +7955,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a Query Governance object by governance item ID.</p>
+     * <p>Queries the details of a governance object based on the Query Governance project ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified quality watchtask by governance item ID. Online version: v6.3.0.</p>
+     * <p>Retrieves the details of a specified issue checklist object based on the governance item ID. Available since v6.3.0.</p>
      * 
      * @param tmpReq GetDataAssetsGovernObjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8023,10 +8006,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a Query Governance object by governance item ID.</p>
+     * <p>Queries the details of a governance object based on the Query Governance project ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified quality watchtask by governance item ID. Online version: v6.3.0.</p>
+     * <p>Retrieves the details of a specified issue checklist object based on the governance item ID. Available since v6.3.0.</p>
      * 
      * @param request GetDataAssetsGovernObjectRequest
      * @return GetDataAssetsGovernObjectResponse
@@ -8150,7 +8133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Service Monitoring: Analyzes API access trends.</p>
+     * <p>Queries the API access trend analysis for Service Monitoring.</p>
      * 
      * @param request GetDataServiceApiCallTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8198,7 +8181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Service Monitoring: Analyzes API access trends.</p>
+     * <p>Queries the API access trend analysis for Service Monitoring.</p>
      * 
      * @param request GetDataServiceApiCallTrendRequest
      * @return GetDataServiceApiCallTrendResponse
@@ -8326,7 +8309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of API groups in Data Service.</p>
+     * <p>Queries the list of data service API groups.</p>
      * 
      * @param request GetDataServiceApiGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8366,7 +8349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of API groups in Data Service.</p>
+     * <p>Queries the list of data service API groups.</p>
      * 
      * @param request GetDataServiceApiGroupsRequest
      * @return GetDataServiceApiGroupsResponse
@@ -8486,7 +8469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of application groups for a data service project.</p>
+     * <p>Queries the list of application groups in a data service project.</p>
      * 
      * @param request GetDataServiceAppGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8526,7 +8509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of application groups for a data service project.</p>
+     * <p>Queries the list of application groups in a data service project.</p>
      * 
      * @param request GetDataServiceAppGroupsRequest
      * @return GetDataServiceAppGroupsResponse
@@ -8538,8 +8521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the member list of a data service application, including regular members and owners. Only application owners can call this operation.
-     * Online version: v6.0.0.</p>
+     * <p>Queries the members of a data service application, including regular members and owners. Only application owners can perform this query. Available since v6.0.0.</p>
      * 
      * @param request GetDataServiceAppMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8579,8 +8561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the member list of a data service application, including regular members and owners. Only application owners can call this operation.
-     * Online version: v6.0.0.</p>
+     * <p>Queries the members of a data service application, including regular members and owners. Only application owners can perform this query. Available since v6.0.0.</p>
      * 
      * @param request GetDataServiceAppMembersRequest
      * @return GetDataServiceAppMembersResponse
@@ -8648,7 +8629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of applications that the account has permissions to access based on the app group ID.</p>
+     * <p>Queries the applications that the account has permissions to access based on the application group ID.</p>
      * 
      * @param request GetDataServiceAuthorizedAppsByGroupIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8692,7 +8673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of applications that the account has permissions to access based on the app group ID.</p>
+     * <p>Queries the applications that the account has permissions to access based on the application group ID.</p>
      * 
      * @param request GetDataServiceAuthorizedAppsByGroupIdRequest
      * @return GetDataServiceAuthorizedAppsByGroupIdResponse
@@ -8704,7 +8685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of projects that the user has access to.</p>
+     * <p>Queries the list of projects that the user is authorized to access.</p>
      * 
      * @param request GetDataServiceAuthorizedProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8740,7 +8721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of projects that the user has access to.</p>
+     * <p>Queries the list of projects that the user is authorized to access.</p>
      * 
      * @param request GetDataServiceAuthorizedProjectsRequest
      * @return GetDataServiceAuthorizedProjectsResponse
@@ -8752,7 +8733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of projects for which the current user is the owner.</p>
+     * <p>Retrieves the list of projects where the current user is the owner.</p>
      * 
      * @param request GetDataServiceMyProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8788,7 +8769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of projects for which the current user is the owner.</p>
+     * <p>Retrieves the list of projects where the current user is the owner.</p>
      * 
      * @param request GetDataServiceMyProjectsRequest
      * @return GetDataServiceMyProjectsResponse
@@ -8904,7 +8885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a tested connectivity task based on the data source ID.</p>
+     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a dataset. Release version: v6.2.0.</p>
@@ -8951,7 +8932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a tested connectivity task based on the data source ID.</p>
+     * <p>Queries the details of tested connectivity tasks based on the data source ID.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a dataset. Release version: v6.2.0.</p>
@@ -9086,7 +9067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves temporary read and write authorization for file storage.</p>
+     * <p>Obtains temporary read and write authorization for file storage.</p>
      * 
      * @param request GetFileStorageCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9134,7 +9115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves temporary read and write authorization for file storage.</p>
+     * <p>Obtains temporary read and write authorization for file storage.</p>
      * 
      * @param request GetFileStorageCredentialRequest
      * @return GetFileStorageCredentialResponse
@@ -9216,7 +9197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the downstream instances of a specified instance.</p>
+     * <p>Queries the downstream instances of a specified starting instance.</p>
      * 
      * @param tmpReq GetInstanceDownStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9276,7 +9257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the downstream instances of a specified instance.</p>
+     * <p>Queries the downstream instances of a specified starting instance.</p>
      * 
      * @param request GetInstanceDownStreamRequest
      * @return GetInstanceDownStreamResponse
@@ -9472,7 +9453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves neighbor nodes of a graph model entity. Online version: v6.2.0.</p>
+     * <p>Retrieves the neighbor nodes of a graph model. Available since version v6.2.0.</p>
      * 
      * @param tmpReq GetKgNeighborRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9532,7 +9513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves neighbor nodes of a graph model entity. Online version: v6.2.0.</p>
+     * <p>Retrieves the neighbor nodes of a graph model. Available since version v6.2.0.</p>
      * 
      * @param request GetKgNeighborRequest
      * @return GetKgNeighborResponse
@@ -9544,7 +9525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a knowledge graph relation record. Released in version v6.1.1.</p>
+     * <p>Retrieves the details of a knowledge graph relation record. Available since version 6.1.1.</p>
      * 
      * @param request GetKgRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9592,7 +9573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a knowledge graph relation record. Released in version v6.1.1.</p>
+     * <p>Retrieves the details of a knowledge graph relation record. Available since version 6.1.1.</p>
      * 
      * @param request GetKgRelationRequest
      * @return GetKgRelationResponse
@@ -9720,7 +9701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a specific large language model service provider and available models by name. Online version: v6.3.0.</p>
+     * <p>Queries specific large model service providers and available models by name. Release version: v6.3.0.</p>
      * 
      * @param request GetLlmModelProviderByNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9760,7 +9741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a specific large language model service provider and available models by name. Online version: v6.3.0.</p>
+     * <p>Queries specific large model service providers and available models by name. Release version: v6.3.0.</p>
      * 
      * @param request GetLlmModelProviderByNameRequest
      * @return GetLlmModelProviderByNameResponse
@@ -10928,7 +10909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves alert settings by monitored object ID. Release version: v5.4.2.</p>
+     * <p>Retrieves the alert configuration by monitored object ID. Available in version 5.4.2.</p>
      * 
      * @param request GetQualityAlertOfAllRuleScopeByWatchIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10968,7 +10949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves alert settings by monitored object ID. Release version: v5.4.2.</p>
+     * <p>Retrieves the alert configuration by monitored object ID. Available in version 5.4.2.</p>
      * 
      * @param request GetQualityAlertOfAllRuleScopeByWatchIdRequest
      * @return GetQualityAlertOfAllRuleScopeByWatchIdResponse
@@ -10980,7 +10961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution progress and result of an asynchronous task for creating or updating an archived table by progress ID. Available since v6.3.0.</p>
+     * <p>Queries the execution progress and results of an asynchronous task for creating or modifying an exception archive table based on the progress ID. Release version: v6.3.0.</p>
      * 
      * @param request GetQualityArchiveTableProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11020,7 +11001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution progress and result of an asynchronous task for creating or updating an archived table by progress ID. Available since v6.3.0.</p>
+     * <p>Queries the execution progress and results of an asynchronous task for creating or modifying an exception archive table based on the progress ID. Release version: v6.3.0.</p>
      * 
      * @param request GetQualityArchiveTableProgressRequest
      * @return GetQualityArchiveTableProgressResponse
@@ -11032,7 +11013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the quality rule object. Release version: v5.4.2.</p>
+     * <p>Retrieves a quality rule object. Released in version v5.4.2.</p>
      * 
      * @param request GetQualityRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11072,7 +11053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the quality rule object. Release version: v5.4.2.</p>
+     * <p>Retrieves a quality rule object. Released in version v5.4.2.</p>
      * 
      * @param request GetQualityRuleRequest
      * @return GetQualityRuleResponse
@@ -11084,7 +11065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a quality task object. Released in version 5.4.2.</p>
+     * <p>Retrieves the details of a quality task object. Released in v5.4.2.</p>
      * 
      * @param request GetQualityRuleTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11124,7 +11105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a quality task object. Released in version 5.4.2.</p>
+     * <p>Retrieves the details of a quality task object. Released in v5.4.2.</p>
      * 
      * @param request GetQualityRuleTaskRequest
      * @return GetQualityRuleTaskResponse
@@ -11136,8 +11117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the log content of a quality node task object.
-     * Online version: v5.4.2.</p>
+     * <p>Retrieves the log content of a quality task object. Released in v5.4.2.</p>
      * 
      * @param request GetQualityRuleTaskLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11177,8 +11157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the log content of a quality node task object.
-     * Online version: v5.4.2.</p>
+     * <p>Retrieves the log content of a quality task object. Released in v5.4.2.</p>
      * 
      * @param request GetQualityRuleTaskLogRequest
      * @return GetQualityRuleTaskLogResponse
@@ -11190,7 +11169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the quality scheduling object. Available since v5.4.2.</p>
+     * <p>Retrieves a quality schedule object. Released in version 5.4.2.</p>
      * 
      * @param request GetQualityScheduleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11230,7 +11209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the quality scheduling object. Available since v5.4.2.</p>
+     * <p>Retrieves a quality schedule object. Released in version 5.4.2.</p>
      * 
      * @param request GetQualityScheduleRequest
      * @return GetQualityScheduleResponse
@@ -11242,7 +11221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of scheduling settings by monitored object ID. Available since v5.4.2.</p>
+     * <p>Retrieves the list of scheduling settings by monitored object ID. Release version: v5.4.2.</p>
      * 
      * @param request GetQualitySchedulesByWatchIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11282,7 +11261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of scheduling settings by monitored object ID. Available since v5.4.2.</p>
+     * <p>Retrieves the list of scheduling settings by monitored object ID. Release version: v5.4.2.</p>
      * 
      * @param request GetQualitySchedulesByWatchIdRequest
      * @return GetQualitySchedulesByWatchIdResponse
@@ -11294,7 +11273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a quality template object. Released in version 5.4.2.</p>
+     * <p>Retrieves a quality template object. Released in version v5.4.2.</p>
      * 
      * @param request GetQualityTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11334,7 +11313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a quality template object. Released in version 5.4.2.</p>
+     * <p>Retrieves a quality template object. Released in version v5.4.2.</p>
      * 
      * @param request GetQualityTemplateRequest
      * @return GetQualityTemplateResponse
@@ -11400,7 +11379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a data source, table, or metric. Release version: v5.4.2.</p>
+     * <p>Retrieves quality watchtask records by the original ID of the monitored object, such as a data source ID, table ID, or metric ID. Released in version v5.4.2.</p>
      * 
      * @param request GetQualityWatchByObjectIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11444,7 +11423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a data source, table, or metric. Release version: v5.4.2.</p>
+     * <p>Retrieves quality watchtask records by the original ID of the monitored object, such as a data source ID, table ID, or metric ID. Released in version v5.4.2.</p>
      * 
      * @param request GetQualityWatchByObjectIdRequest
      * @return GetQualityWatchByObjectIdResponse
@@ -11508,8 +11487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the log content of a monitoring task object.
-     * Online version: v5.4.2.</p>
+     * <p>Retrieves the log content of the monitoring task object. Released in v5.4.2.</p>
      * 
      * @param request GetQualityWatchTaskLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11549,8 +11527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the log content of a monitoring task object.
-     * Online version: v5.4.2.</p>
+     * <p>Retrieves the log content of the monitoring task object. Released in v5.4.2.</p>
      * 
      * @param request GetQualityWatchTaskLogRequest
      * @return GetQualityWatchTaskLogResponse
@@ -11866,7 +11843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a data classification. Release version: v5.4.2.</p>
+     * <p>Queries the details of a data classification. Release version: v5.4.2.</p>
      * 
      * @param request GetSecurityClassifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11906,7 +11883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a data classification. Release version: v5.4.2.</p>
+     * <p>Queries the details of a data classification. Release version: v5.4.2.</p>
      * 
      * @param request GetSecurityClassifyRequest
      * @return GetSecurityClassifyResponse
@@ -11918,7 +11895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a recognition result. Release version: v5.4.2.</p>
+     * <p>Retrieves the details of the recognition result. Release version: v5.4.2.</p>
      * 
      * @param request GetSecurityIdentifyResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11958,7 +11935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a recognition result. Release version: v5.4.2.</p>
+     * <p>Retrieves the details of the recognition result. Release version: v5.4.2.</p>
      * 
      * @param request GetSecurityIdentifyResultRequest
      * @return GetSecurityIdentifyResultResponse
@@ -11970,7 +11947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a data classification level. Available since v5.4.2.</p>
+     * <p>Retrieves the details of a data classification level. Release version: v5.4.2.</p>
      * 
      * @param request GetSecurityLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12010,7 +11987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a data classification level. Available since v5.4.2.</p>
+     * <p>Retrieves the details of a data classification level. Release version: v5.4.2.</p>
      * 
      * @param request GetSecurityLevelRequest
      * @return GetSecurityLevelResponse
@@ -12022,7 +11999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a key value by key name. Online version: v5.4.2.</p>
+     * <p>Retrieves the value of a key by its name. Available since v5.4.2.</p>
      * 
      * @param request GetSecuritySecretKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12062,7 +12039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a key value by key name. Online version: v5.4.2.</p>
+     * <p>Retrieves the value of a key by its name. Available since v5.4.2.</p>
      * 
      * @param request GetSecuritySecretKeyRequest
      * @return GetSecuritySecretKeyResponse
@@ -12316,7 +12293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a data standard lookup table. Released in version 5.4.2.</p>
+     * <p>Retrieves the details of a data standard lookup table. Available in v5.4.2 and later.</p>
      * 
      * @param request GetStandardLookupTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12360,7 +12337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a data standard lookup table. Released in version 5.4.2.</p>
+     * <p>Retrieves the details of a data standard lookup table. Available in v5.4.2 and later.</p>
      * 
      * @param request GetStandardLookupTableRequest
      * @return GetStandardLookupTableResponse
@@ -12558,7 +12535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a data standard word root. Release version: v5.4.2.</p>
+     * <p>Retrieves the details of a data standard word root. Released in v5.4.2.</p>
      * 
      * @param request GetStandardWordRootRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12602,7 +12579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a data standard word root. Release version: v5.4.2.</p>
+     * <p>Retrieves the details of a data standard word root. Released in v5.4.2.</p>
      * 
      * @param request GetStandardWordRootRequest
      * @return GetStandardWordRootResponse
@@ -12614,7 +12591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of real-time development nodes.</p>
+     * <p>Queries a list of real-time development tasks.</p>
      * 
      * @param request GetStreamJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12658,7 +12635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of real-time development nodes.</p>
+     * <p>Queries a list of real-time development tasks.</p>
      * 
      * @param request GetStreamJobsRequest
      * @return GetStreamJobsResponse
@@ -12868,7 +12845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves dagrun information for all business dates of a data backfill instance workflow.</p>
+     * <p>Retrieves the dagrun information for all business dates of a data backfill workflow.</p>
      * 
      * @param request GetSupplementDagrunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12912,7 +12889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves dagrun information for all business dates of a data backfill instance workflow.</p>
+     * <p>Retrieves the dagrun information for all business dates of a data backfill workflow.</p>
      * 
      * @param request GetSupplementDagrunRequest
      * @return GetSupplementDagrunResponse
@@ -12980,7 +12957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a table asset inventory. Release version: v6.3.2.</p>
+     * <p>Queries the details of the table asset inventory. Released in version 6.3.2.</p>
      * 
      * @param request GetTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13020,7 +12997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a table asset inventory. Release version: v6.3.2.</p>
+     * <p>Queries the details of the table asset inventory. Released in version 6.3.2.</p>
      * 
      * @param request GetTableRequest
      * @return GetTableResponse
@@ -13032,7 +13009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries table column lineage information.</p>
+     * <p>Queries the column lineage information of tables.</p>
      * 
      * @param tmpReq GetTableColumnLineageByTaskIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13080,7 +13057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries table column lineage information.</p>
+     * <p>Queries the column lineage information of tables.</p>
      * 
      * @param request GetTableColumnLineageByTaskIdRequest
      * @return GetTableColumnLineageByTaskIdResponse
@@ -13092,8 +13069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the column-level data lineage of an asset table.
-     * Online version: v5.4.2.</p>
+     * <p>Queries the lineage information of asset table fields. Release version: v5.4.2.</p>
      * 
      * @param tmpReq GetTableColumnLineagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13145,8 +13121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the column-level data lineage of an asset table.
-     * Online version: v5.4.2.</p>
+     * <p>Queries the lineage information of asset table fields. Release version: v5.4.2.</p>
      * 
      * @param request GetTableColumnLineagesRequest
      * @return GetTableColumnLineagesResponse
@@ -13278,8 +13253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries lineage information of an asset table.
-     * Release version: v5.4.2.</p>
+     * <p>Queries the lineage information of asset tables. Available since v5.4.2.</p>
      * 
      * @param tmpReq GetTableLineagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13331,8 +13305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries lineage information of an asset table.
-     * Release version: v5.4.2.</p>
+     * <p>Queries the lineage information of asset tables. Available since v5.4.2.</p>
      * 
      * @param request GetTableLineagesRequest
      * @return GetTableLineagesResponse
@@ -13344,7 +13317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the progress of a transfer task by transfer task ID.</p>
+     * <p>Queries the progress of a transfer task based on the transfer task ID.</p>
      * 
      * @param request GetTransferInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13384,7 +13357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the progress of a transfer task by transfer task ID.</p>
+     * <p>Queries the progress of a transfer task based on the transfer task ID.</p>
      * 
      * @param request GetTransferInfoRequest
      * @return GetTransferInfoResponse
@@ -13396,7 +13369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a user-defined function.</p>
+     * <p>Retrieves the details of a custom function.</p>
      * 
      * @param request GetUdfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13440,7 +13413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a user-defined function.</p>
+     * <p>Retrieves the details of a custom function.</p>
      * 
      * @param request GetUdfRequest
      * @return GetUdfResponse
@@ -13512,7 +13485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the current user information based on the AK/SK used for request signing. Available since version v6.3.0.</p>
+     * <p>Retrieves the current user information based on the AccessKey ID and AccessKey secret used for request signing. Released in version 6.3.0.</p>
      * 
      * @param request GetUserByAccessKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13548,7 +13521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the current user information based on the AK/SK used for request signing. Available since version v6.3.0.</p>
+     * <p>Retrieves the current user information based on the AccessKey ID and AccessKey secret used for request signing. Released in version 6.3.0.</p>
      * 
      * @param request GetUserByAccessKeyRequest
      * @return GetUserByAccessKeyResponse
@@ -13668,7 +13641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves user information in batches by user ID.</p>
+     * <p>Retrieves user information in batches based on user IDs.</p>
      * 
      * @param tmpReq GetUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13716,7 +13689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves user information in batches by user ID.</p>
+     * <p>Retrieves user information in batches based on user IDs.</p>
      * 
      * @param request GetUsersRequest
      * @return GetUsersResponse
@@ -14024,7 +13997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a conditional query to list multiple alerting events.</p>
+     * <p>Queries multiple alerting events based on a conditional query.</p>
      * 
      * @param tmpReq ListAlertEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14072,7 +14045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a conditional query to list multiple alerting events.</p>
+     * <p>Queries multiple alerting events based on a conditional query.</p>
      * 
      * @param request ListAlertEventsRequest
      * @return ListAlertEventsResponse
@@ -14084,7 +14057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a conditional query to list multiple push records.</p>
+     * <p>Queries multiple push records based on conditions.</p>
      * 
      * @param tmpReq ListAlertNotificationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14132,7 +14105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a conditional query to list multiple push records.</p>
+     * <p>Queries multiple push records based on conditions.</p>
      * 
      * @param request ListAlertNotificationsRequest
      * @return ListAlertNotificationsResponse
@@ -14518,7 +14491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on offline computing templates. Released in version v6.2.0.</p>
+     * <p>Queries offline computing templates by paging. Online version: v6.2.0.</p>
      * 
      * @param tmpReq ListBatchTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14574,7 +14547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on offline computing templates. Released in version v6.2.0.</p>
+     * <p>Queries offline computing templates by paging. Online version: v6.2.0.</p>
      * 
      * @param request ListBatchTemplatesRequest
      * @return ListBatchTemplatesResponse
@@ -14828,7 +14801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of compute sources.</p>
+     * <p>Queries a list of compute sources.</p>
      * 
      * @param tmpReq ListComputeSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14876,7 +14849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of compute sources.</p>
+     * <p>Queries a list of compute sources.</p>
      * 
      * @param request ListComputeSourcesRequest
      * @return ListComputeSourcesResponse
@@ -14888,7 +14861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of data domains.</p>
+     * <p>Queries the list of data domains.</p>
      * 
      * @param tmpReq ListDataDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14936,7 +14909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of data domains.</p>
+     * <p>Queries the list of data domains.</p>
      * 
      * @param request ListDataDomainsRequest
      * @return ListDataDomainsResponse
@@ -15076,7 +15049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Operations analysis: analyzes the impact of abnormal API calls.</p>
+     * <p>Analyzes the impact of API call exceptions for operations and maintenance.</p>
      * 
      * @param tmpReq ListDataServiceApiImpactsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15128,7 +15101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Operations analysis: analyzes the impact of abnormal API calls.</p>
+     * <p>Analyzes the impact of API call exceptions for operations and maintenance.</p>
      * 
      * @param request ListDataServiceApiImpactsRequest
      * @return ListDataServiceApiImpactsResponse
@@ -15140,8 +15113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of all applications under a data service tenant. All tenant members can perform this operation.
-     * Release version: v6.0.0.</p>
+     * <p>Queries all applications under a data service tenant. All tenant members can perform this operation. Available since v6.0.0.</p>
      * 
      * @param tmpReq ListDataServiceAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15189,8 +15161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of all applications under a data service tenant. All tenant members can perform this operation.
-     * Release version: v6.0.0.</p>
+     * <p>Queries all applications under a data service tenant. All tenant members can perform this operation. Available since v6.0.0.</p>
      * 
      * @param request ListDataServiceAppsRequest
      * @return ListDataServiceAppsResponse
@@ -15202,7 +15173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of applications that the current user has permissions to access.</p>
+     * <p>Queries the applications that the current user is authorized to access.</p>
      * 
      * @param tmpReq ListDataServiceAuthorizedAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15254,7 +15225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of applications that the current user has permissions to access.</p>
+     * <p>Queries the applications that the current user is authorized to access.</p>
      * 
      * @param request ListDataServiceAuthorizedAppsRequest
      * @return ListDataServiceAuthorizedAppsResponse
@@ -15266,7 +15237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the list of API permissions managed by me.</p>
+     * <p>Retrieves the list of API permissions managed by the current user.</p>
      * 
      * @param tmpReq ListDataServiceMyApiPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15318,7 +15289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the list of API permissions managed by me.</p>
+     * <p>Retrieves the list of API permissions managed by the current user.</p>
      * 
      * @param request ListDataServiceMyApiPermissionsRequest
      * @return ListDataServiceMyApiPermissionsResponse
@@ -15394,7 +15365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of published APIs by page.</p>
+     * <p>Performs a paging query on the list of published APIs.</p>
      * 
      * @param tmpReq ListDataServicePublishedApisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15446,7 +15417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of published APIs by page.</p>
+     * <p>Performs a paging query on the list of published APIs.</p>
      * 
      * @param request ListDataServicePublishedApisRequest
      * @return ListDataServicePublishedApisResponse
@@ -15519,10 +15490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query, and the returned packet includes the basic information of the datasets and their version details. Note that ProjectId is required, while other parameters are options that you can configure in Settings as needed to filter the results.</p>
+     * <p>This API allows you to retrieve dataset information in a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query. The returned data packets include the basic information of the datasets and their version details. Note that <code>ProjectId</code> is required, while other parameters are options, and you can configure the Settings as needed to filter the results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a conditional query to retrieve a list of datasets in a project. Online version: v6.2.0.</p>
+     * <p>Performs a conditional query to retrieve the list of datasets in a project. Online version: v6.2.0.</p>
      * 
      * @param tmpReq ListDatasetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15571,10 +15542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query, and the returned packet includes the basic information of the datasets and their version details. Note that ProjectId is required, while other parameters are options that you can configure in Settings as needed to filter the results.</p>
+     * <p>This API allows you to retrieve dataset information in a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query. The returned data packets include the basic information of the datasets and their version details. Note that <code>ProjectId</code> is required, while other parameters are options, and you can configure the Settings as needed to filter the results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a conditional query to retrieve a list of datasets in a project. Online version: v6.2.0.</p>
+     * <p>Performs a conditional query to retrieve the list of datasets in a project. Online version: v6.2.0.</p>
      * 
      * @param request ListDatasetsRequest
      * @return ListDatasetsResponse
@@ -15586,7 +15557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the directory tree file list.</p>
+     * <p>Queries the list of files in a directory tree.</p>
      * 
      * @param tmpReq ListFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15634,7 +15605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the directory tree file list.</p>
+     * <p>Queries the list of files in a directory tree.</p>
      * 
      * @param request ListFilesRequest
      * @return ListFilesResponse
@@ -15646,11 +15617,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation allows you to retrieve dataset information under a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. Note that <code>ProjectId</code> is required, while other parameters are options that can be configured as needed to filter results.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other options such as keywords and type lists. It supports paging and paged query. The returned data packet includes the basic information and version details of the datasets. Note that <code>ProjectId</code> is required. Other parameters are options and can be configured in Settings to filter the results as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of governance objects based on governance type and filter conditions. Released in v6.3.0.</p>
+     * <p>Queries the issue list based on governance types and filter conditions. Available since v6.3.0.</p>
      * 
      * @param tmpReq ListGovernObjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15698,11 +15669,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation allows you to retrieve dataset information under a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. Note that <code>ProjectId</code> is required, while other parameters are options that can be configured as needed to filter results.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other options such as keywords and type lists. It supports paging and paged query. The returned data packet includes the basic information and version details of the datasets. Note that <code>ProjectId</code> is required. Other parameters are options and can be configured in Settings to filter the results as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of governance objects based on governance type and filter conditions. Released in v6.3.0.</p>
+     * <p>Queries the issue list based on governance types and filter conditions. Available since v6.3.0.</p>
      * 
      * @param request ListGovernObjectsRequest
      * @return ListGovernObjectsResponse
@@ -15778,7 +15749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of custom Kubernetes resource groups under a tenant. Released in version 6.4.0.</p>
+     * <p>Retrieves the list of custom K8s resource groups under a tenant. Available since v6.4.0.</p>
      * 
      * @param request ListK8SResourceGroupIdsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15814,7 +15785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of custom Kubernetes resource groups under a tenant. Released in version 6.4.0.</p>
+     * <p>Retrieves the list of custom K8s resource groups under a tenant. Available since v6.4.0.</p>
      * 
      * @param request ListK8SResourceGroupIdsRequest
      * @return ListK8SResourceGroupIdsResponse
@@ -15826,7 +15797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries knowledge graph entity records with paging. Online version: v6.1.1.</p>
+     * <p>Queries knowledge graph entity records by paging. Online version: v6.1.1.</p>
      * 
      * @param tmpReq ListKgEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15882,7 +15853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries knowledge graph entity records with paging. Online version: v6.1.1.</p>
+     * <p>Queries knowledge graph entity records by paging. Online version: v6.1.1.</p>
      * 
      * @param request ListKgEntityRequest
      * @return ListKgEntityResponse
@@ -15894,7 +15865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries knowledge graph relationship records by paging. Online version: v6.1.1.</p>
+     * <p>Performs a paged query on knowledge graph relation records. Paging is available online in version v6.1.1.</p>
      * 
      * @param tmpReq ListKgRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15950,7 +15921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries knowledge graph relationship records by paging. Online version: v6.1.1.</p>
+     * <p>Performs a paged query on knowledge graph relation records. Paging is available online in version v6.1.1.</p>
      * 
      * @param request ListKgRelationRequest
      * @return ListKgRelationResponse
@@ -16282,15 +16253,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the list of project roles for a specified project type under a tenant. The roleType field in the returned role list indicates the role type:</p>
+     * <p>Retrieves a list of project roles under a specified project type for a tenant. The roleType field in the returned role list identifies the role type:</p>
      * <ul>
-     * <li>BUILD_IN: built-in role.</li>
-     * <li>CUSTOM: custom role.
-     * The ProjectType request parameter is required. Valid values:</li>
-     * <li>BASIC: basic mode project.</li>
-     * <li>DEV: development environment project.</li>
-     * <li>PROD: production environment project.</li>
-     * <li>TAG: tag platform project.</li>
+     * <li>BUILD_IN: built-in role</li>
+     * <li>CUSTOM: custom role
+     * The ProjectType request parameter is required. Valid values: BASIC (basic mode project), DEV (development environment project), PROD (production environment project), and TAG (tag platform project).</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -16334,15 +16301,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the list of project roles for a specified project type under a tenant. The roleType field in the returned role list indicates the role type:</p>
+     * <p>Retrieves a list of project roles under a specified project type for a tenant. The roleType field in the returned role list identifies the role type:</p>
      * <ul>
-     * <li>BUILD_IN: built-in role.</li>
-     * <li>CUSTOM: custom role.
-     * The ProjectType request parameter is required. Valid values:</li>
-     * <li>BASIC: basic mode project.</li>
-     * <li>DEV: development environment project.</li>
-     * <li>PROD: production environment project.</li>
-     * <li>TAG: tag platform project.</li>
+     * <li>BUILD_IN: built-in role</li>
+     * <li>CUSTOM: custom role
+     * The ProjectType request parameter is required. Valid values: BASIC (basic mode project), DEV (development environment project), PROD (production environment project), and TAG (tag platform project).</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -16538,7 +16501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of anomaly archived tables under a specified monitored object. Online version: v6.3.0.</p>
+     * <p>Queries the list of exception archived tables for a specified monitored object. Release version: v6.3.0.</p>
      * 
      * @param tmpReq ListQualityArchiveTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16586,7 +16549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of anomaly archived tables under a specified monitored object. Online version: v6.3.0.</p>
+     * <p>Queries the list of exception archived tables for a specified monitored object. Release version: v6.3.0.</p>
      * 
      * @param request ListQualityArchiveTablesRequest
      * @return ListQualityArchiveTablesResponse
@@ -16598,7 +16561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query of quality rule nodes. Online version: v5.4.2.</p>
+     * <p>Performs a paged query on quality rule nodes with paging. Online version: v5.4.2.</p>
      * 
      * @param tmpReq ListQualityRuleTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16646,7 +16609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query of quality rule nodes. Online version: v5.4.2.</p>
+     * <p>Performs a paged query on quality rule nodes with paging. Online version: v5.4.2.</p>
      * 
      * @param request ListQualityRuleTasksRequest
      * @return ListQualityRuleTasksResponse
@@ -16778,8 +16741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries quality monitoring nodes by paging.
-     * Online version: v5.4.2.</p>
+     * <p>Performs a paged query on quality monitoring nodes with paging. Online version: v5.4.2.</p>
      * 
      * @param tmpReq ListQualityWatchTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16827,8 +16789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries quality monitoring nodes by paging.
-     * Online version: v5.4.2.</p>
+     * <p>Performs a paged query on quality monitoring nodes with paging. Online version: v5.4.2.</p>
      * 
      * @param request ListQualityWatchTasksRequest
      * @return ListQualityWatchTasksResponse
@@ -17674,10 +17635,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the start and stop operation records of real-time tasks in the production environment.</p>
+     * <p>Retrieves a list of start and stop operation records for real-time tasks in the production environment.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the start and stop operation records of real-time tasks. Available since v6.4.0.</p>
+     * <p>Retrieves a list of start and stop operation records for real-time tasks. Available since version 6.4.0.</p>
      * 
      * @param request ListStreamOpsRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17721,10 +17682,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the start and stop operation records of real-time tasks in the production environment.</p>
+     * <p>Retrieves a list of start and stop operation records for real-time tasks in the production environment.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the start and stop operation records of real-time tasks. Available since v6.4.0.</p>
+     * <p>Retrieves a list of start and stop operation records for real-time tasks. Available since version 6.4.0.</p>
      * 
      * @param request ListStreamOpsRecordsRequest
      * @return ListStreamOpsRecordsResponse
@@ -17924,8 +17885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata of asset tables by page.
-     * Available in version v5.4.2.</p>
+     * <p>Queries the metadata of asset tables through paging. Online version: v5.4.2.</p>
      * 
      * @param tmpReq ListTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17973,8 +17933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata of asset tables by page.
-     * Available in version v5.4.2.</p>
+     * <p>Queries the metadata of asset tables through paging. Online version: v5.4.2.</p>
      * 
      * @param request ListTablesRequest
      * @return ListTablesResponse
@@ -18048,13 +18007,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Retrieves the list of tenant roles. The roleType field in the returned role list indicates the role type:</p>
      * <ul>
-     * <li>BUILD_IN: built-in role</li>
-     * <li>CUSTOM: custom role (created by the tenant)
+     * <li>BUILD_IN: built-in role.</li>
+     * <li>CUSTOM: custom role (created by the tenant).
      * This operation does not require additional business request parameters. The tenantId parameter is automatically injected by the POP gateway context.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of tenant roles. Release version: v6.3.2.</p>
+     * <p>Retrieves the list of tenant roles. Available since version v6.3.2.</p>
      * 
      * @param request ListTenantRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18092,13 +18051,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Retrieves the list of tenant roles. The roleType field in the returned role list indicates the role type:</p>
      * <ul>
-     * <li>BUILD_IN: built-in role</li>
-     * <li>CUSTOM: custom role (created by the tenant)
+     * <li>BUILD_IN: built-in role.</li>
+     * <li>CUSTOM: custom role (created by the tenant).
      * This operation does not require additional business request parameters. The tenantId parameter is automatically injected by the POP gateway context.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of tenant roles. Release version: v6.3.2.</p>
+     * <p>Retrieves the list of tenant roles. Available since version v6.3.2.</p>
      * 
      * @param request ListTenantRolesRequest
      * @return ListTenantRolesResponse
@@ -18410,7 +18369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Offline a business entity.</p>
+     * <p>Takes a business entity offline.</p>
      * 
      * @param tmpReq OfflineBizEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18458,7 +18417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Offline a business entity.</p>
+     * <p>Takes a business entity offline.</p>
      * 
      * @param request OfflineBizEntityRequest
      * @return OfflineBizEntityResponse
@@ -18790,7 +18749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Parses the logical table dependencies of an offline compute node. The parsing result may contain self-dependent nodes in the upstream dependency information, where the upstream node ID is the same as the node ID of the parsed code. You must handle such cases on your own.</p>
+     * <p>Parses the logical table dependencies of a batch task. Note that the upstream dependency information in the parsing result may contain self-dependent nodes (where the upstream node ID is the same as the node ID of the parsed code), which you must handle manually.</p>
      * 
      * @param tmpReq ParseBatchTaskDependencyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18838,7 +18797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Parses the logical table dependencies of an offline compute node. The parsing result may contain self-dependent nodes in the upstream dependency information, where the upstream node ID is the same as the node ID of the parsed code. You must handle such cases on your own.</p>
+     * <p>Parses the logical table dependencies of a batch task. Note that the upstream dependency information in the parsing result may contain self-dependent nodes (where the upstream node ID is the same as the node ID of the parsed code), which you must handle manually.</p>
      * 
      * @param request ParseBatchTaskDependencyRequest
      * @return ParseBatchTaskDependencyResponse
@@ -18850,7 +18809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Pauses the scheduling of physical nodes. This stops the scheduling of nodes, and downstream nodes cannot be triggered. Currently, only offline code nodes and integration nodes are supported.</p>
+     * <p>Pauses the scheduling of physical nodes. This pauses node scheduling and prevents downstream nodes from being triggered. Currently, only offline code nodes and integration nodes are supported.</p>
      * 
      * @param tmpReq PausePhysicalNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18902,7 +18861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Pauses the scheduling of physical nodes. This stops the scheduling of nodes, and downstream nodes cannot be triggered. Currently, only offline code nodes and integration nodes are supported.</p>
+     * <p>Pauses the scheduling of physical nodes. This pauses node scheduling and prevents downstream nodes from being triggered. Currently, only offline code nodes and integration nodes are supported.</p>
      * 
      * @param request PausePhysicalNodeRequest
      * @return PausePhysicalNodeResponse
@@ -19098,8 +19057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a standard.
-     * Release version: v5.4.2.</p>
+     * <p>Publishes a standard. Release version: v5.4.2.</p>
      * 
      * @param tmpReq PublishStandardRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19147,8 +19105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a standard.
-     * Release version: v5.4.2.</p>
+     * <p>Publishes a standard. Release version: v5.4.2.</p>
      * 
      * @param request PublishStandardRequest
      * @return PublishStandardResponse
@@ -19224,8 +19181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove regular members from a data service application. Only the application owner can perform this operation.
-     * Released version: v6.0.0.</p>
+     * <p>Deletes a regular member from a data service application. Only the application owner can perform this operation. Available since v6.0.0.</p>
      * 
      * @param tmpReq RemoveDataServiceAppMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19273,8 +19229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove regular members from a data service application. Only the application owner can perform this operation.
-     * Released version: v6.0.0.</p>
+     * <p>Deletes a regular member from a data service application. Only the application owner can perform this operation. Available since v6.0.0.</p>
      * 
      * @param request RemoveDataServiceAppMemberRequest
      * @return RemoveDataServiceAppMemberResponse
@@ -19350,8 +19305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the bindings between quality rules and schedules in batches.
-     * Release version: v5.4.2.</p>
+     * <p>Deletes the bindings between quality rules and schedules in batches. Released in v5.4.2.</p>
      * 
      * @param tmpReq RemoveQualityRuleSchedulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19399,8 +19353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the bindings between quality rules and schedules in batches.
-     * Release version: v5.4.2.</p>
+     * <p>Deletes the bindings between quality rules and schedules in batches. Released in v5.4.2.</p>
      * 
      * @param request RemoveQualityRuleSchedulesRequest
      * @return RemoveQualityRuleSchedulesResponse
@@ -19592,7 +19545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the whitelist of a project.</p>
+     * <p>Updates the project whitelist.</p>
      * 
      * @param tmpReq ReplaceProjectWhiteListsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19644,7 +19597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the whitelist of a project.</p>
+     * <p>Updates the project whitelist.</p>
      * 
      * @param request ReplaceProjectWhiteListsRequest
      * @return ReplaceProjectWhiteListsResponse
@@ -19964,7 +19917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes resource authorization from a user.</p>
+     * <p>Revokes resource authorization for a user.</p>
      * 
      * @param tmpReq RevokeResourcePermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20012,7 +19965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes resource authorization from a user.</p>
+     * <p>Revokes resource authorization for a user.</p>
      * 
      * @param request RevokeResourcePermissionRequest
      * @return RevokeResourcePermissionResponse
@@ -20832,7 +20785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a published API operation by AppKey.</p>
+     * <p>Queries the details of published APIs based on the appKey.</p>
      * 
      * <b>summary</b> : 
      * <p>Synchronizes department information.</p>
@@ -20883,7 +20836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a published API operation by AppKey.</p>
+     * <p>Queries the details of published APIs based on the appKey.</p>
      * 
      * <b>summary</b> : 
      * <p>Synchronizes department information.</p>
@@ -21276,7 +21229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits the custom data lineage of a batch task.</p>
+     * <p>Updates the custom lineage of an offline computing task.</p>
      * 
      * @param tmpReq UpdateBatchTaskUdfLineagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21324,7 +21277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits the custom data lineage of a batch task.</p>
+     * <p>Updates the custom lineage of an offline computing task.</p>
      * 
      * @param request UpdateBatchTaskUdfLineagesRequest
      * @return UpdateBatchTaskUdfLineagesResponse
@@ -21580,7 +21533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a cluster. Online version: v6.3.0.</p>
+     * <p>Modifies a cluster. Available in v6.3.0 and later.</p>
      * 
      * @param tmpReq UpdateComputeClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21632,7 +21585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a cluster. Online version: v6.3.0.</p>
+     * <p>Modifies a cluster. Available in v6.3.0 and later.</p>
      * 
      * @param request UpdateComputeClusterRequest
      * @return UpdateComputeClusterResponse
@@ -21836,8 +21789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a data service application. Only super administrators, system administrators, and application owners can perform this operation.
-     * Release version: v6.0.0.</p>
+     * <p>Updates a data service application. Only super administrators, system administrators, and application owners can perform this operation. Released in version: v6.0.0.</p>
      * 
      * @param tmpReq UpdateDataServiceAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21885,8 +21837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a data service application. Only super administrators, system administrators, and application owners can perform this operation.
-     * Release version: v6.0.0.</p>
+     * <p>Updates a data service application. Only super administrators, system administrators, and application owners can perform this operation. Released in version: v6.0.0.</p>
      * 
      * @param request UpdateDataServiceAppRequest
      * @return UpdateDataServiceAppResponse
@@ -21958,8 +21909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the regular members of a data service application. Only the application owner can perform this operation.
-     * Online version: v6.0.0.</p>
+     * <p>Updates the regular members of a data service application. Only the application owner can perform this operation. Release version: v6.0.0.</p>
      * 
      * @param tmpReq UpdateDataServiceAppMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22007,8 +21957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the regular members of a data service application. Only the application owner can perform this operation.
-     * Online version: v6.0.0.</p>
+     * <p>Updates the regular members of a data service application. Only the application owner can perform this operation. Release version: v6.0.0.</p>
      * 
      * @param request UpdateDataServiceAppMemberRequest
      * @return UpdateDataServiceAppMemberResponse
@@ -22020,7 +21969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits the basic information of a data source. Tenant administrators, data administrators, business segment administrators, project administrators, and operations administrators have permissions to perform this operation.</p>
+     * <p>Modifies the basic information of a data source. Only tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators can perform this operation.</p>
      * 
      * @param tmpReq UpdateDataSourceBasicInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22068,7 +22017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits the basic information of a data source. Tenant administrators, data administrators, business segment administrators, project administrators, and operations administrators have permissions to perform this operation.</p>
+     * <p>Modifies the basic information of a data source. Only tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators can perform this operation.</p>
      * 
      * @param request UpdateDataSourceBasicInfoRequest
      * @return UpdateDataSourceBasicInfoResponse
@@ -22286,7 +22235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves the file position in the menu tree.</p>
+     * <p>Moves a menu tree file to a new location.</p>
      * 
      * @param request UpdateFileDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22334,7 +22283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves the file position in the menu tree.</p>
+     * <p>Moves a menu tree file to a new location.</p>
      * 
      * @param request UpdateFileDirectoryRequest
      * @return UpdateFileDirectoryResponse
@@ -22346,7 +22295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a file name.</p>
+     * <p>Updates the file name.</p>
      * 
      * @param request UpdateFileNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22394,7 +22343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a file name.</p>
+     * <p>Updates the file name.</p>
      * 
      * @param request UpdateFileNameRequest
      * @return UpdateFileNameResponse
@@ -22406,7 +22355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a knowledge graph entity record. Online version: v6.1.1.</p>
+     * <p>Edits a knowledge graph entity record. Available since v6.1.1.</p>
      * 
      * @param tmpReq UpdateKgEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22458,7 +22407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a knowledge graph entity record. Online version: v6.1.1.</p>
+     * <p>Edits a knowledge graph entity record. Available since v6.1.1.</p>
      * 
      * @param request UpdateKgEntityRequest
      * @return UpdateKgEntityResponse
@@ -22470,7 +22419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a knowledge graph relationship record. Online version: v6.1.1.</p>
+     * <p>Updates a knowledge graph relationship record. Release version: v6.1.1.</p>
      * 
      * @param tmpReq UpdateKgRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22522,7 +22471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a knowledge graph relationship record. Online version: v6.1.1.</p>
+     * <p>Updates a knowledge graph relationship record. Release version: v6.1.1.</p>
      * 
      * @param request UpdateKgRelationRequest
      * @return UpdateKgRelationResponse
@@ -23094,8 +23043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a data classification.
-     * Release version: v5.4.2.</p>
+     * <p>Updates a data classification. Release version: v5.4.2.</p>
      * 
      * @param tmpReq UpdateSecurityClassifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23143,8 +23091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a data classification.
-     * Release version: v5.4.2.</p>
+     * <p>Updates a data classification. Release version: v5.4.2.</p>
      * 
      * @param request UpdateSecurityClassifyRequest
      * @return UpdateSecurityClassifyResponse
@@ -23156,7 +23103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a data classification folder. Release version: v5.4.2.</p>
+     * <p>Updates the data classification catalog. Released in version 5.4.2.</p>
      * 
      * @param tmpReq UpdateSecurityClassifyCatalogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23204,7 +23151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a data classification folder. Release version: v5.4.2.</p>
+     * <p>Updates the data classification catalog. Released in version 5.4.2.</p>
      * 
      * @param request UpdateSecurityClassifyCatalogRequest
      * @return UpdateSecurityClassifyCatalogResponse
@@ -23276,8 +23223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates data classification.
-     * Online version: v5.4.2.</p>
+     * <p>Updates the data classification level. Released in version 5.4.2.</p>
      * 
      * @param tmpReq UpdateSecurityLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23325,8 +23271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates data classification.
-     * Online version: v5.4.2.</p>
+     * <p>Updates the data classification level. Released in version 5.4.2.</p>
      * 
      * @param request UpdateSecurityLevelRequest
      * @return UpdateSecurityLevelResponse
@@ -23518,8 +23463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update standard set.
-     * Release version: v5.4.2.</p>
+     * <p>Updates a standard set. Release version: v5.4.2.</p>
      * 
      * @param tmpReq UpdateStandardSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23567,8 +23511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update standard set.
-     * Release version: v5.4.2.</p>
+     * <p>Updates a standard set. Release version: v5.4.2.</p>
      * 
      * @param request UpdateStandardSetRequest
      * @return UpdateStandardSetResponse
@@ -23580,8 +23523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a data standard template.
-     * Release version: v5.4.2.</p>
+     * <p>Updates a data standard template. Release version: v5.4.2.</p>
      * 
      * @param tmpReq UpdateStandardTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23629,8 +23571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a data standard template.
-     * Release version: v5.4.2.</p>
+     * <p>Updates a data standard template. Release version: v5.4.2.</p>
      * 
      * @param request UpdateStandardTemplateRequest
      * @return UpdateStandardTemplateResponse
@@ -23642,8 +23583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a data standard root word.
-     * Online version: v5.4.2.</p>
+     * <p>Updates a data standard word root. Release version: v5.4.2.</p>
      * 
      * @param tmpReq UpdateStandardWordRootRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23691,8 +23631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a data standard root word.
-     * Online version: v5.4.2.</p>
+     * <p>Updates a data standard word root. Release version: v5.4.2.</p>
      * 
      * @param request UpdateStandardWordRootRequest
      * @return UpdateStandardWordRootResponse
@@ -23824,7 +23763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a user-defined function.</p>
+     * <p>Modifies a custom function.</p>
      * 
      * @param tmpReq UpdateUdfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23872,7 +23811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a user-defined function.</p>
+     * <p>Modifies a custom function.</p>
      * 
      * @param request UpdateUdfRequest
      * @return UpdateUdfResponse
@@ -23884,7 +23823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a user group.</p>
+     * <p>Updates a user group.</p>
      * 
      * @param tmpReq UpdateUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23932,7 +23871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a user group.</p>
+     * <p>Updates a user group.</p>
      * 
      * @param request UpdateUserGroupRequest
      * @return UpdateUserGroupResponse
@@ -24362,8 +24301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates alert settings for a monitored object.
-     * Release version: v5.4.2.</p>
+     * <p>Creates or modifies the alert settings for a monitored object. Released in version 5.4.2.</p>
      * 
      * @param tmpReq UpsertQualityWatchAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24411,8 +24349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates alert settings for a monitored object.
-     * Release version: v5.4.2.</p>
+     * <p>Creates or modifies the alert settings for a monitored object. Released in version 5.4.2.</p>
      * 
      * @param request UpsertQualityWatchAlertRequest
      * @return UpsertQualityWatchAlertResponse

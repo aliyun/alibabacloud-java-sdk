@@ -110,7 +110,7 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
 
     public static class GetCheckConnectivityJobByJobIdResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the data source. This parameter is empty if the check is performed before creation.</p>
+         * <p>The ID of the data source. This field is empty when the check is performed before creation.</p>
          * 
          * <strong>example:</strong>
          * <p>192</p>
@@ -137,7 +137,7 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The job type.</p>
+         * <p>The type of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>application/cluster</p>
@@ -146,7 +146,7 @@ public class GetCheckConnectivityJobByJobIdResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The job status. Valid values: NEW, IN_PROCESS, SUCCESS, and FAILED.</p>
+         * <p>The status of the task. Valid values: NEW, IN_PROCESS, SUCCESS, and FAILED.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>

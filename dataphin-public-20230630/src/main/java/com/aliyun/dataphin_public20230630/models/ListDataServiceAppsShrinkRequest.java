@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceAppsShrinkRequest extends TeaModel {
     /**
-     * <p>Query the list of all applications under the tenant.</p>
+     * <p>The query parameters for listing all applications under the tenant.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +22,8 @@ public class ListDataServiceAppsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

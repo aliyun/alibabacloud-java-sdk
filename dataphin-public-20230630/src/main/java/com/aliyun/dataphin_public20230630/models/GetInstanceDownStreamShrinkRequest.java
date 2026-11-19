@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceDownStreamShrinkRequest extends TeaModel {
     /**
-     * <p>Number of levels to expand downstream in the DAG query. Valid values: 1 to 6.</p>
+     * <p>The number of levels to expand the DAG downwards. Valid values: 1 to 6.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class GetInstanceDownStreamShrinkRequest extends TeaModel {
     public Integer downStreamDepth;
 
     /**
-     * <p>Environment identifier.</p>
+     * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: Development environment.</li>
-     * <li>PROD (default): Production environment.</li>
+     * <li>DEV: development environment. </li>
+     * <li>PROD: production environment. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,14 +28,14 @@ public class GetInstanceDownStreamShrinkRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>The request body.</p>
+     * <p>The get request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceGet")
     public String instanceGetShrink;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +45,8 @@ public class GetInstanceDownStreamShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -52,7 +54,7 @@ public class GetInstanceDownStreamShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Run status of the instance.</p>
+     * <p>The run status of the instance. Valid values:</p>
      * <ul>
      * <li>INIT</li>
      * <li>WATING</li>

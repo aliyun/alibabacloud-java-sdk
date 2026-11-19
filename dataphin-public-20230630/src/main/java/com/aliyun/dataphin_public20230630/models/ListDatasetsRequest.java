@@ -21,7 +21,7 @@ public class ListDatasetsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The operator ID.</p>
+     * <p>The operator user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -157,7 +157,7 @@ public class ListDatasetsRequest extends TeaModel {
         public Long tenantId;
 
         /**
-         * <p>The dataset types. If this parameter is left empty, all types are queried.</p>
+         * <p>The dataset type. If this parameter is left empty, all types are queried.</p>
          */
         @NameInMap("TypeList")
         public java.util.List<String> typeList;

@@ -32,7 +32,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The list of scheduling objects.</p>
+     * <p>The scheduling object list.</p>
      */
     @NameInMap("QualityScheduleList")
     public java.util.List<GetQualitySchedulesByWatchIdResponseBodyQualityScheduleList> qualityScheduleList;
@@ -107,7 +107,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
 
     public static class GetQualitySchedulesByWatchIdResponseBodyQualityScheduleList extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -163,7 +163,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -190,14 +190,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
         public String partitionExpression;
 
         /**
-         * <p>The partition type. Valid values:</p>
-         * <ul>
-         * <li>EVERY_DAY: every day</li>
-         * <li>PRE_DAY: previous day</li>
-         * <li>TODAY: current day</li>
-         * <li>FIRST_DAY_OF_WEEK: first day of the week (Sunday)</li>
-         * <li>CUSTOM: custom</li>
-         * </ul>
+         * <p>The partition type. Valid values: EVERY_DAY: every day, PRE_DAY: previous day, TODAY: current day, FIRST_DAY_OF_WEEK: first day of the week (Sunday), and CUSTOM: custom.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -206,14 +199,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
         public String partitionType;
 
         /**
-         * <p>The schedule interval type for timed scheduling. Valid values:</p>
-         * <ul>
-         * <li>DAILY: day</li>
-         * <li>WEEKLY: week</li>
-         * <li>MONTHLY: month</li>
-         * <li>HOURLY: hour</li>
-         * <li>MINUTELY: minute</li>
-         * </ul>
+         * <p>The interval type for timed scheduling. Valid values: DAILY: day, WEEKLY: week, MONTHLY: month, HOURLY: hour, and MINUTELY: minute.</p>
          * 
          * <strong>example:</strong>
          * <p>DAILY</p>
@@ -222,18 +208,13 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
         public String periodScheduleIntervalType;
 
         /**
-         * <p>The schedule interval values for timed scheduling.</p>
+         * <p>The interval values for timed scheduling.</p>
          */
         @NameInMap("PeriodScheduleParamList")
         public java.util.List<String> periodScheduleParamList;
 
         /**
-         * <p>The trigger method for static task triggers. Valid values:</p>
-         * <ul>
-         * <li>ALL_TASKS_FINISHED: all tasks finished</li>
-         * <li>ONE_TASKS_FINISHED: one task finished</li>
-         * <li>PRE_ONE_TASKS_START: previous one task started</li>
-         * </ul>
+         * <p>The trigger method for static task triggers. Valid values: ALL_TASKS_FINISHED, ONE_TASKS_FINISHED, and PRE_ONE_TASKS_START.</p>
          * 
          * <strong>example:</strong>
          * <p>ONE_TASKS_FINISHED</p>
@@ -248,11 +229,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
         public java.util.List<String> triggerNodeList;
 
         /**
-         * <p>The trigger type for trigger scheduling. Valid values:</p>
-         * <ul>
-         * <li>STATIC_TASK_TRIGGER: static task trigger</li>
-         * <li>CODE_CHECK_TRIGGER: code check trigger</li>
-         * </ul>
+         * <p>The trigger method for trigger scheduling. Valid values: STATIC_TASK_TRIGGER: static task trigger, and CODE_CHECK_TRIGGER: code check trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>STATIC_TASK_TRIGGER</p>
@@ -261,14 +238,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
         public String triggerType;
 
         /**
-         * <p>The scheduling type. Valid values:</p>
-         * <ul>
-         * <li>PERIOD_SCHEDULE: timed scheduling</li>
-         * <li>MANUAL_SCHEDULE: manual trigger</li>
-         * <li>CODE_CHECK_TRIGGER: code check trigger</li>
-         * <li>STATIC_TASK_TRIGGER: static task trigger</li>
-         * <li>DEPENDENCY_SCHEDULE: dependency scheduling</li>
-         * </ul>
+         * <p>The scheduling type. Valid values: PERIOD_SCHEDULE: timed scheduling, MANUAL_SCHEDULE: manual trigger, CODE_CHECK_TRIGGER: code check trigger, STATIC_TASK_TRIGGER: static task trigger, and DEPENDENCY_SCHEDULE: dependency scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>PERIOD_SCHEDULE</p>
@@ -277,11 +247,7 @@ public class GetQualitySchedulesByWatchIdResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The validation scope. Valid values:</p>
-         * <ul>
-         * <li>TASK_REFERRED_PARTITION: task updated partition</li>
-         * <li>USER_DEFINED_PARTITION: user-defined partition</li>
-         * </ul>
+         * <p>The validation scope. Valid values: TASK_REFERRED_PARTITION: task updated partition, and USER_DEFINED_PARTITION: user-defined partition.</p>
          * 
          * <strong>example:</strong>
          * <p>TASK_REFERRED_PARTITION</p>

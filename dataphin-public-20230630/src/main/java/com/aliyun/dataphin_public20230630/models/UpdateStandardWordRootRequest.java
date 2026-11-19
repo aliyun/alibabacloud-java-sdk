@@ -15,6 +15,8 @@ public class UpdateStandardWordRootRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateStandardWordRootRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The update instruction.</p>
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -59,7 +61,7 @@ public class UpdateStandardWordRootRequest extends TeaModel {
 
     public static class UpdateStandardWordRootRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The abbreviation of the root word.</p>
+         * <p>The abbreviation of the word root.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,7 +71,7 @@ public class UpdateStandardWordRootRequest extends TeaModel {
         public String abbreviation;
 
         /**
-         * <p>The description of the root word.</p>
+         * <p>The description of the word root.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -78,7 +80,7 @@ public class UpdateStandardWordRootRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The full name of the root word.</p>
+         * <p>The full name of the word root.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,21 +90,21 @@ public class UpdateStandardWordRootRequest extends TeaModel {
         public String fullName;
 
         /**
-         * <p>The name of the root word.</p>
+         * <p>The name of the word root.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>平均值</p>
+         * <p>Average</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The name of the root word before the update.</p>
+         * <p>The original name of the word root.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>平均值</p>
+         * <p>Average</p>
          */
         @NameInMap("OldName")
         public String oldName;

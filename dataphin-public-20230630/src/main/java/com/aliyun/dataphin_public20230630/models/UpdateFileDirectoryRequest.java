@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateFileDirectoryRequest extends TeaModel {
     /**
-     * <p>The updated file folder after the move.</p>
+     * <p>The new directory of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>/xx测试/目录new</p>
+     * <p>/xxTest/directoryNew</p>
      */
     @NameInMap("Directory")
     public String directory;
@@ -35,6 +35,8 @@ public class UpdateFileDirectoryRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

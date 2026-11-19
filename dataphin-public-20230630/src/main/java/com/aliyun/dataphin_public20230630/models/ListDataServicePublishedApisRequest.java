@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataServicePublishedApisRequest extends TeaModel {
     /**
-     * <p>Search conditions.</p>
+     * <p>The query conditions.</p>
      */
     @NameInMap("ListQuery")
     public ListDataServicePublishedApisRequestListQuery listQuery;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +21,8 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -28,7 +30,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Data service project ID.</p>
+     * <p>The ID of the Data Service project.</p>
      * 
      * <strong>example:</strong>
      * <p>102102</p>
@@ -75,7 +77,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
 
     public static class ListDataServicePublishedApisRequestListQuery extends TeaModel {
         /**
-         * <p>API name.</p>
+         * <p>The API name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -84,7 +86,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
         public String apiName;
 
         /**
-         * <p>Group ID.</p>
+         * <p>The group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>102113</p>
@@ -93,7 +95,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
         public Integer groupId;
 
         /**
-         * <p>Page number. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +104,7 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
         public Integer pageNo;
 
         /**
-         * <p>Number of records per page. Default value: 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -15,7 +15,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator.</p>
+     * <p>The operator ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -88,7 +88,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>Specifies whether to follow the primary schedule parameter.</p>
+         * <p>Specifies whether to follow the main scheduling parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -97,7 +97,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Boolean followScheduleParam;
 
         /**
-         * <p>The node schedule status after the condition is met. Valid values:</p>
+         * <p>The node scheduling status after the condition is met. Valid values:</p>
          * <ul>
          * <li>1: Normal.</li>
          * <li>2: Paused.</li>
@@ -111,7 +111,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Integer nodeStatus;
 
         /**
-         * <p>The JSON string of the conditional expression tree. The keys are in lower camel case characters and must be parsed by the invoker.</p>
+         * <p>The JSON string of the conditional expression tree. The keys use lower camel case characters and must be parsed by the invoker.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;EXPRESSION&quot;,&quot;operator&quot;:&quot;or&quot;}</p>
@@ -274,8 +274,8 @@ public class UpdateBatchTaskRequest extends TeaModel {
         /**
          * <p>The interval unit. Valid values:</p>
          * <ul>
-         * <li>MINUTE: Minutes.</li>
-         * <li>HOUR: Hours.</li>
+         * <li>MINUTE: Minute.</li>
+         * <li>HOUR: Hour.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -286,7 +286,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String intervalUnit;
 
         /**
-         * <p>The schedule period. Valid values:</p>
+         * <p>The scheduling cycle. Valid values:</p>
          * <ul>
          * <li>YEARLY: Yearly.</li>
          * <li>MONTHLY: Monthly.</li>
@@ -362,7 +362,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
 
     public static class UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig extends TeaModel {
         /**
-         * <p>自定义失败重试间隔。</p>
+         * <p>The custom retry interval.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -371,7 +371,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String customRerunInterval;
 
         /**
-         * <p>自定义失败重试次数。</p>
+         * <p>The custom retry count.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -380,7 +380,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String customRerunTimes;
 
         /**
-         * <p>是否跟随系统配置。</p>
+         * <p>Specifies whether to follow the system retry configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -421,7 +421,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
 
     public static class UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig extends TeaModel {
         /**
-         * <p>自定义超时时间。</p>
+         * <p>The custom timeout period.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -430,7 +430,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String customValues;
 
         /**
-         * <p>是否跟随系统配置。</p>
+         * <p>Specifies whether to follow the system timeout configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -473,7 +473,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the parameter.</p>
+         * <p>The parameter value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -533,7 +533,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
 
     public static class UpdateBatchTaskRequestUpdateCommandUpStreamListDependPeriod extends TeaModel {
         /**
-         * <p>The cycle offset. This parameter is required when the PeriodType parameter is set to LAST_N_PERIOD.</p>
+         * <p>The period offset. This parameter is required when dependencyPeriodType is set to LAST_N_PERIOD.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -542,10 +542,10 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Integer periodOffset;
 
         /**
-         * <p>The type of the dependency cycle. Valid values:</p>
+         * <p>The dependency period type. Valid values:</p>
          * <ul>
-         * <li>CURRENT_PERIOD: Current cycle.</li>
-         * <li>LAST_PERIOD: Last cycle.</li>
+         * <li>CURRENT_PERIOD: Current period.</li>
+         * <li>LAST_PERIOD: Last period.</li>
          * <li>LAST_N_PERIOD: Last N days.</li>
          * <li>LAST_24_HOUR: Last 24 hours.</li>
          * </ul>
@@ -582,7 +582,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
 
     public static class UpdateBatchTaskRequestUpdateCommandUpStreamList extends TeaModel {
         /**
-         * <p>The dependency cycle.</p>
+         * <p>The dependency period.</p>
          */
         @NameInMap("DependPeriod")
         public UpdateBatchTaskRequestUpdateCommandUpStreamListDependPeriod dependPeriod;
@@ -603,13 +603,13 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String dependStrategy;
 
         /**
-         * <p>The list of dependent logical table fields.</p>
+         * <p>The dependent logical table fields.</p>
          */
         @NameInMap("FieldList")
         public java.util.List<String> fieldList;
 
         /**
-         * <p>The type of the upstream dependency node. Valid values:</p>
+         * <p>The upstream dependency node type. Valid values:</p>
          * <ul>
          * <li>PHYSICAL: Physical node.</li>
          * <li>LOGICAL: Logical table dependency.</li>
@@ -622,7 +622,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The cycle difference. A value of 0 indicates a dependency on the same cycle. A positive integer indicates a dependency on the previous N cycles.</p>
+         * <p>The period difference. A value of 0 indicates a same-period dependency. A positive number indicates a dependency on the previous N periods.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -746,7 +746,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
 
     public static class UpdateBatchTaskRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The base schedule template ID. This parameter takes effect when the configuration method is set to schedule template. If this parameter and all other schedule fields are not specified, the original binding is retained.</p>
+         * <p>The base schedule template ID. This parameter applies when the configuration method is set to schedule template. If this parameter is not specified and no other scheduling fields are specified, the original binding is retained.</p>
          * 
          * <strong>example:</strong>
          * <p>7305621095333696</p>
@@ -774,13 +774,13 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Boolean conditionScheduleEnable;
 
         /**
-         * <p>The conditional scheduling configuration details. This parameter overwrites the existing configurations. If this parameter is not specified, the original configurations are retained. This parameter is supported only for periodic tasks.</p>
+         * <p>The conditional scheduling configuration details. This parameter fully overwrites the existing configuration. If this parameter is not specified, the original configuration remains unchanged. This parameter is supported only for periodic tasks.</p>
          */
         @NameInMap("ConditionScheduleParamList")
         public java.util.List<UpdateBatchTaskRequestUpdateCommandConditionScheduleParamList> conditionScheduleParamList;
 
         /**
-         * <p>The conditional schedule template ID.</p>
+         * <p>The conditional scheduling template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7305621095333697</p>
@@ -789,13 +789,13 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Long conditionScheduleTemplateId;
 
         /**
-         * <p>The cross-node parameters. These are output parameters declared by the current node for downstream nodes to reference. This parameter overwrites the existing parameters. If this parameter is not specified, the original parameters are retained.</p>
+         * <p>The cross-node parameters, which are the output parameters declared by the current node for downstream nodes to reference. This parameter fully overwrites the existing parameters. If this parameter is not specified, the original parameters remain unchanged.</p>
          */
         @NameInMap("ContextParamList")
         public java.util.List<UpdateBatchTaskRequestUpdateCommandContextParamList> contextParamList;
 
         /**
-         * <p>不传时保留任务当前配置。</p>
+         * <p>The amount of CPU resources.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -813,7 +813,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The custom schedule interval configuration.</p>
+         * <p>The custom scheduling interval configuration.</p>
          */
         @NameInMap("CustomScheduleConfig")
         public UpdateBatchTaskRequestUpdateCommandCustomScheduleConfig customScheduleConfig;
@@ -855,7 +855,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String devHttpPath;
 
         /**
-         * <p>The ID of the schedule resource group for development tasks.</p>
+         * <p>The schedule resource group ID for development tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-def456</p>
@@ -864,7 +864,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String devResourceGroupId;
 
         /**
-         * <p>The list of development owner IDs.</p>
+         * <p>The list of lead developer IDs.</p>
          */
         @NameInMap("DevelopOwnerIdList")
         public java.util.List<String> developOwnerIdList;
@@ -884,19 +884,19 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String engine;
 
         /**
-         * <p>失败重试配置。不传时保留任务当前配置。传入时整体替换该配置对象。</p>
+         * <p>The failure retry configuration. If not specified, the current configuration of the node is retained. If specified, the entire configuration object is replaced.</p>
          */
         @NameInMap("ExecuteRerunConfig")
         public UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig executeRerunConfig;
 
         /**
-         * <p>执行超时配置。不传时保留任务当前配置。传入时整体替换该配置对象。</p>
+         * <p>The execution timeout configuration. If not specified, the current configuration of the node is retained. If specified, the entire configuration object is replaced.</p>
          */
         @NameInMap("ExecuteTimeOutConfig")
         public UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig executeTimeOutConfig;
 
         /**
-         * <p>The ID of the task directory tree node.</p>
+         * <p>The ID of the node in the task directory tree.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -906,7 +906,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>不传时保留任务当前配置。</p>
+         * <p>The amount of memory resources.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -954,7 +954,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Integer nodeStatus;
 
         /**
-         * <p>The list of O&amp;M owner IDs. If you do not specify this parameter, the O&amp;M owners are not modified.</p>
+         * <p>The list of O&amp;M owner IDs. If not specified, the O&amp;M owners are not modified.</p>
          */
         @NameInMap("OpsOwnerIdList")
         public java.util.List<String> opsOwnerIdList;
@@ -994,13 +994,13 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The list of third-party Python packages on which the node depends.</p>
+         * <p>The third-party Python packages that the node depends on.</p>
          */
         @NameInMap("PythonModuleList")
         public java.util.List<String> pythonModuleList;
 
         /**
-         * <p>The ID of the scheduling resource group for the production node.</p>
+         * <p>The ID of the scheduling resource group for production nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-abc123</p>
@@ -1008,11 +1008,14 @@ public class UpdateBatchTaskRequest extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The list of referenced resources, specified by resource name.</p>
+         */
         @NameInMap("ResourceReferenceList")
         public java.util.List<String> resourceReferenceList;
 
         /**
-         * <p>超时重试开关。不传时保留任务当前配置。显式传入false时关闭。</p>
+         * <p>Specifies whether to retry the node upon timeout.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1023,12 +1026,12 @@ public class UpdateBatchTaskRequest extends TeaModel {
         /**
          * <p>The scheduling cycle. Valid values:</p>
          * <ul>
-         * <li>YEARLY: Yearly.</li>
-         * <li>MONTHLY: Monthly.</li>
-         * <li>WEEKLY: Weekly.</li>
-         * <li>DAILY: Daily.</li>
-         * <li>HOURLY: Hourly.</li>
-         * <li>MINUTELY: Minutely.</li>
+         * <li>YEARLY</li>
+         * <li>MONTHLY</li>
+         * <li>WEEKLY</li>
+         * <li>DAILY</li>
+         * <li>HOURLY</li>
+         * <li>MINUTELY</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1044,7 +1047,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public UpdateBatchTaskRequestUpdateCommandSparkClientInfo sparkClientInfo;
 
         /**
-         * <p>不传时保留任务当前配置。显式传入false时关闭。</p>
+         * <p>The switch for Spark dynamic resources.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1053,7 +1056,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Boolean sparkDynamicResourceSwitch;
 
         /**
-         * <p>ONLY_PROD表示仅生产环境，PROD_AND_DEV表示生产和开发环境。不传时保留任务当前配置。</p>
+         * <p>The effective scope of the Spark resource configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>ONLY_PROD</p>
@@ -1062,7 +1065,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String sparkResourceEffectScope;
 
         /**
-         * <p>Spark SQL资源配置，键为配置项名称，值为字符串。不传时保留任务当前配置；传入空JSON对象{}时清空配置。</p>
+         * <p>The resource configuration for the Spark node. The value is a JSON string, such as {&quot;spark.executor.memory&quot;:&quot;2g&quot;}.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;spark.executor.memory&quot;:&quot;2g&quot;}</p>
@@ -1071,7 +1074,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String sparkSqlResourceConfigMap;
 
         /**
-         * <p>The list of node tags. This parameter overwrites all existing tags. If you do not specify this parameter, the original tags remain unchanged.</p>
+         * <p>The list of node tag names. This parameter overwrites all existing tags. If not specified, the original tags remain unchanged.</p>
          */
         @NameInMap("TaskTagList")
         public java.util.List<String> taskTagList;
@@ -1079,8 +1082,8 @@ public class UpdateBatchTaskRequest extends TeaModel {
         /**
          * <p>The type of the node. Valid values:</p>
          * <ul>
-         * <li>1: Hive SQL.</li>
-         * <li>5: MaxCompute SQL.</li>
+         * <li>1: Hive_SQL.</li>
+         * <li>5: MaxCompute_SQL.</li>
          * <li>10: Shell.</li>
          * <li>21: Python.</li>
          * </ul>
@@ -1093,13 +1096,13 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public Integer taskType;
 
         /**
-         * <p>The list of upstream dependencies.</p>
+         * <p>The upstream dependencies.</p>
          */
         @NameInMap("UpStreamList")
         public java.util.List<UpdateBatchTaskRequestUpdateCommandUpStreamList> upStreamList;
 
         /**
-         * <p>The end date of the validity period. Format: yyyy-MM-dd. This parameter must be specified together with the ValidStartDate parameter.</p>
+         * <p>The end date of the validity period. Format: yyyy-MM-dd. This parameter must be specified together with ValidStartDate.</p>
          * 
          * <strong>example:</strong>
          * <p>9999-12-31</p>
@@ -1108,7 +1111,7 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String validEndDate;
 
         /**
-         * <p>The start date of the validity period. Format: yyyy-MM-dd. This parameter must be specified together with the ValidEndDate parameter.</p>
+         * <p>The start date of the validity period. Format: yyyy-MM-dd. This parameter must be specified together with ValidEndDate.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01</p>

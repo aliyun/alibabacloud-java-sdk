@@ -21,6 +21,8 @@ public class CreateUserGroupRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -67,7 +69,7 @@ public class CreateUserGroupRequest extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>The user IDs of the user group administrators.</p>
+         * <p>The IDs of the administrator users in the user group.</p>
          */
         @NameInMap("AdminUserIdList")
         public java.util.List<String> adminUserIdList;
@@ -76,7 +78,7 @@ public class CreateUserGroupRequest extends TeaModel {
          * <p>The description of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Sample user group description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -85,7 +87,7 @@ public class CreateUserGroupRequest extends TeaModel {
          * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx用户组</p>
+         * <p>xx user group</p>
          */
         @NameInMap("Name")
         public String name;

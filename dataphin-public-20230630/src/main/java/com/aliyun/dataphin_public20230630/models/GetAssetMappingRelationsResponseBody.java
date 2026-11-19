@@ -107,7 +107,7 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
 
     public static class GetAssetMappingRelationsResponseBodyMappingRelationList extends TeaModel {
         /**
-         * <p>The asset type. Valid values: COLUMN (field) and INDEX (metric).</p>
+         * <p>The asset type. Valid values: COLUMN: field. INDEX: metric.</p>
          * 
          * <strong>example:</strong>
          * <p>COLUMN</p>

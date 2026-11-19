@@ -617,14 +617,14 @@ public class GetDatasetResponseBody extends TeaModel {
         public Integer requestMethod;
 
         /**
-         * <p>The request parameter list.</p>
+         * <p>The list of request parameters.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RequestParamList")
         public java.util.List<GetDatasetResponseBodyDatasetDTOVersionListApiInfoRequestParamList> requestParamList;
 
         /**
-         * <p>The response parameter list.</p>
+         * <p>The list of response parameters.</p>
          */
         @NameInMap("ResponseParamList")
         public java.util.List<GetDatasetResponseBodyDatasetDTOVersionListApiInfoResponseParamList> responseParamList;
@@ -754,7 +754,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>Test data source</p>
@@ -840,7 +840,7 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigMetadataStorageConfigTableSchemaColumnsVectorIndexConfig extends TeaModel {
         /**
-         * <p>The embedding dimension.</p>
+         * <p>The vector dimension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -860,7 +860,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public String embeddingModel;
 
         /**
-         * <p>The index building parameters. Specify different parameters based on the index type. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</p>
+         * <p>The index build parameters. Specify different parameters based on the index type. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</p>
          * 
          * <strong>example:</strong>
          * <p>{M:30, efConstruction:360}</p>
@@ -946,7 +946,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The subtype of the array element. This parameter is valid only when the type is ARRAY.</p>
+         * <p>The subtype of the array element. Valid only when the type is ARRAY.</p>
          * 
          * <strong>example:</strong>
          * <p>INT64</p>
@@ -955,7 +955,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public String elementType;
 
         /**
-         * <p>The maximum capacity of the array. This parameter is valid only when the type is ARRAY. Default value: 4096.</p>
+         * <p>The maximum capacity of the array. Valid only when the type is ARRAY. Default value: 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>35</p>
@@ -1081,7 +1081,7 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigMetadataStorageConfigTableSchema extends TeaModel {
         /**
-         * <p>The column list.</p>
+         * <p>The list of columns.</p>
          */
         @NameInMap("Columns")
         public java.util.List<GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigMetadataStorageConfigTableSchemaColumns> columns;
@@ -1113,7 +1113,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>Test data source</p>
@@ -1131,7 +1131,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public String devSchema;
 
         /**
-         * <p>The storage destination, which can be a new table or an existing table.</p>
+         * <p>The storage destination (new table or existing table).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1248,7 +1248,7 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigRealtimeMetaTableConfigTableSchemaColumnsVectorIndexConfig extends TeaModel {
         /**
-         * <p>The embedding dimension.</p>
+         * <p>The vector dimension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1268,7 +1268,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public String embeddingModel;
 
         /**
-         * <p>The index building parameters.</p>
+         * <p>The index construction parameters.</p>
          */
         @NameInMap("IndexParams")
         public java.util.Map<String, ?> indexParams;
@@ -1486,7 +1486,7 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigRealtimeMetaTableConfigTableSchema extends TeaModel {
         /**
-         * <p>The column list.</p>
+         * <p>The list of columns.</p>
          */
         @NameInMap("Columns")
         public java.util.List<GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigRealtimeMetaTableConfigTableSchemaColumns> columns;
@@ -1508,7 +1508,7 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigRealtimeMetaTableConfig extends TeaModel {
         /**
-         * <p>The data source type of the meta table. Only KAFKA is supported in the current phase.</p>
+         * <p>The data source type of the metadata table. Only KAFKA is available in the current phase.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1518,17 +1518,17 @@ public class GetDatasetResponseBody extends TeaModel {
         public String datasourceType;
 
         /**
-         * <p>The meta table name.</p>
+         * <p>The metadata table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test meta table</p>
+         * <p>Test metadata table</p>
          */
         @NameInMap("MetaTableName")
         public String metaTableName;
 
         /**
-         * <p>The ID of the project to which the meta table belongs. Cross-project access is supported.</p>
+         * <p>The ID of the project to which the metadata table belongs. Cross-project access is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1538,7 +1538,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The table schema configuration. This configuration reuses MetadataStorageConfigDTO.TableSchemaDTO.</p>
+         * <p>The table schema configuration. Reuses MetadataStorageConfigDTO.TableSchemaDTO.</p>
          */
         @NameInMap("TableSchema")
         public GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigRealtimeMetaTableConfigTableSchema tableSchema;
@@ -1596,7 +1596,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigMetadataStorageConfig metadataStorageConfig;
 
         /**
-         * <p>The real-time meta table configuration. This configuration takes effect only when metadataStorageType is set to REALTIME_META_TABLE.</p>
+         * <p>The real-time metadata table configuration. Valid only when metadataStorageType is REALTIME_META_TABLE.</p>
          */
         @NameInMap("RealtimeMetaTableConfig")
         public GetDatasetResponseBodyDatasetDTOVersionListDataVersionConfigRealtimeMetaTableConfig realtimeMetaTableConfig;
@@ -1651,7 +1651,7 @@ public class GetDatasetResponseBody extends TeaModel {
 
     public static class GetDatasetResponseBodyDatasetDTOVersionList extends TeaModel {
         /**
-         * <p>The API information for the online dataset.</p>
+         * <p>The API information of the online dataset.</p>
          */
         @NameInMap("ApiInfo")
         public GetDatasetResponseBodyDatasetDTOVersionListApiInfo apiInfo;
@@ -1816,7 +1816,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The subject domain ID.</p>
+         * <p>The subject area ID.</p>
          * 
          * <strong>example:</strong>
          * <p>78201</p>
@@ -1825,10 +1825,10 @@ public class GetDatasetResponseBody extends TeaModel {
         public String dataCellId;
 
         /**
-         * <p>The name of the subject domain.</p>
+         * <p>The subject area name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Offline data subject domain</p>
+         * <p>Offline data subject area</p>
          */
         @NameInMap("DataCellName")
         public String dataCellName;
@@ -1879,7 +1879,7 @@ public class GetDatasetResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The dataset ID, which serves as the business primary key.</p>
+         * <p>The dataset ID, which is the business primary key.</p>
          * 
          * <strong>example:</strong>
          * <p>7255018404425088</p>

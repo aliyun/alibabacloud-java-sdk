@@ -14,7 +14,7 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The summary of call exception impacts.</p>
+     * <p>The summary of API exception impacts.</p>
      */
     @NameInMap("Data")
     public GetDataServiceApiErrorImpactResponseBodyData data;
@@ -47,7 +47,7 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
 
     public static class GetDataServiceApiErrorImpactResponseBodyDataErrorApiList extends TeaModel {
         /**
-         * <p>The API name.</p>
+         * <p>The name of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -116,7 +116,7 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         public String apiName;
 
         /**
-         * <p>The API ID.</p>
+         * <p>The ID of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>2012</p>
@@ -184,7 +184,7 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         public Long appKey;
 
         /**
-         * <p>The app name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>app1</p>
@@ -193,7 +193,7 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The number of exceptions for the app.</p>
+         * <p>The number of exceptions for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -242,13 +242,13 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
 
     public static class GetDataServiceApiErrorImpactResponseBodyData extends TeaModel {
         /**
-         * <p>The list of APIs affected by exceptions.</p>
+         * <p>The APIs affected by the exceptions.</p>
          */
         @NameInMap("ErrorApiList")
         public java.util.List<GetDataServiceApiErrorImpactResponseBodyDataErrorApiList> errorApiList;
 
         /**
-         * <p>The list of apps affected by exceptions.</p>
+         * <p>The applications affected by the exceptions.</p>
          */
         @NameInMap("ErrorAppList")
         public java.util.List<GetDataServiceApiErrorImpactResponseBodyDataErrorAppList> errorAppList;

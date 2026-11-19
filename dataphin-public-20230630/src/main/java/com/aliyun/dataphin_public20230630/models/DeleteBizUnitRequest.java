@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBizUnitRequest extends TeaModel {
     /**
-     * <p>The business domain ID.</p>
+     * <p>The business block ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,8 @@ public class DeleteBizUnitRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

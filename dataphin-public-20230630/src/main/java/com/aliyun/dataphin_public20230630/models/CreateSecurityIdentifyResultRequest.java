@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityIdentifyResultRequest extends TeaModel {
     /**
-     * <p>The create request.</p>
+     * <p>The creation request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateSecurityIdentifyResultRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -69,11 +71,7 @@ public class CreateSecurityIdentifyResultRequest extends TeaModel {
         public Long classifyId;
 
         /**
-         * <p>The deduplication strategy. Valid values:</p>
-         * <ul>
-         * <li>COVER_ALL: overwrites all online tags.</li>
-         * <li>COVER_UNLOCKED: overwrites only unlocked online tags.</li>
-         * </ul>
+         * <p>The conflict strategy. Valid values: COVER_ALL (overwrites all online tags) and COVER_UNLOCKED (overwrites only unlocked online tags).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -83,7 +81,7 @@ public class CreateSecurityIdentifyResultRequest extends TeaModel {
         public String conflictStrategy;
 
         /**
-         * <p>The datasource environment identifier. This parameter is required only for datasource tables.</p>
+         * <p>The environment identifier of the datasource. This parameter is required only for datasource tables.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -92,7 +90,7 @@ public class CreateSecurityIdentifyResultRequest extends TeaModel {
         public String datasourceEnv;
 
         /**
-         * <p>The datasource name. This parameter is required only for datasource tables.</p>
+         * <p>The name of the datasource. This parameter is required only for datasource tables.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -101,12 +99,7 @@ public class CreateSecurityIdentifyResultRequest extends TeaModel {
         public String datasourceName;
 
         /**
-         * <p>Specifies whether to enable the result. Valid values:</p>
-         * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Disabled.
-         * Default value: true.</li>
-         * </ul>
+         * <p>The enabled status. Valid values: true (enabled) and false (disabled). Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -115,7 +108,7 @@ public class CreateSecurityIdentifyResultRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The field name.</p>
+         * <p>The name of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +127,7 @@ public class CreateSecurityIdentifyResultRequest extends TeaModel {
         public Boolean isDatasourceTable;
 
         /**
-         * <p>The table catalog. For a datasource table, specify the database or schema name. For a Dataphin physical table, specify the project name in English. For a Dataphin logical table, specify the business unit name in English.</p>
+         * <p>The catalog of the table. For a datasource table, specify the name of the database or schema to which the table belongs. For a Dataphin physical table, specify the English name of the project. For a Dataphin logical table, specify the English name of the business unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +137,7 @@ public class CreateSecurityIdentifyResultRequest extends TeaModel {
         public String tableCatalog;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

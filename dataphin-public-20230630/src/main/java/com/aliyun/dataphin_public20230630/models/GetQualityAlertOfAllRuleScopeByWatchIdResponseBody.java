@@ -23,7 +23,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -32,7 +32,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
     public String message;
 
     /**
-     * <p>The alert settings details.</p>
+     * <p>The alert configuration details.</p>
      */
     @NameInMap("QualityAlertInfo")
     public GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfo qualityAlertInfo;
@@ -47,7 +47,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
 
     public static class GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfoAlertDutyList extends TeaModel {
         /**
-         * <p>The alert duty roster ID.</p>
+         * <p>The on-call schedule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -116,7 +116,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
         public String id;
 
         /**
-         * <p>The alert duty roster name.</p>
+         * <p>The on-call schedule name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -191,13 +191,13 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
 
     public static class GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfo extends TeaModel {
         /**
-         * <p>The duty roster alert channels.</p>
+         * <p>The on-call schedule alert channels.</p>
          */
         @NameInMap("AlertDutyChannelList")
         public java.util.List<String> alertDutyChannelList;
 
         /**
-         * <p>The duty roster alert list.</p>
+         * <p>The on-call schedule alert list.</p>
          */
         @NameInMap("AlertDutyList")
         public java.util.List<GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfoAlertDutyList> alertDutyList;
@@ -221,7 +221,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
         public java.util.List<GetQualityAlertOfAllRuleScopeByWatchIdResponseBodyQualityAlertInfoAlertUserList> alertUserList;
 
         /**
-         * <p>Indicates whether alerting is enabled for the quality owner.</p>
+         * <p>Indicates whether alerting for quality owners is enabled.</p>
          */
         @NameInMap("EnableAlertQualityOwner")
         public Boolean enableAlertQualityOwner;

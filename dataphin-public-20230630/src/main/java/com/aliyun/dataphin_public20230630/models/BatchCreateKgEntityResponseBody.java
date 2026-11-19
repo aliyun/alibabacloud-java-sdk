@@ -29,7 +29,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,6 +107,15 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
 
     public static class BatchCreateKgEntityResponseBodyCreateResultSuccessEntityList extends TeaModel {
         /**
+         * <p>The business ID of the entity record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
+        @NameInMap("BizId")
+        public String bizId;
+
+        /**
          * <p>The ID of the entity record.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +138,14 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public BatchCreateKgEntityResponseBodyCreateResultSuccessEntityList setBizId(String bizId) {
+            this.bizId = bizId;
+            return this;
+        }
+        public String getBizId() {
+            return this.bizId;
+        }
+
         public BatchCreateKgEntityResponseBodyCreateResultSuccessEntityList setEntityId(String entityId) {
             this.entityId = entityId;
             return this;
@@ -149,7 +166,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
 
     public static class BatchCreateKgEntityResponseBodyCreateResult extends TeaModel {
         /**
-         * <p>The number of failed records.</p>
+         * <p>The number of failed creations.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -158,7 +175,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         public Integer failCount;
 
         /**
-         * <p>The number of successfully created records.</p>
+         * <p>The number of successful creations.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -167,7 +184,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
-         * <p>The list of IDs of successfully created entity records.</p>
+         * <p>The list of IDs for successfully created entity records.</p>
          */
         @NameInMap("SuccessEntityList")
         public java.util.List<BatchCreateKgEntityResponseBodyCreateResultSuccessEntityList> successEntityList;

@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStreamJobsRequest extends TeaModel {
     /**
-     * <p>The Dataphin environment. Valid values:</p>
-     * <ul>
-     * <li>DEV</li>
-     * <li>PROD.</li>
-     * </ul>
+     * <p>The Dataphin environment. Valid values: DEV and PROD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +25,8 @@ public class GetStreamJobsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

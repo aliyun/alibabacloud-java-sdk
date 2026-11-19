@@ -32,7 +32,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The paged query result.</p>
+     * <p>The paged query results.</p>
      */
     @NameInMap("PageResult")
     public ListQualityRuleTasksResponseBodyPageResult pageResult;
@@ -107,7 +107,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
 
     public static class ListQualityRuleTasksResponseBodyPageResultQualityRuleTaskList extends TeaModel {
         /**
-         * <p>The business date.</p>
+         * <p>The business date. Format: YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
@@ -125,7 +125,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String bizDateFormat;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -143,7 +143,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -152,7 +152,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The rule task ID.</p>
+         * <p>The ID of the rule task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -161,7 +161,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The ID of the user who last modified the task.</p>
+         * <p>The ID of the user who last updated the task.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -170,7 +170,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -179,7 +179,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -188,7 +188,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -197,7 +197,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The task status.</p>
+         * <p>The status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -206,7 +206,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The template ID.</p>
+         * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -248,7 +248,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public Boolean validateSuccess;
 
         /**
-         * <p>The watch ID.</p>
+         * <p>The ID of the associated quality watchtask.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -257,7 +257,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public Long watchId;
 
         /**
-         * <p>The watch task ID. This ID is empty for trial run tasks.</p>
+         * <p>The ID of the watchtask. This ID is empty for trial rule tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -418,7 +418,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
 
     public static class ListQualityRuleTasksResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The paged quality rule task list.</p>
+         * <p>The paged list of quality rule tasks.</p>
          */
         @NameInMap("QualityRuleTaskList")
         public java.util.List<ListQualityRuleTasksResponseBodyPageResultQualityRuleTaskList> qualityRuleTaskList;

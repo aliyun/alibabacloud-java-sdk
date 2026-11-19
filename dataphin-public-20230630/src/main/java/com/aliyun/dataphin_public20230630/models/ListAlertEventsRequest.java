@@ -22,6 +22,8 @@ public class ListAlertEventsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,7 +61,7 @@ public class ListAlertEventsRequest extends TeaModel {
 
     public static class ListAlertEventsRequestListQuery extends TeaModel {
         /**
-         * <p>The end date of the alert.</p>
+         * <p>The alert end date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -75,13 +77,13 @@ public class ListAlertEventsRequest extends TeaModel {
         public java.util.List<String> alertObjectTypeList;
 
         /**
-         * <p>The list of alert reasons.</p>
+         * <p>The list of alert causes.</p>
          */
         @NameInMap("AlertReasonList")
         public java.util.List<String> alertReasonList;
 
         /**
-         * <p>The start date of the alert.</p>
+         * <p>The alert start date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,13 +93,13 @@ public class ListAlertEventsRequest extends TeaModel {
         public String alertStartTime;
 
         /**
-         * <p>The list of business units.</p>
+         * <p>The list of business unit names.</p>
          */
         @NameInMap("BizNameList")
         public java.util.List<String> bizNameList;
 
         /**
-         * <p>The keyword for the query.</p>
+         * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -132,7 +134,7 @@ public class ListAlertEventsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The list of projects.</p>
+         * <p>The list of project names.</p>
          */
         @NameInMap("ProjectNameList")
         public java.util.List<String> projectNameList;
@@ -140,16 +142,15 @@ public class ListAlertEventsRequest extends TeaModel {
         /**
          * <p>The source system. Valid values:</p>
          * <ul>
-         * <li>ALL: all</li>
-         * <li>DQE: data quality</li>
-         * <li>OS: data service</li>
-         * <li>STREAM: real-time computing</li>
-         * <li>VDM_BATCH: offline computing</li>
-         * <li>SOP: O&amp;M platform</li>
-         * <li>REAL_TIME_PIPELINE: real-time integration</li>
-         * <li>KGB: baseline monitoring</li>
+         * <li>ALL: All.</li>
+         * <li>DQE: Data quality.</li>
+         * <li>OS: Data service.</li>
+         * <li>STREAM: Real-time computing.</li>
+         * <li>VDM_BATCH: Offline computing.</li>
+         * <li>SOP: O&amp;M platform.</li>
+         * <li>REAL_TIME_PIPELINE: Real-time integration.</li>
+         * <li>KGB: Baseline monitoring.</li>
          * </ul>
-         * <p>and more.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

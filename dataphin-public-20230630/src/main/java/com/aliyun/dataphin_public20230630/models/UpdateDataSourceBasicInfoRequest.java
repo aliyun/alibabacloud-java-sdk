@@ -15,6 +15,8 @@ public class UpdateDataSourceBasicInfoRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateDataSourceBasicInfoRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The basic information to edit for the data source.</p>
+     * <p>The update of the basic information for a data source.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -63,7 +65,7 @@ public class UpdateDataSourceBasicInfoRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Sample data source description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -83,7 +85,7 @@ public class UpdateDataSourceBasicInfoRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Name")
         public String name;

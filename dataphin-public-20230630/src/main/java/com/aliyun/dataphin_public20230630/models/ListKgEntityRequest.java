@@ -14,7 +14,7 @@ public class ListKgEntityRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The paged query filter conditions.</p>
+     * <p>The paged search filter conditions.</p>
      */
     @NameInMap("ListQuery")
     public ListKgEntityRequestListQuery listQuery;
@@ -30,6 +30,8 @@ public class ListKgEntityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -93,17 +95,7 @@ public class ListKgEntityRequest extends TeaModel {
 
     public static class ListKgEntityRequestListQueryFilterList extends TeaModel {
         /**
-         * <p>The operator. Valid values:</p>
-         * <ul>
-         * <li>eq: equal to.</li>
-         * <li>neq: not equal to.</li>
-         * <li>contains: contains.</li>
-         * <li>gt: greater than.</li>
-         * <li>gte: greater than or equal to.</li>
-         * <li>lt: less than.</li>
-         * <li>lte: less than or equal to.</li>
-         * <li>like: fuzzy match.</li>
-         * </ul>
+         * <p>The operator. Valid values: eq (equal to), neq (not equal to), contains (contains), gt (greater than), gte (greater than or equal to), lt (less than), lte (less than or equal to), and like (fuzzy match).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +115,7 @@ public class ListKgEntityRequest extends TeaModel {
         public String propertyCode;
 
         /**
-         * <p>The property match value.</p>
+         * <p>The property value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +163,7 @@ public class ListKgEntityRequest extends TeaModel {
         public java.util.List<ListKgEntityRequestListQueryFilterList> filterList;
 
         /**
-         * <p>The keyword for searching display properties.</p>
+         * <p>The keyword search for displayed properties.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

@@ -32,7 +32,7 @@ public class UpdateComputeClusterRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -88,13 +88,13 @@ public class UpdateComputeClusterRequest extends TeaModel {
         public String clusterSafetyAuthType;
 
         /**
-         * <p>The list of whitelist user group IDs.</p>
+         * <p>The list of whitelisted user group IDs.</p>
          */
         @NameInMap("UserGroupIds")
         public java.util.List<String> userGroupIds;
 
         /**
-         * <p>The list of whitelist user IDs.</p>
+         * <p>The list of whitelisted user IDs.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
@@ -214,7 +214,7 @@ public class UpdateComputeClusterRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>时区名称，例如 Asia/Shanghai。更新时不传则保留原值。</p>
+         * <p>The time zone name, such as Asia/Shanghai. If this parameter is not specified during an update, the original value is retained.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>

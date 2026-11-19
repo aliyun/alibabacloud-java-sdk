@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSupplementDagrunResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of dagruns.</p>
+     * <p>The dagrun list.</p>
      */
     @NameInMap("DagrunList")
     public java.util.List<GetSupplementDagrunResponseBodyDagrunList> dagrunList;
@@ -47,7 +47,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
 
     public static class GetSupplementDagrunResponseBodyDagrunList extends TeaModel {
         /**
-         * <p>The business date. The time format must conform to the partition format specified by the business unit.</p>
+         * <p>The business date. The time format must comply with the partition format specified by the business unit.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-01</p>
@@ -128,7 +128,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The execution end timestamp.</p>
+         * <p>The end execution timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1717081789000</p>
@@ -146,7 +146,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The execution start timestamp.</p>
+         * <p>The start execution timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1717081729000</p>
@@ -155,16 +155,16 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         public Long startExecuteTime;
 
         /**
-         * <p>The status of the data backfill instance workflow. Valid values:</p>
+         * <p>The status of the data backfill workflow. Valid values:</p>
          * <ul>
-         * <li>INIT: dagrun init.</li>
-         * <li>CREATE_FAILED: dagrun creation failed.</li>
-         * <li>CREATED: dagrun created.</li>
-         * <li>READY: dagrun ready for exec.</li>
-         * <li>RUNNING: dagrun running.</li>
-         * <li>KILLED: dagrun stopped.</li>
-         * <li>FAILED: dagrun failed.</li>
-         * <li>SUCCESS: dagrun succeeded.</li>
+         * <li>INIT: The dagrun is initialized.</li>
+         * <li>CREATE_FAILED: The dagrun fails to be created.</li>
+         * <li>CREATED: The dagrun is created.</li>
+         * <li>READY: The dagrun is ready for execution.</li>
+         * <li>RUNNING: The dagrun is running.</li>
+         * <li>KILLED: The dagrun is stopped.</li>
+         * <li>FAILED: The dagrun fails.</li>
+         * <li>SUCCESS: The dagrun succeeds.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the data backfill instance workflow.</p>
+         * <p>The ID of the data backfill workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>f_8241792_20201202_2099680</p>

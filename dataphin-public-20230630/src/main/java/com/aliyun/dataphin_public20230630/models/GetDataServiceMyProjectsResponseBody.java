@@ -23,7 +23,7 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend error details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
 
     public static class GetDataServiceMyProjectsResponseBodyProjectList extends TeaModel {
         /**
-         * <p>The data service project ID.</p>
+         * <p>The ID of the data service project.</p>
          * 
          * <strong>example:</strong>
          * <p>102011</p>
@@ -116,7 +116,7 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
         public Integer projectId;
 
         /**
-         * <p>The project name.</p>
+         * <p>The name of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -125,14 +125,7 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The role. Valid values:</p>
-         * <ul>
-         * <li>1: super administrator</li>
-         * <li>2: developer</li>
-         * <li>3: application member</li>
-         * <li>4: service project administrator</li>
-         * <li>5: O&amp;M engineer.</li>
-         * </ul>
+         * <p>The role. Valid values: 1: Super administrator, 2: Developer, 3: Application member, 4: Service project administrator, 5: O&amp;M user.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

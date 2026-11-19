@@ -25,6 +25,8 @@ public class ReplaceProjectWhiteListsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -80,7 +82,7 @@ public class ReplaceProjectWhiteListsRequest extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;

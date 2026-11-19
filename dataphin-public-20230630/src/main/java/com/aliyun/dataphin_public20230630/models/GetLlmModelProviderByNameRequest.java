@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLlmModelProviderByNameRequest extends TeaModel {
     /**
-     * <p>The name of the large language model service provider.</p>
+     * <p>The name of the large model service provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetLlmModelProviderByNameRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

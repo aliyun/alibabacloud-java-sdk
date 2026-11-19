@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecKgCypherShrinkRequest extends TeaModel {
     /**
-     * <p>The custom Cypher query instruction.</p>
+     * <p>The custom Cypher query command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ExecCommand")
@@ -22,6 +22,8 @@ public class ExecKgCypherShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operating user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

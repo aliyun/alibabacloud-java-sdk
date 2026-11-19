@@ -25,7 +25,7 @@ public class GetProjectWhiteListsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operating user.</p>
+     * <p>The operator user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

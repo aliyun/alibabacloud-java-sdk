@@ -15,6 +15,8 @@ public class RemoveQualityRuleSchedulesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class RemoveQualityRuleSchedulesRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The unbinding instruction.</p>
+     * <p>The unbind command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RemoveCommand")
@@ -76,11 +78,11 @@ public class RemoveQualityRuleSchedulesRequest extends TeaModel {
         public java.util.List<Long> scheduleIdList;
 
         /**
-         * <p>The ID of the monitored object.</p>
+         * <p>The monitored object ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>平均值</p>
+         * <p>Average value</p>
          */
         @NameInMap("WatchId")
         public Long watchId;

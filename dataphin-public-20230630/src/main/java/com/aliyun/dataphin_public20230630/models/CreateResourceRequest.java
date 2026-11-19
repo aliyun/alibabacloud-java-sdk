@@ -22,6 +22,8 @@ public class CreateResourceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,22 +61,17 @@ public class CreateResourceRequest extends TeaModel {
 
     public static class CreateResourceRequestCreateCommand extends TeaModel {
         /**
-         * <p>The commit remarks.</p>
+         * <p>The submission comment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx 测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The compute engine type. Valid values:</p>
-         * <ul>
-         * <li>MAX_COMPUTE</li>
-         * <li>HADOOP</li>
-         * <li>NONE.</li>
-         * </ul>
+         * <p>The compute engine type. Valid values: MAX_COMPUTE, HADOOP, and NONE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,17 +81,17 @@ public class CreateResourceRequest extends TeaModel {
         public String computeEngineType;
 
         /**
-         * <p>The description of the resource file.</p>
+         * <p>The resource description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx 测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The folder in which the resource file is stored.</p>
+         * <p>The storage folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,13 +121,7 @@ public class CreateResourceRequest extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The type of the resource file. Valid values:</p>
-         * <ul>
-         * <li>FILE: common file.</li>
-         * <li>JAR: JAR file.</li>
-         * <li>PYTHON: Python file.</li>
-         * <li>OTHERS: other type of file.</li>
-         * </ul>
+         * <p>The resource type. Valid values: FILE: common file, JAR: JAR file, PYTHON: Python file, and OTHERS: other types of files.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +131,7 @@ public class CreateResourceRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The storage address of the resource file.</p>
+         * <p>The storage address of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

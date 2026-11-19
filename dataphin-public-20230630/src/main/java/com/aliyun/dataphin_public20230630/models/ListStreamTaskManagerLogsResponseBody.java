@@ -14,7 +14,7 @@ public class ListStreamTaskManagerLogsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of log files for the specified TaskManager.</p>
+     * <p>The log file entries for the JobManager or TaskManager. You can use the LogName field to retrieve the log content.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListStreamTaskManagerLogsResponseBodyData> data;
@@ -29,7 +29,7 @@ public class ListStreamTaskManagerLogsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The backend exception details.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class ListStreamTaskManagerLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class ListStreamTaskManagerLogsResponseBody extends TeaModel {
 
     public static class ListStreamTaskManagerLogsResponseBodyData extends TeaModel {
         /**
-         * <p>The log file name. This name can be used as the logName input parameter for the logContent operation.</p>
+         * <p>The original name of the log file. This value corresponds to the LogName request parameter of the GetStreamLogContent operation. Pass this value as is.</p>
          * 
          * <strong>example:</strong>
          * <p>flink--standalonesession-0-dataphin-session-7db678957dc449aab0086b931c9f8218-jobmanager.log</p>
@@ -116,7 +116,7 @@ public class ListStreamTaskManagerLogsResponseBody extends TeaModel {
         public String logName;
 
         /**
-         * <p>The last modified time in milliseconds.</p>
+         * <p>The last modified time of the log file. The value is a timestamp in milliseconds since the UNIX epoch.</p>
          * 
          * <strong>example:</strong>
          * <p>1792033500000</p>
@@ -125,7 +125,7 @@ public class ListStreamTaskManagerLogsResponseBody extends TeaModel {
         public Long mtime;
 
         /**
-         * <p>The file size in bytes.</p>
+         * <p>The size of the log file. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>

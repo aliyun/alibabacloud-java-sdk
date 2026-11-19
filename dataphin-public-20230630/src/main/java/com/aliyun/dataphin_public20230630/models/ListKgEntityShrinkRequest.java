@@ -14,7 +14,7 @@ public class ListKgEntityShrinkRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The paged query filter conditions.</p>
+     * <p>The paged search filter conditions.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
@@ -30,6 +30,8 @@ public class ListKgEntityShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

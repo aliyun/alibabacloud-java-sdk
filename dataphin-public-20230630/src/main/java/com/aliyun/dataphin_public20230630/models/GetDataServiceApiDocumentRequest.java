@@ -34,7 +34,7 @@ public class GetDataServiceApiDocumentRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The version.</p>
+     * <p>The version ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

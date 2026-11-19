@@ -21,6 +21,8 @@ public class ListAlertNotificationsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -76,7 +78,7 @@ public class ListAlertNotificationsRequest extends TeaModel {
         public java.util.List<String> customChannelIdList;
 
         /**
-         * <p>The keyword for the query.</p>
+         * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -91,7 +93,7 @@ public class ListAlertNotificationsRequest extends TeaModel {
         public java.util.List<String> monitoredItemIdList;
 
         /**
-         * <p>The end time of the push.</p>
+         * <p>The push end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +103,7 @@ public class ListAlertNotificationsRequest extends TeaModel {
         public String notifyEndTime;
 
         /**
-         * <p>The start time of the push.</p>
+         * <p>The push start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -121,7 +123,7 @@ public class ListAlertNotificationsRequest extends TeaModel {
         public Integer page;
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,16 +135,16 @@ public class ListAlertNotificationsRequest extends TeaModel {
         /**
          * <p>The source system. Valid values:</p>
          * <ul>
-         * <li>ALL: all.</li>
-         * <li>DQE: data quality.</li>
-         * <li>OS: data service.</li>
-         * <li>STREAM: real-time computing.</li>
-         * <li>VDM_BATCH: offline computing.</li>
+         * <li>ALL: All.</li>
+         * <li>DQE: Data quality.</li>
+         * <li>OS: Data service.</li>
+         * <li>STREAM: Real-time computing.</li>
+         * <li>VDM_BATCH: Offline computing.</li>
          * <li>SOP: O&amp;M platform.</li>
-         * <li>REAL_TIME_PIPELINE: real-time integration.</li>
-         * <li>KGB: baseline monitoring.</li>
+         * <li>REAL_TIME_PIPELINE: Real-time integration.</li>
+         * <li>KGB: Baseline monitoring.
+         * etc.</li>
          * </ul>
-         * <p>And more.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

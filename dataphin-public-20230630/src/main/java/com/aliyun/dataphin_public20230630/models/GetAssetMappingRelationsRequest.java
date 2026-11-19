@@ -60,7 +60,7 @@ public class GetAssetMappingRelationsRequest extends TeaModel {
 
     public static class GetAssetMappingRelationsRequestAssetMappingQuery extends TeaModel {
         /**
-         * <p>The asset object type. Valid values: COLUMN (field) and INDEX (metric).</p>
+         * <p>The asset object type. Valid values: COLUMN: field. INDEX: metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class GetAssetMappingRelationsRequest extends TeaModel {
         public String guid;
 
         /**
-         * <p>The mapping relationship type. Valid values: VALID (mapped) and INVALID (invalid mapping).</p>
+         * <p>The mapping relationship type. Valid values: VALID: mapped. INVALID: invalid mapping.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

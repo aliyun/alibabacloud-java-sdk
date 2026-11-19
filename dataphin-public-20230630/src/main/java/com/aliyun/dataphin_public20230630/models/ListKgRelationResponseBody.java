@@ -47,7 +47,7 @@ public class ListKgRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -116,7 +116,7 @@ public class ListKgRelationResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The data type of the property. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), and LIST (list).</p>
+         * <p>The data type of the property, such as STRING, INTEGER, FLOAT, BOOLEAN, DATE, or LIST.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -166,13 +166,13 @@ public class ListKgRelationResponseBody extends TeaModel {
 
     public static class ListKgRelationResponseBodyPageResultRelationList extends TeaModel {
         /**
-         * <p>The list of properties for the relationship record.</p>
+         * <p>The list of properties for the relation record.</p>
          */
         @NameInMap("PropertyList")
         public java.util.List<ListKgRelationResponseBodyPageResultRelationListPropertyList> propertyList;
 
         /**
-         * <p>The relationship record ID.</p>
+         * <p>The relation record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>abc-xxx</p>
@@ -181,7 +181,7 @@ public class ListKgRelationResponseBody extends TeaModel {
         public String relationId;
 
         /**
-         * <p>The relationship type code.</p>
+         * <p>The relation type code.</p>
          * 
          * <strong>example:</strong>
          * <p>BELONG_TO</p>
@@ -256,7 +256,7 @@ public class ListKgRelationResponseBody extends TeaModel {
 
     public static class ListKgRelationResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The list of paged relationship records.</p>
+         * <p>The paged list of relation records.</p>
          */
         @NameInMap("RelationList")
         public java.util.List<ListKgRelationResponseBodyPageResultRelationList> relationList;

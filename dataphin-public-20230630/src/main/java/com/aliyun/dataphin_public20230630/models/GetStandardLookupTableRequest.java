@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStandardLookupTableRequest extends TeaModel {
     /**
-     * <p>The ID of the lookup table.</p>
+     * <p>The lookup table ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetStandardLookupTableRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Specifies whether to allow a null value to be returned if the lookup table does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</p>
+     * <p>Specifies whether to allow a null value to be returned when the lookup table does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</p>
      */
     @NameInMap("Nullable")
     public Boolean nullable;

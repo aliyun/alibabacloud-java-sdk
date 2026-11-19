@@ -47,7 +47,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The custom function details.</p>
+     * <p>The details of the custom function.</p>
      */
     @NameInMap("UdfInfo")
     public GetUdfByVersionResponseBodyUdfInfo udfInfo;
@@ -107,19 +107,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
 
     public static class GetUdfByVersionResponseBodyUdfInfo extends TeaModel {
         /**
-         * <p>The category. Valid values:</p>
-         * <ul>
-         * <li>1: Window function.</li>
-         * <li>2: Statistical function.</li>
-         * <li>3: Numerical function.</li>
-         * <li>4: String function.</li>
-         * <li>5: Time function.</li>
-         * <li>6: IP address helper function.</li>
-         * <li>7: URL-related function.</li>
-         * <li>8: Encoding and decoding function.</li>
-         * <li>9: Business-related function.</li>
-         * <li>10: Other.</li>
-         * </ul>
+         * <p>The category of the function. Valid values: 1: Window function. 2: Aggregate function. 3: Numeric function. 4: String function. 5: Time function. 6: IP address helper function. 7: URL-related function. 8: Encoding and decoding function. 9: Business-related function. 10: Other.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +116,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         public Integer category;
 
         /**
-         * <p>The registered class name.</p>
+         * <p>The name of the registered class.</p>
          * 
          * <strong>example:</strong>
          * <p>com.lydaas.dataphin.UdfTest</p>
@@ -155,7 +143,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         public String computeEngineType;
 
         /**
-         * <p>The creator.</p>
+         * <p>The creator of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>30012110</p>
@@ -164,7 +152,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -173,7 +161,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The storage directory.</p>
+         * <p>The directory where the function is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -182,7 +170,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         public String directory;
 
         /**
-         * <p>The creation time. Format: yyyy-MM-d HH:mm:ss.</p>
+         * <p>The time when the function was created. Format: yyyy-MM-d HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
@@ -191,7 +179,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time. Format: yyyy-MM-d HH:mm:ss.</p>
+         * <p>The time when the function was last updated. Format: yyyy-MM-d HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
@@ -200,7 +188,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The custom function ID.</p>
+         * <p>The ID of the custom function.</p>
          * 
          * <strong>example:</strong>
          * <p>1030111021</p>
@@ -209,7 +197,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The last modifier.</p>
+         * <p>The user who last modified the function.</p>
          * 
          * <strong>example:</strong>
          * <p>30012110</p>
@@ -218,7 +206,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>udf_to_lower</p>

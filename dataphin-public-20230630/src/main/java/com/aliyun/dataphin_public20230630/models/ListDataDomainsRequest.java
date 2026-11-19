@@ -22,6 +22,8 @@ public class ListDataDomainsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,13 +61,13 @@ public class ListDataDomainsRequest extends TeaModel {
 
     public static class ListDataDomainsRequestListQuery extends TeaModel {
         /**
-         * <p>The IDs of the business units to which the data domains belong.</p>
+         * <p>The IDs of the business units.</p>
          */
         @NameInMap("BizUnitIdList")
         public java.util.List<Long> bizUnitIdList;
 
         /**
-         * <p>The search keyword. You can search by data domain name, code, or description.</p>
+         * <p>The search keyword, which can be the data domain name, code, or description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

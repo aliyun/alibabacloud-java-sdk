@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStandardSetRequest extends TeaModel {
     /**
-     * <p>The create instruction.</p>
+     * <p>The create command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateStandardSetRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,11 +61,7 @@ public class CreateStandardSetRequest extends TeaModel {
 
     public static class CreateStandardSetRequestCreateCommandApprovalConfig extends TeaModel {
         /**
-         * <p>The approval process type. Valid values:</p>
-         * <ul>
-         * <li>BY_DEFAULT: the default approval type.</li>
-         * <li>BY_TEMPLATE: approval based on an approval template.</li>
-         * </ul>
+         * <p>The approval flow type. Valid values: BY_DEFAULT: Default approval type. BY_TEMPLATE: Based on an approval template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +85,7 @@ public class CreateStandardSetRequest extends TeaModel {
         public Boolean isSubmitInBatch;
 
         /**
-         * <p>The ID of the approval template. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+         * <p>The ID of the approval template. This parameter takes effect only when the approval flow type is set to BY_TEMPLATE.</p>
          * 
          * <strong>example:</strong>
          * <p>1121</p>
@@ -136,7 +134,7 @@ public class CreateStandardSetRequest extends TeaModel {
 
     public static class CreateStandardSetRequestCreateCommandDirectoryReference extends TeaModel {
         /**
-         * <p>The directory to which the standard set belongs.</p>
+         * <p>The folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,11 +160,7 @@ public class CreateStandardSetRequest extends TeaModel {
 
     public static class CreateStandardSetRequestCreateCommandOfflineApprovalConfig extends TeaModel {
         /**
-         * <p>The approval process type. Valid values:</p>
-         * <ul>
-         * <li>BY_DEFAULT: the default approval type.</li>
-         * <li>BY_TEMPLATE: approval based on an approval template.</li>
-         * </ul>
+         * <p>The approval flow type. Valid values: BY_DEFAULT: Default approval type. BY_TEMPLATE: Based on an approval template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +184,7 @@ public class CreateStandardSetRequest extends TeaModel {
         public Boolean isSubmitInBatch;
 
         /**
-         * <p>The ID of the approval template. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+         * <p>The ID of the approval template. This parameter takes effect only when the approval flow type is set to BY_TEMPLATE.</p>
          * 
          * <strong>example:</strong>
          * <p>1121</p>
@@ -245,12 +239,7 @@ public class CreateStandardSetRequest extends TeaModel {
         public java.util.List<String> specifiedUserList;
 
         /**
-         * <p>The visibility type. Valid values:</p>
-         * <ul>
-         * <li>PUBLIC: visible to all users.</li>
-         * <li>PRIVATE: visible only to standard set members and administrators.</li>
-         * <li>SPECIFIED: visible only to specified users.</li>
-         * </ul>
+         * <p>The visibility type. Valid values: PUBLIC: Public. PRIVATE: Private, visible only to standard set members and administrators. SPECIFIED: Visible to specified users.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +273,7 @@ public class CreateStandardSetRequest extends TeaModel {
 
     public static class CreateStandardSetRequestCreateCommand extends TeaModel {
         /**
-         * <p>The approval configuration for going online.</p>
+         * <p>The online approval configuration.</p>
          */
         @NameInMap("ApprovalConfig")
         public CreateStandardSetRequestCreateCommandApprovalConfig approvalConfig;
@@ -318,25 +307,25 @@ public class CreateStandardSetRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The directory to which the standard set belongs.</p>
+         * <p>The parent folder.</p>
          */
         @NameInMap("DirectoryReference")
         public CreateStandardSetRequestCreateCommandDirectoryReference directoryReference;
 
         /**
-         * <p>The list of maintainers.</p>
+         * <p>The maintainers.</p>
          */
         @NameInMap("MaintainerList")
         public java.util.List<String> maintainerList;
 
         /**
-         * <p>The list of member groups.</p>
+         * <p>The member group list.</p>
          */
         @NameInMap("MemberGroupList")
         public java.util.List<String> memberGroupList;
 
         /**
-         * <p>The list of members.</p>
+         * <p>The member list.</p>
          */
         @NameInMap("MemberList")
         public java.util.List<String> memberList;
@@ -352,7 +341,7 @@ public class CreateStandardSetRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The approval configuration for going offline.</p>
+         * <p>The offline approval configuration.</p>
          */
         @NameInMap("OfflineApprovalConfig")
         public CreateStandardSetRequestCreateCommandOfflineApprovalConfig offlineApprovalConfig;

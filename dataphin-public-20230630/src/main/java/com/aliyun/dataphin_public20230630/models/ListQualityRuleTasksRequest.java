@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQualityRuleTasksRequest extends TeaModel {
     /**
-     * <p>The paging query conditions.</p>
+     * <p>The paging conditions for the paged query.</p>
      */
     @NameInMap("ListQuery")
     public ListQualityRuleTasksRequestListQuery listQuery;
@@ -21,7 +21,7 @@ public class ListQualityRuleTasksRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The operator user ID.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -60,7 +60,7 @@ public class ListQualityRuleTasksRequest extends TeaModel {
 
     public static class ListQualityRuleTasksRequestListQuery extends TeaModel {
         /**
-         * <p>The business date.</p>
+         * <p>The business date. Format: YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
@@ -69,7 +69,7 @@ public class ListQualityRuleTasksRequest extends TeaModel {
         public String bizDate;
 
         /**
-         * <p>The rule types. Valid values: CONSISTENT (consistency), EFFECTIVE (effectiveness), TIMELINESE (timeliness), ACCURATE (accuracy), UNIQUENESS (uniqueness), COMPLETENESS (completeness), STABILITY (stability), and CUSTOM (custom).</p>
+         * <p>The rule types. Valid values: CONSISTENT (Consistency), EFFECTIVE (Effectiveness), TIMELINESE (Timeliness), ACCURATE (Accuracy), UNIQUENESS (Uniqueness), COMPLETENESS (Completeness), STABILITY (Stability), and CUSTOM (Custom).</p>
          */
         @NameInMap("CatalogList")
         public java.util.List<String> catalogList;
@@ -102,31 +102,31 @@ public class ListQualityRuleTasksRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The rule strengths. Valid values: STRONG (strong) and WEAK (weak).</p>
+         * <p>The rule strengths. Valid values: STRONG (Strong) and WEAK (Weak).</p>
          */
         @NameInMap("RuleStrengthList")
         public java.util.List<String> ruleStrengthList;
 
         /**
-         * <p>The rule labels. Valid values: DEFAULT (default label), DATA_STANDARD_MANUAL (manually created standard rules), DATA_STANDARD_AUTO (standard quality rules created by automatic creation), PIPELINE (rules created by pipelines), and DATA_MODELING (data modeling).</p>
+         * <p>The rule labels. Valid values: DEFAULT (Default label), DATA_STANDARD_MANUAL (Manually created standard rule), DATA_STANDARD_AUTO (Standard quality rule of automatic creation), PIPELINE (Rule created by pipeline), and DATA_MODELING (Data modeling).</p>
          */
         @NameInMap("RuleTagList")
         public java.util.List<String> ruleTagList;
 
         /**
-         * <p>The task statuses. Valid values: NOT_RUN (not run), WAITING (waiting), RUNNING (running), SUCCESS (successful), FAILED (failed), CANCEL (canceled), TIMEOUT (timed out), and OFFLINE (offline).</p>
+         * <p>The task statuses. Valid values: NOT_RUN (Not run), WAITING (Waiting), RUNNING (Running), SUCCESS (Successful), FAILED (Failed), CANCEL (Canceled), TIMEOUT (Timed out), and OFFLINE (Offline).</p>
          */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
 
         /**
-         * <p>The validation results. Valid values: NOT_RUN (not run), WAITING (waiting), RUNNING (running), PASS (passed), NOT_PASS (not passed), FAILED (failed), OFFLINE (offline and requires restart), CANCEL (canceled), and TIMEOUT (timed out).</p>
+         * <p>The validation results. Valid values: NOT_RUN (Not run), WAITING (Waiting), RUNNING (Running), PASS (Passed), NOT_PASS (Not passed), FAILED (Failed), OFFLINE (Offline, requires restart), CANCEL (Canceled), and TIMEOUT (Timed out).</p>
          */
         @NameInMap("ValidateResultList")
         public java.util.List<String> validateResultList;
 
         /**
-         * <p>The quality watchtask ID.</p>
+         * <p>The watchtask ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

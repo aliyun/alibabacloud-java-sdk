@@ -47,7 +47,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -125,7 +125,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public Long appKey;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -152,7 +152,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public Long clientFailCount;
 
         /**
-         * <p>The source IP address of the access request.</p>
+         * <p>The IP address of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -161,7 +161,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>The number of abnormal API calls.</p>
+         * <p>The number of API call exceptions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,7 +170,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public Long errorApiCount;
 
         /**
-         * <p>The number of errors.</p>
+         * <p>The number of exceptions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +188,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public String errorRate;
 
         /**
-         * <p>The most recent call time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The time of the last call. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 08:00:00</p>
@@ -197,7 +197,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public String lastCallTime;
 
         /**
-         * <p>The gateway statistics time. Format: yyyy_MMdd_HHmm.</p>
+         * <p>The time when the gateway statistics are collected. Format: yyyy_MMdd_HHmm.</p>
          * 
          * <strong>example:</strong>
          * <p>2025_0611_1011</p>
@@ -206,7 +206,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         public String minute;
 
         /**
-         * <p>The number of offline instances.</p>
+         * <p>The offline count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

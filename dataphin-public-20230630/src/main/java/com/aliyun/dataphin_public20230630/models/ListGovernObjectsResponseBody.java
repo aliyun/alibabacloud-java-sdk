@@ -14,7 +14,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The backend exception details.</p>
+     * <p>The backend response exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
          * <p>The display name of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>Yang Jing 2088252351182803</p>
+         * <p>Yang Jing2088252351182803</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -170,7 +170,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         public String parentObjectId;
 
         /**
-         * <p>The contact email for the governance issue.</p>
+         * <p>The contact email for governance issues.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:126983612986391@gamail.com">126983612986391@gamail.com</a></p>
@@ -179,16 +179,16 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         public String problemContactMail;
 
         /**
-         * <p>The other contact information for the governance issue.</p>
+         * <p>Other contact information for the governance problem.</p>
          * 
          * <strong>example:</strong>
-         * <p>Jane</p>
+         * <p>Li Si</p>
          */
         @NameInMap("ProblemContactOther")
         public String problemContactOther;
 
         /**
-         * <p>The contact phone number for the governance issue.</p>
+         * <p>The contact phone number for the governance problem.</p>
          * 
          * <strong>example:</strong>
          * <p>16278902467</p>
@@ -197,16 +197,16 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         public String problemContactPhone;
 
         /**
-         * <p>The description of the governance issue.</p>
+         * <p>The description of the governance problem.</p>
          * 
          * <strong>example:</strong>
-         * <p>Governance issue description</p>
+         * <p>Governance problem description</p>
          */
         @NameInMap("ProblemDesc")
         public String problemDesc;
 
         /**
-         * <p>The submission type of the issue.</p>
+         * <p>The submission method of the problem.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -215,7 +215,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         public String problemSubmitType;
 
         /**
-         * <p>The user who submitted the issue.</p>
+         * <p>The user who submitted the problem.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -224,16 +224,16 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         public String problemSubmitter;
 
         /**
-         * <p>The username of the issue submitter.</p>
+         * <p>The username of the user who submitted the problem.</p>
          * 
          * <strong>example:</strong>
-         * <p>John</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("ProblemSubmitterUserName")
         public String problemSubmitterUserName;
 
         /**
-         * <p>The types of the governance issue.</p>
+         * <p>The type of the governance problem.</p>
          */
         @NameInMap("ProblemTypes")
         public java.util.List<String> problemTypes;
@@ -327,10 +327,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
 
     public static class ListGovernObjectsResponseBodyPageResultDataRelatedKnowledge extends TeaModel {
         /**
-         * <p>The cause of the issue.</p>
+         * <p>The cause of the problem.</p>
          * 
          * <strong>example:</strong>
-         * <p>Host exception. The instance was migrated with data loss</p>
+         * <p>Host exception, lossy instance migration</p>
          */
         @NameInMap("Cause")
         public String cause;
@@ -339,13 +339,13 @@ public class ListGovernObjectsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Store scheduled power on/off business domain canary list\n</p>
+         * <p>Canary release list for the scheduled startup and shutdown business domain of stores\n</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
-         * <p>The knowledge entry ID.</p>
+         * <p>The knowledge ID.</p>
          * 
          * <strong>example:</strong>
          * <p>-341426256859</p>
@@ -363,7 +363,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The name of the owner.</p>
+         * <p>The owner name.</p>
          * 
          * <strong>example:</strong>
          * <p>buc_459782</p>
@@ -375,7 +375,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
          * <p>The Solutions.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Type\&quot;:\&quot;text\&quot;,\&quot;Value\&quot;:\&quot;OSS public network access\&quot;}</p>
+         * <p>{&quot;Type&quot;:&quot;text&quot;,&quot;Value&quot;:&quot;OSS public network access&quot;}</p>
          */
         @NameInMap("Solution")
         public String solution;
@@ -454,7 +454,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
 
     public static class ListGovernObjectsResponseBodyPageResultData extends TeaModel {
         /**
-         * <p>The time when the record was reported.</p>
+         * <p>The submission time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-31 10:10:59</p>
@@ -493,7 +493,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         public java.util.List<ListGovernObjectsResponseBodyPageResultDataOwners> owners;
 
         /**
-         * <p>The governance issue object.</p>
+         * <p>The governance problem object.</p>
          */
         @NameInMap("Problem")
         public ListGovernObjectsResponseBodyPageResultDataProblem problem;
@@ -607,7 +607,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         public Long rectifyId;
 
         /**
-         * <p>The name of the rectification.</p>
+         * <p>The rectification name.</p>
          * 
          * <strong>example:</strong>
          * <p>Test rectification</p>
@@ -625,7 +625,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         public String rectifyStatus;
 
         /**
-         * <p>The related knowledge base entries.</p>
+         * <p>The related knowledge base.</p>
          */
         @NameInMap("RelatedKnowledge")
         public java.util.List<ListGovernObjectsResponseBodyPageResultDataRelatedKnowledge> relatedKnowledge;

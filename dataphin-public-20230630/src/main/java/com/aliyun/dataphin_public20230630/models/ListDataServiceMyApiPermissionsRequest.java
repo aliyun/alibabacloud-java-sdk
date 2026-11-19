@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceMyApiPermissionsRequest extends TeaModel {
     /**
-     * <p>Search conditions.</p>
+     * <p>The search criteria.</p>
      */
     @NameInMap("ListQuery")
     public ListDataServiceMyApiPermissionsRequestListQuery listQuery;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +21,8 @@ public class ListDataServiceMyApiPermissionsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -28,7 +30,7 @@ public class ListDataServiceMyApiPermissionsRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Data service project ID.</p>
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +78,7 @@ public class ListDataServiceMyApiPermissionsRequest extends TeaModel {
 
     public static class ListDataServiceMyApiPermissionsRequestListQuery extends TeaModel {
         /**
-         * <p>Search keyword.</p>
+         * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -85,7 +87,7 @@ public class ListDataServiceMyApiPermissionsRequest extends TeaModel {
         public String keyword;
 
         /**
-         * <p>Page number. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -94,7 +96,7 @@ public class ListDataServiceMyApiPermissionsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
-         * <p>Number of records per page. Default value: 20.</p>
+         * <p>The number of records per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

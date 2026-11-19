@@ -107,7 +107,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
 
     public static class ListDataServiceAuthorizedAppsResponseBodyPageResultAuthorizedAppListRemarkForDebugList extends TeaModel {
         /**
-         * <p>The configuration item.</p>
+         * <p>The configuration key.</p>
          * 
          * <strong>example:</strong>
          * <p>k1</p>
@@ -116,7 +116,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the configuration item.</p>
+         * <p>The configuration value.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -167,7 +167,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The ID of the authorized account, which is the ID of the applicant.</p>
+         * <p>The ID of the privilege account, which is the ID of the applicant.</p>
          * 
          * <strong>example:</strong>
          * <p>30012101</p>
@@ -176,7 +176,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String applyUserId;
 
         /**
-         * <p>The name of the authorized account, which is the name of the applicant.</p>
+         * <p>The name of the privilege account, which is the name of the applicant.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -194,7 +194,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String expireDate;
 
         /**
-         * <p>The ID of the authorization request.</p>
+         * <p>The ID of the application request.</p>
          * 
          * <strong>example:</strong>
          * <p>1121</p>
@@ -227,7 +227,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String ownerUserName;
 
         /**
-         * <p>The authorized account type. Valid values:</p>
+         * <p>The privilege account type. Valid values:</p>
          * <ul>
          * <li>0: Individual account.</li>
          * </ul>
@@ -241,8 +241,8 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         /**
          * <p>The permission type. Valid values:</p>
          * <ul>
-         * <li>0: Usage permissions.</li>
-         * <li>1: Development permissions.</li>
+         * <li>0: Usage permission.</li>
+         * <li>1: Development permission.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,13 +270,13 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>Indicates whether the user actually has the owner permissions for the application. The user may not have the permissions due to expiration or other reasons.</p>
+         * <p>Indicates whether the user actually has the owner permission for the application. The user may not have the permission due to expiration or other reasons.</p>
          */
         @NameInMap("RealHasOwnerPrivilege")
         public Boolean realHasOwnerPrivilege;
 
         /**
-         * <p>Indicates whether the user actually has the permissions.</p>
+         * <p>Indicates whether the user actually has the permission.</p>
          */
         @NameInMap("RealHasPrivilege")
         public Boolean realHasPrivilege;
@@ -296,12 +296,12 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         /**
          * <p>The detailed status of the revocation button. Valid values:</p>
          * <ul>
-         * <li>-1: Super administrators cannot relinquish the permission.</li>
-         * <li>-2: Owners cannot relinquish the permission.</li>
-         * <li>-3: Project managers without actual permissions (grayed out).</li>
-         * <li>-4: Regular users without permissions cannot relinquish the permission.</li>
-         * <li>1: Project managers with actual permissions can relinquish the permission.</li>
-         * <li>2: Regular users with permissions can relinquish the permission.</li>
+         * <li>-1: The super administrator cannot return the permission.</li>
+         * <li>-2: The owner cannot return the permission.</li>
+         * <li>-3: The project manager does not have actual permissions, and the button is grayed out.</li>
+         * <li>-4: The regular user does not have permissions and cannot return the permission.</li>
+         * <li>1: The project manager has actual permissions and can return the permission.</li>
+         * <li>2: The regular user has permissions and can return the permission.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -469,7 +469,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public java.util.List<ListDataServiceAuthorizedAppsResponseBodyPageResultAuthorizedAppList> authorizedAppList;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>68</p>

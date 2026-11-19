@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataServicePublishedApisShrinkRequest extends TeaModel {
     /**
-     * <p>Search conditions.</p>
+     * <p>The query conditions.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +21,8 @@ public class ListDataServicePublishedApisShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -28,7 +30,7 @@ public class ListDataServicePublishedApisShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Data service project ID.</p>
+     * <p>The ID of the Data Service project.</p>
      * 
      * <strong>example:</strong>
      * <p>102102</p>

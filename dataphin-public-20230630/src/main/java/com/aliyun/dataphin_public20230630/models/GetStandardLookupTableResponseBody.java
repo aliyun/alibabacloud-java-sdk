@@ -29,7 +29,7 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
     public GetStandardLookupTableResponseBodyLookupTableInfo lookupTableInfo;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -226,7 +226,7 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the user who created the lookup table.</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>30012021</p>
@@ -235,7 +235,7 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The username of the user who created the lookup table.</p>
+         * <p>The username of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -259,7 +259,7 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public GetStandardLookupTableResponseBodyLookupTableInfoDirectoryReference directoryReference;
 
         /**
-         * <p>The ID of the lookup table.</p>
+         * <p>The lookup table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -268,7 +268,7 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The ID of the user who last modified the lookup table.</p>
+         * <p>The ID of the last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>30012021</p>
@@ -277,7 +277,7 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
-         * <p>The username of the user who last modified the lookup table.</p>
+         * <p>The username of the last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

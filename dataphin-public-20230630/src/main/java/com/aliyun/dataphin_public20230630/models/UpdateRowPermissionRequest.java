@@ -15,6 +15,8 @@ public class UpdateRowPermissionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -62,7 +64,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
          * <p>The mapping column description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Business ID.</p>
+         * <p>Business ID</p>
          */
         @NameInMap("ColumnDesc")
         public String columnDesc;
@@ -157,7 +159,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The expression operation values.</p>
+         * <p>The expression operand value.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -278,7 +280,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
 
     public static class UpdateRowPermissionRequestUpdateRowPermissionCommandRules extends TeaModel {
         /**
-         * <p>The rule expressions.</p>
+         * <p>The rule expression.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Expressions")
@@ -405,7 +407,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
         public String mappingColumnName;
 
         /**
-         * <p>The GUID of the table.</p>
+         * <p>The table GUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -457,7 +459,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
          * <p>The row-level permission description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Control business data.</p>
+         * <p>Control business data</p>
          */
         @NameInMap("RowPermissionDesc")
         public String rowPermissionDesc;
@@ -477,7 +479,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>BusinessControl.</p>
+         * <p>Business control</p>
          */
         @NameInMap("RowPermissionName")
         public String rowPermissionName;

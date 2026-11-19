@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataServicePublishedApisResponseBody extends TeaModel {
     /**
-     * <p>Backend response code.</p>
+     * <p>The backend response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Backend exception details.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -32,7 +32,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Paginated query result.</p>
+     * <p>The paged query results.</p>
      */
     @NameInMap("PageResult")
     public ListDataServicePublishedApisResponseBodyPageResult pageResult;
@@ -47,7 +47,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
 
     public static class ListDataServicePublishedApisResponseBodyPageResultApiListAppInfoList extends TeaModel {
         /**
-         * <p>Application ID.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10211</p>
@@ -116,9 +116,9 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Integer appId;
 
         /**
-         * <p>Application key.</p>
+         * <p>The application key. <strong>[Deprecated]</strong> Use AppKeyStr instead.</p>
          * <blockquote>
-         * <p>Notice: Deprecated. Use AppKeyStr instead.</p>
+         * <p>Notice: <strong>[Deprecated]</strong> Use AppKeyStr instead.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Long appKey;
 
         /**
-         * <p>Application key.</p>
+         * <p>The application key.</p>
          * 
          * <strong>example:</strong>
          * <p>APP_200000000</p>
@@ -138,7 +138,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public String appKeyStr;
 
         /**
-         * <p>Application name.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -188,7 +188,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
 
     public static class ListDataServicePublishedApisResponseBodyPageResultApiList extends TeaModel {
         /**
-         * <p>API ID.</p>
+         * <p>The API code.</p>
          * 
          * <strong>example:</strong>
          * <p>1022</p>
@@ -197,7 +197,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Long apiId;
 
         /**
-         * <p>API name.</p>
+         * <p>The API name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -206,7 +206,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public String apiName;
 
         /**
-         * <p>Number of bound applications.</p>
+         * <p>The number of bound applications.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,13 +215,18 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Integer appCount;
 
         /**
-         * <p>List of referenced application information.</p>
+         * <p>The list of referenced applications.</p>
          */
         @NameInMap("AppInfoList")
         public java.util.List<ListDataServicePublishedApisResponseBodyPageResultApiListAppInfoList> appInfoList;
 
         /**
-         * <p>Application status. Valid values: 0 (not all applied), 1 (applied), 2 (no app, need to apply for an app first).</p>
+         * <p>The application status. Valid values:</p>
+         * <ul>
+         * <li>0: Not fully applied.</li>
+         * <li>1: Applied.</li>
+         * <li>2: No application. You must apply for an application first.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -230,7 +235,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Integer applyStatus;
 
         /**
-         * <p>Number of calls.</p>
+         * <p>The number of calls.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -239,7 +244,12 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Integer callCount;
 
         /**
-         * <p>Creation type. Valid values: 0 (custom mode), 1 (wizard mode), 2 (direct connection API).</p>
+         * <p>The creation type. Valid values:</p>
+         * <ul>
+         * <li>0: Custom mode.</li>
+         * <li>1: Wizard mode.</li>
+         * <li>2: Direct API connection.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -248,7 +258,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Integer createType;
 
         /**
-         * <p>Custom update frequency content.</p>
+         * <p>The custom content for the update frequency.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0/1 * * *</p>
@@ -257,7 +267,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public String customUpdateRate;
 
         /**
-         * <p>Publish time. Time format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The publish time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 08:00:00</p>
@@ -266,7 +276,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public String deployTime;
 
         /**
-         * <p>API description.</p>
+         * <p>The API description.</p>
          * 
          * <strong>example:</strong>
          * <p>test xx</p>
@@ -275,7 +285,11 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Call type. Valid values: 1 (synchronous), 2 (asynchronous).</p>
+         * <p>The execution mode. Valid values:</p>
+         * <ul>
+         * <li>1: Synchronous.</li>
+         * <li>2: Asynchronous.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -284,7 +298,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Integer executeMode;
 
         /**
-         * <p>Group ID.</p>
+         * <p>The group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>102131</p>
@@ -293,7 +307,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Integer groupId;
 
         /**
-         * <p>API group name.</p>
+         * <p>The API group name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -302,7 +316,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>Service unit number.</p>
+         * <p>The service unit number.</p>
          * 
          * <strong>example:</strong>
          * <p>1022</p>
@@ -311,7 +325,11 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Long logicUnitNo;
 
         /**
-         * <p>Mode. Valid values: 0 (basic), 1 (dev_prod).</p>
+         * <p>The mode. Valid values:</p>
+         * <ul>
+         * <li>0: basic.</li>
+         * <li>1: dev_prod.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -320,7 +338,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Integer mode;
 
         /**
-         * <p>Owner ID.</p>
+         * <p>The owner ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -329,16 +347,16 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>Owner name.</p>
+         * <p>The owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("OwnerUserName")
         public String ownerUserName;
 
         /**
-         * <p>Data service project ID.</p>
+         * <p>The data service project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>102101</p>
@@ -347,7 +365,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Integer projectId;
 
         /**
-         * <p>Service project name.</p>
+         * <p>The service project name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -356,7 +374,13 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>Update frequency. Valid values: 0 (custom), 1 (daily), 2 (hourly), 3 (per minute).</p>
+         * <p>The update frequency. Valid values:</p>
+         * <ul>
+         * <li>0: Custom.</li>
+         * <li>1: Daily.</li>
+         * <li>2: Hourly.</li>
+         * <li>3: Every minute.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -365,7 +389,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public Integer updateRate;
 
         /**
-         * <p>Modification time. Time format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The update time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 08:00:00</p>
@@ -374,7 +398,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>API version.</p>
+         * <p>The API version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -567,13 +591,13 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
 
     public static class ListDataServicePublishedApisResponseBodyPageResult extends TeaModel {
         /**
-         * <p>Paginated API list.</p>
+         * <p>The paged API list.</p>
          */
         @NameInMap("ApiList")
         public java.util.List<ListDataServicePublishedApisResponseBodyPageResultApiList> apiList;
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>68</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStreamTaskManagersRequest extends TeaModel {
     /**
-     * <p>The ID of the Flink deployment instance.</p>
+     * <p>The deployment instance ID. You can obtain the value from the deploymentInstanceId returned in the operation record or historical run instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListStreamTaskManagersRequest extends TeaModel {
     public String deploymentInstanceId;
 
     /**
-     * <p>The ID of the operating tenant. After the gateway verifies that the current identity has access to the tenant, it injects the tenant ID into the backend.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListStreamTaskManagersRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The optional ID of the operating user. This parameter follows the identity verification rules of the gateway and is not directly bound to the backend user ID.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -34,7 +34,7 @@ public class ListStreamTaskManagersRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The project ID.</p>
+     * <p>The ID of the Dataphin project to which the task belongs. This parameter is used for permission verification in the production environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

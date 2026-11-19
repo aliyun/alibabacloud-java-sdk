@@ -15,6 +15,8 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The update instruction.</p>
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -59,7 +61,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
 
     public static class UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupListInputLineageList extends TeaModel {
         /**
-         * <p>The list of lineage fields.</p>
+         * <p>The list of lineage columns.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnList")
@@ -83,7 +85,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
         public Boolean fullTable;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +135,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
 
     public static class UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupListOutputLineageList extends TeaModel {
         /**
-         * <p>The list of lineage fields.</p>
+         * <p>The list of lineage columns.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnList")
@@ -157,7 +159,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
         public Boolean fullTable;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,14 +209,14 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
 
     public static class UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupList extends TeaModel {
         /**
-         * <p>The collection of lineage input tables.</p>
+         * <p>The collection of input tables for lineage.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("InputLineageList")
         public java.util.List<UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupListInputLineageList> inputLineageList;
 
         /**
-         * <p>The collection of lineage output tables.</p>
+         * <p>The collection of output tables for lineage.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("OutputLineageList")
@@ -245,7 +247,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
 
     public static class UpdateBatchTaskUdfLineagesRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The node ID in the logical definition subtree.</p>
+         * <p>The node ID in the task directory tree.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +264,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends TeaModel {
         public java.util.List<UpdateBatchTaskUdfLineagesRequestUpdateCommandLineageGroupList> lineageGroupList;
 
         /**
-         * <p>The project to which the node belongs.</p>
+         * <p>The project to which the task belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -7,8 +7,8 @@ public class FixDataShrinkRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment. </li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: development environment </li>
+     * <li>PROD: production environment (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class FixDataShrinkRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>The command to rerun downstream nodes to fix data link issues. You can choose to force a rerun.</p>
+     * <p>Reruns downstream nodes to repair pipeline data and allows you to force the rerun.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FixDataCommand")
@@ -35,6 +35,8 @@ public class FixDataShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

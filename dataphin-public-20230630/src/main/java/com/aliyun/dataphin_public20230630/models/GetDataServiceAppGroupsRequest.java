@@ -15,6 +15,8 @@ public class GetDataServiceAppGroupsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operating user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -24,7 +26,7 @@ public class GetDataServiceAppGroupsRequest extends TeaModel {
     /**
      * <p>The data service project ID.</p>
      * <blockquote>
-     * <p>Notice: This field is deprecated.</notice>.</p>
+     * <p>Notice: This field is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

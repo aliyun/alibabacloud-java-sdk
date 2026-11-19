@@ -14,7 +14,7 @@ public class CreateKgRelationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of creating the relationship record.</p>
+     * <p>The creation result of the relationship record.</p>
      */
     @NameInMap("CreateResult")
     public CreateKgRelationResponseBodyCreateResult createResult;
@@ -47,7 +47,7 @@ public class CreateKgRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -15,6 +15,8 @@ public class RevokeResourcePermissionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -84,22 +86,22 @@ public class RevokeResourcePermissionRequest extends TeaModel {
 
     public static class RevokeResourcePermissionRequestRevokeCommand extends TeaModel {
         /**
-         * <p>The list of operations.</p>
+         * <p>The operation list.</p>
          */
         @NameInMap("OperateList")
         public java.util.List<String> operateList;
 
         /**
-         * <p>The reason for revoking the authorization.</p>
+         * <p>The revocation reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>The business authorization has expired</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>The list of resources.</p>
+         * <p>The resources.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceList")

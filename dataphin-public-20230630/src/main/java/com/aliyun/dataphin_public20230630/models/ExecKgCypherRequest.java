@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecKgCypherRequest extends TeaModel {
     /**
-     * <p>The custom Cypher query instruction.</p>
+     * <p>The custom Cypher query command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ExecCommand")
@@ -22,6 +22,8 @@ public class ExecKgCypherRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operating user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -136,7 +138,7 @@ public class ExecKgCypherRequest extends TeaModel {
 
     public static class ExecKgCypherRequestExecCommand extends TeaModel {
         /**
-         * <p>The maximum number of records to return.</p>
+         * <p>The limit on the number of returned records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -145,7 +147,7 @@ public class ExecKgCypherRequest extends TeaModel {
         public Integer limit;
 
         /**
-         * <p>The input parameters of the query statement.</p>
+         * <p>The input parameters for the query statement.</p>
          */
         @NameInMap("Params")
         public java.util.List<ExecKgCypherRequestExecCommandParams> params;

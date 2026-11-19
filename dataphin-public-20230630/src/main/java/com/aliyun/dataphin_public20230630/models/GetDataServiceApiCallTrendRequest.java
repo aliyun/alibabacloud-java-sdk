@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceApiCallTrendRequest extends TeaModel {
     /**
-     * <p>The end time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,8 @@ public class GetDataServiceApiCallTrendRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -42,7 +44,7 @@ public class GetDataServiceApiCallTrendRequest extends TeaModel {
     public Integer projectId;
 
     /**
-     * <p>The start time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

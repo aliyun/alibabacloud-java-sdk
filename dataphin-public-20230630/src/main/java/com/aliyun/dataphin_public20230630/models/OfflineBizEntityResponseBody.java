@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OfflineBizEntityResponseBody extends TeaModel {
     /**
-     * <p>Error code of the request. OK indicates a successful request.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class OfflineBizEntityResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code returned by the backend</p>
+     * <p>The HTTP status code returned by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class OfflineBizEntityResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Error message of the request</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class OfflineBizEntityResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -41,7 +41,7 @@ public class OfflineBizEntityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request was successful</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

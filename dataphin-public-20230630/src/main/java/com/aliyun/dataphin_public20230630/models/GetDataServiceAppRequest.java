@@ -25,7 +25,7 @@ public class GetDataServiceAppRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator.</p>
+     * <p>The operator user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

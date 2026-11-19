@@ -14,7 +14,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The member list of the data service application.</p>
+     * <p>The members of the data service application.</p>
      */
     @NameInMap("Data")
     public GetDataServiceAppMembersResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned from the backend.</p>
+     * <p>The details of the backend response exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
 
     public static class GetDataServiceAppMembersResponseBodyDataMemberList extends TeaModel {
         /**
-         * <p>The authorization expiration time.</p>
+         * <p>The expiration time of the authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-12-12</p>
@@ -116,10 +116,10 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         public String effectiveEnd;
 
         /**
-         * <p>The role of the user. Valid values:</p>
+         * <p>The user role. Valid values:</p>
          * <ul>
-         * <li>general: regular member.</li>
-         * <li>owner: application owner.</li>
+         * <li>general: regular member</li>
+         * <li>owner: application owner</li>
          * </ul>
          * 
          * <strong>example:</strong>

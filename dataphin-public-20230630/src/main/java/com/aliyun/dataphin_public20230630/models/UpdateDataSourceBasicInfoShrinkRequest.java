@@ -15,6 +15,8 @@ public class UpdateDataSourceBasicInfoShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateDataSourceBasicInfoShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The basic information to edit for the data source.</p>
+     * <p>The update of the basic information for a data source.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")

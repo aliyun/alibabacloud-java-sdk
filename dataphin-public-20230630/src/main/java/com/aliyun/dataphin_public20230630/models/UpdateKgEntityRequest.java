@@ -15,6 +15,8 @@ public class UpdateKgEntityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -77,7 +79,7 @@ public class UpdateKgEntityRequest extends TeaModel {
 
     public static class UpdateKgEntityRequestUpdateCommandPropertyList extends TeaModel {
         /**
-         * <p>The property code.</p>
+         * <p>The code of the property.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +89,7 @@ public class UpdateKgEntityRequest extends TeaModel {
         public String code;
 
         /**
-         * <p>The property value.</p>
+         * <p>The value of the property.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -121,7 +123,7 @@ public class UpdateKgEntityRequest extends TeaModel {
 
     public static class UpdateKgEntityRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The entity record ID.</p>
+         * <p>The ID of the entity record.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +133,7 @@ public class UpdateKgEntityRequest extends TeaModel {
         public String entityId;
 
         /**
-         * <p>The entity type code.</p>
+         * <p>The code of the entity type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,7 @@ public class UpdateKgEntityRequest extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The entity record property list.</p>
+         * <p>The property list of the entity record.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("PropertyList")

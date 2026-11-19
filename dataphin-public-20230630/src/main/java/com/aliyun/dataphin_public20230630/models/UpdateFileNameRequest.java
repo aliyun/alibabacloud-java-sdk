@@ -15,7 +15,7 @@ public class UpdateFileNameRequest extends TeaModel {
     public Long fileId;
 
     /**
-     * <p>The new file name.</p>
+     * <p>The updated file name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +35,8 @@ public class UpdateFileNameRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

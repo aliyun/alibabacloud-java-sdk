@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlertNotificationsResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -121,16 +121,16 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         /**
          * <p>The source system. Valid values:</p>
          * <ul>
-         * <li>ALL: all.</li>
-         * <li>DQE: data quality.</li>
-         * <li>OS: data service.</li>
-         * <li>STREAM: real-time computing.</li>
-         * <li>VDM_BATCH: offline computing.</li>
+         * <li>ALL: All.</li>
+         * <li>DQE: Data quality.</li>
+         * <li>OS: Data service.</li>
+         * <li>STREAM: Real-time computing.</li>
+         * <li>VDM_BATCH: Offline computing.</li>
          * <li>SOP: O&amp;M platform.</li>
-         * <li>REAL_TIME_PIPELINE: real-time integration.</li>
-         * <li>KGB: baseline monitoring.</li>
+         * <li>REAL_TIME_PIPELINE: Real-time integration.</li>
+         * <li>KGB: Baseline monitoring.
+         * etc.</li>
          * </ul>
-         * <p>And more.</p>
          * 
          * <strong>example:</strong>
          * <p>VDM_BATCH</p>
@@ -142,9 +142,9 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
          * <p>The alert object type. Valid values:</p>
          * <ul>
          * <li>OS_API: API operation.</li>
-         * <li>OS_APPLICATION_SERVICE: service application.</li>
-         * <li>STREAM_TASK: real-time computing.</li>
-         * <li>REAL_TIME_PIPELINE_TASK: real-time integration.</li>
+         * <li>OS_APPLICATION_SERVICE: Service application.</li>
+         * <li>STREAM_TASK: Real-time computing.</li>
+         * <li>REAL_TIME_PIPELINE_TASK: Real-time integration.</li>
          * <li>VDM_BATCH_SHELL: SHELL.</li>
          * <li>VDM_BATCH_PYTHON: PYTHON.</li>
          * <li>VDM_BATCH_DATAX: DATAX.</li>
@@ -160,15 +160,14 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
          * <li>VDM_BATCH_SPARK_JAR_ON_HIVE: SPARK_JAR_ON_HIVE.</li>
          * <li>VDM_BATCH_SPARK_SQL_ON_HIVE: SPARK_SQL_ON_HIVE.</li>
          * <li>VDM_BATCH_SPARK_SQL: VDM_BATCH_SPARK_SQL.</li>
-         * <li>DQE_LOGICAL_TABLE: logical table.</li>
-         * <li>DQE_PHYSICAL_TABLE: physical table.</li>
-         * <li>DQE_REALTIME_TABLE: real-time meta table.</li>
-         * <li>DQE_DATA_SOURCE: data source.</li>
-         * <li>DQE_INDEX: metric.</li>
+         * <li>DQE_LOGICAL_TABLE: Logical table.</li>
+         * <li>DQE_PHYSICAL_TABLE: Physical table.</li>
+         * <li>DQE_REALTIME_TABLE: Real-time metadata table.</li>
+         * <li>DQE_DATA_SOURCE: Data source.</li>
+         * <li>DQE_INDEX: Metric.</li>
          * <li>QD_DECISION_INVOKE: QD decision invocation.</li>
-         * <li>BASELINE: baseline.</li>
+         * <li>BASELINE: Baseline.</li>
          * </ul>
-         * <p>And more.</p>
          * 
          * <strong>example:</strong>
          * <p>VDM_BATCH_SHELL</p>
@@ -268,42 +267,42 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         /**
          * <p>The alert reason type. Valid values:</p>
          * <ul>
-         * <li>DQE_COLUMN: field rule exception.</li>
-         * <li>DQE_DATA_SOURCE: data source rule exception.</li>
-         * <li>DQE_CUSTOMIZE: custom rule exception.</li>
-         * <li>DQE_TABLE: table rule exception.</li>
-         * <li>DQE_REALTIME_TABLE: real-time table rule exception.</li>
-         * <li>DQE_INDEX: metric rule exception.</li>
-         * <li>OS_AVG_RESPONSE: average response time exception.</li>
-         * <li>OS_CALL_TIMES: call count exception.</li>
-         * <li>OS_ERROR_RATE: error rate exception.</li>
+         * <li>DQE_COLUMN: Field rule exception.</li>
+         * <li>DQE_DATA_SOURCE: Data source rule exception.</li>
+         * <li>DQE_CUSTOMIZE: Custom rule exception.</li>
+         * <li>DQE_TABLE: Table rule exception.</li>
+         * <li>DQE_REALTIME_TABLE: Real-time table rule exception.</li>
+         * <li>DQE_INDEX: Metric rule exception.</li>
+         * <li>OS_AVG_RESPONSE: Average response time exception.</li>
+         * <li>OS_CALL_TIMES: Call count exception.</li>
+         * <li>OS_ERROR_RATE: Error rate exception.</li>
          * <li>OS_OFFLINE: Offline percentage exception.</li>
-         * <li>STREAM_BIZ_DELAY: business delay too high.</li>
-         * <li>STREAM_DATA_RETENTION: data retention exceeds configuration.</li>
-         * <li>STREAM_MORE_THAN_FAILURE: failure frequency exceeds configuration.</li>
+         * <li>STREAM_BIZ_DELAY: High business delay.</li>
+         * <li>STREAM_DATA_RETENTION: Data retention exceeds configuration.</li>
+         * <li>STREAM_MORE_THAN_FAILURE: Failure frequency exceeds configuration.</li>
          * <li>STREAM_TPS_OUT_RANGE: TPS out of range.</li>
-         * <li>STREAM_CHECKPOINT_FAILURE: checkpoint failures exceed configuration.</li>
-         * <li>STREAM_BACKPRESSURE: backpressure duration exceeds configuration.</li>
-         * <li>STREAM_JOB_FAILURE: job execution failed.</li>
-         * <li>VDM_BATCH_ERROR: error.</li>
-         * <li>VDM_BATCH_FINISH: completed.</li>
-         * <li>VDM_BATCH_TIME_OUT: execution timed out.</li>
-         * <li>VDM_BATCH_UNDONE: not completed.</li>
-         * <li>VDM_BATCH_LOGIC_DATA_DELAY: data delay.</li>
-         * <li>QD_DECISION_CALL_TIMES: decision call count exception.</li>
-         * <li>QD_DECISION_MAX_RESPONSE: maximum response time exception.</li>
-         * <li>QD_DECISION_ERROR_RATE: error rate exception.</li>
-         * <li>QD_DECISION_PARAM_COUNT: decision parameter count exception.</li>
-         * <li>QD_DECISION_PARAM_PERCENTAGE: decision parameter percentage exception.</li>
-         * <li>QD_DECISION_PARAM_SUM: decision parameter sum exception.</li>
-         * <li>QD_DECISION_PARAM_AVG: decision parameter average exception.</li>
-         * <li>LOGICAL_INSTANCE_GENERATION: logical instance generation monitoring.</li>
-         * <li>KGB_TASK_ERROR: baseline task error.</li>
-         * <li>KGB_TASK_SLOW_DOWN: baseline task slowdown.</li>
-         * <li>KGB_EARLY_WARNING: baseline early warning.</li>
-         * <li>KGB_BROKEN_LINE: baseline broken line.</li>
+         * <li>STREAM_CHECKPOINT_FAILURE: Checkpoint failures exceed configuration.</li>
+         * <li>STREAM_BACKPRESSURE: Backpressure duration exceeds configuration.</li>
+         * <li>STREAM_JOB_FAILURE: Execution failed.</li>
+         * <li>VDM_BATCH_ERROR: Error occurred.</li>
+         * <li>VDM_BATCH_FINISH: Completed.</li>
+         * <li>VDM_BATCH_TIME_OUT: Execution timed out.</li>
+         * <li>VDM_BATCH_UNDONE: Incomplete.</li>
+         * <li>VDM_BATCH_LOGIC_DATA_DELAY: Data delay.</li>
+         * <li>QD_DECISION_CALL_TIMES: Decision call count exception.</li>
+         * <li>QD_DECISION_MAX_RESPONSE: Maximum response time exception.</li>
+         * <li>QD_DECISION_ERROR_RATE: Error rate exception.</li>
+         * <li>QD_DECISION_PARAM_COUNT: Decision parameter statistics count exception.</li>
+         * <li>QD_DECISION_PARAM_PERCENTAGE: Decision parameter statistics percentage exception.</li>
+         * <li>QD_DECISION_PARAM_SUM: Decision parameter sum exception.</li>
+         * <li>QD_DECISION_PARAM_AVG: Decision parameter average exception.</li>
+         * <li>LOGICAL_INSTANCE_GENERATION: Logical instance generation monitoring.</li>
+         * <li>KGB_TASK_ERROR: Baseline task error.</li>
+         * <li>KGB_TASK_SLOW_DOWN: Baseline task slowed down.</li>
+         * <li>KGB_EARLY_WARNING: Baseline early warning.</li>
+         * <li>KGB_BROKEN_LINE: Baseline SLA breached.
+         * etc.</li>
          * </ul>
-         * <p>And more.</p>
          * 
          * <strong>example:</strong>
          * <p>VDM_BATCH_FINISH</p>
@@ -361,7 +360,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
 
     public static class ListAlertNotificationsResponseBodyListResultDataAlertReceiverUser extends TeaModel {
         /**
-         * <p>The name of the alert receiver.</p>
+         * <p>The alert recipient name.</p>
          * 
          * <strong>example:</strong>
          * <p>ADMIN</p>
@@ -388,15 +387,15 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         /**
          * <p>The push channel type. Valid values:</p>
          * <ul>
-         * <li>VOICE: phone call.</li>
-         * <li>SMS: text message.</li>
-         * <li>MAIL: email.</li>
+         * <li>VOICE: Voice calls.</li>
+         * <li>SMS: Text messages.</li>
+         * <li>MAIL: Email.</li>
          * <li>DINGTALK_ROBOT: DingTalk robot.</li>
          * <li>DINGDING: DingTalk work notification.</li>
-         * <li>CUSTOM: custom message channel.</li>
+         * <li>CUSTOM: Custom message channel.</li>
          * <li>WECHAT: WeCom.</li>
          * <li>FEISHU: Lark.</li>
-         * <li>SILENCE: do not send.</li>
+         * <li>SILENCE: No notification.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -433,11 +432,11 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         public String onCallTableName;
 
         /**
-         * <p>The alert receiver type. Valid values:</p>
+         * <p>The alert recipient type. Valid values:</p>
          * <ul>
-         * <li>ON_CALL_TABLE: on-call schedule.</li>
-         * <li>USER_DEFINED: custom user.</li>
-         * <li>OWNER: owner.</li>
+         * <li>ON_CALL_TABLE: On-call schedule.</li>
+         * <li>USER_DEFINED: Custom user.</li>
+         * <li>OWNER: Owner.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -512,13 +511,13 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
          * <p>The alert reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>不合法</p>
+         * <p>Invalid</p>
          */
         @NameInMap("FailReason")
         public String failReason;
 
         /**
-         * <p>The push content.</p>
+         * <p>The delivery content.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -527,7 +526,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         public String sendContent;
 
         /**
-         * <p>The push time.</p>
+         * <p>The delivery time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-25 10:02:47</p>
@@ -536,11 +535,11 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         public String sendTime;
 
         /**
-         * <p>The push status. Valid values:</p>
+         * <p>The delivery status. Valid values:</p>
          * <ul>
-         * <li>SUCCESS: Sent successfully.</li>
-         * <li>FAILE: Failed to send.</li>
-         * <li>SENDING: Sending in progress.</li>
+         * <li>SUCCESS: Delivered successfully.</li>
+         * <li>FAILE: Delivery failed.</li>
+         * <li>SENDING: Delivering.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -611,13 +610,13 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         public ListAlertNotificationsResponseBodyListResultDataAlertReason alertReason;
 
         /**
-         * <p>The receiver information.</p>
+         * <p>The recipient information.</p>
          */
         @NameInMap("AlertReceiver")
         public ListAlertNotificationsResponseBodyListResultDataAlertReceiver alertReceiver;
 
         /**
-         * <p>The alert sending information.</p>
+         * <p>The alert delivery information.</p>
          */
         @NameInMap("AlertSend")
         public ListAlertNotificationsResponseBodyListResultDataAlertSend alertSend;
@@ -677,7 +676,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         public java.util.List<ListAlertNotificationsResponseBodyListResultData> data;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

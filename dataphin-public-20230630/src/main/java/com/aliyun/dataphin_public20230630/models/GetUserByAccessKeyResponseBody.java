@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserByAccessKeyResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned for the request.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -41,7 +41,7 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
 
     public static class GetUserByAccessKeyResponseBodyUserInfoTenantRoles extends TeaModel {
         /**
-         * <p>The role identifier, such as SUPER_ADMIN or COMMON_USER.</p>
+         * <p>The role key, such as SUPER_ADMIN or COMMON_USER.</p>
          * 
          * <strong>example:</strong>
          * <p>SUPER_ADMIN</p>
@@ -122,7 +122,7 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
          * <p>The role name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Tenant Administrator</p>
+         * <p>Tenant administrator</p>
          */
         @NameInMap("RoleName")
         public String roleName;
@@ -170,7 +170,7 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The email address of the user.</p>
+         * <p>The email address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:xx@aliyun.com">xx@aliyun.com</a></p>
@@ -188,7 +188,7 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         public String nickName;
 
         /**
-         * <p>The account source type, such as ALIYUN_OAUTH2, PUBLICCLOUD_OAUTH2, BUC, or APSARA.</p>
+         * <p>The source type of the account, such as ALIYUN_OAUTH2, PUBLICCLOUD_OAUTH2, BUC, or APSARA.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN_OAUTH2</p>
@@ -197,7 +197,7 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The source account ID of the user during SSO integration.</p>
+         * <p>The source account ID of the user when SSO is integrated.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -206,12 +206,7 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         public String sourceUserId;
 
         /**
-         * <p>The tenant member status. Valid values:</p>
-         * <ul>
-         * <li>NORMAL: Normal.</li>
-         * <li>DEACTIVATE: Deactivated.</li>
-         * <li>DELETE: Deleted.</li>
-         * </ul>
+         * <p>The status of the tenant member. Valid values: NORMAL, DEACTIVATE, and DELETE.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -220,13 +215,13 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of tenant-level roles assigned to the AK/SK owner in the current tenant.</p>
+         * <p>The list of tenant-level roles. These are the roles of the user to whom the AccessKey ID and AccessKey secret belong in the current tenant.</p>
          */
         @NameInMap("TenantRoles")
         public java.util.List<GetUserByAccessKeyResponseBodyUserInfoTenantRoles> tenantRoles;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>

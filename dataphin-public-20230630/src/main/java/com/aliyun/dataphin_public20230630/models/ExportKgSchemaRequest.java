@@ -15,6 +15,8 @@ public class ExportKgSchemaRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -31,7 +33,7 @@ public class ExportKgSchemaRequest extends TeaModel {
     public String outputFormat;
 
     /**
-     * <p>The version number. If this parameter is empty or set to -1, the model metadata in draft state is returned. If this parameter is set to 0, the model metadata of the latest version is returned.</p>
+     * <p>The version ID. An empty value or -1 indicates the draft model metadata. 0 indicates the latest model metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

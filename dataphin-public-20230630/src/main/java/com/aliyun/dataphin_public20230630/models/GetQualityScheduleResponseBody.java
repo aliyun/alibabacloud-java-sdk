@@ -32,7 +32,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The details of the scheduling object.</p>
+     * <p>The schedule object details.</p>
      */
     @NameInMap("QualityScheduleInfo")
     public GetQualityScheduleResponseBodyQualityScheduleInfo qualityScheduleInfo;
@@ -116,7 +116,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the creator.</p>
+         * <p>The user ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -139,7 +139,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The ID of the scheduling object.</p>
+         * <p>The ID of the schedule object.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -148,13 +148,13 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Indicates whether the scheduling object is referenced by a rule.</p>
+         * <p>Indicates whether the object is referenced by a rule.</p>
          */
         @NameInMap("IsRefByRule")
         public Boolean isRefByRule;
 
         /**
-         * <p>The ID of the last modifier.</p>
+         * <p>The user ID of the last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -163,7 +163,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The modification time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The update time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -172,7 +172,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The name of the scheduling object.</p>
+         * <p>The name of the schedule object.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -190,14 +190,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public String partitionExpression;
 
         /**
-         * <p>The partition type. Valid values:</p>
-         * <ul>
-         * <li>EVERY_DAY: Every day.</li>
-         * <li>PRE_DAY: Previous day.</li>
-         * <li>TODAY: Current day.</li>
-         * <li>FIRST_DAY_OF_WEEK: First day of the week (Sunday).</li>
-         * <li>CUSTOM: Custom.</li>
-         * </ul>
+         * <p>The partition type. Valid values: EVERY_DAY for daily, PRE_DAY for previous day, TODAY for current day, FIRST_DAY_OF_WEEK for first day of the week (Sunday), and CUSTOM for custom.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -206,14 +199,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public String partitionType;
 
         /**
-         * <p>The scheduling epoch type for timed scheduling. Valid values:</p>
-         * <ul>
-         * <li>DAILY: Daily.</li>
-         * <li>WEEKLY: Weekly.</li>
-         * <li>MONTHLY: Monthly.</li>
-         * <li>HOURLY: Hourly.</li>
-         * <li>MINUTELY: Minutely.</li>
-         * </ul>
+         * <p>The schedule cycle type for timed scheduling. Valid values: DAILY for day, WEEKLY for week, MONTHLY for month, HOURLY for hour, and MINUTELY for minute.</p>
          * 
          * <strong>example:</strong>
          * <p>DAILY</p>
@@ -222,18 +208,13 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public String periodScheduleIntervalType;
 
         /**
-         * <p>The scheduling epoch values for timed scheduling.</p>
+         * <p>The schedule cycle values for timed scheduling.</p>
          */
         @NameInMap("PeriodScheduleParamList")
         public java.util.List<String> periodScheduleParamList;
 
         /**
-         * <p>The trigger method for fixed task triggers. Valid values:</p>
-         * <ul>
-         * <li>ALL_TASKS_FINISHED: All tasks finished.</li>
-         * <li>ONE_TASKS_FINISHED: One task finished.</li>
-         * <li>PRE_ONE_TASKS_START: Previous task started.</li>
-         * </ul>
+         * <p>The trigger method for static task trigger. Valid values: ALL_TASKS_FINISHED, ONE_TASKS_FINISHED, and PRE_ONE_TASKS_START.</p>
          * 
          * <strong>example:</strong>
          * <p>ONE_TASKS_FINISHED</p>
@@ -248,11 +229,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public java.util.List<String> triggerNodeList;
 
         /**
-         * <p>The trigger method for trigger scheduling. Valid values:</p>
-         * <ul>
-         * <li>STATIC_TASK_TRIGGER: Fixed task trigger.</li>
-         * <li>CODE_CHECK_TRIGGER: Code check trigger.</li>
-         * </ul>
+         * <p>The trigger method for trigger scheduling. Valid values: STATIC_TASK_TRIGGER for static task trigger and CODE_CHECK_TRIGGER for code check trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>STATIC_TASK_TRIGGER</p>
@@ -261,14 +238,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public String triggerType;
 
         /**
-         * <p>The scheduling type. Valid values:</p>
-         * <ul>
-         * <li>PERIOD_SCHEDULE: Timed scheduling.</li>
-         * <li>MANUAL_SCHEDULE: Manual trigger.</li>
-         * <li>CODE_CHECK_TRIGGER: Code check trigger.</li>
-         * <li>STATIC_TASK_TRIGGER: Fixed node trigger.</li>
-         * <li>DEPENDENCY_SCHEDULE: Dependency scheduling.</li>
-         * </ul>
+         * <p>The schedule type. Valid values: PERIOD_SCHEDULE for timed scheduling, MANUAL_SCHEDULE for manual trigger, CODE_CHECK_TRIGGER for code check trigger, STATIC_TASK_TRIGGER for static task trigger, and DEPENDENCY_SCHEDULE for dependency scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>PERIOD_SCHEDULE</p>
@@ -277,11 +247,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The validation scope. Valid values:</p>
-         * <ul>
-         * <li>TASK_REFERRED_PARTITION: Task updated partition.</li>
-         * <li>USER_DEFINED_PARTITION: User-defined partition.</li>
-         * </ul>
+         * <p>The validation scope. Valid values: TASK_REFERRED_PARTITION for task updated partition and USER_DEFINED_PARTITION for custom partition.</p>
          * 
          * <strong>example:</strong>
          * <p>TASK_REFERRED_PARTITION</p>

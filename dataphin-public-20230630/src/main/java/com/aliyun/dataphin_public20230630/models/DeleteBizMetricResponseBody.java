@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBizMetricResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class DeleteBizMetricResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DeleteBizMetricResponseBody extends TeaModel {
 
     public static class DeleteBizMetricResponseBodyData extends TeaModel {
         /**
-         * <p>The exception information.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -119,11 +119,7 @@ public class DeleteBizMetricResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the deletion was successful. Valid values:</p>
-         * <ul>
-         * <li>true: Succeeded.</li>
-         * <li>false: Failed.</li>
-         * </ul>
+         * <p>Indicates whether the deletion is successful. A value of true indicates that the deletion is successful. A value of false indicates that the deletion failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

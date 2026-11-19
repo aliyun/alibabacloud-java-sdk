@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKgNeighborRequest extends TeaModel {
     /**
-     * <p>The entity record data ID.</p>
+     * <p>The data ID of the entity record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetKgNeighborRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The entity record neighbor node query instruction.</p>
+     * <p>The neighbor node query instruction for entity records.</p>
      */
     @NameInMap("NeighborsQuery")
     public GetKgNeighborRequestNeighborsQuery neighborsQuery;
@@ -41,6 +41,8 @@ public class GetKgNeighborRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -123,11 +125,11 @@ public class GetKgNeighborRequest extends TeaModel {
         /**
          * <p>The direction type. Valid values:</p>
          * <ul>
-         * <li>in: the current entity is the target node.</li>
-         * <li>out: the current entity is the source node.</li>
-         * <li>both: the current entity is both the source node and the target node.</li>
+         * <li>in: Uses the current entity as the target node.</li>
+         * <li>out: Uses the current entity as the source node.</li>
+         * <li>both: Uses the current entity as both the source and target nodes.
+         * Default value: both.</li>
          * </ul>
-         * <p>Default value: both.</p>
          * 
          * <strong>example:</strong>
          * <p>both</p>

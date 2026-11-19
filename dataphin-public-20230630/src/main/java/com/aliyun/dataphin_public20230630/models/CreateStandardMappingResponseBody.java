@@ -29,7 +29,7 @@ public class CreateStandardMappingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class CreateStandardMappingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,13 +107,13 @@ public class CreateStandardMappingResponseBody extends TeaModel {
 
     public static class CreateStandardMappingResponseBodyData extends TeaModel {
         /**
-         * <p>The list of asset GUIDs that failed to be created.</p>
+         * <p>The list of GUIDs for assets that failed to be created.</p>
          */
         @NameInMap("FailedGuidList")
         public java.util.List<String> failedGuidList;
 
         /**
-         * <p>The number of successfully added mappings.</p>
+         * <p>The number of successfully added items.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

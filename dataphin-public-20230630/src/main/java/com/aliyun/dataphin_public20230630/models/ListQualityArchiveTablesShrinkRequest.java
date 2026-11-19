@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQualityArchiveTablesShrinkRequest extends TeaModel {
     /**
-     * <p>The input parameters for querying the anomaly archived table list.</p>
+     * <p>The query parameters for the exception archived table list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
@@ -22,7 +22,7 @@ public class ListQualityArchiveTablesShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

@@ -47,7 +47,7 @@ public class DeleteSecurityLevelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -116,13 +116,13 @@ public class DeleteSecurityLevelResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The list of data classification IDs that are associated with the current classification level. This parameter is returned only when this error is triggered.</p>
+         * <p>The list of data classification IDs that are bound to the current data classification level. This parameter is returned only when this error is triggered.</p>
          */
         @NameInMap("RelatedClassifyIdList")
         public java.util.List<Long> relatedClassifyIdList;
 
         /**
-         * <p>Indicates whether the deletion was successful.</p>
+         * <p>Indicates whether the deletion is successful.</p>
          */
         @NameInMap("Success")
         public Boolean success;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAdHocFileResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the custom query file.</p>
+     * <p>The details of the ad hoc query file.</p>
      */
     @NameInMap("FileInfo")
     public GetAdHocFileResponseBodyFileInfo fileInfo;
@@ -47,7 +47,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -125,7 +125,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The directory where the file is located.</p>
+         * <p>The directory of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>/xx1/xx2/</p>
@@ -155,7 +155,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Name")
         public String name;

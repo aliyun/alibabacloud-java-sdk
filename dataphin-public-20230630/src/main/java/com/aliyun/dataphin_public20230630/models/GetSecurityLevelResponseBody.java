@@ -23,7 +23,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend response exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -41,13 +41,13 @@ public class GetSecurityLevelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The data classification level details.</p>
+     * <p>The details of the data classification level.</p>
      */
     @NameInMap("SecurityLevelInfo")
     public GetSecurityLevelResponseBodySecurityLevelInfo securityLevelInfo;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
 
     public static class GetSecurityLevelResponseBodySecurityLevelInfo extends TeaModel {
         /**
-         * <p>The abbreviated name of the data classification level.</p>
+         * <p>The abbreviation of the data classification level.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -125,7 +125,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The sensitivity level of the data classification.</p>
+         * <p>The sensitivity of the data classification level.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -143,7 +143,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of data categorization IDs associated with the current data classification level.</p>
+         * <p>The list of data category IDs associated with the current data classification level.</p>
          */
         @NameInMap("RelatedClassifyIdList")
         public java.util.List<Long> relatedClassifyIdList;

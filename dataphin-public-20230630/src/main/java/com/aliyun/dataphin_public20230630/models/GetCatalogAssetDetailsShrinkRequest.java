@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCatalogAssetDetailsShrinkRequest extends TeaModel {
     /**
-     * <p>The paged query for the listed asset catalog.</p>
+     * <p>The paging query for the list of listed asset catalogs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GetCatalogAssetDetailsQuery")
@@ -22,7 +22,7 @@ public class GetCatalogAssetDetailsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

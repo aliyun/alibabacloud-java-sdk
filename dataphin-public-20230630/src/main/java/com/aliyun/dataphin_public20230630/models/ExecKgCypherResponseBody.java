@@ -47,7 +47,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -158,7 +158,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>The list of relationship record properties.</p>
+         * <p>The list of properties for the relationship record.</p>
          */
         @NameInMap("Properties")
         public java.util.List<ExecKgCypherResponseBodyDataEdgeListProperties> properties;
@@ -333,7 +333,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The list of entity record properties.</p>
+         * <p>The list of properties for the entity record.</p>
          */
         @NameInMap("Properties")
         public java.util.List<ExecKgCypherResponseBodyDataNodeListProperties> properties;
@@ -413,7 +413,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
 
     public static class ExecKgCypherResponseBodyDataRowList extends TeaModel {
         /**
-         * <p>The list of columns in the row.</p>
+         * <p>The list of columns.</p>
          */
         @NameInMap("Columns")
         public java.util.List<ExecKgCypherResponseBodyDataRowListColumns> columns;
@@ -441,7 +441,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
         public java.util.List<ExecKgCypherResponseBodyDataEdgeList> edgeList;
 
         /**
-         * <p>The transformed execution statement.</p>
+         * <p>The converted execution statement.</p>
          * 
          * <strong>example:</strong>
          * <p>MATCH p=()-[:Product]-&gt;() RETURN p, count(*) LIMIT 25</p>

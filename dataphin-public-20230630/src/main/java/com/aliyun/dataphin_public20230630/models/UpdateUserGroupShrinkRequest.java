@@ -15,6 +15,8 @@ public class UpdateUserGroupShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateUserGroupShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The command to edit the user group.</p>
+     * <p>The update user group command.</p>
      */
     @NameInMap("UpdateCommand")
     public String updateCommandShrink;

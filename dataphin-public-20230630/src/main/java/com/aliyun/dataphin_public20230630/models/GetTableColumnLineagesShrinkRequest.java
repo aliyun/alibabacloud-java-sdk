@@ -21,6 +21,8 @@ public class GetTableColumnLineagesShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -28,7 +30,7 @@ public class GetTableColumnLineagesShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The GUID of the table, which is the unique identifier of the asset.</p>
+     * <p>The GUID of the table, which uniquely identifies the asset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

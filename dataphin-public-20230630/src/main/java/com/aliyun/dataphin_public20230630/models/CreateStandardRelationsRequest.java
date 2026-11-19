@@ -22,6 +22,8 @@ public class CreateStandardRelationsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -85,7 +87,7 @@ public class CreateStandardRelationsRequest extends TeaModel {
 
     public static class CreateStandardRelationsRequestCreateCommand extends TeaModel {
         /**
-         * <p>The standard association relationship type: RELATIVE.</p>
+         * <p>The standard association type. Valid value: RELATIVE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

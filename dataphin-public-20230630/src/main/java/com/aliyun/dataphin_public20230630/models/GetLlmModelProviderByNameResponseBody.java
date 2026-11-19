@@ -14,7 +14,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The large language model service provider and available models.</p>
+     * <p>The large model service provider and available models.</p>
      */
     @NameInMap("Data")
     public GetLlmModelProviderByNameResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The details of the backend response exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -116,7 +116,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         public String cnName;
 
         /**
-         * <p>The model description.</p>
+         * <p>The description of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>General text generation model</p>
@@ -125,7 +125,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The list of available dimension values for the embedding model. Only embedding models have this value.</p>
+         * <p>The list of available dimension values for the embedding model. This value is available only for embedding models.</p>
          */
         @NameInMap("EmbeddingDimensions")
         public java.util.List<Integer> embeddingDimensions;
@@ -140,7 +140,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The model invocation method. Valid values:</p>
+         * <p>The model invocation type. Valid values:</p>
          * <ul>
          * <li>OPEN_AI</li>
          * <li>DASH_SCOPE</li>
@@ -153,7 +153,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         public String invokeType;
 
         /**
-         * <p>The model ID.</p>
+         * <p>The ID of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -164,18 +164,18 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         /**
          * <p>The list of model modality types. Valid values:</p>
          * <ul>
-         * <li>TEXT: text</li>
-         * <li>IMAGE: image</li>
-         * <li>AUDIO: audio</li>
-         * <li>VIDEO: video</li>
-         * <li>EMBEDDING: embedding</li>
+         * <li>TEXT: Text.</li>
+         * <li>IMAGE: Image.</li>
+         * <li>AUDIO: Audio.</li>
+         * <li>VIDEO: Video.</li>
+         * <li>EMBEDDING: Embedding.</li>
          * </ul>
          */
         @NameInMap("ModelTypes")
         public java.util.List<String> modelTypes;
 
         /**
-         * <p>The model name.</p>
+         * <p>The name of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -195,9 +195,9 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         /**
          * <p>The list of model task capabilities. Valid values:</p>
          * <ul>
-         * <li>ASR: speech recognition</li>
-         * <li>TTS: speech synthesis</li>
-         * <li>TRANSLATION: speech translation</li>
+         * <li>ASR: Speech recognition.</li>
+         * <li>TTS: Speech synthesis.</li>
+         * <li>TRANSLATION: Speech translation.</li>
          * </ul>
          */
         @NameInMap("Tasks")
@@ -301,7 +301,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         public String baseUrl;
 
         /**
-         * <p>The enabling status.</p>
+         * <p>The enabled status.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -327,8 +327,8 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         /**
          * <p>The source of the model service provider. Valid values:</p>
          * <ul>
-         * <li>BUILTIN_MODEL: built-in</li>
-         * <li>BYOM: user-provided</li>
+         * <li>BUILTIN_MODEL: Built-in.</li>
+         * <li>BYOM: Bring your own model.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,7 +338,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         public String providerSource;
 
         /**
-         * <p>The service provider type. Valid values:</p>
+         * <p>The provider type. Valid values:</p>
          * <ul>
          * <li>BAILIAN</li>
          * <li>DEEPSEEK</li>

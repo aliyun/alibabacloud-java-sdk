@@ -14,7 +14,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of creating relationship records in batches.</p>
+     * <p>The result of creating relation records in batches.</p>
      */
     @NameInMap("CreateResult")
     public BatchCreateKgRelationResponseBodyCreateResult createResult;
@@ -107,7 +107,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
 
     public static class BatchCreateKgRelationResponseBodyCreateResultSuccessRelationList extends TeaModel {
         /**
-         * <p>The relationship record ID.</p>
+         * <p>The relation record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>abc-xxx</p>
@@ -116,13 +116,31 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         public String relationId;
 
         /**
-         * <p>The relationship type code.</p>
+         * <p>The relation type code.</p>
          * 
          * <strong>example:</strong>
          * <p>BELONG_TO</p>
          */
         @NameInMap("RelationType")
         public String relationType;
+
+        /**
+         * <p>The source entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e1d4559a4db044158305e2d89bccf81f</p>
+         */
+        @NameInMap("SourceEntityId")
+        public String sourceEntityId;
+
+        /**
+         * <p>The target entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e1d4559a4db044158305e2d89bccf82f</p>
+         */
+        @NameInMap("TargetEntityId")
+        public String targetEntityId;
 
         public static BatchCreateKgRelationResponseBodyCreateResultSuccessRelationList build(java.util.Map<String, ?> map) throws Exception {
             BatchCreateKgRelationResponseBodyCreateResultSuccessRelationList self = new BatchCreateKgRelationResponseBodyCreateResultSuccessRelationList();
@@ -145,11 +163,27 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             return this.relationType;
         }
 
+        public BatchCreateKgRelationResponseBodyCreateResultSuccessRelationList setSourceEntityId(String sourceEntityId) {
+            this.sourceEntityId = sourceEntityId;
+            return this;
+        }
+        public String getSourceEntityId() {
+            return this.sourceEntityId;
+        }
+
+        public BatchCreateKgRelationResponseBodyCreateResultSuccessRelationList setTargetEntityId(String targetEntityId) {
+            this.targetEntityId = targetEntityId;
+            return this;
+        }
+        public String getTargetEntityId() {
+            return this.targetEntityId;
+        }
+
     }
 
     public static class BatchCreateKgRelationResponseBodyCreateResult extends TeaModel {
         /**
-         * <p>The number of failed records.</p>
+         * <p>The number of failed creations.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -158,7 +192,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         public Integer failCount;
 
         /**
-         * <p>The number of successfully created records.</p>
+         * <p>The number of successful creations.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -167,7 +201,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
-         * <p>The list of successfully created entity records.</p>
+         * <p>The list of successfully created relation records.</p>
          */
         @NameInMap("SuccessRelationList")
         public java.util.List<BatchCreateKgRelationResponseBodyCreateResultSuccessRelationList> successRelationList;

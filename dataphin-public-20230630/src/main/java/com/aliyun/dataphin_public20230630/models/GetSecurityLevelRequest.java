@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSecurityLevelRequest extends TeaModel {
     /**
-     * <p>The sensitivity level of the data classification.</p>
+     * <p>The sensitivity of the data classification level.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,8 @@ public class GetSecurityLevelRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKgEntityRequest extends TeaModel {
     /**
-     * <p>The create command.</p>
+     * <p>The creation command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateKgEntityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -131,7 +133,7 @@ public class CreateKgEntityRequest extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The entity record property list.</p>
+         * <p>The property list of the entity record.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("PropertyList")

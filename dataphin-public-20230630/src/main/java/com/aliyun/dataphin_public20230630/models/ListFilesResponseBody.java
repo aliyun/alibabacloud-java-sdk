@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFilesResponseBody extends TeaModel {
     /**
-     * <p>Request error code. OK indicates a normal request.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class ListFilesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>File list</p>
+     * <p>The list of files.</p>
      */
     @NameInMap("FileList")
     public java.util.List<ListFilesResponseBodyFileList> fileList;
 
     /**
-     * <p>Backend response HTTP code</p>
+     * <p>The HTTP status code returned by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListFilesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Request error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,7 +38,7 @@ public class ListFilesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -47,7 +47,7 @@ public class ListFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request was successful</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListFilesResponseBody extends TeaModel {
 
     public static class ListFilesResponseBodyFileList extends TeaModel {
         /**
-         * <p>File category</p>
+         * <p>The file category.</p>
          * 
          * <strong>example:</strong>
          * <p>tempCode</p>
@@ -119,7 +119,7 @@ public class ListFilesResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>File content</p>
+         * <p>The file content.</p>
          * 
          * <strong>example:</strong>
          * <p>select 1;</p>
@@ -128,7 +128,7 @@ public class ListFilesResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>Creator</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1212111</p>
@@ -137,7 +137,7 @@ public class ListFilesResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>File directory</p>
+         * <p>The file directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/xx/x</p>
@@ -146,7 +146,7 @@ public class ListFilesResponseBody extends TeaModel {
         public String directory;
 
         /**
-         * <p>File type, such as directory</p>
+         * <p>The file type, such as directory.</p>
          * 
          * <strong>example:</strong>
          * <p>directory</p>
@@ -155,7 +155,7 @@ public class ListFilesResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>Creation time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1717483193830</p>
@@ -164,7 +164,7 @@ public class ListFilesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Modification time</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1717483193830</p>
@@ -173,7 +173,7 @@ public class ListFilesResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>File ID</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>111231112</p>
@@ -182,7 +182,7 @@ public class ListFilesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Last modifier</p>
+         * <p>The last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1212111</p>
@@ -191,16 +191,16 @@ public class ListFilesResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
-         * <p>File name</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xxTest</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Project ID</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>312112121</p>

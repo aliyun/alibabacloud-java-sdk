@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteStandardWordRootRequest extends TeaModel {
     /**
-     * <p>The name of the root word.</p>
+     * <p>The word root name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>平均值</p>
+     * <p>Average</p>
      */
     @NameInMap("Name")
     public String name;
@@ -25,6 +25,8 @@ public class DeleteStandardWordRootRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

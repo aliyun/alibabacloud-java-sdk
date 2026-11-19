@@ -123,6 +123,15 @@ public class BatchCreateKgEntityRequest extends TeaModel {
 
     public static class BatchCreateKgEntityRequestCreateCommandEntityList extends TeaModel {
         /**
+         * <p>The business ID of the entity record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
+        @NameInMap("BizId")
+        public String bizId;
+
+        /**
          * <p>The entity type code.</p>
          * <p>This parameter is required.</p>
          * 
@@ -142,6 +151,14 @@ public class BatchCreateKgEntityRequest extends TeaModel {
         public static BatchCreateKgEntityRequestCreateCommandEntityList build(java.util.Map<String, ?> map) throws Exception {
             BatchCreateKgEntityRequestCreateCommandEntityList self = new BatchCreateKgEntityRequestCreateCommandEntityList();
             return TeaModel.build(map, self);
+        }
+
+        public BatchCreateKgEntityRequestCreateCommandEntityList setBizId(String bizId) {
+            this.bizId = bizId;
+            return this;
+        }
+        public String getBizId() {
+            return this.bizId;
         }
 
         public BatchCreateKgEntityRequestCreateCommandEntityList setEntityType(String entityType) {

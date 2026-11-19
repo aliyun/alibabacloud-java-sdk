@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceDownStreamResponseBody extends TeaModel {
     /**
-     * <p>Error code. OK indicates a successful request.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code returned by the backend.</p>
+     * <p>The HTTP status code of the backend response.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,13 +23,13 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Downstream instances and dependency relationships.</p>
+     * <p>The downstream and dependency relationships.</p>
      */
     @NameInMap("InstanceRelationList")
     public java.util.List<GetInstanceDownStreamResponseBodyInstanceRelationList> instanceRelationList;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,7 +38,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -47,7 +47,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
 
     public static class GetInstanceDownStreamResponseBodyInstanceRelationListFieldInstanceList extends TeaModel {
         /**
-         * <p>Field instance ID.</p>
+         * <p>The field instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t_23211</p>
@@ -119,7 +119,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public String fieldInstanceId;
 
         /**
-         * <p>Run status.</p>
+         * <p>The run status.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -128,7 +128,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public String runStatus;
 
         /**
-         * <p>Selection status of the instance.</p>
+         * <p>The selection status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>OPTIONAL</p>
@@ -169,7 +169,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
 
     public static class GetInstanceDownStreamResponseBodyInstanceRelationListInstanceInfo extends TeaModel {
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t_232411</p>
@@ -178,16 +178,16 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Instance name.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Node type.</p>
+         * <p>The node type.</p>
          * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
@@ -228,7 +228,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
 
     public static class GetInstanceDownStreamResponseBodyInstanceRelationList extends TeaModel {
         /**
-         * <p>Depth level.</p>
+         * <p>The level.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,7 +237,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public Integer downStreamDepth;
 
         /**
-         * <p>Extended information of the node instance.</p>
+         * <p>The extended information of the node instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;:&quot;x&quot;}</p>
@@ -246,19 +246,19 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public String extendInfo;
 
         /**
-         * <p>Field instance list.</p>
+         * <p>The list of field instances.</p>
          */
         @NameInMap("FieldInstanceList")
         public java.util.List<GetInstanceDownStreamResponseBodyInstanceRelationListFieldInstanceList> fieldInstanceList;
 
         /**
-         * <p>Instance information.</p>
+         * <p>The instance information.</p>
          */
         @NameInMap("InstanceInfo")
         public GetInstanceDownStreamResponseBodyInstanceRelationListInstanceInfo instanceInfo;
 
         /**
-         * <p>Run status of the instance.</p>
+         * <p>The run status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -267,12 +267,12 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public String runStatus;
 
         /**
-         * <p>Selection status of the instance, primarily used for logical fields.</p>
+         * <p>The selection status of the instance. This is mainly used for logical fields. Valid values:</p>
          * <ul>
-         * <li>OPTIONAL: Optional.</li>
-         * <li>SELECTED: Required.</li>
-         * <li>DISABLE: Not selectable.</li>
-         * <li>GROUP_SELECTED: Select all or deselect all.</li>
+         * <li>OPTIONAL: optional.</li>
+         * <li>SELECTED: required.</li>
+         * <li>DISABLE: unavailable.</li>
+         * <li>GROUP_SELECTED: all selected or all unselected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public String selectStatus;
 
         /**
-         * <p>Reason why the instance is selected.</p>
+         * <p>The reason why the instance is selected. Valid values:</p>
          * <ul>
          * <li>PK_CHANGE</li>
          * <li>LOGIC_CHANGE</li>

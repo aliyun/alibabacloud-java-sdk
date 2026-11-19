@@ -95,7 +95,7 @@ public class ListBatchTemplatesRequest extends TeaModel {
 
     public static class ListBatchTemplatesRequestListQuery extends TeaModel {
         /**
-         * <p>The keyword in the template name.</p>
+         * <p>The keyword for the template name.</p>
          * 
          * <strong>example:</strong>
          * <p>Data processing template</p>
@@ -113,7 +113,7 @@ public class ListBatchTemplatesRequest extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of records per page. Default value: 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

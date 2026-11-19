@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKgRelationRequest extends TeaModel {
     /**
-     * <p>The create command.</p>
+     * <p>The creation command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateKgRelationRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -121,7 +123,7 @@ public class CreateKgRelationRequest extends TeaModel {
 
     public static class CreateKgRelationRequestCreateCommand extends TeaModel {
         /**
-         * <p>The relationship record property list.</p>
+         * <p>The property list of the relationship record.</p>
          */
         @NameInMap("PropertyList")
         public java.util.List<CreateKgRelationRequestCreateCommandPropertyList> propertyList;

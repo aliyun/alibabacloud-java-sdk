@@ -15,6 +15,8 @@ public class PublishStandardRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,13 +61,13 @@ public class PublishStandardRequest extends TeaModel {
 
     public static class PublishStandardRequestPublishCommand extends TeaModel {
         /**
-         * <p>Specifies whether to automatically publish after approval. Default value: true.</p>
+         * <p>Specifies whether to automatically publish the standard after the approval succeeds. Default value: true.</p>
          */
         @NameInMap("AutoPublishAfterApproval")
         public Boolean autoPublishAfterApproval;
 
         /**
-         * <p>The review comment. Maximum length: 128 characters.</p>
+         * <p>The review comment. The comment can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class PublishStandardRequest extends TeaModel {
         public String standardStage;
 
         /**
-         * <p>The version number. Default value: -1 (latest version).</p>
+         * <p>The version number. Default value: -1, which indicates the latest version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

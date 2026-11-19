@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableLineagesResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The backend response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -41,7 +41,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -143,7 +143,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public Long inputProjectId;
 
         /**
-         * <p>Indicates whether the input table has been deleted.</p>
+         * <p>Indicates whether the input table is deleted.</p>
          */
         @NameInMap("InputTableDeleted")
         public Boolean inputTableDeleted;
@@ -158,7 +158,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String inputTableEnv;
 
         /**
-         * <p>The GUID of the input table. Each asset has a unique identifier.</p>
+         * <p>The GUID of the input table, which is the unique identifier of each asset.</p>
          * 
          * <strong>example:</strong>
          * <p>123211</p>
@@ -176,7 +176,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String inputTableName;
 
         /**
-         * <p>The environment to which the task belongs. Valid values: dev and prod.</p>
+         * <p>The environment to which the node belongs. Valid values: dev and prod.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -185,7 +185,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String nodeEnv;
 
         /**
-         * <p>The task ID associated with the lineage.</p>
+         * <p>The ID of the node corresponding to the lineage.</p>
          * 
          * <strong>example:</strong>
          * <p>110021</p>
@@ -230,7 +230,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public Long outputProjectId;
 
         /**
-         * <p>Indicates whether the output table has been deleted.</p>
+         * <p>Indicates whether the output table is deleted.</p>
          */
         @NameInMap("OutputTableDeleted")
         public Boolean outputTableDeleted;
@@ -245,7 +245,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         public String outputTableEnv;
 
         /**
-         * <p>The GUID of the output table. Each asset has a unique identifier.</p>
+         * <p>The GUID of the output table, which is the unique identifier of each asset.</p>
          * 
          * <strong>example:</strong>
          * <p>2231</p>

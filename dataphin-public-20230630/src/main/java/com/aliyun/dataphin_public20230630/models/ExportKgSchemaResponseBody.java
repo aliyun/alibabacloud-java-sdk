@@ -23,7 +23,7 @@ public class ExportKgSchemaResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The backend exception details.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -41,13 +41,13 @@ public class ExportKgSchemaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The knowledge graph definition details.</p>
+     * <p>The details of the knowledge graph definition.</p>
      */
     @NameInMap("SchemaInfo")
     public ExportKgSchemaResponseBodySchemaInfo schemaInfo;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class ExportKgSchemaResponseBody extends TeaModel {
 
     public static class ExportKgSchemaResponseBodySchemaInfo extends TeaModel {
         /**
-         * <p>The knowledge graph definition content converted based on the specified format.</p>
+         * <p>The content of the knowledge graph definition converted based on the specified format.</p>
          * 
          * <strong>example:</strong>
          * <p>workspaceId: f1d4559a4db044158305e2d89bccf81f

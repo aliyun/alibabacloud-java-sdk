@@ -242,7 +242,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String paramType;
 
         /**
-         * <p>The example value.</p>
+         * <p>The sample value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -432,7 +432,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String paramType;
 
         /**
-         * <p>The example value.</p>
+         * <p>The sample value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -549,7 +549,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer execTimeout;
 
         /**
-         * <p>The execution mode. Valid values: 1: Synchronous, 2: Asynchronous.</p>
+         * <p>The execution mode: 1-synchronous, 2-asynchronous.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -597,7 +597,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String osProjectName;
 
         /**
-         * <p>The protocol type. Valid values: 1: HTTPS, 2: HTTP, 3: HTTP and HTTPS.</p>
+         * <p>The protocol type: 1. HTTPS, 2. HTTP, 3. HTTP and HTTPS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -607,7 +607,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer protocol;
 
         /**
-         * <p>The request method. Valid values: 1: GET, 2: LIST.</p>
+         * <p>The request method: 1-GET, 2-LIST.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -617,14 +617,14 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer requestMethod;
 
         /**
-         * <p>The list of request parameters.</p>
+         * <p>The request parameter list.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RequestParamList")
         public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList> requestParamList;
 
         /**
-         * <p>The list of response parameters.</p>
+         * <p>The response parameter list.</p>
          */
         @NameInMap("ResponseParamList")
         public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList> responseParamList;
@@ -840,7 +840,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigMetadataStorageConfigTableSchemaColumnsVectorIndexConfig extends TeaModel {
         /**
-         * <p>The embedding dimension.</p>
+         * <p>The vector dimension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -860,7 +860,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String embeddingModel;
 
         /**
-         * <p>The index building parameters.</p>
+         * <p>The index build parameters.</p>
          */
         @NameInMap("IndexParams")
         public java.util.Map<String, ?> indexParams;
@@ -876,7 +876,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String indexType;
 
         /**
-         * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</p>
+         * <p>The similarity type. Valid values: COSINE, L2, and IP. Default value: COSINE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -943,7 +943,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The subtype of the array element. Valid only when type is ARRAY.</p>
+         * <p>The subtype of array elements. Valid only when type=ARRAY.</p>
          * 
          * <strong>example:</strong>
          * <p>INT64</p>
@@ -952,7 +952,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String elementType;
 
         /**
-         * <p>The maximum capacity of the array. Valid only when type is ARRAY. Default value: 4096.</p>
+         * <p>The maximum capacity of the array. Valid only when type=ARRAY. Default value: 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -971,7 +971,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether the column is a primary key.</p>
+         * <p>Indicates whether the column is a primary key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -991,7 +991,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Specifies whether the column is a URL.</p>
+         * <p>Indicates whether the column is a URL.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1078,7 +1078,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigMetadataStorageConfigTableSchema extends TeaModel {
         /**
-         * <p>The list of columns.</p>
+         * <p>The column list.</p>
          */
         @NameInMap("Columns")
         public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigMetadataStorageConfigTableSchemaColumns> columns;
@@ -1119,7 +1119,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String dataSourceName;
 
         /**
-         * <p>The development database or schema.</p>
+         * <p>The development database/schema.</p>
          * 
          * <strong>example:</strong>
          * <p>HTML content extraction/test423/</p>
@@ -1147,7 +1147,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String metadataStorageType;
 
         /**
-         * <p>The production database or schema.</p>
+         * <p>The production database/schema.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1245,7 +1245,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfigTableSchemaColumnsVectorIndexConfig extends TeaModel {
         /**
-         * <p>The embedding dimension.</p>
+         * <p>The vector dimension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1265,7 +1265,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String embeddingModel;
 
         /**
-         * <p>The index building parameters.</p>
+         * <p>The index build parameters.</p>
          */
         @NameInMap("IndexParams")
         public java.util.Map<String, ?> indexParams;
@@ -1281,7 +1281,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String indexType;
 
         /**
-         * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</p>
+         * <p>The similarity type. Valid values: COSINE, L2, and IP. Default value: COSINE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1339,7 +1339,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfigTableSchemaColumns extends TeaModel {
         /**
-         * <p><strong>The field description.</strong></p>
+         * <p><strong>Field description</strong></p>
          * 
          * <strong>example:</strong>
          * <p>Entry time</p>
@@ -1348,7 +1348,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p><strong>The subtype of the array element. Valid only when type is ARRAY.</strong></p>
+         * <p><strong>The subtype of array elements. Valid only when type=ARRAY.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>INT64</p>
@@ -1357,7 +1357,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String elementType;
 
         /**
-         * <p><strong>The maximum capacity of the array. Valid only when type is ARRAY. Default value: 4096.</strong></p>
+         * <p><strong>The maximum capacity of the array. Valid only when type=ARRAY. Default value: 4096.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>35</p>
@@ -1376,7 +1376,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether the column is a primary key.</p>
+         * <p>Indicates whether the column is a primary key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1396,7 +1396,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Specifies whether the column is a URL.</p>
+         * <p>Indicates whether the column is a URL.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1483,7 +1483,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfigTableSchema extends TeaModel {
         /**
-         * <p>The list of columns.</p>
+         * <p>The column list.</p>
          */
         @NameInMap("Columns")
         public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfigTableSchemaColumns> columns;
@@ -1505,7 +1505,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfig extends TeaModel {
         /**
-         * <p>The data source type of the metatable. Only KAFKA is supported in the current release.</p>
+         * <p>The data source type of the metatable. Only KAFKA is currently supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1525,7 +1525,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String metaTableName;
 
         /**
-         * <p>The ID of the project to which the metatable belongs. Cross-project access is supported.</p>
+         * <p>The project ID of the metatable. Cross-project access is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1535,7 +1535,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The table schema configuration. This configuration reuses <code>MetadataStorageConfigDTO.TableSchemaDTO</code>.</p>
+         * <p>The table schema configuration. Reuses <code>MetadataStorageConfigDTO.TableSchemaDTO</code>.</p>
          */
         @NameInMap("TableSchema")
         public ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfigTableSchema tableSchema;
@@ -1593,7 +1593,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigMetadataStorageConfig metadataStorageConfig;
 
         /**
-         * <p>The real-time metatable configuration. This configuration is valid only when <code>metadataStorageType</code> is <code>REALTIME_META_TABLE</code>.</p>
+         * <p>The real-time metatable configuration. Effective only when <code>metadataStorageType=REALTIME_META_TABLE</code>.</p>
          */
         @NameInMap("RealtimeMetaTableConfig")
         public ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfig realtimeMetaTableConfig;
@@ -1648,7 +1648,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionList extends TeaModel {
         /**
-         * <p>The API information of the online dataset.</p>
+         * <p>The API information for the online dataset.</p>
          */
         @NameInMap("ApiInfo")
         public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo apiInfo;
@@ -1687,7 +1687,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1749450490000</p>
@@ -1867,7 +1867,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-18 17:07:54.237771</p>
@@ -1894,7 +1894,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String lockOwner;
 
         /**
-         * <p>The name of the development owner (interface display field).</p>
+         * <p>The name of the development owner (Displayed Fields on the interface).</p>
          * 
          * <strong>example:</strong>
          * <p>Zhang San</p>
@@ -1912,7 +1912,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String metadataStorageType;
 
         /**
-         * <p>The name of the dataset.</p>
+         * <p>The dataset name.</p>
          * 
          * <strong>example:</strong>
          * <p>audio_dataset</p>
@@ -1945,7 +1945,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The scenarios of the dataset. Valid values: OFFLINE (offline, default) and REALTIME (real-time).</p>
+         * <p>The Scenarios in which the dataset is used. Valid values: OFFLINE (offline, default) and REALTIME (real-time).</p>
          * 
          * <strong>example:</strong>
          * <p>OFFLINE</p>

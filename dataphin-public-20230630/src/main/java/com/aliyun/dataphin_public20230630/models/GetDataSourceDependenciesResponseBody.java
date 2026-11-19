@@ -14,7 +14,7 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The dependency records.</p>
+     * <p>The reference records.</p>
      */
     @NameInMap("DependencyList")
     public java.util.List<GetDataSourceDependenciesResponseBodyDependencyList> dependencyList;
@@ -47,7 +47,7 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

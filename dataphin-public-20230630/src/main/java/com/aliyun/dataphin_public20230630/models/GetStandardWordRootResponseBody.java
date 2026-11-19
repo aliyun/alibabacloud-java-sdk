@@ -23,7 +23,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The backend exception details.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The word root details.</p>
+     * <p>The details of the word root.</p>
      */
     @NameInMap("WordRootInfo")
     public GetStandardWordRootResponseBodyWordRootInfo wordRootInfo;
@@ -125,7 +125,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The user ID of the creator.</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>30012021</p>
@@ -161,7 +161,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         public String fullName;
 
         /**
-         * <p>The user ID of the last modifier.</p>
+         * <p>The ID of the last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>30012021</p>

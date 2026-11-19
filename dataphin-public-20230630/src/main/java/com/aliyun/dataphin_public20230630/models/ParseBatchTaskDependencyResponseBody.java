@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ParseBatchTaskDependencyResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is normal.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -113,7 +113,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         public java.util.List<String> fieldList;
 
         /**
-         * <p>The node ID. A value of -1 is returned if no node is found for the corresponding input table.</p>
+         * <p>The node ID. The value is -1 when the node corresponding to the input table is not found.</p>
          * 
          * <strong>example:</strong>
          * <p>n_11013121</p>
@@ -122,7 +122,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The node name. This parameter is empty if no node is found for the corresponding input table.</p>
+         * <p>The node name. This parameter is empty when the node corresponding to the input table is not found.</p>
          * 
          * <strong>example:</strong>
          * <p>test11</p>
@@ -140,16 +140,16 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         public String outputName;
 
         /**
-         * <p>The owner of the node. This parameter is empty if no node is found for the corresponding input table.</p>
+         * <p>The owner of the node. This parameter is empty when the node corresponding to the input table is not found.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
-         * <p>The owner of the node. This parameter is empty if no node is found for the corresponding input table.</p>
+         * <p>The owner of the node. This parameter is empty when the node corresponding to the input table is not found.</p>
          * 
          * <strong>example:</strong>
          * <p>201122301</p>
@@ -231,7 +231,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
 
     public static class ParseBatchTaskDependencyResponseBodyParseResultDependNodeList extends TeaModel {
         /**
-         * <p>The input/output type. Valid values: input (dependent node) and output (node output name).</p>
+         * <p>The input and output type. Valid values: input (dependent node) and output (node output name).</p>
          * 
          * <strong>example:</strong>
          * <p>input</p>
@@ -240,7 +240,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         public String nodeIoType;
 
         /**
-         * <p>The list of schedule nodes.</p>
+         * <p>The list of scheduled nodes.</p>
          */
         @NameInMap("ScheduleNodeInfoList")
         public java.util.List<ParseBatchTaskDependencyResponseBodyParseResultDependNodeListScheduleNodeInfoList> scheduleNodeInfoList;
@@ -270,7 +270,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
 
     public static class ParseBatchTaskDependencyResponseBodyParseResult extends TeaModel {
         /**
-         * <p>The list of dependent nodes.</p>
+         * <p>The dependent nodes.</p>
          */
         @NameInMap("DependNodeList")
         public java.util.List<ParseBatchTaskDependencyResponseBodyParseResultDependNodeList> dependNodeList;

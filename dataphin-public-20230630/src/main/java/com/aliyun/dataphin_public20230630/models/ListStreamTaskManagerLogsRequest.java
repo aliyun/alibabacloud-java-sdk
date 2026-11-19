@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStreamTaskManagerLogsRequest extends TeaModel {
     /**
-     * <p>The ID of the Flink deployment instance.</p>
+     * <p>The deployment instance ID. Set this parameter to the deploymentInstanceId value returned in the operation record or historical running instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListStreamTaskManagerLogsRequest extends TeaModel {
     public String deploymentInstanceId;
 
     /**
-     * <p>The ID of the operating tenant. The gateway verifies that the current identity has access to the tenant and then injects the TenantId into the backend.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListStreamTaskManagerLogsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The optional ID of the operator. This parameter follows the gateway identity verification rules and is not directly bound to the backend UserId.</p>
+     * <p>The user ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -34,7 +34,7 @@ public class ListStreamTaskManagerLogsRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The project ID.</p>
+     * <p>The ID of the Dataphin project to which the node belongs. This parameter is used for permission verification in the production environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ListStreamTaskManagerLogsRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The TaskManager ID. This parameter can be omitted when retrieving log content. If omitted, the JobManager logs are returned.</p>
+     * <p>The identifier of the TaskManager. Set this parameter to the taskmanagerId value returned by the ListStreamTaskManagers operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCatalogAssetDetailsRequest extends TeaModel {
     /**
-     * <p>The paged query for the listed asset catalog.</p>
+     * <p>The paging query for the list of listed asset catalogs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GetCatalogAssetDetailsQuery")
@@ -22,7 +22,7 @@ public class GetCatalogAssetDetailsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -71,20 +71,22 @@ public class GetCatalogAssetDetailsRequest extends TeaModel {
         public String guid;
 
         /**
-         * <p>Specifies whether to include the field list. Default value: false. Valid values:</p>
+         * <p>Specifies whether to include the column list. Valid values:</p>
          * <ul>
-         * <li>false: Not included.</li>
          * <li>true: Included.</li>
+         * <li>false: Not included.
+         * Default value: false.</li>
          * </ul>
          */
         @NameInMap("IncludeColumns")
         public Boolean includeColumns;
 
         /**
-         * <p>Specifies whether to include detailed data. Default value: false. Valid values:</p>
+         * <p>Specifies whether to include detailed data. Valid values:</p>
          * <ul>
-         * <li>false: Not included.</li>
          * <li>true: Included.</li>
+         * <li>false: Not included.
+         * Default value: false.</li>
          * </ul>
          */
         @NameInMap("IncludeDetailedAttributes")
