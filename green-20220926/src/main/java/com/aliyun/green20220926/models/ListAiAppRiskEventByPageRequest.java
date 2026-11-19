@@ -32,7 +32,7 @@ public class ListAiAppRiskEventByPageRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListAiAppRiskEventByPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query parameter.</p>
+     * <p>The query parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;Lang\&quot;:\&quot;zh\&quot;}</p>

@@ -20,7 +20,7 @@ public class ListKeywordsResponseBody extends TeaModel {
     public ListKeywordsResponseBodyData data;
 
     /**
-     * <p>The description of the error code.</p>
+     * <p>The detailed description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,7 +38,7 @@ public class ListKeywordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The success flag.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -96,7 +96,7 @@ public class ListKeywordsResponseBody extends TeaModel {
          * <p>The properties.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>politics</p>
          */
         @NameInMap("Attribute")
         public String attribute;
@@ -145,7 +145,7 @@ public class ListKeywordsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The keyword library ID.</p>
+         * <p>The ID of the keyword library.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
@@ -154,7 +154,7 @@ public class ListKeywordsResponseBody extends TeaModel {
         public String keywordLibId;
 
         /**
-         * <p>The keyword data ID.</p>
+         * <p>The ID of the keyword data.</p>
          * 
          * <strong>example:</strong>
          * <p>4205334</p>
@@ -172,7 +172,7 @@ public class ListKeywordsResponseBody extends TeaModel {
          * <p>The keyword.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试词</p>
+         * <p>Test word</p>
          */
         @NameInMap("Word")
         public String word;

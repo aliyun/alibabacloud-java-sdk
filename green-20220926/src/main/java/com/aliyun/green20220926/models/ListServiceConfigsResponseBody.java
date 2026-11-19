@@ -20,7 +20,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     public java.util.List<ListServiceConfigsResponseBodyData> data;
 
     /**
-     * <p>The description of the error code.</p>
+     * <p>The detailed description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -38,7 +38,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -143,7 +143,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         public ListServiceConfigsResponseBodyDataCustomServiceConfRulesImageScanRule imageScanRule;
 
         /**
-         * <p>The ordinal number.</p>
+         * <p>The sequence number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,13 +205,13 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         public java.util.List<String> imageService;
 
         /**
-         * <p>The ignored keyword library.</p>
+         * <p>The ignored keyword libraries.</p>
          */
         @NameInMap("KeywordFilterLibs")
         public java.util.List<String> keywordFilterLibs;
 
         /**
-         * <p>The hit keyword library.</p>
+         * <p>The matched keyword libraries.</p>
          */
         @NameInMap("KeywordHitLibs")
         public java.util.List<String> keywordHitLibs;
@@ -223,7 +223,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         public java.util.List<ListServiceConfigsResponseBodyDataCustomServiceConfRules> rules;
 
         /**
-         * <p>The hit similar text library.</p>
+         * <p>The matched similar text libraries.</p>
          */
         @NameInMap("SimilarTextHitLibs")
         public java.util.List<String> similarTextHitLibs;
@@ -285,7 +285,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
 
     public static class ListServiceConfigsResponseBodyData extends TeaModel {
         /**
-         * <p>The classification.</p>
+         * <p>The category.</p>
          * 
          * <strong>example:</strong>
          * <p>guard-scene</p>
@@ -338,10 +338,8 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         /**
          * <p>The scene type. Valid values:</p>
          * <ul>
-         * <li><p>recommended_scene: recommended scenario.</p>
-         * </li>
-         * <li><p>all_scene: all scenarios.</p>
-         * </li>
+         * <li>recommended_scene: recommended scene</li>
+         * <li>all_scene: all scenes</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,7 +361,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
          * <p>The service description.</p>
          * 
          * <strong>example:</strong>
-         * <p>服务描述</p>
+         * <p>Service description</p>
          */
         @NameInMap("ServiceDesc")
         public String serviceDesc;
@@ -372,7 +370,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
          * <p>The service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>服务名称</p>
+         * <p>Service name</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -387,7 +385,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         public String serviceType;
 
         /**
-         * <p>UID。</p>
+         * <p>The user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1674*****0071291</p>

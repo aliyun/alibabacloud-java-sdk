@@ -14,7 +14,7 @@ public class ListAiAppByPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListAiAppByPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query condition.</p>
+     * <p>The query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

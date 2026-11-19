@@ -24,6 +24,9 @@ public class GetAiAppOverviewResponseBody extends TeaModel {
 
     /**
      * <p>The distribution of risk events by level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;high&quot;:2,&quot;medium&quot;:5,&quot;low&quot;:8,&quot;none&quot;:85}</p>
      */
     @NameInMap("RiskEventLevelDistribution")
     public java.util.Map<String, ?> riskEventLevelDistribution;

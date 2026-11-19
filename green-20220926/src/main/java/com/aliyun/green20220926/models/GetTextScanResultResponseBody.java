@@ -20,7 +20,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
     public GetTextScanResultResponseBodyData data;
 
     /**
-     * <p>The description of the error code.</p>
+     * <p>The detailed description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,7 +38,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
 
     public static class GetTextScanResultResponseBodyDataItemsResult extends TeaModel {
         /**
-         * <p>The confidence score, ranging from 0 to 100 and rounded to two decimal places.</p>
+         * <p>The confidence score. Valid values: 0 to 100. The score is accurate to two decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>25.0</p>
@@ -105,7 +105,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>疑似色情内容</p>
+         * <p>Suspected pornographic content</p>
          */
         @NameInMap("Description")
         public String description;
@@ -152,7 +152,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
 
     public static class GetTextScanResultResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The AccountId passed in by the customer.</p>
+         * <p>The AccountId parameter passed by the customer.</p>
          * 
          * <strong>example:</strong>
          * <p>accountIdtest123</p>
@@ -161,10 +161,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The Bailian request ID.</p>
+         * <p>The Model Studio request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>e1063275-a239-4f0c-8b7b-9c6f0d5e4a21</p>
          */
         @NameInMap("BailianRequestId")
         public String bailianRequestId;
@@ -173,16 +173,16 @@ public class GetTextScanResultResponseBody extends TeaModel {
          * <p>The content.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试内容</p>
+         * <p>Test content</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The DataId passed in by the customer.</p>
+         * <p>The DataId parameter passed by the customer.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>data_id_001</p>
          */
         @NameInMap("DataId")
         public String dataId;
@@ -197,7 +197,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String extFeedback;
 
         /**
-         * <p>The reserved parameter.</p>
+         * <p>The extra parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -233,7 +233,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The request time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The request time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-11 14:21:36</p>
@@ -242,22 +242,18 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String requestTime;
 
         /**
-         * <p>The detection results.</p>
+         * <p>The moderation result.</p>
          */
         @NameInMap("Result")
         public java.util.List<GetTextScanResultResponseBodyDataItemsResult> result;
 
         /**
-         * <p>The risk level, which is returned based on the configured high and low risk score thresholds. Valid values:</p>
+         * <p>The risk level. The value is returned based on the configured high and low risk scores. Valid values:</p>
          * <ul>
-         * <li><p>high: high risk.</p>
-         * </li>
-         * <li><p>medium: medium risk.</p>
-         * </li>
-         * <li><p>low: low risk.</p>
-         * </li>
-         * <li><p>none: no risk detected.</p>
-         * </li>
+         * <li>high: High risk.</li>
+         * <li>medium: Medium risk.</li>
+         * <li>low: Low risk.</li>
+         * <li>none: No risk detected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,7 +290,7 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
-         * <p>The suggested action.</p>
+         * <p>The suggestion.</p>
          * 
          * <strong>example:</strong>
          * <p>review</p>

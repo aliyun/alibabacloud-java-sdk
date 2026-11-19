@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppConfigsRequest extends TeaModel {
     /**
-     * <p>The classification.</p>
+     * <p>The category.</p>
      * 
      * <strong>example:</strong>
      * <p>guard-scene</p>
@@ -23,7 +23,7 @@ public class ListAppConfigsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type. Note: This parameter is actually required. If it is not provided, the API returns a 400 error (Code: 400, Message: resourceType may not be empty). Valid values: agent_text | agent_text_image | agent_image.</p>
      * 
      * <strong>example:</strong>
      * <p>agent_text</p>

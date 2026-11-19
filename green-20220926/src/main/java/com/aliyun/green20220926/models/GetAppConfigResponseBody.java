@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppConfigResponseBody extends TeaModel {
     /**
-     * <p>App ID。</p>
+     * <p>The application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>txt_check_pro_agent_01</p>
@@ -60,12 +60,15 @@ public class GetAppConfigResponseBody extends TeaModel {
 
     /**
      * <p>The preset options.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;models&quot;:[&quot;qwen3.7-plus&quot;,&quot;max3.7&quot;,&quot;deepseek-v4-pro&quot;,&quot;glm-5.1&quot;,&quot;glm-5.2&quot;]}</p>
      */
     @NameInMap("Option")
     public java.util.Map<String, ?> option;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

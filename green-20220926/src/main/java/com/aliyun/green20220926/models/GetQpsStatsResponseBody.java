@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class GetQpsStatsResponseBody extends TeaModel {
     /**
      * <p>The chart configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;cn-shanghai&quot;:{&quot;X&quot;:[&quot;20260701&quot;],&quot;Y&quot;:[{&quot;Name&quot;:&quot;cn-shanghai&quot;,&quot;Data&quot;:[10]}]}}</p>
      */
     @NameInMap("Charts")
     public java.util.Map<String, ChartsValue> charts;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. It can be used to troubleshoot issues.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

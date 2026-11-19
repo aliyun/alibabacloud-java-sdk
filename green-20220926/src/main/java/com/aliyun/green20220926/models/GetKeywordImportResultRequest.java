@@ -14,7 +14,7 @@ public class GetKeywordImportResultRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The task ID. Although this parameter is marked as required:false in the specification, it is actually required. If you do not provide this parameter, the service returns a 400 error. You can obtain the task ID from the TaskId field in the response of the AddKeywordsToLib operation when you import keywords in batches from a file.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx-xxx</p>

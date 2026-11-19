@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEventStatusShrinkRequest extends TeaModel {
     /**
-     * <p>The application ID that identifies the application to which the operation belongs.</p>
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class UpdateEventStatusShrinkRequest extends TeaModel {
     public String operationCode;
 
     /**
-     * <p>The operation parameters that contain additional parameter information required to execute the operation.</p>
+     * <p>The operation parameters that contain additional information required to perform the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -49,10 +49,10 @@ public class UpdateEventStatusShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The operation source that identifies the source system or module that triggered this status update request.</p>
+     * <p>The source of the operation, which identifies the system or module that triggered this status update request.</p>
      * 
      * <strong>example:</strong>
-     * <p>xx</p>
+     * <p>disposal</p>
      */
     @NameInMap("Source")
     public String source;

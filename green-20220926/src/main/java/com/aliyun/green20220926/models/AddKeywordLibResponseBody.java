@@ -20,7 +20,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
     public AddKeywordLibResponseBodyData data;
 
     /**
-     * <p>The description of the error code.</p>
+     * <p>The detailed description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -38,7 +38,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The success identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -96,13 +96,13 @@ public class AddKeywordLibResponseBody extends TeaModel {
          * <p>The internationalization key.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>keyword.lib.create.success</p>
          */
         @NameInMap("I18nKey")
         public String i18nKey;
 
         /**
-         * <p>The list of keywords with invalid length.</p>
+         * <p>The list of keywords that are too long or too short.</p>
          */
         @NameInMap("IllegalLengthKeywords")
         public java.util.List<String> illegalLengthKeywords;
@@ -156,10 +156,10 @@ public class AddKeywordLibResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
-         * <p>The prompt information.</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Keywords added. Duplicate and invalid keywords are automatically skipped</p>
          */
         @NameInMap("Tips")
         public String tips;
@@ -262,7 +262,7 @@ public class AddKeywordLibResponseBody extends TeaModel {
 
     public static class AddKeywordLibResponseBodyData extends TeaModel {
         /**
-         * <p>The result.</p>
+         * <p>The results.</p>
          */
         @NameInMap("KeywordsResult")
         public AddKeywordLibResponseBodyDataKeywordsResult keywordsResult;

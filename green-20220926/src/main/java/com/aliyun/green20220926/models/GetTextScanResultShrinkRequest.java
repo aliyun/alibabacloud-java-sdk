@@ -14,7 +14,7 @@ public class GetTextScanResultShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-24 10:01:55</p>
@@ -32,7 +32,10 @@ public class GetTextScanResultShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search condition.</p>
+     * <p>The search conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;DataId&quot;:&quot;data-test-001&quot;}</p>
      */
     @NameInMap("Query")
     public String queryShrink;
@@ -48,12 +51,15 @@ public class GetTextScanResultShrinkRequest extends TeaModel {
 
     /**
      * <p>The sort field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;GmtCreate&quot;:&quot;desc&quot;}</p>
      */
     @NameInMap("Sort")
     public String sortShrink;
 
     /**
-     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-11 09:00:19</p>

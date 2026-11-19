@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopOnlineTestRequest extends TeaModel {
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type. Note: This parameter is required. If it is not provided, the service returns a 400 error with the message \&quot;resourceType may not be empty\&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>

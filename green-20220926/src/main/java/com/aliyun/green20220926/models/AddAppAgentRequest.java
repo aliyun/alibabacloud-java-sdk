@@ -17,13 +17,13 @@ public class AddAppAgentRequest extends TeaModel {
      * <p>The agent name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Agent1</p>
+     * <p>Agent 1</p>
      */
     @NameInMap("AgentName")
     public String agentName;
 
     /**
-     * <p>App ID。</p>
+     * <p>The app ID.</p>
      * 
      * <strong>example:</strong>
      * <p>txt_check_agent_01</p>

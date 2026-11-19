@@ -9,7 +9,7 @@ public class AddKeywordLibRequest extends TeaModel {
      * .</p>
      * 
      * <strong>example:</strong>
-     * <p>keyword1\nkeyword2</p>
+     * <p>Keyword1\nKeyword2</p>
      */
     @NameInMap("Keywords")
     public String keywords;
@@ -27,7 +27,7 @@ public class AddKeywordLibRequest extends TeaModel {
      * <p>The name of the keyword library.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestLibrary.</p>
+     * <p>Test keyword library</p>
      */
     @NameInMap("LibName")
     public String libName;
@@ -51,9 +51,9 @@ public class AddKeywordLibRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The library code.</p>
+     * <p>The code of the keyword library.</p>
      * <ul>
-     * <li>desensitize: desensitization library</li>
+     * <li>desensitize: desensitization keyword library.</li>
      * </ul>
      * 
      * <strong>example:</strong>

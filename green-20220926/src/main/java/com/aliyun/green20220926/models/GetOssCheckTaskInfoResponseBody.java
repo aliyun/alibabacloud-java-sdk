@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     /**
-     * <p>The storage buckets.</p>
+     * <p>The buckets.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;Bucket\&quot;:\&quot;aileshijie\&quot;,\&quot;Region\&quot;:\&quot;cn-hangzhou\&quot;}]</p>
@@ -14,7 +14,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public String buckets;
 
     /**
-     * <p>The configuration item.</p>
+     * <p>The configuration.</p>
      */
     @NameInMap("Config")
     public GetOssCheckTaskInfoResponseBodyConfig config;
@@ -29,7 +29,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The number of completed tasks.</p>
+     * <p>The number of completed items.</p>
      * 
      * <strong>example:</strong>
      * <p>56</p>
@@ -38,7 +38,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public Long finishNum;
 
     /**
-     * <p>Indicates whether this is a scheduled scan task.</p>
+     * <p>Specifies whether the task is a scheduled scan task.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -47,7 +47,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public Boolean isInc;
 
     /**
-     * <p>The next execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The last execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-09 10:30:00</p>
@@ -65,7 +65,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public Integer mediaType;
 
     /**
-     * <p>The last execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The next execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-08 10:30:00</p>
@@ -110,16 +110,16 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The task status.</p>
+     * <p>The status of the task.</p>
      * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx</p>
@@ -128,16 +128,16 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
-     * <p>Document stock task 20240914100517757</p>
+     * <p>Document inventory task 20240914100517757</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>The task type.</p>
+     * <p>The type of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>increment</p>
@@ -289,7 +289,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String copyFrom;
 
         /**
-         * <p>Indicates whether the service is copied.</p>
+         * <p>Specifies whether to copy.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -310,7 +310,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
          * <p>The service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Content moderation.</p>
+         * <p>Content moderation</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -398,7 +398,10 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
 
     public static class GetOssCheckTaskInfoResponseBodyConfig extends TeaModel {
         /**
-         * <p>The filter configuration for each bucket. The key is the bucket name, and the value is the filter configuration, which includes prefix/suffix filters and filter character lists.</p>
+         * <p>The filter configuration for each bucket. The key is the bucket name, and the value is the filter configuration, which includes prefix and suffix filters and a list of filtered characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sample-bucket&quot;:{&quot;PrefixFilterType&quot;:&quot;all&quot;,&quot;PrefixFilters&quot;:[&quot;testprefix1&quot;]}}</p>
          */
         @NameInMap("BucketPrefixFilterConfig")
         public java.util.Map<String, ConfigBucketPrefixFilterConfigValue> bucketPrefixFilterConfig;
@@ -413,7 +416,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Long callbackId;
 
         /**
-         * <p>Indicates whether to deduplicate previously scanned tasks.</p>
+         * <p>Specifies whether to deduplicate historically scanned tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -431,7 +434,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The execution date of the scheduled task. The value is an integer in the format of a single digit, such as 1.</p>
+         * <p>The execution date of the scheduled task. The value is an integer, such as 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -449,7 +452,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String executeTime;
 
         /**
-         * <p>Indicates whether to freeze.</p>
+         * <p>Specifies whether to freeze.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -467,7 +470,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean freezeHighRisk1;
 
         /**
-         * <p>Specifies whether to freeze high-risk audio and text.</p>
+         * <p>Specifies whether to freeze high-risk audio and text files.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -485,7 +488,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean freezeMediumRisk1;
 
         /**
-         * <p>Specifies whether to freeze medium-risk audio and text.</p>
+         * <p>Specifies whether to freeze medium-risk audio and text files.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -536,7 +539,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>Referer。</p>
+         * <p>The Referer, which indicates the source site of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
@@ -545,7 +548,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String referer;
 
         /**
-         * <p>The scan limit quantity.</p>
+         * <p>The limit on the number of items to scan.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -554,7 +557,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Long scanLimit;
 
         /**
-         * <p>Indicates whether to scan images without file extensions.</p>
+         * <p>Specifies whether to scan images without file name extensions.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -563,7 +566,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean scanNoFileType;
 
         /**
-         * <p>The file type to scan.</p>
+         * <p>The type of files to scan.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -572,7 +575,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Integer scanResourceType;
 
         /**
-         * <p>The scan service code.</p>
+         * <p>The code of the scan service.</p>
          */
         @NameInMap("ScanService")
         public java.util.List<String> scanService;
@@ -593,7 +596,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The scheduling date.</p>
+         * <p>The scheduling cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

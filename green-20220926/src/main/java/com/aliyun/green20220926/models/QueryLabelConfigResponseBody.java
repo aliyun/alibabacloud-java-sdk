@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryLabelConfigResponseBody extends TeaModel {
     /**
-     * <p>The content moderation configuration.</p>
+     * <p>The content compliance.</p>
      */
     @NameInMap("ContentModeration")
     public java.util.List<?> contentModeration;

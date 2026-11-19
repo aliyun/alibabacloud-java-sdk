@@ -23,7 +23,7 @@ public class GetAiAppStatsRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The query condition.</p>
+     * <p>The query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

@@ -60,6 +60,9 @@ public class GetStockOssCheckTasksListShrinkRequest extends TeaModel {
 
     /**
      * <p>The sort field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;StartTime&quot;:&quot;desc&quot;}</p>
      */
     @NameInMap("Sort")
     public String sortShrink;

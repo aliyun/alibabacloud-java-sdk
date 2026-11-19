@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyAppConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the source App to copy from.</p>
+     * <p>The ID of the source app.</p>
      * 
      * <strong>example:</strong>
      * <p>txt_check_agent_01</p>
@@ -14,10 +14,10 @@ public class CopyAppConfigRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of the new App to be created from the copy.</p>
+     * <p>The name of the new app.</p>
      * 
      * <strong>example:</strong>
-     * <p>CustomTextModeration</p>
+     * <p>Custom text moderation</p>
      */
     @NameInMap("Name")
     public String name;

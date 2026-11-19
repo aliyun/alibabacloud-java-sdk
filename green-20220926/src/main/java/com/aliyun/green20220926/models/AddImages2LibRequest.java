@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class AddImages2LibRequest extends TeaModel {
     /**
-     * <p>The image URL.</p>
+     * <p>The URL of the image. This value must be the Key field returned by GetUploadInfo, in the format of image/upload/<hash>. Passing an external image URL returns a 400 image.url.invalid error.</p>
      * 
      * <strong>example:</strong>
-     * <p>upload/ea7a98f9-f8bd-4905-a79b-963c9da419c5.jpg</p>
+     * <p>image/upload/755c31906fc0b0b5007ecead9660c2ab</p>
      */
     @NameInMap("ImgUrl")
     public String imgUrl;
 
     /**
-     * <p>The image library ID.</p>
+     * <p>The ID of the image library.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>custom_imglib_001</p>
      */
     @NameInMap("LibId")
     public String libId;

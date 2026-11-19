@@ -11,7 +11,7 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
     public java.util.List<GetGuardLogStatsResponseBodyData> data;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -65,12 +65,15 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
 
         /**
          * <p>The log analysis configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sls.region&quot;:&quot;cn-shanghai&quot;,&quot;sls.project&quot;:&quot;aliyun-guardrail-log&quot;,&quot;sls.logstore&quot;:&quot;guard-analysis&quot;}</p>
          */
         @NameInMap("LogAnalysisConfig")
         public java.util.Map<String, ?> logAnalysisConfig;
 
         /**
-         * <p>The name of the Simple Log Service Logstore.</p>
+         * <p>The name of the Logstore in Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>test003x</p>
@@ -97,7 +100,7 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
         public Long preserveStorage;
 
         /**
-         * <p>The project space.</p>
+         * <p>The workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx_log</p>
@@ -115,7 +118,7 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
         public Long totalStorage;
 
         /**
-         * <p>The number of days for which data is retained.</p>
+         * <p>The data retention period in days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -133,7 +136,7 @@ public class GetGuardLogStatsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>UID。</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1643953****74290</p>

@@ -258,12 +258,15 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
 
         /**
          * <p>The risk level summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;high&quot;:1,&quot;medium&quot;:2,&quot;low&quot;:20}</p>
          */
         @NameInMap("RiskLevelSummary")
         public java.util.Map<String, Long> riskLevelSummary;
 
         /**
-         * <p>The number of shards.</p>
+         * <p>The number of slices.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -35,7 +35,7 @@ public class CopyServiceConfigRequest extends TeaModel {
      * <p>The service description.</p>
      * 
      * <strong>example:</strong>
-     * <p>服务备注</p>
+     * <p>Service remarks</p>
      */
     @NameInMap("ServiceDesc")
     public String serviceDesc;
@@ -44,7 +44,7 @@ public class CopyServiceConfigRequest extends TeaModel {
      * <p>The service name.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户昵称检测</p>
+     * <p>User nickname detection</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

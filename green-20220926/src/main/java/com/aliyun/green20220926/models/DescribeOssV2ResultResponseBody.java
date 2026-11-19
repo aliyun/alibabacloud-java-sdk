@@ -20,7 +20,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
     public java.util.List<DescribeOssV2ResultResponseBodyItems> items;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -105,7 +105,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
          * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Political sensitivity</p>
+         * <p>Political content</p>
          */
         @NameInMap("Description")
         public String description;
@@ -164,7 +164,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
          * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Political sensitivity</p>
+         * <p>Political content</p>
          */
         @NameInMap("Description")
         public String description;
@@ -211,7 +211,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
 
     public static class DescribeOssV2ResultResponseBodyItems extends TeaModel {
         /**
-         * <p>The OSS bucket.</p>
+         * <p>The bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>buckect_test</p>
@@ -229,7 +229,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The moderation modality type.</p>
+         * <p>The detection modality type.</p>
          * 
          * <strong>example:</strong>
          * <p>image</p>
@@ -238,7 +238,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>Indicates whether automatic freezing is configured.</p>
+         * <p>Specifies whether automatic freezing is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -265,13 +265,13 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public String freezeType;
 
         /**
-         * <p>The label details, corresponding to labels.</p>
+         * <p>The label details, which correspond to labels.</p>
          */
         @NameInMap("LabelDetails")
         public java.util.List<DescribeOssV2ResultResponseBodyItemsLabelDetails> labelDetails;
 
         /**
-         * <p>The details of labels2, corresponding to labels2.</p>
+         * <p>The label 2 details, which correspond to labels2.</p>
          */
         @NameInMap("LabelDetails2")
         public java.util.List<DescribeOssV2ResultResponseBodyItemsLabelDetails2> labelDetails2;
@@ -289,7 +289,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public java.util.List<String> labels2;
 
         /**
-         * <p>The manual disposition status.</p>
+         * <p>The manual handling status.</p>
          * 
          * <strong>example:</strong>
          * <p>FREEZE</p>
@@ -298,7 +298,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public String manualFreezeAction;
 
         /**
-         * <p>The disposition time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The handling time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-09 12:00:00</p>
@@ -307,10 +307,10 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public String manualOperateTime;
 
         /**
-         * <p>The operator who performed the disposition.</p>
+         * <p>The operator.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Sample reviewer</p>
          */
         @NameInMap("ManualOperator")
         public String manualOperator;
@@ -361,7 +361,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public String riskLevel0;
 
         /**
-         * <p>The audio or text risk level.</p>
+         * <p>The audio and text risk levels.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -379,7 +379,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public String scanResult;
 
         /**
-         * <p>Service code。</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>baselineCheck</p>
@@ -388,7 +388,7 @@ public class DescribeOssV2ResultResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
-         * <p>The automatic freeze operation performed by the system.</p>
+         * <p>The automatic system freeze operation.</p>
          * 
          * <strong>example:</strong>
          * <p>COPY</p>

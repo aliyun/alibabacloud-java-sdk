@@ -23,7 +23,7 @@ public class AuthInfoConfigValue extends TeaModel {
     public String privateDomain;
 
     /**
-     * <p>The project space.</p>
+     * <p>The project workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>proj-xxx</p>

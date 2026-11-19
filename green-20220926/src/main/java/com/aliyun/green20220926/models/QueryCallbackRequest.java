@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCallbackRequest extends TeaModel {
     /**
-     * <p>Queries data under the OSS detection task.</p>
+     * <p>Specifies whether to query data for OSS check tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

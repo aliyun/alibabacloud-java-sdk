@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPromptTestResultRequest extends TeaModel {
     /**
-     * <p>The configuration item.</p>
+     * <p>The configuration item. Note: This parameter is actually required. If it is not provided, the service returns a 400 error (config may not be empty).</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;enable\&quot;:false}</p>
@@ -14,7 +14,7 @@ public class GetPromptTestResultRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type. Note: This parameter is actually required. If it is not provided, the service returns a 400 error (resourceType may not be empty).</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>
@@ -23,7 +23,7 @@ public class GetPromptTestResultRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The service code.</p>
+     * <p>The service code. Note: This parameter is actually required. If it is not provided, the service returns a 400 error (serviceCode may not be empty).</p>
      * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
@@ -32,16 +32,16 @@ public class GetPromptTestResultRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>The text content.</p>
+     * <p>The text content. Note: This parameter is actually required. If it is not provided, the service returns a 400 error.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试文本</p>
+     * <p>Test text</p>
      */
     @NameInMap("Text")
     public String text;
 
     /**
-     * <p>The business type.</p>
+     * <p>The business type. Note: This parameter is actually required. If it is not provided, the service returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>custom_llm_template</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAiAppRiskEventRequest extends TeaModel {
     /**
-     * <p>The application ID. This parameter is required.</p>
+     * <p>The ID of the application. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

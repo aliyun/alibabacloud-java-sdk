@@ -14,7 +14,7 @@ public class GetScanResultShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The end time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-24 10:01:55</p>
@@ -32,7 +32,10 @@ public class GetScanResultShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search condition.</p>
+     * <p>The search conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;RequestId&quot;:&quot;1E4A2F01-2B3C-4D5E-6F70-8192A3B4C5D6&quot;}</p>
      */
     @NameInMap("Query")
     public String queryShrink;
@@ -47,7 +50,7 @@ public class GetScanResultShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type. Note: This parameter is required. If it is not specified, the API returns ScanResultQueryFailed (HTTP 400). Valid value: image.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>
@@ -57,12 +60,15 @@ public class GetScanResultShrinkRequest extends TeaModel {
 
     /**
      * <p>The sort field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;RequestTime&quot;:&quot;desc&quot;}</p>
      */
     @NameInMap("Sort")
     public String sortShrink;
 
     /**
-     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The start time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-11 09:00:19</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAiAppOverviewRequest extends TeaModel {
     /**
-     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The end time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-09 10:30:00</p>
@@ -23,7 +23,7 @@ public class GetAiAppOverviewRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The start time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-21 16:08:38</p>

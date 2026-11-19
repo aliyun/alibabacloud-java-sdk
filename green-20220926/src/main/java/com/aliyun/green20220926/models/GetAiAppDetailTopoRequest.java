@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAiAppDetailTopoRequest extends TeaModel {
     /**
-     * <p>The application ID that identifies a specific AI application.</p>
+     * <p>The ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -27,7 +27,7 @@ public class ModifyCallbackRequest extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>回调通知</p>
+     * <p>Callback notification</p>
      */
     @NameInMap("Name")
     public String name;

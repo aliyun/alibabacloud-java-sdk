@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOssCheckStatResponseBody extends TeaModel {
     /**
-     * <p>The bar chart data.</p>
+     * <p>The bar chart.</p>
      */
     @NameInMap("BarChart")
     public GetOssCheckStatResponseBodyBarChart barChart;

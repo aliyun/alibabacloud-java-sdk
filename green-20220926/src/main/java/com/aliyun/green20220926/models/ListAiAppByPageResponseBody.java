@@ -20,7 +20,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
     public java.util.List<ListAiAppByPageResponseBodyItems> items;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID of the request, which is assigned by the backend to uniquely identify the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -105,7 +105,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
          * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>The output content contains insulting or discriminatory remarks against others</p>
          */
         @NameInMap("LabelDesc")
         public String labelDesc;
@@ -152,7 +152,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
 
     public static class ListAiAppByPageResponseBodyItemsRiskEvents extends TeaModel {
         /**
-         * <p>The risk event code.</p>
+         * <p>The code of the risk event.</p>
          * 
          * <strong>example:</strong>
          * <p>hit-xxx</p>
@@ -182,10 +182,10 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         public java.util.List<String> eventIds;
 
         /**
-         * <p>The risk event name.</p>
+         * <p>The name of the risk event.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Abuse and personal attacks</p>
          */
         @NameInMap("EventName")
         public String eventName;
@@ -272,9 +272,68 @@ public class ListAiAppByPageResponseBody extends TeaModel {
 
     }
 
+    public static class ListAiAppByPageResponseBodyItemsRiskStats extends TeaModel {
+        /**
+         * <p>The number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("RequestCount")
+        public Long requestCount;
+
+        /**
+         * <p>The number of risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RiskCount")
+        public Long riskCount;
+
+        /**
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content_moderation</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        public static ListAiAppByPageResponseBodyItemsRiskStats build(java.util.Map<String, ?> map) throws Exception {
+            ListAiAppByPageResponseBodyItemsRiskStats self = new ListAiAppByPageResponseBodyItemsRiskStats();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAiAppByPageResponseBodyItemsRiskStats setRequestCount(Long requestCount) {
+            this.requestCount = requestCount;
+            return this;
+        }
+        public Long getRequestCount() {
+            return this.requestCount;
+        }
+
+        public ListAiAppByPageResponseBodyItemsRiskStats setRiskCount(Long riskCount) {
+            this.riskCount = riskCount;
+            return this;
+        }
+        public Long getRiskCount() {
+            return this.riskCount;
+        }
+
+        public ListAiAppByPageResponseBodyItemsRiskStats setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListAiAppByPageResponseBodyItems extends TeaModel {
         /**
-         * <p>appId。</p>
+         * <p>The ID of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>id-xxx</p>
@@ -283,7 +342,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>name-xxx</p>
@@ -310,7 +369,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The last active time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The last active time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 00:00:00</p>
@@ -334,6 +393,12 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
+         * <p>The risk statistics.</p>
+         */
+        @NameInMap("RiskStats")
+        public java.util.List<ListAiAppByPageResponseBodyItemsRiskStats> riskStats;
+
+        /**
          * <p>The Tracing Analysis status.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +408,7 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         public String traceStatus;
 
         /**
-         * <p>UID。</p>
+         * <p>The UID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>104813*****2399</p>
@@ -419,6 +484,14 @@ public class ListAiAppByPageResponseBody extends TeaModel {
         }
         public String getRiskLevel() {
             return this.riskLevel;
+        }
+
+        public ListAiAppByPageResponseBodyItems setRiskStats(java.util.List<ListAiAppByPageResponseBodyItemsRiskStats> riskStats) {
+            this.riskStats = riskStats;
+            return this;
+        }
+        public java.util.List<ListAiAppByPageResponseBodyItemsRiskStats> getRiskStats() {
+            return this.riskStats;
         }
 
         public ListAiAppByPageResponseBodyItems setTraceStatus(String traceStatus) {

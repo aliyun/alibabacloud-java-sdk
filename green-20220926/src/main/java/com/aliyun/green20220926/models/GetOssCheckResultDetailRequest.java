@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOssCheckResultDetailRequest extends TeaModel {
     /**
-     * <p>The storage bucket.</p>
+     * <p>The bucket. Note: This parameter is actually required. If it is not provided, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>oss-tmp</p>
@@ -14,7 +14,7 @@ public class GetOssCheckResultDetailRequest extends TeaModel {
     public String bucket;
 
     /**
-     * <p>The media asset type.</p>
+     * <p>The media asset type. Note: This parameter is actually required. If it is not provided, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class GetOssCheckResultDetailRequest extends TeaModel {
     public Integer mediaType;
 
     /**
-     * <p>The object name.</p>
+     * <p>The object name. Note: This parameter is actually required. If it is not provided, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>1748396909030.jpg</p>
@@ -41,7 +41,7 @@ public class GetOssCheckResultDetailRequest extends TeaModel {
     public String parentTaskId;
 
     /**
-     * <p>The request ID of the query.</p>
+     * <p>The request ID of the query. Note: This parameter is actually required. If it is not provided, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>62E97001-1255-50A9-8E1E-4FD05473D952</p>
@@ -59,7 +59,7 @@ public class GetOssCheckResultDetailRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The service code.</p>
+     * <p>The service code. Note: This parameter is actually required. If it is not provided, the API returns a 400 error.</p>
      * 
      * <strong>example:</strong>
      * <p>audio_media_detection_01</p>

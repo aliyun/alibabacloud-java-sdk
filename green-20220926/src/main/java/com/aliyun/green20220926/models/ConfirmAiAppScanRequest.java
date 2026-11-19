@@ -9,13 +9,13 @@ public class ConfirmAiAppScanRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>lvwang_guardrail_public_cn</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
-     * <p>The ID of the region where the application resides.</p>
+     * <p>The ID of the region to which the application belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

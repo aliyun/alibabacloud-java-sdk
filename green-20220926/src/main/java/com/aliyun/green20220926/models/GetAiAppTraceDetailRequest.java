@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAiAppTraceDetailRequest extends TeaModel {
     /**
-     * <p>The AI application ID, which identifies a specific AI application instance.</p>
+     * <p>The ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>id-xxx</p>
@@ -14,7 +14,7 @@ public class GetAiAppTraceDetailRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The end time of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The end time of the query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-02 16:08:38</p>
@@ -32,7 +32,7 @@ public class GetAiAppTraceDetailRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of the query. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The start time of the query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-01 16:08:38</p>
@@ -41,11 +41,11 @@ public class GetAiAppTraceDetailRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The trace ID, which is used to track and correlate a specific request chain.</p>
+     * <p>The trace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxx</p>
+     * <p>4d3b7c9e2f1a4b8c9d0e1f2a3b4c5d6e</p>
      */
     @NameInMap("TraceId")
     public String traceId;

@@ -8,13 +8,13 @@ public class CreateOnlineTestRequest extends TeaModel {
      * <p>The data ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxxx</p>
+     * <p>4f27b8cc7c4544cb90b41882a5b36326</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type. Valid values: voice (audio), image (image), file (document), text (text), and video (video).</p>
      * 
      * <strong>example:</strong>
      * <p>video</p>
@@ -23,16 +23,16 @@ public class CreateOnlineTestRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The service code.</p>
+     * <p>The service code. Specify a valid service code. The valid service code for online video testing is videoDetection. VideoModeration is not a valid value and returns a 406 online.test.failed error.</p>
      * 
      * <strong>example:</strong>
-     * <p>VideoModeration</p>
+     * <p>videoDetection</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
     /**
-     * <p>The URL to be detected.</p>
+     * <p>The detection URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></p>

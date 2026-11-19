@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppAgentRequest extends TeaModel {
     /**
-     * <p>Agent ID。</p>
+     * <p>The agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ag.abcxxx</p>
@@ -14,7 +14,7 @@ public class DeleteAppAgentRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>App ID。</p>
+     * <p>The app ID.</p>
      * 
      * <strong>example:</strong>
      * <p>txt_check_agent_01</p>

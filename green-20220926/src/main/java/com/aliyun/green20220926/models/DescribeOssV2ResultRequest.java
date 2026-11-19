@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOssV2ResultRequest extends TeaModel {
     /**
-     * <p>The OSS bucket.</p>
+     * <p>The OSS bucket of the file server.</p>
      * 
      * <strong>example:</strong>
      * <p>buckect_test</p>
@@ -32,7 +32,7 @@ public class DescribeOssV2ResultRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,7 +62,7 @@ public class DescribeOssV2ResultRequest extends TeaModel {
      * <p>The task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Image batch task 20240914100517757</p>
+     * <p>Image inventory task 20240914100517757</p>
      */
     @NameInMap("TaskName")
     public String taskName;

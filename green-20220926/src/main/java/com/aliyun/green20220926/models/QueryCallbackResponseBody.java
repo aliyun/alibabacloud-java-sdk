@@ -14,7 +14,7 @@ public class QueryCallbackResponseBody extends TeaModel {
     public String cryptType;
 
     /**
-     * <p>Indicates whether an OSS detection task exists.</p>
+     * <p>Indicates whether an OSS check task exists.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -53,13 +53,13 @@ public class QueryCallbackResponseBody extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>回调通知</p>
+     * <p>Callback notification</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -77,7 +77,7 @@ public class QueryCallbackResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>Seed。</p>
+     * <p>The seed.</p>
      * 
      * <strong>example:</strong>
      * <p>cb2MysbJTAAIf6gB3u4vpIEU-1ySnnf</p>
@@ -86,7 +86,7 @@ public class QueryCallbackResponseBody extends TeaModel {
     public String seed;
 
     /**
-     * <p>UID。</p>
+     * <p>The UID.</p>
      * 
      * <strong>example:</strong>
      * <p>19964*****086772</p>

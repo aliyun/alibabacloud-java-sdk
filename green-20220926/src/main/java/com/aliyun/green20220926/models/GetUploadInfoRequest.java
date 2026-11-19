@@ -8,7 +8,7 @@ public class GetUploadInfoRequest extends TeaModel {
      * <p>The upload name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test.</p>
+     * <p>Test</p>
      */
     @NameInMap("Name")
     public String name;

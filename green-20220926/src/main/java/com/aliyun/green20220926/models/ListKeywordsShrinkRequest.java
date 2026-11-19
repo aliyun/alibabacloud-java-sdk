@@ -14,7 +14,7 @@ public class ListKeywordsShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The keyword library ID.</p>
+     * <p>The ID of the keyword library.</p>
      * 
      * <strong>example:</strong>
      * <p>custom_xxxx</p>
@@ -44,15 +44,15 @@ public class ListKeywordsShrinkRequest extends TeaModel {
      * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;GmtCreate\&quot;:\&quot;desc\&quot;}</p>
+     * <p>{&quot;GmtCreate&quot;:&quot;desc&quot;}</p>
      */
     @NameInMap("Sort")
     public String sortShrink;
 
     /**
-     * <p>The keyword library code. Valid values:</p>
+     * <p>The library code.</p>
      * <ul>
-     * <li>desensitize: desensitization keyword library.</li>
+     * <li>desensitize desensitization library</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class ListKeywordsShrinkRequest extends TeaModel {
      * <p>The keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试词</p>
+     * <p>Test word</p>
      */
     @NameInMap("Word")
     public String word;

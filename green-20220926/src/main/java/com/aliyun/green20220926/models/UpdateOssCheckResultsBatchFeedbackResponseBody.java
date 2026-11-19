@@ -23,7 +23,7 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
     public Integer repeatCount;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -41,10 +41,10 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
     public Integer successCount;
 
     /**
-     * <p>The prompt information.</p>
+     * <p>The prompt message.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxx</p>
+     * <p>Feedback failed for some records: duplicate feedback was provided or the corresponding detection records do not exist. Verify the task and resources, and then resubmit</p>
      */
     @NameInMap("Tips")
     public String tips;

@@ -8,7 +8,7 @@ public class GetGuardStatusRequest extends TeaModel {
      * <p>The commodity code.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>lvwang_guardrail_public_cn</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;

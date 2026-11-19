@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryLabelConfigRequest extends TeaModel {
     /**
-     * <p>The classification. Separate multiple values with commas.</p>
+     * <p>The category. Separate multiple values with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>guard-scene</p>

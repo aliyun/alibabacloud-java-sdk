@@ -8,7 +8,7 @@ public class CreateAppConfigRequest extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>CustomReview</p>
+     * <p>Custom review</p>
      */
     @NameInMap("Name")
     public String name;

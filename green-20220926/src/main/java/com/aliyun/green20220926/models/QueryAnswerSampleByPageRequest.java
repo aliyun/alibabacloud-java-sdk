@@ -8,7 +8,7 @@ public class QueryAnswerSampleByPageRequest extends TeaModel {
      * <p>The answer.</p>
      * 
      * <strong>example:</strong>
-     * <p>答案</p>
+     * <p>Answer</p>
      */
     @NameInMap("Answer")
     public String answer;
@@ -23,7 +23,7 @@ public class QueryAnswerSampleByPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The ID of the proxy answer library.</p>
+     * <p>The ID of the fallback answer library. Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error with the message &quot;libId may not be empty&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>custom_xxxx</p>
@@ -51,6 +51,9 @@ public class QueryAnswerSampleByPageRequest extends TeaModel {
 
     /**
      * <p>The sort field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;field&quot;:&quot;GmtCreate&quot;,&quot;order&quot;:&quot;desc&quot;}</p>
      */
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;

@@ -29,7 +29,7 @@ public class AddImages2LibResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The description of the error code.</p>
+     * <p>The detailed description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,7 +38,7 @@ public class AddImages2LibResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the server to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -47,7 +47,7 @@ public class AddImages2LibResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The success flag.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -110,7 +110,7 @@ public class AddImages2LibResponseBody extends TeaModel {
 
     public static class AddImages2LibResponseBodyData extends TeaModel {
         /**
-         * <p>The image ID.</p>
+         * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>

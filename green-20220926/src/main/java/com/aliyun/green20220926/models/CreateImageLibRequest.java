@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateImageLibRequest extends TeaModel {
     /**
-     * <p>The remarks.</p>
+     * <p>The remark.</p>
      * 
      * <strong>example:</strong>
-     * <p>Politically sensitive.</p>
+     * <p>Politically sensitive content</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -17,7 +17,7 @@ public class CreateImageLibRequest extends TeaModel {
      * <p>The name of the image library.</p>
      * 
      * <strong>example:</strong>
-     * <p>Malicious ads.</p>
+     * <p>Malicious advertising</p>
      */
     @NameInMap("LibName")
     public String libName;

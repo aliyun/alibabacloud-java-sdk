@@ -41,10 +41,10 @@ public class AddAppConfigRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>appId</p>
+     * <p>The system application ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>txt_check_pro_agent_01</p>
      */
     @NameInMap("SysAppId")
     public String sysAppId;

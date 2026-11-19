@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddImageLibRequest extends TeaModel {
     /**
-     * <p>The remarks of the image library.</p>
+     * <p>The remarks for the image library.</p>
      * 
      * <strong>example:</strong>
-     * <p>色情内容黑名单图库</p>
+     * <p>Pornographic content blacklist image library</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -17,7 +17,7 @@ public class AddImageLibRequest extends TeaModel {
      * <p>The name of the image library.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试图库</p>
+     * <p>Test image library</p>
      */
     @NameInMap("LibName")
     public String libName;

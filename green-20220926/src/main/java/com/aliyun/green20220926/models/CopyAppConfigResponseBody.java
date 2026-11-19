@@ -14,7 +14,7 @@ public class CopyAppConfigResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. This ID can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

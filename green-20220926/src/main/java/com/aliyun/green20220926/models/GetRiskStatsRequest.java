@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetRiskStatsRequest extends TeaModel {
     /**
-     * <p>The classification.</p>
+     * <p>The channel identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qoder</p>
+     */
+    @NameInMap("Channel")
+    public String channel;
+
+    /**
+     * <p>The category.</p>
      * 
      * <strong>example:</strong>
      * <p>guard-scene</p>
@@ -53,6 +62,14 @@ public class GetRiskStatsRequest extends TeaModel {
     public static GetRiskStatsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRiskStatsRequest self = new GetRiskStatsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetRiskStatsRequest setChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    public String getChannel() {
+        return this.channel;
     }
 
     public GetRiskStatsRequest setClassify(String classify) {

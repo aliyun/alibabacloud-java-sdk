@@ -29,7 +29,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message for this request.</p>
+     * <p>The response message for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -47,7 +47,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -143,7 +143,7 @@ public class GetFeatureConfigResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>UID。</p>
+         * <p>The user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1643953****74290</p>

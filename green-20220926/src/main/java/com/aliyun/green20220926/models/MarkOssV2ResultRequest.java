@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MarkOssV2ResultRequest extends TeaModel {
     /**
-     * <p>The end time. The time format is YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The end time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-21 16:08:38 +0800</p>
@@ -16,8 +16,8 @@ public class MarkOssV2ResultRequest extends TeaModel {
     /**
      * <p>The freeze type. This parameter is required when Operation is set to freeze. Valid values:</p>
      * <ul>
-     * <li>ACL: Modify file permissions.</li>
-     * <li>COPY: Move the file directory. Description of the destination directory: 1. The file directory selected when the task was created takes priority. 2. If automatic freezing was not enabled during creation, or ACL freezing was configured, the directory selected during freezing in the console is used. 3. The default directory is alicip_riskfile_backup/.</li>
+     * <li>ACL: Modifies file permissions.</li>
+     * <li>COPY: Moves the file directory. Destination directory rules: 1. The file directory selected during task creation takes precedence. 2. If automatic freezing is not enabled during creation, or if ACL freezing is configured, the directory selected in the console during freezing is used. 3. The default directory is alicip_riskfile_backup/.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,12 +27,12 @@ public class MarkOssV2ResultRequest extends TeaModel {
     public String freezeType;
 
     /**
-     * <p>The processing operation. Valid values:</p>
+     * <p>The handling operation. Valid values:</p>
      * <ul>
-     * <li>freeze: Freeze.</li>
-     * <li>unfreeze: Unfreeze.</li>
-     * <li>misreport: Non-violation false positive.</li>
-     * <li>missOut: Violation missed.</li>
+     * <li>freeze: Freezes the object.</li>
+     * <li>unfreeze: Unfreezes the object.</li>
+     * <li>misreport: Reports a false positive.</li>
+     * <li>missOut: Reports a missed violation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class MarkOssV2ResultRequest extends TeaModel {
     public String operation;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -51,7 +51,7 @@ public class MarkOssV2ResultRequest extends TeaModel {
     public String requestIds;
 
     /**
-     * <p>The start time. The time format is YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The start time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-21 16:08:38 +0800</p>
@@ -63,7 +63,7 @@ public class MarkOssV2ResultRequest extends TeaModel {
      * <p>The task name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Image stock task 20240914100517757</p>
+     * <p>Image inventory task 20240914100517757</p>
      */
     @NameInMap("TaskName")
     public String taskName;

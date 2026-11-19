@@ -8,13 +8,13 @@ public class CreateCallbackResponseBody extends TeaModel {
      * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>123</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

@@ -14,10 +14,10 @@ public class CreateCallbackRequest extends TeaModel {
     public String cryptType;
 
     /**
-     * <p>The name of the scheme.</p>
+     * <p>The scheme name.</p>
      * 
      * <strong>example:</strong>
-     * <p>消息通知1</p>
+     * <p>MessageNotification1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -32,7 +32,7 @@ public class CreateCallbackRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The moderation result.</p>
+     * <p>The moderation results.</p>
      * 
      * <strong>example:</strong>
      * <p>all</p>

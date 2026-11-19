@@ -8,19 +8,19 @@ public class GetAnswerImportProgressResponseBody extends TeaModel {
      * <p>The internationalization key.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>common.success</p>
      */
     @NameInMap("I18nKey")
     public String i18nKey;
 
     /**
-     * <p>The list of invalid proxy answers.</p>
+     * <p>The list of invalid fallback answers.</p>
      */
     @NameInMap("IllegalLengthSamples")
     public java.util.List<String> illegalLengthSamples;
 
     /**
-     * <p>The number of invalid entries.</p>
+     * <p>The invalid count.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class GetAnswerImportProgressResponseBody extends TeaModel {
     public Integer invalidCount;
 
     /**
-     * <p>The proxy answer library ID.</p>
+     * <p>The fallback answer library ID.</p>
      * 
      * <strong>example:</strong>
      * <p>alxxxx</p>
@@ -47,7 +47,7 @@ public class GetAnswerImportProgressResponseBody extends TeaModel {
     public Integer progress;
 
     /**
-     * <p>The number of duplicate entries.</p>
+     * <p>The duplicate count.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,13 +56,13 @@ public class GetAnswerImportProgressResponseBody extends TeaModel {
     public Integer repeatCount;
 
     /**
-     * <p>The list of duplicate proxy answers.</p>
+     * <p>The list of duplicate fallback answers.</p>
      */
     @NameInMap("RepeatSamples")
     public java.util.List<String> repeatSamples;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -71,7 +71,7 @@ public class GetAnswerImportProgressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of successful imports.</p>
+     * <p>The success count.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -92,7 +92,7 @@ public class GetAnswerImportProgressResponseBody extends TeaModel {
      * <p>The prompt message.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxx</p>
+     * <p>A total of 10 fallback answers were imported: 8 successful, 1 duplicate, and 1 invalid</p>
      */
     @NameInMap("Tips")
     public String tips;

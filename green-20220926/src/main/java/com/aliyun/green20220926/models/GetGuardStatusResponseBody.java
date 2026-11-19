@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetGuardStatusResponseBody extends TeaModel {
     /**
-     * <p>The list of log scan statistics.</p>
+     * <p>The list of statistics related to log scanning.</p>
      */
     @NameInMap("LogScanStatus")
     public java.util.List<GetGuardStatusResponseBodyLogScanStatus> logScanStatus;
 
     /**
-     * <p>The list of protection status statistics.</p>
+     * <p>The list of statistics related to protection status.</p>
      */
     @NameInMap("ProtectionStatus")
     public java.util.List<GetGuardStatusResponseBodyProtectionStatus> protectionStatus;
 
     /**
-     * <p>The list of real-time protection statistics.</p>
+     * <p>The list of statistics related to real-time protection.</p>
      */
     @NameInMap("RealTimeStatus")
     public java.util.List<GetGuardStatusResponseBodyRealTimeStatus> realTimeStatus;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -73,7 +73,7 @@ public class GetGuardStatusResponseBody extends TeaModel {
          * <p>The status. Valid values:</p>
          * <ul>
          * <li>enabled: Running.</li>
-         * <li>disabled: Not accessed.</li>
+         * <li>disabled: Not connected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class GetGuardStatusResponseBody extends TeaModel {
          * <p>The status. Valid values:</p>
          * <ul>
          * <li>enabled: Running.</li>
-         * <li>disabled: Not accessed.</li>
+         * <li>disabled: Not connected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class GetGuardStatusResponseBody extends TeaModel {
          * <p>The status. Valid values:</p>
          * <ul>
          * <li>enabled: Running.</li>
-         * <li>disabled: Not accessed.</li>
+         * <li>disabled: Not connected.</li>
          * </ul>
          * 
          * <strong>example:</strong>

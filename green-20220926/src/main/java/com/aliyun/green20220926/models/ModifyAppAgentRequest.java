@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppAgentRequest extends TeaModel {
     /**
-     * <p>Agent ID。</p>
+     * <p>The agent ID, which is the unique identifier of the agent and is returned in the response of the AddAppAgent operation.</p>
      * 
      * <strong>example:</strong>
      * <p>ag.abcxxx</p>
@@ -14,16 +14,16 @@ public class ModifyAppAgentRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The agent name.</p>
+     * <p>The name of the agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>Agent1</p>
+     * <p>Agent 1</p>
      */
     @NameInMap("AgentName")
     public String agentName;
 
     /**
-     * <p>App ID。</p>
+     * <p>The app ID, which is the unique identifier of the application and is returned in the response of the AddAppConfig operation. Note: This parameter is actually required. If it is not provided, the API returns a 400 error with the message &quot;appId may not be empty&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>txt_check_agent_01</p>
@@ -35,7 +35,7 @@ public class ModifyAppAgentRequest extends TeaModel {
      * <p>The configuration details.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;model&quot;:&quot;default&quot;,&quot;scene&quot;:&quot;0swLgojx&quot;,&quot;labelConfig&quot;:[{&quot;label&quot;:&quot;Abuse&quot;,&quot;labelDefinition&quot;:&quot;Text content in the reviewed text that contains abusive language&quot;}]}</p>
+     * <p>{&quot;model&quot;:&quot;default&quot;,&quot;scene&quot;:&quot;0swLgojx&quot;,&quot;labelConfig&quot;:[{&quot;label&quot;:&quot;Abuse&quot;,&quot;labelDefinition&quot;:&quot;The moderated text contains abusive content.&quot;}]}</p>
      */
     @NameInMap("Config")
     public String config;
@@ -63,7 +63,7 @@ public class ModifyAppAgentRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type. Note: This parameter is actually required. If it is not provided, the API returns a 400 error with the message &quot;resourceType may not be empty&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>agent_text</p>

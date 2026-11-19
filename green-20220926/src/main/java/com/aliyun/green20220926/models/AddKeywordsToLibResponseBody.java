@@ -45,13 +45,13 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
          * <p>The internationalization key.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>common.success</p>
          */
         @NameInMap("I18nKey")
         public String i18nKey;
 
         /**
-         * <p>The list of keywords with illegal length (too long or too short).</p>
+         * <p>The list of keywords that are too long or too short.</p>
          */
         @NameInMap("IllegalLengthKeywords")
         public java.util.List<String> illegalLengthKeywords;
@@ -72,7 +72,7 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
         public java.util.List<String> invalidKeywords;
 
         /**
-         * <p>The keyword library ID.</p>
+         * <p>The ID of the keyword library.</p>
          * 
          * <strong>example:</strong>
          * <p>customxx_xxxx</p>
@@ -217,7 +217,7 @@ public class AddKeywordsToLibResponseBody extends TeaModel {
         public AddKeywordsToLibResponseBodyDataKeywordsResult keywordsResult;
 
         /**
-         * <p>The keyword library ID.</p>
+         * <p>The ID of the keyword library.</p>
          * 
          * <strong>example:</strong>
          * <p>customxx_xxxx</p>

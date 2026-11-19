@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddAnswerSampleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the proxy answer library.</p>
+     * <p>The ID of the fallback answer library.</p>
      * 
      * <strong>example:</strong>
      * <p>alxxxx</p>
@@ -14,7 +14,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
     public String libId;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -79,13 +79,13 @@ public class AddAnswerSampleResponseBody extends TeaModel {
          * <p>The internationalization key.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>common.success</p>
          */
         @NameInMap("I18nKey")
         public String i18nKey;
 
         /**
-         * <p>The collection of samples whose length is too long or too short.</p>
+         * <p>The collection of samples that are too long or too short.</p>
          */
         @NameInMap("IllegalLengthSamples")
         public java.util.List<String> illegalLengthSamples;
@@ -100,7 +100,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         public Integer invalidCount;
 
         /**
-         * <p>The ID of the proxy answer library.</p>
+         * <p>The ID of the fallback answer library.</p>
          * 
          * <strong>example:</strong>
          * <p>alxxxx</p>
@@ -109,7 +109,7 @@ public class AddAnswerSampleResponseBody extends TeaModel {
         public String libId;
 
         /**
-         * <p>The progress. For example, 90 indicates 90%.</p>
+         * <p>The progress. A value of 90 indicates 90%.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

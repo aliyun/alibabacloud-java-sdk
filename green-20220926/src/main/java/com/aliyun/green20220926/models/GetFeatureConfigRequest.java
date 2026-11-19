@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFeatureConfigRequest extends TeaModel {
     /**
-     * <p>The query condition.</p>
+     * <p>The query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;Lang\&quot;:\&quot;zh\&quot;,\&quot;CategoryType\&quot;:1,\&quot;Default\&quot;:false,\&quot;ParentCategoryId\&quot;:1720}</p>
@@ -41,7 +41,7 @@ public class GetFeatureConfigRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>The type.</p>
+     * <p>The type. Note: This parameter is actually required. If it is not provided, the API returns a 400 error (type may not be empty).</p>
      * 
      * <strong>example:</strong>
      * <p>custom_llm_template</p>

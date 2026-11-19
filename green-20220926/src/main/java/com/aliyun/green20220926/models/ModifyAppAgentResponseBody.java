@@ -14,7 +14,7 @@ public class ModifyAppAgentResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request, which can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

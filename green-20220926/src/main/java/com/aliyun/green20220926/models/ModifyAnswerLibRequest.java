@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAnswerLibRequest extends TeaModel {
     /**
-     * <p>The ID of the proxy response library.</p>
+     * <p>The ID of the fallback library.</p>
      * 
      * <strong>example:</strong>
      * <p>custom_xxxx</p>
@@ -17,7 +17,7 @@ public class ModifyAnswerLibRequest extends TeaModel {
      * <p>The name of the library.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试库</p>
+     * <p>Test library</p>
      */
     @NameInMap("LibName")
     public String libName;

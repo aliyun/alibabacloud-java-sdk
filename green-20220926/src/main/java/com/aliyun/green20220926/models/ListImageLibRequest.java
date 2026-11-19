@@ -14,7 +14,7 @@ public class ListImageLibRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The selected service identifier.</p>
+     * <p>The service identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>response_security_check</p>

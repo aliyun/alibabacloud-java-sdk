@@ -48,7 +48,7 @@ public class ChartsValue extends TeaModel {
         public String name;
 
         /**
-         * <p>The QPS at the point in time.</p>
+         * <p>The QPS at each time point.</p>
          */
         @NameInMap("Data")
         public java.util.List<Long> data;

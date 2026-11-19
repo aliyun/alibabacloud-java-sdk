@@ -60,6 +60,9 @@ public class GetStockOssCheckTasksListRequest extends TeaModel {
 
     /**
      * <p>The sort field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;StartTime&quot;:&quot;desc&quot;}</p>
      */
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;

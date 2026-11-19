@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddAnswerSampleRequest extends TeaModel {
     /**
-     * <p>The ID of the proxy answer library.</p>
+     * <p>The ID of the fallback answer library.</p>
      * 
      * <strong>example:</strong>
      * <p>alxxxx</p>
@@ -23,7 +23,7 @@ public class AddAnswerSampleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The file name of the proxy answer sample to be added.</p>
+     * <p>The name of the file that contains the fallback answer samples to be added.</p>
      * 
      * <strong>example:</strong>
      * <p>data/xxx.xlsx</p>
@@ -35,7 +35,7 @@ public class AddAnswerSampleRequest extends TeaModel {
      * <p>The samples to be added.</p>
      * 
      * <strong>example:</strong>
-     * <p>代答答案1\n代答答案2</p>
+     * <p>Fallback answer 1\nFallback answer 2</p>
      */
     @NameInMap("Samples")
     public String samples;

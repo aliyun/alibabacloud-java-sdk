@@ -23,7 +23,7 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
     public String channel;
 
     /**
-     * <p>The list of event data.</p>
+     * <p>The event data list.</p>
      */
     @NameInMap("EventData")
     public java.util.List<GetAiAppNodeDetailResponseBodyEventData> eventData;
@@ -56,7 +56,7 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID, which is assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -212,7 +212,7 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The list of labels.</p>
+         * <p>The label list.</p>
          */
         @NameInMap("Labels")
         public java.util.List<GetAiAppNodeDetailResponseBodyEventDataLabels> labels;
@@ -236,7 +236,7 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The time when the event occurred. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The time when the event occurred. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 16:08:38</p>
@@ -245,7 +245,7 @@ public class GetAiAppNodeDetailResponseBody extends TeaModel {
         public String time;
 
         /**
-         * <p>The trace ID, which is used to query the exact call information.</p>
+         * <p>The trace ID, which is used to precisely query trace information.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxx</p>

@@ -168,7 +168,10 @@ public class GetAiAppStatsResponseBody extends TeaModel {
         public java.util.List<GetAiAppStatsResponseBodyDataLabelStatChart> labelStatChart;
 
         /**
-         * <p>The total count categorized statistics.</p>
+         * <p>The total count statistics by category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;porn&quot;:{&quot;Total&quot;:&quot;100&quot;,&quot;Share&quot;:&quot;12.50%&quot;}}</p>
          */
         @NameInMap("TotalStat")
         public java.util.Map<String, DataTotalStatValue> totalStat;

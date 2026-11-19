@@ -14,7 +14,10 @@ public class ExportTextScanResultRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The query condition.</p>
+     * <p>The query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;RequestId&quot;:&quot;8488665D-32D3-5DD6-8BF1-B4DE21A7C3E9&quot;}</p>
      */
     @NameInMap("Query")
     public java.util.Map<String, String> query;

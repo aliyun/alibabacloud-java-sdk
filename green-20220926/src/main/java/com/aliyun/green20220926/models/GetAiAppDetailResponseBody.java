@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAiAppDetailResponseBody extends TeaModel {
     /**
-     * <p>appId。</p>
+     * <p>The AI application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>id-xxx</p>
@@ -14,7 +14,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>app-xxx</p>
@@ -23,10 +23,25 @@ public class GetAiAppDetailResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The channel information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qoder</p>
+     */
+    @NameInMap("Channel")
+    public String channel;
+
+    /**
      * <p>The chart.</p>
      */
     @NameInMap("Chart")
     public GetAiAppDetailResponseBodyChart chart;
+
+    /**
+     * <p>The properties.</p>
+     */
+    @NameInMap("Property")
+    public GetAiAppDetailResponseBodyProperty property;
 
     /**
      * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
@@ -44,6 +59,12 @@ public class GetAiAppDetailResponseBody extends TeaModel {
     public java.util.List<GetAiAppDetailResponseBodyRiskEvents> riskEvents;
 
     /**
+     * <p>The risk statistics information.</p>
+     */
+    @NameInMap("RiskStats")
+    public java.util.List<GetAiAppDetailResponseBodyRiskStats> riskStats;
+
+    /**
      * <p>The score.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +74,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
     public Integer score;
 
     /**
-     * <p>UID。</p>
+     * <p>The UID of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>17726*****370735</p>
@@ -82,12 +103,28 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         return this.appName;
     }
 
+    public GetAiAppDetailResponseBody setChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    public String getChannel() {
+        return this.channel;
+    }
+
     public GetAiAppDetailResponseBody setChart(GetAiAppDetailResponseBodyChart chart) {
         this.chart = chart;
         return this;
     }
     public GetAiAppDetailResponseBodyChart getChart() {
         return this.chart;
+    }
+
+    public GetAiAppDetailResponseBody setProperty(GetAiAppDetailResponseBodyProperty property) {
+        this.property = property;
+        return this;
+    }
+    public GetAiAppDetailResponseBodyProperty getProperty() {
+        return this.property;
     }
 
     public GetAiAppDetailResponseBody setRequestId(String requestId) {
@@ -104,6 +141,14 @@ public class GetAiAppDetailResponseBody extends TeaModel {
     }
     public java.util.List<GetAiAppDetailResponseBodyRiskEvents> getRiskEvents() {
         return this.riskEvents;
+    }
+
+    public GetAiAppDetailResponseBody setRiskStats(java.util.List<GetAiAppDetailResponseBodyRiskStats> riskStats) {
+        this.riskStats = riskStats;
+        return this;
+    }
+    public java.util.List<GetAiAppDetailResponseBodyRiskStats> getRiskStats() {
+        return this.riskStats;
     }
 
     public GetAiAppDetailResponseBody setScore(Integer score) {
@@ -163,13 +208,13 @@ public class GetAiAppDetailResponseBody extends TeaModel {
 
     public static class GetAiAppDetailResponseBodyChart extends TeaModel {
         /**
-         * <p>The X value of the coordinate point.</p>
+         * <p>The X-coordinate of the data point.</p>
          */
         @NameInMap("X")
         public java.util.List<String> x;
 
         /**
-         * <p>The Y value of the coordinate point.</p>
+         * <p>The Y-coordinate of the data point.</p>
          */
         @NameInMap("Y")
         public java.util.List<GetAiAppDetailResponseBodyChartY> y;
@@ -197,6 +242,82 @@ public class GetAiAppDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetAiAppDetailResponseBodyProperty extends TeaModel {
+        /**
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:xx@qoder.alibaba-inc.com">xx@qoder.alibaba-inc.com</a></p>
+         */
+        @NameInMap("Email")
+        public String email;
+
+        /**
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx.local</p>
+         */
+        @NameInMap("Hostname")
+        public String hostname;
+
+        /**
+         * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.xx.xx</p>
+         */
+        @NameInMap("Ip")
+        public String ip;
+
+        /**
+         * <p>The MAC address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx.xx.xx</p>
+         */
+        @NameInMap("Mac")
+        public String mac;
+
+        public static GetAiAppDetailResponseBodyProperty build(java.util.Map<String, ?> map) throws Exception {
+            GetAiAppDetailResponseBodyProperty self = new GetAiAppDetailResponseBodyProperty();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAiAppDetailResponseBodyProperty setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public GetAiAppDetailResponseBodyProperty setHostname(String hostname) {
+            this.hostname = hostname;
+            return this;
+        }
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        public GetAiAppDetailResponseBodyProperty setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+        public GetAiAppDetailResponseBodyProperty setMac(String mac) {
+            this.mac = mac;
+            return this;
+        }
+        public String getMac() {
+            return this.mac;
+        }
+
+    }
+
     public static class GetAiAppDetailResponseBodyRiskEventsLabels extends TeaModel {
         /**
          * <p>The labels.</p>
@@ -211,7 +332,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
          * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>The output content contains insulting or discriminatory remarks</p>
          */
         @NameInMap("LabelDesc")
         public String labelDesc;
@@ -258,7 +379,7 @@ public class GetAiAppDetailResponseBody extends TeaModel {
 
     public static class GetAiAppDetailResponseBodyRiskEvents extends TeaModel {
         /**
-         * <p>The risk event code.</p>
+         * <p>The code of the risk event.</p>
          * 
          * <strong>example:</strong>
          * <p>hit_xxx</p>
@@ -282,10 +403,10 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         public java.util.List<String> eventIds;
 
         /**
-         * <p>The risk event name.</p>
+         * <p>The name of the risk event.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Insults and personal attacks</p>
          */
         @NameInMap("EventName")
         public String eventName;
@@ -293,8 +414,8 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         /**
          * <p>The event status. Valid values:</p>
          * <ul>
-         * <li><strong>unhandled</strong>: Not handled.</li>
-         * <li><strong>resolved</strong>: Handled.</li>
+         * <li><strong>unhandled</strong>: unhandled</li>
+         * <li><strong>resolved</strong>: resolved</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -360,6 +481,65 @@ public class GetAiAppDetailResponseBody extends TeaModel {
         }
         public java.util.List<GetAiAppDetailResponseBodyRiskEventsLabels> getLabels() {
             return this.labels;
+        }
+
+    }
+
+    public static class GetAiAppDetailResponseBodyRiskStats extends TeaModel {
+        /**
+         * <p>The number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("RequestCount")
+        public Long requestCount;
+
+        /**
+         * <p>The number of risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RiskCount")
+        public Long riskCount;
+
+        /**
+         * <p>The risk statistics type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content_moderation</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        public static GetAiAppDetailResponseBodyRiskStats build(java.util.Map<String, ?> map) throws Exception {
+            GetAiAppDetailResponseBodyRiskStats self = new GetAiAppDetailResponseBodyRiskStats();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAiAppDetailResponseBodyRiskStats setRequestCount(Long requestCount) {
+            this.requestCount = requestCount;
+            return this;
+        }
+        public Long getRequestCount() {
+            return this.requestCount;
+        }
+
+        public GetAiAppDetailResponseBodyRiskStats setRiskCount(Long riskCount) {
+            this.riskCount = riskCount;
+            return this;
+        }
+        public Long getRiskCount() {
+            return this.riskCount;
+        }
+
+        public GetAiAppDetailResponseBodyRiskStats setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

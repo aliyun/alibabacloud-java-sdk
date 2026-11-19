@@ -35,7 +35,7 @@ public class ModifyServiceInfoRequest extends TeaModel {
      * <p>The service description.</p>
      * 
      * <strong>example:</strong>
-     * <p>描述</p>
+     * <p>Description</p>
      */
     @NameInMap("ServiceDesc")
     public String serviceDesc;
@@ -44,7 +44,7 @@ public class ModifyServiceInfoRequest extends TeaModel {
      * <p>The service name.</p>
      * 
      * <strong>example:</strong>
-     * <p>通用基线检测</p>
+     * <p>General baseline check</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

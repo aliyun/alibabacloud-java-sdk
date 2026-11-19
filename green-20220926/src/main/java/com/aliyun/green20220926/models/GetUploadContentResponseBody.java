@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUploadContentResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>

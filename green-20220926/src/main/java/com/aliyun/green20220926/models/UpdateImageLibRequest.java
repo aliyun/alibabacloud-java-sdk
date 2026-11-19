@@ -8,13 +8,13 @@ public class UpdateImageLibRequest extends TeaModel {
      * <p>The remarks of the image library.</p>
      * 
      * <strong>example:</strong>
-     * <p>备注</p>
+     * <p>Remarks</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The review-free configuration.</p>
+     * <p>The moderation-free configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -35,7 +35,7 @@ public class UpdateImageLibRequest extends TeaModel {
      * <p>The name of the image library.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试图库</p>
+     * <p>Test image library</p>
      */
     @NameInMap("LibName")
     public String libName;

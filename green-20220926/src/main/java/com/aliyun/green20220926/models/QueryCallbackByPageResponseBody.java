@@ -14,13 +14,13 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The data on the current page.</p>
+     * <p>The entries on the current page.</p>
      */
     @NameInMap("Items")
     public java.util.List<QueryCallbackByPageResponseBodyItems> items;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,10 +38,10 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -132,7 +132,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>callback_name</p>
+         * <p>callback_xxx</p>
          */
         @NameInMap("Name")
         public String name;
@@ -147,7 +147,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>Seed。</p>
+         * <p>The seed.</p>
          * 
          * <strong>example:</strong>
          * <p>cb6gYS*******x46Mq</p>
@@ -156,7 +156,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         public String seed;
 
         /**
-         * <p>UID。</p>
+         * <p>The UID.</p>
          * 
          * <strong>example:</strong>
          * <p>12*****00</p>

@@ -20,7 +20,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
     public GetKeywordImportResultResponseBodyData data;
 
     /**
-     * <p>The description of the error code.</p>
+     * <p>The detailed description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -38,7 +38,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The success indicator.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -96,7 +96,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
          * <p>The internationalization key.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>keyword.import.success</p>
          */
         @NameInMap("I18nKey")
         public String i18nKey;
@@ -108,7 +108,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         public java.util.List<String> illegalLengthKeywords;
 
         /**
-         * <p>The number of invalid keywords.</p>
+         * <p>The invalid count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         public Integer progress;
 
         /**
-         * <p>The number of duplicate keywords.</p>
+         * <p>The duplicate count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -156,7 +156,7 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         public java.util.List<String> repeatKeywords;
 
         /**
-         * <p>The number of successfully imported keywords.</p>
+         * <p>The success count.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -165,10 +165,10 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
-         * <p>The prompt information.</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Keyword import completed. Total: 10, Succeeded: 8, Duplicates: 1, Invalid: 1</p>
          */
         @NameInMap("Tips")
         public String tips;
