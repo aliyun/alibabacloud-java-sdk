@@ -14,7 +14,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the created IM channel.</p>
+     * <p>The IM channel information after creation.</p>
      */
     @NameInMap("data")
     public CreateAgentIMChannelResponseBodyData data;
@@ -29,7 +29,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message about the request processing result.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -212,7 +212,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The summary of the channel credentials. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</p>
+         * <p>The channel credential summary. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</p>
          */
         @NameInMap("credentialSummary")
         public CreateAgentIMChannelResponseBodyDataCredentialSummary credentialSummary;
@@ -224,7 +224,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The public network access address of the attached ServiceEndpoint.</p>
+         * <p>The public network access URL of the attached ServiceEndpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://agent.example.com">https://agent.example.com</a></p>
@@ -242,7 +242,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         public String imChannelId;
 
         /**
-         * <p>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a publicly accessible address.</p>
+         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready and have a public address.</p>
          * 
          * <strong>example:</strong>
          * <p>se-1</p>
@@ -251,7 +251,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         public String serviceEndpointId;
 
         /**
-         * <p>The status of the IM channel. Valid values: CREATING (creating), READY (ready), UPDATING (updating), FAILED (failed), DELETING (deleting), and DELETE_FAILED (deletion failed).</p>
+         * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Deletion failed).</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>

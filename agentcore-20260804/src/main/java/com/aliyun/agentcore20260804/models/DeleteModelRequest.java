@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteModelRequest extends TeaModel {
     /**
-     * <p>The client token used for idempotence. This parameter is not currently supported.</p>
+     * <p>The client token used for idempotence. This parameter is currently not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>

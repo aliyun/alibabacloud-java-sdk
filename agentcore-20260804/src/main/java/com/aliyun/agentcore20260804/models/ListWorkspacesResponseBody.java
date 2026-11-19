@@ -23,13 +23,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The workspace list.</p>
+     * <p>The list of workspaces.</p>
      */
     @NameInMap("items")
     public java.util.List<ListWorkspacesResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page used in the current request.</p>
+     * <p>The maximum number of records per page used in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -74,7 +74,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of workspaces that match the query conditions.</p>
+     * <p>The total number of workspaces that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -217,7 +217,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     public static class ListWorkspacesResponseBodyItemsNetworkConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether public egress access from the platform is allowed. The value returned is the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. This setting only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
+         * <p>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -226,7 +226,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Boolean publicEgressEnabled;
 
         /**
-         * <p>Indicates whether public ingress access is allowed. The value returned is the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. If disabled, the public ingress for all agent endpoints in the workspace is closed. If re-enabled, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</p>
+         * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. After this feature is disabled, the public network ingress of all agent endpoints in the workspace is closed. After it is re-enabled, the original public network ingress is restored. INNER_DIRECT and user VPC ingresses are not affected. Collaboration and Element Web ingresses are not controlled by this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -235,7 +235,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Boolean publicIngressEnabled;
 
         /**
-         * <p>The network configuration of the user VPC.</p>
+         * <p>The VPC network configuration of the user.</p>
          */
         @NameInMap("vpc")
         public ListWorkspacesResponseBodyItemsNetworkConfigurationVpc vpc;
@@ -273,7 +273,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     public static class ListWorkspacesResponseBodyItems extends TeaModel {
         /**
-         * <p>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+         * <p>The creation time. The time follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-06T03:56:56Z</p>

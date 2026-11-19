@@ -108,6 +108,7 @@ public class UpdateMemoryResponseBody extends TeaModel {
     public static class UpdateMemoryResponseBodyDataContent extends TeaModel {
         /**
          * <p>The memory text.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>The user enjoys hiking</p>
@@ -150,6 +151,15 @@ public class UpdateMemoryResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The business team ID defined by the caller. It cannot be empty when provided and can be up to 128 UTF-8 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team-001</p>
+         */
+        @NameInMap("teamId")
+        public String teamId;
+
+        /**
          * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +189,14 @@ public class UpdateMemoryResponseBody extends TeaModel {
             return this.sessionId;
         }
 
+        public UpdateMemoryResponseBodyDataScope setTeamId(String teamId) {
+            this.teamId = teamId;
+            return this;
+        }
+        public String getTeamId() {
+            return this.teamId;
+        }
+
         public UpdateMemoryResponseBodyDataScope setUserId(String userId) {
             this.userId = userId;
             return this;
@@ -206,7 +224,7 @@ public class UpdateMemoryResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The long-term memory ID.</p>
+         * <p>The ID of the long-term memory.</p>
          * 
          * <strong>example:</strong>
          * <p>mem-2f5f9c5a8d0e4c3b</p>
@@ -216,6 +234,9 @@ public class UpdateMemoryResponseBody extends TeaModel {
 
         /**
          * <p>The memory metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
          */
         @NameInMap("metadata")
         public java.util.Map<String, String> metadata;
@@ -227,13 +248,37 @@ public class UpdateMemoryResponseBody extends TeaModel {
         public UpdateMemoryResponseBodyDataScope scope;
 
         /**
-         * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+         * <p>The memory source. Valid values: session_extraction: Extracted from session events. content_extraction: Extracted from text or messages. direct: Written directly.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session_extraction</p>
+         */
+        @NameInMap("source")
+        public String source;
+
+        /**
+         * <p>The memory content type. Valid values: semantic: Semantic memory. skill: Skill. user_profile: User preference. session_summary: Session summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>semantic</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <p>The last updated time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:05:00Z</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;
+
+        /**
+         * <p>Indicates whether the memory is valid. A value of false indicates that the memory is revoked and is not included in valid memory retrieval.</p>
+         */
+        @NameInMap("valid")
+        public Boolean valid;
 
         public static UpdateMemoryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateMemoryResponseBodyData self = new UpdateMemoryResponseBodyData();
@@ -280,12 +325,36 @@ public class UpdateMemoryResponseBody extends TeaModel {
             return this.scope;
         }
 
+        public UpdateMemoryResponseBodyData setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public UpdateMemoryResponseBodyData setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public UpdateMemoryResponseBodyData setUpdatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
         public String getUpdatedAt() {
             return this.updatedAt;
+        }
+
+        public UpdateMemoryResponseBodyData setValid(Boolean valid) {
+            this.valid = valid;
+            return this;
+        }
+        public Boolean getValid() {
+            return this.valid;
         }
 
     }

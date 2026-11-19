@@ -108,6 +108,7 @@ public class AddMemoriesResponseBody extends TeaModel {
     public static class AddMemoriesResponseBodyDataMemories extends TeaModel {
         /**
          * <p>The long-term memory ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>mem-2f5f9c5a8d0e4c3b</p>
@@ -132,19 +133,25 @@ public class AddMemoriesResponseBody extends TeaModel {
 
     public static class AddMemoriesResponseBodyData extends TeaModel {
         /**
-         * <p>The memory references. This parameter is returned only when sync is set to true. An empty array is allowed. This parameter is not returned together with taskId.</p>
+         * <p>The memory references returned only when sync is set to true. An empty array is allowed. It is not returned together with taskId.</p>
          */
         @NameInMap("memories")
         public java.util.List<AddMemoriesResponseBodyDataMemories> memories;
 
         /**
-         * <p>The task ID. This parameter is returned only when sync is set to false. This parameter is not returned together with memories.</p>
+         * <p>The task ID returned only when sync is set to false. It is not returned together with memories.</p>
          * 
          * <strong>example:</strong>
          * <p>task-2f5f9c5a8d0e4c3b</p>
          */
         @NameInMap("taskId")
         public String taskId;
+
+        /**
+         * <p>The list of extraction task IDs. Multiple tasks may be returned when multiple rules are enabled. It is not returned for direct writes.</p>
+         */
+        @NameInMap("taskIds")
+        public java.util.List<String> taskIds;
 
         public static AddMemoriesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             AddMemoriesResponseBodyData self = new AddMemoriesResponseBodyData();
@@ -165,6 +172,14 @@ public class AddMemoriesResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public AddMemoriesResponseBodyData setTaskIds(java.util.List<String> taskIds) {
+            this.taskIds = taskIds;
+            return this;
+        }
+        public java.util.List<String> getTaskIds() {
+            return this.taskIds;
         }
 
     }

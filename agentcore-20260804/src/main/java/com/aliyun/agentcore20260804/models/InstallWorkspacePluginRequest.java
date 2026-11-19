@@ -42,7 +42,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
 
     public static class InstallWorkspacePluginRequestBodyConfigNetworkInternet extends TeaModel {
         /**
-         * <p>Specifies whether to enable Internet access. If this parameter is set to true and no VPC is specified, PUB_NET is used. If this parameter is set to true and a VPC is specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. You must configure at least one of Internet access and VPC access.</p>
+         * <p>If set to true and no VPC is specified, PUB_NET is used. If set to true and a VPC is specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. You must configure at least one of Internet access and VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -67,7 +67,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
 
     public static class InstallWorkspacePluginRequestBodyConfigNetworkVpc extends TeaModel {
         /**
-         * <p>Explicitly controls whether the collaboration component uses a VPC network. If this parameter is set to false, vpcId and vSwitchIds are ignored. If this parameter is set to true, you must provide a vpcId and at least two vSwitchIds.</p>
+         * <p>Explicitly specifies whether the collaboration component uses the VPC network. If set to false, vpcId and vSwitchIds are ignored. If set to true, you must provide both vpcId and at least two vSwitchIds.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -83,7 +83,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the user VPC.</p>
+         * <p>The user VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
         public InstallWorkspacePluginRequestBodyConfigNetworkInternet internet;
 
         /**
-         * <p>The user VPC and the list of vSwitches used to deploy the collaboration component. The zones corresponding to the vSwitches are queried by the server. You do not need to pass the Zones parameter.</p>
+         * <p>The user VPC and the list of vSwitches used to deploy the collaboration component. The zones corresponding to the vSwitches are queried by the server, so you do not need to specify the zones.</p>
          */
         @NameInMap("vpc")
         public InstallWorkspacePluginRequestBodyConfigNetworkVpc vpc;

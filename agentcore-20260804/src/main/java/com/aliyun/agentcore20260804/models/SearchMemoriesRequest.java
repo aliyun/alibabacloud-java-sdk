@@ -26,7 +26,7 @@ public class SearchMemoriesRequest extends TeaModel {
 
     public static class SearchMemoriesRequestBodyScope extends TeaModel {
         /**
-         * <p>The agent ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with an agent ID, this field is not returned.</p>
+         * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -35,7 +35,7 @@ public class SearchMemoriesRequest extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The session ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a session ID, this field is not returned.</p>
+         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>session-001</p>
@@ -44,7 +44,16 @@ public class SearchMemoriesRequest extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The user ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a user ID, this field is not returned.</p>
+         * <p>The business team ID defined by the caller. If provided, it cannot be empty and can be up to 128 UTF-8 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team-001</p>
+         */
+        @NameInMap("teamId")
+        public String teamId;
+
+        /**
+         * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>
@@ -73,6 +82,14 @@ public class SearchMemoriesRequest extends TeaModel {
             return this.sessionId;
         }
 
+        public SearchMemoriesRequestBodyScope setTeamId(String teamId) {
+            this.teamId = teamId;
+            return this;
+        }
+        public String getTeamId() {
+            return this.teamId;
+        }
+
         public SearchMemoriesRequestBodyScope setUserId(String userId) {
             this.userId = userId;
             return this;
@@ -91,13 +108,16 @@ public class SearchMemoriesRequest extends TeaModel {
         public Boolean enableRerank;
 
         /**
-         * <p>The string key-value metadata for exact match. A maximum of 16 keys are supported. Each key can be up to 64 characters in length, and each value can be up to 1,024 characters in length.</p>
+         * <p>The string key-value metadata for exact matching. A maximum of 16 keys are supported. Each key can be up to 64 characters in length, and each value can be up to 1,024 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
          */
         @NameInMap("metadata")
         public java.util.Map<String, String> metadata;
 
         /**
-         * <p>The minimum relevance score. Valid values: 0 to 1. Default value: 0.2. If both minScore and minSimilarity are specified, the AND logic is applied for filtering.</p>
+         * <p>The minimum relevance score. Default value: 0.2. Valid values: 0 to 1. If both minScore and minSimilarity are specified, the results are filtered based on the AND logic.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -106,7 +126,7 @@ public class SearchMemoriesRequest extends TeaModel {
         public Float minScore;
 
         /**
-         * <p>The minimum similarity. Valid values: 0 to 1. Default value: 0.3. If both minScore and minSimilarity are specified, the AND logic is applied for filtering.</p>
+         * <p>The minimum similarity score. Default value: 0.3. Valid values: 0 to 1. If both minSimilarity and minScore are specified, the results are filtered based on the AND logic.</p>
          * 
          * <strong>example:</strong>
          * <p>0.3</p>
@@ -115,7 +135,7 @@ public class SearchMemoriesRequest extends TeaModel {
         public Float minSimilarity;
 
         /**
-         * <p>The query text. The text can be up to 8,192 characters in length.</p>
+         * <p>The query text for retrieval, up to 8,192 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,13 +151,19 @@ public class SearchMemoriesRequest extends TeaModel {
         public SearchMemoriesRequestBodyScope scope;
 
         /**
-         * <p>The number of returned results.</p>
+         * <p>The number of results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("topK")
         public Integer topK;
+
+        /**
+         * <p>The list of memory content types. Supported types include semantic, skill, user_profile, and session_summary. If omitted or left as an empty array, no type restriction is applied.</p>
+         */
+        @NameInMap("types")
+        public java.util.List<String> types;
 
         public static SearchMemoriesRequestBody build(java.util.Map<String, ?> map) throws Exception {
             SearchMemoriesRequestBody self = new SearchMemoriesRequestBody();
@@ -198,6 +224,14 @@ public class SearchMemoriesRequest extends TeaModel {
         }
         public Integer getTopK() {
             return this.topK;
+        }
+
+        public SearchMemoriesRequestBody setTypes(java.util.List<String> types) {
+            this.types = types;
+            return this;
+        }
+        public java.util.List<String> getTypes() {
+            return this.types;
         }
 
     }

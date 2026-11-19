@@ -25,14 +25,14 @@ public class ListImageCachesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The records on the current page. If no matching items are found, an empty array is returned.</p>
+     * <p>The records on the current page. This is an empty array if no matching items are found.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("items")
     public java.util.List<ListImageCachesResponseBodyItems> items;
 
     /**
-     * <p>The actual page size used for this request. This is not the number of items on the current page.</p>
+     * <p>The actual page size used for this request, not the number of items on this page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ListImageCachesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The opaque cursor for the next page. An empty string indicates that there are no more pages.</p>
+     * <p>The opaque cursor for the next page. An empty string indicates the end of the list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class ListImageCachesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. A successful request does not indicate that the cache creation is complete.</p>
+     * <p>Indicates whether the request is successful. This does not indicate that the cache creation is complete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class ListImageCachesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records that match the current filter conditions. Do not use this value to determine whether the traversal is complete.</p>
+     * <p>The total number of records that match the current filter conditions. This value is not used to determine whether the traversal is complete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class ListImageCachesResponseBody extends TeaModel {
 
     public static class ListImageCachesResponseBodyItems extends TeaModel {
         /**
-         * <p>The ID of the source ACR instance.</p>
+         * <p>The source ACR instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public Long agentCount;
 
         /**
-         * <p>The size of the cache in bytes.</p>
+         * <p>The cache size in bytes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +257,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
-         * <p>The time when the resource was created. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+         * <p>The resource creation time. The time follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +300,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public ListImageCachesResponseBodyItemsError error;
 
         /**
-         * <p>The ID of the image cache.</p>
+         * <p>The image cache ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The domain name of the source image.</p>
+         * <p>The source image domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String registry;
 
         /**
-         * <p>The repository path of the source image.</p>
+         * <p>The source image repository path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,7 +330,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String repository;
 
         /**
-         * <p>The cache status.</p>
+         * <p>The image cache status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,7 +340,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag of the source image.</p>
+         * <p>The source image tag.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

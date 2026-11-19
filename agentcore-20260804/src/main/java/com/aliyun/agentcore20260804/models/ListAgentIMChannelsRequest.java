@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentIMChannelsRequest extends TeaModel {
     /**
-     * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</p>
+     * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), WECOM (WeCom).</p>
      * 
      * <strong>example:</strong>
      * <p>DINGTALK</p>
@@ -23,7 +23,7 @@ public class ListAgentIMChannelsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. This parameter is not required for the first call. For subsequent calls, use the nextToken value returned in the previous response.</p>
+     * <p>The pagination token. Leave this parameter empty for the first call. For subsequent calls, use the nextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-1</p>
@@ -32,7 +32,7 @@ public class ListAgentIMChannelsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Delete failed).</p>
+     * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), DELETE_FAILED (Deletion failed).</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>

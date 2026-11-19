@@ -25,7 +25,7 @@ public class UploadAgentSpecViaOssRequest extends TeaModel {
 
     public static class UploadAgentSpecViaOssRequestBody extends TeaModel {
         /**
-         * <p>The name of the OSS object, including the full path.</p>
+         * <p>The OSS object name (full path).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UploadAgentSpecViaOssRequest extends TeaModel {
         public String ossObjectName;
 
         /**
-         * <p>Specifies whether to overwrite the existing draft. Default value: false.</p>
+         * <p>Specifies whether to overwrite existing drafts. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -44,7 +44,7 @@ public class UploadAgentSpecViaOssRequest extends TeaModel {
         public Boolean overwrite;
 
         /**
-         * <p>Specifies whether to publish and bring the agent online immediately after the upload. Default value: false.</p>
+         * <p>Specifies whether to publish and bring online directly after the upload. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

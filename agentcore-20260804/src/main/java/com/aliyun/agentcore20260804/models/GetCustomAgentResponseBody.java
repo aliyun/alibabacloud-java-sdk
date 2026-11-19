@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomAgentResponseBody extends TeaModel {
     /**
-     * <p>The request result code. The value is SUCCESS if the request is successful.</p>
+     * <p>The result code of the request. The value is SUCCESS if the request is successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,14 @@ public class GetCustomAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The latest submitted configuration and status of the custom code or image agent. To determine whether the configuration has taken effect, check the latestVersionStatus parameter.</p>
+     * <p>The latest submitted configuration and status of the custom code or image agent. To determine whether the configuration has taken effect, check the latestVersionStatus field.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("data")
     public GetCustomAgentResponseBodyData data;
 
     /**
-     * <p>The HTTP status code of the request. A value of 200 indicates success.</p>
+     * <p>The HTTP status code of the request. The value is 200 if the request is successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The result message of the request. The value success indicates that the request was successful.</p>
+     * <p>The processing result description of the request. The value is success if the request is successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The unique identifier of the request, used to locate and troubleshoot issues.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
+     * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not mean that the backend operation is complete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("success")
@@ -113,7 +113,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataAgenticFsMounts extends TeaModel {
         /**
-         * <p>The absolute mount path in the container, such as /data/train. Mount targets must not be duplicated or form parent-child overlaps, and must avoid platform-reserved directories.</p>
+         * <p>The absolute mount path in the container, such as /data/train. Mount targets must not be duplicated or form parent-child overrides, and must avoid platform-reserved directories.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/agenticfs/data</p>
@@ -131,7 +131,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read and write.</p>
+         * <p>Specifies whether the mount is read-only. A value of true indicates a read-only mount, and a value of false indicates a read/write mount.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -189,7 +189,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataArtifactCode extends TeaModel {
         /**
-         * <p>The startup command for the code package. Required in code package mode. The working directory is the extracted code root directory /code, such as python main.py. Quotes and escapes are supported. Environment variables, pipes, or logical operations are not automatically expanded. Use scripts within the package for complex commands.</p>
+         * <p>The startup command for the code package. This parameter is required in code package mode. The working directory is the root directory of the extracted code, which is /code. Example: python main.py. Quotes and escape characters are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use a script within the package.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String entrypoint;
 
         /**
-         * <p>The identifier of the currently saved code runtime environment configuration. The runtime image uses the saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</p>
+         * <p>The code runtime environment identifier of the currently saved configuration. The runtime image uses a saved snapshot, and adding a new version to the directory does not automatically change the existing configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String languageRuntime;
 
         /**
-         * <p>The fixed oss:// address of the platform code package referenced by the currently saved configuration. It does not contain the signature parameters of the source HTTPS link. You can use this to reuse existing code packages. To download the content, call GetAgentCodePackageDownloadUrl.</p>
+         * <p>The fixed oss:// address of the platform code package referenced by the currently saved configuration, excluding the signature parameters of the source HTTPS link. This can be used to reuse existing code packages. To download the content, call GetAgentCodePackageDownloadUrl.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The image source type. A value of acr indicates an ACR image, and custom indicates a custom image source. For the corresponding source configurations, refer to the descriptions of artifact.container and customImage.</p>
+         * <p>The source type of the image. A value of acr indicates an ACR image, and custom indicates a custom image source. For the corresponding source configurations, refer to the descriptions of artifact.container and customImage.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -362,7 +362,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataArtifact extends TeaModel {
         /**
-         * <p>The code package deployment configuration. This is mutually exclusive with container. Code packages use the ZIP or TAR.GZ format. Dependencies are packaged by the user. The platform does not install dependencies or perform online builds.</p>
+         * <p>The code package deployment configuration, which is mutually exclusive with container. The code package uses the ZIP or TAR.GZ format. Dependencies are packaged by the user, and the platform does not install dependencies or build online.</p>
          */
         @NameInMap("code")
         public GetCustomAgentResponseBodyDataArtifactCode code;
@@ -509,7 +509,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataCurrentImagePullNetwork extends TeaModel {
         /**
-         * <p>The security group ID. Required when type is vpc. It must belong to the selected VPC.</p>
+         * <p>This parameter is required when type is set to vpc and must belong to the selected VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-example</p>
@@ -518,7 +518,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The network type. Required when submitting pullNetwork, and validated by the backend. It defaults to the public network for new creations and is independent of the agent runtime network.</p>
+         * <p>This parameter is required when you submit pullNetwork and is validated by the backend. The default value for new creations is the public network, which is independent of the agent runtime network.</p>
          * 
          * <strong>example:</strong>
          * <p>public</p>
@@ -527,7 +527,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The security group ID. Required when type is vpc. It must belong to the selected VPC.</p>
+         * <p>This parameter is required when type is set to vpc and must belong to the selected VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-example</p>
@@ -536,7 +536,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID. This field is required when the type is vpc. The associated account and region are verified by the backend.</p>
+         * <p>This parameter is required when type is set to vpc. The associated account and region are validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-example</p>
@@ -594,7 +594,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The instance ID for the acr source.</p>
+         * <p>The instance ID for the ACR source.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-example</p>
@@ -603,7 +603,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The namespace for the acr source.</p>
+         * <p>The namespace for the ACR source.</p>
          * 
          * <strong>example:</strong>
          * <p>team</p>
@@ -612,7 +612,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The independent pull network for the custom source.</p>
+         * <p>The dedicated pull network for the custom source.</p>
          */
         @NameInMap("pullNetwork")
         public GetCustomAgentResponseBodyDataCurrentImagePullNetwork pullNetwork;
@@ -627,7 +627,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String repo;
 
         /**
-         * <p>Specifies whether to skip TLS verification for the custom source.</p>
+         * <p>The certificate exception option for the custom source.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -645,7 +645,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The image tag for the ACR source.</p>
+         * <p>The tag for the ACR source.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -654,7 +654,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The source username for the active image.</p>
+         * <p>The source username of the active image.</p>
          * 
          * <strong>example:</strong>
          * <p>reader</p>
@@ -743,7 +743,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataCustomImagePullNetwork extends TeaModel {
         /**
-         * <p>The security group ID. Required when type is vpc. It must belong to the selected VPC.</p>
+         * <p>This parameter is required when type is set to vpc and must belong to the selected VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-example</p>
@@ -752,7 +752,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The network type. Required when submitting pullNetwork, and validated by the backend. It defaults to the public network for new creations and is independent of the agent runtime network.</p>
+         * <p>This parameter is required when you submit pullNetwork and is validated by the backend. The default value for new creations is the public network, which is independent of the agent runtime network.</p>
          * 
          * <strong>example:</strong>
          * <p>public</p>
@@ -761,7 +761,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The security group ID. Required when type is vpc. It must belong to the selected VPC.</p>
+         * <p>This parameter is required when type is set to vpc and must belong to the selected VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-example</p>
@@ -770,7 +770,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID. This field is required when the type is vpc. The associated account and region are verified by the backend.</p>
+         * <p>This parameter is required when type is set to vpc. The associated account and region are validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-example</p>
@@ -819,7 +819,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataCustomImage extends TeaModel {
         /**
-         * <p>The most recently saved source address, which may still be in preparation.</p>
+         * <p>The recently saved source address, which may still be in preparation.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.example.com/team/agent:v1</p>
@@ -834,7 +834,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public GetCustomAgentResponseBodyDataCustomImagePullNetwork pullNetwork;
 
         /**
-         * <p>Specifies whether to skip HTTPS certificate verification for the saved source.</p>
+         * <p>The saved HTTPS certificate exception option.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -843,7 +843,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public Boolean skipTlsVerify;
 
         /**
-         * <p>The verified source username.</p>
+         * <p>The verified username for the source.</p>
          * 
          * <strong>example:</strong>
          * <p>reader</p>
@@ -936,7 +936,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataEnvironment extends TeaModel {
         /**
-         * <p>The list of most recently submitted environment variables.</p>
+         * <p>The latest submitted list of environment variables.</p>
          */
         @NameInMap("variables")
         public java.util.List<GetCustomAgentResponseBodyDataEnvironmentVariables> variables;
@@ -986,7 +986,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The port accessed for the HTTP health check.</p>
+         * <p>The port accessed for HTTP health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -1004,7 +1004,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public Integer timeoutSeconds;
 
         /**
-         * <p>The number of consecutive health check failures required to mark the agent as unhealthy.</p>
+         * <p>The number of consecutive health check failures required to mark the instance as unhealthy.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1070,7 +1070,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataImagePreparation extends TeaModel {
         /**
-         * <p>The current image preparation phase. Configuration acceptance does not mean successful deployment.</p>
+         * <p>The image preparation phase. Configuration acceptance does not indicate successful deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>QUEUED</p>
@@ -1079,7 +1079,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The ID of the task submitted from the console. This is not the RM operation ID.</p>
+         * <p>The task ID submitted from the console for the current submission. This is not the RM operationId.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-example:1</p>
@@ -1112,7 +1112,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataLatestExecutionError extends TeaModel {
         /**
-         * <p>The reason code for the waiting or execution failure of the latest configuration. This code is used to determine the subsequent handling method.</p>
+         * <p>The reason code for the waiting or execution failure of the latest configuration, which is used to determine the subsequent processing method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1122,7 +1122,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The description of the reason why the latest configuration is waiting or has failed to execute. Refer to the code and retryable fields to determine What to do next.</p>
+         * <p>The description of the reason why the latest configuration is waiting or has failed to execute. Check the code and retryable fields to determine what to do next.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1132,7 +1132,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Specifies whether the task is automatically retried. If the value is true, you can query again later. If the value is false, check and fix the configuration based on the error reason, and then resubmit the agent.</p>
+         * <p>Specifies whether automatic retry is performed. If the value is true, you can query again later. If the value is false, check and fix the configuration based on the reason, and then resubmit.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("retryable")
@@ -1213,7 +1213,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataLogging extends TeaModel {
         /**
-         * <p>The Simple Log Service (SLS) log delivery destination.</p>
+         * <p>The SLS log delivery destination.</p>
          */
         @NameInMap("sls")
         public GetCustomAgentResponseBodyDataLoggingSls sls;
@@ -1279,13 +1279,13 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataNetwork extends TeaModel {
         /**
-         * <p>The Internet access configuration of the agent. If this parameter is not configured, Internet access is allowed on the agent side but remains restricted by the workspace configuration.</p>
+         * <p>The Internet access configuration for the agent. If this parameter is not configured, Internet access is allowed on the agent side but remains restricted by the workspace configuration.</p>
          */
         @NameInMap("accessInternet")
         public GetCustomAgentResponseBodyDataNetworkAccessInternet accessInternet;
 
         /**
-         * <p>The user VPC access configuration of the agent. If this parameter is not configured, user VPC access is allowed on the agent side but remains restricted by the workspace configuration.</p>
+         * <p>The user VPC access configuration for the agent. If this parameter is not configured, user VPC access is allowed on the agent side but remains restricted by the workspace configuration.</p>
          */
         @NameInMap("accessVpc")
         public GetCustomAgentResponseBodyDataNetworkAccessVpc accessVpc;
@@ -1346,7 +1346,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The absolute mount path in the container, such as /data/train. Mount targets must not be duplicated or form parent-child overlaps, and must avoid platform-reserved directories.</p>
+         * <p>The absolute mount path in the container, such as /data/train. Mount targets must not be duplicated or form parent-child overrides, and must avoid platform-reserved directories.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/oss/train</p>
@@ -1364,7 +1364,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read and write.</p>
+         * <p>Specifies whether the mount is read-only. A value of true indicates a read-only mount, and a value of false indicates a read/write mount.</p>
          */
         @NameInMap("readOnly")
         public Boolean readOnly;
@@ -1410,7 +1410,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataProtocolPaths extends TeaModel {
         /**
-         * <p>The usage description of the current API path.</p>
+         * <p>The purpose description of the current API path.</p>
          * 
          * <strong>example:</strong>
          * <p>AG-UI conversation API</p>
@@ -1419,7 +1419,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The API path corresponding to the current protocol.</p>
+         * <p>The API path for the current protocol.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1453,13 +1453,13 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataProtocol extends TeaModel {
         /**
-         * <p>The request header configuration for the current protocol. The key is the header name and the value is a string.</p>
+         * <p>The request header configurations for the current protocol, where the key is the name and the value is a string.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The list of API paths corresponding to the current protocol.</p>
+         * <p>The list of API paths for the current protocol.</p>
          */
         @NameInMap("paths")
         public java.util.List<GetCustomAgentResponseBodyDataProtocolPaths> paths;
@@ -1512,12 +1512,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataRuntimeCompute extends TeaModel {
         /**
-         * <p>The compute specification. Valid values:</p>
-         * <ul>
-         * <li>INTERACTIVE: 1 vCPU and 2 GiB of memory.</li>
-         * <li>STANDARD: 2 vCPUs and 4 GiB of memory.</li>
-         * <li>HEAVY: 4 vCPUs and 8 GiB of memory.</li>
-         * </ul>
+         * <p>The compute specification. A value of INTERACTIVE indicates 1 vCPU and 2 GiB of memory, STANDARD indicates 2 vCPUs and 4 GiB of memory, and HEAVY indicates 4 vCPUs and 8 GiB of memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1577,7 +1572,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public Integer minSandboxCount;
 
         /**
-         * <p>The session idle timeout limit in the current configuration, in seconds.</p>
+         * <p>The maximum idle time for a session in the current configuration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -1634,7 +1629,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     public static class GetCustomAgentResponseBodyDataRuntimeSessionPolicy extends TeaModel {
         /**
-         * <p>The name of the HTTP request header used by the session policy. This applies to ISOLATED_HEADER_FIELD.</p>
+         * <p>The name of the HTTP request header used by the session policy. This parameter applies to ISOLATED_HEADER_FIELD.</p>
          * 
          * <strong>example:</strong>
          * <p>X-Session-Id</p>
@@ -1643,13 +1638,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String headerName;
 
         /**
-         * <p>The session policy type. Valid values:</p>
-         * <ul>
-         * <li>AFFINITY: Session affinity.</li>
-         * <li>ISOLATED_HEADER_FIELD: Uses the request header specified by headerName to associate sessions.</li>
-         * <li>ISOLATED_COOKIE: Not recommended.</li>
-         * <li>DISABLED: A compatible value that is returned as AFFINITY.</li>
-         * </ul>
+         * <p>The session policy type. A value of AFFINITY indicates session affinity, and ISOLATED_HEADER_FIELD uses the request header specified by headerName to associate sessions. ISOLATED_COOKIE is not recommended. The compatible value DISABLED in requests is returned as AFFINITY.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1690,13 +1679,13 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public GetCustomAgentResponseBodyDataRuntimeCompute compute;
 
         /**
-         * <p>The elastic policy configuration of the agent.</p>
+         * <p>The elastic policy configuration for the agent.</p>
          */
         @NameInMap("hpa")
         public GetCustomAgentResponseBodyDataRuntimeHpa hpa;
 
         /**
-         * <p>The session policy configuration of the agent.</p>
+         * <p>The session policy configuration for the agent.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("sessionPolicy")
@@ -1753,7 +1742,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String accessScope;
 
         /**
-         * <p>The unique identifier of the custom code or image agent. You can obtain the value from the response of CreateCustomAgent or ListCustomAgents.</p>
+         * <p>The unique identifier of the custom code or image agent. You can obtain it from the response of CreateCustomAgent or ListCustomAgents.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1763,25 +1752,25 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The NAS storage mount configuration. Currently, only the AgenticFS type is supported. This configuration is used to mount file directories in access points to agent runtime instances. This represents the latest submitted NAS mounts.</p>
+         * <p>The NAS storage mount configuration. Currently, only the AgenticFS type is supported, which is used to mount file directories in access points to agent runtime instances. This represents the latest submitted NAS mounts.</p>
          */
         @NameInMap("agenticFsMounts")
         public java.util.List<GetCustomAgentResponseBodyDataAgenticFsMounts> agenticFsMounts;
 
         /**
-         * <p>The latest submitted deployment artifact configuration, including the service listening port and ACR container image. To determine whether the configuration has taken effect, check the latestVersionStatus parameter.</p>
+         * <p>The latest submitted deployment artifact configuration, including the service listening port and ACR container image. To determine whether the configuration has taken effect, check the latestVersionStatus field.</p>
          */
         @NameInMap("artifact")
         public GetCustomAgentResponseBodyDataArtifact artifact;
 
         /**
-         * <p>The currently saved code package information.</p>
+         * <p>The current saved code package information.</p>
          */
         @NameInMap("codePackageInfo")
         public GetCustomAgentResponseBodyDataCodePackageInfo codePackageInfo;
 
         /**
-         * <p>The agent creation method. The value is CUSTOM for custom code or image agents.</p>
+         * <p>The creation method of the agent. For custom code or image agents, the value is CUSTOM.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -1790,7 +1779,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String createMode;
 
         /**
-         * <p>The time when the agent was created. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+         * <p>The time when the agent was created. The time is in ISO 8601 format, with a trailing Z indicating the UTC time zone, and can include fractional seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T06:00:00Z</p>
@@ -1799,19 +1788,19 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The image source snapshot of the current effective configuration version. It is null before the initial configuration takes effect and does not represent the health status.</p>
+         * <p>The image source snapshot of the current active configuration version. This value is null before the initial configuration takes effect and does not indicate the health status.</p>
          */
         @NameInMap("currentImage")
         public GetCustomAgentResponseBodyDataCurrentImage currentImage;
 
         /**
-         * <p>The most recently saved source and its verified username. The source may be in preparation or failed. The password is not returned.</p>
+         * <p>The recently saved source and the verified username for the source. The source may be in preparation or failed. The password is not returned.</p>
          */
         @NameInMap("customImage")
         public GetCustomAgentResponseBodyDataCustomImage customImage;
 
         /**
-         * <p>The deployment method of the agent. Custom code and image agents are deployed and managed by the platform. MANAGED is returned for these agents.</p>
+         * <p>The deployment method of the agent. Custom code or image agents are deployed and managed by the platform, and the value is MANAGED.</p>
          * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -1823,7 +1812,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
          * <p>The description of the agent\&quot;s purpose.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom agent that provides conversational services</p>
+         * <p>Custom agent for providing conversation services</p>
          */
         @NameInMap("description")
         public String description;
@@ -1848,7 +1837,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public GetCustomAgentResponseBodyDataEnvironment environment;
 
         /**
-         * <p>The HTTP health check configuration for the agent. This field is empty if not configured.</p>
+         * <p>The HTTP health check configuration for the agent. This parameter is empty if not configured.</p>
          */
         @NameInMap("healthCheck")
         public GetCustomAgentResponseBodyDataHealthCheck healthCheck;
@@ -1867,13 +1856,13 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String imageCacheId;
 
         /**
-         * <p>The currently associated image preparation task. The phase field indicates task acceptance. Query the preparation API for real-time progress. A normal save operation does not create an image preparation task.</p>
+         * <p>The currently associated image preparation task. The phase field indicates the acceptance status. Query the preparation API for real-time progress. A normal save operation does not create an image preparation task.</p>
          */
         @NameInMap("imagePreparation")
         public GetCustomAgentResponseBodyDataImagePreparation imagePreparation;
 
         /**
-         * <p>The waiting or execution error for the latest configuration version. This field is returned only when the version is waiting for a retry or fails to execute.</p>
+         * <p>The waiting or execution error of the latest configuration version. This field is returned only when the version is waiting for retry or fails to execute.</p>
          */
         @NameInMap("latestExecutionError")
         public GetCustomAgentResponseBodyDataLatestExecutionError latestExecutionError;
@@ -1889,7 +1878,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The execution status corresponding to latestSpecVersion. Valid values:</p>
+         * <p>The execution status corresponding to the latestSpecVersion. Valid values:</p>
          * <ul>
          * <li>pending: Waiting for execution.</li>
          * <li>processing: Executing.</li>
@@ -1925,19 +1914,19 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The network access configuration of the agent. The actual access scope is also restricted by the workspace network configuration.</p>
+         * <p>The network access configuration for the agent. The actual access scope is also restricted by the network configuration of the workspace.</p>
          */
         @NameInMap("network")
         public GetCustomAgentResponseBodyDataNetwork network;
 
         /**
-         * <p>The high-code agent observability configuration.</p>
+         * <p>The observability configuration for the high-code agent.</p>
          */
         @NameInMap("observability")
         public GetCustomAgentResponseBodyDataObservability observability;
 
         /**
-         * <p>The latest submitted list of OSS directory mounts.</p>
+         * <p>The list of recently submitted OSS directory mounts.</p>
          */
         @NameInMap("ossMounts")
         public java.util.List<GetCustomAgentResponseBodyDataOssMounts> ossMounts;
@@ -1967,13 +1956,13 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The latest submitted runtime configuration, including compute specifications, session policy, and elastic policy.</p>
+         * <p>The runtime configuration of the latest commit, including compute specifications, session policy, and elastic policy.</p>
          */
         @NameInMap("runtime")
         public GetCustomAgentResponseBodyDataRuntime runtime;
 
         /**
-         * <p>The instance count by runtime instance phase. Keys include PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed). Only phases that actually occur are returned. Missing keys are treated as 0.</p>
+         * <p>The count of instances by runtime instance phase. Keys include PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed). Only phases that actually occur are returned. Missing keys are treated as 0.</p>
          */
         @NameInMap("sandboxPhaseCounts")
         public java.util.Map<String, Long> sandboxPhaseCounts;
@@ -1987,7 +1976,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
          * <li>Updating: The agent is being updated.</li>
          * <li>Deleting: The agent is being deleted.</li>
          * <li>Deleted: The agent is deleted.
-         * To check the execution progress of the latest configuration, query latestVersionStatus.</li>
+         * To check the execution progress of the latest configuration, query the latestVersionStatus field.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -1998,7 +1987,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the agent was last updated. The time is in ISO 8601 format, with a trailing Z indicating the UTC time zone. Fractional seconds are supported.</p>
+         * <p>The time when the agent was last updated. The time is in ISO 8601 format, with a trailing Z indicating the UTC time zone, and can include fractional seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T06:05:00Z</p>

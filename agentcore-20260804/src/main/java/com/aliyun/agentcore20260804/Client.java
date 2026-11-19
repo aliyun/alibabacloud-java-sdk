@@ -33,12 +33,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Writes messages or text to a memory store to fetch long-term memory to retrieve and use later.</p>
      * <ul>
-     * <li>If <code>sync</code> is omitted or set to <code>true</code>: waits for the fetch to complete and returns <code>memories</code>. Returns an empty array if no memories are fetched.</li>
-     * <li>If <code>sync</code> is set to <code>false</code>: returns a <code>taskId</code>. You can query the fetch progress and results by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a>.</li>
+     * <li>If <code>sync</code> is omitted or set to <code>true</code>: waits for the extraction to complete and returns <code>memories</code>. Returns an empty array if no memories are extracted.</li>
+     * <li>If <code>sync</code> is set to <code>false</code>: returns a <code>taskId</code>. You can use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a> to query the extraction progress and results.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Writes messages or text to a memory store. If sync is omitted or set to true, the operation synchronously waits for extraction and returns only memories, which can be an empty array. If sync is set to false, the operation returns only a taskId, and you can query the result by calling GetMemoryTask.</p>
+     * <p>Extracts memories from text or messages, or directly writes organized memories. When the extract parameter is omitted or set to true, either the text parameter or non-empty messages must be provided. When the extract parameter is set to false, the memories parameter is used. When the sync parameter is omitted or set to true, the operation waits for processing to complete and returns memory references. An empty array is returned if no new memories are generated. When the sync parameter is set to false, a task ID is returned, and you can use GetMemoryTask to query the result. Direct writes do not create extraction tasks.</p>
      * 
      * @param tmpReq AddMemoriesRequest
      * @param headers map
@@ -80,12 +80,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Writes messages or text to a memory store to fetch long-term memory to retrieve and use later.</p>
      * <ul>
-     * <li>If <code>sync</code> is omitted or set to <code>true</code>: waits for the fetch to complete and returns <code>memories</code>. Returns an empty array if no memories are fetched.</li>
-     * <li>If <code>sync</code> is set to <code>false</code>: returns a <code>taskId</code>. You can query the fetch progress and results by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a>.</li>
+     * <li>If <code>sync</code> is omitted or set to <code>true</code>: waits for the extraction to complete and returns <code>memories</code>. Returns an empty array if no memories are extracted.</li>
+     * <li>If <code>sync</code> is set to <code>false</code>: returns a <code>taskId</code>. You can use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a> to query the extraction progress and results.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Writes messages or text to a memory store. If sync is omitted or set to true, the operation synchronously waits for extraction and returns only memories, which can be an empty array. If sync is set to false, the operation returns only a taskId, and you can query the result by calling GetMemoryTask.</p>
+     * <p>Extracts memories from text or messages, or directly writes organized memories. When the extract parameter is omitted or set to true, either the text parameter or non-empty messages must be provided. When the extract parameter is set to false, the memories parameter is used. When the sync parameter is omitted or set to true, the operation waits for processing to complete and returns memory references. An empty array is returned if no new memories are generated. When the sync parameter is set to false, a task ID is returned, and you can use GetMemoryTask to query the result. Direct writes do not create extraction tasks.</p>
      * 
      * @param request AddMemoriesRequest
      * @return AddMemoriesResponse
@@ -98,10 +98,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes multiple models in a specified workspace. If any model is in use, the entire batch request fails.</p>
+     * <p>Deletes models from a specified workspace in batches. If any model is in use, the entire batch request fails.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes multiple models in a specified workspace. If any model is in use, the entire batch request fails.</p>
+     * <p>Deletes models from a specified workspace in batches. If any model is in use, the entire batch request fails.</p>
      * 
      * @param tmpReq BatchDeleteModelsRequest
      * @param headers map
@@ -147,10 +147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes multiple models in a specified workspace. If any model is in use, the entire batch request fails.</p>
+     * <p>Deletes models from a specified workspace in batches. If any model is in use, the entire batch request fails.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes multiple models in a specified workspace. If any model is in use, the entire batch request fails.</p>
+     * <p>Deletes models from a specified workspace in batches. If any model is in use, the entire batch request fails.</p>
      * 
      * @param request BatchDeleteModelsRequest
      * @return BatchDeleteModelsResponse
@@ -224,10 +224,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Converts an MCP server installed from a marketplace template to free-edit mode so that you can directly modify the server configuration. After the conversion, the original source and tag information is retained, and the template editing restrictions are removed. The server no longer appears on the use case page associated with the template.</p>
+     * <p>Converts an MCP service installed from a marketplace template to free edit mode to allow direct modification of the service configuration.
+     * After the conversion, the original source and tag information are retained, and the template editing restrictions are removed. The service no longer appears on the usage page associated with the template.</p>
      * 
      * <b>summary</b> : 
-     * <p>Converts an MCP server to free-edit mode.</p>
+     * <p>Converts an MCP service to free edit mode.</p>
      * 
      * @param request ConvertMcpToFreeEditRequest
      * @param headers map
@@ -261,10 +262,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Converts an MCP server installed from a marketplace template to free-edit mode so that you can directly modify the server configuration. After the conversion, the original source and tag information is retained, and the template editing restrictions are removed. The server no longer appears on the use case page associated with the template.</p>
+     * <p>Converts an MCP service installed from a marketplace template to free edit mode to allow direct modification of the service configuration.
+     * After the conversion, the original source and tag information are retained, and the template editing restrictions are removed. The service no longer appears on the usage page associated with the template.</p>
      * 
      * <b>summary</b> : 
-     * <p>Converts an MCP server to free-edit mode.</p>
+     * <p>Converts an MCP service to free edit mode.</p>
      * 
      * @param request ConvertMcpToFreeEditRequest
      * @return ConvertMcpToFreeEditResponse
@@ -277,11 +279,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an IM channel for an agent to route messages from instant messaging platforms to the agent.
-     * During creation, a publicly accessible service endpoint (<code>ServiceEndpoint</code>) is bound to the channel. After the channel is created, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentIMChannel">GetAgentIMChannel</a> to query its configuration and status.</p>
+     * <p>Creates an IM channel for an agent to route messages from instant messaging platforms to the agent. Binds a publicly accessible service endpoint (<code>ServiceEndpoint</code>) during creation. After the channel is created, you can query its configuration and status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentIMChannel">GetAgentIMChannel</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an IM channel for a specified agent and binds it to a publicly accessible service endpoint.</p>
+     * <p>Creates an instant messaging (IM) channel for a specified agent and binds a publicly accessible ServiceEndpoint.</p>
      * 
      * @param tmpReq CreateAgentIMChannelRequest
      * @param headers map
@@ -327,11 +328,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an IM channel for an agent to route messages from instant messaging platforms to the agent.
-     * During creation, a publicly accessible service endpoint (<code>ServiceEndpoint</code>) is bound to the channel. After the channel is created, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentIMChannel">GetAgentIMChannel</a> to query its configuration and status.</p>
+     * <p>Creates an IM channel for an agent to route messages from instant messaging platforms to the agent. Binds a publicly accessible service endpoint (<code>ServiceEndpoint</code>) during creation. After the channel is created, you can query its configuration and status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentIMChannel">GetAgentIMChannel</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an IM channel for a specified agent and binds it to a publicly accessible service endpoint.</p>
+     * <p>Creates an instant messaging (IM) channel for a specified agent and binds a publicly accessible ServiceEndpoint.</p>
      * 
      * @param request CreateAgentIMChannelRequest
      * @return CreateAgentIMChannelResponse
@@ -404,10 +404,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Creates a new draft version for an existing agent template (AgentSpec) to modify and publish the next version of the configuration.
-     * The template must already exist and must not have a draft currently being edited.</p>
+     * The template must already exist and cannot have a draft currently being edited.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist and must not have a draft currently being edited.</p>
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist and cannot have a draft currently being edited.</p>
      * 
      * @param tmpReq CreateAgentSpecVersionRequest
      * @param headers map
@@ -448,10 +448,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Creates a new draft version for an existing agent template (AgentSpec) to modify and publish the next version of the configuration.
-     * The template must already exist and must not have a draft currently being edited.</p>
+     * The template must already exist and cannot have a draft currently being edited.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist and must not have a draft currently being edited.</p>
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist and cannot have a draft currently being edited.</p>
      * 
      * @param request CreateAgentSpecVersionRequest
      * @return CreateAgentSpecVersionResponse
@@ -464,7 +464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Saves the currently effective configuration of a specified managed or custom agent as an immutable fixed version, and archives the version template and artifacts. This operation only saves the version and does not deploy an instance. Other types of agents, such as external agents, do not support versions and return AgentVersionSubtypeUnsupported. The latest release of the agent must be effective, meaning latestSpecVersion is equal to effectiveSpecVersion. The system generates an incrementing version number, agentVersion, such as v1 and v2, for each agent. The version number is unique within the agent, and the sequence numbers of deleted versions are not reused. This version number is used for querying, deleting, and referencing versions in service endpoints. Each agent can retain up to 50 undeleted versions. If the limit is reached, AgentVersionQuotaExceeded is returned. You can continue to save versions after deleting unused ones. Duplicate submissions with the same versionName and release serial number return the existing version and are not subject to the limit. Submissions with the same versionName but a different release serial number return AgentVersionAlreadyExists.</p>
+     * <p>Saves the currently effective configuration of a specified managed or custom agent as an immutable fixed version, and archives the version template and artifacts. This operation only saves the version and does not deploy an instance. Other types of agents, such as external agents, do not support versions and return AgentVersionSubtypeUnsupported. The latest release of the agent must be effective, meaning latestSpecVersion is equal to effectiveSpecVersion. The system generates an incrementing version number, agentVersion, such as v1 and v2, for each agent. The version number is unique within the agent, and the sequence numbers of deleted versions are not reused. This version number is used to query and delete versions, and for server endpoint references. Each agent can retain up to 50 undeleted versions. If the limit is reached, AgentVersionQuotaExceeded is returned. You can continue to save versions after deleting unused ones. Duplicate submissions with the same versionName and release serial number return the existing version and are not subject to the limit. If the versionName is the same but the release serial number is different, AgentVersionAlreadyExists is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Saves an agent version.</p>
@@ -513,7 +513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Saves the currently effective configuration of a specified managed or custom agent as an immutable fixed version, and archives the version template and artifacts. This operation only saves the version and does not deploy an instance. Other types of agents, such as external agents, do not support versions and return AgentVersionSubtypeUnsupported. The latest release of the agent must be effective, meaning latestSpecVersion is equal to effectiveSpecVersion. The system generates an incrementing version number, agentVersion, such as v1 and v2, for each agent. The version number is unique within the agent, and the sequence numbers of deleted versions are not reused. This version number is used for querying, deleting, and referencing versions in service endpoints. Each agent can retain up to 50 undeleted versions. If the limit is reached, AgentVersionQuotaExceeded is returned. You can continue to save versions after deleting unused ones. Duplicate submissions with the same versionName and release serial number return the existing version and are not subject to the limit. Submissions with the same versionName but a different release serial number return AgentVersionAlreadyExists.</p>
+     * <p>Saves the currently effective configuration of a specified managed or custom agent as an immutable fixed version, and archives the version template and artifacts. This operation only saves the version and does not deploy an instance. Other types of agents, such as external agents, do not support versions and return AgentVersionSubtypeUnsupported. The latest release of the agent must be effective, meaning latestSpecVersion is equal to effectiveSpecVersion. The system generates an incrementing version number, agentVersion, such as v1 and v2, for each agent. The version number is unique within the agent, and the sequence numbers of deleted versions are not reused. This version number is used to query and delete versions, and for server endpoint references. Each agent can retain up to 50 undeleted versions. If the limit is reached, AgentVersionQuotaExceeded is returned. You can continue to save versions after deleting unused ones. Duplicate submissions with the same versionName and release serial number return the existing version and are not subject to the limit. If the versionName is the same but the release serial number is different, AgentVersionAlreadyExists is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Saves an agent version.</p>
@@ -532,17 +532,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates an apiKey or mcpHeader credential in a workspace for agents or MCP to access external services.</p>
      * <h3>Credential types</h3>
      * <ul>
-     * <li><code>apiKey</code>: <code>credentialMetadata</code> is a JSON string that contains only a non-empty <code>apiKey</code>. Do not submit <code>resourceScope</code> and <code>resourceRefs</code>.</li>
-     * <li><code>mcpHeader</code>: <code>credentialMetadata</code> is a JSON string that contains a non-empty <code>headers</code> array. Each item contains a non-empty <code>name</code> and <code>value</code> to configure MCP request headers.</li>
+     * <li>apiKey: credentialMetadata is a JSON string that contains only a non-empty apiKey. Do not submit resourceScope and resourceRefs.</li>
+     * <li>mcpHeader: credentialMetadata is a JSON string that contains a non-empty headers array. Each item contains a non-empty name and value, which are used to configure MCP request headers.</li>
      * </ul>
      * <h3>MCP header scope</h3>
-     * <p>You must specify <code>resourceScope</code> when creating an <code>mcpHeader</code> credential:</p>
+     * <p>You must specify resourceScope when creating an mcpHeader credential:</p>
      * <ul>
-     * <li><code>ALL</code>: Applies to all MCP services. Omit <code>resourceRefs</code>.</li>
-     * <li><code>SPECIFIED</code>: Applies to specified MCP services. <code>resourceRefs</code> must be a non-empty array. For each item, set <code>resourceType=mcpServer</code> and specify <code>resourceId</code>.</li>
+     * <li>ALL: Applies to all MCP services. Omit resourceRefs.</li>
+     * <li>SPECIFIED: Applies to specified MCP services. resourceRefs must be a non-empty array. For each item, set resourceType=mcpServer and specify resourceId.</li>
      * </ul>
      * <h3>Subsequent queries</h3>
-     * <p>Use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListCredentials">ListCredentials</a> to query credentials. For <code>apiKey</code>, a masked value is returned. For <code>mcpHeader</code>, only header names are returned, and header values are not returned.</p>
+     * <p>Use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListCredentials">ListCredentials</a> to query credentials. For apiKey, a masked value is returned. For mcpHeader, only header names are returned, and header values are not returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an apiKey or mcpHeader credential in a workspace for agents or MCP to access external services. The credential content is submitted as a JSON string, and masked results are returned when queried.</p>
@@ -594,17 +594,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates an apiKey or mcpHeader credential in a workspace for agents or MCP to access external services.</p>
      * <h3>Credential types</h3>
      * <ul>
-     * <li><code>apiKey</code>: <code>credentialMetadata</code> is a JSON string that contains only a non-empty <code>apiKey</code>. Do not submit <code>resourceScope</code> and <code>resourceRefs</code>.</li>
-     * <li><code>mcpHeader</code>: <code>credentialMetadata</code> is a JSON string that contains a non-empty <code>headers</code> array. Each item contains a non-empty <code>name</code> and <code>value</code> to configure MCP request headers.</li>
+     * <li>apiKey: credentialMetadata is a JSON string that contains only a non-empty apiKey. Do not submit resourceScope and resourceRefs.</li>
+     * <li>mcpHeader: credentialMetadata is a JSON string that contains a non-empty headers array. Each item contains a non-empty name and value, which are used to configure MCP request headers.</li>
      * </ul>
      * <h3>MCP header scope</h3>
-     * <p>You must specify <code>resourceScope</code> when creating an <code>mcpHeader</code> credential:</p>
+     * <p>You must specify resourceScope when creating an mcpHeader credential:</p>
      * <ul>
-     * <li><code>ALL</code>: Applies to all MCP services. Omit <code>resourceRefs</code>.</li>
-     * <li><code>SPECIFIED</code>: Applies to specified MCP services. <code>resourceRefs</code> must be a non-empty array. For each item, set <code>resourceType=mcpServer</code> and specify <code>resourceId</code>.</li>
+     * <li>ALL: Applies to all MCP services. Omit resourceRefs.</li>
+     * <li>SPECIFIED: Applies to specified MCP services. resourceRefs must be a non-empty array. For each item, set resourceType=mcpServer and specify resourceId.</li>
      * </ul>
      * <h3>Subsequent queries</h3>
-     * <p>Use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListCredentials">ListCredentials</a> to query credentials. For <code>apiKey</code>, a masked value is returned. For <code>mcpHeader</code>, only header names are returned, and header values are not returned.</p>
+     * <p>Use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListCredentials">ListCredentials</a> to query credentials. For apiKey, a masked value is returned. For mcpHeader, only header names are returned, and header values are not returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an apiKey or mcpHeader credential in a workspace for agents or MCP to access external services. The credential content is submitted as a JSON string, and masked results are returned when queried.</p>
@@ -621,14 +621,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deploys a user-provided code package or container image as an agent in a workspace. This corresponds to the &quot;Custom Code / Image&quot; creation method in the console.</p>
-     * <h3>Preparations</h3>
+     * <h3>Before you begin</h3>
      * <p>Prepare a writable workspace and submit name, roleArn, artifact, and runtime. In runtime, specify both compute and sessionPolicy. roleArn is the RAM role used by the agent to access your cloud resources.</p>
      * <h3>Select a deployment method</h3>
      * <table>
      * <thead>
      * <tr>
      * <th>Deployment method</th>
-     * <th>Required configurations</th>
+     * <th>Required configuration</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -637,25 +637,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>Custom image</td>
-     * <td>artifact.port, artifact.container.type=custom, and the complete customImage. The clientToken query parameter is required.</td>
+     * <td>artifact.port, artifact.container.type=custom, and a complete customImage. The clientToken query parameter is required.</td>
      * </tr>
      * <tr>
      * <td>Code package</td>
      * <td>artifact.port, and sourceUri, languageRuntime, and entrypoint in artifact.code.</td>
      * </tr>
      * <tr>
-     * <td>artifact.code and artifact.container are mutually exclusive. The service listening port ranges from 1 to 65535. You can specify a startup command for a container image by using artifact.container.entrypoint. If this parameter is omitted, the default startup method of the image is used.</td>
+     * <td>artifact.code and artifact.container are mutually exclusive. The service listening port ranges from 1 to 65535. You can specify a startup command for a container image by using artifact.container.entrypoint. If omitted, the default startup method of the image is used.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Code package</h3>
      * <ul>
      * <li>ZIP and TAR.GZ formats are supported. The compressed package size ranges from 1 to 500,000,000 bytes. Dependencies must be included in the package. The platform does not install dependencies or perform online builds.</li>
-     * <li>Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListAgentCodeRuntimes">ListAgentCodeRuntimes</a> to query the currently active <code>languageRuntime</code>.</li>
-     * <li>For local files, first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageUploadUrl">GetAgentCodePackageUploadUrl</a> and upload the file directly by using the upload method, URL, and request headers returned in the response. Then, commit <code>sourceUri</code>.</li>
-     * <li><code>sourceUri</code> supports <code>oss://</code> URLs or HTTPS object URLs of standard OSS public domain names, including signed URLs. Private OSS objects must allow the workspace role to read them. You can first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageOssRamAuthorizeUrl">GetAgentCodePackageOssRamAuthorizeUrl</a> to complete the authorization.</li>
-     * <li>Read permissions, objects, and sizes are checked upon commit, and a fixed copy is saved. If the transfer failed, the agent configuration is not created. Archive integrity and decompression are checked when the instance starts.</li>
-     * <li><code>entrypoint</code> is the startup command executed in the <code>/code</code> folder, such as <code>python main.py</code>. The command does not automatically execute shell pipelines or expand environment variables. For complex startup logic, write a script in the package.
+     * <li>Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListAgentCodeRuntimes">ListAgentCodeRuntimes</a> to query the active languageRuntime values.</li>
+     * <li>For local files, first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageUploadUrl">GetAgentCodePackageUploadUrl</a>. Upload the file directly by using the upload method, URL, and request headers returned in the response, and then commit sourceUri.</li>
+     * <li>sourceUri supports oss:// or HTTPS object URLs with standard OSS public domain names, including signed URLs. Private OSS objects must allow the workspace role to read them. You can invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageOssRamAuthorizeUrl">GetAgentCodePackageOssRamAuthorizeUrl</a> to complete the authorization first.</li>
+     * <li>Read permissions, object existence, and size are checked upon commit, and a fixed copy is saved. If the transfer failed, the agent configuration is not created. Archive integrity and decompression are checked when the instance starts.</li>
+     * <li>entrypoint is the startup command executed in the /code folder, such as python main.py. The command does not automatically execute shell pipelines or expand environment variables. For complex startup logic, write the logic into a script within the package.
      * Sample request body for a code package (the runtime environment is subject to the query result):</li>
      * </ul>
      * <pre><code class="language-json">{
@@ -680,7 +680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * </code></pre>
      * <h3>Custom image</h3>
-     * <p>Specify the complete image address in customImage.image. Tags or digests are supported. Do not include protocols or user information. Configure the image pull network separately in customImage.pullNetwork:</p>
+     * <p>For customImage.image, specify the complete image address. Tags or digests are supported. Do not include the protocol or user information. Configure the image pull network separately in customImage.pullNetwork:</p>
      * <table>
      * <thead>
      * <tr>
@@ -701,11 +701,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td></td>
      * </tr>
      * <tr>
-     * <td>useImageCache=true applies only to ACR images. For custom images and code packages, set this parameter to false or omit it.</td>
+     * <td>useImageCache=true applies only to ACR images. For custom images and code packages, use false or omit this field.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
-     * <h3>Runtime configurations</h3>
+     * <h3>Runtime configuration</h3>
      * <p>Omitted fields in runtime.hpa use the following default values:</p>
      * <table>
      * <thead>
@@ -738,7 +738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>sessionTtlSeconds</td>
      * <td>600</td>
-     * <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
+     * <td>The maximum idle time for a session, in seconds. Valid values: 60 to 86400.</td>
      * </tr>
      * <tr>
      * <td>If sessionPolicy.type=ISOLATED_HEADER_FIELD, you must provide a valid HTTP request header name in headerName. Do not specify this field for other policies.</td>
@@ -746,37 +746,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td></td>
      * </tr>
      * <tr>
-     * <td>If network is omitted, the default access policy on the agent side is used. Actual access is still restricted by the workspace network. When submitting access items, specify the corresponding enabled field.</td>
+     * <td>If network is omitted, the default access policy on the agent side is used. Actual access is still subject to the workspace network restrictions. When submitting access items, specify the corresponding enabled value.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>The total number of items in ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath must be an absolute path in the container, such as /data/train. It cannot conflict with platform reserved directories, be duplicated, or form parent-child directory overrides.</td>
+     * <td>The total number of items in ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path within the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overrides.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>File mounts are used to allow the agent to access persistent data. When using AgenticFS, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAgenticFsMountRamAuthorizeUrl">GetWorkspaceAgenticFsMountRamAuthorizeUrl</a> to complete the access point authorization first.</td>
+     * <td>File mounting allows the agent to access persistent data. When using AgenticFS, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAgenticFsMountRamAuthorizeUrl">GetWorkspaceAgenticFsMountRamAuthorizeUrl</a> to authorize the access point first.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>The path for an OSS mount must be a non-empty directory prefix in the bucket. The server for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The path must be an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If readOnly is omitted, the default value is false.</td>
+     * <td>The path for an OSS mount must be a non-empty directory prefix within the bucket. The server for an AgenticFS mount is the AccessPoint domain name, without a protocol, port, or path. The path is an existing non-empty relative directory within the AccessPoint. You cannot mount the root directory of the AccessPoint. If readOnly is omitted, the default value is false.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>Environment variable names must be non-empty and unique in the list. Values must be strings, and empty strings are allowed. When configuring healthCheck, you must specify port. Omitting the health check means no health check is configured. When configuring logging.sls, specify both non-empty project and logstore.</td>
+     * <td>Environment variable names must be non-empty and unique in the list. Values are strings and can be empty strings. When configuring healthCheck, you must specify port. Omitting the health check means no health check is configured. When configuring logging.sls, specify both non-empty project and logstore.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Query results and retries</h3>
-     * <p>A successful response indicates that the request is accepted. Save the agentId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a>. Check latestVersionStatus, latestExecutionError, status, and sandboxPhaseCounts to confirm the configuration processing and instance status.
-     * The clientToken query parameter is required for custom image submissions, and optional for ACR image and code package submissions. The token must be 1 to 128 characters in length and can contain letters, digits, periods, underscores, colons, and hyphens. Reuse the original token to retry the same submission. If the parameters are the same, the existing acceptance result is returned. Use a new token for different submission content.</p>
+     * <p>A successful response indicates that the request has been accepted. Save the agentId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a>. Check latestVersionStatus, latestExecutionError, status, and sandboxPhaseCounts to confirm the configuration processing and instance status.
+     * You must provide the clientToken query parameter when submitting a custom image. It is optional for ACR image and code package submissions. The token length is 1 to 128 characters. Letters, digits, periods, underscores, colons, and hyphens are allowed. Reuse the original token to retry the same submission. The same parameters return the existing acceptance result. Use a new token for different submission content.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a custom code or image agent in a specified workspace, supports code package, ACR image, and custom image deployments, and executes the deployment asynchronously.</p>
+     * <p>Creates a custom code or image agent in a specified workspace. Supports code package, ACR image, and custom image deployments, and executes the deployment asynchronously.</p>
      * 
      * @param tmpReq CreateCustomAgentRequest
      * @param headers map
@@ -823,14 +823,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deploys a user-provided code package or container image as an agent in a workspace. This corresponds to the &quot;Custom Code / Image&quot; creation method in the console.</p>
-     * <h3>Preparations</h3>
+     * <h3>Before you begin</h3>
      * <p>Prepare a writable workspace and submit name, roleArn, artifact, and runtime. In runtime, specify both compute and sessionPolicy. roleArn is the RAM role used by the agent to access your cloud resources.</p>
      * <h3>Select a deployment method</h3>
      * <table>
      * <thead>
      * <tr>
      * <th>Deployment method</th>
-     * <th>Required configurations</th>
+     * <th>Required configuration</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -839,25 +839,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>Custom image</td>
-     * <td>artifact.port, artifact.container.type=custom, and the complete customImage. The clientToken query parameter is required.</td>
+     * <td>artifact.port, artifact.container.type=custom, and a complete customImage. The clientToken query parameter is required.</td>
      * </tr>
      * <tr>
      * <td>Code package</td>
      * <td>artifact.port, and sourceUri, languageRuntime, and entrypoint in artifact.code.</td>
      * </tr>
      * <tr>
-     * <td>artifact.code and artifact.container are mutually exclusive. The service listening port ranges from 1 to 65535. You can specify a startup command for a container image by using artifact.container.entrypoint. If this parameter is omitted, the default startup method of the image is used.</td>
+     * <td>artifact.code and artifact.container are mutually exclusive. The service listening port ranges from 1 to 65535. You can specify a startup command for a container image by using artifact.container.entrypoint. If omitted, the default startup method of the image is used.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Code package</h3>
      * <ul>
      * <li>ZIP and TAR.GZ formats are supported. The compressed package size ranges from 1 to 500,000,000 bytes. Dependencies must be included in the package. The platform does not install dependencies or perform online builds.</li>
-     * <li>Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListAgentCodeRuntimes">ListAgentCodeRuntimes</a> to query the currently active <code>languageRuntime</code>.</li>
-     * <li>For local files, first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageUploadUrl">GetAgentCodePackageUploadUrl</a> and upload the file directly by using the upload method, URL, and request headers returned in the response. Then, commit <code>sourceUri</code>.</li>
-     * <li><code>sourceUri</code> supports <code>oss://</code> URLs or HTTPS object URLs of standard OSS public domain names, including signed URLs. Private OSS objects must allow the workspace role to read them. You can first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageOssRamAuthorizeUrl">GetAgentCodePackageOssRamAuthorizeUrl</a> to complete the authorization.</li>
-     * <li>Read permissions, objects, and sizes are checked upon commit, and a fixed copy is saved. If the transfer failed, the agent configuration is not created. Archive integrity and decompression are checked when the instance starts.</li>
-     * <li><code>entrypoint</code> is the startup command executed in the <code>/code</code> folder, such as <code>python main.py</code>. The command does not automatically execute shell pipelines or expand environment variables. For complex startup logic, write a script in the package.
+     * <li>Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListAgentCodeRuntimes">ListAgentCodeRuntimes</a> to query the active languageRuntime values.</li>
+     * <li>For local files, first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageUploadUrl">GetAgentCodePackageUploadUrl</a>. Upload the file directly by using the upload method, URL, and request headers returned in the response, and then commit sourceUri.</li>
+     * <li>sourceUri supports oss:// or HTTPS object URLs with standard OSS public domain names, including signed URLs. Private OSS objects must allow the workspace role to read them. You can invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageOssRamAuthorizeUrl">GetAgentCodePackageOssRamAuthorizeUrl</a> to complete the authorization first.</li>
+     * <li>Read permissions, object existence, and size are checked upon commit, and a fixed copy is saved. If the transfer failed, the agent configuration is not created. Archive integrity and decompression are checked when the instance starts.</li>
+     * <li>entrypoint is the startup command executed in the /code folder, such as python main.py. The command does not automatically execute shell pipelines or expand environment variables. For complex startup logic, write the logic into a script within the package.
      * Sample request body for a code package (the runtime environment is subject to the query result):</li>
      * </ul>
      * <pre><code class="language-json">{
@@ -882,7 +882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * </code></pre>
      * <h3>Custom image</h3>
-     * <p>Specify the complete image address in customImage.image. Tags or digests are supported. Do not include protocols or user information. Configure the image pull network separately in customImage.pullNetwork:</p>
+     * <p>For customImage.image, specify the complete image address. Tags or digests are supported. Do not include the protocol or user information. Configure the image pull network separately in customImage.pullNetwork:</p>
      * <table>
      * <thead>
      * <tr>
@@ -903,11 +903,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td></td>
      * </tr>
      * <tr>
-     * <td>useImageCache=true applies only to ACR images. For custom images and code packages, set this parameter to false or omit it.</td>
+     * <td>useImageCache=true applies only to ACR images. For custom images and code packages, use false or omit this field.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
-     * <h3>Runtime configurations</h3>
+     * <h3>Runtime configuration</h3>
      * <p>Omitted fields in runtime.hpa use the following default values:</p>
      * <table>
      * <thead>
@@ -940,7 +940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>sessionTtlSeconds</td>
      * <td>600</td>
-     * <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
+     * <td>The maximum idle time for a session, in seconds. Valid values: 60 to 86400.</td>
      * </tr>
      * <tr>
      * <td>If sessionPolicy.type=ISOLATED_HEADER_FIELD, you must provide a valid HTTP request header name in headerName. Do not specify this field for other policies.</td>
@@ -948,37 +948,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td></td>
      * </tr>
      * <tr>
-     * <td>If network is omitted, the default access policy on the agent side is used. Actual access is still restricted by the workspace network. When submitting access items, specify the corresponding enabled field.</td>
+     * <td>If network is omitted, the default access policy on the agent side is used. Actual access is still subject to the workspace network restrictions. When submitting access items, specify the corresponding enabled value.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>The total number of items in ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath must be an absolute path in the container, such as /data/train. It cannot conflict with platform reserved directories, be duplicated, or form parent-child directory overrides.</td>
+     * <td>The total number of items in ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path within the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overrides.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>File mounts are used to allow the agent to access persistent data. When using AgenticFS, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAgenticFsMountRamAuthorizeUrl">GetWorkspaceAgenticFsMountRamAuthorizeUrl</a> to complete the access point authorization first.</td>
+     * <td>File mounting allows the agent to access persistent data. When using AgenticFS, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAgenticFsMountRamAuthorizeUrl">GetWorkspaceAgenticFsMountRamAuthorizeUrl</a> to authorize the access point first.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>The path for an OSS mount must be a non-empty directory prefix in the bucket. The server for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The path must be an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If readOnly is omitted, the default value is false.</td>
+     * <td>The path for an OSS mount must be a non-empty directory prefix within the bucket. The server for an AgenticFS mount is the AccessPoint domain name, without a protocol, port, or path. The path is an existing non-empty relative directory within the AccessPoint. You cannot mount the root directory of the AccessPoint. If readOnly is omitted, the default value is false.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>Environment variable names must be non-empty and unique in the list. Values must be strings, and empty strings are allowed. When configuring healthCheck, you must specify port. Omitting the health check means no health check is configured. When configuring logging.sls, specify both non-empty project and logstore.</td>
+     * <td>Environment variable names must be non-empty and unique in the list. Values are strings and can be empty strings. When configuring healthCheck, you must specify port. Omitting the health check means no health check is configured. When configuring logging.sls, specify both non-empty project and logstore.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Query results and retries</h3>
-     * <p>A successful response indicates that the request is accepted. Save the agentId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a>. Check latestVersionStatus, latestExecutionError, status, and sandboxPhaseCounts to confirm the configuration processing and instance status.
-     * The clientToken query parameter is required for custom image submissions, and optional for ACR image and code package submissions. The token must be 1 to 128 characters in length and can contain letters, digits, periods, underscores, colons, and hyphens. Reuse the original token to retry the same submission. If the parameters are the same, the existing acceptance result is returned. Use a new token for different submission content.</p>
+     * <p>A successful response indicates that the request has been accepted. Save the agentId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a>. Check latestVersionStatus, latestExecutionError, status, and sandboxPhaseCounts to confirm the configuration processing and instance status.
+     * You must provide the clientToken query parameter when submitting a custom image. It is optional for ACR image and code package submissions. The token length is 1 to 128 characters. Letters, digits, periods, underscores, colons, and hyphens are allowed. Reuse the original token to retry the same submission. The same parameters return the existing acceptance result. Use a new token for different submission content.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a custom code or image agent in a specified workspace, supports code package, ACR image, and custom image deployments, and executes the deployment asynchronously.</p>
+     * <p>Creates a custom code or image agent in a specified workspace. Supports code package, ACR image, and custom image deployments, and executes the deployment asynchronously.</p>
      * 
      * @param request CreateCustomAgentRequest
      * @return CreateCustomAgentResponse
@@ -991,41 +991,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Registers an agent hosted in the user\&quot;s runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain the bootstrap information and complete the connection.</p>
+     * <p>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write result for each event in the same order as the request. A successful request does not indicate that every event is written successfully or that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write result for each event in the same order as the request. A successful request does not indicate that every event is written successfully or that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</p>
+     * 
+     * @param tmpReq CreateEventsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEventsResponse
+     */
+    public CreateEventsResponse createEventsWithOptions(String workspaceId, String memoryStoreName, CreateEventsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateEventsShrinkRequest request = new CreateEventsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEvents"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/events"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEventsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write result for each event in the same order as the request. A successful request does not indicate that every event is written successfully or that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Writes messages, summaries, or session fork events in batches. Each batch supports 1 to 100 events and returns the write result for each event in the same order as the request. A successful request does not indicate that every event is written successfully or that memory extraction is complete. The session title and metadata are set only when the session is created for the first time. Subsequent writes do not update existing session information.</p>
+     * 
+     * @param request CreateEventsRequest
+     * @return CreateEventsResponse
+     */
+    public CreateEventsResponse createEvents(String workspaceId, String memoryStoreName, CreateEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createEventsWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Registers an agent hosted in a user runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain onboarding information and complete the connection.</p>
      * <h3>Configure a managed agent</h3>
-     * <p>Provide name, and select the configuration based on the model source:</p>
+     * <p>Provide <code>name</code> and select the configuration based on the model source:</p>
      * <table>
      * <thead>
      * <tr>
-     * <th>modelSource</th>
+     * <th><code>modelSource</code></th>
      * <th>Model configuration</th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>PLATFORM</td>
-     * <td>Uses a platform model. Provide model.modelConnectionId and model.modelName.</td>
+     * <td><code>PLATFORM</code></td>
+     * <td>Uses a platform model. Provide <code>model.modelConnectionId</code> and <code>model.modelName</code>.</td>
      * </tr>
      * <tr>
-     * <td>RUNTIME</td>
-     * <td>The model is managed by the external runtime environment. Do not submit model.</td>
+     * <td><code>RUNTIME</code></td>
+     * <td>The model is managed by an external runtime environment. Do not submit <code>model</code>.</td>
      * </tr>
      * <tr>
-     * <td>If modelSource is omitted but model is provided, it is processed as PLATFORM. If both are omitted, the agent cannot be created.</td>
+     * <td>If <code>modelSource</code> is omitted but <code>model</code> is provided, it is processed as <code>PLATFORM</code>. If both are omitted, the agent cannot be created.</td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>Configure instructions, MCP tools, and skills through instruction, tools, and skills. You can also reference an agent template through template.aiRegistry. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
+     * <td>Configure instructions, MCP tools, and skills by using <code>instruction</code>, <code>tools</code>, and <code>skills</code>. You can also reference an agent template by using <code>template.aiRegistry</code>. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
-     * <h3>Bootstrap sequence</h3>
-     * <p><strong>Step 1:</strong> After creation, save the agentId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration processing result.
-     * <strong>Step 2:</strong> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available bootstrap networks.
-     * <strong>Step 3:</strong> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the bootstrap token and CMS configuration. The external process then completes the bootstrap.
-     * clientToken is a reserved query parameter and currently does not provide idempotency guarantees.</p>
+     * <h3>Onboarding sequence</h3>
+     * <p><strong>Step 1:</strong> After creation, save the <code>agentId</code> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration processing result.
+     * <strong>Step 2:</strong> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available onboarding networks.
+     * <strong>Step 3:</strong> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the onboarding token and CMS configuration. The external process completes the onboarding.
+     * <code>clientToken</code> is a reserved query parameter and does not provide idempotency guarantees at this time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the bootstrap configuration.</p>
+     * <p>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the onboarding configuration.</p>
      * 
      * @param tmpReq CreateExternalAgentRequest
      * @param headers map
@@ -1071,41 +1130,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Registers an agent hosted in the user\&quot;s runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain the bootstrap information and complete the connection.</p>
+     * <p>Registers an agent hosted in a user runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain onboarding information and complete the connection.</p>
      * <h3>Configure a managed agent</h3>
-     * <p>Provide name, and select the configuration based on the model source:</p>
+     * <p>Provide <code>name</code> and select the configuration based on the model source:</p>
      * <table>
      * <thead>
      * <tr>
-     * <th>modelSource</th>
+     * <th><code>modelSource</code></th>
      * <th>Model configuration</th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>PLATFORM</td>
-     * <td>Uses a platform model. Provide model.modelConnectionId and model.modelName.</td>
+     * <td><code>PLATFORM</code></td>
+     * <td>Uses a platform model. Provide <code>model.modelConnectionId</code> and <code>model.modelName</code>.</td>
      * </tr>
      * <tr>
-     * <td>RUNTIME</td>
-     * <td>The model is managed by the external runtime environment. Do not submit model.</td>
+     * <td><code>RUNTIME</code></td>
+     * <td>The model is managed by an external runtime environment. Do not submit <code>model</code>.</td>
      * </tr>
      * <tr>
-     * <td>If modelSource is omitted but model is provided, it is processed as PLATFORM. If both are omitted, the agent cannot be created.</td>
+     * <td>If <code>modelSource</code> is omitted but <code>model</code> is provided, it is processed as <code>PLATFORM</code>. If both are omitted, the agent cannot be created.</td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>Configure instructions, MCP tools, and skills through instruction, tools, and skills. You can also reference an agent template through template.aiRegistry. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
+     * <td>Configure instructions, MCP tools, and skills by using <code>instruction</code>, <code>tools</code>, and <code>skills</code>. You can also reference an agent template by using <code>template.aiRegistry</code>. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
-     * <h3>Bootstrap sequence</h3>
-     * <p><strong>Step 1:</strong> After creation, save the agentId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration processing result.
-     * <strong>Step 2:</strong> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available bootstrap networks.
-     * <strong>Step 3:</strong> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the bootstrap token and CMS configuration. The external process then completes the bootstrap.
-     * clientToken is a reserved query parameter and currently does not provide idempotency guarantees.</p>
+     * <h3>Onboarding sequence</h3>
+     * <p><strong>Step 1:</strong> After creation, save the <code>agentId</code> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration processing result.
+     * <strong>Step 2:</strong> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available onboarding networks.
+     * <strong>Step 3:</strong> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the onboarding token and CMS configuration. The external process completes the onboarding.
+     * <code>clientToken</code> is a reserved query parameter and does not provide idempotency guarantees at this time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the bootstrap configuration.</p>
+     * <p>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the onboarding configuration.</p>
      * 
      * @param request CreateExternalAgentRequest
      * @return CreateExternalAgentResponse
@@ -1118,15 +1177,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Issues an access token and connection configurations for a registered managed agent whose configurations have taken effect to complete the onboarding in the runtime environment where the agent resides.</p>
+     * <p>Issues an access token and connection configurations for a registered and active managed agent to complete the onboarding in the runtime environment where the agent resides.</p>
      * <h3>Prerequisites and parameters</h3>
-     * <p>The managed agent must be in the running state, and its latest configurations must have taken effect. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> first to query available networks.
-     * The <code>networkType</code> parameter is passed as a query parameter. Valid values: <code>INTRANET</code> (internal network) and <code>INTERNET</code> (Internet). The selected endpoint must be available.</p>
+     * <p>The managed agent must be in the running state and the latest configuration must be in effect. First, query the available networks by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a>.
+     * networkType is passed as a query parameter. Valid values: INTRANET (internal network) and INTERNET (Internet). The selected endpoint must be available.</p>
      * <h3>Use the response</h3>
-     * <p>Pass the <code>bootstrapToken</code> to the external runtime process to complete the onboarding. The <code>tokenFingerprint</code> is used to identify the token and cannot be used as a substitute for the token. The <code>cms</code> field contains the observability reporting configurations for the corresponding network. Configure the endpoint, workspace, and license key as provided in the response.</p>
+     * <p>Pass the bootstrapToken to the external runtime process to complete the onboarding. The tokenFingerprint is used to identify the token and cannot be used as a substitute for the token. cms contains the observability reporting configuration for the corresponding network. Configure it based on the endpoint, workspace, and license key provided in the response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Issues an access token for a specified network to a managed agent with effective configurations and returns the CMS configuration.</p>
+     * <p>Issues an access token for a specified network to an active managed agent and returns the CMS configuration.</p>
      * 
      * @param request CreateExternalAgentBootstrapTokenRequest
      * @param headers map
@@ -1160,15 +1219,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Issues an access token and connection configurations for a registered managed agent whose configurations have taken effect to complete the onboarding in the runtime environment where the agent resides.</p>
+     * <p>Issues an access token and connection configurations for a registered and active managed agent to complete the onboarding in the runtime environment where the agent resides.</p>
      * <h3>Prerequisites and parameters</h3>
-     * <p>The managed agent must be in the running state, and its latest configurations must have taken effect. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> first to query available networks.
-     * The <code>networkType</code> parameter is passed as a query parameter. Valid values: <code>INTRANET</code> (internal network) and <code>INTERNET</code> (Internet). The selected endpoint must be available.</p>
+     * <p>The managed agent must be in the running state and the latest configuration must be in effect. First, query the available networks by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a>.
+     * networkType is passed as a query parameter. Valid values: INTRANET (internal network) and INTERNET (Internet). The selected endpoint must be available.</p>
      * <h3>Use the response</h3>
-     * <p>Pass the <code>bootstrapToken</code> to the external runtime process to complete the onboarding. The <code>tokenFingerprint</code> is used to identify the token and cannot be used as a substitute for the token. The <code>cms</code> field contains the observability reporting configurations for the corresponding network. Configure the endpoint, workspace, and license key as provided in the response.</p>
+     * <p>Pass the bootstrapToken to the external runtime process to complete the onboarding. The tokenFingerprint is used to identify the token and cannot be used as a substitute for the token. cms contains the observability reporting configuration for the corresponding network. Configure it based on the endpoint, workspace, and license key provided in the response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Issues an access token for a specified network to a managed agent with effective configurations and returns the CMS configuration.</p>
+     * <p>Issues an access token for a specified network to an active managed agent and returns the CMS configuration.</p>
      * 
      * @param request CreateExternalAgentBootstrapTokenRequest
      * @return CreateExternalAgentBootstrapTokenResponse
@@ -1181,15 +1240,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Integrates an enterprise identity source with a workspace to allow application users to log on with enterprise accounts, or to synchronize users from the enterprise address book to the workspace.
-     * DingTalk, Lark, and custom identity sources (CustomSSO) are supported. A workspace can be bound to only one identity source. To change the integration method, you must unbind the current identity source first.</p>
+     * <p>Integrates an enterprise identity source into a workspace to allow application users to log on with enterprise accounts or synchronize users from the enterprise address book to the workspace.
+     * DingTalk, Lark, and custom identity sources (<code>CustomSSO</code>) are supported. A workspace can be bound to only one identity source. To change the integration method, you must unbind the current identity source first.</p>
      * <h3>Select an integration method</h3>
      * <table>
      * <thead>
      * <tr>
      * <th>Integration method</th>
      * <th>Scenario</th>
-     * <th>Task completed by this operation</th>
+     * <th>Operation performed by this API</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -1198,35 +1257,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Saves the enterprise application credentials and establishes a binding for subsequent logon and address book synchronization configuration.</td>
      * </tr>
      * <tr>
-     * <td>Custom identity source (CustomSSO)</td>
+     * <td>Custom identity source (<code>CustomSSO</code>)</td>
      * <td>The enterprise wants to integrate its own identity authentication and user management system.</td>
      * <td>Creates a shared user pool to prepare for subsequent SAML single sign-on (SSO) and SCIM user synchronization configuration.</td>
      * </tr>
      * <tr>
-     * <td>A user pool stores application users and identity integration configurations. SAML handles enterprise account logon. SCIM provisions users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
+     * <td>The user pool is used to store application users and identity integration configurations. SAML handles enterprise account logon, and SCIM handles provisioning users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Bind DingTalk or Lark</h3>
-     * <p>Specify the enterprise application credentials in metadata. DingTalk requires appKey, appSecret, and corpId. Lark requires appId and appSecret.
-     * Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set syncOnBind to false.
-     * Subsequent address book change synchronization is controlled by syncEnabled, which is disabled by default. When enabled, you must also provide encryptKey and verificationToken.</p>
+     * <p>Enter the enterprise application credentials in <code>metadata</code>: DingTalk requires <code>appKey</code>, <code>appSecret</code>, and <code>corpId</code>, while Lark requires <code>appId</code> and <code>appSecret</code>.
+     * Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set <code>syncOnBind</code> to <code>false</code>.
+     * Subsequent address book change synchronization is controlled by <code>syncEnabled</code> and is disabled by default. When enabled, you must also provide <code>encryptKey</code> and <code>verificationToken</code>.</p>
      * <h3>Bind a custom identity source</h3>
-     * <p>When you create a CustomSSO binding, you only need to specify the identity source type:</p>
+     * <p>When creating a <code>CustomSSO</code> binding, you only need to specify the identity source type:</p>
      * <pre><code class="language-http">POST /workspaces/{workspaceId}/identity-providers
      * {&quot;identityProviderType&quot;:&quot;CustomSSO&quot;}
      * </code></pre>
-     * <p>This call only creates a user pool. Logon and user synchronization are disabled by default. Do not specify metadata, loginEnabled, or syncEnabled during creation.
-     * After creation, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. If WAITING_CONFIGURATION is returned, the user pool is created and you can proceed with the integration configuration:</p>
+     * <p>This call only creates the user pool. Logon and user synchronization are disabled by default. Do not enter <code>metadata</code> or enable <code>loginEnabled</code> and <code>syncEnabled</code> during creation.
+     * After creation, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. If <code>WAITING_CONFIGURATION</code> is returned, the user pool is created and you can proceed with the integration configuration:</p>
      * <ul>
      * <li><strong>Integrate enterprise account logon</strong>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML integration information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</li>
      * <li><strong>Integrate user synchronization</strong>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the SCIM receiving endpoint and credentials, and configure them in the enterprise identity system. After the external configuration is complete, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a> to enable AgentCore user synchronization.
-     * The two processes are independent. You can select one or both based on your business requirements.</li>
+     * The two processes are independent of each other. You can select one or both based on your business requirements.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Binds an external identity provider such as DingTalk, Lark, or a custom identity source to a workspace for enterprise account logon and user synchronization.</p>
+     * <p>Integrates an external identity provider such as DingTalk, Lark, or a custom identity source into a workspace for enterprise account logon and user synchronization.</p>
      * 
      * @param tmpReq CreateIdentityProviderRequest
      * @param headers map
@@ -1266,15 +1325,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Integrates an enterprise identity source with a workspace to allow application users to log on with enterprise accounts, or to synchronize users from the enterprise address book to the workspace.
-     * DingTalk, Lark, and custom identity sources (CustomSSO) are supported. A workspace can be bound to only one identity source. To change the integration method, you must unbind the current identity source first.</p>
+     * <p>Integrates an enterprise identity source into a workspace to allow application users to log on with enterprise accounts or synchronize users from the enterprise address book to the workspace.
+     * DingTalk, Lark, and custom identity sources (<code>CustomSSO</code>) are supported. A workspace can be bound to only one identity source. To change the integration method, you must unbind the current identity source first.</p>
      * <h3>Select an integration method</h3>
      * <table>
      * <thead>
      * <tr>
      * <th>Integration method</th>
      * <th>Scenario</th>
-     * <th>Task completed by this operation</th>
+     * <th>Operation performed by this API</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -1283,35 +1342,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Saves the enterprise application credentials and establishes a binding for subsequent logon and address book synchronization configuration.</td>
      * </tr>
      * <tr>
-     * <td>Custom identity source (CustomSSO)</td>
+     * <td>Custom identity source (<code>CustomSSO</code>)</td>
      * <td>The enterprise wants to integrate its own identity authentication and user management system.</td>
      * <td>Creates a shared user pool to prepare for subsequent SAML single sign-on (SSO) and SCIM user synchronization configuration.</td>
      * </tr>
      * <tr>
-     * <td>A user pool stores application users and identity integration configurations. SAML handles enterprise account logon. SCIM provisions users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
+     * <td>The user pool is used to store application users and identity integration configurations. SAML handles enterprise account logon, and SCIM handles provisioning users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Bind DingTalk or Lark</h3>
-     * <p>Specify the enterprise application credentials in metadata. DingTalk requires appKey, appSecret, and corpId. Lark requires appId and appSecret.
-     * Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set syncOnBind to false.
-     * Subsequent address book change synchronization is controlled by syncEnabled, which is disabled by default. When enabled, you must also provide encryptKey and verificationToken.</p>
+     * <p>Enter the enterprise application credentials in <code>metadata</code>: DingTalk requires <code>appKey</code>, <code>appSecret</code>, and <code>corpId</code>, while Lark requires <code>appId</code> and <code>appSecret</code>.
+     * Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set <code>syncOnBind</code> to <code>false</code>.
+     * Subsequent address book change synchronization is controlled by <code>syncEnabled</code> and is disabled by default. When enabled, you must also provide <code>encryptKey</code> and <code>verificationToken</code>.</p>
      * <h3>Bind a custom identity source</h3>
-     * <p>When you create a CustomSSO binding, you only need to specify the identity source type:</p>
+     * <p>When creating a <code>CustomSSO</code> binding, you only need to specify the identity source type:</p>
      * <pre><code class="language-http">POST /workspaces/{workspaceId}/identity-providers
      * {&quot;identityProviderType&quot;:&quot;CustomSSO&quot;}
      * </code></pre>
-     * <p>This call only creates a user pool. Logon and user synchronization are disabled by default. Do not specify metadata, loginEnabled, or syncEnabled during creation.
-     * After creation, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. If WAITING_CONFIGURATION is returned, the user pool is created and you can proceed with the integration configuration:</p>
+     * <p>This call only creates the user pool. Logon and user synchronization are disabled by default. Do not enter <code>metadata</code> or enable <code>loginEnabled</code> and <code>syncEnabled</code> during creation.
+     * After creation, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. If <code>WAITING_CONFIGURATION</code> is returned, the user pool is created and you can proceed with the integration configuration:</p>
      * <ul>
      * <li><strong>Integrate enterprise account logon</strong>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML integration information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</li>
      * <li><strong>Integrate user synchronization</strong>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the SCIM receiving endpoint and credentials, and configure them in the enterprise identity system. After the external configuration is complete, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a> to enable AgentCore user synchronization.
-     * The two processes are independent. You can select one or both based on your business requirements.</li>
+     * The two processes are independent of each other. You can select one or both based on your business requirements.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Binds an external identity provider such as DingTalk, Lark, or a custom identity source to a workspace for enterprise account logon and user synchronization.</p>
+     * <p>Integrates an external identity provider such as DingTalk, Lark, or a custom identity source into a workspace for enterprise account logon and user synchronization.</p>
      * 
      * @param request CreateIdentityProviderRequest
      * @return CreateIdentityProviderResponse
@@ -1325,18 +1384,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Creates a SCIM access token to authorize an enterprise identity system to send user provisioning requests to AgentCore. For example, when you plan to replace the token used by the enterprise identity system, you can create a new token first and revoke the old token after the switchover is complete.
-     * SCIM is a user provisioning protocol through which an enterprise identity system sends user information by using a receiving endpoint and an access token.</p>
-     * <h3>Before you begin</h3>
-     * <p>A <code>CustomSSO</code> binding is created, and the SCIM receiving endpoint is enabled by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a>.
+     * SCIM is a user provisioning protocol. The enterprise identity system sends user information by using the receiving endpoint and access token.</p>
+     * <h3>Prerequisites</h3>
+     * <p>A CustomSSO binding is created, and the SCIM receiving endpoint is enabled by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a>.
      * A maximum of two SCIM credentials can be retained in the same user pool. When the limit is reached, query existing credentials by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderSCIMCredentials">ListIdentityProviderSCIMCredentials</a> and revoke the credentials that are no longer in use.</p>
-     * <h3>What to do next</h3>
-     * <p><strong>Step 1:</strong> Save the plaintext of the <code>token</code> in the response. The token is returned only upon creation. You can only query the credential summary later.
+     * <h3>How to use the credential after creation</h3>
+     * <p><strong>Step 1:</strong> Save the plaintext of the token in the response. The token is returned only upon creation. You can only query the credential summary later.
      * <strong>Step 2:</strong> Configure the receiving endpoint and the new token in the enterprise identity system.
      * <strong>Step 3:</strong> After you confirm that the enterprise identity system uses the new token, revoke the old token by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteIdentityProviderSCIMCredential">DeleteIdentityProviderSCIMCredential</a> as needed.
-     * If the creation response is lost, query the credential list to verify the creation result to avoid duplicate creation and occupying the credential quota. The user synchronization switch is configured separately by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
+     * If the creation response is lost, query the credential list to verify the creation result. This avoids duplicate creation and consuming the credential quota. The user synchronization switch is configured separately by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Explicitly issues a SCIM credential and returns the plaintext token only in the current response. A maximum of two credentials can exist in the same pool. This operation does not automatically revoke old credentials or enable AC user synchronization.</p>
+     * <p>Issues a SCIM credential explicitly and returns the plaintext token only in the current response. A maximum of two credentials are allowed per pool. This operation does not automatically revoke old credentials or enable AgentCore user synchronization.</p>
      * 
      * @param request CreateIdentityProviderSCIMCredentialRequest
      * @param headers map
@@ -1365,18 +1424,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Creates a SCIM access token to authorize an enterprise identity system to send user provisioning requests to AgentCore. For example, when you plan to replace the token used by the enterprise identity system, you can create a new token first and revoke the old token after the switchover is complete.
-     * SCIM is a user provisioning protocol through which an enterprise identity system sends user information by using a receiving endpoint and an access token.</p>
-     * <h3>Before you begin</h3>
-     * <p>A <code>CustomSSO</code> binding is created, and the SCIM receiving endpoint is enabled by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a>.
+     * SCIM is a user provisioning protocol. The enterprise identity system sends user information by using the receiving endpoint and access token.</p>
+     * <h3>Prerequisites</h3>
+     * <p>A CustomSSO binding is created, and the SCIM receiving endpoint is enabled by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a>.
      * A maximum of two SCIM credentials can be retained in the same user pool. When the limit is reached, query existing credentials by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderSCIMCredentials">ListIdentityProviderSCIMCredentials</a> and revoke the credentials that are no longer in use.</p>
-     * <h3>What to do next</h3>
-     * <p><strong>Step 1:</strong> Save the plaintext of the <code>token</code> in the response. The token is returned only upon creation. You can only query the credential summary later.
+     * <h3>How to use the credential after creation</h3>
+     * <p><strong>Step 1:</strong> Save the plaintext of the token in the response. The token is returned only upon creation. You can only query the credential summary later.
      * <strong>Step 2:</strong> Configure the receiving endpoint and the new token in the enterprise identity system.
      * <strong>Step 3:</strong> After you confirm that the enterprise identity system uses the new token, revoke the old token by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteIdentityProviderSCIMCredential">DeleteIdentityProviderSCIMCredential</a> as needed.
-     * If the creation response is lost, query the credential list to verify the creation result to avoid duplicate creation and occupying the credential quota. The user synchronization switch is configured separately by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
+     * If the creation response is lost, query the credential list to verify the creation result. This avoids duplicate creation and consuming the credential quota. The user synchronization switch is configured separately by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Explicitly issues a SCIM credential and returns the plaintext token only in the current response. A maximum of two credentials can exist in the same pool. This operation does not automatically revoke old credentials or enable AC user synchronization.</p>
+     * <p>Issues a SCIM credential explicitly and returns the plaintext token only in the current response. A maximum of two credentials are allowed per pool. This operation does not automatically revoke old credentials or enable AgentCore user synchronization.</p>
      * 
      * @param request CreateIdentityProviderSCIMCredentialRequest
      * @return CreateIdentityProviderSCIMCredentialResponse
@@ -1389,25 +1448,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Synchronizes users from an enterprise identity provider to a workspace based on the saved department scope. This is suitable for importing users for the first time or manually updating workspace users after adjusting the synchronization scope.</p>
+     * <p>Synchronizes users from an enterprise identity provider to a workspace based on the saved department scope. This operation is suitable for importing users for the first time or manually updating workspace users after adjusting the synchronization scope.</p>
      * <h3>Prerequisites</h3>
      * <ul>
-     * <li>The identity provider is configured and its status is <code>READY</code>. If the previous synchronization failed and the status is <code>SYNC_FAILED</code>, you can also re-initiate it.</li>
-     * <li>The user pool is ready, and no identity provider operations are in progress.</li>
+     * <li>The identity provider is configured and its status is <code>READY</code>. You can also re-initiate the synchronization if the status is <code>SYNC_FAILED</code> after a previous synchronization failure.</li>
+     * <li>The user pool is ready and no identity provider operations are in progress.</li>
      * <li>Manual synchronization uses the saved <code>syncScope</code>. You do not need to enable <code>syncEnabled</code>, which is used for subsequent address book change synchronization.</li>
      * </ul>
-     * <h3>Steps for synchronizing by department</h3>
-     * <p><strong>Step 1:</strong> Query departments by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> and select the scope to synchronize.
-     * <strong>Step 2:</strong> Save the <code>syncScope</code> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete.
+     * <h3>Steps to synchronize by department</h3>
+     * <p><strong>Step 1:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> to query departments and select the scope to synchronize.
+     * <strong>Step 2:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the <code>syncScope</code>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete.
      * <strong>Step 3:</strong> Call this operation to initiate the synchronization and save the returned <code>taskId</code>.
-     * <strong>Step 4:</strong> Query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSyncJob">GetIdentityProviderSyncJob</a>. After the synchronization is complete, view the workspace user list.
+     * <strong>Step 4:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSyncJob">GetIdentityProviderSyncJob</a> to query the progress. After the synchronization is complete, view the workspace user list.
      * If you want to select departments before the initial synchronization, set <code>syncOnBind=false</code> when creating the identity provider, and then perform the preceding steps.</p>
      * <h3>Synchronization results and re-execution</h3>
-     * <p>Synchronization is subject to the maximum number of users allowed in the workspace. Narrowing the synchronization scope does not actively delete users that have already been synchronized.
+     * <p>Synchronization is subject to the maximum number of users allowed in the workspace. Narrowing the synchronization scope does not automatically delete users that have already been synchronized.
      * Each successful initiation creates a new synchronization task. If a request times out or the response is lost, check the identity provider status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> before deciding whether to resubmit the request.</p>
      * 
      * <b>summary</b> : 
-     * <p>Initiates a manual synchronization for an identity provider.</p>
+     * <p>Initiates a manual synchronization of an identity provider.</p>
      * 
      * @param request CreateIdentityProviderSyncJobRequest
      * @param headers map
@@ -1435,25 +1494,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Synchronizes users from an enterprise identity provider to a workspace based on the saved department scope. This is suitable for importing users for the first time or manually updating workspace users after adjusting the synchronization scope.</p>
+     * <p>Synchronizes users from an enterprise identity provider to a workspace based on the saved department scope. This operation is suitable for importing users for the first time or manually updating workspace users after adjusting the synchronization scope.</p>
      * <h3>Prerequisites</h3>
      * <ul>
-     * <li>The identity provider is configured and its status is <code>READY</code>. If the previous synchronization failed and the status is <code>SYNC_FAILED</code>, you can also re-initiate it.</li>
-     * <li>The user pool is ready, and no identity provider operations are in progress.</li>
+     * <li>The identity provider is configured and its status is <code>READY</code>. You can also re-initiate the synchronization if the status is <code>SYNC_FAILED</code> after a previous synchronization failure.</li>
+     * <li>The user pool is ready and no identity provider operations are in progress.</li>
      * <li>Manual synchronization uses the saved <code>syncScope</code>. You do not need to enable <code>syncEnabled</code>, which is used for subsequent address book change synchronization.</li>
      * </ul>
-     * <h3>Steps for synchronizing by department</h3>
-     * <p><strong>Step 1:</strong> Query departments by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> and select the scope to synchronize.
-     * <strong>Step 2:</strong> Save the <code>syncScope</code> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete.
+     * <h3>Steps to synchronize by department</h3>
+     * <p><strong>Step 1:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> to query departments and select the scope to synchronize.
+     * <strong>Step 2:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the <code>syncScope</code>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete.
      * <strong>Step 3:</strong> Call this operation to initiate the synchronization and save the returned <code>taskId</code>.
-     * <strong>Step 4:</strong> Query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSyncJob">GetIdentityProviderSyncJob</a>. After the synchronization is complete, view the workspace user list.
+     * <strong>Step 4:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSyncJob">GetIdentityProviderSyncJob</a> to query the progress. After the synchronization is complete, view the workspace user list.
      * If you want to select departments before the initial synchronization, set <code>syncOnBind=false</code> when creating the identity provider, and then perform the preceding steps.</p>
      * <h3>Synchronization results and re-execution</h3>
-     * <p>Synchronization is subject to the maximum number of users allowed in the workspace. Narrowing the synchronization scope does not actively delete users that have already been synchronized.
+     * <p>Synchronization is subject to the maximum number of users allowed in the workspace. Narrowing the synchronization scope does not automatically delete users that have already been synchronized.
      * Each successful initiation creates a new synchronization task. If a request times out or the response is lost, check the identity provider status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> before deciding whether to resubmit the request.</p>
      * 
      * <b>summary</b> : 
-     * <p>Initiates a manual synchronization for an identity provider.</p>
+     * <p>Initiates a manual synchronization of an identity provider.</p>
      * 
      * @param request CreateIdentityProviderSyncJobRequest
      * @return CreateIdentityProviderSyncJobResponse
@@ -1466,18 +1525,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pre-builds or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</p>
+     * <p>Prepares or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</p>
      * <h3>Request parameters</h3>
      * <p><code>regionId</code>, <code>workspaceId</code>, and <code>clientToken</code> are passed as query parameters. The region must match the entry endpoint and the workspace.
-     * Specify <code>acrInstanceId</code>, <code>namespace</code>, <code>repository</code>, and <code>tag</code> in the JSON request body. For <code>repository</code>, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</p>
+     * The JSON request body provides <code>acrInstanceId</code>, <code>namespace</code>, <code>repository</code>, and <code>tag</code>. For <code>repository</code>, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</p>
      * <h3>Transfer network</h3>
-     * <p>Both <code>accessInternet</code> and <code>accessVpc</code> must be provided, and at least one must be set to <code>true</code>. The server validates this based on the workspace network conditions. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</p>
+     * <p>Both <code>accessInternet</code> and <code>accessVpc</code> must be provided, and at least one of them must be set to <code>true</code>. The server validates these parameters based on the network conditions of the workspace. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</p>
      * <h3>Acceptance and readiness</h3>
      * <p>A successful response returns the current cache snapshot. <code>PENDING</code> indicates that the cache is being prepared, <code>READY</code> indicates that the cache is ready, and <code>FAILED</code> indicates a failure. For failures, check the <code>error</code> field. Save the <code>imageId</code> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, <code>digest</code> may be empty.
-     * Currently, <code>clientToken</code> is only validated to ensure it is not empty. It does not guarantee deduplication by identifier or recovery of the original acceptance result. If the result is not confirmed, query the existing cache first.</p>
+     * Currently, <code>clientToken</code> is only validated to ensure it is not empty. It does not guarantee deduplication by this identifier or recovery of the original acceptance result. If the result is not confirmed, query the existing cache first.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates or reuses a cache for an ACR Enterprise Edition image in a workspace, and returns the cache status upon acceptance.</p>
+     * <p>Creates or reuses an image cache for ACR Enterprise Edition images in a workspace, and returns the cache status upon acceptance.</p>
      * 
      * @param tmpReq CreateImageCacheRequest
      * @param headers map
@@ -1531,18 +1590,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pre-builds or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</p>
+     * <p>Prepares or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</p>
      * <h3>Request parameters</h3>
      * <p><code>regionId</code>, <code>workspaceId</code>, and <code>clientToken</code> are passed as query parameters. The region must match the entry endpoint and the workspace.
-     * Specify <code>acrInstanceId</code>, <code>namespace</code>, <code>repository</code>, and <code>tag</code> in the JSON request body. For <code>repository</code>, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</p>
+     * The JSON request body provides <code>acrInstanceId</code>, <code>namespace</code>, <code>repository</code>, and <code>tag</code>. For <code>repository</code>, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</p>
      * <h3>Transfer network</h3>
-     * <p>Both <code>accessInternet</code> and <code>accessVpc</code> must be provided, and at least one must be set to <code>true</code>. The server validates this based on the workspace network conditions. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</p>
+     * <p>Both <code>accessInternet</code> and <code>accessVpc</code> must be provided, and at least one of them must be set to <code>true</code>. The server validates these parameters based on the network conditions of the workspace. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</p>
      * <h3>Acceptance and readiness</h3>
      * <p>A successful response returns the current cache snapshot. <code>PENDING</code> indicates that the cache is being prepared, <code>READY</code> indicates that the cache is ready, and <code>FAILED</code> indicates a failure. For failures, check the <code>error</code> field. Save the <code>imageId</code> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, <code>digest</code> may be empty.
-     * Currently, <code>clientToken</code> is only validated to ensure it is not empty. It does not guarantee deduplication by identifier or recovery of the original acceptance result. If the result is not confirmed, query the existing cache first.</p>
+     * Currently, <code>clientToken</code> is only validated to ensure it is not empty. It does not guarantee deduplication by this identifier or recovery of the original acceptance result. If the result is not confirmed, query the existing cache first.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates or reuses a cache for an ACR Enterprise Edition image in a workspace, and returns the cache status upon acceptance.</p>
+     * <p>Creates or reuses an image cache for ACR Enterprise Edition images in a workspace, and returns the cache status upon acceptance.</p>
      * 
      * @param request CreateImageCacheRequest
      * @return CreateImageCacheResponse
@@ -1555,9 +1614,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure models, instructions, and skills.</p>
+     * <p>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</p>
      * <h3>Required configurations</h3>
-     * <p>Submit <code>name</code>, <code>model</code>, and <code>runtime</code>. The <code>runtime</code> parameter must include both <code>compute</code> and <code>sessionPolicy</code>. The agent is deployed and run by the platform. You do not need to provide a code package or container image.</p>
+     * <p>Submit <code>name</code>, <code>model</code>, and <code>runtime</code>. The <code>runtime</code> parameter must include both <code>compute</code> and <code>sessionPolicy</code>. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</p>
      * <h3>Harness and model</h3>
      * <table>
      * <thead>
@@ -1568,14 +1627,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>qwenpaw</code></td>
-     * <td>If you omit <code>harness</code> during creation, this type is used by default. Set <code>model.modelConnectionId</code> to the workspace model connection ID, and set <code>model.modelName</code> to the name of the model created under this connection.</td>
+     * <td>If <code>harness</code> is omitted during creation, this type is used by default. Set <code>model.modelConnectionId</code> to the workspace model connection ID, and set <code>model.modelName</code> to the name of the model created under this connection.</td>
      * </tr>
      * <tr>
      * <td><code>qodercli</code></td>
-     * <td>The qodercli connector must be enabled in the workspace. Set <code>model.modelConnectionId</code> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit <code>model.modelName</code>.</td>
+     * <td>The qodercli connector must be enabled in the workspace. Set <code>model.modelConnectionId</code> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <code>model.modelName</code> can be omitted.</td>
      * </tr>
      * <tr>
-     * <td><code>harness</code> is an object, such as <code>{&quot;type&quot;:&quot;qwenpaw&quot;}</code>. For qodercli, set <code>harness.configuration.connectorServiceAccountKey</code> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. You must specify this parameter if multiple records exist. <code>connectorServiceAccountName</code> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+     * <td><code>harness</code> is an object, such as <code>{&quot;type&quot;:&quot;qwenpaw&quot;}</code>. For qodercli, set <code>harness.configuration.connectorServiceAccountKey</code> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This parameter can be omitted if there is only one key record, but must be specified if there are multiple records. <code>connectorServiceAccountName</code> is the account name. Do not specify these two binding fields for qwenpaw.</td>
      * <td></td>
      * </tr>
      * <tr>
@@ -1584,9 +1643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h3>Instructions, templates, and skills</h3>
-     * <p><code>skills</code> uses the skill names in the workspace AI registry. If <code>sourceType=REFERENCE</code>, versions are referenced by <code>versionSelector</code>: use <code>LABEL</code> with a label name, or <code>VERSION</code> with a specific version number. If the selector is omitted, <code>LABEL/latest</code> is used. If <code>sourceType=STATIC</code>, static files bundled with the package are used, and no version selector is provided.
-     * <code>template.aiRegistry</code> specifies the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, <code>instruction</code>, <code>promptVariables</code>, and <code>subAgents</code> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <code>configuredSkills</code> and <code>skills</code>.
-     * If you do not use a template, you can set instructions by using <code>instruction</code>, declare variables by using <code>promptVariables</code>, and configure up to 20 sub-agents by using <code>subAgents</code>. The name and instruction of a sub-agent cannot be empty. Each sub-agent must have a unique name. Tools currently use <code>tools[].type=MCP</code>.</p>
+     * <p><code>skills</code> uses the skill names in the workspace AI registry. If <code>sourceType=REFERENCE</code>, versions are referenced by <code>versionSelector</code>: use <code>LABEL</code> with a tag name, or <code>VERSION</code> with a specific version number. If the selector is omitted, <code>LABEL/latest</code> is used. If <code>sourceType=STATIC</code>, static files bundled with the package are used, and no version selector is provided.
+     * For <code>template.aiRegistry</code>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <code>instruction</code>, <code>promptVariables</code>, and <code>subAgents</code> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <code>configuredSkills</code> and <code>skills</code>.
+     * If no template is used, you can set instructions by using <code>instruction</code>, declare variables by using <code>promptVariables</code>, and configure up to 20 sub-agents by using <code>subAgents</code>. The name and instruction of a sub-agent cannot be empty, and the name of each sub-agent must be unique. Tools currently use <code>tools[].type=MCP</code>.</p>
      * <h3>Runtime configurations and mounts</h3>
      * <p>Omitted fields in <code>runtime.hpa</code> use the following default values:</p>
      * <table>
@@ -1628,12 +1687,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td></td>
      * </tr>
      * <tr>
-     * <td>If you provide <code>network</code>, you must specify both <code>accessInternet.enabled</code> and <code>accessVpc.enabled</code>. Actual access is restricted by the workspace network configurations.</td>
+     * <td>If <code>network</code> is provided, you must specify both <code>accessInternet.enabled</code> and <code>accessVpc.enabled</code>. Actual access is restricted by the workspace network configurations.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. The mount target <code>mountPath</code> uses an absolute path in the container, such as <code>/data/train</code>. The path cannot conflict with platform-reserved directories, and mount targets cannot be duplicated or form parent-child directory overwrites.</td>
+     * <td>The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. The mount target <code>mountPath</code> uses an absolute path in the container, such as <code>/data/train</code>. It cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
      * <td></td>
      * <td></td>
      * </tr>
@@ -1654,10 +1713,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h3>Query deployment results</h3>
-     * <p>A successful response indicates that the request is accepted. Save the <code>agentId</code> and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <code>latestVersionStatus</code>, <code>status</code>, and <code>sandboxPhaseCounts</code> to confirm the configuration processing and instance status. <code>clientToken</code> is a reserved query parameter and does not provide idempotency guarantees.</p>
+     * <p>A successful response indicates that the request is accepted. Save the <code>agentId</code> and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <code>latestVersionStatus</code>, <code>status</code>, and <code>sandboxPhaseCounts</code> to confirm the configuration processing and instance status. <code>clientToken</code> is a reserved query parameter and currently does not provide idempotency guarantees.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a managed Harness agent in a specified workspace, configures the harness, model, skills, and runtime resources, and deploys the agent asynchronously.</p>
+     * <p>Creates a managed Harness agent in a specified workspace, configures the harness, model, skills, and runtime resources, and deploys it asynchronously.</p>
      * 
      * @param tmpReq CreateManagedAgentRequest
      * @param headers map
@@ -1703,9 +1762,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure models, instructions, and skills.</p>
+     * <p>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</p>
      * <h3>Required configurations</h3>
-     * <p>Submit <code>name</code>, <code>model</code>, and <code>runtime</code>. The <code>runtime</code> parameter must include both <code>compute</code> and <code>sessionPolicy</code>. The agent is deployed and run by the platform. You do not need to provide a code package or container image.</p>
+     * <p>Submit <code>name</code>, <code>model</code>, and <code>runtime</code>. The <code>runtime</code> parameter must include both <code>compute</code> and <code>sessionPolicy</code>. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</p>
      * <h3>Harness and model</h3>
      * <table>
      * <thead>
@@ -1716,14 +1775,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>qwenpaw</code></td>
-     * <td>If you omit <code>harness</code> during creation, this type is used by default. Set <code>model.modelConnectionId</code> to the workspace model connection ID, and set <code>model.modelName</code> to the name of the model created under this connection.</td>
+     * <td>If <code>harness</code> is omitted during creation, this type is used by default. Set <code>model.modelConnectionId</code> to the workspace model connection ID, and set <code>model.modelName</code> to the name of the model created under this connection.</td>
      * </tr>
      * <tr>
      * <td><code>qodercli</code></td>
-     * <td>The qodercli connector must be enabled in the workspace. Set <code>model.modelConnectionId</code> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit <code>model.modelName</code>.</td>
+     * <td>The qodercli connector must be enabled in the workspace. Set <code>model.modelConnectionId</code> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <code>model.modelName</code> can be omitted.</td>
      * </tr>
      * <tr>
-     * <td><code>harness</code> is an object, such as <code>{&quot;type&quot;:&quot;qwenpaw&quot;}</code>. For qodercli, set <code>harness.configuration.connectorServiceAccountKey</code> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. You must specify this parameter if multiple records exist. <code>connectorServiceAccountName</code> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+     * <td><code>harness</code> is an object, such as <code>{&quot;type&quot;:&quot;qwenpaw&quot;}</code>. For qodercli, set <code>harness.configuration.connectorServiceAccountKey</code> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This parameter can be omitted if there is only one key record, but must be specified if there are multiple records. <code>connectorServiceAccountName</code> is the account name. Do not specify these two binding fields for qwenpaw.</td>
      * <td></td>
      * </tr>
      * <tr>
@@ -1732,9 +1791,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h3>Instructions, templates, and skills</h3>
-     * <p><code>skills</code> uses the skill names in the workspace AI registry. If <code>sourceType=REFERENCE</code>, versions are referenced by <code>versionSelector</code>: use <code>LABEL</code> with a label name, or <code>VERSION</code> with a specific version number. If the selector is omitted, <code>LABEL/latest</code> is used. If <code>sourceType=STATIC</code>, static files bundled with the package are used, and no version selector is provided.
-     * <code>template.aiRegistry</code> specifies the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, <code>instruction</code>, <code>promptVariables</code>, and <code>subAgents</code> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <code>configuredSkills</code> and <code>skills</code>.
-     * If you do not use a template, you can set instructions by using <code>instruction</code>, declare variables by using <code>promptVariables</code>, and configure up to 20 sub-agents by using <code>subAgents</code>. The name and instruction of a sub-agent cannot be empty. Each sub-agent must have a unique name. Tools currently use <code>tools[].type=MCP</code>.</p>
+     * <p><code>skills</code> uses the skill names in the workspace AI registry. If <code>sourceType=REFERENCE</code>, versions are referenced by <code>versionSelector</code>: use <code>LABEL</code> with a tag name, or <code>VERSION</code> with a specific version number. If the selector is omitted, <code>LABEL/latest</code> is used. If <code>sourceType=STATIC</code>, static files bundled with the package are used, and no version selector is provided.
+     * For <code>template.aiRegistry</code>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <code>instruction</code>, <code>promptVariables</code>, and <code>subAgents</code> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <code>configuredSkills</code> and <code>skills</code>.
+     * If no template is used, you can set instructions by using <code>instruction</code>, declare variables by using <code>promptVariables</code>, and configure up to 20 sub-agents by using <code>subAgents</code>. The name and instruction of a sub-agent cannot be empty, and the name of each sub-agent must be unique. Tools currently use <code>tools[].type=MCP</code>.</p>
      * <h3>Runtime configurations and mounts</h3>
      * <p>Omitted fields in <code>runtime.hpa</code> use the following default values:</p>
      * <table>
@@ -1776,12 +1835,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td></td>
      * </tr>
      * <tr>
-     * <td>If you provide <code>network</code>, you must specify both <code>accessInternet.enabled</code> and <code>accessVpc.enabled</code>. Actual access is restricted by the workspace network configurations.</td>
+     * <td>If <code>network</code> is provided, you must specify both <code>accessInternet.enabled</code> and <code>accessVpc.enabled</code>. Actual access is restricted by the workspace network configurations.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. The mount target <code>mountPath</code> uses an absolute path in the container, such as <code>/data/train</code>. The path cannot conflict with platform-reserved directories, and mount targets cannot be duplicated or form parent-child directory overwrites.</td>
+     * <td>The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. The mount target <code>mountPath</code> uses an absolute path in the container, such as <code>/data/train</code>. It cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
      * <td></td>
      * <td></td>
      * </tr>
@@ -1802,10 +1861,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h3>Query deployment results</h3>
-     * <p>A successful response indicates that the request is accepted. Save the <code>agentId</code> and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <code>latestVersionStatus</code>, <code>status</code>, and <code>sandboxPhaseCounts</code> to confirm the configuration processing and instance status. <code>clientToken</code> is a reserved query parameter and does not provide idempotency guarantees.</p>
+     * <p>A successful response indicates that the request is accepted. Save the <code>agentId</code> and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <code>latestVersionStatus</code>, <code>status</code>, and <code>sandboxPhaseCounts</code> to confirm the configuration processing and instance status. <code>clientToken</code> is a reserved query parameter and currently does not provide idempotency guarantees.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a managed Harness agent in a specified workspace, configures the harness, model, skills, and runtime resources, and deploys the agent asynchronously.</p>
+     * <p>Creates a managed Harness agent in a specified workspace, configures the harness, model, skills, and runtime resources, and deploys it asynchronously.</p>
      * 
      * @param request CreateManagedAgentRequest
      * @return CreateManagedAgentResponse
@@ -1819,12 +1878,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-     * The creation process is executed asynchronously. After you submit the request, call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to check whether the service is ready.
-     * To deploy the service by using a local code package, first call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> operation to obtain the upload URL and upload the file. Then, fill in the returned code package token in the deployment configuration.
-     * The <code>clientToken</code> parameter does not provide idempotency guarantees. If the request result is not confirmed, query existing services before you decide whether to recreate the service.</p>
+     * The creation process is asynchronous. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
+     * To deploy using a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the upload URL and upload the file. Then, fill the returned code package token into the deployment configuration.
+     * The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check whether the service is ready by using the returned status or a query operation.</p>
+     * <p>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call a query operation to verify whether the service is ready.</p>
      * 
      * @param tmpReq CreateMcpRequest
      * @param headers map
@@ -1871,12 +1930,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-     * The creation process is executed asynchronously. After you submit the request, call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to check whether the service is ready.
-     * To deploy the service by using a local code package, first call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> operation to obtain the upload URL and upload the file. Then, fill in the returned code package token in the deployment configuration.
-     * The <code>clientToken</code> parameter does not provide idempotency guarantees. If the request result is not confirmed, query existing services before you decide whether to recreate the service.</p>
+     * The creation process is asynchronous. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
+     * To deploy using a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the upload URL and upload the file. Then, fill the returned code package token into the deployment configuration.
+     * The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check whether the service is ready by using the returned status or a query operation.</p>
+     * <p>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call a query operation to verify whether the service is ready.</p>
      * 
      * @param request CreateMcpRequest
      * @return CreateMcpResponse
@@ -1889,8 +1948,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a long-term memory store (MemoryStore) in a workspace to organize the long-term memories of an agent and their source sessions.
-     * After creation, you can write messages or text by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> and retrieve memories by semantics by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/SearchMemories">SearchMemories</a>.</p>
+     * <p>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</p>
+     * 
+     * @param tmpReq CreateMemoryRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMemoryRuleResponse
+     */
+    public CreateMemoryRuleResponse createMemoryRuleWithOptions(String workspaceId, String memoryStoreName, CreateMemoryRuleRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateMemoryRuleShrinkRequest request = new CreateMemoryRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMemoryRule"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memory-rules"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMemoryRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an extraction rule for a memory store, specifying the rule name, enabling status, and extraction strategy. After the rule is enabled, extraction is triggered when 8 pending extraction events accumulate in a session or when no new pending extraction events are added for 60 consecutive seconds.</p>
+     * 
+     * @param request CreateMemoryRuleRequest
+     * @return CreateMemoryRuleResponse
+     */
+    public CreateMemoryRuleResponse createMemoryRule(String workspaceId, String memoryStoreName, CreateMemoryRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMemoryRuleWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a long-term memory store (MemoryStore) in a workspace to organize the long-term memory of an agent and its source sessions.
+     * After the memory store is created, you can use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> to write messages or text, and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/SearchMemories">SearchMemories</a> to retrieve memories by semantics.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a long-term memory store in a specified workspace.</p>
@@ -1939,8 +2057,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a long-term memory store (MemoryStore) in a workspace to organize the long-term memories of an agent and their source sessions.
-     * After creation, you can write messages or text by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> and retrieve memories by semantics by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/SearchMemories">SearchMemories</a>.</p>
+     * <p>Creates a long-term memory store (MemoryStore) in a workspace to organize the long-term memory of an agent and its source sessions.
+     * After the memory store is created, you can use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> to write messages or text, and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/SearchMemories">SearchMemories</a> to retrieve memories by semantics.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a long-term memory store in a specified workspace.</p>
@@ -1956,7 +2074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a model configuration under a model connection in a workspace for model creation, allowing an agent to select and invoke the model.</p>
+     * <p>Creates a model configuration under a model connection in a workspace for model creation, allowing agents to select and invoke the model.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a model configuration under a model connection in a specified workspace for model creation.</p>
@@ -2005,7 +2123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a model configuration under a model connection in a workspace for model creation, allowing an agent to select and invoke the model.</p>
+     * <p>Creates a model configuration under a model connection in a workspace for model creation, allowing agents to select and invoke the model.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a model configuration under a model connection in a specified workspace for model creation.</p>
@@ -2021,10 +2139,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials for model creation.</p>
+     * <p>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials for model creation.</p>
+     * <p>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</p>
      * 
      * @param tmpReq CreateModelConnectionRequest
      * @param headers map
@@ -2070,10 +2188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials for model creation.</p>
+     * <p>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials for model creation.</p>
+     * <p>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</p>
      * 
      * @param request CreateModelConnectionRequest
      * @return CreateModelConnectionResponse
@@ -2086,7 +2204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates access rules in batches for specified resources in a workspace to define which users or agents can or cannot access the resources.</p>
+     * <p>Creates access rules in bulk for specified resources in a workspace to define which users or agents can or cannot access the resources.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates permission rules.</p>
@@ -2135,7 +2253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates access rules in batches for specified resources in a workspace to define which users or agents can or cannot access the resources.</p>
+     * <p>Creates access rules in bulk for specified resources in a workspace to define which users or agents can or cannot access the resources.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates permission rules.</p>
@@ -2147,6 +2265,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createPermissionRulesWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a named service endpoint in a specified workspace that routes to a specific AgentVersion. For the Router type that runs independently, specifying target.agentVersion registers the independent deployment of the service endpoint. A successful response does not indicate that the deployment is complete. You must check the status of the service endpoint to confirm the deployment status. Service endpoints for collaboration components are created internally by the platform.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service endpoint.</p>
+     * 
+     * @param tmpReq CreateServiceEndpointRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServiceEndpointResponse
+     */
+    public CreateServiceEndpointResponse createServiceEndpointWithOptions(String workspaceId, CreateServiceEndpointRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateServiceEndpointShrinkRequest request = new CreateServiceEndpointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServiceEndpoint"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/service-endpoints"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceEndpointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a named service endpoint in a specified workspace that routes to a specific AgentVersion. For the Router type that runs independently, specifying target.agentVersion registers the independent deployment of the service endpoint. A successful response does not indicate that the deployment is complete. You must check the status of the service endpoint to confirm the deployment status. Service endpoints for collaboration components are created internally by the platform.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service endpoint.</p>
+     * 
+     * @param request CreateServiceEndpointRequest
+     * @return CreateServiceEndpointResponse
+     */
+    public CreateServiceEndpointResponse createServiceEndpoint(String workspaceId, CreateServiceEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createServiceEndpointWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -2213,7 +2396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates a team in a specified workspace and configures user members and agent members at the same time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a team in a specified workspace and configures user members and agent members at the same time. Exactly one user member must have the ADMIN role, and agent members can only have the LEADER or WORKER role.</p>
+     * <p>Creates a team in a specified workspace and configures user members and agent members at the same time. The user members must include exactly one member with the ADMIN role, and agent members can only have the LEADER or WORKER role.</p>
      * 
      * @param tmpReq CreateTeamRequest
      * @param headers map
@@ -2262,7 +2445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Creates a team in a specified workspace and configures user members and agent members at the same time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a team in a specified workspace and configures user members and agent members at the same time. Exactly one user member must have the ADMIN role, and agent members can only have the LEADER or WORKER role.</p>
+     * <p>Creates a team in a specified workspace and configures user members and agent members at the same time. The user members must include exactly one member with the ADMIN role, and agent members can only have the LEADER or WORKER role.</p>
      * 
      * @param request CreateTeamRequest
      * @return CreateTeamResponse
@@ -2275,7 +2458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a user in a workspace for member collaboration and application access, which is used when configuring team members and user logons.</p>
+     * <p>Creates a user in a workspace for member collaboration and application access, which can be used to configure team members and user logons.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a user in a specified workspace. The username must be unique within the workspace, can contain only lowercase letters, digits, and hyphens, and cannot be a reserved name such as manager, admin, or any name starting with worker-. If the password is not specified, the server generates an initial password and returns it in the initialPassword field of the response.</p>
@@ -2324,7 +2507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a user in a workspace for member collaboration and application access, which is used when configuring team members and user logons.</p>
+     * <p>Creates a user in a workspace for member collaboration and application access, which can be used to configure team members and user logons.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a user in a specified workspace. The username must be unique within the workspace, can contain only lowercase letters, digits, and hyphens, and cannot be a reserved name such as manager, admin, or any name starting with worker-. If the password is not specified, the server generates an initial password and returns it in the initialPassword field of the response.</p>
@@ -2340,11 +2523,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.
+     * <p>Creates an AgentCore workspace as a resource scope to organize agents, models, MCP services, and collaboration configurations.
      * After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query the details, and then manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.</p>
+     * <p>Creates an AgentCore workspace as a resource scope to organize agents, models, MCP services, and collaboration configurations.</p>
      * 
      * @param tmpReq CreateWorkspaceRequest
      * @param headers map
@@ -2390,11 +2573,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.
+     * <p>Creates an AgentCore workspace as a resource scope to organize agents, models, MCP services, and collaboration configurations.
      * After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query the details, and then manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.</p>
+     * <p>Creates an AgentCore workspace as a resource scope to organize agents, models, MCP services, and collaboration configurations.</p>
      * 
      * @param request CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
@@ -2466,7 +2649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a specified access application and removes the access configuration of the application from the workspace.</p>
+     * <p>Deletes a specified access application and removes its access configuration from the workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an access application.</p>
@@ -2497,7 +2680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a specified access application and removes the access configuration of the application from the workspace.</p>
+     * <p>Deletes a specified access application and removes its access configuration from the workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an access application.</p>
@@ -2567,10 +2750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes the specified agent template and all its versions and metadata.
-     * This operation is irreversible.</p>
+     * The deletion operation is irreversible.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the specified AgentSpec and all its versions and metadata. This operation is irreversible.</p>
+     * <p>Deletes the specified AgentSpec and all its versions and metadata. The deletion operation is irreversible.</p>
      * 
      * @param request DeleteAgentSpecRequest
      * @param headers map
@@ -2599,10 +2782,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes the specified agent template and all its versions and metadata.
-     * This operation is irreversible.</p>
+     * The deletion operation is irreversible.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the specified AgentSpec and all its versions and metadata. This operation is irreversible.</p>
+     * <p>Deletes the specified AgentSpec and all its versions and metadata. The deletion operation is irreversible.</p>
      * 
      * @param request DeleteAgentSpecRequest
      * @return DeleteAgentSpecResponse
@@ -2662,10 +2845,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a saved fixed version of a specified managed or custom agent. You cannot delete versions that are still referenced by service endpoints or the system-maintained latest version.</p>
+     * <p>Deletes a saved fixed version of a specified managed or custom agent. Versions that are still referenced by service endpoints cannot be deleted, and the system-maintained latest version cannot be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a saved fixed version of a specified managed or custom agent.</p>
+     * <p>Deletes an agent version.</p>
      * 
      * @param request DeleteAgentVersionRequest
      * @param headers map
@@ -2699,10 +2882,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a saved fixed version of a specified managed or custom agent. You cannot delete versions that are still referenced by service endpoints or the system-maintained latest version.</p>
+     * <p>Deletes a saved fixed version of a specified managed or custom agent. Versions that are still referenced by service endpoints cannot be deleted, and the system-maintained latest version cannot be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a saved fixed version of a specified managed or custom agent.</p>
+     * <p>Deletes an agent version.</p>
      * 
      * @param request DeleteAgentVersionRequest
      * @return DeleteAgentVersionResponse
@@ -2715,11 +2898,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes an access credential that is no longer used in a workspace.
-     * If the credential is still bound to an MCP service, dissociate it before deletion.</p>
+     * <p>Deletes access credentials that are no longer used in a workspace.
+     * If a credential is still bound to an MCP service, dissociate it before deletion.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a credential in a specified workspace and deletes the ciphertext hosted in the credential service. After deletion, agents bound to the credential can no longer obtain the credential content.</p>
+     * <p>Deletes a specified credential in a workspace and the ciphertext hosted in the credential service. After the deletion, agents bound to the credential can no longer obtain the credential content.</p>
      * 
      * @param request DeleteCredentialRequest
      * @param headers map
@@ -2753,11 +2936,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes an access credential that is no longer used in a workspace.
-     * If the credential is still bound to an MCP service, dissociate it before deletion.</p>
+     * <p>Deletes access credentials that are no longer used in a workspace.
+     * If a credential is still bound to an MCP service, dissociate it before deletion.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a credential in a specified workspace and deletes the ciphertext hosted in the credential service. After deletion, agents bound to the credential can no longer obtain the credential content.</p>
+     * <p>Deletes a specified credential in a workspace and the ciphertext hosted in the credential service. After the deletion, agents bound to the credential can no longer obtain the credential content.</p>
      * 
      * @param request DeleteCredentialRequest
      * @return DeleteCredentialResponse
@@ -2771,11 +2954,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes a custom code or image agent in a specified workspace and asynchronously cleans up its associated platform resources.</p>
-     * <h3>Before you begin</h3>
+     * <h3>Prerequisites</h3>
      * <p>The workspace must be writable. If the agent is still associated with a team, dissociate it from the team first.</p>
-     * <h3>Deletion result</h3>
-     * <p>A successful response indicates that the deletion request is accepted, and the response summary typically returns <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
-     * Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a> to query the deletion progress. After the deletion is complete, a detail query returns a resource not found error. Runtime resources are cleaned up in the background.</p>
+     * <h3>Deletion results</h3>
+     * <p>A successful response indicates that the deletion request has been accepted, and the response summary is typically <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
+     * Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a> to query the deletion progress. After the deletion is complete, a details query returns a resource not found error. Runtime resources are cleaned up in the background.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a custom code or image agent in a specified workspace and asynchronously cleans up its associated platform resources.</p>
@@ -2807,11 +2990,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes a custom code or image agent in a specified workspace and asynchronously cleans up its associated platform resources.</p>
-     * <h3>Before you begin</h3>
+     * <h3>Prerequisites</h3>
      * <p>The workspace must be writable. If the agent is still associated with a team, dissociate it from the team first.</p>
-     * <h3>Deletion result</h3>
-     * <p>A successful response indicates that the deletion request is accepted, and the response summary typically returns <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
-     * Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a> to query the deletion progress. After the deletion is complete, a detail query returns a resource not found error. Runtime resources are cleaned up in the background.</p>
+     * <h3>Deletion results</h3>
+     * <p>A successful response indicates that the deletion request has been accepted, and the response summary is typically <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
+     * Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a> to query the deletion progress. After the deletion is complete, a details query returns a resource not found error. Runtime resources are cleaned up in the background.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a custom code or image agent in a specified workspace and asynchronously cleans up its associated platform resources.</p>
@@ -2827,15 +3010,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a managed agent in a specified workspace and asynchronously cleans up its associated platform resources.</p>
+     * <p>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion result for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion result for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</p>
+     * 
+     * @param tmpReq DeleteEventsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEventsResponse
+     */
+    public DeleteEventsResponse deleteEventsWithOptions(String workspaceId, String memoryStoreName, DeleteEventsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteEventsShrinkRequest request = new DeleteEventsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEvents"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/events"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEventsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion result for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes events written by a specified session in batches, supporting 1 to 100 event IDs per batch. Returns the deletion result for each event. Events inherited from a parent session cannot be deleted in a child session. Deleting events does not delete extracted memories.</p>
+     * 
+     * @param request DeleteEventsRequest
+     * @return DeleteEventsResponse
+     */
+    public DeleteEventsResponse deleteEvents(String workspaceId, String memoryStoreName, DeleteEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteEventsWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a managed agent from a specified workspace and asynchronously cleans up its associated platform resources.</p>
      * <h3>Prerequisites</h3>
      * <p>The workspace must be writable. If the agent is still associated with a team, dissociate it from the team first.</p>
      * <h3>Deletion results</h3>
      * <p>A successful response indicates that the deletion request has been accepted, and the response summary is typically <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
-     * You can query the deletion progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>. After the deletion is complete, a details query returns a resource not found error. The processes and runtime environment of the managed agent are managed by the caller.</p>
+     * Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the deletion progress. After the deletion is complete, a details query returns a resource not found error. The processes and runtime environments of managed agents are managed by the caller.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a managed agent in a specified workspace and asynchronously cleans up its associated platform resources.</p>
+     * <p>Deletes a managed agent from a specified workspace and asynchronously cleans up its associated platform resources.</p>
      * 
      * @param request DeleteExternalAgentRequest
      * @param headers map
@@ -2863,15 +3105,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a managed agent in a specified workspace and asynchronously cleans up its associated platform resources.</p>
+     * <p>Deletes a managed agent from a specified workspace and asynchronously cleans up its associated platform resources.</p>
      * <h3>Prerequisites</h3>
      * <p>The workspace must be writable. If the agent is still associated with a team, dissociate it from the team first.</p>
      * <h3>Deletion results</h3>
      * <p>A successful response indicates that the deletion request has been accepted, and the response summary is typically <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
-     * You can query the deletion progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>. After the deletion is complete, a details query returns a resource not found error. The processes and runtime environment of the managed agent are managed by the caller.</p>
+     * Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the deletion progress. After the deletion is complete, a details query returns a resource not found error. The processes and runtime environments of managed agents are managed by the caller.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a managed agent in a specified workspace and asynchronously cleans up its associated platform resources.</p>
+     * <p>Deletes a managed agent from a specified workspace and asynchronously cleans up its associated platform resources.</p>
      * 
      * @param request DeleteExternalAgentRequest
      * @return DeleteExternalAgentResponse
@@ -2884,21 +3126,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disconnects the association between a workspace and an enterprise identity source. This operation is used to terminate identity federation or clear the current attach configuration before you attach another identity source.
+     * <p>Disconnects the workspace from the enterprise identity source to end identity federation, or clears the current attachment before attaching another identity source.
      * Disconnecting clears the AgentCore users and associated configurations imported from the identity source. For <code>CustomSSO</code>, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</p>
-     * <h3>Preparations before disconnecting</h3>
-     * <p>Remove the reference relationships between the related users and collaboration teams first. If teams still reference these users, the API operation rejects the disconnection request.
-     * If you only want to temporarily disable a specific capability, you can retain the identity source binding. Use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to disable logon, or use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a> to disable SCIM synchronization.</p>
+     * <h3>Preparations before disconnection</h3>
+     * <p>First, remove the references between the relevant users and collaboration teams. If any team still references these users, the API operation rejects the disconnection request.
+     * If you only want to temporarily disable a specific capability, you can retain the identity source binding: disable logon by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, or disable SCIM synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
      * <h3>Verify the disconnection result</h3>
      * <p>The disconnection is executed in the background. After the request is accepted, <code>DISCONNECTING</code> is returned. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>:</p>
      * <ul>
      * <li>If the query returns <code>IdentityProviderNotFound</code>, the binding has been removed and the disconnection is complete.</li>
-     * <li>If <code>DISCONNECT_FAILED</code> is returned, the cleanup failed. Some resources may have already been cleared. You can initiate the disconnection again.
+     * <li>If <code>DISCONNECT_FAILED</code> is returned, the cleanup failed. Some resources may have already been cleaned up. You can initiate the disconnection again.
      * You can bind a new identity source to the workspace only after the disconnection is complete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</p>
+     * <p>Disconnects the identity source integration for a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</p>
      * 
      * @param request DeleteIdentityProviderRequest
      * @param headers map
@@ -2932,21 +3174,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disconnects the association between a workspace and an enterprise identity source. This operation is used to terminate identity federation or clear the current attach configuration before you attach another identity source.
+     * <p>Disconnects the workspace from the enterprise identity source to end identity federation, or clears the current attachment before attaching another identity source.
      * Disconnecting clears the AgentCore users and associated configurations imported from the identity source. For <code>CustomSSO</code>, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</p>
-     * <h3>Preparations before disconnecting</h3>
-     * <p>Remove the reference relationships between the related users and collaboration teams first. If teams still reference these users, the API operation rejects the disconnection request.
-     * If you only want to temporarily disable a specific capability, you can retain the identity source binding. Use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to disable logon, or use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a> to disable SCIM synchronization.</p>
+     * <h3>Preparations before disconnection</h3>
+     * <p>First, remove the references between the relevant users and collaboration teams. If any team still references these users, the API operation rejects the disconnection request.
+     * If you only want to temporarily disable a specific capability, you can retain the identity source binding: disable logon by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, or disable SCIM synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
      * <h3>Verify the disconnection result</h3>
      * <p>The disconnection is executed in the background. After the request is accepted, <code>DISCONNECTING</code> is returned. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>:</p>
      * <ul>
      * <li>If the query returns <code>IdentityProviderNotFound</code>, the binding has been removed and the disconnection is complete.</li>
-     * <li>If <code>DISCONNECT_FAILED</code> is returned, the cleanup failed. Some resources may have already been cleared. You can initiate the disconnection again.
+     * <li>If <code>DISCONNECT_FAILED</code> is returned, the cleanup failed. Some resources may have already been cleaned up. You can initiate the disconnection again.
      * You can bind a new identity source to the workspace only after the disconnection is complete.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</p>
+     * <p>Disconnects the identity source integration for a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</p>
      * 
      * @param request DeleteIdentityProviderRequest
      * @return DeleteIdentityProviderResponse
@@ -2959,16 +3201,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Revokes a SCIM access token to deactivate an old token or clean up credentials that are no longer in use or have expired.
+     * <p>Revokes a SCIM access token to deactivate an old token or clean up unused or expired credentials.
      * SCIM tokens are used to authorize enterprise identity systems to send user provisioning requests to user pools. After revocation, the enterprise identity system can no longer use the token to access the SCIM endpoint.</p>
      * <h3>Usage</h3>
      * <p><strong>Step 1:</strong> Query the credential list by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderSCIMCredentials">ListIdentityProviderSCIMCredentials</a> to obtain the target credentialId.
      * <strong>Step 2:</strong> If the enterprise identity system is still using the token, configure another valid token for it first.
      * <strong>Step 3:</strong> Call this operation to revoke the target credential, and then refresh the list to confirm the result.
-     * This operation only revokes the specified token. Synchronized users, other tokens, logon configurations, and the user synchronization switch are retained. To disable user synchronization, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
+     * This operation only revokes the specified token. Synchronized users, other tokens, logon configurations, and the user synchronization switch are retained. To disable user synchronization, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Revokes a specified SCIM credential. This operation does not trigger automatic creation of a new token, modify the AC synchronization switch, or disable SAML logon.</p>
+     * <p>Revokes a specified SCIM credential. This operation does not trigger automatic creation of a new token, modify the access configuration synchronization switch, or disable SAML logon.</p>
      * 
      * @param request DeleteIdentityProviderSCIMCredentialRequest
      * @param headers map
@@ -2996,16 +3238,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Revokes a SCIM access token to deactivate an old token or clean up credentials that are no longer in use or have expired.
+     * <p>Revokes a SCIM access token to deactivate an old token or clean up unused or expired credentials.
      * SCIM tokens are used to authorize enterprise identity systems to send user provisioning requests to user pools. After revocation, the enterprise identity system can no longer use the token to access the SCIM endpoint.</p>
      * <h3>Usage</h3>
      * <p><strong>Step 1:</strong> Query the credential list by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderSCIMCredentials">ListIdentityProviderSCIMCredentials</a> to obtain the target credentialId.
      * <strong>Step 2:</strong> If the enterprise identity system is still using the token, configure another valid token for it first.
      * <strong>Step 3:</strong> Call this operation to revoke the target credential, and then refresh the list to confirm the result.
-     * This operation only revokes the specified token. Synchronized users, other tokens, logon configurations, and the user synchronization switch are retained. To disable user synchronization, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
+     * This operation only revokes the specified token. Synchronized users, other tokens, logon configurations, and the user synchronization switch are retained. To disable user synchronization, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Revokes a specified SCIM credential. This operation does not trigger automatic creation of a new token, modify the AC synchronization switch, or disable SAML logon.</p>
+     * <p>Revokes a specified SCIM credential. This operation does not trigger automatic creation of a new token, modify the access configuration synchronization switch, or disable SAML logon.</p>
      * 
      * @param request DeleteIdentityProviderSCIMCredentialRequest
      * @return DeleteIdentityProviderSCIMCredentialResponse
@@ -3018,15 +3260,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the image cache association in a workspace and checks for agent references and instance usage before submission.</p>
+     * <p>Deletes the image cache association in a workspace and checks agent references and instance usage before submission.</p>
      * <h3>Deletion conditions</h3>
-     * <p>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if instances are still using it or resources are being released. You can first query <code>agentCount</code>, <code>canDelete</code>, and <code>deleteBlockReason</code> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</p>
+     * <p>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if the cache is still in use by instances or being released. You can first query <code>agentCount</code>, <code>canDelete</code>, and <code>deleteBlockReason</code> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</p>
      * <h3>Query results</h3>
-     * <p>The <code>imageId</code> in the response corresponds to this request. The current implementation of <code>deletionPending</code> returns <code>false</code>. To confirm whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
-     * This operation deletes the cache association in the specified workspace, but does not delete the source ACR repository or the source image.</p>
+     * <p>The <code>imageId</code> in the response corresponds to this request. The current implementation of <code>deletionPending</code> returns <code>false</code>. To check whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
+     * This operation deletes the cache association in the specified workspace. It does not delete the source ACR repository or the source image.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the image cache association in a workspace and checks for agent references and instance usage before submission.</p>
+     * <p>Deletes the image cache association in a workspace and checks agent references and instance usage before submission.</p>
      * 
      * @param request DeleteImageCacheRequest
      * @param headers map
@@ -3064,15 +3306,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the image cache association in a workspace and checks for agent references and instance usage before submission.</p>
+     * <p>Deletes the image cache association in a workspace and checks agent references and instance usage before submission.</p>
      * <h3>Deletion conditions</h3>
-     * <p>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if instances are still using it or resources are being released. You can first query <code>agentCount</code>, <code>canDelete</code>, and <code>deleteBlockReason</code> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</p>
+     * <p>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if the cache is still in use by instances or being released. You can first query <code>agentCount</code>, <code>canDelete</code>, and <code>deleteBlockReason</code> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</p>
      * <h3>Query results</h3>
-     * <p>The <code>imageId</code> in the response corresponds to this request. The current implementation of <code>deletionPending</code> returns <code>false</code>. To confirm whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
-     * This operation deletes the cache association in the specified workspace, but does not delete the source ACR repository or the source image.</p>
+     * <p>The <code>imageId</code> in the response corresponds to this request. The current implementation of <code>deletionPending</code> returns <code>false</code>. To check whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
+     * This operation deletes the cache association in the specified workspace. It does not delete the source ACR repository or the source image.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the image cache association in a workspace and checks for agent references and instance usage before submission.</p>
+     * <p>Deletes the image cache association in a workspace and checks agent references and instance usage before submission.</p>
      * 
      * @param request DeleteImageCacheRequest
      * @return DeleteImageCacheResponse
@@ -3086,11 +3328,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes a managed Harness agent in a specified workspace and asynchronously cleans up its platform-associated resources.</p>
-     * <h3>Prerequisites</h3>
+     * <h3>Call conditions</h3>
      * <p>The workspace must be writable. If the agent is still associated with a team, dissociate it from the team first.</p>
      * <h3>Deletion results</h3>
-     * <p>A successful response indicates that the deletion request has been accepted, and the response summary is typically <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
-     * You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query the deletion progress. After the deletion is complete, a details query returns a resource not found error. Runtime resources are cleaned up in the background.</p>
+     * <p>A successful response indicates that the deletion request has been accepted, and the response summary is typically <code>status=Deleting</code>. If the agent is already being deleted, subsequent requests return the current summary.
+     * Use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query the deletion progress. After the deletion is complete, a details query returns a resource not found error. Runtime resources are cleaned up in the background.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a managed Harness agent in a specified workspace and asynchronously cleans up its platform-associated resources.</p>
@@ -3122,11 +3364,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes a managed Harness agent in a specified workspace and asynchronously cleans up its platform-associated resources.</p>
-     * <h3>Prerequisites</h3>
+     * <h3>Call conditions</h3>
      * <p>The workspace must be writable. If the agent is still associated with a team, dissociate it from the team first.</p>
      * <h3>Deletion results</h3>
-     * <p>A successful response indicates that the deletion request has been accepted, and the response summary is typically <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
-     * You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query the deletion progress. After the deletion is complete, a details query returns a resource not found error. Runtime resources are cleaned up in the background.</p>
+     * <p>A successful response indicates that the deletion request has been accepted, and the response summary is typically <code>status=Deleting</code>. If the agent is already being deleted, subsequent requests return the current summary.
+     * Use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query the deletion progress. After the deletion is complete, a details query returns a resource not found error. Runtime resources are cleaned up in the background.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a managed Harness agent in a specified workspace and asynchronously cleans up its platform-associated resources.</p>
@@ -3143,10 +3385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes a specified MCP service.
-     * The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
+     * The deletion is an asynchronous process. After the process is complete, the MCP service is no longer returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
+     * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the process is complete, the MCP service is no longer returned.</p>
      * 
      * @param request DeleteMcpRequest
      * @param headers map
@@ -3175,10 +3417,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes a specified MCP service.
-     * The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
+     * The deletion is an asynchronous process. After the process is complete, the MCP service is no longer returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
+     * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the process is complete, the MCP service is no longer returned.</p>
      * 
      * @param request DeleteMcpRequest
      * @return DeleteMcpResponse
@@ -3191,10 +3433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a long-term memory by memory ID.</p>
+     * <p>Deletes a long-term memory based on the memory ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a long-term memory by memory ID.</p>
+     * <p>Deletes a long-term memory based on the memory ID.</p>
      * 
      * @param request DeleteMemoryRequest
      * @param headers map
@@ -3222,10 +3464,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a long-term memory by memory ID.</p>
+     * <p>Deletes a long-term memory based on the memory ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a long-term memory by memory ID.</p>
+     * <p>Deletes a long-term memory based on the memory ID.</p>
      * 
      * @param request DeleteMemoryRequest
      * @return DeleteMemoryResponse
@@ -3238,10 +3480,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Asynchronously deletes a specified long-term memory store (MemoryStore) and all its long-term memories.</p>
+     * <p>Deletes a specified memory rule. Subsequent new content is no longer extracted by using this rule. Existing memories are retained. Repeatedly deleting the same rule returns a success response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronously deletes a MemoryStore and all its long-term memories.</p>
+     * <p>Deletes a specified memory rule. Subsequent new content is no longer extracted by using this rule. Existing memories are retained. Repeatedly deleting the same rule returns a success response.</p>
+     * 
+     * @param request DeleteMemoryRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMemoryRuleResponse
+     */
+    public DeleteMemoryRuleResponse deleteMemoryRuleWithOptions(String workspaceId, String memoryStoreName, String ruleId, DeleteMemoryRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMemoryRule"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memory-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMemoryRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a specified memory rule. Subsequent new content is no longer extracted by using this rule. Existing memories are retained. Repeatedly deleting the same rule returns a success response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified memory rule. Subsequent new content is no longer extracted by using this rule. Existing memories are retained. Repeatedly deleting the same rule returns a success response.</p>
+     * 
+     * @param request DeleteMemoryRuleRequest
+     * @return DeleteMemoryRuleResponse
+     */
+    public DeleteMemoryRuleResponse deleteMemoryRule(String workspaceId, String memoryStoreName, String ruleId, DeleteMemoryRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMemoryRuleWithOptions(workspaceId, memoryStoreName, ruleId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and session ID again, a new session is created. You cannot query the historical content of the deleted session. Extracted memories are retained after the session is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and session ID again, a new session is created. You cannot query the historical content of the deleted session. Extracted memories are retained after the session is deleted.</p>
+     * 
+     * @param request DeleteMemorySessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMemorySessionResponse
+     */
+    public DeleteMemorySessionResponse deleteMemorySessionWithOptions(String workspaceId, String memoryStoreName, String sessionId, DeleteMemorySessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.teamId)) {
+            query.put("teamId", request.teamId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMemorySession"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memory-sessions/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMemorySessionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and session ID again, a new session is created. You cannot query the historical content of the deleted session. Extracted memories are retained after the session is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a session and its queryable event history within a specified association scope. If you write to the same association scope and session ID again, a new session is created. You cannot query the historical content of the deleted session. Extracted memories are retained after the session is deleted.</p>
+     * 
+     * @param request DeleteMemorySessionRequest
+     * @return DeleteMemorySessionResponse
+     */
+    public DeleteMemorySessionResponse deleteMemorySession(String workspaceId, String memoryStoreName, String sessionId, DeleteMemorySessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMemorySessionWithOptions(workspaceId, memoryStoreName, sessionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Asynchronously deletes a specified long-term memory store (MemoryStore) and all long-term memories within it.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Asynchronously deletes a MemoryStore and all long-term memory within it.</p>
      * 
      * @param request DeleteMemoryStoreRequest
      * @param headers map
@@ -3269,10 +3619,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Asynchronously deletes a specified long-term memory store (MemoryStore) and all its long-term memories.</p>
+     * <p>Asynchronously deletes a specified long-term memory store (MemoryStore) and all long-term memories within it.</p>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronously deletes a MemoryStore and all its long-term memories.</p>
+     * <p>Asynchronously deletes a MemoryStore and all long-term memory within it.</p>
      * 
      * @param request DeleteMemoryStoreRequest
      * @return DeleteMemoryStoreResponse
@@ -3391,7 +3741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes an access rule in a workspace and revokes the configuration of the rule. Repeated deletions still return a success response.</p>
+     * <p>Deletes an access rule in a workspace and revokes the configuration of the rule. Repeated deletion requests still return a success response.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a permission rule.</p>
@@ -3428,7 +3778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes an access rule in a workspace and revokes the configuration of the rule. Repeated deletions still return a success response.</p>
+     * <p>Deletes an access rule in a workspace and revokes the configuration of the rule. Repeated deletion requests still return a success response.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a permission rule.</p>
@@ -3445,10 +3795,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes a skill and its related version data from the specified workspace.
-     * The deletion operation is irreversible.</p>
+     * This operation is irreversible.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a skill and its related version data from the specified workspace. The deletion operation is irreversible.</p>
+     * <p>Deletes a skill and its related version data from the specified workspace. This operation is irreversible.</p>
      * 
      * @param request DeleteSkillRequest
      * @param headers map
@@ -3477,10 +3827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes a skill and its related version data from the specified workspace.
-     * The deletion operation is irreversible.</p>
+     * This operation is irreversible.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a skill and its related version data from the specified workspace. The deletion operation is irreversible.</p>
+     * <p>Deletes a skill and its related version data from the specified workspace. This operation is irreversible.</p>
      * 
      * @param request DeleteSkillRequest
      * @return DeleteSkillResponse
@@ -3494,7 +3844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes the draft of a skill that is being edited in normal version mode.
-     * In <code>HEAD</code> mode, a persistent draft is used, and the delete draft operation is not supported. To modify the content, continue editing the draft. To remove the entire skill, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteSkill">DeleteSkill</a>.</p>
+     * In <code>HEAD</code> mode, a persistent draft is used, and draft deletion is not supported. To modify the content, continue editing the draft. To remove the entire skill, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteSkill">DeleteSkill</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes the draft version of the specified skill that is currently being edited.</p>
@@ -3526,7 +3876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Deletes the draft of a skill that is being edited in normal version mode.
-     * In <code>HEAD</code> mode, a persistent draft is used, and the delete draft operation is not supported. To modify the content, continue editing the draft. To remove the entire skill, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteSkill">DeleteSkill</a>.</p>
+     * In <code>HEAD</code> mode, a persistent draft is used, and draft deletion is not supported. To modify the content, continue editing the draft. To remove the entire skill, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteSkill">DeleteSkill</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes the draft version of the specified skill that is currently being edited.</p>
@@ -3545,7 +3895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Deletes a team in a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a team in a specified workspace. Deleting a team does not delete the users and agents within it, but only removes the membership associations.</p>
+     * <p>Deletes a team in a specified workspace. Deleting a team does not delete the users and agents within it, but only dissociates the members.</p>
      * 
      * @param request DeleteTeamRequest
      * @param headers map
@@ -3582,7 +3932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Deletes a team in a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a team in a specified workspace. Deleting a team does not delete the users and agents within it, but only removes the membership associations.</p>
+     * <p>Deletes a team in a specified workspace. Deleting a team does not delete the users and agents within it, but only dissociates the members.</p>
      * 
      * @param request DeleteTeamRequest
      * @return DeleteTeamResponse
@@ -3648,7 +3998,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a workspace that is no longer in use and ends the management lifecycle of the workspace. The API operation processes repeated deletion requests for the same workspace in the <code>Deleting</code> or <code>Deleted</code> state based on idempotence.</p>
+     * <p>Deletes a workspace that is no longer in use and ends the management lifecycle of the workspace.
+     * If you repeatedly delete the same workspace that is in the <code>Deleting</code> or <code>Deleted</code> state, the API operation processes the request based on idempotence.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a workspace that is no longer in use and ends the management lifecycle of the workspace.</p>
@@ -3679,7 +4030,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a workspace that is no longer in use and ends the management lifecycle of the workspace. The API operation processes repeated deletion requests for the same workspace in the <code>Deleting</code> or <code>Deleted</code> state based on idempotence.</p>
+     * <p>Deletes a workspace that is no longer in use and ends the management lifecycle of the workspace.
+     * If you repeatedly delete the same workspace that is in the <code>Deleting</code> or <code>Deleted</code> state, the API operation processes the request based on idempotence.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a workspace that is no longer in use and ends the management lifecycle of the workspace.</p>
@@ -3698,7 +4050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Disables the QoderCLI connector in a workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables the QoderCLI connector in a specified workspace. The connector can be disabled only when no agent is using it. After being disabled, the connector and its service account key configuration are removed.</p>
+     * <p>Disables the QoderCLI connector in a specified workspace. The connector can be disabled only if no agents are using it. After the connector is disabled, the connector and its service account key configuration are removed.</p>
      * 
      * @param request DisableConnectorRequest
      * @param headers map
@@ -3729,7 +4081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Disables the QoderCLI connector in a workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables the QoderCLI connector in a specified workspace. The connector can be disabled only when no agent is using it. After being disabled, the connector and its service account key configuration are removed.</p>
+     * <p>Disables the QoderCLI connector in a specified workspace. The connector can be disabled only if no agents are using it. After the connector is disabled, the connector and its service account key configuration are removed.</p>
      * 
      * @param request DisableConnectorRequest
      * @return DisableConnectorResponse
@@ -3842,7 +4194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables the QoderCLI connector in a workspace. Before enabling, verify the credentials by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyConnector">VerifyConnector</a>.</p>
+     * <p>Enables the QoderCLI connector in a workspace. Before enabling the connector, verify the credentials by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyConnector">VerifyConnector</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables the QoderCLI connector in a specified workspace. The request must provide a site, an API key, and at least one service account key. The service verifies all account keys before saving the configuration.</p>
@@ -3885,7 +4237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables the QoderCLI connector in a workspace. Before enabling, verify the credentials by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyConnector">VerifyConnector</a>.</p>
+     * <p>Enables the QoderCLI connector in a workspace. Before enabling the connector, verify the credentials by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyConnector">VerifyConnector</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables the QoderCLI connector in a specified workspace. The request must provide a site, an API key, and at least one service account key. The service verifies all account keys before saving the configuration.</p>
@@ -3901,10 +4253,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses the <code>clientToken</code> of a create or update request to retrieve a custom image preparation task, which allows you to continue querying the processing progress after a request response is lost.</p>
+     * <p>Uses the <code>clientToken</code> from a create or update request to retrieve a custom image preparation task, which allows you to continue querying the processing progress if the request response is lost.</p>
      * <h3>Search scope</h3>
      * <p>Pass the <code>clientToken</code> used when submitting <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a> as a query parameter, and use the original workspace.
-     * The preparation task can be retrieved only if the submission result includes <code>imagePreparation</code>. If no corresponding preparation task exists, a resource not found error is returned.</p>
+     * The preparation task can be retrieved only if the acceptance result of that submission includes <code>imagePreparation</code>. If no corresponding preparation task exists, a resource not found error is returned.</p>
      * <h3>Query phases</h3>
      * <table>
      * <thead>
@@ -3931,7 +4283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td><code>SUCCEEDED</code></td>
-     * <td>The target version deployment succeeded.</td>
+     * <td>The target version is deployed successfully.</td>
      * </tr>
      * <tr>
      * <td><code>FAILED</code></td>
@@ -3942,13 +4294,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>The target version has been replaced by a subsequent configuration or canceled.</td>
      * </tr>
      * <tr>
-     * <td>After the task is found, you can use the <code>preparationId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgentImagePreparation">GetCustomAgentImagePreparation</a> to continuously query the progress.</td>
+     * <td>After the task is found, you can use the <code>preparationId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgentImagePreparation">GetCustomAgentImagePreparation</a> for continuous queries.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a custom image preparation task by using a submitted clientToken and queries the current progress.</p>
+     * <p>Retrieves a custom image preparation task by using a submitted client token and queries the current progress.</p>
      * 
      * @param request FindCustomAgentImagePreparationRequest
      * @param headers map
@@ -3982,10 +4334,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses the <code>clientToken</code> of a create or update request to retrieve a custom image preparation task, which allows you to continue querying the processing progress after a request response is lost.</p>
+     * <p>Uses the <code>clientToken</code> from a create or update request to retrieve a custom image preparation task, which allows you to continue querying the processing progress if the request response is lost.</p>
      * <h3>Search scope</h3>
      * <p>Pass the <code>clientToken</code> used when submitting <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a> as a query parameter, and use the original workspace.
-     * The preparation task can be retrieved only if the submission result includes <code>imagePreparation</code>. If no corresponding preparation task exists, a resource not found error is returned.</p>
+     * The preparation task can be retrieved only if the acceptance result of that submission includes <code>imagePreparation</code>. If no corresponding preparation task exists, a resource not found error is returned.</p>
      * <h3>Query phases</h3>
      * <table>
      * <thead>
@@ -4012,7 +4364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td><code>SUCCEEDED</code></td>
-     * <td>The target version deployment succeeded.</td>
+     * <td>The target version is deployed successfully.</td>
      * </tr>
      * <tr>
      * <td><code>FAILED</code></td>
@@ -4023,13 +4375,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>The target version has been replaced by a subsequent configuration or canceled.</td>
      * </tr>
      * <tr>
-     * <td>After the task is found, you can use the <code>preparationId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgentImagePreparation">GetCustomAgentImagePreparation</a> to continuously query the progress.</td>
+     * <td>After the task is found, you can use the <code>preparationId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgentImagePreparation">GetCustomAgentImagePreparation</a> for continuous queries.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a custom image preparation task by using a submitted clientToken and queries the current progress.</p>
+     * <p>Retrieves a custom image preparation task by using a submitted client token and queries the current progress.</p>
      * 
      * @param request FindCustomAgentImagePreparationRequest
      * @return FindCustomAgentImagePreparationResponse
@@ -4042,10 +4394,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Forcibly publishes a specified skill version by bypassing the standard review process.</p>
+     * <p>Forcibly publishes the specified skill version by bypassing the standard review process.</p>
      * 
      * <b>summary</b> : 
-     * <p>Forcibly publishes a specified skill version by bypassing the standard review process.</p>
+     * <p>Forcibly publishes the specified skill version by bypassing the standard review process.</p>
      * 
      * @param tmpReq ForcePublishSkillVersionRequest
      * @param headers map
@@ -4085,10 +4437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Forcibly publishes a specified skill version by bypassing the standard review process.</p>
+     * <p>Forcibly publishes the specified skill version by bypassing the standard review process.</p>
      * 
      * <b>summary</b> : 
-     * <p>Forcibly publishes a specified skill version by bypassing the standard review process.</p>
+     * <p>Forcibly publishes the specified skill version by bypassing the standard review process.</p>
      * 
      * @param request ForcePublishSkillVersionRequest
      * @return ForcePublishSkillVersionResponse
@@ -4153,10 +4505,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Retrieves the download URL for the currently saved code package of a custom code or image agent, which can be used to download, inspect, or reuse the fixed code package.</p>
      * <h3>Download scope</h3>
      * <p>Locates the fixed code package referenced by the currently saved configuration by using <code>workspaceId</code> and <code>agentId</code>. This applies to code packages uploaded locally or imported from OSS. Arbitrary bucket names, object keys, or historical version parameters are not accepted.
-     * The current configuration must be deployed as a code package and the fixed package must be available. You do not need to wait for the running instance to be ready. An error is returned if the object has been changed, is missing, or is unreadable.</p>
+     * The current configuration must be deployed as a code package and the fixed package must be available. You do not need to wait for the running instance to be ready. An error is returned if the object has changed, is missing, or is unreadable.</p>
      * <h3>Use the response</h3>
-     * <p>Use <code>downloadUrl</code> to download the file. The <code>fileName</code>, <code>fileSize</code>, <code>format</code>, <code>etag</code>, and <code>crc64</code> fields describe the corresponding fixed package. The unit of <code>fileSize</code> is bytes. The <code>resourceVersionId</code> field identifies the saved configuration version corresponding to this download.
-     * The URL is valid for up to 10 minutes and does not exceed the validity period of the underlying credentials, subject to <code>expiresAt</code>. Retrieve the URL again after it expires.</p>
+     * <p>Use <code>downloadUrl</code> to download the file. The <code>fileName</code>, <code>fileSize</code>, <code>format</code>, <code>etag</code>, and <code>crc64</code> fields describe the corresponding fixed package. The <code>fileSize</code> is measured in bytes. The <code>resourceVersionId</code> identifies the saved configuration version corresponding to this download.
+     * The URL is valid for up to 10 minutes and does not exceed the validity period of the underlying credentials, subject to <code>expiresAt</code>. Retrieve a new URL after it expires.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the time-limited read-only download URL for the currently saved fixed code package of a custom code or image agent.</p>
@@ -4190,10 +4542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Retrieves the download URL for the currently saved code package of a custom code or image agent, which can be used to download, inspect, or reuse the fixed code package.</p>
      * <h3>Download scope</h3>
      * <p>Locates the fixed code package referenced by the currently saved configuration by using <code>workspaceId</code> and <code>agentId</code>. This applies to code packages uploaded locally or imported from OSS. Arbitrary bucket names, object keys, or historical version parameters are not accepted.
-     * The current configuration must be deployed as a code package and the fixed package must be available. You do not need to wait for the running instance to be ready. An error is returned if the object has been changed, is missing, or is unreadable.</p>
+     * The current configuration must be deployed as a code package and the fixed package must be available. You do not need to wait for the running instance to be ready. An error is returned if the object has changed, is missing, or is unreadable.</p>
      * <h3>Use the response</h3>
-     * <p>Use <code>downloadUrl</code> to download the file. The <code>fileName</code>, <code>fileSize</code>, <code>format</code>, <code>etag</code>, and <code>crc64</code> fields describe the corresponding fixed package. The unit of <code>fileSize</code> is bytes. The <code>resourceVersionId</code> field identifies the saved configuration version corresponding to this download.
-     * The URL is valid for up to 10 minutes and does not exceed the validity period of the underlying credentials, subject to <code>expiresAt</code>. Retrieve the URL again after it expires.</p>
+     * <p>Use <code>downloadUrl</code> to download the file. The <code>fileName</code>, <code>fileSize</code>, <code>format</code>, <code>etag</code>, and <code>crc64</code> fields describe the corresponding fixed package. The <code>fileSize</code> is measured in bytes. The <code>resourceVersionId</code> identifies the saved configuration version corresponding to this download.
+     * The URL is valid for up to 10 minutes and does not exceed the validity period of the underlying credentials, subject to <code>expiresAt</code>. Retrieve a new URL after it expires.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the time-limited read-only download URL for the currently saved fixed code package of a custom code or image agent.</p>
@@ -4209,17 +4561,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Generates an authorization link for the workspace resource role to read the code package source bucket, which is used to complete authorization before deploying an existing OSS code package.</p>
+     * <p>Generates an authorization URL for the workspace resource role to read the code package source bucket, which is used to complete authorization before deploying an existing OSS code package.</p>
      * <h3>Authorization steps</h3>
      * <p><strong>Step 1:</strong> Provide the <code>ossBucketName</code> to obtain the <code>authorizeUrl</code> for the current workspace resource role.
-     * <strong>Step 2:</strong> Open the returned link and confirm the authorization.
+     * <strong>Step 2:</strong> Open the returned URL and confirm the authorization.
      * <strong>Step 3:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyAgentCodePackageOssRamAuthorization">VerifyAgentCodePackageOssRamAuthorization</a> to query the policy binding status. To verify a specific code package object, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ValidateAgentCodePackageFromOss">ValidateAgentCodePackageFromOss</a>.</p>
      * <h3>Authorization scope</h3>
      * <p>The role is selected by the server and cannot be overridden by the caller. This authorization reuses the <code>OSSObjectRestoreCustom</code> template, which includes permissions such as reading, writing, and deleting objects, and is not a read-only authorization. Existing authorizations for the same role and bucket can be reused.
-     * Obtaining the link itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace.</p>
+     * Obtaining the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a RAM authorization link for the specified code package source bucket for the workspace resource role.</p>
+     * <p>Generates a RAM authorization URL for a specified code package source bucket for the workspace resource role.</p>
      * 
      * @param request GetAgentCodePackageOssRamAuthorizeUrlRequest
      * @param headers map
@@ -4253,17 +4605,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Generates an authorization link for the workspace resource role to read the code package source bucket, which is used to complete authorization before deploying an existing OSS code package.</p>
+     * <p>Generates an authorization URL for the workspace resource role to read the code package source bucket, which is used to complete authorization before deploying an existing OSS code package.</p>
      * <h3>Authorization steps</h3>
      * <p><strong>Step 1:</strong> Provide the <code>ossBucketName</code> to obtain the <code>authorizeUrl</code> for the current workspace resource role.
-     * <strong>Step 2:</strong> Open the returned link and confirm the authorization.
+     * <strong>Step 2:</strong> Open the returned URL and confirm the authorization.
      * <strong>Step 3:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyAgentCodePackageOssRamAuthorization">VerifyAgentCodePackageOssRamAuthorization</a> to query the policy binding status. To verify a specific code package object, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ValidateAgentCodePackageFromOss">ValidateAgentCodePackageFromOss</a>.</p>
      * <h3>Authorization scope</h3>
      * <p>The role is selected by the server and cannot be overridden by the caller. This authorization reuses the <code>OSSObjectRestoreCustom</code> template, which includes permissions such as reading, writing, and deleting objects, and is not a read-only authorization. Existing authorizations for the same role and bucket can be reused.
-     * Obtaining the link itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace.</p>
+     * Obtaining the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a RAM authorization link for the specified code package source bucket for the workspace resource role.</p>
+     * <p>Generates a RAM authorization URL for a specified code package source bucket for the workspace resource role.</p>
      * 
      * @param request GetAgentCodePackageOssRamAuthorizeUrlRequest
      * @return GetAgentCodePackageOssRamAuthorizeUrlResponse
@@ -4276,8 +4628,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves a time-limited direct upload URL and upload requirements for a local code package. After the upload is complete, use the returned <code>sourceUri</code> to submit the agent deployment.</p>
-     * <h3>Request requirements</h3>
+     * <p>Obtains a time-limited direct upload URL and upload requirements for a local code package. After the upload is complete, use the returned sourceUri to submit the agent deployment.</p>
+     * <h3>Request conditions</h3>
      * <table>
      * <thead>
      * <tr>
@@ -4286,26 +4638,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><code>fileName</code></td>
-     * <td>The name of the ZIP or TAR.GZ file without the folder. Maximum length: 255 characters.</td>
+     * <td>fileName</td>
+     * <td>The name of the ZIP or TAR.GZ file without folders. Maximum length: 255 characters.</td>
      * </tr>
      * <tr>
-     * <td><code>format</code></td>
-     * <td><code>zip</code> or <code>tar.gz</code>. Must match the file name extension.</td>
+     * <td>format</td>
+     * <td>zip or tar.gz. Must match the file name extension.</td>
      * </tr>
      * <tr>
-     * <td><code>fileSize</code></td>
+     * <td>fileSize</td>
      * <td>The size of the compressed package in bytes. Valid values: 1 to 500000000.</td>
      * </tr>
      * </tbody></table>
      * <h3>Upload and deployment</h3>
-     * <p><strong>Step 1:</strong> Use the <code>uploadMethod</code>, <code>uploadUrl</code>, and <code>headers</code> from the response to upload the file directly. This operation only generates the URL and does not upload the file content.
-     * <strong>Step 2:</strong> After the upload is complete, specify the <code>sourceUri</code> in the <code>artifact.code.sourceUri</code> parameter of the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a> operation. You must also provide the <code>languageRuntime</code>, <code>entrypoint</code>, and service port.
+     * <p><strong>Step 1:</strong> Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. This operation only generates the URL and does not upload the file content.
+     * <strong>Step 2:</strong> After the upload is complete, specify the sourceUri in the artifact.code.sourceUri parameter of <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>, and provide the languageRuntime, entrypoint, and service port.
      * <strong>Step 3:</strong> During creation or update, the actual object and its size are verified again. The configuration is saved after the object is transferred to a fixed replica.
-     * The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. The exact expiration time is subject to the <code>expiresAt</code> value. If the URL expires, obtain a new one and use the original link and request headers from the response.</p>
+     * The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. The exact expiration time is subject to expiresAt. If the URL expires, obtain a new one and use the original link and request headers from the response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a time-limited upload URL for a local code package, and returns the upload method, request headers, and the sourceUri for subsequent deployment.</p>
+     * <p>Generates a time-limited upload URL for a local code package and returns the upload method, request headers, and the sourceUri for subsequent deployment.</p>
      * 
      * @param tmpReq GetAgentCodePackageUploadUrlRequest
      * @param headers map
@@ -4345,8 +4697,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves a time-limited direct upload URL and upload requirements for a local code package. After the upload is complete, use the returned <code>sourceUri</code> to submit the agent deployment.</p>
-     * <h3>Request requirements</h3>
+     * <p>Obtains a time-limited direct upload URL and upload requirements for a local code package. After the upload is complete, use the returned sourceUri to submit the agent deployment.</p>
+     * <h3>Request conditions</h3>
      * <table>
      * <thead>
      * <tr>
@@ -4355,26 +4707,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><code>fileName</code></td>
-     * <td>The name of the ZIP or TAR.GZ file without the folder. Maximum length: 255 characters.</td>
+     * <td>fileName</td>
+     * <td>The name of the ZIP or TAR.GZ file without folders. Maximum length: 255 characters.</td>
      * </tr>
      * <tr>
-     * <td><code>format</code></td>
-     * <td><code>zip</code> or <code>tar.gz</code>. Must match the file name extension.</td>
+     * <td>format</td>
+     * <td>zip or tar.gz. Must match the file name extension.</td>
      * </tr>
      * <tr>
-     * <td><code>fileSize</code></td>
+     * <td>fileSize</td>
      * <td>The size of the compressed package in bytes. Valid values: 1 to 500000000.</td>
      * </tr>
      * </tbody></table>
      * <h3>Upload and deployment</h3>
-     * <p><strong>Step 1:</strong> Use the <code>uploadMethod</code>, <code>uploadUrl</code>, and <code>headers</code> from the response to upload the file directly. This operation only generates the URL and does not upload the file content.
-     * <strong>Step 2:</strong> After the upload is complete, specify the <code>sourceUri</code> in the <code>artifact.code.sourceUri</code> parameter of the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a> operation. You must also provide the <code>languageRuntime</code>, <code>entrypoint</code>, and service port.
+     * <p><strong>Step 1:</strong> Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. This operation only generates the URL and does not upload the file content.
+     * <strong>Step 2:</strong> After the upload is complete, specify the sourceUri in the artifact.code.sourceUri parameter of <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>, and provide the languageRuntime, entrypoint, and service port.
      * <strong>Step 3:</strong> During creation or update, the actual object and its size are verified again. The configuration is saved after the object is transferred to a fixed replica.
-     * The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. The exact expiration time is subject to the <code>expiresAt</code> value. If the URL expires, obtain a new one and use the original link and request headers from the response.</p>
+     * The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. The exact expiration time is subject to expiresAt. If the URL expires, obtain a new one and use the original link and request headers from the response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a time-limited upload URL for a local code package, and returns the upload method, request headers, and the sourceUri for subsequent deployment.</p>
+     * <p>Generates a time-limited upload URL for a local code package and returns the upload method, request headers, and the sourceUri for subsequent deployment.</p>
      * 
      * @param request GetAgentCodePackageUploadUrlRequest
      * @return GetAgentCodePackageUploadUrlResponse
@@ -4481,8 +4833,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the upload URL for an agent template (AgentSpec) ZIP package to import templates from local files.
-     * Files are transferred through Object Storage Service (OSS). First, upload the file by using the returned URL, and then call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadAgentSpecViaOss">UploadAgentSpecViaOss</a> API operation to complete the import.</p>
+     * <p>Retrieves the upload URL for an agent template (AgentSpec) ZIP package to import the template from a local file.
+     * Files are transferred through Object Storage Service (OSS). First, upload the file by using the returned URL, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadAgentSpecViaOss">UploadAgentSpecViaOss</a> to complete the import.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the OSS presigned upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, you can call the AgentSpec OSS upload API operation to complete the import.</p>
@@ -4519,8 +4871,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the upload URL for an agent template (AgentSpec) ZIP package to import templates from local files.
-     * Files are transferred through Object Storage Service (OSS). First, upload the file by using the returned URL, and then call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadAgentSpecViaOss">UploadAgentSpecViaOss</a> API operation to complete the import.</p>
+     * <p>Retrieves the upload URL for an agent template (AgentSpec) ZIP package to import the template from a local file.
+     * Files are transferred through Object Storage Service (OSS). First, upload the file by using the returned URL, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadAgentSpecViaOss">UploadAgentSpecViaOss</a> to complete the import.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the OSS presigned upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, you can call the AgentSpec OSS upload API operation to complete the import.</p>
@@ -4583,10 +4935,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the full content of a specified agent template version, including the manifest content, resource files, and metadata.</p>
+     * <p>Queries the complete content of a specified agent template version, including the manifest content, resource files, and metadata.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the full content of a specified AgentSpec version, including the manifest content, resource files, and metadata.</p>
+     * <p>Queries the complete content of a specified AgentSpec version, including the manifest content, resource files, and metadata.</p>
      * 
      * @param request GetAgentSpecVersionRequest
      * @param headers map
@@ -4614,10 +4966,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the full content of a specified agent template version, including the manifest content, resource files, and metadata.</p>
+     * <p>Queries the complete content of a specified agent template version, including the manifest content, resource files, and metadata.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the full content of a specified AgentSpec version, including the manifest content, resource files, and metadata.</p>
+     * <p>Queries the complete content of a specified AgentSpec version, including the manifest content, resource files, and metadata.</p>
      * 
      * @param request GetAgentSpecVersionRequest
      * @return GetAgentSpecVersionResponse
@@ -4677,17 +5029,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a specified credential and returns the list of agents bound to the credential.</p>
+     * <p>Queries the details of a specified credential and returns a list of agents bound to the credential.</p>
      * <h3>Response content</h3>
-     * <p>Queries the credential type, description, application scope, and binding information. Supports two types: <code>apiKey</code> and <code>mcpHeader</code>.</p>
+     * <p>Queries the credential type, description, application scope, and binding information. The <code>apiKey</code> and <code>mcpHeader</code> types are supported.</p>
      * <ul>
      * <li><code>apiKey</code>: The key value is returned in a masked format.</li>
-     * <li><code>mcpHeader</code>: Returns the configured header name without the header value. The <code>resourceType</code> of the applicable resource is <code>mcpServer</code>.
+     * <li><code>mcpHeader</code>: The configured header name is returned, but the header value is not returned. The <code>resourceType</code> of the applicable resource is <code>mcpServer</code>.
      * To modify the configuration, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCredential">UpdateCredential</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified credential and returns the list of agents bound to the credential. The credential content is returned in a masked format.</p>
+     * <p>Queries the details of a specified credential and returns a list of agents bound to the credential. The credential content is returned in a masked format.</p>
      * 
      * @param request GetCredentialRequest
      * @param headers map
@@ -4715,17 +5067,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a specified credential and returns the list of agents bound to the credential.</p>
+     * <p>Queries the details of a specified credential and returns a list of agents bound to the credential.</p>
      * <h3>Response content</h3>
-     * <p>Queries the credential type, description, application scope, and binding information. Supports two types: <code>apiKey</code> and <code>mcpHeader</code>.</p>
+     * <p>Queries the credential type, description, application scope, and binding information. The <code>apiKey</code> and <code>mcpHeader</code> types are supported.</p>
      * <ul>
      * <li><code>apiKey</code>: The key value is returned in a masked format.</li>
-     * <li><code>mcpHeader</code>: Returns the configured header name without the header value. The <code>resourceType</code> of the applicable resource is <code>mcpServer</code>.
+     * <li><code>mcpHeader</code>: The configured header name is returned, but the header value is not returned. The <code>resourceType</code> of the applicable resource is <code>mcpServer</code>.
      * To modify the configuration, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCredential">UpdateCredential</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified credential and returns the list of agents bound to the credential. The credential content is returned in a masked format.</p>
+     * <p>Queries the details of a specified credential and returns a list of agents bound to the credential. The credential content is returned in a masked format.</p>
      * 
      * @param request GetCredentialRequest
      * @return GetCredentialResponse
@@ -4740,7 +5092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the configuration, artifacts, and running status of a custom code or image agent to confirm the processing and effective results of creation or updates.</p>
      * <h3>Query configuration processing results</h3>
-     * <p>After creation or update, you can poll this operation. The returned configuration belongs to the latest submitted version and may not have taken effect yet.</p>
+     * <p>After you create or update an agent, you can poll this operation. The returned configuration belongs to the latest submitted version and may not have taken effect.</p>
      * <table>
      * <thead>
      * <tr>
@@ -4773,13 +5125,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>The snapshot of the number of running instances in each phase.</td>
      * </tr>
      * <tr>
-     * <td><code>pending</code>, <code>processing</code>, and <code>waiting_retry</code> indicate that processing is continuing. <code>succeeded</code> indicates that the configuration is processed successfully. If the value is <code>failed</code>, troubleshoot the issue based on <code>latestExecutionError</code>. Instance status and configuration processing status are queried separately.</td>
+     * <td>The <code>pending</code>, <code>processing</code>, and <code>waiting_retry</code> values indicate that processing is continuing. The <code>succeeded</code> value indicates that the configuration is processed successfully. If the value is <code>failed</code>, troubleshoot the issue based on <code>latestExecutionError</code>. Instance status and configuration processing status are queried separately.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Code packages and images</h3>
-     * <p>In code package mode, <code>artifact.code.sourceUri</code> is the saved fixed package address, and <code>codePackageInfo</code> provides the package information. To download the current fixed package, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageDownloadUrl">GetAgentCodePackageDownloadUrl</a>.
-     * In image mode, <code>customImage</code> is the most recently saved custom source, and <code>currentImage</code> is the image source of the effective version. The two may be different. You can use <code>imagePreparation.preparationId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgentImagePreparation">GetCustomAgentImagePreparation</a> to query the preparation and deployment phases of the current custom image. <code>imageCachePreparation.statusAtAcceptance</code> only indicates the cache status at the time of acceptance.
+     * <p>In code package mode, <code>artifact.code.sourceUri</code> is the saved fixed package URL, and <code>codePackageInfo</code> provides the package information. To download the current fixed package, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageDownloadUrl">GetAgentCodePackageDownloadUrl</a>.
+     * In image mode, <code>customImage</code> is the most recently saved custom source, and <code>currentImage</code> is the image source of the effective version. These values may differ. You can use <code>imagePreparation.preparationId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgentImagePreparation">GetCustomAgentImagePreparation</a> to query the preparation and deployment phases of the custom image. The <code>imageCachePreparation.statusAtAcceptance</code> parameter only indicates the cache status at the time of acceptance.
      * The response does not return the image repository password. If you query an agent that does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * <b>summary</b> : 
@@ -4813,7 +5165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the configuration, artifacts, and running status of a custom code or image agent to confirm the processing and effective results of creation or updates.</p>
      * <h3>Query configuration processing results</h3>
-     * <p>After creation or update, you can poll this operation. The returned configuration belongs to the latest submitted version and may not have taken effect yet.</p>
+     * <p>After you create or update an agent, you can poll this operation. The returned configuration belongs to the latest submitted version and may not have taken effect.</p>
      * <table>
      * <thead>
      * <tr>
@@ -4846,13 +5198,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>The snapshot of the number of running instances in each phase.</td>
      * </tr>
      * <tr>
-     * <td><code>pending</code>, <code>processing</code>, and <code>waiting_retry</code> indicate that processing is continuing. <code>succeeded</code> indicates that the configuration is processed successfully. If the value is <code>failed</code>, troubleshoot the issue based on <code>latestExecutionError</code>. Instance status and configuration processing status are queried separately.</td>
+     * <td>The <code>pending</code>, <code>processing</code>, and <code>waiting_retry</code> values indicate that processing is continuing. The <code>succeeded</code> value indicates that the configuration is processed successfully. If the value is <code>failed</code>, troubleshoot the issue based on <code>latestExecutionError</code>. Instance status and configuration processing status are queried separately.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Code packages and images</h3>
-     * <p>In code package mode, <code>artifact.code.sourceUri</code> is the saved fixed package address, and <code>codePackageInfo</code> provides the package information. To download the current fixed package, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageDownloadUrl">GetAgentCodePackageDownloadUrl</a>.
-     * In image mode, <code>customImage</code> is the most recently saved custom source, and <code>currentImage</code> is the image source of the effective version. The two may be different. You can use <code>imagePreparation.preparationId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgentImagePreparation">GetCustomAgentImagePreparation</a> to query the preparation and deployment phases of the current custom image. <code>imageCachePreparation.statusAtAcceptance</code> only indicates the cache status at the time of acceptance.
+     * <p>In code package mode, <code>artifact.code.sourceUri</code> is the saved fixed package URL, and <code>codePackageInfo</code> provides the package information. To download the current fixed package, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageDownloadUrl">GetAgentCodePackageDownloadUrl</a>.
+     * In image mode, <code>customImage</code> is the most recently saved custom source, and <code>currentImage</code> is the image source of the effective version. These values may differ. You can use <code>imagePreparation.preparationId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgentImagePreparation">GetCustomAgentImagePreparation</a> to query the preparation and deployment phases of the custom image. The <code>imageCachePreparation.statusAtAcceptance</code> parameter only indicates the cache status at the time of acceptance.
      * The response does not return the image repository password. If you query an agent that does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * <b>summary</b> : 
@@ -5012,7 +5364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration effectiveness.</p>
      * <h3>Configuration processing and runtime status</h3>
-     * <p><code>latestSpecVersion</code> and <code>latestVersionStatus</code> indicate the latest submitted configuration and its processing status. <code>status</code> represents the platform resource status, and <code>externalAgentStatus</code> represents the external runtime status. A successful configuration acceptance does not mean that the external process is connected.
+     * <p><code>latestSpecVersion</code> and <code>latestVersionStatus</code> indicate the latest submitted configuration and its processing status. <code>status</code> represents the platform resource status, and <code>externalAgentStatus</code> represents the external runtime status. A successful configuration acceptance does not indicate that the external process is connected.
      * If <code>modelSource</code> is <code>PLATFORM</code>, the returned model configuration is used. <code>RUNTIME</code> indicates that the model is managed by the external environment. <code>configuredSkills</code> indicates explicit skill configurations, and <code>skills</code> represents the aggregated skill information.</p>
      * <h3>External access</h3>
      * <p>After the configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to query available networks, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain access information. If the agent does not exist, has been deleted, or does not belong to the workspace, a resource not found error is returned.</p>
@@ -5048,7 +5400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration effectiveness.</p>
      * <h3>Configuration processing and runtime status</h3>
-     * <p><code>latestSpecVersion</code> and <code>latestVersionStatus</code> indicate the latest submitted configuration and its processing status. <code>status</code> represents the platform resource status, and <code>externalAgentStatus</code> represents the external runtime status. A successful configuration acceptance does not mean that the external process is connected.
+     * <p><code>latestSpecVersion</code> and <code>latestVersionStatus</code> indicate the latest submitted configuration and its processing status. <code>status</code> represents the platform resource status, and <code>externalAgentStatus</code> represents the external runtime status. A successful configuration acceptance does not indicate that the external process is connected.
      * If <code>modelSource</code> is <code>PLATFORM</code>, the returned model configuration is used. <code>RUNTIME</code> indicates that the model is managed by the external environment. <code>configuredSkills</code> indicates explicit skill configurations, and <code>skills</code> represents the aggregated skill information.</p>
      * <h3>External access</h3>
      * <p>After the configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to query available networks, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain access information. If the agent does not exist, has been deleted, or does not belong to the workspace, a resource not found error is returned.</p>
@@ -5071,7 +5423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Prerequisites</h3>
      * <p>The managed agent must be in the running state, and the latest desired configuration must be applied. If the configuration is still being created, updated, or not fully applied, query the status first by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>.</p>
      * <h3>Select an access network</h3>
-     * <p>In the response, the <code>networkType</code> in <code>networkOptions</code> is <code>INTRANET</code> or <code>INTERNET</code>, and <code>available</code> indicates whether the corresponding access endpoint is available. Select a network with <code>available=true</code> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the corresponding access information.</p>
+     * <p>In the response, the networkType in networkOptions is INTRANET or INTERNET, and available indicates whether the corresponding access endpoint is available. Select a network with available set to true and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the corresponding access information.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the available internal and public network access options for a managed agent.</p>
@@ -5106,7 +5458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Prerequisites</h3>
      * <p>The managed agent must be in the running state, and the latest desired configuration must be applied. If the configuration is still being created, updated, or not fully applied, query the status first by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>.</p>
      * <h3>Select an access network</h3>
-     * <p>In the response, the <code>networkType</code> in <code>networkOptions</code> is <code>INTRANET</code> or <code>INTERNET</code>, and <code>available</code> indicates whether the corresponding access endpoint is available. Select a network with <code>available=true</code> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the corresponding access information.</p>
+     * <p>In the response, the networkType in networkOptions is INTRANET or INTERNET, and available indicates whether the corresponding access endpoint is available. Select a network with available set to true and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the corresponding access information.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the available internal and public network access options for a managed agent.</p>
@@ -5122,8 +5474,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the enterprise identity providers bound to a workspace to view the access configuration, logon and user synchronization switches, and configuration processing progress.
-     * For a custom identity provider (<code>CustomSSO</code>), this API operation also reads the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</p>
+     * <p>Queries the enterprise identity providers bound to a workspace. You can use this operation to view the access configuration, logon and user synchronization switches, and configuration processing progress.
+     * For custom identity providers (<code>CustomSSO</code>), this API operation also retrieves the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</p>
      * <h3>How to interpret the query results</h3>
      * <table>
      * <thead>
@@ -5134,7 +5486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>identityProviderType</code></td>
-     * <td>Indicates whether DingTalk, Lark, or a custom identity provider is currently connected.</td>
+     * <td>Indicates whether DingTalk, Lark, or a custom identity provider is currently integrated.</td>
      * </tr>
      * <tr>
      * <td><code>loginEnabled</code></td>
@@ -5150,18 +5502,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td><code>status</code></td>
-     * <td>The processing progress to attach the identity provider or apply the logon configuration.</td>
+     * <td>The processing progress of the identity provider attachment or logon configuration.</td>
      * </tr>
      * <tr>
-     * <td>If <code>CustomSSO</code> returns <code>WAITING_CONFIGURATION</code>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and continue configuring enterprise single sign-on.</td>
+     * <td>When <code>CustomSSO</code> returns <code>WAITING_CONFIGURATION</code>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information for AgentCore and continue configuring enterprise single sign-on.</td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>After saving the logon configuration, you can query <code>status</code> to track the processing progress. <code>READY</code> indicates that the configuration processing is complete. To check whether logon is enabled, you also need to verify <code>loginEnabled</code> and <code>configuration</code>.</td>
+     * <td>After you save the logon configuration, you can query <code>status</code> to track the processing progress. <code>READY</code> indicates that the configuration processing is complete. To check whether logon is enabled, you must also verify <code>loginEnabled</code> and <code>configuration</code>.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
-     * <h3>Query user synchronization status</h3>
+     * <h3>Query the user synchronization status</h3>
      * <p>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system to the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</p>
      * 
      * <b>summary</b> : 
@@ -5193,8 +5545,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the enterprise identity providers bound to a workspace to view the access configuration, logon and user synchronization switches, and configuration processing progress.
-     * For a custom identity provider (<code>CustomSSO</code>), this API operation also reads the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</p>
+     * <p>Queries the enterprise identity providers bound to a workspace. You can use this operation to view the access configuration, logon and user synchronization switches, and configuration processing progress.
+     * For custom identity providers (<code>CustomSSO</code>), this API operation also retrieves the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</p>
      * <h3>How to interpret the query results</h3>
      * <table>
      * <thead>
@@ -5205,7 +5557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>identityProviderType</code></td>
-     * <td>Indicates whether DingTalk, Lark, or a custom identity provider is currently connected.</td>
+     * <td>Indicates whether DingTalk, Lark, or a custom identity provider is currently integrated.</td>
      * </tr>
      * <tr>
      * <td><code>loginEnabled</code></td>
@@ -5221,18 +5573,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td><code>status</code></td>
-     * <td>The processing progress to attach the identity provider or apply the logon configuration.</td>
+     * <td>The processing progress of the identity provider attachment or logon configuration.</td>
      * </tr>
      * <tr>
-     * <td>If <code>CustomSSO</code> returns <code>WAITING_CONFIGURATION</code>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and continue configuring enterprise single sign-on.</td>
+     * <td>When <code>CustomSSO</code> returns <code>WAITING_CONFIGURATION</code>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information for AgentCore and continue configuring enterprise single sign-on.</td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>After saving the logon configuration, you can query <code>status</code> to track the processing progress. <code>READY</code> indicates that the configuration processing is complete. To check whether logon is enabled, you also need to verify <code>loginEnabled</code> and <code>configuration</code>.</td>
+     * <td>After you save the logon configuration, you can query <code>status</code> to track the processing progress. <code>READY</code> indicates that the configuration processing is complete. To check whether logon is enabled, you must also verify <code>loginEnabled</code> and <code>configuration</code>.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
-     * <h3>Query user synchronization status</h3>
+     * <h3>Query the user synchronization status</h3>
      * <p>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system to the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</p>
      * 
      * <b>summary</b> : 
@@ -5261,7 +5613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>configuration</code></td>
-     * <td>The actual status and receiving URL of the SCIM receiving endpoint.</td>
+     * <td>The actual status and accept URL of the SCIM accept endpoint.</td>
      * </tr>
      * <tr>
      * <td><code>syncEnabled</code></td>
@@ -5269,11 +5621,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td><code>operationStatus</code></td>
-     * <td>The execution result of the most recent operation to enable or disable synchronization. It is an empty string <code>&quot;&quot;</code> if no historical tasks exist.</td>
+     * <td>The execute result of the most recent operation to enable or disable synchronization. An empty character string <code>&quot;&quot;</code> is returned if no historical nodes exist.</td>
      * </tr>
      * <tr>
      * <td><code>status</code></td>
-     * <td>The SCIM access state derived from the receiving endpoint configuration, credentials, and operation results.</td>
+     * <td>The SCIM accessed state derived from the accept endpoint configuration, credentials, and operation results.</td>
      * </tr>
      * </tbody></table>
      * <h3>Proceed based on the status</h3>
@@ -5308,12 +5660,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td><code>DISABLED</code></td>
      * <td>Synchronization is disabled. Existing configurations, credentials, and users are retained.</td>
-     * <td>To re-establish access, check and prepare the receiving end first, and then enable synchronization.</td>
+     * <td>To reconnect, check and prepare the receiving end first, and then enable synchronization.</td>
      * </tr>
      * <tr>
      * <td><code>UPDATE_FAILED</code></td>
-     * <td>The operation failed, or the configuration and credentials after enabling are no longer available.</td>
-     * <td>Check the operation results and access configuration in combination with <code>operationStatus</code>.</td>
+     * <td>The operation failed, or the enabled configuration and credentials are no longer available.</td>
+     * <td>Check the operation result and access configuration in combination with <code>operationStatus</code>.</td>
      * </tr>
      * <tr>
      * <td>This operation queries the SCIM status. The SAML enterprise account logon configuration is queried through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. <code>READY</code> reflects the result of the current enabling operation. The user assignment and provisioning status in the enterprise identity system must still be verified on the enterprise side.</td>
@@ -5323,7 +5675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Queries the actual SCIM receiving configuration, the expected AgentCore synchronization switch, and the status of the most recent independent SCIM task. SAML configuration is not required beforehand.</p>
+     * <p>Queries the actual SCIM receiving configuration, the expected AgentCore synchronization switch, and the status of the most recent independent SCIM task. SAML configuration is not required in advance.</p>
      * 
      * @param request GetIdentityProviderSCIMRequest
      * @param headers map
@@ -5363,7 +5715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>configuration</code></td>
-     * <td>The actual status and receiving URL of the SCIM receiving endpoint.</td>
+     * <td>The actual status and accept URL of the SCIM accept endpoint.</td>
      * </tr>
      * <tr>
      * <td><code>syncEnabled</code></td>
@@ -5371,11 +5723,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td><code>operationStatus</code></td>
-     * <td>The execution result of the most recent operation to enable or disable synchronization. It is an empty string <code>&quot;&quot;</code> if no historical tasks exist.</td>
+     * <td>The execute result of the most recent operation to enable or disable synchronization. An empty character string <code>&quot;&quot;</code> is returned if no historical nodes exist.</td>
      * </tr>
      * <tr>
      * <td><code>status</code></td>
-     * <td>The SCIM access state derived from the receiving endpoint configuration, credentials, and operation results.</td>
+     * <td>The SCIM accessed state derived from the accept endpoint configuration, credentials, and operation results.</td>
      * </tr>
      * </tbody></table>
      * <h3>Proceed based on the status</h3>
@@ -5410,12 +5762,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td><code>DISABLED</code></td>
      * <td>Synchronization is disabled. Existing configurations, credentials, and users are retained.</td>
-     * <td>To re-establish access, check and prepare the receiving end first, and then enable synchronization.</td>
+     * <td>To reconnect, check and prepare the receiving end first, and then enable synchronization.</td>
      * </tr>
      * <tr>
      * <td><code>UPDATE_FAILED</code></td>
-     * <td>The operation failed, or the configuration and credentials after enabling are no longer available.</td>
-     * <td>Check the operation results and access configuration in combination with <code>operationStatus</code>.</td>
+     * <td>The operation failed, or the enabled configuration and credentials are no longer available.</td>
+     * <td>Check the operation result and access configuration in combination with <code>operationStatus</code>.</td>
      * </tr>
      * <tr>
      * <td>This operation queries the SCIM status. The SAML enterprise account logon configuration is queried through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. <code>READY</code> reflects the result of the current enabling operation. The user assignment and provisioning status in the enterprise identity system must still be verified on the enterprise side.</td>
@@ -5425,7 +5777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Queries the actual SCIM receiving configuration, the expected AgentCore synchronization switch, and the status of the most recent independent SCIM task. SAML configuration is not required beforehand.</p>
+     * <p>Queries the actual SCIM receiving configuration, the expected AgentCore synchronization switch, and the status of the most recent independent SCIM task. SAML configuration is not required in advance.</p>
      * 
      * @param request GetIdentityProviderSCIMRequest
      * @return GetIdentityProviderSCIMResponse
@@ -5438,11 +5790,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the SAML service provider (SP) access information of AgentCore to configure single sign-on (SSO) in an enterprise identity provider (IdP).
+     * <p>Retrieves the SAML service provider (SP) access information of AgentCore for configuring single sign-on (SSO) in an enterprise identity provider (IdP).
      * An SP is a service provider that receives logon assertions. An IdP is an enterprise identity provider that verifies user identities and issues logon assertions. This operation returns the SP information on the AgentCore side.</p>
      * <h3>Before you begin</h3>
-     * <p>The workspace is bound to CustomSSO, and the shared user pool is initialized. The protocol parameter is required and must be set to SAML.
-     * You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool is available, you can obtain the SP information and then complete the SAML configuration.</p>
+     * <p>The workspace is bound to <code>CustomSSO</code>, and the shared user pool is initialized. The <code>protocol</code> parameter is required and must be set to <code>SAML</code>.
+     * You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool becomes available, you can retrieve the SP information and then complete the SAML configuration.</p>
      * <h3>Request example</h3>
      * <pre><code class="language-http">GET /workspaces/{workspaceId}/identity-providers/CustomSSO/service-provider?protocol=SAML
      * </code></pre>
@@ -5455,29 +5807,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>protocol</td>
-     * <td>The access protocol. This operation returns SAML.</td>
+     * <td><code>protocol</code></td>
+     * <td>The access protocol. This operation returns <code>SAML</code>.</td>
      * </tr>
      * <tr>
-     * <td>entityId</td>
-     * <td>The SP identifier of AgentCore. Configure it as the service provider Entity ID in the enterprise IdP.</td>
+     * <td><code>entityId</code></td>
+     * <td>The SP identifier of AgentCore. Configure this value as the service provider Entity ID in the enterprise IdP.</td>
      * </tr>
      * <tr>
-     * <td>acsUrl</td>
-     * <td>The URL where AgentCore receives SAML logon assertions. Configure it as the ACS URL in the enterprise IdP.</td>
+     * <td><code>acsUrl</code></td>
+     * <td>The URL where AgentCore receives SAML logon assertions. Configure this value as the ACS URL in the enterprise IdP.</td>
      * </tr>
      * <tr>
-     * <td>metadataXml</td>
-     * <td>The SP metadata XML. Import it to configure the SP in an enterprise IdP that supports metadata import.</td>
+     * <td><code>metadataXml</code></td>
+     * <td>The SP metadata XML. Use this file to import the SP configuration in an enterprise IdP that supports metadata import.</td>
      * </tr>
      * </tbody></table>
-     * <h3>Configuration flow</h3>
-     * <p><strong>Step 1:</strong> Call this operation to obtain the SP information, and configure the SP identifier and the URL to accept assertions of AgentCore in the enterprise IdP.
-     * <strong>Step 2:</strong> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>.
-     * <strong>Step 3:</strong> After the configuration is complete, enable single sign-on logon by setting loginEnabled as needed.</p>
+     * <h3>Configuration procedure</h3>
+     * <p><strong>Step 1:</strong> Call this operation to retrieve the SP information, and configure the SP identifier and assertion receiving URL of AgentCore in the enterprise IdP.
+     * <strong>Step 2:</strong> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> operation.
+     * <strong>Step 3:</strong> After the configuration is complete, enable single sign-on by setting <code>loginEnabled</code> as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the SAML service provider (SP) information of CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, for users to configure an external IdP.</p>
+     * <p>Queries the SAML service provider (SP) information for CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, to help users configure an external IdP.</p>
      * 
      * @param request GetIdentityProviderServiceProviderRequest
      * @param headers map
@@ -5511,11 +5863,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the SAML service provider (SP) access information of AgentCore to configure single sign-on (SSO) in an enterprise identity provider (IdP).
+     * <p>Retrieves the SAML service provider (SP) access information of AgentCore for configuring single sign-on (SSO) in an enterprise identity provider (IdP).
      * An SP is a service provider that receives logon assertions. An IdP is an enterprise identity provider that verifies user identities and issues logon assertions. This operation returns the SP information on the AgentCore side.</p>
      * <h3>Before you begin</h3>
-     * <p>The workspace is bound to CustomSSO, and the shared user pool is initialized. The protocol parameter is required and must be set to SAML.
-     * You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool is available, you can obtain the SP information and then complete the SAML configuration.</p>
+     * <p>The workspace is bound to <code>CustomSSO</code>, and the shared user pool is initialized. The <code>protocol</code> parameter is required and must be set to <code>SAML</code>.
+     * You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool becomes available, you can retrieve the SP information and then complete the SAML configuration.</p>
      * <h3>Request example</h3>
      * <pre><code class="language-http">GET /workspaces/{workspaceId}/identity-providers/CustomSSO/service-provider?protocol=SAML
      * </code></pre>
@@ -5528,29 +5880,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>protocol</td>
-     * <td>The access protocol. This operation returns SAML.</td>
+     * <td><code>protocol</code></td>
+     * <td>The access protocol. This operation returns <code>SAML</code>.</td>
      * </tr>
      * <tr>
-     * <td>entityId</td>
-     * <td>The SP identifier of AgentCore. Configure it as the service provider Entity ID in the enterprise IdP.</td>
+     * <td><code>entityId</code></td>
+     * <td>The SP identifier of AgentCore. Configure this value as the service provider Entity ID in the enterprise IdP.</td>
      * </tr>
      * <tr>
-     * <td>acsUrl</td>
-     * <td>The URL where AgentCore receives SAML logon assertions. Configure it as the ACS URL in the enterprise IdP.</td>
+     * <td><code>acsUrl</code></td>
+     * <td>The URL where AgentCore receives SAML logon assertions. Configure this value as the ACS URL in the enterprise IdP.</td>
      * </tr>
      * <tr>
-     * <td>metadataXml</td>
-     * <td>The SP metadata XML. Import it to configure the SP in an enterprise IdP that supports metadata import.</td>
+     * <td><code>metadataXml</code></td>
+     * <td>The SP metadata XML. Use this file to import the SP configuration in an enterprise IdP that supports metadata import.</td>
      * </tr>
      * </tbody></table>
-     * <h3>Configuration flow</h3>
-     * <p><strong>Step 1:</strong> Call this operation to obtain the SP information, and configure the SP identifier and the URL to accept assertions of AgentCore in the enterprise IdP.
-     * <strong>Step 2:</strong> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>.
-     * <strong>Step 3:</strong> After the configuration is complete, enable single sign-on logon by setting loginEnabled as needed.</p>
+     * <h3>Configuration procedure</h3>
+     * <p><strong>Step 1:</strong> Call this operation to retrieve the SP information, and configure the SP identifier and assertion receiving URL of AgentCore in the enterprise IdP.
+     * <strong>Step 2:</strong> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> operation.
+     * <strong>Step 3:</strong> After the configuration is complete, enable single sign-on by setting <code>loginEnabled</code> as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the SAML service provider (SP) information of CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, for users to configure an external IdP.</p>
+     * <p>Queries the SAML service provider (SP) information for CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, to help users configure an external IdP.</p>
      * 
      * @param request GetIdentityProviderServiceProviderRequest
      * @return GetIdentityProviderServiceProviderResponse
@@ -5563,7 +5915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the progress, number of processed users, and failure causes of a user synchronization task to track whether manual synchronization is complete.
+     * <p>Queries the progress, number of processed users, and failure causes of a user synchronization task to track whether a manual synchronization is complete.
      * Use the <code>taskId</code> returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> and keep the same workspace and identity provider.</p>
      * <h3>Determine synchronization results</h3>
      * <table>
@@ -5575,7 +5927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>PENDING</code>, <code>RUNNING</code></td>
-     * <td>The node is not yet complete. You can continue to query.</td>
+     * <td>The node is not yet complete. You can continue to query the status.</td>
      * </tr>
      * <tr>
      * <td><code>PAUSED</code></td>
@@ -5587,14 +5939,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td><code>FAILED</code></td>
-     * <td>The synchronization failed. Check <code>failureReason</code>.</td>
+     * <td>The synchronization failed. Check the <code>failureReason</code>.</td>
      * </tr>
      * <tr>
      * <td><code>CANCELED</code></td>
      * <td>The node is canceled.</td>
      * </tr>
      * <tr>
-     * <td><code>syncedUserCount</code> is the number of processed users, including updated existing users. It is not the number of newly added users and cannot be directly used as a completion percentage. <code>null</code> is returned when the count is not yet available.</td>
+     * <td><code>syncedUserCount</code> is the number of processed users, including updated existing users. It is not the number of newly added users and cannot be directly used as a completion percentage. If the count is not yet available, <code>null</code> is returned.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
@@ -5628,7 +5980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the progress, number of processed users, and failure causes of a user synchronization task to track whether manual synchronization is complete.
+     * <p>Queries the progress, number of processed users, and failure causes of a user synchronization task to track whether a manual synchronization is complete.
      * Use the <code>taskId</code> returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> and keep the same workspace and identity provider.</p>
      * <h3>Determine synchronization results</h3>
      * <table>
@@ -5640,7 +5992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>PENDING</code>, <code>RUNNING</code></td>
-     * <td>The node is not yet complete. You can continue to query.</td>
+     * <td>The node is not yet complete. You can continue to query the status.</td>
      * </tr>
      * <tr>
      * <td><code>PAUSED</code></td>
@@ -5652,14 +6004,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td><code>FAILED</code></td>
-     * <td>The synchronization failed. Check <code>failureReason</code>.</td>
+     * <td>The synchronization failed. Check the <code>failureReason</code>.</td>
      * </tr>
      * <tr>
      * <td><code>CANCELED</code></td>
      * <td>The node is canceled.</td>
      * </tr>
      * <tr>
-     * <td><code>syncedUserCount</code> is the number of processed users, including updated existing users. It is not the number of newly added users and cannot be directly used as a completion percentage. <code>null</code> is returned when the count is not yet available.</td>
+     * <td><code>syncedUserCount</code> is the number of processed users, including updated existing users. It is not the number of newly added users and cannot be directly used as a completion percentage. If the count is not yet available, <code>null</code> is returned.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
@@ -5679,7 +6031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Queries the saved user synchronization scope, checks whether the selected departments are valid, and views the estimated number of departments and users involved. You can use this operation to verify the scope before initiating a manual synchronization.</p>
-     * <h3>View synchronization scope</h3>
+     * <h3>View the synchronization scope</h3>
      * <table>
      * <thead>
      * <tr>
@@ -5696,12 +6048,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>The saved scope of specified departments. Use <code>selectedDepartments</code> to view the selected departments and their validity.</td>
      * </tr>
      * <tr>
-     * <td>This operation reads the saved configuration. After adjusting the department selection, save the changes by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> before querying the estimated results. To browse the complete department tree, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.</td>
+     * <td>This operation reads the saved configurations. After adjusting the department selection, save the changes by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> before querying the estimated results. To browse the complete department tree, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Use user count estimation</h3>
-     * <p>You can use <code>expandedDepartmentCount</code> and <code>estimatedUserCount</code> only when <code>estimateStatus=Ready</code> and the counts are not <code>null</code>. Counts that have not been obtained return <code>null</code> and must not be treated as 0.
+     * <p>You can use <code>expandedDepartmentCount</code> and <code>estimatedUserCount</code> only when <code>estimateStatus</code> is <code>Ready</code> and the counts are not <code>null</code>. Counts that have not been obtained return <code>null</code> and must not be treated as 0.
      * After confirming the scope, initiate the synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a>.</p>
      * 
      * <b>summary</b> : 
@@ -5734,7 +6086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Queries the saved user synchronization scope, checks whether the selected departments are valid, and views the estimated number of departments and users involved. You can use this operation to verify the scope before initiating a manual synchronization.</p>
-     * <h3>View synchronization scope</h3>
+     * <h3>View the synchronization scope</h3>
      * <table>
      * <thead>
      * <tr>
@@ -5751,12 +6103,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>The saved scope of specified departments. Use <code>selectedDepartments</code> to view the selected departments and their validity.</td>
      * </tr>
      * <tr>
-     * <td>This operation reads the saved configuration. After adjusting the department selection, save the changes by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> before querying the estimated results. To browse the complete department tree, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.</td>
+     * <td>This operation reads the saved configurations. After adjusting the department selection, save the changes by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> before querying the estimated results. To browse the complete department tree, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Use user count estimation</h3>
-     * <p>You can use <code>expandedDepartmentCount</code> and <code>estimatedUserCount</code> only when <code>estimateStatus=Ready</code> and the counts are not <code>null</code>. Counts that have not been obtained return <code>null</code> and must not be treated as 0.
+     * <p>You can use <code>expandedDepartmentCount</code> and <code>estimatedUserCount</code> only when <code>estimateStatus</code> is <code>Ready</code> and the counts are not <code>null</code>. Counts that have not been obtained return <code>null</code> and must not be treated as 0.
      * After confirming the scope, initiate the synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a>.</p>
      * 
      * <b>summary</b> : 
@@ -5779,12 +6131,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <thead>
      * <tr>
      * <th><code>status</code></th>
-     * <th>Meaning</th>
+     * <th>Description</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td><code>PENDING</code></td>
-     * <td>Preparing. Continue to query.</td>
+     * <td>Preparing. Continue querying.</td>
      * </tr>
      * <tr>
      * <td><code>READY</code></td>
@@ -5803,12 +6155,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Disabled.</td>
      * </tr>
      * <tr>
-     * <td>The <code>digest</code> is provided after the source resolution is completed. The unit of <code>cacheSizeBytes</code> is bytes, and it can be empty when the cache is not yet available.</td>
+     * <td>The <code>digest</code> is provided after the source resolution is completed. The unit of <code>cacheSizeBytes</code> is bytes, and it may be empty when the cache is not yet available.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Usage and deletion</h3>
-     * <p><code>agentCount</code> indicates the number of agents that have enabled the cache switch and reference this cache. <code>canDelete</code> and <code>deleteBlockReason</code> indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests will recheck the usage.
+     * <p><code>agentCount</code> indicates the number of agents that have the cache switch enabled and reference this cache. <code>canDelete</code> and <code>deleteBlockReason</code> indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests will recheck the usage.
      * The query scope of this operation is determined by <code>regionId</code>, <code>workspaceId</code>, and <code>imageId</code>.</p>
      * 
      * <b>summary</b> : 
@@ -5856,12 +6208,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <thead>
      * <tr>
      * <th><code>status</code></th>
-     * <th>Meaning</th>
+     * <th>Description</th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td><code>PENDING</code></td>
-     * <td>Preparing. Continue to query.</td>
+     * <td>Preparing. Continue querying.</td>
      * </tr>
      * <tr>
      * <td><code>READY</code></td>
@@ -5880,12 +6232,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Disabled.</td>
      * </tr>
      * <tr>
-     * <td>The <code>digest</code> is provided after the source resolution is completed. The unit of <code>cacheSizeBytes</code> is bytes, and it can be empty when the cache is not yet available.</td>
+     * <td>The <code>digest</code> is provided after the source resolution is completed. The unit of <code>cacheSizeBytes</code> is bytes, and it may be empty when the cache is not yet available.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Usage and deletion</h3>
-     * <p><code>agentCount</code> indicates the number of agents that have enabled the cache switch and reference this cache. <code>canDelete</code> and <code>deleteBlockReason</code> indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests will recheck the usage.
+     * <p><code>agentCount</code> indicates the number of agents that have the cache switch enabled and reference this cache. <code>canDelete</code> and <code>deleteBlockReason</code> indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests will recheck the usage.
      * The query scope of this operation is determined by <code>regionId</code>, <code>workspaceId</code>, and <code>imageId</code>.</p>
      * 
      * <b>summary</b> : 
@@ -5914,11 +6266,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>latestSpecVersion</code></td>
-     * <td>The latest submitted desired configuration version.</td>
+     * <td>The latest submitted expected configuration version.</td>
      * </tr>
      * <tr>
      * <td><code>latestVersionStatus</code></td>
-     * <td>The processing status of the desired version.</td>
+     * <td>The processing status of the expected version.</td>
      * </tr>
      * <tr>
      * <td><code>status</code></td>
@@ -5934,12 +6286,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h3>Harness and skill versions</h3>
-     * <p><code>harness.type</code> indicates the runtime framework determined at creation. For qodercli, <code>connectorServiceAccountKey</code> returns the ID of the bound account key record and does not return the original key.
-     * <code>configuredSkills</code> refers to explicitly configured skills. <code>skills</code> includes the aggregated results of template and explicit configurations. <code>resolvedVersion</code> is the current target version, and <code>appliedVersion</code> is the version currently in effect at runtime. These two may differ during an update. <code>fromTemplate=true</code> indicates that the skill comes from a template.
-     * If you query an agent that does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
+     * <p><code>harness.type</code> indicates the runtime framework determined at creation. For qodercli, <code>connectorServiceAccountKey</code> returns the ID of the bound account key record, not the original key.
+     * <code>configuredSkills</code> are explicitly configured skills. <code>skills</code> contains the aggregated results of templates and explicit configurations. <code>resolvedVersion</code> is the current target version, and <code>appliedVersion</code> is the version that has taken effect at runtime. These two may differ during an update. <code>fromTemplate=true</code> indicates that the skill comes from a template.
+     * If the queried agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the latest configuration, Harness and skill versions, configuration processing status, and running instance statistics of a managed Harness agent.</p>
+     * <p>Queries the latest configuration, Harness, skill versions, configuration processing status, and running instance statistics of a managed Harness agent.</p>
      * 
      * @param request GetManagedAgentRequest
      * @param headers map
@@ -5979,11 +6331,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>latestSpecVersion</code></td>
-     * <td>The latest submitted desired configuration version.</td>
+     * <td>The latest submitted expected configuration version.</td>
      * </tr>
      * <tr>
      * <td><code>latestVersionStatus</code></td>
-     * <td>The processing status of the desired version.</td>
+     * <td>The processing status of the expected version.</td>
      * </tr>
      * <tr>
      * <td><code>status</code></td>
@@ -5999,12 +6351,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h3>Harness and skill versions</h3>
-     * <p><code>harness.type</code> indicates the runtime framework determined at creation. For qodercli, <code>connectorServiceAccountKey</code> returns the ID of the bound account key record and does not return the original key.
-     * <code>configuredSkills</code> refers to explicitly configured skills. <code>skills</code> includes the aggregated results of template and explicit configurations. <code>resolvedVersion</code> is the current target version, and <code>appliedVersion</code> is the version currently in effect at runtime. These two may differ during an update. <code>fromTemplate=true</code> indicates that the skill comes from a template.
-     * If you query an agent that does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
+     * <p><code>harness.type</code> indicates the runtime framework determined at creation. For qodercli, <code>connectorServiceAccountKey</code> returns the ID of the bound account key record, not the original key.
+     * <code>configuredSkills</code> are explicitly configured skills. <code>skills</code> contains the aggregated results of templates and explicit configurations. <code>resolvedVersion</code> is the current target version, and <code>appliedVersion</code> is the version that has taken effect at runtime. These two may differ during an update. <code>fromTemplate=true</code> indicates that the skill comes from a template.
+     * If the queried agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the latest configuration, Harness and skill versions, configuration processing status, and running instance statistics of a managed Harness agent.</p>
+     * <p>Queries the latest configuration, Harness, skill versions, configuration processing status, and running instance statistics of a managed Harness agent.</p>
      * 
      * @param request GetManagedAgentRequest
      * @return GetManagedAgentResponse
@@ -6066,15 +6418,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Retrieves a temporary upload URL for a local MCP code package to create or update an MCP service of the code deployment type.</p>
      * <h3>Upload and deployment steps</h3>
-     * <p><strong>Step 1:</strong> Prepare a ZIP code package, enter the file name in <code>fileName</code>, and call this operation to obtain the upload information.
+     * <p><strong>Step 1:</strong> Prepare a ZIP code package, specify the file name in <code>fileName</code>, and call this operation to obtain the upload information.
      * <strong>Step 2:</strong> Use the returned <code>uploadMethod</code>, <code>uploadUrl</code>, and <code>headers</code> to upload the file content. The package size cannot exceed <code>maxSize</code>. The current limit is 50 MiB (52,428,800 bytes).
      * <strong>Step 3:</strong> After the upload is complete, submit the <code>codePackageToken</code> to the code deployment configuration in <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateMcp">CreateMcp</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateMcp">UpdateMcp</a>.
-     * <strong>Step 4:</strong> After submitting the deployment, query the service status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a>.</p>
+     * <strong>Step 4:</strong> After submitting the deployment, query the service status through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a>.</p>
      * <h3>Validity period</h3>
-     * <p>For the expiration time of the upload URL, see <code>expiresAt</code>. For the expiration time of the temporary code package, see <code>artifactExpiresAt</code>. Complete the upload and deployment within the corresponding periods. If the upload URL expires, retrieve it again.</p>
+     * <p>For the expiration time of the upload URL, see <code>expiresAt</code>. For the expiration time of the temporary code package, see <code>artifactExpiresAt</code>. Complete the upload and deployment within the corresponding time limits. If the upload URL expires, obtain it again.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns a time-limited presigned upload URL and a temporary code package token. After the upload is complete, the token can be used to create or update a code deployment.</p>
+     * <p>Returns a time-limited presigned upload URL and a temporary code package token. After the upload is complete, the token can be directly used to create or update a code deployment.</p>
      * 
      * @param tmpReq GetMcpCodePackageUploadUrlRequest
      * @param headers map
@@ -6116,15 +6468,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Retrieves a temporary upload URL for a local MCP code package to create or update an MCP service of the code deployment type.</p>
      * <h3>Upload and deployment steps</h3>
-     * <p><strong>Step 1:</strong> Prepare a ZIP code package, enter the file name in <code>fileName</code>, and call this operation to obtain the upload information.
+     * <p><strong>Step 1:</strong> Prepare a ZIP code package, specify the file name in <code>fileName</code>, and call this operation to obtain the upload information.
      * <strong>Step 2:</strong> Use the returned <code>uploadMethod</code>, <code>uploadUrl</code>, and <code>headers</code> to upload the file content. The package size cannot exceed <code>maxSize</code>. The current limit is 50 MiB (52,428,800 bytes).
      * <strong>Step 3:</strong> After the upload is complete, submit the <code>codePackageToken</code> to the code deployment configuration in <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateMcp">CreateMcp</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateMcp">UpdateMcp</a>.
-     * <strong>Step 4:</strong> After submitting the deployment, query the service status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a>.</p>
+     * <strong>Step 4:</strong> After submitting the deployment, query the service status through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a>.</p>
      * <h3>Validity period</h3>
-     * <p>For the expiration time of the upload URL, see <code>expiresAt</code>. For the expiration time of the temporary code package, see <code>artifactExpiresAt</code>. Complete the upload and deployment within the corresponding periods. If the upload URL expires, retrieve it again.</p>
+     * <p>For the expiration time of the upload URL, see <code>expiresAt</code>. For the expiration time of the temporary code package, see <code>artifactExpiresAt</code>. Complete the upload and deployment within the corresponding time limits. If the upload URL expires, obtain it again.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns a time-limited presigned upload URL and a temporary code package token. After the upload is complete, the token can be used to create or update a code deployment.</p>
+     * <p>Returns a time-limited presigned upload URL and a temporary code package token. After the upload is complete, the token can be directly used to create or update a code deployment.</p>
      * 
      * @param request GetMcpCodePackageUploadUrlRequest
      * @return GetMcpCodePackageUploadUrlResponse
@@ -6186,10 +6538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a long-term memory by memory ID.</p>
+     * <p>Queries a long-term memory based on the memory ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a long-term memory by memory ID.</p>
+     * <p>Queries the content, associated scope, metadata, source, type, and validity status based on the memory ID.</p>
      * 
      * @param request GetMemoryRequest
      * @param headers map
@@ -6217,10 +6569,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a long-term memory by memory ID.</p>
+     * <p>Queries a long-term memory based on the memory ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a long-term memory by memory ID.</p>
+     * <p>Queries the content, associated scope, metadata, source, type, and validity status based on the memory ID.</p>
      * 
      * @param request GetMemoryRequest
      * @return GetMemoryResponse
@@ -6233,7 +6585,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the configuration and current status of a long-term memory store (MemoryStore) for viewing memory store information.</p>
+     * <p>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</p>
+     * 
+     * @param request GetMemoryRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMemoryRuleResponse
+     */
+    public GetMemoryRuleResponse getMemoryRuleWithOptions(String workspaceId, String memoryStoreName, String ruleId, GetMemoryRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMemoryRule"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memory-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMemoryRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration and task statistics of a specified memory rule, including the number of tasks and the latest execution status.</p>
+     * 
+     * @param request GetMemoryRuleRequest
+     * @return GetMemoryRuleResponse
+     */
+    public GetMemoryRuleResponse getMemoryRule(String workspaceId, String memoryStoreName, String ruleId, GetMemoryRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMemoryRuleWithOptions(workspaceId, memoryStoreName, ruleId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the configuration and current status of a long-term memory store (MemoryStore) to view memory store information.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the public information and current status of a MemoryStore in a specified workspace.</p>
@@ -6264,7 +6663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the configuration and current status of a long-term memory store (MemoryStore) for viewing memory store information.</p>
+     * <p>Queries the configuration and current status of a long-term memory store (MemoryStore) to view memory store information.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the public information and current status of a MemoryStore in a specified workspace.</p>
@@ -6280,10 +6679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the progress and results of a memory extraction task by using the <code>taskId</code> returned by the asynchronous <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> operation.</p>
+     * <p>Uses the <code>taskId</code> returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> during asynchronous writes to query the progress and results of a memory extraction task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the task ID returned by the asynchronous AddMemories operation.</p>
+     * <p>Queries the status, input, execute results, and error message of a memory extraction node. A successful node may not generate new memories. If a fault occurs, check the error field for the cause.</p>
      * 
      * @param request GetMemoryTaskRequest
      * @param headers map
@@ -6311,10 +6710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the progress and results of a memory extraction task by using the <code>taskId</code> returned by the asynchronous <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> operation.</p>
+     * <p>Uses the <code>taskId</code> returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> during asynchronous writes to query the progress and results of a memory extraction task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the task ID returned by the asynchronous AddMemories operation.</p>
+     * <p>Queries the status, input, execute results, and error message of a memory extraction node. A successful node may not generate new memories. If a fault occurs, check the error field for the cause.</p>
      * 
      * @param request GetMemoryTaskRequest
      * @return GetMemoryTaskResponse
@@ -6421,10 +6820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Always use the initial operationId returned by RebuildSandbox for queries. Magic aggregates and returns the rebuildOutcome result from Runtime Manager, so the frontend does not need to track Claim tasks. Only SUCCEEDED indicates overall completion. UNKNOWN, missing fields, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted. You can specify the endpoint runtime version by using serviceEndpointId. If omitted, the default latest runtime identity is used.</p>
+     * <p>Always use the initial operationId returned by RebuildSandbox for the query. Magic aggregates and returns the rebuildOutcome result from Runtime Manager, so the frontend does not need to track Claim tasks. Only SUCCEEDED indicates overall completion. UNKNOWN, missing fields, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted. You can specify the endpoint runtime version by using serviceEndpointId. If omitted, the default latest runtime identity is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the overall result of a specified sandbox rebuild task. Always use the initial operationId returned by RebuildSandbox without tracking the rebuild task and subsequent creation tasks separately. Only the SUCCEEDED status indicates completion. Do not treat UNKNOWN, missing status, or query exceptions as success, and do not automatically resubmit the rebuild.</p>
+     * <p>Queries the overall result of a specified sandbox rebuild task. Always use the initial operationId returned by RebuildSandbox, without tracking the rebuild task and subsequent creation tasks separately. Only a status of SUCCEEDED indicates completion. UNKNOWN, missing status, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted.</p>
      * 
      * @param request GetSandboxRebuildOperationRequest
      * @param headers map
@@ -6458,10 +6857,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Always use the initial operationId returned by RebuildSandbox for queries. Magic aggregates and returns the rebuildOutcome result from Runtime Manager, so the frontend does not need to track Claim tasks. Only SUCCEEDED indicates overall completion. UNKNOWN, missing fields, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted. You can specify the endpoint runtime version by using serviceEndpointId. If omitted, the default latest runtime identity is used.</p>
+     * <p>Always use the initial operationId returned by RebuildSandbox for the query. Magic aggregates and returns the rebuildOutcome result from Runtime Manager, so the frontend does not need to track Claim tasks. Only SUCCEEDED indicates overall completion. UNKNOWN, missing fields, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted. You can specify the endpoint runtime version by using serviceEndpointId. If omitted, the default latest runtime identity is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the overall result of a specified sandbox rebuild task. Always use the initial operationId returned by RebuildSandbox without tracking the rebuild task and subsequent creation tasks separately. Only the SUCCEEDED status indicates completion. Do not treat UNKNOWN, missing status, or query exceptions as success, and do not automatically resubmit the rebuild.</p>
+     * <p>Queries the overall result of a specified sandbox rebuild task. Always use the initial operationId returned by RebuildSandbox, without tracking the rebuild task and subsequent creation tasks separately. Only a status of SUCCEEDED indicates completion. UNKNOWN, missing status, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted.</p>
      * 
      * @param request GetSandboxRebuildOperationRequest
      * @return GetSandboxRebuildOperationResponse
@@ -6474,11 +6873,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the service endpoint of an agent or collaboration component to obtain stable access URLs, authentication configuration, and current status.
-     * A service endpoint associates access URLs with a specified agent version or workspace collaboration component. You can use the target route and URL list in the response to verify the access target.</p>
+     * <p>Queries the service endpoint of an agent or collaboration component to obtain a stable access address, authentication configuration, and current status.
+     * A service endpoint associates an access address with a specified agent version or workspace collaboration component. You can use the target route and address list in the response to verify the access target.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified service endpoint, including the target route, access URLs, authentication configuration, and current status.</p>
+     * <p>Queries the details of a specified service endpoint, including the target route, access address, authentication configuration, and current status.</p>
      * 
      * @param request GetServiceEndpointRequest
      * @param headers map
@@ -6506,11 +6905,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the service endpoint of an agent or collaboration component to obtain stable access URLs, authentication configuration, and current status.
-     * A service endpoint associates access URLs with a specified agent version or workspace collaboration component. You can use the target route and URL list in the response to verify the access target.</p>
+     * <p>Queries the service endpoint of an agent or collaboration component to obtain a stable access address, authentication configuration, and current status.
+     * A service endpoint associates an access address with a specified agent version or workspace collaboration component. You can use the target route and address list in the response to verify the access target.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified service endpoint, including the target route, access URLs, authentication configuration, and current status.</p>
+     * <p>Queries the details of a specified service endpoint, including the target route, access address, authentication configuration, and current status.</p>
      * 
      * @param request GetServiceEndpointRequest
      * @return GetServiceEndpointResponse
@@ -6523,11 +6922,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the active API key and invocation method of a service endpoint for external applications to access the endpoint.
-     * The endpoint must have <code>API_KEY</code> authentication enabled and access credentials ready. Securely store the returned API key.</p>
+     * <p>Retrieves the currently effective API key and invocation method for a service endpoint to allow external applications to access the endpoint.
+     * The endpoint must have API_KEY authentication enabled and access credentials ready. Keep the returned API key secure.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the active API key and its invocation method for a service endpoint in a specified workspace.</p>
+     * <p>Queries the currently effective API key and its invocation method for a service endpoint in a specified workspace.</p>
      * 
      * @param request GetServiceEndpointApiKeyRequest
      * @param headers map
@@ -6555,11 +6954,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the active API key and invocation method of a service endpoint for external applications to access the endpoint.
-     * The endpoint must have <code>API_KEY</code> authentication enabled and access credentials ready. Securely store the returned API key.</p>
+     * <p>Retrieves the currently effective API key and invocation method for a service endpoint to allow external applications to access the endpoint.
+     * The endpoint must have API_KEY authentication enabled and access credentials ready. Keep the returned API key secure.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the active API key and its invocation method for a service endpoint in a specified workspace.</p>
+     * <p>Queries the currently effective API key and its invocation method for a service endpoint in a specified workspace.</p>
      * 
      * @param request GetServiceEndpointApiKeyRequest
      * @return GetServiceEndpointApiKeyResponse
@@ -6620,10 +7019,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Retrieves the upload URL for a skill ZIP package to import a skill from a local file.
-     * Files are transferred through OSS. Upload the file by using the returned URL, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadSkillViaOss">UploadSkillViaOss</a> to complete the import. To check the package content and conflicts, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrecheckSkillUploadViaOss">PrecheckSkillUploadViaOss</a> first.</p>
+     * Files are transferred through Object Storage Service (OSS): first upload the file using the returned URL, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadSkillViaOss">UploadSkillViaOss</a> to complete the import. To check the package content and conflicts, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrecheckSkillUploadViaOss">PrecheckSkillUploadViaOss</a> first.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the Object Storage Service (OSS) presigned upload URL and object name required to import a skill ZIP package. After the upload is complete, you can call the skill OSS upload API operation to complete the import.</p>
+     * <p>Retrieves the OSS presigned upload URL and object name required to import a skill ZIP package. After the upload is complete, call the skill OSS upload API to complete the import.</p>
      * 
      * @param request GetSkillImportFileUrlRequest
      * @param headers map
@@ -6658,10 +7057,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Retrieves the upload URL for a skill ZIP package to import a skill from a local file.
-     * Files are transferred through OSS. Upload the file by using the returned URL, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadSkillViaOss">UploadSkillViaOss</a> to complete the import. To check the package content and conflicts, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrecheckSkillUploadViaOss">PrecheckSkillUploadViaOss</a> first.</p>
+     * Files are transferred through Object Storage Service (OSS): first upload the file using the returned URL, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadSkillViaOss">UploadSkillViaOss</a> to complete the import. To check the package content and conflicts, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrecheckSkillUploadViaOss">PrecheckSkillUploadViaOss</a> first.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the Object Storage Service (OSS) presigned upload URL and object name required to import a skill ZIP package. After the upload is complete, you can call the skill OSS upload API operation to complete the import.</p>
+     * <p>Retrieves the OSS presigned upload URL and object name required to import a skill ZIP package. After the upload is complete, call the skill OSS upload API to complete the import.</p>
      * 
      * @param request GetSkillImportFileUrlRequest
      * @return GetSkillImportFileUrlResponse
@@ -6721,10 +7120,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a specified team, including the complete attributes and team roles of each user and agent member in the team.</p>
+     * <p>Queries the details of a specified team. The response also returns the complete attributes and team roles of each user and agent member in the team.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified team, including the complete attributes and team roles of each user and agent member in the team.</p>
+     * <p>Queries the details of a specified team. The response also returns the complete attributes and team roles of each user and agent member in the team.</p>
      * 
      * @param request GetTeamRequest
      * @param headers map
@@ -6752,10 +7151,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a specified team, including the complete attributes and team roles of each user and agent member in the team.</p>
+     * <p>Queries the details of a specified team. The response also returns the complete attributes and team roles of each user and agent member in the team.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified team, including the complete attributes and team roles of each user and agent member in the team.</p>
+     * <p>Queries the details of a specified team. The response also returns the complete attributes and team roles of each user and agent member in the team.</p>
      * 
      * @param request GetTeamRequest
      * @return GetTeamResponse
@@ -6815,11 +7214,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the basic information, associated resources, and network configurations of a workspace for status viewing or configuration verification.
-     * The returned information includes the lifecycle status, associated observability workspace, AI registry namespace, and current network policies.</p>
+     * <p>Queries the basic information, associated resources, and network configurations of a workspace to view the status or verify configurations.
+     * The returned information includes the lifecycle status, associated observability workspace, AI Registry namespace, and current network policies.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS workspace, AI registry namespace, and current network policies.</p>
+     * <p>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS workspace, AI Registry namespace, and current network policies.</p>
      * 
      * @param request GetWorkspaceRequest
      * @param headers map
@@ -6847,11 +7246,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the basic information, associated resources, and network configurations of a workspace for status viewing or configuration verification.
-     * The returned information includes the lifecycle status, associated observability workspace, AI registry namespace, and current network policies.</p>
+     * <p>Queries the basic information, associated resources, and network configurations of a workspace to view the status or verify configurations.
+     * The returned information includes the lifecycle status, associated observability workspace, AI Registry namespace, and current network policies.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS workspace, AI registry namespace, and current network policies.</p>
+     * <p>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS workspace, AI Registry namespace, and current network policies.</p>
      * 
      * @param request GetWorkspaceRequest
      * @return GetWorkspaceResponse
@@ -6864,15 +7263,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Generates an authorization link for the workspace resource role to pull images from a specified ACR Enterprise Edition repository, allowing you to complete access authorization before image deployment.</p>
+     * <p>Generates an authorization link for a workspace resource role to pull images from a specified ACR Enterprise Edition repository. This link is used to complete access authorization before image deployment.</p>
      * <h3>Request parameters</h3>
-     * <p>The <code>workspaceId</code> parameter specifies the workspace. The <code>acrInstanceId</code>, <code>namespace</code>, and <code>repository</code> parameters are passed as query parameters. The <code>repository</code> parameter specifies the repository name without the namespace.</p>
+     * <p>workspaceId identifies the workspace. acrInstanceId, namespace, and repository are passed as query parameters. repository is the repository name without the namespace.</p>
      * <h3>Complete authorization</h3>
-     * <p>Open the <code>authorizeUrl</code> in the response and confirm the authorization. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyWorkspaceAcrRamAuthorization">VerifyWorkspaceAcrRamAuthorization</a> to check the binding status. The role is selected by the server. The <code>roleName</code> and <code>roleSource</code> parameters indicate the selected role and its source, but do not indicate that the authorization is complete.
+     * <p>Open the authorizeUrl in the response and confirm the authorization. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyWorkspaceAcrRamAuthorization">VerifyWorkspaceAcrRamAuthorization</a> to check the binding status. The role is selected by the server. roleName and roleSource indicate the selected role and its source, which does not mean that the authorization is complete.
      * This authorization is used for ACR image deployment of custom agents and reading image cache sources. Obtaining the link itself does not pull images or create caches.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a RAM authorization link for the workspace resource role to pull images from a specified ACR Enterprise Edition repository.</p>
+     * <p>Generates a RAM authorization link for a workspace resource role to pull images from a specified ACR Enterprise Edition repository.</p>
      * 
      * @param request GetWorkspaceAcrRamAuthorizeUrlRequest
      * @param headers map
@@ -6914,15 +7313,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Generates an authorization link for the workspace resource role to pull images from a specified ACR Enterprise Edition repository, allowing you to complete access authorization before image deployment.</p>
+     * <p>Generates an authorization link for a workspace resource role to pull images from a specified ACR Enterprise Edition repository. This link is used to complete access authorization before image deployment.</p>
      * <h3>Request parameters</h3>
-     * <p>The <code>workspaceId</code> parameter specifies the workspace. The <code>acrInstanceId</code>, <code>namespace</code>, and <code>repository</code> parameters are passed as query parameters. The <code>repository</code> parameter specifies the repository name without the namespace.</p>
+     * <p>workspaceId identifies the workspace. acrInstanceId, namespace, and repository are passed as query parameters. repository is the repository name without the namespace.</p>
      * <h3>Complete authorization</h3>
-     * <p>Open the <code>authorizeUrl</code> in the response and confirm the authorization. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyWorkspaceAcrRamAuthorization">VerifyWorkspaceAcrRamAuthorization</a> to check the binding status. The role is selected by the server. The <code>roleName</code> and <code>roleSource</code> parameters indicate the selected role and its source, but do not indicate that the authorization is complete.
+     * <p>Open the authorizeUrl in the response and confirm the authorization. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyWorkspaceAcrRamAuthorization">VerifyWorkspaceAcrRamAuthorization</a> to check the binding status. The role is selected by the server. roleName and roleSource indicate the selected role and its source, which does not mean that the authorization is complete.
      * This authorization is used for ACR image deployment of custom agents and reading image cache sources. Obtaining the link itself does not pull images or create caches.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a RAM authorization link for the workspace resource role to pull images from a specified ACR Enterprise Edition repository.</p>
+     * <p>Generates a RAM authorization link for a workspace resource role to pull images from a specified ACR Enterprise Edition repository.</p>
      * 
      * @param request GetWorkspaceAcrRamAuthorizeUrlRequest
      * @return GetWorkspaceAcrRamAuthorizeUrlResponse
@@ -6936,17 +7335,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Retrieves the AgenticFS mount authorization link to enable agents in the workspace to access a specified file space.
-     * <a href="https://www.alibabacloud.com/help/en/nas/product-overview/agenticfs-overview">AgenticFS</a> is a storage type of Apsara File Storage NAS designed for AI agents. It can be used to persistently store files used by agents. AgenticSpace is the file space within it, and an access point provides the mount entry.</p>
-     * <h3>Authorization and mounting steps</h3>
+     * <a href="https://www.alibabacloud.com/help/en/nas/product-overview/agenticfs-overview">AgenticFS</a> is a storage class of File Storage NAS designed for AI agents, which can be used to persistently store files used by agents. AgenticSpace is the file space within it, and an access point provides the mount entry.</p>
+     * <h3>Authorization and mount steps</h3>
      * <p><strong>Step 1:</strong> Prepare a file system, an AgenticSpace, and an access point in NAS, and obtain the file system ID, access point ID, and domain name.
      * <strong>Step 2:</strong> Submit <code>fileSystemId</code>, <code>accessPointId</code>, and <code>server</code> as query parameters. For <code>server</code>, enter the access point domain name returned by the NAS <code>ListAccessPoints</code> operation, without the protocol, port, or path.
      * <strong>Step 3:</strong> Open the returned <code>authorizeUrl</code> to complete the authorization for the workspace resource role.
      * <strong>Step 4:</strong> Check the authorization status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyWorkspaceAgenticFsMountRamAuthorization">VerifyWorkspaceAgenticFsMountRamAuthorization</a>.
-     * <strong>Step 5:</strong> When creating or updating a custom code or image agent, or a managed Harness agent, enter the access point domain name, the relative directory <code>path</code>, and the container mount path <code>mountPath</code> in <code>agenticFsMounts</code>.
+     * <strong>Step 5:</strong> When creating or updating a custom code/image agent or a managed Harness agent, enter the access point domain name, the relative directory <code>path</code>, and the container mount path <code>mountPath</code> in <code>agenticFsMounts</code>.
      * The access point must be located in the VPC associated with the workspace, and VPC access must be enabled for the agent. The mount directory must already exist. Use a non-empty relative directory within the access point for <code>path</code>, and use an absolute path within the container for <code>mountPath</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the RAM authorization page URL to grant the workspace resource role access to a specified AgenticFS access point before configuring NAS storage mounting for an agent.</p>
+     * <p>Retrieves the RAM page URL to authorize the workspace resource role to access a specified AgenticFS access point before configuring NAS storage mounting for an agent.</p>
      * 
      * @param request GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest
      * @param headers map
@@ -6989,17 +7388,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Retrieves the AgenticFS mount authorization link to enable agents in the workspace to access a specified file space.
-     * <a href="https://www.alibabacloud.com/help/en/nas/product-overview/agenticfs-overview">AgenticFS</a> is a storage type of Apsara File Storage NAS designed for AI agents. It can be used to persistently store files used by agents. AgenticSpace is the file space within it, and an access point provides the mount entry.</p>
-     * <h3>Authorization and mounting steps</h3>
+     * <a href="https://www.alibabacloud.com/help/en/nas/product-overview/agenticfs-overview">AgenticFS</a> is a storage class of File Storage NAS designed for AI agents, which can be used to persistently store files used by agents. AgenticSpace is the file space within it, and an access point provides the mount entry.</p>
+     * <h3>Authorization and mount steps</h3>
      * <p><strong>Step 1:</strong> Prepare a file system, an AgenticSpace, and an access point in NAS, and obtain the file system ID, access point ID, and domain name.
      * <strong>Step 2:</strong> Submit <code>fileSystemId</code>, <code>accessPointId</code>, and <code>server</code> as query parameters. For <code>server</code>, enter the access point domain name returned by the NAS <code>ListAccessPoints</code> operation, without the protocol, port, or path.
      * <strong>Step 3:</strong> Open the returned <code>authorizeUrl</code> to complete the authorization for the workspace resource role.
      * <strong>Step 4:</strong> Check the authorization status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyWorkspaceAgenticFsMountRamAuthorization">VerifyWorkspaceAgenticFsMountRamAuthorization</a>.
-     * <strong>Step 5:</strong> When creating or updating a custom code or image agent, or a managed Harness agent, enter the access point domain name, the relative directory <code>path</code>, and the container mount path <code>mountPath</code> in <code>agenticFsMounts</code>.
+     * <strong>Step 5:</strong> When creating or updating a custom code/image agent or a managed Harness agent, enter the access point domain name, the relative directory <code>path</code>, and the container mount path <code>mountPath</code> in <code>agenticFsMounts</code>.
      * The access point must be located in the VPC associated with the workspace, and VPC access must be enabled for the agent. The mount directory must already exist. Use a non-empty relative directory within the access point for <code>path</code>, and use an absolute path within the container for <code>mountPath</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the RAM authorization page URL to grant the workspace resource role access to a specified AgenticFS access point before configuring NAS storage mounting for an agent.</p>
+     * <p>Retrieves the RAM page URL to authorize the workspace resource role to access a specified AgenticFS access point before configuring NAS storage mounting for an agent.</p>
      * 
      * @param request GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest
      * @return GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse
@@ -7012,8 +7411,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status and configuration of the workspace collaboration component to check whether the component is activated and whether the configuration takes effect.
-     * Use <code>pluginName=collaboration</code> to specify the collaboration component. To activate the component, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/InstallWorkspacePlugin">InstallWorkspacePlugin</a>.</p>
+     * <p>Queries the status and configuration of the collaboration component in a workspace to check whether the component is activated and whether the configuration takes effect.
+     * To specify the collaboration component, set <code>pluginName</code> to <code>collaboration</code>. To activate the component, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/InstallWorkspacePlugin">InstallWorkspacePlugin</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the activation status and configuration of a specified component in a workspace. The collaboration value corresponds to the Collaboration component displayed in the console.</p>
@@ -7044,8 +7443,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status and configuration of the workspace collaboration component to check whether the component is activated and whether the configuration takes effect.
-     * Use <code>pluginName=collaboration</code> to specify the collaboration component. To activate the component, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/InstallWorkspacePlugin">InstallWorkspacePlugin</a>.</p>
+     * <p>Queries the status and configuration of the collaboration component in a workspace to check whether the component is activated and whether the configuration takes effect.
+     * To specify the collaboration component, set <code>pluginName</code> to <code>collaboration</code>. To activate the component, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/InstallWorkspacePlugin">InstallWorkspacePlugin</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the activation status and configuration of a specified component in a workspace. The collaboration value corresponds to the Collaboration component displayed in the console.</p>
@@ -7133,10 +7532,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Enables the collaboration component for a workspace and configures initial settings such as the network.
-     * Set pluginName=collaboration to specify the collaboration component. The enabling process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspacePlugin">GetWorkspacePlugin</a> to check the component status and processing result.</p>
+     * Use pluginName=collaboration to specify the collaboration component. The enabling process is executed asynchronously. After submission, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspacePlugin">GetWorkspacePlugin</a> to check the component status and processing result.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a component for a workspace. This operation corresponds to enabling the collaboration component in the console. After the component is enabled, you can query the component status and current configurations.</p>
+     * <p>Enables a component for a workspace, which corresponds to the operation of enabling the collaboration component in the console. After the component is enabled, you can query its status and current configurations.</p>
      * 
      * @param tmpReq InstallWorkspacePluginRequest
      * @param headers map
@@ -7183,10 +7582,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Enables the collaboration component for a workspace and configures initial settings such as the network.
-     * Set pluginName=collaboration to specify the collaboration component. The enabling process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspacePlugin">GetWorkspacePlugin</a> to check the component status and processing result.</p>
+     * Use pluginName=collaboration to specify the collaboration component. The enabling process is executed asynchronously. After submission, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspacePlugin">GetWorkspacePlugin</a> to check the component status and processing result.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a component for a workspace. This operation corresponds to enabling the collaboration component in the console. After the component is enabled, you can query the component status and current configurations.</p>
+     * <p>Enables a component for a workspace, which corresponds to the operation of enabling the collaboration component in the console. After the component is enabled, you can query its status and current configurations.</p>
      * 
      * @param request InstallWorkspacePluginRequest
      * @return InstallWorkspacePluginResponse
@@ -7199,15 +7598,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the available runtime environments for code package deployment of custom code or image agents, which is used to populate artifact.code.languageRuntime.</p>
+     * <p>Queries the available runtime environments for code package deployment of custom code or image agents, which is used to specify <code>artifact.code.languageRuntime</code>.</p>
      * <h3>Select a runtime environment</h3>
-     * <p>Copy the languageRuntime value from the response exactly as is into the artifact.code.languageRuntime parameter of <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>. The catalog is dynamically provided by the current platform version, and internal base image addresses are not returned.</p>
+     * <p>Pass the <code>languageRuntime</code> value from the response exactly as is to the <code>artifact.code.languageRuntime</code> parameter in <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>. The catalog is dynamically provided by the current platform version, and internal base image addresses are not returned.</p>
      * <h3>Pagination rules</h3>
-     * <p>If maxResults is omitted or set to 0, the default value is 10. If the value is greater than 100, it is processed as 100. The value cannot be negative. Omit nextToken for the first request. For subsequent requests, use the token returned in the previous response and keep the workspace unchanged. An empty token indicates that the query is complete. If the token becomes invalid due to changes in the runtime environment catalog, restart the query from the first page.
-     * Regular updates, restarts, and scale-outs of existing agents continue to use their saved runtime images. When you create an agent or switch the language runtime environment, the catalog currently returned by this operation prevails.</p>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 10. If the value is greater than 100, it is processed as 100. The value cannot be negative. Omit <code>nextToken</code> for the first request. For subsequent requests, use the token returned in the previous response and keep the workspace unchanged. An empty token indicates that the query is complete. If the token becomes invalid due to changes in the runtime environment catalog, restart the query from the first page.
+     * For regular updates, restarts, and scale-outs of existing agents, their saved runtime images are still used. When you create an agent or switch the language runtime environment, the catalog currently returned by this operation prevails.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the identity, name, and architecture of language runtime environments currently available for code package deployment by page.</p>
+     * <p>Queries the identity, name, and architecture of language runtime environments currently available for code package deployment.</p>
      * 
      * @param request ListAgentCodeRuntimesRequest
      * @param headers map
@@ -7245,15 +7644,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the available runtime environments for code package deployment of custom code or image agents, which is used to populate artifact.code.languageRuntime.</p>
+     * <p>Queries the available runtime environments for code package deployment of custom code or image agents, which is used to specify <code>artifact.code.languageRuntime</code>.</p>
      * <h3>Select a runtime environment</h3>
-     * <p>Copy the languageRuntime value from the response exactly as is into the artifact.code.languageRuntime parameter of <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>. The catalog is dynamically provided by the current platform version, and internal base image addresses are not returned.</p>
+     * <p>Pass the <code>languageRuntime</code> value from the response exactly as is to the <code>artifact.code.languageRuntime</code> parameter in <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>. The catalog is dynamically provided by the current platform version, and internal base image addresses are not returned.</p>
      * <h3>Pagination rules</h3>
-     * <p>If maxResults is omitted or set to 0, the default value is 10. If the value is greater than 100, it is processed as 100. The value cannot be negative. Omit nextToken for the first request. For subsequent requests, use the token returned in the previous response and keep the workspace unchanged. An empty token indicates that the query is complete. If the token becomes invalid due to changes in the runtime environment catalog, restart the query from the first page.
-     * Regular updates, restarts, and scale-outs of existing agents continue to use their saved runtime images. When you create an agent or switch the language runtime environment, the catalog currently returned by this operation prevails.</p>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 10. If the value is greater than 100, it is processed as 100. The value cannot be negative. Omit <code>nextToken</code> for the first request. For subsequent requests, use the token returned in the previous response and keep the workspace unchanged. An empty token indicates that the query is complete. If the token becomes invalid due to changes in the runtime environment catalog, restart the query from the first page.
+     * For regular updates, restarts, and scale-outs of existing agents, their saved runtime images are still used. When you create an agent or switch the language runtime environment, the catalog currently returned by this operation prevails.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the identity, name, and architecture of language runtime environments currently available for code package deployment by page.</p>
+     * <p>Queries the identity, name, and architecture of language runtime environments currently available for code package deployment.</p>
      * 
      * @param request ListAgentCodeRuntimesRequest
      * @return ListAgentCodeRuntimesResponse
@@ -7266,10 +7665,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the IM channels for a specified agent.</p>
+     * <p>Queries the IM channels of a specified agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IM channels for a specified agent.</p>
+     * <p>Queries the IM channels of a specified agent.</p>
      * 
      * @param request ListAgentIMChannelsRequest
      * @param headers map
@@ -7315,10 +7714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the IM channels for a specified agent.</p>
+     * <p>Queries the IM channels of a specified agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IM channels for a specified agent.</p>
+     * <p>Queries the IM channels of a specified agent.</p>
      * 
      * @param request ListAgentIMChannelsRequest
      * @return ListAgentIMChannelsResponse
@@ -7331,10 +7730,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query of Agent templates in a specified workspace, and supports name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * <p>Performs a paging query for agent templates in a specified workspace, and supports name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query of AgentSpecs in a specified workspace, and supports name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * <p>Performs a paging query for AgentSpecs in a specified workspace, and supports name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
      * 
      * @param request ListAgentSpecsRequest
      * @param headers map
@@ -7400,10 +7799,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query of Agent templates in a specified workspace, and supports name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * <p>Performs a paging query for agent templates in a specified workspace, and supports name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query of AgentSpecs in a specified workspace, and supports name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * <p>Performs a paging query for AgentSpecs in a specified workspace, and supports name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
      * 
      * @param request ListAgentSpecsRequest
      * @return ListAgentSpecsResponse
@@ -7419,7 +7818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the teams to which specified agents belong.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the teams to which specified agents belong. Specify the agent IDs to query by using agentIds. The response includes the membership information of each agent in its teams, such as the team ID, team name, and the role of the agent in the team.</p>
+     * <p>Queries the teams to which specified agents belong. Specify the agent IDs to query by using agentIds. The operation returns the membership information of each agent in its teams, including the team ID, team name, and the role of the agent in the team.</p>
      * 
      * @param tmpReq ListAgentTeamsRequest
      * @param headers map
@@ -7462,7 +7861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the teams to which specified agents belong.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the teams to which specified agents belong. Specify the agent IDs to query by using agentIds. The response includes the membership information of each agent in its teams, such as the team ID, team name, and the role of the agent in the team.</p>
+     * <p>Queries the teams to which specified agents belong. Specify the agent IDs to query by using agentIds. The operation returns the membership information of each agent in its teams, including the team ID, team name, and the role of the agent in the team.</p>
      * 
      * @param request ListAgentTeamsRequest
      * @return ListAgentTeamsResponse
@@ -7475,10 +7874,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for saved fixed versions of a specified managed or custom agent. The paging results are returned in descending order of creation time and do not include the latest version under system maintenance. List items do not return the configuration. To view the configuration, invoke GetAgentVersion.</p>
+     * <p>Queries the saved fixed versions of a specified managed or custom agent by using paging. The results are returned in descending order of creation time and do not include the system-maintained latest version. The list items do not include the configuration. To view the configuration, call GetAgentVersion.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of agent versions.</p>
+     * <p>Queries the list of agent versions.</p>
      * 
      * @param request ListAgentVersionsRequest
      * @param headers map
@@ -7516,10 +7915,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for saved fixed versions of a specified managed or custom agent. The paging results are returned in descending order of creation time and do not include the latest version under system maintenance. List items do not return the configuration. To view the configuration, invoke GetAgentVersion.</p>
+     * <p>Queries the saved fixed versions of a specified managed or custom agent by using paging. The results are returned in descending order of creation time and do not include the system-maintained latest version. The list items do not include the configuration. To view the configuration, call GetAgentVersion.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of agent versions.</p>
+     * <p>Queries the list of agent versions.</p>
      * 
      * @param request ListAgentVersionsRequest
      * @return ListAgentVersionsResponse
@@ -7595,10 +7994,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the connectors supported by the workspace to view their activation status, configurations, and the number of bound agents.</p>
+     * <p>Queries the connectors supported by a workspace to view their activation status, configurations, and the number of bound agents.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of connectors supported by a specified workspace, along with their status, the number of bound agents, and configurations. The current version returns the QoderCLI connector.</p>
+     * <p>Queries the list of connectors supported by a specified workspace, along with their status, number of bound agents, and configurations. The current version returns the QoderCLI connector.</p>
      * 
      * @param request ListConnectorsRequest
      * @param headers map
@@ -7636,10 +8035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the connectors supported by the workspace to view their activation status, configurations, and the number of bound agents.</p>
+     * <p>Queries the connectors supported by a workspace to view their activation status, configurations, and the number of bound agents.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of connectors supported by a specified workspace, along with their status, the number of bound agents, and configurations. The current version returns the QoderCLI connector.</p>
+     * <p>Queries the list of connectors supported by a specified workspace, along with their status, number of bound agents, and configurations. The current version returns the QoderCLI connector.</p>
      * 
      * @param request ListConnectorsRequest
      * @return ListConnectorsResponse
@@ -7652,13 +8051,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for credentials in a specified workspace.</p>
+     * <p>Queries credentials in a specified workspace with paging.</p>
      * <h3>Query and paging</h3>
-     * <p>Filters credentials by <code>apiKey</code> or <code>mcpHeader</code> type by using <code>credentialType</code>, and performs fuzzy filtering by name by using <code>nameLike</code>.
-     * Uses <code>maxResults</code> to specify the number of entries per page for paging, and uses <code>nextToken</code> in the response to retrieve the next page. The returned credential content is desensitized. To query the details of a single credential, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a>.</p>
+     * <p>Filter credentials by <code>apiKey</code> or <code>mcpHeader</code> type using <code>credentialType</code>, and perform fuzzy matching on names using <code>nameLike</code>.
+     * Use <code>maxResults</code> to specify the number of records per page, and use <code>nextToken</code> in the response to retrieve the next page. The returned credential content is masked. To query the details of a single credential, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query for credentials in a specified workspace. Filters credentials by type by using credentialType, performs fuzzy filtering by credential name by using nameLike, specifies the maximum number of records per page for paging by using maxResults, and retrieves the next page by using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
+     * <p>Queries credentials in a specified workspace with paging. Filters credentials by type using credentialType, performs fuzzy matching on credential names using nameLike, specifies the maximum number of records per page using maxResults, and retrieves the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
      * 
      * @param request ListCredentialsRequest
      * @param headers map
@@ -7708,13 +8107,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for credentials in a specified workspace.</p>
+     * <p>Queries credentials in a specified workspace with paging.</p>
      * <h3>Query and paging</h3>
-     * <p>Filters credentials by <code>apiKey</code> or <code>mcpHeader</code> type by using <code>credentialType</code>, and performs fuzzy filtering by name by using <code>nameLike</code>.
-     * Uses <code>maxResults</code> to specify the number of entries per page for paging, and uses <code>nextToken</code> in the response to retrieve the next page. The returned credential content is desensitized. To query the details of a single credential, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a>.</p>
+     * <p>Filter credentials by <code>apiKey</code> or <code>mcpHeader</code> type using <code>credentialType</code>, and perform fuzzy matching on names using <code>nameLike</code>.
+     * Use <code>maxResults</code> to specify the number of records per page, and use <code>nextToken</code> in the response to retrieve the next page. The returned credential content is masked. To query the details of a single credential, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query for credentials in a specified workspace. Filters credentials by type by using credentialType, performs fuzzy filtering by credential name by using nameLike, specifies the maximum number of records per page for paging by using maxResults, and retrieves the next page by using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
+     * <p>Queries credentials in a specified workspace with paging. Filters credentials by type using credentialType, performs fuzzy matching on credential names using nameLike, specifies the maximum number of records per page using maxResults, and retrieves the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
      * 
      * @param request ListCredentialsRequest
      * @return ListCredentialsResponse
@@ -7727,14 +8126,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query to retrieve the identity, deployment method, and status summary of custom code or image agents in a workspace, with paging support.</p>
-     * <h3>Paged query</h3>
-     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20 and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates the end of paging.</p>
+     * <p>Performs a paging query for the identifiers, deployment methods, and status summaries of custom code or image agents in a workspace.</p>
+     * <h3>Paging query</h3>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token from the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that paging is complete.</p>
      * <h3>Response content</h3>
-     * <p>This operation returns the summary for the current page. It does not return the complete deployment configurations or errors that occur when you execute the latest configurations. Use <code>items[].agentId</code> to invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a> to query code packages, image sources, results after you execute the version, and running instance statuses.</p>
+     * <p>This operation returns the summary for the current page and does not return the complete deployment configurations or execution errors of the latest configurations. To query code packages, image sources, version execution results, and running instance statuses, use <code>items[].agentId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the identity, deployment method, and status summary of custom code or image agents in a workspace, with paging support.</p>
+     * <p>Performs a paging query for the identifiers, deployment methods, and status summaries of custom code or image agents in a workspace.</p>
      * 
      * @param request ListCustomAgentsRequest
      * @param headers map
@@ -7772,14 +8171,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query to retrieve the identity, deployment method, and status summary of custom code or image agents in a workspace, with paging support.</p>
-     * <h3>Paged query</h3>
-     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20 and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates the end of paging.</p>
+     * <p>Performs a paging query for the identifiers, deployment methods, and status summaries of custom code or image agents in a workspace.</p>
+     * <h3>Paging query</h3>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token from the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that paging is complete.</p>
      * <h3>Response content</h3>
-     * <p>This operation returns the summary for the current page. It does not return the complete deployment configurations or errors that occur when you execute the latest configurations. Use <code>items[].agentId</code> to invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a> to query code packages, image sources, results after you execute the version, and running instance statuses.</p>
+     * <p>This operation returns the summary for the current page and does not return the complete deployment configurations or execution errors of the latest configurations. To query code packages, image sources, version execution results, and running instance statuses, use <code>items[].agentId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the identity, deployment method, and status summary of custom code or image agents in a workspace, with paging support.</p>
+     * <p>Performs a paging query for the identifiers, deployment methods, and status summaries of custom code or image agents in a workspace.</p>
      * 
      * @param request ListCustomAgentsRequest
      * @return ListCustomAgentsResponse
@@ -7792,14 +8191,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query to retrieve the identity, configuration versions, and status summary of managed agents in a workspace.</p>
-     * <h3>Paging query</h3>
-     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</p>
-     * <h3>Response content</h3>
-     * <p>This operation returns the summary of managed agents. To query the complete models, instructions, tools, skills, and accessed state, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>.</p>
+     * <p>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used during write operations. Write or delete operations during paging may affect the results of subsequent pages.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query to retrieve the identity, configuration versions, and status summary of managed agents in a workspace.</p>
+     * <p>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used during write operations. Write or delete operations during paging may affect the results of subsequent pages.</p>
+     * 
+     * @param request ListEventsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEventsResponse
+     */
+    public ListEventsResponse listEventsWithOptions(String workspaceId, String memoryStoreName, ListEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.teamId)) {
+            query.put("teamId", request.teamId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEvents"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/events"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used during write operations. Write or delete operations during paging may affect the results of subsequent pages.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query on the events of a specified session in chronological order from oldest to newest, including the parent session history referenced when a session branch is created. The sessionId parameter is required, and other scope dimensions must match those used during write operations. Write or delete operations during paging may affect the results of subsequent pages.</p>
+     * 
+     * @param request ListEventsRequest
+     * @return ListEventsResponse
+     */
+    public ListEventsResponse listEvents(String workspaceId, String memoryStoreName, ListEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listEventsWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paging query for the identity, configuration version, and status summary of managed agents in a workspace.</p>
+     * <h3>Paging query</h3>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that no more pages are available.</p>
+     * <h3>Response content</h3>
+     * <p>This operation returns the summary of managed agents. You can query the complete models, instructions, tools, skills, and accessed state by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paging query for the identity, configuration version, and status summary of managed agents in a workspace.</p>
      * 
      * @param request ListExternalAgentsRequest
      * @param headers map
@@ -7837,14 +8309,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query to retrieve the identity, configuration versions, and status summary of managed agents in a workspace.</p>
+     * <p>Performs a paging query for the identity, configuration version, and status summary of managed agents in a workspace.</p>
      * <h3>Paging query</h3>
-     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</p>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that no more pages are available.</p>
      * <h3>Response content</h3>
-     * <p>This operation returns the summary of managed agents. To query the complete models, instructions, tools, skills, and accessed state, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>.</p>
+     * <p>This operation returns the summary of managed agents. You can query the complete models, instructions, tools, skills, and accessed state by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query to retrieve the identity, configuration versions, and status summary of managed agents in a workspace.</p>
+     * <p>Performs a paging query for the identity, configuration version, and status summary of managed agents in a workspace.</p>
      * 
      * @param request ListExternalAgentsRequest
      * @return ListExternalAgentsResponse
@@ -7857,22 +8329,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of DingTalk or Lark departments by parent department and paging. This is used when selecting or adjusting the user synchronization scope.</p>
+     * <p>Performs a paged query on the list of DingTalk or Lark departments by parent department by using paging. This is used when selecting or adjusting the user synchronization scope.</p>
      * <h3>Before you begin</h3>
-     * <p>A DingTalk or Lark identity provider is bound to the workspace, and the user pool, application credentials, and authorization to read contacts are prepared.</p>
+     * <p>The workspace is bound to a DingTalk or Lark identity provider, and the user pool, application credentials, and address book read authorization are ready.</p>
      * <h3>Query methods</h3>
      * <ul>
-     * <li>Omit <code>parentDepartmentId</code> to query the root level. Pass a department ID to query its direct child departments.</li>
-     * <li><code>hasChildren</code> indicates whether a department can be expanded. After expansion, use the department ID to query the next level.</li>
-     * <li><code>nextToken</code> is used to continue reading the next page under the same parent department. An empty string indicates that there are no more pages.</li>
+     * <li>Omit parentDepartmentId to query the root level. Pass a department ID to query its direct child departments.</li>
+     * <li>hasChildren indicates whether a department can be expanded. After expanding, use the department ID to query the next level.</li>
+     * <li>nextToken is used to continue reading the next page under the same parent department. An empty string indicates that there are no more pages.</li>
      * </ul>
      * <h3>Total count and pagination</h3>
-     * <p>This operation does not calculate the total number of departments. Currently, <code>totalCount</code> returns JSON <code>null</code>, which does not mean the number of departments is 0. Whether to continue pagination depends on <code>nextToken</code>.</p>
-     * <h3>Request examples</h3>
+     * <p>This operation does not calculate the total number of departments. Currently, totalCount returns JSON null, which does not mean the number of departments is 0. Whether to continue pagination depends on nextToken.</p>
+     * <h3>Request example</h3>
      * <pre><code class="language-http">GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/departments?maxResults=50
      * </code></pre>
-     * <h3>Response examples</h3>
-     * <p>The following shows the response structure for an empty directory page. <code>totalCount</code> retains the <code>null</code> value actually returned by the operation.</p>
+     * <h3>Response example</h3>
+     * <p>The following shows the response structure for an empty directory page. totalCount retains the null value actually returned by the operation.</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
      *   &quot;message&quot;: &quot;success&quot;,
@@ -7889,7 +8361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After selecting the departments to synchronize, save the synchronization scope by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to initiate synchronization as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the departments of an identity provider by paging.</p>
+     * <p>Performs a paged query on the departments of an identity provider by using paging.</p>
      * 
      * @param request ListIdentityProviderDepartmentsRequest
      * @param headers map
@@ -7931,22 +8403,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of DingTalk or Lark departments by parent department and paging. This is used when selecting or adjusting the user synchronization scope.</p>
+     * <p>Performs a paged query on the list of DingTalk or Lark departments by parent department by using paging. This is used when selecting or adjusting the user synchronization scope.</p>
      * <h3>Before you begin</h3>
-     * <p>A DingTalk or Lark identity provider is bound to the workspace, and the user pool, application credentials, and authorization to read contacts are prepared.</p>
+     * <p>The workspace is bound to a DingTalk or Lark identity provider, and the user pool, application credentials, and address book read authorization are ready.</p>
      * <h3>Query methods</h3>
      * <ul>
-     * <li>Omit <code>parentDepartmentId</code> to query the root level. Pass a department ID to query its direct child departments.</li>
-     * <li><code>hasChildren</code> indicates whether a department can be expanded. After expansion, use the department ID to query the next level.</li>
-     * <li><code>nextToken</code> is used to continue reading the next page under the same parent department. An empty string indicates that there are no more pages.</li>
+     * <li>Omit parentDepartmentId to query the root level. Pass a department ID to query its direct child departments.</li>
+     * <li>hasChildren indicates whether a department can be expanded. After expanding, use the department ID to query the next level.</li>
+     * <li>nextToken is used to continue reading the next page under the same parent department. An empty string indicates that there are no more pages.</li>
      * </ul>
      * <h3>Total count and pagination</h3>
-     * <p>This operation does not calculate the total number of departments. Currently, <code>totalCount</code> returns JSON <code>null</code>, which does not mean the number of departments is 0. Whether to continue pagination depends on <code>nextToken</code>.</p>
-     * <h3>Request examples</h3>
+     * <p>This operation does not calculate the total number of departments. Currently, totalCount returns JSON null, which does not mean the number of departments is 0. Whether to continue pagination depends on nextToken.</p>
+     * <h3>Request example</h3>
      * <pre><code class="language-http">GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/departments?maxResults=50
      * </code></pre>
-     * <h3>Response examples</h3>
-     * <p>The following shows the response structure for an empty directory page. <code>totalCount</code> retains the <code>null</code> value actually returned by the operation.</p>
+     * <h3>Response example</h3>
+     * <p>The following shows the response structure for an empty directory page. totalCount retains the null value actually returned by the operation.</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
      *   &quot;message&quot;: &quot;success&quot;,
@@ -7963,7 +8435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>After selecting the departments to synchronize, save the synchronization scope by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to initiate synchronization as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the departments of an identity provider by paging.</p>
+     * <p>Performs a paged query on the departments of an identity provider by using paging.</p>
      * 
      * @param request ListIdentityProviderDepartmentsRequest
      * @return ListIdentityProviderDepartmentsResponse
@@ -7977,21 +8449,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Queries the list of SCIM access credentials to check which tokens are still valid, when they expire, and to select credentials for revocation.
-     * SCIM tokens are used to authorize enterprise identity systems to send user provisioning requests to the user pool. This operation returns credential summaries, including the credential ID, status, creation time, and expiration time. The plaintext token is returned only upon creation.</p>
+     * SCIM tokens are used to authorize enterprise identity systems to send user provisioning requests to the user pool. This operation returns credential summaries, including the credential ID, status, creation time, and expiration time. Plaintext tokens are returned only upon creation.</p>
      * <h3>How to use the query results</h3>
      * <ul>
-     * <li>Credentials with the Enabled status that have not expired can continue to be used.</li>
+     * <li>Credentials with the <code>Enabled</code> status that have not expired can continue to be used.</li>
      * <li>To obtain a new token, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSCIMCredential">CreateIdentityProviderSCIMCredential</a>.</li>
-     * <li>To revoke a token, pass the target credentialId to <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteIdentityProviderSCIMCredential">DeleteIdentityProviderSCIMCredential</a>.
+     * <li>To revoke a token, pass the target <code>credentialId</code> to <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteIdentityProviderSCIMCredential">DeleteIdentityProviderSCIMCredential</a>.
      * A single user pool can retain up to two SCIM credentials. The list may include expired or disabled credentials. Clean up unused credentials before creating a new token.</li>
      * </ul>
      * <h3>Return method</h3>
-     * <p>This operation returns the complete array of credentials at once without using pagination parameters. If no credentials exist, the following is returned:</p>
+     * <p>This operation returns the complete array of credentials at once without using pagination parameters. If no credentials exist, the following response is returned:</p>
      * <pre><code class="language-json">{&quot;data&quot;:[]}
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the complete summary list of up to two SCIM credentials in a shared user pool, without returning plaintext tokens or supporting pagination.</p>
+     * <p>Queries the complete summary list of up to two SCIM credentials in a shared user pool. Plaintext tokens are not returned, and pagination is not supported.</p>
      * 
      * @param request ListIdentityProviderSCIMCredentialsRequest
      * @param headers map
@@ -8020,21 +8492,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Queries the list of SCIM access credentials to check which tokens are still valid, when they expire, and to select credentials for revocation.
-     * SCIM tokens are used to authorize enterprise identity systems to send user provisioning requests to the user pool. This operation returns credential summaries, including the credential ID, status, creation time, and expiration time. The plaintext token is returned only upon creation.</p>
+     * SCIM tokens are used to authorize enterprise identity systems to send user provisioning requests to the user pool. This operation returns credential summaries, including the credential ID, status, creation time, and expiration time. Plaintext tokens are returned only upon creation.</p>
      * <h3>How to use the query results</h3>
      * <ul>
-     * <li>Credentials with the Enabled status that have not expired can continue to be used.</li>
+     * <li>Credentials with the <code>Enabled</code> status that have not expired can continue to be used.</li>
      * <li>To obtain a new token, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSCIMCredential">CreateIdentityProviderSCIMCredential</a>.</li>
-     * <li>To revoke a token, pass the target credentialId to <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteIdentityProviderSCIMCredential">DeleteIdentityProviderSCIMCredential</a>.
+     * <li>To revoke a token, pass the target <code>credentialId</code> to <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteIdentityProviderSCIMCredential">DeleteIdentityProviderSCIMCredential</a>.
      * A single user pool can retain up to two SCIM credentials. The list may include expired or disabled credentials. Clean up unused credentials before creating a new token.</li>
      * </ul>
      * <h3>Return method</h3>
-     * <p>This operation returns the complete array of credentials at once without using pagination parameters. If no credentials exist, the following is returned:</p>
+     * <p>This operation returns the complete array of credentials at once without using pagination parameters. If no credentials exist, the following response is returned:</p>
      * <pre><code class="language-json">{&quot;data&quot;:[]}
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the complete summary list of up to two SCIM credentials in a shared user pool, without returning plaintext tokens or supporting pagination.</p>
+     * <p>Queries the complete summary list of up to two SCIM credentials in a shared user pool. Plaintext tokens are not returned, and pagination is not supported.</p>
      * 
      * @param request ListIdentityProviderSCIMCredentialsRequest
      * @return ListIdentityProviderSCIMCredentialsResponse
@@ -8047,18 +8519,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the enterprise identity providers currently connected to a workspace. This operation is used to display the identity provider list or to check whether a binding already exists before configuring a new connection.
-     * A workspace can be bound to at most one external identity provider: DingTalk, Lark, or a custom identity provider (<code>CustomSSO</code>). If no identity provider is bound, the returned <code>items</code> is an empty array.</p>
+     * <p>Queries the enterprise identity providers currently connected to a workspace. You can use this operation to display the identity provider list or check whether a binding exists before configuring a connection.
+     * A workspace can be bound to at most one external identity provider: DingTalk, Lark, or a custom identity provider (<code>CustomSSO</code>). If no identity provider is bound, the returned <code>items</code> array is empty.</p>
      * <h3>What you can view in the list</h3>
-     * <p>The list returns the identity provider type, binding status, and logon and user synchronization switches. When the status of <code>CustomSSO</code> is <code>WAITING_CONFIGURATION</code>, it indicates that the user pool is ready and you can proceed to complete the integration configuration.
-     * This operation returns a binding summary. To view specific integration configurations, use the corresponding operations:</p>
+     * <p>The list returns the identity provider type, binding status, and the switches for logon and user synchronization. If the status of <code>CustomSSO</code> is <code>WAITING_CONFIGURATION</code>, it indicates that the user pool is ready and you can proceed to fill in the connection configuration.
+     * This operation returns a binding summary. To view specific connection configurations, use the corresponding operations:</p>
      * <ul>
-     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>: Views the identity provider details and SAML logon configuration.</li>
-     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a>: Retrieves the SAML integration information required to configure AgentCore in the enterprise identity system.</li>
-     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Views the SCIM endpoint configuration and user synchronization status.</li>
+     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>: Retrieves the identity provider details and SAML logon configuration.</li>
+     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a>: Retrieves the SAML connection information required to configure AgentCore in the enterprise identity system.</li>
+     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Queries the SCIM receiver configuration and user synchronization status.</li>
      * </ul>
      * <h3>Pagination</h3>
-     * <p>Currently, at most one binding is returned. <code>nextToken</code> should be omitted or passed as an empty string. The default value of <code>maxResults</code> is 10. Valid values: 1 to 100.</p>
+     * <p>Currently, at most one binding is returned. The <code>nextToken</code> parameter should be omitted or set to an empty string. The default value of <code>maxResults</code> is 10, and valid values are 1 to 100.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the summary of existing identity provider bindings for a workspace, including CustomSSO. Returns local binding information without querying the actual upstream SAML or SCIM configurations.</p>
@@ -8099,18 +8571,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the enterprise identity providers currently connected to a workspace. This operation is used to display the identity provider list or to check whether a binding already exists before configuring a new connection.
-     * A workspace can be bound to at most one external identity provider: DingTalk, Lark, or a custom identity provider (<code>CustomSSO</code>). If no identity provider is bound, the returned <code>items</code> is an empty array.</p>
+     * <p>Queries the enterprise identity providers currently connected to a workspace. You can use this operation to display the identity provider list or check whether a binding exists before configuring a connection.
+     * A workspace can be bound to at most one external identity provider: DingTalk, Lark, or a custom identity provider (<code>CustomSSO</code>). If no identity provider is bound, the returned <code>items</code> array is empty.</p>
      * <h3>What you can view in the list</h3>
-     * <p>The list returns the identity provider type, binding status, and logon and user synchronization switches. When the status of <code>CustomSSO</code> is <code>WAITING_CONFIGURATION</code>, it indicates that the user pool is ready and you can proceed to complete the integration configuration.
-     * This operation returns a binding summary. To view specific integration configurations, use the corresponding operations:</p>
+     * <p>The list returns the identity provider type, binding status, and the switches for logon and user synchronization. If the status of <code>CustomSSO</code> is <code>WAITING_CONFIGURATION</code>, it indicates that the user pool is ready and you can proceed to fill in the connection configuration.
+     * This operation returns a binding summary. To view specific connection configurations, use the corresponding operations:</p>
      * <ul>
-     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>: Views the identity provider details and SAML logon configuration.</li>
-     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a>: Retrieves the SAML integration information required to configure AgentCore in the enterprise identity system.</li>
-     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Views the SCIM endpoint configuration and user synchronization status.</li>
+     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>: Retrieves the identity provider details and SAML logon configuration.</li>
+     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a>: Retrieves the SAML connection information required to configure AgentCore in the enterprise identity system.</li>
+     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Queries the SCIM receiver configuration and user synchronization status.</li>
      * </ul>
      * <h3>Pagination</h3>
-     * <p>Currently, at most one binding is returned. <code>nextToken</code> should be omitted or passed as an empty string. The default value of <code>maxResults</code> is 10. Valid values: 1 to 100.</p>
+     * <p>Currently, at most one binding is returned. The <code>nextToken</code> parameter should be omitted or set to an empty string. The default value of <code>maxResults</code> is 10, and valid values are 1 to 100.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the summary of existing identity provider bindings for a workspace, including CustomSSO. Returns local binding information without querying the actual upstream SAML or SCIM configurations.</p>
@@ -8126,16 +8598,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for image caches in a workspace. Supports paging and filtering by image source and cache status.</p>
+     * <p>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</p>
      * <h3>Filter conditions</h3>
      * <p>Provide regionId and workspaceId in the query parameters. You can filter by ACR instance, registry, namespace, repository, tag, digest, and status. Use imageRefContains to search for image address fragments.</p>
      * <h3>Pagination rules</h3>
-     * <p>The default value of maxResults is 20, and the valid values are 1 to 100. Omit nextToken for the first request. For subsequent requests, use the token returned in the response as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that there are no more pages.</p>
+     * <p>The default value of maxResults is 20. Valid values are 1 to 100. Omit nextToken for the first request. For subsequent requests, use the response token as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that no more pages are available.</p>
      * <h3>Response content</h3>
-     * <p>Each item includes imageId, source, digest, status, size, reference count, and deletion conditions. PENDING only indicates that the cache is being prepared. For the cause of failure, see error. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</p>
+     * <p>Each item includes the imageId, source, digest, status, size, reference count, and deletion conditions. PENDING only indicates that the cache is being prepared. For the cause of failure, see error. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query for image caches in a workspace. Supports paging and filtering by image source and cache status.</p>
+     * <p>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</p>
      * 
      * @param request ListImageCachesRequest
      * @param headers map
@@ -8213,16 +8685,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for image caches in a workspace. Supports paging and filtering by image source and cache status.</p>
+     * <p>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</p>
      * <h3>Filter conditions</h3>
      * <p>Provide regionId and workspaceId in the query parameters. You can filter by ACR instance, registry, namespace, repository, tag, digest, and status. Use imageRefContains to search for image address fragments.</p>
      * <h3>Pagination rules</h3>
-     * <p>The default value of maxResults is 20, and the valid values are 1 to 100. Omit nextToken for the first request. For subsequent requests, use the token returned in the response as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that there are no more pages.</p>
+     * <p>The default value of maxResults is 20. Valid values are 1 to 100. Omit nextToken for the first request. For subsequent requests, use the response token as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that no more pages are available.</p>
      * <h3>Response content</h3>
-     * <p>Each item includes imageId, source, digest, status, size, reference count, and deletion conditions. PENDING only indicates that the cache is being prepared. For the cause of failure, see error. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</p>
+     * <p>Each item includes the imageId, source, digest, status, size, reference count, and deletion conditions. PENDING only indicates that the cache is being prepared. For the cause of failure, see error. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query for image caches in a workspace. Supports paging and filtering by image source and cache status.</p>
+     * <p>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</p>
      * 
      * @param request ListImageCachesRequest
      * @return ListImageCachesResponse
@@ -8235,14 +8707,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</p>
-     * <h3>Paging query</h3>
-     * <p>If maxResults is omitted or set to 0, the default value is 20, and the maximum value is 100. Omit nextToken in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</p>
+     * <p>Performs a paging query to retrieve the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</p>
+     * <h3>Paging</h3>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</p>
      * <h3>Response content</h3>
-     * <p>The list returns summary information, where harness.type indicates the runtime framework. For complete configurations, skill targets and effective versions, and instance status statistics, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</p>
+     * <p>The list returns summary information, where <code>harness.type</code> indicates the runtime framework. To query the complete configuration, skill targets and effective versions, and instance status statistics, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</p>
+     * <p>Performs a paging query to retrieve the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</p>
      * 
      * @param request ListManagedAgentsRequest
      * @param headers map
@@ -8280,14 +8752,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</p>
-     * <h3>Paging query</h3>
-     * <p>If maxResults is omitted or set to 0, the default value is 20, and the maximum value is 100. Omit nextToken in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</p>
+     * <p>Performs a paging query to retrieve the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</p>
+     * <h3>Paging</h3>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</p>
      * <h3>Response content</h3>
-     * <p>The list returns summary information, where harness.type indicates the runtime framework. For complete configurations, skill targets and effective versions, and instance status statistics, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</p>
+     * <p>The list returns summary information, where <code>harness.type</code> indicates the runtime framework. To query the complete configuration, skill targets and effective versions, and instance status statistics, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</p>
+     * <p>Performs a paging query to retrieve the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</p>
      * 
      * @param request ListManagedAgentsRequest
      * @return ListManagedAgentsResponse
@@ -8300,7 +8772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries official MCP marketplace templates available for installation to help select required tool services. Supports filtering by keyword, usage tag, and MCP type.</p>
+     * <p>Queries installable official MCP marketplace templates for selecting required tool services. Supports filtering by keyword, usage tag, and MCP type.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries MCP marketplace templates.</p>
@@ -8353,7 +8825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries official MCP marketplace templates available for installation to help select required tool services. Supports filtering by keyword, usage tag, and MCP type.</p>
+     * <p>Queries installable official MCP marketplace templates for selecting required tool services. Supports filtering by keyword, usage tag, and MCP type.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries MCP marketplace templates.</p>
@@ -8426,10 +8898,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for MCP services and their configurations and status in a specified workspace.</p>
+     * <p>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query for MCP services and their configurations and status in a specified workspace.</p>
+     * <p>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</p>
      * 
      * @param request ListMcpsRequest
      * @param headers map
@@ -8487,10 +8959,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for MCP services and their configurations and status in a specified workspace.</p>
+     * <p>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query for MCP services and their configurations and status in a specified workspace.</p>
+     * <p>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</p>
      * 
      * @param request ListMcpsRequest
      * @return ListMcpsResponse
@@ -8503,10 +8975,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries long-term memory with paging and supports filtering by <code>UserId</code>, <code>AgentId</code>, and <code>SessionId</code>.</p>
+     * <p>Performs a paged query on long-term memory. Supports paging and filtering by <code>UserId</code>, <code>AgentId</code>, and <code>SessionId</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries long-term memory with paging and supports independent filtering by UserId, AgentId, and SessionId.</p>
+     * <p>Performs a paged query on memories in a memory store. Supports paging and filtering by associate scope, content type, source, validity status, and update time. Unspecified scope dimensions are excluded from filtering. If valid is omitted, only valid memories are returned. If valid is set to false, revoked memories are returned.</p>
      * 
      * @param request ListMemoriesRequest
      * @param headers map
@@ -8532,8 +9004,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("sessionId", request.sessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.teamId)) {
+            query.put("teamId", request.teamId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.types)) {
+            query.put("types", request.types);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updatedAtFrom)) {
+            query.put("updatedAtFrom", request.updatedAtFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updatedAtTo)) {
+            query.put("updatedAtTo", request.updatedAtTo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
             query.put("userId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.valid)) {
+            query.put("valid", request.valid);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -8556,10 +9052,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries long-term memory with paging and supports filtering by <code>UserId</code>, <code>AgentId</code>, and <code>SessionId</code>.</p>
+     * <p>Performs a paged query on long-term memory. Supports paging and filtering by <code>UserId</code>, <code>AgentId</code>, and <code>SessionId</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries long-term memory with paging and supports independent filtering by UserId, AgentId, and SessionId.</p>
+     * <p>Performs a paged query on memories in a memory store. Supports paging and filtering by associate scope, content type, source, validity status, and update time. Unspecified scope dimensions are excluded from filtering. If valid is omitted, only valid memories are returned. If valid is set to false, revoked memories are returned.</p>
      * 
      * @param request ListMemoriesRequest
      * @return ListMemoriesResponse
@@ -8572,11 +9068,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries raw messages of a specific session in the memory store with paging to view the session content used for generating long-term memory.
-     * <code>SessionId</code> is required, and at least one of <code>UserId</code> and <code>AgentId</code> must be provided to identify the target session.</p>
+     * <p>Performs a paged query of the extraction rules in a memory store. Supports paging, filtering by name and enabled status, and returns the rule configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
+     * <p>Performs a paged query of the extraction rules in a memory store. Supports paging, filtering by name and enabled status, and returns the rule configurations.</p>
+     * 
+     * @param request ListMemoryRulesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMemoryRulesResponse
+     */
+    public ListMemoryRulesResponse listMemoryRulesWithOptions(String workspaceId, String memoryStoreName, ListMemoryRulesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nameLike)) {
+            query.put("nameLike", request.nameLike);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMemoryRules"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memory-rules"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMemoryRulesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query of the extraction rules in a memory store. Supports paging, filtering by name and enabled status, and returns the rule configurations.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query of the extraction rules in a memory store. Supports paging, filtering by name and enabled status, and returns the rule configurations.</p>
+     * 
+     * @param request ListMemoryRulesRequest
+     * @return ListMemoryRulesResponse
+     */
+    public ListMemoryRulesResponse listMemoryRules(String workspaceId, String memoryStoreName, ListMemoryRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMemoryRulesWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paging query for raw messages of a specific session in a memory store to view the session content used to generate long-term memory.
+     * <code>SessionId</code> is required, and at least one of <code>UserId</code> or <code>AgentId</code> must be provided to identify the target session.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId or AgentId must be provided.</p>
      * 
      * @param request ListMemorySessionMessagesRequest
      * @param headers map
@@ -8626,11 +9187,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries raw messages of a specific session in the memory store with paging to view the session content used for generating long-term memory.
-     * <code>SessionId</code> is required, and at least one of <code>UserId</code> and <code>AgentId</code> must be provided to identify the target session.</p>
+     * <p>Performs a paging query for raw messages of a specific session in a memory store to view the session content used to generate long-term memory.
+     * <code>SessionId</code> is required, and at least one of <code>UserId</code> or <code>AgentId</code> must be provided to identify the target session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries raw messages by exact scope with paging. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
+     * <p>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId or AgentId must be provided.</p>
      * 
      * @param request ListMemorySessionMessagesRequest
      * @return ListMemorySessionMessagesResponse
@@ -8643,10 +9204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for source sessions in a long-term memory store (MemoryStore), supporting paging and filtering by user ID and agent ID respectively.</p>
+     * <p>Performs a paging query of source sessions in a long-term memory store (MemoryStore). You can filter the sessions by UserId and AgentId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query for sessions in a MemoryStore, supporting paging and filtering by user ID and agent ID independently.</p>
+     * <p>Performs a paging query of sessions in a memory store. You can filter the sessions by user, team, or agent. Unspecified dimensions are not used for filtering.</p>
      * 
      * @param request ListMemorySessionsRequest
      * @param headers map
@@ -8666,6 +9227,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.teamId)) {
+            query.put("teamId", request.teamId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
@@ -8692,10 +9257,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for source sessions in a long-term memory store (MemoryStore), supporting paging and filtering by user ID and agent ID respectively.</p>
+     * <p>Performs a paging query of source sessions in a long-term memory store (MemoryStore). You can filter the sessions by UserId and AgentId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query for sessions in a MemoryStore, supporting paging and filtering by user ID and agent ID independently.</p>
+     * <p>Performs a paging query of sessions in a memory store. You can filter the sessions by user, team, or agent. Unspecified dimensions are not used for filtering.</p>
      * 
      * @param request ListMemorySessionsRequest
      * @return ListMemorySessionsResponse
@@ -8708,10 +9273,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of the long-term memory stores (MemoryStores) in a workspace by using paging for selection or management.</p>
+     * <p>Queries long-term memory stores (MemoryStores) in a workspace by using paging to select or manage memory stores.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query of MemoryStores in a specified workspace by using paging.</p>
+     * <p>Queries MemoryStores in a specified workspace by using paging.</p>
      * 
      * @param request ListMemoryStoresRequest
      * @param headers map
@@ -8749,10 +9314,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of the long-term memory stores (MemoryStores) in a workspace by using paging for selection or management.</p>
+     * <p>Queries long-term memory stores (MemoryStores) in a workspace by using paging to select or manage memory stores.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query of MemoryStores in a specified workspace by using paging.</p>
+     * <p>Queries MemoryStores in a specified workspace by using paging.</p>
      * 
      * @param request ListMemoryStoresRequest
      * @return ListMemoryStoresResponse
@@ -8765,14 +9330,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Performs a paged query for memory extraction nodes of a specified rule. The ruleId parameter is required. You can further filter the nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned. Paging is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query for memory extraction nodes of a specified rule. The ruleId parameter is required. You can further filter the nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned. Paging is supported.</p>
+     * 
+     * @param request ListMemoryTasksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMemoryTasksResponse
+     */
+    public ListMemoryTasksResponse listMemoryTasksWithOptions(String workspaceId, String memoryStoreName, ListMemoryTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("ruleId", request.ruleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMemoryTasks"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memory-tasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMemoryTasksResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Performs a paged query for memory extraction nodes of a specified rule. The ruleId parameter is required. You can further filter the nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned. Paging is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paged query for memory extraction nodes of a specified rule. The ruleId parameter is required. You can further filter the nodes by status. If the specified rule does not exist or is deleted, a success response with an empty list is returned. Paging is supported.</p>
+     * 
+     * @param request ListMemoryTasksRequest
+     * @return ListMemoryTasksResponse
+     */
+    public ListMemoryTasksResponse listMemoryTasks(String workspaceId, String memoryStoreName, ListMemoryTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMemoryTasksWithOptions(workspaceId, memoryStoreName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries model connections in a workspace by using paging to view configured model services.</p>
      * <ul>
-     * <li>Use <code>Name</code> to filter by name, and <code>SearchType</code> to specify exact match or fuzzy match.</li>
+     * <li>Use <code>Name</code> to filter by name and <code>SearchType</code> to specify exact match or fuzzy match.</li>
      * <li>You can filter by model provider type and invocation protocol.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries model connections in a specified workspace by using paging. Supports filtering by name, provider type, and invocation protocol.</p>
+     * <p>Queries model connections in a specified workspace by using paging, and supports filtering by name, provider type, and invocation protocol.</p>
      * 
      * @param request ListModelConnectionsRequest
      * @param headers map
@@ -8832,12 +9462,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries model connections in a workspace by using paging to view configured model services.</p>
      * <ul>
-     * <li>Use <code>Name</code> to filter by name, and <code>SearchType</code> to specify exact match or fuzzy match.</li>
+     * <li>Use <code>Name</code> to filter by name and <code>SearchType</code> to specify exact match or fuzzy match.</li>
      * <li>You can filter by model provider type and invocation protocol.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries model connections in a specified workspace by using paging. Supports filtering by name, provider type, and invocation protocol.</p>
+     * <p>Queries model connections in a specified workspace by using paging, and supports filtering by name, provider type, and invocation protocol.</p>
      * 
      * @param request ListModelConnectionsRequest
      * @return ListModelConnectionsResponse
@@ -8915,7 +9545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of access rules by resource, supporting paging to check existing rules and their sources.</p>
+     * <p>Performs a paged query of access rules by resource, using paging to check existing rules and their sources.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries permission rules.</p>
@@ -8984,7 +9614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of access rules by resource, supporting paging to check existing rules and their sources.</p>
+     * <p>Performs a paged query of access rules by resource, using paging to check existing rules and their sources.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries permission rules.</p>
@@ -9000,10 +9630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the providers supported by the built-in model catalog of AgentCore and their default service configurations.</p>
+     * <p>Queries the providers supported by the AgentCore built-in model catalog and their default service configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the providers supported by the built-in model catalog of AgentCore and their default service configurations.</p>
+     * <p>Queries the providers supported by the AgentCore built-in model catalog and their default service configurations.</p>
      * 
      * @param request ListPredefinedModelProvidersRequest
      * @param headers map
@@ -9031,10 +9661,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the providers supported by the built-in model catalog of AgentCore and their default service configurations.</p>
+     * <p>Queries the providers supported by the AgentCore built-in model catalog and their default service configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the providers supported by the built-in model catalog of AgentCore and their default service configurations.</p>
+     * <p>Queries the providers supported by the AgentCore built-in model catalog and their default service configurations.</p>
      * 
      * @param request ListPredefinedModelProvidersRequest
      * @return ListPredefinedModelProvidersResponse
@@ -9047,10 +9677,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the models and their capabilities for a specified provider in the AgentCore built-in model catalog.</p>
+     * <p>Queries the models and their capabilities in the built-in model catalog of AgentCore for a specified provider.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the models and their capabilities for a specified provider in the AgentCore built-in model catalog.</p>
+     * <p>Queries the models and their capabilities in the built-in model catalog of AgentCore for a specified provider.</p>
      * 
      * @param request ListPredefinedModelsRequest
      * @param headers map
@@ -9078,10 +9708,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the models and their capabilities for a specified provider in the AgentCore built-in model catalog.</p>
+     * <p>Queries the models and their capabilities in the built-in model catalog of AgentCore for a specified provider.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the models and their capabilities for a specified provider in the AgentCore built-in model catalog.</p>
+     * <p>Queries the models and their capabilities in the built-in model catalog of AgentCore for a specified provider.</p>
      * 
      * @param request ListPredefinedModelsRequest
      * @return ListPredefinedModelsResponse
@@ -9096,11 +9726,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</p>
      * <h3>Query scope</h3>
-     * <p>Locates the instance by using workspaceId, agentId, and sandboxId. You can obtain the sandboxId from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</p>
+     * <p>Locates the instance by using <code>workspaceId</code>, <code>agentId</code>, and <code>sandboxId</code>. You can obtain the <code>sandboxId</code> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</p>
      * <h3>Pagination</h3>
-     * <p>The default value of maxResults is 20. Valid values: 1 to 100. Omit nextToken in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</p>
+     * <p>The default value of <code>maxResults</code> is 20. Valid values: 1 to 100. Omit <code>nextToken</code> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</p>
      * <h3>Session sources</h3>
-     * <p>The source can be API, CONSOLE_DEBUG, EXTERNAL_CHANNEL, or UNKNOWN. For external channels, the channel type is additionally returned. If no source information is provided, UNKNOWN is returned.</p>
+     * <p>The source can be <code>API</code>, <code>CONSOLE_DEBUG</code>, <code>EXTERNAL_CHANNEL</code>, or <code>UNKNOWN</code>. For external channels, the channel type is additionally returned. If no source information is provided, <code>UNKNOWN</code> is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Performs a paging query to retrieve the current active sessions and their sources in a specified agent instance.</p>
@@ -9147,11 +9777,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</p>
      * <h3>Query scope</h3>
-     * <p>Locates the instance by using workspaceId, agentId, and sandboxId. You can obtain the sandboxId from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</p>
+     * <p>Locates the instance by using <code>workspaceId</code>, <code>agentId</code>, and <code>sandboxId</code>. You can obtain the <code>sandboxId</code> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</p>
      * <h3>Pagination</h3>
-     * <p>The default value of maxResults is 20. Valid values: 1 to 100. Omit nextToken in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</p>
+     * <p>The default value of <code>maxResults</code> is 20. Valid values: 1 to 100. Omit <code>nextToken</code> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</p>
      * <h3>Session sources</h3>
-     * <p>The source can be API, CONSOLE_DEBUG, EXTERNAL_CHANNEL, or UNKNOWN. For external channels, the channel type is additionally returned. If no source information is provided, UNKNOWN is returned.</p>
+     * <p>The source can be <code>API</code>, <code>CONSOLE_DEBUG</code>, <code>EXTERNAL_CHANNEL</code>, or <code>UNKNOWN</code>. For external channels, the channel type is additionally returned. If no source information is provided, <code>UNKNOWN</code> is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Performs a paging query to retrieve the current active sessions and their sources in a specified agent instance.</p>
@@ -9167,15 +9797,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the running instances (sandboxes) of an agent to view instance distribution and current running status.</p>
+     * <p>Queries the running instances (sandboxes) of an agent to view the instance distribution and current running status.</p>
      * <h3>Filter instances</h3>
-     * <p><code>searchText</code> matches Sandbox ID fragments, and <code>sessionId</code> matches current valid session ID fragments. Both are case-insensitive. If both are submitted, they are combined for filtering.</p>
+     * <p><code>searchText</code> matches sandbox ID fragments, and <code>sessionId</code> matches current valid session ID fragments. Both are case-insensitive. If both are submitted, they are combined for filtering.</p>
      * <h3>Pagination and status</h3>
-     * <p>The default value of <code>maxResults</code> is 20. Valid values: 1 to 100. Omit <code>nextToken</code> for the first request. For subsequent requests, use the response token as is, and keep <code>workspaceId</code>, <code>agentId</code>, filter conditions, and <code>maxResults</code> unchanged. An empty token indicates that the query is complete.
+     * <p>The default value of <code>maxResults</code> is 20, and the valid values are 1 to 100. Omit <code>nextToken</code> for the first request. For subsequent requests, use the response token as is, and keep <code>workspaceId</code>, <code>agentId</code>, filter conditions, and <code>maxResults</code> unchanged. An empty token indicates that the query is complete.
      * <code>phase</code> indicates the instance phase, <code>activeSessionCount</code> indicates the number of current active sessions, and <code>maxConcurrentSessions</code> indicates the configured concurrency limit for a single instance. You can query the active sessions of an instance by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxSessions">ListSandboxSessions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query on the running instances of an agent, and supports filtering by Sandbox ID and current valid session ID fragments.</p>
+     * <p>Performs a paging query on the running instances of an agent and supports filtering by sandbox ID and current valid session ID fragments.</p>
      * 
      * @param request ListSandboxesRequest
      * @param headers map
@@ -9225,15 +9855,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the running instances (sandboxes) of an agent to view instance distribution and current running status.</p>
+     * <p>Queries the running instances (sandboxes) of an agent to view the instance distribution and current running status.</p>
      * <h3>Filter instances</h3>
-     * <p><code>searchText</code> matches Sandbox ID fragments, and <code>sessionId</code> matches current valid session ID fragments. Both are case-insensitive. If both are submitted, they are combined for filtering.</p>
+     * <p><code>searchText</code> matches sandbox ID fragments, and <code>sessionId</code> matches current valid session ID fragments. Both are case-insensitive. If both are submitted, they are combined for filtering.</p>
      * <h3>Pagination and status</h3>
-     * <p>The default value of <code>maxResults</code> is 20. Valid values: 1 to 100. Omit <code>nextToken</code> for the first request. For subsequent requests, use the response token as is, and keep <code>workspaceId</code>, <code>agentId</code>, filter conditions, and <code>maxResults</code> unchanged. An empty token indicates that the query is complete.
+     * <p>The default value of <code>maxResults</code> is 20, and the valid values are 1 to 100. Omit <code>nextToken</code> for the first request. For subsequent requests, use the response token as is, and keep <code>workspaceId</code>, <code>agentId</code>, filter conditions, and <code>maxResults</code> unchanged. An empty token indicates that the query is complete.
      * <code>phase</code> indicates the instance phase, <code>activeSessionCount</code> indicates the number of current active sessions, and <code>maxConcurrentSessions</code> indicates the configured concurrency limit for a single instance. You can query the active sessions of an instance by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxSessions">ListSandboxSessions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query on the running instances of an agent, and supports filtering by Sandbox ID and current valid session ID fragments.</p>
+     * <p>Performs a paging query on the running instances of an agent and supports filtering by sandbox ID and current valid session ID fragments.</p>
      * 
      * @param request ListSandboxesRequest
      * @return ListSandboxesResponse
@@ -9246,15 +9876,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries service endpoints in a workspace with paging to find the access endpoints for agents or collaboration components.</p>
+     * <p>Performs a paging query of service endpoints in a workspace to find the access endpoints of agents or collaboration components.</p>
      * <ul>
      * <li>Use targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status to filter the results.</li>
-     * <li>Use maxResults to set the number of entries per page. If omitted, the default value is 20.</li>
+     * <li>Use maxResults to set the page size. If this parameter is not specified, the default value is 20.</li>
      * <li>Use the returned nextToken to query the next page.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries service endpoints in a specified workspace with paging, and supports filtering by target type, agent, collaboration component, and status.</p>
+     * <p>Performs a paging query of service endpoints in a specified workspace and supports filtering by target type, agent, collaboration component, and status.</p>
      * 
      * @param request ListServiceEndpointsRequest
      * @param headers map
@@ -9316,15 +9946,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries service endpoints in a workspace with paging to find the access endpoints for agents or collaboration components.</p>
+     * <p>Performs a paging query of service endpoints in a workspace to find the access endpoints of agents or collaboration components.</p>
      * <ul>
      * <li>Use targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status to filter the results.</li>
-     * <li>Use maxResults to set the number of entries per page. If omitted, the default value is 20.</li>
+     * <li>Use maxResults to set the page size. If this parameter is not specified, the default value is 20.</li>
      * <li>Use the returned nextToken to query the next page.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries service endpoints in a specified workspace with paging, and supports filtering by target type, agent, collaboration component, and status.</p>
+     * <p>Performs a paging query of service endpoints in a specified workspace and supports filtering by target type, agent, collaboration component, and status.</p>
      * 
      * @param request ListServiceEndpointsRequest
      * @return ListServiceEndpointsResponse
@@ -9358,12 +9988,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.refType)) {
+            query.put("refType", request.refType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.selectorType)) {
             query.put("selectorType", request.selectorType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.selectorValue)) {
             query.put("selectorValue", request.selectorValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("sourceId", request.sourceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -9402,10 +10040,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of skills in a specified workspace and returns the basic information, version status, and paging information of the skills.</p>
+     * <p>Performs a paged query for skills in a specified workspace and returns the basic information, version status, and paging information of the skills.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query of skills in a specified workspace and returns the basic information, version status, and paging information of the skills.</p>
+     * <p>Performs a paged query for skills in a specified workspace and returns the basic information, version status, and paging information of the skills.</p>
      * 
      * @param request ListSkillsRequest
      * @param headers map
@@ -9471,10 +10109,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of skills in a specified workspace and returns the basic information, version status, and paging information of the skills.</p>
+     * <p>Performs a paged query for skills in a specified workspace and returns the basic information, version status, and paging information of the skills.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query of skills in a specified workspace and returns the basic information, version status, and paging information of the skills.</p>
+     * <p>Performs a paged query for skills in a specified workspace and returns the basic information, version status, and paging information of the skills.</p>
      * 
      * @param request ListSkillsRequest
      * @return ListSkillsResponse
@@ -9487,10 +10125,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query of teams in a specified workspace.</p>
+     * <p>Queries teams in a specified workspace with paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query of teams in a specified workspace. You can use nameLike to filter teams by fuzzy match on the team name, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. The member information in the list includes only the member ID, name, and team role.</p>
+     * <p>Queries teams in a specified workspace with paging. You can use nameLike to filter teams by fuzzy match on the team name, maxResults to specify the maximum number of records per page, and nextToken to obtain the next page. If maxResults is not specified, the server returns 10 records by default. The member information in the list includes only the member identifier, name, and team role.</p>
      * 
      * @param request ListTeamsRequest
      * @param headers map
@@ -9532,10 +10170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query of teams in a specified workspace.</p>
+     * <p>Queries teams in a specified workspace with paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query of teams in a specified workspace. You can use nameLike to filter teams by fuzzy match on the team name, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. The member information in the list includes only the member ID, name, and team role.</p>
+     * <p>Queries teams in a specified workspace with paging. You can use nameLike to filter teams by fuzzy match on the team name, maxResults to specify the maximum number of records per page, and nextToken to obtain the next page. If maxResults is not specified, the server returns 10 records by default. The member information in the list includes only the member identifier, name, and team role.</p>
      * 
      * @param request ListTeamsRequest
      * @return ListTeamsResponse
@@ -9551,7 +10189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the application user directory in a workspace for viewing users and selecting team members.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query for users in a specified workspace. You can filter users by fuzzy match on the username by using nameLike, specify the maximum number of records per paging by using maxResults, and retrieve the next paging by using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
+     * <p>Performs a paged query for users in a specified workspace. You can use nameLike to filter users by fuzzy match on the username, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page during paging. If maxResults is not specified, the server returns 10 records by default.</p>
      * 
      * @param request ListUsersRequest
      * @param headers map
@@ -9604,7 +10242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the application user directory in a workspace for viewing users and selecting team members.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query for users in a specified workspace. You can filter users by fuzzy match on the username by using nameLike, specify the maximum number of records per paging by using maxResults, and retrieve the next paging by using nextToken. If maxResults is not specified, the server returns 10 records by default.</p>
+     * <p>Performs a paged query for users in a specified workspace. You can use nameLike to filter users by fuzzy match on the username, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page during paging. If maxResults is not specified, the server returns 10 records by default.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -9619,14 +10257,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Performs a paged query of workspaces accessible to the current account for selecting a workspace or viewing a workspace overview.</p>
      * <ul>
-     * <li>Use <code>nameLike</code> to filter by name using fuzzy match.</li>
+     * <li>Use <code>nameLike</code> for fuzzy filtering by name.</li>
      * <li>Use <code>maxResults</code> to configure the Settings for the number of entries per page. If this parameter is omitted or set to <code>0</code>, the default value is 20.</li>
      * <li>Use <code>nextToken</code> to query the next page during paging, or use <code>skip</code> to skip a specified number of workspaces.
-     * The list is sorted in the order of creation. By default, deleted workspaces (with the <code>Deleted</code> status) are not returned.</li>
+     * The list is arranged by creation order. By default, deleted workspaces with the <code>Deleted</code> status are not returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query of workspaces under the current tenant. By default, the list does not return soft-deleted records whose status is Deleted. The server applies stable sorting to the results in chronological order of creation during paging.</p>
+     * <p>Performs a paged query of workspaces under the current tenant. By default, the list does not return soft-deleted records with the Deleted status, and the server performs stable sorting of the results by creation order during paging.</p>
      * 
      * @param request ListWorkspacesRequest
      * @param headers map
@@ -9670,14 +10308,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Performs a paged query of workspaces accessible to the current account for selecting a workspace or viewing a workspace overview.</p>
      * <ul>
-     * <li>Use <code>nameLike</code> to filter by name using fuzzy match.</li>
+     * <li>Use <code>nameLike</code> for fuzzy filtering by name.</li>
      * <li>Use <code>maxResults</code> to configure the Settings for the number of entries per page. If this parameter is omitted or set to <code>0</code>, the default value is 20.</li>
      * <li>Use <code>nextToken</code> to query the next page during paging, or use <code>skip</code> to skip a specified number of workspaces.
-     * The list is sorted in the order of creation. By default, deleted workspaces (with the <code>Deleted</code> status) are not returned.</li>
+     * The list is arranged by creation order. By default, deleted workspaces with the <code>Deleted</code> status are not returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query of workspaces under the current tenant. By default, the list does not return soft-deleted records whose status is Deleted. The server applies stable sorting to the results in chronological order of creation during paging.</p>
+     * <p>Performs a paged query of workspaces under the current tenant. By default, the list does not return soft-deleted records with the Deleted status, and the server performs stable sorting of the results by creation order during paging.</p>
      * 
      * @param request ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -9869,17 +10507,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prepares the receiving endpoint and access token for integrating an enterprise identity system with SCIM user synchronization. The enterprise identity system uses this information to provision users to the shared user pool of AgentCore.
+     * <p>Prepares the receiving endpoint and access token for integrating SCIM user synchronization with an enterprise identity system. The enterprise identity system uses this information to provision users to the shared user pool of AgentCore.
      * SCIM is a user provisioning protocol. The enterprise identity system first sends users to the receiving endpoint, and then AgentCore synchronizes the users from the user pool to the workspace.</p>
      * <h3>Before you begin</h3>
-     * <p>A <code>CustomSSO</code> binding has been created by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProvider">CreateIdentityProvider</a>, and the shared user pool is ready. SCIM integration can be performed independently of SAML logon configuration.</p>
+     * <p>A <code>CustomSSO</code> binding has been created by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProvider">CreateIdentityProvider</a>, and the shared user pool is ready. SCIM integration can be performed independently of SAML logon configuration.</p>
      * <h3>What this operation prepares</h3>
      * <p>This operation enables the SCIM receiving endpoint and returns the receiving URL and credential summary:</p>
      * <table>
      * <thead>
      * <tr>
      * <th>Current credential status</th>
-     * <th>Returned result</th>
+     * <th>Return result</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -9888,22 +10526,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>No available credentials exist</td>
-     * <td>Creates a new credential. The <code>token</code> field returns the plaintext of the new token, which is returned only in this response.</td>
+     * <td>Creates a new credential. The <code>token</code> field returns the plaintext of the new token, which is returned only in the current response.</td>
      * </tr>
      * <tr>
-     * <td>The plaintext of an existing token cannot be queried again. If the token is lost, you can create a new token by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSCIMCredential">CreateIdentityProviderSCIMCredential</a>. A maximum of two credentials can be retained for the same user pool. When the limit is reached, you must delete unused credentials first.</td>
+     * <td>The plaintext of an existing token cannot be queried again. If the token is lost, you can create a new token by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSCIMCredential">CreateIdentityProviderSCIMCredential</a>. A single user pool can retain a maximum of two credentials. When the limit is reached, you must delete unused credentials first.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
-     * <h3>Subsequent configuration</h3>
-     * <ol>
-     * <li>Configure the returned receiving URL and valid token in the SCIM user provisioning settings of the enterprise identity system.</li>
-     * <li>Complete the connection test and user assignment in the enterprise identity system.</li>
-     * <li>Enable AgentCore user synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>, and then query the synchronization result by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</li>
-     * </ol>
+     * <h3>What to do next</h3>
+     * <p><strong>Step 1:</strong> Configure the returned receiving URL and valid token in the SCIM user provisioning settings of the enterprise identity system.
+     * <strong>Step 2:</strong> Complete the connection test and user assignment in the enterprise identity system.
+     * <strong>Step 3:</strong> Enable AgentCore user synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>, and then query the synchronization results by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Prepares the SCIM receiving configuration and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only in this response, without automatically enabling AgentCore user synchronization.</p>
+     * <p>Prepares the SCIM receiving configuration and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only in the current response without automatically enabling user synchronization in AgentCore.</p>
      * 
      * @param request PrepareIdentityProviderSCIMRequest
      * @param headers map
@@ -9931,17 +10567,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prepares the receiving endpoint and access token for integrating an enterprise identity system with SCIM user synchronization. The enterprise identity system uses this information to provision users to the shared user pool of AgentCore.
+     * <p>Prepares the receiving endpoint and access token for integrating SCIM user synchronization with an enterprise identity system. The enterprise identity system uses this information to provision users to the shared user pool of AgentCore.
      * SCIM is a user provisioning protocol. The enterprise identity system first sends users to the receiving endpoint, and then AgentCore synchronizes the users from the user pool to the workspace.</p>
      * <h3>Before you begin</h3>
-     * <p>A <code>CustomSSO</code> binding has been created by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProvider">CreateIdentityProvider</a>, and the shared user pool is ready. SCIM integration can be performed independently of SAML logon configuration.</p>
+     * <p>A <code>CustomSSO</code> binding has been created by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProvider">CreateIdentityProvider</a>, and the shared user pool is ready. SCIM integration can be performed independently of SAML logon configuration.</p>
      * <h3>What this operation prepares</h3>
      * <p>This operation enables the SCIM receiving endpoint and returns the receiving URL and credential summary:</p>
      * <table>
      * <thead>
      * <tr>
      * <th>Current credential status</th>
-     * <th>Returned result</th>
+     * <th>Return result</th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -9950,22 +10586,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>No available credentials exist</td>
-     * <td>Creates a new credential. The <code>token</code> field returns the plaintext of the new token, which is returned only in this response.</td>
+     * <td>Creates a new credential. The <code>token</code> field returns the plaintext of the new token, which is returned only in the current response.</td>
      * </tr>
      * <tr>
-     * <td>The plaintext of an existing token cannot be queried again. If the token is lost, you can create a new token by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSCIMCredential">CreateIdentityProviderSCIMCredential</a>. A maximum of two credentials can be retained for the same user pool. When the limit is reached, you must delete unused credentials first.</td>
+     * <td>The plaintext of an existing token cannot be queried again. If the token is lost, you can create a new token by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSCIMCredential">CreateIdentityProviderSCIMCredential</a>. A single user pool can retain a maximum of two credentials. When the limit is reached, you must delete unused credentials first.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
-     * <h3>Subsequent configuration</h3>
-     * <ol>
-     * <li>Configure the returned receiving URL and valid token in the SCIM user provisioning settings of the enterprise identity system.</li>
-     * <li>Complete the connection test and user assignment in the enterprise identity system.</li>
-     * <li>Enable AgentCore user synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>, and then query the synchronization result by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</li>
-     * </ol>
+     * <h3>What to do next</h3>
+     * <p><strong>Step 1:</strong> Configure the returned receiving URL and valid token in the SCIM user provisioning settings of the enterprise identity system.
+     * <strong>Step 2:</strong> Complete the connection test and user assignment in the enterprise identity system.
+     * <strong>Step 3:</strong> Enable AgentCore user synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>, and then query the synchronization results by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Prepares the SCIM receiving configuration and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only in this response, without automatically enabling AgentCore user synchronization.</p>
+     * <p>Prepares the SCIM receiving configuration and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only in the current response without automatically enabling user synchronization in AgentCore.</p>
      * 
      * @param request PrepareIdentityProviderSCIMRequest
      * @return PrepareIdentityProviderSCIMResponse
@@ -9978,10 +10612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Publishes a specified skill version and changes its status to published.</p>
+     * <p>Publishes a specified skill version and sets its status to published.</p>
      * 
      * <b>summary</b> : 
-     * <p>Publishes a specified skill version and changes its status to published.</p>
+     * <p>Publishes a specified skill version and sets its status to published.</p>
      * 
      * @param tmpReq PublishSkillVersionRequest
      * @param headers map
@@ -10021,10 +10655,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Publishes a specified skill version and changes its status to published.</p>
+     * <p>Publishes a specified skill version and sets its status to published.</p>
      * 
      * <b>summary</b> : 
-     * <p>Publishes a specified skill version and changes its status to published.</p>
+     * <p>Publishes a specified skill version and sets its status to published.</p>
      * 
      * @param request PublishSkillVersionRequest
      * @return PublishSkillVersionResponse
@@ -10037,10 +10671,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is successfully submitted and accepted. You must use the returned operationId to call GetSandboxRebuildOperation. Only an overall SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the request if the query times out, returns UNKNOWN, or the result is unclear. You can specify an endpoint runtime version by using serviceEndpointId. If this parameter is omitted, the default latest runtime identity is used.</p>
+     * <p>Submits a single sandbox image rebuild for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is successfully submitted and accepted. You must use the returned operationId to call GetSandboxRebuildOperation. Only an overall SUCCEEDED status indicates completion. Do not automatically resubmit the request if the query times out, returns UNKNOWN, or the result is unclear. You can specify the endpoint runtime version by using serviceEndpointId. If this parameter is omitted, the default latest runtime identity is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is accepted. Use the returned operationId to call GetSandboxRebuildOperation to query the overall result. Only a SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the rebuild request if the query times out, returns UNKNOWN, or the result is unclear.</p>
+     * <p>Submits a single sandbox image rebuild for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is accepted. Use the returned operationId to call GetSandboxRebuildOperation to query the overall result. Only a SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the rebuild if the query times out, returns UNKNOWN, or the result is unclear.</p>
      * 
      * @param request RebuildSandboxRequest
      * @param headers map
@@ -10074,10 +10708,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is successfully submitted and accepted. You must use the returned operationId to call GetSandboxRebuildOperation. Only an overall SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the request if the query times out, returns UNKNOWN, or the result is unclear. You can specify an endpoint runtime version by using serviceEndpointId. If this parameter is omitted, the default latest runtime identity is used.</p>
+     * <p>Submits a single sandbox image rebuild for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is successfully submitted and accepted. You must use the returned operationId to call GetSandboxRebuildOperation. Only an overall SUCCEEDED status indicates completion. Do not automatically resubmit the request if the query times out, returns UNKNOWN, or the result is unclear. You can specify the endpoint runtime version by using serviceEndpointId. If this parameter is omitted, the default latest runtime identity is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is accepted. Use the returned operationId to call GetSandboxRebuildOperation to query the overall result. Only a SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the rebuild request if the query times out, returns UNKNOWN, or the result is unclear.</p>
+     * <p>Submits a single sandbox image rebuild for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is accepted. Use the returned operationId to call GetSandboxRebuildOperation to query the overall result. Only a SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the rebuild if the query times out, returns UNKNOWN, or the result is unclear.</p>
      * 
      * @param request RebuildSandboxRequest
      * @return RebuildSandboxResponse
@@ -10152,7 +10786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Resets the logon password of a specified user.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets the logon password of a specified user. Specify the user by using agentCoreUserId or username. You must specify at least one of them. This operation only supports resetting the passwords of users who use local password authentication for the workspace. If you do not specify the password parameter, the server generates a random password and returns it in the response.</p>
+     * <p>Resets the logon password of a specified user. Specify the user by using agentCoreUserId or username. At least one of the two parameters is required. This operation only supports users who use local password authentication in the workspace. If the password parameter is not specified, the server generates a random password and returns it in the response.</p>
      * 
      * @param tmpReq ResetUserPasswordRequest
      * @param headers map
@@ -10195,7 +10829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Resets the logon password of a specified user.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets the logon password of a specified user. Specify the user by using agentCoreUserId or username. You must specify at least one of them. This operation only supports resetting the passwords of users who use local password authentication for the workspace. If you do not specify the password parameter, the server generates a random password and returns it in the response.</p>
+     * <p>Resets the logon password of a specified user. Specify the user by using agentCoreUserId or username. At least one of the two parameters is required. This operation only supports users who use local password authentication in the workspace. If the password parameter is not specified, the server generates a random password and returns it in the response.</p>
      * 
      * @param request ResetUserPasswordRequest
      * @return ResetUserPasswordResponse
@@ -10209,11 +10843,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Resubmits the creation request for an existing image cache to recreate a cache that has not been successfully created.</p>
-     * <h3>Call scope</h3>
-     * <p>Pass <code>regionId</code>, <code>workspaceId</code>, and <code>clientToken</code> as query parameters, and use <code>imageId</code> to locate the cache. This operation applies to ACR source caches and re-verifies the source repository authorization before submission.</p>
+     * <h3>Scope</h3>
+     * <p>Pass <code>regionId</code>, <code>workspaceId</code>, and <code>clientToken</code> as query parameters, and use <code>imageId</code> to locate the cache. This operation is intended for ACR-sourced caches and re-verifies the source repository authorization before submission.</p>
      * <h3>Query retry results</h3>
-     * <p>A successful response indicates that a retry acceptance snapshot is returned, not that the creation is complete. Query the status through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <code>READY</code> indicates that the cache is ready. If the status is <code>FAILED</code>, check the <code>error</code> field.
-     * The <code>clientToken</code> parameter currently only verifies that the value is not empty and does not guarantee deduplication or recovery of the original acceptance result based on this identifier.</p>
+     * <p>A successful response indicates that a retry acceptance snapshot is returned, but it does not mean that the creation is complete. Query the status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <code>READY</code> indicates that the cache is ready. If the status is <code>FAILED</code>, check the <code>error</code> field.
+     * Currently, <code>clientToken</code> is only verified to be non-empty and does not guarantee deduplication or recovery of the original acceptance result based on this token.</p>
      * 
      * <b>summary</b> : 
      * <p>Resubmits the creation request for an ACR image cache in a specified workspace.</p>
@@ -10271,11 +10905,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Resubmits the creation request for an existing image cache to recreate a cache that has not been successfully created.</p>
-     * <h3>Call scope</h3>
-     * <p>Pass <code>regionId</code>, <code>workspaceId</code>, and <code>clientToken</code> as query parameters, and use <code>imageId</code> to locate the cache. This operation applies to ACR source caches and re-verifies the source repository authorization before submission.</p>
+     * <h3>Scope</h3>
+     * <p>Pass <code>regionId</code>, <code>workspaceId</code>, and <code>clientToken</code> as query parameters, and use <code>imageId</code> to locate the cache. This operation is intended for ACR-sourced caches and re-verifies the source repository authorization before submission.</p>
      * <h3>Query retry results</h3>
-     * <p>A successful response indicates that a retry acceptance snapshot is returned, not that the creation is complete. Query the status through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <code>READY</code> indicates that the cache is ready. If the status is <code>FAILED</code>, check the <code>error</code> field.
-     * The <code>clientToken</code> parameter currently only verifies that the value is not empty and does not guarantee deduplication or recovery of the original acceptance result based on this identifier.</p>
+     * <p>A successful response indicates that a retry acceptance snapshot is returned, but it does not mean that the creation is complete. Query the status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <code>READY</code> indicates that the cache is ready. If the status is <code>FAILED</code>, check the <code>error</code> field.
+     * Currently, <code>clientToken</code> is only verified to be non-empty and does not guarantee deduplication or recovery of the original acceptance result based on this token.</p>
      * 
      * <b>summary</b> : 
      * <p>Resubmits the creation request for an ACR image cache in a specified workspace.</p>
@@ -10291,10 +10925,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves relevant memories semantically from the long-term memory store (MemoryStore) to help agents obtain the information required for subsequent tasks.</p>
+     * <p>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state support retries. After a retry, you can query the progress by calling GetMemoryTask.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves long-term memory from MemoryStore based on semantics.</p>
+     * <p>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state support retries. After a retry, you can query the progress by calling GetMemoryTask.</p>
+     * 
+     * @param request RetryMemoryTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetryMemoryTaskResponse
+     */
+    public RetryMemoryTaskResponse retryMemoryTaskWithOptions(String workspaceId, String memoryStoreName, String taskId, RetryMemoryTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetryMemoryTask"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memory-tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + "/actions/retry"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetryMemoryTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state support retries. After a retry, you can query the progress by calling GetMemoryTask.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retries a failed memory task by reusing the original task ID, input, and extraction configuration. Only tasks in the FAILED state support retries. After a retry, you can query the progress by calling GetMemoryTask.</p>
+     * 
+     * @param request RetryMemoryTaskRequest
+     * @return RetryMemoryTaskResponse
+     */
+    public RetryMemoryTaskResponse retryMemoryTask(String workspaceId, String memoryStoreName, String taskId, RetryMemoryTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.retryMemoryTaskWithOptions(workspaceId, memoryStoreName, taskId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory. You can query it by setting valid=false in ListMemories. Repeated revocations return a success response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory. You can query it by setting valid=false in ListMemories. Repeated revocations return a success response.</p>
+     * 
+     * @param request RevokeMemoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeMemoryResponse
+     */
+    public RevokeMemoryResponse revokeMemoryWithOptions(String workspaceId, String memoryStoreName, String memoryId, RevokeMemoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeMemory"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memories/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryId) + "/actions/revoke"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeMemoryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory. You can query it by setting valid=false in ListMemories. Repeated revocations return a success response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invalidates the specified memory while retaining its content. After revocation, the memory no longer participates in retrieval as a valid memory. You can query it by setting valid=false in ListMemories. Repeated revocations return a success response.</p>
+     * 
+     * @param request RevokeMemoryRequest
+     * @return RevokeMemoryResponse
+     */
+    public RevokeMemoryResponse revokeMemory(String workspaceId, String memoryStoreName, String memoryId, RevokeMemoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.revokeMemoryWithOptions(workspaceId, memoryStoreName, memoryId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves relevant memories semantically from a long-term memory store (MemoryStore) for an agent to obtain information required for subsequent tasks.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves relevant memories based on the query text. Supports filtering by association scope, type, and metadata, and sets result thresholds through similarity and relevance scores. If topK is omitted or set to 0, the default value 10 is used, with a maximum of 200.</p>
      * 
      * @param tmpReq SearchMemoriesRequest
      * @param headers map
@@ -10334,10 +11062,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves relevant memories semantically from the long-term memory store (MemoryStore) to help agents obtain the information required for subsequent tasks.</p>
+     * <p>Retrieves relevant memories semantically from a long-term memory store (MemoryStore) for an agent to obtain information required for subsequent tasks.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves long-term memory from MemoryStore based on semantics.</p>
+     * <p>Retrieves relevant memories based on the query text. Supports filtering by association scope, type, and metadata, and sets result thresholds through similarity and relevance scores. If topK is omitted or set to 0, the default value 10 is used, with a maximum of 200.</p>
      * 
      * @param request SearchMemoriesRequest
      * @return SearchMemoriesResponse
@@ -10350,8 +11078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits a specified draft version of an agent template for review.
-     * If no release pipeline is configured, the version is directly published online.</p>
+     * <p>Submits a specified draft version of an agent template for review. If no release pipeline is configured, the version is directly published online.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits a specified draft version of an AgentSpec for review. If no release pipeline is configured, the version is directly published online.</p>
@@ -10394,8 +11121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits a specified draft version of an agent template for review.
-     * If no release pipeline is configured, the version is directly published online.</p>
+     * <p>Submits a specified draft version of an agent template for review. If no release pipeline is configured, the version is directly published online.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits a specified draft version of an AgentSpec for review. If no release pipeline is configured, the version is directly published online.</p>
@@ -10529,11 +11255,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the ServiceEndpoint, enablement status, or channel behavior configuration bound to an IM channel.
+     * <p>Updates the ServiceEndpoint, enabling status, or channel behavior configuration bound to an IM channel.
      * At least one updatable field must be provided.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the ServiceEndpoint, enablement status, or channel behavior configuration bound to an IM channel. At least one updatable field must be provided.</p>
+     * <p>Updates the ServiceEndpoint, enabling status, or channel behavior configuration bound to an IM channel. At least one updatable field must be provided.</p>
      * 
      * @param tmpReq UpdateAgentIMChannelRequest
      * @param headers map
@@ -10579,11 +11305,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the ServiceEndpoint, enablement status, or channel behavior configuration bound to an IM channel.
+     * <p>Updates the ServiceEndpoint, enabling status, or channel behavior configuration bound to an IM channel.
      * At least one updatable field must be provided.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the ServiceEndpoint, enablement status, or channel behavior configuration bound to an IM channel. At least one updatable field must be provided.</p>
+     * <p>Updates the ServiceEndpoint, enabling status, or channel behavior configuration bound to an IM channel. At least one updatable field must be provided.</p>
      * 
      * @param request UpdateAgentIMChannelRequest
      * @return UpdateAgentIMChannelResponse
@@ -10596,11 +11322,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Replaces the access credentials for an IM channel to rotate keys or correct authentication configurations.
-     * Submit the complete new credentials. The response does not return plaintext secrets.</p>
+     * <p>Replaces all access credentials for an IM channel to rotate keys or correct authentication configurations.
+     * Submit complete new credentials. The response does not return secrets in plaintext.</p>
      * 
      * <b>summary</b> : 
-     * <p>Fully updates the channel credentials for a specified IM channel. Secrets are not returned in the response.</p>
+     * <p>Updates all channel credentials for a specified IM channel. Secrets are not returned in the response.</p>
      * 
      * @param tmpReq UpdateAgentIMChannelCredentialRequest
      * @param headers map
@@ -10646,11 +11372,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Replaces the access credentials for an IM channel to rotate keys or correct authentication configurations.
-     * Submit the complete new credentials. The response does not return plaintext secrets.</p>
+     * <p>Replaces all access credentials for an IM channel to rotate keys or correct authentication configurations.
+     * Submit complete new credentials. The response does not return secrets in plaintext.</p>
      * 
      * <b>summary</b> : 
-     * <p>Fully updates the channel credentials for a specified IM channel. Secrets are not returned in the response.</p>
+     * <p>Updates all channel credentials for a specified IM channel. Secrets are not returned in the response.</p>
      * 
      * @param request UpdateAgentIMChannelCredentialRequest
      * @return UpdateAgentIMChannelCredentialResponse
@@ -10663,10 +11389,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the business tags, version tags, and visibility scope of a specified agent template. Fields not provided remain unchanged.</p>
+     * <p>Updates the business tags, version tags, and visibility scope of a specified agent template. Fields not passed remain unchanged.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the business tags, version tags, and visibility scope of a specified AgentSpec. Fields not provided remain unchanged.</p>
+     * <p>Updates the business tags, version tags, and visibility scope of a specified AgentSpec. Fields not passed remain unchanged.</p>
      * 
      * @param tmpReq UpdateAgentSpecRequest
      * @param headers map
@@ -10706,10 +11432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the business tags, version tags, and visibility scope of a specified agent template. Fields not provided remain unchanged.</p>
+     * <p>Updates the business tags, version tags, and visibility scope of a specified agent template. Fields not passed remain unchanged.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the business tags, version tags, and visibility scope of a specified AgentSpec. Fields not provided remain unchanged.</p>
+     * <p>Updates the business tags, version tags, and visibility scope of a specified AgentSpec. Fields not passed remain unchanged.</p>
      * 
      * @param request UpdateAgentSpecRequest
      * @return UpdateAgentSpecResponse
@@ -10723,10 +11449,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Updates the API key or service account key collection for an enabled QoderCLI connector.
-     * When updating service account keys, existing keys are matched by their record <code>id</code>.</p>
+     * When updating service account keys, the service matches existing keys by their id.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the API key or service account key collection for an enabled QoderCLI connector. When serviceAccountKeys is submitted, the service uses it as the complete updated key collection to add, rename, rotate, and delete keys.</p>
+     * <p>Updates the API key or service account key collection for an enabled QoderCLI connector. When serviceAccountKeys is submitted, the service treats it as the updated complete key collection to perform additions, renames, rotations, and deletions.</p>
      * 
      * @param tmpReq UpdateConnectorRequest
      * @param headers map
@@ -10767,10 +11493,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Updates the API key or service account key collection for an enabled QoderCLI connector.
-     * When updating service account keys, existing keys are matched by their record <code>id</code>.</p>
+     * When updating service account keys, the service matches existing keys by their id.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the API key or service account key collection for an enabled QoderCLI connector. When serviceAccountKeys is submitted, the service uses it as the complete updated key collection to add, rename, rotate, and delete keys.</p>
+     * <p>Updates the API key or service account key collection for an enabled QoderCLI connector. When serviceAccountKeys is submitted, the service treats it as the updated complete key collection to perform additions, renames, rotations, and deletions.</p>
      * 
      * @param request UpdateConnectorRequest
      * @return UpdateConnectorResponse
@@ -10785,19 +11511,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Updates the content, description, or MCP header application scope of a specified credential.</p>
      * <h3>Update rules</h3>
-     * <p>You must modify at least one of the credential content, description, or application scope. When modifying only the application scope, you do not need to submit credentialMetadata or description.</p>
+     * <p>You must modify at least one of the following: credential content, description, or application scope. If you only modify the application scope, you do not need to submit <code>credentialMetadata</code> or <code>description</code>.</p>
      * <ul>
-     * <li>Omit credentialMetadata: The original credential content is retained. If provided, submit a JSON string according to the original credential type.</li>
-     * <li>Omit description: The original description is retained.</li>
-     * <li>The credential name and credentialType cannot be modified.</li>
+     * <li>Omit <code>credentialMetadata</code>: The original credential content is retained. If provided, submit a JSON string according to the original credential type.</li>
+     * <li>Omit <code>description</code>: The original description is retained.</li>
+     * <li>The credential name and <code>credentialType</code> cannot be modified.</li>
      * </ul>
      * <h3>MCP header application scope</h3>
-     * <p>Only mcpHeader supports updating the application scope. For apiKey, do not submit resourceScope or resourceRefs.</p>
+     * <p>Only <code>mcpHeader</code> supports updating the application scope. Do not submit <code>resourceScope</code> or <code>resourceRefs</code> for <code>apiKey</code>.</p>
      * <ul>
      * <li>Omit both the scope and the resource list: The original configuration is retained.</li>
-     * <li>Submit resourceRefs: You must also submit resourceScope.</li>
-     * <li>resourceScope=ALL: Omit resourceRefs.</li>
-     * <li>resourceScope=SPECIFIED: Submit resourceRefs. An empty array [] is allowed during updates. For each item, specify resourceType=mcpServer and resourceId.</li>
+     * <li>Submit <code>resourceRefs</code>: You must also submit <code>resourceScope</code>.</li>
+     * <li><code>resourceScope=ALL</code>: Omit <code>resourceRefs</code>.</li>
+     * <li><code>resourceScope=SPECIFIED</code>: Submit <code>resourceRefs</code>. An empty array <code>[]</code> is allowed during updates. For each item, specify <code>resourceType=mcpServer</code> and <code>resourceId</code>.</li>
      * </ul>
      * <h3>Query results</h3>
      * <p>After the update, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a> to query the current configuration and the masked credential content.</p>
@@ -10851,19 +11577,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Updates the content, description, or MCP header application scope of a specified credential.</p>
      * <h3>Update rules</h3>
-     * <p>You must modify at least one of the credential content, description, or application scope. When modifying only the application scope, you do not need to submit credentialMetadata or description.</p>
+     * <p>You must modify at least one of the following: credential content, description, or application scope. If you only modify the application scope, you do not need to submit <code>credentialMetadata</code> or <code>description</code>.</p>
      * <ul>
-     * <li>Omit credentialMetadata: The original credential content is retained. If provided, submit a JSON string according to the original credential type.</li>
-     * <li>Omit description: The original description is retained.</li>
-     * <li>The credential name and credentialType cannot be modified.</li>
+     * <li>Omit <code>credentialMetadata</code>: The original credential content is retained. If provided, submit a JSON string according to the original credential type.</li>
+     * <li>Omit <code>description</code>: The original description is retained.</li>
+     * <li>The credential name and <code>credentialType</code> cannot be modified.</li>
      * </ul>
      * <h3>MCP header application scope</h3>
-     * <p>Only mcpHeader supports updating the application scope. For apiKey, do not submit resourceScope or resourceRefs.</p>
+     * <p>Only <code>mcpHeader</code> supports updating the application scope. Do not submit <code>resourceScope</code> or <code>resourceRefs</code> for <code>apiKey</code>.</p>
      * <ul>
      * <li>Omit both the scope and the resource list: The original configuration is retained.</li>
-     * <li>Submit resourceRefs: You must also submit resourceScope.</li>
-     * <li>resourceScope=ALL: Omit resourceRefs.</li>
-     * <li>resourceScope=SPECIFIED: Submit resourceRefs. An empty array [] is allowed during updates. For each item, specify resourceType=mcpServer and resourceId.</li>
+     * <li>Submit <code>resourceRefs</code>: You must also submit <code>resourceScope</code>.</li>
+     * <li><code>resourceScope=ALL</code>: Omit <code>resourceRefs</code>.</li>
+     * <li><code>resourceScope=SPECIFIED</code>: Submit <code>resourceRefs</code>. An empty array <code>[]</code> is allowed during updates. For each item, specify <code>resourceType=mcpServer</code> and <code>resourceId</code>.</li>
      * </ul>
      * <h3>Query results</h3>
      * <p>After the update, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a> to query the current configuration and the masked credential content.</p>
@@ -10895,11 +11621,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>name</code></td>
-     * <td>Omit to retain the original name. The value cannot be <code>null</code> or an empty string.</td>
+     * <td>Omitted to retain the original name. It cannot be <code>null</code> or a blank string.</td>
      * </tr>
      * <tr>
      * <td><code>description</code></td>
-     * <td>Omit to retain the original description. Pass <code>null</code> to clear the description.</td>
+     * <td>Omitted to retain the original description. Pass <code>null</code> to clear the description.</td>
      * </tr>
      * <tr>
      * <td><code>artifact</code></td>
@@ -10931,7 +11657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h3>Deployment artifacts</h3>
-     * <p>Three deployment methods are supported: code packages, ACR images, and custom images. When updating or switching the deployment method, provide the configuration according to the target method.</p>
+     * <p>Supports three deployment methods: code packages, ACR images, and custom images. When updating or switching the deployment method, provide the configuration according to the target method.</p>
      * <table>
      * <thead>
      * <tr>
@@ -10949,10 +11675,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>Code package</td>
-     * <td>Provide <code>artifact.port</code>, as well as <code>sourceUri</code>, <code>languageRuntime</code>, and <code>entrypoint</code> in <code>artifact.code</code>. Do not commit <code>container</code> at the same time.</td>
+     * <td>Provide <code>artifact.port</code>, as well as <code>sourceUri</code>, <code>languageRuntime</code>, and <code>entrypoint</code> in <code>artifact.code</code>. Do not submit <code>container</code> at the same time.</td>
      * </tr>
      * <tr>
-     * <td><strong>Custom image</strong></td>
+     * <td><strong>Custom images</strong></td>
      * <td></td>
      * </tr>
      * </tbody></table>
@@ -10960,14 +11686,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><code>customImage</code> must include the complete image address <code>image</code> and the independent pull network <code>pullNetwork</code>. The image address does not include a protocol or user information, and supports addresses with tags or digests.</li>
      * <li>For public network pulling, set <code>pullNetwork.type=public</code> and do not include VPC fields. For VPC pulling, set <code>type=vpc</code> and provide <code>vpcId</code>, <code>vSwitchId</code>, and <code>securityGroupId</code> at the same time. The image pull network and the agent runtime network are configured separately.</li>
      * <li>When repository authentication is required, provide non-empty <code>username</code> and <code>password</code> at the same time. For anonymous access, omit both. The response does not return the password.</li>
-     * <li>Omitting the entire <code>customImage</code> retains the saved image source. Commit the complete object when updating the custom image source. You do not need to resubmit this object when only adjusting the runtime configuration.</li>
-     * <li>Custom images and code packages do not support enabling <code>useImageCache</code>. The value in the final configuration must be <code>false</code>. When this field is omitted for a custom image, it is treated as <code>false</code>. When switching to a code package, if the original configuration is <code>true</code>, you must explicitly change it to <code>false</code>. When updating other sources, omitting this field retains the original value.
-     * <strong>Code package</strong></li>
-     * <li>Supports ZIP or TAR.GZ. The compressed package size cannot exceed <code>500000000</code> bytes. Dependencies are packaged by the invoker. The platform does not execute online builds or install dependencies.</li>
-     * <li>Query the active <code>languageRuntime</code> values by invoking <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListAgentCodeRuntimes">ListAgentCodeRuntimes</a>.</li>
-     * <li><code>sourceUri</code> supports <code>oss://</code> addresses or HTTPS object addresses of standard OSS public domain name, including signed URLs.</li>
-     * <li>For local code packages, first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageUploadUrl">GetAgentCodePackageUploadUrl</a>, upload the file according to the response information, and then commit the returned <code>sourceUri</code>.</li>
-     * <li>The new source is verified for read permissions, objects, and size before acceptance, and is transferred to a fixed copy on the platform. If the transfer failed, the current agent configuration is not saved. Common updates can reuse the saved fixed code package address.</li>
+     * <li>Omitting the entire <code>customImage</code> retains the saved image source. Submit the complete object when updating the custom image source. You do not need to resubmit this object when only adjusting the runtime configuration.</li>
+     * <li>Custom images and code packages do not support enabling <code>useImageCache</code>. The value of this field in the final configuration must be <code>false</code>. When this field is omitted for a custom image, it is treated as <code>false</code>. When switching to a code package, if the original configuration is <code>true</code>, you must explicitly change it to <code>false</code>. When updating other sources, omitting this field retains the original value.
+     * <strong>Code packages</strong></li>
+     * <li>Supports ZIP or TAR.GZ. The compressed package size cannot exceed <code>500000000</code> bytes. Dependencies are packaged by the caller. The platform does not perform online building or dependency installation.</li>
+     * <li>Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListAgentCodeRuntimes">ListAgentCodeRuntimes</a> to query the available <code>languageRuntime</code>.</li>
+     * <li><code>sourceUri</code> supports <code>oss://</code> addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs.</li>
+     * <li>For local code packages, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageUploadUrl">GetAgentCodePackageUploadUrl</a>, upload the file according to the response information, and then submit the returned <code>sourceUri</code>.</li>
+     * <li>The new source verifies read permissions, objects, and sizes before acceptance, and transfers them to a fixed platform copy. If the transfer fails, the current agent configuration is not saved. Common updates can reuse the saved fixed code package address.</li>
      * </ul>
      * <h3>Runtime configuration and elasticity</h3>
      * <p>Omitting the entire <code>runtime</code> retains the original runtime configuration. When submitting <code>runtime</code>, you must specify both <code>compute</code> and <code>sessionPolicy</code>.
@@ -10983,7 +11709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tbody><tr>
      * <td><code>enabled</code></td>
      * <td><code>false</code></td>
-     * <td>Specifies whether elastic scaling is enabled.</td>
+     * <td>Specifies whether to enable elastic scaling.</td>
      * </tr>
      * <tr>
      * <td><code>minSandboxCount</code></td>
@@ -11006,7 +11732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>The maximum idle time of a session, in seconds.</td>
      * </tr>
      * <tr>
-     * <td>The upper and lower limits of the number of instances are configuration values. Query the current number of instances through <code>sandboxPhaseCounts</code>.</td>
+     * <td>The upper and lower limits of the number of instances are configuration values. You can query the current number of instances through <code>sandboxPhaseCounts</code>.</td>
      * <td></td>
      * <td></td>
      * </tr>
@@ -11017,9 +11743,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h3>Network and mounts</h3>
-     * <p>Omitting the entire <code>network</code> retains the original configuration. When submitting this object, omitted access items are treated as allowed on the agent side, and actual access is restricted by the workspace network configuration.
+     * <p>Omitting the entire <code>network</code> retains the original configuration. When submitting this object, omitted access items are treated as allowed on the agent side. Actual access is restricted by the workspace network configuration.
      * To retain the original restrictions, submit both <code>accessInternet.enabled</code> and <code>accessVpc.enabled</code> at the same time. Do not submit only one of them.
-     * The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. When updating either list, you must include all mount items that need to be retained in the list. The two lists are updated separately. You can use <code>agenticFsMounts=[]</code> to clear AgenticFS mounts, but you cannot use <code>null</code> to clear them.
+     * The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. When updating either list, you must include all mount items that need to be retained in the list. The two lists are updated separately. You can set <code>agenticFsMounts=[]</code> to clear AgenticFS mounts. You cannot use <code>null</code> to clear them.
      * In this operation, ACR images, custom images, and code packages all use the same user mount target rules: <code>mountPath</code> is the absolute path in the container, such as <code>/data/train</code>, and must not conflict with platform reserved directories. Mount targets must not be duplicated or form parent-child directory overwrites.</p>
      * <h3>Environment variables</h3>
      * <p>Omitting the entire <code>environment</code> retains the original configuration. When submitting <code>environment.variables</code>, the original list is replaced as a whole with the current list. You must include all variables that need to be retained.
@@ -11030,7 +11756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Submit <code>environment</code> but omit <code>variables</code>, such as <code>environment={}</code>.
      * Variable names must be non-empty and unique in the list. Variable values must be strings, and empty strings are allowed.</li>
      * </ul>
-     * <h3>Health checks and logs</h3>
+     * <h3>Health checks and logging</h3>
      * <p>Omitting the entire <code>healthCheck</code> retains the original configuration. Pass <code>null</code> to remove the health check. When submitting this object, you must specify <code>port</code>. Other unspecified items use the following default values.</p>
      * <table>
      * <thead>
@@ -11112,7 +11838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a custom code or image agent in a specified workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call GetCustomAgent to query the update result.</p>
+     * <p>Updates the configuration of a custom code or image agent in a specified workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call the GetCustomAgent operation to query the update result.</p>
      * 
      * @param tmpReq UpdateCustomAgentRequest
      * @param headers map
@@ -11171,11 +11897,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>name</code></td>
-     * <td>Omit to retain the original name. The value cannot be <code>null</code> or an empty string.</td>
+     * <td>Omitted to retain the original name. It cannot be <code>null</code> or a blank string.</td>
      * </tr>
      * <tr>
      * <td><code>description</code></td>
-     * <td>Omit to retain the original description. Pass <code>null</code> to clear the description.</td>
+     * <td>Omitted to retain the original description. Pass <code>null</code> to clear the description.</td>
      * </tr>
      * <tr>
      * <td><code>artifact</code></td>
@@ -11207,7 +11933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h3>Deployment artifacts</h3>
-     * <p>Three deployment methods are supported: code packages, ACR images, and custom images. When updating or switching the deployment method, provide the configuration according to the target method.</p>
+     * <p>Supports three deployment methods: code packages, ACR images, and custom images. When updating or switching the deployment method, provide the configuration according to the target method.</p>
      * <table>
      * <thead>
      * <tr>
@@ -11225,10 +11951,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>Code package</td>
-     * <td>Provide <code>artifact.port</code>, as well as <code>sourceUri</code>, <code>languageRuntime</code>, and <code>entrypoint</code> in <code>artifact.code</code>. Do not commit <code>container</code> at the same time.</td>
+     * <td>Provide <code>artifact.port</code>, as well as <code>sourceUri</code>, <code>languageRuntime</code>, and <code>entrypoint</code> in <code>artifact.code</code>. Do not submit <code>container</code> at the same time.</td>
      * </tr>
      * <tr>
-     * <td><strong>Custom image</strong></td>
+     * <td><strong>Custom images</strong></td>
      * <td></td>
      * </tr>
      * </tbody></table>
@@ -11236,14 +11962,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><code>customImage</code> must include the complete image address <code>image</code> and the independent pull network <code>pullNetwork</code>. The image address does not include a protocol or user information, and supports addresses with tags or digests.</li>
      * <li>For public network pulling, set <code>pullNetwork.type=public</code> and do not include VPC fields. For VPC pulling, set <code>type=vpc</code> and provide <code>vpcId</code>, <code>vSwitchId</code>, and <code>securityGroupId</code> at the same time. The image pull network and the agent runtime network are configured separately.</li>
      * <li>When repository authentication is required, provide non-empty <code>username</code> and <code>password</code> at the same time. For anonymous access, omit both. The response does not return the password.</li>
-     * <li>Omitting the entire <code>customImage</code> retains the saved image source. Commit the complete object when updating the custom image source. You do not need to resubmit this object when only adjusting the runtime configuration.</li>
-     * <li>Custom images and code packages do not support enabling <code>useImageCache</code>. The value in the final configuration must be <code>false</code>. When this field is omitted for a custom image, it is treated as <code>false</code>. When switching to a code package, if the original configuration is <code>true</code>, you must explicitly change it to <code>false</code>. When updating other sources, omitting this field retains the original value.
-     * <strong>Code package</strong></li>
-     * <li>Supports ZIP or TAR.GZ. The compressed package size cannot exceed <code>500000000</code> bytes. Dependencies are packaged by the invoker. The platform does not execute online builds or install dependencies.</li>
-     * <li>Query the active <code>languageRuntime</code> values by invoking <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListAgentCodeRuntimes">ListAgentCodeRuntimes</a>.</li>
-     * <li><code>sourceUri</code> supports <code>oss://</code> addresses or HTTPS object addresses of standard OSS public domain name, including signed URLs.</li>
-     * <li>For local code packages, first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageUploadUrl">GetAgentCodePackageUploadUrl</a>, upload the file according to the response information, and then commit the returned <code>sourceUri</code>.</li>
-     * <li>The new source is verified for read permissions, objects, and size before acceptance, and is transferred to a fixed copy on the platform. If the transfer failed, the current agent configuration is not saved. Common updates can reuse the saved fixed code package address.</li>
+     * <li>Omitting the entire <code>customImage</code> retains the saved image source. Submit the complete object when updating the custom image source. You do not need to resubmit this object when only adjusting the runtime configuration.</li>
+     * <li>Custom images and code packages do not support enabling <code>useImageCache</code>. The value of this field in the final configuration must be <code>false</code>. When this field is omitted for a custom image, it is treated as <code>false</code>. When switching to a code package, if the original configuration is <code>true</code>, you must explicitly change it to <code>false</code>. When updating other sources, omitting this field retains the original value.
+     * <strong>Code packages</strong></li>
+     * <li>Supports ZIP or TAR.GZ. The compressed package size cannot exceed <code>500000000</code> bytes. Dependencies are packaged by the caller. The platform does not perform online building or dependency installation.</li>
+     * <li>Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListAgentCodeRuntimes">ListAgentCodeRuntimes</a> to query the available <code>languageRuntime</code>.</li>
+     * <li><code>sourceUri</code> supports <code>oss://</code> addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs.</li>
+     * <li>For local code packages, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageUploadUrl">GetAgentCodePackageUploadUrl</a>, upload the file according to the response information, and then submit the returned <code>sourceUri</code>.</li>
+     * <li>The new source verifies read permissions, objects, and sizes before acceptance, and transfers them to a fixed platform copy. If the transfer fails, the current agent configuration is not saved. Common updates can reuse the saved fixed code package address.</li>
      * </ul>
      * <h3>Runtime configuration and elasticity</h3>
      * <p>Omitting the entire <code>runtime</code> retains the original runtime configuration. When submitting <code>runtime</code>, you must specify both <code>compute</code> and <code>sessionPolicy</code>.
@@ -11259,7 +11985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tbody><tr>
      * <td><code>enabled</code></td>
      * <td><code>false</code></td>
-     * <td>Specifies whether elastic scaling is enabled.</td>
+     * <td>Specifies whether to enable elastic scaling.</td>
      * </tr>
      * <tr>
      * <td><code>minSandboxCount</code></td>
@@ -11282,7 +12008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>The maximum idle time of a session, in seconds.</td>
      * </tr>
      * <tr>
-     * <td>The upper and lower limits of the number of instances are configuration values. Query the current number of instances through <code>sandboxPhaseCounts</code>.</td>
+     * <td>The upper and lower limits of the number of instances are configuration values. You can query the current number of instances through <code>sandboxPhaseCounts</code>.</td>
      * <td></td>
      * <td></td>
      * </tr>
@@ -11293,9 +12019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h3>Network and mounts</h3>
-     * <p>Omitting the entire <code>network</code> retains the original configuration. When submitting this object, omitted access items are treated as allowed on the agent side, and actual access is restricted by the workspace network configuration.
+     * <p>Omitting the entire <code>network</code> retains the original configuration. When submitting this object, omitted access items are treated as allowed on the agent side. Actual access is restricted by the workspace network configuration.
      * To retain the original restrictions, submit both <code>accessInternet.enabled</code> and <code>accessVpc.enabled</code> at the same time. Do not submit only one of them.
-     * The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. When updating either list, you must include all mount items that need to be retained in the list. The two lists are updated separately. You can use <code>agenticFsMounts=[]</code> to clear AgenticFS mounts, but you cannot use <code>null</code> to clear them.
+     * The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. When updating either list, you must include all mount items that need to be retained in the list. The two lists are updated separately. You can set <code>agenticFsMounts=[]</code> to clear AgenticFS mounts. You cannot use <code>null</code> to clear them.
      * In this operation, ACR images, custom images, and code packages all use the same user mount target rules: <code>mountPath</code> is the absolute path in the container, such as <code>/data/train</code>, and must not conflict with platform reserved directories. Mount targets must not be duplicated or form parent-child directory overwrites.</p>
      * <h3>Environment variables</h3>
      * <p>Omitting the entire <code>environment</code> retains the original configuration. When submitting <code>environment.variables</code>, the original list is replaced as a whole with the current list. You must include all variables that need to be retained.
@@ -11306,7 +12032,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Submit <code>environment</code> but omit <code>variables</code>, such as <code>environment={}</code>.
      * Variable names must be non-empty and unique in the list. Variable values must be strings, and empty strings are allowed.</li>
      * </ul>
-     * <h3>Health checks and logs</h3>
+     * <h3>Health checks and logging</h3>
      * <p>Omitting the entire <code>healthCheck</code> retains the original configuration. Pass <code>null</code> to remove the health check. When submitting this object, you must specify <code>port</code>. Other unspecified items use the following default values.</p>
      * <table>
      * <thead>
@@ -11388,7 +12114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a custom code or image agent in a specified workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call GetCustomAgent to query the update result.</p>
+     * <p>Updates the configuration of a custom code or image agent in a specified workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call the GetCustomAgent operation to query the update result.</p>
      * 
      * @param request UpdateCustomAgentRequest
      * @return UpdateCustomAgentResponse
@@ -11401,14 +12127,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the model, instruction, tool, or skill configurations saved on the platform side for a managed agent to adjust its capability configurations after integration.</p>
+     * <p>Updates the model, instruction, tool, or skill configurations saved on the platform for a managed agent to adjust its capability configurations after integration.</p>
      * <h3>Update rules</h3>
-     * <p>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced as a whole upon submission. You must include the items to be retained, or pass [] to clear the corresponding explicit lists.</p>
+     * <p>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced in their entirety upon submission. You must include the items that you want to retain. Pass [] to clear the corresponding explicit list.</p>
      * <h3>Switch model sources</h3>
      * <ul>
      * <li>To switch to PLATFORM, provide modelSource=PLATFORM and a valid model configuration, including the model connection ID and model name.</li>
-     * <li>To switch to RUNTIME, change the Settings to modelSource=RUNTIME and do not commit the platform model. The original platform model configuration is removed when the source is switched.
-     * When a template is used, configurations belonging to the template such as instructions are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</li>
+     * <li>To switch to RUNTIME, update the Settings to modelSource=RUNTIME and do not commit the platform model. The original platform model configuration is removed when the source is switched.
+     * When a template is used, configurations that belong to the template, such as instructions, are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -11458,14 +12184,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the model, instruction, tool, or skill configurations saved on the platform side for a managed agent to adjust its capability configurations after integration.</p>
+     * <p>Updates the model, instruction, tool, or skill configurations saved on the platform for a managed agent to adjust its capability configurations after integration.</p>
      * <h3>Update rules</h3>
-     * <p>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced as a whole upon submission. You must include the items to be retained, or pass [] to clear the corresponding explicit lists.</p>
+     * <p>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced in their entirety upon submission. You must include the items that you want to retain. Pass [] to clear the corresponding explicit list.</p>
      * <h3>Switch model sources</h3>
      * <ul>
      * <li>To switch to PLATFORM, provide modelSource=PLATFORM and a valid model configuration, including the model connection ID and model name.</li>
-     * <li>To switch to RUNTIME, change the Settings to modelSource=RUNTIME and do not commit the platform model. The original platform model configuration is removed when the source is switched.
-     * When a template is used, configurations belonging to the template such as instructions are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</li>
+     * <li>To switch to RUNTIME, update the Settings to modelSource=RUNTIME and do not commit the platform model. The original platform model configuration is removed when the source is switched.
+     * When a template is used, configurations that belong to the template, such as instructions, are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -11482,7 +12208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the logon or directory configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on.</p>
+     * <p>Modifies the login or address book configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on (SSO).</p>
      * <h3>Select the configuration to modify</h3>
      * <table>
      * <thead>
@@ -11492,23 +12218,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>DingTalk (DingTalk), Feishu (Feishu)</td>
-     * <td>Enterprise application credentials metadata, logon switch loginEnabled, directory change synchronization switch syncEnabled, and synchronization scope syncScope. You must submit at least one item.</td>
+     * <td>DingTalk, Feishu</td>
+     * <td>Enterprise application credentials metadata, login switch loginEnabled, address book change synchronization switch syncEnabled, and synchronization scope syncScope. At least one item must be submitted.</td>
      * </tr>
      * <tr>
      * <td>Custom identity provider (CustomSSO)</td>
-     * <td>SAML protocol protocol, logon configuration saml, and logon switch loginEnabled. SCIM-based user synchronization is configured separately by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
+     * <td>SAML protocol, login configuration saml, and login switch loginEnabled. SCIM user synchronization is configured independently by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
      * </tr>
      * </tbody></table>
      * <h3>Update DingTalk or Feishu</h3>
-     * <p>metadata is updated by field: submit only the fields that need to be modified. Omitted fields and existing keys remain unchanged. Provided values must be non-empty strings. When you enable directory change synchronization, the configuration must include encryptKey and verificationToken.
+     * <p>metadata is updated by field: submit only the fields that need to be modified. Omitted fields and existing keys remain unchanged. The provided values must be non-empty strings. When you enable address book change synchronization, the configuration must include encryptKey and verificationToken.
      * To adjust synchronized departments:
-     * <strong>Step 1:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> to query and select departments.
-     * <strong>Step 2:</strong> Save syncScope by using this operation. If you omit this field or pass null, the current scope is retained.
-     * <strong>Step 3:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
-     * Saving the scope does not automatically trigger a full synchronization. syncEnabled controls subsequent directory change events. The initial synchronization and manual synchronization are executed separately.</p>
+     * <strong>Step 1:</strong> Query and select departments by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.
+     * <strong>Step 2:</strong> Save syncScope by calling this operation. If you omit this field or pass null, the current scope is retained.
+     * <strong>Step 3:</strong> Wait for the configuration processing to complete by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
+     * Saving the scope does not automatically trigger a full synchronization. syncEnabled controls subsequent address book change events. The initial synchronization and manual synchronization are executed separately.</p>
      * <h3>Configure custom single sign-on</h3>
-     * <p>CustomSSO uses the SAML protocol to allow users to log on through the enterprise identity system. First, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and configure it in the enterprise identity system. Then, fill in the enterprise-side information in saml.
+     * <p>CustomSSO uses the SAML protocol to allow users to log on through the enterprise identity system. First, obtain the access information of AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> and configure it in the enterprise identity system. Then, fill in the enterprise-side information in saml.
      * Choose one of the following two methods:</p>
      * <table>
      * <thead>
@@ -11523,23 +12249,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>Manual entry</td>
-     * <td>Provide entityId, loginUrl, bindingType, and x509Certificates at the same time. Use an HTTPS logon URL and a valid signing certificate. Set bindingType to HTTP-Redirect or HTTP-POST. You can provide up to two certificates.</td>
+     * <td>Provide entityId, loginUrl, bindingType, and x509Certificates at the same time. Use an HTTPS login URL and a valid signing certificate. Set bindingType to HTTP-Redirect or HTTP-POST. You can provide up to two certificates.</td>
      * </tr>
      * <tr>
      * <td>The entityId cannot be changed after it is saved. If the XML contains both binding methods, HTTP-POST and its corresponding URL take precedence.</td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>After saving the configuration, set loginEnabled=true to enable logon. You can also enable it when submitting a valid SAML configuration. Setting it to false disables logon and retains the existing configuration.</td>
+     * <td>After saving the configuration, set loginEnabled=true to enable login. You can also enable it when submitting a valid SAML configuration. Setting it to false disables login and retains the existing configuration.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Confirm that the configuration takes effect</h3>
-     * <p>After the request is accepted, UPDATING is usually returned. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. READY indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
+     * <p>After the request is accepted, UPDATING is usually returned. Query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. READY indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
      * If the request times out, query the current configuration and processing status first, and then decide whether to retry. Query the SCIM processing result by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support the logon switch, incremental synchronization switch, application configuration, and synchronization scope. CustomSSO supports SAML configuration and the logon switch. Updates take effect asynchronously. Call GetIdentityProvider to query the status.</p>
+     * <p>Modifies the configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support login switches, address book synchronization switches, application configurations, and synchronization scopes. CustomSSO supports SAML or OIDC login configurations and login switches. SCIM user synchronization is configured independently. Updates take effect asynchronously. You can query the status by calling GetIdentityProvider.</p>
      * 
      * @param tmpReq UpdateIdentityProviderRequest
      * @param headers map
@@ -11579,7 +12305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the logon or directory configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on.</p>
+     * <p>Modifies the login or address book configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on (SSO).</p>
      * <h3>Select the configuration to modify</h3>
      * <table>
      * <thead>
@@ -11589,23 +12315,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>DingTalk (DingTalk), Feishu (Feishu)</td>
-     * <td>Enterprise application credentials metadata, logon switch loginEnabled, directory change synchronization switch syncEnabled, and synchronization scope syncScope. You must submit at least one item.</td>
+     * <td>DingTalk, Feishu</td>
+     * <td>Enterprise application credentials metadata, login switch loginEnabled, address book change synchronization switch syncEnabled, and synchronization scope syncScope. At least one item must be submitted.</td>
      * </tr>
      * <tr>
      * <td>Custom identity provider (CustomSSO)</td>
-     * <td>SAML protocol protocol, logon configuration saml, and logon switch loginEnabled. SCIM-based user synchronization is configured separately by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
+     * <td>SAML protocol, login configuration saml, and login switch loginEnabled. SCIM user synchronization is configured independently by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
      * </tr>
      * </tbody></table>
      * <h3>Update DingTalk or Feishu</h3>
-     * <p>metadata is updated by field: submit only the fields that need to be modified. Omitted fields and existing keys remain unchanged. Provided values must be non-empty strings. When you enable directory change synchronization, the configuration must include encryptKey and verificationToken.
+     * <p>metadata is updated by field: submit only the fields that need to be modified. Omitted fields and existing keys remain unchanged. The provided values must be non-empty strings. When you enable address book change synchronization, the configuration must include encryptKey and verificationToken.
      * To adjust synchronized departments:
-     * <strong>Step 1:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> to query and select departments.
-     * <strong>Step 2:</strong> Save syncScope by using this operation. If you omit this field or pass null, the current scope is retained.
-     * <strong>Step 3:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
-     * Saving the scope does not automatically trigger a full synchronization. syncEnabled controls subsequent directory change events. The initial synchronization and manual synchronization are executed separately.</p>
+     * <strong>Step 1:</strong> Query and select departments by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.
+     * <strong>Step 2:</strong> Save syncScope by calling this operation. If you omit this field or pass null, the current scope is retained.
+     * <strong>Step 3:</strong> Wait for the configuration processing to complete by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
+     * Saving the scope does not automatically trigger a full synchronization. syncEnabled controls subsequent address book change events. The initial synchronization and manual synchronization are executed separately.</p>
      * <h3>Configure custom single sign-on</h3>
-     * <p>CustomSSO uses the SAML protocol to allow users to log on through the enterprise identity system. First, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and configure it in the enterprise identity system. Then, fill in the enterprise-side information in saml.
+     * <p>CustomSSO uses the SAML protocol to allow users to log on through the enterprise identity system. First, obtain the access information of AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> and configure it in the enterprise identity system. Then, fill in the enterprise-side information in saml.
      * Choose one of the following two methods:</p>
      * <table>
      * <thead>
@@ -11620,23 +12346,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>Manual entry</td>
-     * <td>Provide entityId, loginUrl, bindingType, and x509Certificates at the same time. Use an HTTPS logon URL and a valid signing certificate. Set bindingType to HTTP-Redirect or HTTP-POST. You can provide up to two certificates.</td>
+     * <td>Provide entityId, loginUrl, bindingType, and x509Certificates at the same time. Use an HTTPS login URL and a valid signing certificate. Set bindingType to HTTP-Redirect or HTTP-POST. You can provide up to two certificates.</td>
      * </tr>
      * <tr>
      * <td>The entityId cannot be changed after it is saved. If the XML contains both binding methods, HTTP-POST and its corresponding URL take precedence.</td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>After saving the configuration, set loginEnabled=true to enable logon. You can also enable it when submitting a valid SAML configuration. Setting it to false disables logon and retains the existing configuration.</td>
+     * <td>After saving the configuration, set loginEnabled=true to enable login. You can also enable it when submitting a valid SAML configuration. Setting it to false disables login and retains the existing configuration.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Confirm that the configuration takes effect</h3>
-     * <p>After the request is accepted, UPDATING is usually returned. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. READY indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
+     * <p>After the request is accepted, UPDATING is usually returned. Query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. READY indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
      * If the request times out, query the current configuration and processing status first, and then decide whether to retry. Query the SCIM processing result by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support the logon switch, incremental synchronization switch, application configuration, and synchronization scope. CustomSSO supports SAML configuration and the logon switch. Updates take effect asynchronously. Call GetIdentityProvider to query the status.</p>
+     * <p>Modifies the configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support login switches, address book synchronization switches, application configurations, and synchronization scopes. CustomSSO supports SAML or OIDC login configurations and login switches. SCIM user synchronization is configured independently. Updates take effect asynchronously. You can query the status by calling GetIdentityProvider.</p>
      * 
      * @param request UpdateIdentityProviderRequest
      * @return UpdateIdentityProviderResponse
@@ -11649,29 +12375,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables or disables SCIM user synchronization for AgentCore. When enabled, all existing users in the shared user pool are fully imported into the workspace. Users in the user pool are provisioned by the enterprise identity system through SCIM.</p>
-     * <h3>Preparations</h3>
-     * <p><strong>Step 1:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to enable the receiving endpoint and obtain the receiving URL and a valid token.
+     * <p>Enables or disables SCIM-based user synchronization for AgentCore. When enabled, all existing users in the shared user pool are fully imported into the workspace. Users in the user pool are provisioned by the enterprise identity system through SCIM.</p>
+     * <h3>Preparations before enabling</h3>
+     * <p><strong>Step 1:</strong> Enable the receiving endpoint by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the receiving URL and a valid token.
      * <strong>Step 2:</strong> Complete the SCIM configuration, connection test, and user assignment in the enterprise identity system.
      * <strong>Step 3:</strong> Call this operation and set syncEnabled to true.</p>
      * <pre><code class="language-http">PUT /workspaces/{workspaceId}/scim-provisioning
      * {&quot;syncEnabled&quot;:true}
      * </code></pre>
      * <p>When the enabling task is executed, the system checks whether the receiving endpoint is enabled and whether valid credentials exist. If no users are provisioned in the enterprise identity system, the initial import may succeed but contain no user records.</p>
-     * <h3>Impact of disabling</h3>
-     * <p>Setting syncEnabled to false disables user synchronization and the upstream SCIM receiving endpoint, but retains the imported users, existing credentials, and SAML logon configuration.
-     * To re-enable the feature later, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to prepare the receiving endpoint first, and then enable synchronization.</p>
-     * <h3>Verify the operation result</h3>
-     * <p>After this operation accepts the request, it executes the enabling or disabling task in the background. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the progress:</p>
+     * <h3>Impact after disabling</h3>
+     * <p>Setting syncEnabled to false disables user synchronization and the upstream SCIM receiving endpoint. The imported users, existing credentials, and SAML logon configuration are retained.
+     * To re-enable synchronization later, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to prepare the receiving endpoint first, and then enable synchronization.</p>
+     * <h3>Confirm the operation result</h3>
+     * <p>After this operation accepts the request, it executes the enabling or disabling task in the background. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>:</p>
      * <ul>
      * <li>syncEnabled indicates whether synchronization is expected to be enabled or disabled.</li>
      * <li>operationStatus indicates the execution result of the most recent operation.</li>
      * <li>The status field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
-     * If the operation fails, the saved syncEnabled value is not automatically rolled back. Verify the configuration based on the operation result before deciding on subsequent actions.</li>
+     * If the operation fails, the saved syncEnabled value is not automatically rolled back. Verify the configuration based on the operation result and determine the subsequent actions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables SCIM user synchronization independently. When enabled, an initial full import is executed asynchronously, and the result can be queried by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</p>
+     * <p>Enables or disables SCIM-based user synchronization independently. When enabled, an initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</p>
      * 
      * @param tmpReq UpdateIdentityProviderSCIMRequest
      * @param headers map
@@ -11711,29 +12437,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables or disables SCIM user synchronization for AgentCore. When enabled, all existing users in the shared user pool are fully imported into the workspace. Users in the user pool are provisioned by the enterprise identity system through SCIM.</p>
-     * <h3>Preparations</h3>
-     * <p><strong>Step 1:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to enable the receiving endpoint and obtain the receiving URL and a valid token.
+     * <p>Enables or disables SCIM-based user synchronization for AgentCore. When enabled, all existing users in the shared user pool are fully imported into the workspace. Users in the user pool are provisioned by the enterprise identity system through SCIM.</p>
+     * <h3>Preparations before enabling</h3>
+     * <p><strong>Step 1:</strong> Enable the receiving endpoint by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the receiving URL and a valid token.
      * <strong>Step 2:</strong> Complete the SCIM configuration, connection test, and user assignment in the enterprise identity system.
      * <strong>Step 3:</strong> Call this operation and set syncEnabled to true.</p>
      * <pre><code class="language-http">PUT /workspaces/{workspaceId}/scim-provisioning
      * {&quot;syncEnabled&quot;:true}
      * </code></pre>
      * <p>When the enabling task is executed, the system checks whether the receiving endpoint is enabled and whether valid credentials exist. If no users are provisioned in the enterprise identity system, the initial import may succeed but contain no user records.</p>
-     * <h3>Impact of disabling</h3>
-     * <p>Setting syncEnabled to false disables user synchronization and the upstream SCIM receiving endpoint, but retains the imported users, existing credentials, and SAML logon configuration.
-     * To re-enable the feature later, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to prepare the receiving endpoint first, and then enable synchronization.</p>
-     * <h3>Verify the operation result</h3>
-     * <p>After this operation accepts the request, it executes the enabling or disabling task in the background. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the progress:</p>
+     * <h3>Impact after disabling</h3>
+     * <p>Setting syncEnabled to false disables user synchronization and the upstream SCIM receiving endpoint. The imported users, existing credentials, and SAML logon configuration are retained.
+     * To re-enable synchronization later, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to prepare the receiving endpoint first, and then enable synchronization.</p>
+     * <h3>Confirm the operation result</h3>
+     * <p>After this operation accepts the request, it executes the enabling or disabling task in the background. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>:</p>
      * <ul>
      * <li>syncEnabled indicates whether synchronization is expected to be enabled or disabled.</li>
      * <li>operationStatus indicates the execution result of the most recent operation.</li>
      * <li>The status field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
-     * If the operation fails, the saved syncEnabled value is not automatically rolled back. Verify the configuration based on the operation result before deciding on subsequent actions.</li>
+     * If the operation fails, the saved syncEnabled value is not automatically rolled back. Verify the configuration based on the operation result and determine the subsequent actions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables SCIM user synchronization independently. When enabled, an initial full import is executed asynchronously, and the result can be queried by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</p>
+     * <p>Enables or disables SCIM-based user synchronization independently. When enabled, an initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</p>
      * 
      * @param request UpdateIdentityProviderSCIMRequest
      * @return UpdateIdentityProviderSCIMResponse
@@ -11748,7 +12474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</p>
      * <h3>Update rules</h3>
-     * <p>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set <code>description=null</code> to clear the description.</p>
+     * <p>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</p>
      * <table>
      * <thead>
      * <tr>
@@ -11757,35 +12483,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><code>harness</code></td>
-     * <td>The type cannot be changed. When updating the qodercli account binding, keep the original <code>type</code> and submit the corresponding <code>configuration</code>.</td>
+     * <td>harness</td>
+     * <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
      * </tr>
      * <tr>
-     * <td><code>model</code></td>
+     * <td>model</td>
      * <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
      * </tr>
      * <tr>
-     * <td><code>runtime</code></td>
-     * <td>Specify both <code>compute</code> and <code>sessionPolicy</code> when submitting. Omitting the entire object retains the original runtime configuration.</td>
+     * <td>runtime</td>
+     * <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
      * </tr>
      * <tr>
-     * <td><code>tools</code>, <code>skills</code>, <code>promptVariables</code>, <code>subAgents</code></td>
-     * <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass <code>[]</code> to clear the corresponding explicit lists.</td>
+     * <td>tools, skills, promptVariables, subAgents</td>
+     * <td>The corresponding list is entirely replaced upon submission and must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
      * </tr>
      * <tr>
-     * <td><code>environment</code></td>
+     * <td>environment</td>
      * <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
      * </tr>
      * <tr>
-     * <td><code>network</code></td>
-     * <td>Specify both <code>accessInternet.enabled</code> and <code>accessVpc.enabled</code> when submitting.</td>
+     * <td>network</td>
+     * <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
      * </tr>
      * <tr>
-     * <td><code>ossMounts</code>, <code>agenticFsMounts</code></td>
-     * <td>Entirely replaced respectively. Pass <code>[]</code> to clear the corresponding lists. <code>agenticFsMounts</code> does not accept <code>null</code>.</td>
+     * <td>ossMounts, agenticFsMounts</td>
+     * <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
      * </tr>
      * </tbody></table>
-     * <h3>Harnesses, templates, and skills</h3>
+     * <h3>Harness, templates, and skills</h3>
      * <table>
      * <thead>
      * <tr>
@@ -11794,28 +12520,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><code>qwenpaw</code></td>
-     * <td>This type is used by default if <code>harness</code> is omitted during creation. Set <code>model.modelConnectionId</code> to the workspace model connection ID, and set <code>model.modelName</code> to the name of the model created under this connection.</td>
+     * <td>qwenpaw</td>
+     * <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of a model created under this connection.</td>
      * </tr>
      * <tr>
-     * <td><code>qodercli</code></td>
-     * <td>The qodercli connector must be enabled in the workspace. Set <code>model.modelConnectionId</code> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <code>model.modelName</code> can be omitted.</td>
+     * <td>qodercli</td>
+     * <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
      * </tr>
      * <tr>
-     * <td><code>harness</code> is an object, such as <code>{&quot;type&quot;:&quot;qwenpaw&quot;}</code>. For qodercli, set <code>harness.configuration.connectorServiceAccountKey</code> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. <code>connectorServiceAccountName</code> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+     * <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td><code>skills</code> uses the skill names in the workspace AI Registry. If <code>sourceType=REFERENCE</code>, versions are referenced by <code>versionSelector</code>: use <code>LABEL</code> with a tag name, or <code>VERSION</code> with a specific version number. If the selector is omitted, <code>LABEL/latest</code> is used. If <code>sourceType=STATIC</code>, static files bundled with the package are used, and no version selector is provided.</td>
+     * <td>skills uses the skill names in the workspace AI Registry. For sourceType=REFERENCE, versions are referenced by versionSelector: use LABEL with a tag name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. For sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>For <code>template.aiRegistry</code>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <code>instruction</code>, <code>promptVariables</code>, and <code>subAgents</code> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through <code>configuredSkills</code> and <code>skills</code>.</td>
+     * <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Elasticity and instances</h3>
-     * <p>If <code>runtime</code> is committed but <code>hpa</code> or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete <code>hpa</code>.</p>
+     * <p>If you commit runtime but omit hpa or some of its fields, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</p>
      * <table>
      * <thead>
      * <tr>
@@ -11825,45 +12551,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><code>enabled</code></td>
-     * <td><code>false</code></td>
-     * <td>Specifies whether elastic scaling is enabled.</td>
+     * <td>enabled</td>
+     * <td>false</td>
+     * <td>Specifies whether to enable elastic scaling.</td>
      * </tr>
      * <tr>
-     * <td><code>minSandboxCount</code></td>
-     * <td><code>1</code></td>
+     * <td>minSandboxCount</td>
+     * <td>1</td>
      * <td>The minimum number of instances. Valid values: 0 to 100.</td>
      * </tr>
      * <tr>
-     * <td><code>maxSandboxCount</code></td>
-     * <td><code>10</code></td>
+     * <td>maxSandboxCount</td>
+     * <td>10</td>
      * <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
      * </tr>
      * <tr>
-     * <td><code>maxConcurrentSessionsPerSandbox</code></td>
-     * <td><code>20</code></td>
+     * <td>maxConcurrentSessionsPerSandbox</td>
+     * <td>20</td>
      * <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
      * </tr>
      * <tr>
-     * <td><code>sessionTtlSeconds</code></td>
-     * <td><code>600</code></td>
+     * <td>sessionTtlSeconds</td>
+     * <td>600</td>
      * <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
      * </tr>
      * <tr>
-     * <td>If you only modify instructions, models, or skills, you can omit the entire <code>runtime</code> to keep the original runtime configuration unchanged. The minimum and maximum numbers of instances are the configuration border. You can query the actual number through <code>sandboxPhaseCounts</code>.</td>
+     * <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum number of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Environment and mounts</h3>
-     * <p>Omitting the entire <code>environment</code> retains the original configuration. Submitting <code>environment={}</code> or <code>environment=null</code> clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
-     * The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. The mount target <code>mountPath</code> uses an absolute path in the container, such as <code>/data/train</code>. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
-     * The <code>path</code> for OSS mounts must be a non-empty directory prefix in the bucket. For AgenticFS mounts, <code>server</code> is the AccessPoint domain name, without a protocol, port, or path. <code>path</code> is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If <code>readOnly</code> is omitted, the default value is <code>false</code>.</p>
+     * <p>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+     * The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path within the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overrides.
+     * The path for OSS mounts must be a non-empty directory prefix within the bucket. For AgenticFS mounts, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory within the AccessPoint, and the root directory of the AccessPoint cannot be mounted. If readOnly is omitted, the default value is false.</p>
      * <h3>Query update results</h3>
-     * <p>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <code>latestSpecVersion</code>, <code>latestVersionStatus</code>, <code>status</code>, and <code>sandboxPhaseCounts</code> to confirm the configuration processing and instance status. <code>clientToken</code> does not provide idempotence guarantees at this time.</p>
+     * <p>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not currently provide idempotency guarantees.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configurations.</p>
+     * <p>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configuration.</p>
      * 
      * @param tmpReq UpdateManagedAgentRequest
      * @param headers map
@@ -11911,7 +12637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</p>
      * <h3>Update rules</h3>
-     * <p>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set <code>description=null</code> to clear the description.</p>
+     * <p>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</p>
      * <table>
      * <thead>
      * <tr>
@@ -11920,35 +12646,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><code>harness</code></td>
-     * <td>The type cannot be changed. When updating the qodercli account binding, keep the original <code>type</code> and submit the corresponding <code>configuration</code>.</td>
+     * <td>harness</td>
+     * <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
      * </tr>
      * <tr>
-     * <td><code>model</code></td>
+     * <td>model</td>
      * <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
      * </tr>
      * <tr>
-     * <td><code>runtime</code></td>
-     * <td>Specify both <code>compute</code> and <code>sessionPolicy</code> when submitting. Omitting the entire object retains the original runtime configuration.</td>
+     * <td>runtime</td>
+     * <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
      * </tr>
      * <tr>
-     * <td><code>tools</code>, <code>skills</code>, <code>promptVariables</code>, <code>subAgents</code></td>
-     * <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass <code>[]</code> to clear the corresponding explicit lists.</td>
+     * <td>tools, skills, promptVariables, subAgents</td>
+     * <td>The corresponding list is entirely replaced upon submission and must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
      * </tr>
      * <tr>
-     * <td><code>environment</code></td>
+     * <td>environment</td>
      * <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
      * </tr>
      * <tr>
-     * <td><code>network</code></td>
-     * <td>Specify both <code>accessInternet.enabled</code> and <code>accessVpc.enabled</code> when submitting.</td>
+     * <td>network</td>
+     * <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
      * </tr>
      * <tr>
-     * <td><code>ossMounts</code>, <code>agenticFsMounts</code></td>
-     * <td>Entirely replaced respectively. Pass <code>[]</code> to clear the corresponding lists. <code>agenticFsMounts</code> does not accept <code>null</code>.</td>
+     * <td>ossMounts, agenticFsMounts</td>
+     * <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
      * </tr>
      * </tbody></table>
-     * <h3>Harnesses, templates, and skills</h3>
+     * <h3>Harness, templates, and skills</h3>
      * <table>
      * <thead>
      * <tr>
@@ -11957,28 +12683,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><code>qwenpaw</code></td>
-     * <td>This type is used by default if <code>harness</code> is omitted during creation. Set <code>model.modelConnectionId</code> to the workspace model connection ID, and set <code>model.modelName</code> to the name of the model created under this connection.</td>
+     * <td>qwenpaw</td>
+     * <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of a model created under this connection.</td>
      * </tr>
      * <tr>
-     * <td><code>qodercli</code></td>
-     * <td>The qodercli connector must be enabled in the workspace. Set <code>model.modelConnectionId</code> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <code>model.modelName</code> can be omitted.</td>
+     * <td>qodercli</td>
+     * <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
      * </tr>
      * <tr>
-     * <td><code>harness</code> is an object, such as <code>{&quot;type&quot;:&quot;qwenpaw&quot;}</code>. For qodercli, set <code>harness.configuration.connectorServiceAccountKey</code> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. <code>connectorServiceAccountName</code> is the account name. Do not specify these two binding fields for qwenpaw.</td>
+     * <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td><code>skills</code> uses the skill names in the workspace AI Registry. If <code>sourceType=REFERENCE</code>, versions are referenced by <code>versionSelector</code>: use <code>LABEL</code> with a tag name, or <code>VERSION</code> with a specific version number. If the selector is omitted, <code>LABEL/latest</code> is used. If <code>sourceType=STATIC</code>, static files bundled with the package are used, and no version selector is provided.</td>
+     * <td>skills uses the skill names in the workspace AI Registry. For sourceType=REFERENCE, versions are referenced by versionSelector: use LABEL with a tag name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. For sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
      * <td></td>
      * </tr>
      * <tr>
-     * <td>For <code>template.aiRegistry</code>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <code>instruction</code>, <code>promptVariables</code>, and <code>subAgents</code> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through <code>configuredSkills</code> and <code>skills</code>.</td>
+     * <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Elasticity and instances</h3>
-     * <p>If <code>runtime</code> is committed but <code>hpa</code> or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete <code>hpa</code>.</p>
+     * <p>If you commit runtime but omit hpa or some of its fields, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</p>
      * <table>
      * <thead>
      * <tr>
@@ -11988,45 +12714,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><code>enabled</code></td>
-     * <td><code>false</code></td>
-     * <td>Specifies whether elastic scaling is enabled.</td>
+     * <td>enabled</td>
+     * <td>false</td>
+     * <td>Specifies whether to enable elastic scaling.</td>
      * </tr>
      * <tr>
-     * <td><code>minSandboxCount</code></td>
-     * <td><code>1</code></td>
+     * <td>minSandboxCount</td>
+     * <td>1</td>
      * <td>The minimum number of instances. Valid values: 0 to 100.</td>
      * </tr>
      * <tr>
-     * <td><code>maxSandboxCount</code></td>
-     * <td><code>10</code></td>
+     * <td>maxSandboxCount</td>
+     * <td>10</td>
      * <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
      * </tr>
      * <tr>
-     * <td><code>maxConcurrentSessionsPerSandbox</code></td>
-     * <td><code>20</code></td>
+     * <td>maxConcurrentSessionsPerSandbox</td>
+     * <td>20</td>
      * <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
      * </tr>
      * <tr>
-     * <td><code>sessionTtlSeconds</code></td>
-     * <td><code>600</code></td>
+     * <td>sessionTtlSeconds</td>
+     * <td>600</td>
      * <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
      * </tr>
      * <tr>
-     * <td>If you only modify instructions, models, or skills, you can omit the entire <code>runtime</code> to keep the original runtime configuration unchanged. The minimum and maximum numbers of instances are the configuration border. You can query the actual number through <code>sandboxPhaseCounts</code>.</td>
+     * <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum number of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * <h3>Environment and mounts</h3>
-     * <p>Omitting the entire <code>environment</code> retains the original configuration. Submitting <code>environment={}</code> or <code>environment=null</code> clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
-     * The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. The mount target <code>mountPath</code> uses an absolute path in the container, such as <code>/data/train</code>. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
-     * The <code>path</code> for OSS mounts must be a non-empty directory prefix in the bucket. For AgenticFS mounts, <code>server</code> is the AccessPoint domain name, without a protocol, port, or path. <code>path</code> is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If <code>readOnly</code> is omitted, the default value is <code>false</code>.</p>
+     * <p>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+     * The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path within the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overrides.
+     * The path for OSS mounts must be a non-empty directory prefix within the bucket. For AgenticFS mounts, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory within the AccessPoint, and the root directory of the AccessPoint cannot be mounted. If readOnly is omitted, the default value is false.</p>
      * <h3>Query update results</h3>
-     * <p>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <code>latestSpecVersion</code>, <code>latestVersionStatus</code>, <code>status</code>, and <code>sandboxPhaseCounts</code> to confirm the configuration processing and instance status. <code>clientToken</code> does not provide idempotence guarantees at this time.</p>
+     * <p>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not currently provide idempotency guarantees.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configurations.</p>
+     * <p>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configuration.</p>
      * 
      * @param request UpdateManagedAgentRequest
      * @return UpdateManagedAgentResponse
@@ -12040,7 +12766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Updates the address, description, authentication, or Swagger configuration of an MCP service. The service type and protocol cannot be modified after creation.
-     * The update process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the processing result. The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
+     * The update process is executed asynchronously. After submission, you can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to query the processing result. The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update process is asynchronous.</p>
@@ -12090,7 +12816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Updates the address, description, authentication, or Swagger configuration of an MCP service. The service type and protocol cannot be modified after creation.
-     * The update process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the processing result. The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
+     * The update process is executed asynchronously. After submission, you can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to query the processing result. The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update process is asynchronous.</p>
@@ -12106,11 +12832,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service.
-     * Updates the parameters exposed by the schema using the same template version bound during MCP creation, without upgrading the template version.</p>
+     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service. This operation uses the same template version that was bound when the MCP service was created to update the parameters exposed by the schema, without upgrading the template version.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates MCP parameters based on a template.</p>
+     * <p>Updates the parameters of an MCP service based on a template.</p>
      * 
      * @param tmpReq UpdateMcpTemplateConfigRequest
      * @param headers map
@@ -12160,11 +12885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service.
-     * Updates the parameters exposed by the schema using the same template version bound during MCP creation, without upgrading the template version.</p>
+     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service. This operation uses the same template version that was bound when the MCP service was created to update the parameters exposed by the schema, without upgrading the template version.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates MCP parameters based on a template.</p>
+     * <p>Updates the parameters of an MCP service based on a template.</p>
      * 
      * @param request UpdateMcpTemplateConfigRequest
      * @return UpdateMcpTemplateConfigResponse
@@ -12177,10 +12901,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * <p>Updates the text or metadata of a long-term memory based on the memory ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * <p>Updates the content or metadata of a specified memory. At least one field must be provided for the update, and unprovided fields retain their original values. The metadata is fully replaced. Pass an empty object to clear the metadata.</p>
      * 
      * @param tmpReq UpdateMemoryRequest
      * @param headers map
@@ -12220,10 +12944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * <p>Updates the text or metadata of a long-term memory based on the memory ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
+     * <p>Updates the content or metadata of a specified memory. At least one field must be provided for the update, and unprovided fields retain their original values. The metadata is fully replaced. Pass an empty object to clear the metadata.</p>
      * 
      * @param request UpdateMemoryRequest
      * @return UpdateMemoryResponse
@@ -12232,6 +12956,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateMemoryWithOptions(workspaceId, memoryStoreName, memoryId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the name, description, enabling status, or extraction strategy of a memory rule. At least one field to update must be provided. Fields that are not provided remain unchanged.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name, description, enabling status, or extraction strategy of a memory rule. At least one field to update must be provided. Fields that are not provided remain unchanged.</p>
+     * 
+     * @param tmpReq UpdateMemoryRuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMemoryRuleResponse
+     */
+    public UpdateMemoryRuleResponse updateMemoryRuleWithOptions(String workspaceId, String memoryStoreName, String ruleId, UpdateMemoryRuleRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMemoryRuleShrinkRequest request = new UpdateMemoryRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMemoryRule"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/memorystores/" + com.aliyun.openapiutil.Client.getEncodeParam(memoryStoreName) + "/memory-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMemoryRuleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the name, description, enabling status, or extraction strategy of a memory rule. At least one field to update must be provided. Fields that are not provided remain unchanged.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name, description, enabling status, or extraction strategy of a memory rule. At least one field to update must be provided. Fields that are not provided remain unchanged.</p>
+     * 
+     * @param request UpdateMemoryRuleRequest
+     * @return UpdateMemoryRuleResponse
+     */
+    public UpdateMemoryRuleResponse updateMemoryRule(String workspaceId, String memoryStoreName, String ruleId, UpdateMemoryRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMemoryRuleWithOptions(workspaceId, memoryStoreName, ruleId, request, headers, runtime);
     }
 
     /**
@@ -12301,19 +13084,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the description, context length, maximum output length, or capability configuration of a model.</p>
+     * <p>Updates the description, context length, maximum output length, or capability configurations of a model.</p>
      * <h3>Update rules</h3>
      * <ul>
-     * <li>Provide at least one non-null field among description, contextSize, maxTokens, and capabilities.</li>
-     * <li>Omitted fields or fields passed as null retain their original values.</li>
-     * <li>The capabilities object is replaced as a whole. Unsubmitted capabilities within the object are treated as false.</li>
+     * <li>Provide at least one non-<code>null</code> field among description, contextSize, maxTokens, and capabilities.</li>
+     * <li>Omitted fields or fields passed as <code>null</code> retain their original values.</li>
+     * <li>The capabilities object is replaced as a whole. Unsubmitted capabilities within the object are treated as <code>false</code>.</li>
      * </ul>
      * <h3>Impact on agents</h3>
-     * <p>After contextSize, maxTokens, or capabilities actually change, the platform asynchronously refreshes the managed Harness agents that reference this model, as well as the managed agents that use platform models (modelSource=PLATFORM). Modifying only the description or repeatedly submitting the same configuration does not trigger a refresh.
+     * <p>After contextSize, maxTokens, or capabilities actually change, the platform asynchronously refreshes the managed Harness agents that reference this model, as well as the managed agents that use platform models (<code>modelSource=PLATFORM</code>). Modifying only the description or repeatedly submitting the same configuration does not trigger a refresh.
      * A successful response indicates that the model configuration has been saved. Verify the configuration by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetModel">GetModel</a>, and then check whether the configuration takes effect by calling the corresponding agent details API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the description, context token limit, maximum output token count, or capability configuration of a specified model.</p>
+     * <p>Updates the description, context token limit, maximum output token count, or capability configurations of a specified model.</p>
      * 
      * @param tmpReq UpdateModelRequest
      * @param headers map
@@ -12359,19 +13142,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the description, context length, maximum output length, or capability configuration of a model.</p>
+     * <p>Updates the description, context length, maximum output length, or capability configurations of a model.</p>
      * <h3>Update rules</h3>
      * <ul>
-     * <li>Provide at least one non-null field among description, contextSize, maxTokens, and capabilities.</li>
-     * <li>Omitted fields or fields passed as null retain their original values.</li>
-     * <li>The capabilities object is replaced as a whole. Unsubmitted capabilities within the object are treated as false.</li>
+     * <li>Provide at least one non-<code>null</code> field among description, contextSize, maxTokens, and capabilities.</li>
+     * <li>Omitted fields or fields passed as <code>null</code> retain their original values.</li>
+     * <li>The capabilities object is replaced as a whole. Unsubmitted capabilities within the object are treated as <code>false</code>.</li>
      * </ul>
      * <h3>Impact on agents</h3>
-     * <p>After contextSize, maxTokens, or capabilities actually change, the platform asynchronously refreshes the managed Harness agents that reference this model, as well as the managed agents that use platform models (modelSource=PLATFORM). Modifying only the description or repeatedly submitting the same configuration does not trigger a refresh.
+     * <p>After contextSize, maxTokens, or capabilities actually change, the platform asynchronously refreshes the managed Harness agents that reference this model, as well as the managed agents that use platform models (<code>modelSource=PLATFORM</code>). Modifying only the description or repeatedly submitting the same configuration does not trigger a refresh.
      * A successful response indicates that the model configuration has been saved. Verify the configuration by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetModel">GetModel</a>, and then check whether the configuration takes effect by calling the corresponding agent details API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the description, context token limit, maximum output token count, or capability configuration of a specified model.</p>
+     * <p>Updates the description, context token limit, maximum output token count, or capability configurations of a specified model.</p>
      * 
      * @param request UpdateModelRequest
      * @return UpdateModelResponse
@@ -12384,7 +13167,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.</p>
+     * <p>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.
+     * The request body must contain at least one non-null update field. If a field is omitted or set to null, the original value is retained. When apiKeys is submitted, the existing keys are completely replaced by the new list.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.</p>
@@ -12433,7 +13217,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.</p>
+     * <p>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.
+     * The request body must contain at least one non-null update field. If a field is omitted or set to null, the original value is retained. When apiKeys is submitted, the existing keys are completely replaced by the new list.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.</p>
@@ -12445,6 +13230,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateModelConnectionWithOptions(workspaceId, connectionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the name, bound version, authentication method, or elastic policy of a service endpoint. The top-level agentVersion is used to rebind the runtime source of the service endpoint. Router service endpoints and DEFAULT service endpoints of the GATEWAY_API_WITH_VPC_INGRESS or GATEWAY_API_WITH_PUBLIC_INGRESS type support independent operation. Rebinding or modifying the elasticity triggers an independent deployment of the service endpoint. DEFAULT service endpoints of the GATEWAY_API type support rebinding the agentVersion to switch to the target version within the namespace where the original gateway runtime instance resides. If the original gateway runtime instance is unavailable, ServiceEndpointTargetNotReady is returned. This type does not support elasticity updates. If updateElasticity is set to true, InvalidParameter is returned, and the elasticity inherits the configuration of the bound version. When a DEFAULT service endpoint is rebound from latest to another version, if the same agent still has a service endpoint bound to latest that is not running independently, Operation.Conflict is returned. Runtimes with the same target and normalized configuration are not repeatedly published. An explicit submission can trigger initial initialization or the retry of a failed task. A successful response does not indicate that the deployment is complete. You must verify the deployment status based on the status of the service endpoint.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a service endpoint.</p>
+     * 
+     * @param tmpReq UpdateServiceEndpointRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateServiceEndpointResponse
+     */
+    public UpdateServiceEndpointResponse updateServiceEndpointWithOptions(String workspaceId, String serviceEndpointId, UpdateServiceEndpointRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateServiceEndpointShrinkRequest request = new UpdateServiceEndpointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateServiceEndpoint"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/service-endpoints/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceEndpointId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceEndpointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the name, bound version, authentication method, or elastic policy of a service endpoint. The top-level agentVersion is used to rebind the runtime source of the service endpoint. Router service endpoints and DEFAULT service endpoints of the GATEWAY_API_WITH_VPC_INGRESS or GATEWAY_API_WITH_PUBLIC_INGRESS type support independent operation. Rebinding or modifying the elasticity triggers an independent deployment of the service endpoint. DEFAULT service endpoints of the GATEWAY_API type support rebinding the agentVersion to switch to the target version within the namespace where the original gateway runtime instance resides. If the original gateway runtime instance is unavailable, ServiceEndpointTargetNotReady is returned. This type does not support elasticity updates. If updateElasticity is set to true, InvalidParameter is returned, and the elasticity inherits the configuration of the bound version. When a DEFAULT service endpoint is rebound from latest to another version, if the same agent still has a service endpoint bound to latest that is not running independently, Operation.Conflict is returned. Runtimes with the same target and normalized configuration are not repeatedly published. An explicit submission can trigger initial initialization or the retry of a failed task. A successful response does not indicate that the deployment is complete. You must verify the deployment status based on the status of the service endpoint.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a service endpoint.</p>
+     * 
+     * @param request UpdateServiceEndpointRequest
+     * @return UpdateServiceEndpointResponse
+     */
+    public UpdateServiceEndpointResponse updateServiceEndpoint(String workspaceId, String serviceEndpointId, UpdateServiceEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateServiceEndpointWithOptions(workspaceId, serviceEndpointId, request, headers, runtime);
     }
 
     /**
@@ -12629,7 +13479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Updates the description and members of a specified team.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the description and members of a specified team. When users or agents are provided, the corresponding member lists are replaced based on full overwrite semantics. Member lists that are not provided remain unchanged. The team name cannot be modified after creation.</p>
+     * <p>Updates the description and members of a specified team. When users or agents are provided, the corresponding member list is replaced based on full overwrite semantics. Member lists that are not provided remain unchanged. The team name cannot be modified after creation.</p>
      * 
      * @param tmpReq UpdateTeamRequest
      * @param headers map
@@ -12678,7 +13528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Updates the description and members of a specified team.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the description and members of a specified team. When users or agents are provided, the corresponding member lists are replaced based on full overwrite semantics. Member lists that are not provided remain unchanged. The team name cannot be modified after creation.</p>
+     * <p>Updates the description and members of a specified team. When users or agents are provided, the corresponding member list is replaced based on full overwrite semantics. Member lists that are not provided remain unchanged. The team name cannot be modified after creation.</p>
      * 
      * @param request UpdateTeamRequest
      * @return UpdateTeamResponse
@@ -12694,7 +13544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Updates the display name, email address, or note of a specified user.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the display name, email address, or note of a specified user. At least one of displayName, email, and note must be specified. Unspecified properties remain unchanged. The username cannot be modified after creation.</p>
+     * <p>Updates the display name, email address, or note of a specified user. You must specify at least one of the displayName, email, and note parameters. Unspecified attributes remain unchanged. The username cannot be modified after creation.</p>
      * 
      * @param tmpReq UpdateUserRequest
      * @param headers map
@@ -12743,7 +13593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Updates the display name, email address, or note of a specified user.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the display name, email address, or note of a specified user. At least one of displayName, email, and note must be specified. Unspecified properties remain unchanged. The username cannot be modified after creation.</p>
+     * <p>Updates the display name, email address, or note of a specified user. You must specify at least one of the displayName, email, and note parameters. Unspecified attributes remain unchanged. The username cannot be modified after creation.</p>
      * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse
@@ -12756,11 +13606,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the name or network configuration of a workspace to adjust workspace information and the private network access environment for agents.
-     * The workspace must be in the <code>Initialized</code> state. To enable VPC networking, set <code>Enabled</code> in the network configuration to <code>true</code>, and provide both <code>VpcId</code> and at least one <code>VSwitchIds</code>.</p>
+     * <p>Modifies the name or network configuration of a workspace to adjust workspace information and the private network access environment for agents. The workspace must be in the <code>Initialized</code> state. To enable VPC networking, set <code>Enabled</code> in the network configuration to <code>true</code> and provide both <code>VpcId</code> and at least one <code>VSwitchIds</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. Status, TenantId, and RegionId are maintained by the server and cannot be modified through this operation.</p>
+     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</p>
      * 
      * @param tmpReq UpdateWorkspaceRequest
      * @param headers map
@@ -12806,11 +13655,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the name or network configuration of a workspace to adjust workspace information and the private network access environment for agents.
-     * The workspace must be in the <code>Initialized</code> state. To enable VPC networking, set <code>Enabled</code> in the network configuration to <code>true</code>, and provide both <code>VpcId</code> and at least one <code>VSwitchIds</code>.</p>
+     * <p>Modifies the name or network configuration of a workspace to adjust workspace information and the private network access environment for agents. The workspace must be in the <code>Initialized</code> state. To enable VPC networking, set <code>Enabled</code> in the network configuration to <code>true</code> and provide both <code>VpcId</code> and at least one <code>VSwitchIds</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. Status, TenantId, and RegionId are maintained by the server and cannot be modified through this operation.</p>
+     * <p>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse
@@ -12823,10 +13671,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves an uploaded agent template ZIP package from OSS, parses the package, and imports the agent template into the current workspace.</p>
+     * <p>Retrieves an uploaded agent template ZIP package from OSS, parses it, and imports the agent template into the current workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves an uploaded AgentSpec ZIP package from OSS, parses the package, and imports the AgentSpec into the current workspace.</p>
+     * <p>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</p>
      * 
      * @param tmpReq UploadAgentSpecViaOssRequest
      * @param headers map
@@ -12866,10 +13714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves an uploaded agent template ZIP package from OSS, parses the package, and imports the agent template into the current workspace.</p>
+     * <p>Retrieves an uploaded agent template ZIP package from OSS, parses it, and imports the agent template into the current workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves an uploaded AgentSpec ZIP package from OSS, parses the package, and imports the AgentSpec into the current workspace.</p>
+     * <p>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</p>
      * 
      * @param request UploadAgentSpecViaOssRequest
      * @return UploadAgentSpecViaOssResponse
@@ -12946,11 +13794,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In the JSON request body, specify <code>ossBucketName</code> and the complete <code>ossObjectName</code>. Do not specify the HTTPS download URL. The object extension must be ZIP or TAR.GZ, and the compressed size must be between 1 and 500,000,000 bytes.
      * This operation uses the workspace role to check the object metadata and read permissions, and returns the <code>sourceUri</code>, file name, size, and format.</p>
      * <h3>Subsequent deployment</h3>
-     * <p>Passing the validation indicates that the object check is successful, but does not mean that the archive content is complete or ready to start. Submit the returned <code>sourceUri</code> to <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>. The system will recheck and save a fixed copy upon submission.
-     * This operation is an optional precheck and is not a required step for creation or update.</p>
+     * <p>Passing the validation indicates that the object check is successful, but does not mean that the archive content is complete or ready to start. Submit the returned <code>sourceUri</code> to <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>. The system will recheck the object and save a fixed copy upon submission.
+     * This operation is an optional precheck and is not a required step for creating or updating an agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Validates the read conditions of the workspace role for a specified OSS code package object and returns the source URI and package information.</p>
+     * <p>Validates the read permissions of the workspace role on a specified OSS code package object, and returns the source URI and package information.</p>
      * 
      * @param tmpReq ValidateAgentCodePackageFromOssRequest
      * @param headers map
@@ -12995,11 +13843,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In the JSON request body, specify <code>ossBucketName</code> and the complete <code>ossObjectName</code>. Do not specify the HTTPS download URL. The object extension must be ZIP or TAR.GZ, and the compressed size must be between 1 and 500,000,000 bytes.
      * This operation uses the workspace role to check the object metadata and read permissions, and returns the <code>sourceUri</code>, file name, size, and format.</p>
      * <h3>Subsequent deployment</h3>
-     * <p>Passing the validation indicates that the object check is successful, but does not mean that the archive content is complete or ready to start. Submit the returned <code>sourceUri</code> to <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>. The system will recheck and save a fixed copy upon submission.
-     * This operation is an optional precheck and is not a required step for creation or update.</p>
+     * <p>Passing the validation indicates that the object check is successful, but does not mean that the archive content is complete or ready to start. Submit the returned <code>sourceUri</code> to <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>. The system will recheck the object and save a fixed copy upon submission.
+     * This operation is an optional precheck and is not a required step for creating or updating an agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>Validates the read conditions of the workspace role for a specified OSS code package object and returns the source URI and package information.</p>
+     * <p>Validates the read permissions of the workspace role on a specified OSS code package object, and returns the source URI and package information.</p>
      * 
      * @param request ValidateAgentCodePackageFromOssRequest
      * @return ValidateAgentCodePackageFromOssResponse
@@ -13015,7 +13863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries whether the read authorization for the code package source bucket is bound to the workspace resource role to determine whether supplementary authorization is required.</p>
      * <h3>Query results</h3>
      * <p><code>ossBucketName</code> is passed as a query parameter. <code>authorizationStatus=AUTHORIZED</code> indicates that the policy is bound, and <code>UNAUTHORIZED</code> indicates that it is not bound.
-     * A bound policy does not mean that a specific code package object definitely exists or is readable. To check the object, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ValidateAgentCodePackageFromOss">ValidateAgentCodePackageFromOss</a>. To obtain the authorization link, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageOssRamAuthorizeUrl">GetAgentCodePackageOssRamAuthorizeUrl</a>.</p>
+     * A bound policy does not mean that a specific code package object definitely exists or is readable. To check an object, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ValidateAgentCodePackageFromOss">ValidateAgentCodePackageFromOss</a>. To obtain an authorization link, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageOssRamAuthorizeUrl">GetAgentCodePackageOssRamAuthorizeUrl</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the binding status of the authorization policy for the code package source bucket to the current workspace resource role.</p>
@@ -13055,7 +13903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries whether the read authorization for the code package source bucket is bound to the workspace resource role to determine whether supplementary authorization is required.</p>
      * <h3>Query results</h3>
      * <p><code>ossBucketName</code> is passed as a query parameter. <code>authorizationStatus=AUTHORIZED</code> indicates that the policy is bound, and <code>UNAUTHORIZED</code> indicates that it is not bound.
-     * A bound policy does not mean that a specific code package object definitely exists or is readable. To check the object, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ValidateAgentCodePackageFromOss">ValidateAgentCodePackageFromOss</a>. To obtain the authorization link, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageOssRamAuthorizeUrl">GetAgentCodePackageOssRamAuthorizeUrl</a>.</p>
+     * A bound policy does not mean that a specific code package object definitely exists or is readable. To check an object, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ValidateAgentCodePackageFromOss">ValidateAgentCodePackageFromOss</a>. To obtain an authorization link, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageOssRamAuthorizeUrl">GetAgentCodePackageOssRamAuthorizeUrl</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the binding status of the authorization policy for the code package source bucket to the current workspace resource role.</p>
@@ -13071,10 +13919,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Verifies Qoder service account keys for a specified site to check whether the credentials are available before enabling or updating a connector. You can submit multiple keys at the same time. The response returns a list of invalid service account keys.</p>
+     * <p>Validates Qoder service account keys at a specified site to check whether the credentials are available before you enable or update a connector. You can submit multiple keys at the same time. The response returns a list of invalid service account keys.</p>
      * 
      * <b>summary</b> : 
-     * <p>Verifies whether one or more Qoder service account keys are available at a specified site. This operation does not save the keys or modify the connector status.</p>
+     * <p>Validates whether one or more Qoder service account keys are available at a specified site. This operation does not save the keys or modify the connector status.</p>
      * 
      * @param tmpReq VerifyConnectorRequest
      * @param headers map
@@ -13114,10 +13962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Verifies Qoder service account keys for a specified site to check whether the credentials are available before enabling or updating a connector. You can submit multiple keys at the same time. The response returns a list of invalid service account keys.</p>
+     * <p>Validates Qoder service account keys at a specified site to check whether the credentials are available before you enable or update a connector. You can submit multiple keys at the same time. The response returns a list of invalid service account keys.</p>
      * 
      * <b>summary</b> : 
-     * <p>Verifies whether one or more Qoder service account keys are available at a specified site. This operation does not save the keys or modify the connector status.</p>
+     * <p>Validates whether one or more Qoder service account keys are available at a specified site. This operation does not save the keys or modify the connector status.</p>
      * 
      * @param request VerifyConnectorRequest
      * @return VerifyConnectorResponse
@@ -13132,9 +13980,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the authorization status of a workspace resource role for a specified ACR Enterprise Edition image repository to determine whether to proceed with image preparation or grant additional authorizations.</p>
      * <h3>Request parameters</h3>
-     * <p><code>acrInstanceId</code>, <code>namespace</code>, and <code>repository</code> use query parameters and must be consistent with the targets used when obtaining the authorization URL.</p>
+     * <p>The acrInstanceId, namespace, and repository parameters use query parameters and must be consistent with the target used when obtaining the authorization URL.</p>
      * <h3>Authorization and deployment</h3>
-     * <p><code>authorizationStatus=AUTHORIZED</code> indicates that the target authorization for the selected role is satisfied, and <code>UNAUTHORIZED</code> indicates that it is not yet satisfied. If authorization is required, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a> and confirm on the RAM page.
+     * <p>authorizationStatus=AUTHORIZED indicates that the target authorization for the selected role is satisfied, and UNAUTHORIZED indicates that it is not yet satisfied. If authorization is required, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a> and confirm on the RAM page.
      * The authorization status is checked separately from whether the specific image tag exists and whether the pull network is reachable.</p>
      * 
      * <b>summary</b> : 
@@ -13182,9 +14030,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the authorization status of a workspace resource role for a specified ACR Enterprise Edition image repository to determine whether to proceed with image preparation or grant additional authorizations.</p>
      * <h3>Request parameters</h3>
-     * <p><code>acrInstanceId</code>, <code>namespace</code>, and <code>repository</code> use query parameters and must be consistent with the targets used when obtaining the authorization URL.</p>
+     * <p>The acrInstanceId, namespace, and repository parameters use query parameters and must be consistent with the target used when obtaining the authorization URL.</p>
      * <h3>Authorization and deployment</h3>
-     * <p><code>authorizationStatus=AUTHORIZED</code> indicates that the target authorization for the selected role is satisfied, and <code>UNAUTHORIZED</code> indicates that it is not yet satisfied. If authorization is required, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a> and confirm on the RAM page.
+     * <p>authorizationStatus=AUTHORIZED indicates that the target authorization for the selected role is satisfied, and UNAUTHORIZED indicates that it is not yet satisfied. If authorization is required, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a> and confirm on the RAM page.
      * The authorization status is checked separately from whether the specific image tag exists and whether the pull network is reachable.</p>
      * 
      * <b>summary</b> : 
@@ -13202,9 +14050,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Checks whether the workspace has been granted access to the specified AgenticFS access point for subsequent Agent file mount configurations.
-     * <a href="https://www.alibabacloud.com/help/en/nas/product-overview/agenticfs-overview">AgenticFS</a> is a storage type of File Storage NAS designed for AI agents. Access points provide mount entries for file spaces.</p>
+     * <a href="https://www.alibabacloud.com/help/en/nas/product-overview/agenticfs-overview">AgenticFS</a> is a storage type of Apsara File Storage NAS designed for AI agents. Access points provide mount entries for file spaces.</p>
      * <h3>Query and what to do next</h3>
-     * <p>For the <code>server</code> query parameter, specify the access point domain name without the protocol, port, or path. Keep it consistent with the value used when obtaining the authorization link.</p>
+     * <p>For the <code>server</code> query parameter, enter the access point domain name without the protocol, port, or path. Keep it consistent with the value used when obtaining the authorization link.</p>
      * <table>
      * <thead>
      * <tr>
@@ -13214,20 +14062,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>AUTHORIZED</code></td>
-     * <td>Authorization is complete. You can continue to configure <code>agenticFsMounts</code> for the agent.</td>
+     * <td>Authorization is completed. You can continue to configure <code>agenticFsMounts</code> for the Agent.</td>
      * </tr>
      * <tr>
      * <td><code>UNAUTHORIZED</code></td>
      * <td>Obtain the link through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAgenticFsMountRamAuthorizeUrl">GetWorkspaceAgenticFsMountRamAuthorizeUrl</a>, complete the authorization, and then query again.</td>
      * </tr>
      * <tr>
-     * <td>After authorization is complete, you must still commit the mount configuration in the agent and check the configuration processing result through the agent details. The mount folder must already exist, the access point must be located in the VPC associated with the workspace, and VPC access must be enabled for the agent.</td>
+     * <td>After authorization is completed, you must still commit the mount configuration in the Agent and check the configuration processing result through the Agent details. The mount folder must already exist, the access point must be located in the VPC associated with the workspace, and VPC access must be enabled for the Agent.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether the workspace resource role has been granted access to the specified NAS (AgenticFS) access point for subsequent Agent mount configurations.</p>
+     * <p>Queries whether the workspace resource role has been granted access to the target NAS (AgenticFS) access point for subsequent Agent mount configurations.</p>
      * 
      * @param request VerifyWorkspaceAgenticFsMountRamAuthorizationRequest
      * @param headers map
@@ -13262,9 +14110,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Checks whether the workspace has been granted access to the specified AgenticFS access point for subsequent Agent file mount configurations.
-     * <a href="https://www.alibabacloud.com/help/en/nas/product-overview/agenticfs-overview">AgenticFS</a> is a storage type of File Storage NAS designed for AI agents. Access points provide mount entries for file spaces.</p>
+     * <a href="https://www.alibabacloud.com/help/en/nas/product-overview/agenticfs-overview">AgenticFS</a> is a storage type of Apsara File Storage NAS designed for AI agents. Access points provide mount entries for file spaces.</p>
      * <h3>Query and what to do next</h3>
-     * <p>For the <code>server</code> query parameter, specify the access point domain name without the protocol, port, or path. Keep it consistent with the value used when obtaining the authorization link.</p>
+     * <p>For the <code>server</code> query parameter, enter the access point domain name without the protocol, port, or path. Keep it consistent with the value used when obtaining the authorization link.</p>
      * <table>
      * <thead>
      * <tr>
@@ -13274,20 +14122,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><code>AUTHORIZED</code></td>
-     * <td>Authorization is complete. You can continue to configure <code>agenticFsMounts</code> for the agent.</td>
+     * <td>Authorization is completed. You can continue to configure <code>agenticFsMounts</code> for the Agent.</td>
      * </tr>
      * <tr>
      * <td><code>UNAUTHORIZED</code></td>
      * <td>Obtain the link through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAgenticFsMountRamAuthorizeUrl">GetWorkspaceAgenticFsMountRamAuthorizeUrl</a>, complete the authorization, and then query again.</td>
      * </tr>
      * <tr>
-     * <td>After authorization is complete, you must still commit the mount configuration in the agent and check the configuration processing result through the agent details. The mount folder must already exist, the access point must be located in the VPC associated with the workspace, and VPC access must be enabled for the agent.</td>
+     * <td>After authorization is completed, you must still commit the mount configuration in the Agent and check the configuration processing result through the Agent details. The mount folder must already exist, the access point must be located in the VPC associated with the workspace, and VPC access must be enabled for the Agent.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether the workspace resource role has been granted access to the specified NAS (AgenticFS) access point for subsequent Agent mount configurations.</p>
+     * <p>Queries whether the workspace resource role has been granted access to the target NAS (AgenticFS) access point for subsequent Agent mount configurations.</p>
      * 
      * @param request VerifyWorkspaceAgenticFsMountRamAuthorizationRequest
      * @return VerifyWorkspaceAgenticFsMountRamAuthorizationResponse
@@ -13318,8 +14166,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Checks the authorization of the default private OSS storage for the workspace and updates its authorization status.</td>
      * </tr>
      * </tbody></table>
-     * <h3>Return statuses</h3>
-     * <p><code>AUTHORIZED</code> indicates that authorization is granted, <code>UNAUTHORIZED</code> indicates that authorization is not granted, and <code>NOT_REQUIRED</code> indicates that authorization is not required. The authorization status does not indicate whether a specific mount directory exists or an instance has completed the mount.
+     * <h3>Return status</h3>
+     * <p><code>AUTHORIZED</code> indicates that authorization is granted, <code>UNAUTHORIZED</code> indicates that authorization is not granted, and <code>NOT_REQUIRED</code> indicates that authorization is not required. The authorization status does not indicate whether the specific mount directory exists or whether the instance has completed the mount.
      * If the goal is to read from a code package source, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyAgentCodePackageOssRamAuthorization">VerifyAgentCodePackageOssRamAuthorization</a>. Do not mix code package verification with runtime directory mounting.</p>
      * 
      * <b>summary</b> : 
@@ -13375,8 +14223,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Checks the authorization of the default private OSS storage for the workspace and updates its authorization status.</td>
      * </tr>
      * </tbody></table>
-     * <h3>Return statuses</h3>
-     * <p><code>AUTHORIZED</code> indicates that authorization is granted, <code>UNAUTHORIZED</code> indicates that authorization is not granted, and <code>NOT_REQUIRED</code> indicates that authorization is not required. The authorization status does not indicate whether a specific mount directory exists or an instance has completed the mount.
+     * <h3>Return status</h3>
+     * <p><code>AUTHORIZED</code> indicates that authorization is granted, <code>UNAUTHORIZED</code> indicates that authorization is not granted, and <code>NOT_REQUIRED</code> indicates that authorization is not required. The authorization status does not indicate whether the specific mount directory exists or whether the instance has completed the mount.
      * If the goal is to read from a code package source, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyAgentCodePackageOssRamAuthorization">VerifyAgentCodePackageOssRamAuthorization</a>. Do not mix code package verification with runtime directory mounting.</p>
      * 
      * <b>summary</b> : 

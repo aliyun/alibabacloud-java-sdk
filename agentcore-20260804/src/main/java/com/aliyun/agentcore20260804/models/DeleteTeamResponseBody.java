@@ -29,7 +29,7 @@ public class DeleteTeamResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned when the request fails.</p>
+     * <p>The response message. Returns an error description when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -107,7 +107,7 @@ public class DeleteTeamResponseBody extends TeaModel {
 
     public static class DeleteTeamResponseBodyData extends TeaModel {
         /**
-         * <p>The team name. The name can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
+         * <p>The team name. It can only contain lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>team-01</p>

@@ -107,7 +107,7 @@ public class VerifyWorkspaceOssMountRamAuthorizationResponseBody extends TeaMode
 
     public static class VerifyWorkspaceOssMountRamAuthorizationResponseBodyData extends TeaModel {
         /**
-         * <p>The authorization status of the OSS storage.</p>
+         * <p>The OSS storage authorization status.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTHORIZED</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMemoryRequest extends TeaModel {
     /**
-     * <p>The update memory request.</p>
+     * <p>The request to update a memory.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
@@ -26,13 +26,16 @@ public class UpdateMemoryRequest extends TeaModel {
 
     public static class UpdateMemoryRequestBody extends TeaModel {
         /**
-         * <p>The updated string key-value metadata. You must provide at least one of Metadata or Text. A maximum of 16 keys are allowed. The maximum length of a key is 64 characters, and the maximum length of a value is 1,024 characters.</p>
+         * <p>The updated string key-value metadata. Provide at least one of Text or Metadata. A maximum of 16 keys are allowed. The maximum length is 64 characters for a key and 1,024 characters for a value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
          */
         @NameInMap("metadata")
         public java.util.Map<String, String> metadata;
 
         /**
-         * <p>The updated memory text. You must provide at least one of Text or Metadata. The maximum size is 32,000 UTF-8 bytes.</p>
+         * <p>The updated memory text. Provide at least one of Text or Metadata. The size cannot exceed 32,000 UTF-8 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>The user enjoys hiking on weekends</p>

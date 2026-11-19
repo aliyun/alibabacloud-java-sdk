@@ -14,7 +14,7 @@ public class ListTeamsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The filter condition for fuzzy matching the team name.</p>
+     * <p>The filter condition for fuzzy matching by team name.</p>
      * 
      * <strong>example:</strong>
      * <p>team</p>
@@ -23,7 +23,7 @@ public class ListTeamsRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned in the previous response.</p>
+     * <p>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned in the previous call.</p>
      * 
      * <strong>example:</strong>
      * <p>dGVhbS1vZmZzZXQ6MTA</p>

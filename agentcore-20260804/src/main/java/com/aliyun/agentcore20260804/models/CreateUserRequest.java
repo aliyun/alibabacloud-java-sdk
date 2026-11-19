@@ -46,13 +46,13 @@ public class CreateUserRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhang San</p>
+         * <p>John Doe</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
-         * <p>The email address of the user. The email address can be up to 256 characters in length.</p>
+         * <p>The email address of the user. The address can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
@@ -61,7 +61,7 @@ public class CreateUserRequest extends TeaModel {
         public String email;
 
         /**
-         * <p>The username. The username must be unique within the workspace, can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length. Reserved names such as manager, admin, or any name starting with worker- are not allowed.</p>
+         * <p>The username. The name must be unique within the workspace, can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length. Reserved names such as manager, admin, or any name starting with worker- are not allowed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class CreateUserRequest extends TeaModel {
          * <p>The remarks for the user. The remarks can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent operation team member</p>
+         * <p>Agent operations team member</p>
          */
         @NameInMap("note")
         public String note;

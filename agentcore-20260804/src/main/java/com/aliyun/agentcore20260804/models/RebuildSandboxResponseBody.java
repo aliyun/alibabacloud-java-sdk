@@ -20,7 +20,7 @@ public class RebuildSandboxResponseBody extends TeaModel {
     public RebuildSandboxResponseBodyData data;
 
     /**
-     * <p>The HTTP status code of the API request.</p>
+     * <p>The HTTP status code corresponding to the API request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class RebuildSandboxResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. You can use the request ID to locate the API call.</p>
+     * <p>The request ID, which is used to trace the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>01A1BE93-46A7-1A2A-BD62-159FCDAA****</p>
@@ -107,7 +107,7 @@ public class RebuildSandboxResponseBody extends TeaModel {
 
     public static class RebuildSandboxResponseBodyData extends TeaModel {
         /**
-         * <p>The target instance incarnation for this rebuild. A rebuild increases the incarnation. The returned value only indicates that the request is accepted and does not indicate that the new instance is ready.</p>
+         * <p>The target instance generation for this rebuild. A rebuild increases the generation. The return of this value only indicates that the request is accepted, not that the new instance is ready.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -116,7 +116,7 @@ public class RebuildSandboxResponseBody extends TeaModel {
         public Long incarnation;
 
         /**
-         * <p>The ID of the initial rebuild task. Use the operationId returned by RebuildSandbox. Always use this ID to query the overall result. You do not need to use the IDs of subsequently created tasks.</p>
+         * <p>The ID of the initial rebuild task. Use the operationId returned by RebuildSandbox. Always use this ID to query the overall result subsequently. You do not need to switch to the IDs of subsequently created tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>01a1be92-7fa4-76b2-a871-b376d6d0****</p>
@@ -125,7 +125,7 @@ public class RebuildSandboxResponseBody extends TeaModel {
         public String operationId;
 
         /**
-         * <p>The logical sandbox ID that corresponds to this rebuild. The logical ID remains unchanged after the rebuild.</p>
+         * <p>The logical sandbox ID corresponding to this rebuild. The logical ID remains unchanged after the rebuild.</p>
          * 
          * <strong>example:</strong>
          * <p>01a1b56a-b00f-7aa3-bacf-cc9d04b0****</p>

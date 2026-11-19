@@ -14,7 +14,7 @@ public class DeleteUserResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the deleted user.</p>
+     * <p>The deleted user information.</p>
      */
     @NameInMap("data")
     public DeleteUserResponseBodyData data;

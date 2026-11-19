@@ -29,7 +29,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned when the request fails.</p>
+     * <p>The response message. Returns an error description when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -107,7 +107,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
 
     public static class CreateIdentityProviderResponseBodyDataConfiguration extends TeaModel {
         /**
-         * <p>HTTP-Redirect or HTTP-POST. This parameter is required when you manually enter the configuration. The query returns the short name.</p>
+         * <p>HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP-Redirect</p>
@@ -116,7 +116,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         public String bindingType;
 
         /**
-         * <p>This parameter is required when you manually enter the configuration. It cannot be empty and cannot exceed 2,048 characters. Existing configurations cannot be replaced. This is different from the Entity ID of the service provider (SP) returned in the query.</p>
+         * <p>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. It cannot be changed after configuration. It is different from the local entity ID queried by the service provider (SP).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -125,7 +125,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
+         * <p>Required for manual entry. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -134,7 +134,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         public String loginUrl;
 
         /**
-         * <p>The actual switch value is Enabled or Disabled, which differs from the expected loginEnabled value saved in AC.</p>
+         * <p>The actual switch value, which is Enabled or Disabled. It is not equivalent to the expected loginEnabled value saved in the access configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -181,9 +181,204 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
 
     }
 
+    public static class CreateIdentityProviderResponseBodyDataOidc extends TeaModel {
+        /**
+         * <p>The absolute HTTPS URL required in manual entry mode. Do not specify this field in discovery mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/authorize">https://idp.example.com/authorize</a></p>
+         */
+        @NameInMap("authorizationEndpoint")
+        public String authorizationEndpoint;
+
+        /**
+         * <p>The default value is client_secret_post. If the value is none, PKCE must be enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client_secret_post</p>
+         */
+        @NameInMap("clientAuthMethod")
+        public String clientAuthMethod;
+
+        /**
+         * <p>The client ID registered in the external IdP, which is different from the Matrix client. It cannot be replaced in place after configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-client</p>
+         */
+        @NameInMap("clientId")
+        public String clientId;
+
+        /**
+         * <p>The absolute HTTPS discovery endpoint. It is mutually exclusive with manually entered endpoints.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/.well-known/openid-configuration">https://idp.example.com/.well-known/openid-configuration</a></p>
+         */
+        @NameInMap("discoveryEndpoint")
+        public String discoveryEndpoint;
+
+        /**
+         * <p>The absolute HTTPS issuer of the external IdP. It cannot be replaced in place after configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com">https://idp.example.com</a></p>
+         */
+        @NameInMap("issuer")
+        public String issuer;
+
+        /**
+         * <p>The absolute HTTPS URL required in manual entry mode. Do not specify this field in discovery mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/jwks">https://idp.example.com/jwks</a></p>
+         */
+        @NameInMap("jwksUri")
+        public String jwksUri;
+
+        /**
+         * <p>Specifies whether PKCE is enabled. Default value: true. This parameter must be set to true when client authentication is not used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("pkceRequired")
+        public Boolean pkceRequired;
+
+        /**
+         * <p>An array of strings that must include openid. Default values: openid, profile, and email.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;openid&quot;,&quot;profile&quot;,&quot;email&quot;]</p>
+         */
+        @NameInMap("scopes")
+        public java.util.List<String> scopes;
+
+        /**
+         * <p>The name of the claim in the ID token that is used to match the SCIM externalId. If omitted during creation, the default value sub is used. If omitted during an update, the saved value is retained. For Azure, you can specify oid. The value must be non-empty and contain no whitespace characters. When you query oidc, the saved value is returned. When you query oidcConfiguration, the actual upstream value is returned, which may be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oid</p>
+         */
+        @NameInMap("ssoMappingClaim")
+        public String ssoMappingClaim;
+
+        /**
+         * <p>The absolute HTTPS URL required in manual entry mode. Do not specify this field in discovery mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/token">https://idp.example.com/token</a></p>
+         */
+        @NameInMap("tokenEndpoint")
+        public String tokenEndpoint;
+
+        /**
+         * <p>The optional absolute HTTPS URL for manual mode. Leave this field empty in Discovery mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/userinfo">https://idp.example.com/userinfo</a></p>
+         */
+        @NameInMap("userinfoEndpoint")
+        public String userinfoEndpoint;
+
+        public static CreateIdentityProviderResponseBodyDataOidc build(java.util.Map<String, ?> map) throws Exception {
+            CreateIdentityProviderResponseBodyDataOidc self = new CreateIdentityProviderResponseBodyDataOidc();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setAuthorizationEndpoint(String authorizationEndpoint) {
+            this.authorizationEndpoint = authorizationEndpoint;
+            return this;
+        }
+        public String getAuthorizationEndpoint() {
+            return this.authorizationEndpoint;
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setClientAuthMethod(String clientAuthMethod) {
+            this.clientAuthMethod = clientAuthMethod;
+            return this;
+        }
+        public String getClientAuthMethod() {
+            return this.clientAuthMethod;
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setClientId(String clientId) {
+            this.clientId = clientId;
+            return this;
+        }
+        public String getClientId() {
+            return this.clientId;
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setDiscoveryEndpoint(String discoveryEndpoint) {
+            this.discoveryEndpoint = discoveryEndpoint;
+            return this;
+        }
+        public String getDiscoveryEndpoint() {
+            return this.discoveryEndpoint;
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setIssuer(String issuer) {
+            this.issuer = issuer;
+            return this;
+        }
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setJwksUri(String jwksUri) {
+            this.jwksUri = jwksUri;
+            return this;
+        }
+        public String getJwksUri() {
+            return this.jwksUri;
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setPkceRequired(Boolean pkceRequired) {
+            this.pkceRequired = pkceRequired;
+            return this;
+        }
+        public Boolean getPkceRequired() {
+            return this.pkceRequired;
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setScopes(java.util.List<String> scopes) {
+            this.scopes = scopes;
+            return this;
+        }
+        public java.util.List<String> getScopes() {
+            return this.scopes;
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setSsoMappingClaim(String ssoMappingClaim) {
+            this.ssoMappingClaim = ssoMappingClaim;
+            return this;
+        }
+        public String getSsoMappingClaim() {
+            return this.ssoMappingClaim;
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setTokenEndpoint(String tokenEndpoint) {
+            this.tokenEndpoint = tokenEndpoint;
+            return this;
+        }
+        public String getTokenEndpoint() {
+            return this.tokenEndpoint;
+        }
+
+        public CreateIdentityProviderResponseBodyDataOidc setUserinfoEndpoint(String userinfoEndpoint) {
+            this.userinfoEndpoint = userinfoEndpoint;
+            return this;
+        }
+        public String getUserinfoEndpoint() {
+            return this.userinfoEndpoint;
+        }
+
+    }
+
     public static class CreateIdentityProviderResponseBodyDataSaml extends TeaModel {
         /**
-         * <p>HTTP-Redirect or HTTP-POST. This parameter is required when you manually enter the configuration. The query returns the short name.</p>
+         * <p>HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP-Redirect</p>
@@ -192,7 +387,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         public String bindingType;
 
         /**
-         * <p>This parameter is required when you manually enter the configuration. It cannot be empty and cannot exceed 2,048 characters. Existing configurations cannot be replaced. This is different from the Entity ID of the service provider (SP) returned in the query.</p>
+         * <p>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. It cannot be changed after configuration. It is different from the local entity ID queried by the service provider (SP).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -201,7 +396,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>This parameter is required when you manually enter the configuration. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
+         * <p>Required for manual entry. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -210,7 +405,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         public String loginUrl;
 
         /**
-         * <p>This parameter is required when you manually enter the configuration. It must be a non-empty array that uses PEM X.509 certificate text. The current validity period is verified, and a maximum of two certificates are allowed after deduplication.</p>
+         * <p>Required for manual entry. It must be a non-empty array that uses PEM X.509 certificate text. The current validity period is verified. A maximum of two certificates are allowed after deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
@@ -268,7 +463,12 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         public java.util.List<String> departmentIds;
 
         /**
-         * <p>AllAuthorized: the entire authorized scope, which is limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When you explicitly submit syncScope, you must provide a valid mode, which is verified by the backend.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AllAuthorized: the entire authorized scope, which is limited by the application address book authorization.</li>
+         * <li>SelectedDepartments: the selected departments and all their sub-departments.
+         * When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SelectedDepartments</p>
@@ -322,7 +522,13 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         public Boolean loginEnabled;
 
         /**
-         * <p>Only SAML is currently supported. This parameter may not be returned if no valid configuration is saved. Placeholder initialization with OIDC is not supported.</p>
+         * <p>The security summary of the expected configuration. It does not contain credentials. The original SAML fields and meanings are retained.</p>
+         */
+        @NameInMap("oidc")
+        public CreateIdentityProviderResponseBodyDataOidc oidc;
+
+        /**
+         * <p>Currently, only SAML is supported. This field may not be returned if no valid configuration is saved. Initialization with an OIDC placeholder is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SAML</p>
@@ -331,7 +537,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The input supports either XML or complete manual entry. The query returns the standardized configuration and does not echo the original XML. This parameter can be omitted if it is not configured.</p>
+         * <p>The input supports either XML or full manual entry. Queries return the standardized configuration and do not echo the original XML. This field can be omitted if it is not configured.</p>
          */
         @NameInMap("saml")
         public CreateIdentityProviderResponseBodyDataSaml saml;
@@ -339,15 +545,15 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         /**
          * <p>The binding status. Valid values:</p>
          * <ul>
-         * <li>CONFIGURED: The configuration is accepted and waiting for the user pool to be activated.</li>
-         * <li>SYNCING: Organization members are being synchronized.</li>
-         * <li>SYNCED: The synchronization of organization members is complete.</li>
-         * <li>READY: The binding is in effect.</li>
-         * <li>SYNC_FAILED: The synchronization of organization members failed.</li>
-         * <li>UPDATING: The configuration is being updated.</li>
-         * <li>UPDATE_FAILED: The configuration update failed.</li>
-         * <li>DISCONNECTING: The binding is being disconnected.</li>
-         * <li>DISCONNECT_FAILED: The disconnection failed.</li>
+         * <li>CONFIGURED: configuration accepted and waiting for user pool activation</li>
+         * <li>SYNCING: synchronizing organization members</li>
+         * <li>SYNCED: organization member synchronization completed</li>
+         * <li>READY: binding in effect</li>
+         * <li>SYNC_FAILED: organization member synchronization failed</li>
+         * <li>UPDATING: updating configuration</li>
+         * <li>UPDATE_FAILED: configuration update failed</li>
+         * <li>DISCONNECTING: disconnecting the binding</li>
+         * <li>DISCONNECT_FAILED: disconnection failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -363,7 +569,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         public Boolean syncEnabled;
 
         /**
-         * <p>Uses the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized. The initial provider synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</p>
+         * <p>Uses the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized, and the initial vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</p>
          */
         @NameInMap("syncScope")
         public CreateIdentityProviderResponseBodyDataSyncScope syncScope;
@@ -404,6 +610,14 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         }
         public Boolean getLoginEnabled() {
             return this.loginEnabled;
+        }
+
+        public CreateIdentityProviderResponseBodyData setOidc(CreateIdentityProviderResponseBodyDataOidc oidc) {
+            this.oidc = oidc;
+            return this;
+        }
+        public CreateIdentityProviderResponseBodyDataOidc getOidc() {
+            return this.oidc;
         }
 
         public CreateIdentityProviderResponseBodyData setProtocol(String protocol) {

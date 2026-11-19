@@ -32,7 +32,7 @@ public class ListCredentialsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The filter condition for fuzzy matching by credential name.</p>
+     * <p>The keyword used to perform fuzzy matching on credential names.</p>
      * 
      * <strong>example:</strong>
      * <p>model</p>
@@ -41,7 +41,7 @@ public class ListCredentialsRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned in the previous response.</p>
+     * <p>The cursor used to query the next page. Leave this parameter empty in the first call. In subsequent calls, specify the nextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

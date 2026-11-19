@@ -76,7 +76,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the selector. If the type is LABEL, the value is the label name, such as latest. If the type is VERSION, the value is the specific version number.</p>
+         * <p>The value of the selector. When the type is LABEL, this is the label name, such as latest. When the type is VERSION, this is the specific version number.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -127,7 +127,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The referenced version selector. If omitted, the default is LABEL/latest.</p>
+         * <p>The referenced version selector. If omitted, the default value is LABEL/latest.</p>
          */
         @NameInMap("versionSelector")
         public GetAgentSpecLatestResponseBodyDataSkillsVersionSelector versionSelector;
@@ -186,7 +186,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description used to explain the purpose of the resource</p>
+         * <p>A sample description to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;

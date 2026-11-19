@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMemorySessionsRequest extends TeaModel {
     /**
-     * <p>The agent ID. If not specified, all agents are matched. The length is limited to 1 to 128 UTF-8 bytes, and it cannot contain / or *.</p>
+     * <p>The agent ID. If you do not specify this parameter, all agents are matched. The value must be 1 to 128 UTF-8 bytes in length and cannot contain a forward slash (/) or an asterisk (*).</p>
      * 
      * <strong>example:</strong>
      * <p>agent-001</p>
@@ -32,7 +32,16 @@ public class ListMemorySessionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The user ID. If not specified, all users are matched. The length is limited to 1 to 128 UTF-8 bytes, and it cannot contain / or *.</p>
+     * <p>The business team ID defined by the caller.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>team-001</p>
+     */
+    @NameInMap("teamId")
+    public String teamId;
+
+    /**
+     * <p>The user ID. If you do not specify this parameter, all users are matched. The value must be 1 to 128 UTF-8 bytes in length and cannot contain a forward slash (/) or an asterisk (*).</p>
      * 
      * <strong>example:</strong>
      * <p>user-001</p>
@@ -67,6 +76,14 @@ public class ListMemorySessionsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListMemorySessionsRequest setTeamId(String teamId) {
+        this.teamId = teamId;
+        return this;
+    }
+    public String getTeamId() {
+        return this.teamId;
     }
 
     public ListMemorySessionsRequest setUserId(String userId) {

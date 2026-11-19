@@ -14,7 +14,7 @@ public class DebugModelResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The model debugging result.</p>
+     * <p>The model test result.</p>
      */
     @NameInMap("data")
     public DebugModelResponseBodyData data;
@@ -29,7 +29,7 @@ public class DebugModelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message about the request processing result.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -116,13 +116,13 @@ public class DebugModelResponseBody extends TeaModel {
         public String connectionId;
 
         /**
-         * <p>Indicates whether the model debugging is successful.</p>
+         * <p>Indicates whether the model test is successful.</p>
          */
         @NameInMap("debugSuccess")
         public Boolean debugSuccess;
 
         /**
-         * <p>The error code returned when debugging fails.</p>
+         * <p>The error code for a test failure.</p>
          * 
          * <strong>example:</strong>
          * <p>UPSTREAM_MODEL_ERROR</p>
@@ -131,7 +131,7 @@ public class DebugModelResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error description returned when debugging fails.</p>
+         * <p>The error description for a test failure.</p>
          * 
          * <strong>example:</strong>
          * <p>The model endpoint rejected the debug request.</p>
@@ -140,7 +140,7 @@ public class DebugModelResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The number of input tokens consumed by this model debugging request.</p>
+         * <p>The number of input tokens consumed by the model test request.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -149,7 +149,7 @@ public class DebugModelResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
-         * <p>The duration of this model debugging invocation, in milliseconds.</p>
+         * <p>The duration of the model test call, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -167,7 +167,7 @@ public class DebugModelResponseBody extends TeaModel {
         public String modelId;
 
         /**
-         * <p>The number of output tokens consumed by this model debugging response.</p>
+         * <p>The number of output tokens consumed by the model test response.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -176,7 +176,7 @@ public class DebugModelResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
-         * <p>The text response returned by the model when model debugging succeeds. This field is empty if debugging fails.</p>
+         * <p>The text response returned by the model when the model test succeeds. This field is empty if the test fails.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -185,7 +185,7 @@ public class DebugModelResponseBody extends TeaModel {
         public String response;
 
         /**
-         * <p>The debugging result status.</p>
+         * <p>The test result status.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

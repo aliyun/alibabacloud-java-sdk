@@ -12,7 +12,7 @@ public class CreateImageCacheRequest extends TeaModel {
     public CreateImageCacheRequestBody body;
 
     /**
-     * <p>The non-empty request token passed as a query parameter. The current implementation does not guarantee deduplication by this token or recovery of the original acceptance result.</p>
+     * <p>The non-empty request identifier passed as a query parameter. The current implementation does not guarantee deduplication by this identifier or recovery of the original acceptance result.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class CreateImageCacheRequest extends TeaModel {
 
     public static class CreateImageCacheRequestBody extends TeaModel {
         /**
-         * <p>Specifies whether to allow public network access for the current source reading and transfer. At least one of this parameter and <code>accessVpc</code> must be set to true. The server validates the access conditions of the current workspace.</p>
+         * <p>Specifies whether to allow the use of the public network for the current source reading and transfer. At least one of this parameter and accessVpc must be set to true. The server validates the access conditions of the current workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class CreateImageCacheRequest extends TeaModel {
         public Boolean accessInternet;
 
         /**
-         * <p>Specifies whether to allow the use of a VPC for the current source reading and transfer. At least one of this parameter and <code>accessInternet</code> must be set to true. The server resolves the trusted network of the current workspace and does not modify the runtime network of the agent.</p>
+         * <p>Specifies whether to allow the use of a VPC for the current source reading and transfer. At least one of this parameter and accessInternet must be set to true. The server resolves the trusted network of the current workspace and does not modify the runtime network of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

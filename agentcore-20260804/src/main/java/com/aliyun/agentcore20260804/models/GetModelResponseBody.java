@@ -29,7 +29,7 @@ public class GetModelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message indicating the request processing result.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -119,7 +119,7 @@ public class GetModelResponseBody extends TeaModel {
         public Boolean document;
 
         /**
-         * <p>Indicates whether the model is able to invoke multiple tool calling operations in a single response.</p>
+         * <p>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</p>
          */
         @NameInMap("multiToolCall")
         public Boolean multiToolCall;
@@ -251,7 +251,7 @@ public class GetModelResponseBody extends TeaModel {
         public Long contextSize;
 
         /**
-         * <p>The creation time of the resource, in RFC 3339 UTC format.</p>
+         * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
@@ -260,7 +260,7 @@ public class GetModelResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The model description. The maximum length is 255 characters.</p>
+         * <p>The model description, which can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -305,7 +305,7 @@ public class GetModelResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The last update time of the resource, in RFC 3339 UTC format.</p>
+         * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>

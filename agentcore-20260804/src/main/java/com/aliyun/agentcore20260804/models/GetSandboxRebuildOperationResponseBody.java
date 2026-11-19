@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSandboxRebuildOperationResponseBody extends TeaModel {
     /**
-     * <p>Task result code of the API request. A successful request returns SUCCESS. Query task result of the asynchronous task separately.</p>
+     * <p>The result code of this API request. SUCCESS is returned for successful requests. Query the asynchronous task result separately.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class GetSandboxRebuildOperationResponseBody extends TeaModel {
     public GetSandboxRebuildOperationResponseBodyData data;
 
     /**
-     * <p>The HTTP status code corresponding to the API request.</p>
+     * <p>The HTTP status code corresponding to this API request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetSandboxRebuildOperationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The result description of the API request. This does not indicate that the asynchronous rebuild task is completed.</p>
+     * <p>The result description of this API request, which does not indicate that the asynchronous rebuild task is completed.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class GetSandboxRebuildOperationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to locate the API call.</p>
+     * <p>The request ID, which is used to locate this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>01A1BE93-46A7-1A2A-BD62-159FCDAA****</p>
@@ -47,7 +47,7 @@ public class GetSandboxRebuildOperationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API request is successful. A value of true does not indicate that the sandbox rebuild is completed.</p>
+     * <p>Indicates whether this API request is successful. A value of true does not mean that the sandbox rebuild is completed.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -116,7 +116,7 @@ public class GetSandboxRebuildOperationResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The task error description that can be publicly displayed. Keep the task ID for troubleshooting.</p>
+         * <p>The publicly displayable task error description. Retain the task ID for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>The Sandbox rebuild did not complete. Contact support with the operation ID.</p>
@@ -149,13 +149,13 @@ public class GetSandboxRebuildOperationResponseBody extends TeaModel {
 
     public static class GetSandboxRebuildOperationResponseBodyData extends TeaModel {
         /**
-         * <p>The task error that can be publicly displayed. This is returned upon task failure, cancellation, or override by subsequent operations. This field can be empty in other states.</p>
+         * <p>The publicly displayable task error. Returned when the task fails, is canceled, or an override by subsequent operations occurs. This field can be empty in other states.</p>
          */
         @NameInMap("error")
         public GetSandboxRebuildOperationResponseBodyDataError error;
 
         /**
-         * <p>The initial rebuild task ID. Use the operationId returned by RebuildSandbox. Always use this ID to query the overall result. You do not need to switch to the ID of a subsequent creation task.</p>
+         * <p>The initial rebuild task ID. Use the operationId returned by RebuildSandbox. Always use this ID to query the overall result subsequently, without switching to the ID of subsequent creation tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>01a1be92-7fa4-76b2-a871-b376d6d0****</p>
@@ -164,7 +164,7 @@ public class GetSandboxRebuildOperationResponseBody extends TeaModel {
         public String operationId;
 
         /**
-         * <p>The logical sandbox ID corresponding to the rebuild. The logical ID remains unchanged after the rebuild.</p>
+         * <p>The logical sandbox ID corresponding to this rebuild. The logical ID remains unchanged after the rebuild.</p>
          * 
          * <strong>example:</strong>
          * <p>01a1b56a-b00f-7aa3-bacf-cc9d04b0****</p>
@@ -173,7 +173,17 @@ public class GetSandboxRebuildOperationResponseBody extends TeaModel {
         public String sandboxId;
 
         /**
-         * <p>The overall rebuild status. Valid values: PENDING: waiting to be processed. RUNNING: execute. SUCCEEDED: overall success. FAILED: failed. CANCELED: canceled. SUPERSEDED: override by subsequent operations. UNKNOWN: unconfirmed. Only SUCCEEDED indicates completion. Do not treat UNKNOWN, missing status, or query exceptions as success, and do not automatically resubmit the rebuild.</p>
+         * <p>The overall rebuild status. Valid values:</p>
+         * <ul>
+         * <li>PENDING: Waiting to be processed.</li>
+         * <li>RUNNING: The task continues to execute.</li>
+         * <li>SUCCEEDED: Overall success.</li>
+         * <li>FAILED: Failed.</li>
+         * <li>CANCELED: Canceled.</li>
+         * <li>SUPERSEDED: A subsequent operation will override this task.</li>
+         * <li>UNKNOWN: Unable to confirm.
+         * Only SUCCEEDED indicates completion. UNKNOWN, missing status, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>

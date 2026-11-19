@@ -128,7 +128,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         public String enabledAt;
 
         /**
-         * <p>The updated JSON string for the connector configuration. This is sensitive information.</p>
+         * <p>The updated JSON string of the connector configuration. This is sensitive information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</p>
@@ -137,7 +137,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         public String metadata;
 
         /**
-         * <p>The name of the connector. Currently, the value is qodercli.</p>
+         * <p>The connector name. Currently, the value is qodercli.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>
@@ -146,7 +146,7 @@ public class UpdateConnectorResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the connector.</p>
+         * <p>The connector status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLED</p>

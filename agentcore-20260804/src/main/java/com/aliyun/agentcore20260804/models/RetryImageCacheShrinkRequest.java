@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetryImageCacheShrinkRequest extends TeaModel {
     /**
-     * <p>The request body for retrying image cache creation.</p>
+     * <p>The retry image cache request body.</p>
      */
     @NameInMap("body")
     public String bodyShrink;
@@ -21,7 +21,7 @@ public class RetryImageCacheShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The product entry region. This parameter is passed as a query parameter and must be consistent with the selected region endpoint and the workspace region.</p>
+     * <p>The product entry region. It is passed as a query parameter and must match the selected region endpoint and the workspace region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

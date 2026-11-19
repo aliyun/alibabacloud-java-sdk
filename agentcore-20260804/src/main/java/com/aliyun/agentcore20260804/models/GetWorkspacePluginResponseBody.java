@@ -29,7 +29,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned when the request fails.</p>
+     * <p>The response message. An error description is returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -116,7 +116,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         public String agentSpaceName;
 
         /**
-         * <p>The creation time of the AgentSpace, in UTC format compliant with RFC 3339.</p>
+         * <p>The creation time of the AgentSpace, in UTC time formatted according to RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -125,7 +125,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The region ID where the AgentSpace resides.</p>
+         * <p>The ID of the region where the AgentSpace is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -166,7 +166,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
 
     public static class GetWorkspacePluginResponseBodyDataConfigNetworkInternet extends TeaModel {
         /**
-         * <p>Specifies whether public network access is enabled.</p>
+         * <p>Indicates whether public network access is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -191,7 +191,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
 
     public static class GetWorkspacePluginResponseBodyDataConfigNetworkVpc extends TeaModel {
         /**
-         * <p>Indicates whether VPC network access is currently enabled for the collaboration component.</p>
+         * <p>Indicates whether the VPC network is currently enabled for the collaboration component.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -206,7 +206,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID used for component deployment.</p>
+         * <p>The ID of the VPC used for component deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1example</p>

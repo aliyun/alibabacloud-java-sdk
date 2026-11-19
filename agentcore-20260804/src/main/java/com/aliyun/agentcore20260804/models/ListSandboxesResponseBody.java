@@ -239,7 +239,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         public String sandboxId;
 
         /**
-         * <p>The server compares the actual image tag of the instance with the pool target image tag. The value is true if the tags are different during the RUNNING, HIBERNATED, or FAILED phase. The value is false if the tags are the same or during other known phases. This parameter is empty if the tag or phase cannot be confirmed, and it cannot be treated as false. The version sequence is not determined by the tag size.</p>
+         * <p>The server compares the actual image tag of the instance with the target image tag of the pool. The value is true if the tags are different during the RUNNING, HIBERNATED, or FAILED phase. The value is false if the tags are the same or during other known phases. This parameter is empty if the tag or phase cannot be confirmed, and it cannot be treated as false. The version sequence is not determined by the tag size.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

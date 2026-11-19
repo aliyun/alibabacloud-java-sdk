@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteModelConnectionResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of SUCCESS indicates success.</p>
+     * <p>The business status code. The value is SUCCESS if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class DeleteModelConnectionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The identifier of the model connection for which the deletion task has been accepted.</p>
+     * <p>The ID of the model connection for which the deletion request is accepted.</p>
      */
     @NameInMap("data")
     public DeleteModelConnectionResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * <p>The HTTP status code. The value is 200 if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class DeleteModelConnectionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message indicating the request processing result.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

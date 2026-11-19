@@ -32,7 +32,7 @@ public class DeleteMemoryResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>01A00000-0000-0000-0000-000000000001</p>

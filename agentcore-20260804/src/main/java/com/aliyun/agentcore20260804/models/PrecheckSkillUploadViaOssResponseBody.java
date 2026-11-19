@@ -42,7 +42,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
 
     public static class PrecheckSkillUploadViaOssResponseBodyData extends TeaModel {
         /**
-         * <p>The draft mode. Valid values: HEAD and VERSIONED. The value is determined by the server.</p>
+         * <p>The draft mode: HEAD or VERSIONED, determined by the server.</p>
          * 
          * <strong>example:</strong>
          * <p>HEAD</p>
@@ -75,7 +75,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         public Boolean exists;
 
         /**
-         * <p>The content revision identifier of the persistent draft, which is used to determine whether the local cache has expired. This parameter is returned only in HEAD draft mode.</p>
+         * <p>The content revision identifier of the persistent draft, used to determine whether the local cache is expired, returned only in HEAD draft mode.</p>
          * 
          * <strong>example:</strong>
          * <p>rev-1a2b3c4d</p>
@@ -84,7 +84,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         public String headRevision;
 
         /**
-         * <p>The status of the persistent draft. Valid values: draft, reviewing, and reviewed. This parameter is returned only in HEAD draft mode.</p>
+         * <p>The status of the persistent draft: draft, reviewing, or reviewed, returned only in HEAD draft mode.</p>
          * 
          * <strong>example:</strong>
          * <p>draft</p>
@@ -120,7 +120,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         public String parsedVersion;
 
         /**
-         * <p>The precheck result code. HEAD_EXISTS indicates that the upload will overwrite the existing persistent draft and requires secondary confirmation. HEAD_LOCKED indicates that the draft is under review and cannot be overwritten. You must withdraw the review first.</p>
+         * <p>The precheck result code.</p>
          * 
          * <strong>example:</strong>
          * <p>VALIDATION_FAILED</p>
@@ -129,7 +129,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         public String precheckCode;
 
         /**
-         * <p>The reason description.</p>
+         * <p>The reason.</p>
          * 
          * <strong>example:</strong>
          * <p>Resource processing completed</p>

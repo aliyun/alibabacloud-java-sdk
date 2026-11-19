@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMemoryStoreShrinkRequest extends TeaModel {
     /**
-     * <p>The update MemoryStore request.</p>
+     * <p>The update memory store request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

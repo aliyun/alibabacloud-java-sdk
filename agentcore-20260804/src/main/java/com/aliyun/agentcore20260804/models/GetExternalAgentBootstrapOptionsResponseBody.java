@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS for a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
     public GetExternalAgentBootstrapOptionsResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 for a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillDetailResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public GetSkillDetailResponseBodyData data;
@@ -42,7 +42,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
 
     public static class GetSkillDetailResponseBodyDataVersions extends TeaModel {
         /**
-         * <p>The version author.</p>
+         * <p>The author of the version.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -60,7 +60,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String commitMsg;
 
         /**
-         * <p>The MD5 checksum of the skill content package for this version, which is used to verify content consistency.</p>
+         * <p>The MD5 checksum of the skill content package for this version, used to verify content consistency.</p>
          * 
          * <strong>example:</strong>
          * <p>9e107d9d372bb6826bd81d3542a419d6</p>
@@ -69,7 +69,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String contentMd5;
 
         /**
-         * <p>The creation time. It is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>
@@ -81,7 +81,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample description to illustrate the purpose of the resource</p>
+         * <p>Sample description used to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -96,7 +96,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>The publish pipeline information.</p>
+         * <p>The release pipeline information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;status&quot;:&quot;SUCCESS&quot;}</p>
@@ -114,7 +114,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>
@@ -232,7 +232,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample description to illustrate the purpose of the resource</p>
+         * <p>Sample description used to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -247,7 +247,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>The draft pattern. A value of HEAD indicates that the skill has a persistent draft, and a value of VERSIONED indicates that a draft with a version number is created for each edit. This is determined by the server, and the client uses this value to invoke routing for What to do next.</p>
+         * <p>The draft pattern. A value of HEAD indicates that the skill has a persistent draft. A value of VERSIONED indicates that each edit creates a draft with a version number. This pattern is determined by the server, and the client uses it for routing What to do next when they invoke the API.</p>
          * 
          * <strong>example:</strong>
          * <p>HEAD</p>
@@ -256,7 +256,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String draftMode;
 
         /**
-         * <p>Specifies whether the root data is editable.</p>
+         * <p>Indicates whether the root data is editable.</p>
          */
         @NameInMap("editable")
         public Boolean editable;
@@ -271,7 +271,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String editingVersion;
 
         /**
-         * <p>Specifies whether the skill is enabled.</p>
+         * <p>Indicates whether the skill is enabled.</p>
          */
         @NameInMap("enable")
         public Boolean enable;
@@ -286,7 +286,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String from;
 
         /**
-         * <p>The label mapping.</p>
+         * <p>The tag mapping.</p>
          */
         @NameInMap("labels")
         public java.util.Map<String, String> labels;
@@ -337,7 +337,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>
@@ -361,7 +361,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
-         * <p>Specifies whether the current user has write permissions.</p>
+         * <p>Indicates whether the current user has write permissions.</p>
          */
         @NameInMap("writeable")
         public Boolean writeable;

@@ -14,7 +14,7 @@ public class VerifyConnectorResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The verification result.</p>
+     * <p>The validation result.</p>
      */
     @NameInMap("data")
     public VerifyConnectorResponseBodyData data;
@@ -110,7 +110,7 @@ public class VerifyConnectorResponseBody extends TeaModel {
 
     public static class VerifyConnectorResponseBodyData extends TeaModel {
         /**
-         * <p>The list of service account key labels that failed the verification or have uncertain verification results.</p>
+         * <p>The list of labels for service account keys that failed validation or have uncertain validation results.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -119,7 +119,7 @@ public class VerifyConnectorResponseBody extends TeaModel {
         public java.util.List<String> invalidServiceAccountKeys;
 
         /**
-         * <p>Indicates whether all verified service account keys are valid.</p>
+         * <p>Indicates whether all validated service account keys are valid.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -14,7 +14,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public GetMcpMarketItemResponseBodyData data;
@@ -38,7 +38,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID used to locate and troubleshoot the request.</p>
+     * <p>The request ID, which is used to locate and troubleshoot the request.</p>
      * 
      * <strong>example:</strong>
      * <p>request-123456</p>
@@ -107,7 +107,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
 
     public static class GetMcpMarketItemResponseBodyData extends TeaModel {
         /**
-         * <p>The MCP marketplace template category.</p>
+         * <p>The category of the MCP marketplace template.</p>
          * 
          * <strong>example:</strong>
          * <p>knowledge</p>
@@ -116,7 +116,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The MCP service description.</p>
+         * <p>The description of the MCP service.</p>
          * 
          * <strong>example:</strong>
          * <p>MCP service for querying knowledge bases</p>
@@ -125,13 +125,13 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The template display metadata.</p>
+         * <p>The display metadata of the template.</p>
          */
         @NameInMap("displayMetadata")
         public java.util.Map<String, ?> displayMetadata;
 
         /**
-         * <p>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the default fields are used.</p>
+         * <p>The multilingual display content, organized by BCP-47 language tags. If a language is not matched, the system falls back to the default fields.</p>
          */
         @NameInMap("i18n")
         public java.util.Map<String, DataI18nValue> i18n;
@@ -146,7 +146,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String iconUrl;
 
         /**
-         * <p>The template installation count.</p>
+         * <p>The number of times the template has been installed.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -173,7 +173,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String mcpType;
 
         /**
-         * <p>The MCP marketplace template name.</p>
+         * <p>The name of the MCP marketplace template.</p>
          * 
          * <strong>example:</strong>
          * <p>Knowledge</p>
@@ -200,7 +200,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The MCP marketplace template instructions.</p>
+         * <p>The instructions for the MCP marketplace template.</p>
          * 
          * <strong>example:</strong>
          * <h1>Knowledge\nKnowledge base query service</h1>
@@ -209,7 +209,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String readme;
 
         /**
-         * <p>The template schema version.</p>
+         * <p>The schema version of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -218,7 +218,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String schemaVersion;
 
         /**
-         * <p>The template input schema, represented as a JSON Schema string.</p>
+         * <p>The input schema of the template, represented as a JSON Schema string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</p>
@@ -227,7 +227,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String templateInputSchema;
 
         /**
-         * <p>The MCP marketplace template version.</p>
+         * <p>The version of the MCP marketplace template.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

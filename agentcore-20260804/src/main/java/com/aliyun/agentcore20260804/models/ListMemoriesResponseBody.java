@@ -23,7 +23,7 @@ public class ListMemoriesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of memory records.</p>
+     * <p>The list of memories.</p>
      */
     @NameInMap("items")
     public java.util.List<ListMemoriesResponseBodyItems> items;
@@ -69,6 +69,15 @@ public class ListMemoriesResponseBody extends TeaModel {
      */
     @NameInMap("success")
     public Boolean success;
+
+    /**
+     * <p>The total number of records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
+    @NameInMap("totalCount")
+    public Long totalCount;
 
     public static ListMemoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMemoriesResponseBody self = new ListMemoriesResponseBody();
@@ -139,9 +148,18 @@ public class ListMemoriesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListMemoriesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListMemoriesResponseBodyItemsContent extends TeaModel {
         /**
          * <p>The memory text.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>The user likes hiking</p>
@@ -166,7 +184,7 @@ public class ListMemoriesResponseBody extends TeaModel {
 
     public static class ListMemoriesResponseBodyItemsScope extends TeaModel {
         /**
-         * <p>The agent ID. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*). This field is not returned if the memory is not associated with an agent ID.</p>
+         * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -175,7 +193,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The session ID. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*). This field is not returned if the memory is not associated with a session ID.</p>
+         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>session-001</p>
@@ -184,7 +202,16 @@ public class ListMemoriesResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The user ID. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*). This field is not returned if the memory is not associated with a user ID.</p>
+         * <p>The business team ID defined by the caller. This field cannot be empty when provided and can be up to 128 UTF-8 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team-001</p>
+         */
+        @NameInMap("teamId")
+        public String teamId;
+
+        /**
+         * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>
@@ -211,6 +238,14 @@ public class ListMemoriesResponseBody extends TeaModel {
         }
         public String getSessionId() {
             return this.sessionId;
+        }
+
+        public ListMemoriesResponseBodyItemsScope setTeamId(String teamId) {
+            this.teamId = teamId;
+            return this;
+        }
+        public String getTeamId() {
+            return this.teamId;
         }
 
         public ListMemoriesResponseBodyItemsScope setUserId(String userId) {
@@ -250,6 +285,9 @@ public class ListMemoriesResponseBody extends TeaModel {
 
         /**
          * <p>The memory metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
          */
         @NameInMap("metadata")
         public java.util.Map<String, String> metadata;
@@ -261,6 +299,35 @@ public class ListMemoriesResponseBody extends TeaModel {
         public ListMemoriesResponseBodyItemsScope scope;
 
         /**
+         * <p>The source of the memory. Valid values:</p>
+         * <ul>
+         * <li>session_extraction: Extracted from session events.</li>
+         * <li>content_extraction: Extracted from text or messages.</li>
+         * <li>direct: Written directly.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>session_extraction</p>
+         */
+        @NameInMap("source")
+        public String source;
+
+        /**
+         * <p>The memory content type. Valid values:</p>
+         * <ul>
+         * <li>semantic: Semantic memory.</li>
+         * <li>skill: Skill.</li>
+         * <li>user_profile: User preference.</li>
+         * <li>session_summary: Session summary.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>semantic</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
          * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
@@ -268,6 +335,12 @@ public class ListMemoriesResponseBody extends TeaModel {
          */
         @NameInMap("updatedAt")
         public String updatedAt;
+
+        /**
+         * <p>Indicates whether the memory is valid. A value of false indicates that the memory is revoked and is not included in valid memory retrieval.</p>
+         */
+        @NameInMap("valid")
+        public Boolean valid;
 
         public static ListMemoriesResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             ListMemoriesResponseBodyItems self = new ListMemoriesResponseBodyItems();
@@ -314,12 +387,36 @@ public class ListMemoriesResponseBody extends TeaModel {
             return this.scope;
         }
 
+        public ListMemoriesResponseBodyItems setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public ListMemoriesResponseBodyItems setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public ListMemoriesResponseBodyItems setUpdatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
         public String getUpdatedAt() {
             return this.updatedAt;
+        }
+
+        public ListMemoriesResponseBodyItems setValid(Boolean valid) {
+            this.valid = valid;
+            return this;
+        }
+        public Boolean getValid() {
+            return this.valid;
         }
 
     }

@@ -51,7 +51,7 @@ public class CreateCredentialRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the resource. This parameter is empty if the resource is deleted.</p>
+         * <p>The resource name. This field is empty if the resource is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>my-mcp-service</p>
@@ -60,7 +60,7 @@ public class CreateCredentialRequest extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The type of the resource. Set the value to mcpServer, which indicates an MCP service.</p>
+         * <p>The resource type. Currently, only mcpServer is supported, which indicates an MCP service.</p>
          * 
          * <strong>example:</strong>
          * <p>mcpServer</p>
@@ -101,7 +101,7 @@ public class CreateCredentialRequest extends TeaModel {
 
     public static class CreateCredentialRequestBody extends TeaModel {
         /**
-         * <p>The credential content, submitted as a JSON string. For the apiKey type, it contains only a non-empty apiKey. For the mcpHeader type, it contains a non-empty headers array, where each item includes a name and a value.</p>
+         * <p>The credential content, submitted as a JSON string. For the apiKey type, it contains only a non-empty apiKey. For the mcpHeader type, it contains a non-empty headers array, where each item contains a name and a value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class CreateCredentialRequest extends TeaModel {
         public String credentialType;
 
         /**
-         * <p>The description of the credential. The description can be up to 256 characters in length.</p>
+         * <p>The credential description. It can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>API key used to call the model service in the production environment</p>
@@ -130,7 +130,7 @@ public class CreateCredentialRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the credential. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
+         * <p>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,13 +140,13 @@ public class CreateCredentialRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of applicable resources for an mcpHeader credential. This parameter must be non-empty when resourceScope is set to SPECIFIED, and must be omitted when resourceScope is set to ALL.</p>
+         * <p>The list of applicable resources for the MCP header credential. This field must be non-empty when resourceScope is set to SPECIFIED, and must be omitted when resourceScope is set to ALL.</p>
          */
         @NameInMap("resourceRefs")
         public java.util.List<CreateCredentialRequestBodyResourceRefs> resourceRefs;
 
         /**
-         * <p>The application scope of an mcpHeader credential. This parameter is supported only for the mcpHeader type. ALL indicates all MCP services, and SPECIFIED indicates the MCP services specified in resourceRefs. Do not submit this field for the apiKey type.</p>
+         * <p>The applicable scope of the MCP header credential. This field is supported only for the mcpHeader type. ALL indicates all MCP services, and SPECIFIED indicates the MCP services specified in resourceRefs. Do not submit this field for the apiKey type.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPermissionRulesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return per page.</p>
+     * <p>The maximum number of results to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -79,7 +79,7 @@ public class ListPermissionRulesRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The target of the rule.</p>
+     * <p>The rule target.</p>
      * 
      * <strong>example:</strong>
      * <p>agent-1234567890</p>

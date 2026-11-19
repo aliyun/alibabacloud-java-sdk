@@ -15,7 +15,7 @@ public class DeleteImageCacheResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The image cache deletion result.</p>
+     * <p>The delete image cache result.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("data")
@@ -52,7 +52,7 @@ public class DeleteImageCacheResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. A successful request does not mean that the cache creation is complete.</p>
+     * <p>Indicates whether the request is successful. A successful request does not indicate that the cache creation is complete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DeleteImageCacheResponseBody extends TeaModel {
 
     public static class DeleteImageCacheResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the deletion is in progress. The current implementation always returns false. To confirm the visibility of the cache, call GetImageCache or ListImageCaches.</p>
+         * <p>Indicates whether the deletion is in progress. The current implementation always returns false. To check the cache visibility, call GetImageCache or ListImageCaches.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

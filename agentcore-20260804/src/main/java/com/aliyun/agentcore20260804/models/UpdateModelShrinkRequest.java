@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateModelShrinkRequest extends TeaModel {
     /**
-     * <p>The model update request body. At least one of the description, contextSize, maxTokens, and capabilities parameters must be non-null.</p>
+     * <p>The model update request body. At least one non-null parameter among description, contextSize, maxTokens, and capabilities must be provided.</p>
      */
     @NameInMap("body")
     public String bodyShrink;

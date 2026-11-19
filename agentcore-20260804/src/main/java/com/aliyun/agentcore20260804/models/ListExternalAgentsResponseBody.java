@@ -26,13 +26,13 @@ public class ListExternalAgentsResponseBody extends TeaModel {
      * <p>The list of managed agents.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;agentId&quot;:&quot;agent-1&quot;,&quot;workspaceId&quot;:&quot;ws-1&quot;,&quot;name&quot;:&quot;my-external-agent&quot;,&quot;description&quot;:&quot;运行在用户环境中的代码评审智能体&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:1,&quot;effectiveSpecVersion&quot;:1,&quot;createMode&quot;:&quot;CUSTOM&quot;,&quot;runtime&quot;:&quot;qwenpaw&quot;,&quot;deployType&quot;:&quot;SELF_HOSTED&quot;,&quot;createdAt&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</p>
+     * <p>[{&quot;agentId&quot;:&quot;agent-1&quot;,&quot;workspaceId&quot;:&quot;ws-1&quot;,&quot;name&quot;:&quot;my-external-agent&quot;,&quot;description&quot;:&quot;Code review agent running in the user environment&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:1,&quot;effectiveSpecVersion&quot;:1,&quot;createMode&quot;:&quot;CUSTOM&quot;,&quot;runtime&quot;:&quot;qwenpaw&quot;,&quot;deployType&quot;:&quot;SELF_HOSTED&quot;,&quot;createdAt&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</p>
      */
     @NameInMap("items")
     public java.util.List<ListExternalAgentsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of entries returned per page for this request.</p>
+     * <p>The maximum number of entries returned per page for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -164,7 +164,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
 
     public static class ListExternalAgentsResponseBodyItems extends TeaModel {
         /**
-         * <p>The ID of the managed agent.</p>
+         * <p>The managed agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>

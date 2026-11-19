@@ -14,7 +14,7 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The MemoryStore details.</p>
+     * <p>The memory store details.</p>
      */
     @NameInMap("data")
     public UpdateMemoryStoreResponseBodyData data;
@@ -107,7 +107,7 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
 
     public static class UpdateMemoryStoreResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time. It is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+         * <p>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00Z</p>
@@ -116,13 +116,22 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The MemoryStore description.</p>
+         * <p>The description of the memory store.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used to save the user\&quot;s long-term preferences</p>
+         * <p>Used to save long-term user preferences</p>
          */
         @NameInMap("description")
         public String description;
+
+        /**
+         * <p>The number of events. You can query this value by calling the GetMemoryStore operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("eventCount")
+        public Long eventCount;
 
         /**
          * <p>The custom extraction instructions.</p>
@@ -134,7 +143,16 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
         public String extractInstructions;
 
         /**
-         * <p>The MemoryStore ID.</p>
+         * <p>The number of valid memories. You can query this value by calling the GetMemoryStore operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("memoryCount")
+        public Long memoryCount;
+
+        /**
+         * <p>The memory store ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ms-2f5f9c5a8d0e4c3b</p>
@@ -143,7 +161,7 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreId;
 
         /**
-         * <p>The MemoryStore name. It cannot be modified after creation.</p>
+         * <p>The name of the memory store. It cannot be modified after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>customer-memory</p>
@@ -152,7 +170,7 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreName;
 
         /**
-         * <p>The lifecycle state of the MemoryStore.</p>
+         * <p>The lifecycle state of the memory store.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -161,7 +179,7 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last update time. It is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+         * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:05:00Z</p>
@@ -199,12 +217,28 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
             return this.description;
         }
 
+        public UpdateMemoryStoreResponseBodyData setEventCount(Long eventCount) {
+            this.eventCount = eventCount;
+            return this;
+        }
+        public Long getEventCount() {
+            return this.eventCount;
+        }
+
         public UpdateMemoryStoreResponseBodyData setExtractInstructions(String extractInstructions) {
             this.extractInstructions = extractInstructions;
             return this;
         }
         public String getExtractInstructions() {
             return this.extractInstructions;
+        }
+
+        public UpdateMemoryStoreResponseBodyData setMemoryCount(Long memoryCount) {
+            this.memoryCount = memoryCount;
+            return this;
+        }
+        public Long getMemoryCount() {
+            return this.memoryCount;
         }
 
         public UpdateMemoryStoreResponseBodyData setMemoryStoreId(String memoryStoreId) {

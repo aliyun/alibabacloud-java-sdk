@@ -29,7 +29,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     public java.util.List<ListServiceEndpointsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page returned in this query.</p>
+     * <p>The maximum number of records per page that takes effect in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor for the next page. Empty if there is no next page.</p>
+     * <p>The cursor for the next page. This parameter is empty if there is no next page.</p>
      * 
      * <strong>example:</strong>
      * <p>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</p>
@@ -158,7 +158,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
 
     public static class ListServiceEndpointsResponseBodyItemsAccessUrls extends TeaModel {
         /**
-         * <p>The access URL type. Valid values: INTERNET and VPC.</p>
+         * <p>The type of the access URL. Valid values: INTERNET and VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
@@ -234,7 +234,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
 
     public static class ListServiceEndpointsResponseBodyItemsAuthentication extends TeaModel {
         /**
-         * <p>The authentication method. NONE indicates that no authentication is required, and API_KEY indicates that authentication is performed by passing an API key through the x-api-key request header.</p>
+         * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the x-api-key request header.</p>
          * 
          * <strong>example:</strong>
          * <p>API_KEY</p>
@@ -257,9 +257,237 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
 
     }
 
-    public static class ListServiceEndpointsResponseBodyItemsElasticityPolicy extends TeaModel {
+    public static class ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints extends TeaModel {
         /**
-         * <p>Indicates whether elasticity is enabled.</p>
+         * <p>Required. The value ranges from 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("maxInstances")
+        public Integer maxInstances;
+
+        /**
+         * <p>Required. The value ranges from 0 to 100 and must not be greater than the maxInstances value in the same item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("minInstances")
+        public Integer minInstances;
+
+        /**
+         * <p>Required only for each trigger point of the monthly cycle. Must be non-empty and contain unique integers from 1 to 31. Each row is selected independently. If a date does not exist in a specific month, the trigger does not occur and is not postponed to the end of the month. Must be omitted for other cycles.</p>
+         */
+        @NameInMap("monthDays")
+        public java.util.List<Integer> monthDays;
+
+        /**
+         * <p>Required. The format is HH:mm:ss. The time is interpreted based on the time zone of the associated policy. The precision is down to the minute, and the seconds are fixed at 00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:00:00</p>
+         */
+        @NameInMap("time")
+        public String time;
+
+        /**
+         * <p>Required only for each trigger point of weekly policies. It must be non-empty and deduplicated. Valid values are integers from 1 to 7, where 1 represents Monday and 7 represents Sunday. Each row is selected independently. It must be omitted for other cycles.</p>
+         */
+        @NameInMap("weekdays")
+        public java.util.List<Integer> weekdays;
+
+        public static ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints self = new ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints setMaxInstances(Integer maxInstances) {
+            this.maxInstances = maxInstances;
+            return this;
+        }
+        public Integer getMaxInstances() {
+            return this.maxInstances;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints setMinInstances(Integer minInstances) {
+            this.minInstances = minInstances;
+            return this;
+        }
+        public Integer getMinInstances() {
+            return this.minInstances;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints setMonthDays(java.util.List<Integer> monthDays) {
+            this.monthDays = monthDays;
+            return this;
+        }
+        public java.util.List<Integer> getMonthDays() {
+            return this.monthDays;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints setWeekdays(java.util.List<Integer> weekdays) {
+            this.weekdays = weekdays;
+            return this;
+        }
+        public java.util.List<Integer> getWeekdays() {
+            return this.weekdays;
+        }
+
+    }
+
+    public static class ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies extends TeaModel {
+        /**
+         * <p>Required only when validity is set to range. The format is the same as startTime, and the seconds are fixed at 00. The value must be later than startTime. The interval does not include the end time. If validity is set to forever, the start and end times must be omitted. Valid dates and cross-field constraints are verified by the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-12-01T00:00:00</p>
+         */
+        @NameInMap("endTime")
+        public String endTime;
+
+        /**
+         * <p>Required. It must be unique and stable within the endpoint. It is generated by the frontend when added, and retained during editing and retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-weekday</p>
+         */
+        @NameInMap("id")
+        public String id;
+
+        /**
+         * <p>Required. Valid values: 5 for regular and 10 for high priority. New policies default to regular priority. It must be explicitly provided during submission, and no default value is set by the API. When dynamicPolicy.enabled is finally true, the validity periods of high-priority policies must not overlap, except for end-to-end connections. Long-term high-priority policies can overlap with other high-priority policies. Overlapping drafts can be saved when disabled, and the final configuration is validated when re-enabled. The validity of other fields and trigger conflicts within the policy are always validated. The priority must be explicitly provided.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("priority")
+        public Integer priority;
+
+        /**
+         * <p>Required. Valid values: daily for every day, weekly for every week, and monthly for every month. Only submit the fields corresponding to the specified cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weekly</p>
+         */
+        @NameInMap("repeat")
+        public String repeat;
+
+        /**
+         * <p>Required only when validity is set to range. The format is YYYY-MM-DDTHH:mm:ss in the time zone of the policy, without a time zone offset. The seconds are fixed at 00. The interval includes the start time. When editing, the existing past start time is retained, and updates or retries are not rejected even if it is earlier than the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-01T00:00:00</p>
+         */
+        @NameInMap("startTime")
+        public String startTime;
+
+        /**
+         * <p>Required and non-empty. Each item must be complete. The day of the week or day of the month is configured independently for each item. Within the same policy, daily policies conflict if they have the same time. Weekly and monthly policies conflict only if they have the same time and their date sets intersect. This is validated by the console.</p>
+         */
+        @NameInMap("timePoints")
+        public java.util.List<ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints> timePoints;
+
+        /**
+         * <p>Required. It must be a valid IANA time zone. All dates and times in this policy are interpreted in this time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
+        @NameInMap("timeZone")
+        public String timeZone;
+
+        /**
+         * <p>Required. Valid values: forever: The policy is permanently valid. range: The policy is valid for a specific period. After expiration, the policy and its trigger results exit the current calculation, and the remaining policies are recalculated. If no candidates are available, the baseline values are restored, and the saved configurations are not automatically deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>range</p>
+         */
+        @NameInMap("validity")
+        public String validity;
+
+        public static ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies self = new ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies setRepeat(String repeat) {
+            this.repeat = repeat;
+            return this;
+        }
+        public String getRepeat() {
+            return this.repeat;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies setTimePoints(java.util.List<ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints> timePoints) {
+            this.timePoints = timePoints;
+            return this;
+        }
+        public java.util.List<ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints> getTimePoints() {
+            return this.timePoints;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies setValidity(String validity) {
+            this.validity = validity;
+            return this;
+        }
+        public String getValidity() {
+            return this.validity;
+        }
+
+    }
+
+    public static class ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy extends TeaModel {
+        /**
+         * <p>Required during creation. If omitted during an update, the original value is retained. Disabling it retains existing policies and restores the basic upper and lower limits. Enabling it again triggers immediate calculation. When finally enabled, policies must not be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -268,7 +496,52 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of instances, which must be no less than 1.</p>
+         * <p>Required during creation. If omitted during an update, the original list is retained. If provided, it replaces the entire list and is not merged by ID. To clear the list, you must also ensure that the final enabled status is false. Each item must be complete. Conditional requirements and cross-field constraints are validated by the server. The display order does not indicate priority.</p>
+         */
+        @NameInMap("policies")
+        public java.util.List<ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies> policies;
+
+        public static ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy self = new ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy setPolicies(java.util.List<ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies> policies) {
+            this.policies = policies;
+            return this;
+        }
+        public java.util.List<ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies> getPolicies() {
+            return this.policies;
+        }
+
+    }
+
+    public static class ListServiceEndpointsResponseBodyItemsElasticityPolicy extends TeaModel {
+        /**
+         * <p>Returns the saved dynamic configuration. If the basic configuration lacks dynamicPolicy before the feature is released, it is supplemented with enabled=false and policies=[].</p>
+         */
+        @NameInMap("dynamicPolicy")
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy dynamicPolicy;
+
+        /**
+         * <p>Independent of dynamicPolicy.enabled. If omitted during an update, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>The saved or backfilled basic maximum number of instances. It must not be less than minSandboxCount. Historical values can exceed 100 and are not truncated when read. The basic value is used when dynamic scaling is disabled or no candidates are available.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -277,7 +550,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public Integer maxSandboxCount;
 
         /**
-         * <p>The minimum number of instances, which must be no less than 0 and no greater than maxSandboxCount.</p>
+         * <p>The saved or backfilled basic minimum number of instances. It must be a non-negative integer and not greater than maxSandboxCount. Historical values can exceed 100 and are not truncated when read. However, newly written complete configurations must still meet the 0 to 100 range.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,6 +561,14 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public static ListServiceEndpointsResponseBodyItemsElasticityPolicy build(java.util.Map<String, ?> map) throws Exception {
             ListServiceEndpointsResponseBodyItemsElasticityPolicy self = new ListServiceEndpointsResponseBodyItemsElasticityPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicy setDynamicPolicy(ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy dynamicPolicy) {
+            this.dynamicPolicy = dynamicPolicy;
+            return this;
+        }
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy getDynamicPolicy() {
+            return this.dynamicPolicy;
         }
 
         public ListServiceEndpointsResponseBodyItemsElasticityPolicy setEnabled(Boolean enabled) {
@@ -423,7 +704,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public ListServiceEndpointsResponseBodyItemsAuthentication authentication;
 
         /**
-         * <p>The creation time in RFC 3339 UTC format.</p>
+         * <p>The creation time in UTC format compliant with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -432,19 +713,34 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The result of combining publicAccessEnabled with the workspace public access inbound upper limit. It is true only when both allow it. This only indicates the policy target and does not mean that the public access entry has been published. The actual status is subject to accessUrls and status.</p>
+         * <p>Read-only. This is a shared response field. The list operation does not query RM row by row and returns null. For details, call the GetServiceEndpoint operation to query sandboxPhaseCounts.RUNNING based on the endpoint runtimeKey. Do not replace it with the baseline upper and lower limits, target quantity, or READY status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("currentInstances")
+        public Integer currentInstances;
+
+        /**
+         * <p>The result of combining publicAccessEnabled with the public inbound access upper limit of the workspace. The value is true only when both allow public inbound access. This only indicates the policy target and does not mean that the public endpoint has been published. The actual status is subject to accessUrls and status.</p>
          */
         @NameInMap("effectivePublicAccessEnabled")
         public Boolean effectivePublicAccessEnabled;
 
         /**
-         * <p>Returned only when elastic override values are set for the service endpoint. Can be set for Router-type service endpoints and DEFAULT service endpoints of the GATEWAY_API_WITH_VPC_INGRESS type. If no override values are set, this object is not returned, indicating that the source configuration of the agent is inherited. It must not be treated as an empty object or a default policy. When returned, all three fields are always included.</p>
+         * <p>Includes the enabled status, basic minSandboxCount and maxSandboxCount, and dynamicPolicy. This does not represent the currently effective limits or the actual number of instances. If the basic configuration lacks dynamicPolicy before the feature is released, it is supplemented with enabled=false and policies=[]. This parameter is null if the endpoint configuration is not saved, and the list does not backfill the version source. Historical basic capacity can exceed 100. Retrieve the details again when you open the edit page.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
          */
         @NameInMap("elasticityPolicy")
         public ListServiceEndpointsResponseBodyItemsElasticityPolicy elasticityPolicy;
 
         /**
-         * <p>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform, and NAMED indicates a named endpoint explicitly created by a user.</p>
+         * <p>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by a user.</p>
          * 
          * <strong>example:</strong>
          * <p>NAMED</p>
@@ -453,7 +749,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The name of the service endpoint. It must be unique within the workspace and 1 to 128 characters in length.</p>
+         * <p>The name of the service endpoint. The name must be unique within the workspace and 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-endpoint</p>
@@ -462,7 +758,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The expected public access inbound setting configured by the user on the service endpoint. For legacy service endpoints where this has not been set, true is returned. This only indicates the configuration expectation. The actual availability of the public access URL is subject to accessUrls and status.</p>
+         * <p>The expected public inbound access configured by the user on the service endpoint. For historical service endpoints that have not been configured, true is returned. This only indicates the configuration expectation. The actual availability of the public IP address is subject to accessUrls and status.</p>
          */
         @NameInMap("publicAccessEnabled")
         public Boolean publicAccessEnabled;
@@ -510,7 +806,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public ListServiceEndpointsResponseBodyItemsTarget target;
 
         /**
-         * <p>The time of the last modification in RFC 3339 UTC format.</p>
+         * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -554,6 +850,14 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
         public String getCreatedAt() {
             return this.createdAt;
+        }
+
+        public ListServiceEndpointsResponseBodyItems setCurrentInstances(Integer currentInstances) {
+            this.currentInstances = currentInstances;
+            return this;
+        }
+        public Integer getCurrentInstances() {
+            return this.currentInstances;
         }
 
         public ListServiceEndpointsResponseBodyItems setEffectivePublicAccessEnabled(Boolean effectivePublicAccessEnabled) {

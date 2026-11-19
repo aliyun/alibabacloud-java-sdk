@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentIMChannelResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS when the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
     public UpdateAgentIMChannelResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value is 200 when the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -194,7 +194,12 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         public UpdateAgentIMChannelResponseBodyDataChannelConfig channelConfig;
 
         /**
-         * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</p>
+         * <p>The IM channel type. Valid values:</p>
+         * <ul>
+         * <li>DINGTALK: DingTalk</li>
+         * <li>FEISHU: Lark</li>
+         * <li>WECOM: WeCom</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DINGTALK</p>
@@ -224,7 +229,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The public network access URL of the bound ServiceEndpoint.</p>
+         * <p>The public network access URL of the attached ServiceEndpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://agent.example.com">https://agent.example.com</a></p>
@@ -242,7 +247,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         public String imChannelId;
 
         /**
-         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready and have a public endpoint.</p>
+         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready and have a public IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>se-1</p>
@@ -251,7 +256,15 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         public String serviceEndpointId;
 
         /**
-         * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Delete failed).</p>
+         * <p>The IM channel status. Valid values:</p>
+         * <ul>
+         * <li>CREATING: Creating</li>
+         * <li>READY: Ready</li>
+         * <li>UPDATING: Updating</li>
+         * <li>FAILED: Failed</li>
+         * <li>DELETING: Deleting</li>
+         * <li>DELETE_FAILED: Deletion failed</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>READY</p>

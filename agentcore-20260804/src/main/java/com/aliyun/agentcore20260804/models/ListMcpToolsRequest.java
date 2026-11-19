@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMcpToolsRequest extends TeaModel {
     /**
-     * <p>The maximum number of results to return per request. Default value: 10. Maximum value: 100.</p>
+     * <p>The maximum number of results to return in a single request. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>

@@ -14,7 +14,7 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The MemoryStore details.</p>
+     * <p>The details of the memory store.</p>
      */
     @NameInMap("data")
     public CreateMemoryStoreResponseBodyData data;
@@ -116,25 +116,43 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The MemoryStore description.</p>
+         * <p>The description of the memory store.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used to save long-term user preferences</p>
+         * <p>Used to store the long-term preferences of users</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The number of events. You can query this value by calling GetMemoryStore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("eventCount")
+        public Long eventCount;
+
+        /**
          * <p>The custom extraction instructions.</p>
          * 
          * <strong>example:</strong>
-         * <p>Extract only explicitly expressed long-term user preferences</p>
+         * <p>Extract only long-term preferences explicitly expressed by users</p>
          */
         @NameInMap("extractInstructions")
         public String extractInstructions;
 
         /**
-         * <p>The MemoryStore ID.</p>
+         * <p>The number of valid memories. You can query this value by calling GetMemoryStore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("memoryCount")
+        public Long memoryCount;
+
+        /**
+         * <p>The ID of the memory store.</p>
          * 
          * <strong>example:</strong>
          * <p>ms-2f5f9c5a8d0e4c3b</p>
@@ -143,7 +161,7 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreId;
 
         /**
-         * <p>The name of the MemoryStore. The name cannot be modified after creation.</p>
+         * <p>The name of the memory store. The name cannot be modified after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>customer-memory</p>
@@ -152,7 +170,7 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreName;
 
         /**
-         * <p>The lifecycle state of the MemoryStore.</p>
+         * <p>The lifecycle status of the memory store.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -161,7 +179,7 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+         * <p>The last updated time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:05:00Z</p>
@@ -170,7 +188,7 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The AgentCore workspace ID.</p>
+         * <p>The ID of the AgentCore workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-2f5f9c5a8d0e4c3b</p>
@@ -199,12 +217,28 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
             return this.description;
         }
 
+        public CreateMemoryStoreResponseBodyData setEventCount(Long eventCount) {
+            this.eventCount = eventCount;
+            return this;
+        }
+        public Long getEventCount() {
+            return this.eventCount;
+        }
+
         public CreateMemoryStoreResponseBodyData setExtractInstructions(String extractInstructions) {
             this.extractInstructions = extractInstructions;
             return this;
         }
         public String getExtractInstructions() {
             return this.extractInstructions;
+        }
+
+        public CreateMemoryStoreResponseBodyData setMemoryCount(Long memoryCount) {
+            this.memoryCount = memoryCount;
+            return this;
+        }
+        public Long getMemoryCount() {
+            return this.memoryCount;
         }
 
         public CreateMemoryStoreResponseBodyData setMemoryStoreId(String memoryStoreId) {

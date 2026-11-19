@@ -12,7 +12,7 @@ public class CreateImageCacheShrinkRequest extends TeaModel {
     public String bodyShrink;
 
     /**
-     * <p>The non-empty request token passed as a query parameter. The current implementation does not guarantee deduplication by this token or recovery of the original acceptance result.</p>
+     * <p>The non-empty request identifier passed as a query parameter. The current implementation does not guarantee deduplication by this identifier or recovery of the original acceptance result.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

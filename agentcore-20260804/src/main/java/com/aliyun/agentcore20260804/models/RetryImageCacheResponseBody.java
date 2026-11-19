@@ -15,7 +15,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of retrying image cache creation.</p>
+     * <p>The retry image cache result.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("data")
@@ -52,7 +52,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. A successful request does not mean that the cache creation is complete.</p>
+     * <p>Indicates whether the request is successful. This does not mean that the cache creation is complete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>The image cache creation failed. Please retry</p>
+         * <p>Image cache creation failed. Please try again</p>
          */
         @NameInMap("message")
         public String message;
@@ -160,7 +160,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
 
     public static class RetryImageCacheResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the source ACR instance.</p>
+         * <p>The source ACR instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String acrInstanceId;
 
         /**
-         * <p>The number of agents that use the cache.</p>
+         * <p>The number of agents using the cache.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public Long agentCount;
 
         /**
-         * <p>The size of the cache in bytes.</p>
+         * <p>The cache size in bytes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public Long cacheSizeBytes;
 
         /**
-         * <p>Indicates whether the cache can be deleted.</p>
+         * <p>Indicates whether deletion is allowed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
-         * <p>The time when the resource was created. The time follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+         * <p>The resource creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The reason why the cache cannot be deleted.</p>
+         * <p>The reason why deletion is blocked.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The domain name of the source image.</p>
+         * <p>The source image domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String registry;
 
         /**
-         * <p>The path of the source image repository.</p>
+         * <p>The source image repository path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String repository;
 
         /**
-         * <p>The cache status.</p>
+         * <p>The image cache status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag of the source image.</p>
+         * <p>The source image tag.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

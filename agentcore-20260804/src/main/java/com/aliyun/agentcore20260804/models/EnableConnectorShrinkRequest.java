@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableConnectorShrinkRequest extends TeaModel {
     /**
-     * <p>The request body for enabling the connector.</p>
+     * <p>The request body for the enable operation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

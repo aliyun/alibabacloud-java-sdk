@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillReferencesRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from 1. Default value: 1.</p>
+     * <p>The page number, starting from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,16 @@ public class ListSkillReferencesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The reference selector type used for filtering. Valid values: LABEL and VERSION.</p>
+     * <p>Filters by reference strength. Valid values: STRONG, WEAK.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STRONG</p>
+     */
+    @NameInMap("refType")
+    public String refType;
+
+    /**
+     * <p>Filters by reference selector type. Valid values: LABEL, VERSION.</p>
      * 
      * <strong>example:</strong>
      * <p>LABEL</p>
@@ -32,13 +41,22 @@ public class ListSkillReferencesRequest extends TeaModel {
     public String selectorType;
 
     /**
-     * <p>The reference selector value used for filtering. Valid values: latest, a named label, HEAD, or a specific version.</p>
+     * <p>Filters by reference selector value. Valid values: latest, a named label, HEAD, or a specific version.</p>
      * 
      * <strong>example:</strong>
      * <p>HEAD</p>
      */
     @NameInMap("selectorValue")
     public String selectorValue;
+
+    /**
+     * <p>Filters by reference source identifier. The value must be agentcore or a configured source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agentcore</p>
+     */
+    @NameInMap("sourceId")
+    public String sourceId;
 
     public static ListSkillReferencesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSkillReferencesRequest self = new ListSkillReferencesRequest();
@@ -61,6 +79,14 @@ public class ListSkillReferencesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListSkillReferencesRequest setRefType(String refType) {
+        this.refType = refType;
+        return this;
+    }
+    public String getRefType() {
+        return this.refType;
+    }
+
     public ListSkillReferencesRequest setSelectorType(String selectorType) {
         this.selectorType = selectorType;
         return this;
@@ -75,6 +101,14 @@ public class ListSkillReferencesRequest extends TeaModel {
     }
     public String getSelectorValue() {
         return this.selectorValue;
+    }
+
+    public ListSkillReferencesRequest setSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public String getSourceId() {
+        return this.sourceId;
     }
 
 }

@@ -29,7 +29,7 @@ public class ListModelConnectionsResponseBody extends TeaModel {
     public java.util.List<ListModelConnectionsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of entries to return on each page. Valid values: 0 to 100. Default value: 10. If this parameter is not specified or is set to 0, the default value is used.</p>
+     * <p>The maximum number of entries to return per page. Valid values: 0 to 100. Default value: 10. If this parameter is not specified or is set to 0, the default value is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListModelConnectionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token. Pass the token returned in the previous query for the current request. An empty response indicates that no more pages are available.</p>
+     * <p>The pagination token. Pass the token returned in the previous response to query the next page. If the response is empty, no more pages are available.</p>
      * 
      * <strong>example:</strong>
      * <p>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWwtY29ubmVjdGlvbjoxMA</p>
@@ -218,7 +218,7 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String connectionId;
 
         /**
-         * <p>The time when the resource was created. The time is displayed in the RFC 3339 UTC format.</p>
+         * <p>The time when the resource was created. The time is in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
@@ -251,13 +251,13 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The list of summaries of models associated with the model connection.</p>
+         * <p>The list of model summaries associated with the model connection.</p>
          */
         @NameInMap("models")
         public java.util.List<ListModelConnectionsResponseBodyItemsModels> models;
 
         /**
-         * <p>The name of the model connection. The name must be 1 to 128 characters in length and cannot contain whitespace characters.</p>
+         * <p>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -266,7 +266,7 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The model invocation protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified during model connection creation, this default value is used.</p>
+         * <p>The model invocation protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified when you create a model connection, this default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAI/v1</p>
@@ -293,7 +293,7 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The failure summary returned when the model connection fails to be published, or when deletion fails but the connection remains in the deleting state. This field is empty in other states.</p>
+         * <p>The failure summary returned when the model connection fails to be published, or when deletion fails but the status remains Deleting. This field is empty for other statuses.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayOperationException</p>
@@ -302,7 +302,7 @@ public class ListModelConnectionsResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>The time when the resource was last updated. The time is displayed in the RFC 3339 UTC format.</p>
+         * <p>The time when the resource was last updated. The time is in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>

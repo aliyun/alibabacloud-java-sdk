@@ -116,7 +116,7 @@ public class CreateCredentialResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the resource. This parameter is empty if the resource is deleted.</p>
+         * <p>The resource name. This field is empty if the resource is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>my-mcp-service</p>
@@ -125,7 +125,7 @@ public class CreateCredentialResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The type of the resource. Set the value to mcpServer, which indicates an MCP service.</p>
+         * <p>The resource type. Currently, only mcpServer is supported, which indicates an MCP service.</p>
          * 
          * <strong>example:</strong>
          * <p>mcpServer</p>
@@ -166,7 +166,7 @@ public class CreateCredentialResponseBody extends TeaModel {
 
     public static class CreateCredentialResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the credential was created. The time is in UTC and follows the RFC 3339 format.</p>
+         * <p>The creation time in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -202,7 +202,7 @@ public class CreateCredentialResponseBody extends TeaModel {
         public String credentialType;
 
         /**
-         * <p>The description of the credential. The description can be up to 256 characters in length.</p>
+         * <p>The credential description. It can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>API key used to call the model service in the production environment</p>
@@ -211,7 +211,7 @@ public class CreateCredentialResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the credential. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
+         * <p>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
          * 
          * <strong>example:</strong>
          * <p>model-api-key</p>
@@ -220,7 +220,7 @@ public class CreateCredentialResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the region where the resource resides.</p>
+         * <p>The region ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -235,7 +235,7 @@ public class CreateCredentialResponseBody extends TeaModel {
         public java.util.List<CreateCredentialResponseBodyDataResourceRefs> resourceRefs;
 
         /**
-         * <p>The application scope of the credential. ALL indicates all scopes, and SPECIFIED indicates the specified MCP services.</p>
+         * <p>The applicable scope of the credential. ALL indicates all scopes, and SPECIFIED indicates the specified MCP services.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -244,7 +244,7 @@ public class CreateCredentialResponseBody extends TeaModel {
         public String resourceScope;
 
         /**
-         * <p>The time when the credential was last modified. The time is in UTC and follows the RFC 3339 format.</p>
+         * <p>The last modification time in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>

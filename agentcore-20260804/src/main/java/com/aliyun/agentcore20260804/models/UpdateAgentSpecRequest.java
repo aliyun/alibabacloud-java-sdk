@@ -25,7 +25,7 @@ public class UpdateAgentSpecRequest extends TeaModel {
 
     public static class UpdateAgentSpecRequestBody extends TeaModel {
         /**
-         * <p>The business tags as a JSON-formatted string.</p>
+         * <p>The business tags in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ai&quot;,&quot;agent&quot;]</p>
@@ -34,7 +34,7 @@ public class UpdateAgentSpecRequest extends TeaModel {
         public String bizTags;
 
         /**
-         * <p>The label mapping as a JSON-formatted string.</p>
+         * <p>The label mapping in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;latest&quot;:&quot;0.0.1&quot;}</p>

@@ -11,7 +11,7 @@ public class UpdateMcpRequest extends TeaModel {
     public UpdateMcpRequestBody body;
 
     /**
-     * <p>The client token that is used to ensure request idempotency. This is a reserved query parameter. The current console backend does not read this parameter and does not provide idempotency guarantees such as deduplication or recovery of the original acceptance result based on this token.</p>
+     * <p>The reserved query request identifier. The current console backend does not read this parameter and does not provide idempotency guarantees for deduplication or restoring the original acceptance result based on this identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -42,7 +42,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyAuthCodePackage extends TeaModel {
         /**
-         * <p>The API key used to verify MCP callers.</p>
+         * <p>The API key used to verify the MCP caller.</p>
          * 
          * <strong>example:</strong>
          * <p>example-api-key</p>
@@ -219,7 +219,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyAuth extends TeaModel {
         /**
-         * <p>The API key authentication configuration for callers of code-deployed MCP services.</p>
+         * <p>The caller API key authentication configuration for code-deployed MCP.</p>
          */
         @NameInMap("codePackage")
         public UpdateMcpRequestBodyAuthCodePackage codePackage;
@@ -231,7 +231,7 @@ public class UpdateMcpRequest extends TeaModel {
         public UpdateMcpRequestBodyAuthDirectProxy directProxy;
 
         /**
-         * <p>Specifies whether the configuration is enabled.</p>
+         * <p>Specifies whether to enable the configuration.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -283,7 +283,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigAccessControl extends TeaModel {
         /**
-         * <p>The AgentCore credential referenced when the mode is CREDENTIAL.</p>
+         * <p>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
          * 
          * <strong>example:</strong>
          * <p>credential-id</p>
@@ -292,13 +292,13 @@ public class UpdateMcpRequest extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>Specifies whether to enable access control for the MCP entry point.</p>
+         * <p>Specifies whether to enable ingress access control.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates the use of AgentCore access credentials.</p>
+         * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication by using AgentCore access credentials.</p>
          * 
          * <strong>example:</strong>
          * <p>CREDENTIAL</p>
@@ -339,13 +339,13 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigAgentIdentityConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to enable authorization.</p>
+         * <p>Specifies whether authorization is enabled.</p>
          */
         @NameInMap("authorizationEnabled")
         public Boolean authorizationEnabled;
 
         /**
-         * <p>The ARN of the credential provider.</p>
+         * <p>The credential provider ARN.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -354,7 +354,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String credentialProviderArn;
 
         /**
-         * <p>The type of the credential provider.</p>
+         * <p>The credential provider type.</p>
          * 
          * <strong>example:</strong>
          * <p>oauth2</p>
@@ -363,7 +363,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String credentialProviderType;
 
         /**
-         * <p>Specifies whether to enable agent identity.</p>
+         * <p>Specifies whether agent identity is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -424,7 +424,7 @@ public class UpdateMcpRequest extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The code package runtime: python3.13, nodejs22, or java17.</p>
+         * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
          * 
          * <strong>example:</strong>
          * <p>python3.13</p>
@@ -465,7 +465,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigContainerConfiguration extends TeaModel {
         /**
-         * <p>The ID of the ACR instance.</p>
+         * <p>The ACR instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-example</p>
@@ -480,13 +480,13 @@ public class UpdateMcpRequest extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The entrypoint arguments for the container.</p>
+         * <p>The container entrypoint parameters.</p>
          */
         @NameInMap("entrypoint")
         public java.util.List<String> entrypoint;
 
         /**
-         * <p>The address of the container image.</p>
+         * <p>The container image address.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/example/mcp:1.0.0</p>
@@ -495,7 +495,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The type of the image registry.</p>
+         * <p>The image registry type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACR</p>
@@ -504,7 +504,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String imageRegistryType;
 
         /**
-         * <p>The MCP runtime mode. Custom containers must expose standard MCP themselves. Set the value to SELF_HOSTED.</p>
+         * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set the value to SELF_HOSTED.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_HOSTED</p>
@@ -513,7 +513,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String mcpRuntimeMode;
 
         /**
-         * <p>The source type of the container. Currently, this is fixed to CONTAINER_IMAGE.</p>
+         * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTAINER_IMAGE</p>
@@ -598,7 +598,7 @@ public class UpdateMcpRequest extends TeaModel {
          * <p>The description of the hook.</p>
          * 
          * <strong>example:</strong>
-         * <p>Log MCP tool invocations</p>
+         * <p>Log MCP tool invocation</p>
          */
         @NameInMap("description")
         public String description;
@@ -625,7 +625,7 @@ public class UpdateMcpRequest extends TeaModel {
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The timeout period in milliseconds.</p>
+         * <p>The timeout period of the hook, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -634,7 +634,7 @@ public class UpdateMcpRequest extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The hook callback URL.</p>
+         * <p>The callback URL of the hook.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp-hook">https://example.com/mcp-hook</a></p>
@@ -707,7 +707,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigHookConfiguration extends TeaModel {
         /**
-         * <p>The ordered list of hooks. Executes PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in array order.</p>
+         * <p>The ordered list of hooks. The PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks are executed in the order of the array.</p>
          */
         @NameInMap("hooks")
         public java.util.List<UpdateMcpRequestBodyDeploymentConfigHookConfigurationHooks> hooks;
@@ -741,7 +741,7 @@ public class UpdateMcpRequest extends TeaModel {
         public Boolean enableRequestMetrics;
 
         /**
-         * <p>The start rule for Function Compute log segmentation.</p>
+         * <p>The start rule for splitting Function Compute logs.</p>
          * 
          * <strong>example:</strong>
          * <p>DefaultRegex</p>
@@ -825,7 +825,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String endpointPath;
 
         /**
-         * <p>The number of concurrent sessions per instance. This value is currently fixed at 1.</p>
+         * <p>The session concurrency per instance. Currently fixed to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -834,7 +834,7 @@ public class UpdateMcpRequest extends TeaModel {
         public Integer sessionConcurrencyPerInstance;
 
         /**
-         * <p>The session idle timeout in seconds. Default value: 1800.</p>
+         * <p>The session idle timeout period in seconds. Default value: 1800.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -948,7 +948,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigNasConfiguration extends TeaModel {
         /**
-         * <p>The ID of the user group.</p>
+         * <p>The group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -963,7 +963,7 @@ public class UpdateMcpRequest extends TeaModel {
         public java.util.List<UpdateMcpRequestBodyDeploymentConfigNasConfigurationMountPoints> mountPoints;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1013,7 +1013,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String networkMode;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-example</p>
@@ -1028,7 +1028,7 @@ public class UpdateMcpRequest extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-example</p>
@@ -1189,7 +1189,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigParameterTransformConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to enable parameter transformation and result enhancement.</p>
+         * <p>Specifies whether parameter transformation and result enhancement is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -1204,7 +1204,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String ruleSetId;
 
         /**
-         * <p>The version of the transformation rule.</p>
+         * <p>The transformation rule version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -1245,7 +1245,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigProxyConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether the MCP proxy is enabled.</p>
+         * <p>Specifies whether to enable the MCP proxy.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -1267,7 +1267,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigRuntimeConfiguration extends TeaModel {
         /**
-         * <p>The CPU specification, in cores. Default value: 0.25.</p>
+         * <p>The CPU specifications in cores. Default value: 0.25.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1276,7 +1276,7 @@ public class UpdateMcpRequest extends TeaModel {
         public Double cpu;
 
         /**
-         * <p>The ephemeral disk size, in MB. Valid values: 512 and 10240.</p>
+         * <p>The temporary disk size in MB. Valid values: 512 and 10240.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1291,7 +1291,7 @@ public class UpdateMcpRequest extends TeaModel {
         public java.util.Map<String, String> environmentVariables;
 
         /**
-         * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
+         * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -1300,7 +1300,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String executionRoleArn;
 
         /**
-         * <p>The number of concurrent requests per instance. Default value: 200.</p>
+         * <p>The request concurrency per instance. Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1309,7 +1309,7 @@ public class UpdateMcpRequest extends TeaModel {
         public Integer instanceConcurrency;
 
         /**
-         * <p>The memory specification, in MB. Default value: 512.</p>
+         * <p>The memory specifications in MB. Default value: 512.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1327,7 +1327,7 @@ public class UpdateMcpRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The function timeout period, in seconds. Default value: 300.</p>
+         * <p>The function timeout period in seconds. Default value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -1408,7 +1408,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfig extends TeaModel {
         /**
-         * <p>The access control for the MCP entry point.</p>
+         * <p>The MCP ingress access control configuration.</p>
          */
         @NameInMap("accessControl")
         public UpdateMcpRequestBodyDeploymentConfigAccessControl accessControl;
@@ -1621,19 +1621,19 @@ public class UpdateMcpRequest extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The backend authentication configuration. When enabled is set to true, specify directProxy (name and value) for DIRECT_PROXY, specify the httpToMcp array (each item includes id, type, and credential; apiKey also requires position and name) for HTTP_TO_MCP, and specify codePackage for CODE_PACKAGE. Multiple authentication objects are supported, and the first one serves as the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
+         * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name and value); for HTTP_TO_MCP, specify the httpToMcp array (each item includes id, type, and credential, and apiKey also requires position and name). Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
          */
         @NameInMap("auth")
         public UpdateMcpRequestBodyAuth auth;
 
         /**
-         * <p>The custom tags. Multiple tags are supported. Pass an empty list to clear the tags.</p>
+         * <p>The custom tags. You can specify multiple tags. Pass an empty list to clear the tags.</p>
          */
         @NameInMap("customTags")
         public java.util.List<String> customTags;
 
         /**
-         * <p>The deployment configuration patch for a CODE_PACKAGE MCP. Object fields are merged hierarchically. To retain the current code package, omit CodeConfiguration.CodePackageToken, and the server reuses the deployed code package. To replace the code package, provide a new non-empty token. CodePackageUrl is only supported in CreateMcp and is not supported during updates.</p>
+         * <p>The deployment configuration patch for CODE_PACKAGE MCP. Object fields are merged hierarchically. Omit CodeConfiguration.CodePackageToken to retain the current code package, and the server reuses the currently deployed code package. Provide a new non-empty token to replace the code package. CodePackageUrl is only supported in CreateMcp and is not supported during updates.</p>
          */
         @NameInMap("deploymentConfig")
         public UpdateMcpRequestBodyDeploymentConfig deploymentConfig;
@@ -1642,7 +1642,7 @@ public class UpdateMcpRequest extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description that illustrates the purpose of the resource</p>
+         * <p>A sample description used to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;

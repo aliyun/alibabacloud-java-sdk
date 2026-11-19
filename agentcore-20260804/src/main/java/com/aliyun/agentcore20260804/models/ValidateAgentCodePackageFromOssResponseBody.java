@@ -14,7 +14,7 @@ public class ValidateAgentCodePackageFromOssResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public ValidateAgentCodePackageFromOssResponseBodyData data;

@@ -32,7 +32,7 @@ public class ListMcpMarketItemsRequest extends TeaModel {
     public String mcpType;
 
     /**
-     * <p>The pagination token used to query the next page.</p>
+     * <p>The pagination token for querying the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

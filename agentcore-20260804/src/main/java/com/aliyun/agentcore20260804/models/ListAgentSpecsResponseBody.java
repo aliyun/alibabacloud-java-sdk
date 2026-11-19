@@ -67,7 +67,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
 
     public static class ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector extends TeaModel {
         /**
-         * <p>The type of the version selector. Valid values: LABEL (by label) and VERSION (by specific version).</p>
+         * <p>The version selector type. Valid values: LABEL (by tag) and VERSION (by specific version).</p>
          * 
          * <strong>example:</strong>
          * <p>LABEL</p>
@@ -76,7 +76,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the selector. If the type is LABEL, the value is the label name, such as latest. If the type is VERSION, the value is the specific version number.</p>
+         * <p>The selector value. For LABEL, it is the tag name (such as latest). For VERSION, it is the specific version number.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -118,7 +118,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The source type of the skill. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</p>
+         * <p>The skill source type. Valid values: REFERENCE (references AI Registry) and STATIC (statically provided with the package).</p>
          * 
          * <strong>example:</strong>
          * <p>REFERENCE</p>
@@ -127,7 +127,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The referenced version selector. If omitted, the default value is LABEL/latest.</p>
+         * <p>The referenced version selector. If omitted, the default is LABEL/latest.</p>
          */
         @NameInMap("versionSelector")
         public ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector versionSelector;
@@ -177,7 +177,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample description used to explain the purpose of the resource</p>
+         * <p>A sample description used to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -201,7 +201,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public String editingVersion;
 
         /**
-         * <p>Indicates whether it is enabled.</p>
+         * <p>Specifies whether it is enabled.</p>
          */
         @NameInMap("enable")
         public Boolean enable;
@@ -216,13 +216,13 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public String from;
 
         /**
-         * <p>The version labels.</p>
+         * <p>The version tags.</p>
          */
         @NameInMap("labels")
         public java.util.Map<String, String> labels;
 
         /**
-         * <p>The list of referenced MCP servers.</p>
+         * <p>The list of MCP service references.</p>
          */
         @NameInMap("mcpServers")
         public java.util.List<ListAgentSpecsResponseBodyDataPageItemsMcpServers> mcpServers;
@@ -264,13 +264,13 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The list of referenced skills.</p>
+         * <p>The list of skill references.</p>
          */
         @NameInMap("skills")
         public java.util.List<ListAgentSpecsResponseBodyDataPageItemsSkills> skills;
 
         /**
-         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>

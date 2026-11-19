@@ -78,7 +78,7 @@ public class CreateModelConnectionRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified in Settings during model creation, this default value is used.</p>
+         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified when you create a model connection, this default value is used for model creation.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAI/v1</p>
@@ -87,7 +87,7 @@ public class CreateModelConnectionRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The model provider type.</p>
+         * <p>The model provider type. Predefined providers can be queried by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListPredefinedModelProviders">ListPredefinedModelProviders</a>. In addition, custom, anthropic, and gemini are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

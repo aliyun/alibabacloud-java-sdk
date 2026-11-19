@@ -11,7 +11,7 @@ public class CreateExternalAgentRequest extends TeaModel {
     public CreateExternalAgentRequestBody body;
 
     /**
-     * <p>A reserved query parameter. Currently, the backend does not provide idempotency guarantees for deduplication or restoring the original processing result based on this identifier.</p>
+     * <p>The reserved query parameter. The backend does not provide idempotency guarantees for deduplication or restoring the original acceptance result based on this identifier at this time.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -40,9 +40,56 @@ public class CreateExternalAgentRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public static class CreateExternalAgentRequestBodyEnvironmentCredentialReferences extends TeaModel {
+        /**
+         * <p>Required when a credential reference item is passed. Validated by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cred-example</p>
+         */
+        @NameInMap("credentialId")
+        public String credentialId;
+
+        public static CreateExternalAgentRequestBodyEnvironmentCredentialReferences build(java.util.Map<String, ?> map) throws Exception {
+            CreateExternalAgentRequestBodyEnvironmentCredentialReferences self = new CreateExternalAgentRequestBodyEnvironmentCredentialReferences();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateExternalAgentRequestBodyEnvironmentCredentialReferences setCredentialId(String credentialId) {
+            this.credentialId = credentialId;
+            return this;
+        }
+        public String getCredentialId() {
+            return this.credentialId;
+        }
+
+    }
+
+    public static class CreateExternalAgentRequestBodyEnvironment extends TeaModel {
+        /**
+         * <p>This list must be explicitly provided and cannot be null when the environment object is passed. The list is replaced as a whole. If environment is not passed during an update, the original binding is retained. If an empty list is passed or environment is null, the binding is cleared. Only the credential ID is passed, not the actual secret key.</p>
+         */
+        @NameInMap("credentialReferences")
+        public java.util.List<CreateExternalAgentRequestBodyEnvironmentCredentialReferences> credentialReferences;
+
+        public static CreateExternalAgentRequestBodyEnvironment build(java.util.Map<String, ?> map) throws Exception {
+            CreateExternalAgentRequestBodyEnvironment self = new CreateExternalAgentRequestBodyEnvironment();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateExternalAgentRequestBodyEnvironment setCredentialReferences(java.util.List<CreateExternalAgentRequestBodyEnvironmentCredentialReferences> credentialReferences) {
+            this.credentialReferences = credentialReferences;
+            return this;
+        }
+        public java.util.List<CreateExternalAgentRequestBodyEnvironmentCredentialReferences> getCredentialReferences() {
+            return this.credentialReferences;
+        }
+
+    }
+
     public static class CreateExternalAgentRequestBodyModelQuota extends TeaModel {
         /**
-         * <p>Specifies whether to enable the token quota. If this parameter is not specified, the default value is true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</p>
+         * <p>Specifies whether to enable the token quota. Defaults to true if not specified. Passing false disables and deletes existing quota rules.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,7 +98,7 @@ public class CreateExternalAgentRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The quota limit type. This parameter is required and validated by the backend when the quota is enabled. Fixed value: token.</p>
+         * <p>The quota limit type. Required and validated by the backend when the quota is enabled. Fixed value: token.</p>
          * 
          * <strong>example:</strong>
          * <p>token</p>
@@ -60,7 +107,7 @@ public class CreateExternalAgentRequest extends TeaModel {
         public String limitType;
 
         /**
-         * <p>The quota statistical period. This parameter is required and validated by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</p>
+         * <p>The quota statistical period. Required and validated by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -69,7 +116,7 @@ public class CreateExternalAgentRequest extends TeaModel {
         public String periodType;
 
         /**
-         * <p>The maximum number of tokens that can be consumed in a single period. This parameter is required and validated by the backend when the quota is enabled. The value must be greater than 0.</p>
+         * <p>The maximum number of tokens allowed to be consumed in a single period. Required and validated by the backend when the quota is enabled, and must be greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -138,7 +185,7 @@ public class CreateExternalAgentRequest extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The model token quota configuration. If this parameter is not provided, no quota is configured.</p>
+         * <p>The model token quota configuration. If not passed, no quota is configured.</p>
          */
         @NameInMap("quota")
         public CreateExternalAgentRequestBodyModelQuota quota;
@@ -176,7 +223,7 @@ public class CreateExternalAgentRequest extends TeaModel {
 
     public static class CreateExternalAgentRequestBodySkillsVersionSelector extends TeaModel {
         /**
-         * <p>The version selector type. Valid values: LABEL (selects by tag) and VERSION (selects by specific version).</p>
+         * <p>The version selector type. LABEL selects by tag. VERSION selects by specific version.</p>
          * 
          * <strong>example:</strong>
          * <p>LABEL</p>
@@ -185,7 +232,7 @@ public class CreateExternalAgentRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The selector value. When the type is LABEL, this is the tag name, such as latest. When the type is VERSION, this is the specific version number.</p>
+         * <p>The selector value. For LABEL, it is the tag name (such as latest). For VERSION, it is the specific version number.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -228,7 +275,7 @@ public class CreateExternalAgentRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The skill source type. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</p>
+         * <p>The skill source type. REFERENCE references the AI Registry. STATIC is statically provided with the deployment package.</p>
          * 
          * <strong>example:</strong>
          * <p>REFERENCE</p>
@@ -237,7 +284,7 @@ public class CreateExternalAgentRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The skill version field for compatibility with legacy requests. For new requests, use sourceType and versionSelector. Do not submit this parameter in combination with sourceType.</p>
+         * <p>The skill version field for compatibility with legacy requests. Use sourceType and versionSelector for new requests. Do not submit it in combination with sourceType.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -246,7 +293,7 @@ public class CreateExternalAgentRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>The skill reference version selector. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
+         * <p>The skill reference version selector. Supports LABEL tags and VERSION specific versions. Defaults to LABEL/latest if omitted. Selectors are not provided for STATIC sources.</p>
          */
         @NameInMap("versionSelector")
         public CreateExternalAgentRequestBodySkillsVersionSelector versionSelector;
@@ -411,7 +458,13 @@ public class CreateExternalAgentRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The agent instructions used to guide the behavior of the agent.</p>
+         * <p>Optional. Credentials can be bound to both PLATFORM and RUNTIME model sources. When passing the object, you must explicitly provide a non-null credentialReferences list. Common environment variables are not supported.</p>
+         */
+        @NameInMap("environment")
+        public CreateExternalAgentRequestBodyEnvironment environment;
+
+        /**
+         * <p>The agent instruction, used to guide the behavior of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>You are a code review assistant</p>
@@ -420,13 +473,13 @@ public class CreateExternalAgentRequest extends TeaModel {
         public String instruction;
 
         /**
-         * <p>The model configuration. Available only when modelSource is set to PLATFORM.</p>
+         * <p>The model configuration. Available only when modelSource is PLATFORM.</p>
          */
         @NameInMap("model")
         public CreateExternalAgentRequestBodyModel model;
 
         /**
-         * <p>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model, and the model parameter cannot be provided at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</p>
+         * <p>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</p>
          * 
          * <strong>example:</strong>
          * <p>PLATFORM</p>
@@ -473,6 +526,14 @@ public class CreateExternalAgentRequest extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public CreateExternalAgentRequestBody setEnvironment(CreateExternalAgentRequestBodyEnvironment environment) {
+            this.environment = environment;
+            return this;
+        }
+        public CreateExternalAgentRequestBodyEnvironment getEnvironment() {
+            return this.environment;
         }
 
         public CreateExternalAgentRequestBody setInstruction(String instruction) {

@@ -63,7 +63,7 @@ public class GetAgentSpecVersionResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description used to explain the purpose of the resource</p>
+         * <p>Sample description used to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentTeamsShrinkRequest extends TeaModel {
     /**
-     * <p>The request parameters for querying the list of agent teams.</p>
+     * <p>The request parameters for querying agent teams.</p>
      */
     @NameInMap("body")
     public String bodyShrink;

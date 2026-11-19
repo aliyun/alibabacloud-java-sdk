@@ -47,7 +47,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyDataNetworkConfigurationVpc extends TeaModel {
         /**
-         * <p>Specifies whether the VPC network is enabled.</p>
+         * <p>Indicates whether the VPC network is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -125,7 +125,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID of the user.</p>
+         * <p>The ID of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -166,7 +166,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyDataNetworkConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether private network ingress access is enabled for the workspace. A value of true indicates that it is enabled, and a value of false indicates that it is disabled. This setting is independent of the enabled field in the user VPC network configuration.</p>
+         * <p>The private ingress access switch for the workspace. A value of true indicates that it is enabled, and a value of false indicates that it is disabled. This switch is independent of the enabled field in the user VPC network configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -175,7 +175,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public Boolean privateIngressEnabled;
 
         /**
-         * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This setting only controls whether the latest versions of managed and custom agents use the platform\&quot;s public network egress. It does not control fixed historical versions, model or MCP proxy egress, or the user VPC\&quot;s own public network egress.</p>
+         * <p>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the change failed in the current round. This parameter only controls the use of the platform public egress by the latest versions of managed and custom agents. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -184,7 +184,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public Boolean publicEgressEnabled;
 
         /**
-         * <p>The public network egress IP address of the workspace.</p>
+         * <p>The public egress IP address of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>203.0.113.10</p>
@@ -193,7 +193,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String publicEgressIp;
 
         /**
-         * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public network ingress for all agent endpoints in the workspace is closed, and the original public network ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected, and collaboration and Element Web ingress are not controlled by this setting.</p>
+         * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. After this feature is disabled, the public ingress of all agent endpoints in the workspace is disabled. After this feature is re-enabled, the original public ingress is restored. The INNER_DIRECT and user VPC ingress are not affected. The collaboration and Element Web ingress are not controlled by this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -202,7 +202,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public Boolean publicIngressEnabled;
 
         /**
-         * <p>The VPC network configuration of the user.</p>
+         * <p>The network configuration of the user VPC.</p>
          */
         @NameInMap("vpc")
         public GetWorkspaceResponseBodyDataNetworkConfigurationVpc vpc;
@@ -256,7 +256,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The OSS storage authorization status.</p>
+         * <p>The authorization status of OSS storage.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTHORIZED</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListManagedAgentsResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of SUCCESS indicates success.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,7 +50,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next page. An empty value indicates that the end of the list is reached.</p>
+     * <p>The token for the next page. An empty value indicates that the last page is reached.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-1</p>
@@ -212,7 +212,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public ListManagedAgentsResponseBodyItemsHarnessConfiguration configuration;
 
         /**
-         * <p>Returned only in queries. The server calculates this value based on the complete instance distribution, which is not affected by the pagination and filtering of the instance list. If the image tag is missing, pagination is incomplete, or the value cannot be confirmed, this parameter is empty, which is not equivalent to 0.</p>
+         * <p>The total number of instances that are not aligned with the pool target image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -230,7 +230,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Returned only in queries. Currently returns the tag of the pool target image. If the tag cannot be parsed, this parameter is empty and cannot be replaced by the agent configuration version.</p>
+         * <p>The Harness version corresponding to the pool target image.</p>
          * 
          * <strong>example:</strong>
          * <p>202611031754</p>

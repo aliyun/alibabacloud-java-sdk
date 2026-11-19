@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateMemoryStoreRequest extends TeaModel {
     /**
-     * <p>The MemoryStore creation request.</p>
+     * <p>The request to create a memory store.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public CreateMemoryStoreRequestBody body;
 
     /**
-     * <p>The client request token.</p>
+     * <p>The client token.</p>
      * 
      * <strong>example:</strong>
      * <p>memory-store-create-20260909-001</p>
@@ -43,25 +43,25 @@ public class CreateMemoryStoreRequest extends TeaModel {
 
     public static class CreateMemoryStoreRequestBody extends TeaModel {
         /**
-         * <p>The description of the MemoryStore, up to 1,024 characters.</p>
+         * <p>The description of the memory store. The description can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used to save long-term user preferences</p>
+         * <p>Used to store the long-term preferences of users</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The custom extraction instructions, up to 4,096 characters.</p>
+         * <p>The custom extraction instructions. The instructions can be up to 4,096 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Extract only explicitly expressed long-term user preferences</p>
+         * <p>Extract only long-term preferences explicitly expressed by users</p>
          */
         @NameInMap("extractInstructions")
         public String extractInstructions;
 
         /**
-         * <p>The name of the MemoryStore. The name must be 1 to 64 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot be modified after creation.</p>
+         * <p>The name of the memory store. The name must be 1 to 64 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot be modified after creation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

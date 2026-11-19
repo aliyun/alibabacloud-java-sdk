@@ -14,7 +14,7 @@ public class FindCustomAgentImagePreparationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The preparation query result. For the asynchronous execution status, see phase.</p>
+     * <p>The preparation query result. Check the phase for the asynchronous execution status.</p>
      */
     @NameInMap("data")
     public FindCustomAgentImagePreparationResponseBodyData data;
@@ -110,7 +110,7 @@ public class FindCustomAgentImagePreparationResponseBody extends TeaModel {
 
     public static class FindCustomAgentImagePreparationResponseBodyDataError extends TeaModel {
         /**
-         * <p>The business error code for image preparation. Used to identify the failure type. For the specific cause, see message.</p>
+         * <p>The business error code for image preparation. Used to identify the failure type. For the specific cause, see the message.</p>
          * 
          * <strong>example:</strong>
          * <p>ImageSyncFailed</p>
@@ -119,7 +119,7 @@ public class FindCustomAgentImagePreparationResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The specific cause of the failure, which may include underlying errors such as image not found, authentication failure, network timeout, or certificate verification error. Passwords, tokens, or authentication headers are not returned. If the underlying system does not provide a specific cause, a general description is returned.</p>
+         * <p>The specific cause of the failure. It may include underlying errors such as image not found, authentication failure, network timeout, or certificate verification error. Passwords, tokens, or authentication headers are not returned. A general description is returned if the underlying cause is not provided.</p>
          * 
          * <strong>example:</strong>
          * <p>tls: failed to verify certificate: x509: certificate signed by unknown authority</p>
@@ -161,13 +161,13 @@ public class FindCustomAgentImagePreparationResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The error information. Returned only when the operation fails. Otherwise, null is returned.</p>
+         * <p>The error information. Returned only when the preparation fails. Otherwise, the value is null.</p>
          */
         @NameInMap("error")
         public FindCustomAgentImagePreparationResponseBodyDataError error;
 
         /**
-         * <p>The phase where the failure occurred. Returned only when the status is FAILED. Otherwise, null is returned.</p>
+         * <p>The phase where the failure occurred. Returned only when the phase is FAILED. Otherwise, the value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>COPYING</p>
@@ -176,7 +176,7 @@ public class FindCustomAgentImagePreparationResponseBody extends TeaModel {
         public String failedPhase;
 
         /**
-         * <p>The current phase. Only SUCCEEDED indicates that the target version deployment succeeded.</p>
+         * <p>The current phase. Only SUCCEEDED indicates that the target version is deployed successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>FAILED</p>
@@ -185,7 +185,7 @@ public class FindCustomAgentImagePreparationResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The ID of the preparation task submitted from the console.</p>
+         * <p>The ID of the task submitted in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-example:1</p>

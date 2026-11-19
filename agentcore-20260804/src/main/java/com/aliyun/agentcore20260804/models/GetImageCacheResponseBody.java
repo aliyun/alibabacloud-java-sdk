@@ -15,7 +15,7 @@ public class GetImageCacheResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The query result for the image cache details.</p>
+     * <p>The query result of the image cache details.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("data")
@@ -130,7 +130,7 @@ public class GetImageCacheResponseBody extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Image cache creation failed. Try again</p>
+         * <p>Image cache creation failed. Please try again</p>
          */
         @NameInMap("message")
         public String message;

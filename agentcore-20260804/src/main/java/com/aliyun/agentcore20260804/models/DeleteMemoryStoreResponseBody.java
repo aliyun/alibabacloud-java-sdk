@@ -107,7 +107,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
 
     public static class DeleteMemoryStoreResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time. It follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+         * <p>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00Z</p>
@@ -116,13 +116,22 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The MemoryStore description.</p>
+         * <p>The description of the MemoryStore.</p>
          * 
          * <strong>example:</strong>
          * <p>Used to store the long-term preferences of users</p>
          */
         @NameInMap("description")
         public String description;
+
+        /**
+         * <p>The number of events. You can query this value by calling GetMemoryStore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("eventCount")
+        public Long eventCount;
 
         /**
          * <p>The custom extraction instructions.</p>
@@ -134,7 +143,16 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         public String extractInstructions;
 
         /**
-         * <p>The MemoryStore ID.</p>
+         * <p>The number of valid memories. You can query this value by calling GetMemoryStore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("memoryCount")
+        public Long memoryCount;
+
+        /**
+         * <p>The ID of the MemoryStore.</p>
          * 
          * <strong>example:</strong>
          * <p>ms-2f5f9c5a8d0e4c3b</p>
@@ -143,7 +161,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreId;
 
         /**
-         * <p>The MemoryStore name. It cannot be modified after creation.</p>
+         * <p>The name of the MemoryStore. It cannot be modified after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>customer-memory</p>
@@ -152,7 +170,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreName;
 
         /**
-         * <p>The lifecycle state of the MemoryStore.</p>
+         * <p>The lifecycle status of the MemoryStore.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -161,7 +179,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last update time. It follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+         * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:05:00Z</p>
@@ -170,7 +188,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The AgentCore workspace ID.</p>
+         * <p>The ID of the AgentCore workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-2f5f9c5a8d0e4c3b</p>
@@ -199,12 +217,28 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DeleteMemoryStoreResponseBodyData setEventCount(Long eventCount) {
+            this.eventCount = eventCount;
+            return this;
+        }
+        public Long getEventCount() {
+            return this.eventCount;
+        }
+
         public DeleteMemoryStoreResponseBodyData setExtractInstructions(String extractInstructions) {
             this.extractInstructions = extractInstructions;
             return this;
         }
         public String getExtractInstructions() {
             return this.extractInstructions;
+        }
+
+        public DeleteMemoryStoreResponseBodyData setMemoryCount(Long memoryCount) {
+            this.memoryCount = memoryCount;
+            return this;
+        }
+        public Long getMemoryCount() {
+            return this.memoryCount;
         }
 
         public DeleteMemoryStoreResponseBodyData setMemoryStoreId(String memoryStoreId) {

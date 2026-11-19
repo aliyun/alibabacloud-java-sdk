@@ -25,7 +25,7 @@ public class UpdateSkillScopeRequest extends TeaModel {
 
     public static class UpdateSkillScopeRequestBody extends TeaModel {
         /**
-         * <p>The visibility scope.</p>
+         * <p>The visibility.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

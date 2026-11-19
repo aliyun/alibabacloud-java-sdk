@@ -14,7 +14,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The summary of the custom code or image agent whose deletion is accepted. Runtime resources are subsequently cleaned up in the background.</p>
+     * <p>The summary of the custom code or image agent whose deletion has been accepted. Runtime resources are subsequently cleaned up in the background.</p>
      */
     @NameInMap("data")
     public DeleteCustomAgentResponseBodyData data;
@@ -29,7 +29,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The processing result message of the request. The value is success if the request is successful.</p>
+     * <p>The processing result description of the request. The value is success if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The unique identifier of the request. It is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>550E8400-E29B-41D4-A716-446655440000</p>
@@ -134,7 +134,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The creation mode of the agent. The value is CUSTOM for custom code or image agents.</p>
+         * <p>The creation method of the agent. The value is CUSTOM for custom code or image agents.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -143,7 +143,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String createMode;
 
         /**
-         * <p>The time when the agent was created. The time is in ISO 8601 format, with a trailing Z indicating the UTC time zone. Fractional seconds may be included.</p>
+         * <p>The time when the agent was created. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T06:00:00Z</p>
@@ -152,7 +152,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The deployment mode of the agent. The value is MANAGED for custom code or image agents because they are deployed and managed by the platform.</p>
+         * <p>The deployment method of the agent. Custom code or image agents are deployed and managed by the platform, and the value is MANAGED.</p>
          * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -161,16 +161,16 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The description of the agent\&quot;s purpose.</p>
+         * <p>The description of the agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom agent providing conversation services</p>
+         * <p>Custom agent that provides conversation services</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The latest configuration version number. Updates with the same configuration may retain the original version number. This field does not indicate that the configuration has taken effect.</p>
+         * <p>The current latest configuration version number. Updates with the same configuration may retain the original version number. This field does not indicate that the configuration has taken effect.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +188,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The compute specification of the agent. Valid values: INTERACTIVE, STANDARD, and HEAVY.</p>
+         * <p>The compute specifications of the agent. Valid values: INTERACTIVE, STANDARD, and HEAVY.</p>
          * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
@@ -197,16 +197,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The overall status of the agent. Valid values:</p>
-         * <ul>
-         * <li>Creating: The agent is being created.</li>
-         * <li>Running: The agent is running.</li>
-         * <li>Failed: The agent failed.</li>
-         * <li>Updating: The agent is being updated.</li>
-         * <li>Deleting: The agent is being deleted.</li>
-         * <li>Deleted: The agent is deleted.</li>
-         * </ul>
-         * <p>Call GetCustomAgent to query the execution progress of the latest configuration.</p>
+         * <p>The overall status of the agent. Valid values: Creating (the agent is being created), Running (the agent is running), Failed (the agent failed), Updating (the agent is being updated), Deleting (the agent is being deleted), and Deleted (the agent is deleted). Call GetCustomAgent to query the execution progress of the latest configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -215,7 +206,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the agent was last updated. The time is in ISO 8601 format, with a trailing Z indicating the UTC time zone. Fractional seconds may be included.</p>
+         * <p>The time when the agent was last updated. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T06:05:00Z</p>

@@ -29,7 +29,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned if the request fails.</p>
+     * <p>The response message. Returns an error description if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -107,7 +107,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
 
     public static class GetServiceEndpointResponseBodyDataAccessUrls extends TeaModel {
         /**
-         * <p>The access URL type. Valid values: INTERNET and VPC.</p>
+         * <p>The type of the access URL. Valid values: INTERNET and VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
@@ -116,7 +116,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The access URL status. Valid values: CREATING, READY, and DEGRADED.</p>
+         * <p>The status of the access URL. Valid values: CREATING, READY, and DEGRADED.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -125,7 +125,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason for the access URL status. The specific reason is returned when the status is abnormal.</p>
+         * <p>The reason for the access URL status. Returns the specific reason when the status is abnormal.</p>
          * 
          * <strong>example:</strong>
          * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
@@ -206,9 +206,279 @@ public class GetServiceEndpointResponseBody extends TeaModel {
 
     }
 
-    public static class GetServiceEndpointResponseBodyDataElasticityPolicy extends TeaModel {
+    public static class GetServiceEndpointResponseBodyDataEffectiveCapacity extends TeaModel {
         /**
-         * <p>Specifies whether elasticity is enabled.</p>
+         * <p>Read-only. Maps to autoScalingStatus.effectiveLimits.maxSandboxes in the RM. When effectiveCapacity is not null, this value must be returned in pairs with the minimum value. The value must be non-negative and no less than the minimum value. Zero is a valid value. The read value is not truncated at the upper limit of 100 configured for writing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("maxSandboxCount")
+        public Integer maxSandboxCount;
+
+        /**
+         * <p>Read-only. Maps to autoScalingStatus.effectiveLimits.minSandboxes in the RM. When effectiveCapacity is not null, this value must be returned in pairs with the maximum value. The value must be non-negative and no greater than the maximum value. The read value is not truncated at the upper limit of 100 configured for writing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
+        @NameInMap("minSandboxCount")
+        public Integer minSandboxCount;
+
+        public static GetServiceEndpointResponseBodyDataEffectiveCapacity build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceEndpointResponseBodyDataEffectiveCapacity self = new GetServiceEndpointResponseBodyDataEffectiveCapacity();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceEndpointResponseBodyDataEffectiveCapacity setMaxSandboxCount(Integer maxSandboxCount) {
+            this.maxSandboxCount = maxSandboxCount;
+            return this;
+        }
+        public Integer getMaxSandboxCount() {
+            return this.maxSandboxCount;
+        }
+
+        public GetServiceEndpointResponseBodyDataEffectiveCapacity setMinSandboxCount(Integer minSandboxCount) {
+            this.minSandboxCount = minSandboxCount;
+            return this;
+        }
+        public Integer getMinSandboxCount() {
+            return this.minSandboxCount;
+        }
+
+    }
+
+    public static class GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints extends TeaModel {
+        /**
+         * <p>Required. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("maxInstances")
+        public Integer maxInstances;
+
+        /**
+         * <p>Required. Valid values: 0 to 100. The value cannot be greater than the maxInstances value in the same item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("minInstances")
+        public Integer minInstances;
+
+        /**
+         * <p>Required only for each trigger point of the monthly cycle. The list must be non-empty and contain unique integers from 1 to 31. Each row is selected independently. If a selected day does not exist in a specific month, the trigger does not fire and is not postponed to the end of the month. This field must be omitted for other cycles.</p>
+         */
+        @NameInMap("monthDays")
+        public java.util.List<Integer> monthDays;
+
+        /**
+         * <p>Required. The format is HH:mm:ss, interpreted in the time zone of the associated policy. The precision is down to the minute, and the seconds are fixed at 00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:00:00</p>
+         */
+        @NameInMap("time")
+        public String time;
+
+        /**
+         * <p>Required only for each trigger point of weekly policies. Cannot be empty and must be deduplicated. Valid values are integers from 1 to 7, where 1 represents Monday and 7 represents Sunday. Each row is selected independently. Must be omitted for other cycles.</p>
+         */
+        @NameInMap("weekdays")
+        public java.util.List<Integer> weekdays;
+
+        public static GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints self = new GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints setMaxInstances(Integer maxInstances) {
+            this.maxInstances = maxInstances;
+            return this;
+        }
+        public Integer getMaxInstances() {
+            return this.maxInstances;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints setMinInstances(Integer minInstances) {
+            this.minInstances = minInstances;
+            return this;
+        }
+        public Integer getMinInstances() {
+            return this.minInstances;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints setMonthDays(java.util.List<Integer> monthDays) {
+            this.monthDays = monthDays;
+            return this;
+        }
+        public java.util.List<Integer> getMonthDays() {
+            return this.monthDays;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints setWeekdays(java.util.List<Integer> weekdays) {
+            this.weekdays = weekdays;
+            return this;
+        }
+        public java.util.List<Integer> getWeekdays() {
+            return this.weekdays;
+        }
+
+    }
+
+    public static class GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies extends TeaModel {
+        /**
+         * <p>Required only when validity is set to range. The format is the same as startTime, with seconds fixed at 00. The end time must be later than the startTime. The interval does not include the end time. If validity is set to forever, the start and end times must be omitted. Valid dates and cross-field constraints are validated by the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-12-01T00:00:00</p>
+         */
+        @NameInMap("endTime")
+        public String endTime;
+
+        /**
+         * <p>Required. Must be unique and stable within the endpoint. Generated by the frontend when added, and retained during editing and retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-weekday</p>
+         */
+        @NameInMap("id")
+        public String id;
+
+        /**
+         * <p>Required. 5 indicates regular priority, and 10 indicates high priority. New policies default to regular priority. Must be explicitly provided during submission, as the API does not set a default value. When the final dynamicPolicy.enabled is true, the validity periods of high-priority policies must not overlap, except that end-to-end connection is allowed, and long-term high-priority policies can overlap with other high-priority policies. Overlapping drafts can be saved when disabled, but the final configuration is validated when re-enabled. The validity of other fields and trigger conflicts within the policy are always validated. The priority must be explicitly provided.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("priority")
+        public Integer priority;
+
+        /**
+         * <p>Required. daily means every day, weekly means every week, and monthly means every month. Only submit fields corresponding to the specified cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weekly</p>
+         */
+        @NameInMap("repeat")
+        public String repeat;
+
+        /**
+         * <p>Required only when validity is set to range. The format is YYYY-MM-DDTHH:mm:ss in the policy time zone, without a time zone offset. The seconds are fixed at 00. The interval includes the start time. When editing, existing past start times are retained, and updates or retries are not rejected even if the start time is earlier than the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-01T00:00:00</p>
+         */
+        @NameInMap("startTime")
+        public String startTime;
+
+        /**
+         * <p>Required and cannot be empty. Each item must be complete. The day of the week or day of the month is configured independently for each item. Within the same policy, daily policies conflict if they have the same time. Weekly and monthly policies conflict only if they have the same time and their date sets intersect. This is validated by the console.</p>
+         */
+        @NameInMap("timePoints")
+        public java.util.List<GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints> timePoints;
+
+        /**
+         * <p>Required. Must be a valid IANA time zone. All dates and times in this policy are interpreted in this time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
+        @NameInMap("timeZone")
+        public String timeZone;
+
+        /**
+         * <p>Required. Valid values: forever for long-term validity, and range for short-term validity. After expiration, the policy and its trigger results are excluded from the current calculation, and the remaining policies are recalculated. If no candidate policy is available, the baseline value is restored. Saved configurations are not automatically deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>range</p>
+         */
+        @NameInMap("validity")
+        public String validity;
+
+        public static GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies self = new GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies setRepeat(String repeat) {
+            this.repeat = repeat;
+            return this;
+        }
+        public String getRepeat() {
+            return this.repeat;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies setTimePoints(java.util.List<GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints> timePoints) {
+            this.timePoints = timePoints;
+            return this;
+        }
+        public java.util.List<GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPoliciesTimePoints> getTimePoints() {
+            return this.timePoints;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies setValidity(String validity) {
+            this.validity = validity;
+            return this;
+        }
+        public String getValidity() {
+            return this.validity;
+        }
+
+    }
+
+    public static class GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy extends TeaModel {
+        /**
+         * <p>Required during creation. If omitted during an update, the original value is retained. Disabling this feature retains existing policies and restores the base upper and lower limits. Re-enabling it triggers immediate calculation. When finally enabled, policies must not be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -217,7 +487,52 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of instances. The value must be greater than or equal to 1.</p>
+         * <p>Required during creation. If omitted during an update, the original list is retained. If passed, the entire list is replaced rather than merged by ID. To clear the list, you must also ensure that the final enabled value is false. Each item must be complete. Conditional requirements and cross-field constraints are validated by the server. The display order does not indicate priority.</p>
+         */
+        @NameInMap("policies")
+        public java.util.List<GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies> policies;
+
+        public static GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy self = new GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy setPolicies(java.util.List<GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies> policies) {
+            this.policies = policies;
+            return this;
+        }
+        public java.util.List<GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicyPolicies> getPolicies() {
+            return this.policies;
+        }
+
+    }
+
+    public static class GetServiceEndpointResponseBodyDataElasticityPolicy extends TeaModel {
+        /**
+         * <p>Returns the saved dynamic configuration. If the base configuration before the requirement goes online lacks dynamicPolicy, it is supplemented with enabled=false and policies=[].</p>
+         */
+        @NameInMap("dynamicPolicy")
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy dynamicPolicy;
+
+        /**
+         * <p>Independent of dynamicPolicy.enabled. If omitted during an update, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>The saved or backfilled base maximum instance count. The value must be no less than minSandboxCount. Historical values can exceed 100, and the read value is not truncated. The base value is used when dynamic scaling is disabled or no candidates are available.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -226,7 +541,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public Integer maxSandboxCount;
 
         /**
-         * <p>The minimum number of instances. The value must be greater than or equal to 0 and less than or equal to the value of maxSandboxCount.</p>
+         * <p>The saved or backfilled base minimum instance count. The value must be non-negative and no greater than maxSandboxCount. Historical values can exceed 100, and the read value is not truncated. A newly written complete configuration must still meet the 0 to 100 range.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,6 +552,14 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public static GetServiceEndpointResponseBodyDataElasticityPolicy build(java.util.Map<String, ?> map) throws Exception {
             GetServiceEndpointResponseBodyDataElasticityPolicy self = new GetServiceEndpointResponseBodyDataElasticityPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicy setDynamicPolicy(GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy dynamicPolicy) {
+            this.dynamicPolicy = dynamicPolicy;
+            return this;
+        }
+        public GetServiceEndpointResponseBodyDataElasticityPolicyDynamicPolicy getDynamicPolicy() {
+            return this.dynamicPolicy;
         }
 
         public GetServiceEndpointResponseBodyDataElasticityPolicy setEnabled(Boolean enabled) {
@@ -267,7 +590,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
 
     public static class GetServiceEndpointResponseBodyDataTarget extends TeaModel {
         /**
-         * <p>The target agent ID. This parameter is returned when the target type is AGENT_VERSION.</p>
+         * <p>The ID of the target agent. Returned when the target type is AGENT_VERSION.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-123456</p>
@@ -276,7 +599,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The target agent version number. This parameter is returned when the target type is AGENT_VERSION.</p>
+         * <p>The version number of the target agent. Returned when the target type is AGENT_VERSION.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -285,7 +608,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String agentVersion;
 
         /**
-         * <p>The collaboration component type. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
+         * <p>The type of the collaboration component. Returned when the target type is TEAM_COLLABORATION.</p>
          * 
          * <strong>example:</strong>
          * <p>ELEMENT_WEB</p>
@@ -294,7 +617,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String collaborationComponent;
 
         /**
-         * <p>The workspace resource binding ID associated with the target collaboration component. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
+         * <p>The ID of the workspace resource binding associated with the target collaboration component. Returned when the target type is TEAM_COLLABORATION.</p>
          * 
          * <strong>example:</strong>
          * <p>wrb-123456</p>
@@ -372,7 +695,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public GetServiceEndpointResponseBodyDataAuthentication authentication;
 
         /**
-         * <p>The creation time in UTC format compliant with RFC 3339.</p>
+         * <p>The creation time in UTC format based on RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -381,19 +704,46 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The result of combining publicAccessEnabled with the public inbound access upper limit of the workspace. The value is true only when both allow public inbound access. This field only indicates the policy target and does not mean that the public endpoint has been published. The actual status is subject to accessUrls and status.</p>
+         * <p>Read-only. For Get operations, it queries RM sandboxPhaseCounts.RUNNING based on the Endpoint runtimeKey. For Create and Update operations, it returns null. The value is a non-negative integer. If the statistics are unavailable, it returns null. It is not replaced by the baseline upper and lower limits, target quantity, or READY status. Unavailable statistics do not block submission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("currentInstances")
+        public Integer currentInstances;
+
+        /**
+         * <p>Read-only and returned only in detail queries. The console reads this from autoScalingStatus.effectiveLimits in the same RM detail request that queries the current instance count. It represents the upper and lower limits currently applied by the resource manager (RM), rather than the saved base configuration or the actual instance count. This value is null if it is not applicable, the running object does not exist, the identity does not match, the query fails, or the RM does not return a valid range. Configuration values are not used as a fallback, and this field is not used for edit backfill or submission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;minSandboxCount&quot;:8,&quot;maxSandboxCount&quot;:20}</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("effectiveCapacity")
+        public GetServiceEndpointResponseBodyDataEffectiveCapacity effectiveCapacity;
+
+        /**
+         * <p>The result of combining publicAccessEnabled with the public network inbound access limit of the workspace. The value is true only when both allow public access. This only indicates the policy target and does not mean that the public network entry has been published. The actual status is subject to accessUrls and status.</p>
          */
         @NameInMap("effectivePublicAccessEnabled")
         public Boolean effectivePublicAccessEnabled;
 
         /**
-         * <p>This object is returned only when elastic override values are configured for the service endpoint. You can configure override values for Router-type service endpoints and DEFAULT service endpoints of the GATEWAY_API_WITH_VPC_INGRESS type. If no override values are configured, this object is not returned, which indicates that the source configuration of the agent is inherited. Do not treat the absence of this object as an empty object or a default policy. When this object is returned, all three fields are included.</p>
+         * <p>Used for edit backfill. This is not the currently effective upper and lower limits or the actual instance count. The Get operation preferentially returns the saved configuration. If no configuration is saved, an endpoint that supports elasticity backfills the base values from the frozen configuration of the expected runtime or the bound version configuration when the runtime is not yet established. Successful publication is not required. This value is null when the source is temporarily unavailable or no applicable configuration exists, but the status and statusReason are still returned. The Create and Update operations return only the saved configuration, and return null if no configuration is saved. The historical base capacity can exceed 100, and the read value is not truncated.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
          */
         @NameInMap("elasticityPolicy")
         public GetServiceEndpointResponseBodyDataElasticityPolicy elasticityPolicy;
 
         /**
-         * <p>The service endpoint type. DEFAULT indicates the default endpoint created and maintained by the platform. NAMED indicates the named endpoint explicitly created by the user.</p>
+         * <p>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by a user.</p>
          * 
          * <strong>example:</strong>
          * <p>NAMED</p>
@@ -402,7 +752,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The service endpoint name. The name must be unique within the workspace and be 1 to 128 characters in length.</p>
+         * <p>The name of the service endpoint. The name must be unique within the workspace and be 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-endpoint</p>
@@ -411,13 +761,13 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The expected public inbound access configured by the user on the service endpoint. For historical service endpoints where this value is not configured, true is returned. This field only indicates the configuration expectation. The actual availability of the public URL is subject to accessUrls and status.</p>
+         * <p>The expected public network inbound access configured by the user on the service endpoint. For historical service endpoints where this has not been configured, true is returned. This only indicates the configuration expectation. The actual availability of the public IP address is subject to accessUrls and status.</p>
          */
         @NameInMap("publicAccessEnabled")
         public Boolean publicAccessEnabled;
 
         /**
-         * <p>The region ID of the service endpoint.</p>
+         * <p>The ID of the region where the service endpoint resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -435,7 +785,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String serviceEndpointId;
 
         /**
-         * <p>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</p>
+         * <p>The status of the service endpoint. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -444,7 +794,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason for the service endpoint status. The specific reason is returned when the status is abnormal.</p>
+         * <p>The reason for the service endpoint status. Returns the specific reason when the status is abnormal.</p>
          * 
          * <strong>example:</strong>
          * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
@@ -453,13 +803,13 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>The target route configuration of the service endpoint.</p>
+         * <p>The target routing configuration of the service endpoint.</p>
          */
         @NameInMap("target")
         public GetServiceEndpointResponseBodyDataTarget target;
 
         /**
-         * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
+         * <p>The time of the last modification in UTC format based on RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -503,6 +853,22 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         }
         public String getCreatedAt() {
             return this.createdAt;
+        }
+
+        public GetServiceEndpointResponseBodyData setCurrentInstances(Integer currentInstances) {
+            this.currentInstances = currentInstances;
+            return this;
+        }
+        public Integer getCurrentInstances() {
+            return this.currentInstances;
+        }
+
+        public GetServiceEndpointResponseBodyData setEffectiveCapacity(GetServiceEndpointResponseBodyDataEffectiveCapacity effectiveCapacity) {
+            this.effectiveCapacity = effectiveCapacity;
+            return this;
+        }
+        public GetServiceEndpointResponseBodyDataEffectiveCapacity getEffectiveCapacity() {
+            return this.effectiveCapacity;
         }
 
         public GetServiceEndpointResponseBodyData setEffectivePublicAccessEnabled(Boolean effectivePublicAccessEnabled) {

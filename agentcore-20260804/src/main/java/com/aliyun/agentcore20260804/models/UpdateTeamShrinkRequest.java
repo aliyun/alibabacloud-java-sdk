@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTeamShrinkRequest extends TeaModel {
     /**
-     * <p>The request body for updating the team.</p>
+     * <p>The request body for updating a team.</p>
      */
     @NameInMap("body")
     public String bodyShrink;

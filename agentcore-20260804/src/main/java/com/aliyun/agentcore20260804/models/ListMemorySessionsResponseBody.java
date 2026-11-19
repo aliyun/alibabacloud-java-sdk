@@ -23,7 +23,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The session list.</p>
+     * <p>The list of sessions.</p>
      */
     @NameInMap("items")
     public java.util.List<ListMemorySessionsResponseBodyItems> items;
@@ -69,6 +69,15 @@ public class ListMemorySessionsResponseBody extends TeaModel {
      */
     @NameInMap("success")
     public Boolean success;
+
+    /**
+     * <p>The total number of records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
+    @NameInMap("totalCount")
+    public Long totalCount;
 
     public static ListMemorySessionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMemorySessionsResponseBody self = new ListMemorySessionsResponseBody();
@@ -139,6 +148,14 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListMemorySessionsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListMemorySessionsResponseBodyItems extends TeaModel {
         /**
          * <p>The agent ID. This field is not returned if the session is not associated with an agent ID.</p>
@@ -150,6 +167,24 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         public String agentId;
 
         /**
+         * <p>The creation time in RFC 3339 format with time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-23T10:00:00Z</p>
+         */
+        @NameInMap("createdAt")
+        public String createdAt;
+
+        /**
+         * <p>The string key-value tags set by the caller. A maximum of 16 tags are supported. A key can be up to 64 Unicode characters in length, and a value can be up to 1,024 Unicode characters in length. Empty strings are allowed. Nested objects or arrays are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
+         */
+        @NameInMap("metadata")
+        public java.util.Map<String, String> metadata;
+
+        /**
          * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +192,24 @@ public class ListMemorySessionsResponseBody extends TeaModel {
          */
         @NameInMap("sessionId")
         public String sessionId;
+
+        /**
+         * <p>The business team ID defined by the caller. If specified, the value cannot be empty and can be up to 128 UTF-8 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team-001</p>
+         */
+        @NameInMap("teamId")
+        public String teamId;
+
+        /**
+         * <p>The session title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Travel plan</p>
+         */
+        @NameInMap("title")
+        public String title;
 
         /**
          * <p>The user ID. This field is not returned if the session is not associated with a user ID.</p>
@@ -180,12 +233,44 @@ public class ListMemorySessionsResponseBody extends TeaModel {
             return this.agentId;
         }
 
+        public ListMemorySessionsResponseBodyItems setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
+        public ListMemorySessionsResponseBodyItems setMetadata(java.util.Map<String, String> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+        public java.util.Map<String, String> getMetadata() {
+            return this.metadata;
+        }
+
         public ListMemorySessionsResponseBodyItems setSessionId(String sessionId) {
             this.sessionId = sessionId;
             return this;
         }
         public String getSessionId() {
             return this.sessionId;
+        }
+
+        public ListMemorySessionsResponseBodyItems setTeamId(String teamId) {
+            this.teamId = teamId;
+            return this;
+        }
+        public String getTeamId() {
+            return this.teamId;
+        }
+
+        public ListMemorySessionsResponseBodyItems setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
         public ListMemorySessionsResponseBodyItems setUserId(String userId) {

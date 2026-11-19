@@ -108,6 +108,7 @@ public class GetMemoryResponseBody extends TeaModel {
     public static class GetMemoryResponseBodyDataContent extends TeaModel {
         /**
          * <p>The memory text.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>The user likes hiking</p>
@@ -132,7 +133,7 @@ public class GetMemoryResponseBody extends TeaModel {
 
     public static class GetMemoryResponseBodyDataScope extends TeaModel {
         /**
-         * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. Slashes (/) and asterisks (*) are not allowed. This field is not returned if the memory is not associated with an agent ID.</p>
+         * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -141,7 +142,7 @@ public class GetMemoryResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. Slashes (/) and asterisks (*) are not allowed. This field is not returned if the memory is not associated with a session ID.</p>
+         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>session-001</p>
@@ -150,7 +151,16 @@ public class GetMemoryResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. Slashes (/) and asterisks (*) are not allowed. This field is not returned if the memory is not associated with a user ID.</p>
+         * <p>The business team ID defined by the caller. The value cannot be empty when provided and can be up to 128 UTF-8 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team-001</p>
+         */
+        @NameInMap("teamId")
+        public String teamId;
+
+        /**
+         * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>
@@ -177,6 +187,14 @@ public class GetMemoryResponseBody extends TeaModel {
         }
         public String getSessionId() {
             return this.sessionId;
+        }
+
+        public GetMemoryResponseBodyDataScope setTeamId(String teamId) {
+            this.teamId = teamId;
+            return this;
+        }
+        public String getTeamId() {
+            return this.teamId;
         }
 
         public GetMemoryResponseBodyDataScope setUserId(String userId) {
@@ -216,6 +234,9 @@ public class GetMemoryResponseBody extends TeaModel {
 
         /**
          * <p>The memory metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
          */
         @NameInMap("metadata")
         public java.util.Map<String, String> metadata;
@@ -227,13 +248,48 @@ public class GetMemoryResponseBody extends TeaModel {
         public GetMemoryResponseBodyDataScope scope;
 
         /**
-         * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
+         * <p>The memory source. Valid values:</p>
+         * <ul>
+         * <li>session_extraction: extracted from session events</li>
+         * <li>content_extraction: extracted from text or messages</li>
+         * <li>direct: written directly</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>session_extraction</p>
+         */
+        @NameInMap("source")
+        public String source;
+
+        /**
+         * <p>The memory content type. Valid values:</p>
+         * <ul>
+         * <li>semantic: semantic memory</li>
+         * <li>skill: skill</li>
+         * <li>user_profile: user preference</li>
+         * <li>session_summary: session summary</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>semantic</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <p>The last updated time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:05:00Z</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;
+
+        /**
+         * <p>Indicates whether the memory is valid. A value of false indicates that the memory is revoked and is not included in valid memory retrieval.</p>
+         */
+        @NameInMap("valid")
+        public Boolean valid;
 
         public static GetMemoryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMemoryResponseBodyData self = new GetMemoryResponseBodyData();
@@ -280,12 +336,36 @@ public class GetMemoryResponseBody extends TeaModel {
             return this.scope;
         }
 
+        public GetMemoryResponseBodyData setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public GetMemoryResponseBodyData setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public GetMemoryResponseBodyData setUpdatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
         public String getUpdatedAt() {
             return this.updatedAt;
+        }
+
+        public GetMemoryResponseBodyData setValid(Boolean valid) {
+            this.valid = valid;
+            return this;
+        }
+        public Boolean getValid() {
+            return this.valid;
         }
 
     }

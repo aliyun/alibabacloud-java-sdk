@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebuildSandboxRequest extends TeaModel {
     /**
-     * <p>The ID of the service registration endpoint. This parameter is optional. If you specify this parameter, the operation targets the runtime instance that corresponds to the service registration endpoint under the agent. If you omit this parameter, the default latest runtime identity is used. Pass the service registration endpoint ID instead of the service registration endpoint name. You must keep this parameter consistent when you query instances, commit rebuilds, and query nodes.</p>
+     * <p>The service registration endpoint ID. This parameter is optional. If specified, the operation targets the runtime instance corresponding to the endpoint under the agent. If omitted, the default latest runtime identity is used. Pass the endpoint ID, not the endpoint name. Keep this parameter consistent when querying instances, committing rebuilds, and querying nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>se-7f3a92c1</p>

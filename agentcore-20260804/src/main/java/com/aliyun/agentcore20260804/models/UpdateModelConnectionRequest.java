@@ -11,7 +11,7 @@ public class UpdateModelConnectionRequest extends TeaModel {
     public UpdateModelConnectionRequestBody body;
 
     /**
-     * <p>The client token used for idempotence. This parameter is not supported.</p>
+     * <p>The client token used for idempotence. This parameter is not currently supported.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -42,7 +42,7 @@ public class UpdateModelConnectionRequest extends TeaModel {
 
     public static class UpdateModelConnectionRequestBody extends TeaModel {
         /**
-         * <p>The list of API keys used to access the upstream model service. The list must contain at least one non-empty value.</p>
+         * <p>The list of API keys used to access the upstream model service. The list must contain at least one non-empty value. When submitted, the new list completely replaces all existing keys. If this parameter is omitted or set to null, the original key list is retained.</p>
          */
         @NameInMap("apiKeys")
         public java.util.List<String> apiKeys;
@@ -75,7 +75,7 @@ public class UpdateModelConnectionRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</p>
+         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If Settings are not specified during model creation, this default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAI/v1</p>
@@ -84,7 +84,7 @@ public class UpdateModelConnectionRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The model provider type.</p>
+         * <p>The model provider type. Predefined providers can be queried by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListPredefinedModelProviders">ListPredefinedModelProviders</a>. Additionally, custom, anthropic, and gemini are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen</p>

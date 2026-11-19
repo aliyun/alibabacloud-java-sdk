@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
     /**
-     * <p>If the call fails, troubleshoot the issue based on the HTTP status code and the message.</p>
+     * <p>The business result code. If the request fails, use this code in combination with the HTTP status code and the result message for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The original fields and the meaning of the status field are retained. The new scimStatus field corresponds to the data.status field in the query operation. The operationStatus field retains the status of the most recent SCIM task.</p>
+     * <p>The data object. Retains the original fields and the meaning of the status field. The new scimStatus field corresponds to the data.status field in the query API operation, and the operationStatus field retains the status of the most recent SCIM task.</p>
      */
     @NameInMap("data")
     public UpdateIdentityProviderSCIMResponseBodyData data;
 
     /**
-     * <p>The processing status of the current request. This status is not equivalent to the final result of the background task.</p>
+     * <p>The HTTP status code. Indicates the processing status of the current request, which does not necessarily reflect the final result of the background task.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message about request acceptance or errors. For an asynchronous task, verify the result by calling the corresponding query operation.</p>
+     * <p>The result message. Indicates whether the request is accepted or returns an error message. For an asynchronous task, check the task result by calling the corresponding query API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. You can use this ID to associate the call with troubleshooting. Retain this ID if the call fails.</p>
+     * <p>The request ID. Retain this ID to correlate the current call and troubleshoot failures.</p>
      * 
      * <strong>example:</strong>
      * <p>request-example</p>
@@ -47,7 +47,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the current request was processed successfully. A value of true indicates success. For asynchronous writes, you must continue to query the task result.</p>
+     * <p>Indicates whether the current request is successful. A value of true indicates that the request is processed successfully. For asynchronous write operations, you must continue to query the task result.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
 
     public static class UpdateIdentityProviderSCIMResponseBodyDataConfiguration extends TeaModel {
         /**
-         * <p>The SAML binding type. Valid values: HTTP-Redirect and HTTP-POST. Required when manually specified. The query returns the short name.</p>
+         * <p>The SAML binding type. Valid values: HTTP-Redirect and HTTP-POST. This field is required when you manually enter the configuration. The query returns the short name.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP-Redirect</p>
@@ -116,7 +116,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String bindingType;
 
         /**
-         * <p>Required when manually specified. The value must be non-empty and up to 2,048 characters in length. You cannot change this value after it is configured. This value is different from the local entity ID queried by the SP.</p>
+         * <p>The IdP entity ID. This field is required when you manually enter the metadata. It must be a non-empty string of up to 2,048 characters. You cannot change the entity ID after it is configured. This ID is different from the local entity ID returned by the SP query.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -125,7 +125,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>Required when manually specified. The value must be an absolute HTTPS URL and must not contain user credentials or fragments.</p>
+         * <p>The IdP SSO logon URL. This field is required when you manually enter the metadata. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -134,7 +134,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String loginUrl;
 
         /**
-         * <p>The actual switch value, which is Enabled or Disabled. This value is not equivalent to the expected value of loginEnabled saved by AgentCore.</p>
+         * <p>The actual SSO logon status of AgentIdentity. The actual switch value is Enabled or Disabled, which is not equivalent to the expected value of loginEnabled saved in the access configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -183,7 +183,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
 
     public static class UpdateIdentityProviderSCIMResponseBodyDataMetadata extends TeaModel {
         /**
-         * <p>The SAML binding URI in the historical metadata snapshot. For CustomSSO updates, use the saml.bindingType field.</p>
+         * <p>The SAML binding URI in the historical metadata snapshot. To update CustomSSO, use the saml.bindingType field.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect</p>
@@ -192,7 +192,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String binding;
 
         /**
-         * <p>The certificate string in the historical metadata snapshot. To edit the configuration, use the saml.x509Certificates field and do not submit the old metadata.</p>
+         * <p>The certificate string in the historical metadata snapshot. To edit the configuration, use the saml.x509Certificates field instead of submitting the old metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>MIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQELBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoXDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8oGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYNW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbYEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Okkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0EBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUWld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImcaWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTqP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjocJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdVjfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5</p>
@@ -201,7 +201,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String certificates;
 
         /**
-         * <p>Required when manually specified. The value must be non-empty and up to 2,048 characters in length. You cannot change this value after it is configured. This value is different from the local entity ID queried by the SP.</p>
+         * <p>The IdP entity ID. This field is required when you manually enter the metadata. It must be a non-empty string of up to 2,048 characters. You cannot change the entity ID after it is configured. This ID is different from the local entity ID returned by the SP query.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -210,7 +210,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>Required when manually specified. The value must be an absolute HTTPS URL and must not contain user credentials or fragments.</p>
+         * <p>The IdP SSO logon URL. This field is required when you manually enter the metadata. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -257,9 +257,204 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateIdentityProviderSCIMResponseBodyDataOidc extends TeaModel {
+        /**
+         * <p>The authorization endpoint. This field is required in manual mode and must be an absolute HTTPS URL. Do not specify this field in discovery mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/authorize">https://idp.example.com/authorize</a></p>
+         */
+        @NameInMap("authorizationEndpoint")
+        public String authorizationEndpoint;
+
+        /**
+         * <p>The client authentication method. Default value: client_secret_post. If the value is none, Proof Key for Code Exchange (PKCE) must be enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client_secret_post</p>
+         */
+        @NameInMap("clientAuthMethod")
+        public String clientAuthMethod;
+
+        /**
+         * <p>The client ID registered in the external IdP. This ID is different from the Matrix client ID. You cannot change the client ID in place after it is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-client</p>
+         */
+        @NameInMap("clientId")
+        public String clientId;
+
+        /**
+         * <p>The absolute HTTPS OIDC discovery endpoint. This field is mutually exclusive with manually entered endpoints.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/.well-known/openid-configuration">https://idp.example.com/.well-known/openid-configuration</a></p>
+         */
+        @NameInMap("discoveryEndpoint")
+        public String discoveryEndpoint;
+
+        /**
+         * <p>The absolute HTTPS issuer of the external IdP. You cannot change the issuer in place after it is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com">https://idp.example.com</a></p>
+         */
+        @NameInMap("issuer")
+        public String issuer;
+
+        /**
+         * <p>The authorization endpoint. This field is required in manual mode and must be an absolute HTTPS URL. Do not specify this field in discovery mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/jwks">https://idp.example.com/jwks</a></p>
+         */
+        @NameInMap("jwksUri")
+        public String jwksUri;
+
+        /**
+         * <p>Specifies whether PKCE is enabled. Default value: true. This parameter must be set to true when no client authentication is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("pkceRequired")
+        public Boolean pkceRequired;
+
+        /**
+         * <p>The array of strings that must contain openid. Default values: openid, profile, and email.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;openid&quot;,&quot;profile&quot;,&quot;email&quot;]</p>
+         */
+        @NameInMap("scopes")
+        public java.util.List<String> scopes;
+
+        /**
+         * <p>The name of the claim in the ID token that is used to match the SCIM externalId. If omitted during creation, the default value sub is used. If omitted during an update, the saved value is retained. For Azure, you can specify oid. The value must be non-empty and cannot contain whitespace characters. When querying oidc, the saved value is returned. When querying oidcConfiguration, the actual upstream value is returned, which may be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oid</p>
+         */
+        @NameInMap("ssoMappingClaim")
+        public String ssoMappingClaim;
+
+        /**
+         * <p>The authorization endpoint. This field is required in manual mode and must be an absolute HTTPS URL. Do not specify this field in discovery mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/token">https://idp.example.com/token</a></p>
+         */
+        @NameInMap("tokenEndpoint")
+        public String tokenEndpoint;
+
+        /**
+         * <p>The optional absolute HTTPS URL for manual mode. Leave this field empty in discovery mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/userinfo">https://idp.example.com/userinfo</a></p>
+         */
+        @NameInMap("userinfoEndpoint")
+        public String userinfoEndpoint;
+
+        public static UpdateIdentityProviderSCIMResponseBodyDataOidc build(java.util.Map<String, ?> map) throws Exception {
+            UpdateIdentityProviderSCIMResponseBodyDataOidc self = new UpdateIdentityProviderSCIMResponseBodyDataOidc();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setAuthorizationEndpoint(String authorizationEndpoint) {
+            this.authorizationEndpoint = authorizationEndpoint;
+            return this;
+        }
+        public String getAuthorizationEndpoint() {
+            return this.authorizationEndpoint;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setClientAuthMethod(String clientAuthMethod) {
+            this.clientAuthMethod = clientAuthMethod;
+            return this;
+        }
+        public String getClientAuthMethod() {
+            return this.clientAuthMethod;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setClientId(String clientId) {
+            this.clientId = clientId;
+            return this;
+        }
+        public String getClientId() {
+            return this.clientId;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setDiscoveryEndpoint(String discoveryEndpoint) {
+            this.discoveryEndpoint = discoveryEndpoint;
+            return this;
+        }
+        public String getDiscoveryEndpoint() {
+            return this.discoveryEndpoint;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setIssuer(String issuer) {
+            this.issuer = issuer;
+            return this;
+        }
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setJwksUri(String jwksUri) {
+            this.jwksUri = jwksUri;
+            return this;
+        }
+        public String getJwksUri() {
+            return this.jwksUri;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setPkceRequired(Boolean pkceRequired) {
+            this.pkceRequired = pkceRequired;
+            return this;
+        }
+        public Boolean getPkceRequired() {
+            return this.pkceRequired;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setScopes(java.util.List<String> scopes) {
+            this.scopes = scopes;
+            return this;
+        }
+        public java.util.List<String> getScopes() {
+            return this.scopes;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setSsoMappingClaim(String ssoMappingClaim) {
+            this.ssoMappingClaim = ssoMappingClaim;
+            return this;
+        }
+        public String getSsoMappingClaim() {
+            return this.ssoMappingClaim;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setTokenEndpoint(String tokenEndpoint) {
+            this.tokenEndpoint = tokenEndpoint;
+            return this;
+        }
+        public String getTokenEndpoint() {
+            return this.tokenEndpoint;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc setUserinfoEndpoint(String userinfoEndpoint) {
+            this.userinfoEndpoint = userinfoEndpoint;
+            return this;
+        }
+        public String getUserinfoEndpoint() {
+            return this.userinfoEndpoint;
+        }
+
+    }
+
     public static class UpdateIdentityProviderSCIMResponseBodyDataSaml extends TeaModel {
         /**
-         * <p>The SAML binding type. Valid values: HTTP-Redirect and HTTP-POST. Required when manually specified. The query returns the short name.</p>
+         * <p>The SAML binding type. Valid values: HTTP-Redirect and HTTP-POST. This field is required when you manually enter the configuration. The query returns the short name.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP-Redirect</p>
@@ -268,7 +463,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String bindingType;
 
         /**
-         * <p>Required when manually specified. The value must be non-empty and up to 2,048 characters in length. You cannot change this value after it is configured. This value is different from the local entity ID queried by the SP.</p>
+         * <p>The IdP entity ID. This field is required when you manually enter the metadata. It must be a non-empty string of up to 2,048 characters. You cannot change the entity ID after it is configured. This ID is different from the local entity ID returned by the SP query.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -277,7 +472,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>Required when manually specified. The value must be an absolute HTTPS URL and must not contain user credentials or fragments.</p>
+         * <p>The IdP SSO logon URL. This field is required when you manually enter the metadata. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -286,7 +481,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String loginUrl;
 
         /**
-         * <p>Required when manually specified. The value must be a non-empty array of PEM X.509 certificate texts. The system verifies the current validity period. A maximum of two certificates are allowed after deduplication.</p>
+         * <p>The list of IdP signing certificates. When you manually enter the configuration, this field is required and must be a non-empty array of PEM X.509 certificate texts. The system verifies the current validity period. A maximum of two certificates are retained after deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
@@ -335,13 +530,13 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
 
     public static class UpdateIdentityProviderSCIMResponseBodyData extends TeaModel {
         /**
-         * <p>The actual SAML configuration is read back on demand only by GetIdentityProvider. The SCIM query and preparation operations return the actual receiving status and URL.</p>
+         * <p>The actual upstream configuration. The actual SAML configuration is read back on demand only by the GetIdentityProvider API operation. The SCIM query and preparation operations return the actual receiving status and URL.</p>
          */
         @NameInMap("configuration")
         public UpdateIdentityProviderSCIMResponseBodyDataConfiguration configuration;
 
         /**
-         * <p>The creation time recorded on the server.</p>
+         * <p>The time when the record was created on the server.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-26T00:00:00Z</p>
@@ -350,7 +545,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>For CustomSSO, an empty string is returned. You must obtain the SCIM receiving URL by calling the SCIM query or preparation operation. The example shows an empty JSON string. The actual value does not contain double quotation marks.</p>
+         * <p>The SAML vendor event callback URL. For CustomSSO, an empty string is returned. To obtain the SCIM receiving URL, call the SCIM query or preparation API operation. The example shows a JSON empty string &quot;&quot;, but the actual value does not include double quotation marks.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -359,7 +554,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String eventSubscriptionCallbackUrl;
 
         /**
-         * <p>The type of the identity provider. General CRUD operations support DingTalk, Feishu, and CustomSSO. Service provider (SP) queries support only CustomSSO. The SCIM path uses the CustomSSO shared pool.</p>
+         * <p>The identity provider type. General CRUD operations support DingTalk, Feishu, and CustomSSO. SP queries support only CustomSSO. The SCIM path uses the CustomSSO shared pool.</p>
          * 
          * <strong>example:</strong>
          * <p>CustomSSO</p>
@@ -368,7 +563,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String identityProviderType;
 
         /**
-         * <p>For CustomSSO, an empty string is returned. You must obtain the Assertion Consumer Service (ACS) URL for SAML by calling the SP query operation. The example shows an empty JSON string. The actual value does not contain double quotation marks.</p>
+         * <p>The SAML vendor callback URL. For CustomSSO, an empty string is returned. To obtain the Assertion Consumer Service (ACS) URL for SAML, call the SP query API operation. The example shows a JSON empty string &quot;&quot;, but the actual value does not include double quotation marks.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -377,19 +572,25 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String loginCallbackUrl;
 
         /**
-         * <p>Specifies whether logon is enabled. Do not set this parameter to true during CustomSSO initialization. You must save a valid SAML configuration before enabling logon. Disabling logon does not delete the configuration. If an asynchronous task fails, this expected value does not indicate that the change has taken effect on the upstream side.</p>
+         * <p>Specifies whether logon is enabled. Do not set this parameter to true during CustomSSO initialization. You must save a valid SAML configuration before enabling logon. Disabling logon does not delete the configuration. If an asynchronous task fails, this expected value does not indicate that the change has taken effect on the upstream server.</p>
          */
         @NameInMap("loginEnabled")
         public Boolean loginEnabled;
 
         /**
-         * <p>Vendor parameters are used for DingTalk and Feishu. CustomSSO updates use the protocol and saml fields and do not accept this field. The return value does not contain vendor keys.</p>
+         * <p>The standard identity provider (IdP) metadata. Vendor parameters are used for DingTalk and Feishu. To update CustomSSO, use the protocol and saml fields. This field is not accepted for CustomSSO updates. The return value does not include vendor keys.</p>
          */
         @NameInMap("metadata")
         public UpdateIdentityProviderSCIMResponseBodyDataMetadata metadata;
 
         /**
-         * <p>The original status of the most recent independent SCIM operation task. An empty string (&quot;&quot;) is returned if no historical tasks exist.</p>
+         * <p>The security summary of the expected OIDC configuration. This summary does not include credentials. The original SAML fields and their meanings are retained.</p>
+         */
+        @NameInMap("oidc")
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc oidc;
+
+        /**
+         * <p>The original status of the most recent independent SCIM operation task. If no historical tasks exist, an empty string (&quot;&quot;) is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>
@@ -398,7 +599,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String operationStatus;
 
         /**
-         * <p>Only SAML is supported. This field may not be returned if no valid configuration is saved. Initialization with an OIDC placeholder is not supported.</p>
+         * <p>The logon protocol. Only SAML is supported. This field may not be returned if no valid configuration is saved. You cannot use OIDC as a placeholder for initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>SAML</p>
@@ -407,13 +608,13 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>You can specify either XML or manual fields for the input. The query returns a standardized configuration and does not return the original XML. This field can be omitted if it is not configured.</p>
+         * <p>The SAML logon configuration. You can provide the input by using XML or by manually entering all fields. The query returns the standardized configuration and does not echo the original XML. This field can be omitted if it is not configured.</p>
          */
         @NameInMap("saml")
         public UpdateIdentityProviderSCIMResponseBodyDataSaml saml;
 
         /**
-         * <p>The independent SCIM status. This field does not change the meaning of shared resources and logon configurations in the original status field. This field corresponds to the data.status field in the query operation.</p>
+         * <p>The independent SCIM status. This field does not change the meaning of the original status field for shared resources and logon configurations. It corresponds to the data.status field in the query API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>UPDATING</p>
@@ -422,7 +623,7 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String scimStatus;
 
         /**
-         * <p>The lifecycle of the CustomSSO user pool and the task status of the logon configuration. This field does not indicate the SCIM operation result. You can query the SCIM switch result by checking the operationStatus field returned by GetIdentityProviderSCIM. You cannot use this field to determine whether all protocols are configured.</p>
+         * <p>The operation status of the CustomSSO user pool lifecycle and logon configuration tasks. This status does not indicate the result of SCIM operations. To query the result of the SCIM switch, use the GetIdentityProviderSCIM.operationStatus field. You cannot use this field to determine whether all protocols are configured.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -431,13 +632,13 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Specifies whether to enable SCIM synchronization. Do not set this parameter to true during CustomSSO initialization. You can update this parameter only by calling UpdateIdentityProviderSCIM. Check the operationStatus field to determine the result.</p>
+         * <p>Specifies whether to enable SCIM synchronization. Do not set this parameter to true during CustomSSO initialization. You can only update this parameter later by calling UpdateIdentityProviderSCIM. Determine the result based on the operationStatus field.</p>
          */
         @NameInMap("syncEnabled")
         public Boolean syncEnabled;
 
         /**
-         * <p>The most recent update time recorded on the server.</p>
+         * <p>The time when the record was last updated on the server.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-26T00:00:00Z</p>
@@ -513,6 +714,14 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         }
         public UpdateIdentityProviderSCIMResponseBodyDataMetadata getMetadata() {
             return this.metadata;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyData setOidc(UpdateIdentityProviderSCIMResponseBodyDataOidc oidc) {
+            this.oidc = oidc;
+            return this;
+        }
+        public UpdateIdentityProviderSCIMResponseBodyDataOidc getOidc() {
+            return this.oidc;
         }
 
         public UpdateIdentityProviderSCIMResponseBodyData setOperationStatus(String operationStatus) {

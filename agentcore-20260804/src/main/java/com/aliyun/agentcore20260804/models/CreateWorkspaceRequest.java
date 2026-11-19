@@ -98,7 +98,7 @@ public class CreateWorkspaceRequest extends TeaModel {
 
     public static class CreateWorkspaceRequestBodyNetworkConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to allow public egress access from the platform. If not specified, this feature is enabled by default. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
+         * <p>Specifies whether to allow public egress access from the platform. Default value: true. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -107,7 +107,7 @@ public class CreateWorkspaceRequest extends TeaModel {
         public Boolean publicEgressEnabled;
 
         /**
-         * <p>Specifies whether to allow public ingress access. If not specified, this feature is enabled by default. If disabled, the public ingress endpoints of all agent endpoints in the workspace are closed. If re-enabled, the original public ingress endpoints are restored. INNER_DIRECT and user VPC ingress endpoints are not affected. Collaboration and Element Web ingress endpoints are not controlled by this parameter.</p>
+         * <p>Specifies whether to allow public ingress access. Default value: true. If set to false, the public ingress for all agent endpoints in the workspace is disabled. If set back to true, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter. If this parameter is set to false, the workspace VPC must be enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -154,7 +154,7 @@ public class CreateWorkspaceRequest extends TeaModel {
 
     public static class CreateWorkspaceRequestBody extends TeaModel {
         /**
-         * <p>If specified, the workspace is directly bound to this AgentSpace without creating a new one. The CloudMonitor (CMS) workspace to which it belongs is determined by the server-side reverse lookup result, and CmsWorkspace validation is not required in this case. When the workspace is deleted, it is only unbound, and the AgentSpace is not deleted. The value must match the current account and region, and the reverse lookup must return the associated CMS workspace. Otherwise, InvalidParameter is returned.</p>
+         * <p>If specified, the workspace is directly bound to this AgentSpace, and a new one is not created. The CMS workspace to which it belongs is determined by the server reverse lookup result, and CmsWorkspace does not need to be verified. When the workspace is deleted, it is only unbound, and the AgentSpace is not deleted. It must match the current account and region, and the associated CMS workspace must be found through reverse lookup. Otherwise, InvalidParameter is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
@@ -163,7 +163,7 @@ public class CreateWorkspaceRequest extends TeaModel {
         public String agentSpace;
 
         /**
-         * <p>If specified, the workspace is bound to this CloudMonitor (CMS) workspace without creating a new one. When the workspace is deleted, it is only unbound, and the CMS workspace is not deleted. The value must match the current account and region. Otherwise, InvalidParameter is returned.</p>
+         * <p>If specified, the workspace is bound to this CMS workspace, and the platform does not create a new one. When the workspace is deleted, it is only unbound, and the CMS workspace is not deleted. The CMS workspace must match the current account and region. Otherwise, InvalidParameter is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>my-cms-workspace</p>
@@ -188,7 +188,16 @@ public class CreateWorkspaceRequest extends TeaModel {
         public CreateWorkspaceRequestBodyNetworkConfiguration networkConfiguration;
 
         /**
-         * <p>The storage type of the workspace.</p>
+         * <p>The optional JSON string for the workspace skill security scan policy. If omitted, the existing compatibility behavior is maintained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enabled&quot;:false,&quot;minBlockRiskLevel&quot;:&quot;medium&quot;,&quot;maxSkipRatio&quot;:0.8}</p>
+         */
+        @NameInMap("scanPolicy")
+        public String scanPolicy;
+
+        /**
+         * <p>The storage type of the workspace. PLATFORM indicates platform-managed storage. PRIVATE indicates user private OSS storage.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -231,6 +240,14 @@ public class CreateWorkspaceRequest extends TeaModel {
         }
         public CreateWorkspaceRequestBodyNetworkConfiguration getNetworkConfiguration() {
             return this.networkConfiguration;
+        }
+
+        public CreateWorkspaceRequestBody setScanPolicy(String scanPolicy) {
+            this.scanPolicy = scanPolicy;
+            return this;
+        }
+        public String getScanPolicy() {
+            return this.scanPolicy;
         }
 
         public CreateWorkspaceRequestBody setStorageType(String storageType) {

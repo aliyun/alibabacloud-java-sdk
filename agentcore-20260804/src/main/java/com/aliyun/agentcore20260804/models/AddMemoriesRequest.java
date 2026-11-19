@@ -24,9 +24,68 @@ public class AddMemoriesRequest extends TeaModel {
         return this.body;
     }
 
+    public static class AddMemoriesRequestBodyMemories extends TeaModel {
+        /**
+         * <p>The string key-value tags set by the caller. A maximum of 16 tags are supported. A key can be up to 64 Unicode characters in length, and a value can be up to 1,024 Unicode characters in length. Empty strings are allowed. Nested objects or arrays are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
+         */
+        @NameInMap("metadata")
+        public java.util.Map<String, String> metadata;
+
+        /**
+         * <p>The content of the memory to be directly written. It cannot be empty and can be up to 32,000 UTF-8 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The user likes hiking</p>
+         */
+        @NameInMap("text")
+        public String text;
+
+        /**
+         * <p>The content type of the memory. Valid values: semantic for semantic memory, skill for skill, user_profile for user preference, and session_summary for session summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>semantic</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static AddMemoriesRequestBodyMemories build(java.util.Map<String, ?> map) throws Exception {
+            AddMemoriesRequestBodyMemories self = new AddMemoriesRequestBodyMemories();
+            return TeaModel.build(map, self);
+        }
+
+        public AddMemoriesRequestBodyMemories setMetadata(java.util.Map<String, String> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+        public java.util.Map<String, String> getMetadata() {
+            return this.metadata;
+        }
+
+        public AddMemoriesRequestBodyMemories setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public AddMemoriesRequestBodyMemories setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class AddMemoriesRequestBodyMessages extends TeaModel {
         /**
-         * <p>The message content.</p>
+         * <p>The content of the message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -36,7 +95,16 @@ public class AddMemoriesRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The message role.</p>
+         * <p>The reference time of the message in RFC 3339 format with a time zone. If omitted, the request-level referenceTime is used. If both are omitted, the time of the current request is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-08T13:56:00+08:00</p>
+         */
+        @NameInMap("referenceTime")
+        public String referenceTime;
+
+        /**
+         * <p>The role of the message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -58,6 +126,14 @@ public class AddMemoriesRequest extends TeaModel {
             return this.content;
         }
 
+        public AddMemoriesRequestBodyMessages setReferenceTime(String referenceTime) {
+            this.referenceTime = referenceTime;
+            return this;
+        }
+        public String getReferenceTime() {
+            return this.referenceTime;
+        }
+
         public AddMemoriesRequestBodyMessages setRole(String role) {
             this.role = role;
             return this;
@@ -70,7 +146,7 @@ public class AddMemoriesRequest extends TeaModel {
 
     public static class AddMemoriesRequestBodyScope extends TeaModel {
         /**
-         * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
+         * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -79,7 +155,7 @@ public class AddMemoriesRequest extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
+         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>session-001</p>
@@ -88,7 +164,16 @@ public class AddMemoriesRequest extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
+         * <p>The business team ID defined by the caller. It cannot be empty when provided and can be up to 128 UTF-8 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team-001</p>
+         */
+        @NameInMap("teamId")
+        public String teamId;
+
+        /**
+         * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>
@@ -117,6 +202,14 @@ public class AddMemoriesRequest extends TeaModel {
             return this.sessionId;
         }
 
+        public AddMemoriesRequestBodyScope setTeamId(String teamId) {
+            this.teamId = teamId;
+            return this;
+        }
+        public String getTeamId() {
+            return this.teamId;
+        }
+
         public AddMemoriesRequestBodyScope setUserId(String userId) {
             this.userId = userId;
             return this;
@@ -129,19 +222,34 @@ public class AddMemoriesRequest extends TeaModel {
 
     public static class AddMemoriesRequestBody extends TeaModel {
         /**
-         * <p>The message list. You must provide either this parameter or Text, but not both. You can specify 1 to 20 messages, and the total size of the content cannot exceed 32,000 UTF-8 bytes.</p>
+         * <p>Specifies whether to extract memories. If omitted or set to true, memories are extracted from text or messages. If set to false, memories are directly written.</p>
+         */
+        @NameInMap("extract")
+        public Boolean extract;
+
+        /**
+         * <p>The list of memories to be directly written when extract is set to false. The list can contain 1 to 100 memories. You cannot provide text, messages, referenceTime, or request-level metadata at the same time.</p>
+         */
+        @NameInMap("memories")
+        public java.util.List<AddMemoriesRequestBodyMemories> memories;
+
+        /**
+         * <p>The list of messages. You must provide either text or messages, but not both. The list can contain 1 to 20 messages, and the total length of the content cannot exceed 32,000 UTF-8 bytes.</p>
          */
         @NameInMap("messages")
         public java.util.List<AddMemoriesRequestBodyMessages> messages;
 
         /**
-         * <p>The string key-value metadata. You can specify up to 16 keys. The maximum length of a key is 64 characters, and the maximum length of a value is 1,024 characters.</p>
+         * <p>The string key-value metadata. A maximum of 16 keys are supported. A key can be up to 64 characters in length, and a value can be up to 1,024 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;topic&quot;:&quot;hiking&quot;}</p>
          */
         @NameInMap("metadata")
         public java.util.Map<String, String> metadata;
 
         /**
-         * <p>The time reference point for the batch of messages or text. The value must be in RFC 3339 format with a time zone and support fractional seconds.</p>
+         * <p>The time reference point for the batch of messages or text. It uses the RFC 3339 format with a time zone and supports fractional seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-08T13:56:00+08:00</p>
@@ -162,7 +270,7 @@ public class AddMemoriesRequest extends TeaModel {
         public Boolean sync;
 
         /**
-         * <p>The text to be written directly. You must provide either this parameter or Messages, but not both. The size cannot exceed 32,000 UTF-8 bytes.</p>
+         * <p>The text to be directly written. You must provide either text or messages, but not both. The text cannot exceed 32,000 UTF-8 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>The user likes hiking</p>
@@ -173,6 +281,22 @@ public class AddMemoriesRequest extends TeaModel {
         public static AddMemoriesRequestBody build(java.util.Map<String, ?> map) throws Exception {
             AddMemoriesRequestBody self = new AddMemoriesRequestBody();
             return TeaModel.build(map, self);
+        }
+
+        public AddMemoriesRequestBody setExtract(Boolean extract) {
+            this.extract = extract;
+            return this;
+        }
+        public Boolean getExtract() {
+            return this.extract;
+        }
+
+        public AddMemoriesRequestBody setMemories(java.util.List<AddMemoriesRequestBodyMemories> memories) {
+            this.memories = memories;
+            return this;
+        }
+        public java.util.List<AddMemoriesRequestBodyMemories> getMemories() {
+            return this.memories;
         }
 
         public AddMemoriesRequestBody setMessages(java.util.List<AddMemoriesRequestBodyMessages> messages) {

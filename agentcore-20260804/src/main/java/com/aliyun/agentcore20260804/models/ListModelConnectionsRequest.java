@@ -14,7 +14,7 @@ public class ListModelConnectionsRequest extends TeaModel {
     public Boolean includeModels;
 
     /**
-     * <p>The maximum number of entries to return on each page. Valid values: 0 to 100. Default value: 10. If this parameter is not specified or is set to 0, the default value is used.</p>
+     * <p>The maximum number of entries to return per page. Valid values: 0 to 100. Default value: 10. If this parameter is not specified or is set to 0, the default value is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListModelConnectionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the model connection. The name must be 1 to 128 characters in length and cannot contain whitespace characters.</p>
+     * <p>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -32,7 +32,7 @@ public class ListModelConnectionsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. Pass the token returned in the previous query for the current request. An empty response indicates that no more pages are available.</p>
+     * <p>The pagination token. Pass the token returned in the previous response to query the next page. If the response is empty, no more pages are available.</p>
      * 
      * <strong>example:</strong>
      * <p>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWwtY29ubmVjdGlvbjoxMA</p>

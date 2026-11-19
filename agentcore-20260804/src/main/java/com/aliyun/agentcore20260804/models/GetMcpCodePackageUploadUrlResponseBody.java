@@ -137,7 +137,7 @@ public class GetMcpCodePackageUploadUrlResponseBody extends TeaModel {
         public String expiresAt;
 
         /**
-         * <p>The HTTP request headers, where the key is the header name and the value is the header content.</p>
+         * <p>The HTTP request headers. The key is the header name, and the value is the header content.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Content-Type&quot;:&quot;application/zip&quot;}</p>
@@ -146,7 +146,7 @@ public class GetMcpCodePackageUploadUrlResponseBody extends TeaModel {
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The maximum allowed size of the code package to upload, in bytes.</p>
+         * <p>The maximum allowed size of the code package to be uploaded, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>52428800</p>
@@ -164,7 +164,7 @@ public class GetMcpCodePackageUploadUrlResponseBody extends TeaModel {
         public String uploadMethod;
 
         /**
-         * <p>The presigned upload URL for the code package.</p>
+         * <p>The presigned upload URL of the code package.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example-bucket.oss-cn-hangzhou.aliyuncs.com/server.zip?Signature=example-signature">https://example-bucket.oss-cn-hangzhou.aliyuncs.com/server.zip?Signature=example-signature</a></p>

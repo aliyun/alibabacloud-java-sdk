@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+     * <p>The business status code. A value of SUCCESS indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
     public CreateExternalAgentBootstrapTokenResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+     * <p>The HTTP status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -125,7 +125,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         public String licenseKey;
 
         /**
-         * <p>The name of the CMS workspace.</p>
+         * <p>The CMS workspace name.</p>
          * 
          * <strong>example:</strong>
          * <p>cms-workspace</p>
@@ -166,7 +166,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
 
     public static class CreateExternalAgentBootstrapTokenResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the managed agent.</p>
+         * <p>The managed agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>
@@ -190,7 +190,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         public CreateExternalAgentBootstrapTokenResponseBodyDataCms cms;
 
         /**
-         * <p>The access network type. Valid values: INTRANET (internal network) and INTERNET (Internet).</p>
+         * <p>The network type for access. Valid values: INTRANET (internal network) and INTERNET (Internet).</p>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>

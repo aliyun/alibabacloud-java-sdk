@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateModelConnectionResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
     public UpdateModelConnectionResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -107,7 +107,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
 
     public static class UpdateModelConnectionResponseBodyData extends TeaModel {
         /**
-         * <p>The number of API keys configured in the model connection.</p>
+         * <p>The number of API keys configured for the model connection.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</p>
+         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If Settings are not specified during model creation, this default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAI/v1</p>
@@ -194,7 +194,7 @@ public class UpdateModelConnectionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The failure summary returned when the model connection fails to be published, or when deletion fails but the connection remains in the deleting state. This field is empty in other states.</p>
+         * <p>The failure summary returned when the model connection fails to be published, or when deletion fails but the connection remains in the deleting state. This field is empty for other states.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayOperationException</p>

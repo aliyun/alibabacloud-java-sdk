@@ -167,7 +167,7 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified in Settings during model creation, this default value is used.</p>
+         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified when you create a model connection, this default value is used for model creation.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAI/v1</p>
@@ -194,7 +194,7 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The failure summary returned when the model connection fails to be published, or when the deletion fails but the connection remains in the Deleting state. This field is empty in other states.</p>
+         * <p>The failure summary returned when the model connection fails to be published, or when the deletion fails but the connection remains in the deleting state. This field is empty in other states.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayOperationException</p>
