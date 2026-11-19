@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResellerUserQuotaRequest extends TeaModel {
     /**
-     * <p>The amount in CNY. This parameter is required to activate a quota.</p>
+     * <p>The amount. Unit: CNY or USD. This parameter is required for opening a quota account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,11 @@ public class CreateResellerUserQuotaRequest extends TeaModel {
     public String amount;
 
     /**
-     * <p>The currency.</p>
+     * <p>The currency name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CNY：人民币。USD：美元。JPY：日元。</p>
+     * <p>CNY: Chinese yuan. USD: US dollar. JPY: Japanese yen</p>
      */
     @NameInMap("Currency")
     public String currency;

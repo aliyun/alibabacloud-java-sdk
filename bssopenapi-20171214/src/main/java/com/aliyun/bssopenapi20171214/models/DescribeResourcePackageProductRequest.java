@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourcePackageProductRequest extends TeaModel {
     /**
-     * <p>The code of the service.</p>
+     * <p>The product type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

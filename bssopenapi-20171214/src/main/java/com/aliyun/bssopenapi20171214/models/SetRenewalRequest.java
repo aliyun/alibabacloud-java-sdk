@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetRenewalRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can enable auto-renewal for up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).</p>
+     * <p>The instance IDs. You can specify up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class SetRenewalRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The code of the service.</p>
+     * <p>The product code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class SetRenewalRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The type of the service.</p>
+     * <p>The product type.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
@@ -37,7 +37,7 @@ public class SetRenewalRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The auto-renewal period. Valid values:</p>
+     * <p>The auto-renewal period of the instance. Valid values:</p>
      * <ul>
      * <li>1</li>
      * <li>2</li>
@@ -46,7 +46,7 @@ public class SetRenewalRequest extends TeaModel {
      * <li>12</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</p>
+     * <p>This parameter is required when RenewalStatus is set to AutoRenewal.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,13 +56,13 @@ public class SetRenewalRequest extends TeaModel {
     public Integer renewalPeriod;
 
     /**
-     * <p>The unit of the auto-renewal period. Valid values:</p>
+     * <p>The unit of the auto-renewal cycle. Valid values:</p>
      * <ul>
-     * <li>M: months</li>
-     * <li>Y: years</li>
+     * <li>M: month.</li>
+     * <li>Y: year.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</p>
+     * <p>This parameter is required when RenewalStatus is set to AutoRenewal.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,11 +72,11 @@ public class SetRenewalRequest extends TeaModel {
     public String renewalPeriodUnit;
 
     /**
-     * <p>The status of renewal. Valid values:</p>
+     * <p>The renewal status. Valid values:</p>
      * <ul>
-     * <li>AutoRenewal: The instance is automatically renewed.</li>
-     * <li>ManualRenewal: The instance is manually renewed.</li>
-     * <li>NotRenewal: The instance is not renewed.</li>
+     * <li>AutoRenewal: auto-renewal.</li>
+     * <li>ManualRenewal: manual renewal.</li>
+     * <li>NotRenewal: no renewal.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -87,10 +87,10 @@ public class SetRenewalRequest extends TeaModel {
     public String renewalStatus;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The subscription type. Valid values:</p>
      * <ul>
-     * <li>Subscription: subscription</li>
-     * <li>PayAsYouGo: pay-as-you-go</li>
+     * <li>Subscription: subscription.</li>
+     * <li>PayAsYouGo: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>

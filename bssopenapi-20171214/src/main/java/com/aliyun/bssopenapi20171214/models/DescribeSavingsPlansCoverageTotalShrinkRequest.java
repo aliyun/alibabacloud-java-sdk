@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansCoverageTotalShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
+     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resources.</p>
      * 
      * <strong>example:</strong>
      * <p>123745698925000</p>
@@ -14,7 +14,7 @@ public class DescribeSavingsPlansCoverageTotalShrinkRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>Format: yyyy-MM-dd HH:mm:ss. The query excludes this time. If this parameter is left empty, the query covers data up to the current time.</p>
+     * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified end time is excluded from the query. If this parameter is left empty, the current time is used as the end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-20 00:00:00</p>
@@ -22,15 +22,18 @@ public class DescribeSavingsPlansCoverageTotalShrinkRequest extends TeaModel {
     @NameInMap("EndPeriod")
     public String endPeriod;
 
+    /**
+     * <p>The filter parameters.</p>
+     */
     @NameInMap("FilterParam")
     public String filterParamShrink;
 
     /**
-     * <p>Valid values:</p>
+     * <p>The time granularity. Valid values:</p>
      * <ul>
-     * <li>MONTH: month granularity.</li>
-     * <li>DAY: day granularity.</li>
-     * <li>HOUR: hour granularity.</li>
+     * <li>MONTH: month</li>
+     * <li>DAY: day</li>
+     * <li>HOUR: hour</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +44,7 @@ public class DescribeSavingsPlansCoverageTotalShrinkRequest extends TeaModel {
     public String periodType;
 
     /**
-     * <p>Format: yyyy-MM-dd HH:mm:ss. The query includes this time.</p>
+     * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified start time is included in the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

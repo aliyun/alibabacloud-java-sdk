@@ -54,6 +54,9 @@ public class QuerySkuPriceListShrinkRequest extends TeaModel {
 
     /**
      * <p>The collection of pricing factor conditions. You can call the <strong>QueryPriceEntityList</strong> operation to query pricing factor codes and pricing factor values.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;vm_region_no&quot;:[&quot;cn-shiwei-shenshu&quot;]}</p>
      */
     @NameInMap("PriceFactorConditionMap")
     public String priceFactorConditionMapShrink;

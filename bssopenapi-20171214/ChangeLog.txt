@@ -1,3 +1,7 @@
+2026-11-19 Version: 4.2.0
+- Support API ReleaseExpiredPrepaidInstance.
+
+
 2026-10-15 Version: 4.1.2
 - Update API GetSubscriptionPrice: add response parameters Body.Data.PaymentScheme.
 

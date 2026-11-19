@@ -26,7 +26,7 @@ public class RelieveAccountRelationRequest extends TeaModel {
      * <p>The ID of the account association. You must specify either the RelationId parameter, or the ParentUserId, ChildUserId, and RelationType parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>RelationId</p>
+     * <p>123456</p>
      */
     @NameInMap("RelationId")
     public Long relationId;

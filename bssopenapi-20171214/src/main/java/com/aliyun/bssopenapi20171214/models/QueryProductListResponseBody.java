@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryProductListResponseBody extends TeaModel {
     /**
-     * <p>The response status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -20,7 +20,7 @@ public class QueryProductListResponseBody extends TeaModel {
     public QueryProductListResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>This API is not applicable for caller.</p>
@@ -38,7 +38,7 @@ public class QueryProductListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -173,7 +173,7 @@ public class QueryProductListResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
-         * <p>The number of records displayed per page.</p>
+         * <p>The number of entries displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

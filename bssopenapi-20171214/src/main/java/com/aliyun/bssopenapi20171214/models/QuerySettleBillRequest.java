@@ -14,7 +14,7 @@ public class QuerySettleBillRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The billing cycle, in the format of YYYY-MM.</p>
+     * <p>The billing cycle. Format: YYYY-MM.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class QuerySettleBillRequest extends TeaModel {
     public Boolean isDisplayLocalCurrency;
 
     /**
-     * <p>Specifies whether to filter based on whether the original price (PretaxGrossAmount) is 0. Default value: false (compatible with existing logic). Valid values:</p>
+     * <p>Specifies whether to filter out records whose original price (PretaxGrossAmount) is 0. Default value: false (for compatibility with existing logic). Valid values:</p>
      * <ul>
-     * <li>true: Yes.</li>
-     * <li>false: No.</li>
+     * <li>true: yes</li>
+     * <li>false: no</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class QuerySettleBillRequest extends TeaModel {
     public Boolean isHideZeroCharge;
 
     /**
-     * <p>The maximum number of data records to read in this request. Default value: 20. Maximum value: 300.</p>
+     * <p>The maximum number of data records to return in the current request. Default value: 20. Maximum value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -49,7 +49,7 @@ public class QuerySettleBillRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which the next query starts. Leave this parameter empty to start from the beginning.</p>
+     * <p>The token that specifies the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
@@ -92,7 +92,7 @@ public class QuerySettleBillRequest extends TeaModel {
      * <ul>
      * <li>Subscription: subscription</li>
      * <li>PayAsYouGo: pay-as-you-go<blockquote>
-     * <p> This parameter must be used together with the ProductCode parameter.</p>
+     * <p>This parameter must be used together with the ProductCode parameter.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -106,7 +106,7 @@ public class QuerySettleBillRequest extends TeaModel {
     /**
      * <p>The type. Valid values:</p>
      * <ul>
-     * <li>SubscriptionOrder: prepaid order</li>
+     * <li>SubscriptionOrder: subscription order</li>
      * <li>PayAsYouGoBill: pay-as-you-go bill</li>
      * <li>Refund: refund bill</li>
      * <li>Adjustment: adjustment bill</li>

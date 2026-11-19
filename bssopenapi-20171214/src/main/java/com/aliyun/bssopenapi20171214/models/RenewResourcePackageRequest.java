@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewResourcePackageRequest extends TeaModel {
     /**
-     * <p>The renewal duration of the resource package.</p>
+     * <p>The renewal duration of the resource plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class RenewResourcePackageRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The time when the resource package takes effect. If you leave this parameter empty, the resource package takes effect immediately.</p>
-     * <p>Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time zone must be UTC.</p>
+     * <p>The effective period of the resource plan. If you do not specify this parameter, the resource plan takes effect immediately by default.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-02-02T12:00:00Z</p>
@@ -25,7 +25,7 @@ public class RenewResourcePackageRequest extends TeaModel {
     public String effectiveDate;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,12 +38,10 @@ public class RenewResourcePackageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The unit of the renewal duration. Valid values:</p>
+     * <p>The unit of the resource plan duration. Valid values:</p>
      * <ul>
-     * <li><p>Month</p>
-     * </li>
-     * <li><p>Year</p>
-     * </li>
+     * <li>Month</li>
+     * <li>Year</li>
      * </ul>
      * <p>Default value: Month.</p>
      * <p>This parameter is required.</p>

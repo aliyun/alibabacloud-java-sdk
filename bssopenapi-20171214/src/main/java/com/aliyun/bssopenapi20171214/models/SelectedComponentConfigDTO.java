@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SelectedComponentConfigDTO extends TeaModel {
     /**
-     * <p>The property configuration list.</p>
+     * <p>The list of property configurations.</p>
      */
     @NameInMap("AttributeConfigs")
     public java.util.List<SelectedComponentConfigDTOAttributeConfigs> attributeConfigs;
@@ -161,7 +161,7 @@ public class SelectedComponentConfigDTO extends TeaModel {
 
     public static class SelectedComponentConfigDTOAttributeConfigs extends TeaModel {
         /**
-         * <p>The upper and lower bound values, used for bounded properties.</p>
+         * <p>The upper and lower bounds, used for bounded properties.</p>
          */
         @NameInMap("BoundedValue")
         public SelectedComponentConfigDTOAttributeConfigsBoundedValue boundedValue;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansUsageTotalRequest extends TeaModel {
     /**
-     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resources.</p>
+     * <p>The ID of the account with resource ownership, which is the account that actually uses the resources.</p>
      * 
      * <strong>example:</strong>
      * <p>123745698925000</p>
@@ -14,7 +14,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>The end of the time range to query. The end time is excluded from the time range. If you do not set this parameter, the end time is the current time. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end time of the time range to query. The end time is not included in the time range. If you do not specify this parameter, the end time is the current time. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-02 00:00:00</p>
@@ -22,11 +22,14 @@ public class DescribeSavingsPlansUsageTotalRequest extends TeaModel {
     @NameInMap("EndPeriod")
     public String endPeriod;
 
+    /**
+     * <p>The filter parameters.</p>
+     */
     @NameInMap("FilterParam")
     public DescribeSavingsPlansUsageTotalRequestFilterParam filterParam;
 
     /**
-     * <p>The time granularity of the usage summary. Valid values: MONTH, DAY, HOUR.</p>
+     * <p>The time granularity for querying the usage summary. Valid values: MONTH, DAY, and HOUR.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +39,7 @@ public class DescribeSavingsPlansUsageTotalRequest extends TeaModel {
     public String periodType;
 
     /**
-     * <p>The start of the time range to query. The start time is included in the time range. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time of the time range to query. The start time is included in the time range. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,12 +94,21 @@ public class DescribeSavingsPlansUsageTotalRequest extends TeaModel {
     }
 
     public static class DescribeSavingsPlansUsageTotalRequestFilterParamDimensions extends TeaModel {
+        /**
+         * <p>The dimension code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The selection method for dimension filtering.</p>
+         */
         @NameInMap("SelectType")
         public String selectType;
 
+        /**
+         * <p>The list of dimension filter values.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -132,12 +144,21 @@ public class DescribeSavingsPlansUsageTotalRequest extends TeaModel {
     }
 
     public static class DescribeSavingsPlansUsageTotalRequestFilterParamTags extends TeaModel {
+        /**
+         * <p>The tag code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The selection method for tag filtering.</p>
+         */
         @NameInMap("SelectType")
         public String selectType;
 
+        /**
+         * <p>The list of tag filter values.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -173,9 +194,15 @@ public class DescribeSavingsPlansUsageTotalRequest extends TeaModel {
     }
 
     public static class DescribeSavingsPlansUsageTotalRequestFilterParam extends TeaModel {
+        /**
+         * <p>The list of dimension filter conditions.</p>
+         */
         @NameInMap("Dimensions")
         public java.util.List<DescribeSavingsPlansUsageTotalRequestFilterParamDimensions> dimensions;
 
+        /**
+         * <p>The list of tag filter conditions.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeSavingsPlansUsageTotalRequestFilterParamTags> tags;
 

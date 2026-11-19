@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAccountTransactionsRequest extends TeaModel {
     /**
-     * <p>The end time of the creation time range. If not specified, the default value is the current time. Example: 2018-01-01T00:00:00Z.</p>
+     * <p>The end time of the creation time range. If you do not specify this parameter, the default value is the current time. Example: 2018-01-01T00:00:00Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-03-06T01:55:00Z</p>
@@ -14,7 +14,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
-     * <p>The start time of the creation time range. If not specified, the default value is one month before the current time. Example: 2018-01-01T00:00:00Z.</p>
+     * <p>The start time of the creation time range. If you do not specify this parameter, the default value is one month before the current time. Example: 2018-01-01T00:00:00Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-03-05T01:46:09Z</p>
@@ -50,14 +50,14 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String recordID;
 
     /**
-     * <p>The transaction channel. If you specify a transaction channel, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</p>
+     * <p>The transaction channel. If you specify a transaction channel, the query returns results of the specified channel. If no results exist, an empty result is returned. If you do not specify this parameter, all channels are returned by default. Valid values:</p>
      * <ul>
-     * <li>AccountBalance: Account balance.</li>
+     * <li>AccountBalance: User balance.</li>
      * <li>BankTransfer: Bank transfer.</li>
      * <li>Alipay: Alipay.</li>
      * <li>AntCreditPay: Ant Credit Pay.</li>
      * <li>OfflineRemittance: Offline remittance.</li>
-     * <li>RegularBankCreditRefund: Credit-based payment refund.</li>
+     * <li>RegularBankCreditRefund: Credit limit refund.</li>
      * <li>CreditCard: Credit card.</li>
      * <li>MyBankCredit: MYbank Credit.</li>
      * <li>HuaxiaBankCInstallment: Huaxia Bank installment.</li>
@@ -80,7 +80,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String transactionChannelSN;
 
     /**
-     * <p>The income and expense type. If you specify an income and expense type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</p>
+     * <p>The income and expense type. If you specify an income and expense type, the query returns results of the specified type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</p>
      * <ul>
      * <li>Income: Income.</li>
      * <li>Expense: Expense.</li>
@@ -102,7 +102,7 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     public String transactionNumber;
 
     /**
-     * <p>The transaction type. If you specify a transaction type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</p>
+     * <p>The transaction type. If you specify a transaction type, the query returns results of the specified type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</p>
      * <ul>
      * <li>Payment: Top-up.</li>
      * <li>Withdraw: Withdrawal.</li>

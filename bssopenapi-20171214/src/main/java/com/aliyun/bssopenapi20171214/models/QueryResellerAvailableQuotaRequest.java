@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryResellerAvailableQuotaRequest extends TeaModel {
     /**
-     * <p>You do not need to specify this parameter.</p>
+     * <p>This parameter is not required.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("ItemCodes")
     public String itemCodes;

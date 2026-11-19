@@ -59,7 +59,7 @@ public class BaseAttributeInfoDTO extends TeaModel {
     public String valueType;
 
     /**
-     * <p>The property value list.</p>
+     * <p>The list of property values.</p>
      */
     @NameInMap("Values")
     public java.util.List<AttributeValueInfoDTO> values;

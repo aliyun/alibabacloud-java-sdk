@@ -326,6 +326,9 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
         /**
          * <p>The collection of factor values. Different commodities have their own factors under pricing entities. For example, the instance_type pricing entity of the ECS commodity has factors such as <code>vm_region_no, iooptimized, vm_os_kind, instance_type</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vm_region_no&quot;:&quot;cn-zhangjiakou-na62-a01&quot;,&quot;iooptimized&quot;:&quot;optimized&quot;,&quot;vm_os_kind&quot;:&quot;windows&quot;,&quot;instance_type&quot;:&quot;ecs.i1.xlarge&quot;}</p>
          */
         @NameInMap("SkuFactorMap")
         public java.util.Map<String, String> skuFactorMap;

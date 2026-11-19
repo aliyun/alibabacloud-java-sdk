@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgAccountRequest extends TeaModel {
     /**
-     * <p>The properties of the new account. In the console, click Account Properties in the top menu bar to go to the <strong>Security Settings</strong> page and view the properties.</p>
+     * <p>The attributes of the new account. To view the attributes, click Account Attributes in the top menu bar of the console to go to the <strong>Security Settings</strong> page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,25 +17,25 @@ public class CreateAgAccountRequest extends TeaModel {
      * <p>The name of the city in English.</p>
      * 
      * <strong>example:</strong>
-     * <p>北京</p>
+     * <p>Beijing</p>
      */
     @NameInMap("CityName")
     public String cityName;
 
     /**
-     * <p>The name of the enterprise. This is the enterprise name that corresponds to the Unified Social Credit Code.</p>
+     * <p>The name of the enterprise. The name must be the same as the enterprise name associated with the unified social credit code.</p>
      * 
      * <strong>example:</strong>
-     * <p>阿里云测试有限公司</p>
+     * <p>Alibaba Cloud Test Co., Ltd</p>
      */
     @NameInMap("EnterpriseName")
     public String enterpriseName;
 
     /**
-     * <p>The first name of the user under the level 1 category.</p>
+     * <p>The name of the first-level category.</p>
      * 
      * <strong>example:</strong>
-     * <p>志成</p>
+     * <p>Zhicheng</p>
      */
     @NameInMap("FirstName")
     public String firstName;
@@ -45,13 +45,13 @@ public class CreateAgAccountRequest extends TeaModel {
      * <p>Maximum length: 64 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>吴</p>
+     * <p>Wu</p>
      */
     @NameInMap("LastName")
     public String lastName;
 
     /**
-     * <p>The logon email address of the member account.</p>
+     * <p>The logon email address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class CreateAgAccountRequest extends TeaModel {
      * <p>The name of the province. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
-     * <p>北京</p>
+     * <p>Beijing</p>
      */
     @NameInMap("ProvinceName")
     public String provinceName;

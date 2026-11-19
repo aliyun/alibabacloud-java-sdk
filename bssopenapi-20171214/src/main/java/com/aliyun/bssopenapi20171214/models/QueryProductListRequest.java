@@ -15,7 +15,7 @@ public class QueryProductListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of records per page. Maximum value: 300. Default value: 20.</p>
+     * <p>The number of entries per page. Maximum value: 300. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

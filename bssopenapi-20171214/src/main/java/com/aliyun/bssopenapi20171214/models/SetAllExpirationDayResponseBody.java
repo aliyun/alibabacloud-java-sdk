@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetAllExpirationDayResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,25 +14,25 @@ public class SetAllExpirationDayResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message that is returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The message that is returned</p>
+     * <p>Response message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>The ID of the request</p>
+     * <p>Request ID</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

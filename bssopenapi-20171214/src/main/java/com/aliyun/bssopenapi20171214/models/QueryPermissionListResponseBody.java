@@ -114,7 +114,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
          * <p>The permission name.</p>
          * 
          * <strong>example:</strong>
-         * <p>主账号 子账号共享主账号信控身份</p>
+         * <p>主帐号允许子帐号共享主帐号信控身份</p>
          */
         @NameInMap("PermissionName")
         public String permissionName;

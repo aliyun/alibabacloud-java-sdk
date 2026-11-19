@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryResellerUserAlarmThresholdRequest extends TeaModel {
     /**
-     * <p>The type of alert. This parameter is required. Set the value to quota_low_balance, which indicates a low quota alert.</p>
+     * <p>The alert type. Required. Valid values: quota_low_balance: Quota low-balance alert.</p>
      * 
      * <strong>example:</strong>
      * <p>quota_low_balance</p>

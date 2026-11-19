@@ -14,13 +14,13 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetResourcePackagePriceResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
@@ -142,7 +142,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
 
     public static class GetResourcePackagePriceResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the currency.</p>
+         * <p>The currency.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -151,7 +151,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discounted amount. Unit: CNY.</p>
+         * <p>The discount price. Unit: CNY.</p>
          * 
          * <strong>example:</strong>
          * <p>215040</p>
@@ -172,7 +172,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         public GetResourcePackagePriceResponseBodyDataPromotions promotions;
 
         /**
-         * <p>The price at which the transaction is made. Unit: CNY.</p>
+         * <p>The transaction price. Unit: CNY.</p>
          * 
          * <strong>example:</strong>
          * <p>1075200</p>

@@ -5,67 +5,67 @@ import com.aliyun.tea.*;
 
 public class AttributeInfoDTO extends TeaModel {
     /**
-     * <p>The property categories.</p>
+     * <p>The attribute categories.</p>
      */
     @NameInMap("AttributeCategories")
     public java.util.List<String> attributeCategories;
 
     /**
-     * <p>The property source.</p>
+     * <p>The attribute source.</p>
      */
     @NameInMap("AttributeSource")
     public String attributeSource;
 
     /**
-     * <p>The property type.</p>
+     * <p>The attribute type.</p>
      */
     @NameInMap("AttributeType")
     public String attributeType;
 
     /**
-     * <p>The property code.</p>
+     * <p>The attribute code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The composite properties (basic information).</p>
+     * <p>The composite attributes (basic information).</p>
      */
     @NameInMap("CompositeAttributes")
     public java.util.List<BaseAttributeInfoDTO> compositeAttributes;
 
     /**
-     * <p>The property description (translated).</p>
+     * <p>The attribute description (translated).</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The description properties (basic information).</p>
+     * <p>The description attributes (basic information).</p>
      */
     @NameInMap("DescriptionAttributes")
     public java.util.List<BaseAttributeInfoDTO> descriptionAttributes;
 
     /**
-     * <p>The property name (translated).</p>
+     * <p>The attribute name (translated).</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The O&amp;M property configuration.</p>
+     * <p>The O&amp;M attribute configuration.</p>
      */
     @NameInMap("OperationalAttributeConfig")
     public String operationalAttributeConfig;
 
     /**
-     * <p>The O&amp;M property type.</p>
+     * <p>The O&amp;M attribute type.</p>
      */
     @NameInMap("OperationalAttributeType")
     public String operationalAttributeType;
 
     /**
-     * <p>The sub-properties (complete information).</p>
+     * <p>The sub-attributes (complete information).</p>
      */
     @NameInMap("SubAttributes")
     public java.util.List<AttributeInfoDTO> subAttributes;
@@ -83,7 +83,7 @@ public class AttributeInfoDTO extends TeaModel {
     public String valueType;
 
     /**
-     * <p>The property value list.</p>
+     * <p>The attribute value list.</p>
      */
     @NameInMap("Values")
     public java.util.List<AttributeValueInfoDTO> values;

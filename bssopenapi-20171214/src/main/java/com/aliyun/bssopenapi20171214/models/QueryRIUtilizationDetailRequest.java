@@ -14,7 +14,7 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public String deductedInstanceId;
 
     /**
-     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The end time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The instance type corresponding to the reserved instance.</p>
+     * <p>The instance type of the reserved instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Instancetyp</p>
@@ -54,7 +54,7 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
      * <p>Valid values:</p>
      * <ul>
      * <li>ecsRi: ECS reserved instances. This is the default value.</li>
-     * <li>scu_bag: Storage capacity unit (SCU) plans.</li>
+     * <li>scu_bag: storage capacity units (SCUs).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -74,7 +74,7 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public String RIInstanceId;
 
     /**
-     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * <p>The start time. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,45 +4,18 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryUserOmsDataResponseBody extends TeaModel {
-    /**
-     * <p>The status code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("Data")
     public QueryUserOmsDataResponseBodyData data;
 
-    /**
-     * <p>The error message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Successful！</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -92,27 +65,12 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
     }
 
     public static class QueryUserOmsDataResponseBodyData extends TeaModel {
-        /**
-         * <p>The host ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn</p>
-         */
         @NameInMap("HostId")
         public String hostId;
 
-        /**
-         * <p>The NextToken field for the start of the next page. If this field is empty or not present, it indicates that no more data is available.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NextToken</p>
-         */
         @NameInMap("Marker")
         public String marker;
 
-        /**
-         * <p>The OMS data list.</p>
-         */
         @NameInMap("OmsData")
         public java.util.List<java.util.Map<String, ?>> omsData;
 

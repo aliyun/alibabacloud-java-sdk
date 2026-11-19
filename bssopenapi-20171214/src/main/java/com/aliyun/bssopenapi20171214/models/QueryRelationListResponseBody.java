@@ -14,13 +14,13 @@ public class QueryRelationListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The message body.</p>
      */
     @NameInMap("Data")
     public QueryRelationListResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful!</p>
@@ -29,7 +29,7 @@ public class QueryRelationListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7FC5D662-37FD-40A6-85B1-33442D815184</p>
@@ -38,7 +38,7 @@ public class QueryRelationListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -111,7 +111,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The display name of the account.</p>
+         * <p>The display name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>test4</p>
@@ -120,7 +120,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         public String accountNickName;
 
         /**
-         * <p>The type of the financial account. Valid values: MASTER and MEMBER.</p>
+         * <p>The type of the enterprise financial account. Valid values: MASTER and MEMBER.</p>
          * 
          * <strong>example:</strong>
          * <p>MEMBER</p>
@@ -129,7 +129,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The time when the relationship expires. If this parameter is empty, the relationship does not expire.</p>
+         * <p>The time when the relationship expires. An empty value indicates that the relationship does not expire.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-08T15:12Z</p>
@@ -147,7 +147,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         public Long relationId;
 
         /**
-         * <p>The relationship type. <code>FinancialManagement</code> indicates Financial Management and <code>FinancialTrusteeship</code> indicates finance trusteeship.</p>
+         * <p>The relationship policy. A value of FinancialManagement indicates financial management, and a value of FinancialTrusteeship indicates finance trusteeship.</p>
          * 
          * <strong>example:</strong>
          * <p>FinancialManagement</p>
@@ -156,7 +156,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         public String relationType;
 
         /**
-         * <p>The time when the relationship was established. The time is in UTC and follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * <p>The time when the relationship is established. The time follows the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z (which is 20:00:00 on May 23, 2016 in UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-02T15:12Z</p>
@@ -165,7 +165,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         public String setupTime;
 
         /**
-         * <p>The time when the relationship takes effect. The time is in UTC and follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * <p>The effective period of the relationship. The time follows the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z (which is 20:00:00 on May 23, 2016 in UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-02T15:12Z</p>
@@ -174,7 +174,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the relationship. The value is an enumeration of RelationshipStatusEnum.</p>
+         * <p>The relationship status. Valid values are the enumerated values of RelationshipStatusEnum.</p>
          * 
          * <strong>example:</strong>
          * <p>RELATED</p>

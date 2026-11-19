@@ -14,13 +14,13 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message description.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful！</p>
@@ -29,7 +29,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -38,7 +38,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
 
     public static class DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The amount after a discount is applied.</p>
+         * <p>The amount after discount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -102,8 +102,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double afterDiscountAmount;
 
         /**
-         * <p>The amortization month.
-         * Format: YYYYMM.</p>
+         * <p>The amortization month. Format: YYYYMM.</p>
          * 
          * <strong>example:</strong>
          * <p>202210</p>
@@ -114,10 +113,8 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         /**
          * <p>The amortization status. Valid values:</p>
          * <ul>
-         * <li><p>amortized: The cost is amortized.</p>
-         * </li>
-         * <li><p>unAmortized: The cost is not amortized.</p>
-         * </li>
+         * <li>amortized: amortized.</li>
+         * <li>unAmortized: unamortized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +142,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public String billAccountName;
 
         /**
-         * <p>The ID of the resource owner.</p>
+         * <p>The resource ownership account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>185xxxxx489</p>
@@ -154,7 +151,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Long billOwnerID;
 
         /**
-         * <p>The name of the resource owner.</p>
+         * <p>The name of the account to which the resources belong.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -172,8 +169,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public String bizType;
 
         /**
-         * <p>The billing cycle.
-         * Format: YYYYMM.</p>
+         * <p>The billing cycle. Format: YYYYMM.</p>
          * 
          * <strong>example:</strong>
          * <p>202210</p>
@@ -182,7 +178,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public String consumePeriod;
 
         /**
-         * <p>The amount that is amortized in the current period, after a discount is applied.</p>
+         * <p>The current amortization amount after discount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -191,7 +187,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double currentAmortizationAfterDiscountAmount;
 
         /**
-         * <p>The amount deducted by cash coupons that is amortized in the current period.</p>
+         * <p>The current amortization amount deducted by vouchers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -200,7 +196,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double currentAmortizationDeductedByCashCoupons;
 
         /**
-         * <p>The amount deducted by coupons that is amortized in the current period.</p>
+         * <p>The current amortization amount deducted by coupons.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -209,7 +205,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double currentAmortizationDeductedByCoupons;
 
         /**
-         * <p>The amount paid by prepaid card that is amortized in the current period.</p>
+         * <p>The current amortization amount paid by prepaid cards.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -218,7 +214,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double currentAmortizationDeductedByPrepaidCard;
 
         /**
-         * <p>The expenditure amount that is amortized in the current period. This amount can be invoiced.</p>
+         * <p>The current amortization expenditure amount (invoiceable).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -227,7 +223,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double currentAmortizationExpenditureAmount;
 
         /**
-         * <p>The discount that is amortized in the current period.</p>
+         * <p>The current amortization invoice discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -236,7 +232,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double currentAmortizationInvoiceDiscount;
 
         /**
-         * <p>The pretax amount that is amortized in the current period.</p>
+         * <p>The current amortization pretax amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -245,7 +241,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double currentAmortizationPretaxAmount;
 
         /**
-         * <p>The pretax gross amount that is amortized in the current period.</p>
+         * <p>The current amortization pretax gross amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -254,7 +250,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double currentAmortizationPretaxGrossAmount;
 
         /**
-         * <p>The amount rounded down that is amortized in the current period.</p>
+         * <p>The current amortization round-down discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -263,7 +259,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double currentAmortizationRoundDownDiscount;
 
         /**
-         * <p>The amount deducted by cash coupons.</p>
+         * <p>The amount deducted by vouchers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -281,7 +277,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double deductedByCoupons;
 
         /**
-         * <p>The amount paid by prepaid card.</p>
+         * <p>The amount paid by prepaid cards.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -290,7 +286,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double deductedByPrepaidCard;
 
         /**
-         * <p>The expenditure amount. This amount can be invoiced.</p>
+         * <p>The expenditure amount (invoiceable).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -299,7 +295,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double expenditureAmount;
 
         /**
-         * <p>The discount.</p>
+         * <p>The invoice discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -326,7 +322,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double pretaxGrossAmount;
 
         /**
-         * <p>The amount that was amortized before the beginning of the period, after a discount is applied.</p>
+         * <p>The previously amortized amount after discount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -335,7 +331,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double previouslyAmortizedAfterDiscountAmount;
 
         /**
-         * <p>The amount deducted by cash coupons that was amortized before the beginning of the period.</p>
+         * <p>The previously amortized amount deducted by vouchers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -344,7 +340,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double previouslyAmortizedDeductedByCashCoupons;
 
         /**
-         * <p>The amount deducted by coupons that was amortized before the beginning of the period.</p>
+         * <p>The previously amortized amount deducted by coupons.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -353,7 +349,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double previouslyAmortizedDeductedByCoupons;
 
         /**
-         * <p>The amount paid by prepaid card that was amortized before the beginning of the period.</p>
+         * <p>The previously amortized amount paid by prepaid cards.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -362,7 +358,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double previouslyAmortizedDeductedByPrepaidCard;
 
         /**
-         * <p>The expenditure amount that was amortized before the beginning of the period. This amount can be invoiced.</p>
+         * <p>The previously amortized expenditure amount (invoiceable).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -371,7 +367,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double previouslyAmortizedExpenditureAmount;
 
         /**
-         * <p>The discount that was amortized before the beginning of the period.</p>
+         * <p>The previously amortized invoice discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -380,7 +376,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double previouslyAmortizedInvoiceDiscount;
 
         /**
-         * <p>The pretax amount that was amortized before the beginning of the period.</p>
+         * <p>The previously amortized pretax amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -389,7 +385,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double previouslyAmortizedPretaxAmount;
 
         /**
-         * <p>The pretax gross amount that was amortized before the beginning of the period.</p>
+         * <p>The previously amortized pretax gross amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -398,7 +394,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double previouslyAmortizedPretaxGrossAmount;
 
         /**
-         * <p>The amount rounded down that was amortized before the beginning of the period.</p>
+         * <p>The previously amortized round-down discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -416,16 +412,16 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public String productCode;
 
         /**
-         * <p>The details of the product.</p>
+         * <p>The product detail.</p>
          * 
          * <strong>example:</strong>
-         * <p>云数据库RDS</p>
+         * <p>ApsaraDB RDS</p>
          */
         @NameInMap("ProductDetail")
         public String productDetail;
 
         /**
-         * <p>The code of the product details.</p>
+         * <p>The product detail code.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -437,13 +433,13 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
          * <p>The product name.</p>
          * 
          * <strong>example:</strong>
-         * <p>云数据库RDS</p>
+         * <p>ApsaraDB RDS</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
-         * <p>The unamortized amount at the end of the period, after a discount is applied.</p>
+         * <p>The remaining amortization amount after discount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -452,7 +448,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double remainingAmortizationAfterDiscountAmount;
 
         /**
-         * <p>The unamortized amount deducted by cash coupons at the end of the period.</p>
+         * <p>The remaining amortization amount deducted by vouchers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -461,7 +457,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double remainingAmortizationDeductedByCashCoupons;
 
         /**
-         * <p>The unamortized amount deducted by coupons at the end of the period.</p>
+         * <p>The remaining amortization amount deducted by coupons.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -470,7 +466,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double remainingAmortizationDeductedByCoupons;
 
         /**
-         * <p>The unamortized amount paid by prepaid card at the end of the period.</p>
+         * <p>The remaining amortization amount paid by prepaid cards.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -479,7 +475,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double remainingAmortizationDeductedByPrepaidCard;
 
         /**
-         * <p>The unamortized expenditure amount at the end of the period. This amount can be invoiced.</p>
+         * <p>The remaining amortization expenditure amount (invoiceable).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -488,7 +484,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double remainingAmortizationExpenditureAmount;
 
         /**
-         * <p>The unamortized discount at the end of the period.</p>
+         * <p>The remaining amortization invoice discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -497,7 +493,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double remainingAmortizationInvoiceDiscount;
 
         /**
-         * <p>The unamortized pretax amount at the end of the period.</p>
+         * <p>The remaining amortization pretax amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -506,7 +502,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double remainingAmortizationPretaxAmount;
 
         /**
-         * <p>The unamortized pretax gross amount at the end of the period.</p>
+         * <p>The remaining amortization pretax gross amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -515,7 +511,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double remainingAmortizationPretaxGrossAmount;
 
         /**
-         * <p>The unamortized amount rounded down at the end of the period.</p>
+         * <p>The remaining amortization round-down discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -524,7 +520,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Double remainingAmortizationRoundDownDiscount;
 
         /**
-         * <p>The amount rounded down.</p>
+         * <p>The round-down discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -535,10 +531,8 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         /**
          * <p>The subscription type. Valid values:</p>
          * <ul>
-         * <li><p>Subscription: subscription.</p>
-         * </li>
-         * <li><p>PayAsYouGo: pay-as-you-go.</p>
-         * </li>
+         * <li>Subscription: subscription.</li>
+         * <li>PayAsYouGo: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -948,7 +942,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
 
     public static class DescribeProductAmortizedCostByAmortizationPeriodResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the account.</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>185766xxxx</p>
@@ -957,7 +951,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public String accountID;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The user account.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -972,7 +966,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public java.util.List<DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems> items;
 
         /**
-         * <p>The maximum number of entries returned.</p>
+         * <p>The maximum number of records returned for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -981,7 +975,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public Integer maxResults;
 
         /**
-         * <p>The token that is used to query the next page of results.</p>
+         * <p>The token that specifies the position from which the current call starts reading. The value must be empty or set to the NextToken value returned in the previous response. Otherwise, an error is reported. An empty value indicates that the reading starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
@@ -990,7 +984,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public String nextToken;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

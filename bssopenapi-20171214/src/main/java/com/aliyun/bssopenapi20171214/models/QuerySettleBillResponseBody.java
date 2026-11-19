@@ -38,7 +38,7 @@ public class QuerySettleBillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -523,7 +523,7 @@ public class QuerySettleBillResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The billing cycle, in the format of YYYY-MM.</p>
+         * <p>The billing cycle. Format: YYYY-MM.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-02</p>
@@ -535,7 +535,7 @@ public class QuerySettleBillResponseBody extends TeaModel {
         public QuerySettleBillResponseBodyDataItems items;
 
         /**
-         * <p>The maximum number of records returned in this request.</p>
+         * <p>The maximum number of records returned in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -544,7 +544,7 @@ public class QuerySettleBillResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that indicates the position where the current call reads to. An empty value indicates that all data has been read.</p>
+         * <p>The token that indicates the position where the current read operation ends. If this parameter is empty, all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUQARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>

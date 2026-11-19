@@ -38,7 +38,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -144,7 +144,7 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
         public Float coveragePercentage;
 
         /**
-         * <p>The total offset amount.</p>
+         * <p>The total deducted amount.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

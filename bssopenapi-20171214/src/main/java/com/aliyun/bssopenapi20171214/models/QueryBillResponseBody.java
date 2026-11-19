@@ -38,7 +38,7 @@ public class QueryBillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -481,7 +481,7 @@ public class QueryBillResponseBody extends TeaModel {
         public String accountID;
 
         /**
-         * <p>The account name.</p>
+         * <p>The account.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
@@ -490,7 +490,7 @@ public class QueryBillResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The billing cycle, in the YYYY-MM format.</p>
+         * <p>The billing cycle. Format: YYYY-MM.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-02</p>

@@ -12,7 +12,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to instance for savings plan instances.</p>
+     * <p>The resource type. Valid value: instance: savings plan instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags. You can add 1 to 20 tags at a time.</p>
+     * <p>The list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -59,7 +59,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. An empty string is allowed.</p>
+         * <p>The tag key. You can specify 1 to 20 tag keys at a time. Empty strings are allowed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value. You can specify 1 to 20 tag values at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

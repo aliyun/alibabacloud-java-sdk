@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
     /**
-     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</p>
+     * <p>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resources.</p>
      * 
      * <strong>example:</strong>
      * <p>123745698925000</p>
@@ -14,7 +14,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
     public Long billOwnerId;
 
     /**
-     * <p>Format: yyyy-MM-dd HH:mm:ss. The query excludes this time. If this parameter is left empty, the query covers data up to the current time.</p>
+     * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified end time is excluded from the query. If this parameter is left empty, the current time is used as the end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-20 00:00:00</p>
@@ -22,15 +22,18 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
     @NameInMap("EndPeriod")
     public String endPeriod;
 
+    /**
+     * <p>The filter parameters.</p>
+     */
     @NameInMap("FilterParam")
     public DescribeSavingsPlansCoverageTotalRequestFilterParam filterParam;
 
     /**
-     * <p>Valid values:</p>
+     * <p>The time granularity. Valid values:</p>
      * <ul>
-     * <li>MONTH: month granularity.</li>
-     * <li>DAY: day granularity.</li>
-     * <li>HOUR: hour granularity.</li>
+     * <li>MONTH: month</li>
+     * <li>DAY: day</li>
+     * <li>HOUR: hour</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +44,7 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
     public String periodType;
 
     /**
-     * <p>Format: yyyy-MM-dd HH:mm:ss. The query includes this time.</p>
+     * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss. The specified start time is included in the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,12 +99,27 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
     }
 
     public static class DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions extends TeaModel {
+        /**
+         * <p>The dimension code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMODITY</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The selection method for dimension filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IN</p>
+         */
         @NameInMap("SelectType")
         public String selectType;
 
+        /**
+         * <p>The list of dimension filter values.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -137,12 +155,21 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
     }
 
     public static class DescribeSavingsPlansCoverageTotalRequestFilterParamTags extends TeaModel {
+        /**
+         * <p>The tag code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The selection method for tag filtering.</p>
+         */
         @NameInMap("SelectType")
         public String selectType;
 
+        /**
+         * <p>The list of tag filter values.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -178,9 +205,15 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
     }
 
     public static class DescribeSavingsPlansCoverageTotalRequestFilterParam extends TeaModel {
+        /**
+         * <p>The list of dimension filter conditions.</p>
+         */
         @NameInMap("Dimensions")
         public java.util.List<DescribeSavingsPlansCoverageTotalRequestFilterParamDimensions> dimensions;
 
+        /**
+         * <p>The list of tag filter conditions.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeSavingsPlansCoverageTotalRequestFilterParamTags> tags;
 

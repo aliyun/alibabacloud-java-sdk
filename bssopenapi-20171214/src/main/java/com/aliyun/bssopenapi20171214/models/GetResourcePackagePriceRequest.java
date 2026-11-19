@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourcePackagePriceRequest extends TeaModel {
     /**
-     * <p>The validity period of the resource plan. The value must be the same as the duration of the resource plan specified in the specifications.</p>
+     * <p>The validity period of the resource plan. The value must match the available validity period of the specification size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class GetResourcePackagePriceRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default.
-     * When the <strong>OrderType</strong> is <strong>BUY</strong>, resource packs with the <strong>EffectiveDate longer than the current time of 6 months</strong> are not supported.
-     * If the <strong>OrderType</strong> is <strong>UPGRADE</strong>, the <strong>EffectiveDate</strong> <strong>must be less than or equal to</strong> the actual expiration time of the upgraded instance.
-     * Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The effective period of the resource plan. If you do not specify this parameter, the default is immediate.
+     * When the order type is <strong>BUY</strong>, you cannot query the price of a resource plan whose effective period is more than six months later than the current time.
+     * When the order type is <strong>UPGRADE</strong>, the effective period must be earlier than or equal to the actual expiration time of the resource plan to be upgraded.
+     * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-02-10T12:00:00Z</p>
@@ -27,7 +27,7 @@ public class GetResourcePackagePriceRequest extends TeaModel {
     public String effectiveDate;
 
     /**
-     * <p>The ID of the instance. <strong>This parameter is required when the order type is renewal or upgrade.</strong></p>
+     * <p>The instance ID. <strong>This parameter is required when the order type is renewal or upgrade.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>OSSBAG-cn-0xl0002</p>
@@ -36,14 +36,11 @@ public class GetResourcePackagePriceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the order. Valid values:</p>
+     * <p>The order type. Valid values:</p>
      * <ul>
-     * <li><p>BUY: You place the order to purchase an instance.</p>
-     * </li>
-     * <li><p>UPGRADE: You place the order to upgrade an instance.</p>
-     * </li>
-     * <li><p>RENEW: You place the order to renew an instance.</p>
-     * </li>
+     * <li>BUY: new purchase.</li>
+     * <li>UPGRADE: upgrade.</li>
+     * <li>RENEW: renewal.</li>
      * </ul>
      * <p>Default value: BUY.</p>
      * 
@@ -57,7 +54,7 @@ public class GetResourcePackagePriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The type of the resource plan. The value must be the same as the value of the <strong>ProductCode</strong> parameter that is returned when you call the <strong>DescribeResourcePackageProduct</strong> operation.</p>
+     * <p>The resource plan type. The value must be the same as the Code value of <strong>ResourcePackage</strong> returned by the operation that describes resource plans.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,12 +64,10 @@ public class GetResourcePackagePriceRequest extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The unit of validity period of the resource plan. Valid values:</p>
+     * <p>The unit of the validity period for the resource plan. Valid values:</p>
      * <ul>
-     * <li><p>Month</p>
-     * </li>
-     * <li><p>Year</p>
-     * </li>
+     * <li>Month: months.</li>
+     * <li>Year: years.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +77,7 @@ public class GetResourcePackagePriceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The code of service. You can query the service code by calling the <strong>QueryProductList</strong> operation or viewing <strong>Codes of Alibaba Cloud Services</strong>.</p>
+     * <p>The product code. You can obtain the product code by calling the <strong>QueryProductList</strong> operation or referring to the <strong>Alibaba Cloud product code quick reference guide</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +87,7 @@ public class GetResourcePackagePriceRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The specifications of the resource plan.</p>
+     * <p>The specification size of the resource plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
