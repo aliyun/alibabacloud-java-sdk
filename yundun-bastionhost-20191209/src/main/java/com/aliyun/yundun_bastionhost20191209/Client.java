@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Yundun-bastionhost";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-qingdao", "yundun-bastionhost.aliyuncs.com"),
@@ -720,7 +723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</p>
+     * <p>Grants a user access to assets. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</p>
      * 
      * @param request AttachHostAccountsToUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -764,7 +767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</p>
+     * <p>Grants a user access to assets. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</p>
      * 
      * @param request AttachHostAccountsToUserRequest
      * @return AttachHostAccountsToUserResponse
@@ -1010,7 +1013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates project authorization administrators.</p>
+     * <p>Associates administrators with a project authorization.</p>
      * 
      * @param request AttachProjectManagersToProjectAuthorizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1054,7 +1057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates project authorization administrators.</p>
+     * <p>Associates administrators with a project authorization.</p>
      * 
      * @param request AttachProjectManagersToProjectAuthorizationRequest
      * @return AttachProjectManagersToProjectAuthorizationResponse
@@ -1230,6 +1233,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AttachReviewersToReviewRuleResponse attachReviewersToReviewRule(AttachReviewersToReviewRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachReviewersToReviewRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Withdraws a submitted O&amp;M request.</p>
+     * 
+     * @param request CancelOperationTicketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelOperationTicketResponse
+     */
+    public CancelOperationTicketResponse cancelOperationTicketWithOptions(CancelOperationTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationTicketId)) {
+            query.put("OperationTicketId", request.operationTicketId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelOperationTicket"),
+            new TeaPair("version", "2019-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelOperationTicketResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Withdraws a submitted O&amp;M request.</p>
+     * 
+     * @param request CancelOperationTicketRequest
+     * @return CancelOperationTicketResponse
+     */
+    public CancelOperationTicketResponse cancelOperationTicket(CancelOperationTicketRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelOperationTicketWithOptions(request, runtime);
     }
 
     /**
@@ -3644,7 +3699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of instances.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3704,7 +3759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of instances.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -3716,7 +3771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Alibaba Cloud regions that support Bastionhost instances.</p>
+     * <p>Queries the Alibaba Cloud regions supported by Bastionhost instances.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3752,7 +3807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Alibaba Cloud regions that support Bastionhost instances.</p>
+     * <p>Queries the Alibaba Cloud regions supported by Bastionhost instances.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -3996,7 +4051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes authorized hosts and host accounts from a user group.</p>
+     * <p>Removes the hosts and host accounts authorized for a user group.</p>
      * 
      * @param request DetachHostAccountsFromUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4044,7 +4099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes authorized hosts and host accounts from a user group.</p>
+     * <p>Removes the hosts and host accounts authorized for a user group.</p>
      * 
      * @param request DetachHostAccountsFromUserGroupRequest
      * @return DetachHostAccountsFromUserGroupResponse
@@ -6022,11 +6077,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows administrators to retrieve the list of commands that require approval.
-     * The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
+     * <p>This operation allows administrators to retrieve a list of commands pending approval.
+     * The queries per second (QPS) limit for a single user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of commands that require approval.</p>
+     * <p>Queries a list of commands pending approval.</p>
      * 
      * @param request ListApproveCommandsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6035,6 +6090,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListApproveCommandsResponse listApproveCommandsWithOptions(ListApproveCommandsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.approvalStatus)) {
+            query.put("ApprovalStatus", request.approvalStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.approveCommandId)) {
+            query.put("ApproveCommandId", request.approveCommandId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -6074,11 +6137,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows administrators to retrieve the list of commands that require approval.
-     * The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
+     * <p>This operation allows administrators to retrieve a list of commands pending approval.
+     * The queries per second (QPS) limit for a single user is 10. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of commands that require approval.</p>
+     * <p>Queries a list of commands pending approval.</p>
      * 
      * @param request ListApproveCommandsRequest
      * @return ListApproveCommandsResponse
@@ -8010,8 +8073,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
-     * The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * <p>This API operation is used by administrators to retrieve a list of O&amp;M tickets pending approval.
+     * The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of O&amp;M tickets pending approval.</p>
@@ -8023,12 +8086,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListOperationTicketsResponse listOperationTicketsWithOptions(ListOperationTicketsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.approvalStatus)) {
+            query.put("ApprovalStatus", request.approvalStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.assetAddress)) {
             query.put("AssetAddress", request.assetAddress);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationTicketId)) {
+            query.put("OperationTicketId", request.operationTicketId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -8066,8 +8137,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
-     * The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * <p>This API operation is used by administrators to retrieve a list of O&amp;M tickets pending approval.
+     * The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of O&amp;M tickets pending approval.</p>
@@ -9880,7 +9951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves hosts to a different project in a batch.</p>
+     * <p>Updates the project ownership of multiple hosts.</p>
      * 
      * @param request ModifyHostsProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9928,7 +9999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves hosts to a different project in a batch.</p>
+     * <p>Updates the project ownership of multiple hosts.</p>
      * 
      * @param request ModifyHostsProjectRequest
      * @return ModifyHostsProjectResponse
@@ -11870,7 +11941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the effective asset scope for a specified control policy.</p>
+     * <p>Sets the asset scope for a specified control policy.</p>
      * 
      * @param request SetPolicyAssetScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11930,7 +12001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the effective asset scope for a specified control policy.</p>
+     * <p>Sets the asset scope for a specified control policy.</p>
      * 
      * @param request SetPolicyAssetScopeRequest
      * @return SetPolicyAssetScopeResponse
@@ -12454,7 +12525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tests the connectivity to the Active Directory (AD) authentication server configured for a Bastionhost instance. Use this operation to validate your AD settings before you save them.</p>
+     * <p>Verifies the AD service configuration of an instance.</p>
      * 
      * @param request VerifyInstanceADAuthServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12526,7 +12597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tests the connectivity to the Active Directory (AD) authentication server configured for a Bastionhost instance. Use this operation to validate your AD settings before you save them.</p>
+     * <p>Verifies the AD service configuration of an instance.</p>
      * 
      * @param request VerifyInstanceADAuthServerRequest
      * @return VerifyInstanceADAuthServerResponse
@@ -12538,7 +12609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tests the connectivity to the Lightweight Directory Access Protocol (LDAP) authentication server configured for a Bastionhost instance. Use this operation to validate your LDAP settings before you save them.</p>
+     * <p>Verifies the LDAP service configuration of an instance.</p>
      * 
      * @param request VerifyInstanceLDAPAuthServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12606,7 +12677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tests the connectivity to the Lightweight Directory Access Protocol (LDAP) authentication server configured for a Bastionhost instance. Use this operation to validate your LDAP settings before you save them.</p>
+     * <p>Verifies the LDAP service configuration of an instance.</p>
      * 
      * @param request VerifyInstanceLDAPAuthServerRequest
      * @return VerifyInstanceLDAPAuthServerResponse

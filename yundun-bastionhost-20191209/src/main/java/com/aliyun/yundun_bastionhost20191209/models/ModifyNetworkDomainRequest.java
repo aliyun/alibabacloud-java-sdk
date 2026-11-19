@@ -8,7 +8,7 @@ public class ModifyNetworkDomainRequest extends TeaModel {
      * <p>The new description of the network domain.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>This network domain is used for the test environment</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -76,7 +76,7 @@ public class ModifyNetworkDomainRequest extends TeaModel {
     /**
      * <p>The region ID of the Bastionhost instance to which the network domain to be modified belongs.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class ModifyNetworkDomainRequest extends TeaModel {
         public String address;
 
         /**
-         * <p>The type of the proxy server node to be modified. Valid values:</p>
+         * <p>The node type of the proxy server. Valid values:</p>
          * <ul>
          * <li><strong>Master</strong>: Primary proxy server.</li>
          * <li><strong>Slave</strong>: Secondary proxy server.</li>
@@ -181,7 +181,7 @@ public class ModifyNetworkDomainRequest extends TeaModel {
          * <p>The new password of the proxy server account.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Demo****123!</p>
          */
         @NameInMap("Password")
         public String password;

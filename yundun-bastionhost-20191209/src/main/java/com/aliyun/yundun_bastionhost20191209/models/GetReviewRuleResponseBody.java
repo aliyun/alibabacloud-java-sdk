@@ -42,7 +42,7 @@ public class GetReviewRuleResponseBody extends TeaModel {
 
     public static class GetReviewRuleResponseBodyReviewRulePrincipals extends TeaModel {
         /**
-         * <p>If the value of PrincipalType is RamUser, the returned value is the RAM user ID of the associated auditor. If the value of PrincipalType is RamRole, the returned value is the ARN of the RAM role of the associated auditor.</p>
+         * <p>If the PrincipalType parameter is set to RamUser, this parameter returns the ID of the RAM user that acts as the auditor. If the PrincipalType parameter is set to RamRole, this parameter returns the ARN of the RAM role that acts as the auditor.</p>
          * 
          * <strong>example:</strong>
          * <p>2061****5219</p>
@@ -51,7 +51,7 @@ public class GetReviewRuleResponseBody extends TeaModel {
         public String principalId;
 
         /**
-         * <p>The display name of the RAM user or RAM role of the associated auditor.</p>
+         * <p>The display name of the RAM user or RAM role that acts as the auditor.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -60,7 +60,7 @@ public class GetReviewRuleResponseBody extends TeaModel {
         public String principalName;
 
         /**
-         * <p>The auditor type. Valid values:</p>
+         * <p>The type of the auditor. Valid values:</p>
          * <ul>
          * <li><p><strong>RamUser</strong>: Resource Access Management (RAM) user.</p>
          * </li>
@@ -107,7 +107,7 @@ public class GetReviewRuleResponseBody extends TeaModel {
 
     public static class GetReviewRuleResponseBodyReviewRuleProjects extends TeaModel {
         /**
-         * <p>The project description.</p>
+         * <p>The description of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -131,7 +131,7 @@ public class GetReviewRuleResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The project name.</p>
+         * <p>The name of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>project1</p>
@@ -140,7 +140,7 @@ public class GetReviewRuleResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The project ID.</p>
+         * <p>The ID of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -198,25 +198,28 @@ public class GetReviewRuleResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The auditor information associated with the audit policy.</p>
+         * <p>The information about the auditors associated with the audit policy.</p>
          */
         @NameInMap("Principals")
         public java.util.List<GetReviewRuleResponseBodyReviewRulePrincipals> principals;
 
         /**
-         * <p>The array of project IDs specified as auditable in the audit policy. This parameter is valid only when the value of ScopeType is 2.</p>
+         * <p>The array of project IDs that can be audited based on the audit policy. This parameter is valid only when the value of ScopeType is 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[2,3]</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<Long> projectIds;
 
         /**
-         * <p>The auditable project information.</p>
+         * <p>The information about the projects that can be audited.</p>
          */
         @NameInMap("Projects")
         public java.util.List<GetReviewRuleResponseBodyReviewRuleProjects> projects;
 
         /**
-         * <p>The audit policy ID.</p>
+         * <p>The ID of the audit policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -234,7 +237,7 @@ public class GetReviewRuleResponseBody extends TeaModel {
         public String reviewRuleName;
 
         /**
-         * <p>The type of the auditable asset scope rule specified in the audit policy. Valid values:</p>
+         * <p>The type of the asset scope rule specified in the audit policy. Valid values:</p>
          * <ul>
          * <li><p><strong>1</strong>: All projects.</p>
          * </li>

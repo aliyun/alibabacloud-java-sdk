@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DetachHostAccountsFromUserGroupRequest extends TeaModel {
     /**
-     * <p>The host IDs and host account IDs that you want to remove from the user group.<br>You can specify up to 10 host IDs, and each host supports up to 10 host account IDs. You do not need to specify host account IDs. If you do not specify host account IDs, the authorized host and all authorized host accounts of the host are removed from the user group. For the specific structure of this parameter, see the Hosts parameter structure description below the request parameters list.</p>
+     * <p>Specifies the IDs of the hosts and host accounts whose authorization you want to remove from the user group.<br>You can specify up to 10 host IDs, and up to 10 host account IDs for each host. You can leave the host account IDs empty. If you do not specify host account IDs, the host and all its authorized host accounts are removed from the user group. For more information about the structure of this parameter, see the Hosts parameter structure description in the request parameters section.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query host IDs and call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query host account IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain host IDs and call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain host account IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DetachHostAccountsFromUserGroupRequest extends TeaModel {
     public String hosts;
 
     /**
-     * <p>The instance ID of the bastion host where the user group from which you want to remove authorization for hosts and host accounts resides.</p>
+     * <p>Specifies the instance ID of the Bastionhost instance that manages the user group for which you want to remove the authorization of hosts and host accounts.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,9 +40,9 @@ public class DetachHostAccountsFromUserGroupRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host instance where the user group from which you want to remove authorized hosts and host accounts resides.</p>
+     * <p>Specifies the region ID of the Bastionhost instance that manages the user group from which you want to remove authorized hosts and host accounts.</p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,9 +52,9 @@ public class DetachHostAccountsFromUserGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the user group from which you want to remove authorized hosts and host accounts.</p>
+     * <p>Specifies the ID of the user group from which you want to remove authorized hosts and host accounts.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

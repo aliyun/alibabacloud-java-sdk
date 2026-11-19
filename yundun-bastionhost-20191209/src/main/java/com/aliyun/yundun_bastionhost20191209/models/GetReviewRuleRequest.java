@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetReviewRuleRequest extends TeaModel {
     /**
-     * <p>The instance ID of the Bastionhost instance.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,7 +30,7 @@ public class GetReviewRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The audit policy ID.</p>
+     * <p>The ID of the audit policy.</p>
      * <blockquote>
      * <p>You can invoke the ListReviewRules operation to obtain this parameter.</p>
      * </blockquote>

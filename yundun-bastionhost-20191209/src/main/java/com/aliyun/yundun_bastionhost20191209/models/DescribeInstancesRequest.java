@@ -16,19 +16,19 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The status of the Bastionhost instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>PENDING</strong>: Uninitialized</p>
+     * <li><p><strong>PENDING</strong>: Not initialized.</p>
      * </li>
-     * <li><p><strong>CREATING</strong>: Creating </p>
+     * <li><p><strong>CREATING</strong>: Being created. </p>
      * </li>
-     * <li><p><strong>RUNNING</strong>: Running </p>
+     * <li><p><strong>RUNNING</strong>: Running. </p>
      * </li>
-     * <li><p><strong>EXPIRED</strong>: Expired </p>
+     * <li><p><strong>EXPIRED</strong>: Expired. </p>
      * </li>
-     * <li><p><strong>CREATE_FAILED</strong>: Creation failed</p>
+     * <li><p><strong>CREATE_FAILED</strong>: Creation failed.</p>
      * </li>
-     * <li><p><strong>UPGRADING</strong>: Upgrading</p>
+     * <li><p><strong>UPGRADING</strong>: Being upgraded.</p>
      * </li>
-     * <li><p><strong>UPGRADE_FAILED</strong>: Upgrade failed</p>
+     * <li><p><strong>UPGRADE_FAILED</strong>: Upgrade failed.</p>
      * </li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>Specifies the page number of the returned results. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the returned results. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +48,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Settings for a paged query. Specifies the number of Bastionhost instances to display on each page during paging. Default value: <strong>10</strong>, which indicates that 10 Bastionhost instances are displayed on each page.</p>
+     * <p>Settings for the number of Bastionhost instances to return on each page in a paged query. Default value: <strong>10</strong>, which indicates that 10 Bastionhost instances are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

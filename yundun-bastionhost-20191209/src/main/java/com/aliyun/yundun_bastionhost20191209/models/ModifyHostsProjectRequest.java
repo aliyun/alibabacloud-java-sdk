@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyHostsProjectRequest extends TeaModel {
     /**
-     * <p>The IDs of the hosts that you want to move. This parameter is a JSON-formatted string. You can specify up to 100 host IDs. Separate multiple host IDs with commas (,).</p>
+     * <p>The IDs of the hosts to be moved. The value is a JSON string. You can specify up to 100 host IDs. Separate multiple host IDs with commas (,).</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class ModifyHostsProjectRequest extends TeaModel {
     public String hostIds;
 
     /**
-     * <p>The instance ID of the bastion host.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,9 +40,9 @@ public class ModifyHostsProjectRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,9 +52,9 @@ public class ModifyHostsProjectRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the target project to which you want to move the hosts.</p>
+     * <p>The ID of the destination project to which you want to move the hosts.</p>
      * <blockquote>
-     * <p>You can call the ListProjectsForProjectAuthorizationPrincipal operation to query this parameter.</p>
+     * <p>You can call the ListProjectsForProjectAuthorizationPrincipal operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

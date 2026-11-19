@@ -59,6 +59,21 @@ public class ListApproveCommandsResponseBody extends TeaModel {
 
     public static class ListApproveCommandsResponseBodyApproveCommands extends TeaModel {
         /**
+         * <p>The status of the approval request. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Pending approval.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Approved.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ApprovalStatus")
+        public Integer approvalStatus;
+
+        /**
          * <p>The ID of the command pending approval.</p>
          * 
          * <strong>example:</strong>
@@ -68,7 +83,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         public String approveCommandId;
 
         /**
-         * <p>The name of the asset account.</p>
+         * <p>The name of the O&amp;M asset account.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -95,7 +110,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         public String assetName;
 
         /**
-         * <p>The source IP address from which the application is submitted.</p>
+         * <p>The source IP address from which the request was submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>172.18.XX.XX</p>
@@ -104,7 +119,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>The Bastionhost user who submitted the application.</p>
+         * <p>The Bastionhost user who submitted the request.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -122,7 +137,7 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         public String command;
 
         /**
-         * <p>The time when the application was submitted. Unit: seconds. The value is a UNIX timestamp.</p>
+         * <p>The time when the request was submitted. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1679393152</p>
@@ -149,8 +164,10 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The approval status.
-         * <strong>Wait</strong>: Pending approval.</p>
+         * <p>The approval status. Valid value:</p>
+         * <ul>
+         * <li><strong>Wait</strong>: Pending approval.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Wait</p>
@@ -161,6 +178,14 @@ public class ListApproveCommandsResponseBody extends TeaModel {
         public static ListApproveCommandsResponseBodyApproveCommands build(java.util.Map<String, ?> map) throws Exception {
             ListApproveCommandsResponseBodyApproveCommands self = new ListApproveCommandsResponseBodyApproveCommands();
             return TeaModel.build(map, self);
+        }
+
+        public ListApproveCommandsResponseBodyApproveCommands setApprovalStatus(Integer approvalStatus) {
+            this.approvalStatus = approvalStatus;
+            return this;
+        }
+        public Integer getApprovalStatus() {
+            return this.approvalStatus;
         }
 
         public ListApproveCommandsResponseBodyApproveCommands setApproveCommandId(String approveCommandId) {
