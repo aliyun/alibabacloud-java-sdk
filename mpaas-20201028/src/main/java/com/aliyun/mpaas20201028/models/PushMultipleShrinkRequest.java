@@ -321,6 +321,9 @@ public class PushMultipleShrinkRequest extends TeaModel {
         @NameInMap("TemplateKeyValue")
         public String templateKeyValue;
 
+        @NameInMap("VendorTemplate")
+        public String vendorTemplate;
+
         public static PushMultipleShrinkRequestTargetMsg build(java.util.Map<String, ?> map) throws Exception {
             PushMultipleShrinkRequestTargetMsg self = new PushMultipleShrinkRequestTargetMsg();
             return TeaModel.build(map, self);
@@ -356,6 +359,14 @@ public class PushMultipleShrinkRequest extends TeaModel {
         }
         public String getTemplateKeyValue() {
             return this.templateKeyValue;
+        }
+
+        public PushMultipleShrinkRequestTargetMsg setVendorTemplate(String vendorTemplate) {
+            this.vendorTemplate = vendorTemplate;
+            return this;
+        }
+        public String getVendorTemplate() {
+            return this.vendorTemplate;
         }
 
     }
