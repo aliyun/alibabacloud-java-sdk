@@ -29,7 +29,7 @@ public class GetBillingOverviewRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The list of grouping conditions. Currently, you must specify exactly one grouping dimension.</p>
+     * <p>The list of grouping conditions. Currently, exactly one grouping dimension must be specified.</p>
      */
     @NameInMap("groupBy")
     public java.util.List<GetBillingOverviewRequestGroupBy> groupBy;
@@ -53,7 +53,7 @@ public class GetBillingOverviewRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The query time range, which includes the start and end times. Both the start and end times are included in the query range. The time format must be consistent with the granularity, and the start time cannot be later than the end time.</p>
+     * <p>The query time range, which includes start and end. Both the start time and end time are included in the query range. The time format must be consistent with granularity, and start cannot be later than end.</p>
      */
     @NameInMap("timePeriod")
     public GetBillingOverviewRequestTimePeriod timePeriod;
@@ -155,7 +155,7 @@ public class GetBillingOverviewRequest extends TeaModel {
 
     public static class GetBillingOverviewRequestFilterDimensions extends TeaModel {
         /**
-         * <p>The filter field. For more information, see the &quot;Additional notes&quot; section below.</p>
+         * <p>The filter field. For more information, see the supplementary notes below.</p>
          * 
          * <strong>example:</strong>
          * <p>CHARGE_TYPE</p>
@@ -233,7 +233,7 @@ public class GetBillingOverviewRequest extends TeaModel {
 
     public static class GetBillingOverviewRequestGroupBy extends TeaModel {
         /**
-         * <p>The code of the grouping dimension. For more information, see the &quot;Additional notes&quot; section below.</p>
+         * <p>The code of the grouping dimension. For more information, see the supplementary notes below.</p>
          * 
          * <strong>example:</strong>
          * <p>BASE_MODEL</p>
@@ -258,7 +258,7 @@ public class GetBillingOverviewRequest extends TeaModel {
 
     public static class GetBillingOverviewRequestTimePeriod extends TeaModel {
         /**
-         * <p>The end time of the query. This time point is included in the query range. The format is determined by granularity.</p>
+         * <p>The end time of the query. This time point is included. The format is determined by <code>granularity</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>202609</p>
@@ -267,7 +267,7 @@ public class GetBillingOverviewRequest extends TeaModel {
         public String end;
 
         /**
-         * <p>The start time of the query. This time point is included in the query range. The format is determined by granularity.</p>
+         * <p>The start time of the query. This time point is included. The format is determined by <code>granularity</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>202609</p>

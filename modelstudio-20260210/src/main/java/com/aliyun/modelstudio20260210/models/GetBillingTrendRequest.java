@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBillingTrendRequest extends TeaModel {
     /**
-     * <p>The dimension filter condition.</p>
+     * <p>The dimension filter conditions.</p>
      */
     @NameInMap("filter")
     public GetBillingTrendRequestFilter filter;
@@ -53,7 +53,7 @@ public class GetBillingTrendRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The time range to query, including the start time and end time. This parameter is required.</p>
+     * <p>The time range for the query, which includes the start time and end time. This parameter is required.</p>
      */
     @NameInMap("timePeriod")
     public GetBillingTrendRequestTimePeriod timePeriod;
@@ -155,7 +155,7 @@ public class GetBillingTrendRequest extends TeaModel {
 
     public static class GetBillingTrendRequestFilterDimensions extends TeaModel {
         /**
-         * <p>The filter dimension code. For more information, see the &quot;Additional notes&quot; section below.</p>
+         * <p>The code of the filter dimension. For more information, see the &quot;Additional notes&quot; section below.</p>
          * 
          * <strong>example:</strong>
          * <p>CHARGE_TYPE</p>
@@ -233,7 +233,7 @@ public class GetBillingTrendRequest extends TeaModel {
 
     public static class GetBillingTrendRequestGroupBy extends TeaModel {
         /**
-         * <p>The grouping dimension code. For more information, see the &quot;Additional notes&quot; section below.</p>
+         * <p>The code of the grouping dimension. For more information, see the &quot;Additional notes&quot; section below.</p>
          * 
          * <strong>example:</strong>
          * <p>BASE_MODEL</p>

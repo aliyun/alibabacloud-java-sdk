@@ -29,10 +29,10 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li>true: successful</li>
-     * <li>false: failed</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         public Long cycleEndTime;
 
         /**
-         * <p>The entitlement code (subscription code). Consumption is not required in the credits scenario.</p>
+         * <p>The entitlement code. This is the subscription code and is not required for consumption in the credits scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -216,7 +216,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         public String accountEmail;
 
         /**
-         * <p>The ID of the attached member accounts.</p>
+         * <p>The ID of the member accounts to attach.</p>
          * 
          * <strong>example:</strong>
          * <p>acc_123456789</p>
@@ -236,8 +236,8 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         /**
          * <p>The assignment status. Valid values:</p>
          * <ul>
-         * <li>ASSIGNED</li>
-         * <li>UNASSIGNED</li>
+         * <li>ASSIGNED: Assigned.</li>
+         * <li>UNASSIGNED: Unassigned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The active entitlement instances. For the TokenPlan product, this list contains only one active entitlement instance.</p>
+         * <p>The currently active entitlement instances. For the TokenPlan product, this list contains only one active entitlement instance.</p>
          */
         @NameInMap("EquityList")
         public java.util.List<GetSubscriptionSeatDetailsResponseBodyDataItemsEquityList> equityList;
@@ -282,9 +282,9 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         /**
          * <p>The seat type. Valid values: </p>
          * <ul>
-         * <li>standard: standard seat</li>
-         * <li>pro: advanced seat</li>
-         * <li>max: premium seat</li>
+         * <li>standard: Standard seat.</li>
+         * <li>pro: Pro seat.</li>
+         * <li>max: Premium seat.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,12 +305,12 @@ public class GetSubscriptionSeatDetailsResponseBody extends TeaModel {
         /**
          * <p>The seat status. Valid values:</p>
          * <ul>
-         * <li>CREATING: creating</li>
-         * <li>NORMAL: valid</li>
-         * <li>LIMIT: restricted due to overdue payment</li>
-         * <li>RELEASE: released upon expiration</li>
-         * <li>STOP: stopped upon expiration</li>
-         * <li>REFUNDED: refunded</li>
+         * <li>CREATING: Creating.</li>
+         * <li>NORMAL: Valid.</li>
+         * <li>LIMIT: Restricted due to overdue payment.</li>
+         * <li>RELEASE: Released upon expiration.</li>
+         * <li>STOP: Stopped upon expiration.</li>
+         * <li>REFUNDED: Refunded.</li>
          * </ul>
          * 
          * <strong>example:</strong>

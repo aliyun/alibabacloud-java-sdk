@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "ModelStudio";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("modelstudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -195,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</p>
+     * <p>Creates an API key as an authentication credential before you use large models or applications in Alibaba Cloud Model Studio.</p>
      * 
      * @param request CreateApiKeyRequest
      * @param headers map
@@ -239,7 +242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</p>
+     * <p>Creates an API key as an authentication credential before you use large models or applications in Alibaba Cloud Model Studio.</p>
      * 
      * @param request CreateApiKeyRequest
      * @return CreateApiKeyResponse
@@ -745,7 +748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the billing trends.</p>
+     * <p>Queries billing trends.</p>
      * 
      * @param tmpReq GetBillingTrendRequest
      * @param headers map
@@ -825,7 +828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the billing trends.</p>
+     * <p>Queries billing trends.</p>
      * 
      * @param request GetBillingTrendRequest
      * @return GetBillingTrendResponse
@@ -926,7 +929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on seat details.</p>
+     * <p>Performs a paged query on seat details with paging.</p>
      * 
      * @param request GetSubscriptionSeatDetailsRequest
      * @param headers map
@@ -936,6 +939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSubscriptionSeatDetailsResponse getSubscriptionSeatDetailsWithOptions(GetSubscriptionSeatDetailsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceCode)) {
+            query.put("InstanceCode", request.instanceCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("PageNo", request.pageNo);
         }
@@ -980,7 +987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on seat details.</p>
+     * <p>Performs a paged query on seat details with paging.</p>
      * 
      * @param request GetSubscriptionSeatDetailsRequest
      * @return GetSubscriptionSeatDetailsResponse
@@ -1248,7 +1255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries model throttling for a workspace.</p>
+     * <p>Queries the model throttling configurations for a workspace.</p>
      * 
      * @param request ListModelLimitsRequest
      * @param headers map
@@ -1298,7 +1305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries model throttling for a workspace.</p>
+     * <p>Queries the model throttling configurations for a workspace.</p>
      * 
      * @param request ListModelLimitsRequest
      * @return ListModelLimitsResponse
@@ -1721,7 +1728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the API key value changes. The API key ID remains unchanged.</p>
+     * <p>Only the API key changes. The API key ID remains unchanged.</p>
      * 
      * <b>summary</b> : 
      * <p>Resets an API key.</p>
@@ -1752,7 +1759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the API key value changes. The API key ID remains unchanged.</p>
+     * <p>Only the API key changes. The API key ID remains unchanged.</p>
      * 
      * <b>summary</b> : 
      * <p>Resets an API key.</p>
@@ -1812,7 +1819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only the API key changes. The API key ID remains unchanged.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets a UAC API key.</p>
+     * <p>Resets the UAC API key.</p>
      * 
      * @param request RotateTokenPlanKeyRequest
      * @param headers map
@@ -1849,7 +1856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only the API key changes. The API key ID remains unchanged.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resets a UAC API key.</p>
+     * <p>Resets the UAC API key.</p>
      * 
      * @param request RotateTokenPlanKeyRequest
      * @return RotateTokenPlanKeyResponse

@@ -1,3 +1,7 @@
+2026-11-19 Version: 2.2.5
+- Update API GetSubscriptionSeatDetails: add request parameters InstanceCode.
+
+
 2026-10-29 Version: 2.2.4
 - Update API GetBillingOverview: add request parameters granularity.
 - Update API GetBillingOverview: add request parameters timePeriod.

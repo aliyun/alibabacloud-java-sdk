@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBillingTrendShrinkRequest extends TeaModel {
     /**
-     * <p>The dimension filter condition.</p>
+     * <p>The dimension filter conditions.</p>
      */
     @NameInMap("filter")
     public String filterShrink;
@@ -53,7 +53,7 @@ public class GetBillingTrendShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The time range to query, including the start time and end time. This parameter is required.</p>
+     * <p>The time range for the query, which includes the start time and end time. This parameter is required.</p>
      */
     @NameInMap("timePeriod")
     public String timePeriodShrink;

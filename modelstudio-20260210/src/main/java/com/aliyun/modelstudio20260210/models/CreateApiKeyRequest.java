@@ -23,7 +23,7 @@ public class CreateApiKeyRequest extends TeaModel {
      * <p>The workspace ID.</p>
      * <blockquote>
      * <ul>
-     * <li>If you do not specify this parameter, the created API key is automatically assigned to the default workspace.</li>
+     * <li>If you do not specify this parameter, the created API key automatically belongs to the default workspace.</li>
      * </ul>
      * </blockquote>
      * 
@@ -66,14 +66,14 @@ public class CreateApiKeyRequest extends TeaModel {
         /**
          * <p>The list of accessible models.</p>
          * <blockquote>
-         * <p>Notice: This parameter takes effect only when allowAllModels is set to false.</p>
+         * <p>Notice: The specified values take effect only when allowAllModels is set to false.</p>
          * </blockquote>
          */
         @NameInMap("accessibleModels")
         public java.util.List<String> accessibleModels;
 
         /**
-         * <p>Specifies whether to allow access to all models that have been granted inference permissions in the workspace. Valid values:</p>
+         * <p>Specifies whether to allow access to all models granted inference permissions in the workspace. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -113,7 +113,7 @@ public class CreateApiKeyRequest extends TeaModel {
          * <p>The IP address whitelist.</p>
          * <blockquote>
          * <ul>
-         * <li>If you select custom permissions and do not specify an IP address whitelist, the server defaults to IPv4 (0.0.0.0/0) and IPv6 (::/0), which allows all IP addresses.</li>
+         * <li>When you customize the permission scope and do not specify the IP address whitelist, the server sets the default values to IPv4 (0.0.0.0/0) and IPv6 (::/0), which allows access from all IP addresses.</li>
          * </ul>
          * </blockquote>
          */
@@ -121,13 +121,13 @@ public class CreateApiKeyRequest extends TeaModel {
         public java.util.List<String> accessIps;
 
         /**
-         * <p>The model access scope. If you configure this parameter, you can only call the selected models. If you do not configure this parameter, you can access all models that have been granted inference permissions in the specified workspace by default.</p>
+         * <p>The model access scope.</p>
          */
         @NameInMap("modelAccessScope")
         public CreateApiKeyRequestAuthModelAccessScope modelAccessScope;
 
         /**
-         * <p>The permission type. Valid values: All: all permissions. Custom: custom permissions.</p>
+         * <p>The permission type. All indicates all permissions. Custom indicates custom permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>

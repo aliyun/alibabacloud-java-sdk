@@ -29,7 +29,7 @@ public class GetBillingOverviewShrinkRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The list of grouping conditions. Currently, you must specify exactly one grouping dimension.</p>
+     * <p>The list of grouping conditions. Currently, exactly one grouping dimension must be specified.</p>
      */
     @NameInMap("groupBy")
     public String groupByShrink;
@@ -53,7 +53,7 @@ public class GetBillingOverviewShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The query time range, which includes the start and end times. Both the start and end times are included in the query range. The time format must be consistent with the granularity, and the start time cannot be later than the end time.</p>
+     * <p>The query time range, which includes start and end. Both the start time and end time are included in the query range. The time format must be consistent with granularity, and start cannot be later than end.</p>
      */
     @NameInMap("timePeriod")
     public String timePeriodShrink;

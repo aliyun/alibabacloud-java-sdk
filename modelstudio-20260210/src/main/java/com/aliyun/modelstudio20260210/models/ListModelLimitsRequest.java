@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListModelLimitsRequest extends TeaModel {
     /**
-     * <p>The maximum number of results. Valid values: 0 to 200.</p>
+     * <p>The maximum number of results to return. Valid values: 0 to 200.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -14,7 +14,7 @@ public class ListModelLimitsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The single model for exact match.</p>
+     * <p>The model for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen-plus</p>
@@ -32,7 +32,7 @@ public class ListModelLimitsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page token.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>lwytFRtLdNk=</p>

@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1. Valid values: positive integers.</p>
+     * <p>The instance code of the seat.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>subs_xxxxx</p>
+     */
+    @NameInMap("InstanceCode")
+    public String instanceCode;
+
+    /**
+     * <p>The page number. Default value: 1. Valid values: a positive integer.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,11 +32,11 @@ public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The filter for the seat assignment status. Valid values:</p>
+     * <p>Specifies whether to filter by seat assignment status. Valid values:</p>
      * <ul>
-     * <li>true: assigned</li>
-     * <li>false: unassigned</li>
-     * <li>null: all</li>
+     * <li>true: Assigned.</li>
+     * <li>false: Unassigned.</li>
+     * <li>null: All.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,11 +55,11 @@ public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     public String seatId;
 
     /**
-     * <p>The seat type (specType). Valid values:</p>
+     * <p>The seat type. Valid values:</p>
      * <ul>
-     * <li>standard: standard seat</li>
-     * <li>pro: advanced seat</li>
-     * <li>max: premium seat</li>
+     * <li>standard: Standard seat.</li>
+     * <li>pro: Pro seat.</li>
+     * <li>max: Premium seat.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,6 +77,14 @@ public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     public static GetSubscriptionSeatDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSubscriptionSeatDetailsRequest self = new GetSubscriptionSeatDetailsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetSubscriptionSeatDetailsRequest setInstanceCode(String instanceCode) {
+        this.instanceCode = instanceCode;
+        return this;
+    }
+    public String getInstanceCode() {
+        return this.instanceCode;
     }
 
     public GetSubscriptionSeatDetailsRequest setPageNo(Integer pageNo) {

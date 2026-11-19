@@ -47,10 +47,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
 
     public static class ResetApiKeyResponseBodyApiKey extends TeaModel {
         /**
-         * <p>API Key ID。</p>
+         * <p>The API key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2965964</p>
