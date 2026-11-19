@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateKnowledgeSpaceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically activate MCP. The specifications are fixed to polar.app.g2.medium with 2 nodes and the pay-as-you-go billing method. If you set this parameter to true, you must also explicitly set EnforceAcl to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("AutoCreateMcpInstance")
+    public Boolean autoCreateMcpInstance;
+
+    /**
      * <p>The type of the database engine.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +30,15 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
      */
     @NameInMap("Description")
     public String description;
+
+    /**
+     * <p>Specifies whether to only validate the creation request without placing an order or creating resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The vector dimensions.</p>
@@ -43,7 +61,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String embeddingModel;
 
     /**
-     * <p>Specifies whether to enforce access control list (ACL) authentication for the knowledge space.</p>
+     * <p>Specifies whether to enforce ACL authentication for the knowledge space.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -111,7 +129,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the rerank model.</p>
+     * <p>The name of the reranking model.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-rerank</p>
@@ -130,7 +148,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The shard size, in tokens.</p>
+     * <p>The shard size in tokens.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -142,8 +160,8 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     /**
      * <p>The sharding strategy. Valid values:</p>
      * <ul>
-     * <li>hierarchical: hierarchical sharding. This is the default value.</li>
-     * <li>hybrid: hybrid sharding.</li>
+     * <li>hierarchical: The default value.</li>
+     * <li>hybrid.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -154,7 +172,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String shardingStrategy;
 
     /**
-     * <p>The vSwitch for automatic creation of the database.</p>
+     * <p>The ID of the vSwitch for the automatic creation of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -164,7 +182,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The VPC for automatic creation of the database.</p>
+     * <p>The ID of the VPC for the automatic creation of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -174,7 +192,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The active zone for automatic creation of the database.</p>
+     * <p>The active zone for the automatic creation of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -186,6 +204,14 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public static CreateKnowledgeSpaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKnowledgeSpaceRequest self = new CreateKnowledgeSpaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateKnowledgeSpaceRequest setAutoCreateMcpInstance(Boolean autoCreateMcpInstance) {
+        this.autoCreateMcpInstance = autoCreateMcpInstance;
+        return this;
+    }
+    public Boolean getAutoCreateMcpInstance() {
+        return this.autoCreateMcpInstance;
     }
 
     public CreateKnowledgeSpaceRequest setDBType(String DBType) {
@@ -202,6 +228,14 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateKnowledgeSpaceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateKnowledgeSpaceRequest setEmbeddingDimension(Integer embeddingDimension) {

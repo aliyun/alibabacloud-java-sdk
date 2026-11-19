@@ -7,11 +7,11 @@ public class DescribeAgenticDBPerformanceRequest extends TeaModel {
     /**
      * <p>The statistical method for alerts. Valid values for different monitoring items:</p>
      * <ul>
-     * <li>Value: the value of the HTTP status code.</li>
-     * <li>Average: the average HTTP wait time.</li>
-     * <li>Value: the value of the TELNET status code.</li>
-     * <li>TelnetLatency: the average TELNET wait time.</li>
-     * <li>Average: the average PING packet loss rate.</li>
+     * <li>Value: The value of the HTTP status code.</li>
+     * <li>Average: The average HTTP wait time.</li>
+     * <li>Value: The value of the TELNET status code.</li>
+     * <li>TelnetLatency: The average TELNET wait time.</li>
+     * <li>Average: The average PING packet loss rate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeAgenticDBPerformanceRequest extends TeaModel {
     public Boolean aggregate;
 
     /**
-     * <p>The ID of the anchor branch. If you do not specify this parameter, the main branch of the project is used by default.</p>
+     * <p>The anchor branch ID. If this parameter is not specified, the main branch of the project is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>br-7g8h9i0j1k2l</p>
@@ -50,7 +50,7 @@ public class DescribeAgenticDBPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The granularity of performance data. Valid values:</p>
+     * <p>The data granularity of performance data. Valid values:</p>
      * <ul>
      * <li>5</li>
      * <li>30</li>
