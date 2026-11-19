@@ -82,6 +82,9 @@ public class PushSimpleRequest extends TeaModel {
     @NameInMap("TargetMsgkey")
     public String targetMsgkey;
 
+    @NameInMap("TargetVendorTemplate")
+    public String targetVendorTemplate;
+
     @NameInMap("TaskName")
     public String taskName;
 
@@ -106,8 +109,14 @@ public class PushSimpleRequest extends TeaModel {
     @NameInMap("Uri")
     public String uri;
 
+    @NameInMap("UseVoip")
+    public Boolean useVoip;
+
     @NameInMap("VendorTemplate")
     public String vendorTemplate;
+
+    @NameInMap("VoipMap")
+    public String voipMap;
 
     /**
      * <p>This parameter is required.</p>
@@ -288,6 +297,14 @@ public class PushSimpleRequest extends TeaModel {
         return this.targetMsgkey;
     }
 
+    public PushSimpleRequest setTargetVendorTemplate(String targetVendorTemplate) {
+        this.targetVendorTemplate = targetVendorTemplate;
+        return this;
+    }
+    public String getTargetVendorTemplate() {
+        return this.targetVendorTemplate;
+    }
+
     public PushSimpleRequest setTaskName(String taskName) {
         this.taskName = taskName;
         return this;
@@ -344,12 +361,28 @@ public class PushSimpleRequest extends TeaModel {
         return this.uri;
     }
 
+    public PushSimpleRequest setUseVoip(Boolean useVoip) {
+        this.useVoip = useVoip;
+        return this;
+    }
+    public Boolean getUseVoip() {
+        return this.useVoip;
+    }
+
     public PushSimpleRequest setVendorTemplate(String vendorTemplate) {
         this.vendorTemplate = vendorTemplate;
         return this;
     }
     public String getVendorTemplate() {
         return this.vendorTemplate;
+    }
+
+    public PushSimpleRequest setVoipMap(String voipMap) {
+        this.voipMap = voipMap;
+        return this;
+    }
+    public String getVoipMap() {
+        return this.voipMap;
     }
 
     public PushSimpleRequest setWorkspaceId(String workspaceId) {

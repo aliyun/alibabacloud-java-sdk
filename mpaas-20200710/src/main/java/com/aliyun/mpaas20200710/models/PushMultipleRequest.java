@@ -321,6 +321,9 @@ public class PushMultipleRequest extends TeaModel {
         @NameInMap("TemplateKeyValue")
         public String templateKeyValue;
 
+        @NameInMap("VendorTemplate")
+        public String vendorTemplate;
+
         public static PushMultipleRequestTargetMsg build(java.util.Map<String, ?> map) throws Exception {
             PushMultipleRequestTargetMsg self = new PushMultipleRequestTargetMsg();
             return TeaModel.build(map, self);
@@ -356,6 +359,14 @@ public class PushMultipleRequest extends TeaModel {
         }
         public String getTemplateKeyValue() {
             return this.templateKeyValue;
+        }
+
+        public PushMultipleRequestTargetMsg setVendorTemplate(String vendorTemplate) {
+            this.vendorTemplate = vendorTemplate;
+            return this;
+        }
+        public String getVendorTemplate() {
+            return this.vendorTemplate;
         }
 
     }

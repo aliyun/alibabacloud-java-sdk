@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "mPaaS";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-hangzhou", "mpaas.aliyuncs.com"),
@@ -3326,6 +3329,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TargetMsgkey", request.targetMsgkey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetVendorTemplate)) {
+            body.put("TargetVendorTemplate", request.targetVendorTemplate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
             body.put("TaskName", request.taskName);
         }
@@ -3354,8 +3361,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Uri", request.uri);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useVoip)) {
+            body.put("UseVoip", request.useVoip);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vendorTemplate)) {
             body.put("VendorTemplate", request.vendorTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voipMap)) {
+            body.put("VoipMap", request.voipMap);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -3474,6 +3489,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TargetMsgkey", request.targetMsgkey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetVendorTemplate)) {
+            body.put("TargetVendorTemplate", request.targetVendorTemplate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
             body.put("TaskName", request.taskName);
         }
@@ -3502,8 +3521,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TransparentMessageUrgency", request.transparentMessageUrgency);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useVoip)) {
+            body.put("UseVoip", request.useVoip);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vendorTemplate)) {
             body.put("VendorTemplate", request.vendorTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voipMap)) {
+            body.put("VoipMap", request.voipMap);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
