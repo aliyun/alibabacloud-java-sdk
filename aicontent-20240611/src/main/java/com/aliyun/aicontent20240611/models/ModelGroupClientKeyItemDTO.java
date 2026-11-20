@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelGroupClientKeyItemDTO extends TeaModel {
     /**
+     * <p>The numeric ID of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>501</p>
      */
@@ -12,6 +14,8 @@ public class ModelGroupClientKeyItemDTO extends TeaModel {
     public Long id;
 
     /**
+     * <p>The masked preview of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-ab****yz</p>
      */
@@ -19,8 +23,10 @@ public class ModelGroupClientKeyItemDTO extends TeaModel {
     public String keyPreview;
 
     /**
+     * <p>The authorization name (derived from the API key name).</p>
+     * 
      * <strong>example:</strong>
-     * <p>Default Key</p>
+     * <p>Default key</p>
      */
     @NameInMap("name")
     public String name;

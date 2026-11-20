@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody extends TeaModel {
     /**
-     * <p>The response data object.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
     public PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The fault message encoding.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -50,7 +50,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
 
     public static class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time of the inference job.</p>
+         * <p>The creation time of the model inference task.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-25T12:00:00</p>
@@ -122,7 +122,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public String createTime;
 
         /**
-         * <p>The inference job ID.</p>
+         * <p>The model inference task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3220</p>
@@ -131,7 +131,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public String id;
 
         /**
-         * <p>The job status.</p>
+         * <p>The model inference task status.</p>
          * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
@@ -140,7 +140,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public String jobStatus;
 
         /**
-         * <p>The job progress.</p>
+         * <p>The model inference task progress.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -158,7 +158,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public String modelId;
 
         /**
-         * <p>The ID of the prompt used for the job.</p>
+         * <p>promptId</p>
          * 
          * <strong>example:</strong>
          * <p>promptId-xxxx-xxxx-xxxx</p>
@@ -167,7 +167,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public String promptId;
 
         /**
-         * <p>A list of resource IDs for the generated images.</p>
+         * <p>The list of model inference task results.</p>
          * 
          * <strong>example:</strong>
          * <p>0000.png</p>

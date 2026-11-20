@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ConversationListQry extends TeaModel {
+    /**
+     * <p>The search keyword.</p>
+     */
     @NameInMap("keyword")
     public String keyword;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ConversationListQry extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -22,6 +29,8 @@ public class ConversationListQry extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The status filter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

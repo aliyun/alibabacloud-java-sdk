@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ClientUpdateCmd extends TeaModel {
     /**
+     * <p>The company address.</p>
+     * 
      * <strong>example:</strong>
-     * <p>杭州市</p>
+     * <p>Hangzhou</p>
      */
     @NameInMap("address")
     public String address;
 
     /**
+     * <p>The list of allowed model IDs, separated by commas. An empty value indicates all models.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
      */
@@ -19,6 +23,8 @@ public class ClientUpdateCmd extends TeaModel {
     public String allowedModels;
 
     /**
+     * <p>The contact information.</p>
+     * 
      * <strong>example:</strong>
      * <p>13800138000</p>
      */
@@ -26,20 +32,26 @@ public class ClientUpdateCmd extends TeaModel {
     public String contact;
 
     /**
+     * <p>The customer name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>我的客户</p>
+     * <p>My customer</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
-     * <p>备注</p>
+     * <p>Remark</p>
      */
     @NameInMap("remark")
     public String remark;
 
     /**
+     * <p>The status.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryNacosTagsRequest extends TeaModel {
     /**
+     * <p>Specifies the Nacos configuration type to retrieve.</p>
+     * 
      * <strong>example:</strong>
      * <p>providers</p>
      */
@@ -12,7 +14,7 @@ public class ModelRouterQueryNacosTagsRequest extends TeaModel {
     public String configType;
 
     /**
-     * <p>The field by which to group the results.</p>
+     * <p>The grouping field.</p>
      * 
      * <strong>example:</strong>
      * <p>resourceId</p>
@@ -30,7 +32,7 @@ public class ModelRouterQueryNacosTagsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether to return the total count of results.</p>
+     * <p>Specifies whether to return the total count.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -39,7 +41,7 @@ public class ModelRouterQueryNacosTagsRequest extends TeaModel {
     public Boolean needTotalCount;
 
     /**
-     * <p>The token from a previous response to retrieve the next page of results.</p>
+     * <p>The pagination token. This parameter is empty if there is no next page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +50,7 @@ public class ModelRouterQueryNacosTagsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>resourceId</p>
@@ -57,7 +59,7 @@ public class ModelRouterQueryNacosTagsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The sort order.</p>
+     * <p>The sort direction.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -75,7 +77,7 @@ public class ModelRouterQueryNacosTagsRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of results to return per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

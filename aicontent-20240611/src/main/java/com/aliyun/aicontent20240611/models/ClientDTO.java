@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ClientDTO extends TeaModel {
     /**
+     * <p>The company address.</p>
+     * 
      * <strong>example:</strong>
      * <p>Hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class ClientDTO extends TeaModel {
     public String address;
 
     /**
+     * <p>The authorization management configuration in the format of {&quot;model_ids&quot;:[...],&quot;group_ids&quot;:[...]}. An empty value indicates that group authorization is not used.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;model_ids&quot;:[1,2],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}</p>
      */
@@ -19,6 +23,8 @@ public class ClientDTO extends TeaModel {
     public String allowedModelGroupConfig;
 
     /**
+     * <p>The list of allowed model IDs, separated by commas. An empty value indicates all models.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
      */
@@ -26,6 +32,8 @@ public class ClientDTO extends TeaModel {
     public String allowedModels;
 
     /**
+     * <p>The customer UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>st-xxxx</p>
      */
@@ -33,6 +41,8 @@ public class ClientDTO extends TeaModel {
     public String clientUuid;
 
     /**
+     * <p>The contact information.</p>
+     * 
      * <strong>example:</strong>
      * <p>13800138000</p>
      */
@@ -40,6 +50,8 @@ public class ClientDTO extends TeaModel {
     public String contact;
 
     /**
+     * <p>The status. A value of 0 indicates enabled, and a non-zero value indicates disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -47,6 +59,8 @@ public class ClientDTO extends TeaModel {
     public Integer deleteTag;
 
     /**
+     * <p>The discount factor. A value of 1.0 indicates no discount.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
@@ -54,6 +68,8 @@ public class ClientDTO extends TeaModel {
     public Double discount;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -61,6 +77,8 @@ public class ClientDTO extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -68,6 +86,8 @@ public class ClientDTO extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -75,6 +95,8 @@ public class ClientDTO extends TeaModel {
     public Long id;
 
     /**
+     * <p>The hierarchy level. Valid values: 1 to 5.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +104,8 @@ public class ClientDTO extends TeaModel {
     public Integer level;
 
     /**
+     * <p>The account type. A value of 0 indicates a main account, and a value of 1 indicates a regular account.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -89,13 +113,17 @@ public class ClientDTO extends TeaModel {
     public Integer main;
 
     /**
+     * <p>The customer name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>My Customer</p>
+     * <p>My customer</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The node type. Valid values: department: Department. user: User node, which is a leaf in the department tree.</p>
+     * 
      * <strong>example:</strong>
      * <p>department</p>
      */
@@ -103,6 +131,8 @@ public class ClientDTO extends TeaModel {
     public String nodeType;
 
     /**
+     * <p>The parent department ID. An empty value indicates the top level.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -110,6 +140,8 @@ public class ClientDTO extends TeaModel {
     public Long parentId;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>Remarks</p>
      */
@@ -117,6 +149,8 @@ public class ClientDTO extends TeaModel {
     public String remark;
 
     /**
+     * <p>The user ID. This field has a value only when the node type is user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001</p>
      */

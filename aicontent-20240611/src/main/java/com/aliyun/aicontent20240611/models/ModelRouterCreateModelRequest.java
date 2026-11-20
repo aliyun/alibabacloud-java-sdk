@@ -23,10 +23,10 @@ public class ModelRouterCreateModelRequest extends TeaModel {
     public String baseUrl;
 
     /**
-     * <p>The model description.</p>
+     * <p>The description of the model.</p>
      * 
      * <strong>example:</strong>
-     * <p>通义千问大模型</p>
+     * <p>Qwen large language model</p>
      */
     @NameInMap("description")
     public String description;
@@ -68,7 +68,7 @@ public class ModelRouterCreateModelRequest extends TeaModel {
     public String maxOutputLength;
 
     /**
-     * <p>The model ID.</p>
+     * <p>The ID of the model.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen-turbo</p>
@@ -77,7 +77,7 @@ public class ModelRouterCreateModelRequest extends TeaModel {
     public String modelId;
 
     /**
-     * <p>The model type.</p>
+     * <p>The type of the model.</p>
      * 
      * <strong>example:</strong>
      * <p>Chat</p>
@@ -86,10 +86,10 @@ public class ModelRouterCreateModelRequest extends TeaModel {
     public String modelType;
 
     /**
-     * <p>The model name.</p>
+     * <p>The name of the model.</p>
      * 
      * <strong>example:</strong>
-     * <p>通义千问</p>
+     * <p>Qwen</p>
      */
     @NameInMap("name")
     public String name;

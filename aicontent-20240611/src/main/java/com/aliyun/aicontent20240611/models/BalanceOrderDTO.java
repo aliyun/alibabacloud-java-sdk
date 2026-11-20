@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BalanceOrderDTO extends TeaModel {
     /**
+     * <p>The change amount.</p>
+     * 
      * <strong>example:</strong>
      * <p>100.00</p>
      */
@@ -12,6 +14,8 @@ public class BalanceOrderDTO extends TeaModel {
     public Double amount;
 
     /**
+     * <p>The pool balance after the change.</p>
+     * 
      * <strong>example:</strong>
      * <p>600.00</p>
      */
@@ -19,6 +23,8 @@ public class BalanceOrderDTO extends TeaModel {
     public Double balanceAfter;
 
     /**
+     * <p>The pool balance before the change.</p>
+     * 
      * <strong>example:</strong>
      * <p>500.00</p>
      */
@@ -26,6 +32,8 @@ public class BalanceOrderDTO extends TeaModel {
     public Double balanceBefore;
 
     /**
+     * <p>The balance type (permanent: Permanent / monthly: Monthly).</p>
+     * 
      * <strong>example:</strong>
      * <p>permanent</p>
      */
@@ -33,6 +41,8 @@ public class BalanceOrderDTO extends TeaModel {
     public String balanceType;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-15T10:30:00+08:00</p>
      */
@@ -40,6 +50,8 @@ public class BalanceOrderDTO extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The direction (in: Income / out: Expense).</p>
+     * 
      * <strong>example:</strong>
      * <p>in</p>
      */
@@ -47,6 +59,8 @@ public class BalanceOrderDTO extends TeaModel {
     public String direction;
 
     /**
+     * <p>The associated model code (available for deduction types).</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-max</p>
      */
@@ -54,6 +68,8 @@ public class BalanceOrderDTO extends TeaModel {
     public String modelCode;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -61,6 +77,8 @@ public class BalanceOrderDTO extends TeaModel {
     public String operatorId;
 
     /**
+     * <p>The unique identifier of the change record.</p>
+     * 
      * <strong>example:</strong>
      * <p>ord_20240715_abc123</p>
      */
@@ -68,6 +86,8 @@ public class BalanceOrderDTO extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The change type (recharge: Recharge / periodic_recharge: Periodic recharge / deduct: Deduction / manual_deduct: Manual deduction / transfer_out: Transfer out / transfer_in: Transfer in / return_out: Refund out / return_in: Refund in / write_off: Write-off / monthly_expire: Monthly expiration / deficit_writeoff: Deficit write-off).</p>
+     * 
      * <strong>example:</strong>
      * <p>recharge</p>
      */
@@ -75,13 +95,17 @@ public class BalanceOrderDTO extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The remark.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Manual top-up by administrator</p>
+     * <p>Manual recharge by administrator</p>
      */
     @NameInMap("remark")
     public String remark;
 
     /**
+     * <p>The source identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>console</p>
      */
@@ -89,6 +113,8 @@ public class BalanceOrderDTO extends TeaModel {
     public String source;
 
     /**
+     * <p>The total balance after the change (permanent + monthly).</p>
+     * 
      * <strong>example:</strong>
      * <p>1600.00</p>
      */
@@ -96,6 +122,8 @@ public class BalanceOrderDTO extends TeaModel {
     public Double totalAfter;
 
     /**
+     * <p>The total balance before the change (permanent + monthly).</p>
+     * 
      * <strong>example:</strong>
      * <p>1500.00</p>
      */

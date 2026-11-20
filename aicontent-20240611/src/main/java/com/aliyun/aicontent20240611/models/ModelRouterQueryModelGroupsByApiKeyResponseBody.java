@@ -11,7 +11,7 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
     public ModelRouterQueryModelGroupsByApiKeyResponseBodyData data;
 
     /**
-     * <p>The error message code.</p>
+     * <p>The fault message code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -47,7 +47,7 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,6 +110,12 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
 
     public static class ModelRouterQueryModelGroupsByApiKeyResponseBodyData extends TeaModel {
         /**
+         * <p>The owner type of the key. Valid values:</p>
+         * <ul>
+         * <li>department: Department key (department-level authorization, all keys in the same department return the same result).</li>
+         * <li>user: User (department member) key (user-level authorization).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>department</p>
          */
@@ -117,7 +123,7 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
         public String bindType;
 
         /**
-         * <p>The department ID to which the key belongs.</p>
+         * <p>The ID of the department to which the key belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>

@@ -82,7 +82,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxxx</p>
+     * <p>demo_user</p>
      */
     @NameInMap("userId")
     public String userId;

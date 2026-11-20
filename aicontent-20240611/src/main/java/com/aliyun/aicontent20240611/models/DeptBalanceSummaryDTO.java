@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeptBalanceSummaryDTO extends TeaModel {
     /**
+     * <p>The monthly balance pool overview.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class DeptBalanceSummaryDTO extends TeaModel {
     public BalancePoolSummaryDTO monthly;
 
     /**
+     * <p>The permanent balance pool overview.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

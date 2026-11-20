@@ -4,21 +4,39 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ObservationChartsDTO extends TeaModel {
+    /**
+     * <p>The call volume time series.</p>
+     */
     @NameInMap("callVolume")
     public java.util.List<TimeSeriesPointDTO> callVolume;
 
+    /**
+     * <p>The number of concurrent connections.</p>
+     */
     @NameInMap("concurrency")
     public java.util.List<TimeSeriesPointDTO> concurrency;
 
+    /**
+     * <p>The QPM time series.</p>
+     */
     @NameInMap("qpm")
     public java.util.List<TimeSeriesPointDTO> qpm;
 
+    /**
+     * <p>The response time time series.</p>
+     */
     @NameInMap("responseTime")
     public java.util.List<TimeSeriesPointDTO> responseTime;
 
+    /**
+     * <p>The success rate time series.</p>
+     */
     @NameInMap("successRate")
     public java.util.List<ObservationChartsDTOSuccessRate> successRate;
 
+    /**
+     * <p>The TPM time series.</p>
+     */
     @NameInMap("tpm")
     public java.util.List<TimeSeriesPointDTO> tpm;
 
@@ -77,6 +95,8 @@ public class ObservationChartsDTO extends TeaModel {
 
     public static class ObservationChartsDTOSuccessRate extends TeaModel {
         /**
+         * <p>The label.</p>
+         * 
          * <strong>example:</strong>
          * <p>series1</p>
          */
@@ -84,12 +104,20 @@ public class ObservationChartsDTO extends TeaModel {
         public String label;
 
         /**
+         * <p>The timestamp (RFC3339).</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */
         @NameInMap("timestamp")
         public String timestamp;
 
+        /**
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62.37</p>
+         */
         @NameInMap("value")
         public Object value;
 

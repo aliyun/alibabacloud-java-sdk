@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RequestLogDTO extends TeaModel {
     /**
+     * <p>API Key ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class RequestLogDTO extends TeaModel {
     public Long apiKeyId;
 
     /**
+     * <p>The client ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class RequestLogDTO extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The unique identifier of the client.</p>
+     * 
      * <strong>example:</strong>
      * <p>mt_xxxxxMYTX9</p>
      */
@@ -26,6 +32,8 @@ public class RequestLogDTO extends TeaModel {
     public String clientUuid;
 
     /**
+     * <p>The output tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -33,6 +41,8 @@ public class RequestLogDTO extends TeaModel {
     public Integer completionTokens;
 
     /**
+     * <p>The deletion tag. A value of 0 indicates enabled, and a non-zero value indicates disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -40,6 +50,8 @@ public class RequestLogDTO extends TeaModel {
     public Integer deleteTag;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -47,6 +59,8 @@ public class RequestLogDTO extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -54,6 +68,8 @@ public class RequestLogDTO extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +77,8 @@ public class RequestLogDTO extends TeaModel {
     public Long id;
 
     /**
+     * <p>The model.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
      */
@@ -68,6 +86,8 @@ public class RequestLogDTO extends TeaModel {
     public String modelCode;
 
     /**
+     * <p>The model ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -75,13 +95,17 @@ public class RequestLogDTO extends TeaModel {
     public Long modelId;
 
     /**
+     * <p>The model name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>通义千问</p>
+     * <p>Qwen</p>
      */
     @NameInMap("modelName")
     public String modelName;
 
     /**
+     * <p>The model type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Chat</p>
      */
@@ -89,6 +113,8 @@ public class RequestLogDTO extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The input tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -96,6 +122,8 @@ public class RequestLogDTO extends TeaModel {
     public Integer promptTokens;
 
     /**
+     * <p>The request body.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -103,6 +131,8 @@ public class RequestLogDTO extends TeaModel {
     public String requestBody;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req-xxxx</p>
      */
@@ -110,6 +140,8 @@ public class RequestLogDTO extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The request time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -117,6 +149,8 @@ public class RequestLogDTO extends TeaModel {
     public String requestTime;
 
     /**
+     * <p>The response body.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -124,6 +158,8 @@ public class RequestLogDTO extends TeaModel {
     public String responseBody;
 
     /**
+     * <p>The response time in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -131,6 +167,8 @@ public class RequestLogDTO extends TeaModel {
     public Integer responseTimeMs;
 
     /**
+     * <p>The status.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -138,6 +176,8 @@ public class RequestLogDTO extends TeaModel {
     public String status;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -145,6 +185,8 @@ public class RequestLogDTO extends TeaModel {
     public Integer statusCode;
 
     /**
+     * <p>The tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen</p>
      */
@@ -152,6 +194,8 @@ public class RequestLogDTO extends TeaModel {
     public String symbol;
 
     /**
+     * <p>The total tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>150</p>
      */
@@ -159,6 +203,8 @@ public class RequestLogDTO extends TeaModel {
     public Integer totalTokens;
 
     /**
+     * <p>The usage statistics.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;prompt_tokens&quot;:100,&quot;completion_tokens&quot;:50,&quot;total_tokens&quot;:150}</p>
      */

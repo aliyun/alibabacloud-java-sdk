@@ -1,3 +1,8 @@
+2026-11-20 Version: 7.12.1
+- Update API ModelRouterQueryCostModelList: add request parameters modelIds.
+- Update API ModelRouterQueryCostTrendMetrics: add request parameters modelIds.
+
+
 2026-10-10 Version: 7.12.0
 - Support API ModelRouterBatchRenewMemberApiKeys.
 - Support API ModelRouterRenewApiKey.

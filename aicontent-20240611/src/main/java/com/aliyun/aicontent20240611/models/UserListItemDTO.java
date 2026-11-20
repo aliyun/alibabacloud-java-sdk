@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UserListItemDTO extends TeaModel {
     /**
+     * <p>The list of departments and roles to which the user belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class UserListItemDTO extends TeaModel {
     public java.util.List<UserDepartmentDTO> departments;
 
     /**
+     * <p>The creation time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-07-01 10:00:00</p>
      */
@@ -19,6 +23,8 @@ public class UserListItemDTO extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class UserListItemDTO extends TeaModel {
     public Long id;
 
     /**
+     * <p>The logon name.</p>
+     * 
      * <strong>example:</strong>
      * <p>zhangsan</p>
      */
@@ -33,6 +41,8 @@ public class UserListItemDTO extends TeaModel {
     public String loginName;
 
     /**
+     * <p>The name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Zhang San</p>
      */
@@ -40,6 +50,8 @@ public class UserListItemDTO extends TeaModel {
     public String name;
 
     /**
+     * <p>The phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>13800000000</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     /**
-     * <p>The client ID used to filter the results.</p>
+     * <p>The client ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public Long clientId;
 
     /**
-     * <p>The field by which to group the results.</p>
+     * <p>The field used to group results.</p>
      * 
      * <strong>example:</strong>
      * <p>resourceId</p>
@@ -23,7 +23,7 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public String groupBy;
 
     /**
-     * <p>Optional. If set to true, the keys of members under the department are also included when filtering by department.</p>
+     * <p>Optional. Specifies whether to include the keys of members under the department when filtering by department.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Optional. Filters by member IDs. Separate multiple member IDs with commas. If this parameter is not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+     * <p>Optional. Filters results by member IDs. Separate multiple IDs with commas. If you do not specify this parameter, the department and all its members are included. If you pass an empty value, only the department is included, excluding its members.</p>
      * 
      * <strong>example:</strong>
      * <p>30001,30002</p>
@@ -59,7 +59,7 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public String memberUserIds;
 
     /**
-     * <p>Specifies whether to return the total count.</p>
+     * <p>Specifies whether to return the total count of records.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The field by which to sort results.</p>
      * 
      * <strong>example:</strong>
      * <p>resourceId</p>
@@ -104,7 +104,7 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -113,7 +113,7 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The status used to filter the results.</p>
+     * <p>The status used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

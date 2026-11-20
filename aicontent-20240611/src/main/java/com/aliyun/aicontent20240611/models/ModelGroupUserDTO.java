@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelGroupUserDTO extends TeaModel {
     /**
+     * <p>The list of API key summaries for the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ModelGroupUserDTO extends TeaModel {
     public java.util.List<ModelGroupClientKeyItemDTO> apiKeys;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001</p>
      */
@@ -19,6 +23,8 @@ public class ModelGroupUserDTO extends TeaModel {
     public Long userId;
 
     /**
+     * <p>The username.</p>
+     * 
      * <strong>example:</strong>
      * <p>Zhang San</p>
      */

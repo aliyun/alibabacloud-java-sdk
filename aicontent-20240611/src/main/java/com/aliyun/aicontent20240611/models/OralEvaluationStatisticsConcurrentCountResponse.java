@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
     /**
-     * <p>Statistical data for the project.</p>
+     * <p>The project statistics data.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("projectData")
@@ -44,14 +44,17 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
 
     public static class OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationDataData extends TeaModel {
         /**
-         * <p>The count of the item.</p>
+         * <p>The statistics item count.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("count")
         public Integer count;
 
         /**
-         * <p>The name of the statistical item.</p>
+         * <p>The statistics item name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,13 +88,13 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
 
     public static class OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationData extends TeaModel {
         /**
-         * <p>A list of data nodes.</p>
+         * <p>The data list.</p>
          */
         @NameInMap("Data")
         public java.util.List<OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationDataData> data;
 
         /**
-         * <p>The app key.</p>
+         * <p>appkey</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +128,7 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
 
     public static class OralEvaluationStatisticsConcurrentCountResponseProjectData extends TeaModel {
         /**
-         * <p>A list of application data.</p>
+         * <p>The data list.</p>
          */
         @NameInMap("ApplicationData")
         public java.util.List<OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationData> applicationData;

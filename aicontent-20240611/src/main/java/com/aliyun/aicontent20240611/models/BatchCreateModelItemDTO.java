@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchCreateModelItemDTO extends TeaModel {
     /**
+     * <p>The model description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>通义千问 Max</p>
+     * <p>Qwen Max</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The extension configuration parameters in JSON string format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +23,8 @@ public class BatchCreateModelItemDTO extends TeaModel {
     public String extensions;
 
     /**
+     * <p>The supported input and output data types, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -26,6 +32,8 @@ public class BatchCreateModelItemDTO extends TeaModel {
     public String inOut;
 
     /**
+     * <p>The maximum input length in tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>128000</p>
      */
@@ -33,6 +41,8 @@ public class BatchCreateModelItemDTO extends TeaModel {
     public String maxInputLength;
 
     /**
+     * <p>The maximum output length in tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>8192</p>
      */
@@ -40,6 +50,7 @@ public class BatchCreateModelItemDTO extends TeaModel {
     public String maxOutputLength;
 
     /**
+     * <p>The model identifier. This parameter is required and corresponds to the model ID on the vendor side. If the identifier is duplicated, the backend automatically increments the version by using v1 or v2.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +60,7 @@ public class BatchCreateModelItemDTO extends TeaModel {
     public String modelId;
 
     /**
+     * <p>The model type. This parameter is required. Valid values: Chat, Embedding, Rerank, Image, Audio, and Video.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +70,7 @@ public class BatchCreateModelItemDTO extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The model name. This parameter is required. If the identifier is duplicated, add -v1 or -v2 to distinguish the models.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +80,8 @@ public class BatchCreateModelItemDTO extends TeaModel {
     public String name;
 
     /**
+     * <p>The tags, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>chat,NLP</p>
      */

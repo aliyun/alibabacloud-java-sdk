@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryModelListRequest extends TeaModel {
     /**
-     * <p>The field to use for grouping the results.</p>
+     * <p>The field by which to group the results.</p>
      * 
      * <strong>example:</strong>
      * <p>resourceId</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
     public String groupBy;
 
     /**
-     * <p>The keyword for a fuzzy search on model information.</p>
+     * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,6 +32,8 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The model type filter.</p>
+     * 
      * <strong>example:</strong>
      * <p>Chat</p>
      */
@@ -39,7 +41,7 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
     public String modelType;
 
     /**
-     * <p>Specifies whether to include the total count of matching models in the response.</p>
+     * <p>Specifies whether to include the total count of items.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -48,7 +50,7 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
     public Boolean needTotalCount;
 
     /**
-     * <p>The pagination token for retrieving the next page of results. If this parameter is not specified, the first page is retrieved. To retrieve a subsequent page, set this to the <code>nextToken</code> value from the previous response.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -57,7 +59,7 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field to use for sorting the results.</p>
+     * <p>The field by which to sort the results.</p>
      * 
      * <strong>example:</strong>
      * <p>resourceId</p>
@@ -66,7 +68,7 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The sort order. Valid values include <code>ASC</code> for ascending order and <code>DESC</code> for descending order.</p>
+     * <p>The sort direction.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -75,7 +77,7 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
     public String orderDirection;
 
     /**
-     * <p>The page number to retrieve. Pages are numbered starting from 1.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -84,7 +86,7 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of models to return per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +95,7 @@ public class ModelRouterQueryModelListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The model status to use as a filter.</p>
+     * <p>The status filter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

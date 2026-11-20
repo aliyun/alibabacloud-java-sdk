@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryClientListResponseBody extends TeaModel {
     /**
-     * <p>A wrapper object for the paged response data.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
-     * <p>[]</p>
+     * <p>{&quot;page&quot;:1,&quot;pageSize&quot;:10}</p>
      */
     @NameInMap("data")
     public ModelRouterQueryClientListResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The fault message encoding.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -50,7 +50,7 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -112,10 +112,15 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
     }
 
     public static class ModelRouterQueryClientListResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of items.</p>
+         */
         @NameInMap("list")
         public java.util.List<ClientDTO> list;
 
         /**
+         * <p>maxResults</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -123,18 +128,38 @@ public class ModelRouterQueryClientListResponseBody extends TeaModel {
         public String maxResults;
 
         /**
+         * <p>nextToken</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("nextToken")
         public String nextToken;
 
+        /**
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("page")
         public Integer page;
 
+        /**
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("pageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of records that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("total")
         public Integer total;
 

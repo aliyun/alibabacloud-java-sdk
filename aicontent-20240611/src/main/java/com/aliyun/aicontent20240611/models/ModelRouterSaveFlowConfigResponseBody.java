@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ModelRouterSaveFlowConfigResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The fault message code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -20,10 +20,10 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -47,7 +47,7 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
 
     public static class ModelRouterSaveFlowConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time of the configuration.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-27T18:28:57.987356+08:00</p>
@@ -119,7 +119,7 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The last modification time of the configuration.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-27T18:28:57.987356+08:00</p>
@@ -128,7 +128,7 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the flow control configuration.</p>
+         * <p>The rate limiting configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -146,7 +146,7 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public Integer modelId;
 
         /**
-         * <p>The configured RPM.</p>
+         * <p>The requests per minute (RPM) limit.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -155,7 +155,7 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public Integer rpm;
 
         /**
-         * <p>Indicates whether smooth flow control is enabled.</p>
+         * <p>Specifies whether smooth rate limiting is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -164,7 +164,7 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public Boolean smoothFlowEnabled;
 
         /**
-         * <p>The configured TPM.</p>
+         * <p>The tokens per minute (TPM) limit.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

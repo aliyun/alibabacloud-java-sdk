@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchFailedItemDTO extends TeaModel {
     /**
+     * <p>The reason for failure.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Member node missing</p>
+     * <p>Missing member node</p>
      */
     @NameInMap("reason")
     public String reason;
 
     /**
+     * <p>The user ID of the failed member.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

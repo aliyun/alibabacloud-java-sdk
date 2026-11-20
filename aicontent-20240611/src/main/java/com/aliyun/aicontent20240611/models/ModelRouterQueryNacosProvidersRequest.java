@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryNacosProvidersRequest extends TeaModel {
     /**
-     * <p>The field by which to group the results.</p>
+     * <p>The field used to group the results.</p>
      * 
      * <strong>example:</strong>
      * <p>resourceId</p>
@@ -23,7 +23,7 @@ public class ModelRouterQueryNacosProvidersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether the total count is required.</p>
+     * <p>Specifies whether to include the total count of items.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class ModelRouterQueryNacosProvidersRequest extends TeaModel {
     public Boolean needTotalCount;
 
     /**
-     * <p>The pagination token used for paginated queries. Specify this parameter to retrieve the next page.</p>
+     * <p>The pagination token used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ModelRouterQueryNacosProvidersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The field used to sort the results.</p>
      * 
      * <strong>example:</strong>
      * <p>resourceId</p>
@@ -50,7 +50,7 @@ public class ModelRouterQueryNacosProvidersRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The sort direction.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -68,7 +68,7 @@ public class ModelRouterQueryNacosProvidersRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BillOrderEntryDTO extends TeaModel {
     /**
+     * <p>The change amount.</p>
+     * 
      * <strong>example:</strong>
      * <p>100.00</p>
      */
@@ -12,6 +14,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public Double amount;
 
     /**
+     * <p>The balance after the change.</p>
+     * 
      * <strong>example:</strong>
      * <p>100.00</p>
      */
@@ -19,6 +23,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public Double balanceAfter;
 
     /**
+     * <p>The balance before the change.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.00</p>
      */
@@ -26,6 +32,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public Double balanceBefore;
 
     /**
+     * <p>The balance type: permanent/monthly.</p>
+     * 
      * <strong>example:</strong>
      * <p>permanent</p>
      */
@@ -33,6 +41,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public String balanceType;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -40,6 +50,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The change direction: in/out.</p>
+     * 
      * <strong>example:</strong>
      * <p>in</p>
      */
@@ -47,6 +59,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public String direction;
 
     /**
+     * <p>The model code (available when gateway billing deduction is applied).</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-max</p>
      */
@@ -54,6 +68,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public String modelCode;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +77,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public String operatorId;
 
     /**
+     * <p>The change record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ord_xxxxxxxx</p>
      */
@@ -68,6 +86,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The change type.</p>
+     * 
      * <strong>example:</strong>
      * <p>recharge</p>
      */
@@ -75,6 +95,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The remark.</p>
+     * 
      * <strong>example:</strong>
      * <p>Top-up</p>
      */
@@ -82,6 +104,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public String remark;
 
     /**
+     * <p>The source.</p>
+     * 
      * <strong>example:</strong>
      * <p>console</p>
      */
@@ -89,6 +113,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public String source;
 
     /**
+     * <p>The total balance after the change.</p>
+     * 
      * <strong>example:</strong>
      * <p>100.00</p>
      */
@@ -96,6 +122,8 @@ public class BillOrderEntryDTO extends TeaModel {
     public Double totalAfter;
 
     /**
+     * <p>The total balance before the change.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.00</p>
      */

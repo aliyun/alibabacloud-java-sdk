@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BillingBillTierDTO extends TeaModel {
     /**
+     * <p>The dimension key-value mapping, where the key is the dimension column name and the value is the display value.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;context_tier&quot;: &quot;0-32k&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class BillingBillTierDTO extends TeaModel {
     public String dimValues;
 
     /**
+     * <p>The cost of the bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.05</p>
      */
@@ -19,6 +23,8 @@ public class BillingBillTierDTO extends TeaModel {
     public Float payableAmount;
 
     /**
+     * <p>The usage value mapping, where the key is the metric name and the value is the numerical value.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;input_tokens&quot;: 1000, &quot;output_tokens&quot;: 500}</p>
      */

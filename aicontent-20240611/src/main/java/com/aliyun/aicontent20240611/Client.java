@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "AiContent";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-shanghai", "aicontent.aliyuncs.com"),
@@ -461,7 +464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an access warrant.</p>
+     * <p>Creates authorization credentials in the Alibaba Cloud Management Console.</p>
      * 
      * @param request CreateAccessWarrantRequest
      * @param headers map
@@ -515,7 +518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an access warrant.</p>
+     * <p>Creates authorization credentials in the Alibaba Cloud Management Console.</p>
      * 
      * @param request CreateAccessWarrantRequest
      * @return CreateAccessWarrantResponse
@@ -804,7 +807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Expansion dialogues are for open-ended conversations. In these conversations, the AI poses open-ended questions, but the user must stay on topic. If a user\&quot;s response is off-topic, the AI steers the conversation back on topic. If the user gives two consecutive off-topic responses, the AI moves on to the next topic.</p>
+     * <p>Conducts extended practice conversations primarily for open-ended communication scenarios. During the practice, although the questions raised by the AI do not have preset answers, the user must still answer within the relevant topic. If the user\&quot;s answer deviates from the topic, the AI will attempt to guide them back to the topic. If the user goes off-topic twice in a row, the AI will guide them to proceed to the next topic.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueRequest
      * @param headers map
@@ -866,7 +869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Expansion dialogues are for open-ended conversations. In these conversations, the AI poses open-ended questions, but the user must stay on topic. If a user\&quot;s response is off-topic, the AI steers the conversation back on topic. If the user gives two consecutive off-topic responses, the AI moves on to the next topic.</p>
+     * <p>Conducts extended practice conversations primarily for open-ended communication scenarios. During the practice, although the questions raised by the AI do not have preset answers, the user must still answer within the relevant topic. If the user\&quot;s answer deviates from the topic, the AI will attempt to guide them back to the topic. If the user goes off-topic twice in a row, the AI will guide them to proceed to the next topic.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueRequest
      * @return ExecuteAITeacherExpansionDialogueResponse
@@ -879,7 +882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uses context to polish the expanded text.</p>
+     * <p>Polishes the extension exercise based on the context.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueRefineRequest
      * @param headers map
@@ -941,7 +944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uses context to polish the expanded text.</p>
+     * <p>Polishes the extension exercise based on the context.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueRefineRequest
      * @return ExecuteAITeacherExpansionDialogueRefineResponse
@@ -954,7 +957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Further Contextual Translation Practice.</p>
+     * <p>Translates the context for extended practice.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueTranslateRequest
      * @param headers map
@@ -1012,7 +1015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Further Contextual Translation Practice.</p>
+     * <p>Translates the context for extended practice.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueTranslateRequest
      * @return ExecuteAITeacherExpansionDialogueTranslateResponse
@@ -1076,7 +1079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Practice synchronous dialogue.</p>
+     * <p>Conducts a synchronous practice conversation.</p>
      * 
      * @param request ExecuteAITeacherSyncDialogueRequest
      * @param headers map
@@ -1122,7 +1125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Practice synchronous dialogue.</p>
+     * <p>Conducts a synchronous practice conversation.</p>
      * 
      * @param request ExecuteAITeacherSyncDialogueRequest
      * @return ExecuteAITeacherSyncDialogueResponse
@@ -1135,7 +1138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can practice contextual translation in real-time.</p>
+     * <p>Translates context for synchronous practice.</p>
      * 
      * @param request ExecuteAITeacherSyncDialogueTranslateRequest
      * @param headers map
@@ -1177,7 +1180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can practice contextual translation in real-time.</p>
+     * <p>Translates context for synchronous practice.</p>
      * 
      * @param request ExecuteAITeacherSyncDialogueTranslateRequest
      * @return ExecuteAITeacherSyncDialogueTranslateResponse
@@ -1721,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Supplemental Practice Assistant</p>
+     * <p>Retrieves prompts for the extended practice assistant.</p>
      * 
      * @param request GetAITeacherExpansionDialogueSuggestionRequest
      * @param headers map
@@ -1783,7 +1786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Supplemental Practice Assistant</p>
+     * <p>Retrieves prompts for the extended practice assistant.</p>
      * 
      * @param request GetAITeacherExpansionDialogueSuggestionRequest
      * @return GetAITeacherExpansionDialogueSuggestionResponse
@@ -1796,7 +1799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sync Practice Assistant</p>
+     * <p>Retrieves the prompts for the sync practice assistant.</p>
      * 
      * @param request GetAITeacherSyncDialogueSuggestionRequest
      * @param headers map
@@ -1842,7 +1845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sync Practice Assistant</p>
+     * <p>Retrieves the prompts for the sync practice assistant.</p>
      * 
      * @param request GetAITeacherSyncDialogueSuggestionRequest
      * @return GetAITeacherSyncDialogueSuggestionResponse
@@ -1906,7 +1909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch get article details</p>
+     * <p>Retrieves the details of multiple articles.</p>
      * 
      * @param request ListTextbookAssistantArticleDetailsRequest
      * @param headers map
@@ -1944,7 +1947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch get article details</p>
+     * <p>Retrieves the details of multiple articles.</p>
      * 
      * @param request ListTextbookAssistantArticleDetailsRequest
      * @return ListTextbookAssistantArticleDetailsResponse
@@ -2134,7 +2137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the available grades and volumes for the Textbook Assistant.</p>
+     * <p>Retrieves the list of grades that have English textbook resources.</p>
      * 
      * @param request ListTextbookAssistantGradeVolumesRequest
      * @param headers map
@@ -2172,7 +2175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the available grades and volumes for the Textbook Assistant.</p>
+     * <p>Retrieves the list of grades that have English textbook resources.</p>
      * 
      * @param request ListTextbookAssistantGradeVolumesRequest
      * @return ListTextbookAssistantGradeVolumesResponse
@@ -2185,7 +2188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Article Details</p>
+     * <p>Retrieves the details of an article.</p>
      * 
      * @param request ListTextbookAssistantSceneDetailsRequest
      * @param headers map
@@ -2223,7 +2226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Article Details</p>
+     * <p>Retrieves the details of an article.</p>
      * 
      * @param request ListTextbookAssistantSceneDetailsRequest
      * @return ListTextbookAssistantSceneDetailsResponse
@@ -2696,7 +2699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables balance-based throttling for a department.</p>
+     * <p>Enables department balance throttling.</p>
      * 
      * @param request ModelRouterConfigureClientBalanceRequest
      * @param headers map
@@ -2738,7 +2741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables balance-based throttling for a department.</p>
+     * <p>Enables department balance throttling.</p>
      * 
      * @param request ModelRouterConfigureClientBalanceRequest
      * @return ModelRouterConfigureClientBalanceResponse
@@ -3323,7 +3326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs model creation.</p>
+     * <p>Manages model creation.</p>
      * 
      * @param request ModelRouterCreateModelRequest
      * @param headers map
@@ -3401,7 +3404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs model creation.</p>
+     * <p>Manages model creation.</p>
      * 
      * @param request ModelRouterCreateModelRequest
      * @return ModelRouterCreateModelResponse
@@ -4075,7 +4078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the balance overview of a department.</p>
+     * <p>Retrieves the department balance overview.</p>
      * 
      * @param request ModelRouterGetDeptBalanceSummaryRequest
      * @param headers map
@@ -4103,7 +4106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the balance overview of a department.</p>
+     * <p>Retrieves the department balance overview.</p>
      * 
      * @param request ModelRouterGetDeptBalanceSummaryRequest
      * @return ModelRouterGetDeptBalanceSummaryResponse
@@ -4782,7 +4785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API keys.</p>
+     * <p>Queries a list of API keys.</p>
      * 
      * @param request ModelRouterQueryApiKeyListRequest
      * @param headers map
@@ -4864,7 +4867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API keys.</p>
+     * <p>Queries a list of API keys.</p>
      * 
      * @param request ModelRouterQueryApiKeyListRequest
      * @return ModelRouterQueryApiKeyListResponse
@@ -5201,7 +5204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of clients.</p>
+     * <p>Queries a list of customers.</p>
      * 
      * @param request ModelRouterQueryClientListRequest
      * @param headers map
@@ -5275,7 +5278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of clients.</p>
+     * <p>Queries a list of customers.</p>
      * 
      * @param request ModelRouterQueryClientListRequest
      * @return ModelRouterQueryClientListResponse
@@ -5550,7 +5553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of models called for billing management.</p>
+     * <p>Retrieves a list of invoked models for billing management.</p>
      * 
      * @param request ModelRouterQueryCostModelListRequest
      * @param headers map
@@ -5586,6 +5589,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
             query.put("memberUserIds", request.memberUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelIds)) {
+            query.put("modelIds", request.modelIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
@@ -5624,7 +5631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of models called for billing management.</p>
+     * <p>Retrieves a list of invoked models for billing management.</p>
      * 
      * @param request ModelRouterQueryCostModelListRequest
      * @return ModelRouterQueryCostModelListResponse
@@ -5756,6 +5763,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
             query.put("memberUserIds", request.memberUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelIds)) {
+            query.put("modelIds", request.modelIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
@@ -6159,10 +6170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the bound groups and models by API key.</p>
+     * <p>Queries the groups and models bound to an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bound groups and models by API key.</p>
+     * <p>Queries the groups and models bound to an API key.</p>
      * 
      * @param request ModelRouterQueryModelGroupsByApiKeyRequest
      * @param headers map
@@ -6190,10 +6201,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the bound groups and models by API key.</p>
+     * <p>Queries the groups and models bound to an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the bound groups and models by API key.</p>
+     * <p>Queries the groups and models bound to an API key.</p>
      * 
      * @param request ModelRouterQueryModelGroupsByApiKeyRequest
      * @return ModelRouterQueryModelGroupsByApiKeyResponse
@@ -6206,7 +6217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Model management/Get model list</p>
+     * <p>Retrieves a list of models.</p>
      * 
      * @param request ModelRouterQueryModelListRequest
      * @param headers map
@@ -6280,7 +6291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Model management/Get model list</p>
+     * <p>Retrieves a list of models.</p>
      * 
      * @param request ModelRouterQueryModelListRequest
      * @return ModelRouterQueryModelListResponse
@@ -6293,7 +6304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of Nacos service providers through Nacos configuration.</p>
+     * <p>Retrieves the Nacos configuration and the list of Nacos service providers.</p>
      * 
      * @param request ModelRouterQueryNacosProvidersRequest
      * @param headers map
@@ -6355,7 +6366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of Nacos service providers through Nacos configuration.</p>
+     * <p>Retrieves the Nacos configuration and the list of Nacos service providers.</p>
      * 
      * @param request ModelRouterQueryNacosProvidersRequest
      * @return ModelRouterQueryNacosProvidersResponse
@@ -6368,7 +6379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of tags from Nacos.</p>
+     * <p>Queries the list of Nacos tags.</p>
      * 
      * @param request ModelRouterQueryNacosTagsRequest
      * @param headers map
@@ -6434,7 +6445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of tags from Nacos.</p>
+     * <p>Queries the list of Nacos tags.</p>
      * 
      * @param request ModelRouterQueryNacosTagsRequest
      * @return ModelRouterQueryNacosTagsResponse
@@ -6982,7 +6993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Flow control management / Save flow control configuration</p>
+     * <p>Configures write rate limiting.</p>
      * 
      * @param request ModelRouterSaveFlowConfigRequest
      * @param headers map
@@ -7028,7 +7039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Flow control management / Save flow control configuration</p>
+     * <p>Configures write rate limiting.</p>
      * 
      * @param request ModelRouterSaveFlowConfigRequest
      * @return ModelRouterSaveFlowConfigResponse
@@ -7192,7 +7203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/停止成员订阅</p>
+     * <p>Stops a member subscription.</p>
      * 
      * @param request ModelRouterStopMemberSubscriptionRequest
      * @param headers map
@@ -7226,7 +7237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>组织管理/停止成员订阅</p>
+     * <p>Stops a member subscription.</p>
      * 
      * @param request ModelRouterStopMemberSubscriptionRequest
      * @return ModelRouterStopMemberSubscriptionResponse
@@ -7916,7 +7927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a personalized text-to-image inference job.</p>
+     * <p>Queries the status of a preset model inference task for personalized text-to-image generation.</p>
      * 
      * @param request PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest
      * @param headers map
@@ -7950,7 +7961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a personalized text-to-image inference job.</p>
+     * <p>Queries the status of a preset model inference task for personalized text-to-image generation.</p>
      * 
      * @param request PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest
      * @return PersonalizedTextToImageQueryPreModelInferenceJobInfoResponse
@@ -7963,7 +7974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an inference job to generate images based on a personalized text-to-image model.</p>
+     * <p>Creates an image inference task based on a specified model for personalized text-to-image generation.</p>
      * 
      * @param request Personalizedtxt2imgAddInferenceJobRequest
      * @param headers map
@@ -8009,7 +8020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an inference job to generate images based on a personalized text-to-image model.</p>
+     * <p>Creates an image inference task based on a specified model for personalized text-to-image generation.</p>
      * 
      * @param request Personalizedtxt2imgAddInferenceJobRequest
      * @return Personalizedtxt2imgAddInferenceJobResponse
@@ -8140,7 +8151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the status and results of a Personalizedtxt2img inference job.</p>
+     * <p>Queries the status and results of a personalized text-to-image model inference task.</p>
      * 
      * @param request Personalizedtxt2imgQueryInferenceJobInfoRequest
      * @param headers map
@@ -8174,7 +8185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the status and results of a Personalizedtxt2img inference job.</p>
+     * <p>Queries the status and results of a personalized text-to-image model inference task.</p>
      * 
      * @param request Personalizedtxt2imgQueryInferenceJobInfoRequest
      * @return Personalizedtxt2imgQueryInferenceJobInfoResponse
@@ -8271,7 +8282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an application access ID (appkey).</p>
+     * <p>Retrieves the application access identifier (appkey) information from the Alibaba Cloud Management Console.</p>
      * 
      * @param request QueryApplicationAccessIdRequest
      * @param headers map
@@ -8305,7 +8316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about an application access ID (appkey).</p>
+     * <p>Retrieves the application access identifier (appkey) information from the Alibaba Cloud Management Console.</p>
      * 
      * @param request QueryApplicationAccessIdRequest
      * @return QueryApplicationAccessIdResponse

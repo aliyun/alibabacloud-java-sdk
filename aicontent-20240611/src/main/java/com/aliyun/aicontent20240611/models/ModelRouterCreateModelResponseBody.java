@@ -14,7 +14,7 @@ public class ModelRouterCreateModelResponseBody extends TeaModel {
     public ModelDTO data;
 
     /**
-     * <p>The fault code.</p>
+     * <p>The encoding of the error message for the fault.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -41,7 +41,7 @@ public class ModelRouterCreateModelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
@@ -50,7 +50,7 @@ public class ModelRouterCreateModelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

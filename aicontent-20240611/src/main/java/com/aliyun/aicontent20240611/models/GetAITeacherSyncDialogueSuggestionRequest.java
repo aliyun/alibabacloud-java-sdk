@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
     /**
-     * <p>A list of dialogue tasks.</p>
+     * <p>The collection of conversation task content.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("dialogueTasks")
@@ -21,14 +21,14 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
     public String languageCode;
 
     /**
-     * <p>A list of dialogue records.</p>
+     * <p>The collection of conversation records.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("records")
     public java.util.List<GetAITeacherSyncDialogueSuggestionRequestRecords> records;
 
     /**
-     * <p>The unique identifier for the end-user.</p>
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
 
     public static class GetAITeacherSyncDialogueSuggestionRequestDialogueTasks extends TeaModel {
         /**
-         * <p>The assistant\&quot;s message content.</p>
+         * <p>The AI conversation content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,16 +86,16 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public String assistant;
 
         /**
-         * <p>The translation of the assistant\&quot;s message.</p>
+         * <p>The translation of the AI conversation content.</p>
          * 
          * <strong>example:</strong>
-         * <p>为什么有些人认为遛狗是份好差事?</p>
+         * <p>Why do some people think walking dogs is a good job?</p>
          */
         @NameInMap("assistantTranslate")
         public String assistantTranslate;
 
         /**
-         * <p>The sequence number of the dialogue task.</p>
+         * <p>The sequence number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public Integer order;
 
         /**
-         * <p>The user\&quot;s message content.</p>
+         * <p>The user conversation content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
 
     public static class GetAITeacherSyncDialogueSuggestionRequestRecords extends TeaModel {
         /**
-         * <p>The message content.</p>
+         * <p>The conversation content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,25 +165,35 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>A control flag that indicates if a student\&quot;s response is off-topic. The value is based on the previous turn. If the conversation goes off-topic more than twice, the system sets this value to <code>true</code> to force a task switch.</p>
+         * <p>Specifies whether the response is off-topic and applies flow control. This parameter indicates whether the student\&quot;s response aligns with the conversation task settings. The value is derived from the return results of previous conversation turns. Additionally, this parameter controls the conversation flow. If the response is off-topic more than twice, the value is forcibly set to true to switch the task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: Off-topic.</li>
+         * <li>false: On-topic.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>跑题：true, 不跑题：false</p>
+         * <p>true</p>
          */
         @NameInMap("isOffTopicControl")
         public Boolean isOffTopicControl;
 
         /**
-         * <p>Specifies if the message is on topic. <code>true</code> indicates the message is on topic; <code>false</code> indicates it is off topic.</p>
+         * <p>Specifies whether the response is on-topic.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: On-topic.</li>
+         * <li>false: Off-topic.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>扣题：true, 不扣题：false</p>
+         * <p>true</p>
          */
         @NameInMap("isOnTopic")
         public Boolean isOnTopic;
 
         /**
-         * <p>The sequence number of the message in the conversation.</p>
+         * <p>The sequence number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,11 +203,11 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public Integer order;
 
         /**
-         * <p>The role of the message author. Valid values: <code>assistant</code> (for AI-generated messages) and <code>user</code> (for user-provided messages).</p>
+         * <p>The role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>AI：assistant；用户：user</p>
+         * <p>AI: assistant; User: user</p>
          */
         @NameInMap("role")
         public String role;

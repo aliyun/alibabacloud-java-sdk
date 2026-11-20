@@ -14,7 +14,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     public java.util.List<ModelRouterQueryNacosProvidersResponseBodyData> data;
 
     /**
-     * <p>The fault message code.</p>
+     * <p>The fault message encoding.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -113,7 +113,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
 
     public static class ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions extends TeaModel {
         /**
-         * <p>The asynchronous call identifier.</p>
+         * <p>The identifier for asynchronous invocation.</p>
          */
         @NameInMap("async")
         public Boolean async;
@@ -135,13 +135,13 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
 
     public static class ModelRouterQueryNacosProvidersResponseBodyDataModels extends TeaModel {
         /**
-         * <p>The extension configuration parameters of the model, stored as key-value pairs for additional model behavior configuration.</p>
+         * <p>The extension configuration parameters of the model, which store additional model behavior configurations as key-value pairs.</p>
          */
         @NameInMap("extensions")
         public ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions extensions;
 
         /**
-         * <p>The model identifier.</p>
+         * <p>The identifier of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>ca90f359956e94367470c38676</p>
@@ -150,7 +150,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         public String identifier;
 
         /**
-         * <p>The input type and output type.</p>
+         * <p>The input and output types.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -177,7 +177,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         public String outputToken;
 
         /**
-         * <p>The feature type or capability category of the model.</p>
+         * <p>The function type or capability category of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>Chat</p>
@@ -257,16 +257,16 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         public java.util.List<ModelRouterQueryNacosProvidersResponseBodyDataModels> models;
 
         /**
-         * <p>The provider name.</p>
+         * <p>The name of the provider.</p>
          * 
          * <strong>example:</strong>
-         * <p>通义千问</p>
+         * <p>Qwen</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The provider identifier.</p>
+         * <p>The identifier of the provider.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen</p>

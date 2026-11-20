@@ -14,7 +14,7 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
     public Personalizedtxt2imgAddInferenceJobResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The fault message encoding.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -50,7 +50,7 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
 
     public static class Personalizedtxt2imgAddInferenceJobResponseBodyData extends TeaModel {
         /**
-         * <p>The inference job\&quot;s creation time.</p>
+         * <p>The creation time of the model inference task.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-25T12:00:00</p>
@@ -122,7 +122,7 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The model inference job ID.</p>
+         * <p>The ID of the model inference task.</p>
          * 
          * <strong>example:</strong>
          * <p>3220</p>
@@ -131,7 +131,7 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The job status.</p>
+         * <p>The status of the model inference task.</p>
          * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
@@ -140,7 +140,7 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public String jobStatus;
 
         /**
-         * <p>The inference job progress.</p>
+         * <p>The progress of the model inference task.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -158,7 +158,7 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public String modelId;
 
         /**
-         * <p>The prompt ID.</p>
+         * <p>promptId</p>
          * 
          * <strong>example:</strong>
          * <p>promptId-xxxx-xxxx-xxxx</p>
@@ -167,7 +167,7 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public String promptId;
 
         /**
-         * <p>A list of URLs for the generated images.</p>
+         * <p>The list of results for the model inference task.</p>
          * 
          * <strong>example:</strong>
          * <p>0000.png</p>

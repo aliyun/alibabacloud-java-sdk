@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchOpResultDTO extends TeaModel {
     /**
+     * <p>The list of failed items.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class BatchOpResultDTO extends TeaModel {
     public java.util.List<BatchFailedItemDTO> failed;
 
     /**
+     * <p>The list of successful member user IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */

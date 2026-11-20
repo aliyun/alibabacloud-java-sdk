@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OrgInitResultDTO extends TeaModel {
     /**
+     * <p>The returned plaintext API key, which is visible only once during initialization.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-xxxxxxxxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class OrgInitResultDTO extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The customer ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class OrgInitResultDTO extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The customer unique identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>st-xxxx</p>
      */
@@ -26,6 +32,8 @@ public class OrgInitResultDTO extends TeaModel {
     public String clientUuid;
 
     /**
+     * <p>Indicates whether it is newly created. A value of false indicates that it already exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class OrgInitResultDTO extends TeaModel {
     public Boolean isNew;
 
     /**
+     * <p>The enterprise ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class OrgInitResultDTO extends TeaModel {
     public Long orgId;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

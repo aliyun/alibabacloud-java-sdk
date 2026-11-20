@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BalancePoolSummaryDTO extends TeaModel {
     /**
+     * <p>The balance allocated to users equals the sum of the sub-wallet balances of all members in the department.</p>
+     * 
      * <strong>example:</strong>
      * <p>40.00</p>
      */
@@ -12,6 +14,8 @@ public class BalancePoolSummaryDTO extends TeaModel {
     public Double allocated;
 
     /**
+     * <p>The available department balance equals the sub-wallet balance of the department.</p>
+     * 
      * <strong>example:</strong>
      * <p>60.00</p>
      */
@@ -19,6 +23,8 @@ public class BalancePoolSummaryDTO extends TeaModel {
     public Double available;
 
     /**
+     * <p>The total amount equals the available department balance plus the balance allocated to users.</p>
+     * 
      * <strong>example:</strong>
      * <p>100.00</p>
      */

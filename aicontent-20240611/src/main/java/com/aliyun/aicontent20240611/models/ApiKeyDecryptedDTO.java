@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ApiKeyDecryptedDTO extends TeaModel {
+    /**
+     * <p>The associated client information.</p>
+     */
     @NameInMap("client")
     public ClientDTO client;
 
     /**
+     * <p>The client ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ApiKeyDecryptedDTO extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The deletion tag. A value of 0 indicates enabled, and a non-zero value indicates disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -22,6 +29,8 @@ public class ApiKeyDecryptedDTO extends TeaModel {
     public Integer deleteTag;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -29,6 +38,8 @@ public class ApiKeyDecryptedDTO extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -36,6 +47,8 @@ public class ApiKeyDecryptedDTO extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +56,8 @@ public class ApiKeyDecryptedDTO extends TeaModel {
     public Long id;
 
     /**
+     * <p>The full key.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-xxxxxxxxxxxxxxxxxxx</p>
      */
@@ -50,6 +65,8 @@ public class ApiKeyDecryptedDTO extends TeaModel {
     public String key;
 
     /**
+     * <p>The key preview.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-xxx****xxx</p>
      */
@@ -57,6 +74,8 @@ public class ApiKeyDecryptedDTO extends TeaModel {
     public String keyPreview;
 
     /**
+     * <p>The key name.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyApiKey</p>
      */

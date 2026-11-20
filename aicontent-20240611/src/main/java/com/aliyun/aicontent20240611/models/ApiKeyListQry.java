@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ApiKeyListQry extends TeaModel {
     /**
+     * <p>The client ID filter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("clientId")
     public Long clientId;
 
+    /**
+     * <p>The search keyword.</p>
+     */
     @NameInMap("keyword")
     public String keyword;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ApiKeyListQry extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class ApiKeyListQry extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The status filter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

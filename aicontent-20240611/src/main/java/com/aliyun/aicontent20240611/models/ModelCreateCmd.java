@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelCreateCmd extends TeaModel {
     /**
+     * <p>API Key</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-xxxx</p>
      */
@@ -12,6 +14,8 @@ public class ModelCreateCmd extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>Base URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
      */
@@ -19,13 +23,17 @@ public class ModelCreateCmd extends TeaModel {
     public String baseUrl;
 
     /**
+     * <p>The model description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>通义千问大模型</p>
+     * <p>Qwen large language model</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The maximum input length.</p>
+     * 
      * <strong>example:</strong>
      * <p>8192</p>
      */
@@ -33,6 +41,8 @@ public class ModelCreateCmd extends TeaModel {
     public String maxInputLength;
 
     /**
+     * <p>The maximum output length.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048</p>
      */
@@ -40,6 +50,8 @@ public class ModelCreateCmd extends TeaModel {
     public String maxOutputLength;
 
     /**
+     * <p>The model ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-turbo</p>
      */
@@ -47,6 +59,8 @@ public class ModelCreateCmd extends TeaModel {
     public String modelId;
 
     /**
+     * <p>The model type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Chat</p>
      */
@@ -54,13 +68,17 @@ public class ModelCreateCmd extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The model name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>通义千问</p>
+     * <p>Qwen</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The vendor symbol.</p>
+     * 
      * <strong>example:</strong>
      * <p>alibaba</p>
      */
@@ -68,6 +86,8 @@ public class ModelCreateCmd extends TeaModel {
     public String symbol;
 
     /**
+     * <p>The tags, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>chat,NLP</p>
      */

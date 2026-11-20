@@ -11,7 +11,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
     public java.util.List<ListTextbookAssistantSceneDetailsResponseBodyData> data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -20,10 +20,10 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -38,7 +38,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
@@ -47,11 +47,11 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded.</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call succeeded.</p>
+     * <li><p><strong>true</strong>: Successful.</p>
      * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
+     * <li><p><strong>false</strong>: Failed.</p>
      * </li>
      * </ul>
      * 
@@ -128,13 +128,13 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
          * <p>The translation of the role introduction.</p>
          * 
          * <strong>example:</strong>
-         * <p>Carl，一个好奇的男孩</p>
+         * <p>Carl, a curious boy</p>
          */
         @NameInMap("introductionTranslate")
         public String introductionTranslate;
 
         /**
-         * <p>The role guidance text.</p>
+         * <p>The role prompt text.</p>
          * 
          * <strong>example:</strong>
          * <p>Hi Noah, who is that in the photo?</p>
@@ -143,10 +143,10 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         public String promoting;
 
         /**
-         * <p>The translation of the role guidance text.</p>
+         * <p>The translation of the role prompt text.</p>
          * 
          * <strong>example:</strong>
-         * <p>嗨 Noah，照片里的人是谁？</p>
+         * <p>Hi Noah, who is the person in the photo?</p>
          */
         @NameInMap("promotingTranslate")
         public String promotingTranslate;
@@ -170,7 +170,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         public String roleNameTranslate;
 
         /**
-         * <p>The role type:</p>
+         * <p>The role type. A value of 0 indicates the AI questioner, and a value of 1 indicates the responder.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -255,7 +255,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
          * <p>The translation of the scene task description.</p>
          * 
          * <strong>example:</strong>
-         * <p>说这是你爸爸的兄弟。</p>
+         * <p>Say this is your father\&quot;s brother</p>
          */
         @NameInMap("sceneTaskTranslate")
         public String sceneTaskTranslate;
@@ -285,10 +285,10 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantSceneDetailsResponseBodyDataSentenceList extends TeaModel {
         /**
-         * <p>The sentence analysis.</p>
+         * <p>The sentence analysis and explanation.</p>
          * 
          * <strong>example:</strong>
-         * <p>Is + this + your + 家庭成员?</p>
+         * <p>Is + this + your + family member?</p>
          */
         @NameInMap("sentenceAnalysis")
         public String sentenceAnalysis;
@@ -344,7 +344,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantSceneDetailsResponseBodyDataTheme extends TeaModel {
         /**
-         * <p>A list of image URLs related to the theme.</p>
+         * <p>The images related to the current theme.</p>
          */
         @NameInMap("themeImageList")
         public java.util.List<String> themeImageList;
@@ -353,7 +353,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
          * <p>The theme name.</p>
          * 
          * <strong>example:</strong>
-         * <p>家庭生活</p>
+         * <p>Family life</p>
          */
         @NameInMap("themeName")
         public String themeName;
@@ -400,7 +400,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantSceneDetailsResponseBodyDataTopic extends TeaModel {
         /**
-         * <p>A list of image URLs related to the topic.</p>
+         * <p>The images related to the current topic.</p>
          */
         @NameInMap("topicImageList")
         public java.util.List<String> topicImageList;
@@ -409,13 +409,13 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
          * <p>The topic name.</p>
          * 
          * <strong>example:</strong>
-         * <p>介绍家人</p>
+         * <p>Introducing family members</p>
          */
         @NameInMap("topicName")
         public String topicName;
 
         /**
-         * <p>The translation of the topic name.</p>
+         * <p>The translation of the topic content.</p>
          * 
          * <strong>example:</strong>
          * <p>Introducing family members</p>
@@ -459,7 +459,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
          * <p>The word definition.</p>
          * 
          * <strong>example:</strong>
-         * <p>家；家庭</p>
+         * <p>Home; family</p>
          */
         @NameInMap("wordAnalysis")
         public String wordAnalysis;
@@ -515,7 +515,7 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantSceneDetailsResponseBodyData extends TeaModel {
         /**
-         * <p>A list of roles in the scene.</p>
+         * <p>The list of roles.</p>
          */
         @NameInMap("roleList")
         public java.util.List<ListTextbookAssistantSceneDetailsResponseBodyDataRoleList> roleList;
@@ -539,31 +539,28 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         public String sceneId;
 
         /**
-         * <p>A list of image URLs related to the current scene.</p>
+         * <p>The images related to the current scene.</p>
          */
         @NameInMap("sceneImageList")
         public java.util.List<String> sceneImageList;
 
         /**
-         * <p>The scene task list.</p>
+         * <p>The list of scene tasks.</p>
          */
         @NameInMap("sceneTaskList")
         public java.util.List<ListTextbookAssistantSceneDetailsResponseBodyDataSceneTaskList> sceneTaskList;
 
-        /**
-         * <p>The translation of the scene description.</p>
-         */
         @NameInMap("sceneTranslate")
         public String sceneTranslate;
 
         /**
-         * <p>The sentence list.</p>
+         * <p>The list of sentences.</p>
          */
         @NameInMap("sentenceList")
         public java.util.List<ListTextbookAssistantSceneDetailsResponseBodyDataSentenceList> sentenceList;
 
         /**
-         * <p>The practice target.</p>
+         * <p>The practice objective.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -572,19 +569,19 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The theme details.</p>
+         * <p>The theme information.</p>
          */
         @NameInMap("theme")
         public ListTextbookAssistantSceneDetailsResponseBodyDataTheme theme;
 
         /**
-         * <p>The topic details.</p>
+         * <p>The topic information.</p>
          */
         @NameInMap("topic")
         public ListTextbookAssistantSceneDetailsResponseBodyDataTopic topic;
 
         /**
-         * <p>The word list.</p>
+         * <p>The list of words.</p>
          */
         @NameInMap("wordList")
         public java.util.List<ListTextbookAssistantSceneDetailsResponseBodyDataWordList> wordList;

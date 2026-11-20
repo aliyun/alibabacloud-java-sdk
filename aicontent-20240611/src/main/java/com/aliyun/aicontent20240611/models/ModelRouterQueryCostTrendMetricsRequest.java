@@ -74,6 +74,13 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     public String memberUserIds;
 
     /**
+     * <strong>example:</strong>
+     * <p>123,456</p>
+     */
+    @NameInMap("modelIds")
+    public String modelIds;
+
+    /**
      * <p>The model types, separated by commas.</p>
      * 
      * <strong>example:</strong>
@@ -160,6 +167,14 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     }
     public String getMemberUserIds() {
         return this.memberUserIds;
+    }
+
+    public ModelRouterQueryCostTrendMetricsRequest setModelIds(String modelIds) {
+        this.modelIds = modelIds;
+        return this;
+    }
+    public String getModelIds() {
+        return this.modelIds;
     }
 
     public ModelRouterQueryCostTrendMetricsRequest setModelTypes(String modelTypes) {

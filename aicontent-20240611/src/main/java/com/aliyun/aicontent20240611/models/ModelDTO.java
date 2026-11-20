@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelDTO extends TeaModel {
     /**
-     * <p>A masked preview of the API key.</p>
+     * <p>The API key preview.</p>
      * 
      * <strong>example:</strong>
      * <p>sk-xxx****xxx</p>
@@ -14,7 +14,7 @@ public class ModelDTO extends TeaModel {
     public String apiKeyPreview;
 
     /**
-     * <p>The base URL for API requests.</p>
+     * <p>Base URL</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
@@ -23,7 +23,7 @@ public class ModelDTO extends TeaModel {
     public String baseUrl;
 
     /**
-     * <p>Indicates the model\&quot;s status. A value of 0 means enabled, and a non-zero value means disabled.</p>
+     * <p>A value of 0 indicates enabled, and a non-zero value indicates disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -35,7 +35,7 @@ public class ModelDTO extends TeaModel {
      * <p>The model description.</p>
      * 
      * <strong>example:</strong>
-     * <p>通义千问大模型</p>
+     * <p>Qwen large language model</p>
      */
     @NameInMap("description")
     public String description;
@@ -44,7 +44,7 @@ public class ModelDTO extends TeaModel {
     public String extensions;
 
     /**
-     * <p>The time when the model was created, in ISO 8601 format.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
@@ -53,7 +53,7 @@ public class ModelDTO extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>The time when the model was last updated, in ISO 8601 format.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
@@ -62,6 +62,8 @@ public class ModelDTO extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>Indicates whether a billing rule is configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -69,7 +71,7 @@ public class ModelDTO extends TeaModel {
     public Boolean hasBillingRule;
 
     /**
-     * <p>The unique ID of the model.</p>
+     * <p>ID</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -108,7 +110,7 @@ public class ModelDTO extends TeaModel {
     public String maxOutputLength;
 
     /**
-     * <p>The model code.</p>
+     * <p>The model identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen-turbo</p>
@@ -129,7 +131,7 @@ public class ModelDTO extends TeaModel {
      * <p>The model name.</p>
      * 
      * <strong>example:</strong>
-     * <p>通义千问</p>
+     * <p>Qwen</p>
      */
     @NameInMap("name")
     public String name;
@@ -144,16 +146,16 @@ public class ModelDTO extends TeaModel {
     public String symbol;
 
     /**
-     * <p>The display names for the tags, separated by commas.</p>
+     * <p>The tag display names.</p>
      * 
      * <strong>example:</strong>
-     * <p>对话,自然语言处理</p>
+     * <p>Conversation, natural language processing</p>
      */
     @NameInMap("tagNames")
     public String tagNames;
 
     /**
-     * <p>A comma-separated list of model tags.</p>
+     * <p>The tags, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>chat,NLP</p>
@@ -162,7 +164,7 @@ public class ModelDTO extends TeaModel {
     public String tags;
 
     /**
-     * <p>The version number.</p>
+     * <p>The version.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

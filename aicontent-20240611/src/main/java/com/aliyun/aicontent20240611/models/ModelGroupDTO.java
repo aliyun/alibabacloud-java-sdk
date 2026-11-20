@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelGroupDTO extends TeaModel {
     /**
+     * <p>The time when the group was created. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-01 00:00:00</p>
      */
@@ -12,6 +14,8 @@ public class ModelGroupDTO extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The time when the group was updated. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-01 00:00:00</p>
      */
@@ -19,6 +23,8 @@ public class ModelGroupDTO extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The unique identifier of the group. It starts with the mg_ prefix and remains unchanged after creation.</p>
+     * 
      * <strong>example:</strong>
      * <p>mg_a1b2c3d4e5f6g7h8i9j0</p>
      */
@@ -26,6 +32,8 @@ public class ModelGroupDTO extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The number of models currently included in the group.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -33,6 +41,8 @@ public class ModelGroupDTO extends TeaModel {
     public Integer modelCount;
 
     /**
+     * <p>The array of all member model IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[101, 102, 103]</p>
      */
@@ -40,13 +50,21 @@ public class ModelGroupDTO extends TeaModel {
     public java.util.List<Long> modelList;
 
     /**
+     * <p>The name of the group. If a system group is unnamed, the default platform name is returned.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Professional Plan</p>
+     * <p>Professional Edition plan</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The type of the group. Valid values:</p>
+     * <ul>
+     * <li>system: The group is automatically created by the system and cannot be edited or deleted.</li>
+     * <li>manual: The group is manually created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>manual</p>
      */

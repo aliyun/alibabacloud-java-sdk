@@ -65,7 +65,7 @@ public class ApiKeyDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("memberUserName")
     public String memberUserName;

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaModel {
     /**
-     * <p>A container for the returned data.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
-     * <p>[]</p>
+     * <p>{&quot;chineseResult&quot;:&quot;谢谢莉莉.你喜欢吃肉吗，莉莉？&quot;,&quot;englishResult&quot;:&quot;Thanks, Lily. Do you like meat, Lily?&quot;}</p>
      */
     @NameInMap("data")
     public GetAITeacherExpansionDialogueSuggestionResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The fault message code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -50,7 +50,7 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
 
     public static class GetAITeacherExpansionDialogueSuggestionResponseBodyData extends TeaModel {
         /**
-         * <p>The Chinese translation of the suggested response.</p>
+         * <p>The Chinese prompt of the assistant.</p>
          * 
          * <strong>example:</strong>
          * <p>谢谢莉莉.你喜欢吃肉吗，莉莉？</p>
@@ -122,7 +122,7 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         public String chineseResult;
 
         /**
-         * <p>The suggested response in English.</p>
+         * <p>The English prompt of the assistant.</p>
          * 
          * <strong>example:</strong>
          * <p>Thanks, Lily. Do you like meat, Lily?</p>

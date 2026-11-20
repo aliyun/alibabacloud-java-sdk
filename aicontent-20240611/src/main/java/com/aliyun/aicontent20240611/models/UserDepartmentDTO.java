@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UserDepartmentDTO extends TeaModel {
     /**
+     * <p>The department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class UserDepartmentDTO extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The department name.</p>
+     * 
      * <strong>example:</strong>
      * <p>R&amp;D Department</p>
      */
@@ -19,6 +23,8 @@ public class UserDepartmentDTO extends TeaModel {
     public String clientName;
 
     /**
+     * <p>The role code.</p>
+     * 
      * <strong>example:</strong>
      * <p>member</p>
      */
@@ -26,6 +32,8 @@ public class UserDepartmentDTO extends TeaModel {
     public String roleCode;
 
     /**
+     * <p>The role name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Member</p>
      */

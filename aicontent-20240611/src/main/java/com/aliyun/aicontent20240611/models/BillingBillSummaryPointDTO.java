@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BillingBillSummaryPointDTO extends TeaModel {
     /**
+     * <p>The timestamp in UNIX seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1700000000</p>
      */
@@ -12,6 +14,8 @@ public class BillingBillSummaryPointDTO extends TeaModel {
     public Long timestamp;
 
     /**
+     * <p>The total cost at that point in time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.23</p>
      */

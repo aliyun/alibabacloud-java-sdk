@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaModel {
     /**
-     * <p>The object that contains the refinement result.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
-     * <p>[]</p>
+     * <p>{&quot;result&quot;:&quot;Yes, I\&quot;ll be right there.&quot;}</p>
      */
     @NameInMap("data")
     public ExecuteAITeacherExpansionDialogueRefineResponseBodyData data;
 
     /**
-     * <p>The error code. Returned only when the request fails.</p>
+     * <p>The fault message encoding.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -23,10 +23,10 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
     public String errCode;
 
     /**
-     * <p>The error message. Returned only when the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -50,7 +50,7 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
 
     public static class ExecuteAITeacherExpansionDialogueRefineResponseBodyData extends TeaModel {
         /**
-         * <p>The refinement result.</p>
+         * <p>The polishing result.</p>
          * 
          * <strong>example:</strong>
          * <p>Yes, I\&quot;ll be right there.</p>

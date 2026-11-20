@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
     /**
-     * <p>An array of article detail objects.</p>
+     * <p>The returned data object.</p>
      */
     @NameInMap("data")
     public java.util.List<ListTextbookAssistantArticleDetailsResponseBodyData> data;
@@ -23,7 +23,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -38,7 +38,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
@@ -47,11 +47,11 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates if the API call succeeded.</p>
+     * <p>Indicates whether the API call is successful.</p>
      * <ul>
-     * <li><p><strong>true</strong>: Success</p>
+     * <li><p><strong>true</strong>: Successful.</p>
      * </li>
-     * <li><p><strong>false</strong>: Failure</p>
+     * <li><p><strong>false</strong>: Failed.</p>
      * </li>
      * </ul>
      * 
@@ -116,7 +116,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantArticleDetailsResponseBodyDataQuestionList extends TeaModel {
         /**
-         * <p>The answer.</p>
+         * <p>The answer to the question.</p>
          * 
          * <strong>example:</strong>
          * <p>I\&quot;m Mike Black</p>
@@ -125,7 +125,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         public String answer;
 
         /**
-         * <p>The question.</p>
+         * <p>The question content.</p>
          * 
          * <strong>example:</strong>
          * <p>From the book, how does Mike Black introduce himself?</p>
@@ -134,10 +134,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         public String question;
 
         /**
-         * <p>The translated question.</p>
+         * <p>The translation of the question content.</p>
          * 
          * <strong>example:</strong>
-         * <p>根据文章，迈克·布莱克是如何介绍自己的？</p>
+         * <p>According to the article, how does Mike Black introduce himself?</p>
          */
         @NameInMap("questionTranslate")
         public String questionTranslate;
@@ -193,13 +193,16 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         public String sceneId;
 
         /**
-         * <p>A list of image URLs for the scene.</p>
+         * <p>The images related to the current scene.</p>
          */
         @NameInMap("sceneImageList")
         public java.util.List<String> sceneImageList;
 
         /**
-         * <p>The translated scene description.</p>
+         * <p>The translation of the scene description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>At a cafe, share the story of how you met your friends</p>
          */
         @NameInMap("sceneTranslate")
         public String sceneTranslate;
@@ -245,10 +248,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantArticleDetailsResponseBodyDataSentenceList extends TeaModel {
         /**
-         * <p>The sentence analysis.</p>
+         * <p>The sentence analysis and explanation.</p>
          * 
          * <strong>example:</strong>
-         * <p>主语 + be动词（am/is/are） + 姓名.</p>
+         * <p>Subject + be verb (am/is/are) + name</p>
          */
         @NameInMap("sentenceAnalysis")
         public String sentenceAnalysis;
@@ -304,7 +307,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantArticleDetailsResponseBodyDataTheme extends TeaModel {
         /**
-         * <p>A list of image URLs for the theme.</p>
+         * <p>The images related to the current theme.</p>
          */
         @NameInMap("themeImageList")
         public java.util.List<String> themeImageList;
@@ -313,13 +316,13 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
          * <p>The theme name.</p>
          * 
          * <strong>example:</strong>
-         * <p>自我认知与提升</p>
+         * <p>Self-awareness and improvement</p>
          */
         @NameInMap("themeName")
         public String themeName;
 
         /**
-         * <p>The translated theme name.</p>
+         * <p>The translation of the theme name.</p>
          * 
          * <strong>example:</strong>
          * <p>Self-awareness, self-management, self-improvement</p>
@@ -360,7 +363,7 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantArticleDetailsResponseBodyDataTopic extends TeaModel {
         /**
-         * <p>A list of image URLs for the topic.</p>
+         * <p>The images related to the current topic.</p>
          */
         @NameInMap("topicImageList")
         public java.util.List<String> topicImageList;
@@ -369,13 +372,13 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
          * <p>The topic name.</p>
          * 
          * <strong>example:</strong>
-         * <p>打招呼与自我介绍</p>
+         * <p>Greetings and self-introductions</p>
          */
         @NameInMap("topicName")
         public String topicName;
 
         /**
-         * <p>The translated topic name.</p>
+         * <p>The translation of the topic content.</p>
          * 
          * <strong>example:</strong>
          * <p>Greetings and self-introduction</p>
@@ -416,10 +419,10 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantArticleDetailsResponseBodyDataWordList extends TeaModel {
         /**
-         * <p>The word analysis.</p>
+         * <p>The word definition.</p>
          * 
          * <strong>example:</strong>
-         * <p>令人愉快的；友好的</p>
+         * <p>Pleasant; friendly</p>
          */
         @NameInMap("wordAnalysis")
         public String wordAnalysis;
@@ -484,46 +487,48 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         public String articleId;
 
         /**
-         * <p>A list of Q\&amp;A objects.</p>
+         * <p>The question and answer data.</p>
          */
         @NameInMap("questionList")
         public java.util.List<ListTextbookAssistantArticleDetailsResponseBodyDataQuestionList> questionList;
 
         /**
-         * <p>A list of scene objects.</p>
+         * <p>The scene list.</p>
          */
         @NameInMap("sceneList")
         public java.util.List<ListTextbookAssistantArticleDetailsResponseBodyDataSceneList> sceneList;
 
         /**
-         * <p>A list of sentence objects.</p>
+         * <p>The sentence list.</p>
          */
         @NameInMap("sentenceList")
         public java.util.List<ListTextbookAssistantArticleDetailsResponseBodyDataSentenceList> sentenceList;
 
         /**
-         * <p>The learning objectives.</p>
+         * <p>The practice objective.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.能够在自我介绍时运用句型“What\&quot;s your name? My name is/I‘m...”进行询问及回答。\n2.能够和新朋友运用句型“Nice to meet you(too).”进行问候。</p>
+         * <ol>
+         * <li>Be able to use the sentence pattern &quot;What\&quot;s your name? My name is/I\&quot;m...&quot; to ask and answer during self-introductions.\n2. Be able to use the sentence pattern &quot;Nice to meet you (too).&quot; to greet new friends</li>
+         * </ol>
          */
         @NameInMap("target")
         public String target;
 
         /**
-         * <p>The theme object.</p>
+         * <p>The theme information.</p>
          */
         @NameInMap("theme")
         public ListTextbookAssistantArticleDetailsResponseBodyDataTheme theme;
 
         /**
-         * <p>The topic object.</p>
+         * <p>The topic information.</p>
          */
         @NameInMap("topic")
         public ListTextbookAssistantArticleDetailsResponseBodyDataTopic topic;
 
         /**
-         * <p>A list of word objects.</p>
+         * <p>The word list.</p>
          */
         @NameInMap("wordList")
         public java.util.List<ListTextbookAssistantArticleDetailsResponseBodyDataWordList> wordList;

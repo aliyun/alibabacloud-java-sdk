@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelGroupClientDTO extends TeaModel {
     /**
+     * <p>The list of API key summaries for the department.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ModelGroupClientDTO extends TeaModel {
     public java.util.List<ModelGroupClientKeyItemDTO> apiKeys;
 
     /**
+     * <p>The department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1001</p>
      */
@@ -19,8 +23,10 @@ public class ModelGroupClientDTO extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The department name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>UserA-Professional</p>
+     * <p>User A-Professional Edition</p>
      */
     @NameInMap("clientName")
     public String clientName;

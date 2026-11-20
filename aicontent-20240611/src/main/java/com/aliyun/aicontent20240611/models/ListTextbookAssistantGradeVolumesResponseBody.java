@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The response data object.</p>
      */
     @NameInMap("data")
     public java.util.List<ListTextbookAssistantGradeVolumesResponseBodyData> data;
@@ -23,7 +23,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -38,7 +38,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F3B1AAF2-3041-5AA7-A352-BD5F998FA465</p>
@@ -47,7 +47,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantGradeVolumesResponseBodyDataGradeVolumes extends TeaModel {
         /**
-         * <p>The grade level. Valid values: 1 to 9.</p>
+         * <p>The grade. Valid values: 1 to 9, corresponding to the grade level.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -119,7 +119,7 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
         public String grade;
 
         /**
-         * <p>The volume. Valid values: <code>0</code> (single volume), <code>1</code> (Volume 1), and <code>2</code> (Volume 2).</p>
+         * <p>The volume. Valid values: 0: full volume, 1: first semester, 2: second semester.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -152,16 +152,16 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantGradeVolumesResponseBodyData extends TeaModel {
         /**
-         * <p>The grade and volume information.</p>
+         * <p>The grade and volume data.</p>
          */
         @NameInMap("gradeVolumes")
         public java.util.List<ListTextbookAssistantGradeVolumesResponseBodyDataGradeVolumes> gradeVolumes;
 
         /**
-         * <p>The version of the textbook.</p>
+         * <p>The textbook version.</p>
          * 
          * <strong>example:</strong>
-         * <p>人教版</p>
+         * <p>PEP edition</p>
          */
         @NameInMap("textbookVersion")
         public String textbookVersion;

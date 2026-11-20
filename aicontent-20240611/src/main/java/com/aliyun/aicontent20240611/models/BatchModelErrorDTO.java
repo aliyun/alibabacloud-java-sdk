@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchModelErrorDTO extends TeaModel {
     /**
+     * <p>The failure cause.</p>
+     * 
      * <strong>example:</strong>
-     * <p>模型类型不能为空</p>
+     * <p>The model type cannot be empty</p>
      */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     /**
+     * <p>The model ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-max</p>
      */
@@ -19,6 +23,8 @@ public class BatchModelErrorDTO extends TeaModel {
     public String modelId;
 
     /**
+     * <p>The model name.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-max</p>
      */

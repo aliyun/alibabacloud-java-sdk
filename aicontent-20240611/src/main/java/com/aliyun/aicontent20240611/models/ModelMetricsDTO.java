@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelMetricsDTO extends TeaModel {
     /**
+     * <p>The average response time (ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>200.5</p>
      */
@@ -12,6 +14,8 @@ public class ModelMetricsDTO extends TeaModel {
     public Double avgResponseTime;
 
     /**
+     * <p>The total number of input tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>500000</p>
      */
@@ -19,6 +23,8 @@ public class ModelMetricsDTO extends TeaModel {
     public Long inputTokens;
 
     /**
+     * <p>The total number of output tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>300000</p>
      */
@@ -26,6 +32,8 @@ public class ModelMetricsDTO extends TeaModel {
     public Long outputTokens;
 
     /**
+     * <p>The success rate (%).</p>
+     * 
      * <strong>example:</strong>
      * <p>99.5</p>
      */
@@ -33,6 +41,8 @@ public class ModelMetricsDTO extends TeaModel {
     public Double successRate;
 
     /**
+     * <p>The total number of calls.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

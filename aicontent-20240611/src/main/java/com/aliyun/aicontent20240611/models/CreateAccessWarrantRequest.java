@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccessWarrantRequest extends TeaModel {
     /**
-     * <p>The merchant\&quot;s application ID.</p>
+     * <p>The AppKey of the project assigned by the merchant.</p>
      * 
      * <strong>example:</strong>
      * <p>a123</p>
@@ -14,7 +14,7 @@ public class CreateAccessWarrantRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The signature for the request parameters.</p>
+     * <p>The signature of the authorization API parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>e32fac43df0b0b0be32fac43df0b0b0b</p>
@@ -23,7 +23,7 @@ public class CreateAccessWarrantRequest extends TeaModel {
     public String requestSign;
 
     /**
-     * <p>The 10-digit request timestamp in seconds.</p>
+     * <p>The 10-digit timestamp in seconds when the merchant initiates the authorization request.</p>
      * 
      * <strong>example:</strong>
      * <p>1701000000</p>
@@ -41,7 +41,7 @@ public class CreateAccessWarrantRequest extends TeaModel {
     public String userClientIp;
 
     /**
-     * <p>The merchant\&quot;s user ID.</p>
+     * <p>The ID of the merchant user.</p>
      * 
      * <strong>example:</strong>
      * <p>sn123</p>
@@ -50,7 +50,7 @@ public class CreateAccessWarrantRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The duration, in seconds, for which the access warrant is valid.</p>
+     * <p>The validity period of the authorization ID, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>7200</p>

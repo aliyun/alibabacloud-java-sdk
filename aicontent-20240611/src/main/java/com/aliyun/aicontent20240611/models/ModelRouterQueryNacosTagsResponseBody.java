@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
     /**
-     * <p>An array of tags.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
     public java.util.List<ModelRouterQueryNacosTagsResponseBodyData> data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The fault message encoding.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -50,7 +50,7 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,19 +113,35 @@ public class ModelRouterQueryNacosTagsResponseBody extends TeaModel {
 
     public static class ModelRouterQueryNacosTagsResponseBodyData extends TeaModel {
         /**
+         * <p>The display name of the model type. This parameter is returned when configType is set to model-types.</p>
+         * 
          * <strong>example:</strong>
-         * <p>文本生成</p>
+         * <p>Text generation</p>
          */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TXT_GEN</p>
+         */
         @NameInMap("tag")
         public String tag;
 
+        /**
+         * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Text generation</p>
+         */
         @NameInMap("tagName")
         public String tagName;
 
         /**
+         * <p>The model type value. This parameter is returned when configType is set to model-types.</p>
+         * 
          * <strong>example:</strong>
          * <p>NLP</p>
          */

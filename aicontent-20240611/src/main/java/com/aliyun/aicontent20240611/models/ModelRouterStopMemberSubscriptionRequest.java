@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterStopMemberSubscriptionRequest extends TeaModel {
     /**
+     * <p>The balance type. Valid values: permanent, monthly.</p>
+     * 
      * <strong>example:</strong>
      * <p>monthly</p>
      */

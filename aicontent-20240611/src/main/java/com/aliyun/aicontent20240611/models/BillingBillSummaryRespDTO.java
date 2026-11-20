@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class BillingBillSummaryRespDTO extends TeaModel {
+    /**
+     * <p>The list of cost trend data points.</p>
+     */
     @NameInMap("points")
     public java.util.List<BillingBillSummaryPointDTO> points;
 
     /**
+     * <p>The total cost within the time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>123.45</p>
      */

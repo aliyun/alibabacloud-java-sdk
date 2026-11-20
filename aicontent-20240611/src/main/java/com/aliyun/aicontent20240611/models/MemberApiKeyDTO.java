@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class MemberApiKeyDTO extends TeaModel {
+    /**
+     * <p>The parent department information.</p>
+     */
     @NameInMap("client")
     public ClientDTO client;
 
     /**
+     * <p>The ID of the parent department. Member keys are mapped to their parent departments.</p>
+     * 
      * <strong>example:</strong>
      * <p>438</p>
      */
@@ -15,6 +20,8 @@ public class MemberApiKeyDTO extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The deletion tag. A value of 0 indicates that the key is enabled, and a non-zero value indicates that the key is disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -22,6 +29,8 @@ public class MemberApiKeyDTO extends TeaModel {
     public Integer deleteTag;
 
     /**
+     * <p>The expiration time. A null value indicates that the key never expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-12-31T00:00:00Z</p>
      */
@@ -29,6 +38,8 @@ public class MemberApiKeyDTO extends TeaModel {
     public String expireAt;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-03T18:41:40+08:00</p>
      */
@@ -36,6 +47,8 @@ public class MemberApiKeyDTO extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-03T18:41:40+08:00</p>
      */
@@ -43,16 +56,23 @@ public class MemberApiKeyDTO extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The API key ID. This ID can be used to query the bound group by API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>502</p>
      */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>The full key. This field is not returned in the member list and is always empty.</p>
+     */
     @NameInMap("key")
     public String key;
 
     /**
+     * <p>The masked preview of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-us****9876</p>
      */
@@ -60,6 +80,8 @@ public class MemberApiKeyDTO extends TeaModel {
     public String keyPreview;
 
     /**
+     * <p>The ID of the department member to whom the key belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>304</p>
      */
@@ -67,20 +89,26 @@ public class MemberApiKeyDTO extends TeaModel {
     public Long memberUserId;
 
     /**
+     * <p>The member name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>John</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("memberUserName")
     public String memberUserName;
 
     /**
+     * <p>The API key name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>John\&quot;s Key</p>
+     * <p>Zhang San\&quot;s key</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The status. Valid values: active: Enabled. disabled: Disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */

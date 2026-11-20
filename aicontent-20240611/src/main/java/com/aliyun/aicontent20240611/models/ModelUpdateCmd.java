@@ -20,7 +20,7 @@ public class ModelUpdateCmd extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>通义千问大模型</p>
+     * <p>Qwen large language model</p>
      */
     @NameInMap("description")
     public String description;
@@ -55,7 +55,7 @@ public class ModelUpdateCmd extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>通义千问</p>
+     * <p>Qwen</p>
      */
     @NameInMap("name")
     public String name;

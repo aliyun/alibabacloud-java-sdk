@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ConversationUpdateCmd extends TeaModel {
     /**
+     * <p>The conversation data in JSON format, containing message records for each model.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;你好&quot;}]}</p>
+     * <p>{&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;Hello&quot;}]}</p>
      */
     @NameInMap("chatData")
     public String chatData;
 
     /**
+     * <p>The number of messages.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class ConversationUpdateCmd extends TeaModel {
     public Integer messageCount;
 
     /**
+     * <p>The list of model IDs as a JSON array string.</p>
+     * 
      * <strong>example:</strong>
      * <p>[1,2,3]</p>
      */
@@ -26,8 +32,10 @@ public class ConversationUpdateCmd extends TeaModel {
     public String modelIds;
 
     /**
+     * <p>The conversation title.</p>
+     * 
      * <strong>example:</strong>
-     * <p>我的对话</p>
+     * <p>My conversation</p>
      */
     @NameInMap("title")
     public String title;

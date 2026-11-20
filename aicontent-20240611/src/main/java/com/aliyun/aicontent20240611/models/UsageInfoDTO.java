@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UsageInfoDTO extends TeaModel {
     /**
+     * <p>The output tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -12,6 +14,8 @@ public class UsageInfoDTO extends TeaModel {
     public Integer completionTokens;
 
     /**
+     * <p>The number of images.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +23,8 @@ public class UsageInfoDTO extends TeaModel {
     public Integer imageCount;
 
     /**
+     * <p>The input tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +32,8 @@ public class UsageInfoDTO extends TeaModel {
     public Integer promptTokens;
 
     /**
+     * <p>The total tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>150</p>
      */
@@ -33,6 +41,8 @@ public class UsageInfoDTO extends TeaModel {
     public Integer totalTokens;
 
     /**
+     * <p>The number of videos.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -40,6 +50,8 @@ public class UsageInfoDTO extends TeaModel {
     public Integer videoCount;
 
     /**
+     * <p>The video duration in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

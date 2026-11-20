@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeptMemberDTO extends TeaModel {
     /**
+     * <p>The comma-separated list of authorized model IDs. This field is valid only when include_authorization is specified. An empty value indicates that the models are inherited or all models are authorized.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2</p>
      */
@@ -12,6 +14,8 @@ public class DeptMemberDTO extends TeaModel {
     public String allowedModels;
 
     /**
+     * <p>The authorization configuration. Valid values: inherit: Inherited from the department. custom: Customized. This field is valid only when include_authorization is specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>inherit</p>
      */
@@ -19,6 +23,8 @@ public class DeptMemberDTO extends TeaModel {
     public String authConfig;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class DeptMemberDTO extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The member user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class DeptMemberDTO extends TeaModel {
     public Long id;
 
     /**
+     * <p>The number of active keys that belong to the member. This field is valid only when include_authorization is specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class DeptMemberDTO extends TeaModel {
     public Integer keyCount;
 
     /**
+     * <p>The logon name.</p>
+     * 
      * <strong>example:</strong>
      * <p>zhangsan</p>
      */
@@ -47,6 +59,8 @@ public class DeptMemberDTO extends TeaModel {
     public String loginName;
 
     /**
+     * <p>The monthly balance. This field is valid only when include_balance is specified. The value is 0 if the feature is not activated.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.00</p>
      */
@@ -54,6 +68,8 @@ public class DeptMemberDTO extends TeaModel {
     public Double monthlyBalance;
 
     /**
+     * <p>The name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Zhang San</p>
      */
@@ -61,6 +77,8 @@ public class DeptMemberDTO extends TeaModel {
     public String name;
 
     /**
+     * <p>The permanent balance. This field is valid only when include_balance is specified. The value is 0 if the feature is not activated.</p>
+     * 
      * <strong>example:</strong>
      * <p>20.00</p>
      */
@@ -68,6 +86,8 @@ public class DeptMemberDTO extends TeaModel {
     public Double permanentBalance;
 
     /**
+     * <p>The mobile phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>138****0000</p>
      */
@@ -75,6 +95,8 @@ public class DeptMemberDTO extends TeaModel {
     public String phone;
 
     /**
+     * <p>The role code.</p>
+     * 
      * <strong>example:</strong>
      * <p>member</p>
      */
@@ -82,6 +104,8 @@ public class DeptMemberDTO extends TeaModel {
     public String roleCode;
 
     /**
+     * <p>The role name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Member</p>
      */

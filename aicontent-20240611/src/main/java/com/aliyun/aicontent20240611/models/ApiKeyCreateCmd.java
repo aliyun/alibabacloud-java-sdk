@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApiKeyCreateCmd extends TeaModel {
     /**
+     * <p>The customer ID. A value of null indicates the default customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelGroupModelDTO extends TeaModel {
     /**
+     * <p>The numeric ID of the model.</p>
+     * 
      * <strong>example:</strong>
      * <p>101</p>
      */
@@ -12,6 +14,8 @@ public class ModelGroupModelDTO extends TeaModel {
     public Long id;
 
     /**
+     * <p>The model identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-max</p>
      */
@@ -19,6 +23,8 @@ public class ModelGroupModelDTO extends TeaModel {
     public String modelCode;
 
     /**
+     * <p>The model type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Chat</p>
      */
@@ -26,13 +32,17 @@ public class ModelGroupModelDTO extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The name of the model.</p>
+     * 
      * <strong>example:</strong>
-     * <p>通义千问-Max</p>
+     * <p>Qwen-Max</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The platform to which the model belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen</p>
      */
@@ -40,6 +50,8 @@ public class ModelGroupModelDTO extends TeaModel {
     public String platform;
 
     /**
+     * <p>The model version.</p>
+     * 
      * <strong>example:</strong>
      * <p>v0</p>
      */
