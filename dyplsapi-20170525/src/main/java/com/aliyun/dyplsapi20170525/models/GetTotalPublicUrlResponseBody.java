@@ -86,7 +86,7 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://secret-axb-reco****cn-shanghai.aliyuncs.com/1000000820257625_66647243838006067251551752068865.mp3?Expires=1551****07&OSSAccessKeyId=LTAIP00vvvv****v&Signature=tK6Yq9KusU4n%2BZQWX****4/WmEA%3D">http://secret-axb-reco****cn-shanghai.aliyuncs.com/1000000820257625_66647243838006067251551752068865.mp3?Expires=1551****07&amp;OSSAccessKeyId=LTAIP00vvvv****v&amp;Signature=tK6Yq9KusU4n%2BZQWX****4/WmEA%3D</a></p>
+         * <p><a href="http://secret-ab-reco****cn-shanghai.aliyuncs.com/10000008********_66647243838006067***************.mp3?Expires=1551******&OSSAccessKeyId=yourAccessKeyID&Signature=tK6Yq9KusU4n***************EA%3D">http://secret-ab-reco****cn-shanghai.aliyuncs.com/10000008********_66647243838006067***************.mp3?Expires=1551******&amp;OSSAccessKeyId=yourAccessKeyID&amp;Signature=tK6Yq9KusU4n***************EA%3D</a></p>
          */
         @NameInMap("PhonePublicUrl")
         public String phonePublicUrl;
@@ -98,7 +98,7 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://secret-ab-reco****cn-shanghai.aliyuncs.com/1000000820257625_66647243838006067251551752068865.mp3?Expires=155175****&OSSAccessKeyId=LTAIP00vvv****vv&Signature=tK6Yq9KusU4n%2BZQW****g4/WmEA%3D">http://secret-ab-reco****cn-shanghai.aliyuncs.com/1000000820257625_66647243838006067251551752068865.mp3?Expires=155175****&amp;OSSAccessKeyId=LTAIP00vvv****vv&amp;Signature=tK6Yq9KusU4n%2BZQW****g4/WmEA%3D</a></p>
+         * <p><a href="http://secret-ab-reco****cn-shanghai.aliyuncs.com/10000008********_66647243838006067***************.mp3?Expires=1551******&OSSAccessKeyId=yourAccessKeyID&Signature=tK6Yq9KusU4n***************EA%3D">http://secret-ab-reco****cn-shanghai.aliyuncs.com/10000008********_66647243838006067***************.mp3?Expires=1551******&amp;OSSAccessKeyId=yourAccessKeyID&amp;Signature=tK6Yq9KusU4n***************EA%3D</a></p>
          */
         @NameInMap("RingPublicUrl")
         public String ringPublicUrl;

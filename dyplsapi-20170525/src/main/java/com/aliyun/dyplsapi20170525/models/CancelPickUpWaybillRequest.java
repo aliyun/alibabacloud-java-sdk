@@ -9,7 +9,7 @@ public class CancelPickUpWaybillRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;action\&quot;:\&quot;UPDATE_DESC\&quot;,\&quot;value\&quot;:\&quot;The courier is unable to pick up the package.\&quot;}</p>
+     * <p>不想退货了</p>
      */
     @NameInMap("CancelDesc")
     public String cancelDesc;

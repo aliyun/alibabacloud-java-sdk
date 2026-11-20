@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
     /**
+     * <p>Details of the denied access.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,7 +14,7 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>请求状态码</p>
+     * <p>Request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -21,13 +23,13 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>A号码报备状态查询结构体</p>
+     * <p>The struct for querying the A number reporting status.</p>
      */
     @NameInMap("Data")
     public QuerySecretAPhoneNoToCustResponseBodyData data;
 
     /**
-     * <p>失败错误提示</p>
+     * <p>Error message for a failed operation.</p>
      * 
      * <strong>example:</strong>
      * <p>号码组不存在</p>
@@ -36,7 +38,7 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>返回id</p>
+     * <p>The returned ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1D73E648-0978-18A5-B089-3BB2</p>
@@ -45,7 +47,13 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>请求是否成功</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <ul>
+     * <li><p>true: Succeeded.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -108,7 +116,7 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
 
     public static class QuerySecretAPhoneNoToCustResponseBodyData extends TeaModel {
         /**
-         * <p>所属a号码组id</p>
+         * <p>The ID of the A number group to which the number belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>19</p>
@@ -117,7 +125,7 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
         public String ANoWhiteGroupId;
 
         /**
-         * <p>固话报备的经办人/法人电话</p>
+         * <p>The contact phone number of the handler or legal representative for landline reporting.</p>
          * 
          * <strong>example:</strong>
          * <p>130*****8888</p>
@@ -126,7 +134,13 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
         public String custPhoneNo;
 
         /**
-         * <p>号码类型</p>
+         * <p>The number type. Valid values:</p>
+         * <ul>
+         * <li><p>Mobile: Mobile phone number.</p>
+         * </li>
+         * <li><p>Fixed: Landline number.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Mobile</p>
@@ -135,7 +149,7 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
         public String noType;
 
         /**
-         * <p>A号码</p>
+         * <p>A number.</p>
          * 
          * <strong>example:</strong>
          * <p>130*****1234</p>
@@ -144,7 +158,7 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
         public String phoneNoA;
 
         /**
-         * <p>备注（客户自己的业务备注，可编辑）</p>
+         * <p>Remarks (user\&quot;s own business notes).</p>
          * 
          * <strong>example:</strong>
          * <p>***报备</p>
@@ -153,7 +167,7 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>报备失败原因</p>
+         * <p>The reason for review failure.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;系统判断为不同人&quot;]</p>
@@ -162,7 +176,15 @@ public class QuerySecretAPhoneNoToCustResponseBody extends TeaModel {
         public String reportResult;
 
         /**
-         * <p>报备结果</p>
+         * <p>The reporting result. Valid values:</p>
+         * <ul>
+         * <li><p>REVIEWING: Under review.</p>
+         * </li>
+         * <li><p>PASS: Review passed.</p>
+         * </li>
+         * <li><p>FAIL: Review failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>REVIEWING</p>

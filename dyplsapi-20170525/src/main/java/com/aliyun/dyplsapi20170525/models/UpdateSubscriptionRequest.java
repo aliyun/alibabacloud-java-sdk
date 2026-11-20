@@ -8,7 +8,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
      * <p>The ID of the ASR model.</p>
      * 
      * <strong>example:</strong>
-     * <p>980abddb908f48e8b987cb2cd303****</p>
+     * <p>7ee372834d2f4cc7ac0d0ab2d0ae1aac</p>
      */
     @NameInMap("ASRModelId")
     public String ASRModelId;
@@ -79,7 +79,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1234</p>
+     * <p>200001234****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -135,7 +135,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1390000****</p>
+     * <p>139****0000</p>
      */
     @NameInMap("PhoneNoA")
     public String phoneNoA;
@@ -147,7 +147,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1390000****</p>
+     * <p>138****0000</p>
      */
     @NameInMap("PhoneNoB")
     public String phoneNoB;
@@ -157,7 +157,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1390000****</p>
+     * <p>139****1111</p>
      */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
@@ -229,7 +229,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;AXBRing_B&quot;:&quot;100000001&quot;,&quot;AXBRing_A&quot;:&quot;100000001&quot;}</p>
+     * <p>{&quot;AXBRing_B&quot;:&quot;1000<strong><strong>1&quot;,&quot;AXBRing_A&quot;:&quot;1000</strong></strong>1&quot;}</p>
      */
     @NameInMap("RingConfig")
     public String ringConfig;

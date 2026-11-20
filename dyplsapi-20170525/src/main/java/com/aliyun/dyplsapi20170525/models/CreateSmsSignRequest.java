@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSmsSignRequest extends TeaModel {
     /**
-     * <p>收信人号码</p>
+     * <p>The recipient number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateSmsSignRequest extends TeaModel {
     public String calledNo;
 
     /**
-     * <p>客户uid</p>
+     * <p>The customer UID. This parameter is automatically obtained by the system and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -26,7 +26,7 @@ public class CreateSmsSignRequest extends TeaModel {
     public Long callerParentId;
 
     /**
-     * <p>发信人号码</p>
+     * <p>The sender number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateSmsSignRequest extends TeaModel {
     public String callingNo;
 
     /**
-     * <p>号码池key</p>
+     * <p>The number pool key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class CreateSmsSignRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>请求去重ID, reqId最大长度为20位,接入方需要保持原子性</p>
+     * <p>The request deduplication ID. The maximum length is 20 characters. Ensure the atomicity of the request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddSecretBlacklistResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The request status code. Valid values:</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+     * <li>OK: The request was successful.</li>
+     * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AddSecretBlacklistResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

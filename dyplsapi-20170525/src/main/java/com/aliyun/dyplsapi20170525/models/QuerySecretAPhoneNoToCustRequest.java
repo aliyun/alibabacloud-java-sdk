@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySecretAPhoneNoToCustRequest extends TeaModel {
     /**
-     * <p>号码组ID</p>
+     * <p>Number group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class QuerySecretAPhoneNoToCustRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>A号码</p>
+     * <p>A number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListXTelephonesRequest extends TeaModel {
     /**
-     * <p>客户uid</p>
+     * <p>The customer UID. This parameter is automatically obtained by the system and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -16,7 +16,7 @@ public class ListXTelephonesRequest extends TeaModel {
     public Long callerParentId;
 
     /**
-     * <p>号码池key</p>
+     * <p>The number pool key.</p>
      * 
      * <strong>example:</strong>
      * <p>FC5**********************a1a</p>
@@ -28,7 +28,7 @@ public class ListXTelephonesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>页码从1开始</p>
+     * <p>The page number for the paged query. Paging starts from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -37,7 +37,7 @@ public class ListXTelephonesRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>每页条数</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -46,7 +46,7 @@ public class ListXTelephonesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>请求去重ID, reqId最大长度为20位,接入方需要保持原子性</p>
+     * <p>The request deduplication ID. The maximum length is 20 characters. Ensure the atomicity of the request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePhoneNoAReportRequest extends TeaModel {
     /**
-     * <p>所属a号码组id</p>
+     * <p>ID of the A-number group. On the <a href="https://dyplsnext.console.aliyun.com/qualification">Qualification Management</a> page, click View Details in the A-number whitelist section of the relevant qualification.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreatePhoneNoAReportRequest extends TeaModel {
     public Long ANoWhiteGroupId;
 
     /**
-     * <p>姓名</p>
+     * <p>Name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreatePhoneNoAReportRequest extends TeaModel {
     public String custName;
 
     /**
-     * <p>证件号码</p>
+     * <p>Certificate number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreatePhoneNoAReportRequest extends TeaModel {
     public String documentNumber;
 
     /**
-     * <p>证件类型 填写1表示身份证</p>
+     * <p>Certificate type. Enter 1 for an ID card.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,17 +45,17 @@ public class CreatePhoneNoAReportRequest extends TeaModel {
     public Long documentType;
 
     /**
-     * <p>半身照oss路径地址</p>
+     * <p>OSS path of the front-facing portrait photo.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456/test1719383196033.jpg示例值</p>
+     * <p>123456/test1719383196033.jpg</p>
      */
     @NameInMap("IdCardAlivePhoto")
     public String idCardAlivePhoto;
 
     /**
-     * <p>身份证反面照片oss路径地址</p>
+     * <p>OSS path of the photo of the back side (portrait side) of the ID card.</p>
      * 
      * <strong>example:</strong>
      * <p>123456/test1719383196032.jpg</p>
@@ -64,7 +64,7 @@ public class CreatePhoneNoAReportRequest extends TeaModel {
     public String idCardBackPhoto;
 
     /**
-     * <p>身份证正面照片oss路径地址</p>
+     * <p>OSS path of the photo of the front side (national emblem side) of the ID card.</p>
      * 
      * <strong>example:</strong>
      * <p>123456/test1719383196031.jpg</p>
@@ -76,7 +76,7 @@ public class CreatePhoneNoAReportRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>手机号</p>
+     * <p>Phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class CreatePhoneNoAReportRequest extends TeaModel {
     public String phoneNoA;
 
     /**
-     * <p>备注（客户自己的业务备注，可编辑）</p>
+     * <p>Remark (business remark added by the user).</p>
      * 
      * <strong>example:</strong>
      * <p>***报备</p>

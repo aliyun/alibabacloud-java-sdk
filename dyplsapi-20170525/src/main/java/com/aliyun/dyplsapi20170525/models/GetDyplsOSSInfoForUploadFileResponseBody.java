@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
     /**
+     * <p>Details of denied access.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,16 +14,27 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Request status code. Valid values:  </p>
+     * <ul>
+     * <li>OK: indicates that the request succeeded.  </li>
+     * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error Code List</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public GetDyplsOSSInfoForUploadFileResponseBodyData data;
 
     /**
+     * <p>Description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +42,8 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E2FD3B2F-5028-16E3-9F83-2F76F99B3873</p>
      */
@@ -36,6 +51,14 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Valid values:  </p>
+     * <ul>
+     * <li><p>true: indicates success.  </p>
+     * </li>
+     * <li><p>false: indicates failure.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,13 +120,17 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
 
     public static class GetDyplsOSSInfoForUploadFileResponseBodyData extends TeaModel {
         /**
+         * <p>AccessKey ID used for signing.</p>
+         * 
          * <strong>example:</strong>
-         * <p>LTAI***pSvPz</p>
+         * <p>YOUR_ACCESS_KEY_ID</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         /**
+         * <p>Expiration Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1744613007</p>
          */
@@ -111,6 +138,8 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>Host address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://alicom-**********-cn-zhangjiakou.aliyuncs.com">https://alicom-**********-cn-zhangjiakou.aliyuncs.com</a></p>
          */
@@ -118,6 +147,8 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>Signing policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>IjoiMjAyN*****9udGV</p>
          */
@@ -125,6 +156,8 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
         public String policy;
 
         /**
+         * <p>Signature computed from the <strong>AccessKey secret</strong> and <strong>policy</strong>. When invoking the OSS API, OSS authenticates this signature to confirm the validity of the POST request.</p>
+         * 
          * <strong>example:</strong>
          * <p>BXwW**********aoZH</p>
          */
@@ -132,6 +165,8 @@ public class GetDyplsOSSInfoForUploadFileResponseBody extends TeaModel {
         public String signature;
 
         /**
+         * <p>Policy path.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */

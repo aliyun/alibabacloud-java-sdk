@@ -12,7 +12,7 @@ public class QuerySubsIdRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1390000****</p>
+     * <p>139****1111</p>
      */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
@@ -22,7 +22,7 @@ public class QuerySubsIdRequest extends TeaModel {
      * <p>Log on to the <a href="https://dyplsnext.console.aliyun.com/overview">Phone Number Protection console</a> and view the key of the phone number pool on the Number Pool Management page.</p>
      * 
      * <strong>example:</strong>
-     * <p>FC123456</p>
+     * <p>FC10000012345****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;

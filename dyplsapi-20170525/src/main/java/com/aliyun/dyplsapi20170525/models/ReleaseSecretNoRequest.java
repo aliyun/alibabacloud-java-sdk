@@ -12,7 +12,7 @@ public class ReleaseSecretNoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>FC123456</p>
+     * <p>FC10000012345****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
@@ -31,7 +31,7 @@ public class ReleaseSecretNoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>130</p>
+     * <p>139****0000</p>
      */
     @NameInMap("SecretNo")
     public String secretNo;

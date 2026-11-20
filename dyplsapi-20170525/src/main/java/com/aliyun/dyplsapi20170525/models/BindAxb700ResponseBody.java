@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindAxb700ResponseBody extends TeaModel {
     /**
+     * <p>The access denied details.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,16 +14,27 @@ public class BindAxb700ResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code. Valid values:</p>
+     * <ul>
+     * <li>OK: The request was successful.
+     *  Other values indicate failure.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public BindAxb700ResponseBodyData data;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +42,8 @@ public class BindAxb700ResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9297B722-A016-43FB-B51A-E54050******</p>
      */
@@ -36,6 +51,12 @@ public class BindAxb700ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +118,8 @@ public class BindAxb700ResponseBody extends TeaModel {
 
     public static class BindAxb700ResponseBodyData extends TeaModel {
         /**
+         * <p>The purchased 700 private number, which is the X number.</p>
+         * 
          * <strong>example:</strong>
          * <p>700********0001</p>
          */
@@ -104,6 +127,8 @@ public class BindAxb700ResponseBody extends TeaModel {
         public String secretNo;
 
         /**
+         * <p>The number binding ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123*******</p>
          */

@@ -27,7 +27,7 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>请求成功</p>
      */
     @NameInMap("Message")
     public String message;
@@ -83,7 +83,7 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
          * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>none</p>
+         * <p>无</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
@@ -92,7 +92,7 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>none</p>
+         * <p>无</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
@@ -101,7 +101,7 @@ public class CancelPickUpWaybillResponseBody extends TeaModel {
          * <p>The cancellation result.</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>取消成功</p>
          */
         @NameInMap("Message")
         public String message;

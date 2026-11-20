@@ -8,8 +8,8 @@ public class QuerySecretNoDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The key of the phone number pool.</p>
-     * <p>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+     * <p>The key of the number pool.</p>
+     * <p>Log on to the Phone Number Protection console and obtain the <strong>Number Pool Key</strong> on the <a href="https://dyplsnext.console.aliyun.com/number-pool">Number Pool Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,8 @@ public class QuerySecretNoDetailRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The private number.</p>
+     * <p>The privacy number, which is the X number.</p>
+     * <p>Log on to the Phone Number Protection console and obtain the X number on the <a href="https://dyplsnext.console.aliyun.com/number/list">Number Management</a> page. Alternatively, view the <strong>SecretNo</strong> parameter in the response when you call a number binding operation such as <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-bindaxb">BindAxb</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

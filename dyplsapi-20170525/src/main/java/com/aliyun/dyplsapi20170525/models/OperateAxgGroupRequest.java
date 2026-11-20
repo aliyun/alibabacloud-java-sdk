@@ -17,7 +17,7 @@ public class OperateAxgGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234</p>
+     * <p>200001234****</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
@@ -63,7 +63,7 @@ public class OperateAxgGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>FC123456</p>
+     * <p>FC10000012345****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;

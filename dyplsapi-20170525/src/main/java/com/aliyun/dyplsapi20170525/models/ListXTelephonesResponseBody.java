@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListXTelephonesResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denied error.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,7 +14,13 @@ public class ListXTelephonesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>返回状态码 0000表示成功 其他表示失败</p>
+     * <p>The response status code. Valid values:</p>
+     * <ul>
+     * <li><p>0000: Success.</p>
+     * </li>
+     * <li><p>Other values: Failure.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0000</p>
@@ -20,20 +28,29 @@ public class ListXTelephonesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data collection.</p>
+     */
     @NameInMap("Data")
     public ListXTelephonesResponseBodyData data;
 
     /**
-     * <p>返回信息</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>返回是否成功 true  表示成功 false表示失败</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: Success.</p>
+     * </li>
+     * <li><p>false: Failure.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -88,16 +105,16 @@ public class ListXTelephonesResponseBody extends TeaModel {
 
     public static class ListXTelephonesResponseBodyDataList extends TeaModel {
         /**
-         * <p>绑定失败原因</p>
+         * <p>The reason for binding failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>绑定失败用户身份证黑名单</p>
+         * <p>Binding failed: user ID card blacklisted</p>
          */
         @NameInMap("AuthMsg")
         public String authMsg;
 
         /**
-         * <p>绑定时间</p>
+         * <p>The binding time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-29 17:23:58</p>
@@ -106,7 +123,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
         public String bindTime;
 
         /**
-         * <p>购买时间</p>
+         * <p>The purchase time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-29 17:23:58</p>
@@ -115,7 +132,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
         public String buyTime;
 
         /**
-         * <p>客户号码池key</p>
+         * <p>The customer number pool key.</p>
          * 
          * <strong>example:</strong>
          * <p>FC533e6eeb81f4400c87ef3745a21a1a</p>
@@ -124,16 +141,16 @@ public class ListXTelephonesResponseBody extends TeaModel {
         public String customerPoolKey;
 
         /**
-         * <p>号码池名称</p>
+         * <p>The number pool name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试号码池</p>
+         * <p>Test number pool</p>
          */
         @NameInMap("CustomerPoolName")
         public String customerPoolName;
 
         /**
-         * <p>释放时间</p>
+         * <p>The release time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-29 17:23:58</p>
@@ -142,7 +159,11 @@ public class ListXTelephonesResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>短信开通状态：0 未开通 1已开通</p>
+         * <p>The SMS activation status. Valid values:</p>
+         * <ul>
+         * <li>0: Not activated.</li>
+         * <li>1: Activated.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -151,7 +172,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
         public String smsStatus;
 
         /**
-         * <p>X号码</p>
+         * <p>The X number.</p>
          * 
          * <strong>example:</strong>
          * <p>17816876546</p>
@@ -160,7 +181,19 @@ public class ListXTelephonesResponseBody extends TeaModel {
         public String telephone;
 
         /**
-         * <p>号码状态：0 空闲中 1 调拨完成待购买 2购买完成待认证  3 实名认证中  4 实名认证成功  5 认证失败  6 解绑中 7 解绑失败 8已释放 99 超时释放</p>
+         * <p>The number status. Valid values:</p>
+         * <ul>
+         * <li>0: Idle.</li>
+         * <li>1: Allocation completed and pending purchase.</li>
+         * <li>2: Purchase completed and pending verification.</li>
+         * <li>3: Real-name verification in progress.</li>
+         * <li>4: Real-name verification succeeded.</li>
+         * <li>5: Verification failed.</li>
+         * <li>6: Unbinding in progress.</li>
+         * <li>7: Unbinding failed.</li>
+         * <li>8: Released.</li>
+         * <li>99: Released due to timeout.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -169,7 +202,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
         public String telephoneStatus;
 
         /**
-         * <p>解绑时间</p>
+         * <p>The unbinding time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-29 17:23:58</p>
@@ -266,13 +299,13 @@ public class ListXTelephonesResponseBody extends TeaModel {
 
     public static class ListXTelephonesResponseBodyData extends TeaModel {
         /**
-         * <p>数据集合</p>
+         * <p>The data list.</p>
          */
         @NameInMap("List")
         public java.util.List<ListXTelephonesResponseBodyDataList> list;
 
         /**
-         * <p>页码</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -281,7 +314,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
-         * <p>每页条数</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -290,7 +323,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>符合查询条件的总数量</p>
+         * <p>The total number of entries that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

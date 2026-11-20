@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePhoneNoAReportResponseBody extends TeaModel {
     /**
+     * <p>Details of denied access.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,7 +14,7 @@ public class CreatePhoneNoAReportResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>请求状态码</p>
+     * <p>Request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -21,13 +23,13 @@ public class CreatePhoneNoAReportResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>A号码报备结果结构体</p>
+     * <p>The struct of the A-number filing result.</p>
      */
     @NameInMap("Data")
     public CreatePhoneNoAReportResponseBodyData data;
 
     /**
-     * <p>失败错误提示</p>
+     * <p>Error message for failure.</p>
      * 
      * <strong>example:</strong>
      * <p>手机号码***已存在</p>
@@ -36,7 +38,7 @@ public class CreatePhoneNoAReportResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>返回id</p>
+     * <p>The returned ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1D73E648-0978-18A5-B089-3BB2</p>
@@ -45,7 +47,13 @@ public class CreatePhoneNoAReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>请求是否成功</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <ul>
+     * <li><p>true: Succeeded.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -108,7 +116,13 @@ public class CreatePhoneNoAReportResponseBody extends TeaModel {
 
     public static class CreatePhoneNoAReportResponseBodyData extends TeaModel {
         /**
-         * <p>创建结果</p>
+         * <p>Creation result. Valid values:</p>
+         * <ul>
+         * <li><p>true: Succeeded.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -117,7 +131,15 @@ public class CreatePhoneNoAReportResponseBody extends TeaModel {
         public Boolean createResult;
 
         /**
-         * <p>创建类型枚举，1为成功，负数为创建失败</p>
+         * <p>Enumeration of creation types. A value of 1 indicates success, and negative values indicate creation failure. Valid values:</p>
+         * <ul>
+         * <li><p>1: Succeeded.</p>
+         * </li>
+         * <li><p>-1: The mobile phone number has already been submitted for filing; no need to submit again.</p>
+         * </li>
+         * <li><p>-2: The mobile phone number has already been successfully filed; no need to file again.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>

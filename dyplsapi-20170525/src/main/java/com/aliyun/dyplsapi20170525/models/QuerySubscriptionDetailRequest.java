@@ -8,23 +8,28 @@ public class QuerySubscriptionDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The private number in the binding, that is, phone number X.</p>
+     * <p>The privacy number in the binding relationship, which is the X number.</p>
+     * <p>Logon to the privacy protection console and go to the <a href="https://dyplsnext.console.aliyun.com/number/list">Number Management</a> page to obtain the X number. Alternatively, check the <strong>SecretNo</strong> in the response parameters when you invoke number binding API operations such as <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-bindaxb">BindAxb</a>.</p>
+     * <blockquote>
+     * <p>When specifying the X number, make sure it is associated with the <strong>SubsId</strong> parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>13900001234</p>
+     * <p>139****1111</p>
      */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
 
     /**
-     * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+     * <p>The key of the number pool.</p>
+     * <p>Log on to the privacy protection console and go to the <a href="https://dyplsnext.console.aliyun.com/number-pool?spm=a2c4g.11186623.0.0.7e6449bbtiHP8m">Number Pool Management</a> page to obtain the <strong>Number Pool Key</strong>.</p>
      * <blockquote>
-     * <p> This parameter is required when <strong>ProductType</strong> is left empty.</p>
+     * <p>This parameter is required when <strong>ProductType</strong> is left empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>FC123456</p>
+     * <p>FC10000012345****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
@@ -38,13 +43,11 @@ public class QuerySubscriptionDetailRequest extends TeaModel {
      * <li><strong>AXN_EXTENSION_REUSE</strong></li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.</p>
-     * </li>
-     * <li><p>This parameter is required when <strong>PoolKey</strong> is left empty.</p>
-     * </li>
+     * <li>This parameter is applicable to former Alibaba Dayu users. Alibaba Cloud users can ignore this parameter.</li>
+     * <li>This parameter is required when <strong>PoolKey</strong> is left empty.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>AXB_170</p>
@@ -59,8 +62,11 @@ public class QuerySubscriptionDetailRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The binding ID.</p>
-     * <p>Log on to the Phone Number Protection console, choose <strong>Number and Number Pool</strong> &gt; <strong>Number Management</strong>. On the Number Management page, select the desired record and click Details to view the binding ID. Alternatively, you can view the value of the <strong>SubsId</strong> parameter returned by an API operation for a phone number binding such as <a href="https://help.aliyun.com/document_detail/110248.html">BindAxb</a>. The value of this parameter indicates a binding ID.</p>
+     * <p>The binding relationship ID.</p>
+     * <p>Logon to the privacy protection console, go to the <a href="https://dyplsnext.console.aliyun.com/number/list">Number Management</a> page, filter the numbers, and click <strong>Details</strong> to view the binding relationship ID. Alternatively, check the <strong>SubsId</strong> in the response parameters when you invoke number binding API operations such as <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-bindaxb">BindAxb</a>.</p>
+     * <blockquote>
+     * <p>When specifying the binding relationship ID, make sure it is associated with the <strong>PhoneNoX</strong> parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

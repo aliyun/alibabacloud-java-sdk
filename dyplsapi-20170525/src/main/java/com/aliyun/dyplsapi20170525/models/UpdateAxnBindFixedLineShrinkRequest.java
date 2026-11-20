@@ -5,35 +5,47 @@ import com.aliyun.tea.*;
 
 public class UpdateAxnBindFixedLineShrinkRequest extends TeaModel {
     /**
-     * <p>放音编码必须包含3个场景的编码。按照“B-&gt;X,A-&gt;X,其他号码-&gt;X”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2,3”表示B-&gt;X放音编号为1，A-&gt;X放音编号为2， 其他号码-&gt;X放音编号为3。</p>
+     * <p>The prompt code for the caller side. This parameter is required for AXB services. The codes must include three scenarios. Enter the codes in the order of B-&gt;X, A-&gt;X, and other numbers-&gt;X, separated by commas.</p>
+     * <blockquote>
+     * <p>1,2,3 indicates that the prompt code for B-&gt;X is 1, the prompt code for A-&gt;X is 2, and the prompt code for other numbers-&gt;X is 3.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>1,2,3</p>
      */
     @NameInMap("Anucode")
     public String anucode;
 
     /**
-     * <p>被叫侧放音编码  被叫放音编码必须包含2个场景的编码。按照“A被叫,其他号码被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫侧接听时的放音编号为1，其他号码为被叫侧接听时的放音编号为2。</p>
+     * <p>The prompt code for the callee side after the call is connected. The codes must include two scenarios. Enter the codes in the order of A as callee and B as callee, separated by commas.</p>
+     * <blockquote>
+     * <p>1,2 indicates that the prompt code when A is the callee is 1, and the prompt code when B is the callee is 2.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>10001,10002</p>
+     * <p>1,2</p>
      */
     @NameInMap("Anucodecalled")
     public String anucodecalled;
 
     /**
-     * <p>号池ID。</p>
+     * <p>The ID of the number pool.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>alitest</p>
+     * <p>FC10000016848****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>位：秒，必须为数字 0：不会自动解绑 非0：自动解绑周期</p>
+     * <p>The expiration time. Unit: seconds. Valid values:</p>
+     * <ul>
+     * <li><p>0: Never expires.</p>
+     * </li>
+     * <li><p>Other values: If you specify another value, such as 60, the binding is valid for 60 seconds after the number X is allocated. After 60 seconds, the binding is automatically unbound.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -42,17 +54,17 @@ public class UpdateAxnBindFixedLineShrinkRequest extends TeaModel {
     public String expiration;
 
     /**
-     * <p>额外字段</p>
+     * <p>The extended parameters.</p>
      */
     @NameInMap("Extra")
     public String extraShrink;
 
     /**
-     * <p>消息请求唯一标识</p>
+     * <p>The unique identifier of the message request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>12345dkwkd99d</p>
+     * <p>123*******</p>
      */
     @NameInMap("OrderId")
     public String orderId;
@@ -61,10 +73,10 @@ public class UpdateAxnBindFixedLineShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>接入商自有字段，最大250字符长度</p>
+     * <p>The external business extension field. This parameter is returned in the call record receipt message. The maximum length is 100 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234</p>
+     * <p>19394</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -76,58 +88,65 @@ public class UpdateAxnBindFixedLineShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>绑定id</p>
+     * <p>The binding ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>GHX0534X202504221531579290029-2-1-aliaxn</p>
+     * <p>GHX0*************************</p>
      */
     @NameInMap("SubId")
     public String subId;
 
     /**
-     * <p>格式为yyyyMMddHHmmss。时间采用北京时间，24小时制。</p>
+     * <p>The binding time. The format is yyyyMMddHHmmss. The time is in UTC+8 and uses a 24-hour clock.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>20250421141723098</p>
+     * <p>20161114143116</p>
      */
     @NameInMap("Subts")
     public String subts;
 
     /**
-     * <p>接通后主叫侧放音编码  接通后主叫侧放音编码必须包含2个场景的编码。按照“A被叫,其他号码被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫时主叫侧的放音编号为1，其他号码被叫为被叫时主叫侧的放音编号为2</p>
+     * <p>The prompt code for the caller side after the call is connected. The codes must include two scenarios. Enter the codes in the order of A as callee and B as callee, separated by commas.</p>
+     * <blockquote>
+     * <p>1,2 indicates that the prompt code for the caller side when A is the callee is 1, and the prompt code for the caller side when B is the callee is 2.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>10001,10002</p>
+     * <p>1,2</p>
      */
     @NameInMap("TAnucodeConnect")
     public String TAnucodeConnect;
 
     /**
-     * <p>A号码</p>
+     * <p>The number A of the landline AXN privacy number.</p>
+     * <blockquote>
+     * <p>You can set number A to a mobile phone number or a landline number. If you use a landline number, you must include the area code. Do not add a hyphen between the area code and the phone number.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>15500001111</p>
+     * <p>Mobile phone number: 182<strong><strong>2371
+     * Landline number: 0571</strong></strong>**36</p>
      */
     @NameInMap("TelA")
     public String telA;
 
     /**
-     * <p>B号码</p>
+     * <p>The number N of the landline AXN privacy number.</p>
      * 
      * <strong>example:</strong>
-     * <p>15500002222</p>
+     * <p>155****2222</p>
      */
     @NameInMap("TelB")
     public String telB;
 
     /**
-     * <p>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
+     * <p>The business timestamp. The format is yyyyMMddHHmmssSSS. The time is in UTC+8 and uses a 24-hour clock, accurate to milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>20250421141723098</p>
+     * <p>20161114143116123</p>
      */
     @NameInMap("Ts")
     public String ts;

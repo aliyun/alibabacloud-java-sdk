@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAxnExtensionBindFixedLineRequest extends TeaModel {
     /**
-     * <p>号池ID</p>
+     * <p>The business ID identifier assigned by Alibaba Cloud to the customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteAxnExtensionBindFixedLineRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>消息请求唯一标识</p>
+     * <p>The unique identifier of the message request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DeleteAxnExtensionBindFixedLineRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>绑定id</p>
+     * <p>The binding ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DeleteAxnExtensionBindFixedLineRequest extends TeaModel {
     public String subId;
 
     /**
-     * <p>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
+     * <p>Format: yyyyMMddHHmmssSSS. The time uses Beijing time in 24-hour format, accurate to milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

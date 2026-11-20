@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     /**
-     * <p>The end time of the door-to-door pickup in the appointment. The value of <strong>AppointGotEndTime</strong> is the value of <strong>EndTime</strong> of <strong>AppointTimes</strong> in <strong>CpTimeSelectList</strong> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</p>
+     * <p>The end time of the scheduled door-to-door pickup, in the YYYY-MM-DD HH:mm:ss format. To obtain the value of <strong>AppointGotEndTime</strong>, obtain the <strong>EndTime</strong> value from <strong>AppointTimes</strong> in the <strong>CpTimeSelectList</strong> response parameter of the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/CreatePickUpWaybillPreQuery">CreatePickUpWaybillPreQuery</a> operation.</p>
      * <blockquote>
-     * <p> This parameter is required when <strong>BizType</strong> is set to <strong>1</strong>.</p>
+     * <p>Required when <strong>bizType</strong> is set to <strong>1</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     public String appointGotEndTime;
 
     /**
-     * <p>The start time of the door-to-door pickup in the appointment. The value of <strong>AppointGotStartTime</strong> is the value of <strong>StartTime</strong> of <strong>AppointTimes</strong> in <strong>CpTimeSelectList</strong> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</p>
+     * <p>The start time of the scheduled door-to-door pickup, in the YYYY-MM-DD HH:mm:ss format. To obtain the value of <strong>AppointGotStartTime</strong>, obtain the <strong>StartTime</strong> value from <strong>AppointTimes</strong> in the <strong>CpTimeSelectList</strong> response parameter of the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/CreatePickUpWaybillPreQuery">CreatePickUpWaybillPreQuery</a> operation.</p>
      * <blockquote>
-     * <p> This parameter is required when <strong>BizType</strong> is set to <strong>1</strong>.</p>
+     * <p>Required when <strong>bizType</strong> is set to <strong>1</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,10 +29,10 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     public String appointGotStartTime;
 
     /**
-     * <p>The pickup mode. Valid values:</p>
+     * <p>The delivery mode. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong> (default): real-time order.</li>
-     * <li><strong>1</strong>: appointment order.</li>
+     * <li><strong>0</strong>: real-time order (default)</li>
+     * <li><strong>1</strong>: scheduled order</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,16 +42,16 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The address of the consignee.</p>
+     * <p>The address of the recipient.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ConsigneeAddress")
     public String consigneeAddressShrink;
 
     /**
-     * <p>The mobile phone number of the consignee.</p>
+     * <p>The mobile phone number of the recipient.</p>
      * <blockquote>
-     * <p> Either ConsigneeMobile or ConsigneePhone must be set.</p>
+     * <p>You must specify either ConsigneeMobile or ConsigneePhone.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,19 +61,19 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     public String consigneeMobile;
 
     /**
-     * <p>The name of the consignee.</p>
+     * <p>The name of the recipient.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Li</p>
+     * <p>Zhang XX</p>
      */
     @NameInMap("ConsigneeName")
     public String consigneeName;
 
     /**
-     * <p>The landline phone number of the consignee.</p>
+     * <p>The landline phone number of the recipient.</p>
      * <blockquote>
-     * <p> Either ConsigneeMobile or ConsigneePhone must be set.</p>
+     * <p>You must specify either ConsigneeMobile or ConsigneePhone.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     public String consigneePhone;
 
     /**
-     * <p>The code of the courier company.</p>
+     * <p>The express delivery company code.</p>
      * 
      * <strong>example:</strong>
      * <p>YTO</p>
@@ -92,13 +92,13 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     public String cpCode;
 
     /**
-     * <p>The items.</p>
+     * <p>The list of goods.</p>
      */
     @NameInMap("GoodsInfos")
     public String goodsInfosShrink;
 
     /**
-     * <p>The external channel sources.</p>
+     * <p>The external channel source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     public String orderChannels;
 
     /**
-     * <p>The ID of the external order.</p>
+     * <p>The external order ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,10 +118,10 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     public String outerOrderCode;
 
     /**
-     * <p>The additional information about the order. The additional information will be printed on the order.</p>
+     * <p>The remark. The remark content printed on the waybill.</p>
      * 
      * <strong>example:</strong>
-     * <p>fragile</p>
+     * <p>Fragile items</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -136,7 +136,7 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     /**
      * <p>The mobile phone number of the sender.</p>
      * <blockquote>
-     * <p> Either SendMobile or SendPhone must be set.</p>
+     * <p>You must specify either SendMobile or SendPhone.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Wang</p>
+     * <p>Wang XX</p>
      */
     @NameInMap("SendName")
     public String sendName;
@@ -158,7 +158,7 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     /**
      * <p>The landline phone number of the sender.</p>
      * <blockquote>
-     * <p> Either SendMobile or SendPhone must be set.</p>
+     * <p>You must specify either SendMobile or SendPhone.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

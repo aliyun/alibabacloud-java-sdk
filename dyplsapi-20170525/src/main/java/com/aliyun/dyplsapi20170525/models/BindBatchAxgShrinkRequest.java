@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindBatchAxgShrinkRequest extends TeaModel {
     /**
+     * <p>The list of AXG bindings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AxgBindList")
@@ -14,6 +15,9 @@ public class BindBatchAxgShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The key of the number pool.</p>
+     * <p>You can log on to the Phone Number Protection console and obtain the key on the <a href="https://dyplsnext.console.aliyun.com/number-pool">Number Pool Management</a> page.</p>
+     * 
      * <strong>example:</strong>
      * <p>FC2235****</p>
      */

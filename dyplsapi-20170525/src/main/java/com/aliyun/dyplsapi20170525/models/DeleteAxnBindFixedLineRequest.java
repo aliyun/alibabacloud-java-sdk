@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteAxnBindFixedLineRequest extends TeaModel {
     /**
-     * <p>号池ID。</p>
+     * <p>The number pool ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>alitest</p>
+     * <p>FC10000016848****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>消息请求唯一标识</p>
+     * <p>The unique identifier of the message request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>12345dkwkd99d</p>
+     * <p>123*******</p>
      */
     @NameInMap("OrderId")
     public String orderId;
@@ -34,21 +34,21 @@ public class DeleteAxnBindFixedLineRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>绑定id</p>
+     * <p>The binding ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>GHX0534X202504221531579290029-2-1-aliaxn</p>
+     * <p>A93I******</p>
      */
     @NameInMap("SubId")
     public String subId;
 
     /**
-     * <p>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
+     * <p>The business timestamp. Format: yyyyMMddHHmmssSSS. The time is in UTC+8, in 24-hour format, accurate to milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>20250421141723098</p>
+     * <p>20161114143116123</p>
      */
     @NameInMap("Ts")
     public String ts;

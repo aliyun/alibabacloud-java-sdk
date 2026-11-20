@@ -9,7 +9,7 @@ public class QueryRecordFileDownloadUrlRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>abcedf1234</p>
+     * <p>416*********bd50</p>
      */
     @NameInMap("CallId")
     public String callId;
@@ -33,7 +33,7 @@ public class QueryRecordFileDownloadUrlRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>FC123456</p>
+     * <p>FC10000012345****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;

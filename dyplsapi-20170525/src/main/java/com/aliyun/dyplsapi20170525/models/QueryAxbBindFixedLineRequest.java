@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class QueryAxbBindFixedLineRequest extends TeaModel {
     /**
-     * <p>号池ID。</p>
+     * <p>The number pool ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ALPT_1234</p>
+     * <p>FC10000016848****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>消息请求唯一标识。</p>
+     * <p>The unique identifier of the message request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>3ererrrdrrrr</p>
+     * <p>123*******</p>
      */
     @NameInMap("OrderId")
     public String orderId;
@@ -28,16 +28,22 @@ public class QueryAxbBindFixedLineRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>A/B号码，queryType=1时，必传</p>
+     * <p>The A/B number. Required when QueryType is set to 1.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>138****6534</p>
      */
     @NameInMap("Phone")
     public String phone;
 
     /**
-     * <p>查询类型 0：根据绑定id查询 1：根据X和A/B号码查询</p>
+     * <p>The query type. Valid values:</p>
+     * <ul>
+     * <li><p>0: Query by binding ID.</p>
+     * </li>
+     * <li><p>1: Query by X and A/B numbers.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,29 +59,29 @@ public class QueryAxbBindFixedLineRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>绑定id， queryType=0时，必传</p>
+     * <p>The binding ID. Required when QueryType is set to 0.</p>
      * 
      * <strong>example:</strong>
-     * <p>A20304o0200303004j</p>
+     * <p>A203**************</p>
      */
     @NameInMap("SubId")
     public String subId;
 
     /**
-     * <p>x号码，queryType=1时，必传</p>
+     * <p>The X number. Required when QueryType is set to 1.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>0571******23</p>
      */
     @NameInMap("TelX")
     public String telX;
 
     /**
-     * <p>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
+     * <p>The business timestamp. Format: yyyyMMddHHmmssSSS. The time is in UTC+8, in 24-hour format, accurate to milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>20161114143116001</p>
+     * <p>20161114143116123</p>
      */
     @NameInMap("Ts")
     public String ts;

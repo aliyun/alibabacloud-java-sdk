@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateSubs700ResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,12 @@ public class UpdateSubs700ResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code of the API request. Valid values:</p>
+     * <ul>
+     * <li>OK: The request is successful.</li>
+     * <li>Other error codes: For more information, see <a href="https://help.aliyun.com/document_detail/59892.html">API error codes</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +27,8 @@ public class UpdateSubs700ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The default response format. This field does not contain an actual value.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -26,6 +36,8 @@ public class UpdateSubs700ResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +45,8 @@ public class UpdateSubs700ResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9297B722-A016-43FB-B51A-E54050******</p>
      */
@@ -40,6 +54,12 @@ public class UpdateSubs700ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

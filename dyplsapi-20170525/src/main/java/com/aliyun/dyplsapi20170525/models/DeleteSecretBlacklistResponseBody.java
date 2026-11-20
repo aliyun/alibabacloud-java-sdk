@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteSecretBlacklistResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+     * <li>A value of OK indicates that the request is successful.</li>
+     * <li>For other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteSecretBlacklistResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -27,7 +27,7 @@ public class DeleteSecretBlacklistResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>

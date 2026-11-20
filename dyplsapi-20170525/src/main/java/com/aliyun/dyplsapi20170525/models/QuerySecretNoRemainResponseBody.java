@@ -79,21 +79,9 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
     }
 
     public static class QuerySecretNoRemainResponseBodySecretRemainDTORemainDTOListRemainDTO extends TeaModel {
-        /**
-         * <p>The quantity of remaining phone numbers available for online purchase for the city.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>120</p>
-         */
         @NameInMap("Amount")
         public Long amount;
 
-        /**
-         * <p>The home location of the phone numbers.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Wuhan</p>
-         */
         @NameInMap("City")
         public String city;
 
@@ -153,14 +141,11 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
          * <p>The home location of the phone numbers.</p>
          * 
          * <strong>example:</strong>
-         * <p>hangzhou</p>
+         * <p>杭州</p>
          */
         @NameInMap("City")
         public String city;
 
-        /**
-         * <p>The information about remaining phone numbers available for online purchase.</p>
-         */
         @NameInMap("RemainDTOList")
         public QuerySecretNoRemainResponseBodySecretRemainDTORemainDTOList remainDTOList;
 

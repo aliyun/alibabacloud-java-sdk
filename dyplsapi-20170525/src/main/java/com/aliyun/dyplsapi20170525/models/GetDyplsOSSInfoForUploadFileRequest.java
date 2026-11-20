@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDyplsOSSInfoForUploadFileRequest extends TeaModel {
     /**
+     * <p>The business type. Default Value: phone_card.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

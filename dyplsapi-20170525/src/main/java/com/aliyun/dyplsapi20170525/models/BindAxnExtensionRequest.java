@@ -5,31 +5,39 @@ import com.aliyun.tea.*;
 
 public class BindAxnExtensionRequest extends TeaModel {
     /**
-     * <p>The ID of the ASR model. On the <a href="https://dyplsnext.console.aliyun.com/?spm=5176.12818093.categories-n-products.ddypls.22e616d0a0tEFC#/asr">Automatic Speech Recognition (ASR) Model Management</a> page, you can view the ID of the ASR model.</p>
+     * <p>The ASR model ID. Valid values:</p>
+     * <ul>
+     * <li><p>General-Telephone-Mandarin Chinese model ID: 7ee372834d2f4cc7ac0d0ab2d0ae1aac</p>
+     * </li>
+     * <li><p>General-Telephone-Cantonese model ID: 9b4afe3d224e4fa3bf963697113e2f77</p>
+     * </li>
+     * <li><p>General-Telephone-Regional accent model ID: 3655a6cb94764145a1f9a38a3c3b3b4b</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>980abddb908f48e8b987cb2cd303****</p>
+     * <p>7ee372834d2f4cc7ac0d0ab2d0ae1aac</p>
      */
     @NameInMap("ASRModelId")
     public String ASRModelId;
 
     /**
-     * <p>Specifies whether to enable automatic speech recognition (ASR). Valid values:</p>
+     * <p>The ASR status. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): disables ASR.</li>
-     * <li><strong>true</strong>: enables ASR.</li>
+     * <li><strong>false</strong>: Disabled. This is the default value.</li>
+     * <li><strong>true</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("ASRStatus")
     public Boolean ASRStatus;
 
     /**
-     * <p>Re-sets the phone number display logic in the AXN extension binding. Fixed value: <strong>1</strong>, indicating that phone number X is displayed on both the calling phone and the called phone.</p>
+     * <p>Resets the number display logic in the binding relationship. Set the value to <strong>1</strong>, which indicates that the intermediate number X is displayed for both the caller and the callee.</p>
      * <blockquote>
-     * <p> Due to the regulatory restrictions imposed by carriers, the setting to display real phone numbers during calls does not take effect.</p>
+     * <p>Due to carrier regulatory restrictions, the setting to display the real number during a call does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,10 +47,10 @@ public class BindAxnExtensionRequest extends TeaModel {
     public Integer callDisplayType;
 
     /**
-     * <p>The status of call restrictions. Valid values:</p>
+     * <p>The call restriction status. Valid values:</p>
      * <ul>
-     * <li><strong>CONTROL_AX_DISABLE</strong>: Phone number A cannot be used to call phone number X.</li>
-     * <li><strong>CONTROL_BX_DISABLE</strong>: Phone number B cannot be used to call phone number X.</li>
+     * <li><strong>CONTROL_AX_DISABLE</strong>: Number A cannot call number X.</li>
+     * <li><strong>CONTROL_BX_DISABLE</strong>: Number B cannot call number X.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,22 +60,24 @@ public class BindAxnExtensionRequest extends TeaModel {
     public String callRestrict;
 
     /**
-     * <p>Specifies the city to which phone number X to be selected belongs.</p>
+     * <p>The city where you want to select number X.</p>
+     * <blockquote>
      * <ul>
-     * <li>If no phone number for the specified city is available in the current phone number pool or this parameter is not specified, a phone number that belongs to another city is randomly selected from the current phone number pool and assigned as phone number X.</li>
-     * <li>If Number X Assignment Mode is set to Strict Matching Mode and no phone number meets the requirement, the system displays an allocation error.</li>
+     * <li>If no available numbers exist in the specified city in the current number pool, or if this parameter is not specified, the system randomly assigns a number from another city in the current number pool as number X.</li>
+     * <li>If the <strong>number X allocation mode</strong> is set to <strong>strict match mode</strong>, the system returns an allocation error when no eligible numbers are available.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>hangzhou</p>
+     * <p>Beijing</p>
      */
     @NameInMap("ExpectCity")
     public String expectCity;
 
     /**
-     * <p>The expiration time of the AXN extension binding. The value is accurate to seconds.</p>
+     * <p>The expiration time of the binding relationship. The time is accurate to seconds.</p>
      * <blockquote>
-     * <p> The expiration time must be more than 1 minute later than the time when you call this API operation.</p>
+     * <p>The expiration time must be at least 1 minute later than the current time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -81,9 +91,9 @@ public class BindAxnExtensionRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>The extension of phone number X. The extension is 1 to 3 digits in length.</p>
+     * <p>The extension number of number X. The extension number must be 1 to 3 digits in length.</p>
      * <blockquote>
-     * <p> If you specify Extension, you must also specify PhoneNoX.</p>
+     * <p>If you specify an extension number, you must also specify number X. This means that both the Extension and PhoneNoX parameters must be specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,10 +103,10 @@ public class BindAxnExtensionRequest extends TeaModel {
     public String extension;
 
     /**
-     * <p>Specifies whether to record all calls made by the bound phone numbers. Valid values:</p>
+     * <p>Specifies whether to record all calls generated for this binding relationship. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: Records calls.</li>
+     * <li><strong>false</strong>: Does not record calls. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +116,7 @@ public class BindAxnExtensionRequest extends TeaModel {
     public Boolean isRecordingEnabled;
 
     /**
-     * <p>The extension field for the external business. This parameter is returned in a call record receipt.</p>
+     * <p>The external business extension field. This parameter is returned in the call record receipt message.</p>
      * 
      * <strong>example:</strong>
      * <p>abcdef</p>
@@ -115,7 +125,7 @@ public class BindAxnExtensionRequest extends TeaModel {
     public String outId;
 
     /**
-     * <p>The ID of the external business.</p>
+     * <p>The external business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>abcdef</p>
@@ -127,7 +137,8 @@ public class BindAxnExtensionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Phone number A in the AXN extension binding. Phone number A can be set to a mobile phone number or a landline phone number. The landline phone number must be added with an area code, and no hyphen is required between the area code and the landline phone number.</p>
+     * <p>The number A of the AXN extension number.
+     * Number A can be a mobile phone number or a landline number. For a landline number, you must add the area code. Do not add a hyphen between the area code and the phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -137,32 +148,42 @@ public class BindAxnExtensionRequest extends TeaModel {
     public String phoneNoA;
 
     /**
-     * <p>Phone number B in the AXN extension binding. When phone number A is used to call phone number X, the call is forwarded to phone number B. If you need to update phone number B, call the <a href="https://help.aliyun.com/document_detail/110253.html">UpdateSubscription</a> operation.</p>
-     * <p>Phone number B can be set to a mobile phone number or a landline phone number. The landline phone number must be added with an area code, and no hyphen is required between the area code and the landline phone number.</p>
+     * <p>The number B of the AXN extension number.</p>
+     * <p>Number B can be a mobile phone number or a landline number. For a landline number, you must add the area code. Do not add a hyphen between the area code and the phone number.</p>
+     * <blockquote>
+     * <ul>
+     * <li>When number A calls number X, the call is forwarded to number B by default. If number B is not specified, the call cannot be connected.</li>
+     * <li>When number A calls number X, the call is forwarded to number B only when the <strong>callback mode for number A</strong> is set to <strong>default mode</strong>. If it is not set to <strong>default mode</strong>, the call cannot be connected.</li>
+     * <li>To modify the <strong>callback mode for number A</strong>, go to <a href="https://dyplsnext.console.aliyun.com/number-pool?resType=1">Number Pool Management</a> &gt; filter by <strong>AXN Extension Number</strong> &gt; <strong>Number Pool Management</strong> &gt; <strong>Callback Mode for Number A</strong> &gt; <strong>Adjust Configuration</strong>.</li>
+     * <li>To update number B, call the <a href="https://www.alibabacloud.com/help/en/pnp/developer-reference/api-dyplsapi-2017-05-25-updatesubscription">UpdateSubscription</a> operation.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>139****0000</p>
+     * <p>138****0000</p>
      */
     @NameInMap("PhoneNoB")
     public String phoneNoB;
 
     /**
-     * <p>Phone number X in the AXN extension binding. If you do not specify this parameter, a random phone number is selected from the phone number pool based on the value of the <strong>ExpectCity</strong> parameter and is used as phone number X.</p>
+     * <p>The number X of the AXN extension number.</p>
+     * <p>Number X is a privacy number that you have <a href="https://dyplsnext.console.aliyun.com/numberbuy?spm=a2c4g.11186623.0.0.7e6449bbtiHP8m">purchased</a> in the console.</p>
      * <blockquote>
-     * <p> Phone number X is the phone number that you purchased in the Phone Number Protection console or by using the <a href="https://help.aliyun.com/document_detail/110266.html">BuySecretNo</a> operation before you bind a phone number. Phone number X is used to forward calls.</p>
+     * <p>If you do not specify number X, the system randomly assigns a number from the specified number pool as number X based on the ExpectCity parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>139****0000</p>
+     * <p>139****1111</p>
      */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
 
     /**
-     * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+     * <p>The key of the number pool.</p>
+     * <p>You can obtain the <strong>number pool key</strong> on the <a href="https://dyplsnext.console.aliyun.com/number-pool?spm=a2c4g.11186623.0.0.7e6449bbtiHP8m">Number Pool Management</a> page in the Privacy Protection console.</p>
      * 
      * <strong>example:</strong>
-     * <p>FC123456</p>
+     * <p>FC10000011111****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
@@ -174,19 +195,23 @@ public class BindAxnExtensionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Sets the ringtone for enterprise Color Ring Back Tone (CRBT) in the AXN extension binding.</p>
+     * <p>Set the corporate ringback tone for dial-up to number X after the AXN extension number is bound.</p>
+     * <p>Specify the <strong>ringtone field</strong> and <strong>ringback tone encoding</strong> for this parameter.</p>
+     * <p>Valid values for the <strong>ringtone field</strong>:</p>
      * <ul>
-     * <li>Ringtone setting (with a callback number) when phone number A is used to call phone number X in the AXN extension binding: AXNRing_AB</li>
-     * <li>Ringtone setting (without a callback number) when phone number A is used to call phone number X in the AXN extension binding: AXNRing_A</li>
-     * <li>Ringtone setting when an N-side number is used to call phone number X in the AXN extension binding: AXNRing_N</li>
+     * <li>AXNRing_AB: The ringtone settings before number A calls number X and the call is connected (with a callback number) in the AXN extension number scenario.</li>
+     * <li>AXNRing_A: The ringtone settings before number A calls number X and the call is connected (without a callback number) in the AXN extension number scenario.</li>
+     * <li>AXNRing_N: The ringtone settings before the number on side N calls number X and the call is connected in the AXN extension number scenario.</li>
+     * <li>AXNRing_A_PICKUP: The ringtone settings after number A calls number X and the call is connected in the AXN extension number scenario.</li>
+     * <li>AXNRing_N_PICKUP: The ringtone settings after the number on side N calls number X and the call is connected in the AXN extension number scenario.</li>
      * </ul>
-     * <p>Enterprise CRBT codes: Enterprise CRBT codes can be queried in the Phone Number Protection console. You can choose <strong>Number Pool Management &gt; Enterprise CRBT Management</strong> to view and manage enterprise CRBT codes. You can also upload, delete, or perform other operations on enterprise CRBT codes.</p>
-     * <blockquote>
-     * <p> The bound enterprise CRBTs are preferentially used. If no enterprise CRBT is set or the setting does not take effect, the enterprise CRBTs at the phone number pool level are used.</p>
-     * </blockquote>
+     * <p><strong>Ringback tone encoding</strong>:</p>
+     * <p>You can obtain the corporate ringback tone encoding on the <a href="https://dyplsnext.console.aliyun.com/number-pool/ringtone?resType=1">Corporate Ringback Tone Management</a> page in the Privacy Protection console.</p>
+     * <p><strong>Example</strong>:</p>
+     * <p>To set the ringtone before number A calls number X and the call is connected (without a callback number), enter &quot;AXNRing_A&quot;: &quot;1000****1&quot;.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;AXNRing_N&quot;:&quot;100000001&quot;,&quot;AXNRing_A&quot;:&quot;100000001&quot;}</p>
+     * <p>{&quot;AXNRing_N&quot;:&quot;1000<strong><strong>1&quot;,&quot;AXNRing_A&quot;:&quot;1000</strong></strong>1&quot;}</p>
      */
     @NameInMap("RingConfig")
     public String ringConfig;

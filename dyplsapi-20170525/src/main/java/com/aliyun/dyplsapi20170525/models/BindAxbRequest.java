@@ -55,7 +55,7 @@ public class BindAxbRequest extends TeaModel {
      * <p>The maximum ringing duration for each number in sequential ringing. Unit: seconds. The value ranges from 5 to 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>10秒</p>
      */
     @NameInMap("CallTimeout")
     public Integer callTimeout;
@@ -94,7 +94,7 @@ public class BindAxbRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>hangzhou</p>
+     * <p>北京</p>
      */
     @NameInMap("ExpectCity")
     public String expectCity;
@@ -120,7 +120,7 @@ public class BindAxbRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("IsRecordingEnabled")
     public Boolean isRecordingEnabled;
@@ -164,7 +164,7 @@ public class BindAxbRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>139****0000</p>
+     * <p>136****0000</p>
      */
     @NameInMap("PhoneNoB")
     public String phoneNoB;
@@ -175,7 +175,7 @@ public class BindAxbRequest extends TeaModel {
      * <p>If you do not specify this parameter, a random phone number is selected from the phone number pool based on the value of the ExpectCity parameter and is used as phone number X.</p>
      * 
      * <strong>example:</strong>
-     * <p>139****0000</p>
+     * <p>171****1893</p>
      */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
@@ -185,7 +185,7 @@ public class BindAxbRequest extends TeaModel {
      * <p>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
      * 
      * <strong>example:</strong>
-     * <p>FC5526*****</p>
+     * <p>FC10000016848****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
@@ -208,7 +208,10 @@ public class BindAxbRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;AXBRing_B&quot;:&quot;1000<strong><strong>1&quot;,&quot;AXBRing_A&quot;:&quot;1000</strong></strong>1&quot;}</p>
+     * <p>{
+     *       &quot;AXBRing_B&quot;: &quot;1000<strong><strong>1&quot;,
+     *       &quot;AXBRing_A&quot;: &quot;1000</strong></strong>1&quot;
+     * }</p>
      */
     @NameInMap("RingConfig")
     public String ringConfig;

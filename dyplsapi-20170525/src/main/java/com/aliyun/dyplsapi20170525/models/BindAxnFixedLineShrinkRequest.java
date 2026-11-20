@@ -5,45 +5,57 @@ import com.aliyun.tea.*;
 
 public class BindAxnFixedLineShrinkRequest extends TeaModel {
     /**
-     * <p>放音编码必须包含3个场景的编码。按照“B-&gt;X,A-&gt;X,其他号码-&gt;X”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2,3”表示B-&gt;X放音编号为1，A-&gt;X放音编号为2， 其他号码-&gt;X放音编号为3</p>
+     * <p>The audio prompt codes for the caller side. The value must include codes for three scenarios. Specify the codes in the order of B-&gt;X, A-&gt;X, and other numbers-&gt;X, separated by commas.</p>
+     * <blockquote>
+     * <p>For example, 1,2,3 indicates that the audio prompt code for B-&gt;X is 1, the code for A-&gt;X is 2, and the code for other numbers-&gt;X is 3.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10001,10002,10003</p>
+     * <p>1,2,3</p>
      */
     @NameInMap("Anucode")
     public String anucode;
 
     /**
-     * <p>被叫侧放音编码  被叫放音编码必须包含2个场景的编码。按照“A被叫,其他号码被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫侧接听时的放音编号为1，其他号码为被叫侧接听时的放音编号为2</p>
+     * <p>The audio prompt codes for the callee side. The value must include codes for two scenarios. Specify the codes in the order of A as the callee and other numbers as the callee, separated by commas.</p>
+     * <blockquote>
+     * <p>For example, 1,2 indicates that the audio prompt code when number A answers as the callee is 1, and the code when other numbers answer as the callee is 2.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>10001,10002</p>
+     * <p>1,2</p>
      */
     @NameInMap("Anucodecalled")
     public String anucodecalled;
 
     /**
-     * <p>号池ID。</p>
+     * <p>The ID of the number pool.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>alitest</p>
+     * <p>FC10000016848****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>去掉“0” 例如：北京（10）；在平台分配X号码模式中，平台从号码池中分配该地区的X号码，避免产生呼叫长途费</p>
+     * <p>The area code. You can specify the location of number X (specified city -&gt; provincial capital -&gt; national routing). If you do not specify the location, a number is randomly assigned nationwide.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>0571</p>
      */
     @NameInMap("Areacode")
     public String areacode;
 
     /**
-     * <p>绑定类型，值如下： mode101：客户携带X号码 mode102：平台分配X号码</p>
+     * <p>The binding type. Valid values:</p>
+     * <ul>
+     * <li><p>mode101: The customer specifies number X.</p>
+     * </li>
+     * <li><p>mode102: The platform assigns number X.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,27 +65,33 @@ public class BindAxnFixedLineShrinkRequest extends TeaModel {
     public String bindType;
 
     /**
-     * <p>位：秒，必须为数字 0：不会自动解绑 非0：自动解绑周期</p>
+     * <p>The expiration time. Unit: seconds. Valid values:</p>
+     * <ul>
+     * <li><p>0: The binding never expires.</p>
+     * </li>
+     * <li><p>Other values: If you specify another value, such as 60, the binding is valid for 60 seconds after number X is successfully assigned. After 60 seconds, the binding is automatically unbound.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>60</p>
      */
     @NameInMap("Expiration")
     public String expiration;
 
     /**
-     * <p>扩展参数</p>
+     * <p>The extended parameters.</p>
      */
     @NameInMap("Extra")
     public String extraShrink;
 
     /**
-     * <p>消息请求唯一标识</p>
+     * <p>The unique identifier of the message request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>12345dkwkd99d</p>
+     * <p>123*******</p>
      */
     @NameInMap("OrderId")
     public String orderId;
@@ -82,10 +100,10 @@ public class BindAxnFixedLineShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>接入商自有字段，最大250字符长度</p>
+     * <p>The external business extension field. This parameter is returned in the call record receipt message. The value cannot exceed 100 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>12444</p>
+     * <p>19394</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -97,58 +115,71 @@ public class BindAxnFixedLineShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>格式为yyyyMMddHHmmss。时间采用北京时间，24小时制。</p>
+     * <p>The binding time. The format is yyyyMMddHHmmss. The time is in UTC+8 and uses the 24-hour clock.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>20250421141723098</p>
+     * <p>20161114143116</p>
      */
     @NameInMap("Subts")
     public String subts;
 
     /**
-     * <p>接通后主叫侧放音编码  接通后主叫侧放音编码必须包含2个场景的编码。按照“A被叫,其他号码被叫”的顺序填写编码，编码之间以逗号分隔。  比如：“1,2”表示A号码为被叫时主叫侧的放音编号为1，其他号码被叫为被叫时主叫侧的放音编号为2</p>
+     * <p>The audio prompt codes for the caller side after the call is connected. The value must include codes for two scenarios. Specify the codes in the order of A as the callee and other numbers as the callee, separated by commas.</p>
+     * <blockquote>
+     * <p>For example, 1,2 indicates that the audio prompt code for the caller side when number A is the callee is 1, and the code for the caller side when other numbers are the callee is 2.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>10001,10002</p>
+     * <p>1,2</p>
      */
     @NameInMap("TAnucodeConnect")
     public String TAnucodeConnect;
 
     /**
-     * <p>A号码</p>
+     * <p>Number A of the fixed-line AXN privacy number.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Number A can be a mobile phone number or a fixed-line number. A fixed-line number must include the area code, and no hyphen is required between the area code and the number.</li>
+     * <li>If your business requires modifying a bound number, you can call the <a href="https://api.aliyun.com/document/Dyplsapi/2017-05-25/UpdateAxnBindFixedLine">UpdateAxnBindFixedLine</a> operation to modify it.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>15500001111</p>
+     * <p>Mobile phone number: 182<strong><strong>2371
+     * Fixed-line number: 0571</strong></strong>**36</p>
      */
     @NameInMap("TelA")
     public String telA;
 
     /**
-     * <p>N号码</p>
+     * <p>Number N of the fixed-line AXN privacy number.</p>
      * 
      * <strong>example:</strong>
-     * <p>15500002222</p>
+     * <p>155****2222</p>
      */
     @NameInMap("TelB")
     public String telB;
 
     /**
-     * <p>X号码； 平台分配号码模式下，该参数可不带，系统忽略该参数</p>
+     * <p>Number X of the fixed-line AXN privacy number. Number X is the privacy number that you have purchased in the console.</p>
+     * <blockquote>
+     * <p>This parameter is required in the mode where the customer specifies number X (that is, the BindType parameter is set to mode101).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>0571409312</p>
+     * <p>0571******23</p>
      */
     @NameInMap("TelX")
     public String telX;
 
     /**
-     * <p>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</p>
+     * <p>The business timestamp. The format is yyyyMMddHHmmssSSS. The time is in UTC+8 and uses the 24-hour clock, accurate to milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>20250421141723098</p>
+     * <p>20161114143116123</p>
      */
     @NameInMap("Ts")
     public String ts;

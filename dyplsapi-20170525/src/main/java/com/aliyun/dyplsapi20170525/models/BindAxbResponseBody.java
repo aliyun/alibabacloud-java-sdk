@@ -30,7 +30,7 @@ public class BindAxbResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>9297B722-A016-43FB-B51A-E54050D9369D</p>
+     * <p>9297B722-A016-43FB-B51A-E54050******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -95,7 +95,7 @@ public class BindAxbResponseBody extends TeaModel {
          * <p>The private number, that is, phone number X.</p>
          * 
          * <strong>example:</strong>
-         * <p>139****0000</p>
+         * <p>171****1893</p>
          */
         @NameInMap("SecretNo")
         public String secretNo;
@@ -104,7 +104,7 @@ public class BindAxbResponseBody extends TeaModel {
          * <p>The binding ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1**************3</p>
+         * <p>100017838816****</p>
          */
         @NameInMap("SubsId")
         public String subsId;

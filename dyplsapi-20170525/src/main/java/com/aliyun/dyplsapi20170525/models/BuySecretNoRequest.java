@@ -17,7 +17,7 @@ public class BuySecretNoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>hangzhou</p>
+     * <p>杭州</p>
      */
     @NameInMap("City")
     public String city;

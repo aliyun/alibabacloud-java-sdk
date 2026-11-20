@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSecretAPhoneNoToCustResponseBody extends TeaModel {
     /**
+     * <p>Details of denied access.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,7 +14,7 @@ public class DeleteSecretAPhoneNoToCustResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>请求状态码</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -21,7 +23,13 @@ public class DeleteSecretAPhoneNoToCustResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>删除是否成功</p>
+     * <p>Indicates whether the deletion succeeded. Valid values:</p>
+     * <ul>
+     * <li><p>true: Succeeded.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -30,7 +38,7 @@ public class DeleteSecretAPhoneNoToCustResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>失败错误提示</p>
+     * <p>Error message for failure.</p>
      * 
      * <strong>example:</strong>
      * <p>号码组不存在</p>
@@ -39,7 +47,7 @@ public class DeleteSecretAPhoneNoToCustResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>返回id</p>
+     * <p>The returned ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1D73E648-0978-18A5-B089-3BB2</p>
@@ -48,7 +56,13 @@ public class DeleteSecretAPhoneNoToCustResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>请求是否成功</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <ul>
+     * <li><p>true: Succeeded.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

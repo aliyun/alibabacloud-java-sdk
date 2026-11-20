@@ -11,7 +11,7 @@ public class CreateAxgGroupRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun</p>
+     * <p>测试分组</p>
      */
     @NameInMap("Name")
     public String name;
@@ -33,7 +33,7 @@ public class CreateAxgGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>FC123456</p>
+     * <p>FC10000012345****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
@@ -42,7 +42,7 @@ public class CreateAxgGroupRequest extends TeaModel {
      * <p>The remarks of number group G. The value must be 0 to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>测试用分组</p>
      */
     @NameInMap("Remark")
     public String remark;

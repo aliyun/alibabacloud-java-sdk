@@ -14,7 +14,7 @@ public class UnbindSubscriptionRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>FC123456</p>
+     * <p>FC10000012345****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
@@ -47,7 +47,7 @@ public class UnbindSubscriptionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1390000****</p>
+     * <p>139****1111</p>
      */
     @NameInMap("SecretNo")
     public String secretNo;

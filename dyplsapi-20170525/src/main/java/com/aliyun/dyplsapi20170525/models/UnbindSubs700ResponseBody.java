@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnbindSubs700ResponseBody extends TeaModel {
     /**
+     * <p>The details of the permission check failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,23 +14,39 @@ public class UnbindSubs700ResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code of the API request. Valid values:</p>
+     * <ul>
+     * <li>OK: The request is successful.</li>
+     * <li>Other error codes. For more information, see <a href="https://help.aliyun.com/document_detail/59892.html">API error codes</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The default response format. This parameter has no actual value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9297B722-A016-43FB-B51A-E54050******</p>
      */
@@ -36,6 +54,12 @@ public class UnbindSubs700ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Specifies whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The API call is successful.</li>
+     * <li>false: The API call fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

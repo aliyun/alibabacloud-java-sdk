@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreatePickUpWaybillPreQueryShrinkRequest extends TeaModel {
     /**
-     * <p>The consignee information.</p>
+     * <p>The recipient information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ConsigneeInfo")
     public String consigneeInfoShrink;
 
     /**
-     * <p>The code of the courier company. If no courier company is specified, the system allocates a courier company.</p>
+     * <p>The courier company code. If not specified, the system automatically assigns a courier company.</p>
      * 
      * <strong>example:</strong>
      * <p>YTO</p>
@@ -21,7 +21,7 @@ public class CreatePickUpWaybillPreQueryShrinkRequest extends TeaModel {
     public String cpCode;
 
     /**
-     * <p>The identifier of the external channel source. It cannot contain underscores.</p>
+     * <p>The external channel source identifier. The value cannot contain underscores. The value is agreed upon with the system during integration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class CreatePickUpWaybillPreQueryShrinkRequest extends TeaModel {
     public String orderChannels;
 
     /**
-     * <p>The order number of the access system.</p>
+     * <p>The order number in the caller\&quot;s system.</p>
      * 
      * <strong>example:</strong>
      * <p>787DFHHDS989****</p>
@@ -40,9 +40,9 @@ public class CreatePickUpWaybillPreQueryShrinkRequest extends TeaModel {
     public String outerOrderCode;
 
     /**
-     * <p>The estimated weight. Unit: gram.</p>
+     * <p>The estimated weight, in grams.</p>
      * <blockquote>
-     * <p> If you need to query the estimated price, this parameter is required.</p>
+     * <p>If you want to query the estimated price, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

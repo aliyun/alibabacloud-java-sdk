@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePickUpWaybillResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreatePickUpWaybillResponseBodyData data;
@@ -20,7 +20,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -76,7 +76,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
 
     public static class CreatePickUpWaybillResponseBodyData extends TeaModel {
         /**
-         * <p>The code of the courier company.</p>
+         * <p>The express delivery company code.</p>
          * 
          * <strong>example:</strong>
          * <p>YTO</p>
@@ -88,7 +88,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
          * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>None</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
@@ -97,7 +97,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>none</p>
+         * <p>None</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
@@ -112,7 +112,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         public String gotCode;
 
         /**
-         * <p>The order ID.</p>
+         * <p>The waybill number.</p>
          * 
          * <strong>example:</strong>
          * <p>77312345629****</p>
@@ -121,7 +121,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         public String mailNo;
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the API call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

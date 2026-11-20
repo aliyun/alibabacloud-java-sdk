@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSmsSignResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,7 +14,13 @@ public class CreateSmsSignResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>返回状态码 0000表示成功 其他表示失败</p>
+     * <p>The returned status code. Valid values:</p>
+     * <ul>
+     * <li><p>0000: The request is successful.</p>
+     * </li>
+     * <li><p>Other values: The request failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0000</p>
@@ -20,20 +28,32 @@ public class CreateSmsSignResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The text message signature creation result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;CalledNoSign&quot;:&quot;sign23343466&quot;}</p>
+     */
     @NameInMap("Data")
     public CreateSmsSignResponseBodyData data;
 
     /**
-     * <p>返回信息</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>返回是否成功 true  表示成功 false表示失败</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request is successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -88,7 +108,7 @@ public class CreateSmsSignResponseBody extends TeaModel {
 
     public static class CreateSmsSignResponseBodyData extends TeaModel {
         /**
-         * <p>短信接收者号码签名串(加到短信内容中供解析真实被叫号码)</p>
+         * <p>The signature string of the recipient number. Append this string to the text message content to parse the actual called number.</p>
          * 
          * <strong>example:</strong>
          * <p>sign23343466</p>

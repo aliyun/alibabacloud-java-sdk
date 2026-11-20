@@ -8,7 +8,7 @@ public class BindAxgRequest extends TeaModel {
      * <p>The ID of the ASR model.</p>
      * 
      * <strong>example:</strong>
-     * <p>980abddb908f48e8b987cb2cd303****</p>
+     * <p>9b4afe3d224e4fa3bf963697113e2f77</p>
      */
     @NameInMap("ASRModelId")
     public String ASRModelId;
@@ -21,7 +21,7 @@ public class BindAxgRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>False</p>
+     * <p>false</p>
      */
     @NameInMap("ASRStatus")
     public Boolean ASRStatus;
@@ -59,7 +59,7 @@ public class BindAxgRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>hangzhou</p>
+     * <p>北京</p>
      */
     @NameInMap("ExpectCity")
     public String expectCity;
@@ -89,7 +89,7 @@ public class BindAxgRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234</p>
+     * <p>200001234****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -139,7 +139,7 @@ public class BindAxgRequest extends TeaModel {
      * <p>Phone number B can be set to a mobile phone number or a landline phone number. The landline phone number must be added with an area code, and no hyphen is required between the area code and the landline phone number.</p>
      * 
      * <strong>example:</strong>
-     * <p>139****0000</p>
+     * <p>138****0000</p>
      */
     @NameInMap("PhoneNoB")
     public String phoneNoB;
@@ -151,7 +151,7 @@ public class BindAxgRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>139****0000</p>
+     * <p>139****1111</p>
      */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
@@ -160,7 +160,7 @@ public class BindAxgRequest extends TeaModel {
      * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
      * 
      * <strong>example:</strong>
-     * <p>FC123456</p>
+     * <p>FC10000012345****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
@@ -184,7 +184,7 @@ public class BindAxgRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;AXGRing_AB&quot;:&quot;100000001&quot;,&quot;AXGRing_A&quot;:&quot;100000002&quot;,&quot;AXGRing_G&quot;:&quot;100000003&quot;}</p>
+     * <p>{&quot;AXGRing_AB&quot;:&quot;1000<strong><strong>1&quot;,&quot;AXGRing_A&quot;:&quot;1000</strong></strong>2&quot;,&quot;AXGRing_G&quot;:&quot;1000****3&quot;}</p>
      */
     @NameInMap("RingConfig")
     public String ringConfig;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnBindAXBResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,22 +14,56 @@ public class UnBindAXBResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The returned status code. Valid values:</p>
+     * <ul>
+     * <li><p>0000: Success.</p>
+     * </li>
+     * <li><p>Other values: Failure.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0000</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of dissociating the AXB call binding.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Code&quot;:&quot;0000&quot;,&quot;Message&quot;:&quot;Success&quot;,&quot;Success&quot;:true}</p>
+     */
     @NameInMap("Data")
     public UnBindAXBResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A2568E1-7D83-5491-8DEF-600D8AFF97E7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: Success.</p>
+     * </li>
+     * <li><p>false: Failure.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -89,7 +125,7 @@ public class UnBindAXBResponseBody extends TeaModel {
 
     public static class UnBindAXBResponseBodyData extends TeaModel {
         /**
-         * <p>返回状态码 0000表示成功 其他表示失败</p>
+         * <p>The returned status code. A value of 0000 indicates success. Other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>0000</p>
@@ -98,16 +134,16 @@ public class UnBindAXBResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>返回信息</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>成功</p>
+         * <p>Success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>返回是否成功 true  表示成功 false表示失败</p>
+         * <p>Indicates whether the request is successful. A value of true indicates success, and a value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

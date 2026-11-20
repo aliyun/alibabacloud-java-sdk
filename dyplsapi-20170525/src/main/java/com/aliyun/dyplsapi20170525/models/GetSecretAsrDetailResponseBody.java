@@ -15,6 +15,9 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ASR details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;bizDuration&quot;:10944,&quot;businessId&quot;:&quot;435ee78c7a019650@!FC100000074672458@!20200615225802&quot;,&quot;businessKey&quot;:&quot;JCGTncltuNaolegJ&quot;,&quot;code&quot;:&quot;21050000&quot;,&quot;msg&quot;:&quot;SUCCESS&quot;,&quot;requestId&quot;:&quot;8d2329d407a83447a83be441681f4872ac74nE&quot;,&quot;sentences&quot;:[{&quot;beginTime&quot;:1020,&quot;channelId&quot;:0,&quot;emotionValue&quot;:&quot;5.7&quot;,&quot;endTime&quot;:1770,&quot;silenceDuration&quot;:&quot;0&quot;,&quot;speechRate&quot;:&quot;80&quot;,&quot;text&quot;:&quot;喂&quot;}],&quot;success&quot;:true,&quot;type&quot;:&quot;asrResult&quot;}</p>
      */
     @NameInMap("Data")
     public GetSecretAsrDetailResponseBodyData data;
@@ -133,7 +136,7 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
          * <p>The recognition result of the sentence.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hello</p>
+         * <p>您好</p>
          */
         @NameInMap("Text")
         public String text;
@@ -215,7 +218,7 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
          * <p>The ID of the business process.</p>
          * 
          * <strong>example:</strong>
-         * <p>435ee78c7a019650@!FC100000074672458@!2020061522****</p>
+         * <p>435ee78c7a******@!FC100000074******@!2020061522****</p>
          */
         @NameInMap("BusinessId")
         public String businessId;

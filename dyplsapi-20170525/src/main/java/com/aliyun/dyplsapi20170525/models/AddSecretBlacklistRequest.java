@@ -5,9 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddSecretBlacklistRequest extends TeaModel {
     /**
-     * <p>The numbers in the blacklist. A point-to-point blacklist has a pair of numbers separated by a colon (:). A number pool blacklist has only one single number.</p>
+     * <p>The blacklisted phone number. The value type depends on the <strong>BlackType</strong> parameter:</p>
+     * <ul>
+     * <li><strong>Point-to-point blacklist</strong>: A pair of numbers (A and B numbers) separated by a colon (:).</li>
+     * <li><strong>Number pool blacklist</strong>: A single number.</li>
+     * </ul>
      * <blockquote>
-     * <p> The asterisks (\*) in the sample value are not wildcards.</p>
+     * <p>(\*) is not a wildcard.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,8 +36,8 @@ public class AddSecretBlacklistRequest extends TeaModel {
     public String blackType;
 
     /**
-     * <p>The key of the phone number pool.</p>
-     * <p>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the Number Pool Management page.</p>
+     * <p>The key of the number pool.</p>
+     * <p>You can obtain the <strong>number pool key</strong> on the <a href="https://dyplsnext.console.aliyun.com/number-pool">Number Pool Management</a> page in the privacy protection console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,30 +47,24 @@ public class AddSecretBlacklistRequest extends TeaModel {
     public String poolKey;
 
     /**
-     * <p>The blacklist remarks.</p>
+     * <p>The remarks for the blacklist entry.</p>
      * 
      * <strong>example:</strong>
-     * <p>Customer service feedback</p>
+     * <p>Blacklist remarks</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The control on the call direction.</p>
+     * <p>The call direction control. Valid values:</p>
      * <ul>
-     * <li><strong>PHONEA_REJECT</strong>: The first number in the blacklist can be used to call the second number, but the second number cannot be used to call the first number.</li>
-     * <li><strong>PHONEB_REJECT</strong>: The first number in the blacklist cannot be used to call the second number, but the second number can be used to call the first number.</li>
-     * <li>If this parameter is left empty, the two numbers in the blacklist cannot be used to call each other.</li>
+     * <li><strong>PHONEA_REJECT</strong>: The first number in BlackNo can call the second number, but the second number cannot call the first number.</li>
+     * <li><strong>PHONEB_REJECT</strong>: The first number in BlackNo cannot call the second number, but the second number can call the first number.</li>
+     * <li><strong>Not specified</strong>: The two numbers in BlackNo cannot call each other.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for a point-to-point blacklist.</p>
+     * <p>This parameter takes effect only for point-to-point blacklists.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>DUPLEX_REJECT</li>
-     * <li>PHONEA_REJECT</li>
-     * <li>PHONEB_REJECT</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PHONEA_REJECT</p>

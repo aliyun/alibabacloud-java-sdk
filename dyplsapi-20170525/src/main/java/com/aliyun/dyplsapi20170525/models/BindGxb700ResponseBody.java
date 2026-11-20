@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindGxb700ResponseBody extends TeaModel {
     /**
+     * <p>The access denied details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,16 +14,25 @@ public class BindGxb700ResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code. Valid values:
+     * OK: The request was successful.
+     * Other values indicate failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public BindGxb700ResponseBodyData data;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +40,8 @@ public class BindGxb700ResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9297B722-A016-43FB-B51A-E54050******</p>
      */
@@ -36,6 +49,10 @@ public class BindGxb700ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:
+     * true: Successful.
+     * false: Failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class BindGxb700ResponseBody extends TeaModel {
 
     public static class BindGxb700ResponseBodyData extends TeaModel {
         /**
+         * <p>The purchased 700 private number, which is the X number.</p>
+         * 
          * <strong>example:</strong>
          * <p>700********0001</p>
          */
@@ -104,6 +123,8 @@ public class BindGxb700ResponseBody extends TeaModel {
         public String secretNo;
 
         /**
+         * <p>The number binding ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123*******</p>
          */

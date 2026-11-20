@@ -86,7 +86,7 @@ public class BindAxgResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>139****0000</p>
+         * <p>130</p>
          */
         @NameInMap("Extension")
         public String extension;
@@ -95,7 +95,7 @@ public class BindAxgResponseBody extends TeaModel {
          * <p>The private number, that is, phone number X.</p>
          * 
          * <strong>example:</strong>
-         * <p>139****0000</p>
+         * <p>139****1111</p>
          */
         @NameInMap("SecretNo")
         public String secretNo;
