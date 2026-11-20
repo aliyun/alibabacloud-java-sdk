@@ -7,7 +7,7 @@ public class RevokeEndpointAclShrinkRequest extends TeaModel {
     /**
      * <p>The ACL policy. Valid values:</p>
      * <ul>
-     * <li><strong>allow</strong>: The operation is for a Classless Inter-Domain Routing (CIDR) whitelist. Currently, only \<code>allow\\</code> is supported.</li>
+     * <li><strong>allow</strong>: CIDR whitelist. Currently, only allow is supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class RevokeEndpointAclShrinkRequest extends TeaModel {
     public String aclStrategy;
 
     /**
-     * <p>The list of network segments.</p>
+     * <p>The list of CIDR blocks. Specify at least one CIDR block. Example: 192.168.1.0/24.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CidrList")
@@ -27,7 +27,7 @@ public class RevokeEndpointAclShrinkRequest extends TeaModel {
     /**
      * <p>The endpoint type. Valid values:</p>
      * <ul>
-     * <li><strong>public</strong>: The Internet endpoint. Currently, only \<code>public\\</code> is supported.</li>
+     * <li><strong>public</strong>: Internet-facing endpoint. Currently, only public is supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

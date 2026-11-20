@@ -29,7 +29,7 @@ public class ListEventRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>06273500-249F-5863-121D-74D51123E62C</p>
@@ -38,7 +38,7 @@ public class ListEventRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the response.</p>
+     * <p>The response status.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -47,7 +47,7 @@ public class ListEventRulesResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -112,10 +112,8 @@ public class ListEventRulesResponseBody extends TeaModel {
         /**
          * <p>The endpoint type. Valid values:</p>
          * <ul>
-         * <li><p><strong>topic</strong>: A topic can deliver messages to multiple subscribers. You can add or remove subscribers later.</p>
-         * </li>
-         * <li><p><strong>queue</strong>: Messages are delivered directly to a queue. This simplifies the delivery path, but you cannot add new subscribers later.</p>
-         * </li>
+         * <li><strong>topic</strong>: The topic type. A topic supports delivery to multiple subscription endpoints. You can add or remove subscription endpoints later.</li>
+         * <li><strong>queue</strong>: The queue type. Messages are delivered directly to a queue. This reduces the link path, but you cannot add new subscription endpoints later.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +123,7 @@ public class ListEventRulesResponseBody extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The actual value of the endpoint.</p>
+         * <p>The actual value of the receiving endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>test-topic</p>
@@ -167,7 +165,7 @@ public class ListEventRulesResponseBody extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The actual value of the endpoint.</p>
+         * <p>The actual value of the receiving endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>wyx-vp-complete-queue</p>
@@ -200,7 +198,7 @@ public class ListEventRulesResponseBody extends TeaModel {
 
     public static class ListEventRulesResponseBodyDataPageData extends TeaModel {
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>--</p>
@@ -209,7 +207,7 @@ public class ListEventRulesResponseBody extends TeaModel {
         public String deliveryMode;
 
         /**
-         * <p>The endpoint of the subscription.</p>
+         * <p>The endpoint address of the subscription.</p>
          */
         @NameInMap("Endpoint")
         public ListEventRulesResponseBodyDataPageDataEndpoint endpoint;
@@ -221,7 +219,7 @@ public class ListEventRulesResponseBody extends TeaModel {
         public java.util.List<String> eventTypes;
 
         /**
-         * <p>The event matching rules. The rules have an OR relationship.</p>
+         * <p>The event matching rules with an OR relationship.</p>
          */
         @NameInMap("MatchRules")
         public java.util.List<java.util.List<EventMatchRule>> matchRules;
@@ -236,7 +234,7 @@ public class ListEventRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The subscribers. A maximum of 20 entries are returned. If there are more subscribers, see <a href="https://help.aliyun.com/document_detail/2804757.html">List Subscriptions</a>.</p>
+         * <p>The subscription endpoints. A maximum of 20 entries are returned. If the number exceeds 20, use the <a href="https://help.aliyun.com/document_detail/2804757.html">subscription list</a> to query.</p>
          */
         @NameInMap("Subscriptions")
         public java.util.List<ListEventRulesResponseBodyDataPageDataSubscriptions> subscriptions;
@@ -315,7 +313,7 @@ public class ListEventRulesResponseBody extends TeaModel {
 
     public static class ListEventRulesResponseBodyData extends TeaModel {
         /**
-         * <p>This parameter is deprecated. The maximum number of entries is based on Total.</p>
+         * <p><strong>[Deprecated]</strong> Use Total for the maximum number of entries in paged queries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -324,7 +322,7 @@ public class ListEventRulesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>This parameter is deprecated. Paged queries are based on PageNum.</p>
+         * <p><strong>[Deprecated]</strong> Use PageNum for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>a88f58d504b8b4c4e0b5e8707e68181f</p>
@@ -348,7 +346,7 @@ public class ListEventRulesResponseBody extends TeaModel {
         public Long pageNum;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -366,7 +364,7 @@ public class ListEventRulesResponseBody extends TeaModel {
         public Long pages;
 
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

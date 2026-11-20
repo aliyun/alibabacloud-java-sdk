@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class EnableEndpointRequest extends TeaModel {
     /**
-     * <p>The type of the endpoint. Valid value:</p>
+     * <p>The type of the access point. Valid values:</p>
      * <ul>
-     * <li><strong>public</strong>: The Internet endpoint. Only public is supported.</li>
+     * <li><strong>public</strong>: the public access point. Currently, only public is supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

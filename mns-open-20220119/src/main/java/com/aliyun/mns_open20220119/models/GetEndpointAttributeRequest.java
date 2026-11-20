@@ -7,7 +7,7 @@ public class GetEndpointAttributeRequest extends TeaModel {
     /**
      * <p>The endpoint type. Valid values:</p>
      * <ul>
-     * <li><strong>public</strong>: Internet endpoint. Currently, only public is supported.</li>
+     * <li><strong>public</strong>: Internet-facing endpoint. Currently, only public is supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

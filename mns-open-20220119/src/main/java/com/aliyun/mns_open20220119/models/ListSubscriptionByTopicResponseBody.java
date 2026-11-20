@@ -29,7 +29,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>06273500-249F-5863-121D-74D51123****</p>
@@ -47,7 +47,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
 
     public static class ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy extends TeaModel {
         /**
-         * <p>The destination queue for dead-letter messages.</p>
+         * <p>The destination queue for dead-letter message delivery.</p>
          * 
          * <strong>example:</strong>
          * <p>dead-letter-queue</p>
@@ -152,7 +152,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
 
     public static class ListSubscriptionByTopicResponseBodyDataPageData extends TeaModel {
         /**
-         * <p>The time when the subscription was created, in Unix time format.</p>
+         * <p>The time when the subscription was created. The value is a UNIX timestamp representing the number of seconds that have elapsed since 00:00:00 on January 1, 1970.</p>
          * 
          * <strong>example:</strong>
          * <p>1449554806</p>
@@ -161,13 +161,13 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The dead-letter queue policy.</p>
+         * <p>The dead-letter policy.</p>
          */
         @NameInMap("DlqPolicy")
         public ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy dlqPolicy;
 
         /**
-         * <p>The endpoint of the subscription.</p>
+         * <p>The endpoint address of the subscription.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example.com">http://example.com</a></p>
@@ -176,7 +176,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The tag for message filtering in the subscription. Only messages with the same tag are pushed.</p>
+         * <p>The tag used to filter messages in the subscription. Only messages with matching tags are pushed.</p>
          * 
          * <strong>example:</strong>
          * <p>important</p>
@@ -185,7 +185,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         public String filterTag;
 
         /**
-         * <p>The time when the subscription properties were last modified. This value is a UNIX timestamp.</p>
+         * <p>The time when the subscription attributes were last modified. The value is a UNIX timestamp representing the number of seconds that have elapsed since 00:00:00 on January 1, 1970.</p>
          * 
          * <strong>example:</strong>
          * <p>1449554806</p>
@@ -194,8 +194,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         public Long lastModifyTime;
 
         /**
-         * <p>The format of the message content pushed to the endpoint.
-         * Valid values:</p>
+         * <p>The format of the message content pushed to the endpoint. Valid values:</p>
          * <ul>
          * <li><p>XML</p>
          * </li>
@@ -212,11 +211,11 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         public String notifyContentFormat;
 
         /**
-         * <p>The retry policy for message push failures to the endpoint. Valid values:</p>
+         * <p>The retry strategy used when a message fails to be pushed to the endpoint. Valid values:</p>
          * <ul>
-         * <li><p>BACKOFF_RETRY: backoff retry.</p>
+         * <li><p>BACKOFF_RETRY: backoff retry</p>
          * </li>
-         * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</p>
+         * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry</p>
          * </li>
          * </ul>
          * 
@@ -227,7 +226,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         public String notifyStrategy;
 
         /**
-         * <p>The subscription name.</p>
+         * <p>The name of the subscription.</p>
          * 
          * <strong>example:</strong>
          * <p>MySubscription</p>
@@ -245,7 +244,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         public String topicName;
 
         /**
-         * <p>The AccountId of the owner of the topic to which the subscription belongs.</p>
+         * <p>The account ID of the topic owner to which the subscription belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789098****</p>
@@ -342,13 +341,13 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
 
     public static class ListSubscriptionByTopicResponseBodyData extends TeaModel {
         /**
-         * <p>The entries on the current page.</p>
+         * <p>The results returned on the current page.</p>
          */
         @NameInMap("PageData")
         public java.util.List<ListSubscriptionByTopicResponseBodyDataPageData> pageData;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -375,7 +374,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         public Long pages;
 
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

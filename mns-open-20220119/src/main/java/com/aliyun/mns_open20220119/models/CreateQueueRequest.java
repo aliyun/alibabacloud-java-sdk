@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQueueRequest extends TeaModel {
     /**
-     * <p>The delay period for all messages sent to the queue. A message sent to the queue can be consumed only after the delay period specified by this parameter elapses.
-     * Valid values: 0 to 604800. Unit: seconds.
-     * Default value: 0.</p>
+     * <p>The delay time for all messages sent to the queue. A message can be consumed only after the specified delay time elapses from the time it is sent to the queue. Valid values: 0 to 604800. Unit: seconds. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -37,16 +35,23 @@ public class CreateQueueRequest extends TeaModel {
     @NameInMap("EnableLogging")
     public Boolean enableLogging;
 
+    /**
+     * <p>Specifies whether log broker encryption is enabled. Valid values: true and false.</p>
+     */
     @NameInMap("EnableSSE")
     public Boolean enableSSE;
 
+    /**
+     * <p>The KMS key ID. This parameter is required only when SseType is set to KMS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-xxx</p>
+     */
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 
     /**
-     * <p>The maximum size of a message body that can be sent to the queue.
-     * Valid values: 1024 to 65536. Unit: bytes.
-     * Default value: 65536.</p>
+     * <p>The maximum size of a message body that can be sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
      * 
      * <strong>example:</strong>
      * <p>65536</p>
@@ -55,9 +60,7 @@ public class CreateQueueRequest extends TeaModel {
     public Long maximumMessageSize;
 
     /**
-     * <p>The maximum duration for which a message is retained in the queue. After the specified duration elapses since a message is sent to the queue, the message is deleted regardless of whether it has been consumed.
-     * Valid values: 60 to 604800. Unit: seconds.
-     * Default value: 345600.</p>
+     * <p>The maximum retention period of a message in the queue. After the specified period elapses from the time the message is sent to the queue, the message is deleted regardless of whether it has been received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
      * 
      * <strong>example:</strong>
      * <p>345600</p>
@@ -66,9 +69,7 @@ public class CreateQueueRequest extends TeaModel {
     public Long messageRetentionPeriod;
 
     /**
-     * <p>The maximum duration for which a ReceiveMessage request waits when the queue has no messages.
-     * Valid values: 0 to 30. Unit: seconds.
-     * Default value: 0.</p>
+     * <p>The maximum wait time for a ReceiveMessage request when no messages are available in the queue. Valid values: 0 to 30. Unit: seconds. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -89,7 +90,7 @@ public class CreateQueueRequest extends TeaModel {
     /**
      * <p>The type of the queue. Valid values:</p>
      * <ul>
-     * <li>normal: standard queue.</li>
+     * <li>normal: Standard queue.</li>
      * <li>fifo: FIFO queue.</li>
      * </ul>
      * 
@@ -99,9 +100,21 @@ public class CreateQueueRequest extends TeaModel {
     @NameInMap("QueueType")
     public String queueType;
 
+    /**
+     * <p>The storage encryption algorithm. AES-256-GCM is supported. If you do not specify this parameter, the default algorithm is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AES-256-GCM</p>
+     */
     @NameInMap("SseAlgorithm")
     public String sseAlgorithm;
 
+    /**
+     * <p>The storage encryption method. Valid values: SMQ and KMS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KMS</p>
+     */
     @NameInMap("SseType")
     public String sseType;
 
@@ -118,9 +131,7 @@ public class CreateQueueRequest extends TeaModel {
     public CreateQueueRequestTenantRateLimitPolicy tenantRateLimitPolicy;
 
     /**
-     * <p>The duration for which a message stays in the Inactive state after it is consumed from the queue and changes from the Active state to the Inactive state.
-     * Valid values: 1 to 43200. Unit: seconds.
-     * Default value: 30.</p>
+     * <p>The duration for which a message remains in the inactive state after it is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -255,7 +266,7 @@ public class CreateQueueRequest extends TeaModel {
 
     public static class CreateQueueRequestDlqPolicy extends TeaModel {
         /**
-         * <p>The target queue to which dead-letter messages are delivered.</p>
+         * <p>The destination queue for dead-letter messages.</p>
          * 
          * <strong>example:</strong>
          * <p>deadLetterQueue</p>
@@ -273,7 +284,7 @@ public class CreateQueueRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of times a message can be delivered.</p>
+         * <p>The maximum number of receive attempts for a message.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -314,7 +325,7 @@ public class CreateQueueRequest extends TeaModel {
 
     public static class CreateQueueRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tag1</p>
@@ -323,7 +334,7 @@ public class CreateQueueRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

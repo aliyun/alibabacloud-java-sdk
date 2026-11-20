@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEventRuleShrinkRequest extends TeaModel {
     /**
-     * <p>A client token to ensure the idempotence of the request.</p>
-     * <p>Generate a unique value for this parameter from your client for each request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate a value for this parameter on the client side and ensure that the value is unique across different requests.</p>
      * 
      * <strong>example:</strong>
      * <p>06273500-249F-5863-121D-74D51123****</p>
@@ -15,7 +14,7 @@ public class CreateEventRuleShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> This field is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>--</p>
@@ -30,27 +29,27 @@ public class CreateEventRuleShrinkRequest extends TeaModel {
     public String endpointShrink;
 
     /**
-     * <p>This parameter is deprecated. Use Endpoint instead.</p>
+     * <p><strong>[Deprecated]</strong> This field is deprecated. Use the Endpoint parameter instead.</p>
      */
     @NameInMap("Endpoints")
     public String endpointsShrink;
 
     /**
-     * <p>A list of event types.</p>
+     * <p>The list of event types. Valid values depend on the selected cloud service. For example, if OSS is selected, common values include ObjectCreated:PutObject and ObjectRemoved:DeleteObject. For more information, see the event notification documentation for each cloud service.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EventTypes")
     public String eventTypesShrink;
 
     /**
-     * <p>A list of matching rules. The logical relationship between the rules is OR.</p>
+     * <p>The list of matching rules. A maximum of 10 rules can be specified at the outer level. The rules are connected by the OR operator.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MatchRules")
     public String matchRulesShrink;
 
     /**
-     * <p>The name of the Alibaba Cloud product for which you want to receive event notifications.</p>
+     * <p>The name of the cloud service for event notification. Currently, only OSS is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +59,7 @@ public class CreateEventRuleShrinkRequest extends TeaModel {
     public String productName;
 
     /**
-     * <p>The name of the event rule.</p>
+     * <p>The name of the event notification rule. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

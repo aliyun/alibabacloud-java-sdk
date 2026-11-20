@@ -29,7 +29,7 @@ public class GetAccountAttributesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>06273500-249F-5863-121D-74D51123****</p>
@@ -128,7 +128,7 @@ public class GetAccountAttributesResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>Indicates whether the message trace feature is enabled.</p>
+         * <p>Indicates whether the message tracing feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

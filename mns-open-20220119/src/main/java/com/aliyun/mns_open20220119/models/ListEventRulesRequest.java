@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventRulesRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated. Use PageSize for paged queries.</p>
+     * <p><strong>[Deprecated]</strong> Use PageSize for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListEventRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>This parameter is deprecated. Use PageNum for paged queries.</p>
+     * <p><strong>[Deprecated]</strong> Use PageNum for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>cd7NlPlX4kgKCdsCWMiMR/+HnVzPLQ4/XLvjR64jZ7F9AQ+Mr3T59J6IVkuXeV3w</p>
@@ -23,9 +23,7 @@ public class ListEventRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number of the results to return.
-     * Valid values: 1 to 100000.
-     * If you set this parameter to a value less than 1, the system uses 1. If you set this parameter to a value greater than 100000, the system uses 100000.</p>
+     * <p>The page number of the returned results. Valid values: 1 to 100000. If the specified value is less than 1, the system defaults to 1. If the specified value is greater than 100000, the system defaults to 100000.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,9 +32,7 @@ public class ListEventRulesRequest extends TeaModel {
     public Long pageNum;
 
     /**
-     * <p>The number of entries to return on each page.
-     * Valid values: 10 to 50.
-     * If you set this parameter to a value less than 10, the system uses 10. If you set this parameter to a value greater than 50, the system uses 50.</p>
+     * <p>The number of entries to return on each page. Valid values: 10 to 50. If the specified value is less than 10, the system defaults to 10. If the specified value is greater than 50, the system defaults to 50.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,7 +41,7 @@ public class ListEventRulesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The name of the Alibaba Cloud service for which event notifications are configured.</p>
+     * <p>The name of the cloud service for event notifications.</p>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -54,7 +50,7 @@ public class ListEventRulesRequest extends TeaModel {
     public String productName;
 
     /**
-     * <p>The resource name in the matching rule. This parameter is used to filter rules. For example, for Object Storage Service (OSS), this is the bucket name.</p>
+     * <p>The resource name in the matching rules, used to filter rules. For example, in OSS, this is the OSS bucket name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-bucket</p>
@@ -63,7 +59,7 @@ public class ListEventRulesRequest extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The filter condition for the rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>rule-xsXDW</p>
@@ -72,7 +68,7 @@ public class ListEventRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The subscriber.</p>
+     * <p>The subscription endpoint.</p>
      */
     @NameInMap("Subscription")
     public ListEventRulesRequestSubscription subscription;
@@ -167,10 +163,8 @@ public class ListEventRulesRequest extends TeaModel {
         /**
          * <p>The endpoint type. Valid values:</p>
          * <ul>
-         * <li><p><strong>topic</strong>: A topic can deliver messages to multiple subscribers. You can add or remove subscribers later.</p>
-         * </li>
-         * <li><p><strong>queue</strong>: Messages are delivered directly to a queue. This simplifies the delivery path, but you cannot add new subscribers later.</p>
-         * </li>
+         * <li><strong>topic</strong>: The topic type. A topic supports delivery to multiple subscription endpoints. You can add or remove subscription endpoints later.</li>
+         * <li><strong>queue</strong>: The queue type. Messages are delivered directly to a queue. This reduces the link path, but you cannot add new subscription endpoints later.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +174,7 @@ public class ListEventRulesRequest extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The actual value of the endpoint.</p>
+         * <p>The actual value of the receiving endpoint. When EndpointType is set to topic, this is the topic name. When EndpointType is set to queue, this is the queue name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-topic</p>

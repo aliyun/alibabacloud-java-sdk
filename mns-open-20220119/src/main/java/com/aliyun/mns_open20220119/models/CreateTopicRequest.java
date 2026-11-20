@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the log management feature. Valid values:</p>
+     * <p>Specifies whether to enable the logging feature. Valid values:</p>
      * <ul>
-     * <li><p>true: Enabled.</p>
+     * <li><p>true: enables the feature.</p>
      * </li>
-     * <li><p>false: Disabled.
+     * <li><p>false: disables the feature.
      * Default value: false.</p>
      * </li>
      * </ul>
@@ -20,14 +20,25 @@ public class CreateTopicRequest extends TeaModel {
     @NameInMap("EnableLogging")
     public Boolean enableLogging;
 
+    /**
+     * <p>Specifies whether to enable server-side encryption for the message body. Valid values: true or false.</p>
+     */
     @NameInMap("EnableSSE")
     public Boolean enableSSE;
 
+    /**
+     * <p>The KMS key ID used when KMS encryption is enabled. The key must belong to the same account and region as the topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-xxx</p>
+     */
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 
     /**
-     * <p>The maximum length of the message body sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+     * <p>The maximum size of the message body that can be sent to the topic.
+     * Valid values: 1024 to 65536. Unit: bytes.
+     * Default value: 65536.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -35,9 +46,21 @@ public class CreateTopicRequest extends TeaModel {
     @NameInMap("MaxMessageSize")
     public Long maxMessageSize;
 
+    /**
+     * <p>The server-side encryption algorithm. Currently, only AES-256-GCM is supported. If this parameter is not specified, the default algorithm is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AES-256-GCM</p>
+     */
     @NameInMap("SseAlgorithm")
     public String sseAlgorithm;
 
+    /**
+     * <p>The server-side encryption method. Valid values: SMQ (service-hosted key) or KMS (user-managed KMS key).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KMS</p>
+     */
     @NameInMap("SseType")
     public String sseType;
 
@@ -48,7 +71,7 @@ public class CreateTopicRequest extends TeaModel {
     public java.util.List<CreateTopicRequestTag> tag;
 
     /**
-     * <p>The name of the topic to create.</p>
+     * <p>The name of the topic. The name can be up to 120 characters in length and must start with a letter. It can contain letters, digits, and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,8 +83,8 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The type of the topic. Valid values:</p>
      * <ul>
-     * <li>normal: normal topic</li>
-     * <li>fifo: FIFO topic</li>
+     * <li>normal: standard topic.</li>
+     * <li>fifo: FIFO topic.</li>
      * </ul>
      * 
      * <strong>example:</strong>

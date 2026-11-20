@@ -11,36 +11,36 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String dlqPolicyShrink;
 
     /**
-     * <p>The email push attributes. This parameter is required when PushType is set to dm. The value is in JSON format and contains the following fields:</p>
+     * <p>The attributes for Direct Mail push. This parameter is required when the PushType parameter is set to dm. The value is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li>AccountName: The sender address configured in DirectMail (such as <a href="mailto:notify@example.com">notify@example.com</a>).</li>
-     * <li>Subject: The email subject.</li>
+     * <li>AccountName: the sender address, which is the sender address configured in Direct Mail, such as <a href="mailto:notify@example.com">notify@example.com</a>.</li>
+     * <li>Subject: the email subject.</li>
      * </ul>
      */
     @NameInMap("DmAttributes")
     public String dmAttributesShrink;
 
     /**
-     * <p>The SMS push attributes. This parameter is required when PushType is set to alisms. The value is in JSON format and contains the following fields:</p>
+     * <p>The attributes for SMS push. This parameter is required when the PushType parameter is set to alisms. The value is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li>TemplateCode: The SMS template code, which can be obtained from the Short Message Service console.</li>
-     * <li>SignName: The SMS signature name.</li>
+     * <li>TemplateCode: the code of the SMS template, which can be obtained from the SMS console.</li>
+     * <li>SignName: the name of the SMS signature.</li>
      * </ul>
      */
     @NameInMap("DysmsAttributes")
     public String dysmsAttributesShrink;
 
     /**
-     * <h2>Endpoint address for receiving messages</h2>
-     * <p>The format varies depending on the value of <code>PushType</code>:</p>
+     * <h2>Endpoint for receiving messages</h2>
+     * <p>The format varies based on the <code>PushType</code> parameter:</p>
      * <ul>
-     * <li><code>PushType=http</code>: An HTTP/HTTPS callback URL, such as <code>http://example.com/callback</code> or <code>https://example.com/callback</code>.</li>
-     * <li><code>PushType=queue</code>: The ARN of the destination queue, in the format <code>acs:mns:{RegionId}:{Alibaba Cloud account ID}:queues/{QueueName}</code>.</li>
-     * <li><code>PushType=dm</code>: The email push endpoint, in the fixed format <code>smq-ep:dm:{Alibaba Cloud account ID}:__dynamic</code>. Replace <code>{Alibaba Cloud account ID}</code> with your Alibaba Cloud account ID.</li>
-     * <li><code>PushType=dysms</code>: The SMS push endpoint, in the format <code>smq-ep:dysms:{Alibaba Cloud account ID}:{PhoneNumber}</code>.</li>
+     * <li><code>PushType=http</code>: The HTTP or HTTPS callback URL, such as <code>http://example.com/callback</code> or <code>https://example.com/callback</code>.</li>
+     * <li><code>PushType=queue</code>: The ARN of the destination queue, in the format of <code>acs:mns:{RegionId}:{Alibaba Cloud account ID}:/queues/{QueueName}</code>.</li>
+     * <li><code>PushType=dm</code>: The Direct Mail push endpoint, in the fixed format of <code>smq-ep:dm:{Alibaba Cloud account ID}:__dynamic</code>. Replace <code>{Alibaba Cloud account ID}</code> with the ID of your Alibaba Cloud account.</li>
+     * <li><code>PushType=dysms</code>: The SMS push endpoint, in the format of <code>smq-ep:dysms:{Alibaba Cloud account ID}:{Phone number}</code>.</li>
      * <li><code>PushType=kafka</code>: The Kafka push endpoint. The Kafka push type is deprecated.</li>
-     * <li><code>PushType=fc</code>: The Function Compute endpoint, in the format <code>acs:fc:{RegionId}:{Alibaba Cloud account ID}:services/{ServiceName}/functions/{FunctionName}</code>.</li>
-     * <li><code>PushType=eventbus</code>: The EventBridge endpoint, in the format <code>acs:eventbridge:{RegionId}:{Alibaba Cloud account ID}:eventbus/{EventBusName}</code>.</li>
+     * <li><code>PushType=fc</code>: The Function Compute endpoint, in the format of <code>acs:fc:{RegionId}:{Alibaba Cloud account ID}:services/{ServiceName}/functions/{FunctionName}</code>.</li>
+     * <li><code>PushType=eventbus</code>: The EventBridge endpoint, in the format of <code>acs:eventbridge:{RegionId}:{Alibaba Cloud account ID}:eventbus/{EventBusName}</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -57,8 +57,9 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String kafkaAttributesShrink;
 
     /**
-     * <p>The tag used for message filtering in this subscription. Only messages with a matching tag are pushed. The value is a string of up to 16 characters.</p>
-     * <p>By default, no message filtering is applied.</p>
+     * <p>The tag used for message filtering in the subscription. Only messages with a matching tag are pushed.
+     * The value must be a string up to 16 characters in length.</p>
+     * <p>By default, message filtering is not performed.</p>
      * 
      * <strong>example:</strong>
      * <p>important</p>
@@ -70,9 +71,9 @@ public class SubscribeShrinkRequest extends TeaModel {
      * <h2>Format of the pushed message content</h2>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>XML</code>: The message body is pushed in XML format. This is the default value.</li>
-     * <li><code>JSON</code>: The message body is pushed in JSON format.</li>
-     * <li><code>SIMPLIFIED</code>: Only the raw message body content is pushed, without SMQ metadata wrapping.</li>
+     * <li><code>XML</code>: XML format (default)</li>
+     * <li><code>JSON</code>: JSON format</li>
+     * <li><code>SIMPLIFIED</code>: original message body content without the SMQ metadata wrapper</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,12 +83,10 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String notifyContentFormat;
 
     /**
-     * <p>The retry strategy when an error occurs while pushing messages to the endpoint. Valid values:</p>
+     * <p>The retry strategy that is used when an error occurs during message pushing to the endpoint. Valid values:</p>
      * <ul>
-     * <li><p>BACKOFF_RETRY: backoff retry.</p>
-     * </li>
-     * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</p>
-     * </li>
+     * <li>BACKOFF_RETRY: backoff retry (default)</li>
+     * <li>EXPONENTIAL_DECAY_RETRY: exponential decay retry</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,29 +96,23 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String notifyStrategy;
 
     /**
-     * <h2>Push type of the subscription</h2>
+     * <h2>Push types for subscriptions</h2>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><code>http</code>: HTTP/HTTPS push. Pushes messages to a specified HTTP or HTTPS callback URL.</p>
-     * </li>
-     * <li><p><code>queue</code>: Queue push. Pushes messages to a specified SMQ queue.</p>
-     * </li>
-     * <li><p><code>dm</code>: Email push. Sends notifications through DirectMail. You must also set the <code>DmAttributes</code> and <code>StsRoleArn</code> parameters.</p>
-     * </li>
-     * <li><p><code>dysms</code>: SMS push. Sends notifications through Alibaba Cloud Short Message Service. You must also set the <code>DysmsAttributes</code> parameter.</p>
-     * </li>
-     * <li><p><code>fc</code>: Function Compute push. Pushes messages to Alibaba Cloud Function Compute (FC).</p>
-     * </li>
-     * <li><p><code>eventbus</code>: EventBridge push. Pushes messages to an EventBridge event bus.</p>
-     * </li>
+     * <li><code>http</code>: Pushes messages to the specified HTTP or HTTPS callback URL.</li>
+     * <li><code>queue</code>: Pushes messages to the specified Simple Message Queue (SMQ) queue.</li>
+     * <li><code>dm</code>: Sends notifications by using the Direct Mail service. You must also set the <code>DmAttributes</code> and <code>StsRoleArn</code> parameters.</li>
+     * <li><code>dysms</code>: Sends notifications by using the Alibaba Cloud SMS service. You must also set the <code>DysmsAttributes</code> parameter.</li>
+     * <li><code>fc</code>: Pushes messages to Alibaba Cloud Function Compute (FC).</li>
+     * <li><code>eventbus</code>: Pushes messages to an EventBridge event bus.</li>
      * </ul>
      * <p><strong>Note:</strong>
-     * The following values are deprecated and are only used for compatibility with legacy subscriptions:</p>
+     * The following values are deprecated and are retained only for compatibility with legacy subscriptions:</p>
      * <ul>
-     * <li><code>mpush</code>: Mobile push.</li>
-     * <li><code>alisms</code>: Legacy SMS.</li>
-     * <li><code>email</code>: Legacy email. Use <code>dm</code> instead.</li>
-     * <li><code>kafka</code>: Kafka push type is deprecated.</li>
+     * <li><code>mpush</code>: mobile push</li>
+     * <li><code>alisms</code>: legacy SMS</li>
+     * <li><code>email</code>: legacy email, use <code>dm</code> instead</li>
+     * <li><code>kafka</code>: deprecated Kafka push type</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -130,7 +123,7 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String pushType;
 
     /**
-     * <p>The ARN of the RAM role assumed by the service. The format is acs:ram::{Alibaba Cloud account ID}:role/{RoleName}. Replace {Alibaba Cloud account ID} with the Alibaba Cloud account ID that calls the API operation.</p>
+     * <p>The ARN of the RAM role assumed by the service. The format is acs:ram::{Alibaba Cloud account ID}:role/{RoleName}. Replace {Alibaba Cloud account ID} with the ID of the Alibaba Cloud account that calls the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1234567890:role/AliyunMNSNotificationRole</p>
@@ -139,7 +132,7 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String stsRoleArn;
 
     /**
-     * <p>The name of the subscription.</p>
+     * <p>The name of the subscription. The name must be 1 to 255 characters in length. It must start with a letter or a digit, and can contain only letters, digits, and hyphens (-). The name cannot start with mns-reserved-.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -155,7 +148,7 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String tenantRateLimitPolicyShrink;
 
     /**
-     * <p>The name of the topic.</p>
+     * <p>The name of the topic. The name must be 1 to 255 characters in length. It must start with a letter or a digit, and can contain only letters, digits, and hyphens (-). The name cannot start with mns-reserved-.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

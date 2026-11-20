@@ -11,11 +11,11 @@ public class SetSubscriptionAttributesShrinkRequest extends TeaModel {
     public String dlqPolicyShrink;
 
     /**
-     * <p>The retry policy for message delivery failures to the endpoint. Valid values:</p>
+     * <p>The retry policy used when an error occurs while pushing messages to the endpoint. Valid values:</p>
      * <ul>
-     * <li><p>BACKOFF_RETRY: backoff retry.</p>
+     * <li><p>BACKOFF_RETRY: backoff retry</p>
      * </li>
-     * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</p>
+     * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry</p>
      * </li>
      * </ul>
      * 
@@ -26,6 +26,8 @@ public class SetSubscriptionAttributesShrinkRequest extends TeaModel {
     public String notifyStrategy;
 
     /**
+     * <p>The STS role ARN.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::1234567890:role/roleName</p>
      */

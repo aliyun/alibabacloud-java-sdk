@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Mns-open";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("mns-open", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -28,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more Access Control List (ACL) rules to an endpoint of a specified type.</p>
+     * <p>Creates one or more ACL rules for an access point of a specified type.</p>
      * 
      * @param tmpReq AuthorizeEndpointAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -74,7 +77,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more Access Control List (ACL) rules to an endpoint of a specified type.</p>
+     * <p>Creates one or more ACL rules for an access point of a specified type.</p>
      * 
      * @param request AuthorizeEndpointAclRequest
      * @return AuthorizeEndpointAclResponse
@@ -176,7 +179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the CreateQueue operation to create a queue.</p>
+     * <p>Creates a queue.</p>
      * 
      * @param tmpReq CreateQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -274,7 +277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the CreateQueue operation to create a queue.</p>
+     * <p>Creates a queue.</p>
      * 
      * @param request CreateQueueRequest
      * @return CreateQueueResponse
@@ -286,7 +289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the CreateTopic operation to create a topic.</p>
+     * <p>Creates a topic by calling the CreateTopic operation.</p>
      * 
      * @param request CreateTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -352,7 +355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the CreateTopic operation to create a topic.</p>
+     * <p>Creates a topic by calling the CreateTopic operation.</p>
      * 
      * @param request CreateTopicRequest
      * @return CreateTopicResponse
@@ -412,7 +415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DeleteQueue operation to delete a created queue.</p>
+     * <p>Deletes a queue.</p>
      * 
      * @param request DeleteQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -444,7 +447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DeleteQueue operation to delete a created queue.</p>
+     * <p>Deletes a queue.</p>
      * 
      * @param request DeleteQueueRequest
      * @return DeleteQueueResponse
@@ -456,7 +459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DeleteTopic operation to delete a topic.</p>
+     * <p>Deletes a topic.</p>
      * 
      * @param request DeleteTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -488,7 +491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DeleteTopic operation to delete a topic.</p>
+     * <p>Deletes a topic.</p>
      * 
      * @param request DeleteTopicRequest
      * @return DeleteTopicResponse
@@ -500,7 +503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation disables an endpoint of a specified type, blocking all subsequent requests from the endpoint and returning an error.</p>
+     * <p>Disables access points of a specified type. After the access points are disabled, all requests originating from the corresponding access points are intercepted and an error is returned.</p>
      * 
      * @param request DisableEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -532,7 +535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation disables an endpoint of a specified type, blocking all subsequent requests from the endpoint and returning an error.</p>
+     * <p>Disables access points of a specified type. After the access points are disabled, all requests originating from the corresponding access points are intercepted and an error is returned.</p>
      * 
      * @param request DisableEndpointRequest
      * @return DisableEndpointResponse
@@ -544,7 +547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation enables an endpoint of a specified type. After the endpoint is enabled, requests that originate from the endpoint and are on the Access Control List (ACL) whitelist are not blocked.</p>
+     * <p>Enables an access point of a specified type. After the access point is enabled, requests from the corresponding access point that are in the ACL whitelist are not blocked.</p>
      * 
      * @param request EnableEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -576,7 +579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation enables an endpoint of a specified type. After the endpoint is enabled, requests that originate from the endpoint and are on the Access Control List (ACL) whitelist are not blocked.</p>
+     * <p>Enables an access point of a specified type. After the access point is enabled, requests from the corresponding access point that are in the ACL whitelist are not blocked.</p>
      * 
      * @param request EnableEndpointRequest
      * @return EnableEndpointResponse
@@ -588,7 +591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the log configuration of a user.</p>
+     * <p>Retrieves the user log configuration.</p>
      * 
      * @param request GetAccountAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -613,7 +616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the log configuration of a user.</p>
+     * <p>Retrieves the user log configuration.</p>
      * 
      * @param request GetAccountAttributesRequest
      * @return GetAccountAttributesResponse
@@ -669,7 +672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves an event notification rule.</p>
+     * <p>Retrieves event notification rules.</p>
      * 
      * @param request GetEventRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -705,7 +708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves an event notification rule.</p>
+     * <p>Retrieves event notification rules.</p>
      * 
      * @param request GetEventRuleRequest
      * @return GetEventRuleResponse
@@ -905,7 +908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of event notification rules.</p>
+     * <p>Queries the list of event notifications.</p>
      * 
      * @param tmpReq ListEventRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -975,7 +978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of event notification rules.</p>
+     * <p>Queries the list of event notifications.</p>
      * 
      * @param request ListEventRulesRequest
      * @return ListEventRulesResponse
@@ -1047,7 +1050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ListSubscriptionByTopic operation to retrieve a paginated list of subscriptions for a topic.</p>
+     * <p>Queries a paginated list of subscriptions under a specific topic.</p>
      * 
      * @param request ListSubscriptionByTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1099,7 +1102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ListSubscriptionByTopic operation to retrieve a paginated list of subscriptions for a topic.</p>
+     * <p>Queries a paginated list of subscriptions under a specific topic.</p>
      * 
      * @param request ListSubscriptionByTopicRequest
      * @return ListSubscriptionByTopicResponse
@@ -1171,7 +1174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes one or more Access Control List (ACL) rules for a specified endpoint type.</p>
+     * <p>Deletes one or more ACL rules for an endpoint of a specified type.</p>
      * 
      * @param tmpReq RevokeEndpointAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1217,7 +1220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes one or more Access Control List (ACL) rules for a specified endpoint type.</p>
+     * <p>Deletes one or more ACL rules for an endpoint of a specified type.</p>
      * 
      * @param request RevokeEndpointAclRequest
      * @return RevokeEndpointAclResponse
@@ -1229,7 +1232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the user log configuration.</p>
+     * <p>Configures user log settings.</p>
      * 
      * @param request SetAccountAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1277,7 +1280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the user log configuration.</p>
+     * <p>Configures user log settings.</p>
      * 
      * @param request SetAccountAttributesRequest
      * @return SetAccountAttributesResponse
@@ -1391,7 +1394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the SetSubscriptionAttributes operation to modify a subscription\&quot;s attributes.</p>
+     * <p>Modifies the attributes of a subscription.</p>
      * 
      * @param tmpReq SetSubscriptionAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1453,7 +1456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the SetSubscriptionAttributes operation to modify a subscription\&quot;s attributes.</p>
+     * <p>Modifies the attributes of a subscription.</p>
      * 
      * @param request SetSubscriptionAttributesRequest
      * @return SetSubscriptionAttributesResponse
@@ -1465,7 +1468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the SetTopicAttributes operation to modify the attributes of a topic.</p>
+     * <p>Modifies the attributes of a topic.</p>
      * 
      * @param request SetTopicAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1521,7 +1524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the SetTopicAttributes operation to modify the attributes of a topic.</p>
+     * <p>Modifies the attributes of a topic.</p>
      * 
      * @param request SetTopicAttributesRequest
      * @return SetTopicAttributesResponse
@@ -1533,7 +1536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the Subscribe operation to create a subscription for a topic.</p>
+     * <p>Creates a subscription for a topic.</p>
      * 
      * @param tmpReq SubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1635,7 +1638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the Subscribe operation to create a subscription for a topic.</p>
+     * <p>Creates a subscription for a topic.</p>
      * 
      * @param request SubscribeRequest
      * @return SubscribeResponse
@@ -1647,7 +1650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call Unsubscribe to cancel an existing subscription.</p>
+     * <p>Cancels an existing subscription.</p>
      * 
      * @param request UnsubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1683,7 +1686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call Unsubscribe to cancel an existing subscription.</p>
+     * <p>Cancels an existing subscription.</p>
      * 
      * @param request UnsubscribeRequest
      * @return UnsubscribeResponse

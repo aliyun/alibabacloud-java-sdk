@@ -112,7 +112,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
         /**
          * <p>The ACL policy. Valid values:</p>
          * <ul>
-         * <li><strong>allow</strong>: The endpoint allows access from the corresponding CIDR block. Currently, only allow is supported.</li>
+         * <li><strong>allow</strong>: allows access from the corresponding CIDR block to the current endpoint. Currently, only allow is supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>

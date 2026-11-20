@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTopicResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The HTTP status code of the response.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>06273500-249F-5863-121D-74D51123E62C</p>
@@ -38,7 +38,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The response status.</p>
+     * <p>The status of the response.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -110,7 +110,7 @@ public class CreateTopicResponseBody extends TeaModel {
 
     public static class CreateTopicResponseBodyData extends TeaModel {
         /**
-         * <p>The response code.</p>
+         * <p>The HTTP status code of the response.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -122,7 +122,7 @@ public class CreateTopicResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>N/A</p>
          */
         @NameInMap("Message")
         public String message;

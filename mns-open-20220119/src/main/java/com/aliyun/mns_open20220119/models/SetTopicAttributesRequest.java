@@ -9,10 +9,10 @@ public class SetTopicAttributesRequest extends TeaModel {
      * <ul>
      * <li><p>true: Enabled.</p>
      * </li>
-     * <li><p>false: Disabled.
-     * Default value: false.</p>
+     * <li><p>false: Disabled.</p>
      * </li>
      * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,14 +20,23 @@ public class SetTopicAttributesRequest extends TeaModel {
     @NameInMap("EnableLogging")
     public Boolean enableLogging;
 
+    /**
+     * <p>Specifies whether to enable server-side encryption for message bodies. Valid values: true or false.</p>
+     */
     @NameInMap("EnableSSE")
     public Boolean enableSSE;
 
+    /**
+     * <p>The KMS key ID. This parameter is required when you use KMS for encryption. The key must belong to the same Alibaba Cloud account and region as the topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-xxx</p>
+     */
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 
     /**
-     * <p>The maximum length of the message body sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+     * <p>The maximum size of a message body sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
      * 
      * <strong>example:</strong>
      * <p>65536</p>
@@ -35,14 +44,26 @@ public class SetTopicAttributesRequest extends TeaModel {
     @NameInMap("MaxMessageSize")
     public Long maxMessageSize;
 
+    /**
+     * <p>The server-side encryption algorithm. Currently, only AES-256-GCM is supported. If you do not specify this parameter, the default algorithm is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AES-256-GCM</p>
+     */
     @NameInMap("SseAlgorithm")
     public String sseAlgorithm;
 
+    /**
+     * <p>The server-side encryption method. Valid values: SMQ (service-managed key) or KMS (customer-managed KMS key).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KMS</p>
+     */
     @NameInMap("SseType")
     public String sseType;
 
     /**
-     * <p>The name of the topic.</p>
+     * <p>The name of the topic. The name can be up to 120 characters in length. It must start with a letter and can contain letters, digits, and hyphens.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

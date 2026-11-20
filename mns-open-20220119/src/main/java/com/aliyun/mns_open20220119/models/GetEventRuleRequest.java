@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEventRuleRequest extends TeaModel {
     /**
-     * <p>The name of the Alibaba Cloud product that triggers the event notification.</p>
+     * <p>The name of the cloud service for event notifications.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEventRuleRequest extends TeaModel {
     /**
-     * <p>A client token to ensure the idempotence of the request.</p>
-     * <p>Generate a unique value for this parameter from your client for each request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate a value for this parameter on the client side and ensure that the value is unique across different requests.</p>
      * 
      * <strong>example:</strong>
      * <p>06273500-249F-5863-121D-74D51123****</p>
@@ -15,7 +14,7 @@ public class CreateEventRuleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> This field is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>--</p>
@@ -30,27 +29,27 @@ public class CreateEventRuleRequest extends TeaModel {
     public CreateEventRuleRequestEndpoint endpoint;
 
     /**
-     * <p>This parameter is deprecated. Use Endpoint instead.</p>
+     * <p><strong>[Deprecated]</strong> This field is deprecated. Use the Endpoint parameter instead.</p>
      */
     @NameInMap("Endpoints")
     public java.util.List<CreateEventRuleRequestEndpoints> endpoints;
 
     /**
-     * <p>A list of event types.</p>
+     * <p>The list of event types. Valid values depend on the selected cloud service. For example, if OSS is selected, common values include ObjectCreated:PutObject and ObjectRemoved:DeleteObject. For more information, see the event notification documentation for each cloud service.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EventTypes")
     public java.util.List<String> eventTypes;
 
     /**
-     * <p>A list of matching rules. The logical relationship between the rules is OR.</p>
+     * <p>The list of matching rules. A maximum of 10 rules can be specified at the outer level. The rules are connected by the OR operator.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MatchRules")
     public java.util.List<java.util.List<EventMatchRule>> matchRules;
 
     /**
-     * <p>The name of the Alibaba Cloud product for which you want to receive event notifications.</p>
+     * <p>The name of the cloud service for event notification. Currently, only OSS is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +59,7 @@ public class CreateEventRuleRequest extends TeaModel {
     public String productName;
 
     /**
-     * <p>The name of the event rule.</p>
+     * <p>The name of the event notification rule. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -140,12 +139,19 @@ public class CreateEventRuleRequest extends TeaModel {
 
     public static class CreateEventRuleRequestEndpoint extends TeaModel {
         /**
+         * <p>The ARN of the role for cross-account delivery. This parameter is required when EndpointType is set to queue and EndpointValue is set to the ARN of a cross-account queue, which means the account that owns the queue is different from the current account. Format: acs:ram::<UID of the account that owns the queue>:role/<Role name>. The role must be created by the account that owns the queue. The trust policy must allow the delivery account to assume the role, and the role must be granted permissions to send messages to the destination queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram:1234567890:role/CrossAccountQueueRole</p>
+         */
+        @NameInMap("EndpointRoleName")
+        public String endpointRoleName;
+
+        /**
          * <p>The endpoint type. Valid values:</p>
          * <ul>
-         * <li><p><strong>topic</strong>: The endpoint is a topic. A topic can deliver messages to multiple subscribers. You can add or remove subscribers later.</p>
-         * </li>
-         * <li><p><strong>queue</strong>: The endpoint is a queue. Messages are delivered directly to the queue. This simplifies the delivery path, but you cannot add new subscribers later.</p>
-         * </li>
+         * <li><strong>topic</strong>: Topic type. Topics support delivery to multiple subscription endpoints. You can add or remove subscription endpoints later.</li>
+         * <li><strong>queue</strong>: Queue type. Messages are delivered directly to the queue. This reduces the routing path, but you cannot add new subscription endpoints later.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +161,7 @@ public class CreateEventRuleRequest extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The value of the endpoint.</p>
+         * <p>The actual value of the endpoint. If EndpointType is set to topic, this parameter specifies the topic name. If EndpointType is set to queue, this parameter specifies the queue name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-topic</p>
@@ -166,6 +172,14 @@ public class CreateEventRuleRequest extends TeaModel {
         public static CreateEventRuleRequestEndpoint build(java.util.Map<String, ?> map) throws Exception {
             CreateEventRuleRequestEndpoint self = new CreateEventRuleRequestEndpoint();
             return TeaModel.build(map, self);
+        }
+
+        public CreateEventRuleRequestEndpoint setEndpointRoleName(String endpointRoleName) {
+            this.endpointRoleName = endpointRoleName;
+            return this;
+        }
+        public String getEndpointRoleName() {
+            return this.endpointRoleName;
         }
 
         public CreateEventRuleRequestEndpoint setEndpointType(String endpointType) {
@@ -188,7 +202,7 @@ public class CreateEventRuleRequest extends TeaModel {
 
     public static class CreateEventRuleRequestEndpoints extends TeaModel {
         /**
-         * <p>Deprecated. Use Endpoint.EndpointType instead.</p>
+         * <p><strong>[Deprecated]</strong> This field is deprecated. Use Endpoint.EndpointType instead.</p>
          * 
          * <strong>example:</strong>
          * <p>http</p>
@@ -197,7 +211,7 @@ public class CreateEventRuleRequest extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>Deprecated. Use Endpoint.EndpointValue instead.</p>
+         * <p><strong>[Deprecated]</strong> This field is deprecated. Use Endpoint.EndpointValue instead.</p>
          * 
          * <strong>example:</strong>
          * <p>test-xxx-queue</p>
