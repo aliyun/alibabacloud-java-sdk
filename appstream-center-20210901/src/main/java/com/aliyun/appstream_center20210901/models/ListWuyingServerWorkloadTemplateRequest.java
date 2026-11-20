@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWuyingServerWorkloadTemplateRequest extends TeaModel {
     /**
-     * <p>The compatibility field. The current version does not read this parameter. This operation returns a fixed maximum of the first 100 templates.</p>
+     * <p>A compatibility field. The current version does not read this parameter. The operation returns a maximum of the first 100 templates.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ListWuyingServerWorkloadTemplateRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The compatibility field. The current version does not read this parameter and does not support token-based pagination.</p>
+     * <p>A compatibility field. The current version does not read this parameter and does not support token-based pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>unused</p>
@@ -23,7 +23,9 @@ public class ListWuyingServerWorkloadTemplateRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the virtual node pool. This parameter is <strong>required</strong>. The node pool must belong to the current account. You can call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the ID.</p>
+     * <p>The virtual node pool ID. <strong>Required</strong>. The node pool must already exist and belong to the current account, but it is not required to be attached to a workstation.</p>
+     * <p>If you already have a valid node pool ID, you can directly pass it. If a workstation is already associated with a node pool, you can also obtain the corresponding non-empty <code>VirtualNodePoolId</code> by invoking <a href="~~ListWuyingServer~~">ListWuyingServer</a>. If you do not have a valid ID, do not use an empty value, workstation ID, cluster ID, or the character string <code>null</code> as a substitute.</p>
+     * <p><a href="~~CreateWuyingServer~~">CreateWuyingServer</a> only associates existing node pools and does not support automatic creation of node pools. If the node pool does not exist or does not belong to the current account, <code>InvalidParameter.VirtualNodePoolId</code> is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

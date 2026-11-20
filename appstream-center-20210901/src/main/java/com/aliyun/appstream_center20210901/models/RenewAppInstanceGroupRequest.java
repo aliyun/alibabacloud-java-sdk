@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewAppInstanceGroupRequest extends TeaModel {
     /**
-     * <p>The delivery group ID.</p>
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>Specifies whether to enable automatic payment. If RenewMode is set to RENEW_SPECIFIED_NODE_COUNT or RENEW_SPECIFIED_NODE_IDS, this parameter must be set to false.</p>
+     * <p>Specifies whether to enable automatic payment. When the RenewMode parameter is set to RENEW_SPECIFIED_NODE_COUNT or RENEW_SPECIFIED_NODE_IDS, this parameter must be set to false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,7 +24,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The numeric part of the resource purchase duration. Use this parameter together with <code>PeriodUnit</code> to specify the full purchase duration.</p>
+     * <p>The numeric part of the subscription duration. This parameter is used together with the PeriodUnit parameter to specify the complete subscription duration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,19 +34,19 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit part of the resource purchase duration. Use this parameter together with <code>Period</code> to specify the full purchase duration. The valid combinations of <code>Period</code> and <code>PeriodUnit</code> are as follows:</p>
+     * <p>The unit of the subscription duration. This parameter is used together with the Period parameter to specify the complete subscription duration. Valid combinations of Period and PeriodUnit are as follows:</p>
      * <ul>
-     * <li>1 Week (1 week)</li>
-     * <li>1 Month (1 month)</li>
-     * <li>2 Month (2 months)</li>
-     * <li>3 Month (3 months)</li>
-     * <li>6 Month (6 months)</li>
-     * <li>1 Year (1 year)</li>
-     * <li>2 Year (2 years)</li>
-     * <li>3 Year (3 years)</li>
+     * <li>1 Week</li>
+     * <li>1 Month</li>
+     * <li>2 Month</li>
+     * <li>3 Month</li>
+     * <li>6 Month</li>
+     * <li>1 Year</li>
+     * <li>2 Year</li>
+     * <li>3 Year</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is not. If the request parameters do not match the combinations listed above, such as <code>2 Week</code>, the operation call succeeds but an error occurs during order placement.</p>
+     * <p>This parameter is case-sensitive. For example, Week is valid, but week is invalid. If the request parameters do not match the preceding valid combinations, such as 2 Week, the API call may succeed, but an error will occur during the order placement stage.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -67,7 +67,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The promotion ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</p>
+     * <p>The promotion ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>17440009****</p>
@@ -94,7 +94,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
     public String renewMode;
 
     /**
-     * <p>The list of node IDs to renew.</p>
+     * <p>The IDs of the nodes to renew.</p>
      */
     @NameInMap("RenewNodes")
     public java.util.List<String> renewNodes;

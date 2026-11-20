@@ -11,7 +11,7 @@ public class DescribeSlsDeliveryConfigResponseBody extends TeaModel {
     public java.util.List<DescribeSlsDeliveryConfigResponseBodyDeliveryConfigs> deliveryConfigs;
 
     /**
-     * <p>The request ID used to locate the current call.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -55,8 +55,8 @@ public class DescribeSlsDeliveryConfigResponseBody extends TeaModel {
          * <ul>
          * <li><code>Stopped</code>: Delivery is stopped.</li>
          * <li><code>Enabled</code>: Delivery is enabled.</li>
-         * <li><code>AbnormalLogstoreDeleted</code>: The destination Logstore is deleted, and delivery is abnormal.</li>
-         * <li><code>AbnormalProjectDeleted</code>: The destination project is deleted, and delivery is abnormal.</li>
+         * <li><code>AbnormalLogstoreDeleted</code>: Delivery is abnormal because the destination Logstore is deleted.</li>
+         * <li><code>AbnormalProjectDeleted</code>: Delivery is abnormal because the destination project is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserUsageReportRequest extends TeaModel {
     /**
-     * <p>The ID of the app instance group, which is used to filter data for a specified app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID. If you do not specify this parameter, data is not filtered by app instance group.</p>
+     * <p>The ID of the app instance group, which is used to filter data for a specified app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID. If you do not specify this parameter, data is not filtered by app instance group. To skip this filter, omit the parameter. An empty string is different from an omitted parameter and is used as a filter value in the query.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -14,7 +14,7 @@ public class QueryUserUsageReportRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The ID of the business region, which is used to filter report data. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</p>
+     * <p>The ID of the business region, which is used to filter report data. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID. To skip this filter, omit the parameter. An empty string is different from an omitted parameter and is used as a filter value in the query.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -38,7 +38,9 @@ public class QueryUserUsageReportRequest extends TeaModel {
     public String connectionStatus;
 
     /**
-     * <p>The end time of the statistics. <strong>Required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The end time cannot be earlier than the <code>StartDate</code>. The service converts the time to the <code>yyyyMMdd</code> format and calculates statistics in a closed interval of natural days. The hour, minute, and second are not involved in day-level filtering. The time span cannot exceed 60 months. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The end time of the statistics. <strong>This parameter is required. You must specify both <code>StartDate</code> and <code>EndDate</code></strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The time is in Beijing time (UTC+8). Specify the time in Beijing time without appending <code>Z</code> or a time zone offset. The operation filters calendar day data based on the provided calendar dates without time zone conversion. The hour, minute, and second parts are not involved in day-level filtering.</p>
+     * <p>The interval between the start and end times calculated by full months must not exceed 60 months. Make sure that <code>EndDate</code> is not earlier than <code>StartDate</code>. The current operation does not independently verify the chronological order of the times. A reversed date range may return empty data. Do not rely on parameter errors to identify this situation.</p>
+     * <p>If either time parameter is missing, the format is incorrect, or the range exceeds the limit, <code>InvalidParameter.StartDate/EndDate</code> (HTTP status code: 400) is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-09-02 00:00:00</p>
@@ -47,7 +49,7 @@ public class QueryUserUsageReportRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The page number to query. We recommend that you explicitly specify a value starting from <code>1</code>. If you do not specify this parameter, the service processes the request as the first page, but the response may return <code>0</code>.</p>
+     * <p>The page number to query. Specify a value starting from <code>1</code>. If you do not specify this parameter, the service processes the request as the first page, but the response may echo <code>0</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +58,7 @@ public class QueryUserUsageReportRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 200. If the specified value is greater than 1,500, the value 1,500 is used.</p>
+     * <p>The number of records per page. Default value: <code>200</code>. If the value is greater than <code>1500</code>, the actual query processes it as <code>1500</code>. Specify a value from 1 to 1,500. The <code>PageSize</code> field in the response returns the echo request value, which does not necessarily mean that this value is adopted or that this number of records is actually returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -65,18 +67,28 @@ public class QueryUserUsageReportRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. <strong>Required</strong>.</p>
+     * <p>The product type. <strong>This parameter must be explicitly specified</strong>. The value is not case-sensitive. If this parameter is not provided or an unrecognized type is specified, <code>InvalidParameter.ProductType</code> (HTTP status code: 400) is returned.</p>
      * <p>Valid values:</p>
      * <ul>
+     * <li><code>CloudGame</code>: Cloud gaming.</li>
      * <li><code>CloudApp</code>: Wuying Cloud App.</li>
-     * <li><code>CloudBrowser</code>: Cloud Browser.</li>
-     * <li><code>WuyingServer</code>: Enterprise Edition workstation.</li>
-     * <li><code>WuyingWorkstation</code>: Personal Edition Linggou container workstation.</li>
-     * <li><code>WuyingWorkstationTeam</code>: Linggou Team Edition container workstation.</li>
-     * <li><code>WuyingWorkstationBusiness</code>: Linggou Dedicated Edition container workstation.</li>
-     * <li><code>AndroidCloud</code>: Cloud Phone.</li>
-     * <li><code>AIAgent</code>: AgentBay (AI agent).</li>
+     * <li><code>CloudBrowser</code>: Cloud browser.</li>
+     * <li><code>CloudDesktop</code>: Cloud desktop.</li>
+     * <li><code>ImageBuilder</code>: Image builder.</li>
+     * <li><code>ImageValidate</code>: Image validation.</li>
+     * <li><code>AndroidCloud</code>: Cloud phone.</li>
+     * <li><code>GpuRender</code>: GPU rendering.</li>
+     * <li><code>AndroidGpuRender</code>: Cloud phone GPU rendering.</li>
+     * <li><code>WuyingServer</code>: Enterprise workstation.</li>
+     * <li><code>GpuProxy</code>: GPU remote rendering proxy.</li>
+     * <li><code>GpuCache</code>: GPU remote rendering cache.</li>
+     * <li><code>AIAgent</code>: AI agent service.</li>
+     * <li><code>HostedDesktop</code>: Hosted computer.</li>
+     * <li><code>WuyingWorkstation</code>: Personal Edition container workstation.</li>
+     * <li><code>WuyingWorkstationBusiness</code>: Business Edition container workstation.</li>
+     * <li><code>WuyingWorkstationTeam</code>: Team Edition container workstation.</li>
      * </ul>
+     * <p>The query returns only existing statistical records for the current account within the specified product and time range. Specifying a recognized type does not necessarily mean that report data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>CloudApp</p>
@@ -85,7 +97,9 @@ public class QueryUserUsageReportRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The start time of the statistics. <strong>Required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The service converts the time to the <code>yyyyMMdd</code> format and calculates statistics in a closed interval of natural days. The hour, minute, and second are not involved in day-level filtering. The time span cannot exceed 60 months. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The start time of the statistics. <strong>This parameter is required. You must specify both <code>StartDate</code> and <code>EndDate</code></strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The time is in Beijing time (UTC+8). Specify the time in Beijing time without appending <code>Z</code> or a time zone offset. The operation filters calendar day data based on the provided calendar dates without time zone conversion. The hour, minute, and second parts are not involved in day-level filtering.</p>
+     * <p>The interval between the start and end times calculated by full months must not exceed 60 months. Make sure that <code>EndDate</code> is not earlier than <code>StartDate</code>. The current operation does not independently verify the chronological order of the times. A reversed date range may return empty data. Do not rely on parameter errors to identify this situation.</p>
+     * <p>If either time parameter is missing, the format is incorrect, or the range exceeds the limit, <code>InvalidParameter.StartDate/EndDate</code> (HTTP status code: 400) is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-09-01 00:00:00</p>
@@ -94,7 +108,7 @@ public class QueryUserUsageReportRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The ID of the end user, which is used to precisely filter users. If you do not specify this parameter, data is not filtered by user.</p>
+     * <p>The ID of the end user, which is used to precisely filter users. If you do not specify this parameter, data is not filtered by user. To skip this filter, omit the parameter. An empty string is different from an omitted parameter and is used as a filter value in the query.</p>
      * 
      * <strong>example:</strong>
      * <p>user01</p>

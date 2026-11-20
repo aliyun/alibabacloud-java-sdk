@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyWuyingServerSpecRequest extends TeaModel {
     /**
-     * <p>The status after the specification change is complete.</p>
+     * <p>The status of the workstation after the specification change is complete.</p>
      * <ul>
      * <li><code>stopped</code>: Shuts down the workstation after the specification change is complete.</li>
      * </ul>
-     * <p>This option applies to Enterprise Edition or container workstations that support this setting.</p>
+     * <p>This option is applicable to Enterprise Edition or container workstations that support this setting.</p>
      * 
      * <strong>example:</strong>
      * <p>stopped</p>
@@ -18,7 +18,7 @@ public class ModifyWuyingServerSpecRequest extends TeaModel {
     public String afterStatus;
 
     /**
-     * <p>The product type of the target workstation. It must match the actual type of the resource. For Enterprise Edition workstations, use <code>WuyingServer</code>. If this parameter is omitted, <code>WuyingServer</code> is used by default.</p>
+     * <p>The product type of the target workstation, which must be consistent with the actual type of the resource. For Enterprise Edition workstations, use <code>WuyingServer</code>. If this parameter is omitted, <code>WuyingServer</code> is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>WuyingServer</p>
@@ -27,7 +27,7 @@ public class ModifyWuyingServerSpecRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The ID of the promotion. It is used to identify a promotional event or coupon.</p>
+     * <p>The ID of the promotion, which is used to identify a promotional event or coupon.</p>
      * 
      * <strong>example:</strong>
      * <p>17440009****</p>
@@ -46,7 +46,7 @@ public class ModifyWuyingServerSpecRequest extends TeaModel {
     public String serverInstanceType;
 
     /**
-     * <p>The ID of the workstation whose specifications you want to change. This parameter is required.</p>
+     * <p>The ID of the workstation whose specifications you want to modify. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-0bw2f11****dial</p>

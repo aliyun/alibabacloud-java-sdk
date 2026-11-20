@@ -95,9 +95,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public Long tenantId;
 
     /**
-     * <p>The credential for connecting to the cloud application.</p>
+     * <p>The credentials used to connect to the cloud application.</p>
      * <blockquote>
-     * <p>This parameter is returned only for non-initial calls.</p>
+     * <p>This parameter is returned for non-initial calls.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -23,7 +23,7 @@ public class RenewAppInstanceGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>
@@ -32,7 +32,7 @@ public class RenewAppInstanceGroupResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

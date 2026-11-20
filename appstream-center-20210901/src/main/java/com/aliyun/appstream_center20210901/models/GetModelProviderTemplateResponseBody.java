@@ -64,7 +64,7 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the Wuying security gateway proxy is enabled.</p>
+         * <p>Specifies whether the Wuying secure gateway proxy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

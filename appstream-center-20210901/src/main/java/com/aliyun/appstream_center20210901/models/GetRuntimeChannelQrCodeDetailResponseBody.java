@@ -11,7 +11,7 @@ public class GetRuntimeChannelQrCodeDetailResponseBody extends TeaModel {
     public GetRuntimeChannelQrCodeDetailResponseBodyData data;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -42,7 +42,7 @@ public class GetRuntimeChannelQrCodeDetailResponseBody extends TeaModel {
 
     public static class GetRuntimeChannelQrCodeDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The URL or content of the QR code. If the QR code is not yet generated or the content is empty, this field is empty.</p>
+         * <p>The URL or content of the QR code. If the QR code is not generated or the content is empty, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://qr.example.com/abc">https://qr.example.com/abc</a></p>
@@ -51,7 +51,7 @@ public class GetRuntimeChannelQrCodeDetailResponseBody extends TeaModel {
         public String qrCode;
 
         /**
-         * <p>The access URL of the QR code configuration channel page. This URL is generated and sent to the user when the QR code configuration is initiated, and carries the taskId, channel code, and region parameters of the current process. If the URL is not recorded, this field is empty.</p>
+         * <p>The access URL of the QR code configuration channel page. It is generated and sent to the user when the QR code configuration is initiated, and carries the taskId, channel code, and region parameters of the current process. If the URL is not recorded, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://eds.console.aliyun.com/public/scan-pair?taskId=8f14e45f-ceea-4672-9f6e-3c5b2a1d****&code=dingtalk-connector&region=cn-shanghai">https://eds.console.aliyun.com/public/scan-pair?taskId=8f14e45f-ceea-4672-9f6e-3c5b2a1d****&amp;code=dingtalk-connector&amp;region=cn-shanghai</a></p>
@@ -60,7 +60,17 @@ public class GetRuntimeChannelQrCodeDetailResponseBody extends TeaModel {
         public String qrCodeNotifyUrl;
 
         /**
-         * <p>The scan status. Valid values: Generating (generating), Generated (generated), GenerateFailed (generation failed), Scanned (scanned), Configuring (configuring), Success (success), Failed (failed), and Expired (expired).</p>
+         * <p>The QR code scan status. Valid values:</p>
+         * <ul>
+         * <li>Generating: The QR code is being generated.</li>
+         * <li>Generated: The QR code is generated.</li>
+         * <li>GenerateFailed: The QR code generation failed.</li>
+         * <li>Scanned: The QR code is scanned.</li>
+         * <li>Configuring: The configuration is in progress.</li>
+         * <li>Success: The configuration is successful.</li>
+         * <li>Failed: The configuration failed.</li>
+         * <li>Expired: The process has expired.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Generated</p>
@@ -69,7 +79,17 @@ public class GetRuntimeChannelQrCodeDetailResponseBody extends TeaModel {
         public String qrCodeStatus;
 
         /**
-         * <p>The status of the QR code configuration process. The valid values are the same as those of QrCodeStatus. Valid values: Generating (generating), Generated (generated), GenerateFailed (generation failed), Scanned (scanned), Configuring (configuring), Success (success), Failed (failed), and Expired (expired).</p>
+         * <p>The status of the QR code configuration process. The value is the same as QrCodeStatus. Valid values:</p>
+         * <ul>
+         * <li>Generating: The QR code is being generated.</li>
+         * <li>Generated: The QR code is generated.</li>
+         * <li>GenerateFailed: The QR code generation failed.</li>
+         * <li>Scanned: The QR code is scanned.</li>
+         * <li>Configuring: The configuration is in progress.</li>
+         * <li>Success: The configuration is successful.</li>
+         * <li>Failed: The configuration failed.</li>
+         * <li>Expired: The process has expired.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>

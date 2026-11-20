@@ -42,7 +42,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
 
     public static class GetResourceRenewPriceResponseBodyDataPricePromotions extends TeaModel {
         /**
-         * <p>The coupon code.</p>
+         * <p>The coupon option code.</p>
          * 
          * <strong>example:</strong>
          * <p>coupon****</p>
@@ -51,10 +51,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         public String optionCode;
 
         /**
-         * <p>The coupon descriptions.</p>
+         * <p>The coupon description.</p>
          * 
          * <strong>example:</strong>
-         * <p>**活动</p>
+         * <p>**Promotion</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -72,7 +72,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
          * <p>The coupon name.</p>
          * 
          * <strong>example:</strong>
-         * <p>**活动</p>
+         * <p>**Promotion</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
@@ -144,7 +144,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discount amount. The actual price equals the original price minus the discount amount.</p>
+         * <p>The discount amount. The actual price is the original price minus the discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -162,13 +162,13 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         public String originalPrice;
 
         /**
-         * <p>The coupon descriptions.</p>
+         * <p>The coupon description.</p>
          */
         @NameInMap("Promotions")
         public java.util.List<GetResourceRenewPriceResponseBodyDataPricePromotions> promotions;
 
         /**
-         * <p>The actual price. The actual price equals the original price minus the discount amount.</p>
+         * <p>The transaction price. The actual price is the original price minus the discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -225,16 +225,16 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
 
     public static class GetResourceRenewPriceResponseBodyDataRules extends TeaModel {
         /**
-         * <p>The pricing rule description.</p>
+         * <p>The description of the price calculation rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>**活动</p>
+         * <p>**Promotion</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The pricing rule ID.</p>
+         * <p>The ID of the price calculation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>20002****</p>
@@ -273,7 +273,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         public GetResourceRenewPriceResponseBodyDataPrice price;
 
         /**
-         * <p>The pricing rules.</p>
+         * <p>The price calculation rules.</p>
          */
         @NameInMap("Rules")
         public java.util.List<GetResourceRenewPriceResponseBodyDataRules> rules;

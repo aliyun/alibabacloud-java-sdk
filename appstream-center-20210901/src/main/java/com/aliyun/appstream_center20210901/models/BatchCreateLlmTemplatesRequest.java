@@ -20,7 +20,7 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
-     * <p>The ID of the model provider template.</p>
+     * <p>The ID of the associated model provider template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
 
     public static class BatchCreateLlmTemplatesRequestLlmTemplateItems extends TeaModel {
         /**
-         * <p>The model configuration JSON object.</p>
+         * <p>The JSON object for model configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{

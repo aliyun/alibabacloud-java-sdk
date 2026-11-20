@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserUsageReportResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of <code>200</code> indicates that the request was successful. Other values indicate that the request failed.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
+     * <p>The business processing status code. <strong>A successful response may not contain this field. Do not use <code>Code=200</code> as a necessary condition for success.</strong> This field is not equivalent to the HTTP status code. If the request fails, handle it based on the HTTP status code, error code, and error message.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,10 +20,7 @@ public class QueryUserUsageReportResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The description of the request processing result. Typically, <code>success</code> is returned when the request is successful.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>success</p>
+     * <p>The description of the business processing result. <strong>A successful response may not contain this field. Do not rely on the fixed <code>success</code> text.</strong> If the request fails, read the specific error message based on the error code.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -41,7 +35,7 @@ public class QueryUserUsageReportResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page used in the current response.</p>
+     * <p>The number of records per page in the request. If this parameter is not specified, the default value <code>200</code> is returned. If the requested value exceeds <code>1500</code>, this field still returns the echo request value, but the actual query uses a maximum of <code>1500</code>. Refer to the length of the data list for the actual number of returned records.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -160,7 +154,8 @@ public class QueryUserUsageReportResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The last connection time. Format: <code>yyyy-MM-dd HH:mm:ss</code>. If no current or historical connection record exists, <code>-</code> is returned. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+         * <p>The last connection time. Format: <code>yyyy-MM-dd HH:mm:ss</code>. If a current session binding record exists, the connection time of this record is used. Otherwise, the historical connection record is used. If no available connection time exists, <code>-</code> is returned. This time is not limited by the statistical date range in the request.</p>
+         * <p>The time is in Beijing time (UTC+8). The returned string does not carry <code>Z</code> or a time zone offset. For example, <code>2026-09-01 10:00:00</code> indicates 10:00:00 on September 1, 2026, Beijing time. Do not parse it as UTC time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01 10:00:00</p>
@@ -178,7 +173,7 @@ public class QueryUserUsageReportResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The cumulative session persistence duration within the query range, which refers to the time a user occupies a session from attach to release. If multiple sessions exist under the same app instance group, their durations are accumulated. Unit: hours.</p>
+         * <p>The cumulative session persistence duration within the query range, which is the duration that the user occupies the session from attach to session release. Multiple sessions under the same app instance group are accumulated. Unit: hours.</p>
          * 
          * <strong>example:</strong>
          * <p>3.5</p>

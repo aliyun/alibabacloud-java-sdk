@@ -20,7 +20,7 @@ public class ResizeWuyingServerDiskShrinkRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The new size of the system cloud disk, in GB.</p>
+     * <p>The new capacity of the system cloud disk, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>220</p>
@@ -29,7 +29,7 @@ public class ResizeWuyingServerDiskShrinkRequest extends TeaModel {
     public Integer systemDiskNewSize;
 
     /**
-     * <p>The ID of the WUYING Workspace.</p>
+     * <p>The workstation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-0bw2f11****dial</p>

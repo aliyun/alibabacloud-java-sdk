@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsRequest extends TeaModel {
     /**
-     * <p>The app instance group ID. This parameter is used to filter app instance group events. If this parameter is not specified, events are not filtered by app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
+     * <p>The delivery group ID. This parameter is used to filter events of a specific delivery group. If you do not specify this parameter, events are not filtered by delivery group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -23,7 +23,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String appInstanceGroupName;
 
     /**
-     * <p>The ID of the application instance. This parameter is used to filter events associated with the instance. If this parameter is not specified, events are not filtered by application instance. To obtain this value, call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance group ID, and then specify the ID as <code>AppInstanceGroupId</code> when calling <a href="~~ListAppInstances~~">ListAppInstances</a>.</p>
+     * <p>The application instance ID. This parameter is used to filter events associated with a specific instance. If you do not specify this parameter, events are not filtered by application instance. To obtain this value, first call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then use the ID as <code>AppInstanceGroupId</code> to call the <a href="~~ListAppInstances~~">ListAppInstances</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>ai-azn3kmwruh1vl****</p>
@@ -32,7 +32,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String appInstanceId;
 
     /**
-     * <p>The business region ID of the event, which is used for exact filtering. If you do not specify this parameter, events are not filtered by business region. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</p>
+     * <p>The business region ID of the event. This parameter is used to filter events precisely. If you do not specify this parameter, events are not filtered by business region. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -41,7 +41,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The end time of the query. <strong>Required</strong>. The format is the same as <code>StartTime</code>. We recommend that you always include the time zone offset. The query includes this time, and the end time cannot be earlier than <code>StartTime</code>. A time range later than the call time does not generate future events.</p>
+     * <p>The end time of the query. <strong>Required</strong>. The format is the same as that of <code>StartTime</code>. We recommend that you always include the time zone offset. The query includes this exact time, and the end time cannot be earlier than the <code>StartTime</code>. A time range later than the call time does not generate future events.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The optional list of user IDs. If you specify multiple user IDs, events are filtered by using the OR logic. If you specify both <code>EndUserIds</code> and <code>UserId</code>, the intersection is used. If you do not specify this parameter, the original query is retained. If you specify an empty list or a list that contains only blank user IDs, an empty result is returned. The caller must convert usernames or display names to user IDs before calling this operation.</p>
+     * <p>The list of user IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;user-1&quot;,&quot;user-2&quot;]</p>
@@ -60,7 +60,7 @@ public class DescribeEventsRequest extends TeaModel {
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The event ID, which is used to query a single event. If you do not specify this parameter, events are not filtered by event ID.</p>
+     * <p>The event ID. This parameter is used to query a specific event. If you do not specify this parameter, events are not filtered by event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>evt-9ciijz60n4xsv****</p>
@@ -69,7 +69,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The event type identifier, which is used to filter events. Different products may generate different event types. This operation does not restrict the values to a fixed enumeration. You should use the <code>EventList.EventType</code> values obtained from previous queries as filter values.</p>
+     * <p>The event type identifier. This parameter is used to filter events precisely. Different products may generate different event types, and this operation does not restrict the value to a fixed enumeration. You should use the <code>EventList.EventType</code> values obtained from previous queries as the filter value.</p>
      * 
      * <strong>example:</strong>
      * <p>SessionDisconnected</p>
@@ -78,7 +78,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The compatibility field. The current version does not read this parameter. Use <code>PageSize</code> to control the number of records on each page.</p>
+     * <p>A compatibility field. The current version does not read this parameter. Use <code>PageSize</code> to control the number of records on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -87,7 +87,7 @@ public class DescribeEventsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The private IP address of the member elastic network interface (ENI) of the cloud resource, which is used to filter related events. If you do not specify this parameter, events are not filtered by IP address.</p>
+     * <p>The private IP address of the member elastic network interface (ENI) of the cloud resource. This parameter is used to filter related events precisely. If you do not specify this parameter, events are not filtered by IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.1.10</p>
@@ -96,7 +96,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String memberEniIp;
 
     /**
-     * <p>The compatibility field. The current version does not read this parameter and does not support token-based pagination. Use <code>PageNumber</code>.</p>
+     * <p>A compatibility field. The current version does not read this parameter and does not support token-based pagination. Use <code>PageNumber</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>unused</p>
@@ -105,7 +105,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The office network ID, which is used to filter events generated within the office network. If you do not specify this parameter, events are not filtered by office network.</p>
+     * <p>The office network ID. This parameter is used to filter events generated within a specific office network. If you do not specify this parameter, events are not filtered by office network.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai+dir-123456****</p>
@@ -132,14 +132,14 @@ public class DescribeEventsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. Values are not case-sensitive. If you specify an unsupported value, the request fails. If you do not specify this parameter, events are not filtered by product type. Valid values:</p>
+     * <p>The product type. The value is case-insensitive. The request fails if an unsupported value is specified. If this parameter is not specified, results are not filtered by product type. Only the following public product values are supported:</p>
      * <ul>
-     * <li><code>CloudApp</code>: Wuying Cloud App.</li>
+     * <li><code>CloudApp</code>: WUYING Cloud App.</li>
      * <li><code>CloudBrowser</code>: Cloud Browser.</li>
      * <li><code>WuyingServer</code>: Enterprise Edition workstation.</li>
      * <li><code>WuyingWorkstation</code>: Personal Edition Linggou container workstation.</li>
-     * <li><code>WuyingWorkstationTeam</code>: Linggou Team Edition container workstation.</li>
-     * <li><code>WuyingWorkstationBusiness</code>: Linggou Dedicated Edition container workstation.</li>
+     * <li><code>WuyingWorkstationTeam</code>: Team Edition Linggou container workstation.</li>
+     * <li><code>WuyingWorkstationBusiness</code>: Dedicated Edition Linggou container workstation.</li>
      * <li><code>AndroidCloud</code>: Cloud Phone.</li>
      * <li><code>AIAgent</code>: AgentBay (AI agent).</li>
      * </ul>
@@ -151,7 +151,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The start time of the query. <strong>Required</strong>. Specify the time in the ISO 8601 format: <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss</code>. You can include three-digit milliseconds and use <code>Z</code> or <code>±HH:mm</code> to specify the time zone. We recommend that you always include the time zone offset. The query includes this time, and the start time must be earlier than or equal to <code>EndTime</code>. The service only retains and retrieves events that occurred within 30 days before the call time.</p>
+     * <p>The start time of the query. <strong>Required</strong>. Specify the time in the ISO 8601 standard: <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss</code>. You can include three digits for milliseconds and use <code>Z</code> or <code>±HH:mm</code> to specify the time zone. We recommend that you always include the time zone offset. The query includes this exact time, and the start time must be earlier than or equal to the <code>EndTime</code>. The service retains and retrieves only events that occurred within 30 days before the call time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The end user ID, which is used to filter events generated by the user. If you do not specify this parameter, events are not filtered by user.</p>
+     * <p>The end user ID. This parameter is used to filter events generated by a specific user. If you do not specify this parameter, events are not filtered by user.</p>
      * 
      * <strong>example:</strong>
      * <p>user01</p>

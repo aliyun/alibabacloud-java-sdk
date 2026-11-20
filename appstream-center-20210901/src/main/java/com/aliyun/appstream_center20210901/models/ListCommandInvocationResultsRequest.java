@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCommandInvocationResultsRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group. Queries the command execution results under this delivery group. This parameter must be specified when AppInstanceGroupIds is not specified. If both are specified, AppInstanceGroupIds takes precedence and this parameter does not take effect.</p>
+     * <p>The delivery group ID. Queries the command execution results under this delivery group. This parameter is required when AppInstanceGroupIds is not specified. If both are specified, AppInstanceGroupIds takes precedence and this parameter does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-0bxls9m9arax6****</p>
@@ -14,19 +14,19 @@ public class ListCommandInvocationResultsRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The list of delivery group IDs. A maximum of 200 IDs can be specified, and all delivery groups must be in the same region. When specified, it takes precedence over AppInstanceGroupId and queries the command execution results of all persistent sessions under these delivery groups. The list cannot contain null values.</p>
+     * <p>The list of delivery group IDs. You can specify up to 200 IDs, and all delivery groups must be in the same region. When specified, this parameter takes precedence over AppInstanceGroupId and queries the command execution results of all persistent sessions under these delivery groups. The list cannot contain null values.</p>
      */
     @NameInMap("AppInstanceGroupIds")
     public java.util.List<String> appInstanceGroupIds;
 
     /**
-     * <p>The list of persistent session IDs. A maximum of 100 IDs can be specified. It is used to query only the command execution results of the specified persistent sessions. When AppInstanceGroupIds is specified, only persistent sessions belonging to these delivery groups are retained. If no matching persistent sessions are found, an empty list is returned.</p>
+     * <p>The list of persistent session IDs. You can specify up to 100 IDs to query the command execution results of only the specified persistent sessions. When AppInstanceGroupIds is specified, only persistent sessions that belong to these delivery groups are retained. If no matching persistent sessions are found, an empty list is returned.</p>
      */
     @NameInMap("AppInstancePersistentIds")
     public java.util.List<String> appInstancePersistentIds;
 
     /**
-     * <p>The command execution ID, which is the InvocationId returned when you call RunAppInstanceCommand to deliver a command.</p>
+     * <p>The command execution ID, which is the InvocationId returned when RunAppInstanceCommand is called to deliver a command.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ListCommandInvocationResultsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number of the query results to display. It is used together with PageSize for paging in a paged query. If not specified, the default value is 0, which indicates the first page.</p>
+     * <p>The page number of the query results to return. This parameter is used together with PageSize for paging. If this parameter is not passed, the default value is 0, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,7 +63,7 @@ public class ListCommandInvocationResultsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of query results per page. Default value: 200.</p>
+     * <p>The number of entries to return on each page. Default value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -72,7 +72,7 @@ public class ListCommandInvocationResultsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. Currently, only WuyingServer is supported. If you specify other values, a parameter error is returned.</p>
+     * <p>The product type. Currently, only WuyingServer is supported. If you pass other values, a parameter error is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

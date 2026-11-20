@@ -11,7 +11,7 @@ public class CreateWuyingServerResponseBody extends TeaModel {
     public CreateWuyingServerResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -42,7 +42,7 @@ public class CreateWuyingServerResponseBody extends TeaModel {
 
     public static class CreateWuyingServerResponseBodyData extends TeaModel {
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>23429322113****</p>
@@ -52,6 +52,8 @@ public class CreateWuyingServerResponseBody extends TeaModel {
 
         /**
          * <p>The list of workstation IDs.</p>
+         * <p><strong>If AutoPay is set to false and the order is unpaid, these IDs are the workstation IDs pre-allocated for the order. The actual workstations are not yet created, and you cannot use these IDs to perform deletion or other resource operations.</strong> Pay the order corresponding to the returned OrderId first, and then call ListWuyingServer to confirm that the workstations are created and check their current status.
+         * <a href="~~ListWuyingServer~~">ListWuyingServer</a></p>
          */
         @NameInMap("WuyingServerIdList")
         public java.util.List<String> wuyingServerIdList;

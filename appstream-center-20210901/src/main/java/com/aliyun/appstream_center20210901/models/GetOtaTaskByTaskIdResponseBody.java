@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>OtaTask.Running</p>
@@ -14,7 +14,7 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>The task is running and cannot be sumitted.</p>
@@ -32,10 +32,10 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
     public String otaVersion;
 
     /**
-     * <p>The release note that describes the content of the over-the-air update.</p>
+     * <p>The release notes that describe the content of the over-the-air update.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试升级</p>
+     * <p>Test upgrade</p>
      */
     @NameInMap("ReleaseNote")
     public String releaseNote;

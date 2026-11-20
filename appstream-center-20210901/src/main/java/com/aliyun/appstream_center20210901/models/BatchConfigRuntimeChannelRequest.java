@@ -17,9 +17,9 @@ public class BatchConfigRuntimeChannelRequest extends TeaModel {
     /**
      * <p>The agent provider.</p>
      * <ul>
-     * <li>JVS Computer: Enter OpenClaw.</li>
-     * <li>OpenClaw: Enter OpenClaw.</li>
-     * <li>Hermes Agent: Enter HermesAgent.</li>
+     * <li>JVS Computer: Specify OpenClaw.</li>
+     * <li>OpenClaw: Specify OpenClaw.</li>
+     * <li>Hermes Agent: Specify HermesAgent.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -30,14 +30,14 @@ public class BatchConfigRuntimeChannelRequest extends TeaModel {
     public String agentProvider;
 
     /**
-     * <p>The list of channel configurations. A maximum of 200 configurations are supported. Each configuration item specifies an agent runtime and the third-party channel to be configured for it. Different channel configurations can be delivered to different runtimes. Multiple configuration items for the same runtime are processed sequentially.</p>
+     * <p>The list of channel configurations. A maximum of 200 items are supported. Each configuration item specifies an agent runtime and the third-party channel to be configured for it. Different channel configurations can be delivered to different runtimes. Multiple configuration items for the same runtime are processed sequentially.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChannelConfigs")
     public java.util.List<BatchConfigRuntimeChannelRequestChannelConfigs> channelConfigs;
 
     /**
-     * <p>The agent runtime type, such as CloudDesktop (cloud desktop).</p>
+     * <p>The agent runtime type, such as CloudDesktop (Cloud Desktop).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class BatchConfigRuntimeChannelRequest extends TeaModel {
 
     public static class BatchConfigRuntimeChannelRequestChannelConfigs extends TeaModel {
         /**
-         * <p>The third-party channel code, such as dingtalk-connector (DingTalk), feishu (Lark), and wecom (WeCom). System channel codes are not case-sensitive. Configuring wechat and jvsclaw is not supported. If these values are passed, the entire request fails and the error code ChannelConfig.NotSupported is returned.</p>
+         * <p>The third-party channel code, such as dingtalk-connector (DingTalk), feishu (Lark), and wecom (WeCom). System channel codes are case-insensitive. Configuring wechat and jvsclaw is not supported. If these values are passed, the entire request fails and the error code ChannelConfig.NotSupported is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class BatchConfigRuntimeChannelRequest extends TeaModel {
         public String code;
 
         /**
-         * <p>The JSON string for the channel configuration.</p>
+         * <p>The JSON string for channel configuration.</p>
          * <ul>
          * <li>Simple mode: only appKey and appSecret are allowed.</li>
          * <li>Custom mode: all configuration items required for the channel under the current agent provider must be included.</li>
@@ -112,8 +112,8 @@ public class BatchConfigRuntimeChannelRequest extends TeaModel {
         /**
          * <p>The configuration mode. Valid values:</p>
          * <ul>
-         * <li>Simple: the simple configuration mode.</li>
-         * <li>Custom: the custom configuration mode.</li>
+         * <li>Simple: simple configuration mode.</li>
+         * <li>Custom: custom configuration mode.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -60,7 +60,7 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
-         * <p>The ID of the network interface.</p>
+         * <p>The ID of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp174p2xxxxxbyh02ix</p>

@@ -19,7 +19,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
      * <blockquote>
-     * <p>This parameter is required for the initial call and optional for subsequent calls.</p>
+     * <p>Required for the initial call and optional for subsequent calls.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,11 +29,11 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The list of delivery groups.</p>
+     * <p>The delivery group list.</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify this parameter, application instances are allocated only from the specified and authorized delivery groups.</li>
-     * <li>If you specify the <code>AppInstanceId</code> or <code>AppInstancePersistentId</code> parameter, this parameter is required.</li>
+     * <li>If this parameter is specified, an application instance is assigned only from the specified and authorized delivery groups.</li>
+     * <li>If the AppInstanceId or AppInstancePersistentId parameter is specified, this parameter is required.</li>
      * </ul>
      * </blockquote>
      */
@@ -41,7 +41,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public java.util.List<String> appInstanceGroupIdList;
 
     /**
-     * <p>The delivery group set ID used to obtain the connection credential.</p>
+     * <p>The ID of the delivery group set used to obtain connection credentials.</p>
      * 
      * <strong>example:</strong>
      * <p>set-3jm9d0abc00example</p>
@@ -53,8 +53,8 @@ public class GetConnectionTicketRequest extends TeaModel {
      * <p>The application instance ID.</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify this parameter, only the specified application instance is allocated.</li>
-     * <li>If you specify this parameter, you must also specify the <code>AppInstanceGroupIdList</code> parameter, and the number of delivery group IDs in <code>AppInstanceGroupIdList</code> must be 1.</li>
+     * <li>If this parameter is specified, the system attempts to assign only the specified application instance.</li>
+     * <li>If this parameter is specified, the AppInstanceGroupIdList parameter must also be specified, and the number of delivery group IDs in AppInstanceGroupIdList must be 1.</li>
      * </ul>
      * </blockquote>
      * 
@@ -83,7 +83,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String appPolicyId;
 
     /**
-     * <p>The application startup parameter. This parameter is optional. You can refer to the method for specifying startup parameters in the image creation documentation and manually verify the startup parameters during image creation. This field is suitable for startup parameters with variable content, allowing API callers to set them flexibly. For more information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation parameters and startup parameters</a>.</p>
+     * <p>The application startup parameters. This parameter is optional. You can refer to the image creation documentation to fill in the startup parameters and manually verify them during the image creation process. This field is suitable for startup parameters with variable content, allowing API callers to configure them flexibly. For more information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation and startup parameters</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>/q /n</p>
@@ -92,7 +92,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String appStartParam;
 
     /**
-     * <p>The application version. If you specify this parameter, only the specified version of the application is opened. If you do not specify this parameter, any authorized version of the application is opened.</p>
+     * <p>The application version. If this parameter is specified, only the application of the specified version is started. If this parameter is not specified, an authorized application of any version is started.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
@@ -103,7 +103,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>If you specify this parameter, application instances are allocated only from delivery groups in the specified region.</p>
+     * <p>If this parameter is specified, an application instance is assigned only from the delivery groups in the specified region.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p>This parameter is required for non-initial calls. Use this parameter query to invoke the node status and connection credential retrieval.</p>
+     * <p>Required for non-initial invocations. Use this parameter to invoke a parameter query for the node status and connection credentials.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

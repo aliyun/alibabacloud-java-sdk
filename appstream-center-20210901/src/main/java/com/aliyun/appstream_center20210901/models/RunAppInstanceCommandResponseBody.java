@@ -42,7 +42,7 @@ public class RunAppInstanceCommandResponseBody extends TeaModel {
 
     public static class RunAppInstanceCommandResponseBodyCommandResultModel extends TeaModel {
         /**
-         * <p>The command execution ID. When commands are issued in batches to multiple delivery groups, only one execution ID is returned. You can use this ID to call the ListCommandInvocationResults operation to query the command execution results on each session.</p>
+         * <p>The command execution ID. Only one execution ID is returned even when commands are issued in batches to multiple delivery groups. You can use this ID to call ListCommandInvocationResults to query the command execution results on each session.</p>
          * 
          * <strong>example:</strong>
          * <p>t-hz0jdfwd9f****</p>

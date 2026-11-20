@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWuyingServerEipInfoRequest extends TeaModel {
     /**
-     * <p>The Internet service operation provider. Valid values:</p>
+     * <p>The Internet service operation provider. Valid values: </p>
      * <ul>
      * <li>ChinaMobile: shift.</li>
      * <li>ChinaTelecom: China Telecom.</li>
@@ -19,7 +19,7 @@ public class DescribeWuyingServerEipInfoRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The ID of the workstation. You can obtain the ID from the WuyingServerIdList parameter returned after you call the CreateWuyingServer operation to create a workstation, or call the ListWuyingServer operation to query the IDs of existing workstations.</p>
+     * <p>The workstation ID. You can obtain the ID from the WuyingServerIdList returned after you call the CreateWuyingServer operation to create a workstation, or call the ListWuyingServer operation to query the IDs of existing workstations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

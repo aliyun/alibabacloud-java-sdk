@@ -11,7 +11,7 @@ public class ModifyWuyingServerSpecResponseBody extends TeaModel {
     public ModifyWuyingServerSpecResponseBodyModifyWuyingServerSpecModel modifyWuyingServerSpecModel;
 
     /**
-     * <p>The ID of the request. It is used for troubleshooting.</p>
+     * <p>The ID of the request, which is used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -42,7 +42,7 @@ public class ModifyWuyingServerSpecResponseBody extends TeaModel {
 
     public static class ModifyWuyingServerSpecResponseBodyModifyWuyingServerSpecModel extends TeaModel {
         /**
-         * <p>The ID of the order generated for this specification change. Returning an order ID does not mean that the specification change is complete.</p>
+         * <p>The ID of the order generated for this specification change. Returning an order ID does not indicate that the specification change is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>23429322113****</p>

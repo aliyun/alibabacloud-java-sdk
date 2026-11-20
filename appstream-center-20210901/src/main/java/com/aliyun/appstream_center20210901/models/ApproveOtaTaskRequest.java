@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApproveOtaTaskRequest extends TeaModel {
     /**
-     * <p>The delivery group ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</p>
+     * <p>The ID of the delivery group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The region ID of the delivery group. You can call <a href="~~ListRegions~~">ListRegions</a> to query the list of regions supported by Wuying Cloud Application.</p>
+     * <p>The ID of the region to which the delivery group belongs. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to query the regions supported by Wuying Cloud Application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The OTA upgrade task type.</p>
+     * <p>The type of the OTA upgrade task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String otaType;
 
     /**
-     * <p>The start time of the OTA upgrade task. Specify the time in ISO 8601 format.</p>
+     * <p>The start time of the OTA upgrade task. Specify the time in the ISO 8601 format.</p>
      * <p>This parameter is required.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
@@ -46,9 +46,9 @@ public class ApproveOtaTaskRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The OTA upgrade task ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</p>
+     * <p>The ID of the OTA upgrade task. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
      * <blockquote>
-     * <p>Each successful call to <code>ApproveOtaTask</code> causes the <code>TaskId</code> to change. Therefore, before calling this operation again, call <code>ListAppInstanceGroup</code> again to obtain the latest <code>TaskId</code>.</p>
+     * <p>After you successfully call <code>ApproveOtaTask</code>, the <code>TaskId</code> changes. Therefore, before you call this operation again, call <code>ListAppInstanceGroup</code> to obtain the latest <code>TaskId</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

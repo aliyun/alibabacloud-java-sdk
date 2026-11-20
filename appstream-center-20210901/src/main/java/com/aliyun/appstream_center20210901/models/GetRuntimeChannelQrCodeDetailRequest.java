@@ -25,7 +25,7 @@ public class GetRuntimeChannelQrCodeDetailRequest extends TeaModel {
     public String agentProvider;
 
     /**
-     * <p>The channel code. It must be the same as the channel code used when initiating the QR code configuration channel, such as dingtalk-connector (DingTalk), feishu (Lark), or wecom (WeCom).</p>
+     * <p>The channel code. It must be the same as the channel code used when initiating the QR code configuration channel, such as dingtalk-connector (DingTalk), feishu (Lark), and wecom (WeCom).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class GetRuntimeChannelQrCodeDetailRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the runtime, such as the ID of a cloud desktop.</p>
+     * <p>The ID of the runtime, such as a cloud desktop ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

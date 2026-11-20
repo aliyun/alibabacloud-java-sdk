@@ -11,7 +11,7 @@ public class SendRuntimeQrCodeConfigChannelMessageResponseBody extends TeaModel 
     public java.util.List<SendRuntimeQrCodeConfigChannelMessageResponseBodyData> data;
 
     /**
-     * <p>The request ID, which is a unique identifier for the request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -59,7 +59,7 @@ public class SendRuntimeQrCodeConfigChannelMessageResponseBody extends TeaModel 
 
     public static class SendRuntimeQrCodeConfigChannelMessageResponseBodyData extends TeaModel {
         /**
-         * <p>The error code when the sending fails, such as Runtime.NotFound (the runtime does not exist) or Runtime.UserNotSupported (the runtime has no authorized user or has multiple authorized users). This parameter is not returned when the sending is successful.</p>
+         * <p>The error code when the sending fails, such as Runtime.NotFound (the runtime does not exist) or Runtime.UserNotSupported (the runtime has no authorized users or has multiple authorized users). This parameter is not returned when the sending is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Runtime.UserNotSupported</p>

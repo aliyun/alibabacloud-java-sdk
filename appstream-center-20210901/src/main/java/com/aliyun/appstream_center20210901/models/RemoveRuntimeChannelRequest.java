@@ -14,11 +14,11 @@ public class RemoveRuntimeChannelRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The agent provider. The mappings with the agent runtime type are as follows:</p>
+     * <p>The agent provider. The mappings to the agent runtime types are as follows:</p>
      * <ul>
-     * <li>JVS Computer: Set to OpenClaw.</li>
-     * <li>OpenClaw: Set to OpenClaw.</li>
-     * <li>Hermes Agent: Set to HermesAgent, and you must also set AgentPlatform to ENTERPRISE_JVS. If AgentPlatform is not specified, the default value is ENTERPRISE, and only OpenClaw is supported in this case.</li>
+     * <li>JVS Computer: set to OpenClaw.</li>
+     * <li>OpenClaw: set to OpenClaw.</li>
+     * <li>Hermes Agent: set to HermesAgent, and you must also set AgentPlatform to ENTERPRISE_JVS. If AgentPlatform is not specified, the default value is ENTERPRISE, and only OpenClaw is supported in this case.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

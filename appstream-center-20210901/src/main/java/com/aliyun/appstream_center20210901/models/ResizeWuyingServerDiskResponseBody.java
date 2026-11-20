@@ -42,7 +42,7 @@ public class ResizeWuyingServerDiskResponseBody extends TeaModel {
 
     public static class ResizeWuyingServerDiskResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>23429322113****</p>
