@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyAppInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>The reserved parameter.</p>
+     * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
      */
     @NameInMap("BranchName")
     public String branchName;
 
     /**
-     * <p>The client token that is used to ensure idempotence.</p>
+     * <p>The client token used to ensure idempotence.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -26,6 +29,9 @@ public class ModifyAppInstanceShrinkRequest extends TeaModel {
     public String componentsShrink;
 
     /**
+     * <p>The instance ID of the ApsaraDB RDS for PostgreSQL database connected to the AI application.</p>
+     * <p><notice>Only <strong>newly purchased empty ApsaraDB RDS for PostgreSQL instances</strong> are supported. The major engine version must be <strong>17</strong>, and the minor engine version must be <strong>20250630 or later</strong>.</notice></p>
+     * 
      * <strong>example:</strong>
      * <p>pgm-2ze49qv594vi****</p>
      */
@@ -49,6 +55,15 @@ public class ModifyAppInstanceShrinkRequest extends TeaModel {
      */
     @NameInMap("InstanceName")
     public String instanceName;
+
+    /**
+     * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
+    @NameInMap("MigrationMode")
+    public String migrationMode;
 
     /**
      * <p>The region ID.</p>
@@ -110,6 +125,14 @@ public class ModifyAppInstanceShrinkRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public ModifyAppInstanceShrinkRequest setMigrationMode(String migrationMode) {
+        this.migrationMode = migrationMode;
+        return this;
+    }
+    public String getMigrationMode() {
+        return this.migrationMode;
     }
 
     public ModifyAppInstanceShrinkRequest setRegionId(String regionId) {

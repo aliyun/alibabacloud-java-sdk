@@ -32,7 +32,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The name of the custom agent.</p>
+     * <p>The name of the dedicated agent.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance List Query Agent</p>
@@ -59,7 +59,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>I am your custom agent for querying the instance list</p>
+     * <p>I am your dedicated agent for querying instance lists</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
@@ -141,7 +141,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     public static class CreateCustomAgentResponseBodySkills extends TeaModel {
         /**
-         * <p>The skill description.</p>
+         * <p>The description of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL query optimization skill</p>

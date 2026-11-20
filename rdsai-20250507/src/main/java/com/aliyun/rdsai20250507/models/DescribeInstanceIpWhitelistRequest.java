@@ -4,11 +4,17 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceIpWhitelistRequest extends TeaModel {
+    /**
+     * <p>The name of the branch to be operated on. If this parameter is not specified, the operation is performed on the original instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ra-branch-123456789012abcd</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
     /**
-     * <p>The group name.</p>
+     * <p>The name of the group.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -26,7 +32,7 @@ public class DescribeInstanceIpWhitelistRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

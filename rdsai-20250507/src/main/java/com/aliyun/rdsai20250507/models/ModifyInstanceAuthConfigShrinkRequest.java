@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAuthConfigShrinkRequest extends TeaModel {
     /**
-     * <p>The reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("BranchName")
     public String branchName;

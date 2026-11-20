@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySandboxTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The number of CPUs for sandboxes created from this template. Valid values: 1 to 4.</p>
+     * <p>The number of CPUs for sandboxes created by using this template. Valid values: 1 to 4.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ModifySandboxTemplateShrinkRequest extends TeaModel {
     public String defaultCpu;
 
     /**
-     * <p>The memory size of sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
+     * <p>The memory size for sandboxes created by using this template. Unit: GiB. Valid values: 1 to 8.</p>
      * 
      * <strong>example:</strong>
      * <p>1Gi</p>
@@ -22,6 +22,12 @@ public class ModifySandboxTemplateShrinkRequest extends TeaModel {
     @NameInMap("DefaultMemory")
     public String defaultMemory;
 
+    /**
+     * <p>The container image used for the sandbox template. Format: <code>[registry/]&lt;repo&gt;[:tag][@sha256:digest]</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.example.com/example/sandbox:1.0</p>
+     */
     @NameInMap("Image")
     public String image;
 
@@ -53,11 +59,14 @@ public class ModifySandboxTemplateShrinkRequest extends TeaModel {
     @NameInMap("Replicas")
     public Long replicas;
 
+    /**
+     * <p>The custom tags of the sandbox template. The key is the tag name, and the value is the tag value. You cannot use the system-reserved tag createdBy or the system-reserved tag hidden.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>The sandbox template ID.</p>
+     * <p>The ID of the sandbox template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

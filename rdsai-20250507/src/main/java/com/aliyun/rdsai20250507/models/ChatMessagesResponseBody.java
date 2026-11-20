@@ -8,13 +8,13 @@ public class ChatMessagesResponseBody extends TeaModel {
      * <p>The answer content.</p>
      * 
      * <strong>example:</strong>
-     * <p>The disk usage of instance rm-bp14as9914vd3**** is 23%, and storage expansion is not needed at this time. If you need to view the detailed configuration, performance monitoring, or perform other operations for a specific instance, let me know your specific requirements!</p>
+     * <p>The disk usage of instance rm-bp14as9914vd3**** is 23%, so capacity expansion is not required at this time. If you need to view detailed configurations, performance monitoring, or perform other operations for a specific instance, let me know your specific requirements</p>
      */
     @NameInMap("Answer")
     public String answer;
 
     /**
-     * <p>The tool invocation approval status.</p>
+     * <p>The tool calling invoke approval status.</p>
      * 
      * <strong>example:</strong>
      * <p>pending</p>
@@ -23,7 +23,7 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String approvalStatus;
 
     /**
-     * <p>The tool invocation ID.</p>
+     * <p>The tool calling invoke ID.</p>
      * 
      * <strong>example:</strong>
      * <p>call-example</p>
@@ -50,7 +50,7 @@ public class ChatMessagesResponseBody extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The tool invocation description.</p>
+     * <p>The tool calling invoke description.</p>
      * 
      * <strong>example:</strong>
      * <p>Search ContextDB records</p>
@@ -89,7 +89,7 @@ public class ChatMessagesResponseBody extends TeaModel {
      * <p>The query mode.</p>
      * 
      * <strong>example:</strong>
-     * <p>This field will be deprecated and can be ignored</p>
+     * <p>This will be deprecated in the future and can be ignored</p>
      */
     @NameInMap("Mode")
     public String mode;
@@ -122,7 +122,7 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The tool invocation parameters.</p>
+     * <p>The tool calling invoke parameters.</p>
      */
     @NameInMap("ToolArguments")
     public java.util.Map<String, ?> toolArguments;

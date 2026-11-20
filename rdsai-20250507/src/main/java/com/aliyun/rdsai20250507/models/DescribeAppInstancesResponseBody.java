@@ -11,7 +11,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
     public java.util.List<DescribeAppInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>A reserved parameter. You can ignore it.</p>
+     * <p>A reserved parameter. You can ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -47,7 +47,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -111,12 +111,18 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
     public static class DescribeAppInstancesResponseBodyInstancesComponents extends TeaModel {
         /**
          * <p>The component status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The component type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase</p>
          */
         @NameInMap("Type")
         public String type;
@@ -242,7 +248,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The internal endpoint of the AI application.</p>
+         * <p>The internal network connection endpoint of the AI application.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.XXX.XXX:8000</p>

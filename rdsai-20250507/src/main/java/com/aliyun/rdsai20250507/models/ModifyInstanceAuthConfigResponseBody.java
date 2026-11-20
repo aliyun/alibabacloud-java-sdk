@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAuthConfigResponseBody extends TeaModel {
     /**
-     * <p>The reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>Reserved parameter</p>
+     * <p>A reserved parameter</p>
      */
     @NameInMap("BranchName")
     public String branchName;

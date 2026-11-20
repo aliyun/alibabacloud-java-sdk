@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSandboxTemplateRequest extends TeaModel {
     /**
-     * <p>The number of CPUs for sandboxes created from this template. Valid values: 1 to 4.</p>
+     * <p>The number of CPUs for sandboxes created by using this template. Valid values: 1 to 4.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public String defaultCpu;
 
     /**
-     * <p>The memory size for sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
+     * <p>The memory size of sandboxes created by using this template. Unit: GiB. Valid values: 1 to 8.</p>
      * 
      * <strong>example:</strong>
      * <p>1Gi</p>
@@ -23,7 +23,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public String defaultMemory;
 
     /**
-     * <p>The description of the sandbox template. The description must be unique within the VPC.</p>
+     * <p>The description of the sandbox template. It must be unique within the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>code-interpreter</p>
@@ -31,6 +31,12 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The container image used for the sandbox template. Format: <code>[registry/]&lt;repo&gt;[:tag][@sha256:digest]</code>. This parameter is required when you use a non-generic template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.example.com/example/sandbox:1.0</p>
+     */
     @NameInMap("Image")
     public String image;
 
@@ -54,7 +60,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of prewarmed sandboxes. Valid values: 1 to 1000.</p>
+     * <p>The number of pre-warmed sandboxes. Valid values: 1 to 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,6 +68,9 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     @NameInMap("Replicas")
     public Long replicas;
 
+    /**
+     * <p>The custom tags of the sandbox template. The key is the tag name and the value is the tag value. You cannot use the system-reserved tag createdBy. You cannot use the system-reserved tag hidden.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
 

@@ -29,7 +29,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request result.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -114,11 +114,11 @@ public class CreateApiKeyResponseBody extends TeaModel {
         /**
          * <p>The quota limit type. Valid values:</p>
          * <ul>
-         * <li><p><strong>fixed</strong>: Fixed value.</p>
+         * <li><p><strong>fixed</strong>: fixed value.</p>
          * </li>
-         * <li><p><strong>ratio</strong>: Percentage-based.</p>
+         * <li><p><strong>ratio</strong>: percentage.</p>
          * </li>
-         * <li><p><strong>auto</strong>: Automatic allocation.</p>
+         * <li><p><strong>auto</strong>: automatic allocation.</p>
          * </li>
          * </ul>
          * 
@@ -128,6 +128,12 @@ public class CreateApiKeyResponseBody extends TeaModel {
         @NameInMap("LimitType")
         public String limitType;
 
+        /**
+         * <p>The ARN of the RAM role bound to the custom API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/example-role</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 

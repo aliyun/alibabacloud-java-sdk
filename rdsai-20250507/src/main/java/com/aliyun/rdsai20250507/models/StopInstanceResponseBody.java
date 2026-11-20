@@ -4,6 +4,12 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The name of the branch specified for this operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ra-branch-123456789012abcd</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 

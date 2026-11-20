@@ -14,7 +14,7 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     public Boolean enableTools;
 
     /**
-     * <p>The name of the custom agent.</p>
+     * <p>The name of the dedicated agent.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance List Query Agent</p>
@@ -33,7 +33,7 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>I am your custom agent for querying the instance list</p>
+     * <p>I am your dedicated agent for querying instance lists</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;

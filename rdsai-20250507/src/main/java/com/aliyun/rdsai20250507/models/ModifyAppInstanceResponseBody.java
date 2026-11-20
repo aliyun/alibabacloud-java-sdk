@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppInstanceResponseBody extends TeaModel {
     /**
-     * <p>The reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -36,6 +36,15 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    /**
+     * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
+    @NameInMap("TargetInstanceName")
+    public String targetInstanceName;
 
     public static ModifyAppInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyAppInstanceResponseBody self = new ModifyAppInstanceResponseBody();
@@ -72,6 +81,14 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyAppInstanceResponseBody setTargetInstanceName(String targetInstanceName) {
+        this.targetInstanceName = targetInstanceName;
+        return this;
+    }
+    public String getTargetInstanceName() {
+        return this.targetInstanceName;
     }
 
     public static class ModifyAppInstanceResponseBodyComponents extends TeaModel {

@@ -4,9 +4,18 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
+    /**
+     * <p>The name of the branch specified for this operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ra-branch-123456789012abcd</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
+    /**
+     * <p>The list of IP address whitelist groups for the PostgreSQL database instance associated with the branch.</p>
+     */
     @NameInMap("DbIpWhiteListGroups")
     public java.util.List<DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups> dbIpWhiteListGroups;
 
@@ -20,7 +29,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The IP whitelist groups.</p>
+     * <p>The list of IP address whitelist groups.</p>
      */
     @NameInMap("IpWhiteListGroups")
     public java.util.List<DescribeInstanceIpWhitelistResponseBodyIpWhiteListGroups> ipWhiteListGroups;
@@ -80,9 +89,21 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups extends TeaModel {
+        /**
+         * <p>The name of the IP address whitelist group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The list of addresses in the IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0/24</p>
+         */
         @NameInMap("IpWhitelist")
         public String ipWhitelist;
 
@@ -111,7 +132,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
 
     public static class DescribeInstanceIpWhitelistResponseBodyIpWhiteListGroups extends TeaModel {
         /**
-         * <p>The group name.</p>
+         * <p>The name of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

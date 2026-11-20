@@ -14,7 +14,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The position from which the current read operation starts. An empty value indicates that the read operation starts from the beginning.</p>
+     * <p>The position from which the read operation starts. An empty value indicates that the read operation starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
@@ -56,7 +56,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public java.util.List<DescribeSandboxTemplatesResponseBodySandboxTemplates> sandboxTemplates;
 
     /**
-     * <p>The total number of data entries that meet the current request conditions.</p>
+     * <p>The total number of entries that meet the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -126,6 +126,12 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeSandboxTemplatesResponseBodySandboxTemplates extends TeaModel {
+        /**
+         * <p>The source that created the sandbox template. Valid values: user (created by a user) and system (created by the system).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
@@ -157,7 +163,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether the sandbox created by using this template can access resources in the VPC where Supabase is deployed.</p>
+         * <p>Indicates whether the sandbox created by using this template can access resources in the VPC where Supabase resides.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -165,6 +171,12 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         @NameInMap("EnableVpcAccess")
         public String enableVpcAccess;
 
+        /**
+         * <p>The container image used by the sandbox template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.example.com/example/sandbox:1.0</p>
+         */
         @NameInMap("Image")
         public String image;
 
@@ -177,14 +189,23 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The number of replicas for the sandbox template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Replicas")
         public Long replicas;
 
+        /**
+         * <p>The custom tags of the sandbox template. A key represents a tag name, and a value represents a tag value.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, String> tags;
 
         /**
-         * <p>The ID of the sandbox template. Specify this ID when you use the template to create a sandbox.</p>
+         * <p>The ID of the sandbox template. Specify this ID when creating a sandbox by using this template.</p>
          * 
          * <strong>example:</strong>
          * <p>code-interpreter-asdxxxx</p>

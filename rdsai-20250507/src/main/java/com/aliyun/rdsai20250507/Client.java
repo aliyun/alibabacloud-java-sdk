@@ -337,7 +337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
@@ -405,7 +405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
@@ -987,7 +987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom agent.</p>
+     * <p>Creates a dedicated agent.</p>
      * 
      * @param tmpReq CreateCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1045,7 +1045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom agent.</p>
+     * <p>Creates a dedicated agent.</p>
      * 
      * @param request CreateCustomAgentRequest
      * @return CreateCustomAgentResponse
@@ -1205,7 +1205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS Supabase</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -1281,7 +1281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS Supabase</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -2163,7 +2163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
@@ -2217,7 +2217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
@@ -2489,13 +2489,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist of an RDS AI application instance.</p>
+     * <p>Queries the IP address whitelist of an ApsaraDB RDS AI application instance.</p>
      * 
      * @param request DescribeInstanceIpWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2539,13 +2539,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist of an RDS AI application instance.</p>
+     * <p>Queries the IP address whitelist of an ApsaraDB RDS AI application instance.</p>
      * 
      * @param request DescribeInstanceIpWhitelistRequest
      * @return DescribeInstanceIpWhitelistResponse
@@ -2611,8 +2611,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
-     * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <h3>Related feature documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the SSL configuration of an ApsaraDB RDS AI application instance.</p>
@@ -2657,8 +2657,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
-     * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <h3>Related feature documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the SSL configuration of an ApsaraDB RDS AI application instance.</p>
@@ -3093,13 +3093,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <p>RDS Supabase</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of sandbox templates for creating Supabase sandboxes.</p>
+     * <p>Queries a list of sandbox templates used to create Supabase sandboxes.</p>
      * 
      * @param request DescribeSandboxTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3159,13 +3159,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <p>RDS Supabase</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of sandbox templates for creating Supabase sandboxes.</p>
+     * <p>Queries a list of sandbox templates used to create Supabase sandboxes.</p>
      * 
      * @param request DescribeSandboxTemplatesRequest
      * @return DescribeSandboxTemplatesResponse
@@ -4458,11 +4458,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries custom API keys.</p>
+     * <p>Retrieves custom API keys.</p>
      * 
      * @param request ListApiKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4502,11 +4502,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries custom API keys.</p>
+     * <p>Retrieves custom API keys.</p>
      * 
      * @param request ListApiKeysRequest
      * @return ListApiKeysResponse
@@ -4580,10 +4580,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</p>
+     * <p>Lists all members in a specified workspace, along with a list of API keys for each member. Plaintext keys are not returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists context database members.</p>
+     * <p>Lists ContextDB members.</p>
      * 
      * @param request ListContextDatabaseMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4623,10 +4623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists all members in a specified workspace. Each member includes a list of API keys (plaintext values are not returned).</p>
+     * <p>Lists all members in a specified workspace, along with a list of API keys for each member. Plaintext keys are not returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists context database members.</p>
+     * <p>Lists ContextDB members.</p>
      * 
      * @param request ListContextDatabaseMembersRequest
      * @return ListContextDatabaseMembersResponse
@@ -5350,7 +5350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of Agent tools for a user.</p>
+     * <p>Queries the list of user agent tools.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCustomAgentToolsResponse
@@ -5373,7 +5373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of Agent tools for a user.</p>
+     * <p>Queries the list of user agent tools.</p>
      * @return ListCustomAgentToolsResponse
      */
     public ListCustomAgentToolsResponse listCustomAgentTools() throws Exception {
@@ -5575,13 +5575,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the modules of an ApsaraDB RDS AI application instance.</p>
+     * <p>Modifies the modules of an RDS AI application instance.</p>
      * 
      * @param tmpReq ModifyAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5620,6 +5620,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceName", request.instanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.migrationMode)) {
+            query.put("MigrationMode", request.migrationMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5643,13 +5647,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the modules of an ApsaraDB RDS AI application instance.</p>
+     * <p>Modifies the modules of an RDS AI application instance.</p>
      * 
      * @param request ModifyAppInstanceRequest
      * @return ModifyAppInstanceResponse
@@ -5661,10 +5665,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS for Supabase</a></p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the authentication configuration of an ApsaraDB RDS AI application instance.</p>
@@ -5717,10 +5721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">ApsaraDB RDS for Supabase</a></p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the authentication configuration of an ApsaraDB RDS AI application instance.</p>
@@ -5949,7 +5953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -6011,7 +6015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -6030,15 +6034,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Supported engines</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * <blockquote>
-     * <p>Currently, only Object Storage Service (OSS) is supported.</p>
+     * <p>Only Object Storage Service (OSS) is supported.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the storage configuration of an RDS AI application instance.</p>
+     * <p>Modifies the storage configuration of an ApsaraDB RDS AI application instance.</p>
      * 
      * @param tmpReq ModifyInstanceStorageConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6093,15 +6097,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Supported engines</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * <blockquote>
-     * <p>Currently, only Object Storage Service (OSS) is supported.</p>
+     * <p>Only Object Storage Service (OSS) is supported.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the storage configuration of an RDS AI application instance.</p>
+     * <p>Modifies the storage configuration of an ApsaraDB RDS AI application instance.</p>
      * 
      * @param request ModifyInstanceStorageConfigRequest
      * @return ModifyInstanceStorageConfigResponse
@@ -6113,13 +6117,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Batch modifies the SSL configurations of RDS AI application instances.</p>
+     * <p>Modifies the SSL configurations of multiple ApsaraDB RDS AI application instances in batches.</p>
      * 
      * @param tmpReq ModifyInstancesSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6177,13 +6181,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Batch modifies the SSL configurations of RDS AI application instances.</p>
+     * <p>Modifies the SSL configurations of multiple ApsaraDB RDS AI application instances in batches.</p>
      * 
      * @param request ModifyInstancesSSLRequest
      * @return ModifyInstancesSSLResponse
@@ -6251,7 +6255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS Supabase</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -6323,7 +6327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>RDS Supabase</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -6539,7 +6543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
@@ -6591,7 +6595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <p><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></p>
      * 
      * <b>summary</b> : 
@@ -7165,13 +7169,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Pauses an RDS AI application instance that is in the Running state.</p>
+     * <p>Pauses an ApsaraDB RDS AI application instance that is in the Running state.</p>
      * 
      * @param request StopInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7215,13 +7219,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Pauses an RDS AI application instance that is in the Running state.</p>
+     * <p>Pauses an ApsaraDB RDS AI application instance that is in the Running state.</p>
      * 
      * @param request StopInstanceRequest
      * @return StopInstanceResponse

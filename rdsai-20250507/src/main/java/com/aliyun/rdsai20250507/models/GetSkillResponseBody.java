@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillResponseBody extends TeaModel {
     /**
-     * <p>The current active version ID.</p>
+     * <p>The ID of the currently active version.</p>
      * 
      * <strong>example:</strong>
      * <p>version-example</p>
@@ -14,7 +14,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String activeVersionId;
 
     /**
-     * <p>The content digest of the current skill bundle.</p>
+     * <p>The content digest of the current skill package.</p>
      * 
      * <strong>example:</strong>
      * <p>0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</p>
@@ -23,7 +23,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String bundleHash;
 
     /**
-     * <p>The size of the current skill bundle, in bytes.</p>
+     * <p>The size of the current skill package, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -38,7 +38,7 @@ public class GetSkillResponseBody extends TeaModel {
     public GetSkillResponseBodyCapabilities capabilities;
 
     /**
-     * <p>The skill category.</p>
+     * <p>The category of the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>productivity</p>
@@ -71,10 +71,10 @@ public class GetSkillResponseBody extends TeaModel {
     public java.util.List<String> dbtypes;
 
     /**
-     * <p>The skill description. The description can be up to 1000 characters in length.</p>
+     * <p>The description of the skill. The description can be up to 1,000 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>SQL Review Expert: Comprehensively reviews SQL for security, performance, and compliance, identifies risks, and provides optimization suggestions. Activated immediately when a user submits SQL or asks about &quot;SQL review&quot;, &quot;SQL Review&quot;, &quot;any risks&quot;, or &quot;how to optimize&quot;</p>
+     * <p>SQL Review Expert: Comprehensively reviews the security, performance, and compliance of SQL statements, identifies risks, and provides optimization suggestions. This skill is immediately activated when a user submits SQL statements or asks questions such as &quot;SQL review&quot;, &quot;Are there any risks?&quot;, or &quot;How to optimize?&quot;</p>
      */
     @NameInMap("Description")
     public String description;
@@ -89,7 +89,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The temporary download URL of the skill bundle.</p>
+     * <p>The temporary download URL for the skill package.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/skill-package.zip">https://example.com/skill-package.zip</a></p>
@@ -107,25 +107,31 @@ public class GetSkillResponseBody extends TeaModel {
     public String expiresAt;
 
     /**
-     * <p>The file in the bundle that is read based on the specified path.</p>
+     * <p>The file in the package specified by path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;path&quot;:&quot;README.md&quot;,&quot;size_bytes&quot;:15,&quot;text&quot;:&quot;# Example Skill&quot;,&quot;reason&quot;:null}</p>
      */
     @NameInMap("File")
     public java.util.Map<String, ?> file;
 
     /**
-     * <p>The list of files in the current skill bundle.</p>
+     * <p>The list of files in the current skill package.</p>
      */
     @NameInMap("Files")
     public java.util.List<java.util.Map<String, ?>> files;
 
     /**
      * <p>The metadata fields of SKILL.md.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;:&quot;example-skill&quot;,&quot;description&quot;:&quot;Example skill&quot;,&quot;version&quot;:&quot;1.0.0&quot;}</p>
      */
     @NameInMap("Frontmatter")
     public java.util.Map<String, ?> frontmatter;
 
     /**
-     * <p>The public HTTPS URL of the current icon. This value is empty if no icon is configured.</p>
+     * <p>The public HTTPS URL of the current icon. This field is empty if no icon is configured.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/skill-icon.png">https://example.com/skill-icon.png</a></p>
@@ -152,7 +158,7 @@ public class GetSkillResponseBody extends TeaModel {
     public Boolean isDeleted;
 
     /**
-     * <p>The skill name. The name can contain only lowercase letters, digits, and hyphens.</p>
+     * <p>The name of the skill. The name can contain only lowercase letters, digits, and hyphens.</p>
      * 
      * <strong>example:</strong>
      * <p>sql-optimization</p>
@@ -161,7 +167,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The unique request identifier.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -188,7 +194,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillId;
 
     /**
-     * <p>The full Markdown content of SKILL.md.</p>
+     * <p>The full SKILL.md Markdown content.</p>
      * 
      * <strong>example:</strong>
      * <h1>Example Skill</h1>
@@ -197,7 +203,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillMarkdown;
 
     /**
-     * <p>The skill type.</p>
+     * <p>The type of the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -206,7 +212,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillType;
 
     /**
-     * <p>The stable identifier of the private skill.</p>
+     * <p>The stable identifier for the private skill.</p>
      * 
      * <strong>example:</strong>
      * <p>example-skill</p>
@@ -224,7 +230,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String updatedAt;
 
     /**
-     * <p>The current skill version number.</p>
+     * <p>The current version number of the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
@@ -509,7 +515,7 @@ public class GetSkillResponseBody extends TeaModel {
         public Boolean delete;
 
         /**
-         * <p>Indicates whether the skill bundle can be downloaded.</p>
+         * <p>Indicates whether the skill package can be downloaded.</p>
          */
         @NameInMap("Download")
         public Boolean download;
@@ -595,7 +601,7 @@ public class GetSkillResponseBody extends TeaModel {
 
     public static class GetSkillResponseBodyVersions extends TeaModel {
         /**
-         * <p>The activation time of the skill version.</p>
+         * <p>The time when the skill version was activated.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-15T10:00:00Z</p>
@@ -604,7 +610,7 @@ public class GetSkillResponseBody extends TeaModel {
         public String activatedAt;
 
         /**
-         * <p>The creation time of the skill version.</p>
+         * <p>The time when the skill version was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-15T10:00:00Z</p>
@@ -613,13 +619,13 @@ public class GetSkillResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Indicates whether the skill requires a credential.</p>
+         * <p>Indicates whether the skill requires credentials.</p>
          */
         @NameInMap("CredentialRequired")
         public Boolean credentialRequired;
 
         /**
-         * <p>The number of files in the skill bundle.</p>
+         * <p>The number of files in the skill package.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -628,7 +634,7 @@ public class GetSkillResponseBody extends TeaModel {
         public Long fileCount;
 
         /**
-         * <p>The skill version ID.</p>
+         * <p>The ID of the skill version.</p>
          * 
          * <strong>example:</strong>
          * <p>version-example</p>
@@ -637,7 +643,7 @@ public class GetSkillResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The size of the skill bundle, in bytes.</p>
+         * <p>The size of the skill package, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -646,7 +652,7 @@ public class GetSkillResponseBody extends TeaModel {
         public Long packageSize;
 
         /**
-         * <p>The reason for revoking the skill version.</p>
+         * <p>The reason why the skill version was revoked.</p>
          * 
          * <strong>example:</strong>
          * <p>Replaced by a newer version</p>
@@ -655,7 +661,7 @@ public class GetSkillResponseBody extends TeaModel {
         public String revokeReason;
 
         /**
-         * <p>The revocation time of the skill version.</p>
+         * <p>The time when the skill version was revoked.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-15T11:00:00Z</p>
@@ -673,7 +679,7 @@ public class GetSkillResponseBody extends TeaModel {
         public String sha256;
 
         /**
-         * <p>The ID of the skill to which the version belongs.</p>
+         * <p>The ID of the parent skill.</p>
          * 
          * <strong>example:</strong>
          * <p>skill-example</p>
@@ -709,7 +715,7 @@ public class GetSkillResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update note for the version.</p>
+         * <p>The update notes for the version.</p>
          * 
          * <strong>example:</strong>
          * <p>Update Skill documentation</p>

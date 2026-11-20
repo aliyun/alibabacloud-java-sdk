@@ -29,7 +29,7 @@ public class ListSkillResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -93,13 +93,16 @@ public class ListSkillResponseBody extends TeaModel {
 
     public static class ListSkillResponseBodyData extends TeaModel {
         /**
-         * <p>The currently active skill version information.</p>
+         * <p>The information about the currently active skill version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;id&quot;:&quot;12345678-1234-4234-8234-123456789012&quot;,&quot;skill_id&quot;:&quot;23456789-1234-4234-8234-123456789012&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;status&quot;:&quot;ACTIVE&quot;,&quot;package_size&quot;:1024,&quot;credential_required&quot;:false}</p>
          */
         @NameInMap("ActiveVersion")
         public java.util.Map<String, ?> activeVersion;
 
         /**
-         * <p>The currently active version ID.</p>
+         * <p>The ID of the currently active version.</p>
          * 
          * <strong>example:</strong>
          * <p>version-example</p>
@@ -144,13 +147,13 @@ public class ListSkillResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>SQL Review Expert: Comprehensively reviews SQL for security, performance, and compliance, identifies risks, and provides optimization suggestions. Activated immediately when a user submits SQL or asks about &quot;SQL review&quot;, &quot;SQL Review&quot;, &quot;any risks&quot;, or &quot;how to optimize&quot;</p>
+         * <p>SQL Review Expert: Comprehensively reviews SQL statements for security, performance, and compliance, identifies risks, and provides optimization recommendations. Activated immediately when a user submits SQL or asks questions such as &quot;SQL review&quot;, &quot;SQL Review&quot;, &quot;Are there any risks?&quot;, or &quot;How to optimize?&quot;.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The skill display name.</p>
+         * <p>The display name of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>Example Skill</p>
@@ -159,7 +162,7 @@ public class ListSkillResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The public HTTPS URL of the current icon. Empty if not configured.</p>
+         * <p>The public HTTPS URL of the current icon. This parameter is empty if no icon is configured.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/skill-icon.png">https://example.com/skill-icon.png</a></p>
@@ -195,7 +198,7 @@ public class ListSkillResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The skill visibility scope.</p>
+         * <p>The visibility scope of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -213,7 +216,7 @@ public class ListSkillResponseBody extends TeaModel {
         public String skillType;
 
         /**
-         * <p>The skill stable identifier.</p>
+         * <p>The stable identifier of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>example-skill</p>
@@ -231,7 +234,7 @@ public class ListSkillResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The skill visibility for the current user.</p>
+         * <p>The visibility of the skill to the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>

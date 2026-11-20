@@ -26,7 +26,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
      * <p>The name of the custom agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>Query instance list agent</p>
+     * <p>Instance list query agent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -124,7 +124,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
 
     public static class UpdateCustomAgentResponseBodySkills extends TeaModel {
         /**
-         * <p>The skill description.</p>
+         * <p>The description of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL query optimization skill</p>
@@ -142,7 +142,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The skill name.</p>
+         * <p>The name of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>query-optimization</p>
@@ -151,7 +151,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The skill type.</p>
+         * <p>The type of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>

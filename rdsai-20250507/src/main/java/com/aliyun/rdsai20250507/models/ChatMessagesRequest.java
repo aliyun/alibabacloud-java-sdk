@@ -14,7 +14,7 @@ public class ChatMessagesRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of the event = message response. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</p>
+     * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool calling invoke events, child node events, and document events are unified into the answer field of the event = message. When set to separate, tool calling invoke events, child node events, and document events have their own respective events.</p>
      * 
      * <strong>example:</strong>
      * <p>inline</p>
@@ -22,11 +22,14 @@ public class ChatMessagesRequest extends TeaModel {
     @NameInMap("EventMode")
     public String eventMode;
 
+    /**
+     * <p>The list of attachments included in the current conversation round. References uploaded files by using UploadFileId.</p>
+     */
     @NameInMap("Files")
     public java.util.List<ChatMessagesRequestFiles> files;
 
     /**
-     * <p>The task inputs.</p>
+     * <p>The task input.</p>
      */
     @NameInMap("Inputs")
     public ChatMessagesRequestInputs inputs;
@@ -44,7 +47,7 @@ public class ChatMessagesRequest extends TeaModel {
      * <p>The query content.</p>
      * 
      * <strong>example:</strong>
-     * <p>Check the disk usage of instance rm-bp14as9914vd3**** and whether storage expansion is needed</p>
+     * <p>Instance rm-bp14as9914vd3**** disk usage, and whether capacity expansion is required</p>
      */
     @NameInMap("Query")
     public String query;
@@ -103,14 +106,41 @@ public class ChatMessagesRequest extends TeaModel {
     }
 
     public static class ChatMessagesRequestFiles extends TeaModel {
+        /**
+         * <p>The file transfer method. Set this parameter to local_file when referencing an uploaded file, and provide the UploadFileId at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local_file</p>
+         */
         @NameInMap("TransferMethod")
         public String transferMethod;
 
+        /**
+         * <p>The attachment type. A value of image indicates an image. The actual supported types are determined by the file upload configuration of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The identifier of the uploaded file. The ContextDB management agent can use the UploadFileId returned by the current workspace knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000000-0000-4000-8000-000000000001</p>
+         */
         @NameInMap("UploadFileId")
         public String uploadFileId;
+
+        /**
+         * <p>The image URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://other-general-huadong1.oss-cn-hangzhou.aliyuncs.com/uploadWidget/BirthCertification_0.jpeg">https://other-general-huadong1.oss-cn-hangzhou.aliyuncs.com/uploadWidget/BirthCertification_0.jpeg</a></p>
+         */
+        @NameInMap("Url")
+        public String url;
 
         public static ChatMessagesRequestFiles build(java.util.Map<String, ?> map) throws Exception {
             ChatMessagesRequestFiles self = new ChatMessagesRequestFiles();
@@ -141,6 +171,14 @@ public class ChatMessagesRequest extends TeaModel {
             return this.uploadFileId;
         }
 
+        public ChatMessagesRequestFiles setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
     }
 
     public static class ChatMessagesRequestInputs extends TeaModel {
@@ -154,7 +192,7 @@ public class ChatMessagesRequest extends TeaModel {
         public String customAgentId;
 
         /**
-         * <p>Specifies whether to enable deep thinking mode.</p>
+         * <p>Specifies whether to enable the deep thinking mode.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -190,7 +228,7 @@ public class ChatMessagesRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The tool approval call ID for resuming execution. Pass this parameter after all decisions in the current approval round are completed in the console to continue the interrupted ChatMessage Loop. Do not pass this parameter for regular conversations.</p>
+         * <p>The tool approval call ID for resuming execution. Pass this parameter after the console completes all decisions for the current approval round to continue the interrupted ChatMessage loop. Do not pass this parameter for regular conversations.</p>
          * 
          * <strong>example:</strong>
          * <p>call-example</p>
@@ -217,7 +255,7 @@ public class ChatMessagesRequest extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The tool approval mode for the current conversation. Valid values: read_only (read-only, write tools are rejected), manual (write tools require manual approval), and auto (the approval sub-agent automatically determines the action. If the result is needs_human, the request is escalated to manual approval). When this parameter is passed, the approval mode of the current conversation is updated.</p>
+         * <p>The tool approval mode for the current conversation. Valid values: read_only (read-only, rejects write tools), manual (write tools require manual approval), and auto (automatically determined by the approval sub-agent; escalated to manual approval when needs_human is returned). Passing this parameter updates the approval mode for the current conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>manual</p>

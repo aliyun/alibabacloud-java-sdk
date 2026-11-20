@@ -4,9 +4,26 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
+    /**
+     * <p>The name of the branch to operate on. If this parameter is not specified, the operation is performed on the original instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ra-branch-123456789012abcd</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
+    /**
+     * <p>Specifies whether to forcibly stop the instance. Valid values:</p>
+     * <ul>
+     * <li>true: Forcibly stops the instance.</li>
+     * <li>false: Normally stops the instance.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 

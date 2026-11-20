@@ -11,7 +11,7 @@ public class ListApiKeysResponseBody extends TeaModel {
     public ListApiKeysResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListApiKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request result.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -85,7 +85,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String apiKey;
 
         /**
-         * <p>The daily throttling quota.</p>
+         * <p>The daily token quota.</p>
          * 
          * <strong>example:</strong>
          * <p>100000000</p>
@@ -94,7 +94,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Long dailyTokenQuota;
 
         /**
-         * <p>Indicates whether the key is throttled.</p>
+         * <p>Indicates whether the API key is throttled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -103,7 +103,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Boolean isRateLimited;
 
         /**
-         * <p>The API key name.</p>
+         * <p>The name of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>api-*****</p>
@@ -112,7 +112,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String keyName;
 
         /**
-         * <p>The quota ratio.</p>
+         * <p>The quota limit percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -121,7 +121,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Float limitRate;
 
         /**
-         * <p>The quota type. Valid values:</p>
+         * <p>The quota limit type. Valid values:</p>
          * <ul>
          * <li><strong>fixed</strong>: Fixed value.</li>
          * <li><strong>ratio</strong>: Percentage.</li>
@@ -134,11 +134,17 @@ public class ListApiKeysResponseBody extends TeaModel {
         @NameInMap("LimitType")
         public String limitType;
 
+        /**
+         * <p>The ARN of the RAM role bound to the custom API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890123456:role/example-role</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
         /**
-         * <p>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
+         * <p>The alert threshold percentage. A value of 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -147,7 +153,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer thresholdPercent;
 
         /**
-         * <p>The quota of the current key.</p>
+         * <p>The token quota of the current API key.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -236,7 +242,7 @@ public class ListApiKeysResponseBody extends TeaModel {
 
     public static class ListApiKeysResponseBodyData extends TeaModel {
         /**
-         * <p>The URL for model calls.</p>
+         * <p>The URL for model invocation.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
@@ -251,7 +257,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public java.util.List<ListApiKeysResponseBodyDataCustomKeyList> customKeyList;
 
         /**
-         * <p>The daily throttling quota for the system API key.</p>
+         * <p>The daily token quota of the system API key.</p>
          * 
          * <strong>example:</strong>
          * <p>100000000</p>
@@ -260,7 +266,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Long dailyTokenQuota;
 
         /**
-         * <p>Indicates whether the key is throttled.</p>
+         * <p>Indicates whether the API key is throttled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -278,7 +284,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer page;
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -287,7 +293,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The system-generated key.</p>
+         * <p>The system-generated API key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-xxx</p>
@@ -296,7 +302,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String systemApiKey;
 
         /**
-         * <p>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
+         * <p>The alert threshold percentage for the system API key. A value of 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -305,7 +311,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer thresholdPercent;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>138</p>

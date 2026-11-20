@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstancesSSLResponseBody extends TeaModel {
     /**
-     * <p>The list of instance IDs of AI applications that were successfully modified.</p>
+     * <p>The list of instance IDs of the AI applications that were successfully modified.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -25,6 +25,12 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The expiration time of the custom SSL certificate. The time is in the yyyy-MM-dd HH:mm:ss format and in the UTC+8 time zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2027-12-31 23:59:59</p>
+     */
     @NameInMap("SSLExpiredTime")
     public String SSLExpiredTime;
 
