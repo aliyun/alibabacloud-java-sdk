@@ -20,7 +20,7 @@ public class GetRunResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -71,7 +71,7 @@ public class GetRunResponseBody extends TeaModel {
          * <p>The operation description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Perform changes on the sample resource</p>
+         * <p>Apply changes to the sample resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -125,7 +125,7 @@ public class GetRunResponseBody extends TeaModel {
         public String approvalUrl;
 
         /**
-         * <p>Specifies whether the interrupt can be canceled.</p>
+         * <p>Indicates whether it can be canceled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -134,7 +134,7 @@ public class GetRunResponseBody extends TeaModel {
         public Boolean cancellable;
 
         /**
-         * <p>The change digest.</p>
+         * <p>The change summary.</p>
          * 
          * <strong>example:</strong>
          * <p>example-change-digest</p>
@@ -232,7 +232,7 @@ public class GetRunResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The interrupt prompt.</p>
+         * <p>The interrupt message.</p>
          * 
          * <strong>example:</strong>
          * <p>Specify the region of the target resource</p>
@@ -250,7 +250,13 @@ public class GetRunResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
-         * <p>The reason for the interrupt: <code>tool_call</code> (tool calling requires processing), <code>input_required</code> (user input is required), <code>confirmation</code> (confirmation is required), or <code>out_of_band_approval</code> (waiting for out-of-band approval).</p>
+         * <p>The interrupt reason. Valid values:</p>
+         * <ul>
+         * <li><code>tool_call</code>: Tool invocation requires handling.</li>
+         * <li><code>input_required</code>: User input is required.</li>
+         * <li><code>confirmation</code>: Confirmation is required.</li>
+         * <li><code>out_of_band_approval</code>: Waiting for out-of-band approval.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>input_required</p>
@@ -259,7 +265,7 @@ public class GetRunResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The JSON Schema that the payload must conform to when resuming the interrupt.</p>
+         * <p>The JSON schema that the payload must conform to when resuming this interrupt.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;region&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;region&quot;]}</p>
@@ -268,7 +274,7 @@ public class GetRunResponseBody extends TeaModel {
         public java.util.Map<String, ?> responseSchema;
 
         /**
-         * <p>The ID used to invoke the tool calling.</p>
+         * <p>The tool invocation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tool_call_example_001</p>
@@ -355,7 +361,11 @@ public class GetRunResponseBody extends TeaModel {
         public java.util.List<GetRunResponseBodyDataOutcomeInterrupts> interrupts;
 
         /**
-         * <p>The outcome type: <code>success</code> (completed successfully) or <code>interrupt</code> (waiting for interrupt processing).</p>
+         * <p>The outcome type. Valid values:</p>
+         * <ul>
+         * <li><code>success</code>: Successfully completed.</li>
+         * <li><code>interrupt</code>: Waiting for interrupt handling.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>interrupt</p>
@@ -388,7 +398,7 @@ public class GetRunResponseBody extends TeaModel {
 
     public static class GetRunResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the run was created, in ISO 8601 format.</p>
+         * <p>The creation time of the run, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -421,7 +431,16 @@ public class GetRunResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The run status: <code>PENDING</code> (pending execution), <code>RUNNING</code> (running), <code>WAITING_USER</code> (waiting for interrupt processing), <code>COMPLETED</code> (completed), <code>FAILED</code> (failed), <code>CANCELLED</code> (canceled), or <code>REJECTED</code> (rejected).</p>
+         * <p>The run status. Valid values:</p>
+         * <ul>
+         * <li><code>PENDING</code>: Pending execution.</li>
+         * <li><code>RUNNING</code>: Running.</li>
+         * <li><code>WAITING_USER</code>: Waiting for interrupt handling.</li>
+         * <li><code>COMPLETED</code>: Completed.</li>
+         * <li><code>FAILED</code>: Failed.</li>
+         * <li><code>CANCELLED</code>: Canceled.</li>
+         * <li><code>REJECTED</code>: Rejected.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -430,7 +449,7 @@ public class GetRunResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the run was last updated, in ISO 8601 format.</p>
+         * <p>The last update time of the run, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:01:00Z</p>

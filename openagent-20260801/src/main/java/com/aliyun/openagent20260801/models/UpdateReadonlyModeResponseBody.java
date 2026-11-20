@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateReadonlyModeResponseBody extends TeaModel {
     /**
-     * <p>The currently active configuration information.</p>
+     * <p>The current effective configuration information.</p>
      */
     @NameInMap("data")
     public UpdateReadonlyModeResponseBodyData data;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000-0000-4000-8000-000000000001</p>
@@ -59,7 +59,7 @@ public class UpdateReadonlyModeResponseBody extends TeaModel {
 
     public static class UpdateReadonlyModeResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the configuration. The value is fixed to readonly.</p>
+         * <p>The configuration name. The value is fixed as readonly.</p>
          * 
          * <strong>example:</strong>
          * <p>readonly</p>
@@ -86,7 +86,7 @@ public class UpdateReadonlyModeResponseBody extends TeaModel {
         public String gmtUpdate;
 
         /**
-         * <p>The currently active configuration value, returned as the string true or false.</p>
+         * <p>The current effective configuration value. The value is returned as a string, either true or false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -95,7 +95,7 @@ public class UpdateReadonlyModeResponseBody extends TeaModel {
         public String value;
 
         /**
-         * <p>The type of the configuration value. The value is BOOL for this API operation.</p>
+         * <p>The type of the configuration value. For this operation, the value is BOOL.</p>
          * 
          * <strong>example:</strong>
          * <p>BOOL</p>

@@ -8,7 +8,7 @@ public class UpdateSessionHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The idempotency key for the request. Use the same value when you retry the same update request.</p>
+     * <p>The idempotency key for the request. Use the same value when retrying the same update request.</p>
      * 
      * <strong>example:</strong>
      * <p>update-session-example-001</p>

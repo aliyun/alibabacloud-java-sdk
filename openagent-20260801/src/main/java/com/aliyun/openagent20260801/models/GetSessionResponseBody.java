@@ -11,7 +11,7 @@ public class GetSessionResponseBody extends TeaModel {
     public GetSessionResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000-0000-4000-8000-000000000001</p>
@@ -68,7 +68,7 @@ public class GetSessionResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The ID of the most recent run.</p>
+         * <p>The ID of the latest run.</p>
          * 
          * <strong>example:</strong>
          * <p>run_example_001</p>
@@ -77,7 +77,7 @@ public class GetSessionResponseBody extends TeaModel {
         public String lastRunId;
 
         /**
-         * <p>The status of the most recent run. Valid values: <code>PENDING</code> (pending execution), <code>RUNNING</code> (running), <code>WAITING_USER</code> (waiting for interrupt handling), <code>COMPLETED</code> (completed), <code>FAILED</code> (failed), <code>CANCELLED</code> (cancelled), and <code>REJECTED</code> (rejected).</p>
+         * <p>The status of the latest run. Valid values: <code>PENDING</code> (Pending), <code>RUNNING</code> (Running), <code>WAITING_USER</code> (Waiting for interrupt handling), <code>COMPLETED</code> (Completed), <code>FAILED</code> (Failed), <code>CANCELLED</code> (Cancelled), and <code>REJECTED</code> (Rejected).</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -95,7 +95,7 @@ public class GetSessionResponseBody extends TeaModel {
         public Boolean pinned;
 
         /**
-         * <p>The session ID.</p>
+         * <p>The ID of the session.</p>
          * 
          * <strong>example:</strong>
          * <p>session_example_001</p>
@@ -104,7 +104,7 @@ public class GetSessionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The session status. Valid values: <code>IDLE</code> (idle), <code>ACTIVE</code> (active), <code>WAITING_USER_INPUT</code> (waiting for user input), <code>WAITING_APPROVAL</code> (waiting for user confirmation), <code>WAITING_OUT_OF_BAND_APPROVAL</code> (waiting for out-of-band approval), and <code>CLOSED</code> (closed).</p>
+         * <p>The status of the session. Valid values: <code>IDLE</code> (Idle), <code>ACTIVE</code> (Running), <code>WAITING_USER_INPUT</code> (Waiting for user input), <code>WAITING_APPROVAL</code> (Waiting for user confirmation), <code>WAITING_OUT_OF_BAND_APPROVAL</code> (Waiting for out-of-band approval), and <code>CLOSED</code> (Closed).</p>
          * 
          * <strong>example:</strong>
          * <p>IDLE</p>
@@ -113,7 +113,7 @@ public class GetSessionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The session title.</p>
+         * <p>The title of the session.</p>
          * 
          * <strong>example:</strong>
          * <p>Cloud resource inspection example</p>

@@ -14,7 +14,7 @@ public class ListMessagesRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the value returned from the previous page.</p>
+     * <p>The pagination token. Do not pass this parameter in the first request. For subsequent requests, use the value returned from the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>example-next-token</p>

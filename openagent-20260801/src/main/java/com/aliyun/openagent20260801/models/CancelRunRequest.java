@@ -8,7 +8,7 @@ public class CancelRunRequest extends TeaModel {
      * <p>The reason for the cancellation. The value must be 1 to 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>The user manually canceled this task</p>
+     * <p>The user manually canceled the task</p>
      */
     @NameInMap("reason")
     public String reason;

@@ -8,7 +8,7 @@ public class SendMessageHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The idempotency key for the request. Use the same key and the same business parameters when retrying the same request.</p>
+     * <p>The idempotency key for the request. Use the same key and the same business parameters when you retry the same request.</p>
      * 
      * <strong>example:</strong>
      * <p>send-message-example-001</p>

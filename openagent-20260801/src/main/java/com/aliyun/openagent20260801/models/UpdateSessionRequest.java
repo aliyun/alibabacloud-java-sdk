@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSessionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to pin the session. If you do not specify this parameter, the pinned status remains unchanged.</p>
+     * <p>Specifies whether to pin the session. If this field is not specified, the pinned status remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class UpdateSessionRequest extends TeaModel {
     public Boolean pinned;
 
     /**
-     * <p>The new title of the session. If you do not need to update the title, do not specify this parameter.</p>
+     * <p>The new title of the session. Leave this field empty if no update is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Updated inspection session</p>

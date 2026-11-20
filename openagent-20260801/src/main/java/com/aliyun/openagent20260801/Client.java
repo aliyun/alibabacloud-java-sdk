@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "OpenAgent";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("openagent", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -208,7 +211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the read-only mode switch for the current account. The read-only mode is enabled by default if it is not configured.</p>
+     * <p>Queries the read-only mode switch for the current account. The read-only mode is enabled by default if not configured.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the read-only mode.</p>
@@ -239,7 +242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the read-only mode switch for the current account. The read-only mode is enabled by default if it is not configured.</p>
+     * <p>Queries the read-only mode switch for the current account. The read-only mode is enabled by default if not configured.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the read-only mode.</p>
@@ -302,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the title, status, pinning information, and the ID and status of the most recent run of a specified session.</p>
+     * <p>Queries the title, status, pinned status, and the ID and status of the latest run of a specified session.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a session.</p>
@@ -333,7 +336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the title, status, pinning information, and the ID and status of the most recent run of a specified session.</p>
+     * <p>Queries the title, status, pinned status, and the ID and status of the latest run of a specified session.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a session.</p>
@@ -349,7 +352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query on the message timeline of a specified session. Use the returned nextToken to retrieve the next page.</p>
+     * <p>Performs a paged query on the message timeline of a specified session. Use the returned nextToken for paging.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists messages.</p>
@@ -394,7 +397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query on the message timeline of a specified session. Use the returned nextToken to retrieve the next page.</p>
+     * <p>Performs a paged query on the message timeline of a specified session. Use the returned nextToken for paging.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists messages.</p>
@@ -410,7 +413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses paging to query the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</p>
+     * <p>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists sessions.</p>
@@ -451,7 +454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses paging to query the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</p>
+     * <p>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists sessions.</p>
@@ -467,7 +470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Sends a message to a specified session, submits interrupt handling results, or reconnects to a specified run. Returns the run progress and results through a Server-Sent Events (SSE) event stream.</p>
+     * <p>Sends a message to a specified session, submits interrupt processing results, or reconnects to a specified run. Returns the run progress and results through a Server-Sent Events (SSE) event stream.</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a message.</p>
@@ -480,6 +483,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendMessageResponse sendMessageWithOptions(String sessionId, SendMessageRequest request, SendMessageHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachments)) {
+            body.put("attachments", request.attachments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commands)) {
+            body.put("commands", request.commands);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             body.put("content", request.content);
         }
@@ -525,7 +536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Sends a message to a specified session, submits interrupt handling results, or reconnects to a specified run. Returns the run progress and results through a Server-Sent Events (SSE) event stream.</p>
+     * <p>Sends a message to a specified session, submits interrupt processing results, or reconnects to a specified run. Returns the run progress and results through a Server-Sent Events (SSE) event stream.</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a message.</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateReadonlyModeRequest extends TeaModel {
     /**
-     * <p>Required. Pass the string true to enable read-only mode, or false to disable it. The value is case-insensitive.</p>
+     * <p>Required. Set this parameter to the string true to enable read-only mode, or false to disable it. The value is case-insensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

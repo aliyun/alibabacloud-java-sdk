@@ -8,7 +8,7 @@ public class CancelRunHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The idempotency key of the request. Use the same value and the same business parameters when retrying the same cancellation request.</p>
+     * <p>The idempotency key for the request. Use the same value and the same business parameters when you retry the same cancellation request.</p>
      * 
      * <strong>example:</strong>
      * <p>cancel-example-001</p>

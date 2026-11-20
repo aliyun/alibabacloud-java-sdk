@@ -20,7 +20,7 @@ public class ListSessionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Specifies whether the request is successful. A value of true indicates success.</p>
+     * <p>Indicates whether the request was successful. true indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,16 +77,7 @@ public class ListSessionsResponseBody extends TeaModel {
         public String lastRunId;
 
         /**
-         * <p>The status of the most recent run. Valid values:</p>
-         * <ul>
-         * <li><code>PENDING</code>: Pending.</li>
-         * <li><code>RUNNING</code>: Running.</li>
-         * <li><code>WAITING_USER</code>: Waiting for interrupt handling.</li>
-         * <li><code>COMPLETED</code>: Completed.</li>
-         * <li><code>FAILED</code>: Failed.</li>
-         * <li><code>CANCELLED</code>: Cancelled.</li>
-         * <li><code>REJECTED</code>: Rejected.</li>
-         * </ul>
+         * <p>The status of the most recent run. Valid values: <code>PENDING</code> (pending), <code>RUNNING</code> (running), <code>WAITING_USER</code> (waiting for user intervention), <code>COMPLETED</code> (completed), <code>FAILED</code> (failed), <code>CANCELLED</code> (cancelled), and <code>REJECTED</code> (rejected).</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -95,7 +86,7 @@ public class ListSessionsResponseBody extends TeaModel {
         public String lastRunStatus;
 
         /**
-         * <p>Specifies whether the session is pinned.</p>
+         * <p>Indicates whether the session is pinned.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -113,15 +104,7 @@ public class ListSessionsResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The session status. Valid values:</p>
-         * <ul>
-         * <li><code>IDLE</code>: Idle.</li>
-         * <li><code>ACTIVE</code>: Active.</li>
-         * <li><code>WAITING_USER_INPUT</code>: Waiting for user input.</li>
-         * <li><code>WAITING_APPROVAL</code>: Waiting for user confirmation.</li>
-         * <li><code>WAITING_OUT_OF_BAND_APPROVAL</code>: Waiting for out-of-band approval.</li>
-         * <li><code>CLOSED</code>: Closed.</li>
-         * </ul>
+         * <p>The session status. Valid values: <code>IDLE</code> (idle), <code>ACTIVE</code> (running), <code>WAITING_USER_INPUT</code> (waiting for user input), <code>WAITING_APPROVAL</code> (waiting for user approval), <code>WAITING_OUT_OF_BAND_APPROVAL</code> (waiting for out-of-band approval), and <code>CLOSED</code> (closed).</p>
          * 
          * <strong>example:</strong>
          * <p>IDLE</p>

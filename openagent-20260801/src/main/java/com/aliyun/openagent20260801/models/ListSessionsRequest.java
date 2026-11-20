@@ -14,7 +14,7 @@ public class ListSessionsRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, pass the nextToken value returned in the previous response. Do not parse or construct this value.</p>
+     * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, pass the nextToken returned in the previous response. Do not parse or construct this token.</p>
      * 
      * <strong>example:</strong>
      * <p>example-next-token</p>

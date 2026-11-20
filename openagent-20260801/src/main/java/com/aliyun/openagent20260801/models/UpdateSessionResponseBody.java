@@ -68,7 +68,7 @@ public class UpdateSessionResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The ID of the last run.</p>
+         * <p>The ID of the most recent run.</p>
          * 
          * <strong>example:</strong>
          * <p>run_example_001</p>
@@ -77,15 +77,15 @@ public class UpdateSessionResponseBody extends TeaModel {
         public String lastRunId;
 
         /**
-         * <p>The status of the last run. Valid values:</p>
+         * <p>The status of the most recent run. Valid values:</p>
          * <ul>
-         * <li><code>PENDING</code>: Pending.</li>
-         * <li><code>RUNNING</code>: Running.</li>
-         * <li><code>WAITING_USER</code>: Waiting for interrupt handling.</li>
-         * <li><code>COMPLETED</code>: Completed.</li>
-         * <li><code>FAILED</code>: Failed.</li>
-         * <li><code>CANCELLED</code>: Cancelled.</li>
-         * <li><code>REJECTED</code>: Rejected.</li>
+         * <li><code>PENDING</code>: pending</li>
+         * <li><code>RUNNING</code>: running</li>
+         * <li><code>WAITING_USER</code>: waiting for interrupt handling</li>
+         * <li><code>COMPLETED</code>: completed</li>
+         * <li><code>FAILED</code>: failed</li>
+         * <li><code>CANCELLED</code>: canceled</li>
+         * <li><code>REJECTED</code>: rejected</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,12 +115,12 @@ public class UpdateSessionResponseBody extends TeaModel {
         /**
          * <p>The session status. Valid values:</p>
          * <ul>
-         * <li><code>IDLE</code>: Idle.</li>
-         * <li><code>ACTIVE</code>: Active.</li>
-         * <li><code>WAITING_USER_INPUT</code>: Waiting for user input.</li>
-         * <li><code>WAITING_APPROVAL</code>: Waiting for user confirmation.</li>
-         * <li><code>WAITING_OUT_OF_BAND_APPROVAL</code>: Waiting for out-of-band approval.</li>
-         * <li><code>CLOSED</code>: Closed.</li>
+         * <li><code>IDLE</code>: idle</li>
+         * <li><code>ACTIVE</code>: running</li>
+         * <li><code>WAITING_USER_INPUT</code>: waiting for user input</li>
+         * <li><code>WAITING_APPROVAL</code>: waiting for user confirmation</li>
+         * <li><code>WAITING_OUT_OF_BAND_APPROVAL</code>: waiting for out-of-band approval</li>
+         * <li><code>CLOSED</code>: closed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class UpdateSessionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The session title.</p>
+         * <p>The title of the session.</p>
          * 
          * <strong>example:</strong>
          * <p>Cloud resource inspection example</p>
