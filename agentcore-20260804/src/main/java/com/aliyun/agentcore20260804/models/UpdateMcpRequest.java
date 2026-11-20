@@ -11,7 +11,7 @@ public class UpdateMcpRequest extends TeaModel {
     public UpdateMcpRequestBody body;
 
     /**
-     * <p>The reserved query request identifier. The current console backend does not read this parameter and does not provide idempotency guarantees for deduplication or restoring the original acceptance result based on this identifier.</p>
+     * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees for deduplication or restoring original results based on this identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -219,7 +219,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyAuth extends TeaModel {
         /**
-         * <p>The caller API key authentication configuration for code-deployed MCP.</p>
+         * <p>The caller API key authentication configuration for a code-deployed MCP.</p>
          */
         @NameInMap("codePackage")
         public UpdateMcpRequestBodyAuthCodePackage codePackage;
@@ -292,13 +292,17 @@ public class UpdateMcpRequest extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>Specifies whether to enable ingress access control.</p>
+         * <p>Specifies whether to enable entry access control.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates authentication by using AgentCore access credentials.</p>
+         * <p>The access control mode. Valid values:</p>
+         * <ul>
+         * <li>ANONYMOUS: anonymous access</li>
+         * <li>CREDENTIAL: AgentCore credential authentication</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CREDENTIAL</p>
@@ -339,7 +343,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigAgentIdentityConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether authorization is enabled.</p>
+         * <p>Specifies whether to enable authorization.</p>
          */
         @NameInMap("authorizationEnabled")
         public Boolean authorizationEnabled;
@@ -363,7 +367,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String credentialProviderType;
 
         /**
-         * <p>Specifies whether agent identity is enabled.</p>
+         * <p>Specifies whether to enable agent identity.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -418,13 +422,13 @@ public class UpdateMcpRequest extends TeaModel {
         public String codePackageToken;
 
         /**
-         * <p>The complete startup command, passed sequentially by parameter boundaries. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
+         * <p>The complete startup command, passed sequentially as separate arguments. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
          */
         @NameInMap("command")
         public java.util.List<String> command;
 
         /**
-         * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
+         * <p>The code package runtime. Valid values: python3.13, nodejs22, or java17.</p>
          * 
          * <strong>example:</strong>
          * <p>python3.13</p>
@@ -480,7 +484,7 @@ public class UpdateMcpRequest extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The container entrypoint parameters.</p>
+         * <p>The container entrypoint arguments.</p>
          */
         @NameInMap("entrypoint")
         public java.util.List<String> entrypoint;
@@ -504,7 +508,7 @@ public class UpdateMcpRequest extends TeaModel {
         public String imageRegistryType;
 
         /**
-         * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set the value to SELF_HOSTED.</p>
+         * <p>The MCP runtime mode. Custom containers must currently expose standard MCP themselves. Set the value to SELF_HOSTED.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_HOSTED</p>
@@ -707,7 +711,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigHookConfiguration extends TeaModel {
         /**
-         * <p>The ordered list of hooks. The PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks are executed in the order of the array.</p>
+         * <p>The list of hooks executed in array order, including PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks.</p>
          */
         @NameInMap("hooks")
         public java.util.List<UpdateMcpRequestBodyDeploymentConfigHookConfigurationHooks> hooks;
@@ -851,6 +855,15 @@ public class UpdateMcpRequest extends TeaModel {
         @NameInMap("sessionMaxLifetimeSeconds")
         public Integer sessionMaxLifetimeSeconds;
 
+        /**
+         * <p>The session mode. This parameter applies only to StreamableHTTP. Default value: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STATEFUL</p>
+         */
+        @NameInMap("sessionMode")
+        public String sessionMode;
+
         public static UpdateMcpRequestBodyDeploymentConfigMcpConfiguration build(java.util.Map<String, ?> map) throws Exception {
             UpdateMcpRequestBodyDeploymentConfigMcpConfiguration self = new UpdateMcpRequestBodyDeploymentConfigMcpConfiguration();
             return TeaModel.build(map, self);
@@ -886,6 +899,14 @@ public class UpdateMcpRequest extends TeaModel {
         }
         public Integer getSessionMaxLifetimeSeconds() {
             return this.sessionMaxLifetimeSeconds;
+        }
+
+        public UpdateMcpRequestBodyDeploymentConfigMcpConfiguration setSessionMode(String sessionMode) {
+            this.sessionMode = sessionMode;
+            return this;
+        }
+        public String getSessionMode() {
+            return this.sessionMode;
         }
 
     }
@@ -948,7 +969,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigNasConfiguration extends TeaModel {
         /**
-         * <p>The group ID.</p>
+         * <p>The user group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1189,7 +1210,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigParameterTransformConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether parameter transformation and result enhancement is enabled.</p>
+         * <p>Specifies whether to enable parameter transformation and result enhancement.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -1267,7 +1288,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfigRuntimeConfiguration extends TeaModel {
         /**
-         * <p>The CPU specifications in cores. Default value: 0.25.</p>
+         * <p>The CPU specification in cores. Default value: 0.25.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1276,7 +1297,7 @@ public class UpdateMcpRequest extends TeaModel {
         public Double cpu;
 
         /**
-         * <p>The temporary disk size in MB. Valid values: 512 and 10240.</p>
+         * <p>The ephemeral disk size in MB. Valid values: 512 or 10240.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1291,7 +1312,7 @@ public class UpdateMcpRequest extends TeaModel {
         public java.util.Map<String, String> environmentVariables;
 
         /**
-         * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
+         * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -1309,7 +1330,7 @@ public class UpdateMcpRequest extends TeaModel {
         public Integer instanceConcurrency;
 
         /**
-         * <p>The memory specifications in MB. Default value: 512.</p>
+         * <p>The memory specification in MB. Default value: 512.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1408,7 +1429,7 @@ public class UpdateMcpRequest extends TeaModel {
 
     public static class UpdateMcpRequestBodyDeploymentConfig extends TeaModel {
         /**
-         * <p>The MCP ingress access control configuration.</p>
+         * <p>The MCP entry access control.</p>
          */
         @NameInMap("accessControl")
         public UpdateMcpRequestBodyDeploymentConfigAccessControl accessControl;
@@ -1621,19 +1642,28 @@ public class UpdateMcpRequest extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name and value); for HTTP_TO_MCP, specify the httpToMcp array (each item includes id, type, and credential, and apiKey also requires position and name). Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
+         * <p>The backend authentication configuration. When enabled is set to true: for DIRECT_PROXY, specify directProxy (name/value); for HTTP_TO_MCP, specify the httpToMcp array (each item includes id, type, and credential, and apiKey also requires position and name). Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
          */
         @NameInMap("auth")
         public UpdateMcpRequestBodyAuth auth;
 
         /**
-         * <p>The custom tags. You can specify multiple tags. Pass an empty list to clear the tags.</p>
+         * <p>Optional. Valid values: legacy and modern. This parameter is used only for DIRECT_PROXY. If omitted for direct connection, the current value is retained and validated against the existing protocol of the resource. The modern value is incompatible with SSE. Updates are rejected if they break existing client access contracts. For CODE_PACKAGE, this parameter is not required. Valid inputs are ignored, existing field values are not changed, and no publication or Function Compute (FC) session affinity changes are triggered. FC session affinity is configured only based on protocol and DeploymentConfig.McpConfiguration.SessionMode. The gateway protocol is determined by the result of successful probing after FC deployment. For HTTP_TO_MCP, valid values are ignored and not saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modern</p>
+         */
+        @NameInMap("backendMcpProtocol")
+        public String backendMcpProtocol;
+
+        /**
+         * <p>The custom tags. Multiple tags are supported. Pass an empty list to clear the tags.</p>
          */
         @NameInMap("customTags")
         public java.util.List<String> customTags;
 
         /**
-         * <p>The deployment configuration patch for CODE_PACKAGE MCP. Object fields are merged hierarchically. Omit CodeConfiguration.CodePackageToken to retain the current code package, and the server reuses the currently deployed code package. Provide a new non-empty token to replace the code package. CodePackageUrl is only supported in CreateMcp and is not supported during updates.</p>
+         * <p>The deployment configuration patch for CODE_PACKAGE MCP. Object fields are merged hierarchically. If you do not replace the code package, omit CodeConfiguration.CodePackageToken, and the server reuses the currently deployed code package. If you replace the code package, pass a new non-empty token. CodePackageUrl is supported only for CreateMcp and is not supported for updates.</p>
          */
         @NameInMap("deploymentConfig")
         public UpdateMcpRequestBodyDeploymentConfig deploymentConfig;
@@ -1648,7 +1678,16 @@ public class UpdateMcpRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The access permission mode. PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
+         * <p>Optional. The format is YYYY-MM-DD. This parameter can be specified during creation and modified during updates. If omitted during an update, the current value is retained. It only saves and displays the origin protocol date metadata. It is not a software version, does not restrict the external gateway protocol, does not control backend requests, does not indicate that real-time verification has passed, and does not trigger deployment. No default value is set, and the date is not restricted by legacy or modern. For HTTP_TO_MCP, valid dates are ignored and not saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-26</p>
+         */
+        @NameInMap("originProtocolVersion")
+        public String originProtocolVersion;
+
+        /**
+         * <p>PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTROLLED</p>
@@ -1657,7 +1696,16 @@ public class UpdateMcpRequest extends TeaModel {
         public String permissionMode;
 
         /**
-         * <p>The Swagger configuration. Specify this field if the type is HTTP_TO_MCP.</p>
+         * <p>Optional. Valid values: SSE and StreamableHTTP. If this parameter is omitted or set to the current value, the original protocol is retained. Actual modifications are allowed only when the initial origin probing for a CODE_PACKAGE fails and the status is CREATE_PROBE_FAILED. After the server verifies that there are no successfully published versions, no gateway publications, and no pending tasks, a new compute deployment and origin probing are initiated, and the status returns to CREATING. Protocol modifications are not allowed for update failures after a successful publication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StreamableHTTP</p>
+         */
+        @NameInMap("protocol")
+        public String protocol;
+
+        /**
+         * <p>If Type is set to HTTP_TO_MCP, specify this field.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;}</p>
@@ -1686,6 +1734,14 @@ public class UpdateMcpRequest extends TeaModel {
             return this.auth;
         }
 
+        public UpdateMcpRequestBody setBackendMcpProtocol(String backendMcpProtocol) {
+            this.backendMcpProtocol = backendMcpProtocol;
+            return this;
+        }
+        public String getBackendMcpProtocol() {
+            return this.backendMcpProtocol;
+        }
+
         public UpdateMcpRequestBody setCustomTags(java.util.List<String> customTags) {
             this.customTags = customTags;
             return this;
@@ -1710,12 +1766,28 @@ public class UpdateMcpRequest extends TeaModel {
             return this.description;
         }
 
+        public UpdateMcpRequestBody setOriginProtocolVersion(String originProtocolVersion) {
+            this.originProtocolVersion = originProtocolVersion;
+            return this;
+        }
+        public String getOriginProtocolVersion() {
+            return this.originProtocolVersion;
+        }
+
         public UpdateMcpRequestBody setPermissionMode(String permissionMode) {
             this.permissionMode = permissionMode;
             return this;
         }
         public String getPermissionMode() {
             return this.permissionMode;
+        }
+
+        public UpdateMcpRequestBody setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
         public UpdateMcpRequestBody setSwaggerConfig(String swaggerConfig) {

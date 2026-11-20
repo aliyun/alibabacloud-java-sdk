@@ -25,6 +25,15 @@ public class UpdateSkillLabelsRequest extends TeaModel {
 
     public static class UpdateSkillLabelsRequestBody extends TeaModel {
         /**
+         * <p>The label descriptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;stable&quot;:&quot;prod environment usage&quot;}</p>
+         */
+        @NameInMap("labelDescriptions")
+        public String labelDescriptions;
+
+        /**
          * <p>The version label mapping JSON string.</p>
          * <p>This parameter is required.</p>
          * 
@@ -37,6 +46,14 @@ public class UpdateSkillLabelsRequest extends TeaModel {
         public static UpdateSkillLabelsRequestBody build(java.util.Map<String, ?> map) throws Exception {
             UpdateSkillLabelsRequestBody self = new UpdateSkillLabelsRequestBody();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateSkillLabelsRequestBody setLabelDescriptions(String labelDescriptions) {
+            this.labelDescriptions = labelDescriptions;
+            return this;
+        }
+        public String getLabelDescriptions() {
+            return this.labelDescriptions;
         }
 
         public UpdateSkillLabelsRequestBody setLabels(String labels) {

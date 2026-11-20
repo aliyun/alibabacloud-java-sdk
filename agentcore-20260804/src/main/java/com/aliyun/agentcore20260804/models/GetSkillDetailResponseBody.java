@@ -42,7 +42,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
 
     public static class GetSkillDetailResponseBodyDataVersions extends TeaModel {
         /**
-         * <p>The author of the version.</p>
+         * <p>The version author.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -69,7 +69,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String contentMd5;
 
         /**
-         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time. It is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>
@@ -81,7 +81,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample description used to illustrate the purpose of the resource</p>
+         * <p>Sample description to illustrate the resource purpose</p>
          */
         @NameInMap("description")
         public String description;
@@ -96,7 +96,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>The release pipeline information.</p>
+         * <p>The publish pipeline information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;status&quot;:&quot;SUCCESS&quot;}</p>
@@ -114,7 +114,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>
@@ -123,7 +123,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The version number.</p>
+         * <p>The version number. A value of HEAD indicates a persistent draft, which should be displayed as a draft in the user interface.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -232,7 +232,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample description used to illustrate the purpose of the resource</p>
+         * <p>Sample description to illustrate the resource purpose</p>
          */
         @NameInMap("description")
         public String description;
@@ -247,7 +247,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>The draft pattern. A value of HEAD indicates that the skill has a persistent draft. A value of VERSIONED indicates that each edit creates a draft with a version number. This pattern is determined by the server, and the client uses it for routing What to do next when they invoke the API.</p>
+         * <p>The draft pattern. HEAD indicates that the skill has a persistent draft, and VERSIONED indicates that a draft with a version number is created for each edit. This is determined by the server, and clients invoke What to do next by routing based on this value.</p>
          * 
          * <strong>example:</strong>
          * <p>HEAD</p>
@@ -262,7 +262,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public Boolean editable;
 
         /**
-         * <p>The version being edited.</p>
+         * <p>The version being edited. The value is HEAD in HEAD draft mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -286,7 +286,16 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String from;
 
         /**
-         * <p>The tag mapping.</p>
+         * <p>The label descriptions under the root data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;stable&quot;:&quot;1.0.0&quot;}</p>
+         */
+        @NameInMap("labelDescriptions")
+        public java.util.Map<String, String> labelDescriptions;
+
+        /**
+         * <p>The label mapping.</p>
          */
         @NameInMap("labels")
         public java.util.Map<String, String> labels;
@@ -319,7 +328,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The version under review.</p>
+         * <p>The version under review. The value is HEAD in HEAD draft mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -337,7 +346,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>
@@ -433,6 +442,14 @@ public class GetSkillDetailResponseBody extends TeaModel {
         }
         public String getFrom() {
             return this.from;
+        }
+
+        public GetSkillDetailResponseBodyData setLabelDescriptions(java.util.Map<String, String> labelDescriptions) {
+            this.labelDescriptions = labelDescriptions;
+            return this;
+        }
+        public java.util.Map<String, String> getLabelDescriptions() {
+            return this.labelDescriptions;
         }
 
         public GetSkillDetailResponseBodyData setLabels(java.util.Map<String, String> labels) {

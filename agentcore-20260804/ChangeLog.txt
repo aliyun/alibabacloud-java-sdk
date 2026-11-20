@@ -1,3 +1,37 @@
+2026-11-20 Version: 3.7.0
+- Support API ProbeMcpOrigin.
+- Update API ConvertMcpToFreeEdit: add response parameters Body.data.deploymentConfig.mcpConfiguration.sessionMode.
+- Update API CreateMcp: add request parameters body.backendMcpProtocol.
+- Update API CreateMcp: add request parameters body.originProtocolVersion.
+- Update API CreateMcp: add request parameters body.deploymentConfig.mcpConfiguration.sessionMode.
+- Update API CreateMcp: add response parameters Body.data.backendMcpProtocol.
+- Update API CreateMcp: add response parameters Body.data.operation.
+- Update API CreateMcp: add response parameters Body.data.originProbe.
+- Update API CreateMcp: add response parameters Body.data.originProtocolVersion.
+- Update API CreateMcp: add response parameters Body.data.deploymentConfig.mcpConfiguration.sessionMode.
+- Update API GetMcp: add response parameters Body.data.backendMcpProtocol.
+- Update API GetMcp: add response parameters Body.data.operation.
+- Update API GetMcp: add response parameters Body.data.originProbe.
+- Update API GetMcp: add response parameters Body.data.originProtocolVersion.
+- Update API GetMcp: add response parameters Body.data.deploymentConfig.mcpConfiguration.sessionMode.
+- Update API GetSkillDetail: add response parameters Body.data.labelDescriptions.
+- Update API InstallMcpMarketItem: add request parameters body.deploymentConfig.mcpConfiguration.sessionMode.
+- Update API InstallMcpMarketItem: add response parameters Body.data.deploymentConfig.mcpConfiguration.sessionMode.
+- Update API ListMcps: add response parameters Body.items.$.backendMcpProtocol.
+- Update API ListMcps: add response parameters Body.items.$.operation.
+- Update API ListMcps: add response parameters Body.items.$.originProbe.
+- Update API ListMcps: add response parameters Body.items.$.originProtocolVersion.
+- Update API ListMcps: add response parameters Body.items.$.deploymentConfig.mcpConfiguration.sessionMode.
+- Update API ListModels: add response parameters Body.items.$.supportedThinkingLevels.
+- Update API UpdateMcp: add request parameters body.backendMcpProtocol.
+- Update API UpdateMcp: add request parameters body.originProtocolVersion.
+- Update API UpdateMcp: add request parameters body.protocol.
+- Update API UpdateMcp: add request parameters body.deploymentConfig.mcpConfiguration.sessionMode.
+- Update API UpdateMcpTemplateConfig: add request parameters body.deploymentConfig.mcpConfiguration.sessionMode.
+- Update API UpdateMcpTemplateConfig: add response parameters Body.data.deploymentConfig.mcpConfiguration.sessionMode.
+- Update API UpdateSkillLabels: add request parameters body.labelDescriptions.
+
+
 2026-11-19 Version: 3.6.0
 - Support API CreateEvents.
 - Support API CreateMemoryRule.

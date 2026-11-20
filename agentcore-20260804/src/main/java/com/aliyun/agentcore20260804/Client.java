@@ -224,11 +224,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Converts an MCP service installed from a marketplace template to free edit mode to allow direct modification of the service configuration.
-     * After the conversion, the original source and tag information are retained, and the template editing restrictions are removed. The service no longer appears on the usage page associated with the template.</p>
+     * <p>Converts an MCP service installed from a marketplace template to free-edit mode, allowing you to directly modify the service configuration. After the conversion, the original source and tag information are retained, and the editing restrictions of the template are removed. The service will no longer appear on the use case page corresponding to the template.</p>
      * 
      * <b>summary</b> : 
-     * <p>Converts an MCP service to free edit mode.</p>
+     * <p>Converts an MCP service to free-edit mode.</p>
      * 
      * @param request ConvertMcpToFreeEditRequest
      * @param headers map
@@ -262,11 +261,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Converts an MCP service installed from a marketplace template to free edit mode to allow direct modification of the service configuration.
-     * After the conversion, the original source and tag information are retained, and the template editing restrictions are removed. The service no longer appears on the usage page associated with the template.</p>
+     * <p>Converts an MCP service installed from a marketplace template to free-edit mode, allowing you to directly modify the service configuration. After the conversion, the original source and tag information are retained, and the editing restrictions of the template are removed. The service will no longer appear on the use case page corresponding to the template.</p>
      * 
      * <b>summary</b> : 
-     * <p>Converts an MCP service to free edit mode.</p>
+     * <p>Converts an MCP service to free-edit mode.</p>
      * 
      * @param request ConvertMcpToFreeEditRequest
      * @return ConvertMcpToFreeEditResponse
@@ -1878,12 +1876,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-     * The creation process is asynchronous. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
-     * To deploy using a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the upload URL and upload the file. Then, fill the returned code package token into the deployment configuration.
-     * The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</p>
+     * The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+     * When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
+     * <code>clientToken</code> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call a query operation to verify whether the service is ready.</p>
+     * <p>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call the query operation to confirm whether the service is ready.</p>
      * 
      * @param tmpReq CreateMcpRequest
      * @param headers map
@@ -1930,12 +1928,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-     * The creation process is asynchronous. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
-     * To deploy using a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the upload URL and upload the file. Then, fill the returned code package token into the deployment configuration.
-     * The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</p>
+     * The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+     * When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
+     * <code>clientToken</code> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call a query operation to verify whether the service is ready.</p>
+     * <p>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call the query operation to confirm whether the service is ready.</p>
      * 
      * @param request CreateMcpRequest
      * @return CreateMcpResponse
@@ -8898,10 +8896,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</p>
+     * <p>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</p>
+     * <p>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</p>
      * 
      * @param request ListMcpsRequest
      * @param headers map
@@ -8959,10 +8957,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</p>
+     * <p>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query for the MCP services and their configurations and statuses in a specified workspace.</p>
+     * <p>Performs a paged query to retrieve the MCP services, configurations, and statuses in a specified workspace by using paging.</p>
      * 
      * @param request ListMcpsRequest
      * @return ListMcpsResponse
@@ -9480,10 +9478,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</p>
+     * <p>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</p>
+     * <p>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</p>
      * 
      * @param request ListModelsRequest
      * @param headers map
@@ -9529,10 +9527,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</p>
+     * <p>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</p>
+     * <p>Performs a paged query for models in a specified workspace and supports filtering by model connection and model name during paging.</p>
      * 
      * @param request ListModelsRequest
      * @return ListModelsResponse
@@ -10608,6 +10606,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.prepareIdentityProviderSCIMWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Validates an MCP origin server.</p>
+     * 
+     * @param tmpReq ProbeMcpOriginRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ProbeMcpOriginResponse
+     */
+    public ProbeMcpOriginResponse probeMcpOriginWithOptions(String workspaceId, ProbeMcpOriginRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ProbeMcpOriginShrinkRequest request = new ProbeMcpOriginShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
+            body.put("body", request.bodyShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ProbeMcpOrigin"),
+            new TeaPair("version", "2026-08-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/mcp-origin-probes"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ProbeMcpOriginResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Validates an MCP origin server.</p>
+     * 
+     * @param request ProbeMcpOriginRequest
+     * @return ProbeMcpOriginResponse
+     */
+    public ProbeMcpOriginResponse probeMcpOrigin(String workspaceId, ProbeMcpOriginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.probeMcpOriginWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -12766,7 +12823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Updates the address, description, authentication, or Swagger configuration of an MCP service. The service type and protocol cannot be modified after creation.
-     * The update process is executed asynchronously. After submission, you can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to query the processing result. The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
+     * The update process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the processing result. The clientToken parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update process is asynchronous.</p>
@@ -12816,7 +12873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Updates the address, description, authentication, or Swagger configuration of an MCP service. The service type and protocol cannot be modified after creation.
-     * The update process is executed asynchronously. After submission, you can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to query the processing result. The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
+     * The update process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the processing result. The clientToken parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update process is asynchronous.</p>
@@ -12832,10 +12889,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service. This operation uses the same template version that was bound when the MCP service was created to update the parameters exposed by the schema, without upgrading the template version.</p>
+     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service.
+     * Updates the parameters exposed by the schema using the same template version bound during MCP creation, without upgrading the template version.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the parameters of an MCP service based on a template.</p>
+     * <p>Updates the MCP parameters based on a template.</p>
      * 
      * @param tmpReq UpdateMcpTemplateConfigRequest
      * @param headers map
@@ -12885,10 +12943,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service. This operation uses the same template version that was bound when the MCP service was created to update the parameters exposed by the schema, without upgrading the template version.</p>
+     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service.
+     * Updates the parameters exposed by the schema using the same template version bound during MCP creation, without upgrading the template version.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the parameters of an MCP service based on a template.</p>
+     * <p>Updates the MCP parameters based on a template.</p>
      * 
      * @param request UpdateMcpTemplateConfigRequest
      * @return UpdateMcpTemplateConfigResponse

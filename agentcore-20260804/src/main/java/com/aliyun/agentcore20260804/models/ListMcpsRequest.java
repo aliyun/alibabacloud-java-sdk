@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMcpsRequest extends TeaModel {
     /**
-     * <p>The custom tag used for filtering. An exact match is required.</p>
+     * <p>The custom tags used to filter results. An exact match is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Knowledge base</p>
@@ -14,7 +14,7 @@ public class ListMcpsRequest extends TeaModel {
     public String customTag;
 
     /**
-     * <p>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The maximum number of entries to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class ListMcpsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The official usage tag used for filtering.</p>
+     * <p>The official usage tags used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>KNOWLEDGE_BASE</p>
@@ -50,7 +50,7 @@ public class ListMcpsRequest extends TeaModel {
     public String officialTag;
 
     /**
-     * <p>The name match type. This parameter takes effect only when Name is specified. Valid values: accurate (exact match) and blur (fuzzy match). Default value: blur.</p>
+     * <p>The name matching mode. This parameter takes effect only when Name is specified. Valid values: accurate (exact match) and blur (fuzzy match). Default value: blur.</p>
      * 
      * <strong>example:</strong>
      * <p>blur</p>

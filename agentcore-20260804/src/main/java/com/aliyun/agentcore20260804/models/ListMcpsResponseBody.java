@@ -29,7 +29,7 @@ public class ListMcpsResponseBody extends TeaModel {
     public java.util.List<ListMcpsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The maximum number of entries to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class ListMcpsResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Request processed successfully</p>
+     * <p>The request is processed successfully</p>
      */
     @NameInMap("message")
     public String message;
@@ -158,7 +158,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsAuthCodePackage extends TeaModel {
         /**
-         * <p>The API Key used to verify the MCP caller.</p>
+         * <p>The API key used to verify the MCP caller.</p>
          * 
          * <strong>example:</strong>
          * <p>example-api-key</p>
@@ -167,7 +167,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String apiKey;
 
         /**
-         * <p>The name of the request header that carries the API Key.</p>
+         * <p>The name of the request header that carries the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>X-API-Key</p>
@@ -335,7 +335,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsAuth extends TeaModel {
         /**
-         * <p>The caller API Key authentication configuration for the code deployment MCP.</p>
+         * <p>The caller API key authentication configuration for the code deployment MCP.</p>
          */
         @NameInMap("codePackage")
         public ListMcpsResponseBodyItemsAuthCodePackage codePackage;
@@ -399,7 +399,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigAccessControl extends TeaModel {
         /**
-         * <p>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</p>
+         * <p>The ID of the access credential. This parameter references an AgentCore credential when the mode is set to CREDENTIAL.</p>
          * 
          * <strong>example:</strong>
          * <p>credential-id</p>
@@ -408,13 +408,13 @@ public class ListMcpsResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>Specifies whether to enable entry access control.</p>
+         * <p>Specifies whether entry access control is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates access by using AgentCore credentials.</p>
+         * <p>The access control mode. A value of ANONYMOUS indicates anonymous access. A value of CREDENTIAL indicates that AgentCore access credentials are used.</p>
          * 
          * <strong>example:</strong>
          * <p>CREDENTIAL</p>
@@ -455,7 +455,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigAgentIdentityConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether authorization is enabled.</p>
+         * <p>Indicates whether authorization is enabled.</p>
          */
         @NameInMap("authorizationEnabled")
         public Boolean authorizationEnabled;
@@ -479,7 +479,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String credentialProviderType;
 
         /**
-         * <p>Specifies whether agent identity is enabled.</p>
+         * <p>Specifies whether Agent identity is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -525,7 +525,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigCodeConfiguration extends TeaModel {
         /**
-         * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create or update a code deployment after a presigned upload is completed.</p>
+         * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create or update a code deployment after the presigned upload is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>upload-token</p>
@@ -540,7 +540,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The code package runtime. Valid values: python3.13, nodejs22, or java17.</p>
+         * <p>The code package runtime. Valid values: python3.13, nodejs22, and java17.</p>
          * 
          * <strong>example:</strong>
          * <p>python3.13</p>
@@ -620,7 +620,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String imageRegistryType;
 
         /**
-         * <p>The MCP runtime mode. Custom containers currently must expose the standard MCP themselves. The value is SELF_HOSTED.</p>
+         * <p>Custom containers must currently expose the standard MCP themselves. Valid value: SELF_HOSTED.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_HOSTED</p>
@@ -629,7 +629,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String mcpRuntimeMode;
 
         /**
-         * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
+         * <p>Currently fixed to CONTAINER_IMAGE.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTAINER_IMAGE</p>
@@ -714,13 +714,13 @@ public class ListMcpsResponseBody extends TeaModel {
          * <p>The description of the hook.</p>
          * 
          * <strong>example:</strong>
-         * <p>Record MCP tool invoke</p>
+         * <p>Record MCP tool invocation</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>Specifies whether to enable the hook.</p>
+         * <p>Specifies whether the hook is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -735,7 +735,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String event;
 
         /**
-         * <p>The hook request headers.</p>
+         * <p>The request headers of the hook.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
@@ -823,7 +823,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigHookConfiguration extends TeaModel {
         /**
-         * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
+         * <p>The ordered list of hooks. The PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks are executed in the order of the array.</p>
          */
         @NameInMap("hooks")
         public java.util.List<ListMcpsResponseBodyItemsDeploymentConfigHookConfigurationHooks> hooks;
@@ -845,7 +845,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigLogConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to collect instance metrics.</p>
+         * <p>Specifies whether instance metrics are collected.</p>
          */
         @NameInMap("enableInstanceMetrics")
         public Boolean enableInstanceMetrics;
@@ -857,7 +857,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Boolean enableRequestMetrics;
 
         /**
-         * <p>The start rule for Function Compute log splitting.</p>
+         * <p>The start rule for splitting Function Compute logs.</p>
          * 
          * <strong>example:</strong>
          * <p>DefaultRegex</p>
@@ -941,7 +941,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String endpointPath;
 
         /**
-         * <p>The session concurrency per instance. Currently fixed to 1.</p>
+         * <p>Currently fixed to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -966,6 +966,15 @@ public class ListMcpsResponseBody extends TeaModel {
          */
         @NameInMap("sessionMaxLifetimeSeconds")
         public Integer sessionMaxLifetimeSeconds;
+
+        /**
+         * <p>Applicable only to StreamableHTTP. Default value for creation: STATEFUL. If omitted during an update, the original value is retained. STATELESS disables Function Compute session affinity, and the stdio gateway does not enable stateful mode. Native HTTP services must support stateless MCP themselves.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STATEFUL</p>
+         */
+        @NameInMap("sessionMode")
+        public String sessionMode;
 
         public static ListMcpsResponseBodyItemsDeploymentConfigMcpConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ListMcpsResponseBodyItemsDeploymentConfigMcpConfiguration self = new ListMcpsResponseBodyItemsDeploymentConfigMcpConfiguration();
@@ -1004,11 +1013,19 @@ public class ListMcpsResponseBody extends TeaModel {
             return this.sessionMaxLifetimeSeconds;
         }
 
+        public ListMcpsResponseBodyItemsDeploymentConfigMcpConfiguration setSessionMode(String sessionMode) {
+            this.sessionMode = sessionMode;
+            return this;
+        }
+        public String getSessionMode() {
+            return this.sessionMode;
+        }
+
     }
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigNasConfigurationMountPoints extends TeaModel {
         /**
-         * <p>Specifies whether to enable TLS.</p>
+         * <p>Specifies whether TLS is enabled.</p>
          */
         @NameInMap("enableTls")
         public Boolean enableTls;
@@ -1023,7 +1040,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String mountDir;
 
         /**
-         * <p>The NAS server address.</p>
+         * <p>The NAS service address.</p>
          * 
          * <strong>example:</strong>
          * <p>example.cn-hangzhou.nas.aliyuncs.com</p>
@@ -1064,7 +1081,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigNasConfiguration extends TeaModel {
         /**
-         * <p>The user group ID.</p>
+         * <p>The runtime user group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1079,7 +1096,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.List<ListMcpsResponseBodyItemsDeploymentConfigNasConfigurationMountPoints> mountPoints;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The runtime user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1202,7 +1219,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The path in the OSS bucket.</p>
+         * <p>The path of the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>/data</p>
@@ -1211,7 +1228,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String bucketPath;
 
         /**
-         * <p>The endpoint of the OSS service.</p>
+         * <p>The OSS service endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -1311,7 +1328,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
+         * <p>The reference to the reserved parameter transformation and result enhancement rule set.</p>
          * 
          * <strong>example:</strong>
          * <p>rules-1</p>
@@ -1320,7 +1337,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String ruleSetId;
 
         /**
-         * <p>The transformation rule version.</p>
+         * <p>The version of the transformation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -1361,7 +1378,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigProxyConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to enable the MCP proxy.</p>
+         * <p>Specifies whether the MCP proxy is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -1383,7 +1400,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigRuntimeConfiguration extends TeaModel {
         /**
-         * <p>The CPU specifications in cores. Default value: 0.25.</p>
+         * <p>The CPU size in cores. Default value: 0.25.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1392,7 +1409,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Double cpu;
 
         /**
-         * <p>The temporary disk size in MB. Valid values: 512 or 10240.</p>
+         * <p>The ephemeral disk size in MB. Valid values: 512 and 10240.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1407,7 +1424,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.Map<String, String> environmentVariables;
 
         /**
-         * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
+         * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -1416,7 +1433,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String executionRoleArn;
 
         /**
-         * <p>The request concurrency per instance. Default value: 200.</p>
+         * <p>Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1425,7 +1442,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Integer instanceConcurrency;
 
         /**
-         * <p>The memory specifications in MB. Default value: 512.</p>
+         * <p>The memory size in MB. Default value: 512.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1434,7 +1451,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The service port. Default value: 9000.</p>
+         * <p>Default value: 9000.</p>
          * 
          * <strong>example:</strong>
          * <p>9000</p>
@@ -1530,13 +1547,17 @@ public class ListMcpsResponseBody extends TeaModel {
         public ListMcpsResponseBodyItemsDeploymentConfigAccessControl accessControl;
 
         /**
-         * <p>The agent identity configuration.</p>
+         * <p>The Agent identity configuration.</p>
          */
         @NameInMap("agentIdentityConfiguration")
         public ListMcpsResponseBodyItemsDeploymentConfigAgentIdentityConfiguration agentIdentityConfiguration;
 
         /**
-         * <p>The artifact type. Code indicates a ZIP code package, and Container indicates a custom container.</p>
+         * <p>The artifact type. Valid values:</p>
+         * <ul>
+         * <li>Code: ZIP code package.</li>
+         * <li>Container: Custom container.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Code</p>
@@ -1754,6 +1775,482 @@ public class ListMcpsResponseBody extends TeaModel {
 
     }
 
+    public static class ListMcpsResponseBodyItemsOperationError extends TeaModel {
+        /**
+         * <p>The diagnostic error code. Only bounded diagnostic codes are returned. The original error body from the origin server is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROBE_TIMEOUT</p>
+         */
+        @NameInMap("code")
+        public String code;
+
+        /**
+         * <p>The necessary diagnostics after trimming and desensitization. Credentials and original responses are not included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The probe deadline was exceeded.</p>
+         */
+        @NameInMap("message")
+        public String message;
+
+        /**
+         * <p>Specifies whether the operation is suitable for retry based on a restricted policy. This field does not trigger automatic retries.</p>
+         */
+        @NameInMap("retryable")
+        public Boolean retryable;
+
+        /**
+         * <p>The error source. Valid values: MAGIC, ROUTER, NETWORK, ORIGIN, and UNKNOWN. The value is determined only based on actual evidence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN</p>
+         */
+        @NameInMap("source")
+        public String source;
+
+        /**
+         * <p>The detection or publish stage where the error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INITIALIZE</p>
+         */
+        @NameInMap("stage")
+        public String stage;
+
+        public static ListMcpsResponseBodyItemsOperationError build(java.util.Map<String, ?> map) throws Exception {
+            ListMcpsResponseBodyItemsOperationError self = new ListMcpsResponseBodyItemsOperationError();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMcpsResponseBodyItemsOperationError setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public ListMcpsResponseBodyItemsOperationError setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListMcpsResponseBodyItemsOperationError setRetryable(Boolean retryable) {
+            this.retryable = retryable;
+            return this;
+        }
+        public Boolean getRetryable() {
+            return this.retryable;
+        }
+
+        public ListMcpsResponseBodyItemsOperationError setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public ListMcpsResponseBodyItemsOperationError setStage(String stage) {
+            this.stage = stage;
+            return this;
+        }
+        public String getStage() {
+            return this.stage;
+        }
+
+    }
+
+    public static class ListMcpsResponseBodyItemsOperation extends TeaModel {
+        /**
+         * <p>The desensitized error of the current publish operation. Gateway or formal link failures after the origin server passes the probe are represented by this field.</p>
+         */
+        @NameInMap("error")
+        public ListMcpsResponseBodyItemsOperationError error;
+
+        /**
+         * <p>The identifier of the current or most recent publish operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3541f1af-87cc-45d1-a28e-94ec5633b931</p>
+         */
+        @NameInMap("operationId")
+        public String operationId;
+
+        /**
+         * <p>The publish stage. Valid values: compute deployment, origin probe, summary save, gateway publish, entry credential synchronization, formal link verification, and deployment submission. Legacy tasks retain their original stage semantics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VALIDATE_ORIGIN</p>
+         */
+        @NameInMap("stage")
+        public String stage;
+
+        /**
+         * <p>The operation status. Valid values: PENDING, RUNNING, SUCCEEDED, and FAILED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
+        @NameInMap("status")
+        public String status;
+
+        /**
+         * <p>The operation type. Valid value: PUBLISH.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLISH</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <p>The time when the operation was updated, in ISO 8601 UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-19T08:30:00Z</p>
+         */
+        @NameInMap("updatedAt")
+        public String updatedAt;
+
+        public static ListMcpsResponseBodyItemsOperation build(java.util.Map<String, ?> map) throws Exception {
+            ListMcpsResponseBodyItemsOperation self = new ListMcpsResponseBodyItemsOperation();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMcpsResponseBodyItemsOperation setError(ListMcpsResponseBodyItemsOperationError error) {
+            this.error = error;
+            return this;
+        }
+        public ListMcpsResponseBodyItemsOperationError getError() {
+            return this.error;
+        }
+
+        public ListMcpsResponseBodyItemsOperation setOperationId(String operationId) {
+            this.operationId = operationId;
+            return this;
+        }
+        public String getOperationId() {
+            return this.operationId;
+        }
+
+        public ListMcpsResponseBodyItemsOperation setStage(String stage) {
+            this.stage = stage;
+            return this;
+        }
+        public String getStage() {
+            return this.stage;
+        }
+
+        public ListMcpsResponseBodyItemsOperation setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListMcpsResponseBodyItemsOperation setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListMcpsResponseBodyItemsOperation setUpdatedAt(String updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public String getUpdatedAt() {
+            return this.updatedAt;
+        }
+
+    }
+
+    public static class ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration extends TeaModel {
+        /**
+         * <p>The verified backend MCP protocol policy. Valid values: legacy and modern. This field is empty if the policy is not confirmed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modern</p>
+         */
+        @NameInMap("backendMcpProtocol")
+        public String backendMcpProtocol;
+
+        /**
+         * <p>The verified MCP transport. Valid values: SSE and StreamableHTTP. This field is empty if the transport is not confirmed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StreamableHTTP</p>
+         */
+        @NameInMap("protocol")
+        public String protocol;
+
+        /**
+         * <p>The actual negotiated or selected and verified date version of the MCP protocol. This field is empty if the version is not confirmed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-26</p>
+         */
+        @NameInMap("protocolVersion")
+        public String protocolVersion;
+
+        /**
+         * <p>The actual session mode. Valid values: STATEFUL, STATELESS, and NOT_APPLICABLE. This field is empty if the mode is not confirmed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STATELESS</p>
+         */
+        @NameInMap("sessionMode")
+        public String sessionMode;
+
+        public static ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration self = new ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration setBackendMcpProtocol(String backendMcpProtocol) {
+            this.backendMcpProtocol = backendMcpProtocol;
+            return this;
+        }
+        public String getBackendMcpProtocol() {
+            return this.backendMcpProtocol;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration setProtocolVersion(String protocolVersion) {
+            this.protocolVersion = protocolVersion;
+            return this;
+        }
+        public String getProtocolVersion() {
+            return this.protocolVersion;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration setSessionMode(String sessionMode) {
+            this.sessionMode = sessionMode;
+            return this;
+        }
+        public String getSessionMode() {
+            return this.sessionMode;
+        }
+
+    }
+
+    public static class ListMcpsResponseBodyItemsOriginProbeLastResultError extends TeaModel {
+        /**
+         * <p>The diagnostic error code. Only bounded diagnostic codes are returned. The original error body from the origin server is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROBE_TIMEOUT</p>
+         */
+        @NameInMap("code")
+        public String code;
+
+        /**
+         * <p>The necessary diagnostics after trimming and desensitization. Credentials and original responses are not included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The probe deadline was exceeded.</p>
+         */
+        @NameInMap("message")
+        public String message;
+
+        /**
+         * <p>Specifies whether the operation is suitable for retry based on a restricted policy. This field does not trigger automatic retries.</p>
+         */
+        @NameInMap("retryable")
+        public Boolean retryable;
+
+        /**
+         * <p>The error source. Valid values: MAGIC, ROUTER, NETWORK, ORIGIN, and UNKNOWN. The value is determined only based on actual evidence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNKNOWN</p>
+         */
+        @NameInMap("source")
+        public String source;
+
+        /**
+         * <p>The detection or publish stage where the error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INITIALIZE</p>
+         */
+        @NameInMap("stage")
+        public String stage;
+
+        public static ListMcpsResponseBodyItemsOriginProbeLastResultError build(java.util.Map<String, ?> map) throws Exception {
+            ListMcpsResponseBodyItemsOriginProbeLastResultError self = new ListMcpsResponseBodyItemsOriginProbeLastResultError();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResultError setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResultError setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResultError setRetryable(Boolean retryable) {
+            this.retryable = retryable;
+            return this;
+        }
+        public Boolean getRetryable() {
+            return this.retryable;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResultError setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResultError setStage(String stage) {
+            this.stage = stage;
+            return this;
+        }
+        public String getStage() {
+            return this.stage;
+        }
+
+    }
+
+    public static class ListMcpsResponseBodyItemsOriginProbeLastResult extends TeaModel {
+        /**
+         * <p>The actual configuration confirmed by evidence in this probe. This field is empty if no confirmed information is available and is not inferred from the expected configuration.</p>
+         */
+        @NameInMap("actualConfiguration")
+        public ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration actualConfiguration;
+
+        /**
+         * <p>The probe error. This field is empty if the probe is successful. It only stores desensitized diagnostics required for this probe.</p>
+         */
+        @NameInMap("error")
+        public ListMcpsResponseBodyItemsOriginProbeLastResultError error;
+
+        /**
+         * <p>The time when the origin server was probed, in ISO 8601 UTC format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-19T08:30:00Z</p>
+         */
+        @NameInMap("probedAt")
+        public String probedAt;
+
+        /**
+         * <p>The probe stage. Valid values: CONNECT, DISCOVER, INITIALIZE, SESSION_CHECK, CLEANUP, and COMPLETE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
+         */
+        @NameInMap("stage")
+        public String stage;
+
+        /**
+         * <p>The probe result. Valid values:</p>
+         * <ul>
+         * <li>SUCCESS: The protocol and applicable session checks passed. Undeclared capabilities do not affect the result.</li>
+         * <li>FAILED: The checks failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
+        @NameInMap("status")
+        public String status;
+
+        public static ListMcpsResponseBodyItemsOriginProbeLastResult build(java.util.Map<String, ?> map) throws Exception {
+            ListMcpsResponseBodyItemsOriginProbeLastResult self = new ListMcpsResponseBodyItemsOriginProbeLastResult();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResult setActualConfiguration(ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration actualConfiguration) {
+            this.actualConfiguration = actualConfiguration;
+            return this;
+        }
+        public ListMcpsResponseBodyItemsOriginProbeLastResultActualConfiguration getActualConfiguration() {
+            return this.actualConfiguration;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResult setError(ListMcpsResponseBodyItemsOriginProbeLastResultError error) {
+            this.error = error;
+            return this;
+        }
+        public ListMcpsResponseBodyItemsOriginProbeLastResultError getError() {
+            return this.error;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResult setProbedAt(String probedAt) {
+            this.probedAt = probedAt;
+            return this;
+        }
+        public String getProbedAt() {
+            return this.probedAt;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResult setStage(String stage) {
+            this.stage = stage;
+            return this;
+        }
+        public String getStage() {
+            return this.stage;
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbeLastResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class ListMcpsResponseBodyItemsOriginProbe extends TeaModel {
+        /**
+         * <p>Returned only for CODE_PACKAGE. This field is cleared when a new task starts and is empty if no verification has been performed or if the old task did not perform verification. If a subsequent release fails, the current summary is retained, which does not indicate real-time health or the active version status.</p>
+         */
+        @NameInMap("lastResult")
+        public ListMcpsResponseBodyItemsOriginProbeLastResult lastResult;
+
+        public static ListMcpsResponseBodyItemsOriginProbe build(java.util.Map<String, ?> map) throws Exception {
+            ListMcpsResponseBodyItemsOriginProbe self = new ListMcpsResponseBodyItemsOriginProbe();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMcpsResponseBodyItemsOriginProbe setLastResult(ListMcpsResponseBodyItemsOriginProbeLastResult lastResult) {
+            this.lastResult = lastResult;
+            return this;
+        }
+        public ListMcpsResponseBodyItemsOriginProbeLastResult getLastResult() {
+            return this.lastResult;
+        }
+
+    }
+
     public static class ListMcpsResponseBodyItems extends TeaModel {
         /**
          * <p>The list of MCP service addresses.</p>
@@ -1762,10 +2259,19 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The backend authentication configuration. The enabled field indicates whether the configuration is enabled. The directProxy field specifies the custom authentication header for the direct proxy. The httpToMcp field specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
+         * <p>The backend authentication configuration. enabled specifies whether the configuration is enabled. directProxy specifies the custom authentication header for the direct proxy. httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
          */
         @NameInMap("auth")
         public ListMcpsResponseBodyItemsAuth auth;
+
+        /**
+         * <p>The saved legacy or modern backend policy, which is separate from the transport indicated by protocol and does not indicate verification. This field is not saved for newly created CODE_PACKAGE. For historical CODE_PACKAGE, the existing value does not control Function Compute session affinity or gateway protocol. For the actual protocol, refer to OriginProbe.LastResult.ActualConfiguration.BackendMcpProtocol. This field is returned as empty for historical unspecified values and HTTP_TO_MCP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modern</p>
+         */
+        @NameInMap("backendMcpProtocol")
+        public String backendMcpProtocol;
 
         /**
          * <p>The time when the MCP was created, in ISO 8601 UTC format.</p>
@@ -1783,7 +2289,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.List<String> customTags;
 
         /**
-         * <p>The deployment configuration for the code deployment MCP.</p>
+         * <p>The deployment configuration for code-deployed MCP.</p>
          */
         @NameInMap("deploymentConfig")
         public ListMcpsResponseBodyItemsDeploymentConfig deploymentConfig;
@@ -1792,13 +2298,13 @@ public class ListMcpsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sample description to illustrate the purpose of the resource</p>
+         * <p>A sample description that illustrates the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The MCP endpoint that can be called by users or agents. This field is empty before deployment is complete.</p>
+         * <p>The MCP endpoint that can be called by users or agents. This field is empty before the deployment is completed.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
@@ -1807,7 +2313,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The Function Compute function name corresponding to the CODE_PACKAGE MCP. This field is empty before deployment is complete and for other types.</p>
+         * <p>The Function Compute function name for the CODE_PACKAGE MCP. This field is empty before deployment is complete and for other types.</p>
          * 
          * <strong>example:</strong>
          * <p>agentcore-mcp-example</p>
@@ -1849,7 +2355,32 @@ public class ListMcpsResponseBody extends TeaModel {
         public String officialTag;
 
         /**
-         * <p>PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
+         * <p>The read-only progress of the reused existing publish task. This field does not change the primary status of the resource and is empty if no historical operation information is available.</p>
+         */
+        @NameInMap("operation")
+        public ListMcpsResponseBodyItemsOperation operation;
+
+        /**
+         * <p>Only code deployment returns the minimal origin verification summary of the most recent task. This field is empty for direct proxy and HTTP to MCP, and queries do not trigger probing.</p>
+         */
+        @NameInMap("originProbe")
+        public ListMcpsResponseBodyItemsOriginProbe originProbe;
+
+        /**
+         * <p>The optional saved origin MCP protocol date display metadata, in YYYY-MM-DD format. You can specify this field during creation and modify it during updates. If omitted during an update, the current value is retained. This field only saves and displays information. It is not a software version, does not restrict the external gateway protocol, does not control backend requests, and does not indicate that real-time verification has passed. This field returns null and has no default value if it is omitted during creation and not updated, missing historically, or used for HTTP_TO_MCP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-26</p>
+         */
+        @NameInMap("originProtocolVersion")
+        public String originProtocolVersion;
+
+        /**
+         * <p>The access permission mode. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: Public access.</li>
+         * <li>CONTROLLED: Access controlled based on permission rules.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CONTROLLED</p>
@@ -1912,7 +2443,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>Specifies whether the MCP is still subject to the usage constraints of the official template.</p>
+         * <p>Indicates whether the MCP is still subject to the usage constraints of the official template.</p>
          */
         @NameInMap("usageActive")
         public Boolean usageActive;
@@ -1936,6 +2467,14 @@ public class ListMcpsResponseBody extends TeaModel {
         }
         public ListMcpsResponseBodyItemsAuth getAuth() {
             return this.auth;
+        }
+
+        public ListMcpsResponseBodyItems setBackendMcpProtocol(String backendMcpProtocol) {
+            this.backendMcpProtocol = backendMcpProtocol;
+            return this;
+        }
+        public String getBackendMcpProtocol() {
+            return this.backendMcpProtocol;
         }
 
         public ListMcpsResponseBodyItems setCreatedAt(String createdAt) {
@@ -2016,6 +2555,30 @@ public class ListMcpsResponseBody extends TeaModel {
         }
         public String getOfficialTag() {
             return this.officialTag;
+        }
+
+        public ListMcpsResponseBodyItems setOperation(ListMcpsResponseBodyItemsOperation operation) {
+            this.operation = operation;
+            return this;
+        }
+        public ListMcpsResponseBodyItemsOperation getOperation() {
+            return this.operation;
+        }
+
+        public ListMcpsResponseBodyItems setOriginProbe(ListMcpsResponseBodyItemsOriginProbe originProbe) {
+            this.originProbe = originProbe;
+            return this;
+        }
+        public ListMcpsResponseBodyItemsOriginProbe getOriginProbe() {
+            return this.originProbe;
+        }
+
+        public ListMcpsResponseBodyItems setOriginProtocolVersion(String originProtocolVersion) {
+            this.originProtocolVersion = originProtocolVersion;
+            return this;
+        }
+        public String getOriginProtocolVersion() {
+            return this.originProtocolVersion;
         }
 
         public ListMcpsResponseBodyItems setPermissionMode(String permissionMode) {

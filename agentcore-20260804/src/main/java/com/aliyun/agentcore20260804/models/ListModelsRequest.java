@@ -32,7 +32,7 @@ public class ListModelsRequest extends TeaModel {
     public String modelName;
 
     /**
-     * <p>The pagination token. Specify the token returned from the previous query. An empty response indicates that no more pages are available.</p>
+     * <p>The pagination token. Pass the token returned by the previous query in the request. An empty value in the response indicates that no more pages are available.</p>
      * 
      * <strong>example:</strong>
      * <p>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWw6MTA</p>
