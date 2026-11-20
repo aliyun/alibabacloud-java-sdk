@@ -3454,8 +3454,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For information about the features, common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</li>
-     * <li>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policies are created.</li>
+     * <li>For information about the features, Common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</li>
+     * <li>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policy are created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3732,8 +3732,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For information about the features, common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</li>
-     * <li>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policies are created.</li>
+     * <li>For information about the features, Common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</li>
+     * <li>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policy are created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9010,6 +9010,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries a list of cloud desktops with detected vulnerabilities.</p>
+     * 
+     * @param request DescribeDesktopIdsByVulNamesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDesktopIdsByVulNamesResponse
+     */
+    public DescribeDesktopIdsByVulNamesResponse describeDesktopIdsByVulNamesWithOptions(DescribeDesktopIdsByVulNamesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.necessity)) {
+            query.put("Necessity", request.necessity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vulName)) {
+            query.put("VulName", request.vulName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDesktopIdsByVulNames"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDesktopIdsByVulNamesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of cloud desktops with detected vulnerabilities.</p>
+     * 
+     * @param request DescribeDesktopIdsByVulNamesRequest
+     * @return DescribeDesktopIdsByVulNamesResponse
+     */
+    public DescribeDesktopIdsByVulNamesResponse describeDesktopIdsByVulNames(DescribeDesktopIdsByVulNamesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDesktopIdsByVulNamesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the basic information of cloud computers.</p>
      * 
      * @param request DescribeDesktopInfoRequest
@@ -12800,6 +12860,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeResourceByCenterPolicyIdResponse describeResourceByCenterPolicyId(DescribeResourceByCenterPolicyIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeResourceByCenterPolicyIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该接口为中心化接口，只可通过上海或新加坡地域的服务进行调用。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询地域化的统计数据</p>
+     * 
+     * @param request DescribeResourceStatisticByRegionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeResourceStatisticByRegionResponse
+     */
+    public DescribeResourceStatisticByRegionResponse describeResourceStatisticByRegionWithOptions(DescribeResourceStatisticByRegionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.includeGroupDesktops)) {
+            query.put("IncludeGroupDesktops", request.includeGroupDesktops);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchRegionId)) {
+            query.put("SearchRegionId", request.searchRegionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeResourceStatisticByRegion"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeResourceStatisticByRegionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>该接口为中心化接口，只可通过上海或新加坡地域的服务进行调用。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询地域化的统计数据</p>
+     * 
+     * @param request DescribeResourceStatisticByRegionRequest
+     * @return DescribeResourceStatisticByRegionResponse
+     */
+    public DescribeResourceStatisticByRegionResponse describeResourceStatisticByRegion(DescribeResourceStatisticByRegionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeResourceStatisticByRegionWithOptions(request, runtime);
     }
 
     /**
@@ -17774,10 +17896,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</p>
+     * <p>After a shared cloud desktop is created, the system performs automatic creation of a corresponding number of cloud desktops within the shared cloud desktop based on the shared cloud desktop scaling policy Settings and the end-user connection status. These cloud desktops share the same cloud desktop template and security policy. You can modify the configurations of the shared cloud desktop as needed in different scenarios, such as the name, cloud desktop template, and associated policies.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a shared cloud computer.</p>
+     * <p>Modifies a shared cloud desktop.</p>
      * 
      * @param request ModifyDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17913,10 +18035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</p>
+     * <p>After a shared cloud desktop is created, the system performs automatic creation of a corresponding number of cloud desktops within the shared cloud desktop based on the shared cloud desktop scaling policy Settings and the end-user connection status. These cloud desktops share the same cloud desktop template and security policy. You can modify the configurations of the shared cloud desktop as needed in different scenarios, such as the name, cloud desktop template, and associated policies.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a shared cloud computer.</p>
+     * <p>Modifies a shared cloud desktop.</p>
      * 
      * @param request ModifyDesktopGroupRequest
      * @return ModifyDesktopGroupResponse
@@ -23181,7 +23303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</p>
+     * <p>Removes tags from cloud computers. If a removed tag is not added to any cloud computer, the tag is automatically deleted.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23229,7 +23351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</p>
+     * <p>Removes tags from cloud computers. If a removed tag is not added to any cloud computer, the tag is automatically deleted.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse

@@ -130,9 +130,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("DiskStatus")
         public String diskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pmxgcnb</p>
+         */
         @NameInMap("EnvId")
         public String envId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 

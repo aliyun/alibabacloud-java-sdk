@@ -1,3 +1,8 @@
+2026-11-20 Version: 5.8.0
+- Support API DescribeDesktopIdsByVulNames.
+- Support API DescribeResourceStatisticByRegion.
+
+
 2026-11-18 Version: 5.7.0
 - Support API DeleteCloudDriveServices.
 - Support API ImportDrive.
