@@ -5840,7 +5840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Releases <strong>upfront</strong> instances that have <strong>expired and stopped</strong>. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release by the system after the retention period. <strong>The release operation is irreversible. Before you invoke this operation, confirm that you no longer need the instance data or underlying resources.</strong></p>
+     * <p>Releases <strong>expired and stopped</strong> <strong>upfront</strong> instances. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release after the retention period. <strong>Release operations are irrevocable. Confirm that the instance data and underlying resources are no longer needed before you invoke this operation.</strong></p>
      * 
      * <b>summary</b> : 
      * <p>Releases expired and stopped subscription instances.</p>
@@ -5883,7 +5883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Releases <strong>upfront</strong> instances that have <strong>expired and stopped</strong>. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release by the system after the retention period. <strong>The release operation is irreversible. Before you invoke this operation, confirm that you no longer need the instance data or underlying resources.</strong></p>
+     * <p>Releases <strong>expired and stopped</strong> <strong>upfront</strong> instances. After an instance expires and stops, you can use this operation to release it in advance instead of waiting for the automatic release after the retention period. <strong>Release operations are irrevocable. Confirm that the instance data and underlying resources are no longer needed before you invoke this operation.</strong></p>
      * 
      * <b>summary</b> : 
      * <p>Releases expired and stopped subscription instances.</p>

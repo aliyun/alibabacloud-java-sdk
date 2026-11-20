@@ -12,18 +12,27 @@ public class AttributeValueInfoDTO extends TeaModel {
 
     /**
      * <p>The property code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The default value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("DefaultValue")
     public String defaultValue;
 
     /**
      * <p>The description (translated).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>实例 CPU 核数</p>
      */
     @NameInMap("Description")
     public String description;
@@ -36,18 +45,27 @@ public class AttributeValueInfoDTO extends TeaModel {
 
     /**
      * <p>The unique identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("IdentifyKey")
     public String identifyKey;
 
     /**
      * <p>The maximum value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("Max")
     public String max;
 
     /**
      * <p>The minimum value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Min")
     public String min;
@@ -60,6 +78,9 @@ public class AttributeValueInfoDTO extends TeaModel {
 
     /**
      * <p>The step size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Step")
     public String step;
@@ -72,12 +93,18 @@ public class AttributeValueInfoDTO extends TeaModel {
 
     /**
      * <p>The enum value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Value")
     public String value;
 
     /**
      * <p>The value name (translated).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2 核</p>
      */
     @NameInMap("ValueName")
     public String valueName;

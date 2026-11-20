@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReleaseExpiredPrepaidInstanceResponseBody extends TeaModel {
     /**
-     * <p><strong>[Deprecated]</strong> The field is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> The host ID.</p>
      * 
      * <strong>example:</strong>
      * <p>deprecated</p>
@@ -47,7 +47,7 @@ public class ReleaseExpiredPrepaidInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +119,7 @@ public class ReleaseExpiredPrepaidInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -152,7 +152,7 @@ public class ReleaseExpiredPrepaidInstanceResponseBody extends TeaModel {
 
     public static class ReleaseExpiredPrepaidInstanceResponseBodyData extends TeaModel {
         /**
-         * <p><strong>[Deprecated]</strong> The field is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The host ID.</p>
          * 
          * <strong>example:</strong>
          * <p>deprecated</p>
@@ -167,7 +167,7 @@ public class ReleaseExpiredPrepaidInstanceResponseBody extends TeaModel {
         public java.util.List<ReleaseExpiredPrepaidInstanceResponseBodyDataInstanceResults> instanceResults;
 
         /**
-         * <p>Indicates whether the release operation is successful.</p>
+         * <p>Indicates whether the release operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

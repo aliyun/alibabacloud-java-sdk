@@ -24,6 +24,9 @@ public class AttributeInfoDTO extends TeaModel {
 
     /**
      * <p>The attribute code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu</p>
      */
     @NameInMap("Code")
     public String code;
@@ -36,6 +39,9 @@ public class AttributeInfoDTO extends TeaModel {
 
     /**
      * <p>The attribute description (translated).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>实例 CPU 核数</p>
      */
     @NameInMap("Description")
     public String description;
@@ -48,6 +54,9 @@ public class AttributeInfoDTO extends TeaModel {
 
     /**
      * <p>The attribute name (translated).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CPU 核数</p>
      */
     @NameInMap("Name")
     public String name;
@@ -72,6 +81,9 @@ public class AttributeInfoDTO extends TeaModel {
 
     /**
      * <p>The unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>核</p>
      */
     @NameInMap("Unit")
     public String unit;
