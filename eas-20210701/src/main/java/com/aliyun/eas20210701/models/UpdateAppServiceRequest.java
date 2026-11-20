@@ -24,15 +24,6 @@ public class UpdateAppServiceRequest extends TeaModel {
 
     /**
      * <p>The application type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>LLM: the large language model (LLM) application</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>LLM</p>
@@ -50,13 +41,16 @@ public class UpdateAppServiceRequest extends TeaModel {
     public String appVersion;
 
     /**
-     * <p>The additional configurations that are required for service deployment.</p>
+     * <p>The additional configuration information required for deployment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;ModelStorage&quot;: &quot;oss&quot;, &quot;OssPath&quot;: &quot;oss://examplebucket/xxxx/&quot; }</p>
      */
     @NameInMap("Config")
     public java.util.Map<String, ?> config;
 
     /**
-     * <p>The number of instances. This value must be greater than 0.</p>
+     * <p>The number of instances. The value must be greater than 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +59,7 @@ public class UpdateAppServiceRequest extends TeaModel {
     public Integer replicas;
 
     /**
-     * <p>The service specifications. Valid values:</p>
+     * <p>The service specification. Valid values:</p>
      * <ul>
      * <li>llama_7b_fp16</li>
      * <li>llama_7b_int8</li>

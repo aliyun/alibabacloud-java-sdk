@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
     /**
-     * <p>The filter name. Fuzzy match is supported.</p>
+     * <p>The name filter. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>foo</p>
@@ -14,13 +14,16 @@ public class ListGroupsRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The user-defined labels.</p>
+     * <p>The custom labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
     /**
-     * <p>The sort order of the results.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -38,7 +41,7 @@ public class ListGroupsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of service groups to display on each page in a paged query. Settings for paging default to 100.</p>
+     * <p>The Settings for the number of service groups to return on each page during paging in a paged query. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +50,7 @@ public class ListGroupsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -56,7 +59,7 @@ public class ListGroupsRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The traffic allocation method used to filter service groups.</p>
+     * <p>The traffic distribution mode filter.</p>
      * 
      * <strong>example:</strong>
      * <p>auto</p>

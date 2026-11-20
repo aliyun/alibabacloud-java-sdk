@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateServiceRolloutRequest extends TeaModel {
     /**
-     * <p>The configuration for the Batch strategy.</p>
+     * <p>The automatic batching configuration.</p>
      */
     @NameInMap("Batch")
     public CreateServiceRolloutRequestBatch batch;
 
     /**
-     * <p>The configuration for the Partition strategy.</p>
+     * <p>The manual batching configuration.</p>
      */
     @NameInMap("Partition")
     public CreateServiceRolloutRequestPartition partition;
 
     /**
-     * <p>Specifies whether to pause the rollout.</p>
+     * <p>Specifies whether to pause the update.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -65,7 +65,7 @@ public class CreateServiceRolloutRequest extends TeaModel {
         public String batchSize;
 
         /**
-         * <p>The wait interval after each batch completes.</p>
+         * <p>The wait interval after each batch update is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>5m</p>

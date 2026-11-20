@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceVersionRequest extends TeaModel {
     /**
-     * <p>The destination version of the service. The value must be of the INT type. The value must be greater than 0 and smaller than the current version of the service.</p>
+     * <p>The target version to which the service is switched. The value must be an integer greater than 0 and less than the current version of the service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

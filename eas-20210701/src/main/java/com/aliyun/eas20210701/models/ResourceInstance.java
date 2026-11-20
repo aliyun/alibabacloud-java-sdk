@@ -143,7 +143,7 @@ public class ResourceInstance extends TeaModel {
      * <p>The IP address of the instance in a dedicated network.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.XX.XX</p>
+     * <p>192.168.xx.xx</p>
      */
     @NameInMap("InstanceTenantIp")
     public String instanceTenantIp;

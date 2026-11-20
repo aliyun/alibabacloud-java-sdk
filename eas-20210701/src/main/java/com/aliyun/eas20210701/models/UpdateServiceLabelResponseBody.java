@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceLabelResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Succeed to update service [service_from_XXXX] labels.</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceMirrorRequest extends TeaModel {
     /**
-     * <p>The percentage of the traffic that is mirrored to the destination service. Valid values: 0 to 100.</p>
+     * <p>The ratio. Valid values: 0 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -14,7 +14,7 @@ public class CreateServiceMirrorRequest extends TeaModel {
     public Integer ratio;
 
     /**
-     * <p>The instances.</p>
+     * <p>The list of service instances.</p>
      */
     @NameInMap("Target")
     public java.util.List<String> target;

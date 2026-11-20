@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceRolloutResponseBody extends TeaModel {
     /**
-     * <p>The request ID. This ID is unique to each request and is used for troubleshooting.</p>
+     * <p>The request ID. The unique identifier returned for each request, used for troubleshooting and tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
@@ -14,7 +14,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the service rollout, including the rollout strategy (<code>Strategy</code>) and execution status (<code>Status</code>).</p>
+     * <p>The rollout information. Includes the strategy configuration and execution status.</p>
      */
     @NameInMap("Rollout")
     public DescribeServiceRolloutResponseBodyRollout rollout;
@@ -42,7 +42,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
 
     public static class DescribeServiceRolloutResponseBodyRolloutStatus extends TeaModel {
         /**
-         * <p>The identifier for the currently running revision.</p>
+         * <p>The current revision. The identifier of the version that is currently running.</p>
          * 
          * <strong>example:</strong>
          * <p>service-abc123-v1</p>
@@ -51,7 +51,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
         public String currentRevision;
 
         /**
-         * <p>The scheduled start time for the next batch.</p>
+         * <p>The start time of the next batch update, in the YYYY/MM/DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026/05/08 16:10:56</p>
@@ -60,18 +60,13 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
         public String nextBatchStartTime;
 
         /**
-         * <p>The current release phase. Valid values:</p>
+         * <p>The rollout phase. Valid values:</p>
          * <ul>
-         * <li><p><code>Pending</code>: The rollout is waiting to start.</p>
-         * </li>
-         * <li><p><code>Running</code>: The rollout is in progress.</p>
-         * </li>
-         * <li><p><code>Paused</code>: The rollout is paused.</p>
-         * </li>
-         * <li><p><code>Completed</code>: The rollout is complete.</p>
-         * </li>
-         * <li><p><code>Failed</code>: The rollout has failed.</p>
-         * </li>
+         * <li>Pending: The rollout is waiting to start.</li>
+         * <li>Running: The rollout is in progress.</li>
+         * <li>Paused: The rollout is paused.</li>
+         * <li>Completed: The rollout is completed.</li>
+         * <li>Failed: The rollout failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -81,7 +76,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The total number of desired replicas for the service.</p>
+         * <p>The total number of replicas. The total number of replicas for the service.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -90,7 +85,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
         public Integer totalReplicas;
 
         /**
-         * <p>The identifier for the target revision.</p>
+         * <p>The update revision. The identifier of the target version to which the service is being updated.</p>
          * 
          * <strong>example:</strong>
          * <p>service-abc123-v2</p>
@@ -99,7 +94,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
         public String updateRevision;
 
         /**
-         * <p>The number of replicas updated to the new revision.</p>
+         * <p>The number of updated replicas. The number of replicas that have been updated to the new version.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -164,7 +159,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
 
     public static class DescribeServiceRolloutResponseBodyRolloutStrategyBatch extends TeaModel {
         /**
-         * <p>The number or percentage of replicas to update in each batch.</p>
+         * <p>The batch size. The number or percentage of replicas to update in each batch.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +168,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
         public String batchSize;
 
         /**
-         * <p>The time to wait between batches.</p>
+         * <p>The batch interval. The waiting time between two rollouts.</p>
          * 
          * <strong>example:</strong>
          * <p>5m</p>
@@ -206,7 +201,7 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
 
     public static class DescribeServiceRolloutResponseBodyRolloutStrategyPartition extends TeaModel {
         /**
-         * <p>Specifies the number or percentage of old replicas to keep. For example, a value of <code>50%</code> indicates that 50% of the old replicas are retained.</p>
+         * <p>The partition value. Indicates the number or percentage of old replicas to retain. For example, \&quot;50%\&quot; indicates that 50% of the old replicas are retained.</p>
          * 
          * <strong>example:</strong>
          * <p>50%</p>
@@ -231,13 +226,13 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
 
     public static class DescribeServiceRolloutResponseBodyRolloutStrategy extends TeaModel {
         /**
-         * <p>The configuration for a batch release. This object is returned only when the batch release strategy is used.</p>
+         * <p>The batch rollout configuration. This parameter is returned if a batch rollout strategy is used. Otherwise, it is not returned.</p>
          */
         @NameInMap("Batch")
         public DescribeServiceRolloutResponseBodyRolloutStrategyBatch batch;
 
         /**
-         * <p>The configuration for a canary release. This object is returned only when the canary release strategy is used.</p>
+         * <p>The partition rollout configuration. This parameter is returned if a partition rollout strategy is used. Otherwise, it is not returned.</p>
          */
         @NameInMap("Partition")
         public DescribeServiceRolloutResponseBodyRolloutStrategyPartition partition;
@@ -267,13 +262,13 @@ public class DescribeServiceRolloutResponseBody extends TeaModel {
 
     public static class DescribeServiceRolloutResponseBodyRollout extends TeaModel {
         /**
-         * <p>The current progress and phase of the rollout.</p>
+         * <p>The rollout execution status. Includes the current rollout progress and phase information.</p>
          */
         @NameInMap("Status")
         public DescribeServiceRolloutResponseBodyRolloutStatus status;
 
         /**
-         * <p>The rollout strategy configuration. This object contains the parameters for a canary release or batch release.</p>
+         * <p>The rollout strategy configuration. Includes the specific configuration parameters for partition or batch rollouts.</p>
          */
         @NameInMap("Strategy")
         public DescribeServiceRolloutResponseBodyRolloutStrategy strategy;

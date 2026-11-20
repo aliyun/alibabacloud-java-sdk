@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBenchmarkTaskResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The success message of the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Benchmark task [benchmark-larec-test-1076] is Updating</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAclPolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
+     * <p>The whitelist of IP address segments that are allowed to access the VPC.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclPolicyList")

@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayLabelRequest extends TeaModel {
     /**
-     * <p>The custom gateway labels.</p>
+     * <p>The custom gateway tags.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;

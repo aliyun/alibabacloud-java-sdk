@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstanceFaultInjectionInfoResponseBody extends TeaModel {
     /**
-     * <p>A list of injected faults.</p>
+     * <p>The list of injected faults.</p>
      */
     @NameInMap("FaultInfoList")
     public java.util.List<ListServiceInstanceFaultInjectionInfoResponseBodyFaultInfoList> faultInfoList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
@@ -42,15 +42,12 @@ public class ListServiceInstanceFaultInjectionInfoResponseBody extends TeaModel 
 
     public static class ListServiceInstanceFaultInjectionInfoResponseBodyFaultInfoListFaultStatus extends TeaModel {
         /**
-         * <p>The status of the fault. Valid values:</p>
-         * <ol>
-         * <li><p>FaultNotInjected: The task was created, but the fault was not successfully injected.</p>
-         * </li>
-         * <li><p>FaultInjectedSuccess: The fault was successfully injected.</p>
-         * </li>
-         * <li><p>FaultInjectedFailure: The fault injection failed. The failure may be caused by parameter errors or system issues.</p>
-         * </li>
-         * </ol>
+         * <p>The fault status. Valid values:</p>
+         * <ul>
+         * <li>FaultNotInjected: The task is created but the fault is not injected.</li>
+         * <li>FaultInjectedSuccess: The fault is successfully injected.</li>
+         * <li>FaultInjectedFailure: The fault injection failed, which may be caused by parameter errors or system issues.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>FaultInjectedSuccess</p>
@@ -92,28 +89,23 @@ public class ListServiceInstanceFaultInjectionInfoResponseBody extends TeaModel 
 
     public static class ListServiceInstanceFaultInjectionInfoResponseBodyFaultInfoList extends TeaModel {
         /**
-         * <p>The parameters for each fault type.</p>
+         * <p>Detailed parameters for each fault type:</p>
          * <ol>
-         * <li><p>CpuFullloadTask (CPU full load fault)
-         * <code>{ &quot;FaultType&quot;: &quot;CpuFullloadTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;fullload&quot;, &quot;CpuPercent&quot;: 50 } }</code></p>
-         * </li>
-         * <li><p>MemLoadTask (Memory load fault)
-         * <code>{ &quot;FaultType&quot;: &quot;MemLoadTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;load&quot;, &quot;MemPercent&quot;: 80 } }</code></p>
-         * </li>
-         * <li><p>NetworkTask (Network fault)
-         * 3.a. NetworkDelayAction (Network delay)
-         * <code>{ &quot;FaultType&quot;: &quot;NetworkTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;delay&quot;, &quot;Time&quot;: 3000, &quot;Offset&quot;: 100 } }</code>
-         * 3.b. NetworkCorruptAction (Network packet corruption)
-         * <code>{ &quot;FaultType&quot;: &quot;NetworkTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;corrupt&quot;, &quot;Percent&quot;: 50 } }</code>
-         * 3.c. NetworkLossAction (Network packet loss)
-         * <code>{ &quot;FaultType&quot;: &quot;NetworkTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;loss&quot;, &quot;Percent&quot;: 30 } }</code></p>
-         * </li>
-         * <li><p>DiskBurnTask (Disk read/write fault)
-         * <code>{ &quot;FaultType&quot;: &quot;DiskBurnTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;burn&quot;, &quot;Read&quot;: true, &quot;Write&quot;: true, &quot;Size&quot;: 100 } }</code></p>
-         * </li>
-         * <li><p>DiskFillTask (Disk fill fault)
-         * <code>{ &quot;FaultType&quot;: &quot;DiskFillTask&quot;, &quot;FaultArgs&quot;: { &quot;FaultAction&quot;: &quot;fill&quot;, &quot;Percent&quot;: 80 } }</code></p>
-         * </li>
+         * <li>CpuFullloadTask (CPU full load fault)
+         * <code>{   &quot;FaultType&quot;: &quot;CpuFullloadTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;fullload&quot;,  &quot;CpuPercent&quot;: 50   } }</code></li>
+         * <li>MemLoadTask (memory load fault)
+         * <code>{   &quot;FaultType&quot;: &quot;MemLoadTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;load&quot;,  &quot;MemPercent&quot;: 80   } }</code></li>
+         * <li>NetworkTask (network fault)
+         * 3.a. NetworkDelayAction (network delay)
+         * <code>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;delay&quot;,  &quot;Time&quot;: 3000,  &quot;Offset&quot;: 100   } }</code>
+         * 3.b. NetworkCorruptAction (network packet corruption)
+         * <code>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;corrupt&quot;,  &quot;Percent&quot;: 50   } }</code>
+         * 3.c. NetworkLossAction (network packet loss)
+         * <code>{   &quot;FaultType&quot;: &quot;NetworkTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;loss&quot;,  &quot;Percent&quot;: 30   } }</code></li>
+         * <li>DiskBurnTask (disk read/write fault)
+         * <code>{   &quot;FaultType&quot;: &quot;DiskBurnTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;burn&quot;,  &quot;Read&quot;: true,  &quot;Write&quot;: true,  &quot;Size&quot;: 100   } }</code></li>
+         * <li>DiskFillTask (disk fill fault)
+         * <code>{   &quot;FaultType&quot;: &quot;DiskFillTask&quot;,   &quot;FaultArgs&quot;: {  &quot;FaultAction&quot;: &quot;fill&quot;,  &quot;Percent&quot;: 80   } }</code></li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -137,7 +129,14 @@ public class ListServiceInstanceFaultInjectionInfoResponseBody extends TeaModel 
         public ListServiceInstanceFaultInjectionInfoResponseBodyFaultInfoListFaultStatus faultStatus;
 
         /**
-         * <p>The fault type. Valid values:CpuFullloadTask: a CPU full load fault.MemLoadTask: a memory load fault.NetworkTask: a network fault.DiskBurnTask: a disk read/write fault.DiskFillTask: a disk fill fault.</p>
+         * <p>The fault type. Valid values:</p>
+         * <ul>
+         * <li>CpuFullloadTask: CPU full load fault.</li>
+         * <li>MemLoadTask: memory load fault.</li>
+         * <li>NetworkTask: network fault.</li>
+         * <li>DiskBurnTask: disk read/write fault.</li>
+         * <li>DiskFillTask: disk fill fault.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DiskFillTask</p>

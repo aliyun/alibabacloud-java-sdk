@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartBenchmarkTaskResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>Benchmark task [benchmark-larec-test-1076] is Starting</p>

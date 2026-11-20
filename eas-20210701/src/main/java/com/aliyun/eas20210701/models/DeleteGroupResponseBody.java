@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGroupResponseBody extends TeaModel {
     /**
-     * <p>The response message.</p>
+     * <p>The message returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>Delete service group foo successfully</p>

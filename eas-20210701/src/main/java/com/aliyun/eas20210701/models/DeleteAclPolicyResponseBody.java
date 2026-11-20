@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAclPolicyResponseBody extends TeaModel {
     /**
-     * <p>The private gateway ID.</p>
+     * <p>The ID of the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
@@ -14,7 +14,7 @@ public class DeleteAclPolicyResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>Successfully delete acl policy for gateway</p>
@@ -23,7 +23,7 @@ public class DeleteAclPolicyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>

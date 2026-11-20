@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceCronScalerRequest extends TeaModel {
     /**
-     * <p>The cron expressions for the dates to exclude from the schedule.</p>
+     * <p>The cron expressions for the dates to be excluded.</p>
      */
     @NameInMap("ExcludeDates")
     public java.util.List<String> excludeDates;
 
     /**
-     * <p>The scheduled scaling tasks.</p>
+     * <p>The scheduled scaling jobs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ScaleJobs")
@@ -40,7 +40,7 @@ public class UpdateServiceCronScalerRequest extends TeaModel {
 
     public static class UpdateServiceCronScalerRequestScaleJobs extends TeaModel {
         /**
-         * <p>The name of the scheduled auto scaling task.</p>
+         * <p>The name of the scheduled scaling job.</p>
          * 
          * <strong>example:</strong>
          * <p>scale-job-1</p>
@@ -49,7 +49,7 @@ public class UpdateServiceCronScalerRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The cron expression that specifies when to run the scaling task. For more information about cron expressions, see the <strong>Cron expressions</strong> section in this topic.</p>
+         * <p>The cron expression for the scaling job. For more information about how to configure a cron expression, see <strong>Supplementary description of request parameters</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class UpdateServiceCronScalerRequest extends TeaModel {
         public String schedule;
 
         /**
-         * <p>The target number of instances for the scaling task.</p>
+         * <p>The target number of instances for the scaling job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class UpdateServiceCronScalerRequest extends TeaModel {
         public Integer targetSize;
 
         /**
-         * <p>The time zone for the cron expression.</p>
+         * <p>The time zone configuration used to parse the execution time of the scheduled scaling job.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>

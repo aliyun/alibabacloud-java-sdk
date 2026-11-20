@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateGroupRequest extends TeaModel {
     /**
      * <p>The user-defined labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
@@ -17,11 +20,7 @@ public class UpdateGroupRequest extends TeaModel {
     public UpdateGroupRequestNetwork network;
 
     /**
-     * <p>The traffic mode. Valid values:</p>
-     * <ul>
-     * <li>auto: automatically assigns weights based on the proportion of instances.</li>
-     * <li>customized: distributes traffic based on custom fixed weights.</li>
-     * </ul>
+     * <p>The traffic mode. Valid values: auto and customized. In auto mode, weights are automatically allocated based on the proportion of instances. In customized mode, traffic is distributed based on custom fixed weights.</p>
      * 
      * <strong>example:</strong>
      * <p>auto</p>

@@ -26,7 +26,7 @@ public class AttachGatewayDomainRequest extends TeaModel {
 
     public static class AttachGatewayDomainRequestCustomDomain extends TeaModel {
         /**
-         * <p>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after you upload or purchase a certificate in the <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc%5C&p=cas">Certificate Management Service</a> console.</p>
+         * <p>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after uploading or purchasing a certificate in <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc&p=cas">Certificate Management Service</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1473**25</p>
@@ -46,11 +46,6 @@ public class AttachGatewayDomainRequest extends TeaModel {
 
         /**
          * <p>The domain name type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>intranet: internal network.</li>
-         * <li>internet: public network.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

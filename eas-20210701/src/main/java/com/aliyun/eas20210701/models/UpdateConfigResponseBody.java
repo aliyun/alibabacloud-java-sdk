@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConfigResponseBody extends TeaModel {
     /**
-     * <p>The time the configuration was created.</p>
+     * <p>The time when the dynamic parameter was created. The time is displayed in UTC and follows the RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-15T10:30:00Z</p>
@@ -14,7 +14,7 @@ public class UpdateConfigResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The dynamic parameter name.</p>
+     * <p>The name of the dynamic parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>llm_gateway.route_policy</p>
@@ -23,7 +23,7 @@ public class UpdateConfigResponseBody extends TeaModel {
     public String key;
 
     /**
-     * <p>The time the configuration was last updated.</p>
+     * <p>The time when the dynamic parameter was updated. The time is displayed in UTC and follows the RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-15T11:00:00Z</p>
@@ -32,7 +32,7 @@ public class UpdateConfigResponseBody extends TeaModel {
     public String updatedAt;
 
     /**
-     * <p>The dynamic parameter value.</p>
+     * <p>The value of the dynamic parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;model&quot;: &quot;gpt-4-turbo&quot;}</p>

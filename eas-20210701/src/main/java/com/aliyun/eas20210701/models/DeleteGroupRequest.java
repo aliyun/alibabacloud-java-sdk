@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGroupRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform a cascade delete. If enabled, deleting the service group automatically deletes all services within the service group. This feature is disabled by default.</p>
+     * <p>Specifies whether cascade delete is enabled. If enabled, deleting the service group automatically deletes all services in the service group. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualResourceResponseBody extends TeaModel {
     /**
-     * <p>The time when the virtual resource group was created.</p>
+     * <p>The time when the virtual resource group was created, in UTC in RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16T17:52:49Z</p>
@@ -23,7 +23,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     public Boolean disableSpotProtectionPeriod;
 
     /**
-     * <p>The collection of features for the virtual resource group. This identifies the attributes that the resource group supports.</p>
+     * <p>The set of features of the virtual resource group, which identifies the capabilities supported by the resource group.</p>
      */
     @NameInMap("Features")
     public java.util.List<String> features;
@@ -38,7 +38,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of resources in the virtual resource group.</p>
+     * <p>The list of resources contained in the virtual resource group.</p>
      */
     @NameInMap("Resources")
     public java.util.List<DescribeVirtualResourceResponseBodyResources> resources;
@@ -53,7 +53,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     public Integer serviceCount;
 
     /**
-     * <p>The time when the virtual resource group was last updated.</p>
+     * <p>The time when the virtual resource group was last updated, in UTC in RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16T19:52:49Z</p>
@@ -62,7 +62,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The ID of the virtual resource group.</p>
+     * <p>The virtual resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-vr-npovr28onap1xxxxxx</p>
@@ -167,7 +167,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The scheduling priority of the resource. A larger value indicates a higher priority.</p>
+         * <p>The scheduling priority of the resource. A larger value indicates a higher scheduling priority.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -176,7 +176,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The ID of the Lingjun resource quota.</p>
+         * <p>The Lingjun resource quota ID.</p>
          * 
          * <strong>example:</strong>
          * <p>quota185lqxxxxxx</p>
@@ -185,7 +185,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         public String quotaId;
 
         /**
-         * <p>The region where the resource is located.</p>
+         * <p>The region where the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -194,7 +194,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The ID of the dedicated resource group.</p>
+         * <p>The dedicated resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-r-g55ieatgg3buxxxxxx</p>
@@ -203,7 +203,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The maximum price for a spot instance in the public resource group.</p>
+         * <p>The maximum price for spot instances in the public resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>10.05</p>

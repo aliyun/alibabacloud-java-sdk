@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachGatewayDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the private gateway. To obtain the private gateway ID, see the GatewayId parameter in the response parameters of the <a href="https://apiworkbench.aliyun-inc.com/document/eas/2021-07-01/ListGateway?spm=openapi-amp.newDocPublishment.0.0.765e281fL2IcjJ%5C&ampEnv=online">ListGateway</a> operation.</p>
+     * <p>The dedicated gateway ID. To obtain the dedicated gateway ID, refer to the GatewayId field in the response of the <a href="https://apiworkbench.aliyun-inc.com/document/eas/2021-07-01/ListGateway?spm=openapi-amp.newDocPublishment.0.0.765e281fL2IcjJ&ampEnv=online">ListGateway</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
@@ -14,7 +14,7 @@ public class AttachGatewayDomainResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The error message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successfully update custom endpoint for gateway gw-1uhcqmsc7x22******</p>
@@ -23,7 +23,7 @@ public class AttachGatewayDomainResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>

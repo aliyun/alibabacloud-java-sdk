@@ -29,7 +29,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of events.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>29</p>
@@ -93,7 +93,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
 
     public static class DescribeServiceEventResponseBodyEvents extends TeaModel {
         /**
-         * <p>The event message, which is a JSON-formatted string.</p>
+         * <p>The event information (a formatted JSON string).</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;versionId\&quot;:1,\&quot;message\&quot;:\&quot;Stage scale complete\&quot;,\&quot;availableInstance\&quot;:1,\&quot;unavailableInstance\&quot;:0}</p>
@@ -102,7 +102,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The reason for the event, which indicates a change in the service status.</p>
+         * <p>The reason for the event (information about service status changes).</p>
          * 
          * <strong>example:</strong>
          * <p>Updating</p>
@@ -113,9 +113,9 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><p>Service: a service.</p>
+         * <li><p>Service: service.</p>
          * </li>
-         * <li><p>Pod: a service instance.</p>
+         * <li><p>Pod: service instance.</p>
          * </li>
          * </ul>
          * 
@@ -126,7 +126,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>The time when the event occurred, in UTC.</p>
+         * <p>The UTC time when the event occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-09 06:30:00</p>
@@ -137,10 +137,8 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         /**
          * <p>The event type. Valid values:</p>
          * <ul>
-         * <li><p>Normal: a normal event.</p>
-         * </li>
-         * <li><p>Warning: a warning event.</p>
-         * </li>
+         * <li>Normal: normal events.</li>
+         * <li>Warning: abnormal events.</li>
          * </ul>
          * 
          * <strong>example:</strong>

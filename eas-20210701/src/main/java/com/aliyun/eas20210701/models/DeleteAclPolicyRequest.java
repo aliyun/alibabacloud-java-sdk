@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteAclPolicyRequest extends TeaModel {
     /**
-     * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
+     * <p>The whitelist of IP address ranges that are allowed to access the VPC. This parameter is required. If this parameter is not specified, an InvalidParameter error is returned, indicating that AclPolicyList must be set.</p>
      */
     @NameInMap("AclPolicyList")
     public java.util.List<DeleteAclPolicyRequestAclPolicyList> aclPolicyList;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC). For more information about how to obtain the VPC ID, see DescribeVpcs.</p>
+     * <p>The ID of the VPC. For information about how to obtain the VPC ID, see DescribeVpcs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-uf66uio7md****</p>
@@ -42,7 +42,7 @@ public class DeleteAclPolicyRequest extends TeaModel {
 
     public static class DeleteAclPolicyRequestAclPolicyList extends TeaModel {
         /**
-         * <p>The comment on the IP CIDR block in the VPC that can access the private gateway.</p>
+         * <p>The comment for the IP address range that is allowed to access the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -51,7 +51,7 @@ public class DeleteAclPolicyRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>The IP CIDR block in the VPC that can access the private gateway.</p>
+         * <p>The IP address range that is allowed to access the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>10.23.XX.XX/32</p>

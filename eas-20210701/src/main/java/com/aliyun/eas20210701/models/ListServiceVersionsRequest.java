@@ -14,7 +14,7 @@ public class ListServiceVersionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 100.</p>
+     * <p>The number of versions to return on each page in the paging Settings for a paged query. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

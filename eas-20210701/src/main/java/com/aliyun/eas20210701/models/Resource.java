@@ -200,7 +200,7 @@ public class Resource extends TeaModel {
      * <p>The status of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>ResourceReady</p>
+     * <p>ResouceReady</p>
      */
     @NameInMap("Status")
     public String status;

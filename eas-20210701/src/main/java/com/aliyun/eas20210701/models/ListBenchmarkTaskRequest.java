@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBenchmarkTaskRequest extends TeaModel {
     /**
-     * <p>The filter used to query tasks. If you specify this parameter, the system returns tasks whose names or associated service names match the filter value.</p>
+     * <p>The filter parameter. If specified, the system searches for records that match the specified value in the EAS service name and stress testing task name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_bench</p>
@@ -13,14 +13,30 @@ public class ListBenchmarkTaskRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The model ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Qwen3.5-27B</p>
+     */
     @NameInMap("ModelId")
     public String modelId;
 
+    /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li>desc: Descending order. This is the default value.</li>
+     * <li>asc: Ascending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the stress testing task list. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +45,7 @@ public class ListBenchmarkTaskRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The name of the Elastic Algorithm Service (EAS) service that corresponds to the stress testing task. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+     * <p>The number of stress testing tasks to return on each page. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -37,6 +53,17 @@ public class ListBenchmarkTaskRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The request method for stress testing. Valid values:</p>
+     * <ul>
+     * <li>concurrency: Fixed concurrency mode.</li>
+     * <li>requestRate: Fixed request rate mode.</li>
+     * <li>peakThroughput: Peak throughput mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>requestRate</p>
+     */
     @NameInMap("RequestMethod")
     public String requestMethod;
 
@@ -49,9 +76,21 @@ public class ListBenchmarkTaskRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The sort field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
+    /**
+     * <p>The execution status used to filter stress testing tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Creating</p>
+     */
     @NameInMap("Status")
     public String status;
 

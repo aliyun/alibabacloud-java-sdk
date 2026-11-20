@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceRolloutResponseBody extends TeaModel {
     /**
-     * <p>A message that indicates the result of the request. Possible values include:</p>
+     * <p>The response message. Describes the request processing result. Valid values:</p>
      * <ul>
-     * <li><p>&quot;Rollout updated successfully&quot;</p>
-     * </li>
-     * <li><p>&quot;Rollout paused successfully&quot;</p>
-     * </li>
-     * <li><p>&quot;Rollout resumed successfully&quot;</p>
-     * </li>
+     * <li>&quot;Rollout updated successfully&quot;: The policy is updated successfully.</li>
+     * <li>&quot;Rollout paused successfully&quot;: The rollout is paused successfully.</li>
+     * <li>&quot;Rollout resumed successfully&quot;: The rollout is resumed successfully.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,7 @@ public class UpdateServiceRolloutResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>A unique identifier for the request. You can use this request ID for troubleshooting and tracking.</p>
+     * <p>The request ID. The unique identifier returned for each request, used for troubleshooting and tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>

@@ -29,7 +29,7 @@ public class ListGatewayResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
@@ -93,7 +93,7 @@ public class ListGatewayResponseBody extends TeaModel {
 
     public static class ListGatewayResponseBodyGatewaysLabels extends TeaModel {
         /**
-         * <p>The key of the gateway tag.</p>
+         * <p>The key of the gateway label.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -102,7 +102,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public String labelKey;
 
         /**
-         * <p>The value of the gateway tag.</p>
+         * <p>The value of the gateway label.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -137,10 +137,8 @@ public class ListGatewayResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><p>PrePaid: Subscription.</p>
-         * </li>
-         * <li><p>PostPaid: Pay-as-you-go.</p>
-         * </li>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,7 +148,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The time when the private gateway was created. The time is in UTC.</p>
+         * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-05-19T14:19:42Z</p>
@@ -186,7 +184,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The public network endpoint.</p>
+         * <p>The domain name for public network access.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******-1801786532******.cn-wulanchabu.pai-eas.aliyuncs.com</p>
@@ -204,7 +202,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public Boolean internetEnabled;
 
         /**
-         * <p>The internal network endpoint.</p>
+         * <p>The domain name for internal network access.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-wulanchabu.pai-eas.aliyuncs.com</p>
@@ -219,7 +217,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public Boolean intranetEnabled;
 
         /**
-         * <p>Indicates whether it is the default private gateway.</p>
+         * <p>Indicates whether the private gateway is the default private gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -228,13 +226,13 @@ public class ListGatewayResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The list of gateway tags.</p>
+         * <p>The list of gateway labels.</p>
          */
         @NameInMap("Labels")
         public java.util.List<ListGatewayResponseBodyGatewaysLabels> labels;
 
         /**
-         * <p>The number of nodes for the private gateway.</p>
+         * <p>The number of nodes in the private gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -261,13 +259,22 @@ public class ListGatewayResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the private gateway was last updated. The time is in UTC.</p>
+         * <p>The time when the private gateway was updated. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-24T11:52:17Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
+
+        /**
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        @NameInMap("WorkspaceId")
+        public String workspaceId;
 
         public static ListGatewayResponseBodyGateways build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayResponseBodyGateways self = new ListGatewayResponseBodyGateways();
@@ -392,6 +399,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public ListGatewayResponseBodyGateways setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
     }

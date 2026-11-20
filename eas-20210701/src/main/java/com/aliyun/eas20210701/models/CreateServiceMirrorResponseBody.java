@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceMirrorResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>Traffic mirroring is ON for service [foo] in region [cn-shanghai], ratio [70%]</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceResponseBody extends TeaModel {
     /**
-     * <p>A message that indicates a successful operation.</p>
+     * <p>The success message.</p>
      * 
      * <strong>example:</strong>
      * <p>instance xxxx isolation updated to true。</p>

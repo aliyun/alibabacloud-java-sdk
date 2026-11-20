@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayIntranetLinkedVpcPeerShrinkRequest extends TeaModel {
     /**
-     * <p>The list of VPC peers.</p>
+     * <p>The list of peered VPCs.</p>
      */
     @NameInMap("PeerVpcs")
     public String peerVpcsShrink;
 
     /**
-     * <p>The VPC ID. To obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
+     * <p>The ID of the VPC. For information about how to obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zetuli9ws0qgjd******</p>

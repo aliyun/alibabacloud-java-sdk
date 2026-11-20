@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVirtualResourceResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned list of virtual resource groups.</p>
+     * <p>The page number of the returned virtual resource group list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of virtual resource groups returned on each page.</p>
+     * <p>The number of virtual resource groups displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,7 +93,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
 
     public static class ListVirtualResourceResponseBodyVirtualResources extends TeaModel {
         /**
-         * <p>The time when the virtual resource group was created.</p>
+         * <p>The time when the virtual resource group was created, in UTC in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16T17:52:49Z</p>
@@ -111,7 +111,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         public Integer serviceCount;
 
         /**
-         * <p>The time when the virtual resource group was last updated.</p>
+         * <p>The time when the virtual resource group was last updated, in UTC in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16T19:52:49Z</p>
@@ -120,7 +120,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the virtual resource group.</p>
+         * <p>The virtual resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eas-vr-npovr28onap1xxxxxx</p>
@@ -129,7 +129,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         public String virtualResourceId;
 
         /**
-         * <p>The name of the virtual resource group.</p>
+         * <p>The virtual resource group name.</p>
          * 
          * <strong>example:</strong>
          * <p>MyVirtualResource</p>

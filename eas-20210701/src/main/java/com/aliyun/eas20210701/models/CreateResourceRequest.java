@@ -7,10 +7,8 @@ public class CreateResourceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p><code>false</code> (default): Auto-renewal is disabled.</p>
-     * </li>
-     * <li><p><code>true</code>: Auto-renewal is enabled.</p>
-     * </li>
+     * <li>false (default): disables auto-renewal.</li>
+     * <li>true: enables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,14 +20,12 @@ public class CreateResourceRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><p><code>PrePaid</code>: subscription.</p>
-     * </li>
-     * <li><p><code>PostPaid</code>: pay-as-you-go.</p>
+     * <li>PrePaid: subscription.</li>
+     * <li>PostPaid: pay-as-you-go.<blockquote>
+     * <p>This parameter is required when ResourceType is set to Dedicated.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is required when <code>ResourceType</code> is set to <code>Dedicated</code>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -40,7 +36,7 @@ public class CreateResourceRequest extends TeaModel {
     /**
      * <p>The number of instances.</p>
      * <blockquote>
-     * <p>This parameter is required when <code>ResourceType</code> is set to <code>Dedicated</code>.</p>
+     * <p>This parameter is required when ResourceType is set to Dedicated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,7 +48,7 @@ public class CreateResourceRequest extends TeaModel {
     /**
      * <p>The ECS instance type.</p>
      * <blockquote>
-     * <p>This parameter is required when <code>ResourceType</code> is set to <code>Dedicated</code>.</p>
+     * <p>This parameter is required when ResourceType is set to Dedicated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,6 +59,9 @@ public class CreateResourceRequest extends TeaModel {
 
     /**
      * <p>The user-defined labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
@@ -79,14 +78,12 @@ public class CreateResourceRequest extends TeaModel {
     /**
      * <p>The type of the resource group. Valid values:</p>
      * <ul>
-     * <li><p><code>Dedicated</code>: a dedicated resource group.</p>
-     * </li>
-     * <li><p><code>SelfManaged</code>: a self-managed resource group.</p>
+     * <li>Dedicated: dedicated resource group.</li>
+     * <li>SelfManaged: self-managed resource group.<blockquote>
+     * <p>To use a self-managed resource group, you must apply to be added to the whitelist.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>You must be whitelisted to use self-managed resource groups.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Dedicated</p>
@@ -101,7 +98,7 @@ public class CreateResourceRequest extends TeaModel {
     public CreateResourceRequestSelfManagedResourceOptions selfManagedResourceOptions;
 
     /**
-     * <p>The size of the system disk, in GiB. The value must be between 200 and 2,000. If unspecified, the default is 200 GiB.</p>
+     * <p>The size of the system cloud disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -109,11 +106,17 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 
+    /**
+     * <p>The usage mode of the resource group. Valid values: inference (inference service resource group) and sandbox (sandbox resource group).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inference</p>
+     */
     @NameInMap("UsageMode")
     public String usageMode;
 
     /**
-     * <p>The zone in which to create the instance.</p>
+     * <p>The zone to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-f</p>
@@ -216,7 +219,7 @@ public class CreateResourceRequest extends TeaModel {
 
     public static class CreateResourceRequestSelfManagedResourceOptionsNodeTolerations extends TeaModel {
         /**
-         * <p>The effect of the toleration.</p>
+         * <p>The effect.</p>
          * 
          * <strong>example:</strong>
          * <p>NoSchedule</p>
@@ -225,7 +228,7 @@ public class CreateResourceRequest extends TeaModel {
         public String effect;
 
         /**
-         * <p>The key of the toleration.</p>
+         * <p>The key.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -234,7 +237,7 @@ public class CreateResourceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The toleration operator, which defines the relationship between the key and value.</p>
+         * <p>The operator that defines the relationship between the key and the value.</p>
          * 
          * <strong>example:</strong>
          * <p>Equal</p>
@@ -243,7 +246,7 @@ public class CreateResourceRequest extends TeaModel {
         public String operator;
 
         /**
-         * <p>The toleration value.</p>
+         * <p>The value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -301,19 +304,22 @@ public class CreateResourceRequest extends TeaModel {
         public String externalClusterId;
 
         /**
-         * <p>The node labels to match, specified as key-value pairs.</p>
+         * <p>The label key-value pairs for nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;key1&quot;: &quot;value1&quot;</p>
          */
         @NameInMap("NodeMatchLabels")
         public java.util.Map<String, String> nodeMatchLabels;
 
         /**
-         * <p>A list of tolerations for node taints.</p>
+         * <p>The list of tolerations for node taints.</p>
          */
         @NameInMap("NodeTolerations")
         public java.util.List<CreateResourceRequestSelfManagedResourceOptionsNodeTolerations> nodeTolerations;
 
         /**
-         * <p>The name of the RAM role that grants PAI-EAS the required permissions.</p>
+         * <p>The name of the RAM role to which PAI-EAS-related permissions are granted.</p>
          * 
          * <strong>example:</strong>
          * <p>clusterrole</p>

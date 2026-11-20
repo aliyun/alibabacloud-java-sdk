@@ -14,7 +14,7 @@ public class CreateGatewayIntranetLinkedVpcResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The message returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>Successfully add intranet linked vpc for gateway</p>
@@ -23,7 +23,7 @@ public class CreateGatewayIntranetLinkedVpcResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>

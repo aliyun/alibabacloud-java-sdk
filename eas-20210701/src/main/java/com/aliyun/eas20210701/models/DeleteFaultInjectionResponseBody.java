@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFaultInjectionResponseBody extends TeaModel {
     /**
-     * <p>A message that indicates the result of the operation.</p>
+     * <p>The operation result message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successfully delete acl policy for gateway</p>
@@ -14,7 +14,7 @@ public class DeleteFaultInjectionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>

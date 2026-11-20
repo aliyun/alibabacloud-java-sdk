@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTenantAddonsResponseBody extends TeaModel {
     /**
-     * <p>The information about the plug-in.</p>
+     * <p>The plugin information.</p>
      */
     @NameInMap("Addons")
     public java.util.List<ListTenantAddonsResponseBodyAddons> addons;
@@ -42,13 +42,20 @@ public class ListTenantAddonsResponseBody extends TeaModel {
 
     public static class ListTenantAddonsResponseBodyAddons extends TeaModel {
         /**
-         * <p>The attributes of the plug-in.</p>
+         * <p>The plugin attributes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *  &quot;AccessToken&quot;:&quot;ld***.eY***.&quot;,
+         *  &quot;InternetEndpoint&quot;: &quot;<strong><strong>.com/prometheus&quot;,
+         *  &quot;IntranetEndpoint&quot;: &quot;</strong></strong>.vpc.com/prometheus&quot;
+         * }</p>
          */
         @NameInMap("Attributes")
         public java.util.Map<String, String> attributes;
 
         /**
-         * <p>The name of the plug-in.</p>
+         * <p>The plugin name.</p>
          * 
          * <strong>example:</strong>
          * <p>prometheus_discovery</p>

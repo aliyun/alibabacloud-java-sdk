@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayResponseBody extends TeaModel {
     /**
-     * <p>The ID of the private gateway.</p>
+     * <p>The private gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>

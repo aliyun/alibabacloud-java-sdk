@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFaultInjectionResponseBody extends TeaModel {
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Addon prometheus_discovery is successfully reinstalled</p>
@@ -14,7 +14,7 @@ public class CreateFaultInjectionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82***</p>

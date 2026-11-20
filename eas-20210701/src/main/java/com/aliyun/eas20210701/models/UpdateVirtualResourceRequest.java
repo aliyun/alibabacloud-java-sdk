@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateVirtualResourceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to disable the retention period of preemptible instances.</p>
+     * <p>Specifies whether to disable the protection period for spot instances.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,9 +14,9 @@ public class UpdateVirtualResourceRequest extends TeaModel {
     public Boolean disableSpotProtectionPeriod;
 
     /**
-     * <p>The resources in the virtual resource group.</p>
+     * <p>The list of resources contained in the virtual resource group.</p>
      * <blockquote>
-     * <p> If you specify this parameter, previous data is overwritten.</p>
+     * <p>Notice: If specified, the previous data is overwritten.</p>
      * </blockquote>
      */
     @NameInMap("Resources")
@@ -64,7 +64,7 @@ public class UpdateVirtualResourceRequest extends TeaModel {
         /**
          * <p>The instance type of the public resource group.</p>
          * <blockquote>
-         * <p> You must specify one and only one of the InstanceType, ResourceId, and QuotaId parameters.</p>
+         * <p>Notice: You must specify exactly one of the following fields: InstanceType, ResourceId, and QuotaId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class UpdateVirtualResourceRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The priority of resource scheduling. A greater number indicates a higher priority.</p>
+         * <p>The scheduling priority of the resource. A larger value indicates a higher scheduling priority.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -83,9 +83,9 @@ public class UpdateVirtualResourceRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The ID of the Lingjun resource quota.</p>
+         * <p>The Lingjun resource quota ID.</p>
          * <blockquote>
-         * <p> You must specify one and only one of the InstanceType, ResourceId, and QuotaId parameters.</p>
+         * <p>Notice: You must specify exactly one of the following fields: InstanceType, ResourceId, and QuotaId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class UpdateVirtualResourceRequest extends TeaModel {
         public String quotaId;
 
         /**
-         * <p>The region in which the resource resides.</p>
+         * <p>The region where the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -104,9 +104,9 @@ public class UpdateVirtualResourceRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The ID of the dedicated resource group. For information about how to obtain the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>The ID of the dedicated resource group. For more information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <blockquote>
-         * <p> You must specify one and only one of the InstanceType, ResourceId, and QuotaId parameters.</p>
+         * <p>Notice: You must specify exactly one of the following fields: InstanceType, ResourceId, and QuotaId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -116,10 +116,8 @@ public class UpdateVirtualResourceRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The maximum price of preemptible instances in a public resource group.</p>
-         * <blockquote>
-         * <p> If you leave this parameter empty, preemptible instances are not used.</p>
-         * </blockquote>
+         * <p>The maximum price for spot instances in the public resource group.
+         * <notice>If not specified, spot instances are not used.</p>
          * 
          * <strong>example:</strong>
          * <p>10.05</p>

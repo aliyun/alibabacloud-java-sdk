@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateVirtualResourceResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The operation result message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successfully updated virtual resource eas-vr-npovr28onap1xxxxxx</p>
@@ -14,7 +14,7 @@ public class UpdateVirtualResourceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>

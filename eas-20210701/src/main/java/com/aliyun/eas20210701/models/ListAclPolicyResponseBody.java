@@ -85,7 +85,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
          * <p>The IP CIDR block in the VPC that can access the private gateway over the Internet.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.0.0.0/0</p>
+         * <p>10.23.XX.XX/32</p>
          */
         @NameInMap("Entry")
         public String entry;
@@ -140,7 +140,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
          * <p>The comment on the IP CIDR block in the VPC that can access the private gateway over the internal network.</p>
          * 
          * <strong>example:</strong>
-         * <p>default</p>
+         * <p>Test Entry</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -149,7 +149,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
          * <p>The IP CIDR block in the VPC that can access the private gateway over the internal network.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.0.0.0/0</p>
+         * <p>192.168.XX.XX/24</p>
          */
         @NameInMap("Entry")
         public String entry;

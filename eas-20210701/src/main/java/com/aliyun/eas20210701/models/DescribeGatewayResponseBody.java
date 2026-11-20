@@ -14,7 +14,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The time when the dedicated gateway was created. The time is in UTC.</p>
+     * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-05-19T14:19:42Z</p>
@@ -23,7 +23,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The self-managed cluster ID.</p>
+     * <p>The ID of the self-managed cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>c935eadf284c14c2da57a2a13ad6******</p>
@@ -32,7 +32,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String externalClusterId;
 
     /**
-     * <p>The dedicated gateway ID.</p>
+     * <p>The ID of the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
@@ -41,7 +41,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The alias of the dedicated gateway.</p>
+     * <p>The alias of the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>mygateway1</p>
@@ -50,7 +50,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String gatewayName;
 
     /**
-     * <p>The instance type used by the dedicated gateway.</p>
+     * <p>The instance type used by the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>2c4g</p>
@@ -59,7 +59,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The public network access domain name.</p>
+     * <p>The domain name for public network access.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******-1801786532******.cn-wulanchabu.pai-eas.aliyuncs.com</p>
@@ -77,7 +77,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public Boolean internetEnabled;
 
     /**
-     * <p>The status of public network access enablement or disablement.</p>
+     * <p>The status of public network access.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -86,7 +86,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String internetStatus;
 
     /**
-     * <p>The internal access domain name.</p>
+     * <p>The domain name for internal network access.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-wulanchabu.pai-eas.aliyuncs.com</p>
@@ -94,11 +94,17 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @NameInMap("IntranetDomain")
     public String intranetDomain;
 
+    /**
+     * <p>Indicates whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IntranetEnabled")
     public Boolean intranetEnabled;
 
     /**
-     * <p>Indicates whether the dedicated gateway is the default one.</p>
+     * <p>Indicates whether the private gateway is the default private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -106,11 +112,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
+    /**
+     * <p>The list of gateway labels.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<DescribeGatewayResponseBodyLabels> labels;
 
     /**
-     * <p>The number of nodes in the dedicated gateway.</p>
+     * <p>The number of nodes in the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -128,7 +137,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether HTTP-to-HTTPS redirection is enabled.</p>
+     * <p>Indicates whether HTTP redirection to HTTPS is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -137,7 +146,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public Boolean SSLRedirectionEnabled;
 
     /**
-     * <p>The status of the dedicated gateway.</p>
+     * <p>The status of the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -146,13 +155,22 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the dedicated gateway was last updated. The time is in UTC.</p>
+     * <p>The time when the private gateway was updated. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-02-24T11:52:17Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
+
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static DescribeGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGatewayResponseBody self = new DescribeGatewayResponseBody();
@@ -303,8 +321,18 @@ public class DescribeGatewayResponseBody extends TeaModel {
         return this.updateTime;
     }
 
+    public DescribeGatewayResponseBody setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static class DescribeGatewayResponseBodyLabels extends TeaModel {
         /**
+         * <p>The key of the gateway label.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -312,6 +340,8 @@ public class DescribeGatewayResponseBody extends TeaModel {
         public String labelKey;
 
         /**
+         * <p>The value of the gateway label.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */

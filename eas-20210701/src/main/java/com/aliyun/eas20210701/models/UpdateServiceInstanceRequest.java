@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether the instance is a replica.</p>
+     * <p>Specifies whether the current instance is an instance unit.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,9 +14,9 @@ public class UpdateServiceInstanceRequest extends TeaModel {
     public Boolean isReplica;
 
     /**
-     * <p>Specifies whether to fence the service instance. After an instance is fenced, it is no longer managed by the VPC controller and a new instance is created. The fenced instance is reserved for troubleshooting or debugging. Note: You cannot unfence an instance. Valid values:</p>
+     * <p>Specifies whether to isolate the service instance. After an instance is isolated, it is no longer managed by the controller, and a new instance is created. The isolated instance is used to preserve the state or for debugging. Note: An isolated instance cannot be unisolated. Valid values:</p>
      * <ul>
-     * <li>true: Fences the instance.</li>
+     * <li>true: The instance is isolated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class UpdateServiceInstanceRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is for an invitational preview. It is not generally available.</p>
+     * <p>This parameter is in invitational preview and is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,12 +37,10 @@ public class UpdateServiceInstanceRequest extends TeaModel {
     public Boolean hibernate;
 
     /**
-     * <p>Specifies whether to isolate the instance. Valid values:</p>
+     * <p>Specifies whether the instance receives traffic. Valid values:</p>
      * <ul>
-     * <li><p>true: The instance is isolated and does not receive traffic.</p>
-     * </li>
-     * <li><p>false: The instance is not isolated and receives traffic.</p>
-     * </li>
+     * <li>true: The instance receives traffic.</li>
+     * <li>false: The instance does not receive traffic.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAclPolicyRequest extends TeaModel {
     /**
-     * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
+     * <p>The whitelist of IP address segments that are allowed to access the VPC.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclPolicyList")
@@ -43,7 +43,7 @@ public class CreateAclPolicyRequest extends TeaModel {
 
     public static class CreateAclPolicyRequestAclPolicyList extends TeaModel {
         /**
-         * <p>The comment on the IP CIDR block in the VPC that can access the private gateway.</p>
+         * <p>The description of the IP address segment that is allowed to access the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -52,7 +52,7 @@ public class CreateAclPolicyRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>The IP CIDR block in the VPC that can access the private gateway.</p>
+         * <p>The IP address segment that is allowed to access the VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

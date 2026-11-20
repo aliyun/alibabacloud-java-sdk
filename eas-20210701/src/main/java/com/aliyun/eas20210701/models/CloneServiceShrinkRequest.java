@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class CloneServiceShrinkRequest extends TeaModel {
     /**
-     * <p>The label of the service to be cloned.</p>
+     * <p>The labels for the copied service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Labels")
     public String labelsShrink;
 
     /**
-     * <p>The request body. For more information, see <a href="https://help.aliyun.com/document_detail/412086.html">CreateService</a>.</p>
+     * <p>The request body. For more information about parameter settings, see <a href="https://help.aliyun.com/document_detail/412086.html">CreateService</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{   &quot;name&quot;: &quot;foo&quot;,   &quot;model_path&quot;: &quot;<a href="http://path/to/model.tar.gz">http://path/to/model.tar.gz</a>&quot;,   &quot;processor&quot;: &quot;tensorflow_cpu&quot;,   &quot;metadata&quot;: {     &quot;instance&quot;: 2,     &quot;memory&quot;: 7000,     &quot;cpu&quot;: 4   } }</p>

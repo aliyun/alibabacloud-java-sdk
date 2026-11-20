@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListGatewayIntranetLinkedVpcPeerRequest extends TeaModel {
     /**
-     * <p>The ID of the attached virtual private cloud (VPC). For more information, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
+     * <p>The ID of the associated VPC. For more information about how to query the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
      * <ul>
-     * <li><p>Specify a VPC ID to query only the VPC peers for that VPC.</p>
-     * </li>
-     * <li><p>If you do not specify a VPC ID, all VPC peers are returned.</p>
-     * </li>
+     * <li>If you specify a VPC ID, only the VPC peers associated with the specified VPC ID are queried.</li>
+     * <li>If you do not specify a VPC ID, all VPC peers are queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>

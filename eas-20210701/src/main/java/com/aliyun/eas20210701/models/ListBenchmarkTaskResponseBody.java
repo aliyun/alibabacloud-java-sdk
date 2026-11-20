@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBenchmarkTaskResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned list of tasks.</p>
+     * <p>The page number of the returned stress testing task list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of tasks to return on each page.</p>
+     * <p>The number of stress testing tasks returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
     public java.util.List<ListBenchmarkTaskResponseBodyTasks> tasks;
 
     /**
-     * <p>The total number of tasks.</p>
+     * <p>The total number of tasks queried.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -102,7 +102,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         public Long availableAgent;
 
         /**
-         * <p>The time when the stress testing task was created.</p>
+         * <p>The time when the stress testing task was created. The time is in UTC and follows the RFC3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-02-04T02:43:15Z</p>
@@ -111,7 +111,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>A summary of the task.</p>
+         * <p>The summary information of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>Benchmark task [benchmark-larec-test-1076] is Running</p>
@@ -165,7 +165,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The time when the stress testing task was last updated.</p>
+         * <p>The time when the stress testing task was updated. The time is in UTC and follows the RFC3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-24T03:11:30Z</p>

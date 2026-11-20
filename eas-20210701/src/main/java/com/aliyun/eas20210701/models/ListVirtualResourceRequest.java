@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListVirtualResourceRequest extends TeaModel {
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p>Desc: Descending order.</p>
-     * </li>
-     * <li><p>Asc: Ascending order.</p>
-     * </li>
+     * <li>Desc: descending order.</li>
+     * <li>Asc: ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ListVirtualResourceRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number for the list of virtual resource groups. The value starts from 1. The default value is 1.</p>
+     * <p>The page number of the virtual resource group list. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +27,7 @@ public class ListVirtualResourceRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of virtual resource groups to display on each page. The default value is 100.</p>
+     * <p>The number of virtual resource groups to display per page in a paged query. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +36,7 @@ public class ListVirtualResourceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field that is used to sort the results. By default, the results are sorted by timestamp in descending order.</p>
+     * <p>The sort field. Results are sorted by timestamp in descending order by default.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -47,7 +45,7 @@ public class ListVirtualResourceRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The ID of the virtual resource group.</p>
+     * <p>The virtual resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-vr-npovr28onap1xxxxxx</p>
@@ -56,7 +54,7 @@ public class ListVirtualResourceRequest extends TeaModel {
     public String virtualResourceId;
 
     /**
-     * <p>The name of the virtual resource group.</p>
+     * <p>The virtual resource group name.</p>
      * 
      * <strong>example:</strong>
      * <p>MyVirtualResource</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Group extends TeaModel {
     /**
-     * <p>The access token for the traffic entry of the service group.</p>
+     * <p>The access token for the traffic ingress of the service group.</p>
      * 
      * <strong>example:</strong>
      * <p>MzJiMDI5MDliODc0MTlkYmI0ZDhlYmExYjczYTIyZTE3Zm********</p>
@@ -13,11 +13,17 @@ public class Group extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
+    /**
+     * <p>The UID of the account that created the service group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20123*******</p>
+     */
     @NameInMap("CallerUid")
     public String callerUid;
 
     /**
-     * <p>The region in which the service group resides.</p>
+     * <p>The ID of the cluster where the service group is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -26,7 +32,7 @@ public class Group extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The time when the service group was created. The time is in UTC.</p>
+     * <p>The time when the service group was created. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-05-19T14:19:42Z</p>
@@ -52,6 +58,9 @@ public class Group extends TeaModel {
     @NameInMap("IntranetEndpoint")
     public String intranetEndpoint;
 
+    /**
+     * <p>The list of labels for the service group.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<GroupLabels> labels;
 
@@ -64,14 +73,23 @@ public class Group extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The virtual private cloud (VPC) configuration of the service group.</p>
+     */
     @NameInMap("Network")
     public GroupNetwork network;
 
+    /**
+     * <p>The UID of the parent account that created the service group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11234*******</p>
+     */
     @NameInMap("ParentUid")
     public String parentUid;
 
     /**
-     * <p>The queue services contained in the service group.</p>
+     * <p>The queue services included in the service group.</p>
      * 
      * <strong>example:</strong>
      * <p>qservice</p>
@@ -89,7 +107,7 @@ public class Group extends TeaModel {
     public String trafficMode;
 
     /**
-     * <p>The time when the service group was last updated. The time is in UTC.</p>
+     * <p>The time when the service group was updated. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-29T11:13:20Z</p>
@@ -207,9 +225,21 @@ public class Group extends TeaModel {
     }
 
     public static class GroupLabels extends TeaModel {
+        /**
+         * <p>The label key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("LabelKey")
         public String labelKey;
 
+        /**
+         * <p>The label value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("LabelValue")
         public String labelValue;
 
@@ -237,15 +267,39 @@ public class Group extends TeaModel {
     }
 
     public static class GroupNetwork extends TeaModel {
+        /**
+         * <p>The dedicated gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-248xxxxxxvlkhtbrda</p>
+         */
         @NameInMap("GatewayId")
         public String gatewayId;
 
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-584xxxxxx7h08llvoww5tv5gl</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1xxxxxxwmssgq28gye8</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1xxxxxx0qrykjr9b</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

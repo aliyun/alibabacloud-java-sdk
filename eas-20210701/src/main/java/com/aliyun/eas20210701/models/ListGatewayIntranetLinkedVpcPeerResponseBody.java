@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
     /**
-     * <p>The private gateway ID.</p>
+     * <p>The ID of the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
@@ -14,13 +14,13 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>A list of peer VPCs.</p>
+     * <p>The list of peered VPCs.</p>
      */
     @NameInMap("PeerVpcList")
     public java.util.List<ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcList> peerVpcList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>
@@ -59,7 +59,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
 
     public static class ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcListPeerVpcs extends TeaModel {
         /**
-         * <p>The region where the peer VPC is located.</p>
+         * <p>The region where the peered VPC is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -67,11 +67,17 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The network connectivity status of the peered VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the peer VPC.</p>
+         * <p>The ID of the peered VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf66uio7md****</p>
@@ -112,13 +118,13 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
 
     public static class ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcList extends TeaModel {
         /**
-         * <p>A list of peer VPC IDs.</p>
+         * <p>The list of peered VPC IDs.</p>
          */
         @NameInMap("PeerVpcs")
         public java.util.List<ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcListPeerVpcs> peerVpcs;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zetuli9ws0qgjd******</p>

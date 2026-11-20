@@ -4,21 +4,57 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ArtifactRelease extends TeaModel {
+    /**
+     * <p>The artifact reference name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>python-env</p>
+     */
     @NameInMap("ArtifactRef")
     public String artifactRef;
 
+    /**
+     * <p>The creation time of the artifact release record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-01-15T10:30:00Z</p>
+     */
     @NameInMap("CreatedAt")
     public String createdAt;
 
+    /**
+     * <p>The artifact description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Container image for model inference</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The container image address used by the artifact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-shanghai.aliyuncs.com/eas/echo_cn-shanghai:v0.0.1-20210129111320</p>
+     */
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <p>The artifact type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Image</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The artifact version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>V2.0</p>
+     */
     @NameInMap("Version")
     public String version;
 

@@ -5,35 +5,29 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceRolloutRequest extends TeaModel {
     /**
-     * <p>The batch rollout configuration. This parameter is mutually exclusive with <code>Partition</code>.</p>
+     * <p><strong>Batch</strong>  </p>
      * <ul>
-     * <li><p>Type: object</p>
-     * </li>
-     * <li><p>Required: No</p>
-     * </li>
-     * <li><p>Description: The batch rollout configuration for adjusting batch policy parameters. This parameter is mutually exclusive with Partition.</p>
-     * </li>
+     * <li>Type: object</li>
+     * <li>Required: no</li>
+     * <li>Description: The batch rollout configuration. Used to adjust batch policy parameters. Mutually exclusive with Partition.</li>
      * </ul>
      */
     @NameInMap("Batch")
     public UpdateServiceRolloutRequestBatch batch;
 
     /**
-     * <p>The partition rollout configuration. This parameter is mutually exclusive with <code>Batch</code>.</p>
+     * <p><strong>Partition</strong>  </p>
      * <ul>
-     * <li><p>Type: object</p>
-     * </li>
-     * <li><p>Required: No</p>
-     * </li>
-     * <li><p>Description: The partition rollout configuration. This parameter adjusts the parameters for the partition strategy. It is mutually exclusive with <code>Batch</code>.</p>
-     * </li>
+     * <li>Type: object</li>
+     * <li>Required: no</li>
+     * <li>Description: The partition rollout configuration. Used to adjust partition policy parameters. Mutually exclusive with Batch.</li>
      * </ul>
      */
     @NameInMap("Partition")
     public UpdateServiceRolloutRequestPartition partition;
 
     /**
-     * <p>Set to <code>true</code> to pause the rollout or <code>false</code> to resume it.</p>
+     * <p>Specifies whether to pause the rollout. A value of true indicates that the rollout is paused. A value of false indicates that the rollout is resumed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -72,7 +66,7 @@ public class UpdateServiceRolloutRequest extends TeaModel {
 
     public static class UpdateServiceRolloutRequestBatch extends TeaModel {
         /**
-         * <p>The number of replicas to update in each batch. This can be an integer or a percentage. The default is <code>&quot;25%&quot;</code>.</p>
+         * <p>The batch size. The number of replicas updated per batch. Integer or percentage formats are supported. Default value: &quot;25%&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>25%</p>
@@ -81,7 +75,7 @@ public class UpdateServiceRolloutRequest extends TeaModel {
         public String batchSize;
 
         /**
-         * <p>The interval to wait between batches. Supported units include <code>s</code> (seconds), <code>m</code> (minutes), and <code>h</code> (hours).</p>
+         * <p>The batch interval. The wait time between two rollouts. Supported units: s (seconds), m (minutes), and h (hours).</p>
          * 
          * <strong>example:</strong>
          * <p>60s</p>
@@ -114,31 +108,22 @@ public class UpdateServiceRolloutRequest extends TeaModel {
 
     public static class UpdateServiceRolloutRequestPartition extends TeaModel {
         /**
-         * <p><strong>Partition value</strong></p>
+         * <p><strong>Partition</strong>  </p>
          * <ul>
-         * <li><p>Type: string</p>
-         * </li>
-         * <li><p>Required: Yes</p>
-         * </li>
-         * <li><p>Description: The partition value. This parameter specifies the number or percentage of old-version replicas to retain. It supports two formats:</p>
-         * <ol>
-         * <li><p>An integer, such as &quot;5&quot;, for the number of replicas.</p>
-         * </li>
-         * <li><p>A percentage, such as &quot;50%&quot;, for the proportion of replicas.</p>
-         * </li>
+         * <li>Type: string</li>
+         * <li>Required: yes</li>
+         * <li>Description: The partition value. Two formats are supported:<ol>
+         * <li>Integer format: such as &quot;5&quot;, which means retaining 5 old replicas.</li>
+         * <li>Percentage format: such as &quot;50%&quot;, which means retaining 50% of the old replicas.
+         * Adjustment policy:</li>
          * </ol>
-         * <p>Adjustment strategy:</p>
          * <ul>
-         * <li><p>Increasing the value rolls back to the previous version by increasing the number of old-version replicas.</p>
-         * </li>
-         * <li><p>Decreasing the value continues the rollout by reducing the number of old-version replicas.</p>
-         * </li>
-         * <li><p>Setting the value to &quot;0&quot; or &quot;0%&quot; completes the rollout, replacing all old-version replicas.</p>
-         * </li>
+         * <li>Increase the value: Roll back to the old version and increase the proportion of old replicas.</li>
+         * <li>Decrease the value: Proceed to the new version and decrease the proportion of old replicas.</li>
+         * <li>Set to &quot;0%&quot;: Complete the full update and switch all replicas to the new version.</li>
          * </ul>
          * </li>
-         * <li><p>Example: 30%</p>
-         * </li>
+         * <li>Example: 30%</li>
          * </ul>
          * 
          * <strong>example:</strong>

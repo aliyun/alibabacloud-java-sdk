@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceInstanceLabelShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether the operation takes effect on all instances in the resource group. If this parameter is set to true, the InstanceIds parameter does not take effect.</p>
+     * <p>Specifies whether the operation applies to all instances in the resource group. If this parameter is set to true, the InstanceIds parameter does not take effect.</p>
      */
     @NameInMap("AllInstances")
     public Boolean allInstances;
 
     /**
-     * <p>The machine instance IDs.</p>
+     * <p>The instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
     /**
-     * <p>The tags to delete. (Deprecated. Use LabelKeys instead.).</p>
+     * <p><strong>[Deprecated]</strong> The tags to delete. Use LabelKeys instead.</p>
      */
     @NameInMap("Keys")
     @Deprecated

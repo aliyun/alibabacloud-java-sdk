@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceInstanceLabelResponseBody extends TeaModel {
     /**
-     * <p>The message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

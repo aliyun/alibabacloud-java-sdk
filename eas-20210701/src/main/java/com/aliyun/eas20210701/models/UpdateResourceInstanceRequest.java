@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceInstanceRequest extends TeaModel {
     /**
-     * <p>The scheduling behavior to update for the instance in the dedicated resource group. Valid values:</p>
+     * <p>Updates the schedulable behavior of the machine instance in the dedicated resource group. Valid values:</p>
      * <ul>
-     * <li><p>Uncordon: Allows services to be scheduled to the instance.</p>
-     * </li>
-     * <li><p>Cordon: Prevents services from being scheduled to the instance.</p>
-     * </li>
-     * <li><p>Drain: Evicts the service instances that are running on the instance.</p>
-     * </li>
+     * <li>Uncordon: Allows services to be scheduled to this instance.</li>
+     * <li>Cordon: Prevents services from being scheduled to this instance.</li>
+     * <li>Drain: Evicts service instances that are already scheduled to this instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -22,9 +19,21 @@ public class UpdateResourceInstanceRequest extends TeaModel {
     @NameInMap("Action")
     public String action;
 
+    /**
+     * <p>The size of the system cloud disk after scaling, in GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("NewDiskSize")
     public String newDiskSize;
 
+    /**
+     * <p>Takes effect when Action is set to Cordon or Drain. Records the reason for the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Node maintenance</p>
+     */
     @NameInMap("Reason")
     public String reason;
 

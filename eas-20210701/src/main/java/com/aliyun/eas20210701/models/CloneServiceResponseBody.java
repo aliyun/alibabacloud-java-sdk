@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneServiceResponseBody extends TeaModel {
     /**
-     * <p>The public endpoint of the service.</p>
+     * <p>The public network access endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
@@ -14,7 +14,7 @@ public class CloneServiceResponseBody extends TeaModel {
     public String internetEndpoint;
 
     /**
-     * <p>The private endpoint of the service.</p>
+     * <p>The internal endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
@@ -32,7 +32,7 @@ public class CloneServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The service ID.</p>
+     * <p>The ID of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-m-r9knx7n9guf2p*****</p>
@@ -41,7 +41,7 @@ public class CloneServiceResponseBody extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The service name.</p>
+     * <p>The name of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>foo</p>
@@ -50,7 +50,7 @@ public class CloneServiceResponseBody extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The service status.</p>
+     * <p>The status of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>Creating</p>

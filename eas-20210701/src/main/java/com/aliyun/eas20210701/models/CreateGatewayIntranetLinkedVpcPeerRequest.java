@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayIntranetLinkedVpcPeerRequest extends TeaModel {
     /**
-     * <p>The list of VPC peers.</p>
+     * <p>The list of peered VPCs.</p>
      */
     @NameInMap("PeerVpcs")
     public java.util.List<CreateGatewayIntranetLinkedVpcPeerRequestPeerVpcs> peerVpcs;
 
     /**
-     * <p>The VPC ID. To obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
+     * <p>The ID of the VPC. For information about how to obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zetuli9ws0qgjd******</p>
@@ -42,7 +42,7 @@ public class CreateGatewayIntranetLinkedVpcPeerRequest extends TeaModel {
 
     public static class CreateGatewayIntranetLinkedVpcPeerRequestPeerVpcs extends TeaModel {
         /**
-         * <p>The region where the VPC peer resides.</p>
+         * <p>The region where the peered VPC resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -51,7 +51,7 @@ public class CreateGatewayIntranetLinkedVpcPeerRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>The ID of the VPC peer. To obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a>.</p>
+         * <p>The ID of the peered VPC. For information about how to obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf66uio7md****</p>

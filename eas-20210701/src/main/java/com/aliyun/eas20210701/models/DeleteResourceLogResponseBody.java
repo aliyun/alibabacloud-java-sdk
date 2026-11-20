@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceLogResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The operation result message.</p>
      * 
      * <strong>example:</strong>
      * <p>Log service for resource [eas-r-asdas****] is deleting</p>
@@ -14,7 +14,7 @@ public class DeleteResourceLogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>

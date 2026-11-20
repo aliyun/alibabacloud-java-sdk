@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceRolloutResponseBody extends TeaModel {
     /**
-     * <p>A message indicating the result of the request.</p>
+     * <p><strong>Message</strong>  </p>
      * <ul>
-     * <li><p>Type: <code>string</code></p>
-     * </li>
-     * <li><p>Description: The message that describes the result of the request.</p>
-     * </li>
-     * <li><p>Example value: <code>Rollout deleted successfully</code></p>
-     * </li>
+     * <li>Type: <code>string</code>  </li>
+     * <li>Description: The returned message. Describes the request processing result.  </li>
+     * <li>Example: <code>Rollout deleted successfully</code></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,14 +19,11 @@ public class DeleteServiceRolloutResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID of the request. Use this ID for troubleshooting.</p>
+     * <p><strong>RequestId</strong>  </p>
      * <ul>
-     * <li><p>Type: <code>string</code></p>
-     * </li>
-     * <li><p>Description: The unique identifier for the request. Use this ID to troubleshoot and track issues.</p>
-     * </li>
-     * <li><p>Example: <code>40325405-579C-4D82-9B4F-8A7C6D5E4F3A</code></p>
-     * </li>
+     * <li>Type: <code>string</code>  </li>
+     * <li>Description: The request ID. The unique identifier returned for each request, used for troubleshooting and tracking.  </li>
+     * <li>Example: <code>40325405-579C-4D82-9B4F-8A7C6D5E4F3A</code></li>
      * </ul>
      * 
      * <strong>example:</strong>

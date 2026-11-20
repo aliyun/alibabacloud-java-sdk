@@ -14,7 +14,7 @@ public class ListGatewayIntranetSupportedZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The zones that are supported by the region.</p>
+     * <p>The list of zones supported in the current region.</p>
      */
     @NameInMap("Zones")
     public java.util.List<String> zones;

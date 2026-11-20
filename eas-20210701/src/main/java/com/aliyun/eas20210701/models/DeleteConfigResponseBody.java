@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteConfigResponseBody extends TeaModel {
     /**
-     * <p>The number of configurations deleted.</p>
+     * <p>The number of deleted configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DeleteConfigResponseBody extends TeaModel {
     public Integer deleted;
 
     /**
-     * <p>A message indicating the operation result.</p>
+     * <p>The operation result message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successfully deleted 1 configs</p>

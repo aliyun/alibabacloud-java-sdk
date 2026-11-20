@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopServiceResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>Succeed to auto scale service [foo]</p>

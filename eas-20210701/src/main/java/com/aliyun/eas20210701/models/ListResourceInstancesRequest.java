@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListResourceInstancesRequest extends TeaModel {
     /**
-     * <p>Filters instances by billing method. Valid values:</p>
+     * <p>The billing method of the machines to filter. Valid values:</p>
      * <ul>
-     * <li><p>PrePaid: subscription.</p>
-     * </li>
-     * <li><p>PostPaid: pay-as-you-go.</p>
-     * </li>
+     * <li>PrePaid: Subscription.</li>
+     * <li>PostPaid: Pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ListResourceInstancesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>A keyword for the search. You can search by instance ID or IP address.</p>
+     * <p>The search keyword. You can search by machine ID or IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>10.224.xx.xx</p>
@@ -29,7 +27,7 @@ public class ListResourceInstancesRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The IP address of the instance.</p>
+     * <p>The IP address of the machine.</p>
      * 
      * <strong>example:</strong>
      * <p>10.224.xx.xx</p>
@@ -38,7 +36,7 @@ public class ListResourceInstancesRequest extends TeaModel {
     public String instanceIP;
 
     /**
-     * <p>Filter by instance ID. For more information, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
+     * <p>Filters the results by instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1jd6x3uots****a</p>
@@ -47,7 +45,7 @@ public class ListResourceInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Filter by instance name.</p>
+     * <p>Filters the results by instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>e-xxxx***</p>
@@ -56,7 +54,7 @@ public class ListResourceInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The status of the instance.</p>
+     * <p>The status of the machine.</p>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -65,7 +63,10 @@ public class ListResourceInstancesRequest extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>Filter by label.</p>
+     * <p>Filters the results by label.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
      */
     @NameInMap("Label")
     public java.util.Map<String, String> label;
@@ -80,7 +81,7 @@ public class ListResourceInstancesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. The value starts from 1. The default value is 1.</p>
+     * <p>The page number of the machine instance list in the dedicated resource group. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -89,7 +90,7 @@ public class ListResourceInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of instances to return on each page. Default value: 100.</p>
+     * <p>The paging Settings for the number of machines to return on each page in a paged query. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -98,7 +99,7 @@ public class ListResourceInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort field.</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -107,7 +108,7 @@ public class ListResourceInstancesRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The zone of the instance.</p>
+     * <p>The zone of the machine.</p>
      * 
      * <strong>example:</strong>
      * <p>J</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopBenchmarkTaskResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The operation result message.</p>
      * 
      * <strong>example:</strong>
      * <p>Benchmark task [benchmark-larec-test-dbe5] is Stopping</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceRolloutResponseBody extends TeaModel {
     /**
-     * <p>A message that indicates the result of the operation.</p>
+     * <p>The response message that describes the result of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>Rollout created successfully</p>
@@ -14,7 +14,7 @@ public class CreateServiceRolloutResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID. Use this ID for troubleshooting and traceability.</p>
+     * <p>The request ID. It is a unique identifier returned for each request and is used for troubleshooting and tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayLabelResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Succeed to delete gateway labels.</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceRequest extends TeaModel {
     /**
-     * <p>The new name of the resource group after the update. The name can be up to 27 characters in length.</p>
+     * <p>The new name of the resource group. The name cannot exceed 27 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>iot</p>
@@ -14,7 +14,7 @@ public class UpdateResourceRequest extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>The configuration items of the self-managed resource group.</p>
+     * <p>The configuration options for the self-managed resource group.</p>
      */
     @NameInMap("SelfManagedResourceOptions")
     public UpdateResourceRequestSelfManagedResourceOptions selfManagedResourceOptions;
@@ -42,13 +42,7 @@ public class UpdateResourceRequest extends TeaModel {
 
     public static class UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations extends TeaModel {
         /**
-         * <p>The effect.
-         * Valid values:</p>
-         * <ul>
-         * <li>PreferNoSchedule</li>
-         * <li>NoSchedule</li>
-         * <li>NoExecute</li>
-         * </ul>
+         * <p>The effect.</p>
          * 
          * <strong>example:</strong>
          * <p>NoSchedule</p>
@@ -66,12 +60,7 @@ public class UpdateResourceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Relationship between key names and key values.
-         * Valid values:</p>
-         * <ul>
-         * <li>Equal</li>
-         * <li>Exists</li>
-         * </ul>
+         * <p>The relationship between the key name and the key value.</p>
          * 
          * <strong>example:</strong>
          * <p>Equal</p>
@@ -129,13 +118,16 @@ public class UpdateResourceRequest extends TeaModel {
 
     public static class UpdateResourceRequestSelfManagedResourceOptions extends TeaModel {
         /**
-         * <p>Tag tag key-value pairs for nodes.</p>
+         * <p>The set of label key-value pairs for nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;key1&quot;: &quot;value1&quot;</p>
          */
         @NameInMap("NodeMatchLabels")
         public java.util.Map<String, String> nodeMatchLabels;
 
         /**
-         * <p>Tolerations for nodes.</p>
+         * <p>The list of tolerations for node taints.</p>
          */
         @NameInMap("NodeTolerations")
         public java.util.List<UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations> nodeTolerations;

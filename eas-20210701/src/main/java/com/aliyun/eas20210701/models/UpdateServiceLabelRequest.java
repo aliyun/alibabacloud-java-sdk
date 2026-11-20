@@ -7,6 +7,9 @@ public class UpdateServiceLabelRequest extends TeaModel {
     /**
      * <p>The custom service tags.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;

@@ -11,7 +11,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public java.util.List<Group> groups;
 
     /**
-     * <p>The current page number of the returned group list.</p>
+     * <p>The current page number of the group list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of groups displayed per page.</p>
+     * <p>The number of groups returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of service groups.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

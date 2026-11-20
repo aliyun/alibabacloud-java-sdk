@@ -5,6 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateAppServiceRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5db780a0-9d3e-4f35-a84a-xxxxx</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+     * <ul>
+     * <li>true: performs a dry run without performing the actual operation. If the request fails the dry run, an error is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li>false (default): sends a normal request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The quota ID.</p>
      * 
      * <strong>example:</strong>
@@ -23,16 +45,7 @@ public class CreateAppServiceRequest extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The application service type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>LLM</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The type of the application service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +64,10 @@ public class CreateAppServiceRequest extends TeaModel {
     public String appVersion;
 
     /**
-     * <p>The additional configurations that are required for service deployment.</p>
+     * <p>The additional configuration information required for deployment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;ModelStorage&quot;: &quot;oss&quot;, &quot;OssPath&quot;: &quot;oss://examplebucket/xxxx/&quot; }</p>
      */
     @NameInMap("Config")
     public java.util.Map<String, ?> config;
@@ -67,7 +83,7 @@ public class CreateAppServiceRequest extends TeaModel {
     public Integer replicas;
 
     /**
-     * <p>The service name.</p>
+     * <p>The name of the service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,6 +117,22 @@ public class CreateAppServiceRequest extends TeaModel {
     public static CreateAppServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppServiceRequest self = new CreateAppServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAppServiceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateAppServiceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateAppServiceRequest setQuotaId(String quotaId) {

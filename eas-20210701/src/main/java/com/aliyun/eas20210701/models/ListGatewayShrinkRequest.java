@@ -14,7 +14,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The ID of the private gateway. You can obtain the ID from the private_gateway_id field in the response of the ListResources operation.</p>
+     * <p>The ID of the private gateway. To obtain the private gateway ID, see the private_gateway_id field in the response of the ListResources operation.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
@@ -41,7 +41,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>Specifies whether to enable access over the public network.</p>
+     * <p>Specifies whether public network access is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,10 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public Boolean internetEnabled;
 
     /**
-     * <p>Filter by tag.</p>
+     * <p>Filters the results by label.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
      */
     @NameInMap("Label")
     public String labelShrink;
@@ -65,7 +68,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number of the gateway list to return. The default value is 1.</p>
+     * <p>The page number of the gateway list. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,7 +77,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of gateways to return on each page. The default value is 100.</p>
+     * <p>The paging settings for the number of entries to return on each page in a paged query. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -83,7 +86,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group. You can obtain the ID from the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
+     * <p>The ID of the resource group. To obtain the resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>eas-r-4gt8twzwllfo******</p>
@@ -92,7 +95,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>The field to sort by.</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -108,6 +111,15 @@ public class ListGatewayShrinkRequest extends TeaModel {
      */
     @NameInMap("Status")
     public String status;
+
+    /**
+     * <p>The ID of the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static ListGatewayShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewayShrinkRequest self = new ListGatewayShrinkRequest();
@@ -208,6 +220,14 @@ public class ListGatewayShrinkRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListGatewayShrinkRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

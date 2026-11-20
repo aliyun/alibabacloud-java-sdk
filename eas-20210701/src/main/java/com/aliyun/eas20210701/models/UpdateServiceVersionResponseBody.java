@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceVersionResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Service [foo] in region [cn-shanghai] is starting</p>

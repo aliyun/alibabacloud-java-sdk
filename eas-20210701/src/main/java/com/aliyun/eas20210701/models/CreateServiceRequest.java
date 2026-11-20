@@ -5,23 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateServiceRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5db780a0-9d3e-4f35-a84a-xxxxx</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>Specifies whether to enter development mode.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -30,7 +23,25 @@ public class CreateServiceRequest extends TeaModel {
     public String develop;
 
     /**
-     * <p>The custom label.</p>
+     * <p>Specifies whether to only perform a dry run for this request.</p>
+     * <ul>
+     * <li><p>true: A check request is sent, and no actual operation is performed. If the check fails, the corresponding error is returned. If the check succeeds, the error code DryRunOperation is returned.</p>
+     * </li>
+     * <li><p>false (default): A normal request is sent.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The user-defined labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
@@ -45,79 +56,79 @@ public class CreateServiceRequest extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The request body. For more information about the key request parameters, see <strong>Table 1. Request body parameters</strong> and <strong>Table 2. Metadata parameters</strong>. For more information about all related parameters, see <a href="https://help.aliyun.com/document_detail/450525.html">Parameters of model services</a>.</p>
+     * <p>The request body. For instructions on key request parameter settings, see <strong>Table 1. Request body parameters</strong> and <strong>Table 2. Metadata parameters</strong> below. For more details about parameter settings, see <a href="https://help.aliyun.com/document_detail/450525.html">All related metric description for service models</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Image deployment service:
+     * <p>Service deployed by using an image:
      * {
-     *   &quot;name&quot;: &quot;foo&quot;,
-     *   &quot;metadata&quot;: {
-     *     &quot;instance&quot;: 2,
-     *     &quot;memory&quot;: 7000,
-     *     &quot;cpu&quot;: 4
-     *     },
-     *   &quot;containers&quot;: [
-     *     {
-     *       &quot;image&quot;: &quot;<strong><strong>&quot;,
-     *       &quot;script&quot;: &quot;</strong></strong> --listen=0.0.0.0 --server_port=8000 --headless&quot;,
-     *       &quot;port&quot;: 8000
-     *     }
-     *   ],
-     *   &quot;storage&quot;: [
-     *     {
-     *       &quot;oss&quot;: {
-     *         &quot;path&quot;: &quot;oss://examplebuket/data111/&quot;,
-     *         &quot;readOnly&quot;: false
-     *       },
-     *       &quot;properties&quot;: {
-     *         &quot;resource_type&quot;: &quot;model&quot;
-     *       },
-     *       &quot;mount_path&quot;: &quot;/data&quot;
-     *     }
-     *   ]
+     *   &quot;name&quot;: &quot;foo&quot;,
+     *   &quot;metadata&quot;: {
+     *     &quot;instance&quot;: 2,
+     *     &quot;memory&quot;: 7000,
+     *     &quot;cpu&quot;: 4
+     *     },
+     *   &quot;containers&quot;: [
+     *     {
+     *       &quot;image&quot;: &quot;<strong><strong>&quot;,
+     *       &quot;script&quot;: &quot;</strong></strong> --listen=0.0.0.0 --server_port=8000 --headless&quot;,
+     *       &quot;port&quot;: 8000
+     *     }
+     *   ],
+     *   &quot;storage&quot;: [
+     *     {
+     *       &quot;oss&quot;: {
+     *         &quot;path&quot;: &quot;oss://examplebuket/data111/&quot;,
+     *         &quot;readOnly&quot;: false
+     *       },
+     *       &quot;properties&quot;: {
+     *         &quot;resource_type&quot;: &quot;model&quot;
+     *       },
+     *       &quot;mount_path&quot;: &quot;/data&quot;
+     *     }
+     *   ]
      * }
-     * image deploymentAI-Web application:
+     * AI-Web application deployed by using an image:
      * {
-     *   &quot;name&quot;: &quot;foo&quot;,
-     *   &quot;metadata&quot;: {
-     *     &quot;instance&quot;: 1,
-     *     &quot;memory&quot;: 7000,
-     *     &quot;cpu&quot;: 4,
-     *     &quot;enable_webservice&quot;: true
-     *   },
-     *   &quot;containers&quot;: [
-     *     {
-     *       &quot;image&quot;: &quot;<strong><strong>&quot;,
-     *       &quot;script&quot;: &quot;</strong></strong> --listen=0.0.0.0 --server_port=8000 --headless&quot;,
-     *       &quot;port&quot;: 8000
-     *     }
-     *   ],
-     *   &quot;storage&quot;: [
-     *     {
-     *       &quot;oss&quot;: {
-     *         &quot;path&quot;: &quot;oss://examplebucket/data111/&quot;,
-     *         &quot;readOnly&quot;: false
-     *       },
-     *       &quot;properties&quot;: {
-     *       &quot;resource_type&quot;: &quot;model&quot;
-     *       },
-     *       &quot;mount_path&quot;: &quot;/data&quot;
-     *     }
-     *   ]
+     *   &quot;name&quot;: &quot;foo&quot;,
+     *   &quot;metadata&quot;: {
+     *     &quot;instance&quot;: 1,
+     *     &quot;memory&quot;: 7000,
+     *     &quot;cpu&quot;: 4,
+     *     &quot;enable_webservice&quot;: true
+     *   },
+     *   &quot;containers&quot;: [
+     *     {
+     *       &quot;image&quot;: &quot;<strong><strong>&quot;,
+     *       &quot;script&quot;: &quot;</strong></strong> --listen=0.0.0.0 --server_port=8000 --headless&quot;,
+     *       &quot;port&quot;: 8000
+     *     }
+     *   ],
+     *   &quot;storage&quot;: [
+     *     {
+     *       &quot;oss&quot;: {
+     *         &quot;path&quot;: &quot;oss://examplebucket/data111/&quot;,
+     *         &quot;readOnly&quot;: false
+     *       },
+     *       &quot;properties&quot;: {
+     *       &quot;resource_type&quot;: &quot;model&quot;
+     *       },
+     *       &quot;mount_path&quot;: &quot;/data&quot;
+     *     }
+     *   ]
      * }
-     * model+processor deployment service:
+     * Service deployed by using a model and a processor:
      * {
-     *   &quot;metadata&quot;: {
-     *     &quot;instance&quot;: 1,
-     *     &quot;memory&quot;: 7000,
-     *     &quot;cpu&quot;: 4
-     *   },
-     *   &quot;name&quot;: &quot;foo&quot;,
-     *   &quot;model_config&quot;: {},
-     *   &quot;processor_type&quot;: &quot;python&quot;,
-     *   &quot;processor_path&quot;: &quot;oss://<strong><strong>&quot;,
-     *   &quot;processor_entry&quot;: &quot;a.py&quot;,
-     *   &quot;model_path&quot;: &quot;oss://</strong></strong>&quot;
+     *   &quot;metadata&quot;: {
+     *     &quot;instance&quot;: 1,
+     *     &quot;memory&quot;: 7000,
+     *     &quot;cpu&quot;: 4
+     *   },
+     *   &quot;name&quot;: &quot;foo&quot;,
+     *   &quot;model_config&quot;: {},
+     *   &quot;processor_type&quot;: &quot;python&quot;,
+     *   &quot;processor_path&quot;: &quot;oss://<strong><strong>&quot;,
+     *   &quot;processor_entry&quot;: &quot;a.py&quot;,
+     *   &quot;model_path&quot;: &quot;oss://</strong></strong>&quot;
      * }</p>
      */
     @NameInMap("body")
@@ -128,12 +139,28 @@ public class CreateServiceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateServiceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public CreateServiceRequest setDevelop(String develop) {
         this.develop = develop;
         return this;
     }
     public String getDevelop() {
         return this.develop;
+    }
+
+    public CreateServiceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateServiceRequest setLabels(java.util.Map<String, String> labels) {

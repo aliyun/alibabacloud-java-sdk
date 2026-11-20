@@ -7,10 +7,8 @@ public class CreateResourceInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p>false (default): Auto-renewal is disabled.</p>
-     * </li>
-     * <li><p>true: Auto-renewal is enabled.</p>
-     * </li>
+     * <li>false (default): disables auto-renewal.</li>
+     * <li>true: enables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,10 +20,8 @@ public class CreateResourceInstancesRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><p>PrePaid: subscription.</p>
-     * </li>
-     * <li><p>PostPaid: pay-as-you-go.</p>
-     * </li>
+     * <li>PrePaid: subscription.</li>
+     * <li>PostPaid: pay-as-you-go.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +32,7 @@ public class CreateResourceInstancesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The number of new instances to create. The value must be between 1 and 100.</p>
+     * <p>The number of instances to create. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +42,7 @@ public class CreateResourceInstancesRequest extends TeaModel {
     public Integer ecsInstanceCount;
 
     /**
-     * <p>The instance type. This corresponds to an ECS instance type.</p>
+     * <p>The instance type, which corresponds to an ECS instance type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,13 +52,16 @@ public class CreateResourceInstancesRequest extends TeaModel {
     public String ecsInstanceType;
 
     /**
-     * <p>The user-defined tags.</p>
+     * <p>The user-defined labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
     /**
-     * <p>The size of the system disk, in GiB. The value must be between 200 and 2,000. If you do not configure this parameter, the default value is 200 GiB.</p>
+     * <p>The size of the system cloud disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -71,7 +70,7 @@ public class CreateResourceInstancesRequest extends TeaModel {
     public Integer systemDiskSize;
 
     /**
-     * <p>The custom user data. This parameter is not currently used.</p>
+     * <p>The custom user data. This parameter is not used.</p>
      * 
      * <strong>example:</strong>
      * <p>x112223333</p>
@@ -81,7 +80,7 @@ public class CreateResourceInstancesRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The zone where the instance belongs.</p>
+     * <p>The zone to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-f</p>

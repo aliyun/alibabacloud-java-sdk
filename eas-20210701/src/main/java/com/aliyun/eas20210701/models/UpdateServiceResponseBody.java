@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The operation result message.</p>
      * 
      * <strong>example:</strong>
      * <p>Succeed to update service [foo] in region [cn-shanghai]</p>
@@ -14,7 +14,7 @@ public class UpdateServiceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82****</p>

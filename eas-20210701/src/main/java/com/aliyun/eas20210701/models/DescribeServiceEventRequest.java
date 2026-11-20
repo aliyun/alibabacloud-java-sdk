@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceEventRequest extends TeaModel {
     /**
-     * <p>The end time of the query range, in UTC. The default value is the current time.</p>
+     * <p>The end time of the query. The format is YYYY-MM-DD HH:mm:ss. If this parameter is not specified, the current time is used.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-01-02 15:04:05</p>
@@ -16,10 +16,8 @@ public class DescribeServiceEventRequest extends TeaModel {
     /**
      * <p>The event type. Valid values:</p>
      * <ul>
-     * <li><p>Normal: a normal event.</p>
-     * </li>
-     * <li><p>Warning: a warning event.</p>
-     * </li>
+     * <li>Normal: normal events.</li>
+     * <li>Warning: abnormal events.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class DescribeServiceEventRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The name of the service instance. To obtain this name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+     * <p>The name of the service instance. For information about how to obtain the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>echo-test-784xxxx85d-hhnd8</p>
@@ -38,7 +36,7 @@ public class DescribeServiceEventRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The page number to return. Default value: 1.</p>
+     * <p>The page number of the service event list. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +45,7 @@ public class DescribeServiceEventRequest extends TeaModel {
     public String pageNum;
 
     /**
-     * <p>The number of events to return per page. Default value: 100.</p>
+     * <p>The number of events to display per page in a paged query. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,7 +54,7 @@ public class DescribeServiceEventRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The start time of the query range, in UTC. The default value is 7 days ago.</p>
+     * <p>The start time of the query in UTC. Default value: 7 days ago.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-01-02 15:04:05</p>

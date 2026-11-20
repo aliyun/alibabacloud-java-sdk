@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayIntranetLinkedVpcRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+     * <p>The Alibaba Cloud account ID to which the VPC belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>19*****10</p>
@@ -14,7 +14,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>Specifies whether to enable authoritative DNS parsing. The default value is false.</p>
+     * <p>Specifies whether to enable authoritative DNS resolution. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends TeaModel {
     public Boolean enableAuthoritativeDns;
 
     /**
-     * <p>The ID of the virtual switch. For more information, see <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a>.</p>
+     * <p>The ID of the vSwitch. To obtain the vSwitch ID, refer to <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-8vbqn2at0kljjxxxx****</p>
@@ -32,7 +32,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC). For more information, see <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a>.</p>
+     * <p>The ID of the VPC. To obtain the VPC ID, refer to <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-uf66uio7md****</p>

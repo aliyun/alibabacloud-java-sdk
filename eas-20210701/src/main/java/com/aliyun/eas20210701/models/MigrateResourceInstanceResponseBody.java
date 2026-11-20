@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class MigrateResourceInstanceResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The message returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -20,7 +20,7 @@ public class MigrateResourceInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82***</p>

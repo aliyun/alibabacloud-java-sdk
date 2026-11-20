@@ -14,7 +14,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public java.util.List<ListConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>Indicates if more entries are available. <code>true</code> if more entries exist; otherwise, <code>false</code>.</p>
+     * <p>Indicates whether more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -50,7 +50,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The total number of entries found.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>150</p>
@@ -130,7 +130,7 @@ public class ListConfigsResponseBody extends TeaModel {
 
     public static class ListConfigsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>The time when the dynamic parameter was created, in UTC and ISO 8601 format.</p>
+         * <p>The creation time of the dynamic parameter, in UTC and RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T10:00:00Z</p>
@@ -148,7 +148,7 @@ public class ListConfigsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The time when the dynamic parameter was last updated, in UTC and ISO 8601 format.</p>
+         * <p>The update time of the dynamic parameter, in UTC and RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T10:00:00Z</p>

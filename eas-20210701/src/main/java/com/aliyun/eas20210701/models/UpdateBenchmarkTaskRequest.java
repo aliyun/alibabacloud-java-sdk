@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBenchmarkTaskRequest extends TeaModel {
     /**
-     * <p>The request body. The body includes the parameters that are set to create a stress testing task. For more information, see <strong>Table 1. Fields in the base parameter</strong>.</p>
+     * <p>The configuration parameters of the stress testing task. For more information, see <strong>Table 1. base description table</strong>. The target stress testing task must be in the Running state. You can call the DescribeBenchmarkTask operation to query the task status. If the task is in the Stopped state, you must first call the StartBenchmarkTask operation and wait until the task enters the Running state.</p>
      * 
      * <strong>example:</strong>
      * <p>{

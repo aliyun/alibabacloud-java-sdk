@@ -4,14 +4,46 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceRequest extends TeaModel {
+    /**
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5db780a0-9d3e-4f35-a84a-xxxxx</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>Specifies whether to only precheck the request.</p>
+     * <ul>
+     * <li><p>true: sends a precheck request without performing the actual operation. If the precheck fails, the corresponding error is returned. If the precheck succeeds, the error code DryRunOperation is returned.</p>
+     * </li>
+     * <li><p>false: sends a normal request. This is the default value.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The type of the child service to update. Note: This parameter takes effect only for aggregated services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LLMPrefill</p>
+     */
     @NameInMap("MemberToUpdate")
     public String memberToUpdate;
 
     /**
-     * <p>The type of the service update. Valid values: merge and replace. By default, merge is used if you do not specify this parameter.</p>
+     * <p>The update type of the service. Both merge and replace modes are supported. If this parameter is not specified, the merge mode is used by default.</p>
      * <ul>
-     * <li>merge: If the JSON string configured for the existing service is <code>{&quot;a&quot;:&quot;b&quot;}</code> and the JSON string specified in the body parameter is <code>{&quot;c&quot;:&quot;d&quot;}</code>, the JSON string is <code>{&quot;a&quot;:&quot;b&quot;,&quot;c&quot;:&quot;d&quot;}</code> after the service update.</li>
-     * <li>replace: If the JSON string configured for the existing service is <code>{&quot;a&quot;:&quot;b&quot;}</code> and the JSON string specified in the body parameter is <code>{&quot;c&quot;:&quot;d&quot;}</code>, the JSON string is <code>{&quot;c&quot;:&quot;d&quot;}</code> after the service update.</li>
+     * <li>merge: the merge mode. If the original service configuration JSON is
+     * <code>{&quot;a&quot;:&quot;b&quot;}</code> and the updated configuration is <code>{&quot;c&quot;:&quot;d&quot;}</code>, the final configuration in merge mode is <code>{&quot;a&quot;:&quot;b&quot;,&quot;c&quot;:&quot;d&quot;}</code>.</li>
+     * <li>replace: the replace mode. If the original service configuration JSON is
+     * <code>{&quot;a&quot;:&quot;b&quot;}</code> and the updated configuration is <code>{&quot;c&quot;:&quot;d&quot;}</code>, the final configuration in replace mode is <code>{&quot;c&quot;:&quot;d&quot;}</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +53,7 @@ public class UpdateServiceRequest extends TeaModel {
     public String updateType;
 
     /**
-     * <p>The request body. The body includes the request parameters that you want to update. For more information about the request parameters, see <a href="https://help.aliyun.com/document_detail/412086.html">CreateService</a>.</p>
+     * <p>The updated configuration. For more information about parameter settings, see <a href="https://help.aliyun.com/document_detail/412086.html">CreateService</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -41,6 +73,22 @@ public class UpdateServiceRequest extends TeaModel {
     public static UpdateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServiceRequest self = new UpdateServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateServiceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public UpdateServiceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public UpdateServiceRequest setMemberToUpdate(String memberToUpdate) {

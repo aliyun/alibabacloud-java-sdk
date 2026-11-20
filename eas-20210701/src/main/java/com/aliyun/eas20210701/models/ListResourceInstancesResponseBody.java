@@ -11,7 +11,7 @@ public class ListResourceInstancesResponseBody extends TeaModel {
     public java.util.List<ResourceInstance> instances;
 
     /**
-     * <p>The page number of the returned list of instances.</p>
+     * <p>The page number of the returned machine instance list in the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListResourceInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of instances returned on each page.</p>
+     * <p>The number of machines returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

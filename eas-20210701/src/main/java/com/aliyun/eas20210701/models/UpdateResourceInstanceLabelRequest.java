@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceInstanceLabelRequest extends TeaModel {
     /**
-     * <p>Specifies whether the modification takes effect on all instances in the resource group. If you set this parameter to true, the InstanceIds parameter does not take effect.</p>
+     * <p>Specifies whether the operation applies to all instances in the resource group. If this parameter is set to true, the InstanceIds parameter does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -20,7 +20,10 @@ public class UpdateResourceInstanceLabelRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The custom tag.</p>
+     * <p>The user-defined tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;

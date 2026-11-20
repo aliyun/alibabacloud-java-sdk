@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
     /**
-     * <p>The current page number.</p>
+     * <p>The current page number of the returned service list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListServicesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of services per page.</p>
+     * <p>The number of services returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class CreateGroupRequest extends TeaModel {
     /**
      * <p>The user-defined labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
     /**
-     * <p>The name of the group.</p>
+     * <p>The name of the service group. Only lowercase letters, digits, and underscores are allowed. The format is [a-z0-9_]+.</p>
      * 
      * <strong>example:</strong>
      * <p>foo</p>
@@ -20,7 +23,7 @@ public class CreateGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The virtual private cloud (VPC) configuration.</p>
+     * <p>The VPC configuration.</p>
      */
     @NameInMap("Network")
     public CreateGroupRequestNetwork network;
@@ -73,7 +76,7 @@ public class CreateGroupRequest extends TeaModel {
 
     public static class CreateGroupRequestNetwork extends TeaModel {
         /**
-         * <p>The dedicated gateway ID.</p>
+         * <p>The dedicated gateway ID. This parameter is required. If this parameter is not specified, the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-248xxxxxxvlkhtbrda</p>
@@ -100,7 +103,7 @@ public class CreateGroupRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The VPC ID. This parameter is required when GatewayId is set to an ALB gateway, and you must specify the VPC ID associated with the gateway. You can call the ListGatewayIntranetLinkedVpc operation to query the association.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1xxxxxx0qrykjr9b</p>
