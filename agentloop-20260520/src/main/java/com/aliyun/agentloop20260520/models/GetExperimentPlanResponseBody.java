@@ -69,6 +69,9 @@ public class GetExperimentPlanResponseBody extends TeaModel {
 
     /**
      * <p>The name of the associated data processing pipeline. This field is empty if no pipeline is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dify-log</p>
      */
     @NameInMap("pipelineName")
     public String pipelineName;

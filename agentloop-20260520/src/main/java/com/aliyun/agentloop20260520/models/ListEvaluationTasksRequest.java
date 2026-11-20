@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEvaluationTasksRequest extends TeaModel {
     /**
-     * <p>The AgentSpace name.</p>
+     * <p>The name of the AgentSpace.</p>
      * 
      * <strong>example:</strong>
      * <p>prod-agentspace</p>
@@ -14,7 +14,7 @@ public class ListEvaluationTasksRequest extends TeaModel {
     public String agentSpace;
 
     /**
-     * <p>The filter condition for the task source. If this parameter is not specified, tasks from the default source are queried.</p>
+     * <p>The filter condition for the task source. If not specified, tasks from the default source are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -23,7 +23,7 @@ public class ListEvaluationTasksRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>The data source type of the evaluation object. Set this parameter to <code>trace</code> for trace-based evaluation.</p>
+     * <p>The data source type of the evaluation object. Use trace for trace evaluation.</p>
      * 
      * <strong>example:</strong>
      * <p>trace</p>
@@ -32,7 +32,7 @@ public class ListEvaluationTasksRequest extends TeaModel {
     public String dataType;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries to return per page. The default value is 20, and the maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -59,7 +59,7 @@ public class ListEvaluationTasksRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The evaluation task mode. If this parameter is not specified, the default value is <code>batch</code>.</p>
+     * <p>The mode of the evaluation task. If not specified, the backend defaults to batch.</p>
      * 
      * <strong>example:</strong>
      * <p>batch</p>
@@ -68,7 +68,7 @@ public class ListEvaluationTasksRequest extends TeaModel {
     public String taskMode;
 
     /**
-     * <p>The fuzzy match condition for the task name.</p>
+     * <p>The fuzzy search condition for the task name.</p>
      * 
      * <strong>example:</strong>
      * <p>trace_task_completion_eval</p>

@@ -22,6 +22,15 @@ public class RunStrategies extends TeaModel {
     @NameInMap("continuous")
     public ContinuousStrategy continuous;
 
+    /**
+     * <p>The selection of specified objects for evaluation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;startTime&quot;:1794542191,&quot;endTime&quot;:1795146991,&quot;evalIds&quot;:[&quot;2646a9380bba3c86371f55a0226322941794983634&quot;]}</p>
+     */
+    @NameInMap("selectedData")
+    public SelectedDataStrategy selectedData;
+
     public static RunStrategies build(java.util.Map<String, ?> map) throws Exception {
         RunStrategies self = new RunStrategies();
         return TeaModel.build(map, self);
@@ -41,6 +50,14 @@ public class RunStrategies extends TeaModel {
     }
     public ContinuousStrategy getContinuous() {
         return this.continuous;
+    }
+
+    public RunStrategies setSelectedData(SelectedDataStrategy selectedData) {
+        this.selectedData = selectedData;
+        return this;
+    }
+    public SelectedDataStrategy getSelectedData() {
+        return this.selectedData;
     }
 
 }
