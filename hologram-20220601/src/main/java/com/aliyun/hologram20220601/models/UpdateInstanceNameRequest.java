@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceNameRequest extends TeaModel {
     /**
-     * <p>The new name of the instance. The name must be 2 to 64 characters in length. A letter is counted as one character.</p>
+     * <p>The new instance name. The name must be 2 to 64 characters in length. Each Chinese character or letter counts as one character.</p>
      * 
      * <strong>example:</strong>
      * <p>new_name</p>

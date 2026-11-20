@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListWarehousesResponseBody extends TeaModel {
     /**
-     * <p>The list of virtual warehouses.</p>
+     * <p>The list of compute groups.</p>
      */
     @NameInMap("WarehouseList")
     public java.util.List<ListWarehousesResponseBodyWarehouseList> warehouseList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
@@ -42,7 +42,7 @@ public class ListWarehousesResponseBody extends TeaModel {
 
     public static class ListWarehousesResponseBodyWarehouseList extends TeaModel {
         /**
-         * <p>The number of CPU cores.</p>
+         * <p>cpu</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -51,7 +51,7 @@ public class ListWarehousesResponseBody extends TeaModel {
         public Long cpu;
 
         /**
-         * <p>The ID.</p>
+         * <p>id</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -60,7 +60,7 @@ public class ListWarehousesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The memory size.</p>
+         * <p>The memory.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -69,7 +69,7 @@ public class ListWarehousesResponseBody extends TeaModel {
         public Long mem;
 
         /**
-         * <p>The name of the virtual warehouse.</p>
+         * <p>The name of the compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>MyWarehouse</p>

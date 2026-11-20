@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DropUserResponseBody extends TeaModel {
     /**
-     * <p>The result of the deletion. A value of true indicates success, and a value of false indicates failure.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +18,7 @@ public class DropUserResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error code that is returned if the request fails.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -23,7 +27,7 @@ public class DropUserResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message that is returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -41,7 +45,7 @@ public class DropUserResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>EA8F0084-5831-5907-BB31-BD05D2617844</p>
@@ -50,7 +54,11 @@ public class DropUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. A value of &quot;true&quot; indicates success, and &quot;false&quot; indicates failure.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

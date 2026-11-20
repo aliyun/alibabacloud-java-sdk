@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateModelServiceRequest extends TeaModel {
     /**
-     * <p>The API key for Alibaba Cloud Model Studio. This parameter is required only for Model Studio models. You can obtain this key from the Model Studio console or by calling an API.</p>
+     * <p>The API key for Alibaba Cloud Model Studio. Log on to the Model Studio console or use the API to obtain the key. This parameter is required only for Alibaba Cloud Model Studio models.</p>
      * 
      * <strong>example:</strong>
      * <p>api-key-xxx</p>
@@ -14,7 +14,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>The number of vCPUs. This parameter is required only for a Hologres AI node.</p>
+     * <p>The CPU specifications. This parameter is required only for Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -23,7 +23,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public Long cpu;
 
     /**
-     * <p>The number of GPUs. This parameter is required only for a Hologres AI node.</p>
+     * <p>The GPU specifications. This parameter is required only for Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public Long gpu;
 
     /**
-     * <p>The GPU memory size in GB. This parameter is required only for a Hologres AI node.</p>
+     * <p>The GPU memory specifications. This parameter is required only for Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -41,7 +41,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public Long gpuMemory;
 
     /**
-     * <p>The memory size in GB. This parameter is required only for a Hologres AI node.</p>
+     * <p>The memory specifications. This parameter is required only for Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -50,7 +50,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public Long memory;
 
     /**
-     * <p>The model parameters, required only for Model Studio models. You can provide the default parameters returned by the <code>ListModelCatalog</code> operation or a modified version of them.</p>
+     * <p>The model parameters. Refer to the default parameters returned by ListModelCatalog. You can pass the parameters directly or modify them as needed before passing. This parameter is required only for Alibaba Cloud Model Studio models.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;timeout&quot;:600,&quot;max_retries&quot;:10,&quot;max_retry_delay&quot;:8,&quot;initial_retry_delay&quot;:0.5}</p>
@@ -59,7 +59,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String modelParams;
 
     /**
-     * <p>A custom name for the model service.</p>
+     * <p>The custom service name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String modelServiceName;
 
     /**
-     * <p>The name of the model. To find the name, call <code>ListModelCatalog</code> for a model from Alibaba Cloud Model Studio, or <code>GetAvailableModelsResource</code> for a model on a Hologres AI node.</p>
+     * <p>The model name. To query Alibaba Cloud Model Studio models, call ListModelCatalog. To query Hologres AI nodes, call GetAvailableModelsResource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String modelType;
 
     /**
-     * <p>The provider of the underlying model.</p>
+     * <p>The underlying model provider.</p>
      * 
      * <strong>example:</strong>
      * <p>bailian</p>
@@ -88,7 +88,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String provider;
 
     /**
-     * <p>The number of replicas. This parameter is required only for a Hologres AI node.</p>
+     * <p>The number of service replicas. This parameter is required only for Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -97,7 +97,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public Long serviceCount;
 
     /**
-     * <p>The type of task the model performs, such as <code>chat/completions</code> or <code>embedding</code>. To find the supported task types, see the output of the <code>ListModelCatalog</code> operation.</p>
+     * <p>The model type, such as chat/completions or embedding. Refer to the types returned by ListModelCatalog and create the model as needed.</p>
      * 
      * <strong>example:</strong>
      * <p>embedding</p>

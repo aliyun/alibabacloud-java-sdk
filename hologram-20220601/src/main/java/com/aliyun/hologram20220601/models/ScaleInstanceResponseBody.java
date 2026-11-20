@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScaleInstanceResponseBody extends TeaModel {
     /**
-     * <p>The returned results.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public ScaleInstanceResponseBodyData data;
@@ -102,7 +102,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The details of the error.</p>
+         * <p>The detailed error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Invalid scale type</p>
@@ -111,7 +111,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>219183853450000</p>
@@ -120,7 +120,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
         public String orderId;
 
         /**
-         * <p>Indicates whether the scaling was successful.</p>
+         * <p>Indicates whether the specification change was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

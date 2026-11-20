@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateDatabaseRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_db</p>
      */
     @NameInMap("databaseName")
     public String databaseName;
 
     /**
-     * <p>The permission model of the database.</p>
+     * <p>The permission model. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/security-and-compliance/hologres-permission-model/">Hologres permission model</a>. Default value: Standard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SPM</p>
      */
     @NameInMap("permissionModel")
     public String permissionModel;

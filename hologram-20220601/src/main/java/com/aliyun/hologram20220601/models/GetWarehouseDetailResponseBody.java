@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWarehouseDetailResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
@@ -42,7 +42,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
     public static class GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList extends TeaModel {
         /**
-         * <p>The auto scaling type.</p>
+         * <p>The auto-scaling type.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -69,7 +69,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String clusterCpu;
 
         /**
-         * <p>The number of CPU cores.</p>
+         * <p>cpu</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -78,7 +78,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public Long cpu;
 
         /**
-         * <p>Indicates whether this is the default virtual warehouse.</p>
+         * <p>Indicates whether the compute group is the default compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -87,7 +87,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public Boolean defaultWarehouse;
 
         /**
-         * <p>The elastic computing resources.</p>
+         * <p>The elastic compute resources.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -96,7 +96,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public Long elasticCpu;
 
         /**
-         * <p>The type of elasticity.</p>
+         * <p>The elastic type.</p>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
@@ -105,7 +105,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String elasticType;
 
         /**
-         * <p>The ID.</p>
+         * <p>id</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -132,7 +132,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String maxClusterCount;
 
         /**
-         * <p>The memory size.</p>
+         * <p>The memory.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -141,7 +141,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public Long mem;
 
         /**
-         * <p>The name of the virtual warehouse.</p>
+         * <p>The name of the compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>MyWarehouse</p>
@@ -159,7 +159,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public Long nodeCount;
 
         /**
-         * <p>The rebalancing status of the virtual warehouse.</p>
+         * <p>The rebalance status of the compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>DONE</p>
@@ -305,7 +305,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
     public static class GetWarehouseDetailResponseBodyWarehouseDetail extends TeaModel {
         /**
-         * <p>The total current auto elastic computing resources of the virtual warehouse.</p>
+         * <p>The total auto-scaling elastic compute resources of the compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -314,7 +314,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String autoElasticCpu;
 
         /**
-         * <p>The unallocated computing resources in the instance.</p>
+         * <p>The unallocated compute resources. The remaining unallocated compute resources for compute groups in the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -323,7 +323,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String remainingCpu;
 
         /**
-         * <p>The reserved computing resources. The total computing resources of all running virtual warehouses in the instance cannot exceed this value.</p>
+         * <p>The reserved compute resources. The total compute resources of all running compute groups in the instance cannot exceed the reserved compute resources of the compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -332,7 +332,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String reservedCpu;
 
         /**
-         * <p>The total current scheduled elastic computing resources of the virtual warehouse.</p>
+         * <p>The total time-based elastic compute resources of the compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -341,7 +341,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String timedElasticCpu;
 
         /**
-         * <p>The warehouses.</p>
+         * <p>The warehouse list.</p>
          */
         @NameInMap("WarehouseList")
         public java.util.List<GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList> warehouseList;

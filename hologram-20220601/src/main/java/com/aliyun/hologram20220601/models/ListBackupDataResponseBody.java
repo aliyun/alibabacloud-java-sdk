@@ -42,20 +42,14 @@ public class ListBackupDataResponseBody extends TeaModel {
 
     public static class ListBackupDataResponseBodyBackupDataList extends TeaModel {
         /**
-         * <p>The backup type.</p>
+         * <p>The backup type. Backup types are generally divided into two categories: 1) Local backup, where the snapshot and the instance belong to the same region. 2) Remote backup, where the snapshot and the instance belong to different regions. Valid values:</p>
          * <ul>
-         * <li><p>redundant: Stores instance snapshots across zones within the same region.</p>
-         * </li>
-         * <li><p>redundant_remote: Stores instance snapshots across zones in a different region.</p>
-         * </li>
-         * <li><p>full: Stores an instance snapshot locally.</p>
-         * </li>
-         * <li><p>full_remote: Stores an instance snapshot remotely.</p>
-         * </li>
-         * <li><p>local: It is a filter for local snapshots, not a backup type.</p>
-         * </li>
-         * <li><p>remote: It is a filter for remote snapshots, not a backup type.</p>
-         * </li>
+         * <li>redundant: Local backup with cross-zone multi-copy storage in the same region.</li>
+         * <li>redundant_remote: Remote backup with cross-zone multi-copy storage in the same region, which is a cross-region copy of the redundant type.</li>
+         * <li>full: Local backup with single-copy storage.</li>
+         * <li>full_remote: Remote backup with single-copy storage, which is a cross-region copy of the full type.</li>
+         * <li>local: Does not represent a specific backup type and is only used to filter local backup data.</li>
+         * <li>remote: Does not represent a specific backup type and is only used to filter remote backup data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -65,7 +59,7 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String backupType;
 
         /**
-         * <p>The size of the cold data, in bytes.</p>
+         * <p>The size of the cold storage data. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>32413521</p>
@@ -74,7 +68,7 @@ public class ListBackupDataResponseBody extends TeaModel {
         public Long coldDataSize;
 
         /**
-         * <p>The description of the snapshot. It can be updated.</p>
+         * <p>The description of the backup data. This field can be updated.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -92,7 +86,7 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String dataGran;
 
         /**
-         * <p>The size of the snapshot, in bytes.</p>
+         * <p>The size of the backup data. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>76085723136</p>
@@ -101,7 +95,7 @@ public class ListBackupDataResponseBody extends TeaModel {
         public Long dataSize;
 
         /**
-         * <p>The time when the data snapshot was created. For the format, see StartTime.</p>
+         * <p>The data snapshot time. For the format, refer to StartTime.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-28T12:23:37.000+00:00</p>
@@ -110,7 +104,7 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String dataTime;
 
         /**
-         * <p>The time when the backup was completed. For the format, see StartTime.</p>
+         * <p>The end time of the backup. For the format, refer to StartTime.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-28T12:27:34.000+00:00</p>
@@ -119,7 +113,7 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The unique snapshot ID.</p>
+         * <p>The unique ID of the backup.</p>
          * 
          * <strong>example:</strong>
          * <p>1780805690994479105</p>
@@ -173,7 +167,7 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String instanceZoneId;
 
         /**
-         * <p>The region where the snapshot is stored.</p>
+         * <p>The region where the backup data resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -182,7 +176,7 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String snapshotRegion;
 
         /**
-         * <p>The zone where backup snapshot(s). If you use zone-redundant storage, the data is stored across multiple zones. This parameter returns one of those zones.</p>
+         * <p>The zone where the backup data resides. For zone-redundant storage, the data is stored across multiple zones, and this field indicates one of the zones.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
@@ -191,7 +185,7 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String snapshotZoneId;
 
         /**
-         * <p>The timestamp when the backup began. Format: <code>YYYY-MM-DDTHH:mm:ss.SSSTZ</code> (UTC+8). This format is used for all time-related parameters.</p>
+         * <p>The start time of the backup. The time is in the UTC+8 time zone and follows the YYYY-MM-DDTHH:mm:ss.SSSTZ format. The same applies to other time fields.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-28T11:19:56.000+00:00</p>
@@ -209,7 +203,7 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The backup trigger type.</p>
+         * <p>The trigger type.</p>
          * 
          * <strong>example:</strong>
          * <p>scheduled</p>

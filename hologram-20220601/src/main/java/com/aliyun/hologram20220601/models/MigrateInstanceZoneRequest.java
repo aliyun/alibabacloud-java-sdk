@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateInstanceZoneRequest extends TeaModel {
     /**
-     * <p>The ID of the target availability zone. Call the <code>ListMigrationZones</code> operation to confirm that the target availability zone meets the migration requirements.</p>
+     * <p>The destination zone. Call ListMigrationZones to verify that the destination zone meets the migration conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>

@@ -14,7 +14,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to return tags.</p>
+     * <p>Specifies whether to display tags.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

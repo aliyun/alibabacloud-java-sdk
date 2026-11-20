@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableSupportAccountResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class EnableSupportAccountResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error code that is returned if the request fails.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -23,7 +23,7 @@ public class EnableSupportAccountResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message that is returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -41,7 +41,7 @@ public class EnableSupportAccountResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>AB71198A-2DB1-511B-AE4D-690BAA97F076</p>
@@ -50,7 +50,7 @@ public class EnableSupportAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call succeeded. This is independent of the operation\&quot;s result.</p>
+     * <p>Indicates whether the request is successful. This parameter indicates whether an exception occurred during the request and is independent of the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

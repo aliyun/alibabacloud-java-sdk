@@ -47,7 +47,7 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. This parameter is not related to business logic.</p>
+     * <p>Indicates whether the request is successful. This parameter is unrelated to business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -152,7 +152,7 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
 
     public static class ListFollowerInstancesResponseBodyInstanceList extends TeaModel {
         /**
-         * <p>The billing type.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -161,7 +161,7 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The commodity code, which is consistent with the product detail code in User Center.</p>
+         * <p>The commodity code, which is consistent with the product detail code in the User Center.</p>
          * 
          * <strong>example:</strong>
          * <p>hologram_postpay_public_cn</p>
@@ -170,7 +170,7 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-16T02:24:05Z</p>
@@ -179,7 +179,7 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-04T16:00:00.000Z</p>

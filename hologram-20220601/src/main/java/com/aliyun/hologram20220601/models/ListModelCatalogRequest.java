@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListModelCatalogRequest extends TeaModel {
     /**
-     * <p>The number of entries per page.
+     * <p>The maximum number of entries per page.
      * Default value:
      *     20
      * Maximum value:
@@ -18,7 +18,7 @@ public class ListModelCatalogRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of NextToken that is returned from the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>uat-assembly-cut-3d-bbig</p>
@@ -27,6 +27,8 @@ public class ListModelCatalogRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The model provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>holo_bailian</p>
      */

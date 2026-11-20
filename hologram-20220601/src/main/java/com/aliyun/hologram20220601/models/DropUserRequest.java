@@ -14,7 +14,7 @@ public class DropUserRequest extends TeaModel {
     public String superUser;
 
     /**
-     * <p>The user name. Only RAM users and STS accounts are supported. Prefix the name with &quot;p4_&quot; for a RAM user (for example, p4_234253434) or &quot;v4_&quot; for an STS account (for example, v4_3234134).</p>
+     * <p>The username. Only RAM users and STS accounts are supported. If the user is a RAM user, the name must be prefixed with &quot;p4_&quot;, such as p4_234253434. If the user is an STS account, the name must be prefixed with &quot;v4_&quot;, such as v4_3234134.</p>
      * 
      * <strong>example:</strong>
      * <p>p4_234253434</p>

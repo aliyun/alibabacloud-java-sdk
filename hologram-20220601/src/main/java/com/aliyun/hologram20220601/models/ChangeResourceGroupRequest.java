@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>hgprecn-cn-zvp25ysv3006</p>
@@ -14,7 +14,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>New resource group ID.</p>
+     * <p>The ID of the new resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxwerqwerasfd</p>

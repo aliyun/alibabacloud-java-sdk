@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBackupDataDescResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation. A value of \&quot;true\&quot; indicates that the backup description was updated successfully.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class UpdateBackupDataDescResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>87060182-4B69-5C3D-B3A1-A944D20138A7</p>
@@ -50,7 +50,7 @@ public class UpdateBackupDataDescResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

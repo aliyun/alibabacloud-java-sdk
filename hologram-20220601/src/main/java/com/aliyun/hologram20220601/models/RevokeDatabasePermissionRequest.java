@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeDatabasePermissionRequest extends TeaModel {
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_db</p>

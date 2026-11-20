@@ -14,7 +14,7 @@ public class UpdateHoloWebLoginSettingRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Set to <code>true</code> to allow logins from external accounts, or <code>false</code> to deny these logins.</p>
+     * <p>Specifies whether external accounts are allowed to log on. Valid values: true (allowed) and false (not allowed).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

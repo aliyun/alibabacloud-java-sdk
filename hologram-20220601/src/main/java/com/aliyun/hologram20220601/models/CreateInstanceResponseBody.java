@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
-     * <p>The returned results.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public CreateInstanceResponseBodyData data;
@@ -111,7 +111,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The details of the error.</p>
+         * <p>The detailed error message.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidVpcOrVSwitch.NotAvailable</p>
@@ -129,12 +129,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String orderId;
 
         /**
-         * <p>Indicates whether the instance was created.</p>
+         * <p>Indicates whether the instance was created. Valid values:  </p>
          * <ul>
-         * <li><p>true: The instance was created.</p>
-         * </li>
-         * <li><p>false: The instance failed to be created.</p>
-         * </li>
+         * <li>true: The instance was created.</li>
+         * <li>false: The instance failed to be created.</li>
          * </ul>
          * 
          * <strong>example:</strong>

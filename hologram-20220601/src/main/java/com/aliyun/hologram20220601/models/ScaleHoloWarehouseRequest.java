@@ -14,7 +14,7 @@ public class ScaleHoloWarehouseRequest extends TeaModel {
     public Long clusterCount;
 
     /**
-     * <p>The number of vCPUs for the virtual warehouse. The value must be a multiple of 16.</p>
+     * <p>The specifications of the compute group. The value must be a multiple of 16.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ScaleHoloWarehouseRequest extends TeaModel {
     public Long cpu;
 
     /**
-     * <p>The name of the virtual warehouse.</p>
+     * <p>The name of the compute group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeInstanceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>The returned result, which indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. This parameter is not related to the business logic.</p>
+     * <p>The request result, which indicates whether an exception occurred during the request and is independent of the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

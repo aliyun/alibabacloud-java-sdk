@@ -38,7 +38,7 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>623EF0B6-A6C1-5764-82CC-0BC176654CB9</p>
@@ -47,7 +47,7 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
 
     public static class GetScheduledBackupConfigResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the backup configuration is enabled. Valid values: <strong>1</strong> (enabled) and <strong>0</strong> (disabled).</p>
+         * <p>Indicates whether the configuration is effective. Valid values: - <strong>true</strong>: Effective. - <strong>false</strong>: Not effective.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

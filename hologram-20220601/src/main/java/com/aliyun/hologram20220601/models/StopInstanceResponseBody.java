@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopInstanceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>The returned result, which indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class StopInstanceResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</p>
@@ -50,7 +50,7 @@ public class StopInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. This parameter is not related to the result of the business operation.</p>
+     * <p>The request result, which indicates whether an exception occurred during the request, independent of the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

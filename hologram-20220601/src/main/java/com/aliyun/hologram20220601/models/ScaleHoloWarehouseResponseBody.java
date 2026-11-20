@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ScaleHoloWarehouseResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation. A value of true indicates that the operation was successful. A value of false indicates that the operation failed.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +18,7 @@ public class ScaleHoloWarehouseResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</p>

@@ -23,7 +23,7 @@ public class GetScheduledBackupConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The backup type. By default, the operation returns periodical and manual backup configurations. To retrieve the remote backup configuration, set this parameter to \&quot;remote\&quot;.</p>
+     * <p>The backup type. By default, periodic and manual backup configurations are returned. To return the remote backup configuration, set this parameter to remote.</p>
      * 
      * <strong>example:</strong>
      * <p>remote</p>

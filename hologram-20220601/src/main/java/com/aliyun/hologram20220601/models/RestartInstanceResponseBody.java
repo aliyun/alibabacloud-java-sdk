@@ -41,7 +41,7 @@ public class RestartInstanceResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>36291497-CDB0-53DC-8CD7-762E054F57A6</p>
@@ -50,7 +50,7 @@ public class RestartInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether an exception occurred during the request. This parameter is not related to the business outcome.</p>
+     * <p>The request result. Indicates whether an exception occurred during the request, which is independent of the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

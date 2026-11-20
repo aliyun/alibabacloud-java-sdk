@@ -14,7 +14,7 @@ public class EnableWarehouseAutoScaleRequest extends TeaModel {
     public String maxClusterCount;
 
     /**
-     * <p>The name of the warehouse.</p>
+     * <p>The name of the compute group.</p>
      * 
      * <strong>example:</strong>
      * <p>my_warehouse</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public RenewInstanceResponseBodyData data;
@@ -38,7 +38,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
@@ -47,7 +47,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. This parameter is not related to the business result.</p>
+     * <p>Indicates whether the request was successful. This parameter indicates whether an exception occurred during the request and is unrelated to the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -119,7 +119,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error details.</p>
+         * <p>The detailed error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Invalid charge type</p>
@@ -137,12 +137,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         public String orderId;
 
         /**
-         * <p>Indicates whether the renewal is successful.</p>
+         * <p>Indicates whether the renewal was successful. Valid values:  </p>
          * <ul>
-         * <li><p>true: The renewal is successful.</p>
-         * </li>
-         * <li><p>false: The renewal failed.</p>
-         * </li>
+         * <li>true: The renewal was successful.</li>
+         * <li>false: The renewal failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

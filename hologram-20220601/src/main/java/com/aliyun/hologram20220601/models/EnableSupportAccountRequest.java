@@ -14,7 +14,7 @@ public class EnableSupportAccountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> The deprecated parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class EnableSupportAccountRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The expiration time.</p>
+     * <p>The expiration time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-03-24 11:19:05</p>

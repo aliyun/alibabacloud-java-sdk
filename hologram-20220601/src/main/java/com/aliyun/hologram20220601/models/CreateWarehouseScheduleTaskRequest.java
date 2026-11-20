@@ -5,35 +5,51 @@ import com.aliyun.tea.*;
 
 public class CreateWarehouseScheduleTaskRequest extends TeaModel {
     /**
-     * <p>A description of the warehouse schedule task.</p>
+     * <p>The description of the time-based elastic plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user stat</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The number of elastic compute units.</p>
+     * <p>The number of elastic CPU cores. The value must be a multiple of 16, greater than or equal to 16, and less than or equal to the specifications of the current compute group.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
      */
     @NameInMap("elasticCu")
     public Long elasticCu;
 
     /**
-     * <p>The UTC end time of the task, in ISO 8601 format.</p>
+     * <p>The end time. The format is HHmm (four digits, 24-hour clock). The time must be on the hour or half hour, such as 0030, 0100, or 0400.
+     * The end time must be later than the start time.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0200</p>
      */
     @NameInMap("endTime")
     public String endTime;
 
     /**
-     * <p>The UTC start time of the task, in ISO 8601 format.</p>
+     * <p>The start time. The format is HHmm (four digits, 24-hour clock). The time must be on the hour or half hour, such as 0030, 0100, or 0400.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0100</p>
      */
     @NameInMap("startTime")
     public String startTime;
 
     /**
-     * <p>The ID of the warehouse.</p>
+     * <p>The ID of the compute group. You can call ListWarehouses to obtain the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("warehouseId")
     public Long warehouseId;

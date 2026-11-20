@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHoloWebLoginSettingResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>true: Success. false: Failure.</p>
      */
     @NameInMap("Data")
     public GetHoloWebLoginSettingResponseBodyData data;
@@ -38,7 +38,7 @@ public class GetHoloWebLoginSettingResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</p>
@@ -47,7 +47,7 @@ public class GetHoloWebLoginSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. This is independent of the operation\&quot;s result.</p>
+     * <p>The request result. Indicates whether an exception occurred during the request. This parameter is unrelated to the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetHoloWebLoginSettingResponseBody extends TeaModel {
 
     public static class GetHoloWebLoginSettingResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether external accounts are allowed to log in.</p>
+         * <p>Indicates whether external accounts are allowed to log on.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

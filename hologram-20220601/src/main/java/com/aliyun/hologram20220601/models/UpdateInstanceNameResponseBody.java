@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceNameResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation. This indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>C6B55032-D41A-5FE0-9C07-8BD81C88422E</p>
@@ -50,7 +50,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the request. This indicates whether an exception occurred.</p>
+     * <p>Indicates whether an exception occurred during the request.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableSupportAccountResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation, returned as a string. Valid values are <code>true</code> and <code>false</code>.</p>
+     * <p>Indicates whether the request is successful. Valid values: true (success) and false (failure).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class DisableSupportAccountResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</p>
@@ -50,7 +50,7 @@ public class DisableSupportAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

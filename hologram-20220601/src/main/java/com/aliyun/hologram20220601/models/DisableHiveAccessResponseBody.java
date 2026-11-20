@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableHiveAccessResponseBody extends TeaModel {
     /**
-     * <p>The result.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class DisableHiveAccessResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>82B7A554-4D00-50DF-95D9-B59E7B4D5489</p>
@@ -50,7 +50,7 @@ public class DisableHiveAccessResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the request.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

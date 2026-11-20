@@ -47,7 +47,7 @@ public class UpgradeInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request result, which indicates whether an exception occurred for this request.</p>
+     * <p>Indicates whether an exception occurred during the request.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -128,7 +128,11 @@ public class UpgradeInstanceResponseBody extends TeaModel {
         public String reasonKey;
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

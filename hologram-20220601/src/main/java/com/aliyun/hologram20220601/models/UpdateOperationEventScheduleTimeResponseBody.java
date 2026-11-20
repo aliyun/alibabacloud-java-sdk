@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateOperationEventScheduleTimeResponseBody extends TeaModel {
     /**
-     * <p>Returns <code>true</code> if the scheduled time is successfully updated, or <code>false</code> otherwise.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +18,7 @@ public class UpdateOperationEventScheduleTimeResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The unique identifier for the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>11F64C4C-EC50-5472-BC5D-7FD9F51499F6</p>

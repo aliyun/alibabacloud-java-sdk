@@ -32,7 +32,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The instance details.</p>
+     * <p>The instance information.</p>
      */
     @NameInMap("Instance")
     public GetInstanceResponseBodyInstance instance;
@@ -47,7 +47,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the request, which indicates whether an exception occurred. This parameter is not related to the business logic.</p>
+     * <p>The request result. This parameter indicates whether an exception occurred during the request and is independent of the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstanceEndpoints extends TeaModel {
         /**
-         * <p>Some earlier instances have both AnyTunnel and SingleTunnel enabled. When you switch from AnyTunnel to SingleTunnel, the endpoints for both are retained. This field is used to store the extra endpoint.</p>
+         * <p>Some legacy instances have both AnyTunnel and SingleTunnel enabled. When switching from AnyTunnel to SingleTunnel, the endpoints for both are retained. Therefore, an additional field is required to store the endpoints.</p>
          * 
          * <strong>example:</strong>
          * <p>hgprecn-cn-uqm362o1b001-cn-hangzhou-internal.hologres.aliyuncs.com:80</p>
@@ -128,7 +128,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The domain name of the endpoint.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>hgprecn-cn-uqm362o1b001-cn-hangzhou-internal.hologres.aliyuncs.com:80</p>
@@ -288,7 +288,9 @@ public class GetInstanceResponseBody extends TeaModel {
         public String autoRenewal;
 
         /**
-         * <p>The cold storage capacity. Unit: GB. SSD is hot storage, which is also standard storage. HDD is cold storage.</p>
+         * <p>The cold storage capacity.
+         * Unit: GB.
+         * SSD is equivalent to hot storage, which is also standard storage. HDD is equivalent to cold storage.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -306,7 +308,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The number of compute nodes. A node has 16 vCPUs and 32 GB of memory.</p>
+         * <p>The number of compute nodes.
+         * A typical configuration for a node is 16 vCPUs and 32 GB of memory.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -315,7 +318,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public Long computeNodeCount;
 
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -324,7 +327,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public Long cpu;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-03T13:06:06Z</p>
@@ -333,7 +336,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The size of the standard storage. Unit: GB.</p>
+         * <p>The standard storage size.
+         * Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -360,6 +364,12 @@ public class GetInstanceResponseBody extends TeaModel {
         public Boolean enableSSL;
 
         /**
+         * <p>Indicates whether the instance sandbox feature is enabled.</p>
+         */
+        @NameInMap("EnableSandbox")
+        public Boolean enableSandbox;
+
+        /**
          * <p>Indicates whether Serverless Computing is enabled.</p>
          * 
          * <strong>example:</strong>
@@ -375,7 +385,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public java.util.List<GetInstanceResponseBodyInstanceEndpoints> endpoints;
 
         /**
-         * <p>The expiration time. Pay-as-you-go instances do not expire.</p>
+         * <p>The expiration time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard.
+         * Pay-as-you-go instances do not have an expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-03T13:06:06Z</p>
@@ -393,7 +404,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Long gatewayCount;
 
         /**
-         * <p>The vCPU resources of the gateway. Unit: cores.</p>
+         * <p>The CPU resources of the gateway.
+         * Unit: Cores.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -402,7 +414,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Long gatewayCpu;
 
         /**
-         * <p>The memory resources of the gateway. Unit: GB.</p>
+         * <p>The memory resources of the gateway.
+         * Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -429,7 +442,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the instance. The name must be 2 to 64 characters in length. Each letter or Chinese character is counted as a single character.</p>
+         * <p>The instance name.
+         * The name must be 2 to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -465,7 +479,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The ID of the primary instance.</p>
+         * <p>The primary instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hgpostcn-cn-i7m2ncd6w002</p>
@@ -474,7 +488,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String leaderInstanceId;
 
         /**
-         * <p>The memory size. Unit: GB.</p>
+         * <p>The memory size.
+         * Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -492,7 +507,10 @@ public class GetInstanceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The role of instance in disaster recovery. Active: the primary instance. Passive: the secondary instance. PreActive: a primary instance that has not reached the desired state.</p>
+         * <p>The role of the disaster recovery instance.
+         * Active: The primary disaster recovery instance.
+         * Passive: The secondary disaster recovery instance. 
+         * PreActive: The primary disaster recovery instance that has not reached the desired state.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -501,7 +519,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String replicaRole;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzuq7hpybze2i</p>
@@ -510,12 +528,10 @@ public class GetInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The storage class:</p>
+         * <p>The storage type. Valid values:</p>
          * <ul>
-         * <li><p>redundant: Zone-redundant storage</p>
-         * </li>
-         * <li><p>local: Locally redundant storage</p>
-         * </li>
+         * <li>redundant: 3AZ.</li>
+         * <li>local: 1AZ.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -525,7 +541,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The reason why the instance was stopped.</p>
+         * <p>The reason for suspension.</p>
          * 
          * <strong>example:</strong>
          * <p>Manual</p>
@@ -534,7 +550,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String suspendReason;
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The instance tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetInstanceResponseBodyInstanceTags> tags;
@@ -632,6 +648,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public Boolean getEnableSSL() {
             return this.enableSSL;
+        }
+
+        public GetInstanceResponseBodyInstance setEnableSandbox(Boolean enableSandbox) {
+            this.enableSandbox = enableSandbox;
+            return this;
+        }
+        public Boolean getEnableSandbox() {
+            return this.enableSandbox;
         }
 
         public GetInstanceResponseBodyInstance setEnableServerless(Boolean enableServerless) {

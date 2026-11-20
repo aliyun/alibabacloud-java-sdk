@@ -38,7 +38,11 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -47,7 +51,7 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
@@ -110,7 +114,11 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
 
     public static class GetCertificateAttributeResponseBodyCertificateAttributeDto extends TeaModel {
         /**
-         * <p>Specifies whether SSL is enabled.</p>
+         * <p>Specifies whether SSL is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -119,7 +127,7 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
         public Boolean enableSSL;
 
         /**
-         * <p>The UNIX timestamp when the certificate expires.</p>
+         * <p>The expiration timestamp of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>1790583135000</p>
@@ -128,7 +136,7 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
         public Long expirationTime;
 
         /**
-         * <p>The status of the certificate.</p>
+         * <p>The certificate status.</p>
          * 
          * <strong>example:</strong>
          * <p>effective</p>

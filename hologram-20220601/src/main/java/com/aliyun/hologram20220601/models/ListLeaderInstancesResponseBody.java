@@ -38,7 +38,7 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
     public java.util.List<ListLeaderInstancesResponseBodyInstanceList> instanceList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5600196E-78E2-50F2-B2A1-C44D3B665438</p>
@@ -47,7 +47,7 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successfully processed. This does not reflect the business outcome of the operation.</p>
+     * <p>Indicates whether the request was successful. This parameter is unrelated to the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
 
     public static class ListLeaderInstancesResponseBodyInstanceListTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tagKey</p>
@@ -119,7 +119,7 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -152,7 +152,7 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
 
     public static class ListLeaderInstancesResponseBodyInstanceList extends TeaModel {
         /**
-         * <p>Indicates the compatibility between the leader instance and the follower instance. A value of <code>0</code> indicates a perfect match. Any other value indicates a mismatch.</p>
+         * <p>The match level between the primary and secondary instances. A value of 0 indicates a perfect match, and other values indicate a mismatch.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -179,7 +179,7 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in UTC formatted according to ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-25T02:15:35Z</p>
@@ -188,7 +188,7 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The expiration time. This parameter is not returned for pay-as-you-go instances.</p>
+         * <p>The expiration time. Pay-as-you-go instances do not have an expiration time. The time is displayed in UTC and formatted in accordance with ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-25T02:15:35Z</p>

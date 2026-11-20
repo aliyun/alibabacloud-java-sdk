@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateManualBackupResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class CreateManualBackupResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5C11C8CB-9851-504D-8A41-3CF5F4FC0358</p>
@@ -50,7 +50,7 @@ public class CreateManualBackupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

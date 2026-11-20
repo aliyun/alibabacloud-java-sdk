@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHoloWebLoginSettingResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+     * <p>Indicates whether the operation is successful. Valid values: true (successful) and false (failed).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class UpdateHoloWebLoginSettingResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CB13FFDD-2DF8-5396-A848-2D6A31245B6D</p>
@@ -50,7 +50,7 @@ public class UpdateHoloWebLoginSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: <code>true</code> (success) and <code>false</code> (failure).</p>
+     * <p>Indicates whether the operation is successful. Valid values: true (successful) and false (failed).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>9CC37B9F-F4B4-5FF1-939B-AEE78DC70130</p>
@@ -50,7 +50,7 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

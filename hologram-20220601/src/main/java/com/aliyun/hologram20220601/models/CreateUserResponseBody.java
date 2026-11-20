@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateUserResponseBody extends TeaModel {
     /**
-     * <p>Returns true on success and false on failure.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +45,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
@@ -50,7 +54,11 @@ public class CreateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded. A value of &quot;true&quot; indicates success, and &quot;false&quot; indicates failure.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

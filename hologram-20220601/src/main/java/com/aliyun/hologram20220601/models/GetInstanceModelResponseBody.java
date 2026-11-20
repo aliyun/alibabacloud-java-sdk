@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceModelResponseBody extends TeaModel {
     /**
-     * <p>The AI node instance ID.</p>
+     * <p>The ID of the AI node instance.</p>
      * 
      * <strong>example:</strong>
      * <p>hologram_aicombo_public_cn-77xxx</p>
@@ -14,10 +14,10 @@ public class GetInstanceModelResponseBody extends TeaModel {
     public String aiInstanceId;
 
     /**
-     * <p>Indicates whether auto-renewal is enabled for the resource.</p>
+     * <p>Specifies whether auto-renewal is enabled for the resource. Valid values:</p>
      * <ul>
      * <li>true: Auto-renewal is enabled. The resource is automatically renewed upon expiration.</li>
-     * <li>false: Auto-renewal is not enabled. The resource stops being available upon expiration.</li>
+     * <li>false: Auto-renewal is disabled. The resource is stopped upon expiration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The total CPU of the node. This parameter applies only to Hologres AI nodes.</p>
+     * <p>The total CPU of the node. This parameter is applicable only to Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -58,7 +58,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
     public Long cpu;
 
     /**
-     * <p>The total CPU used by the node. This parameter applies only to Hologres AI nodes.</p>
+     * <p>The total CPU used by the node. This parameter is applicable only to Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -67,7 +67,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
     public Long cpuUsed;
 
     /**
-     * <p>The expiration time (UTC).</p>
+     * <p>The expiration time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-28T07:44:27.535Z</p>
@@ -76,7 +76,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
     public String expirationTime;
 
     /**
-     * <p>The total GPU of the node. This parameter applies only to Hologres AI nodes.</p>
+     * <p>The total GPU of the node. This parameter is applicable only to Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -85,7 +85,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
     public Long gpu;
 
     /**
-     * <p>The total GPU memory of the node. This parameter applies only to Hologres AI nodes.</p>
+     * <p>The total GPU memory of the node. This parameter is applicable only to Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -94,7 +94,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
     public Long gpuMemory;
 
     /**
-     * <p>The total GPU memory used by the node. This parameter applies only to Hologres AI nodes.</p>
+     * <p>The total GPU memory used by the node. This parameter is applicable only to Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -103,7 +103,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
     public Long gpuMemoryUsed;
 
     /**
-     * <p>The total GPU used by the node. This parameter applies only to Hologres AI nodes.</p>
+     * <p>The total GPU used by the node. This parameter is applicable only to Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -112,7 +112,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
     public Long gpuUsed;
 
     /**
-     * <p>The total memory of the node. This parameter applies only to Hologres AI nodes.</p>
+     * <p>The total memory of the node. This parameter is applicable only to Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -121,7 +121,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
     public Long memory;
 
     /**
-     * <p>The total memory used by the node. This parameter applies only to Hologres AI nodes.</p>
+     * <p>The total memory used by the node. This parameter is applicable only to Hologres AI nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -339,7 +339,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
 
     public static class GetInstanceModelResponseBodyModelServiceList extends TeaModel {
         /**
-         * <p>The Bailian API key (display only, cannot be used directly).</p>
+         * <p>The Model Studio API key. This key is for display purposes only and cannot be used directly.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-42f6c8xxxxxb</p>
@@ -348,7 +348,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
         public String apiKey;
 
         /**
-         * <p>The CPU consumed by this model service. This parameter applies only to Hologres AI nodes.</p>
+         * <p>The CPU occupied by this model service. This parameter is applicable only to Hologres AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -357,7 +357,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
         public Long cpu;
 
         /**
-         * <p>The GPU consumed by this model service. This parameter applies only to Hologres AI nodes.</p>
+         * <p>The GPU occupied by this model service. This parameter is applicable only to Hologres AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -366,7 +366,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
         public Long gpu;
 
         /**
-         * <p>The GPU memory consumed by this model service. This parameter applies only to Hologres AI nodes.</p>
+         * <p>The GPU memory occupied by this model service. This parameter is applicable only to Hologres AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -375,7 +375,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
         public Long gpuMemory;
 
         /**
-         * <p>The region where the AI node is deployed.</p>
+         * <p>The deployment region of the AI node.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -384,7 +384,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
         public String instanceRegion;
 
         /**
-         * <p>The memory consumed by this model service. This parameter applies only to Hologres AI nodes.</p>
+         * <p>The memory occupied by this model service. This parameter is applicable only to Hologres AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -411,7 +411,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The model parameters. This parameter applies only to Bailian models.</p>
+         * <p>The model parameters. This parameter is applicable only to Model Studio models.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;timeout&quot;:600,&quot;max_retries&quot;:10,&quot;max_retry_delay&quot;:8,&quot;initial_retry_delay&quot;:0.5}</p>
@@ -438,7 +438,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
         public String provider;
 
         /**
-         * <p>The number of service replicas. This parameter applies only to Hologres AI nodes.</p>
+         * <p>The number of service replicas. This parameter is applicable only to Hologres AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -464,6 +464,12 @@ public class GetInstanceModelResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Specifies whether the model service supports access through an API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("supportApiKeyAccess")
         public Boolean supportApiKeyAccess;
 

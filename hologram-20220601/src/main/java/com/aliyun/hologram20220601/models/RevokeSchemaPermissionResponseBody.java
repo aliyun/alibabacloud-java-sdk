@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class RevokeSchemaPermissionResponseBody extends TeaModel {
     /**
-     * <p>true: The operation succeeded. false: The operation failed.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +18,7 @@ public class RevokeSchemaPermissionResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>

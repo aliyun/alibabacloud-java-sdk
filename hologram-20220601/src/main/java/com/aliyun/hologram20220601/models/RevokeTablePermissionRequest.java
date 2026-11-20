@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class RevokeTablePermissionRequest extends TeaModel {
     /**
-     * <p>Specifies whether this operation applies to all tables in the schema. If true, permissions are revoked from all tables. If false or not specified, permissions are revoked only from the table specified by tableName.</p>
+     * <p>Specifies whether the operation takes effect on all tables. Valid values:</p>
+     * <ul>
+     * <li>true: Yes.</li>
+     * <li>false or null: No.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +18,7 @@ public class RevokeTablePermissionRequest extends TeaModel {
     public Boolean allTable;
 
     /**
-     * <p>The columns from which you want to revoke permissions. This is required only for column-level permissions.</p>
+     * <p>The list of column names for which permissions are to be revoked.</p>
      */
     @NameInMap("columnNames")
     public java.util.List<String> columnNames;
@@ -29,7 +33,7 @@ public class RevokeTablePermissionRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>The permissions to revoke.</p>
+     * <p>The list of permissions.</p>
      */
     @NameInMap("privileges")
     public java.util.List<String> privileges;

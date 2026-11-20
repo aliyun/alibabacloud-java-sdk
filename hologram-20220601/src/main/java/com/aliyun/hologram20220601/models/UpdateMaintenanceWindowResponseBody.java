@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMaintenanceWindowResponseBody extends TeaModel {
     /**
-     * <p>A value of <code>true</code> indicates that the maintenance window was successfully updated.</p>
+     * <p>Indicates whether the operation is successful. Valid values: true: Success. false: Failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class UpdateMaintenanceWindowResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
@@ -50,7 +50,7 @@ public class UpdateMaintenanceWindowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. A value of <code>false</code> indicates that a server-side error occurred.</p>
+     * <p>The request result. Indicates whether an exception occurred during the request.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

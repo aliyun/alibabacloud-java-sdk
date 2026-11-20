@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatabasesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to list only foreign tables. If you set this parameter to \<code>true\\</code>, only foreign tables are listed. If you set this parameter to \<code>false\\</code> or do not specify it, all tables are listed.</p>
+     * <p>Specifies whether to list foreign tables separately. Valid values: true: yes, false or null: no.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

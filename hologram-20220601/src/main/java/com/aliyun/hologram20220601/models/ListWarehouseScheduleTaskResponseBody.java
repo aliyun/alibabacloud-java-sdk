@@ -14,7 +14,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of warehouse schedule tasks.</p>
+     * <p>The list of time-based elastic plans.</p>
      */
     @NameInMap("ScheduleTaskList")
     public java.util.List<ListWarehouseScheduleTaskResponseBodyScheduleTaskList> scheduleTaskList;
@@ -42,7 +42,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
 
     public static class ListWarehouseScheduleTaskResponseBodyScheduleTaskListPlans extends TeaModel {
         /**
-         * <p>The description of the scaling plan.</p>
+         * <p>The description of the elastic plan.</p>
          * 
          * <strong>example:</strong>
          * <p>bill stat</p>
@@ -51,7 +51,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The number of elastic resources. The value must be a multiple of 16, with a minimum value of 16, and cannot exceed the warehouse specification.</p>
+         * <p>The elastic resources. The value must be a multiple of 16, greater than or equal to 16, and less than or equal to the compute group specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -60,7 +60,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public Long elasticCu;
 
         /**
-         * <p>The end time of the plan. The time must be on the hour or half-hour and in the HHmm format.</p>
+         * <p>The end time. Only full hours and half hours are supported. The format is HHmm (four digits, 24-hour clock).</p>
          * 
          * <strong>example:</strong>
          * <p>0400</p>
@@ -69,7 +69,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the scaling plan.</p>
+         * <p>The elastic plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1802985780260052993</p>
@@ -78,7 +78,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The start time of the plan. The time must be on the hour or half-hour and in the HHmm format. For example, 0100 represents 01:00.</p>
+         * <p>The start time. Only full hours and half hours are supported, such as 0100 for 1:00 AM. The format is HHmm (four digits, 24-hour clock).</p>
          * 
          * <strong>example:</strong>
          * <p>0100</p>
@@ -135,7 +135,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
 
     public static class ListWarehouseScheduleTaskResponseBodyScheduleTaskList extends TeaModel {
         /**
-         * <p>The scaling type.</p>
+         * <p>The elastic type.</p>
          * 
          * <strong>example:</strong>
          * <p>timed</p>
@@ -144,13 +144,13 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String elasticType;
 
         /**
-         * <p>The scaling plans for the warehouse.</p>
+         * <p>The list of elastic plans for a single compute group.</p>
          */
         @NameInMap("Plans")
         public java.util.List<ListWarehouseScheduleTaskResponseBodyScheduleTaskListPlans> plans;
 
         /**
-         * <p>The number of reserved resources for the warehouse.</p>
+         * <p>The reserved resources of the compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -159,7 +159,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public Long reservedCpu;
 
         /**
-         * <p>The status of the warehouse.</p>
+         * <p>The status of the compute group.</p>
          * 
          * <strong>example:</strong>
          * <p>kRunning</p>
@@ -168,7 +168,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the warehouse.</p>
+         * <p>The compute group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -177,7 +177,7 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String warehouseId;
 
         /**
-         * <p>The name of the warehouse.</p>
+         * <p>The compute group name.</p>
          * 
          * <strong>example:</strong>
          * <p>init_warehouse</p>

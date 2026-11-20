@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindLeaderInstanceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the operation succeeded.</p>
+     * <p>Indicates whether the association is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class BindLeaderInstanceResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error code for a failed request.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>404</p>
@@ -23,7 +23,7 @@ public class BindLeaderInstanceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message for a failed request.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Internal server error.</p>
@@ -41,7 +41,7 @@ public class BindLeaderInstanceResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6FF2EDFD-3154-5C3E-8CFA-8F7E366BCF9D</p>
@@ -50,7 +50,7 @@ public class BindLeaderInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API request succeeded. This parameter is independent of the binding operation result.</p>
+     * <p>Indicates whether the request is successful. This parameter is independent of the business result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

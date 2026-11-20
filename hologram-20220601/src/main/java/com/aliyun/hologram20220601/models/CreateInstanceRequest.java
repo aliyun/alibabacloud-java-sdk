@@ -5,16 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
      * <ul>
-     * <li><p>true (default): Automatic payment is enabled.</p>
-     * </li>
-     * <li><p>false: An order is generated, but no payment is made.</p>
+     * <li>true: Automatic payment is enabled.</li>
+     * <li>false: Only an order is generated, and no payment is made.<blockquote>
+     * <p>Default value: true. If your payment method has insufficient balance, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the Expenses and Costs console to complete the payment.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>If your account balance is insufficient, set the <code>autoPay</code> parameter to <code>false</code>. When an unpaid order is generated, log on to the Expenses and Costs console to pay for the order.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,12 +21,10 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <p>Specifies whether to enable monthly auto-renewal. Default value: false. Valid values:</p>
      * <ul>
-     * <li><p>true: Auto-renewal is enabled.</p>
-     * </li>
-     * <li><p>false (default): Auto-renewal is disabled.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,14 +36,12 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><p>PrePaid: Subscription.</p>
-     * </li>
-     * <li><p>PostPaid: Pay-as-you-go.</p>
+     * <li>PrePaid: Subscription.</li>
+     * <li>PostPaid: Pay-as-you-go.<blockquote>
+     * <p>This parameter is ignored for Shared instances. Shared is a defined specifications type, and its billing method defaults to PostPaid.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is ignored for shared instances. Shared instances use defined specifications and the default billing method is pay-as-you-go..</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,9 +51,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The cold storage capacity of the instance. Unit: GB.</p>
+     * <p>The low-frequency storage capacity of the instance. Unit: GB.</p>
      * <blockquote>
-     * <p>This parameter is ignored for pay-as-you-go (PostPaid) instances.</p>
+     * <p>This parameter is ignored for pay-as-you-go instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,27 +63,19 @@ public class CreateInstanceRequest extends TeaModel {
     public Long coldStorageSize;
 
     /**
-     * <p>The instance type. Valid values:</p>
+     * <p>The instance specifications. Valid values:</p>
      * <ul>
-     * <li><p>32 vCPUs and 128 GB of memory (2 compute nodes)</p>
-     * </li>
-     * <li><p>64 vCPUs and 256 GB of memory (4 compute nodes)</p>
-     * </li>
-     * <li><p>96 vCPUs and 384 GB of memory (6 compute nodes)</p>
-     * </li>
-     * <li><p>128 vCPUs and 512 GB of memory (8 compute nodes)</p>
-     * </li>
-     * <li><p>and so on.</p>
-     * </li>
+     * <li>32 cores, 128 GB (Number of compute nodes: 2)</li>
+     * <li>64 cores, 256 GB (Number of compute nodes: 4)</li>
+     * <li>96 cores, 384 GB (Number of compute nodes: 6)</li>
+     * <li>128 cores, 512 GB (Number of compute nodes: 8)</li>
+     * <li>Other specifications</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>Specify the number of vCPUs.</p>
-     * </li>
-     * <li><p>To purchase an instance with more than 1,024 vCPUs, submit a ticket.</p>
-     * </li>
-     * <li><p>You do not need to specify the instance type for a shared instance.</p>
-     * </li>
+     * <li>Specify the number of cores.</li>
+     * <li>To purchase an instance with more than 1,024 cores, submit a ticket.</li>
+     * <li>You do not need to specify the specifications for a Shared instance.</li>
      * </ul>
      * </blockquote>
      * 
@@ -100,9 +86,9 @@ public class CreateInstanceRequest extends TeaModel {
     public Long cpu;
 
     /**
-     * <p>The subscription duration, such as two months.</p>
+     * <p>The subscription duration. For example, set this parameter to 2 for a two-month subscription.</p>
      * <blockquote>
-     * <p>Specify this parameter only for subscription instances.</p>
+     * <p>This parameter is not required if the billing method is PostPaid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,9 +107,9 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean enableServerlessComputing;
 
     /**
-     * <p>The number of gateways. Valid values: [2, 50].</p>
+     * <p>The number of gateways. Valid values: 2 to 50.</p>
      * <blockquote>
-     * <p>You must specify this parameter only for virtual warehouse instances.</p>
+     * <p>This parameter is required only for Warehouse instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -133,7 +119,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long gatewayCount;
 
     /**
-     * <p>The initial database.</p>
+     * <p>The initial databases.</p>
      * 
      * <strong>example:</strong>
      * <p>chatbot</p>
@@ -142,7 +128,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String initialDatabases;
 
     /**
-     * <p>The instance name. The name must be 2 to 64 characters in length. A letter is counted as one character.</p>
+     * <p>The name of the instance. The name must be 2 to 64 characters in length. Each Chinese character or letter counts as one character.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -154,16 +140,11 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><p>Standard: General-purpose instance.</p>
-     * </li>
-     * <li><p>Follower: Read-only secondary instance.</p>
-     * </li>
-     * <li><p>Warehouse: Virtual warehouse instance.</p>
-     * </li>
-     * <li><p>Shared: Shared instance.</p>
-     * </li>
-     * <li><p>Serverless: Serverless instance.</p>
-     * </li>
+     * <li>Standard: General-purpose.</li>
+     * <li>Follower: Read-only secondary instance.</li>
+     * <li>Warehouse: Compute group.</li>
+     * <li>Shared: Shared.</li>
+     * <li>Severless: Serverless.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -174,20 +155,15 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The ID of the primary instance. This parameter is required for secondary instances.</p>
+     * <p>The ID of the primary instance. This parameter is required for Follower instances.</p>
      * <blockquote>
      * <p>The primary and secondary instances must meet the following conditions:</p>
      * <ul>
-     * <li><p>The primary instance is in the Running state.</p>
-     * </li>
-     * <li><p>The primary and secondary instances are in the same region and zone.</p>
-     * </li>
-     * <li><p>They are in the same zone.</p>
-     * </li>
-     * <li><p>The primary instance has less than 10 secondary instances.</p>
-     * </li>
-     * <li><p>The primary and secondary instances belong to the same Alibaba Cloud account.</p>
-     * </li>
+     * <li>The primary instance is in the Running state.</li>
+     * <li>The primary and secondary instances are in the same region.</li>
+     * <li>The primary and secondary instances are in the same zone.</li>
+     * <li>The primary instance is associated with fewer than 10 secondary instances.</li>
+     * <li>The primary and secondary instances belong to the same Alibaba Cloud account.</li>
      * </ul>
      * </blockquote>
      * 
@@ -200,21 +176,16 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The billing cycle. Valid values:</p>
      * <ul>
-     * <li><p>Month: The instance is billed on a monthly basis.</p>
-     * </li>
-     * <li><p>Hour: The instance is billed on an hourly basis.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
+     * <li>Month: Monthly billing.</li>
+     * <li>Hour: Hourly billing.<blockquote>
      * <ul>
-     * <li><p>Subscription instances support only <code>Month</code>.</p>
-     * </li>
-     * <li><p>Pay-as-you-go instances support only <code>Hour</code>.</p>
-     * </li>
-     * <li><p>For shared instances, the value is automatically set to <code>Hour</code>.</p>
-     * </li>
+     * <li>PrePaid supports only Month.</li>
+     * <li>PostPaid supports only Hour.</li>
+     * <li>For Shared instances, this parameter is automatically set to Hour and does not need to be specified.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -223,7 +194,8 @@ public class CreateInstanceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The region ID. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">Endpoints</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">Endpoints</a>.</p>
+     * <p>The region ID. You can go to &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-endpoint">service registration endpoints</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">service registration endpoints</a> to view the supported regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -233,7 +205,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group. If you leave this parameter empty, the default resource group for your account is used.</p>
+     * <p>The ID of the resource group. If this parameter is left empty, the default resource group of the account is used.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -244,7 +216,7 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The standard storage capacity of the instance. Unit: GB.</p>
      * <blockquote>
-     * <p>This parameter is ignored for pay-as-you-go (PostPaid) instances.</p>
+     * <p>This parameter is ignored for pay-as-you-go instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -254,7 +226,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long storageSize;
 
     /**
-     * <p>The storage class.</p>
+     * <p>The storage type.</p>
      * 
      * <strong>example:</strong>
      * <p>redundant</p>
@@ -263,7 +235,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The ID of the vSwitch. The vSwitch must be in the same zone as the instance.</p>
+     * <p>The ID of the vSwitch. The zone ID of the vSwitch must be the same as that of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -273,7 +245,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC). The VPC must be in the same region as the instance.</p>
+     * <p>The ID of the virtual private cloud (VPC). The region ID of the VPC must be the same as that of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -283,7 +255,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The zone ID. Refer to the usage notes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

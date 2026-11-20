@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteStatementRequest extends TeaModel {
     /**
-     * <p>The name of the database.</p>
+     * <p>The database.</p>
      * 
      * <strong>example:</strong>
      * <p>test_db</p>
@@ -14,7 +14,7 @@ public class ExecuteStatementRequest extends TeaModel {
     public String dbName;
 
     /**
-     * <p>The maximum size of the response, in bytes. Default: 10,485,760 (10 MB). If the response size exceeds this limit, it is truncated, as indicated by the Truncated field in the response.</p>
+     * <p>The maximum amount of data to return in a single request, in bytes. Default value: 10485760 (10 MB). Excess data is truncated and indicated by setting truncated to true.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -23,7 +23,7 @@ public class ExecuteStatementRequest extends TeaModel {
     public Long maxBytes;
 
     /**
-     * <p>The maximum number of rows to return. Default: 200. Maximum: 1,000. If the result set exceeds this limit, it is truncated, as indicated by the <code>Truncated</code> field in the response.</p>
+     * <p>The maximum number of rows to return. Default value: 200. Maximum value: 1000. Excess rows are truncated and indicated by the Truncated field in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -32,13 +32,13 @@ public class ExecuteStatementRequest extends TeaModel {
     public Long maxRows;
 
     /**
-     * <p>An array of bound parameters for a parameterized query. These parameters map sequentially to placeholders (e.g., <code>$1</code>, <code>$2</code>) in the SQL statement. Supported types include <code>String</code>, <code>Long</code>, <code>Double</code>, <code>Boolean</code>, and <code>null</code> (for SQL <code>NULL</code>). Using parameterized queries helps prevent SQL injection and improves the cache reuse rate for prepared statements. These parameters apply to all SQL statements in the sql field.</p>
+     * <p>The list of parameters to attach to the SQL parameterized query, which correspond in sequence to placeholders such as $1 and $2 in the SQL statement. Supported value types include String, Long, Double, Boolean, and null, which represents NULL. Using a parameterized query effectively prevents SQL injection and improves the cache reuse rate of precompiled statements. The parameter list applies to each SQL statement in Statements.</p>
      */
     @NameInMap("parameters")
     public java.util.List<?> parameters;
 
     /**
-     * <p>The query timeout, in seconds. Default: 30. Maximum: 30. Minimum: 1. If a query exceeds this time limit, the server cancels it.</p>
+     * <p>The timeout period for SQL execution, in seconds. Default value: 30. Maximum value: 30. Minimum value: 1. If a timeout occurs, the server actively cancels the query.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -47,7 +47,7 @@ public class ExecuteStatementRequest extends TeaModel {
     public Long queryTimeout;
 
     /**
-     * <p>The SQL statement to execute. The maximum length is 16,384 characters. You can specify multiple SQL statements separated by semicolons. If multiple statements are provided, the API returns the result of the last statement.</p>
+     * <p>The SQL statement to be executed. The maximum length is 16,384 characters. Multiple SQL statements separated by semicolons are supported. If multiple statements are specified, the result of the last statement is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>select * from test_table limit 10;</p>

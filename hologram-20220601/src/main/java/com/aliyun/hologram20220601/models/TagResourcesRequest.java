@@ -14,7 +14,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instance type. Set the value to <code>instance</code>.</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance</p>
@@ -38,7 +38,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The ID of the account that owns the tag.</p>
+     * <p>The account ID of the tag owner.</p>
      * 
      * <strong>example:</strong>
      * <p>1062017779051424</p>
@@ -47,7 +47,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long tagOwnerUid;
 
     /**
-     * <p>A collection of tags to add.</p>
+     * <p>The new tags to add.</p>
      */
     @NameInMap("tags")
     public java.util.List<TagResourcesRequestTags> tags;

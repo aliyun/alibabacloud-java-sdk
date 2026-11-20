@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstancePortRequest extends TeaModel {
     /**
-     * <p>The port of the instance. Valid values: 1 to 65535.</p>
+     * <p>The port number.</p>
      * 
      * <strong>example:</strong>
      * <p>443</p>

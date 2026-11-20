@@ -32,7 +32,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>14E2358E-0499-509E-8E22-CA30EC474A9A</p>
@@ -41,7 +41,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded. This parameter is independent of the business logic.</p>
+     * <p>Indicates whether the request is successful, regardless of the business result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The list of resources.</p>
+     * <p>The resource collection.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<DescribeTagsResponseBodyTagResources> tagResources;
@@ -137,7 +137,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>A list of values for the corresponding tag key.</p>
+         * <p>The collection of all tag values under the same tag key.</p>
          */
         @NameInMap("TagValue")
         public java.util.List<String> tagValue;

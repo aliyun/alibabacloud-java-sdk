@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWarehouseScheduleEventRequest extends TeaModel {
     /**
-     * <p>The elastic type. If this parameter is omitted, events of all types are returned. Valid values:</p>
+     * <p>The elastic scaling type, including time-based scaling and auto scaling. By default, all types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>timed</p>
@@ -14,7 +14,7 @@ public class ListWarehouseScheduleEventRequest extends TeaModel {
     public String elasticType;
 
     /**
-     * <p>The end timestamp, in seconds. Defaults to the current time.</p>
+     * <p>The end timestamp. Default value: current time. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1777516201</p>
@@ -23,7 +23,7 @@ public class ListWarehouseScheduleEventRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The page number. Defaults to 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListWarehouseScheduleEventRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default: 30. Maximum: 100.</p>
+     * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -41,7 +41,7 @@ public class ListWarehouseScheduleEventRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The start timestamp, in seconds. Defaults to three days ago.</p>
+     * <p>The start timestamp. Default value: three days ago. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1777257001</p>

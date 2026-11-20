@@ -14,7 +14,7 @@ public class CreateWarehouseRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The configuration settings.</p>
+     * <p>The configuration information.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -32,7 +32,7 @@ public class CreateWarehouseRequest extends TeaModel {
     public String cpu;
 
     /**
-     * <p>The warehouse name.</p>
+     * <p>The name of the warehouse.</p>
      * 
      * <strong>example:</strong>
      * <p>warehouse-test</p>

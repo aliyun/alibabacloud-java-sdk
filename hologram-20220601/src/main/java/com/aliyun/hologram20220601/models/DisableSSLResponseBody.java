@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableSSLResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation. <code>true</code> indicates success. <code>false</code> indicates failure.</p>
+     * <p>true: success. false: failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class DisableSSLResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values: <code>true</code> and <code>false</code>.</p>
+     * <p>Indicates whether the operation is successful. Valid values: true: Success. false: Failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

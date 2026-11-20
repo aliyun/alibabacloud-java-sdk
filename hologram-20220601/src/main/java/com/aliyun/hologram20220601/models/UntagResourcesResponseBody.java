@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>The operation success indicator.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class UntagResourcesResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CE1C813B-3445-57EC-9504-342E45D1C7EA</p>
@@ -50,7 +50,7 @@ public class UntagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successfully processed. This parameter does not indicate the outcome of the untagging operation.</p>
+     * <p>Indicates whether the request is successful, independent of the business result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -47,7 +47,7 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request result, which indicates whether an exception occurred. This is not related to business logic.</p>
+     * <p>Indicates whether the request succeeded. This parameter is unrelated to the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
 
     public static class ListUpgradeReleaseVersionsResponseBodyData extends TeaModel {
         /**
-         * <p>The URL of the version release notes.</p>
+         * <p>The URL of the release notes.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.alibabacloud.com/help/en/hologres/product-overview/release-notes">https://www.alibabacloud.com/help/en/hologres/product-overview/release-notes</a></p>

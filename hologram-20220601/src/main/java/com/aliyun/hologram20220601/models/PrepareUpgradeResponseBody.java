@@ -11,7 +11,7 @@ public class PrepareUpgradeResponseBody extends TeaModel {
     public PrepareUpgradeResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -20,7 +20,7 @@ public class PrepareUpgradeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class PrepareUpgradeResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>77B97AFB-7C9D-50FF-A72D-F13FD73E49D8</p>
@@ -47,7 +47,7 @@ public class PrepareUpgradeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call was successful. This does not indicate the result of the upgrade preparation.</p>
+     * <p>The request result, which is independent of the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class PrepareUpgradeResponseBody extends TeaModel {
 
     public static class PrepareUpgradeResponseBodyData extends TeaModel {
         /**
-         * <p>The reason the preparation task failed.</p>
+         * <p>The reason for the upgrade failure.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -119,7 +119,7 @@ public class PrepareUpgradeResponseBody extends TeaModel {
         public String failReason;
 
         /**
-         * <p>A key that identifies the reason for the failure.</p>
+         * <p>The upgrade target key.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -128,7 +128,7 @@ public class PrepareUpgradeResponseBody extends TeaModel {
         public String reasonKey;
 
         /**
-         * <p>Indicates whether the preparation task started successfully.</p>
+         * <p>Indicates whether the pre-upgrade preparation task was started successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

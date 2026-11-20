@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceModelResponseBody extends TeaModel {
     /**
-     * <p>The list of AI node resources.</p>
+     * <p>The list of AI resources.</p>
      */
     @NameInMap("instanceModelList")
     public java.util.List<ListInstanceModelResponseBodyInstanceModelList> instanceModelList;
@@ -42,7 +42,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
 
     public static class ListInstanceModelResponseBodyInstanceModelList extends TeaModel {
         /**
-         * <p>The AI node instance ID.</p>
+         * <p>The ID of the AI node instance.</p>
          * 
          * <strong>example:</strong>
          * <p>hologram_aicombo_public_cn-77xxx</p>
@@ -51,7 +51,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String aiInstanceId;
 
         /**
-         * <p>The AI specifications.</p>
+         * <p>The <strong>AI specifications</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>small-8core-30G-24G</p>
@@ -60,13 +60,17 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String aiSpec;
 
         /**
-         * <p>Indicates whether auto-renewal is enabled.</p>
+         * <p>Specifies whether <strong>auto-renewal</strong> is enabled.</p>
          */
         @NameInMap("autoRenewal")
         public Boolean autoRenewal;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -75,7 +79,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The commodity code.</p>
          * 
          * <strong>example:</strong>
          * <p>hologram_aipostpay_public_cn</p>
@@ -93,7 +97,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public Long cpu;
 
         /**
-         * <p>The total CPU used by the node. This parameter applies only to Hologres AI nodes.</p>
+         * <p>The total CPU usage of the node. This parameter applies only to Hologres AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -102,7 +106,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public Long cpuUsed;
 
         /**
-         * <p>The expiration time in UTC.</p>
+         * <p>The expiration time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-28T07:44:27.535Z</p>
@@ -111,7 +115,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String expirationTime;
 
         /**
-         * <p>The number of GPU cards. This parameter applies only to Hologres AI nodes.</p>
+         * <p>The number of GPUs. This parameter applies only to Hologres AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -129,7 +133,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public Long gpuMemory;
 
         /**
-         * <p>The total GPU memory used by the node. This parameter applies only to Hologres AI nodes.</p>
+         * <p>The total GPU memory usage of the node. This parameter applies only to Hologres AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -138,7 +142,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public Long gpuMemoryUsed;
 
         /**
-         * <p>The total GPU used by the node. This parameter applies only to Hologres AI nodes.</p>
+         * <p>The total GPU usage of the node. This parameter applies only to Hologres AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -147,7 +151,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public Long gpuUsed;
 
         /**
-         * <p>The Hologres instance ID.</p>
+         * <p>The <strong>Hologres instance ID</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>hgpostcn-cn-yi34hlzdx003</p>
@@ -156,7 +160,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String holoInstanceId;
 
         /**
-         * <p>The Hologres instance name.</p>
+         * <p>The <strong>Hologres instance name</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>myInstance</p>
@@ -174,7 +178,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The total memory used by the node. This parameter applies only to Hologres AI nodes.</p>
+         * <p>The total memory usage of the node. This parameter applies only to Hologres AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -201,7 +205,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>small</p>
@@ -210,7 +214,7 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The status.</p>
+         * <p>The <strong>status</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ResourceReady</p>

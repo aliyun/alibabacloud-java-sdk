@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateExternalDatabaseResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation. <code>true</code> indicates success and <code>false</code> indicates failure.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +45,7 @@ public class CreateExternalDatabaseResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</p>
@@ -50,7 +54,11 @@ public class CreateExternalDatabaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values are <code>true</code> (success) and <code>false</code> (failure).</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

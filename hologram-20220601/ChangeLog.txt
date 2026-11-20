@@ -1,3 +1,7 @@
+2026-11-20 Version: 1.10.2
+- Update API GetInstance: add response parameters Body.Instance.EnableSandbox.
+
+
 2026-07-29 Version: 1.10.1
 - Update API GetInstanceModel: add response parameters Body.modelServiceList.$.supportApiKeyAccess.
 - Update API ListModelCatalog: add request parameters provider.

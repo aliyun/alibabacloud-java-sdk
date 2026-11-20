@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the tagging operation succeeded.</p>
+     * <p>The operation success indicator.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class TagResourcesResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>15CEB459-CEE0-5528-87F5-B5A9B9F9B184</p>
@@ -50,7 +50,7 @@ public class TagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates if the API call was accepted. This is separate from whether the tagging operation itself succeeded.</p>
+     * <p>Indicates whether the request is successful, independent of the business result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

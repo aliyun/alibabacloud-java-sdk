@@ -5,23 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>The instance type for Cloud Monitor. Valid values:</p>
+     * <p>The CloudMonitor instance type. Valid values:</p>
      * <ul>
-     * <li><p>standard</p>
-     * </li>
-     * <li><p>follower</p>
-     * </li>
-     * <li><p>mc-acceleration</p>
-     * </li>
-     * <li><p>warehouse</p>
-     * </li>
-     * <li><p>high-memory</p>
-     * </li>
-     * <li><p>serverless</p>
-     * </li>
+     * <li>standard</li>
+     * <li>follower</li>
+     * <li>mc-acceleration</li>
+     * <li>warehouse</li>
+     * <li>high-memory</li>
+     * <li>serverless</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is for Cloud Monitor.</p>
+     * <p>This is CloudMonitor.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,7 +34,7 @@ public class ListInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the instance.</p>
+     * <p>The instance label.</p>
      */
     @NameInMap("tag")
     public java.util.List<ListInstancesRequestTag> tag;

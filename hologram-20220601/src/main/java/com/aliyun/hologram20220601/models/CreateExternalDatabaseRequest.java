@@ -23,7 +23,7 @@ public class CreateExternalDatabaseRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>Specifies whether to use the default user mapping.</p>
+     * <p>Specifies whether to use user mapping.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,13 +32,13 @@ public class CreateExternalDatabaseRequest extends TeaModel {
     public String defaultUserMapping;
 
     /**
-     * <p>The configuration parameters. For more information, see <a href="https://help.aliyun.com/zh/hologres/developer-reference/create-external-database?scm=20140722.S_help%40%40%E6%96%87%E6%A1%A3%40%402847319._.ID_help%40%40%E6%96%87%E6%A1%A3%40%402847319-RL_mapping-LOC_doc%7EUND%7Eab-OR_ser-PAR1_6a0b3e1c17775322800352312d0096-V_4-PAR3_r-RE_new5-P0_11-P1_0%5C&spm=a2c4g.11186623.help-search.i50">CREATE EXTERNAL DATABASE</a>.</p>
+     * <p>The configuration parameters. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/create-external-database">CREATE EXTERNAL DATABASE</a>.</p>
      */
     @NameInMap("externalConfig")
     public java.util.List<CreateExternalDatabaseRequestExternalConfig> externalConfig;
 
     /**
-     * <p>The metastore type.</p>
+     * <p>The metastore type, such as MaxCompute.</p>
      * 
      * <strong>example:</strong>
      * <p>maxcompute</p>
@@ -93,7 +93,7 @@ public class CreateExternalDatabaseRequest extends TeaModel {
 
     public static class CreateExternalDatabaseRequestExternalConfig extends TeaModel {
         /**
-         * <p>The configuration key.</p>
+         * <p>The configuration field name.</p>
          * 
          * <strong>example:</strong>
          * <p>mc_project</p>
@@ -102,7 +102,7 @@ public class CreateExternalDatabaseRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The configuration value.</p>
+         * <p>The configuration field value.</p>
          * 
          * <strong>example:</strong>
          * <p>log_sum</p>

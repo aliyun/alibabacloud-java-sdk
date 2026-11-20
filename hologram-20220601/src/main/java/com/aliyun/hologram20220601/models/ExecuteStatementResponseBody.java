@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ExecuteStatementResponseBody extends TeaModel {
     /**
-     * <p>The execution result of the SQL statement.</p>
+     * <p>Specifies whether OpenAPI SQL execution is allowed. Valid values: true: Allowed. false: Not allowed.</p>
      */
     @NameInMap("data")
     public ExecuteStatementResponseBodyData data;
 
     /**
-     * <p>The error code. This parameter is returned only if the request fails.</p>
+     * <p>The error code. This field is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameterValue</p>
@@ -20,10 +20,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message. This parameter is returned only if the request fails.</p>
+     * <p>The error message. This field is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>参数值不合法（如 SQL 为空、超长等）</p>
+     * <p>Invalid parameter value, such as an empty or excessively long SQL statement</p>
      */
     @NameInMap("errorMessage")
     public String errorMessage;
@@ -38,7 +38,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
@@ -47,7 +47,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -110,7 +110,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
 
     public static class ExecuteStatementResponseBodyDataResultsColumnMetadata extends TeaModel {
         /**
-         * <p>The name of the column.</p>
+         * <p>The <strong>column name</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -119,13 +119,13 @@ public class ExecuteStatementResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the column can be null.</p>
+         * <p>Indicates whether the column is nullable.</p>
          */
         @NameInMap("nullable")
         public Boolean nullable;
 
         /**
-         * <p>The data type of the column, such as <code>int4</code>, <code>text</code>, or <code>bool</code>.</p>
+         * <p>The data type, such as int4, text, or bool.</p>
          * 
          * <strong>example:</strong>
          * <p>int4</p>
@@ -166,13 +166,13 @@ public class ExecuteStatementResponseBody extends TeaModel {
 
     public static class ExecuteStatementResponseBodyDataResults extends TeaModel {
         /**
-         * <p>The metadata of columns in the result set.</p>
+         * <p>The <strong>column metadata</strong>.</p>
          */
         @NameInMap("columnMetadata")
         public java.util.List<ExecuteStatementResponseBodyDataResultsColumnMetadata> columnMetadata;
 
         /**
-         * <p>The number of rows returned by a SELECT statement.</p>
+         * <p>The number of rows returned.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -199,7 +199,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The ID of the query.</p>
+         * <p><strong>Query ID</strong></p>
          * 
          * <strong>example:</strong>
          * <p>E3F4B2A7-1234-5678-9ABC-DEF012345678</p>
@@ -208,13 +208,13 @@ public class ExecuteStatementResponseBody extends TeaModel {
         public String queryId;
 
         /**
-         * <p>The set of records that are returned by the query. Each row is an array of strings, and all values are serialized as strings. A NULL value is represented as &quot;\N&quot;.</p>
+         * <p>The set of query result rows. Each row is an array of strings. All values are serialized as strings, and NULL values are represented as \N.</p>
          */
         @NameInMap("records")
         public java.util.List<java.util.List<String>> records;
 
         /**
-         * <p>The executed SQL statement.</p>
+         * <p>The SQL statement that is actually executed.</p>
          * 
          * <strong>example:</strong>
          * <p>select * from test_table limit 10;</p>
@@ -223,7 +223,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
         public String sql;
 
         /**
-         * <p>Indicates whether the SQL statement was executed successfully.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -232,13 +232,13 @@ public class ExecuteStatementResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>Indicates whether the result set was truncated. The value is <code>true</code> if the number of returned rows exceeds the value of <code>MaxResults</code>.</p>
+         * <p>Indicates whether the result is truncated. The value is true if the result exceeds MaxResults.</p>
          */
         @NameInMap("truncated")
         public Boolean truncated;
 
         /**
-         * <p>The number of rows affected by an INSERT, UPDATE, or DELETE statement. This parameter is not returned for SELECT statements.</p>
+         * <p>The number of rows affected by the INSERT, UPDATE, or DELETE statement.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -335,7 +335,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
 
     public static class ExecuteStatementResponseBodyData extends TeaModel {
         /**
-         * <p>The error code for the SQL statement execution. This parameter is returned only if the execution fails.</p>
+         * <p>The error code. This field is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameterValue</p>
@@ -344,22 +344,22 @@ public class ExecuteStatementResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message for the SQL statement execution. This parameter is returned only if the execution fails.</p>
+         * <p>The error message. This field is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
-         * <p>参数值不合法（如 SQL 为空、超长等）</p>
+         * <p>Invalid parameter value, such as an empty or excessively long SQL statement</p>
          */
         @NameInMap("errorMessage")
         public String errorMessage;
 
         /**
-         * <p>A list of execution results. This list always contains exactly one result object. If you execute multiple SELECT statements, only the result of the last one is returned.</p>
+         * <p>The list of execution results. The length is currently fixed to 1. If multiple SELECT queries are executed, only the result of the last SELECT query is returned.</p>
          */
         @NameInMap("results")
         public java.util.List<ExecuteStatementResponseBodyDataResults> results;
 
         /**
-         * <p>Indicates whether the SQL statement was executed successfully.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         @NameInMap("success")
         public Boolean success;

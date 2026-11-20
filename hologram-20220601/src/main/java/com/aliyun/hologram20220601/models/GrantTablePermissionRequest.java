@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantTablePermissionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to grant the permissions on all tables in the schema.</p>
+     * <p>Specifies whether to grant permissions on all existing tables.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -13,11 +13,14 @@ public class GrantTablePermissionRequest extends TeaModel {
     @NameInMap("allTable")
     public Boolean allTable;
 
+    /**
+     * <p>The list of column names to grant permissions on.</p>
+     */
     @NameInMap("columnNames")
     public java.util.List<String> columnNames;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>my_db</p>
@@ -26,7 +29,7 @@ public class GrantTablePermissionRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>The permissions to grant.</p>
+     * <p>The list of permissions.</p>
      */
     @NameInMap("privileges")
     public java.util.List<String> privileges;

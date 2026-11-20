@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class DisableExecuteStatementResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the operation is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The operation is successful.</li>
-     * <li>false: The operation failed.</li>
-     * </ul>
+     * <p>Valid values: true: Successful. false: Failed.</p>
      */
     @NameInMap("data")
     public Boolean data;
 
     /**
-     * <p>The error code. This parameter is empty if the operation is successful.</p>
+     * <p><strong>The error code. This parameter is empty if the request is successful.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameterValue</p>
@@ -24,7 +20,10 @@ public class DisableExecuteStatementResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message. This parameter is empty if the operation is successful.</p>
+     * <p>The error message. This parameter is empty if the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid parameter value.</p>
      */
     @NameInMap("errorMessage")
     public String errorMessage;
@@ -39,7 +38,7 @@ public class DisableExecuteStatementResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p><strong>The request ID.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>E3F4B2A7-1234-5678-9ABC-DEF012345678</p>
@@ -48,7 +47,7 @@ public class DisableExecuteStatementResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p><strong>Indicates whether the request is successful.</strong></p>
      */
     @NameInMap("success")
     public Boolean success;

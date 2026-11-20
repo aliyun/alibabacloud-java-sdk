@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to change the network type from AnyTunnel to SingleTunnel. This parameter is not applicable to new instances. Keep the default value of null.</p>
+     * <p>Specifies whether to convert AnyTunnel to SingleTunnel. This parameter is invalid for new instances. Set it to null by default.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String anyTunnelToSingleTunnel;
 
     /**
-     * <p>The network types to enable. The order of the network types does not matter. For example, if an instance has the Internet, Intranet, and VPCSingleTunnel network types enabled, disable the Internet network type by specifying \<code>Intranet,VPCSingleTunnel\\</code>.</p>
+     * <p>The list of network types to enable. Specify a combination of existing network types. The order does not matter. For example, if the Internet, internal network, and VPCSingleTunnel network types are enabled and you want to disable the Internet network type, remove the Internet type and pass &quot;Intranet, VPCSingleTunnel&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>Internet,VPCSingleTunnel</p>
@@ -23,7 +23,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String networkTypes;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2vccsiymtqr9aavew0vo3</p>
@@ -32,7 +32,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-t4netc3y5etlondfb5ra7</p>
@@ -41,7 +41,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the VPC.</p>
+     * <p>The owner ID of the VPC, which is the Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1999365732646672</p>

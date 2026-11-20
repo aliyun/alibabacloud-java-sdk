@@ -47,7 +47,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstanceListEndpoints extends TeaModel {
         /**
-         * <p>Indicates whether the endpoint is enabled.</p>
+         * <p>Specifies whether the endpoint is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -119,7 +119,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>Domain name.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>hgpostcn-cn-aaab9ad2d8fb-cn-hangzhou-internal.hologres.aliyuncs.com:80</p>
@@ -137,7 +137,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The ID of the virtual switch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-wz9oap28raidjevhuszg4</p>
@@ -155,7 +155,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The VPC instance ID.</p>
+         * <p>The ID of the VPC-connected instance.</p>
          * 
          * <strong>example:</strong>
          * <p>hgpostcn-cn-wwo3665tx004-frontend-st</p>
@@ -262,7 +262,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstanceList extends TeaModel {
         /**
-         * <p>The commodity code. This code is the same as the product detail code in the User Center.</p>
+         * <p>The commodity code, which is consistent with the product detail code in the User Center.</p>
          * 
          * <strong>example:</strong>
          * <p>hologram_postpay_public_cn</p>
@@ -271,7 +271,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The creation time. The time is displayed in UTC and formatted according to ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-16T02:24:05Z</p>
@@ -280,7 +280,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Indicates whether lakehouse acceleration is enabled.</p>
+         * <p>Specifies whether data lakehouse acceleration is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -289,7 +289,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String enableHiveAccess;
 
         /**
-         * <p>Indicates whether SSL encryption is enabled.</p>
+         * <p>Specifies whether SSL is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -304,7 +304,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public java.util.List<ListInstancesResponseBodyInstanceListEndpoints> endpoints;
 
         /**
-         * <p>The time when the instance expires.</p>
+         * <p>The expiration time. The time is displayed in UTC and formatted according to ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-04T16:00:00.000Z</p>
@@ -358,7 +358,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The ID of the primary instance.</p>
+         * <p>The leader instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hgprecn-cn-2r42sqvxm006</p>
@@ -385,12 +385,10 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The storage class:</p>
+         * <p>The storage type. Valid values:</p>
          * <ul>
-         * <li><p>redundant: Zone-redundant storage (three zones)</p>
-         * </li>
-         * <li><p>local: Locally redundant storage (one zone)</p>
-         * </li>
+         * <li>redundant: 3AZ</li>
+         * <li>local: 1AZ</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -400,7 +398,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The reason why the instance was suspended.</p>
+         * <p>The reason for suspension.</p>
          * 
          * <strong>example:</strong>
          * <p>Manual</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenameHoloWarehouseRequest extends TeaModel {
     /**
-     * <p>The original name of the virtual warehouse.</p>
+     * <p>The original name of the compute group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RenameHoloWarehouseRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The new name of the virtual warehouse.</p>
+     * <p>The new name of the compute group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

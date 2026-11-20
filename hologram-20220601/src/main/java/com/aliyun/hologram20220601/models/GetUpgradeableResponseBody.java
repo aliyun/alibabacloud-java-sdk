@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUpgradeableResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetUpgradeableResponseBodyData> data;
@@ -47,7 +47,7 @@ public class GetUpgradeableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. This parameter is not related to business logic.</p>
+     * <p>Indicates whether the request was successful. This parameter indicates whether an exception occurred during the request and is independent of the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetUpgradeableResponseBody extends TeaModel {
 
     public static class GetUpgradeableResponseBodyData extends TeaModel {
         /**
-         * <p>The reason why the upgrade failed.</p>
+         * <p>The reason for the upgrade failure.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -131,7 +131,7 @@ public class GetUpgradeableResponseBody extends TeaModel {
          * <p>Indicates whether the instance can be upgraded. Valid values:</p>
          * <ul>
          * <li>true: The instance can be upgraded.</li>
-         * <li>false: The instance cannot be upgraded because it is already the latest version.</li>
+         * <li>false: The instance cannot be upgraded because it is already running the latest version.</li>
          * </ul>
          * 
          * <strong>example:</strong>

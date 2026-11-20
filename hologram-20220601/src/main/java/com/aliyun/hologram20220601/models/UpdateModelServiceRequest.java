@@ -32,7 +32,7 @@ public class UpdateModelServiceRequest extends TeaModel {
     public Long memory;
 
     /**
-     * <p>A custom name for the model service.</p>
+     * <p>The custom service name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class CreateHoloWarehouseRequest extends TeaModel {
     public Long clusterCount;
 
     /**
-     * <p>The specifications of the virtual warehouse. The value must be a multiple of 16. The minimum value is 16.</p>
+     * <p>The specifications of the compute group. The value must be a multiple of 16, and the minimum value is 16.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateHoloWarehouseRequest extends TeaModel {
     public String cpu;
 
     /**
-     * <p>The virtual warehouse name.</p>
+     * <p>The name of the compute group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

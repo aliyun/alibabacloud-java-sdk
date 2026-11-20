@@ -41,7 +41,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CB13FFDD-2DF8-5396-A848-2D6A31245B6D</p>
@@ -50,7 +50,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

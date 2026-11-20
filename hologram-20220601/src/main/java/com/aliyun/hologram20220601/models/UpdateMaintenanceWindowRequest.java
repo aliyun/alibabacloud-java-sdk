@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMaintenanceWindowRequest extends TeaModel {
     /**
-     * <p>The end time of the maintenance window, in UTC and <code>HH:mm</code> format.</p>
+     * <p>The end time in the HH:mm format (24-hour clock).</p>
      * 
      * <strong>example:</strong>
      * <p>02:00</p>
@@ -14,7 +14,7 @@ public class UpdateMaintenanceWindowRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The start time of the maintenance window, in UTC and <code>HH:mm</code> format.</p>
+     * <p>The start time in the HH:mm format (24-hour clock).</p>
      * 
      * <strong>example:</strong>
      * <p>00:00</p>

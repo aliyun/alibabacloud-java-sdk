@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ScaleInstanceRequest extends TeaModel {
     /**
-     * <p>The cold storage space of the instance. Unit: GB.</p>
+     * <p>The infrequent access storage space of the instance. Unit: GB.</p>
      * <blockquote>
      * <p>This parameter is ignored for pay-as-you-go instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1000G</p>
+     * <p>1000</p>
      */
     @NameInMap("coldStorageSize")
     public Long coldStorageSize;
@@ -19,27 +19,18 @@ public class ScaleInstanceRequest extends TeaModel {
     /**
      * <p>The instance specifications. Valid values:</p>
      * <ul>
-     * <li><p><code>16</code>: 16 vCPUs and 64 GB of memory (1 compute node)</p>
-     * </li>
-     * <li><p><code>32</code>: 32 vCPUs and 128 GB of memory (2 compute nodes)</p>
-     * </li>
-     * <li><p><code>64</code>: 64 vCPUs and 256 GB of memory (4 compute nodes)</p>
-     * </li>
-     * <li><p><code>96</code>: 96 vCPUs and 384 GB memory (6 compute nodes)</p>
-     * </li>
-     * <li><p><code>128</code>: 128 vCPUs and 512 GB memory (8 compute nodes)</p>
-     * </li>
-     * <li><p>and so on.</p>
-     * </li>
+     * <li>16 cores, 64 GB (Number of compute nodes: 1)</li>
+     * <li>32 cores, 128 GB (Number of compute nodes: 2)</li>
+     * <li>64 cores, 256 GB (Number of compute nodes: 4)</li>
+     * <li>96 cores, 384 GB (Number of compute nodes: 6)</li>
+     * <li>128 cores, 512 GB (Number of compute nodes: 8)</li>
+     * <li>More</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>Specify the number of vCPUs.</p>
-     * </li>
-     * <li><p>To purchase an instance type with more than 1024 vCPUs, submit a ticket.</p>
-     * </li>
-     * <li><p>Skip this parameter for shared instances.</p>
-     * </li>
+     * <li>Specify only the number of cores.</li>
+     * <li>To purchase specifications with more than 1,024 cores, submit a ticket.</li>
+     * <li>You do not need to specify the specifications for shared instances.</li>
      * </ul>
      * </blockquote>
      * 
@@ -50,7 +41,7 @@ public class ScaleInstanceRequest extends TeaModel {
     public Long cpu;
 
     /**
-     * <p>Specifies whether to enable Serverless Computing.</p>
+     * <p>Specifies whether to enable serverless computing.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,9 +50,9 @@ public class ScaleInstanceRequest extends TeaModel {
     public Boolean enableServerlessComputing;
 
     /**
-     * <p>The number of gateways. Valid values: [2, 50].</p>
+     * <p>The number of gateways. Valid values: 2 to 50.</p>
      * <blockquote>
-     * <p>This parameter applies only to virtual warehouse instances.</p>
+     * <p>This parameter is required only for the Warehouse type.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,21 +62,17 @@ public class ScaleInstanceRequest extends TeaModel {
     public Long gatewayCount;
 
     /**
-     * <p>The scaling type.</p>
+     * <p>The type of the specification change. Valid values:</p>
      * <ul>
-     * <li><p>UPGRADE: Upgrades the instance.</p>
-     * </li>
-     * <li><p>DOWNGRADE: Downgrades the instance.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
+     * <li>UPGRADE: upgrades the specifications.</li>
+     * <li>DOWNGRADE: downgrades the specifications.<blockquote>
      * <ul>
-     * <li><p><strong>Upgrade an instance:</strong> New specifications must be equal to or greater than original specifications. Leaving a parameter empty retains its original specification. At least one specification must be increased.</p>
-     * </li>
-     * <li><p><strong>Downgrade an instance:</strong> New specifications must be equal to or less than original specifications. Leaving a parameter empty retains its original specification. At least one specification must be decreased.</p>
-     * </li>
+     * <li>When you upgrade the specifications, the new specifications cannot be lower than the original specifications. An empty field indicates that the original specifications remain unchanged. At least one specification must be higher than the original specification.</li>
+     * <li>When you downgrade the specifications, the new specifications cannot be higher than the original specifications. An empty field indicates that the original specifications remain unchanged. At least one specification must be lower than the original specification.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +88,7 @@ public class ScaleInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1000G</p>
+     * <p>1000</p>
      */
     @NameInMap("storageSize")
     public Long storageSize;

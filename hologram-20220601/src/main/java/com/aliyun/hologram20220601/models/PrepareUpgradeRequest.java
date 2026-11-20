@@ -14,7 +14,7 @@ public class PrepareUpgradeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class PrepareUpgradeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The target version for the upgrade. Call the ListUpgradeReleaseVersion operation to get a list of available versions.</p>
+     * <p>The target version. Call ListUpgradeReleaseVersion to check the available target versions.</p>
      * 
      * <strong>example:</strong>
      * <p>r5.0.0</p>

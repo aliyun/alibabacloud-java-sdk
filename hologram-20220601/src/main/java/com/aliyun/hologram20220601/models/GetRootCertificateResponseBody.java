@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRootCertificateResponseBody extends TeaModel {
     /**
-     * <p>The result of the request. The value is a JSON string that contains the certificate in the PEM format.</p>
+     * <p>The returned result. The value is a JSON string, and the final certificate format is PEM.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;rootCertificate&quot;: &quot;BEGIN xxxx&quot;}</p>
@@ -41,7 +41,7 @@ public class GetRootCertificateResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class GetRootCertificateResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>

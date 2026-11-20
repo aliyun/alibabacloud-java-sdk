@@ -38,7 +38,7 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0C4935F5-6217-569A-902F-931B2F3E28BA</p>
@@ -110,7 +110,7 @@ public class ListDatabasesResponseBody extends TeaModel {
 
     public static class ListDatabasesResponseBodyDatabaseList extends TeaModel {
         /**
-         * <p>Indicates whether the table is a foreign table. \<code>true\\</code>: The table is a foreign table. \<code>false\\</code>: The table is not a foreign table.</p>
+         * <p>Indicates whether the table is a foreign table. Valid values: true: yes, false: no.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -137,7 +137,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         public String permissionModel;
 
         /**
-         * <p>The permission.</p>
+         * <p>The permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>developer</p>

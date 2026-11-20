@@ -20,7 +20,7 @@ public class ListModelCatalogResponseBody extends TeaModel {
     public java.util.List<ListModelCatalogResponseBodyModelList> modelList;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of NextToken that is returned from the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -113,17 +113,17 @@ public class ListModelCatalogResponseBody extends TeaModel {
          *             &quot;domains&quot;: &quot;The sentence is from Ali Cloud IT domain. &quot;, 
          *             &quot;terms&quot;: [
          *                 {
-         *                     &quot;source&quot;: &quot;生物传感器&quot;,
+         *                     &quot;source&quot;: &quot;Biosensor&quot;,
          *                     &quot;target&quot;: &quot;biological sensor&quot;
          *                 },
          *                 {
-         *                     &quot;source&quot;: &quot;身体健康状况&quot;,
+         *                     &quot;source&quot;: &quot;Physical health status&quot;,
          *                     &quot;target&quot;: &quot;health status of the body&quot;
          *                 }
          *             ],
          *             &quot;tm_list&quot;: [
          *                 {
-         *                     &quot;source&quot;: &quot;您可以通过如下方式查看集群的内核版本信息:&quot;,
+         *                     &quot;source&quot;: &quot;You can use one of the following methods to view the kernel version information of a cluster:&quot;,
          *                     &quot;target&quot;: &quot;You can use one of the following methods to query the engine version of a cluster:&quot;
          *                 }
          *             ]
@@ -152,6 +152,12 @@ public class ListModelCatalogResponseBody extends TeaModel {
         @NameInMap("serviceDeployRegion")
         public String serviceDeployRegion;
 
+        /**
+         * <p>Specifies whether the model service can be accessed by using an API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("supportApiKeyAccess")
         public Boolean supportApiKeyAccess;
 

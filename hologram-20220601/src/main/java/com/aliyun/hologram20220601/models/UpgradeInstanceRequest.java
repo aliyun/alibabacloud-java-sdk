@@ -23,7 +23,7 @@ public class UpgradeInstanceRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The upgrade time.</p>
+     * <p>The upgrade time. The format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-02-11 10:00:01</p>

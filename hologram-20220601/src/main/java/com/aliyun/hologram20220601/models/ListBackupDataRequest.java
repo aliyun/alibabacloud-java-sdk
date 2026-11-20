@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBackupDataRequest extends TeaModel {
     /**
-     * <p>The backup type, used to filter snapshots. If you leave this parameter empty, all snapshots are returned.</p>
+     * <p>The backup type. Filters specific backup data by type. If this parameter is left empty, all backup data is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>redundant</p>

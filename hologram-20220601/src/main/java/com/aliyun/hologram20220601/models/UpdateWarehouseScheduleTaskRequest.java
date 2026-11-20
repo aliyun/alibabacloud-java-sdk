@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWarehouseScheduleTaskRequest extends TeaModel {
     /**
-     * <p>The number of CUs to add. The value must be a multiple of 16, be at least 16, and not exceed the current warehouse size.</p>
+     * <p>The number of CPU cores to scale out. The value must be a multiple of 16, greater than or equal to 16, and less than or equal to the specifications of the current compute group.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -14,7 +14,7 @@ public class UpdateWarehouseScheduleTaskRequest extends TeaModel {
     public Long elasticCu;
 
     /**
-     * <p>The end time. The time must be in 24-hour HHmm format, on the hour or half-hour. The end time must be later than the start time. For example, <code>0030</code>, <code>0100</code>, and <code>0400</code>.</p>
+     * <p>The end time. The format is HHmm (four digits, 24-hour clock). The time must be on the hour or half hour, such as 0030, 0100, or 0400. The end time must be later than the start time.</p>
      * 
      * <strong>example:</strong>
      * <p>0400</p>
@@ -23,7 +23,7 @@ public class UpdateWarehouseScheduleTaskRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The elastic schedule ID.</p>
+     * <p>The elastic plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1980869072412614657</p>
@@ -32,7 +32,7 @@ public class UpdateWarehouseScheduleTaskRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The start time. The time must be in 24-hour HHmm format, on the hour or half-hour. For example, <code>0030</code>, <code>0100</code>, and <code>0400</code>.</p>
+     * <p>The start time. The format is HHmm (four digits, 24-hour clock). The time must be on the hour or half hour, such as 0030, 0100, or 0400.</p>
      * 
      * <strong>example:</strong>
      * <p>0200</p>
@@ -41,7 +41,7 @@ public class UpdateWarehouseScheduleTaskRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The warehouse ID.</p>
+     * <p>The compute group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

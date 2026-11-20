@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListOperationEventsResponseBody extends TeaModel {
     /**
-     * <p>The event list.</p>
+     * <p>The list of events.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListOperationEventsResponseBodyData> data;
 
     /**
-     * <p>The page number to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -20,7 +20,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 50. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 50. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -29,7 +29,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
@@ -38,7 +38,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that match the query.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -135,7 +135,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
 
     public static class ListOperationEventsResponseBodyData extends TeaModel {
         /**
-         * <p>Specifies whether the event can be canceled.</p>
+         * <p>Indicates whether the event can be canceled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -144,7 +144,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public Boolean cancelable;
 
         /**
-         * <p>Specifies whether the scheduled time for the event can be changed.</p>
+         * <p>Indicates whether the event schedule can be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -162,7 +162,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The event name.</p>
+         * <p>The event name filter.</p>
          * 
          * <strong>example:</strong>
          * <p>HOT_UPGRADE</p>
@@ -171,7 +171,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The event type.</p>
+         * <p>The event type filter.</p>
          * 
          * <strong>example:</strong>
          * <p>UPGRADE_ON_CUSTOMERS_BEHALF</p>
@@ -180,13 +180,13 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>The follower instance list.</p>
+         * <p>The list of follower instances.</p>
          */
         @NameInMap("FollowerInstances")
         public java.util.List<ListOperationEventsResponseBodyDataFollowerInstances> followerInstances;
 
         /**
-         * <p>The event ID.</p>
+         * <p>Id</p>
          * 
          * <strong>example:</strong>
          * <p>1826503661244379138</p>
@@ -204,7 +204,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The maintenance window.</p>
+         * <p>The maintenance time window.</p>
          * 
          * <strong>example:</strong>
          * <p>21:00-22:00</p>
@@ -222,7 +222,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The scheduled time of the event.</p>
+         * <p>ScheduleTime</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-22 15:49:28</p>
@@ -231,7 +231,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String scheduleTime;
 
         /**
-         * <p>The state of the event.</p>
+         * <p>State</p>
          * 
          * <strong>example:</strong>
          * <p>queued</p>

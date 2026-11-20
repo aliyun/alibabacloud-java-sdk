@@ -32,7 +32,7 @@ public class UpdateInstancePortResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D1303CD4-AA70-5998-8025-F55B22C50840</p>
@@ -41,7 +41,7 @@ public class UpdateInstancePortResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. This parameter is independent of the result of the operation.</p>
+     * <p>Indicates whether an exception occurred during the request, which is independent of the business result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class UpdateInstancePortResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The result of the operation. A value of <code>true</code> indicates that the operation is successful. A value of <code>false</code> indicates that the operation fails.</p>
+     * <p>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

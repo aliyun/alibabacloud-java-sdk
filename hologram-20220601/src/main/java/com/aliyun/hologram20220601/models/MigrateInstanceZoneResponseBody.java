@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class MigrateInstanceZoneResponseBody extends TeaModel {
     /**
-     * <p>Specifies whether the operation was successful. <code>true</code> indicates success and <code>false</code> indicates failure.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +18,7 @@ public class MigrateInstanceZoneResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>

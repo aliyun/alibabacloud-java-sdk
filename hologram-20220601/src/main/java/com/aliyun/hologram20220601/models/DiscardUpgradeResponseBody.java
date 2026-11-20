@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DiscardUpgradeResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public java.util.List<DiscardUpgradeResponseBodyData> data;
@@ -38,7 +38,7 @@ public class DiscardUpgradeResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>A47D57BE-59D1-51A6-9CC3-080C07852C4E</p>
@@ -47,7 +47,7 @@ public class DiscardUpgradeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API request itself was successful. This does not reflect the outcome of the operation. For the operation\&quot;s result, see the Success field in the Data array.</p>
+     * <p>Indicates whether the request is successful. This parameter indicates whether an exception occurred during the request and is independent of the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DiscardUpgradeResponseBody extends TeaModel {
 
     public static class DiscardUpgradeResponseBodyData extends TeaModel {
         /**
-         * <p>The reason the upgrade failed.</p>
+         * <p>The reason for the upgrade failure.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -128,7 +128,7 @@ public class DiscardUpgradeResponseBody extends TeaModel {
         public String reasonKey;
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

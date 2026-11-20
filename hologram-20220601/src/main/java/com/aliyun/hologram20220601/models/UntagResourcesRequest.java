@@ -23,7 +23,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>An array of instance IDs.</p>
+     * <p>The instance IDs.</p>
      */
     @NameInMap("resourceIds")
     public java.util.List<String> resourceIds;
@@ -38,7 +38,8 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>An array of tag keys. To remove tags, you only need to provide the corresponding tag keys.</p>
+     * <p>The tag keys.
+     * To delete tags, provide the corresponding tag keys.</p>
      */
     @NameInMap("tagKeys")
     public java.util.List<String> tagKeys;

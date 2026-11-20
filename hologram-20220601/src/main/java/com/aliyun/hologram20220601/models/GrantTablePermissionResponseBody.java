@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GrantTablePermissionResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation. A value of <code>true</code> indicates the operation was successful, and <code>false</code> indicates it failed.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +54,7 @@ public class GrantTablePermissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful. This parameter indicates whether an exception occurred during the request and is unrelated to the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

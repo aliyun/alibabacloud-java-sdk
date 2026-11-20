@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class SuspendHoloWarehouseResponseBody extends TeaModel {
     /**
-     * <p>The result of the request. <code>true</code> indicates the request is successful. <code>false</code> indicates the request failed.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +18,7 @@ public class SuspendHoloWarehouseResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</p>

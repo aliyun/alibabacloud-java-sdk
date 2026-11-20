@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GrantSchemaPermissionResponseBody extends TeaModel {
     /**
-     * <p>true: The operation was successful. false: The operation failed.</p>
+     * <p>Indicates whether the operation succeeded. Valid values:</p>
+     * <ul>
+     * <li>true: The operation succeeded.</li>
+     * <li>false: The operation failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +45,7 @@ public class GrantSchemaPermissionResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</p>
@@ -50,7 +54,7 @@ public class GrantSchemaPermissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. This parameter is not related to the business logic.</p>
+     * <p>Indicates whether an exception occurred during the request. This is independent of the business logic.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
