@@ -29,6 +29,12 @@ public class ObserveGroupDiscoverRule extends TeaModel {
     public Long gmtCreate;
 
     /**
+     * <p>是否自动纳管同 domain、同实体 group 且由指定关系直接出边关联的子实体，历史缺省为 false。</p>
+     */
+    @NameInMap("includeRelatedEntities")
+    public Boolean includeRelatedEntities;
+
+    /**
      * <p>手动指定的实例 ID 列表（枚举型，含 1.0 手动实例同步）。</p>
      */
     @NameInMap("instanceIds")
@@ -123,6 +129,14 @@ public class ObserveGroupDiscoverRule extends TeaModel {
     }
     public Long getGmtCreate() {
         return this.gmtCreate;
+    }
+
+    public ObserveGroupDiscoverRule setIncludeRelatedEntities(Boolean includeRelatedEntities) {
+        this.includeRelatedEntities = includeRelatedEntities;
+        return this;
+    }
+    public Boolean getIncludeRelatedEntities() {
+        return this.includeRelatedEntities;
     }
 
     public ObserveGroupDiscoverRule setInstanceIds(java.util.List<String> instanceIds) {

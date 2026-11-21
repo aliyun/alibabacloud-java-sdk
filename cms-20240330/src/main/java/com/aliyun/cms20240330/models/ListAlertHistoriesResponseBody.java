@@ -166,7 +166,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String bizSource;
 
         /**
-         * <p>The cumulative number of alert events during the alert duration.</p>
+         * <p>The cumulative number of alerts (alert events) during the alert duration.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -175,7 +175,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The end time of the alert, which is the recovery time. This field has a value only when the alert history enters the OK state. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The end time (recovery time) of the alert. This field has a value only when the alert history record enters the OK state. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1740535517000</p>
@@ -211,7 +211,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public java.util.Map<String, String> instanceDetail;
 
         /**
-         * <p>The unique key value (instanceKey) that identifies the alert object instance.</p>
+         * <p>The unique key value used to identify the alert object instance, which is the instanceKey.</p>
          * 
          * <strong>example:</strong>
          * <p>entity/apm/apm.service/6dc9e46fda6d012537b48c3250ff806b</p>
@@ -250,13 +250,13 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
          * <p>The content of the latest alert message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The number of zombie child processes of the process {{$tags.comm}} running on the instance {{$tags.instanceId}} is greater than 128</p>
+         * <p>The number of zombie child processes of the process {{$tags.comm}} running on instance {{$tags.instanceId}} is greater than 128</p>
          */
         @NameInMap("message")
         public String message;
 
         /**
-         * <p>Indicates whether the observed object is in the global scope. This value is copied from the rule when the alert history record is created.</p>
+         * <p>Indicates whether the observed object is in the global scope. This value is copied from the rule upon creation.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -265,7 +265,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public Boolean observeResourceGlobalScope;
 
         /**
-         * <p>The serialized string of the observed object list. This value is copied from the rule when the alert history record is created.</p>
+         * <p>The serialized string of the observed object list. This value is copied from the rule upon creation.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;resourceId&quot;:&quot;i-bp1234567890abcdef&quot;,&quot;resourceType&quot;:&quot;ACS::ECS::Instance&quot;}]</p>
@@ -274,7 +274,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String observeResourceList;
 
         /**
-         * <p>The type of the observed object, such as PROMETHEUS, APM, RUM, or cms_basic. This value is copied from the rule when the alert history record is created.</p>
+         * <p>The type of the observed object, such as PROMETHEUS, APM, RUM, or cms_basic. This value is copied from the rule upon creation.</p>
          * 
          * <strong>example:</strong>
          * <p>PROMETHEUS</p>

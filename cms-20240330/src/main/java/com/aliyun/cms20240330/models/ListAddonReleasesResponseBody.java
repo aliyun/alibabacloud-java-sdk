@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListAddonReleasesResponseBody extends TeaModel {
     /**
-     * <p>The token for the next page.</p>
+     * <p>The token used to query the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The collection of integrated component information.</p>
+     * <p>The collection of onboarded component information.</p>
      */
     @NameInMap("releases")
     public java.util.List<ListAddonReleasesResponseBodyReleases> releases;
@@ -26,7 +29,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of components.</p>
+     * <p>The total number of components.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -175,7 +178,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public Integer ready;
 
         /**
-         * <p>The number of sub-releases.</p>
+         * <p>The total number of sub-releases.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -235,7 +238,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String apiVersion;
 
         /**
-         * <p>The installation phase information.</p>
+         * <p>The installation phase conditions.</p>
          */
         @NameInMap("conditions")
         public java.util.List<ListAddonReleasesResponseBodyReleasesConditions> conditions;
@@ -250,7 +253,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The integration time.</p>
+         * <p>The onboarding time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-04T16:10:12+08:00</p>
@@ -292,7 +295,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The number of plugins.</p>
+         * <p>The number of plug-ins.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -301,7 +304,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public Long exporterCount;
 
         /**
-         * <p>Indicates whether configurations exist.</p>
+         * <p>Indicates whether a configuration exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -310,7 +313,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public Boolean haveConfig;
 
         /**
-         * <p>The ID of the integration user.</p>
+         * <p>The ID of the onboarding user.</p>
          * 
          * <strong>example:</strong>
          * <p>175xxxxxxxxx</p>
@@ -328,7 +331,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>Indicates whether the component is a managed component.</p>
+         * <p>Indicates whether the component is managed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -424,7 +427,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the owner user.</p>
+         * <p>The ID of the associated user.</p>
          * 
          * <strong>example:</strong>
          * <p>175xxxxxxxxxxxxx</p>

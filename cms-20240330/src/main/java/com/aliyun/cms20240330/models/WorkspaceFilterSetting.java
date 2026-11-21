@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class WorkspaceFilterSetting extends TeaModel {
     /**
-     * <p>The label filter. This parameter is not supported and does not take effect if specified.</p>
+     * <p>The tag filter. This feature is not yet supported, and passing this parameter has no effect.</p>
      */
     @NameInMap("tagSelector")
     public FilterSetting tagSelector;

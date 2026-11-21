@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusInstanceRequest extends TeaModel {
     /**
-     * <p>The number of days for automatic archiving after storage expires. A value of 0 indicates no archiving. Valid values for archive days:
-     * V1: 1 to 365 days. Only supported for billing by metric write volume.
-     * V2: 1 to 3650 days (3650 indicates permanent retention).</p>
+     * <p>The number of days to automatically archive and retain data after the storage period expires. A value of 0 indicates that data is not archived. Valid values for the archive retention period:
+     * V1: 1 to 365 days. Supported only for the pay-by-ingested-data billing method.
+     * V2: 1 to 3650 days. A value of 3650 indicates permanent retention.</p>
      * 
      * <strong>example:</strong>
      * <p>365</p>
@@ -19,7 +19,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Integer archiveDuration;
 
     /**
-     * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
+     * <p>The authentication-free read policy. IP address ranges and VPC IDs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -37,7 +37,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String authFreeReadPolicy;
 
     /**
-     * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
+     * <p>The authentication-free read policy. IP address ranges and VPC IDs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -53,6 +53,14 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
      */
     @NameInMap("authFreeWritePolicy")
     public String authFreeWritePolicy;
+
+    /**
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>true: sends a precheck request without updating the instance. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the DryRunOperation error code is returned.
+     * false: sends a regular request. If the request passes the precheck, the instance is updated. This is the default value.</p>
+     */
+    @NameInMap("dryrun")
+    public Boolean dryrun;
 
     /**
      * <p>Specifies whether to enable authentication-free read.</p>
@@ -82,9 +90,9 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthToken;
 
     /**
-     * <p>The billing method. This can be modified only once during the instance lifetime:
-     * POSTPAY: pay-as-you-go by metric reporting volume.
-     * POSTPAY_GB: pay-as-you-go by metric write volume.</p>
+     * <p>The billing method. You can change the billing method only once during the lifecycle of the instance. Valid values:
+     * POSTPAY: pay-as-you-go based on the number of reported metrics.
+     * POSTPAY_GB: pay-as-you-go based on the volume of ingested data.</p>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY_GB</p>
@@ -93,7 +101,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test-prom-name</p>
@@ -102,7 +110,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String prometheusInstanceName;
 
     /**
-     * <p>Instance storage database status of the instance. Only RUNNING is supported. If left empty, instance storage database status is not changed.</p>
+     * <p>The status of the instance storage database. Only RUNNING is supported. If this parameter is left empty, the status of the storage database is not changed.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -111,9 +119,9 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The storage duration (days):
-     * By write volume: 90, 180.
-     * By metric reporting volume: 15, 30, 60, 90, 180.</p>
+     * <p>The storage duration in days. Valid values:
+     * For the pay-by-ingested-data billing method: 90 and 180.
+     * For the pay-by-reported-metrics billing method: 15, 30, 60, 90, and 180.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>
@@ -163,6 +171,14 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     }
     public String getAuthFreeWritePolicy() {
         return this.authFreeWritePolicy;
+    }
+
+    public UpdatePrometheusInstanceRequest setDryrun(Boolean dryrun) {
+        this.dryrun = dryrun;
+        return this;
+    }
+    public Boolean getDryrun() {
+        return this.dryrun;
     }
 
     public UpdatePrometheusInstanceRequest setEnableAuthFreeRead(Boolean enableAuthFreeRead) {

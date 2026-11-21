@@ -29,7 +29,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -102,13 +102,13 @@ public class ListContactGroupsResponseBody extends TeaModel {
         public String contactGroupId;
 
         /**
-         * <p>The contact IDs.</p>
+         * <p>The IDs of the contacts.</p>
          */
         @NameInMap("contactIds")
         public java.util.List<String> contactIds;
 
         /**
-         * <p>The contact name.</p>
+         * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

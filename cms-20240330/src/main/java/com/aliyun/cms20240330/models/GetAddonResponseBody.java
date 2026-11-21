@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAddonResponseBody extends TeaModel {
     /**
-     * <p>The list of data corresponding to the request header.</p>
+     * <p>The list of data corresponding to the request.</p>
      */
     @NameInMap("data")
     public GetAddonResponseBodyData data;
@@ -150,6 +150,9 @@ public class GetAddonResponseBody extends TeaModel {
 
         /**
          * <p>The dependencies on probes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;metric-agent&quot;:true}</p>
          */
         @NameInMap("features")
         public java.util.Map<String, Boolean> features;
@@ -193,7 +196,7 @@ public class GetAddonResponseBody extends TeaModel {
 
     public static class GetAddonResponseBodyDataEnvironmentsPoliciesMetricCheckRule extends TeaModel {
         /**
-         * <p>The data check rule executed after installation.</p>
+         * <p>The data check rule applied after installation.</p>
          */
         @NameInMap("promQL")
         public java.util.List<String> promQL;
@@ -324,7 +327,7 @@ public class GetAddonResponseBody extends TeaModel {
         public GetAddonResponseBodyDataEnvironmentsPoliciesMetricCheckRule metricCheckRule;
 
         /**
-         * <p>Specifies whether to initiate a pod restart guide immediately after the add-on installation is completed during integration.</p>
+         * <p>Specifies whether to initiate a pod restart guide immediately after the add-on is installed during integration.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -418,7 +421,7 @@ public class GetAddonResponseBody extends TeaModel {
         public java.util.List<GetAddonResponseBodyDataEnvironmentsCommonSchemaRefs> commonSchemaRefs;
 
         /**
-         * <p>The additional dependency files.</p>
+         * <p>The additional dependencies.</p>
          */
         @NameInMap("dependencies")
         public GetAddonResponseBodyDataEnvironmentsDependencies dependencies;
@@ -433,7 +436,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether the environment is enabled.</p>
+         * <p>Indicates whether the environment is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -547,7 +550,7 @@ public class GetAddonResponseBody extends TeaModel {
 
     public static class GetAddonResponseBodyData extends TeaModel {
         /**
-         * <p>The alias of the component.</p>
+         * <p>The alias of the integrated component.</p>
          * 
          * <strong>example:</strong>
          * <p>resume_vector_alias</p>
@@ -556,7 +559,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The list of category directories for the component.</p>
+         * <p>The list of category directories for the integrated component.</p>
          */
         @NameInMap("categories")
         public java.util.List<String> categories;
@@ -607,7 +610,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The latest creation time.</p>
+         * <p>The latest release creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-12 12:30:30</p>
@@ -646,9 +649,7 @@ public class GetAddonResponseBody extends TeaModel {
          * <p>The component version.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>0.1.1</p>
          */
         @NameInMap("version")
         public String version;

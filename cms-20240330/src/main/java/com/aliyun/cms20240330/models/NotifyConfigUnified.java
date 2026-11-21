@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class NotifyConfigUnified extends TeaModel {
     /**
-     * <p>The days of the week on which notifications are sent, 1-7.</p>
+     * <p>The days of the week when notifications are sent, ranging from 1 to 7.</p>
      */
     @NameInMap("activeDays")
     public java.util.List<Integer> activeDays;
 
     /**
-     * <p>The daily notification effective end time.</p>
+     * <p>The daily end time for the notification effective period.</p>
      * 
      * <strong>example:</strong>
      * <p>20:00</p>
@@ -20,7 +20,7 @@ public class NotifyConfigUnified extends TeaModel {
     public String activeEndTime;
 
     /**
-     * <p>The daily notification effective start time.</p>
+     * <p>The daily start time for the notification effective period.</p>
      * 
      * <strong>example:</strong>
      * <p>08:00</p>
@@ -35,13 +35,13 @@ public class NotifyConfigUnified extends TeaModel {
     public java.util.List<DirectNotifyChannel> channels;
 
     /**
-     * <p>The list of notification policy IDs (type=NOTIFY_POLICY, currently a maximum of 1 per service. Mutually exclusive with channels/silenceTimeSecs/activeDays/activeStartTime/activeEndTime/utcOffset of DIRECT_NOTIFY).</p>
+     * <p>The list of notification policy IDs.</p>
      */
     @NameInMap("notifyStrategies")
     public java.util.List<String> notifyStrategies;
 
     /**
-     * <p>Specifies whether to send recovery notifications (type=DIRECT_NOTIFY). Default value: true. Each severity level in severityChannels can independently override this setting.</p>
+     * <p>Specifies whether to send a recovery notification. Default value: true. This setting can be independently overridden for each severity level in severityChannels.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,13 +50,16 @@ public class NotifyConfigUnified extends TeaModel {
     public Boolean sendRecoverNotification;
 
     /**
-     * <p>The Notification Recipients and channels configured by severity level (type=DIRECT_NOTIFY, new mode, mutually exclusive with channels). The key is the severity level: CRITICAL/ERROR/WARNING/INFO.</p>
+     * <p>The notification recipients and channels configured for each severity level. The key is the severity level: CRITICAL, ERROR, WARNING, or INFO.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;CRITICAL&quot;:{&quot;sendRecoverNotification&quot;:true}}</p>
      */
     @NameInMap("severityChannels")
     public java.util.Map<String, SeverityNotifyConfig> severityChannels;
 
     /**
-     * <p>The mute for epoch in seconds.</p>
+     * <p>The mute epoch in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

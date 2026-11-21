@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertWebhookRequest extends TeaModel {
     /**
-     * <p>The content type. Valid values:</p>
+     * <p>The data content type. Valid values:</p>
      * <ul>
      * <li>JSON</li>
      * <li>FORM</li>
@@ -19,6 +19,9 @@ public class UpdateAlertWebhookRequest extends TeaModel {
 
     /**
      * <p>headers</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;X-Total-Count&quot;:&quot;0&quot;}</p>
      */
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
@@ -50,7 +53,7 @@ public class UpdateAlertWebhookRequest extends TeaModel {
     public String method;
 
     /**
-     * <p>The name of the webhook.</p>
+     * <p>The webhook name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -59,7 +62,7 @@ public class UpdateAlertWebhookRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The URL of the alert callback.</p>
+     * <p>The alert callback URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://aliyun.com/test">http://aliyun.com/test</a></p>

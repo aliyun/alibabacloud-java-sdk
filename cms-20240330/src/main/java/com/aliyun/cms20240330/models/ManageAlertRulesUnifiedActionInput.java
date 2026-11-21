@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     /**
-     * <p>The action type.</p>
+     * <p>The operation type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,10 +42,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public ArmsIntegrationConfig armsIntegrationConfig;
 
     /**
-     * <p>The business source. Valid values include managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls. Pass this field as needed for CREATE, UPDATE, and PATCH actions.</p>
+     * <p>The business source (optional). Examples include managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls. Pass as needed for CREATE, UPDATE, and PATCH.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("bizSource")
     public String bizSource;
@@ -63,7 +63,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
      * <p>The content template.</p>
      * 
      * <strong>example:</strong>
-     * <p>实例 {{instance}} CPU 使用率超过 {{threshold}}%</p>
+     * <p>Instance {{instance}} CPU usage exceeds {{threshold}}%</p>
      */
     @NameInMap("contentTemplate")
     public String contentTemplate;
@@ -87,7 +87,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The alert drill evaluation time in Unix milliseconds. This field is required by the backend when drillMode is ONE_SHOT. The time cannot be later than the current time or earlier than 90 days ago.</p>
+     * <p>The alert drill time, in Unix milliseconds. Required by the backend when drillMode is ONE_SHOT. It cannot be later than the current time or earlier than 90 days ago.</p>
      * 
      * <strong>example:</strong>
      * <p>1783728000000</p>
@@ -96,7 +96,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public Long drillEvalTime;
 
     /**
-     * <p>The alert drill mode. This field is required by the backend when the action is DRILL_ALERT. Valid values: ONE_SHOT specifies a single point in time to simulate a complete lifecycle consisting of three events: OCCURRED, PERSISTENT, and RECOVERED. TIME_TRAVEL specifies a time range to simulate the lifecycle in multiple rounds based on the rule scheduling interval.</p>
+     * <p>The alert drill mode. Required by the backend when action is DRILL_ALERT. ONE_SHOT specifies a single time point to simulate a complete lifecycle (three events: OCCURRED, PERSISTENT, and RECOVERED). TIME_TRAVEL specifies a time period to simulate round by round according to the rule scheduling interval (OCCURRED, PERSISTENT, ..., RECOVERED).</p>
      * 
      * <strong>example:</strong>
      * <p>ONE_SHOT</p>
@@ -105,10 +105,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public String drillMode;
 
     /**
-     * <p>The alert drill time range in Unix milliseconds. This field is required by the backend when drillMode is TIME_TRAVEL. The endTime must be later than the startTime and cannot be later than the current time. The lifecycle is simulated in multiple rounds based on the rule scheduling interval. The maximum number of rounds is 500. If the limit is exceeded, the backend returns a 400 error.</p>
+     * <p>The alert drill time range, in Unix milliseconds. Required by the backend when drillMode is TIME_TRAVEL. The endTime must be later than the startTime and cannot be later than the current time. The span between endTime and startTime cannot exceed 1 hour (the backend returns 400 if exceeded). Simulates round by round according to the rule scheduling interval, with a maximum of 500 rounds (the backend returns 400 if exceeded).</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;startTime&quot;:1783728000000,&quot;endTime&quot;:1783814400000}</p>
+     * <p>{&quot;startTime&quot;:1783728000000,&quot;endTime&quot;:1783731600000}</p>
      */
     @NameInMap("drillTimeRange")
     public ManageAlertRulesUnifiedActionInputDrillTimeRange drillTimeRange;
@@ -150,7 +150,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public ObserveResourceConfig observeResourceConfig;
 
     /**
-     * <p><strong>[Deprecated]</strong> The ID of the monitored object instance. For new integrations, use observeResourceConfig.resources instead. This field is retained only for compatibility with legacy SDKs.</p>
+     * <p><strong>[Deprecated]</strong> The monitored object instance ID. Use observeResourceConfig.resources for new integrations. Retained only for compatibility with legacy SDKs.</p>
      * 
      * <strong>example:</strong>
      * <p>example-id-001</p>
@@ -160,7 +160,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public String observeResourceInstanceId;
 
     /**
-     * <p><strong>[Deprecated]</strong> The resource type of the monitored object. For new integrations, use observeResourceConfig.entityType instead. This field is retained only for compatibility with legacy SDKs.</p>
+     * <p><strong>[Deprecated]</strong> The monitored object resource type. Use observeResourceConfig.entityType for new integrations. Retained only for compatibility with legacy SDKs.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -179,7 +179,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public QueryConfigUnified queryConfig;
 
     /**
-     * <p>The root cause analysis (RCA) configuration. Pass this field as needed for CREATE, UPDATE, and PATCH actions.</p>
+     * <p>The root cause analysis (RCA) configuration (optional). Pass as needed for CREATE, UPDATE, and PATCH.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;enabled&quot;:false}</p>
@@ -188,7 +188,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public AlertRuleRcaConfig rcaConfig;
 
     /**
-     * <p>The region ID. This aligns with V1 AlertRule.regionId. If not provided, the gateway callerRegionId is used.</p>
+     * <p>The region ID. Aligned with V1 AlertRule.regionId. The gateway callerRegionId is used if not provided.</p>
      * 
      * <strong>example:</strong>
      * <p>example-id-001</p>
@@ -197,7 +197,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The schedule aggregation configuration.</p>
+     * <p>The scheduling aggregation configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;type&quot;:&quot;FIXED&quot;,&quot;intervalSecs&quot;:60}</p>
@@ -206,7 +206,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public ScheduleConfigUnified scheduleConfig;
 
     /**
-     * <p>The UUID of the rule. This field is required for UPDATE and PATCH actions.</p>
+     * <p>The rule UUID. Required for UPDATE and PATCH.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx-xxx-xxx</p>
@@ -215,7 +215,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public String uuid;
 
     /**
-     * <p>The list of UUIDs for the rules to be deleted. This is used for the BATCH_DELETE action.</p>
+     * <p>The list of rule UUIDs to be deleted (BATCH_DELETE).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;cms_v2_81d01768-fee9-459f-af49-ab2704f1db2b&quot;]</p>
@@ -224,7 +224,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     public java.util.List<String> uuidList;
 
     /**
-     * <p>The workspace ID. This field is required for CREATE, UPDATE, PATCH, DELETE, ENABLE, DISABLE, BATCH_DELETE, BATCH_ENABLE, and BATCH_DISABLE actions. It identifies the CloudMonitor workspace to which the rule belongs.</p>
+     * <p>The workspace (for CREATE, UPDATE, and other actions).</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
@@ -441,16 +441,16 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
 
     public static class ManageAlertRulesUnifiedActionInputDrillTimeRange extends TeaModel {
         /**
-         * <p>The drill end time in Unix milliseconds. The end time must be later than the start time.</p>
+         * <p>The drill end time, in Unix milliseconds. Must be later than the start time, and the span from the start time cannot exceed 1 hour.</p>
          * 
          * <strong>example:</strong>
-         * <p>1783814400000</p>
+         * <p>1783731600000</p>
          */
         @NameInMap("endTime")
         public Long endTime;
 
         /**
-         * <p>The drill start time in Unix milliseconds.</p>
+         * <p>The drill start time, in Unix milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1783728000000</p>

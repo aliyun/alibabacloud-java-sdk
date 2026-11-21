@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class SearchContextRequest extends TeaModel {
     /**
-     * <p>Filter conditions</p>
+     * <p>The filter conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;metadata.serviceName&quot;:&quot;sls-sop-daily&quot;,&quot;metadata.taskType&quot;:{&quot;in&quot;:[&quot;troubleshooting&quot;,&quot;knowledge_retrieval&quot;]}}</p>
      */
     @NameInMap("filter")
     public java.util.Map<String, ?> filter;
 
     /**
-     * <p>Whether to format</p>
+     * <p>Specifies whether to format the output.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,7 +23,7 @@ public class SearchContextRequest extends TeaModel {
     public Boolean formatted;
 
     /**
-     * <p>Limit the number of items returned</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -29,7 +32,7 @@ public class SearchContextRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>Query content</p>
+     * <p>The query content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +42,7 @@ public class SearchContextRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>Retrieval option</p>
+     * <p>The retrieval options.</p>
      * 
      * <strong>example:</strong>
      * <p>reranker,llm_rank</p>
@@ -48,7 +51,7 @@ public class SearchContextRequest extends TeaModel {
     public String retrievalOption;
 
     /**
-     * <p>Similarity threshold</p>
+     * <p>The similarity threshold.</p>
      * 
      * <strong>example:</strong>
      * <p>0.3</p>

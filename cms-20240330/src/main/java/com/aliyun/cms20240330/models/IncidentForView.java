@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class IncidentForView extends TeaModel {
     /**
-     * <p>The expiration time of the notification block.</p>
+     * <p>The expiration time for suppressing notifications.</p>
      * 
      * <strong>example:</strong>
-     * <p>-1 indicates that notifications are not blocked</p>
+     * <p>-1</p>
      */
     @NameInMap("blockingExpireTimestamp")
     public Long blockingExpireTimestamp;
@@ -17,7 +17,7 @@ public class IncidentForView extends TeaModel {
      * <p>The detailed content of the incident.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;{&quot;description&quot;:&quot;High CPU usage on the ECS instance&quot;,&quot;impact&quot;:&quot;Payment service delay&quot;}&quot;</p>
+     * <p>&quot;{&quot;description&quot;:&quot;High CPU usage on the ECS instance&quot;,&quot;impact&quot;:&quot;Payment service latency&quot;}&quot;</p>
      */
     @NameInMap("content")
     public String content;
@@ -29,7 +29,7 @@ public class IncidentForView extends TeaModel {
     public java.util.List<IncidentEscalationPolicyForView> escalations;
 
     /**
-     * <p>The group identifier.</p>
+     * <p>The identifier of the group.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;group-123456&quot;</p>
@@ -39,6 +39,9 @@ public class IncidentForView extends TeaModel {
 
     /**
      * <p>The grouping key-value pairs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;resourceId&quot;:&quot;i-bp123456&quot;,&quot;severity&quot;:&quot;Critical&quot;}</p>
      */
     @NameInMap("groupingKeys")
     public java.util.Map<String, String> groupingKeys;
@@ -71,7 +74,7 @@ public class IncidentForView extends TeaModel {
     public String notifyStrategyUuid;
 
     /**
-     * <p>The operator information.</p>
+     * <p>The information about the operator.</p>
      */
     @NameInMap("operator")
     public ContactForIncidentView operator;
@@ -155,13 +158,16 @@ public class IncidentForView extends TeaModel {
     public String subscriptionUuid;
 
     /**
-     * <p>The array of tags.</p>
+     * <p>The tag array.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
     /**
-     * <p>The timestamp when the incident was created.</p>
+     * <p>The creation timestamp of the incident.</p>
      * 
      * <strong>example:</strong>
      * <p>1743876000000</p>

@@ -23,7 +23,7 @@ public class ListAlertWebhooksRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class ListAlertWebhooksRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The unique ID of the webhook.</p>
+     * <p>The unique identifiers of the webhooks.</p>
      */
     @NameInMap("webhookIds")
     public java.util.List<String> webhookIds;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-0000000000000000-cn-hangzhou</p>

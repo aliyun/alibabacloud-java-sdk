@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSubscriptionsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records returned for the current request.</p>
+     * <p>The maximum number of records returned in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

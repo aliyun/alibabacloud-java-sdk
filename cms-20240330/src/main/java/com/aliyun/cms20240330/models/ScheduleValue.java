@@ -14,15 +14,6 @@ public class ScheduleValue extends TeaModel {
     public String contactId;
 
     /**
-     * <p>The name of the on-call contact.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>testName</p>
-     */
-    @NameInMap("contactName")
-    public String contactName;
-
-    /**
      * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +31,15 @@ public class ScheduleValue extends TeaModel {
     @NameInMap("start")
     public String start;
 
+    /**
+     * <p>The name of the on-call contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testName</p>
+     */
+    @NameInMap("contactName")
+    public String contactName;
+
     public static ScheduleValue build(java.util.Map<String, ?> map) throws Exception {
         ScheduleValue self = new ScheduleValue();
         return TeaModel.build(map, self);
@@ -51,14 +51,6 @@ public class ScheduleValue extends TeaModel {
     }
     public String getContactId() {
         return this.contactId;
-    }
-
-    public ScheduleValue setContactName(String contactName) {
-        this.contactName = contactName;
-        return this;
-    }
-    public String getContactName() {
-        return this.contactName;
     }
 
     public ScheduleValue setEnd(String end) {
@@ -75,6 +67,14 @@ public class ScheduleValue extends TeaModel {
     }
     public String getStart() {
         return this.start;
+    }
+
+    public ScheduleValue setContactName(String contactName) {
+        this.contactName = contactName;
+        return this;
+    }
+    public String getContactName() {
+        return this.contactName;
     }
 
 }

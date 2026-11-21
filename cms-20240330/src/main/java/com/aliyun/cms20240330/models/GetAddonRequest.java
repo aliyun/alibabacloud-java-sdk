@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAddonRequest extends TeaModel {
     /**
-     * <p>The language. Default value: zh. Valid values: zh, en.</p>
+     * <p>The language environment. Default value: zh. Valid values: zh, en.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -17,9 +17,7 @@ public class GetAddonRequest extends TeaModel {
      * <p>The version of the add-on.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>0.1.1</p>
      */
     @NameInMap("version")
     public String version;

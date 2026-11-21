@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDeliveryTasksResponseBody extends TeaModel {
     /**
-     * <p>The list of data delivery tasks.</p>
+     * <p>The list of delivery tasks.</p>
      */
     @NameInMap("deliveryTasks")
     public java.util.List<ListDeliveryTasksResponseBodyDeliveryTasks> deliveryTasks;
 
     /**
-     * <p>The maximum number of results to return. Maximum value: 100.</p>
+     * <p>The maximum number of entries to return. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -29,7 +29,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7D7DF334-B2F2-5453-AD51-A27B337E3191</p>
@@ -116,6 +116,9 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
     public static class ListDeliveryTasksResponseBodyDeliveryTasksSinkList extends TeaModel {
         /**
          * <p>The detailed configuration of the delivery sink. The meanings of the key and value vary based on the sinkType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Url&quot;:&quot;<a href="https://example.com/api/v1/write%22,%22Network%22:%22PublicNetwork%22,%22AuthType%22:%22None%22%7D">https://example.com/api/v1/write&quot;,&quot;Network&quot;:&quot;PublicNetwork&quot;,&quot;AuthType&quot;:&quot;None&quot;}</a></p>
          */
         @NameInMap("sinkConfigs")
         public java.util.Map<String, String> sinkConfigs;
@@ -196,7 +199,8 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
 
     public static class ListDeliveryTasksResponseBodyDeliveryTasks extends TeaModel {
         /**
-         * <p>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format and is displayed in UTC.</p>
+         * <p>The creation time.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +210,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The data source ID, which is the Prometheus instance ID.</p>
+         * <p>The ID of the data source, which is the ID of the Prometheus instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-5f2b4c7e66342s</p>
@@ -215,7 +219,10 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</p>
+         * <p>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</p>
          */
         @NameInMap("externalLabels")
         public java.util.Map<String, String> externalLabels;
@@ -227,7 +234,10 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public ListDeliveryTasksResponseBodyDeliveryTasksExtraInfo extraInfo;
 
         /**
-         * <p>The metric filter conditions, used in conjunction with labelFiltersType. The key is the metric label name, and the value is the matched value.</p>
+         * <p>The metric filter conditions, which are used together with labelFiltersType. The key is the metric label name and the value is the match value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;<strong>name</strong>&quot;:&quot;up&quot;}</p>
          */
         @NameInMap("labelFilters")
         public java.util.Map<String, String> labelFilters;
@@ -251,7 +261,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The list of delivery sinks. Multiple sinks are supported.</p>
+         * <p>The list of delivery sinks. You can configure multiple sinks.</p>
          */
         @NameInMap("sinkList")
         public java.util.List<ListDeliveryTasksResponseBodyDeliveryTasksSinkList> sinkList;
@@ -272,7 +282,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public java.util.List<ListDeliveryTasksResponseBodyDeliveryTasksTags> tags;
 
         /**
-         * <p>The task description.</p>
+         * <p>The description of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>my delivery task</p>
@@ -281,7 +291,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String taskDescription;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>db21f8a126d96953</p>
@@ -290,7 +300,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>test-task</p>
@@ -299,7 +309,8 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The update time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format and is displayed in UTC.</p>
+         * <p>The update time.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

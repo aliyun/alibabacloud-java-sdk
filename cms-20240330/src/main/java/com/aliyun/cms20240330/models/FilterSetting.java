@@ -11,7 +11,7 @@ public class FilterSetting extends TeaModel {
     public java.util.List<FilterSettingConditions> conditions;
 
     /**
-     * <p>Use either expression or relation. If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, relation (AND or OR) is used to perform a simple AND/OR operation on all conditions. Condition numbers correspond to the indexes of the conditions array (starting from 1). Each condition evaluates whether a single event field matches by using field (the event field path, which supports dot-notation nesting such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the matching value).</p>
+     * <p>The expression. Specify either expression or relation. If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, relation (AND or OR) is used to perform a simple logical AND or OR operation on all conditions. The condition number corresponds to the index of the conditions array, starting from 1. Each condition evaluates whether a single event field matches based on field (the event field path, which supports dot notation for nested fields such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the matching value).</p>
      * 
      * <strong>example:</strong>
      * <p>1 and 2 or 3</p>
@@ -59,7 +59,7 @@ public class FilterSetting extends TeaModel {
 
     public static class FilterSettingConditions extends TeaModel {
         /**
-         * <p>The JSON path of the event field. Dot-notation nesting is supported.</p>
+         * <p>The JSON path of the event field, which supports dot notation for nested fields.</p>
          * 
          * <strong>example:</strong>
          * <p>labels.alertname</p>
@@ -77,7 +77,7 @@ public class FilterSetting extends TeaModel {
         public String op;
 
         /**
-         * <p>The matching value. Separate multiple values with commas when using IN or NOT_IN.</p>
+         * <p>The matching value. Separate multiple values with commas when the operator is IN or NOT_IN.</p>
          * 
          * <strong>example:</strong>
          * <p>CRITICAL</p>

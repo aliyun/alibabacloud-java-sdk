@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateMaintainWindowRequest extends TeaModel {
     /**
-     * <p>The request body. This parameter is required by the backend. Pass in the complete MaintainWindowForModify configuration object.</p>
+     * <p>The request body. This parameter is required by the backend. Pass a complete MaintainWindowForModify configuration object.</p>
      */
     @NameInMap("body")
     public MaintainWindowForModify body;
 
     /**
-     * <p>The workspace name. This parameter is required by the backend and is used to isolate silence policy resources across different business spaces.</p>
+     * <p>The workspace name. This parameter is required by the backend and is used to isolate silence policy resources across different business workspaces.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-xxxx-cn-hangzhou</p>

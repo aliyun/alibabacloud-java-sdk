@@ -5,7 +5,40 @@ import com.aliyun.tea.*;
 
 public class MergeOncallSchedule extends TeaModel {
     /**
-     * <p>The extension details.</p>
+     * <p>The extended details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;oncallScheduleId&quot;: &quot;testId&quot;,
+     *   &quot;oncallScheduleName&quot;: &quot;testName&quot;,
+     *   &quot;rotations&quot;: [
+     *     {
+     *       &quot;activeDays&quot;: [
+     *         1
+     *       ],
+     *       &quot;contacts&quot;: [
+     *         &quot;testId&quot;
+     *       ],
+     *       &quot;rotationEndTime&quot;: &quot;24:00&quot;,
+     *       &quot;rotationName&quot;: &quot;testName&quot;,
+     *       &quot;rotationStartTime&quot;: &quot;00:00&quot;,
+     *       &quot;shiftRecurrenceFrequency&quot;: &quot;WEEKLY&quot;,
+     *       &quot;startDate&quot;: &quot;2024-01-01&quot;,
+     *       &quot;timeZone&quot;: &quot;Asia/Shanghai&quot;,
+     *       &quot;shiftLength&quot;: 3
+     *     }
+     *   ],
+     *   &quot;shiftRobotId&quot;: &quot;testId&quot;,
+     *   &quot;substitudes&quot;: [
+     *     {
+     *       &quot;startTime&quot;: &quot;2024-10-10 09:00&quot;,
+     *       &quot;endTime&quot;: &quot;2024-10-15 18:00&quot;,
+     *       &quot;replacedContactId&quot;: &quot;testId&quot;,
+     *       &quot;contactId&quot;: &quot;testId&quot;
+     *     }
+     *   ],
+     *   &quot;workspace&quot;: &quot;default-cms-5884500827389836-cn-hangzhou&quot;
+     * }</p>
      */
     @NameInMap("detail")
     public java.util.Map<String, ?> detail;
@@ -20,7 +53,7 @@ public class MergeOncallSchedule extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>The last modified time.</p>
+     * <p>The last modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>1700000000</p>
@@ -32,16 +65,16 @@ public class MergeOncallSchedule extends TeaModel {
      * <p>The unique identifier.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleValue</p>
+     * <p>Sample value</p>
      */
     @NameInMap("identifier")
     public String identifier;
 
     /**
-     * <p>The schedule name.</p>
+     * <p>The name of the schedule.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleName</p>
+     * <p>Sample name</p>
      */
     @NameInMap("name")
     public String name;
@@ -50,7 +83,7 @@ public class MergeOncallSchedule extends TeaModel {
      * <p>The source.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleValue</p>
+     * <p>Sample value</p>
      */
     @NameInMap("source")
     public String source;
@@ -59,7 +92,7 @@ public class MergeOncallSchedule extends TeaModel {
      * <p>The workspace.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleValue</p>
+     * <p>Sample value</p>
      */
     @NameInMap("workspace")
     public String workspace;

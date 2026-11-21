@@ -17,13 +17,13 @@ public class NotifyStrategyConfig extends TeaModel {
      * <p>The description of the notification policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>生产环境告警通知策略</p>
+     * <p>Production environment alert notification policy</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The noise reduction settings.</p>
+     * <p>The grouping and merging settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("groupingSetting")
@@ -95,6 +95,15 @@ public class NotifyStrategyConfig extends TeaModel {
 
     public static class NotifyStrategyConfigCustomTemplateEntries extends TeaModel {
         /**
+         * <p>This parameter is optional. You can configure at most one template for each notification type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS</p>
+         */
+        @NameInMap("targetType")
+        public String targetType;
+
+        /**
          * <p>The UUID of the notification template.</p>
          * 
          * <strong>example:</strong>
@@ -106,6 +115,14 @@ public class NotifyStrategyConfig extends TeaModel {
         public static NotifyStrategyConfigCustomTemplateEntries build(java.util.Map<String, ?> map) throws Exception {
             NotifyStrategyConfigCustomTemplateEntries self = new NotifyStrategyConfigCustomTemplateEntries();
             return TeaModel.build(map, self);
+        }
+
+        public NotifyStrategyConfigCustomTemplateEntries setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
         }
 
         public NotifyStrategyConfigCustomTemplateEntries setTemplateUuid(String templateUuid) {
@@ -120,7 +137,7 @@ public class NotifyStrategyConfig extends TeaModel {
 
     public static class NotifyStrategyConfigGroupingSetting extends TeaModel {
         /**
-         * <p>The event fields by which events are grouped. Events in the same group are merged into a single notification. An empty array indicates no grouping.</p>
+         * <p>The event fields used for grouping and merging. Events in the same group are merged into a single notification. An empty array indicates no grouping.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;alertname&quot;]</p>
@@ -129,7 +146,7 @@ public class NotifyStrategyConfig extends TeaModel {
         public java.util.List<String> groupingKeys;
 
         /**
-         * <p>This parameter does not take effect for this operation. You do not need to set this parameter.</p>
+         * <p>This parameter does not take effect for this API operation and does not need to be configured.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -138,7 +155,7 @@ public class NotifyStrategyConfig extends TeaModel {
         public Integer periodMin;
 
         /**
-         * <p>This parameter does not take effect for this operation. You do not need to set this parameter.</p>
+         * <p>This parameter does not take effect for this API operation and does not need to be configured.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -147,7 +164,7 @@ public class NotifyStrategyConfig extends TeaModel {
         public Integer silenceSec;
 
         /**
-         * <p>This parameter does not take effect for this operation. You do not need to set this parameter.</p>
+         * <p>This parameter does not take effect for this API operation and does not need to be configured.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -196,17 +213,17 @@ public class NotifyStrategyConfig extends TeaModel {
 
     public static class NotifyStrategyConfigRoutesChannels extends TeaModel {
         /**
-         * <p>The channel type. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP. Lowercase values are not supported. For email, text message, or phone call notifications, use CONTACT with enabledSubChannels.</p>
+         * <p>The type of the channel. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP. The values must be in uppercase. Lowercase values are not supported. For email, text message, and voice call, use CONTACT and configure enabledSubChannels.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>WEBHOOK</p>
+         * <p>DING</p>
          */
         @NameInMap("channelType")
         public String channelType;
 
         /**
-         * <p>Required only for CONTACT, GROUP, or DUTY. The sub-channel types in uppercase. Valid values: EMAIL, SMS, VOICE, DING, WEIXIN, FEISHU, and WEBHOOK.</p>
+         * <p>This parameter is required only when the channel type is CONTACT, GROUP, or DUTY. Valid values for sub-channels: EMAIL, SMS, VOICE, DING, WEIXIN, FEISHU, and WEBHOOK. The values must be in uppercase.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;EMAIL&quot;,&quot;SMS&quot;]</p>
@@ -215,7 +232,7 @@ public class NotifyStrategyConfig extends TeaModel {
         public java.util.List<String> enabledSubChannels;
 
         /**
-         * <p>The list of receiver identifiers. At least one receiver is required. Specify a webhook UUID for WEBHOOK, a robot UUID for chatbots, or a contact ID for CONTACT.</p>
+         * <p>The list of recipient identifiers. At least one identifier is required. For WEBHOOK, specify the webhook UUID. For a chatbot, specify the chatbot UUID. For CONTACT, specify the contact ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +274,7 @@ public class NotifyStrategyConfig extends TeaModel {
 
     public static class NotifyStrategyConfigRoutesEffectTimeRange extends TeaModel {
         /**
-         * <p>The effective days. Valid values: 0 to 6 (0 = Sunday, 6 = Saturday). The value 7 is not supported.</p>
+         * <p>The effective days of the week. Valid values: 0 to 6. A value of 0 indicates Sunday, and 6 indicates Saturday. The value 7 is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>[0,1,2,3,4,5,6]</p>
@@ -342,10 +359,10 @@ public class NotifyStrategyConfig extends TeaModel {
         public java.util.List<NotifyStrategyConfigRoutesChannels> channels;
 
         /**
-         * <p>The digital employee name. Required when enableRca is set to true.</p>
+         * <p>The name of the digital employee. This parameter is required when enableRca is set to true.</p>
          * 
          * <strong>example:</strong>
-         * <p>数字员工名</p>
+         * <p>Digital employee name</p>
          */
         @NameInMap("digitalEmployeeName")
         public String digitalEmployeeName;
@@ -357,7 +374,7 @@ public class NotifyStrategyConfig extends TeaModel {
         public NotifyStrategyConfigRoutesEffectTimeRange effectTimeRange;
 
         /**
-         * <p>Specifies whether to enable Root Cause Analysis (RCA).</p>
+         * <p>Specifies whether to enable root cause analysis (RCA).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -366,7 +383,7 @@ public class NotifyStrategyConfig extends TeaModel {
         public Boolean enableRca;
 
         /**
-         * <p>The route-level event filter conditions.</p>
+         * <p>The route-level event filtering conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

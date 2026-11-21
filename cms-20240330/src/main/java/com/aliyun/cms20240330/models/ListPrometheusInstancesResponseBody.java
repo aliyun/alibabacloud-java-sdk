@@ -20,7 +20,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
      * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxxxxxx</p>
+     * <p>11a111111111a1111a1111aaaa1a1aa1aa11aa111aa11a1111a1a111aa1a1111a1a111a1a111111111111111111111aa</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -96,7 +96,12 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
 
     public static class ListPrometheusInstancesResponseBodyPrometheusInstances extends TeaModel {
         /**
-         * <p>The access type. Valid values: readWrite, readOnly, and httpReadOnly.</p>
+         * <p>The access type. Valid values:</p>
+         * <ul>
+         * <li>readWrite: Read and write.</li>
+         * <li>readOnly: Read-only.</li>
+         * <li>httpReadOnly: HTTP read-only.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>readWrite</p>
@@ -125,10 +130,10 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go based on the number of metrics.</li>
-         * <li>POSTPAY_GB: pay-as-you-go based on the amount of written data.</li>
-         * <li>PREPAY: subscription.</li>
-         * <li>FREE: free.</li>
+         * <li>POSTPAY: Pay-as-you-go based on the number of metrics.</li>
+         * <li>POSTPAY_GB: Pay-as-you-go based on the amount of written data.</li>
+         * <li>PREPAY: Subscription.</li>
+         * <li>FREE: Free.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +152,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-63549e054ff596a4149927961dff</p>
@@ -156,7 +161,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String prometheusInstanceId;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test-prom-name</p>
@@ -174,7 +179,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2bhocin5e2na</p>
@@ -219,9 +224,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
          * <p>The version.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>V1</p>
          */
         @NameInMap("version")
         public String version;

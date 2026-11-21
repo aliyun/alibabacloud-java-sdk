@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusUserSettingRequest extends TeaModel {
     /**
-     * <p>The value of the user setting.</p>
+     * <p>The user configuration setting value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

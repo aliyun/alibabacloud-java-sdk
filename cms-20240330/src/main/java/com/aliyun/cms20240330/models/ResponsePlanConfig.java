@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResponsePlanConfig extends TeaModel {
     /**
-     * <p>The number of seconds for automatic recovery. If no new trigger occurs within this duration, the event is automatically recovered.</p>
+     * <p>The auto-recovery time in seconds. The incident automatically recovers if no new triggers occur within this duration.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -73,7 +73,7 @@ public class ResponsePlanConfig extends TeaModel {
 
     public static class ResponsePlanConfigPushingSetting extends TeaModel {
         /**
-         * <p>The list of action integration IDs triggered by alerts.</p>
+         * <p>The list of alert-triggered action integration IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;action-uuid-xxx&quot;]</p>
@@ -82,7 +82,7 @@ public class ResponsePlanConfig extends TeaModel {
         public java.util.List<String> alertActionIds;
 
         /**
-         * <p>The list of action integration IDs triggered by recovery.</p>
+         * <p>The list of recovery-triggered action integration IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;action-uuid-yyy&quot;]</p>
@@ -115,7 +115,7 @@ public class ResponsePlanConfig extends TeaModel {
 
     public static class ResponsePlanConfigRepeatNotifySetting extends TeaModel {
         /**
-         * <p>The target incident status at which repeat notifications stop.</p>
+         * <p>The target incident state for stopping repeat notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>RECOVERED</p>
@@ -124,7 +124,7 @@ public class ResponsePlanConfig extends TeaModel {
         public String endIncidentState;
 
         /**
-         * <p>The repeat notification interval, in seconds.</p>
+         * <p>The repeat notification interval in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>

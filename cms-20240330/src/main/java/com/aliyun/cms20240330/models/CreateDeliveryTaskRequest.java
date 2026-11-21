@@ -15,13 +15,13 @@ public class CreateDeliveryTaskRequest extends TeaModel {
     public String dataSourceId;
 
     /**
-     * <p>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</p>
+     * <p>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</p>
      */
     @NameInMap("externalLabels")
     public java.util.Map<String, String> externalLabels;
 
     /**
-     * <p>The metric filtering conditions. This parameter is used together with labelFiltersType. The key is the metric label name, and the value is the match value.</p>
+     * <p>The metric filtering conditions used in conjunction with labelFiltersType. The key is the metric label name and the value is the match value.</p>
      */
     @NameInMap("labelFilters")
     public java.util.Map<String, String> labelFilters;
@@ -52,7 +52,7 @@ public class CreateDeliveryTaskRequest extends TeaModel {
     public java.util.List<CreateDeliveryTaskRequestSinkList> sinkList;
 
     /**
-     * <p>The tags of the resource.</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreateDeliveryTaskRequestTags> tags;

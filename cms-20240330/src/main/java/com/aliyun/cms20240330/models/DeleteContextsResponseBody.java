@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContextsResponseBody extends TeaModel {
     /**
-     * <p>The number of deleted contexts.</p>
+     * <p>The number of successfully deleted contexts.</p>
      * 
      * <strong>example:</strong>
      * <p>55</p>

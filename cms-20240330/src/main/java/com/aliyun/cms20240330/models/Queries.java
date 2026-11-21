@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Queries extends TeaModel {
     /**
-     * <p>The end offset of the time range for SLS_MULTI_QUERY (mutually exclusive with window).</p>
+     * <p>The end offset of the time range for SLS_MULTI_QUERY, which is mutually exclusive with window.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class Queries extends TeaModel {
     public Long end;
 
     /**
-     * <p>The query expression (PromQL for PROMETHEUS_MULTI_QUERY and SPL for SLS_MULTI_QUERY).</p>
+     * <p>The query expression, which is PromQL for PROMETHEUS_MULTI_QUERY and SPL for SLS_MULTI_QUERY.</p>
      * 
      * <strong>example:</strong>
      * <p>示例值</p>
@@ -23,7 +23,7 @@ public class Queries extends TeaModel {
     public String expr;
 
     /**
-     * <p>The label filter conditions for UMODEL_METRICSET_MULTI_QUERY (optional and independent per query).</p>
+     * <p>The label filter conditions for UMODEL_METRICSET_MULTI_QUERY, which are optional and independent per query.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;env&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;value&quot;:&quot;prod&quot;}]</p>
@@ -50,7 +50,7 @@ public class Queries extends TeaModel {
     public String metricSet;
 
     /**
-     * <p>The query name for PROMETHEUS_MULTI_QUERY or UMODEL_METRICSET_MULTI_QUERY (such as $A or $B, referenced by condition triggers).</p>
+     * <p>The query name for PROMETHEUS_MULTI_QUERY or UMODEL_METRICSET_MULTI_QUERY, such as $A or $B, which is referenced by condition triggers.</p>
      * 
      * <strong>example:</strong>
      * <p>示例名称</p>
@@ -59,7 +59,7 @@ public class Queries extends TeaModel {
     public String name;
 
     /**
-     * <p>The start offset of the time range for SLS_MULTI_QUERY (mutually exclusive with window).</p>
+     * <p>The start offset of the time range for SLS_MULTI_QUERY, which is mutually exclusive with window.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -68,7 +68,7 @@ public class Queries extends TeaModel {
     public Long start;
 
     /**
-     * <p>The time unit for SLS_MULTI_QUERY (day, hour, minute, or second).</p>
+     * <p>The time unit for SLS_MULTI_QUERY, which can be day, hour, minute, or second.</p>
      * 
      * <strong>example:</strong>
      * <p>second</p>
@@ -77,7 +77,7 @@ public class Queries extends TeaModel {
     public String timeUnit;
 
     /**
-     * <p>The alignment window size for SLS_MULTI_QUERY (mutually exclusive with start and end).</p>
+     * <p>The alignment window size for SLS_MULTI_QUERY, which is mutually exclusive with start and end.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

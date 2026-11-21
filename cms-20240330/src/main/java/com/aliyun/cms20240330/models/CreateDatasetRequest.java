@@ -26,6 +26,9 @@ public class CreateDatasetRequest extends TeaModel {
     /**
      * <p>The table schema.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;message&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;chn&quot;:true}}</p>
      */
     @NameInMap("schema")
     public java.util.Map<String, IndexKey> schema;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatasetResponseBody extends TeaModel {
     /**
-     * <p>The time the dataset was created, as a Unix timestamp.</p>
+     * <p>The creation time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The name of the dataset.</p>
+     * <p>The dataset name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_dataset</p>
@@ -24,7 +24,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The description of the dataset.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -33,7 +33,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the region where the dataset is located.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-heyuan</p>
@@ -42,7 +42,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The unique identifier for the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -51,13 +51,13 @@ public class GetDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The data schema of the dataset.</p>
+     * <p>The table schema.</p>
      */
     @NameInMap("schema")
     public java.util.Map<String, IndexKey> schema;
 
     /**
-     * <p>The time the dataset was last updated, as a Unix timestamp.</p>
+     * <p>The update time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class GetDatasetResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The workspace name.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

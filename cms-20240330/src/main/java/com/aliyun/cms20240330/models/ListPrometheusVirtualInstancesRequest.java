@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListPrometheusVirtualInstancesRequest extends TeaModel {
     /**
      * <p>The maximum number of instances to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
@@ -21,12 +24,18 @@ public class ListPrometheusVirtualInstancesRequest extends TeaModel {
 
     /**
      * <p>The next token for the paging query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1b2c3d4e5f60718293a4b5c6d7e****8f9a0b1c2d3e4f508f9a0b1c2d3e4f508f9a0b1c2d3e4f50</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>The tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
      */
     @NameInMap("tenantId")
     public String tenantId;

@@ -14,13 +14,19 @@ public class UpdateDeliveryTaskRequest extends TeaModel {
     public String dataSourceId;
 
     /**
-     * <p>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</p>
+     * <p>The additional labels appended to all delivered metrics. The key is the label name, and the value is the label value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</p>
      */
     @NameInMap("externalLabels")
     public java.util.Map<String, String> externalLabels;
 
     /**
-     * <p>The metric filter conditions. The entire value is replaced and incremental merging is not performed.</p>
+     * <p>The metric filtering conditions. The existing conditions are entirely replaced without incremental merging.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;<strong>name</strong>&quot;:&quot;up&quot;}</p>
      */
     @NameInMap("labelFilters")
     public java.util.Map<String, String> labelFilters;
@@ -44,21 +50,19 @@ public class UpdateDeliveryTaskRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of delivery targets.</p>
+     * <p>The list of delivery destinations.</p>
      */
     @NameInMap("sinkList")
     public java.util.List<UpdateDeliveryTaskRequestSinkList> sinkList;
 
     /**
-     * <p>The task status. This parameter is used to start or stop a task. Valid values:</p>
-     * <ul>
-     * <li>Enable: enables the task.</li>
-     * <li>Disable: disables the task.</li>
-     * <li>Running: the task is running.</li>
-     * </ul>
+     * <p>The task status, which is used to start or stop the task. Valid values:</p>
+     * <p>Enable: Starts the task.</p>
+     * <p>Disable: Stops the task.</p>
+     * <p>Running: The task is running.</p>
      * 
      * <strong>example:</strong>
-     * <p>Enable</p>
+     * <p>Running</p>
      */
     @NameInMap("status")
     public String status;
@@ -73,7 +77,7 @@ public class UpdateDeliveryTaskRequest extends TeaModel {
     public String taskDescription;
 
     /**
-     * <p>The task name. The name can contain letters, digits, underscores (_), and hyphens (-), and can be in Chinese.</p>
+     * <p>The task name. Chinese characters, English letters, underscores (_), and hyphens (-) are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>new-task-name</p>
@@ -160,13 +164,16 @@ public class UpdateDeliveryTaskRequest extends TeaModel {
 
     public static class UpdateDeliveryTaskRequestSinkList extends TeaModel {
         /**
-         * <p>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType.</p>
+         * <p>The detailed configuration of the delivery destination. The meanings of keys and values vary based on the sinkType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Url&quot;:&quot;<a href="https://example.com/api/v1/write%22,%22Network%22:%22PublicNetwork%22,%22AuthType%22:%22None%22%7D">https://example.com/api/v1/write&quot;,&quot;Network&quot;:&quot;PublicNetwork&quot;,&quot;AuthType&quot;:&quot;None&quot;}</a></p>
          */
         @NameInMap("sinkConfigs")
         public java.util.Map<String, String> sinkConfigs;
 
         /**
-         * <p>The delivery target type.</p>
+         * <p>The type of the delivery destination.</p>
          * 
          * <strong>example:</strong>
          * <p>Prometheus</p>

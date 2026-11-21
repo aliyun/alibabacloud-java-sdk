@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePipelineRequest extends TeaModel {
     /**
-     * <p>The pipeline description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>test pipeline</p>
@@ -26,13 +26,13 @@ public class UpdatePipelineRequest extends TeaModel {
     public UpdatePipelineRequestPipeline pipeline;
 
     /**
-     * <p>The data sink configuration.</p>
+     * <p>The sink.</p>
      */
     @NameInMap("sink")
     public UpdatePipelineRequestSink sink;
 
     /**
-     * <p>The data source configuration.</p>
+     * <p>The data source.</p>
      */
     @NameInMap("source")
     public UpdatePipelineRequestSource source;
@@ -135,7 +135,7 @@ public class UpdatePipelineRequest extends TeaModel {
         public Long fromTime;
 
         /**
-         * <p>The execution interval.</p>
+         * <p>The time interval.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -177,13 +177,13 @@ public class UpdatePipelineRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The one-time execution configuration.</p>
+         * <p>The configuration for a single execution.</p>
          */
         @NameInMap("runOnce")
         public UpdatePipelineRequestExecutePolicyRunOnce runOnce;
 
         /**
-         * <p>The scheduled execution configuration.</p>
+         * <p>The configuration for scheduled execution.</p>
          */
         @NameInMap("scheduled")
         public UpdatePipelineRequestExecutePolicyScheduled scheduled;
@@ -230,7 +230,10 @@ public class UpdatePipelineRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The node parameters.</p>
+         * <p>The parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;output&quot;:&quot;ID,key_0,key_2,key_3,key_4&quot;,&quot;workspace&quot;:&quot;workspace-test-dataset&quot;,&quot;field&quot;:&quot;key_0&quot;,&quot;global&quot;:true,&quot;dataset&quot;:&quot;dataset_1&quot;}</p>
          */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
@@ -277,7 +280,7 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestPipeline extends TeaModel {
         /**
-         * <p>The pipeline nodes.</p>
+         * <p>The nodes.</p>
          */
         @NameInMap("nodes")
         public java.util.List<UpdatePipelineRequestPipelineNodes> nodes;
@@ -299,7 +302,7 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestSinkDataset extends TeaModel {
         /**
-         * <p>The dataset name.</p>
+         * <p>The dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset_1</p>
@@ -341,7 +344,7 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestSink extends TeaModel {
         /**
-         * <p>The destination dataset configuration.</p>
+         * <p>The dataset.</p>
          */
         @NameInMap("dataset")
         public UpdatePipelineRequestSinkDataset dataset;
@@ -380,7 +383,7 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestSourceLogstore extends TeaModel {
         /**
-         * <p>The Logstore name.</p>
+         * <p>The Simple Log Service Logstore name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-logstore</p>
@@ -389,7 +392,7 @@ public class UpdatePipelineRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The filter query.</p>
+         * <p>The filter statement.</p>
          * 
          * <strong>example:</strong>
          * <p>status:500 and method:GET</p>
@@ -422,13 +425,13 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestSource extends TeaModel {
         /**
-         * <p>The Log Service Logstore configuration.</p>
+         * <p>The Simple Log Service Logstore information.</p>
          */
         @NameInMap("logstore")
         public UpdatePipelineRequestSourceLogstore logstore;
 
         /**
-         * <p>The source type.</p>
+         * <p>The data source type.</p>
          * 
          * <strong>example:</strong>
          * <p>logstore</p>

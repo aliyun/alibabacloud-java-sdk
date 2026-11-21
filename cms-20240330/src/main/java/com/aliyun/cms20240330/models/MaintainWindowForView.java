@@ -29,7 +29,7 @@ public class MaintainWindowForView extends TeaModel {
     public MaintainWindowForViewEffectTimeRange effectTimeRange;
 
     /**
-     * <p>The crontab expression.</p>
+     * <p>The Crontab expression.</p>
      * 
      * <strong>example:</strong>
      * <ul>

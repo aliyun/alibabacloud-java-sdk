@@ -44,7 +44,7 @@ public class CreateDataPipelineRequest extends TeaModel {
     public java.util.List<CreateDataPipelineRequestProcessors> processors;
 
     /**
-     * <p>The output destination.</p>
+     * <p>The output destinations.</p>
      */
     @NameInMap("sinks")
     public java.util.List<CreateDataPipelineRequestSinks> sinks;
@@ -202,7 +202,7 @@ public class CreateDataPipelineRequest extends TeaModel {
 
     public static class CreateDataPipelineRequestOutputsProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The length of the prefix to retain.</p>
+         * <p>The length of the retained prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -211,7 +211,7 @@ public class CreateDataPipelineRequest extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The length of the suffix to retain.</p>
+         * <p>The length of the retained suffix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -220,7 +220,7 @@ public class CreateDataPipelineRequest extends TeaModel {
         public Integer keepSuffix;
 
         /**
-         * <p>The sensitive keyword.</p>
+         * <p>The sensitive keywords.</p>
          */
         @NameInMap("keys")
         public java.util.List<String> keys;
@@ -229,15 +229,13 @@ public class CreateDataPipelineRequest extends TeaModel {
          * <p>The mask character.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <h1></h1>
          */
         @NameInMap("maskChar")
         public String maskChar;
 
         /**
-         * <p>The data masking mode.</p>
+         * <p>The masking mode.</p>
          * 
          * <strong>example:</strong>
          * <p>keyword</p>
@@ -246,7 +244,7 @@ public class CreateDataPipelineRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The built-in sensitive type.</p>
+         * <p>The built-in sensitive data types.</p>
          */
         @NameInMap("types")
         public java.util.List<String> types;
@@ -443,7 +441,7 @@ public class CreateDataPipelineRequest extends TeaModel {
         public String matchType;
 
         /**
-         * <p>The metric name.</p>
+         * <p>The metric names.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;http_requests_total&quot;]</p>
@@ -643,6 +641,9 @@ public class CreateDataPipelineRequest extends TeaModel {
 
         /**
          * <p>The extension parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
          */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
@@ -964,7 +965,7 @@ public class CreateDataPipelineRequest extends TeaModel {
 
     public static class CreateDataPipelineRequestProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The length of the prefix to retain.</p>
+         * <p>The length of the retained prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -973,7 +974,7 @@ public class CreateDataPipelineRequest extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The length of the suffix to retain.</p>
+         * <p>The length of the retained suffix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -982,7 +983,7 @@ public class CreateDataPipelineRequest extends TeaModel {
         public Integer keepSuffix;
 
         /**
-         * <p>The sensitive keyword.</p>
+         * <p>The sensitive keywords.</p>
          */
         @NameInMap("keys")
         public java.util.List<String> keys;
@@ -991,15 +992,13 @@ public class CreateDataPipelineRequest extends TeaModel {
          * <p>The mask character.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <h1></h1>
          */
         @NameInMap("maskChar")
         public String maskChar;
 
         /**
-         * <p>The data masking mode.</p>
+         * <p>The masking mode.</p>
          * 
          * <strong>example:</strong>
          * <p>keyword</p>
@@ -1008,7 +1007,7 @@ public class CreateDataPipelineRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The built-in sensitive type.</p>
+         * <p>The built-in sensitive data types.</p>
          */
         @NameInMap("types")
         public java.util.List<String> types;
@@ -1205,7 +1204,7 @@ public class CreateDataPipelineRequest extends TeaModel {
         public String matchType;
 
         /**
-         * <p>The metric name.</p>
+         * <p>The metric names.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;http_requests_total&quot;]</p>
@@ -1405,6 +1404,9 @@ public class CreateDataPipelineRequest extends TeaModel {
 
         /**
          * <p>The extension parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
          */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;

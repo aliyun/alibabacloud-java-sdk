@@ -113,6 +113,12 @@ public class ObserveGroup extends TeaModel {
     public String sourceOrigin;
 
     /**
+     * <p>源云监控 1.0 分组是否已持久只读，true 时目标 2.0 分组可独立维护。</p>
+     */
+    @NameInMap("sourceReadOnly")
+    public Boolean sourceReadOnly;
+
+    /**
      * <p>资源标签（阿里云标准标签），键值对数组。</p>
      */
     @NameInMap("tags")
@@ -271,6 +277,14 @@ public class ObserveGroup extends TeaModel {
     }
     public String getSourceOrigin() {
         return this.sourceOrigin;
+    }
+
+    public ObserveGroup setSourceReadOnly(Boolean sourceReadOnly) {
+        this.sourceReadOnly = sourceReadOnly;
+        return this;
+    }
+    public Boolean getSourceReadOnly() {
+        return this.sourceReadOnly;
     }
 
     public ObserveGroup setTags(java.util.List<ObserveGroupTags> tags) {

@@ -111,7 +111,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String contextType;
 
         /**
-         * <p>The creation time in UTC format based on the ISO 8601 standard. Example: 2026-08-10T05:00:00Z.</p>
+         * <p>The creation time. The time is in UTC and follows the ISO 8601 standard, for example, 2026-08-10T05:00:00Z.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time in UTC format based on the ISO 8601 standard. Example: 2026-08-10T05:10:00Z.</p>
+         * <p>The update time. The time is in UTC and follows the ISO 8601 standard, for example, 2026-08-10T05:10:00Z.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

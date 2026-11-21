@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusViewRequest extends TeaModel {
     /**
-     * <p>Not yet enabled.</p>
+     * <p>Not enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -24,7 +24,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public String authFreeReadPolicy;
 
     /**
-     * <p>Specifies whether authentication-free read is supported.</p>
+     * <p>Specifies whether password-free read is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -34,7 +34,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public Boolean enableAuthFreeRead;
 
     /**
-     * <p>Specifies whether authToken is supported.</p>
+     * <p>Specifies whether AuthToken is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public java.util.List<CreatePrometheusViewRequestPrometheusInstances> prometheusInstances;
 
     /**
-     * <p>The Prometheus view name.</p>
+     * <p>The name of the Prometheus view.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,25 +69,24 @@ public class CreatePrometheusViewRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Not yet enabled.</p>
+     * <p>Not enabled.</p>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>Running</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
-     * <p>The operation to perform.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreatePrometheusViewRequestTags> tags;
 
     /**
-     * <p>Valid values:</p>
      * <ul>
-     * <li>V1: Legacy version.</li>
-     * <li>V2: New version.</li>
+     * <li>V1: legacy version</li>
+     * <li>V2: new version</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

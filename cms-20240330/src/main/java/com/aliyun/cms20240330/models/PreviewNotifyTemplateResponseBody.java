@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PreviewNotifyTemplateResponseBody extends TeaModel {
     /**
-     * <p>The rendering result object, which contains two mappings: success for successfully rendered items and failed for items that failed to render.</p>
+     * <p>The rendering result object. This object includes two mappings: success for successfully rendered items and failed for failed rendering items.</p>
      */
     @NameInMap("data")
     public PreviewNotifyTemplateResponseBodyData data;
@@ -29,7 +29,11 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      */
     @NameInMap("success")
     public Boolean success;
@@ -74,12 +78,18 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
     public static class PreviewNotifyTemplateResponseBodyData extends TeaModel {
         /**
          * <p>The mapping of failed rendering results. The key is the template identifier, and the value is the cause of the failure, such as a template syntax error or a reference to an undefined variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;subject&quot;:&quot;Template syntax error&quot;}</p>
          */
         @NameInMap("failed")
         public java.util.Map<String, ?> failed;
 
         /**
          * <p>The mapping of successful rendering results. The key is the template identifier, which corresponds to templates[].key in the request, and the value is the rendered string content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;subject&quot;:&quot;Alert notification&quot;}</p>
          */
         @NameInMap("success")
         public java.util.Map<String, ?> success;

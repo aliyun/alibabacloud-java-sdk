@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language. Valid values:</p>
      * <ul>
-     * <li><p>zh: Chinese. This is the default value.</p>
-     * </li>
-     * <li><p>en: English.</p>
-     * </li>
-     * <li><p>ja: Japanese.</p>
-     * </li>
+     * <li>zh: Chinese (default).</li>
+     * <li>en: English.</li>
+     * <li>ja: Japanese.</li>
      * </ul>
      * 
      * <strong>example:</strong>

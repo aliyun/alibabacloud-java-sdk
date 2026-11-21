@@ -26,7 +26,7 @@ public class SubscriptionForModify extends TeaModel {
     public FilterSetting filterSetting;
 
     /**
-     * <p>The UUID of the notification strategy.</p>
+     * <p>The notification policy UUID.</p>
      * 
      * <strong>example:</strong>
      * <p>123123</p>
@@ -41,7 +41,11 @@ public class SubscriptionForModify extends TeaModel {
     public SubscriptionForModifyPushingSetting pushingSetting;
 
     /**
-     * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values: true: Subscribe. false or null: Do not subscribe.</p>
+     * <p>Specifies whether to subscribe to legacy product events (CloudMonitor 1.0, ARMS, or SLS events where workspace is null). Valid values:</p>
+     * <ul>
+     * <li>true: Subscribes to the events.</li>
+     * <li>false or null: Does not subscribe to the events.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -54,7 +58,7 @@ public class SubscriptionForModify extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestSubscription</p>
+     * <p>测试订阅</p>
      */
     @NameInMap("subscriptionName")
     public String subscriptionName;
@@ -175,7 +179,7 @@ public class SubscriptionForModify extends TeaModel {
 
     public static class SubscriptionForModifyPushingSetting extends TeaModel {
         /**
-         * <p>The list of action plan IDs for alert push.</p>
+         * <p>The list of alert push action plan IDs.</p>
          */
         @NameInMap("alertActionIds")
         public java.util.List<String> alertActionIds;
@@ -190,13 +194,13 @@ public class SubscriptionForModify extends TeaModel {
         public String responsePlanId;
 
         /**
-         * <p>The list of action integration plan IDs for recovery push.</p>
+         * <p>The list of action integration plan IDs.</p>
          */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;
 
         /**
-         * <p>The UUID of the template.</p>
+         * <p>The template UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>123123123</p>

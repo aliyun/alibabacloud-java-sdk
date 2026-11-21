@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceRecordRequest extends TeaModel {
     /**
-     * <p>The entry content in JSON string format. The format varies depending on the recordType value.</p>
+     * <p>The content of the entry. The content is a JSON string and varies based on the recordType.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,8 +21,8 @@ public class UpdateServiceRecordRequest extends TeaModel {
     public String recordContent;
 
     /**
-     * <p>The type of the linked entry. Currently supported value:
-     * logCorrelation, which indicates application log association.</p>
+     * <p>The type of the association entry. Valid values:
+     * logCorrelation: application log association.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -23,7 +23,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
      * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxxxxxx</p>
+     * <p>Y3iar1wjfpVIs8Krllea2QKM7-ND__****Iar1wjf9vi8SkRl_EAWqkM7l9Dl-pl</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

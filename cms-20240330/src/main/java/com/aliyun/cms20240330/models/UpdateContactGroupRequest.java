@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContactGroupRequest extends TeaModel {
     /**
-     * <p>The IDs of the contacts.</p>
+     * <p>The contact IDs.</p>
      */
     @NameInMap("contacts")
     public java.util.List<String> contacts;

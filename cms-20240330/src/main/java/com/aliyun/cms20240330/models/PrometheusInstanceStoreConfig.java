@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PrometheusInstanceStoreConfig extends TeaModel {
     /**
-     * <p>The concurrency per host. If this parameter is not specified, the default value is 2. Valid values: 1 to 8.</p>
+     * <p>The concurrency per host. Valid values: 1 to 8. Default value: 2.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,18 +14,16 @@ public class PrometheusInstanceStoreConfig extends TeaModel {
     public Integer parallelCountPerHost;
 
     /**
-     * <p>Specifies whether to enable parallel query. If this parameter is not specified, the value is considered as false.</p>
+     * <p>Specifies whether to enable parallel query. If not returned, the value is considered false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("parallelEnable")
     public Boolean parallelEnable;
 
     /**
-     * <p>The parallel query mode. Valid values:</p>
-     * <ul>
-     * <li>auto</li>
-     * <li>static</li>
-     * </ul>
-     * <p>If this parameter is not specified, the default value is auto.</p>
+     * <p>The parallel query mode. Valid values: auto, static. Default value: auto.</p>
      * 
      * <strong>example:</strong>
      * <p>static</p>
@@ -34,13 +32,16 @@ public class PrometheusInstanceStoreConfig extends TeaModel {
     public String parallelMode;
 
     /**
-     * <p>Specifies whether to enable query cache. If this parameter is not specified, the value is considered as false.</p>
+     * <p>Specifies whether to enable the query cache. If not returned, the value is considered false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("queryCacheEnable")
     public Boolean queryCacheEnable;
 
     /**
-     * <p>The global concurrency. If this parameter is not specified, the default value is 8. Valid values: 2 to 64.</p>
+     * <p>The global concurrency. Valid values: 2 to 64. Default value: 8.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>

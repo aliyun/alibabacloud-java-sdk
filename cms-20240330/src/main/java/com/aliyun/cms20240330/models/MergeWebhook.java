@@ -32,10 +32,10 @@ public class MergeWebhook extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>The last modification time.</p>
+     * <p>The last modified time.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-03-11T08:21:58.789Z</p>
+     * <p>{&quot;time&quot;: &quot;2025-03-11T08:21:58.789Z&quot;}</p>
      */
     @NameInMap("gmtModified")
     public java.util.Map<String, ?> gmtModified;
@@ -77,7 +77,7 @@ public class MergeWebhook extends TeaModel {
     public String method;
 
     /**
-     * <p>The name of the webhook.</p>
+     * <p>The webhook name.</p>
      * 
      * <strong>example:</strong>
      * <p>O&amp;M alert notification</p>
@@ -95,7 +95,7 @@ public class MergeWebhook extends TeaModel {
     public String source;
 
     /**
-     * <p>The webhook type, which indicates its target platform.</p>
+     * <p>The webhook type, which indicates the target platform.</p>
      * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
@@ -104,7 +104,7 @@ public class MergeWebhook extends TeaModel {
     public String type;
 
     /**
-     * <p>The webhook address used to send requests.</p>
+     * <p>The webhook URL used to send requests.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></p>

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusUserSettingResponseBody extends TeaModel {
     /**
-     * <p>The details of the Prometheus user settings.</p>
+     * <p>The details of the Prometheus user configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value1&quot;}</p>
      */
     @NameInMap("prometheusUserSetting")
     public java.util.Map<String, String> prometheusUserSetting;

@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceRecordRequest extends TeaModel {
     /**
-     * <p>The type of the association entry. Valid values:
-     * logCorrelation: application log association</p>
+     * <p>The type of the association entry. Valid values:</p>
+     * <ul>
+     * <li>logCorrelation: application log association</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

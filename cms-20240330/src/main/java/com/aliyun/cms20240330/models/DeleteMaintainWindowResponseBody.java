@@ -14,7 +14,7 @@ public class DeleteMaintainWindowResponseBody extends TeaModel {
     public String maintainWindowId;
 
     /**
-     * <p>The unique ID of the request. You can use this ID for troubleshooting and ticket tracking.</p>
+     * <p>The unique ID of the request, which is used for troubleshooting and ticket tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A0D1C36</p>

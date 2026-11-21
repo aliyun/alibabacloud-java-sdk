@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListContactGroupsRequest extends TeaModel {
     /**
-     * <p>The contact group IDs.</p>
+     * <p>The IDs of the contact groups.</p>
      */
     @NameInMap("contactGroupIds")
     public java.util.List<String> contactGroupIds;
 
     /**
-     * <p>The contact name.</p>
+     * <p>The name of the contact.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -38,7 +38,7 @@ public class ListContactGroupsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-xxxxxx-cn-beijing</p>

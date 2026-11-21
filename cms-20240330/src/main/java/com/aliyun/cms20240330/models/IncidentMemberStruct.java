@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class IncidentMemberStruct extends TeaModel {
     /**
-     * <p>The structure of the confirmation information.</p>
+     * <p>The acknowledgment information struct.</p>
      */
     @NameInMap("acknowledge")
     public IncidentMemberStructAcknowledge acknowledge;
 
     /**
-     * <p>The ID of the contact.</p>
+     * <p>The contact ID.</p>
      * 
      * <strong>example:</strong>
      * <p>user-12345</p>
@@ -20,19 +20,19 @@ public class IncidentMemberStruct extends TeaModel {
     public String contactId;
 
     /**
-     * <p>A list of contacts.</p>
+     * <p>The contact list.</p>
      */
     @NameInMap("contacts")
     public java.util.List<IncidentMemberStructContacts> contacts;
 
     /**
-     * <p>Information about the escalation stage.</p>
+     * <p>The escalation stage information.</p>
      */
     @NameInMap("escalation")
     public IncidentMemberStructEscalation escalation;
 
     /**
-     * <p>The ID of the event.</p>
+     * <p>The incident ID.</p>
      * 
      * <strong>example:</strong>
      * <p>incident-001</p>
@@ -41,7 +41,7 @@ public class IncidentMemberStruct extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>The ID of the event member.</p>
+     * <p>The incident member ID.</p>
      * 
      * <strong>example:</strong>
      * <p>member-001</p>
@@ -59,7 +59,7 @@ public class IncidentMemberStruct extends TeaModel {
      * <p>The time.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-10-08 10:18:58</p>
+     * <p>1794984221885</p>
      */
     @NameInMap("time")
     public Long time;
@@ -152,7 +152,7 @@ public class IncidentMemberStruct extends TeaModel {
 
     public static class IncidentMemberStructAcknowledge extends TeaModel {
         /**
-         * <p>The confirmation level.</p>
+         * <p>The acknowledgment level.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -203,7 +203,7 @@ public class IncidentMemberStruct extends TeaModel {
         public String channel;
 
         /**
-         * <p>The masked ID of the contact.</p>
+         * <p>The contact ID (masked).</p>
          * 
          * <strong>example:</strong>
          * <p>user-12345</p>
@@ -239,13 +239,13 @@ public class IncidentMemberStruct extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Notify the operations team.</p>
+         * <p>Notify the O&amp;M team</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The ID of the event escalation.</p>
+         * <p>The incident escalation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>escalation-001</p>
@@ -257,13 +257,13 @@ public class IncidentMemberStruct extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Phase one.</p>
+         * <p>Stage 1</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The index of the escalation stage.</p>
+         * <p>The escalation stage index.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -275,7 +275,7 @@ public class IncidentMemberStruct extends TeaModel {
          * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert escalated to the operations team.</p>
+         * <p>Alert escalated to the O&amp;M team</p>
          */
         @NameInMap("title")
         public String title;
@@ -329,7 +329,7 @@ public class IncidentMemberStruct extends TeaModel {
 
     public static class IncidentMemberStructScheduleGroup extends TeaModel {
         /**
-         * <p>The ID of the contact.</p>
+         * <p>The contact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>group-001</p>
@@ -341,7 +341,7 @@ public class IncidentMemberStruct extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Night shift duty team.</p>
+         * <p>Night on-call group</p>
          */
         @NameInMap("name")
         public String name;

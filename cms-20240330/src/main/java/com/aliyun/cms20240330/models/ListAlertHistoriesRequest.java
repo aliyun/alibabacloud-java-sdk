@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlertHistoriesRequest extends TeaModel {
     /**
-     * <p>The unique identifier (transId) of an alert history record.</p>
+     * <p>The unique identifier of an alert history record, which is the transId.</p>
      * 
      * <strong>example:</strong>
      * <p>lme6hk5qih5o769m379jjuo5i1</p>
@@ -14,7 +14,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String alertHistoryId;
 
     /**
-     * <p>Filters the history records of a specified alert rule. Specify the unique identifier (ruleUuid) of the alert rule.</p>
+     * <p>The unique identifier of the alert rule used to filter the history records of a specific alert rule. Pass the ruleUuid of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>mig_prom_v2_11308451</p>
@@ -23,7 +23,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String alertRuleId;
 
     /**
-     * <p>Specifies the business source of the alert history. For example, managed_service_for_prometheus indicates the managed type of the Prometheus integration center. Default value: empty. Leave this parameter empty if you are unsure how to specify it.</p>
+     * <p>The business source of the alert history. For example, <code>managed_service_for_prometheus</code> indicates the managed type of the Prometheus integration center. Default value: empty. Leave this parameter empty if you are unsure about the value.</p>
      * 
      * <strong>example:</strong>
      * <p>managed_service_for_prometheus</p>
@@ -50,7 +50,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String cmsProductCategory;
 
     /**
-     * <p>Filters the records by performing fuzzy matching on the keywords in the display name of the alert rule.</p>
+     * <p>The keyword used for fuzzy match filtering based on the display name of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>keyword</p>
@@ -59,7 +59,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String displayNameKeyWord;
 
     /**
-     * <p>The unique key value (instanceKey) that identifies the alert object instance.</p>
+     * <p>The unique key value used to identify the alert object instance, which is the instanceKey.</p>
      * 
      * <strong>example:</strong>
      * <p>entity/apm/apm.service/6dc9e46fda6d012537b48c3250ff806b</p>
@@ -74,7 +74,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public AlertRuleLabelFilter labelFilter;
 
     /**
-     * <p>The level of the most recent alert during the alert duration. Valid values: CRITICAL (critical), WARN (warning), and INFO (info).</p>
+     * <p>The level of the most recent alert during the alert duration. Valid values: CRITICAL, WARN, and INFO.</p>
      * 
      * <strong>example:</strong>
      * <p>CRITICAL</p>
@@ -83,7 +83,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String latestLevel;
 
     /**
-     * <p>The highest alert level reached during the alert duration. Valid values: CRITICAL (critical), WARN (warning), and INFO (info).</p>
+     * <p>The highest alert level reached during the alert duration. Valid values: CRITICAL, WARN, and INFO.</p>
      * 
      * <strong>example:</strong>
      * <p>CRITICAL</p>
@@ -92,7 +92,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String maxLevel;
 
     /**
-     * <p>The maximum number of results returned per page in a paged query. This parameter is not supported. Use pageSize and pageNumber for paged queries.</p>
+     * <p>The maximum number of results to return on each page during paging for a paged query. This parameter is not supported. Use pageSize and pageNumber for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -101,7 +101,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The migration status value of the alert history.</p>
+     * <p>The migration status of the alert history.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -110,7 +110,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public Integer migrationStatus;
 
     /**
-     * <p>The paging token for querying the next page. This parameter is not supported. Use pageSize and pageNumber for a paging query.</p>
+     * <p>The paging token used to query the next page. This parameter is not supported. Use pageSize and pageNumber for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
@@ -119,7 +119,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Filters alert rules that contain specified notification recipients. Only rules that contain any notification recipient specified in notifyTargets are returned in the result list.</p>
+     * <p>The filter used to filter alert rules that contain specific notification recipients. Only rules that contain at least one notification recipient specified in notifyTargets are returned in the result list.</p>
      */
     @NameInMap("notificationFilter")
     public AlertRuleNotificationFilter notificationFilter;
@@ -134,7 +134,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String observeRelationType;
 
     /**
-     * <p>The dimension column (domain) of the observed object.</p>
+     * <p>The domain of the observed object.</p>
      * 
      * <strong>example:</strong>
      * <p>acs</p>
@@ -152,7 +152,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public Boolean observeResourceGlobalScope;
 
     /**
-     * <p>Filters the alert history by resource instance ID.</p>
+     * <p>The resource instance ID used to filter the alert history.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1234567890abcdef</p>
@@ -170,7 +170,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String observeResourceType;
 
     /**
-     * <p>The page number for a paged query. Default value: 1.</p>
+     * <p>The page number for paging in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -179,7 +179,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of alert history records returned per page in a paged query. Default value: 10.</p>
+     * <p>The number of alert history records to return on each page during paging for a paged query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -188,7 +188,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The key value used for data partitioning. Typically, you do not need to specify this parameter.</p>
+     * <p>The key value used for data partitioning. You do not need to specify this parameter in most cases.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -197,7 +197,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String partitionKey;
 
     /**
-     * <p>The start timestamp of the time range for the alert start time. The value is a UNIX timestamp in milliseconds. If not specified, the default value is 30 days ago.</p>
+     * <p>The start timestamp of the time range for the alert start time. The value is a UNIX timestamp in milliseconds. If you do not specify this parameter, the default value is the timestamp 30 days ago.</p>
      * 
      * <strong>example:</strong>
      * <p>1739866071668</p>
@@ -206,7 +206,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public Long startTimeFrom;
 
     /**
-     * <p>The end timestamp of the time range for the alert start time. The value is a UNIX timestamp in milliseconds. If not specified, the default value is the current time.</p>
+     * <p>The end timestamp of the time range for the alert start time. The value is a UNIX timestamp in milliseconds. If you do not specify this parameter, the default value is the current timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1739866071668</p>
@@ -215,7 +215,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public Long startTimeTo;
 
     /**
-     * <p>The current status of the alert history. Valid values: OK (recovered) and ALARM (alerting).</p>
+     * <p>The current status of the alert history. Valid values: OK and ALARM.</p>
      * 
      * <strong>example:</strong>
      * <p>ALARM</p>
@@ -224,7 +224,7 @@ public class ListAlertHistoriesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The identifier of the workspace to which the alert history belongs. If not specified, the default workspace is used.</p>
+     * <p>The identifier of the workspace to which the alert history belongs. If you do not specify this parameter, the default workspace is used.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-<userId>-cn-hangzhou</p>

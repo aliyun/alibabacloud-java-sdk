@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBizTracesRequest extends TeaModel {
     /**
-     * <p>The maximum number of results to return. Maximum value: 100.</p>
+     * <p>The maximum number of results to return. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

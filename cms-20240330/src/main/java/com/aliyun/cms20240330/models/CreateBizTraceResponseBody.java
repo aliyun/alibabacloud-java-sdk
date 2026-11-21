@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBizTraceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the business trace.</p>
+     * <p>The ID of the business link.</p>
      * 
      * <strong>example:</strong>
      * <p>e339260ed64c95d</p>

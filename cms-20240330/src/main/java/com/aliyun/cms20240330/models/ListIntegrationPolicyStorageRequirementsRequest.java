@@ -14,7 +14,7 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends TeaModel {
     public String addonName;
 
     /**
-     * <p>The name of the add-on release.</p>
+     * <p>The name of the AddonRelease.</p>
      * 
      * <strong>example:</strong>
      * <p>kafka-17201012937917</p>

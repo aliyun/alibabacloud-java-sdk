@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateNotifyPolicyResponseBody extends TeaModel {
     /**
-     * <p>The notification policy object details, including the policy uuid, name, description, enabled status, and sub-entities such as notification policies (noise reduction, notification routing, and channels), subscriptions (event filtering, cross-workspace routing, and legacy product event subscriptions), and response plans (escalation, repeated notifications, automatic recovery, and action integration).</p>
+     * <p>The details of the notification policy object, including the policy UUID, name, description, and enabling status, as well as sub-entities such as the notification policy (group merging, notification routing, and channels), subscriptions (event filtering, cross-workspace routing, and legacy product event subscriptions), and response plans (escalation, repeated notifications, automatic recovery, and action integration).</p>
      */
     @NameInMap("notifyPolicy")
     public NotifyPolicy notifyPolicy;
 
     /**
-     * <p>The unique ID of the request. You can use this ID for troubleshooting and ticket locating.</p>
+     * <p>The unique ID of the request, which is used for troubleshooting and ticket tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>70D52620-2609-1802-9788-6BC592C83F03</p>

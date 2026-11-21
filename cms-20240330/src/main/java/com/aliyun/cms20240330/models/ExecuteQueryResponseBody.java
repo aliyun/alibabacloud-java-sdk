@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteQueryResponseBody extends TeaModel {
     /**
-     * <p>The log data array. Each element corresponds to a log entry.</p>
+     * <p>The log data array, where each element corresponds to a log entry.</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.Map<String, String>> data;
@@ -83,7 +83,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
         public Long elapsedMillisecond;
 
         /**
-         * <p>Indicates whether the query results are complete.</p>
+         * <p>Indicates whether the query result is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>Complete</p>

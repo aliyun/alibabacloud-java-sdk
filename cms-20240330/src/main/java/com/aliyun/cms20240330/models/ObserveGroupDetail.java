@@ -98,10 +98,22 @@ public class ObserveGroupDetail extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>各纳管规则的主实体、关联子实体及总数。</p>
+     */
+    @NameInMap("ruleCounts")
+    public java.util.List<ObserveGroupRuleCount> ruleCounts;
+
+    /**
      * <p>数据来源：native_2_0（2.0 原生）/ synced_from_1_0（从 1.0 应用分组同步）。</p>
      */
     @NameInMap("sourceOrigin")
     public String sourceOrigin;
+
+    /**
+     * <p>源云监控 1.0 分组是否已持久只读，true 时目标 2.0 分组可独立维护。</p>
+     */
+    @NameInMap("sourceReadOnly")
+    public Boolean sourceReadOnly;
 
     /**
      * <p>资源标签（阿里云标准标签），键值对数组。</p>
@@ -248,12 +260,28 @@ public class ObserveGroupDetail extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public ObserveGroupDetail setRuleCounts(java.util.List<ObserveGroupRuleCount> ruleCounts) {
+        this.ruleCounts = ruleCounts;
+        return this;
+    }
+    public java.util.List<ObserveGroupRuleCount> getRuleCounts() {
+        return this.ruleCounts;
+    }
+
     public ObserveGroupDetail setSourceOrigin(String sourceOrigin) {
         this.sourceOrigin = sourceOrigin;
         return this;
     }
     public String getSourceOrigin() {
         return this.sourceOrigin;
+    }
+
+    public ObserveGroupDetail setSourceReadOnly(Boolean sourceReadOnly) {
+        this.sourceReadOnly = sourceReadOnly;
+        return this;
+    }
+    public Boolean getSourceReadOnly() {
+        return this.sourceReadOnly;
     }
 
     public ObserveGroupDetail setTags(java.util.List<ObserveGroupDetailTags> tags) {
@@ -297,6 +325,18 @@ public class ObserveGroupDetail extends TeaModel {
         @NameInMap("entityType")
         public String entityType;
 
+        /**
+         * <p>该类型主实体数量。</p>
+         */
+        @NameInMap("mainCount")
+        public Long mainCount;
+
+        /**
+         * <p>该类型关联子实体数量。</p>
+         */
+        @NameInMap("relatedCount")
+        public Long relatedCount;
+
         public static ObserveGroupDetailEntitySummaries build(java.util.Map<String, ?> map) throws Exception {
             ObserveGroupDetailEntitySummaries self = new ObserveGroupDetailEntitySummaries();
             return TeaModel.build(map, self);
@@ -332,6 +372,22 @@ public class ObserveGroupDetail extends TeaModel {
         }
         public String getEntityType() {
             return this.entityType;
+        }
+
+        public ObserveGroupDetailEntitySummaries setMainCount(Long mainCount) {
+            this.mainCount = mainCount;
+            return this;
+        }
+        public Long getMainCount() {
+            return this.mainCount;
+        }
+
+        public ObserveGroupDetailEntitySummaries setRelatedCount(Long relatedCount) {
+            this.relatedCount = relatedCount;
+            return this;
+        }
+        public Long getRelatedCount() {
+            return this.relatedCount;
         }
 
     }

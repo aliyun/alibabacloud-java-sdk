@@ -23,7 +23,7 @@ public class ListDeliveryTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, specify the nextToken value returned from the previous request.</p>
+     * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, specify the nextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>

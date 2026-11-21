@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNotifyPoliciesRequest extends TeaModel {
     /**
-     * <p>The maximum number of records to return for this request.</p>
+     * <p>The maximum number of entries to return for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListNotifyPoliciesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The fuzzy filter for the policy name.</p>
+     * <p>The keyword for fuzzy filtering by policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>prod-alert</p>
@@ -23,7 +23,7 @@ public class ListNotifyPoliciesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. Leave empty for the first page. For subsequent pages, pass the nextToken returned from the previous page.</p>
+     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, pass the nextToken value returned from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJjdXJzb3IiOjEwfQ==</p>
@@ -32,7 +32,7 @@ public class ListNotifyPoliciesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field to sort by. Valid values include createTime, updateTime, and name.</p>
+     * <p>The field by which to sort the results. Valid values: createTime, updateTime, and name.</p>
      * 
      * <strong>example:</strong>
      * <p>createTime</p>
@@ -41,7 +41,7 @@ public class ListNotifyPoliciesRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>Specifies whether to sort in descending order. Set to true for descending order, or false for ascending order.</p>
+     * <p>Specifies whether to sort the results in descending order. A value of true indicates descending order, and a value of false indicates ascending order.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class ListNotifyPoliciesRequest extends TeaModel {
     public String orderDesc;
 
     /**
-     * <p>The workspace ID, used to isolate notification policy resources for different business workspaces.</p>
+     * <p>The workspace ID, which is used to isolate notification policy resources across different business workspaces.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

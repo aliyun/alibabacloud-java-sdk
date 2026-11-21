@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class NotificationChannelsFilter extends TeaModel {
     /**
-     * <p>The list of notification contacts in the rule contains any value in the array. This uses OR logic and corresponds to notification.contacts in V1.</p>
+     * <p>The list of notification contacts in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.contacts.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;张三&quot;,&quot;李四&quot;]</p>
@@ -14,7 +14,7 @@ public class NotificationChannelsFilter extends TeaModel {
     public java.util.List<String> containsContacts;
 
     /**
-     * <p>The list of custom webhooks in the rule contains any value in the array. This uses OR logic and corresponds to notification.customWebhooks in V1.</p>
+     * <p>The list of custom webhooks in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.customWebhooks.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;<a href="https://my-service.example.com/webhook/alert%22%5D">https://my-service.example.com/webhook/alert&quot;]</a></p>
@@ -23,7 +23,7 @@ public class NotificationChannelsFilter extends TeaModel {
     public java.util.List<String> containsCustomWebhooks;
 
     /**
-     * <p>The list of DingTalk webhooks in the rule contains any value in the array. This uses OR logic and corresponds to notification.dingWebhooks in V1.</p>
+     * <p>The list of DingTalk webhooks in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.dingWebhooks.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;<a href="https://oapi.dingtalk.com/robot/send?access_token=abc123%22%5D">https://oapi.dingtalk.com/robot/send?access_token=abc123&quot;]</a></p>
@@ -32,7 +32,7 @@ public class NotificationChannelsFilter extends TeaModel {
     public java.util.List<String> containsDingWebhooks;
 
     /**
-     * <p>The list of Lark webhooks in the rule contains any value in the array. This uses OR logic and corresponds to notification.fsWebhooks in V1.</p>
+     * <p>The list of Lark webhooks in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.fsWebhooks.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/abc123%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/abc123&quot;]</a></p>
@@ -41,7 +41,7 @@ public class NotificationChannelsFilter extends TeaModel {
     public java.util.List<String> containsFsWebhooks;
 
     /**
-     * <p>The list of contact groups in the rule contains any value in the array. This uses OR logic and corresponds to notification.groups in V1.</p>
+     * <p>The list of notification contact groups in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.groups.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;运维组&quot;,&quot;SRE团队&quot;]</p>
@@ -50,7 +50,7 @@ public class NotificationChannelsFilter extends TeaModel {
     public java.util.List<String> containsGroups;
 
     /**
-     * <p>The list of Slack webhooks in the rule contains any value in the array. This uses OR logic and corresponds to notification.slackWebhooks in V1.</p>
+     * <p>The list of Slack webhooks in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.slackWebhooks.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;<a href="https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXX%22%5D">https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXX&quot;]</a></p>
@@ -59,7 +59,7 @@ public class NotificationChannelsFilter extends TeaModel {
     public java.util.List<String> containsSlackWebhooks;
 
     /**
-     * <p>The list of WeCom webhooks in the rule contains any value in the array. This uses OR logic and corresponds to notification.wxWebhooks in V1.</p>
+     * <p>The list of WeCom webhooks in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.wxWebhooks.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;<a href="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=abc123%22%5D">https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=abc123&quot;]</a></p>

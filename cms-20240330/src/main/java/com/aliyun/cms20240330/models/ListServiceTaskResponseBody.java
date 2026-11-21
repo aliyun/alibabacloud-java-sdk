@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceTaskResponseBody extends TeaModel {
     /**
-     * <p>The maxResults value of the current request.</p>
+     * <p>The maxResults value for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListServiceTaskResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. An encrypted hexadecimal string is returned when a next page exists. An empty value or absence of this field indicates no more data. Pass this value as-is in the nextToken parameter for the next page request.</p>
+     * <p>The token for the next page. An encrypted hexadecimal string is returned if a next page exists. An empty value or the absence of this field indicates that no more data is available. Pass this value as is in the nextToken parameter for the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>d23d8f3f0f0cd1984566b1986c9343122fa0385a05c09694c17fe87709f3eb56d1a7ead56b4a2536</p>
@@ -41,7 +41,7 @@ public class ListServiceTaskResponseBody extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> serviceTasks;
 
     /**
-     * <p>The total number of entries that match the conditions.</p>
+     * <p>The total number of entries that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

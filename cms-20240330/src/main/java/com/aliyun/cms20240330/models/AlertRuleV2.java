@@ -12,6 +12,9 @@ public class AlertRuleV2 extends TeaModel {
 
     /**
      * <p>The annotations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;platform&quot;:&quot;github&quot;}</p>
      */
     @NameInMap("annotations")
     public java.util.Map<String, String> annotations;
@@ -23,7 +26,7 @@ public class AlertRuleV2 extends TeaModel {
     public ArmsIntegrationConfig armsIntegrationConfig;
 
     /**
-     * <p>The business source (read-only, such as managed_service_for_prometheus / umodel / application_insights / cloud_monitoring / sls).</p>
+     * <p>The business source. This parameter is read-only. Examples include managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls.</p>
      * 
      * <strong>example:</strong>
      * <p>示例值</p>
@@ -32,7 +35,7 @@ public class AlertRuleV2 extends TeaModel {
     public String bizSource;
 
     /**
-     * <p>The detection condition configuration aggregate (Prometheus simple / UModel / APM simple / APM composite).</p>
+     * <p>The detection condition configuration aggregation, including simple Prometheus, UModel, simple APM, and composite APM.</p>
      */
     @NameInMap("conditionConfig")
     public ConditionConfigUnified conditionConfig;
@@ -41,13 +44,13 @@ public class AlertRuleV2 extends TeaModel {
      * <p>The content template.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alert triggered: ${metricName} current value ${currentValue} exceeds threshold ${threshold}</p>
+     * <p>告警触发: ${metricName} 当前值 ${currentValue} 超过阈值 ${threshold}</p>
      */
     @NameInMap("contentTemplate")
     public String contentTemplate;
 
     /**
-     * <p>The creation time (read-only), in ISO 8601 format.</p>
+     * <p>The creation time in ISO 8601 format. This parameter is read-only.</p>
      * 
      * <strong>example:</strong>
      * <p>1751595283143</p>
@@ -56,13 +59,13 @@ public class AlertRuleV2 extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The datasource configuration aggregate (shared by PROMETHEUS / UMODEL / APM in a single object; fields are selected based on the type).</p>
+     * <p>The datasource config aggregation. The PROMETHEUS, UMODEL, and APM data sources share the same object, and fields are selected based on the type.</p>
      */
     @NameInMap("datasourceConfig")
     public DatasourceConfigUnified datasourceConfig;
 
     /**
-     * <p>The datasource type (read-only, derived).</p>
+     * <p>The data source type. This parameter is read-only and derived.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -74,13 +77,13 @@ public class AlertRuleV2 extends TeaModel {
      * <p>The display name.</p>
      * 
      * <strong>example:</strong>
-     * <p>CPU resource usage alert 95%</p>
+     * <p>CPU水位告警95%</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>Specifies whether the alert rule is enabled.</p>
+     * <p>Specifies whether the rule is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -90,12 +93,15 @@ public class AlertRuleV2 extends TeaModel {
 
     /**
      * <p>The labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;platform&quot;:&quot;github&quot;}</p>
      */
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
     /**
-     * <p>The rule manager (read-only). An empty value indicates a user-created rule. A non-empty value indicates that the rule was created and managed by the corresponding cloud service.</p>
+     * <p>The manager of the rule. This parameter is read-only. An empty value indicates a user-created rule. A non-empty value indicates that the rule is created and managed by the corresponding cloud service logic.</p>
      * 
      * <strong>example:</strong>
      * <p>integrationCenter</p>
@@ -104,13 +110,13 @@ public class AlertRuleV2 extends TeaModel {
     public String managedBy;
 
     /**
-     * <p>The notification configuration aggregate (currently only DIRECT_NOTIFY, corresponding to DirectNotifyConfig).</p>
+     * <p>The notification configuration aggregation. Currently, only DIRECT_NOTIFY is supported, which corresponds to DirectNotifyConfig.</p>
      */
     @NameInMap("notifyConfig")
     public NotifyConfigUnified notifyConfig;
 
     /**
-     * <p>The notification policy ID (read-only, derived from the first entry in the notification policy list).</p>
+     * <p>The notification strategy ID. This parameter is read-only and derived from the first item in the notification strategy list.</p>
      * 
      * <strong>example:</strong>
      * <p>example-id-001</p>
@@ -125,7 +131,7 @@ public class AlertRuleV2 extends TeaModel {
     public ObserveResourceConfig observeResourceConfig;
 
     /**
-     * <p><strong>[Deprecated]</strong> Specifies whether the rule applies to all resources of the resource type (read-only, derived). For new integrations, use observeResourceConfig.relationType to check whether the value is ALL for equivalent semantics.</p>
+     * <p><strong>[Deprecated]</strong> Specifies whether the rule takes effect on all resources of this type. This parameter is read-only and derived. For new integrations, check whether observeResourceConfig.relationType is set to ALL to determine the equivalent semantics.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -135,13 +141,13 @@ public class AlertRuleV2 extends TeaModel {
     public Boolean observeResourceGlobalScope;
 
     /**
-     * <p>The observable resource ID list (read-only, derived).</p>
+     * <p>The list of observable resource IDs. This parameter is read-only and derived.</p>
      */
     @NameInMap("observeResourceList")
     public java.util.List<String> observeResourceList;
 
     /**
-     * <p><strong>[Deprecated]</strong> The observable resource type (read-only, derived). For new integrations, use observeResourceConfig.entityType instead.</p>
+     * <p><strong>[Deprecated]</strong> The observable resource type. This parameter is read-only and derived. For new integrations, use observeResourceConfig.entityType instead.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -151,7 +157,7 @@ public class AlertRuleV2 extends TeaModel {
     public String observeResourceType;
 
     /**
-     * <p>The partition key (read-only, maintained by the system for rule routing and sharding).</p>
+     * <p>The partition key. This parameter is read-only and maintained by the system for rule routing and sharding.</p>
      * 
      * <strong>example:</strong>
      * <p>示例值</p>
@@ -160,19 +166,19 @@ public class AlertRuleV2 extends TeaModel {
     public String partitionKey;
 
     /**
-     * <p>The query configuration aggregate (PROMETHEUS_SINGLE_QUERY / UMODEL_METRICSET_QUERY / APM_MULTI_QUERY).</p>
+     * <p>The query configuration aggregation, including PROMETHEUS_SINGLE_QUERY, UMODEL_METRICSET_QUERY, and APM_MULTI_QUERY.</p>
      */
     @NameInMap("queryConfig")
     public QueryConfigUnified queryConfig;
 
     /**
-     * <p>The RCA (root cause analysis) configuration.</p>
+     * <p>The root cause analysis (RCA) configuration.</p>
      */
     @NameInMap("rcaConfig")
     public AlertRuleRcaConfig rcaConfig;
 
     /**
-     * <p>The region ID (aligned with V1 AlertRule.regionId; priority: request body regionId &gt; gateway callerRegionId).</p>
+     * <p>The region ID. This parameter is aligned with V1 AlertRule.regionId. Priority: regionId in the request body &gt; callerRegionId in the gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>example-id-001</p>
@@ -181,13 +187,13 @@ public class AlertRuleV2 extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The scheduling configuration aggregate (currently only FIXED is supported).</p>
+     * <p>The schedule configuration aggregation. Currently, only FIXED is supported.</p>
      */
     @NameInMap("scheduleConfig")
     public ScheduleConfigUnified scheduleConfig;
 
     /**
-     * <p>The severity levels covered by this rule, comma-separated (read-only, derived; consistent with the filter.severityLevels query parameter format).</p>
+     * <p>The severity levels covered by this rule, separated by commas. This parameter is read-only and derived. The format is consistent with the filter.severityLevels query parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -196,7 +202,7 @@ public class AlertRuleV2 extends TeaModel {
     public String severityLevels;
 
     /**
-     * <p>The alert status (read-only).</p>
+     * <p>The alert status. This parameter is read-only.</p>
      * 
      * <strong>example:</strong>
      * <p>Alarm</p>
@@ -205,7 +211,7 @@ public class AlertRuleV2 extends TeaModel {
     public String status;
 
     /**
-     * <p>The update time (read-only), in ISO 8601 format.</p>
+     * <p>The update time in ISO 8601 format. This parameter is read-only.</p>
      * 
      * <strong>example:</strong>
      * <p>1764556086388</p>
@@ -214,7 +220,7 @@ public class AlertRuleV2 extends TeaModel {
     public String updatedAt;
 
     /**
-     * <p>The rule UUID (system-generated, read-only).</p>
+     * <p>The UUID of the rule. This parameter is generated by the system and is read-only.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxx-xxxx</p>

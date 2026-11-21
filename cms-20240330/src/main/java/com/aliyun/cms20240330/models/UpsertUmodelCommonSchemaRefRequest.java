@@ -5,6 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpsertUmodelCommonSchemaRefRequest extends TeaModel {
     /**
+     * <p>Specifies whether to perform a dry run for this request. Valid values:</p>
+     * <ul>
+     * <li>true: Sends a check request without performing actual changes.</li>
+     * <li>false: Sends a normal request.
+     * Default value: false.</li>
+     * </ul>
+     */
+    @NameInMap("dryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>The public Umodel schema group.</p>
      * <p>This parameter is required.</p>
      * 
@@ -27,6 +38,14 @@ public class UpsertUmodelCommonSchemaRefRequest extends TeaModel {
     public static UpsertUmodelCommonSchemaRefRequest build(java.util.Map<String, ?> map) throws Exception {
         UpsertUmodelCommonSchemaRefRequest self = new UpsertUmodelCommonSchemaRefRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpsertUmodelCommonSchemaRefRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public UpsertUmodelCommonSchemaRefRequest setGroup(String group) {

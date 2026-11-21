@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryConfigUnified extends TeaModel {
     /**
-     * <p>The aggregate functions. Used when type is set to UMODEL_METRICSET_QUERY or UMODEL_LOGSET_QUERY.</p>
+     * <p>The aggregation function used when the type is UMODEL_METRICSET_QUERY or UMODEL_LOGSET_QUERY.</p>
      * 
      * <strong>example:</strong>
      * <p>AVG</p>
@@ -14,7 +14,7 @@ public class QueryConfigUnified extends TeaModel {
     public String aggregate;
 
     /**
-     * <p><strong>[Deprecated]</strong> Specifies whether to perform alert detection only after data is complete (originally used when type is set to PROMETHEUS_MULTI_QUERY). This field overlaps with enableDataCompleteCheck. Using this field on write paths returns 400.</p>
+     * <p><strong>[Deprecated]</strong> Specifies whether to perform alert detection after data completion. This parameter was originally used when the type was PROMETHEUS_MULTI_QUERY. It duplicates enableDataCompleteCheck and returns a 400 error in the write path.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -24,13 +24,13 @@ public class QueryConfigUnified extends TeaModel {
     public Boolean checkAfterDataComplete;
 
     /**
-     * <p>The dimension list. This parameter is used when type is set to CLOUD_MONITORING_QUERY. Each dimension is a key/value string mapping.</p>
+     * <p>The list of dimensions used when the type is CLOUD_MONITORING_QUERY. Each dimension is a key-value string map.</p>
      */
     @NameInMap("dimensions")
     public java.util.List<java.util.Map<String, String>> dimensions;
 
     /**
-     * <p>The duration in seconds. Used when type is set to PROMETHEUS_MULTI_QUERY.</p>
+     * <p>The duration in seconds used when the type is PROMETHEUS_MULTI_QUERY.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -39,7 +39,7 @@ public class QueryConfigUnified extends TeaModel {
     public Long durationSecs;
 
     /**
-     * <p>Indicates whether data integrity check is enabled.</p>
+     * <p>Specifies whether the data integrity check is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -48,7 +48,7 @@ public class QueryConfigUnified extends TeaModel {
     public Boolean enableDataCompleteCheck;
 
     /**
-     * <p>The entity domain.</p>
+     * <p>The domain to which the entity belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s</p>
@@ -57,19 +57,19 @@ public class QueryConfigUnified extends TeaModel {
     public String entityDomain;
 
     /**
-     * <p>The entity fields to include in the response.</p>
+     * <p>The entity fields to be returned in the response.</p>
      */
     @NameInMap("entityFields")
     public java.util.List<EntityFields> entityFields;
 
     /**
-     * <p>The entity filter list.</p>
+     * <p>The list of entity filters.</p>
      */
     @NameInMap("entityFilters")
     public java.util.List<EntityFilters> entityFilters;
 
     /**
-     * <p>The entity type.</p>
+     * <p>The type of the entity.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s.pod</p>
@@ -78,34 +78,34 @@ public class QueryConfigUnified extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The query expression or SPL statement. Recommended when type is set to PROMETHEUS_SINGLE_QUERY. Optional when type is set to UMODEL_METRICSET_QUERY for custom SPL. Required when type is set to UMODEL_LOGSET_QUERY, where an SPL query statement must be provided (the business layer enforces this requirement).</p>
+     * <p>The query expression or Search Processing Language (SPL) statement. Recommended when the type is PROMETHEUS_SINGLE_QUERY. Optional when the type is UMODEL_METRICSET_QUERY for custom SPL. Required when the type is UMODEL_LOGSET_QUERY, where an SPL query statement must be provided and validated by the business layer.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample value</p>
+     * <p>示例值</p>
      */
     @NameInMap("expr")
     public String expr;
 
     /**
-     * <p>The APM filter condition list.</p>
+     * <p>The list of Application Performance Monitoring (APM) filter conditions.</p>
      */
     @NameInMap("filterList")
     public java.util.List<FilterList> filterList;
 
     /**
-     * <p>The predefined metric filter value list (type=PROMETHEUS_PREDEFINED_METRIC_QUERY / PROMETHEUS_METRIC_GROUP_QUERY [deprecated]).</p>
+     * <p>The list of filter values for predefined metrics when the type is PROMETHEUS_PREDEFINED_METRIC_QUERY or PROMETHEUS_METRIC_GROUP_QUERY [Deprecated].</p>
      */
     @NameInMap("filterValues")
     public java.util.List<PrometheusMetricFilterValue> filterValues;
 
     /**
-     * <p>The group field list. This parameter is used when type is set to SLS_MULTI_QUERY and groupType is set to custom.</p>
+     * <p>The list of grouping fields used when the type is SLS_MULTI_QUERY and the groupType is custom.</p>
      */
     @NameInMap("groupFieldList")
     public java.util.List<String> groupFieldList;
 
     /**
-     * <p>The group ID (type=CLOUD_MONITORING_QUERY). Dual semantics: an og- prefix indicates an observation group (GROUP_V2, the prefix itself conveys the semantics, no relationType is needed, and the backend resolves members through the entity store). A numeric-only value indicates an application group (GROUP_V1 legacy resource group, requires relationType=GROUP).</p>
+     * <p>The group ID used when the type is CLOUD_MONITORING_QUERY. This parameter has dual semantics: an og- prefix indicates an observation group (GROUP_V2, where the prefix defines the semantics and relationType is not required, and the backend resolves members through the entity library); a pure number indicates an application group (GROUP_V1 legacy resource group, which requires relationType=GROUP).</p>
      * 
      * <strong>example:</strong>
      * <p>og-845e0a26455f437c</p>
@@ -114,7 +114,7 @@ public class QueryConfigUnified extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The grouping policy (used when type is set to SLS_MULTI_QUERY): none / label / custom.</p>
+     * <p>The grouping strategy used when the type is SLS_MULTI_QUERY. Valid values: none, label, and custom.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -123,7 +123,7 @@ public class QueryConfigUnified extends TeaModel {
     public String groupType;
 
     /**
-     * <p>The join list (used when type is set to SLS_MULTI_QUERY, with a maximum of 2 entries: joinings[0] corresponds to the set operation between query 0 and query 1, and joinings[1] corresponds to the set operation between query 1 and query 2).</p>
+     * <p>The list of joins used when the type is SLS_MULTI_QUERY. A maximum of two joins are supported. joinings[0] corresponds to the set operation between query 0 and query 1, and joinings[1] corresponds to the set operation between query 1 and query 2.</p>
      */
     @NameInMap("joinings")
     public java.util.List<Joinings> joinings;
@@ -135,16 +135,16 @@ public class QueryConfigUnified extends TeaModel {
     public java.util.List<LabelFilters> labelFilters;
 
     /**
-     * <p>The raw V1 query JSON string returned as a fallback when type is set to UNKNOWN_QUERY and the read path fails to parse (contains the field values that triggered the failure, such as filter.operator=ABC). When the frontend detects that this field is not empty, display it as read-only.</p>
+     * <p>The raw V1 query JSON string returned as a fallback when the type is UNKNOWN_QUERY and parsing fails in the read path. This string includes the field values that triggered the failure, such as filter.operator=ABC. The frontend displays this field in read-only mode when it is not empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample value</p>
+     * <p>示例值</p>
      */
     @NameInMap("legacyRaw")
     public String legacyRaw;
 
     /**
-     * <p>Returned when type is set to UNKNOWN_QUERY, indicating that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor product team.</p>
+     * <p>The legacy type returned when the type is UNKNOWN_QUERY. This parameter indicates that the rule cannot be edited by using the new API. Submit a ticket to contact the CloudMonitor product team.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -153,31 +153,31 @@ public class QueryConfigUnified extends TeaModel {
     public String legacyType;
 
     /**
-     * <p>The log set name (type=UMODEL_LOGSET_QUERY).</p>
+     * <p>The name of the logset when the type is UMODEL_LOGSET_QUERY.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample name</p>
+     * <p>示例名称</p>
      */
     @NameInMap("logSet")
     public String logSet;
 
     /**
-     * <p>The metric group key. This parameter is optional when type is set to APM_MULTI_QUERY. It corresponds to alertMetricInput.groupKey in V1.</p>
+     * <p>The measure group key. This parameter is optional when the type is APM_MULTI_QUERY and corresponds to alertMetricInput.groupKey in V1.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample value</p>
+     * <p>示例值</p>
      */
     @NameInMap("measureGroupKey")
     public String measureGroupKey;
 
     /**
-     * <p>The APM metric configuration list.</p>
+     * <p>The list of APM measure configurations.</p>
      */
     @NameInMap("measureList")
     public java.util.List<MeasureList> measureList;
 
     /**
-     * <p>The metric name (type=UMODEL_METRICSET_QUERY).</p>
+     * <p>The name of the metric when the type is UMODEL_METRICSET_QUERY.</p>
      * 
      * <strong>example:</strong>
      * <p>node_cpu_seconds_total</p>
@@ -186,7 +186,7 @@ public class QueryConfigUnified extends TeaModel {
     public String metric;
 
     /**
-     * <p>The metric group ID (type=PROMETHEUS_PREDEFINED_METRIC_QUERY / PROMETHEUS_METRIC_GROUP_QUERY [deprecated]).</p>
+     * <p>The metric group ID when the type is PROMETHEUS_PREDEFINED_METRIC_QUERY or PROMETHEUS_METRIC_GROUP_QUERY [Deprecated].</p>
      * 
      * <strong>example:</strong>
      * <p>example-id-001</p>
@@ -195,7 +195,7 @@ public class QueryConfigUnified extends TeaModel {
     public String metricGroupId;
 
     /**
-     * <p>The predefined metric ID (type=PROMETHEUS_PREDEFINED_METRIC_QUERY).</p>
+     * <p>The predefined metric ID when the type is PROMETHEUS_PREDEFINED_METRIC_QUERY.</p>
      * 
      * <strong>example:</strong>
      * <p>example-id-001</p>
@@ -204,14 +204,14 @@ public class QueryConfigUnified extends TeaModel {
     public String metricId;
 
     /**
-     * <p><strong>[Deprecated]</strong> The predefined metric ID list (originally used with type=PROMETHEUS_METRIC_GROUP_QUERY). This query type is deprecated. Write path returns 400.</p>
+     * <p><strong>[Deprecated]</strong> The list of predefined metric IDs originally used when the type was PROMETHEUS_METRIC_GROUP_QUERY. This query type is deprecated, and the write path returns a 400 error.</p>
      */
     @NameInMap("metricIds")
     @Deprecated
     public java.util.List<String> metricIds;
 
     /**
-     * <p>The metric set name (type=UMODEL_METRICSET_QUERY).</p>
+     * <p>The name of the metricset when the type is UMODEL_METRICSET_QUERY.</p>
      * 
      * <strong>example:</strong>
      * <p>cms.acs_ecs_dashboard.CPUUtilization</p>
@@ -220,16 +220,16 @@ public class QueryConfigUnified extends TeaModel {
     public String metricSet;
 
     /**
-     * <p>The CloudMonitor namespace (Alibaba Cloud service name, type=CLOUD_MONITORING_QUERY).</p>
+     * <p>The CloudMonitor namespace, which is the cloud service name, when the type is CLOUD_MONITORING_QUERY.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample name</p>
+     * <p>示例名称</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
     /**
-     * <p>The query time offset in seconds. Used when type is set to UMODEL_METRICSET_QUERY or UMODEL_LOGSET_QUERY. Works with windowSecs to implement an offset query over the range [T - windowSecs - offsetSecs, T - offsetSecs]. Valid range: [0, 86400].</p>
+     * <p>The query time offset in seconds used when the type is UMODEL_METRICSET_QUERY or UMODEL_LOGSET_QUERY. This parameter is used together with windowSecs to implement offset queries in the range of [T - windowSecs - offsetSecs, T - offsetSecs]. Valid values: 0 to 86400.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -238,13 +238,13 @@ public class QueryConfigUnified extends TeaModel {
     public Long offsetSecs;
 
     /**
-     * <p>The predefined metric parameter value list (type=PROMETHEUS_PREDEFINED_METRIC_QUERY / PROMETHEUS_METRIC_GROUP_QUERY [deprecated]).</p>
+     * <p>The list of parameter values for predefined metrics when the type is PROMETHEUS_PREDEFINED_METRIC_QUERY or PROMETHEUS_METRIC_GROUP_QUERY [Deprecated].</p>
      */
     @NameInMap("paramValues")
     public java.util.List<PrometheusMetricParamValue> paramValues;
 
     /**
-     * <p>The Prometheus query statement (type=PROMETHEUS_SINGLE_QUERY).</p>
+     * <p>The Prometheus query statement when the type is PROMETHEUS_SINGLE_QUERY.</p>
      * 
      * <strong>example:</strong>
      * <p>avg(rate(node_cpu_seconds_total{mode=&quot;idle&quot;}[5m])) * 100</p>
@@ -254,13 +254,13 @@ public class QueryConfigUnified extends TeaModel {
     public String promQl;
 
     /**
-     * <p>The subquery list (polymorphic by type): when type is set to SLS_MULTI_QUERY, each entry is a SlsNamedQueryEntry (timeUnit/start/end/window/expr). When type is set to PROMETHEUS_MULTI_QUERY, each entry is a PrometheusNamedQueryEntry (name/expr). When type is set to UMODEL_METRICSET_MULTI_QUERY, each entry is a MetricSetNamedQueryEntry.</p>
+     * <p>The list of subqueries, which is polymorphic based on the type. When the type is SLS_MULTI_QUERY, each entry is an SlsNamedQueryEntry object containing timeUnit, start, end, window, and expr. When the type is PROMETHEUS_MULTI_QUERY, each entry is a PrometheusNamedQueryEntry object containing name and expr. When the type is UMODEL_METRICSET_MULTI_QUERY, each entry is a MetricSetNamedQueryEntry object.</p>
      */
     @NameInMap("queries")
     public java.util.List<Queries> queries;
 
     /**
-     * <p>The resource association type (type=CLOUD_MONITORING_QUERY).</p>
+     * <p>The resource association type when the type is CLOUD_MONITORING_QUERY.</p>
      * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>
@@ -269,7 +269,7 @@ public class QueryConfigUnified extends TeaModel {
     public String relationType;
 
     /**
-     * <p>The service ID list (type=APM_MULTI_QUERY).</p>
+     * <p>The list of service IDs (type=APM_MULTI_QUERY).</p>
      */
     @NameInMap("serviceIdList")
     public java.util.List<String> serviceIdList;
@@ -285,7 +285,7 @@ public class QueryConfigUnified extends TeaModel {
     public String type;
 
     /**
-     * <p>The aggregation time window in seconds. Used when type is set to UMODEL_METRICSET_QUERY or UMODEL_LOGSET_QUERY. Valid range: [60, 86400].</p>
+     * <p>The aggregation time window in seconds. Used when type=UMODEL_METRICSET_QUERY or UMODEL_LOGSET_QUERY. Valid range: [60, 86400].</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

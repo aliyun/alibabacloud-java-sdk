@@ -14,7 +14,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     public String dim;
 
     /**
-     * <p>Specifies whether to disable the dimension. If set to true, the filter item does not appear in the group by clause of PromQL.</p>
+     * <p>Specifies whether the filter item is excluded from the group by clause in PromQL. If set to true, the filter item does not appear in the group by clause.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     public String displayNameEn;
 
     /**
-     * <p>Specifies whether to hide the filter. If hidden, the filter is not displayed in frontend interactions, but its value can be passed when rendering PromQL. A typical example is the pid filter in APM scenarios, which is typically not displayed through configuration but shown as a separate application search list in the frontend.</p>
+     * <p>Specifies whether the filter is hidden. If the filter is hidden, it is not displayed in the frontend, but its value can be passed when rendering PromQL. A typical example is the pid filter in APM scenarios, which is generally not displayed through configuration but shown as an independent application search list on the frontend.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     public Boolean hidden;
 
     /**
-     * <p>Specifies whether to disable the label. If set to true, the filter item does not appear in the label filter of PromQL.</p>
+     * <p>Specifies whether the filter item is excluded from the label filter in PromQL. If set to true, the filter item does not appear in the label filter.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

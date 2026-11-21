@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncidentEventStruct extends TeaModel {
     /**
-     * <p>The time of automatic recovery.</p>
+     * <p>The automatic recovery time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -17,13 +17,13 @@ public class IncidentEventStruct extends TeaModel {
      * <p>The content.</p>
      * 
      * <strong>example:</strong>
-     * <p>Detected that the CPU usage of the user-service instance i-abc123 has reached 95%, triggering an alert.</p>
+     * <p>The CPU usage of the user-service instance i-abc123 reached 95%, triggering an alert</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
-     * <p>The total count.</p>
+     * <p>The count.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -33,12 +33,18 @@ public class IncidentEventStruct extends TeaModel {
 
     /**
      * <p>The dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
      */
     @NameInMap("dimension")
     public java.util.Map<String, String> dimension;
 
     /**
-     * <p>The dimension for grouping.</p>
+     * <p>The dimension used for grouping.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;severity&quot;:&quot;Critical&quot;}</p>
      */
     @NameInMap("groupBy")
     public java.util.Map<String, String> groupBy;
@@ -62,7 +68,7 @@ public class IncidentEventStruct extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>The time of the last occurrence.</p>
+     * <p>The last time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -71,7 +77,7 @@ public class IncidentEventStruct extends TeaModel {
     public Long lastTime;
 
     /**
-     * <p>The time of manual recovery.</p>
+     * <p>The manual recovery time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -80,7 +86,10 @@ public class IncidentEventStruct extends TeaModel {
     public Long recoverTime;
 
     /**
-     * <p>The resource associated with the event.</p>
+     * <p>The resource information associated with the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;resourceId&quot;:&quot;i-example001&quot;}</p>
      */
     @NameInMap("resource")
     public java.util.Map<String, String> resource;
@@ -89,7 +98,7 @@ public class IncidentEventStruct extends TeaModel {
      * <p>The status.</p>
      * 
      * <strong>example:</strong>
-     * <p>Running</p>
+     * <p>1</p>
      */
     @NameInMap("status")
     public Long status;
@@ -107,7 +116,7 @@ public class IncidentEventStruct extends TeaModel {
      * <p>The title.</p>
      * 
      * <strong>example:</strong>
-     * <p>User service CPU usage is too high.</p>
+     * <p>High CPU usage in the user service</p>
      */
     @NameInMap("title")
     public String title;

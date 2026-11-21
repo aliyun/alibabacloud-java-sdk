@@ -118,7 +118,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsDependencies extends TeaModel {
         /**
-         * <p>The dependencies on cluster types.</p>
+         * <p>The cluster type dependencies.</p>
          */
         @NameInMap("clusterTypes")
         public java.util.List<String> clusterTypes;
@@ -266,7 +266,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsPolicies extends TeaModel {
         /**
-         * <p>The enabled status of the default alert rule policy.</p>
+         * <p>The enabling status of the default alert rule policy.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -275,7 +275,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String alertDefaultStatus;
 
         /**
-         * <p>Specifies whether the add-on is installed by default.</p>
+         * <p>Specifies whether it is installed by default.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -314,7 +314,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public java.util.List<ListIntegrationPolicyAddonsResponseBodyAddonsEnvironmentsPoliciesProtocols> protocols;
 
         /**
-         * <p>The name of the target add-on.</p>
+         * <p>The target add-on name.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -402,7 +402,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the environment is enabled.</p>
+         * <p>Specifies whether it is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -411,7 +411,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The display name of the environment.</p>
+         * <p>The environment display name.</p>
          * 
          * <strong>example:</strong>
          * <p>Cloud</p>

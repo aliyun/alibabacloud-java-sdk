@@ -23,7 +23,10 @@ public class CreateContactRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The instant messaging (IM) user ID mapping, which supports multi-platform integration. The key is the IM type, such as DING or WEIXIN, and the value is the corresponding user ID.</p>
+     * <p>The instant messaging (IM) user ID mapping, which supports multi-platform integration. The key is the IM type (such as DING or WEIXIN), and the value is the corresponding user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;DING&quot;:&quot;ding_user_abc&quot;,&quot;WEIXIN&quot;:&quot;wx_user_def&quot;}</p>
      */
     @NameInMap("imUserIds")
     public java.util.Map<String, String> imUserIds;
@@ -47,7 +50,7 @@ public class CreateContactRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The mobile phone number. Currently, only Chinese mobile phone numbers are supported.</p>
+     * <p>The mobile phone number. Currently, only phone numbers in the Chinese mainland are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>13012345678</p>
@@ -56,7 +59,7 @@ public class CreateContactRequest extends TeaModel {
     public String phone;
 
     /**
-     * <p>号码国家码，可带前导 +，如 86、+86。传入后 phone 必须是纯数字，服务端按 <phoneCode>-<phone> 拼号发送，因此 phone 内不能再带 +、00 或区号。不传时按手机号码原样发送。</p>
+     * <p>The country code.</p>
      * 
      * <strong>example:</strong>
      * <p>0086</p>

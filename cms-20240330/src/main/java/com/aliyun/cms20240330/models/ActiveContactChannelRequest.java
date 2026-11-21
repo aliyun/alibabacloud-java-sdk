@@ -14,7 +14,7 @@ public class ActiveContactChannelRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The site. Valid values: cn_hangzhou (China site) and ap_southeast_1 (International site). Default value: cn_hangzhou.</p>
+     * <p>The site. Valid values: cn_hangzhou (Alibaba Cloud China Website) and ap_southeast_1 (Alibaba Cloud International Website). Default value: cn_hangzhou.</p>
      * 
      * <strong>example:</strong>
      * <p>cn_hangzhou</p>

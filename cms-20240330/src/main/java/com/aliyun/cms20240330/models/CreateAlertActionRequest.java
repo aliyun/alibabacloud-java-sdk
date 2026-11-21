@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAlertActionRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the alert action integration.</p>
+     * <p>The unique identifier of the action integration.</p>
      * 
      * <strong>example:</strong>
      * <p>testId</p>
@@ -14,7 +14,7 @@ public class CreateAlertActionRequest extends TeaModel {
     public String alertActionId;
 
     /**
-     * <p>The name of the alert action integration.</p>
+     * <p>The name of the action integration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateAlertActionRequest extends TeaModel {
     public String alertActionName;
 
     /**
-     * <p>The event bus parameters.</p>
+     * <p>The event bus.</p>
      */
     @NameInMap("ebParam")
     public CreateAlertActionRequestEbParam ebParam;
@@ -66,7 +66,7 @@ public class CreateAlertActionRequest extends TeaModel {
     public CreateAlertActionRequestSlsParam slsParam;
 
     /**
-     * <p>The alert action integration type.</p>
+     * <p>The action integration type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class CreateAlertActionRequest extends TeaModel {
         public String eventBusName;
 
         /**
-         * <p>The region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -501,7 +501,7 @@ public class CreateAlertActionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The integration webhook for PagerDuty. Both V1 and V2 are supported.</p>
+         * <p>The integration webhook for PagerDuty. V1 and V2 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -602,7 +602,7 @@ public class CreateAlertActionRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The request headers.</p>
+         * <p>The request header information.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
@@ -617,7 +617,7 @@ public class CreateAlertActionRequest extends TeaModel {
         public String method;
 
         /**
-         * <p>The alert callback URL.</p>
+         * <p>The URL for the alert callback.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.test.com">http://www.test.com</a></p>

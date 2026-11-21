@@ -114,7 +114,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
          * <p>The list of contact groups. Multiple contact groups are separated by commas.</p>
          * 
          * <strong>example:</strong>
-         * <p>O&amp;M group, on-call group</p>
+         * <p>O&amp;M group, On-call group</p>
          */
         @NameInMap("groups")
         public String groups;
@@ -140,8 +140,8 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the notification record has no actual delivery channel. Valid values:</p>
          * <ul>
-         * <li>true: No channel. The notifyResult is NO_CHANNEL.</li>
-         * <li>false: Has an actual delivery channel.</li>
+         * <li>true: The record has no channel, which means the notifyResult is NO_CHANNEL.</li>
+         * <li>false: The record has an actual delivery channel.</li>
          * </ul>
          */
         @NameInMap("noChannel")
@@ -175,7 +175,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         public String receiver;
 
         /**
-         * <p>The notification delivery result details. This is the original response content returned by the channel, such as the API response from a DingTalk or Lark bot.</p>
+         * <p>The notification delivery result details. This is the raw response content returned by the channel, such as the API response from a DingTalk or Lark bot.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}</p>
@@ -279,7 +279,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>The time of the notification record. The value is a UNIX timestamp in seconds.</p>
+         * <p>The time when the notification was recorded. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1729400000</p>

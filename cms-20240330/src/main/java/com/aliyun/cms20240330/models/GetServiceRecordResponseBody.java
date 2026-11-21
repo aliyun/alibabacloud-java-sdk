@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceRecordResponseBody extends TeaModel {
     /**
-     * <p>The record.</p>
+     * <p>The number of records.</p>
      */
     @NameInMap("record")
     public GetServiceRecordResponseBodyRecord record;
@@ -42,7 +42,7 @@ public class GetServiceRecordResponseBody extends TeaModel {
 
     public static class GetServiceRecordResponseBodyRecord extends TeaModel {
         /**
-         * <p>The entry content in JSON string format. The returned content varies depending on the recordType.</p>
+         * <p>The content of the entry in JSON string format. The returned content varies based on the recordType.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;project&quot;:&quot;proj-xtrace-16c988dcfe21fcb73c5e6f234927d998-cn-hangzhou&quot;,&quot;storeName&quot;:&quot;app-biz-log&quot;,&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;bindType&quot;:&quot;logstore&quot;,&quot;traceIdRelateField&quot;:&quot;&quot;}</p>
@@ -51,8 +51,8 @@ public class GetServiceRecordResponseBody extends TeaModel {
         public String recordContent;
 
         /**
-         * <p>The type of the linked entry. Currently supported values:
-         * logCorrelation: indicates application log association.</p>
+         * <p>The type of the association entry. Valid values:
+         * logCorrelation: application log association.</p>
          * 
          * <strong>example:</strong>
          * <p>logCorrelation</p>

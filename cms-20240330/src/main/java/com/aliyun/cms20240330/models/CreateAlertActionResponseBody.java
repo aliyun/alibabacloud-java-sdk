@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAlertActionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the alert action integration.</p>
+     * <p>The ID of the action integration.</p>
      * 
      * <strong>example:</strong>
      * <p>testId</p>

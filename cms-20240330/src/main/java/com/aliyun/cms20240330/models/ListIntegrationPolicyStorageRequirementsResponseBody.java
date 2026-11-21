@@ -43,12 +43,18 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
     public static class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsMetadata extends TeaModel {
         /**
          * <p>The annotations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;prometheus.io/path&quot;:&quot;/metrics&quot;}</p>
          */
         @NameInMap("annotations")
         public java.util.Map<String, String> annotations;
 
         /**
          * <p>The resource labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;environment&quot;:&quot;production&quot;}</p>
          */
         @NameInMap("labels")
         public java.util.Map<String, String> labels;
@@ -112,7 +118,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
 
     public static class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsSpec extends TeaModel {
         /**
-         * <p>The instance ID. This field can be specified to narrow the scope to the instance level. It depends on the data in EntityStore.</p>
+         * <p>The instance ID. Specify this parameter to narrow the scope to the instance level. This parameter depends on the data in the EntityStore.</p>
          * 
          * <strong>example:</strong>
          * <p>es-xxxxx</p>
@@ -139,7 +145,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String instanceName;
 
         /**
-         * <p>The project. This optional field is determined based on the current environment type.</p>
+         * <p>The project. This optional parameter is determined based on the current environment type.</p>
          * 
          * <strong>example:</strong>
          * <p>datagrid_cdm</p>
@@ -175,13 +181,19 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String storageType;
 
         /**
-         * <p>The tags to be added to the destination storage. These tags are injected as system tags.</p>
+         * <p>The tags to be added to the target storage, injected as system tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;system-key&quot;:&quot;value&quot;}</p>
          */
         @NameInMap("systemTags")
         public java.util.Map<String, String> systemTags;
 
         /**
-         * <p>The tags to be added to the destination storage. These tags are injected as regular tags.</p>
+         * <p>The tags to be added to the target storage, injected as regular tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;environment&quot;:&quot;production&quot;}</p>
          */
         @NameInMap("tags")
         public java.util.Map<String, String> tags;
@@ -349,7 +361,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
          * <p>The Prometheus metric center.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>aliyun-prom-ca9d365990bf</p>
          */
         @NameInMap("promMetricStore")
         public String promMetricStore;
@@ -462,7 +474,7 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
 
     public static class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirements extends TeaModel {
         /**
-         * <p>The collection of add-on releases.</p>
+         * <p>The collection of AddonReleases.</p>
          */
         @NameInMap("addonReleaseNames")
         public java.util.List<String> addonReleaseNames;

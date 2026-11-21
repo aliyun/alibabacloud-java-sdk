@@ -24,6 +24,9 @@ public class ListAddonReleasesRequest extends TeaModel {
 
     /**
      * <p>The next token for pagination.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class AlertRuleLabelFilter extends TeaModel {
     /**
      * <p>The label filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;regionId&quot;:&quot;cn-shanghai&quot;}</p>
      */
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
     /**
-     * <p>The relational operator between multiple labels.</p>
+     * <p>The relational operator for multiple labels.</p>
      * 
      * <strong>example:</strong>
      * <p>AND</p>

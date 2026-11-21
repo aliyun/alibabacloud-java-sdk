@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertActionRequest extends TeaModel {
     /**
-     * <p>The name of the action integration.</p>
+     * <p>The name of the alert action integration.</p>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -38,7 +38,7 @@ public class UpdateAlertActionRequest extends TeaModel {
     public UpdateAlertActionRequestFcParam fcParam;
 
     /**
-     * <p>The Simple Message Queue (formerly MNS) parameters.</p>
+     * <p>The Simple Message Queue (formerly MNS) (MSMQ) parameters.</p>
      */
     @NameInMap("mnsParam")
     public UpdateAlertActionRequestMnsParam mnsParam;
@@ -56,7 +56,7 @@ public class UpdateAlertActionRequest extends TeaModel {
     public UpdateAlertActionRequestSlsParam slsParam;
 
     /**
-     * <p>The type of the action integration.</p>
+     * <p>The alert action integration type.</p>
      * 
      * <strong>example:</strong>
      * <p>FC</p>
@@ -369,7 +369,7 @@ public class UpdateAlertActionRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The service name in Function Compute.</p>
+         * <p>The service name of Function Compute.</p>
          * 
          * <strong>example:</strong>
          * <p>testService</p>
@@ -410,7 +410,7 @@ public class UpdateAlertActionRequest extends TeaModel {
 
     public static class UpdateAlertActionRequestMnsParam extends TeaModel {
         /**
-         * <p>The resource type of Simple Message Queue (formerly MNS).</p>
+         * <p>The resource type of Simple Message Queue (formerly MNS) (MSMQ).</p>
          * 
          * <strong>example:</strong>
          * <p>queue</p>
@@ -419,7 +419,7 @@ public class UpdateAlertActionRequest extends TeaModel {
         public String mnsType;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          * <ul>
          * <li>If the resource type is queue, the resource name is the queue name.</li>
          * <li>If the resource type is topic, the resource name is the topic name.</li>
@@ -473,7 +473,7 @@ public class UpdateAlertActionRequest extends TeaModel {
 
     public static class UpdateAlertActionRequestPagerDutyParam extends TeaModel {
         /**
-         * <p>The integration key of PagerDuty.</p>
+         * <p>The integration key for PagerDuty.</p>
          * 
          * <strong>example:</strong>
          * <p>fwe4rwr543t543t43t43t43</p>
@@ -482,7 +482,7 @@ public class UpdateAlertActionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The integration webhook URL of PagerDuty. V1 and V2 are supported.</p>
+         * <p>The integration webhook URL for PagerDuty. Both V1 and V2 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -515,7 +515,7 @@ public class UpdateAlertActionRequest extends TeaModel {
 
     public static class UpdateAlertActionRequestSlsParam extends TeaModel {
         /**
-         * <p>The name of the Logstore.</p>
+         * <p>The name of the Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>testLogstore</p>
@@ -524,7 +524,7 @@ public class UpdateAlertActionRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the project.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>testProject</p>
@@ -584,6 +584,9 @@ public class UpdateAlertActionRequest extends TeaModel {
 
         /**
          * <p>The request headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;X-Total-Count&quot;:&quot;0&quot;}</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;

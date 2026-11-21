@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMaintainWindowRequest extends TeaModel {
     /**
-     * <p>The workspace name. This parameter is required by the backend and is used to isolate silence policy resources across different business spaces.</p>
+     * <p>The name of the workspace. This parameter is required by the backend to isolate silence policy resources across different business workspaces.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-xxxx-cn-hangzhou</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListMaintainWindowsResponseBody extends TeaModel {
     /**
-     * <p>The list of silence policies. An empty list is returned when no items match. The list items do not include workspaceFilterSetting.</p>
+     * <p>The list of silence policies. An empty list is returned if no matches are found. List items do not include workspaceFilterSetting.</p>
      */
     @NameInMap("maintainWindowList")
     public java.util.List<MaintainWindowForView> maintainWindowList;
 
     /**
-     * <p>The maximum number of records returned in this request.</p>
+     * <p>The maximum number of records returned for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListMaintainWindowsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. A non-empty value indicates that more results may be available, but the next page may still be empty. An empty value indicates the end of pagination.</p>
+     * <p>The starting cursor for the next page. If this value is not empty, you can continue to query, but the next page may still be empty. An empty value indicates the end of pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>Y21zRXZlbnRCYXNlUGFnZT0y</p>
@@ -29,7 +29,7 @@ public class ListMaintainWindowsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique ID of this request, used for troubleshooting and ticket tracking.</p>
+     * <p>The unique ID of the request, which is used for troubleshooting and ticket tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A0D1C36</p>

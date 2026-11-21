@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertNotifyTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The actual number of deleted records.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

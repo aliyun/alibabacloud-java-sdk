@@ -14,7 +14,7 @@ public class AddContextsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return values.</p>
+     * <p>The results.</p>
      */
     @NameInMap("results")
     public java.util.List<AddContextsResponseBodyResults> results;

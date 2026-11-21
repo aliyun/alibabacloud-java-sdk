@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertRobotsRequest extends TeaModel {
     /**
-     * <p>The chatbot IDs.</p>
+     * <p>The IDs of the chatbots.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("robotIds")
     public java.util.List<String> robotIds;
 
     /**
-     * <p>The chatbot type.</p>
+     * <p>The type of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>DING</p>

@@ -11,7 +11,7 @@ public class ListBizTracesResponseBody extends TeaModel {
     public java.util.List<BizTraceConfig> items;
 
     /**
-     * <p>The maximum number of results to return. Maximum value: 100.</p>
+     * <p>The maximum number of results to return. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListBizTracesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of items.</p>
      * 
      * <strong>example:</strong>
      * <p>66</p>

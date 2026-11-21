@@ -21,7 +21,7 @@ public class ListWorkspacesRequest extends TeaModel {
      * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxxxxxx</p>
+     * <p>aAaAAAA1aAAA1a1a1AaaAAa1A11aaaa1AA-aAA1Aaaa1aaAaAaaAaAaa1AAAaa1A</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -54,7 +54,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public java.util.List<ListWorkspacesRequestTags> tags;
 
     /**
-     * <p>The workspace name. Fuzzy match is supported.</p>
+     * <p>The name of the workspace. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>

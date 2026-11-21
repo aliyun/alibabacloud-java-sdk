@@ -64,7 +64,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
 
     public static class GetDeliveryTaskResponseBodyDeliveryTaskSinkList extends TeaModel {
         /**
-         * <p>The detailed configuration of the delivery destination. The meanings of the key and value vary based on the sinkType. For more information, see the CreateDeliveryTask documentation.</p>
+         * <p>The detailed configuration of the delivery destination. The meanings of the key and value vary based on the sinkType. For more information, see the CreateDeliveryTask description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Url&quot;:&quot;<a href="https://example.com/api/v1/write%22,%22Network%22:%22PublicNetwork%22,%22AuthType%22:%22None%22%7D">https://example.com/api/v1/write&quot;,&quot;Network&quot;:&quot;PublicNetwork&quot;,&quot;AuthType&quot;:&quot;None&quot;}</a></p>
          */
         @NameInMap("sinkConfigs")
         public java.util.Map<String, String> sinkConfigs;
@@ -145,7 +148,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
 
     public static class GetDeliveryTaskResponseBodyDeliveryTask extends TeaModel {
         /**
-         * <p>The creation time. The time is displayed in ISO 8601 format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) and is in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +158,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the data source, which is the Prometheus instance ID.</p>
+         * <p>The data source ID (Prometheus instance ID).</p>
          * 
          * <strong>example:</strong>
          * <p>rw-xxxxxx</p>
@@ -164,7 +167,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</p>
+         * <p>The additional labels attached to all delivered metrics, where the key is the label name and the value is the label value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</p>
          */
         @NameInMap("externalLabels")
         public java.util.Map<String, String> externalLabels;
@@ -176,7 +182,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
         public GetDeliveryTaskResponseBodyDeliveryTaskExtraInfo extraInfo;
 
         /**
-         * <p>The metric filtering conditions, used in conjunction with labelFiltersType. The key is the metric label name and the value is the matching value.</p>
+         * <p>The metric filtering conditions used with labelFiltersType, where the key is the metric label name and the value is the matched value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;<strong>name</strong>&quot;:&quot;up&quot;}</p>
          */
         @NameInMap("labelFilters")
         public java.util.Map<String, String> labelFilters;
@@ -215,7 +224,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The resource group tags.</p>
+         * <p>The keys of the resource group tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<GetDeliveryTaskResponseBodyDeliveryTaskTags> tags;
@@ -248,7 +257,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The update time. The time is displayed in ISO 8601 format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
+         * <p>The update time. The time follows the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) and is in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUmodelDataRequest extends TeaModel {
     /**
-     * <p>The name of the Umodel data to delete. Omit this parameter to delete all Umodel data.</p>
+     * <p>The name of the specific Umodel data. If you do not specify this parameter, all Umodel data is included.</p>
      * 
      * <strong>example:</strong>
      * <p>apm</p>
@@ -14,7 +14,18 @@ public class DeleteUmodelDataRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The kind of the Umodel data. If unspecified, data of all kinds is deleted.</p>
+     * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+     * <ul>
+     * <li>true: sends a check request and does not perform actual changes.</li>
+     * <li>false: sends a normal request.
+     * Default value: false.</li>
+     * </ul>
+     */
+    @NameInMap("dryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The kind of the specific Umodel data. If you do not specify this parameter, all kinds are included.</p>
      * 
      * <strong>example:</strong>
      * <p>metric_set</p>
@@ -23,7 +34,7 @@ public class DeleteUmodelDataRequest extends TeaModel {
     public String kind;
 
     /**
-     * <p>The name of the Umodel data. If unspecified, data with any name is deleted.</p>
+     * <p>The name of the specific Umodel data. If you do not specify this parameter, all Umodel data is included.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -42,6 +53,14 @@ public class DeleteUmodelDataRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public DeleteUmodelDataRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteUmodelDataRequest setKind(String kind) {

@@ -14,7 +14,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -109,7 +109,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
          * <p>The collection of HTTP request headers.</p>
          * 
          * <strong>example:</strong>
-         * <p>key</p>
+         * <p>{&quot;X-Total-Count&quot;:&quot;0&quot;}</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, ?> headers;
@@ -150,7 +150,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The URL of the alert callback.</p>
+         * <p>The alert callback URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://aliyun.com/test">http://aliyun.com/test</a></p>
@@ -159,7 +159,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         public String url;
 
         /**
-         * <p>The unique ID of the webhook.</p>
+         * <p>The unique identifiers of the webhooks.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -168,7 +168,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         public String webhookId;
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-0000000000000000-cn-hangzhou</p>

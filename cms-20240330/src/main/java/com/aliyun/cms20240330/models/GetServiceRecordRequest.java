@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceRecordRequest extends TeaModel {
     /**
-     * <p>The type of the linked entry. Currently supported values:
-     * logCorrelation: indicates application log association.</p>
+     * <p>The type of the association entry. Valid values:
+     * logCorrelation: application log association.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

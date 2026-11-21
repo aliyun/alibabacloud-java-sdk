@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBizTraceRequest extends TeaModel {
     /**
-     * <p>The advanced configurations.</p>
+     * <p>The advanced configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;sample&quot;:{&quot;strategy&quot;:&quot;BY_APP&quot;}}</p>
@@ -14,7 +14,7 @@ public class CreateBizTraceRequest extends TeaModel {
     public String advancedConfig;
 
     /**
-     * <p>The business trace code. The code can contain only letters, digits, and underscores (_), and must start with a lowercase letter.</p>
+     * <p>The business link identifier. The identifier can contain only letters, digits, and underscores (_), and must start with a lowercase letter.</p>
      * 
      * <strong>example:</strong>
      * <p>label_env</p>
@@ -23,7 +23,7 @@ public class CreateBizTraceRequest extends TeaModel {
     public String bizTraceCode;
 
     /**
-     * <p>The name of the business trace.</p>
+     * <p>The name of the business link.</p>
      * 
      * <strong>example:</strong>
      * <p>just test</p>

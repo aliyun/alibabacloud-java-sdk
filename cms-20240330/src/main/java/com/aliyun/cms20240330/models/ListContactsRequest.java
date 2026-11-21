@@ -56,7 +56,7 @@ public class ListContactsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The mobile phone number of the alert contact.</p>
+     * <p>The phone number of the alert contact.</p>
      * 
      * <strong>example:</strong>
      * <p>15012345678</p>

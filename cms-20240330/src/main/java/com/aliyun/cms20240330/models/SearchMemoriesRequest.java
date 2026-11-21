@@ -38,7 +38,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The reranking option.</p>
+     * <p>Specifies whether to rerank.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -47,7 +47,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public Boolean rerank;
 
     /**
-     * <p>The retrieval option.</p>
+     * <p>The retrieval options.</p>
      * 
      * <strong>example:</strong>
      * <p>reranker,llm_rank</p>

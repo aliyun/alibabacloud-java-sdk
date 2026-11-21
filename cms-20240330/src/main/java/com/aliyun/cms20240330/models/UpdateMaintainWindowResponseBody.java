@@ -14,7 +14,7 @@ public class UpdateMaintainWindowResponseBody extends TeaModel {
     public String maintainWindowId;
 
     /**
-     * <p>The unique ID of the request. You can use this ID for troubleshooting and ticket tracking.</p>
+     * <p>The unique ID of the request, which is used for troubleshooting and ticket tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>

@@ -32,7 +32,7 @@ public class GetMemoryResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>The expiration time.</p>
+     * <p>The expiration date.</p>
      * 
      * <strong>example:</strong>
      * <p>1751595283143</p>

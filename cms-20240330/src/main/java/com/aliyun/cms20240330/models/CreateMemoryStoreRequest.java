@@ -46,7 +46,7 @@ public class CreateMemoryStoreRequest extends TeaModel {
     public Integer shortTermTtl;
 
     /**
-     * <p>The source of the memory.</p>
+     * <p>The memory source.</p>
      * 
      * <strong>example:</strong>
      * <p>None/Trace</p>
@@ -55,7 +55,7 @@ public class CreateMemoryStoreRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The configuration when the sourceType is Trace.</p>
+     * <p>The configuration when the sourceType is set to Trace.</p>
      */
     @NameInMap("traceSourceConfig")
     public CreateMemoryStoreRequestTraceSourceConfig traceSourceConfig;

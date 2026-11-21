@@ -73,7 +73,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSource extends TeaModel {
         /**
-         * <p>The name of the Simple Log Service Logstore.</p>
+         * <p>The name of the Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>sls-test-logstore</p>
@@ -82,7 +82,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the Simple Log Service project.</p>
+         * <p>The name of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>sls-test-project</p>

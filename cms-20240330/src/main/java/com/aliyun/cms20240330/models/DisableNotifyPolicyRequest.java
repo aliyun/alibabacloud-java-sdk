@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableNotifyPolicyRequest extends TeaModel {
     /**
-     * <p>The workspace ID. Used to isolate notification policy resources across different business spaces.</p>
+     * <p>The workspace ID, which is used to isolate notification policy resources across different business workspaces.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EffectTimeRange extends TeaModel {
     /**
-     * <p>The values 0 to 6 indicate Sunday to Saturday.</p>
+     * <p>The day of the week, where 0 to 6 indicate Sunday to Saturday.</p>
      */
     @NameInMap("dayInWeek")
     public java.util.List<Integer> dayInWeek;

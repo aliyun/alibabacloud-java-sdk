@@ -20,7 +20,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return values.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("results")
     public java.util.List<SearchMemoriesResponseBodyResults> results;
@@ -142,7 +142,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The hash value of the memory.</p>
+         * <p>The memory hash value.</p>
          * 
          * <strong>example:</strong>
          * <p>d791bf27236c5532056a13279baad3517042bb8d5b1bdb02e7871fa632debffe</p>

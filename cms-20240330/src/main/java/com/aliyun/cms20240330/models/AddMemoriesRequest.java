@@ -41,7 +41,7 @@ public class AddMemoriesRequest extends TeaModel {
     public String customInstructions;
 
     /**
-     * <p>The inference setting.</p>
+     * <p>Specifies whether to enable inference.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

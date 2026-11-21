@@ -42,7 +42,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether it is enabled.</p>
+     * <p>Indicates whether it is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -66,7 +66,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String integrationSetting;
 
     /**
-     * <p>The reporting entry key for the integration.</p>
+     * <p>The key for the integrated reporting endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>10-16818f1445e10a1d012922b285bfb334</p>

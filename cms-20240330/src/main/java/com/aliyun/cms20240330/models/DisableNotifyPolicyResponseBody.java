@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableNotifyPolicyResponseBody extends TeaModel {
     /**
-     * <p>The unique ID of the request. Used for troubleshooting and ticket tracking.</p>
+     * <p>The unique ID of the request, which is used for troubleshooting and ticket tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>70D52620-2609-1802-9788-6BC592C83F03</p>
@@ -14,13 +14,13 @@ public class DisableNotifyPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
-     * <p>The uuid of the notification policy that was operated on.</p>
+     * <p>The UUID of the notification policy on which the operation was performed.</p>
      * 
      * <strong>example:</strong>
      * <p>04779a183add4f2ca06ab440f16cc580</p>

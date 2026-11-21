@@ -14,7 +14,7 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
     public String batchId;
 
     /**
-     * <p><strong>[Deprecated]</strong> The internal reserved parameter. It is used only for business source filtering in internal platform scenarios. Do not pass this parameter in external calls.</p>
+     * <p><strong>[Deprecated]</strong> This is an internal reserved parameter used only for business source filtering in internal platform scenarios. Do not specify this parameter in external calls.</p>
      * 
      * <strong>example:</strong>
      * <p>arms</p>
@@ -27,7 +27,7 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
      * <p>The notification channel. Valid values:</p>
      * <ul>
      * <li>ALI_YUNGE_SMS: Text message.</li>
-     * <li>ALI_YUNGE_CALL: Phone call.</li>
+     * <li>ALI_YUNGE_CALL: Voice call.</li>
      * <li>ALI_YUNGE_MAIL: Email.</li>
      * <li>ALI_YUNGE_ALIUID: Internal message.</li>
      * <li>DING: DingTalk.</li>
@@ -58,7 +58,7 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
      * <p>The channel category. Valid values:</p>
      * <ul>
      * <li>WEBHOOK: Webhook channels, such as DingTalk, Lark, WeCom, Slack, Teams, and custom webhooks.</li>
-     * <li>YUNGE: Yunge communication channels, such as text messages, phone calls, and emails.</li>
+     * <li>YUNGE: Yunge communication channels, such as text messages, voice calls, and emails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,8 +97,8 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
     /**
      * <p>Specifies whether to include notification records without an actual delivery channel. Valid values:</p>
      * <ul>
-     * <li>true: Included.</li>
-     * <li>false: Not included. Only records that were actually delivered through a channel are returned.
+     * <li>true: Includes the records.</li>
+     * <li>false: Excludes the records and returns only records with an actual delivery channel.
      * Default value: true.</li>
      * </ul>
      */
@@ -106,10 +106,10 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
     public Boolean includeNoChannel;
 
     /**
-     * <p>Specifies whether to sort the results in descending order by time. Valid values:</p>
+     * <p>Specifies whether to sort the results in descending order of time. Valid values:</p>
      * <ul>
-     * <li>true: Descending order. The latest records are displayed first.</li>
-     * <li>false: Ascending order.
+     * <li>true: Sorts the results in descending order, with the latest records first.</li>
+     * <li>false: Sorts the results in ascending order.
      * Default value: true.</li>
      * </ul>
      */
@@ -153,7 +153,7 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
     public String notifyStrategyName;
 
     /**
-     * <p><strong>[Deprecated]</strong> The internal reserved parameter. It is used only for the dedicated notification history query path in internal platform scenarios. Do not pass this parameter in external calls.</p>
+     * <p><strong>[Deprecated]</strong> This is an internal reserved parameter used only for dedicated notification history query paths in internal platform scenarios. Do not specify this parameter in external calls.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123456</p>
@@ -172,7 +172,7 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
     public String receiver;
 
     /**
-     * <p>The alert rule ID. Used to filter the notification history triggered by a specified alert rule. Exact match is applied.</p>
+     * <p>The alert rule ID. Used to filter the notification history triggered by a specified alert rule with exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>3fa85f64-5717-4562-b3fc-2c963f66afa6</p>

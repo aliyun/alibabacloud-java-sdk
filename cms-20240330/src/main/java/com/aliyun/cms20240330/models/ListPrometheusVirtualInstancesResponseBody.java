@@ -20,7 +20,10 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The next token for the next page. This parameter is empty when all results are returned.</p>
+     * <p>The next token for pagination. It is empty when all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1b2c3d4e5f60718293a4b5c6d7e****8f9a0b1c2d3e4f508f9a0b1c2d3e4f508f9a0b1c2d3e4f50</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -36,6 +39,9 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of returned instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("totalCount")
     public String totalCount;
@@ -96,7 +102,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The HTTP API endpoint.</p>
+         * <p>The HTTP API URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxxxxxx">http://xxxxxxxx</a></p>
@@ -105,7 +111,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String httpApiUrl;
 
         /**
-         * <p>The applicable data source type: PROMETHEUS_DS.</p>
+         * <p>Applicable data source type: PROMETHEUS_DS.</p>
          * <p>The Prometheus instance ID.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +121,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The applicable query type: CMS_BASIC_QUERY.</p>
+         * <p>Applicable query type: CMS_BASIC_QUERY.</p>
          * <p>The namespace of the metric.</p>
          * 
          * <strong>example:</strong>

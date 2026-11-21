@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceRecordRequest extends TeaModel {
     /**
-     * <p>The content of the entry in JSON string format. The format may vary based on the recordType.</p>
+     * <p>The content of the entry. The value is a JSON string. The format varies based on the recordType.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,10 @@ public class CreateServiceRecordRequest extends TeaModel {
     public String recordContent;
 
     /**
-     * <p>The type of the association entry. Valid values: logCorrelation, which indicates application log association.</p>
+     * <p>The type of the association entry. Valid values:</p>
+     * <ul>
+     * <li>logCorrelation: Application log association.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

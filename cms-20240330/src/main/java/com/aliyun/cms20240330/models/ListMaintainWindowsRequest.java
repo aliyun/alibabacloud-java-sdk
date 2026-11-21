@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListMaintainWindowsRequest extends TeaModel {
     /**
-     * <p>The sort direction. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong>: ascending order.</li>
-     * <li><strong>desc</strong>: descending order (default).</li>
+     * <li><strong>asc</strong>: Ascending order.</li>
+     * <li><strong>desc</strong>: Descending order. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,12 @@ public class ListMaintainWindowsRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>Filters results by enabled status. Valid values:</p>
+     * <p>Filters by enabled status. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Returns only enabled silence policies.</li>
      * <li><strong>false</strong>: Returns only paused silence policies.</li>
      * </ul>
-     * <p>If you do not specify this parameter, results are not filtered by enabled status.</p>
+     * <p>If you do not specify this parameter, the policies are not filtered by enabled status.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class ListMaintainWindowsRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The ID of the silence policy. Exact match is used. If you do not specify this parameter, results are not filtered by ID.</p>
+     * <p>The ID of the silence policy. Exact matching is used. If you do not specify this parameter, the policies are not filtered by ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3ff3fbd0-8a0b-4b31-9b1c-8e3f0a2c5d71</p>
@@ -41,7 +41,7 @@ public class ListMaintainWindowsRequest extends TeaModel {
     public String maintainWindowId;
 
     /**
-     * <p>Policy Name of the silence policy. Fuzzy match is used (a match occurs if Policy Name contains the specified value). If you do not specify this parameter, results are not filtered by name.</p>
+     * <p>Policy Name of the silence policy. Fuzzy matching is used, where a match occurs if Policy Name contains the specified value. If you do not specify this parameter, the policies are not filtered by name.</p>
      * 
      * <strong>example:</strong>
      * <p>silence-for-release</p>
@@ -50,7 +50,7 @@ public class ListMaintainWindowsRequest extends TeaModel {
     public String maintainWindowName;
 
     /**
-     * <p>The maximum number of records to return in this request. Default value: 20.</p>
+     * <p>The maximum number of records to return for this request. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -59,7 +59,7 @@ public class ListMaintainWindowsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. You do not need to specify this parameter for the first query. For subsequent queries, set this parameter to the non-empty nextToken value returned in the previous response. This value does not guarantee that the next page contains data.</p>
+     * <p>The pagination cursor. You do not need to specify this parameter for the first query. For subsequent queries, you can specify the non-empty nextToken returned in the previous response. This value does not guarantee that the next page contains data.</p>
      * 
      * <strong>example:</strong>
      * <p>Y21zRXZlbnRCYXNlUGFnZT0x</p>
@@ -68,13 +68,13 @@ public class ListMaintainWindowsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field by which to sort results. Default value: createTime. Valid values:</p>
+     * <p>The field by which to sort. By default, the policies are sorted by creation time. Valid values:</p>
      * <ul>
-     * <li><strong>createTime</strong>: creation time.</li>
-     * <li><strong>updateTime</strong>: update time.</li>
-     * <li><strong>enable</strong>: enabled status.</li>
+     * <li><strong>createTime</strong>: Creation time.</li>
+     * <li><strong>updateTime</strong>: Update time.</li>
+     * <li><strong>enable</strong>: Enabled status.</li>
      * </ul>
-     * <p>If you specify any other value, results are sorted by creation time.</p>
+     * <p>If you specify other values, the policies are sorted by creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>createTime</p>
@@ -83,7 +83,7 @@ public class ListMaintainWindowsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The workspace name. This parameter is required by the backend and is used to isolate silence policy resources across different business workspaces.</p>
+     * <p>The name of the workspace. This parameter is required by the backend and is used to isolate silence policy resources across different business workspaces.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-xxxx-cn-hangzhou</p>

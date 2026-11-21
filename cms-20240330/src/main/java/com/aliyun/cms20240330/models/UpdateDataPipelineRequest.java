@@ -44,7 +44,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
     public java.util.List<UpdateDataPipelineRequestProcessors> processors;
 
     /**
-     * <p>The output destinations.</p>
+     * <p>The output destination.</p>
      */
     @NameInMap("sinks")
     public java.util.List<UpdateDataPipelineRequestSinks> sinks;
@@ -202,7 +202,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestOutputsProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The length of the retained prefix.</p>
+         * <p>The length of the prefix to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -211,7 +211,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The length of the retained suffix.</p>
+         * <p>The length of the suffix to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -229,9 +229,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
          * <p>The mask character.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <h1></h1>
          */
         @NameInMap("maskChar")
         public String maskChar;
@@ -326,7 +324,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String kind;
 
         /**
-         * <p>The name of the field or dimension.</p>
+         * <p>The field or dimension name.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -521,13 +519,13 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public java.util.List<UpdateDataPipelineRequestOutputsProcessorsConfigScopeConditions> conditions;
 
         /**
-         * <p>The metric name scope.</p>
+         * <p>The scope of metric names.</p>
          */
         @NameInMap("metricName")
         public UpdateDataPipelineRequestOutputsProcessorsConfigScopeMetricName metricName;
 
         /**
-         * <p>The service name scope.</p>
+         * <p>The scope of service names.</p>
          */
         @NameInMap("serviceName")
         public UpdateDataPipelineRequestOutputsProcessorsConfigScopeServiceName serviceName;
@@ -565,7 +563,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestOutputsProcessorsConfigSelector extends TeaModel {
         /**
-         * <p>The service name list.</p>
+         * <p>The list of service names.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -643,6 +641,9 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
         /**
          * <p>The extended parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
          */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
@@ -785,13 +786,13 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestOutputsProcessors extends TeaModel {
         /**
-         * <p>The processor configuration.</p>
+         * <p>The configuration of the processor.</p>
          */
         @NameInMap("config")
         public UpdateDataPipelineRequestOutputsProcessorsConfig config;
 
         /**
-         * <p>The processor name.</p>
+         * <p>The name of the processor.</p>
          * 
          * <strong>example:</strong>
          * <p>drop-health-check</p>
@@ -800,7 +801,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The processor type.</p>
+         * <p>The type of the processor.</p>
          * 
          * <strong>example:</strong>
          * <p>filter</p>
@@ -841,7 +842,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestOutputs extends TeaModel {
         /**
-         * <p>The name of the output.</p>
+         * <p>The output name.</p>
          * 
          * <strong>example:</strong>
          * <p>checkout_route</p>
@@ -964,7 +965,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The length of the retained prefix.</p>
+         * <p>The length of the prefix to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -973,7 +974,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The length of the retained suffix.</p>
+         * <p>The length of the suffix to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -991,9 +992,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
          * <p>The mask character.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <h1></h1>
          */
         @NameInMap("maskChar")
         public String maskChar;
@@ -1088,7 +1087,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String kind;
 
         /**
-         * <p>The name of the field or dimension.</p>
+         * <p>The field or dimension name.</p>
          * 
          * <strong>example:</strong>
          * <p>serviceName</p>
@@ -1283,13 +1282,13 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public java.util.List<UpdateDataPipelineRequestProcessorsConfigScopeConditions> conditions;
 
         /**
-         * <p>The metric name scope.</p>
+         * <p>The scope of metric names.</p>
          */
         @NameInMap("metricName")
         public UpdateDataPipelineRequestProcessorsConfigScopeMetricName metricName;
 
         /**
-         * <p>The service name scope.</p>
+         * <p>The scope of service names.</p>
          */
         @NameInMap("serviceName")
         public UpdateDataPipelineRequestProcessorsConfigScopeServiceName serviceName;
@@ -1327,7 +1326,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestProcessorsConfigSelector extends TeaModel {
         /**
-         * <p>The service name list.</p>
+         * <p>The list of service names.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1405,6 +1404,9 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
         /**
          * <p>The extended parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vendor&quot;:&quot;example&quot;}</p>
          */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
@@ -1547,13 +1549,13 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestProcessors extends TeaModel {
         /**
-         * <p>The processor configuration.</p>
+         * <p>The configuration of the processor.</p>
          */
         @NameInMap("config")
         public UpdateDataPipelineRequestProcessorsConfig config;
 
         /**
-         * <p>The processor name.</p>
+         * <p>The name of the processor.</p>
          * 
          * <strong>example:</strong>
          * <p>drop-health-check</p>
@@ -1562,7 +1564,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The processor type.</p>
+         * <p>The type of the processor.</p>
          * 
          * <strong>example:</strong>
          * <p>filter</p>
@@ -1603,7 +1605,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestSinks extends TeaModel {
         /**
-         * <p>The dataset list.</p>
+         * <p>The list of datasets.</p>
          */
         @NameInMap("datasets")
         public java.util.List<String> datasets;
@@ -1618,7 +1620,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The output destination name.</p>
+         * <p>The name of the output destination.</p>
          * 
          * <strong>example:</strong>
          * <p>error-archive</p>
@@ -1636,7 +1638,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>The output destination type.</p>
+         * <p>The type of the output destination.</p>
          * 
          * <strong>example:</strong>
          * <p>logstore</p>
@@ -1744,7 +1746,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String runMode;
 
         /**
-         * <p>The start position.</p>
+         * <p>The start point for reading.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -1753,7 +1755,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String startFrom;
 
         /**
-         * <p>The backfill time range.</p>
+         * <p>The time range for backfilling.</p>
          */
         @NameInMap("timeRange")
         public UpdateDataPipelineRequestSourceConfigTimeRange timeRange;
@@ -1797,7 +1799,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public UpdateDataPipelineRequestSourceConfig config;
 
         /**
-         * <p>The data source type.</p>
+         * <p>The type of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>traces-default</p>

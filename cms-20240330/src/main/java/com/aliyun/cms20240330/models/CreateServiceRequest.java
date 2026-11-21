@@ -17,7 +17,7 @@ public class CreateServiceRequest extends TeaModel {
      * <p>The service description. This parameter is valid only when serviceType is set to RUM.</p>
      * 
      * <strong>example:</strong>
-     * <p>Mag test application</p>
+     * <p>mag test application</p>
      */
     @NameInMap("description")
     public String description;
@@ -26,7 +26,7 @@ public class CreateServiceRequest extends TeaModel {
      * <p>The display name. This parameter is valid only when serviceType is set to RUM.</p>
      * 
      * <strong>example:</strong>
-     * <p>Mag test application</p>
+     * <p>mag test application</p>
      */
     @NameInMap("displayName")
     public String displayName;
@@ -79,7 +79,7 @@ public class CreateServiceRequest extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag array.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreateServiceRequestTags> tags;

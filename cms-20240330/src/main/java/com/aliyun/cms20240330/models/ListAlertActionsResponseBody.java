@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlertActionsResponseBody extends TeaModel {
     /**
-     * <p>The list of alert action integration configurations.</p>
+     * <p>The list of action integration configurations.</p>
      */
     @NameInMap("alertActions")
     public java.util.List<ListAlertActionsResponseBodyAlertActions> alertActions;
@@ -169,7 +169,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsEssParam extends TeaModel {
         /**
-         * <p>The ID of the elastic scaling group.</p>
+         * <p>The ID of the Auto Scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>testId</p>
@@ -178,7 +178,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String essGroupId;
 
         /**
-         * <p>The ID of the elastic scaling rule.</p>
+         * <p>The ID of the Auto Scaling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>testId</p>
@@ -305,7 +305,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The service name in Function Compute.</p>
+         * <p>The service name of Function Compute.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -346,7 +346,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsMnsParam extends TeaModel {
         /**
-         * <p>The resource type in Simple Message Queue (formerly MNS).</p>
+         * <p>The resource type of Simple Message Queue (formerly MNS).</p>
          * 
          * <strong>example:</strong>
          * <p>queue</p>
@@ -409,7 +409,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsPagerDutyParam extends TeaModel {
         /**
-         * <p>The integration key of PagerDuty.</p>
+         * <p>The integration key for PagerDuty.</p>
          * 
          * <strong>example:</strong>
          * <p>fsfer4543t5t65g4t4</p>
@@ -418,7 +418,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The integration webhook URL of PagerDuty. Both V1 and V2 are supported.</p>
+         * <p>The integration webhook for PagerDuty. Both V1 and V2 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -520,6 +520,9 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
         /**
          * <p>The request headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;X-Total-Count&quot;:&quot;0&quot;}</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
@@ -583,7 +586,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActions extends TeaModel {
         /**
-         * <p>The unique identifiers of the alert action integrations.</p>
+         * <p>The unique identifiers of the action integrations.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -592,7 +595,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String alertActionId;
 
         /**
-         * <p>The name of the alert action integration.</p>
+         * <p>The name of the action integration.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -607,7 +610,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public ListAlertActionsResponseBodyAlertActionsEbParam ebParam;
 
         /**
-         * <p>The elastic scaling parameters.</p>
+         * <p>The Auto Scaling parameters.</p>
          */
         @NameInMap("essParam")
         public ListAlertActionsResponseBodyAlertActionsEssParam essParam;
@@ -643,7 +646,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public ListAlertActionsResponseBodyAlertActionsSlsParam slsParam;
 
         /**
-         * <p>The type of the alert action integration.</p>
+         * <p>The type of the action integration.</p>
          * 
          * <strong>example:</strong>
          * <p>FC</p>

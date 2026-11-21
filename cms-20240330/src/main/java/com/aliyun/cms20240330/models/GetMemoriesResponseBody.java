@@ -187,7 +187,7 @@ public class GetMemoriesResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
-         * <p>The role of the message initiator.</p>
+         * <p>The role that initiated the message.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>

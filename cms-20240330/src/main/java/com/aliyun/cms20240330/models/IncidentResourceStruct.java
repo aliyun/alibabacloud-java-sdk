@@ -8,13 +8,13 @@ public class IncidentResourceStruct extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Production environment web server.</p>
+     * <p>Production web server</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The event ID.</p>
+     * <p>The incident ID.</p>
      * 
      * <strong>example:</strong>
      * <p>incident-001</p>
@@ -23,7 +23,7 @@ public class IncidentResourceStruct extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>The unique ID of the resource in the event.</p>
+     * <p>The unique ID of the resource in the incident.</p>
      * 
      * <strong>example:</strong>
      * <p>res-001</p>
@@ -32,7 +32,7 @@ public class IncidentResourceStruct extends TeaModel {
     public String incidentResourceId;
 
     /**
-     * <p>The details object for the event resource.</p>
+     * <p>The incident resource details object.</p>
      */
     @NameInMap("resource")
     public IncidentResourceDetail resource;
@@ -59,7 +59,7 @@ public class IncidentResourceStruct extends TeaModel {
      * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>user-12345</p>
+     * <p>123456</p>
      */
     @NameInMap("userId")
     public Long userId;

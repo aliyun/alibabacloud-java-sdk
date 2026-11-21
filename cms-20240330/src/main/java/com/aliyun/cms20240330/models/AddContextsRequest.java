@@ -125,7 +125,7 @@ public class AddContextsRequest extends TeaModel {
         public String expirationDate;
 
         /**
-         * <p>The mutability.</p>
+         * <p>The immutable attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

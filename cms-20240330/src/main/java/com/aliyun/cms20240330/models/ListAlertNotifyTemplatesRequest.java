@@ -38,7 +38,7 @@ public class ListAlertNotifyTemplatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The template locale.</p>
+     * <p>The template language.</p>
      * 
      * <strong>example:</strong>
      * <p>GO</p>

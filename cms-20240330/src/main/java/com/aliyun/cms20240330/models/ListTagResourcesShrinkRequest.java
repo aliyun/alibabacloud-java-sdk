@@ -14,10 +14,10 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxxxxxx</p>
+     * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -39,8 +39,8 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The labels. Used as filter conditions for the query.</p>
-     * <p>You can specify up to 20 labels.</p>
+     * <p>The tags. The filter conditions for the query.</p>
+     * <p>You can specify up to 20 tags.</p>
      */
     @NameInMap("tag")
     public String tagShrink;

@@ -14,7 +14,7 @@ public class IncidentPlanStruct extends TeaModel {
     public Integer autoRecoverSeconds;
 
     /**
-     * <p>The timeout period for closing an event.</p>
+     * <p>The timeout period for closing the incident.</p>
      * 
      * <strong>example:</strong>
      * <p>86400000</p>
@@ -23,28 +23,28 @@ public class IncidentPlanStruct extends TeaModel {
     public Long closeExpire;
 
     /**
-     * <p>A list of collaborating teams or roles.</p>
+     * <p>The list of teams or roles involved in the collaboration.</p>
      */
     @NameInMap("corporation")
     public java.util.List<IncidentPlanCorporationStruct> corporation;
 
     /**
-     * <p>The description of the plan.</p>
+     * <p>The plan description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Emergency response plan for excessively high database connection count.</p>
+     * <p>Emergency response plan for excessive database connections</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>A list of escalation policy IDs.</p>
+     * <p>The list of escalation policy IDs.</p>
      */
     @NameInMap("escalationId")
     public java.util.List<String> escalationId;
 
     /**
-     * <p>The time when the plan was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -53,7 +53,7 @@ public class IncidentPlanStruct extends TeaModel {
     public Long gmtCreate;
 
     /**
-     * <p>The time when the plan was last modified.</p>
+     * <p>The last modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>1741234567890</p>
@@ -77,16 +77,16 @@ public class IncidentPlanStruct extends TeaModel {
     public String incidentPlanId;
 
     /**
-     * <p>The name of the plan.</p>
+     * <p>The plan name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Database connection count alert contingency plan.</p>
+     * <p>Incident plan for database connection alerts</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>A list of resource field mapping paths.</p>
+     * <p>The list of resource field mapping paths.</p>
      */
     @NameInMap("resourceFiled")
     public java.util.List<IncidentPlanFieldPath> resourceFiled;
@@ -104,13 +104,13 @@ public class IncidentPlanStruct extends TeaModel {
      * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>uesr-12345</p>
+     * <p>123456</p>
      */
     @NameInMap("userId")
     public Long userId;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The workspace name.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

@@ -14,7 +14,7 @@ public class ListIntegrationPolicyCollectorsRequest extends TeaModel {
     public String addonReleaseName;
 
     /**
-     * <p>The collector type.</p>
+     * <p>The type of the collector.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

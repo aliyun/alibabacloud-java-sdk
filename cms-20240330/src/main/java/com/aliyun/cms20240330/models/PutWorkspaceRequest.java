@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class PutWorkspaceRequest extends TeaModel {
     /**
-     * <p>The workspace description.</p>
+     * <p>Specifies whether to perform a dry run of the request. Valid values: true: sends a check request without making actual changes. false (default): sends a normal request.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The description of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -23,7 +29,7 @@ public class PutWorkspaceRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ae******ey</p>
@@ -32,7 +38,7 @@ public class PutWorkspaceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The Simple Log Service project name.</p>
+     * <p>The name of the Simple Log Service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +56,14 @@ public class PutWorkspaceRequest extends TeaModel {
     public static PutWorkspaceRequest build(java.util.Map<String, ?> map) throws Exception {
         PutWorkspaceRequest self = new PutWorkspaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutWorkspaceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public PutWorkspaceRequest setDescription(String description) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCloudResourceDataResponseBody extends TeaModel {
     /**
-     * <p>The total number of returned data records.</p>
+     * <p>The total count of returned data items.</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.List<String>> data;
@@ -146,7 +146,7 @@ public class GetCloudResourceDataResponseBody extends TeaModel {
 
     public static class GetCloudResourceDataResponseBodyResponseStatus extends TeaModel {
         /**
-         * <p>The information during the execution process.</p>
+         * <p>The information generated during execution.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

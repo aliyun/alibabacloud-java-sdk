@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContextsRequest extends TeaModel {
     /**
-     * <p>A comma-separated list of context IDs.</p>
+     * <p>A comma-separated list of context IDs. This parameter can only be specified as a query parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>mem_long_01,mem_long_02</p>
@@ -14,7 +14,7 @@ public class DeleteContextsRequest extends TeaModel {
     public String contextIds;
 
     /**
-     * <p>The filter condition, specified as a JSON string in the query. The syntax is the same as the <code>filter</code> parameter of the <code>SearchContext</code> operation.</p>
+     * <p>The filter conditions. The syntax is the same as that of SearchContext.filter. This parameter is passed as a JSON string in the query.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;userId&quot;:&quot;u-10001&quot;}</p>

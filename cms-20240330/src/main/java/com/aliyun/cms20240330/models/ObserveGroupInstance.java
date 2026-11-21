@@ -23,6 +23,18 @@ public class ObserveGroupInstance extends TeaModel {
     public String entityDomain;
 
     /**
+     * <p>UModel 实体 ID，与实体域和类型共同标识成员。</p>
+     */
+    @NameInMap("entityId")
+    public String entityId;
+
+    /**
+     * <p>实体角色，main 为主实体、related 为关联子实体。</p>
+     */
+    @NameInMap("entityRole")
+    public String entityRole;
+
+    /**
      * <p>实体类型（如 acs.ecs.instance）。</p>
      */
     @NameInMap("entityType")
@@ -97,6 +109,22 @@ public class ObserveGroupInstance extends TeaModel {
     }
     public String getEntityDomain() {
         return this.entityDomain;
+    }
+
+    public ObserveGroupInstance setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public String getEntityId() {
+        return this.entityId;
+    }
+
+    public ObserveGroupInstance setEntityRole(String entityRole) {
+        this.entityRole = entityRole;
+        return this;
+    }
+    public String getEntityRole() {
+        return this.entityRole;
     }
 
     public ObserveGroupInstance setEntityType(String entityType) {

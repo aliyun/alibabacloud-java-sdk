@@ -14,7 +14,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -32,7 +32,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The metric configuration information of the resources.</p>
+     * <p>The configuration information of the metrics for the resource.</p>
      */
     @NameInMap("resources")
     public java.util.List<DescribeMetricMetaListResponseBodyResources> resources;
@@ -127,7 +127,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The dimension information description.</p>
+         * <p>The description of the dimension information.</p>
          */
         @NameInMap("dimensionDescription")
         public java.util.List<DescribeMetricMetaListResponseBodyResourcesDimensionDescription> dimensionDescription;
@@ -140,17 +140,20 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
 
         /**
          * <p>The CloudMonitor labels. This parameter is returned only when metaFormat is set to CMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;DefaultTemplate&quot;:&quot;false&quot;,&quot;alertDefault&quot;:&quot;80&quot;,&quot;alertUnit&quot;:&quot;%&quot;,&quot;is_alarm&quot;:&quot;true&quot;,&quot;metricCategory&quot;:&quot;instanceId&quot;,&quot;minAlertPeriod&quot;:&quot;60&quot;,&quot;productCategory&quot;:&quot;ecs&quot;,&quot;unitFactor&quot;:&quot;1&quot;}</p>
          */
         @NameInMap("labels")
         public java.util.Map<String, String> labels;
 
         /**
-         * <p>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics. PROM_BASIC indicates Prometheus CloudMonitor Basic monitoring metrics.</p>
+         * <p>The source of metadata. Valid values: CMS for CloudMonitor Basic monitoring metrics, and PROM_BASIC for basic monitoring metrics of Managed Service for Prometheus.</p>
          * <p>Example value:
          * CMS
          * Valid values:
          * CMS
-         * PROM_BASIC.</p>
+         * PROM_BASIC</p>
          * 
          * <strong>example:</strong>
          * <p>PROM_BASIC</p>
@@ -159,7 +162,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         public String metaFormat;
 
         /**
-         * <p>The metric name.</p>
+         * <p>The name of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>CPUUtilization</p>
@@ -186,7 +189,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         public String periods;
 
         /**
-         * <p>The statistical method of the metric. Example values:</p>
+         * <p>The statistical method of the metric. Valid values:</p>
          * <ul>
          * <li>Maximum: the maximum value.</li>
          * <li>Minimum: the minimum value.</li>
@@ -200,7 +203,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The metric type.</p>
+         * <p>The type of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>Gauge</p>

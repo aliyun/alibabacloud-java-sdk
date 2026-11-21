@@ -17,7 +17,7 @@ public class NotifyStrategyDetail extends TeaModel {
      * <p>The description of the notification policy.</p>
      * 
      * <strong>example:</strong>
-     * <p>生产环境告警通知策略</p>
+     * <p>Production environment alert notification policy</p>
      */
     @NameInMap("description")
     public String description;
@@ -29,7 +29,7 @@ public class NotifyStrategyDetail extends TeaModel {
     public NotifyStrategyDetailGroupingSetting groupingSetting;
 
     /**
-     * <p>Specifies whether to ignore notifications for recovery events. A value of true indicates that recovery notifications are not sent.</p>
+     * <p>Specifies whether to ignore notifications for recovery events. If set to true, recovery notifications are not sent.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -118,7 +118,7 @@ public class NotifyStrategyDetail extends TeaModel {
 
     public static class NotifyStrategyDetailGroupingSetting extends TeaModel {
         /**
-         * <p>The event fields by which events are grouped for noise reduction. Events in the same group are merged into a single notification. An empty array indicates no grouping.</p>
+         * <p>The event fields used for grouping and merging. Events with the same values for these fields are merged into a single notification. An empty array indicates that no grouping is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;alertname&quot;]</p>
@@ -136,7 +136,7 @@ public class NotifyStrategyDetail extends TeaModel {
         public Integer periodMin;
 
         /**
-         * <p>The silence duration in seconds.</p>
+         * <p>The silence period in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -145,7 +145,7 @@ public class NotifyStrategyDetail extends TeaModel {
         public Integer silenceSec;
 
         /**
-         * <p>The number of trigger times.</p>
+         * <p>The number of triggers.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -197,7 +197,7 @@ public class NotifyStrategyDetail extends TeaModel {
          * <p>The channel type. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP.</p>
          * 
          * <strong>example:</strong>
-         * <p>WEBHOOK</p>
+         * <p>DING</p>
          */
         @NameInMap("channelType")
         public String channelType;
@@ -253,7 +253,7 @@ public class NotifyStrategyDetail extends TeaModel {
 
     public static class NotifyStrategyDetailRoutesEffectTimeRange extends TeaModel {
         /**
-         * <p>The effective days of the week. Valid values: 0 to 6 (0 = Sunday, 6 = Saturday). The value 7 is not supported.</p>
+         * <p>The effective days of the week. Valid values: 0 to 6. A value of 0 indicates Sunday, and 6 indicates Saturday. The value 7 is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>[0,1,2,3,4,5,6]</p>
@@ -338,10 +338,10 @@ public class NotifyStrategyDetail extends TeaModel {
         public java.util.List<NotifyStrategyDetailRoutesChannels> channels;
 
         /**
-         * <p>The digital employee name. This parameter is required when enableRca is set to true.</p>
+         * <p>The name of the digital employee. This parameter is required when enableRca is set to true.</p>
          * 
          * <strong>example:</strong>
-         * <p>数字员工名</p>
+         * <p>Digital employee name</p>
          */
         @NameInMap("digitalEmployeeName")
         public String digitalEmployeeName;
@@ -353,7 +353,7 @@ public class NotifyStrategyDetail extends TeaModel {
         public NotifyStrategyDetailRoutesEffectTimeRange effectTimeRange;
 
         /**
-         * <p>Specifies whether to enable root cause analysis (RCA).</p>
+         * <p>Specifies whether to enable Root Cause Analysis (RCA).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -362,7 +362,7 @@ public class NotifyStrategyDetail extends TeaModel {
         public Boolean enableRca;
 
         /**
-         * <p>The route-level event filter conditions.</p>
+         * <p>The route-level event filtering conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

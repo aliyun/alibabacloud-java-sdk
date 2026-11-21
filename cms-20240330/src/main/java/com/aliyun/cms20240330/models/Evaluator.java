@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class Evaluator extends TeaModel {
     /**
      * <p>The evaluator configuration parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;size&quot;:7}</p>
      */
     @NameInMap("config")
     public java.util.Map<String, ?> config;
 
     /**
-     * <p>The evaluation filter conditions.</p>
+     * <p>The evaluation filters.</p>
      */
     @NameInMap("filters")
     public java.util.Map<String, String> filters;
@@ -44,7 +47,7 @@ public class Evaluator extends TeaModel {
     public String resultType;
 
     /**
-     * <p>The evaluation variable mapping.</p>
+     * <p>The evaluation variable mappings.</p>
      */
     @NameInMap("variableMapping")
     public java.util.Map<String, String> variableMapping;

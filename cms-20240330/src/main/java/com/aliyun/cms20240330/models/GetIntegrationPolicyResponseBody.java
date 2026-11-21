@@ -135,7 +135,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
     public static class GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesAnnotations extends TeaModel {
         /**
-         * <p>The operation to be performed.</p>
+         * <p>The operation performed.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -206,7 +206,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public java.util.List<String> fieldValues;
 
         /**
-         * <p>The operation to be performed.</p>
+         * <p>The operation performed.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -256,7 +256,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String ipCidr;
 
         /**
-         * <p>The key of the IP field.</p>
+         * <p>The key of the IP address field.</p>
          * 
          * <strong>example:</strong>
          * <p>test-key</p>
@@ -289,7 +289,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
     public static class GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesLabels extends TeaModel {
         /**
-         * <p>The operation to be performed.</p>
+         * <p>The operation performed.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -345,7 +345,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
     public static class GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesTags extends TeaModel {
         /**
-         * <p>The operation to be performed.</p>
+         * <p>The operation performed.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -425,13 +425,13 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The IP matching rule.</p>
+         * <p>The IP address matching rule.</p>
          */
         @NameInMap("ipMatchRule")
         public GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesIpMatchRule ipMatchRule;
 
         /**
-         * <p>The tags.</p>
+         * <p>The labels.</p>
          */
         @NameInMap("labels")
         public java.util.List<GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesLabels> labels;
@@ -541,7 +541,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>Access policy for production environment resources</p>
          */
         @NameInMap("description")
         public String description;
@@ -778,7 +778,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String apiVersion;
 
         /**
-         * <p>The information about the bound resources.</p>
+         * <p>The bound resource information.</p>
          */
         @NameInMap("bindResource")
         public GetIntegrationPolicyResponseBodyPolicyBindResource bindResource;
@@ -814,7 +814,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The rule name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>ControlPolicy4DetailVportInfo</p>
