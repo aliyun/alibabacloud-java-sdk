@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCuHoursRequest extends TeaModel {
     /**
-     * <p>The end time of the query time range.</p>
+     * <p>The end time of the query range.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetCuHoursRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The start time of the query time range.</p>
+     * <p>The start time of the query range.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

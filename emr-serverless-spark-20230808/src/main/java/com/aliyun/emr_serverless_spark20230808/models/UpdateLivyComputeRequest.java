@@ -26,7 +26,7 @@ public class UpdateLivyComputeRequest extends TeaModel {
     public UpdateLivyComputeRequestAutoStopConfiguration autoStopConfiguration;
 
     /**
-     * <p>The number of CPU cores for the Livy server.</p>
+     * <p>The number of CPU cores for the Livy server. Valid values:</p>
      * <ul>
      * <li>1</li>
      * <li>2</li>
@@ -40,7 +40,7 @@ public class UpdateLivyComputeRequest extends TeaModel {
     public String cpuLimit;
 
     /**
-     * <p>The Spark DPI engine database engine version number.</p>
+     * <p>The Spark DPI engine version number.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -73,6 +73,8 @@ public class UpdateLivyComputeRequest extends TeaModel {
     public Boolean fusion;
 
     /**
+     * <p>The Livy DPI engine version. This is a new parameter used to replace livyVersion.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.9.0</p>
      */
@@ -109,7 +111,7 @@ public class UpdateLivyComputeRequest extends TeaModel {
     public String livyVersion;
 
     /**
-     * <p>The memory size of the Livy server.</p>
+     * <p>The memory size of the Livy server. Valid values:</p>
      * <ul>
      * <li>4Gi</li>
      * <li>8Gi</li>
@@ -132,7 +134,7 @@ public class UpdateLivyComputeRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The network connectivity name.</p>
+     * <p>The network connection name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -150,7 +152,7 @@ public class UpdateLivyComputeRequest extends TeaModel {
     public String queueName;
 
     /**
-     * <p><strong>[Deprecated]</strong> The Spark DPI engine database engine version number. Use displayReleaseVersion instead.</p>
+     * <p><strong>[Deprecated]</strong> The Spark DPI engine version number. Use displayReleaseVersion instead.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12, Java Runtime)</p>
@@ -310,7 +312,7 @@ public class UpdateLivyComputeRequest extends TeaModel {
 
     public static class UpdateLivyComputeRequestAutoStartConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to automatically start the gateway after creation.</p>
+         * <p>Specifies whether to automatically start the gateway after creation. Valid values:</p>
          * <ul>
          * <li>true: Yes.</li>
          * <li>false: No.</li>
@@ -339,7 +341,7 @@ public class UpdateLivyComputeRequest extends TeaModel {
 
     public static class UpdateLivyComputeRequestAutoStopConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to allow automatic stopping.</p>
+         * <p>Specifies whether to allow automatic stopping. Valid values:</p>
          * <ul>
          * <li>true: Yes.</li>
          * <li>false: No.</li>

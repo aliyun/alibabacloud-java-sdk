@@ -25,6 +25,9 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     @NameInMap("gpuSpec")
     public java.util.List<String> gpuSpec;
 
+    /**
+     * <p>The ID of the subscription GPU quota instance.</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
@@ -159,7 +162,7 @@ public class EditWorkspaceQueueRequest extends TeaModel {
          * <p>The maximum number of CUs.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.5</p>
+         * <p>2</p>
          */
         @NameInMap("maxCu")
         public Long maxCu;

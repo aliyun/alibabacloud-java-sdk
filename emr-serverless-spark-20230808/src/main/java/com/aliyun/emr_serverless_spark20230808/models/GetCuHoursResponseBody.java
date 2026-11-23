@@ -47,7 +47,7 @@ public class GetCuHoursResponseBody extends TeaModel {
 
     public static class GetCuHoursResponseBodyData extends TeaModel {
         /**
-         * <p>The CU hours consumed by the specified queue during the query period. This value is an estimate and the final value is subject to the bill.</p>
+         * <p>The CU hours consumed by the queried queue during the query period. This value is an estimate, and the final amount is subject to the bill.</p>
          * 
          * <strong>example:</strong>
          * <p>{2025-01-09 00:00:00=2.033333, 2025-01-09 01:00:00=2.033333, 2025-01-09 02:00:00=2.033333, 2025-01-09 03:00:00=2.033333, 2025-01-09 04:00:00=2.033333, 2025-01-09 05:00:00=2.033333, 2025-01-09 06:00:00=2.033333, 2025-01-09 07:00:00=2.033333, 2025-01-09 08:00:00=2.033333, 2025-01-09 09:00:00=1.933333, 2025-01-09 10:00:00=2.133333, 2025-01-09 11:00:00=3.100000, 2025-01-09 12:00:00=2.900000}</p>
