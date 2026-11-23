@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateContext0ResponseBody extends TeaModel {
     /**
-     * <p>The access denial details.</p>
+     * <p>The details of the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public CreateContext0ResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -59,16 +59,16 @@ public class CreateContext0ResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:CreateContext0</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The name of the authentication principal.</p>
+         * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -83,7 +83,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The authentication principal type.</p>
+         * <p>The type of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -210,7 +210,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The dashboard instance name of the context service.</p>
+         * <p>The dashboard replica set name of the context service.</p>
          * 
          * <strong>example:</strong>
          * <p>pxt-*********-d</p>
@@ -219,7 +219,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         public String dashboardReplicaSetName;
 
         /**
-         * <p>The name of the PolarDB-X Search instance.</p>
+         * <p>The name of the PolarDBX Search instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxs-*********</p>
@@ -228,7 +228,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         public String openSearchInstanceName;
 
         /**
-         * <p>The service instance name of the context service.</p>
+         * <p>The service replica set name of the context service.</p>
          * 
          * <strong>example:</strong>
          * <p>pxt-*********-s</p>

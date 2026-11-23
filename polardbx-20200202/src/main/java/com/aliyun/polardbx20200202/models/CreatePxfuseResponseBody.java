@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreatePxfuseResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public CreatePxfuseResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The details of the returned policy.</p>
+     * <p>The returned policy details.</p>
      */
     @NameInMap("Data")
     public CreatePxfuseResponseBodyData data;
@@ -59,7 +59,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:CreatePxfuse</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Example RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -101,7 +101,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of access denial.</p>
+         * <p>The type of the missing permission.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -183,7 +183,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
 
     public static class CreatePxfuseResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the resource already exists.</p>
+         * <p>Indicates whether the instance already exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>

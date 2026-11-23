@@ -15,7 +15,7 @@ public class DisableOpenSearchPublicEndpointRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The type of the target node. Valid values:</p>
+     * <p>The type of the destination node. Valid values:</p>
      * <ul>
      * <li><strong>search</strong>: data node. This is the default value.</li>
      * <li><strong>dashboard</strong>: dashboard node.</li>
@@ -28,7 +28,7 @@ public class DisableOpenSearchPublicEndpointRequest extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

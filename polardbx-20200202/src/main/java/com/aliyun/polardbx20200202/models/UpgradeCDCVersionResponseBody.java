@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpgradeCDCVersionResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public UpgradeCDCVersionResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -85,10 +85,10 @@ public class UpgradeCDCVersionResponseBody extends TeaModel {
         public String dbInstanceName;
 
         /**
-         * <p>The target task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1861190497624654848</p>
+         * <p>2209883</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;
@@ -118,7 +118,7 @@ public class UpgradeCDCVersionResponseBody extends TeaModel {
 
     public static class UpgradeCDCVersionResponseBodyData extends TeaModel {
         /**
-         * <p>The target version number.</p>
+         * <p>The target minor version.</p>
          * 
          * <strong>example:</strong>
          * <p>polardb-2.4.0_5.4.19-20250116_xcluster5.4.20-20241213</p>

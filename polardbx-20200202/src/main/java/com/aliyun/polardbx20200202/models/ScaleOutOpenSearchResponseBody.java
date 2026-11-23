@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScaleOutOpenSearchResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ScaleOutOpenSearchResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -62,7 +62,7 @@ public class ScaleOutOpenSearchResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:ScaleOutOpenSearch</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -71,7 +71,7 @@ public class ScaleOutOpenSearchResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -104,7 +104,7 @@ public class ScaleOutOpenSearchResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the denied permission.</p>
+         * <p>The type of the permission denial.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>

@@ -14,10 +14,10 @@ public class DescribeAccountListRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The type of the account. Specify this parameter to query accounts of a specific type. If you set this parameter to null, all accounts are returned.</p>
+     * <p>The type of the account. Specify this parameter to query accounts of a specific type. If this parameter is left empty, all accounts are returned. Valid values:</p>
      * <ul>
-     * <li>Before three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged user account.</li>
-     * <li>After three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
+     * <li>Before the three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged account.</li>
+     * <li>After the three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
      * </ul>
      * 
      * <strong>example:</strong>

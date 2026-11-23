@@ -11,7 +11,7 @@ public class DeleteContext0ResponseBody extends TeaModel {
     public DeleteContext0ResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The data struct.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public DeleteContext0ResponseBodyData data;
@@ -59,7 +59,7 @@ public class DeleteContext0ResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DeleteContext0</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class DeleteContext0ResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -92,7 +92,7 @@ public class DeleteContext0ResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -201,7 +201,7 @@ public class DeleteContext0ResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The name of the context service dashboard instance.</p>
+         * <p>The name of the dashboard instance for the context service.</p>
          * 
          * <strong>example:</strong>
          * <p>pxt-*********-d</p>
@@ -210,7 +210,7 @@ public class DeleteContext0ResponseBody extends TeaModel {
         public String dashboardReplicaSetName;
 
         /**
-         * <p>The name of the context service instance.</p>
+         * <p>The name of the service instance for the context service.</p>
          * 
          * <strong>example:</strong>
          * <p>pxt-*********-s</p>
@@ -222,7 +222,7 @@ public class DeleteContext0ResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>2209883</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;

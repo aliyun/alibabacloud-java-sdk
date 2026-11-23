@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The detailed reasons for the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ReleaseContext0PublicConnectionResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -56,10 +56,10 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
 
     public static class ReleaseContext0PublicConnectionResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The description is as above.</p>
+         * <p>The description as mentioned above.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:ReleaseContext0PublicConnection</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,13 +68,13 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
          * <p>The identity used for authentication in the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The description is as above.</p>
+         * <p>The description as mentioned above.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The description is as above.</p>
+         * <p>The description as mentioned above.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -183,7 +183,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
 
     public static class ReleaseContext0PublicConnectionResponseBodyData extends TeaModel {
         /**
-         * <p>The context service instance name.</p>
+         * <p>The name of the context service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>context0-example</p>
@@ -195,7 +195,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>pxsp-xxxxxxxxxx</p>
+         * <p>123456</p>
          */
         @NameInMap("DBInstanceId")
         public Integer DBInstanceId;
@@ -219,7 +219,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
         public Integer netType;
 
         /**
-         * <p>The query node type. Valid values:</p>
+         * <p>The type of the queried node. Valid values:</p>
          * <ul>
          * <li>service</li>
          * <li>dashboard</li>
@@ -241,7 +241,7 @@ public class ReleaseContext0PublicConnectionResponseBody extends TeaModel {
         public String oldConnectionString;
 
         /**
-         * <p>The previous port value.</p>
+         * <p>The previous port number.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>

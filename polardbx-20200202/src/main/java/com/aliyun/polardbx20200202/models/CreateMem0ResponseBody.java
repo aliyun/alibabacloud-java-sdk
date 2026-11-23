@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMem0ResponseBody extends TeaModel {
     /**
-     * <p>The detailed reasons for the access denial.</p>
+     * <p>The details of the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public CreateMem0ResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -92,7 +92,7 @@ public class CreateMem0ResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>

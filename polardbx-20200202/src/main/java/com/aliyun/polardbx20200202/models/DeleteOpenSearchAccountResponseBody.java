@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteOpenSearchAccountResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DeleteOpenSearchAccountResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The data struct.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public DeleteOpenSearchAccountResponseBodyData data;
@@ -59,7 +59,7 @@ public class DeleteOpenSearchAccountResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DeleteOpenSearchAccount</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class DeleteOpenSearchAccountResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -92,7 +92,7 @@ public class DeleteOpenSearchAccountResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -183,7 +183,7 @@ public class DeleteOpenSearchAccountResponseBody extends TeaModel {
 
     public static class DeleteOpenSearchAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The account name.</p>
+         * <p>The name of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>polardbx_meta_ro</p>

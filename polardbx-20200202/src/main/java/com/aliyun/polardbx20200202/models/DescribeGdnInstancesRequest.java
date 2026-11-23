@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGdnInstancesRequest extends TeaModel {
     /**
-     * <p>The message filter type.</p>
+     * <p>The filter type.</p>
      * 
      * <strong>example:</strong>
      * <p>gdn_id、
@@ -15,8 +15,7 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String filterType;
 
     /**
-     * <p>The filter value used when querying resources.</p>
-     * <p>This parameter is used in conjunction with FilterKey.</p>
+     * <p>The filter value used to query resources. This parameter is used in conjunction with FilterKey.</p>
      * 
      * <strong>example:</strong>
      * <p>gdn-<em><strong>、
@@ -44,7 +43,7 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String pageNum;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

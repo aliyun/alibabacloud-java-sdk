@@ -43,7 +43,7 @@ public class DescribeTasksRequest extends TeaModel {
      * <p>The number of entries per page. Valid values: 5 to 1000.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

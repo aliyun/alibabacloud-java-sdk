@@ -42,7 +42,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
     public static class DescribeUserEncryptionKeyListResponseBodyData extends TeaModel {
         /**
-         * <p>The key list.</p>
+         * <p>The list of keys.</p>
          */
         @NameInMap("KeyIds")
         public java.util.List<String> keyIds;

@@ -14,7 +14,7 @@ public class DescribeTransformStatusRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The check report.</p>
+     * <p>The validation report.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

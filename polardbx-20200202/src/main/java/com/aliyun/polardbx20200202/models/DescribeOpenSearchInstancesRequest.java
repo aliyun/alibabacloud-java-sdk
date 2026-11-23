@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOpenSearchInstancesRequest extends TeaModel {
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pxc-spsil01pww4hfz</p>
@@ -14,7 +14,7 @@ public class DescribeOpenSearchInstancesRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The maximum number of entries per page for a paging query. Maximum value: 100. Default value: If you do not specify a value or the value is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</p>
+     * <p>The number of entries per page for paging in a paged query. Maximum value: 100. Default value: 10 if no Settings are specified or the Settings value is less than 10. If the Settings value is greater than 100, the default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

@@ -14,7 +14,7 @@ public class CheckHealthResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the component is healthy. A return value of UP indicates healthy. Any other value or an empty value indicates an exception.</p>
+     * <p>Indicates whether the component is healthy. A value of UP indicates that the component is healthy. Any other value or an empty value indicates an abnormal state.</p>
      * 
      * <strong>example:</strong>
      * <p>UP</p>

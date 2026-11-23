@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
-     * <p>Specifies whether the event can be canceled. Valid values:</p>
+     * <p>Specifies whether cancellation is allowed. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: All O&amp;M events can be canceled.</li>
-     * <li><strong>0</strong>: The event cannot be canceled. </li>
-     * <li><strong>1</strong>: The event can be canceled.</li>
+     * <li><strong>-1</strong>: allows canceling all O&amp;M events</li>
+     * <li><strong>0</strong>: not allowed </li>
+     * <li><strong>1</strong>: allowed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,9 +21,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>Specifies whether the time can be modified. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: The time of all O&amp;M events can be modified.</li>
-     * <li><strong>0</strong>: The time cannot be modified. </li>
-     * <li><strong>1</strong>: The time can be modified.</li>
+     * <li><strong>-1</strong>: allows modifying the time of all O&amp;M events</li>
+     * <li><strong>0</strong>: not allowed</li>
+     * <li><strong>1</strong>: allowed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,8 +35,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>The change level. Default value: all. Valid values:</p>
      * <ul>
-     * <li><strong>all</strong>: all exception fix and system O&amp;M levels</li>
-     * <li><strong>S0</strong>: exception fix</li>
+     * <li><strong>all</strong>: all anomaly fix and system O&amp;M levels</li>
+     * <li><strong>S0</strong>: anomaly fix</li>
      * <li><strong>S1</strong>: system O&amp;M</li>
      * </ul>
      * 
@@ -113,8 +113,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: all pending and running tasks  </li>
-     * <li><strong>3</strong>: pending </li>
+     * <li><strong>-1</strong>: all pending and running tasks</li>
+     * <li><strong>3</strong>: pending</li>
      * <li><strong>4</strong>: running</li>
      * </ul>
      * 
@@ -125,7 +125,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Long status;
 
     /**
-     * <p>The task type. Set the value to all to query all tasks under the current account.</p>
+     * <p>The task type. Set the value to all to query all tasks of the current user.</p>
      * 
      * <strong>example:</strong>
      * <p>all</p>

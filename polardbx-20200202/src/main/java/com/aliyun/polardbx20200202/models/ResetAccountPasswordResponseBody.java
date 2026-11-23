@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordResponseBody extends TeaModel {
     /**
-     * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * <p>The returned message. If the request is successful, success is returned. Otherwise, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

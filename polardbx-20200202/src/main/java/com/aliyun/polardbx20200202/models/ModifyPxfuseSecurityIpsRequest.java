@@ -24,11 +24,11 @@ public class ModifyPxfuseSecurityIpsRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The modification mode of the whitelist. Valid values:</p>
+     * <p>The modification mode for the whitelist. Valid values:</p>
      * <ul>
-     * <li>0: overwrites the whitelist group.</li>
-     * <li>1: adds a whitelist group.</li>
-     * <li>2: deletes a whitelist group.</li>
+     * <li>0: Overwrites the whitelist group.</li>
+     * <li>1: Appends to the whitelist group.</li>
+     * <li>2: Deletes the whitelist group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ModifyPxfuseSecurityIpsRequest extends TeaModel {
     public String modifyMode;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ModifyPxfuseSecurityIpsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IP addresses in the whitelist group. Separate multiple IP addresses with commas (,).</p>
+     * <p>The list of IP addresses in the whitelist group. Separate multiple IP addresses with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

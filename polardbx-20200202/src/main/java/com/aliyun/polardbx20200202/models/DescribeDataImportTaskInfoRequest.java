@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataImportTaskInfoRequest extends TeaModel {
     /**
-     * <p>The page number of the failed records.</p>
+     * <p>The page number for failed records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeDataImportTaskInfoRequest extends TeaModel {
     public Integer failPageNumber;
 
     /**
-     * <p>The number of failed records to display per page.</p>
+     * <p>The number of failed records to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -43,7 +43,7 @@ public class DescribeDataImportTaskInfoRequest extends TeaModel {
     public String slinkTaskId;
 
     /**
-     * <p>The page number of the successful records.</p>
+     * <p>The page number for successful records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +52,7 @@ public class DescribeDataImportTaskInfoRequest extends TeaModel {
     public Long successPageNumber;
 
     /**
-     * <p>The number of successful records to display per page.</p>
+     * <p>The number of successful records to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

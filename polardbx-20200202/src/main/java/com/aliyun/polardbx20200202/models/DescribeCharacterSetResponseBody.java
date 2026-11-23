@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCharacterSetResponseBody extends TeaModel {
     /**
-     * <p>The data struct.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public DescribeCharacterSetResponseBodyData data;
 
     /**
-     * <p>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * <p>The returned message. If the request is successful, success is returned. If the request fails, an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -88,7 +88,7 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
         public java.util.List<String> characterSet;
 
         /**
-         * <p>The storage type of databases in the target instance. Currently, only polarx is supported.</p>
+         * <p>The storage type of the database on the target instance. Only polarx is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx</p>

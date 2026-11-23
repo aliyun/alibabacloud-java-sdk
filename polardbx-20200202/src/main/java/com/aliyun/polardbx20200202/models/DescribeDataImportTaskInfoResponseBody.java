@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
     /**
-     * <p>The response code. This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</p>
+     * <p>The response code. This parameter is empty when the request is successful. If the request fails, an exception message such as an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The result set.</p>
+     * <p>The returned result set.</p>
      */
     @NameInMap("Data")
     public DescribeDataImportTaskInfoResponseBodyData data;
 
     /**
-     * <p>The response message. This parameter has a value only when the task status is success. Otherwise, an empty value is returned.</p>
+     * <p>The returned message. This parameter has a value only when the task status is success. Otherwise, it is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,7 +102,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public Long delay;
 
         /**
-         * <p>The most recent error message.</p>
+         * <p>The latest error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -111,7 +111,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public String lastError;
 
         /**
-         * <p>The physical database name.</p>
+         * <p>The name of the physical database.</p>
          * 
          * <strong>example:</strong>
          * <p>drds_test</p>
@@ -155,7 +155,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>fc3b1568-ad96-****-adca-dfe018b38077</p>
+         * <p>1991610</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
@@ -266,10 +266,10 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public java.util.List<DescribeDataImportTaskInfoResponseBodyDataDataImportTaskDetailInfoServiceDetailListTaskDetailList> taskDetailList;
 
         /**
-         * <p>The replication type. Valid values:</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>FULL_COPY: full replication.</li>
-         * <li>INC_COPY: incremental replication.</li>
+         * <li>FULL_COPY: Full replication.</li>
+         * <li>INC_COPY: Incremental replication.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,7 +328,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public Long fsmId;
 
         /**
-         * <p>The state identifier in the data migration or synchronization task.</p>
+         * <p>A state identifier in a data migration or synchronization task.</p>
          * 
          * <strong>example:</strong>
          * <p>RECON_FINISHED_CATCH_UP</p>
@@ -337,7 +337,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public String fsmState;
 
         /**
-         * <p>The status in the data migration, import, or synchronization system.</p>
+         * <p>The status in systems such as data migration, import, and synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>IMPORT_NOT_BEGIN</p>
@@ -346,7 +346,7 @@ public class DescribeDataImportTaskInfoResponseBody extends TeaModel {
         public String fsmStatus;
 
         /**
-         * <p>The data import task details.</p>
+         * <p>The details of the data import task.</p>
          */
         @NameInMap("ServiceDetailList")
         public java.util.List<DescribeDataImportTaskInfoResponseBodyDataDataImportTaskDetailInfoServiceDetailList> serviceDetailList;

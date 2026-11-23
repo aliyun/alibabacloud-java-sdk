@@ -24,11 +24,11 @@ public class ModifyContextDBSecurityIpsRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The modification mode of the whitelist. Valid values:</p>
+     * <p>The whitelist modification mode. Valid values:</p>
      * <ul>
      * <li>0: overwrites the whitelist group.</li>
-     * <li>1: adds a whitelist group.</li>
-     * <li>2: deletes a whitelist group.</li>
+     * <li>1: adds IP addresses to the whitelist group.</li>
+     * <li>2: removes IP addresses from the whitelist group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ModifyContextDBSecurityIpsRequest extends TeaModel {
     public String modifyMode;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

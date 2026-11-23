@@ -14,7 +14,7 @@ public class DescribeColumnarVersionListRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The region where the instance resides.</p>
+     * <p>The region where the instance is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

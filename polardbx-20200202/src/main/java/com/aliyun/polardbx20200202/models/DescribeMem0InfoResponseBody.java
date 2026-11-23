@@ -8,13 +8,13 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
     public DescribeMem0InfoResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>Response data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeMem0InfoResponseBodyData data;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</p>
@@ -138,7 +138,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
 
     public static class DescribeMem0InfoResponseBodyDataInstanceConnAddrs extends TeaModel {
         /**
-         * <p>Connection address</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-spsil01pww4hfz.polarx.singapore.rds.aliyuncs.com</p>
@@ -147,7 +147,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>Port</p>
+         * <p>The port.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -156,7 +156,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>Connection address type</p>
+         * <p>The endpoint type.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -174,7 +174,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String VPCId;
 
         /**
-         * <p>vSwitch ID</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-t4ny14pr37spmjsbv5dc2</p>
@@ -183,7 +183,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>VPC instance ID</p>
+         * <p>The VPC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-spsil01pww4hfzjayd-cn-20251013180429</p>
@@ -248,7 +248,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
 
     public static class DescribeMem0InfoResponseBodyDataInstance extends TeaModel {
         /**
-         * <p>Instance specifications</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.x2.large.2c</p>
@@ -257,7 +257,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>Connection address list</p>
+         * <p>The list of endpoints.</p>
          */
         @NameInMap("ConnAddrs")
         public java.util.List<DescribeMem0InfoResponseBodyDataInstanceConnAddrs> connAddrs;
@@ -272,7 +272,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-spsil01pww4hfz-mem</p>
@@ -281,7 +281,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Number of nodes</p>
+         * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -290,7 +290,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public Integer nodeCount;
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-southeast-1</p>
@@ -299,7 +299,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Instance status</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -308,7 +308,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Storage type</p>
+         * <p>The storage type.</p>
          * 
          * <strong>example:</strong>
          * <p>local_ssd</p>
@@ -326,7 +326,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String VPCId;
 
         /**
-         * <p>vSwitch ID</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-t4ny14pr37spmjsbv5dc2</p>
@@ -335,7 +335,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>Zone ID</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-southeast-1a</p>
@@ -440,7 +440,7 @@ public class DescribeMem0InfoResponseBody extends TeaModel {
 
     public static class DescribeMem0InfoResponseBodyData extends TeaModel {
         /**
-         * <p>Instance information</p>
+         * <p>The instance information.</p>
          */
         @NameInMap("Instance")
         public DescribeMem0InfoResponseBodyDataInstance instance;

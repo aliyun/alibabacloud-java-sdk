@@ -15,7 +15,7 @@ public class DescribeContext0InfoRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The region where the instance resides.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

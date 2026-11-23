@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountRequest extends TeaModel {
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>The reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Category</p>

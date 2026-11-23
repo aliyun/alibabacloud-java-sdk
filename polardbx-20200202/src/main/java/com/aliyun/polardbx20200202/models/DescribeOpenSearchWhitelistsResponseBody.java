@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeOpenSearchWhitelistsResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -59,22 +59,22 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribeOpenSearchWhitelists</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authentication principal.</p>
+         * <p>The OwnerId of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The authentication principal type.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -92,7 +92,7 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the missing permission.</p>
+         * <p>The no-permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -210,7 +210,7 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP address list.</p>
+         * <p>The list of IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -219,7 +219,7 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
         public String ips;
 
         /**
-         * <p>The network type. Only VPC is supported.</p>
+         * <p>The network type. Only VPC networks are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -228,7 +228,7 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The policy remarks.</p>
+         * <p>The policy remark.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-t4nt9qxfgbzab587cshhc</p>
@@ -237,7 +237,7 @@ public class DescribeOpenSearchWhitelistsResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The time when the task was last updated, in timestamp format.</p>
+         * <p>The last update time of the task in timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>0001-01-01T00:00:00Z</p>

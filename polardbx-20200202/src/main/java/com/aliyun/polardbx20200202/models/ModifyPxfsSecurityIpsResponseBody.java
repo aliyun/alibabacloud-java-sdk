@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPxfsSecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details of the access denied error.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ModifyPxfsSecurityIpsResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -56,25 +56,25 @@ public class ModifyPxfsSecurityIpsResponseBody extends TeaModel {
 
     public static class ModifyPxfsSecurityIpsResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The authorization action.</p>
+         * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:ModifyPxfsSecurityIps</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The identity used for authentication in the request.</p>
+         * <p>The identity identifier used for authentication in the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authorization principal.</p>
+         * <p>The owner ID of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class ModifyPxfsSecurityIpsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The description is the same as above.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>

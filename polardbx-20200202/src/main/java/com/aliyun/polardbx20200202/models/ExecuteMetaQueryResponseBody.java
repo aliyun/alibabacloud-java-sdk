@@ -17,7 +17,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
     public ExecuteMetaQueryResponseBodyData data;
 
     /**
-     * <p>The additional message returned by the API operation. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</p>
+     * <p>The additional information returned by the API operation. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -90,16 +90,16 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
 
     public static class ExecuteMetaQueryResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:ExecuteMetaQuery</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -192,7 +192,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         public Long appliedOffset;
 
         /**
-         * <p>The effective upper limit of returned rows for this request.</p>
+         * <p>The effective maximum number of rows to return for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -213,7 +213,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         public Boolean hasMore;
 
         /**
-         * <p>The size in bytes of the Rows JSON array in the returned result after UTF-8 encoding, excluding protocol overhead.</p>
+         * <p>The size in bytes of the Rows JSON array in the response after UTF-8 encoding, excluding protocol overhead.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>

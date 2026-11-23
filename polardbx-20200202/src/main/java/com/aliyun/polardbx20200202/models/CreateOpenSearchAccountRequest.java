@@ -35,7 +35,7 @@ public class CreateOpenSearchAccountRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

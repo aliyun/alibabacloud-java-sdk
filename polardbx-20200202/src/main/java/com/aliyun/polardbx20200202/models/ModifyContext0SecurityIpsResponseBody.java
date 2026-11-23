@@ -56,25 +56,25 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
 
     public static class ModifyContext0SecurityIpsResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The authentication action.</p>
+         * <p>The authorization action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:ModifyContext0SecurityIps</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The name of the authentication principal.</p>
+         * <p>The display name of the authenticated principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Example RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authentication principal.</p>
+         * <p>The owner ID of the authenticated principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of identity used for authentication in the request. Valid values:</p>
+         * <p>The type of the identity used for authentication in the request. Valid values:</p>
          * <ul>
          * <li>SubUser: RAM user.</li>
          * <li>AssumedRoleUser: RAM role.</li>
@@ -200,7 +200,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>pxsp-xxxxxxxxxx</p>
+         * <p>123456</p>
          */
         @NameInMap("DBInstanceId")
         public Integer DBInstanceId;
@@ -218,13 +218,13 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
          * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>2209883</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;
 
         /**
-         * <p>The list of task IDs in the task group.</p>
+         * <p>The IDs of the tasks in the task group.</p>
          */
         @NameInMap("TaskIds")
         public java.util.List<Integer> taskIds;

@@ -25,8 +25,8 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
      * <p>The parameter level. Valid values:</p>
      * <ul>
-     * <li><strong>compute</strong>: the compute layer.</li>
-     * <li><strong>storage</strong>: the storage layer.</li>
+     * <li><strong>compute</strong>: compute layer</li>
+     * <li><strong>storage</strong>: storage layer</li>
      * </ul>
      * 
      * <strong>example:</strong>

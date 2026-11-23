@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeComponentPropetiesResponseBody extends TeaModel {
     /**
-     * <p>The export parameters of exception events.</p>
+     * <p>The export parameters of the exception event.</p>
      */
     @NameInMap("Properties")
     public java.util.List<DescribeComponentPropetiesResponseBodyProperties> properties;
@@ -45,14 +45,14 @@ public class DescribeComponentPropetiesResponseBody extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>4C32G</p>
+         * <p>4 vCPUs and 32 GB</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The display order of the commodity module property.</p>
-         * <p>The returned content varies depending on the commodity module.</p>
+         * <p>The display order of the commodity module properties.</p>
+         * <p>The returned content varies based on the commodity module.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

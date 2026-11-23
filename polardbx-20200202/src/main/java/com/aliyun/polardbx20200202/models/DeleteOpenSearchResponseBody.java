@@ -59,7 +59,7 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DeleteOpenSearch</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -101,7 +101,7 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The no-permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -183,7 +183,7 @@ public class DeleteOpenSearchResponseBody extends TeaModel {
 
     public static class DeleteOpenSearchResponseBodyData extends TeaModel {
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-*********</p>

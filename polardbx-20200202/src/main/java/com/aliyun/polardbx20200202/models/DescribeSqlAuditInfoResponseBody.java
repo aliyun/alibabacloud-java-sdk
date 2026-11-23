@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlAuditInfoResponseBody extends TeaModel {
     /**
-     * <p>The returned result set.</p>
+     * <p>The result set.</p>
      */
     @NameInMap("Data")
     public DescribeSqlAuditInfoResponseBodyData data;

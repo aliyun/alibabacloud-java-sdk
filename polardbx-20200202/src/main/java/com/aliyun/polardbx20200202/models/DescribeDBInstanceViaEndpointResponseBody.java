@@ -51,7 +51,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The port number.</p>
+         * <p>The connection port number.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -60,7 +60,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public Long port;
 
         /**
-         * <p>The connection type. <strong>VPC</strong> indicates an internal network connection. <strong>PUBLIC</strong> indicates a public network connection.</p>
+         * <p>The connection type. <strong>VPC</strong> indicates an internal network connection, and <strong>PUBLIC</strong> indicates a public network connection.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -69,7 +69,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxxxxx</p>
@@ -87,7 +87,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The internal CloudInstanceId within the VPC. This parameter can be ignored.</p>
+         * <p>The internal CloudInstanceId in the VPC. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-zkralxpc5d****</p>
@@ -188,7 +188,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String nodeClass;
 
         /**
-         * <p>The region ID of the node.</p>
+         * <p>The ID of the region where the node resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -197,7 +197,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The zone where the node resides.</p>
+         * <p>The name of the zone where the node resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -335,7 +335,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public Integer cnNodeCount;
 
         /**
-         * <p>The commodity code of the instance. The value is fixed as drds_polarxpost_public_cn.</p>
+         * <p>The commodity type of the instance. The value is fixed as drds_polarxpost_public_cn.</p>
          * 
          * <strong>example:</strong>
          * <p>drds_polarxpost_public_cn</p>
@@ -370,8 +370,8 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><strong>ReadWrite</strong>: primary instance.</li>
-         * <li><strong>ReadOnly</strong>: read-only instance.</li>
+         * <li><strong>ReadWrite</strong>: primary instance</li>
+         * <li><strong>ReadOnly</strong>: read-only instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -390,7 +390,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String DBNodeClass;
 
         /**
-         * <p>The number of instance nodes.</p>
+         * <p>The number of nodes in the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -405,7 +405,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstanceViaEndpointResponseBodyDBInstanceDBNodes> DBNodes;
 
         /**
-         * <p>The database type. The value is fixed as polarx.</p>
+         * <p>The database engine type. The value is fixed as polarx.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx</p>
@@ -414,7 +414,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String DBType;
 
         /**
-         * <p>The database version.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.5</p>
@@ -423,7 +423,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String DBVersion;
 
         /**
-         * <p>The instance description.</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test instance</p>
@@ -467,7 +467,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public Integer dnNodeCount;
 
         /**
-         * <p>The database type. The value is fixed as MySQL.</p>
+         * <p>The database engine. The value is fixed as MySQL.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -476,7 +476,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The expiration time. The time is in the yyyy-MM-ddTHH:mm:ss.sss+0000 format (UTC).</p>
+         * <p>The expiration time. The format is yyyy-MM-ddTHH:mm:ss.sss+0000 (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-31T16:00:00.000+0000</p>
@@ -487,8 +487,8 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance has expired. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Expired.</li>
-         * <li><strong>false</strong>: Not expired.</li>
+         * <li><strong>true</strong>: The instance has expired.</li>
+         * <li><strong>false</strong>: The instance has not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -516,14 +516,14 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public Integer kindCode;
 
         /**
-         * <p>The LTS version numbers.</p>
+         * <p>The LTS version number.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("LTSVersions")
         public java.util.List<String> LTSVersions;
 
         /**
-         * <p>The latest kernel version supported by the instance.</p>
+         * <p>The latest kernel version supported by the current instance.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
@@ -534,12 +534,12 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * <p>The lock mode of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Unlock</strong>: Normal.</li>
-         * <li><strong>ManualLock</strong>: Manually locked.</li>
-         * <li><strong>LockByExpiration</strong>: Automatically locked due to instance expiration.</li>
-         * <li><strong>LockByRestoration</strong>: Automatically locked before instance rollback.</li>
-         * <li><strong>LockByDiskQuota</strong>: Automatically locked due to insufficient disk space.</li>
-         * <li><strong>LockReadInstanceByDiskQuota</strong>: Read-only instance automatically locked due to insufficient disk space.</li>
+         * <li><strong>Unlock</strong>: normal</li>
+         * <li><strong>ManualLock</strong>: manually locked</li>
+         * <li><strong>LockByExpiration</strong>: automatically locked due to expiration</li>
+         * <li><strong>LockByRestoration</strong>: automatically locked before a rollback</li>
+         * <li><strong>LockByDiskQuota</strong>: automatically locked due to full storage space</li>
+         * <li><strong>LockReadInstanceByDiskQuota</strong>: automatically locked due to full storage space of the read-only instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -549,7 +549,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The end time of the maintenance window. The time is in UTC. Add 8 hours to obtain the maintenance window displayed in the console.</p>
+         * <p>The end time of the maintenance window for the instance. The time is in UTC. Add 8 hours to the time to obtain the maintenance window displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>06:00</p>
@@ -558,7 +558,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the maintenance window. The time is in UTC. Add 8 hours to obtain the maintenance window displayed in the console.</p>
+         * <p>The start time of the maintenance window for the instance. The time is in UTC. Add 8 hours to the time to obtain the maintenance window displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>06:00</p>
@@ -576,7 +576,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String minorVersion;
 
         /**
-         * <p>The network type of the instance. Only VPC is supported, which indicates a virtual private cloud (VPC).</p>
+         * <p>The network type of the instance. The only valid value is VPC, which indicates a VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -587,8 +587,8 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -598,7 +598,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The port of the instance endpoint.</p>
+         * <p>The connection port of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -607,7 +607,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The names of read-only instances.</p>
+         * <p>The names of the read-only instances.</p>
          */
         @NameInMap("ReadDBInstances")
         public java.util.List<String> readDBInstances;
@@ -633,8 +633,8 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the three-role mode is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: Disabled.</li>
-         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: The three-role mode is not enabled.</li>
+         * <li><strong>true</strong>: The three-role mode is enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -646,10 +646,10 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * <p>The three-role mode status. Valid values:</p>
          * <ul>
-         * <li><strong>disabled</strong>: Disabled.</li>
-         * <li><strong>enabled</strong>: Enabled.</li>
-         * <li><strong>processing</strong>: Being processed.</li>
-         * <li><strong>unknown</strong>: Unknown. This may be caused by the instance being unreachable.</li>
+         * <li><strong>disabled</strong>: not enabled</li>
+         * <li><strong>enabled</strong>: enabled</li>
+         * <li><strong>processing</strong>: processing</li>
+         * <li><strong>unknown</strong>: unknown, which may be caused by the inability to connect to the instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -661,8 +661,8 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * <p>The instance edition. Valid values:</p>
          * <ul>
-         * <li><strong>enterprise</strong>: Enterprise Edition.</li>
-         * <li><strong>standard</strong>: Standard Edition.</li>
+         * <li><strong>enterprise</strong>: Enterprise Edition</li>
+         * <li><strong>standard</strong>: Standard Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -672,7 +672,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String series;
 
         /**
-         * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/339826.html">Instance status</a>.</p>
+         * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/339826.html">Instance status table</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -698,8 +698,8 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><strong>ReadWrite</strong>: primary instance.</li>
-         * <li><strong>ReadOnly</strong>: read-only instance.</li>
+         * <li><strong>ReadWrite</strong>: primary instance</li>
+         * <li><strong>ReadOnly</strong>: read-only instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -709,7 +709,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxxxx</p>

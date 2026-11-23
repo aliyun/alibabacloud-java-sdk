@@ -11,10 +11,10 @@ public class CreateDataImportTaskResponseBody extends TeaModel {
     public CreateDataImportTaskResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned by the request.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>Sample returned message: The request is processed</p>
      */
     @NameInMap("Message")
     public String message;
@@ -29,7 +29,7 @@ public class CreateDataImportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -11,7 +11,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     public DescribeActiveOperationMaintainConfResponseBodyConfig config;
 
     /**
-     * <p>Specifies whether the settings are configured. Valid values:</p>
+     * <p>Specifies whether the O&amp;M window is configured. Valid values:</p>
      * <ul>
      * <li>1: Configured.</li>
      * <li>0: Not configured.</li>

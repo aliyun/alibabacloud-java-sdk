@@ -59,7 +59,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribePxfsSecurityIps</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
          * <p>The identity used for authentication in the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -83,7 +83,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The description is as described above.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -92,7 +92,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -201,7 +201,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
         public String groupTag;
 
         /**
-         * <p>The IP addresses.</p>
+         * <p>The list of IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24,10.0.0.1</p>
@@ -251,7 +251,7 @@ public class DescribePxfsSecurityIpsResponseBody extends TeaModel {
         public String custinsName;
 
         /**
-         * <p>The whitelist groups.</p>
+         * <p>The list of whitelist groups.</p>
          */
         @NameInMap("Groups")
         public java.util.List<DescribePxfsSecurityIpsResponseBodyDataGroups> groups;

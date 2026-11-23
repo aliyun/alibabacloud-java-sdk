@@ -19,7 +19,7 @@ public class ModifySupabaseDashboardPasswordRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>DemoPass1@</p>
      */
     @NameInMap("NewPassword")
     public String newPassword;

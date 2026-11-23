@@ -59,22 +59,22 @@ public class CreatePxfsResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:CreatePxfs</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The display name of the security principal.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the security principal.</p>
+         * <p>The owner ID of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class CreatePxfsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the security principal.</p>
+         * <p>The type of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -101,7 +101,7 @@ public class CreatePxfsResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The type of permission denial.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>

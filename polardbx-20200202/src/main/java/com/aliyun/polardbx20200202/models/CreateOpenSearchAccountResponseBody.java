@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOpenSearchAccountResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denied error.</p>
+     * <p>The details of the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public CreateOpenSearchAccountResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -59,16 +59,16 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
          * <p>The description is as above.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:CreateOpenSearchAccount</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;

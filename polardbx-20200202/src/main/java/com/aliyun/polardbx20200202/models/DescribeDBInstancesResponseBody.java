@@ -93,7 +93,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDBInstancesNodes extends TeaModel {
         /**
-         * <p>The instance type.</p>
+         * <p>The instance specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx.x4.large.2e</p>
@@ -240,19 +240,19 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String cdcInstanceName;
 
         /**
-         * <p>The CN node specifications. Valid values:</p>
+         * <p>The node specifications of the CN node. Valid values:</p>
          * <ul>
-         * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB</li>
-         * <li><strong>polarx.x4.large.2e</strong>: 4 cores, 16 GB</li>
-         * <li><strong>polarx.x8.large.2e</strong>: 4 cores, 32 GB</li>
-         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores, 32 GB</li>
-         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores, 64 GB</li>
-         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores, 64 GB</li>
-         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores, 128 GB</li>
-         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores, 128 GB</li>
-         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores, 256 GB</li>
-         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores, 470 GB</li>
-         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB</li>
+         * <li><strong>polarx.x4.medium.2e</strong>: 2 cores and 8 GB memory</li>
+         * <li><strong>polarx.x4.large.2e</strong>: 4 cores and 16 GB memory</li>
+         * <li><strong>polarx.x8.large.2e</strong>: 4 cores and 32 GB memory</li>
+         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores and 32 GB memory</li>
+         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores and 64 GB memory</li>
+         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores and 64 GB memory</li>
+         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores and 128 GB memory</li>
+         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores and 128 GB memory</li>
+         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores and 256 GB memory</li>
+         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores and 470 GB memory</li>
+         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores and 720 GB memory</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public java.util.List<String> columnarReadDBInstances;
 
         /**
-         * <p>The commodity code.</p>
+         * <p>The commodity type.</p>
          * 
          * <strong>example:</strong>
          * <p>drds_polarxpre_public_cn</p>
@@ -295,7 +295,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>Indicates whether the multi-flow log service is included. Valid values:</p>
+         * <p>Indicates whether the multi-stream log service is included. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: yes</li>
          * <li><strong>false</strong>: no</li>
@@ -362,23 +362,23 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The DN node specifications. Valid values:</p>
+         * <p>The node specifications of the DN node. Valid values:</p>
          * <ul>
-         * <li><strong>mysql.n2.medium.25</strong>: 2 cores, 4 GB</li>
-         * <li><strong>mysql.n4.medium.25</strong>: 2 cores, 8 GB</li>
-         * <li><strong>mysql.x8.medium.25</strong>: 2 cores, 16 GB</li>
-         * <li><strong>mysql.n2.large.25</strong>: 4 cores, 8 GB</li>
-         * <li><strong>mysql.n4.large.25</strong>: 4 cores, 16 GB</li>
-         * <li><strong>mysql.x8.large.25</strong>: 4 cores, 32 GB</li>
-         * <li><strong>mysql.n2.xlarge.25</strong>: 8 cores, 16 GB</li>
-         * <li><strong>mysql.n4.xlarge.25</strong>: 8 cores, 32 GB</li>
-         * <li><strong>mysql.x8.xlarge.25</strong>: 8 cores, 64 GB</li>
-         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 cores, 64 GB</li>
-         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 cores, 128 GB</li>
-         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores, 128 GB</li>
-         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores, 256 GB</li>
-         * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores, 470 GB</li>
-         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores, 720 GB</li>
+         * <li><strong>mysql.n2.medium.25</strong>: 2 cores and 4 GB memory</li>
+         * <li><strong>mysql.n4.medium.25</strong>: 2 cores and 8 GB memory</li>
+         * <li><strong>mysql.x8.medium.25</strong>: 2 cores and 16 GB memory</li>
+         * <li><strong>mysql.n2.large.25</strong>: 4 cores and 8 GB memory</li>
+         * <li><strong>mysql.n4.large.25</strong>: 4 cores and 16 GB memory</li>
+         * <li><strong>mysql.x8.large.25</strong>: 4 cores and 32 GB memory</li>
+         * <li><strong>mysql.n2.xlarge.25</strong>: 8 cores and 16 GB memory</li>
+         * <li><strong>mysql.n4.xlarge.25</strong>: 8 cores and 32 GB memory</li>
+         * <li><strong>mysql.x8.xlarge.25</strong>: 8 cores and 64 GB memory</li>
+         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 cores and 64 GB memory</li>
+         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 cores and 128 GB memory</li>
+         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores and 128 GB memory</li>
+         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores and 256 GB memory</li>
+         * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores and 470 GB memory</li>
+         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores and 720 GB memory</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -454,7 +454,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>The lock reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>Overdue payments</p>
+         * <p>Overdue payment</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -580,7 +580,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String series;
 
         /**
-         * <p>The instance status. For more information, see the following section.</p>
+         * <p>The instance status. For more information, see the following table.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -598,7 +598,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The storage usage.</p>
+         * <p>The used storage.</p>
          * 
          * <strong>example:</strong>
          * <p>40658534400</p>
@@ -626,7 +626,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstancesResponseBodyDBInstancesTagSet> tagSet;
 
         /**
-         * <p>The third active zone in a Three-zone deployment.</p>
+         * <p>The third zone in a Three-zone deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>
@@ -637,8 +637,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The topology type. Valid values:</p>
          * <ul>
-         * <li><strong>3azones</strong>: Three-zone deployment (three active zones)</li>
-         * <li><strong>1azone</strong>: Single-zone deployment (single active zone)</li>
+         * <li><strong>3azones</strong>: Three-zone deployment</li>
+         * <li><strong>1azone</strong>: Single zone</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -689,7 +689,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String gdnRole;
 
         /**
-         * <p>Indicates whether the instance belongs to a global database network (GDN).</p>
+         * <p>Indicates whether the instance belongs to a GDN.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

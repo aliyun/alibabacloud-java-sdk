@@ -5,10 +5,15 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to delete all tags. This parameter is valid only when TagKey.N is empty. Valid values: true, false, True, and False. Default value: false.</p>
+     * <p>Specifies whether to delete all tags. This parameter takes effect only when TagKey.N is empty. Valid values:</p>
+     * <ul>
+     * <li>true: Deletes all tags.</li>
+     * <li>false: Does not delete all tags.
+     * Default value: false.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Specifies whether to delete all tags</p>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -24,14 +29,14 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. A maximum of 50 subkeys are supported.</p>
+     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. The value must be PolarDBXInstance.</p>
+     * <p>The resource type. Valid value: PolarDBXInstance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +46,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag keys. A maximum of 20 subkeys are supported.</p>
+     * <p>The tag keys. You can specify up to 20 tag keys.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

@@ -15,7 +15,7 @@ public class CreateServiceAccountRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateServiceAccountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the service account.</p>
+     * <p>The service account type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

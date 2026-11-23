@@ -25,7 +25,7 @@ public class ScaleInOpenSearchRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The total number of data nodes after the scale-in. The value must be a positive integer and less than the current number of data nodes.</p>
+     * <p>The total number of data nodes after the scale-down. The value must be a positive integer and less than the current number of data nodes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

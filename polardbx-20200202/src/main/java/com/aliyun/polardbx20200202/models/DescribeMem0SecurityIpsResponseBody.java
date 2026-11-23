@@ -59,7 +59,7 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
          * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribeMem0SecurityIps</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class DescribeMem0SecurityIpsResponseBody extends TeaModel {
          * <p>The identity used for authentication in the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>示例 RAM 用户</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;

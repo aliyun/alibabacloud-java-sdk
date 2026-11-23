@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableOpenSearchPublicEndpointResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The detailed reason for the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DisableOpenSearchPublicEndpointResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -62,22 +62,22 @@ public class DisableOpenSearchPublicEndpointResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DisableOpenSearchPublicEndpoint</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The display name of the principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authentication principal.</p>
+         * <p>The ID of the principal owner.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -86,7 +86,7 @@ public class DisableOpenSearchPublicEndpointResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the authentication principal.</p>
+         * <p>The type of the authenticated principal.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>

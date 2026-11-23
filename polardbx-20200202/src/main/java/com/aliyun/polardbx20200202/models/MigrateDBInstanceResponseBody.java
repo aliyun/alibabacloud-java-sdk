@@ -8,7 +8,7 @@ public class MigrateDBInstanceResponseBody extends TeaModel {
      * <p>The returned message. If the request is successful, &quot;success&quot; is returned. If the request fails, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;

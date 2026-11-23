@@ -14,7 +14,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The instance details.</p>
+     * <p>The list of instance details.</p>
      */
     @NameInMap("Data")
     public DescribeStoragePoolInfoResponseBodyData data;
@@ -59,7 +59,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
 
     public static class DescribeStoragePoolInfoResponseBodyDataStoragePools extends TeaModel {
         /**
-         * <p>The specification type of the instance (the specification code).</p>
+         * <p>The instance type, which is the specification code.</p>
          * 
          * <strong>example:</strong>
          * <p>polar.mysql.x4.large</p>
@@ -71,7 +71,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
          * <p>The list of DNs.</p>
          * 
          * <strong>example:</strong>
-         * <p>[pxc-xdb-s-pxcbj<strong><strong>xxnwp0wac2c4\&quot;,\&quot;pxc-xdb-s-pxcbjr3b8</strong></strong>p0wa1589\&quot;]</p>
+         * <p>[&quot;pxc-xdb-s-pxcbj<strong><strong>xxnwp0wac2c4&quot;,&quot;pxc-xdb-s-pxcbjr3b8</strong></strong>p0wa1589&quot;]</p>
          */
         @NameInMap("DnIdList")
         public java.util.List<String> dnIdList;
@@ -86,7 +86,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String dnIdString;
 
         /**
-         * <p>A reserved field.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;APP_ETLUP1E5FMI5ND5IFO8W\&quot;}</p>
@@ -104,7 +104,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The time when the storage pool was last modified, in timestamp format.</p>
+         * <p>The modification time, in timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-02 16:52:47.0</p>
@@ -116,7 +116,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
          * <p>The list of idle DNs.</p>
          * 
          * <strong>example:</strong>
-         * <p>none</p>
+         * <p>[]</p>
          */
         @NameInMap("IdleDNIdList")
         public java.util.List<String> idleDNIdList;

@@ -14,7 +14,7 @@ public class DescribeDBInstanceSSLRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region where the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

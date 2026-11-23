@@ -15,7 +15,7 @@ public class DeleteServiceAccountRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

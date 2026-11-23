@@ -29,7 +29,7 @@ public class DisableRightsSeparationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>DemoPass1@</p>
      */
     @NameInMap("DbaAccountPassword")
     public String dbaAccountPassword;

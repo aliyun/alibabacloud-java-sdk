@@ -14,7 +14,7 @@ public class UpgradeColumnarVersionRequest extends TeaModel {
     public String columnarVersion;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pxc-xxx</p>
@@ -23,7 +23,7 @@ public class UpgradeColumnarVersionRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pxc-hzrh51fze****pon-cdc</p>
@@ -32,7 +32,7 @@ public class UpgradeColumnarVersionRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

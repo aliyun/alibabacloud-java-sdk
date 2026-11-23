@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateContext0PublicConnectionRequest extends TeaModel {
     /**
-     * <p>The prefix of the public network connection string.</p>
+     * <p>The prefix of the public connection string.</p>
      * 
      * <strong>example:</strong>
      * <p>pxc-**************</p>
@@ -24,7 +24,7 @@ public class AllocateContext0PublicConnectionRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The target node type. Valid values: service and dashboard.</p>
+     * <p>The target node type. Valid values: service, dashboard.</p>
      * 
      * <strong>example:</strong>
      * <p>dn</p>

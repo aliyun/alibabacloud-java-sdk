@@ -61,7 +61,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends TeaModel {
     public String nodeSpec;
 
     /**
-     * <p>The billing method. Valid values: PREPAY and POSTPAY.</p>
+     * <p>The billing method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The billing cycle. Valid values: Year, Month, and Hour.</p>
+     * <p>The billing cycle.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -99,7 +99,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether to enable multi-tenant mode.</p>
+     * <p>Specifies whether to enable the multi-tenant mode.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

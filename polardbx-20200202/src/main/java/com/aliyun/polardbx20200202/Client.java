@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "polardbx";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-1", "polardbx.aliyuncs.com"),
@@ -183,10 +186,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation confirms that no active connections exist before a rollback task to ensure operational security.</p>
+     * <p>This operation confirms that no active connections exist before rolling back a task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables public network connections for a specified physical ReplicaSet of the context service.</p>
+     * <p>Enables public network access for a specified physical ReplicaSet of the context service.</p>
      * 
      * @param request AllocateContext0PublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -234,10 +237,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation confirms that no active connections exist before a rollback task to ensure operational security.</p>
+     * <p>This operation confirms that no active connections exist before rolling back a task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables public network connections for a specified physical ReplicaSet of the context service.</p>
+     * <p>Enables public network access for a specified physical ReplicaSet of the context service.</p>
      * 
      * @param request AllocateContext0PublicConnectionRequest
      * @return AllocateContext0PublicConnectionResponse
@@ -249,10 +252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * <p>This operation verifies that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a public network connection for a ContextDB-X service ReplicaSet.</p>
+     * <p>Enables public network connection for a ContextDB-X service ReplicaSet.</p>
      * 
      * @param request AllocateContextDBPublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -300,10 +303,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * <p>This operation verifies that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a public network connection for a ContextDB-X service ReplicaSet.</p>
+     * <p>Enables public network connection for a ContextDB-X service ReplicaSet.</p>
      * 
      * @param request AllocateContextDBPublicConnectionRequest
      * @return AllocateContextDBPublicConnectionResponse
@@ -391,7 +394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation checks for active connections before a rollback task to ensure operational security.</p>
+     * <p>This operation verifies that no active connections exist before rolling back a task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables the public domain name for a Mem0 instance.</p>
@@ -438,7 +441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation checks for active connections before a rollback task to ensure operational security.</p>
+     * <p>This operation verifies that no active connections exist before rolling back a task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables the public domain name for a Mem0 instance.</p>
@@ -453,10 +456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables public network connection for the agent file service.</p>
+     * <p>Enables a public network connection for the Agent file service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables public network connection for PXFS.</p>
+     * <p>Enables a public network connection for PXFS.</p>
      * 
      * @param request AllocatePxfsPublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -492,10 +495,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables public network connection for the agent file service.</p>
+     * <p>Enables a public network connection for the Agent file service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables public network connection for PXFS.</p>
+     * <p>Enables a public network connection for PXFS.</p>
      * 
      * @param request AllocatePxfsPublicConnectionRequest
      * @return AllocatePxfsPublicConnectionResponse
@@ -717,7 +720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a service health check.</p>
+     * <p>Checks the health of the service.</p>
      * 
      * @param request CheckHealthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -742,7 +745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a service health check.</p>
+     * <p>Checks the health of the service.</p>
      * 
      * @param request CheckHealthRequest
      * @return CheckHealthResponse
@@ -1506,10 +1509,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The CreateDataImportTask operation creates a data import task that supports importing SQL or CSV files stored in OSS, ECS, or directly uploaded into a target database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * <p>The CreateDataImportTask operation creates a data import task. It supports importing SQL or CSV files stored in OSS or ECS, or directly passed files, into a destination database instance. By specifying the instance ID, database name, engine type, data source such as the OSS path, and import type, the system asynchronously or synchronously performs data write operations. This operation is applicable to scenarios such as data migration, initialization, and data backfilling. It returns a task ID for subsequent status query and management.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data import task to import external data files such as SQL scripts and CSV files into a target database instance.</p>
+     * <p>Creates a data import task to import external data files, such as SQL scripts and CSV files, into a destination database instance.</p>
      * 
      * @param request CreateDataImportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1581,10 +1584,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The CreateDataImportTask operation creates a data import task that supports importing SQL or CSV files stored in OSS, ECS, or directly uploaded into a target database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * <p>The CreateDataImportTask operation creates a data import task. It supports importing SQL or CSV files stored in OSS or ECS, or directly passed files, into a destination database instance. By specifying the instance ID, database name, engine type, data source such as the OSS path, and import type, the system asynchronously or synchronously performs data write operations. This operation is applicable to scenarios such as data migration, initialization, and data backfilling. It returns a task ID for subsequent status query and management.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data import task to import external data files such as SQL scripts and CSV files into a target database instance.</p>
+     * <p>Creates a data import task to import external data files, such as SQL scripts and CSV files, into a destination database instance.</p>
      * 
      * @param request CreateDataImportTaskRequest
      * @return CreateDataImportTaskResponse
@@ -1721,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a secondary instance to a global database network (GDN).</p>
+     * <p>Adds a GDN secondary instance.</p>
      * 
      * @param request CreateGdnStandbyMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1848,7 +1851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a secondary instance to a global database network (GDN).</p>
+     * <p>Adds a GDN secondary instance.</p>
      * 
      * @param request CreateGdnStandbyMemberRequest
      * @return CreateGdnStandbyMemberResponse
@@ -1917,7 +1920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a PolarDBX Search instance.</p>
+     * <p>Creates a PolarDB-X Search instance.</p>
      * 
      * @param request CreateOpenSearchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2028,7 +2031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a PolarDBX Search instance.</p>
+     * <p>Creates a PolarDB-X Search instance.</p>
      * 
      * @param request CreateOpenSearchRequest
      * @return CreateOpenSearchResponse
@@ -2620,10 +2623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</p>
+     * <p>Initiates a diagnostic task for the replication link during the data synchronization phase to check for anomalies such as latency, interruption, and data inconsistency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a health check on a replication task during data migration.</p>
+     * <p>Performs a health check on the replication link during data migration.</p>
      * 
      * @param request CreateRplInspectionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2683,10 +2686,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</p>
+     * <p>Initiates a diagnostic task for the replication link during the data synchronization phase to check for anomalies such as latency, interruption, and data inconsistency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a health check on a replication task during data migration.</p>
+     * <p>Performs a health check on the replication link during data migration.</p>
      * 
      * @param request CreateRplInspectionTaskRequest
      * @return CreateRplInspectionTaskResponse
@@ -2698,7 +2701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a SQL statement assessment task. You submit SQL statements through this operation, and the system performs static analysis and risk assessment to identify execution risks and compatibility issues on the target database instance.</p>
+     * <p>Creates an SQL statement evaluation task. This operation submits SQL statements for static analysis and risk assessment, and outputs execution risks and compatibility issues on the target database instance.</p>
      * 
      * @param request CreateSQLEvaluateTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2778,7 +2781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a SQL statement assessment task. You submit SQL statements through this operation, and the system performs static analysis and risk assessment to identify execution risks and compatibility issues on the target database instance.</p>
+     * <p>Creates an SQL statement evaluation task. This operation submits SQL statements for static analysis and risk assessment, and outputs execution risks and compatibility issues on the target database instance.</p>
      * 
      * @param request CreateSQLEvaluateTaskRequest
      * @return CreateSQLEvaluateTaskResponse
@@ -3258,7 +3261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and closes the access entry for the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a context service.</p>
@@ -3297,7 +3300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and closes the access entry for the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a context service.</p>
@@ -3680,7 +3683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Releases a PolarDB-X Search instance.</p>
@@ -3719,7 +3722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Releases a PolarDB-X Search instance.</p>
@@ -3794,8 +3797,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list contains all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
+     * <li>If the DownloadLink parameter is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3841,8 +3844,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list contains all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
+     * <li>If the DownloadLink parameter is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3966,10 +3969,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes an Agent file service tenant identity.</p>
+     * <p>Deletes the tenant identity for the Agent file service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Agent file service tenant identity.</p>
+     * <p>Deletes the tenant identity for the Agent file service.</p>
      * 
      * @param request DeletePxfsUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4013,10 +4016,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes an Agent file service tenant identity.</p>
+     * <p>Deletes the tenant identity for the Agent file service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Agent file service tenant identity.</p>
+     * <p>Deletes the tenant identity for the Agent file service.</p>
      * 
      * @param request DeletePxfsUserRequest
      * @return DeletePxfsUserResponse
@@ -4028,7 +4031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a PXFuse node.</p>
@@ -4067,7 +4070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a PXFuse node.</p>
@@ -4252,7 +4255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of accounts by calling the DescribeAccountList operation.</p>
+     * <p>Queries the list of accounts.</p>
      * 
      * @param request DescribeAccountListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4296,7 +4299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of accounts by calling the DescribeAccountList operation.</p>
+     * <p>Queries the list of accounts.</p>
      * 
      * @param request DescribeAccountListRequest
      * @return DescribeAccountListResponse
@@ -4308,7 +4311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the O&amp;M time configuration.</p>
+     * <p>Queries the O&amp;M window configuration.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4340,7 +4343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the O&amp;M time configuration.</p>
+     * <p>Queries the O&amp;M window configuration.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @return DescribeActiveOperationMaintainConfResponse
@@ -4500,7 +4503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of available regions that support cross-region operations, typically used for multi-region deployment or data replication scenarios.</p>
+     * <p>Queries the list of zones that support cross-region operations, typically used for multi-region deployment or data replication scenarios.</p>
      * 
      * @param request DescribeAvailableCrossRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4536,7 +4539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of available regions that support cross-region operations, typically used for multi-region deployment or data replication scenarios.</p>
+     * <p>Queries the list of zones that support cross-region operations, typically used for multi-region deployment or data replication scenarios.</p>
      * 
      * @param request DescribeAvailableCrossRegionsRequest
      * @return DescribeAvailableCrossRegionsResponse
@@ -4596,7 +4599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a backup set by calling the DescribeBackupSet operation.</p>
+     * <p>Queries the details of a backup set.</p>
      * 
      * @param request DescribeBackupSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4640,7 +4643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a backup set by calling the DescribeBackupSet operation.</p>
+     * <p>Queries the details of a backup set.</p>
      * 
      * @param request DescribeBackupSetRequest
      * @return DescribeBackupSetResponse
@@ -4652,7 +4655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of backup sets by calling the DescribeBackupSetList operation.</p>
+     * <p>Queries the list of backup sets.</p>
      * 
      * @param request DescribeBackupSetListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4680,7 +4683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of backup sets by calling the DescribeBackupSetList operation.</p>
+     * <p>Queries the list of backup sets.</p>
      * 
      * @param request DescribeBackupSetListRequest
      * @return DescribeBackupSetListResponse
@@ -4695,7 +4698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
      * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
-     * <li>If the value of DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4758,7 +4761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
      * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
-     * <li>If the value of DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4840,7 +4843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries CDC information.</p>
+     * <p>Queries the CDC information.</p>
      * 
      * @param request DescribeCdcInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4876,7 +4879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries CDC information.</p>
+     * <p>Queries the CDC information.</p>
      * 
      * @param request DescribeCdcInfoRequest
      * @return DescribeCdcInfoResponse
@@ -4890,12 +4893,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of CDC versions.</p>
+     * <p>Queries the list of CDC versions.</p>
      * 
      * @param request DescribeCdcVersionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4937,12 +4940,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of CDC versions.</p>
+     * <p>Queries the list of CDC versions.</p>
      * 
      * @param request DescribeCdcVersionListRequest
      * @return DescribeCdcVersionListResponse
@@ -4954,7 +4957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invokes the DescribeCharacterSet operation to query the character set types supported by databases in a target instance.</p>
+     * <p>Invokes the DescribeCharacterSet operation to query the character set types supported by the database on the target instance.</p>
      * 
      * @param request DescribeCharacterSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4990,7 +4993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invokes the DescribeCharacterSet operation to query the character set types supported by databases in a target instance.</p>
+     * <p>Invokes the DescribeCharacterSet operation to query the character set types supported by the database on the target instance.</p>
      * 
      * @param request DescribeCharacterSetRequest
      * @return DescribeCharacterSetResponse
@@ -5042,7 +5045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of column store specifications for an instance.</p>
+     * <p>Queries the column store specifications of an instance.</p>
      * 
      * @param request DescribeColumnarClassListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5082,7 +5085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of column store specifications for an instance.</p>
+     * <p>Queries the column store specifications of an instance.</p>
      * 
      * @param request DescribeColumnarClassListRequest
      * @return DescribeColumnarClassListResponse
@@ -5144,8 +5147,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5187,8 +5190,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5204,7 +5207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the property information of a specified component, including property names and types.</p>
+     * <p>Retrieves the property information of a specified component, including the property name and type.</p>
      * 
      * @param request DescribeComponentPropetiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5248,7 +5251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the property information of a specified component, including property names and types.</p>
+     * <p>Retrieves the property information of a specified component, including the property name and type.</p>
      * 
      * @param request DescribeComponentPropetiesRequest
      * @return DescribeComponentPropetiesResponse
@@ -5262,7 +5265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>PolarDB-X 2.0 SQL audit and analysis feature is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -5305,7 +5308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>PolarDB-X 2.0 SQL audit and analysis feature is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -5324,12 +5327,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about context service instances.</p>
+     * <p>Queries the details of a context service instance.</p>
      * 
      * @param request DescribeContext0InfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5367,12 +5370,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about context service instances.</p>
+     * <p>Queries the details of a context service instance.</p>
      * 
      * @param request DescribeContext0InfoRequest
      * @return DescribeContext0InfoResponse
@@ -5386,12 +5389,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data processing, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist for the context service.</p>
+     * <p>Queries the context service whitelist.</p>
      * 
      * @param request DescribeContext0SecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5429,12 +5432,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data processing, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist for the context service.</p>
+     * <p>Queries the context service whitelist.</p>
      * 
      * @param request DescribeContext0SecurityIpsRequest
      * @return DescribeContext0SecurityIpsResponse
@@ -5515,7 +5518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information of a ContextDB-X instance.</p>
+     * <p>Queries the information of ContextDB-X instances.</p>
      * 
      * @param request DescribeContextDBInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5558,7 +5561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information of a ContextDB-X instance.</p>
+     * <p>Queries the information of ContextDB-X instances.</p>
      * 
      * @param request DescribeContextDBInfoRequest
      * @return DescribeContextDBInfoResponse
@@ -5572,12 +5575,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist of a ContextDB-X instance.</p>
+     * <p>Queries the ContextDB-X whitelist.</p>
      * 
      * @param request DescribeContextDBSecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5615,12 +5618,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist of a ContextDB-X instance.</p>
+     * <p>Queries the ContextDB-X whitelist.</p>
      * 
      * @param request DescribeContextDBSecurityIpsRequest
      * @return DescribeContextDBSecurityIpsResponse
@@ -5632,10 +5635,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of custom endpoints configured by the user, which facilitates the management and viewing of private connection or VPC endpoint service settings.</p>
+     * <p>Retrieves the list of custom endpoints configured by users to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of user-defined custom domain names.</p>
+     * <p>Queries the list of custom endpoints.</p>
      * 
      * @param request DescribeCustomEndpointListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5679,10 +5682,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of custom endpoints configured by the user, which facilitates the management and viewing of private connection or VPC endpoint service settings.</p>
+     * <p>Retrieves the list of custom endpoints configured by users to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of user-defined custom domain names.</p>
+     * <p>Queries the list of custom endpoints.</p>
      * 
      * @param request DescribeCustomEndpointListRequest
      * @return DescribeCustomEndpointListResponse
@@ -5694,7 +5697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
+     * <p>This operation retrieves the list of custom endpoints configured by users to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the attributes of an instance.</p>
@@ -5737,7 +5740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
+     * <p>This operation retrieves the list of custom endpoints configured by users to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the attributes of an instance.</p>
@@ -5752,7 +5755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeDBInstanceConfig operation to retrieve instance configuration parameters.</p>
+     * <p>Queries the configuration parameters of an instance.</p>
      * 
      * @param request DescribeDBInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5792,7 +5795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeDBInstanceConfig operation to retrieve instance configuration parameters.</p>
+     * <p>Queries the configuration parameters of an instance.</p>
      * 
      * @param request DescribeDBInstanceConfigRequest
      * @return DescribeDBInstanceConfigResponse
@@ -5804,7 +5807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of custom endpoints configured by a user, which helps manage and view private connection or VPC endpoint service settings.</p>
+     * <p>Retrieves a list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint services.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries custom endpoints.</p>
@@ -5851,7 +5854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of custom endpoints configured by a user, which helps manage and view private connection or VPC endpoint service settings.</p>
+     * <p>Retrieves a list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint services.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries custom endpoints.</p>
@@ -5866,7 +5869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the high availability information of an instance.</p>
+     * <p>Queries the high availability (HA) information of an instance.</p>
      * 
      * @param request DescribeDBInstanceHARequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5902,7 +5905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the high availability information of an instance.</p>
+     * <p>Queries the high availability (HA) information of an instance.</p>
      * 
      * @param request DescribeDBInstanceHARequest
      * @return DescribeDBInstanceHAResponse
@@ -5962,7 +5965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of Transparent Data Encryption (TDE) for an instance.</p>
+     * <p>Retrieves the TDE details of an instance.</p>
      * 
      * @param request DescribeDBInstanceTDERequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5998,7 +6001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of Transparent Data Encryption (TDE) for an instance.</p>
+     * <p>Retrieves the TDE details of an instance.</p>
      * 
      * @param request DescribeDBInstanceTDERequest
      * @return DescribeDBInstanceTDEResponse
@@ -6070,7 +6073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the basic information of an instance by using the endpoint of the instance.</p>
+     * <p>Queries the basic information of an instance based on its endpoint.</p>
      * 
      * @param request DescribeDBInstanceViaEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6106,7 +6109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the basic information of an instance by using the endpoint of the instance.</p>
+     * <p>Queries the basic information of an instance based on its endpoint.</p>
      * 
      * @param request DescribeDBInstanceViaEndpointRequest
      * @return DescribeDBInstanceViaEndpointResponse
@@ -6118,7 +6121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of database instances.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6186,7 +6189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of database instances.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -6200,8 +6203,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Note: </p>
      * <ul>
-     * <li>The <strong>endpoint</strong> differs from other API operations. For Chinese mainland regions and Singapore, use <strong>polardbx.aliyuncs.com</strong>. For other regions, use <strong>polardbx.{region id}.aliyunc.com</strong>.</li>
-     * <li>When debugging this API operation, if you receive a service unavailable error, verify that the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> and change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
+     * <li>The <strong>endpoint</strong> for this operation is different from other operations. Use <strong>polardbx.aliyuncs.com</strong> for the Chinese mainland and Singapore regions, and use <strong>polardbx.{region id}.aliyunc.com</strong> for other regions.</li>
+     * <li>If a &quot;service unavailable&quot; error occurs when debugging this API operation, check whether the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> to change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6267,8 +6270,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Note: </p>
      * <ul>
-     * <li>The <strong>endpoint</strong> differs from other API operations. For Chinese mainland regions and Singapore, use <strong>polardbx.aliyuncs.com</strong>. For other regions, use <strong>polardbx.{region id}.aliyunc.com</strong>.</li>
-     * <li>When debugging this API operation, if you receive a service unavailable error, verify that the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> and change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
+     * <li>The <strong>endpoint</strong> for this operation is different from other operations. Use <strong>polardbx.aliyuncs.com</strong> for the Chinese mainland and Singapore regions, and use <strong>polardbx.{region id}.aliyunc.com</strong> for other regions.</li>
+     * <li>If a &quot;service unavailable&quot; error occurs when debugging this API operation, check whether the <strong>endpoint</strong> is correct. You can switch the <strong>service address</strong> to <strong>Dubai</strong> or <strong>India</strong> to change the <strong>endpoint</strong> to <strong>polardbx.aliyuncs.com</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6500,7 +6503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of PolarDB-X assessment import tasks. (single)</p>
+     * <p>Queries the list of PolarDB-X assessment import tasks.</p>
      * 
      * @param request DescribeEvaluateAndImportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6536,7 +6539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of PolarDB-X assessment import tasks. (single)</p>
+     * <p>Queries the list of PolarDB-X assessment import tasks.</p>
      * 
      * @param request DescribeEvaluateAndImportTaskRequest
      * @return DescribeEvaluateAndImportTaskResponse
@@ -6548,10 +6551,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The CreateDataImportTask operation creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * <p>The CreateDataImportTask operation creates a data import task. It supports importing SQL or CSV files stored in OSS, on ECS instances, or directly passed in the request into a target database instance. By specifying the instance ID, database name, engine type, data source (such as the OSS path), and import type, the system asynchronously or synchronously writes data. This operation is suitable for scenarios such as data migration, initialization, and data backfilling. It returns a task ID for subsequent status query and management.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of assessment import tasks for PolarDB-X.</p>
+     * <p>Queries the list of PolarDB-X assessment import tasks.</p>
      * 
      * @param request DescribeEvaluateAndImportTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6591,10 +6594,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The CreateDataImportTask operation creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * <p>The CreateDataImportTask operation creates a data import task. It supports importing SQL or CSV files stored in OSS, on ECS instances, or directly passed in the request into a target database instance. By specifying the instance ID, database name, engine type, data source (such as the OSS path), and import type, the system asynchronously or synchronously writes data. This operation is suitable for scenarios such as data migration, initialization, and data backfilling. It returns a task ID for subsequent status query and management.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of assessment import tasks for PolarDB-X.</p>
+     * <p>Queries the list of PolarDB-X assessment import tasks.</p>
      * 
      * @param request DescribeEvaluateAndImportTasksRequest
      * @return DescribeEvaluateAndImportTasksResponse
@@ -6646,7 +6649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of global database network (GDN) instances.</p>
+     * <p>Queries a list of global database network (GDN) instances.</p>
      * 
      * @param request DescribeGdnInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6698,7 +6701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of global database network (GDN) instances.</p>
+     * <p>Queries a list of global database network (GDN) instances.</p>
      * 
      * @param request DescribeGdnInstancesRequest
      * @return DescribeGdnInstancesResponse
@@ -6712,12 +6715,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, the number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>View Memory Engine Information</p>
+     * <p>Retrieves the memory engine information.</p>
      * 
      * @param request DescribeMem0InfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6755,12 +6758,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, the number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>View Memory Engine Information</p>
+     * <p>Retrieves the memory engine information.</p>
      * 
      * @param request DescribeMem0InfoRequest
      * @return DescribeMem0InfoResponse
@@ -6889,7 +6892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the account information of PolarDB-X Search.</p>
+     * <p>Queries the account information of PolarDBX Search.</p>
      * 
      * @param request DescribeOpenSearchAccountInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6928,7 +6931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the account information of PolarDB-X Search.</p>
+     * <p>Queries the account information of PolarDBX Search.</p>
      * 
      * @param request DescribeOpenSearchAccountInfoRequest
      * @return DescribeOpenSearchAccountInfoResponse
@@ -6940,10 +6943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, replication interruption, or data inconsistency.</p>
+     * <p>During the data synchronization phase, initiates a diagnostic task for the replication task to check for anomalies such as latency, interruptions, and data inconsistency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the connection information of PolarDB-X Search, including internal, public, and Dashboard endpoints and protocols.</p>
+     * <p>Queries the connection information of PolarDB-X Search, including internal, public, and dashboard endpoints and protocols.</p>
      * 
      * @param request DescribeOpenSearchConnectionInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6979,10 +6982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, replication interruption, or data inconsistency.</p>
+     * <p>During the data synchronization phase, initiates a diagnostic task for the replication task to check for anomalies such as latency, interruptions, and data inconsistency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the connection information of PolarDB-X Search, including internal, public, and Dashboard endpoints and protocols.</p>
+     * <p>Queries the connection information of PolarDB-X Search, including internal, public, and dashboard endpoints and protocols.</p>
      * 
      * @param request DescribeOpenSearchConnectionInfoRequest
      * @return DescribeOpenSearchConnectionInfoResponse
@@ -7056,10 +7059,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of custom endpoints that you have configured. This operation helps you manage and view the settings of private connections or VPC endpoint services.</p>
+     * <p>Retrieves a list of custom endpoints configured by the user to facilitate the management and viewing of private connection or VPC endpoint service settings.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of PolarDBX Search instances.</p>
+     * <p>Queries PolarDB-X Search instances.</p>
      * 
      * @param request DescribeOpenSearchInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7111,10 +7114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of custom endpoints that you have configured. This operation helps you manage and view the settings of private connections or VPC endpoint services.</p>
+     * <p>Retrieves a list of custom endpoints configured by the user to facilitate the management and viewing of private connection or VPC endpoint service settings.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of PolarDBX Search instances.</p>
+     * <p>Queries PolarDB-X Search instances.</p>
      * 
      * @param request DescribeOpenSearchInstancesRequest
      * @return DescribeOpenSearchInstancesResponse
@@ -7126,7 +7129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the list of virtual private clouds (VPCs) available under your account for an instance, so that you can select an appropriate network environment when creating or managing database instances.</p>
+     * <p>This operation retrieves the list of virtual private clouds (VPCs) available under your account for instances, allowing you to select an appropriate network environment when creating or managing database instances.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of PolarDB-X Search nodes.</p>
@@ -7165,7 +7168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the list of virtual private clouds (VPCs) available under your account for an instance, so that you can select an appropriate network environment when creating or managing database instances.</p>
+     * <p>This operation retrieves the list of virtual private clouds (VPCs) available under your account for instances, allowing you to select an appropriate network environment when creating or managing database instances.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of PolarDB-X Search nodes.</p>
@@ -7236,8 +7239,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list contains all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7279,8 +7282,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list contains all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7298,12 +7301,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist of a PolarDB-X Search instance. You can filter the results by network type.</p>
+     * <p>Queries the PolarDB-X Search whitelists. You can filter the whitelists by network type.</p>
      * 
      * @param request DescribeOpenSearchWhitelistsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7341,12 +7344,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist of a PolarDB-X Search instance. You can filter the results by network type.</p>
+     * <p>Queries the PolarDB-X Search whitelists. You can filter the whitelists by network type.</p>
      * 
      * @param request DescribeOpenSearchWhitelistsRequest
      * @return DescribeOpenSearchWhitelistsResponse
@@ -7358,7 +7361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of database parameter templates created by users or supported by the system, including basic information, associated engine types, and modification times of each parameter template.</p>
+     * <p>Queries the list of database parameter groups created by users or supported by the system, including the basic information, associated engine types, and modification time of each parameter group.</p>
      * 
      * @param request DescribeParameterGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7386,7 +7389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of database parameter templates created by users or supported by the system, including basic information, associated engine types, and modification times of each parameter template.</p>
+     * <p>Queries the list of database parameter groups created by users or supported by the system, including the basic information, associated engine types, and modification time of each parameter group.</p>
      * 
      * @param request DescribeParameterGroupsRequest
      * @return DescribeParameterGroupsResponse
@@ -7398,7 +7401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the instance parameter templates.</p>
+     * <p>Queries the parameter templates of an instance.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7442,7 +7445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the instance parameter templates.</p>
+     * <p>Queries the parameter templates of an instance.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
@@ -7506,7 +7509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of all data nodes (Data Nodes) in a PolarDB-X instance, including node status, storage usage, and network addresses, to facilitate operations management and monitoring.</p>
+     * <p>Queries the details of all data nodes in a PolarDB-X instance, including node status, storage usage, and network addresses, to facilitate operations management and monitoring.</p>
      * 
      * @param request DescribePolarxDataNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7554,7 +7557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of all data nodes (Data Nodes) in a PolarDB-X instance, including node status, storage usage, and network addresses, to facilitate operations management and monitoring.</p>
+     * <p>Queries the details of all data nodes in a PolarDB-X instance, including node status, storage usage, and network addresses, to facilitate operations management and monitoring.</p>
      * 
      * @param request DescribePolarxDataNodesRequest
      * @return DescribePolarxDataNodesResponse
@@ -7566,10 +7569,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the access token for the Agent file service.</p>
+     * <p>Queries the access token for the agent file service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the access token for the Agent file service.</p>
+     * <p>Queries the access token for the agent file service.</p>
      * 
      * @param request DescribePxfsAccessTokensRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7613,10 +7616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the access token for the Agent file service.</p>
+     * <p>Queries the access token for the agent file service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the access token for the Agent file service.</p>
+     * <p>Queries the access token for the agent file service.</p>
      * 
      * @param request DescribePxfsAccessTokensRequest
      * @return DescribePxfsAccessTokensResponse
@@ -7628,10 +7631,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the information about an Agent file service instance.</p>
+     * <p>Queries the information of an Agent file service instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an Agent file service instance.</p>
+     * <p>Queries the information of an Agent file service instance.</p>
      * 
      * @param request DescribePxfsInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7667,10 +7670,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the information about an Agent file service instance.</p>
+     * <p>Queries the information of an Agent file service instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an Agent file service instance.</p>
+     * <p>Queries the information of an Agent file service instance.</p>
      * 
      * @param request DescribePxfsInfoRequest
      * @return DescribePxfsInfoResponse
@@ -7682,10 +7685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the whitelist for the Agent file service.</p>
+     * <p>Queries the whitelist for the agent file service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist for the Agent file service.</p>
+     * <p>Queries the whitelist for the agent file service.</p>
      * 
      * @param request DescribePxfsSecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7721,10 +7724,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the whitelist for the Agent file service.</p>
+     * <p>Queries the whitelist for the agent file service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist for the Agent file service.</p>
+     * <p>Queries the whitelist for the agent file service.</p>
      * 
      * @param request DescribePxfsSecurityIpsRequest
      * @return DescribePxfsSecurityIpsResponse
@@ -7976,10 +7979,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of virtual private clouds (VPCs) available under your account. You can use this operation to select an appropriate network environment when creating or managing database instances.</p>
+     * <p>Retrieves the list of virtual private clouds (VPCs) available in your account for instances, so that you can select an appropriate network environment when creating or managing database instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of VPCs for PolarDB-X.</p>
+     * <p>Queries the list of virtual private clouds (VPCs) available for PolarDB-X.</p>
      * 
      * @param request DescribeRdsVpcsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8015,10 +8018,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of virtual private clouds (VPCs) available under your account. You can use this operation to select an appropriate network environment when creating or managing database instances.</p>
+     * <p>Retrieves the list of virtual private clouds (VPCs) available in your account for instances, so that you can select an appropriate network environment when creating or managing database instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of VPCs for PolarDB-X.</p>
+     * <p>Queries the list of virtual private clouds (VPCs) available for PolarDB-X.</p>
      * 
      * @param request DescribeRdsVpcsRequest
      * @return DescribeRdsVpcsResponse
@@ -8030,10 +8033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of available virtual private clouds (VPCs) under your account for an instance, so that you can select an appropriate network environment when creating or managing database instances.</p>
+     * <p>Retrieves the list of virtual private clouds (VPCs) available in your account to help you select an appropriate network environment when you create or manage database instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of available vSwitches in a virtual private cloud (VPC) for an ApsaraDB RDS instance.</p>
+     * <p>Queries the list of vSwitches available for an ApsaraDB RDS instance in a virtual private cloud (VPC).</p>
      * 
      * @param request DescribeRdsVswitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8073,10 +8076,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of available virtual private clouds (VPCs) under your account for an instance, so that you can select an appropriate network environment when creating or managing database instances.</p>
+     * <p>Retrieves the list of virtual private clouds (VPCs) available in your account to help you select an appropriate network environment when you create or manage database instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of available vSwitches in a virtual private cloud (VPC) for an ApsaraDB RDS instance.</p>
+     * <p>Queries the list of vSwitches available for an ApsaraDB RDS instance in a virtual private cloud (VPC).</p>
      * 
      * @param request DescribeRdsVswitchesRequest
      * @return DescribeRdsVswitchesResponse
@@ -8088,7 +8091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeRegions operation to retrieve the list of regions.</p>
+     * <p>Queries the list of regions.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -8111,7 +8114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeRegions operation to retrieve the list of regions.</p>
+     * <p>Queries the list of regions.</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -8121,10 +8124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, interruption, or data inconsistency.</p>
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for anomalies such as latency, interruption, and data inconsistency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the replication lag inspection task for an instance.</p>
+     * <p>Queries the details of the replication latency inspection task for an instance.</p>
      * 
      * @param request DescribeRplInspectionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8176,10 +8179,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, interruption, or data inconsistency.</p>
+     * <p>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for anomalies such as latency, interruption, and data inconsistency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the replication lag inspection task for an instance.</p>
+     * <p>Queries the details of the replication latency inspection task for an instance.</p>
      * 
      * @param request DescribeRplInspectionTaskRequest
      * @return DescribeRplInspectionTaskResponse
@@ -8191,7 +8194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the progress of a scale-out migration task.</p>
+     * <p>Displays the progress of a scale-out migration task.</p>
      * 
      * @param request DescribeScaleOutMigrateTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8243,7 +8246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the progress of a scale-out migration task.</p>
+     * <p>Displays the progress of a scale-out migration task.</p>
      * 
      * @param request DescribeScaleOutMigrateTaskListRequest
      * @return DescribeScaleOutMigrateTaskListResponse
@@ -8255,7 +8258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist of an instance.</p>
+     * <p>Queries the IP address whitelists of an instance.</p>
      * 
      * @param request DescribeSecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8291,7 +8294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist of an instance.</p>
+     * <p>Queries the IP address whitelists of an instance.</p>
      * 
      * @param request DescribeSecurityIpsRequest
      * @return DescribeSecurityIpsResponse
@@ -8357,7 +8360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage usage details of an instance, including total capacity, used space, and remaining space.</p>
+     * <p>Queries the storage space usage details of an instance, including the total capacity, used space, and remaining space.</p>
      * 
      * @param request DescribeShowStorageInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8397,7 +8400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage usage details of an instance, including total capacity, used space, and remaining space.</p>
+     * <p>Queries the storage space usage details of an instance, including the total capacity, used space, and remaining space.</p>
      * 
      * @param request DescribeShowStorageInfoRequest
      * @return DescribeShowStorageInfoResponse
@@ -8487,12 +8490,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries SQL audit information.</p>
+     * <p>Retrieves SQL audit information.</p>
      * 
      * @param request DescribeSqlAuditInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8538,12 +8541,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries SQL audit information.</p>
+     * <p>Retrieves SQL audit information.</p>
      * 
      * @param request DescribeSqlAuditInfoRequest
      * @return DescribeSqlAuditInfoResponse
@@ -8603,7 +8606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a storage pool, including capacity, usage, and status.</p>
+     * <p>Queries the details of storage pools, including capacity, usage, and status.</p>
      * 
      * @param request DescribeStoragePoolInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8643,7 +8646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a storage pool, including capacity, usage, and status.</p>
+     * <p>Queries the details of storage pools, including capacity, usage, and status.</p>
      * 
      * @param request DescribeStoragePoolInfoRequest
      * @return DescribeStoragePoolInfoResponse
@@ -8655,10 +8658,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The CreateDataImportTask operation creates a data import task. This operation supports importing SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * <p>The CreateDataImportTask operation creates a data import task. It supports importing SQL or CSV files stored in OSS, on ECS instances, or directly passed in the request into a target database instance. By specifying the instance ID, database name, engine type, data source (such as the OSS path), and import type, the system asynchronously or synchronously performs data write operations. This operation is applicable to scenarios such as data migration, initialization, and data backfilling. It returns a task ID for subsequent status query and management.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a database schema import task.</p>
+     * <p>Queries the details of a database structure import task.</p>
      * 
      * @param request DescribeStructureImportTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8694,10 +8697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The CreateDataImportTask operation creates a data import task. This operation supports importing SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</p>
+     * <p>The CreateDataImportTask operation creates a data import task. It supports importing SQL or CSV files stored in OSS, on ECS instances, or directly passed in the request into a target database instance. By specifying the instance ID, database name, engine type, data source (such as the OSS path), and import type, the system asynchronously or synchronously performs data write operations. This operation is applicable to scenarios such as data migration, initialization, and data backfilling. It returns a task ID for subsequent status query and management.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a database schema import task.</p>
+     * <p>Queries the details of a database structure import task.</p>
      * 
      * @param request DescribeStructureImportTaskInfoRequest
      * @return DescribeStructureImportTaskInfoResponse
@@ -8711,8 +8714,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before it expires.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8754,8 +8757,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before it expires.</li>
+     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8901,8 +8904,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all log records whose record end time is after the query start time and whose record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
+     * <li>The returned log list includes all log records whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8948,8 +8951,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all log records whose record end time is after the query start time and whose record start time is before the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
+     * <li>The returned log list includes all log records whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9017,7 +9020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of tasks for an instance.</p>
+     * <p>Retrieves the task list of an instance.</p>
      * 
      * @param request DescribeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9085,7 +9088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of tasks for an instance.</p>
+     * <p>Retrieves the task list of an instance.</p>
      * 
      * @param request DescribeTasksRequest
      * @return DescribeTasksResponse
@@ -9097,7 +9100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the current status of a task that upgrades or converts a standard instance to an Enterprise instance.</p>
+     * <p>Queries the current status of an upgrade or conversion task from a standard instance to an enterprise instance.</p>
      * 
      * @param request DescribeTransformStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9137,7 +9140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the current status of a task that upgrades or converts a standard instance to an Enterprise instance.</p>
+     * <p>Queries the current status of an upgrade or conversion task from a standard instance to an enterprise instance.</p>
      * 
      * @param request DescribeTransformStatusRequest
      * @return DescribeTransformStatusResponse
@@ -9149,7 +9152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeUserEncryptionKeyList operation to retrieve the list of Transparent Data Encryption (TDE) keys for a user.</p>
+     * <p>Retrieves the list of user TDE keys.</p>
      * 
      * @param request DescribeUserEncryptionKeyListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9185,7 +9188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeUserEncryptionKeyList operation to retrieve the list of Transparent Data Encryption (TDE) keys for a user.</p>
+     * <p>Retrieves the list of user TDE keys.</p>
      * 
      * @param request DescribeUserEncryptionKeyListRequest
      * @return DescribeUserEncryptionKeyListResponse
@@ -9255,7 +9258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables three-role mode.</p>
+     * <p>Disables the three-role mode.</p>
      * 
      * @param request DisableRightsSeparationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9299,7 +9302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables three-role mode.</p>
+     * <p>Disables the three-role mode.</p>
      * 
      * @param request DisableRightsSeparationRequest
      * @return DisableRightsSeparationResponse
@@ -9380,7 +9383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables public network access for PolarDBX Search.</p>
+     * <p>Enables public network access for PolarDB-X Search.</p>
      * 
      * @param request EnableOpenSearchPublicEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9423,7 +9426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables public network access for PolarDBX Search.</p>
+     * <p>Enables public network access for PolarDB-X Search.</p>
      * 
      * @param request EnableOpenSearchPublicEndpointRequest
      * @return EnableOpenSearchPublicEndpointResponse
@@ -9435,7 +9438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables three-role mode.</p>
+     * <p>Enables the three-role mode.</p>
      * 
      * @param request EnableRightsSeparationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9495,7 +9498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables three-role mode.</p>
+     * <p>Enables the three-role mode.</p>
      * 
      * @param request EnableRightsSeparationRequest
      * @return EnableRightsSeparationResponse
@@ -9581,7 +9584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Executes a metadata query.</p>
@@ -9632,7 +9635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Executes a metadata query.</p>
@@ -9647,10 +9650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of PXFS tenants under a specified PolarDB-X instance and returns the tenant quota, throttling, and usage information.</p>
+     * <p>Queries the PXFS tenants of a specified PolarDB-X instance and returns the quota, throttling, and usage information of the tenants.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of PXFS tenants.</p>
+     * <p>Queries the PXFS tenants.</p>
      * 
      * @param request ListPxfsTenantsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9686,10 +9689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of PXFS tenants under a specified PolarDB-X instance and returns the tenant quota, throttling, and usage information.</p>
+     * <p>Queries the PXFS tenants of a specified PolarDB-X instance and returns the quota, throttling, and usage information of the tenants.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of PXFS tenants.</p>
+     * <p>Queries the PXFS tenants.</p>
      * 
      * @param request ListPxfsTenantsRequest
      * @return ListPxfsTenantsResponse
@@ -9701,7 +9704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of labels.</p>
+     * <p>Retrieves a list of tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9749,7 +9752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of labels.</p>
+     * <p>Retrieves a list of tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -10986,7 +10989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the whitelist of a memory engine.</p>
+     * <p>Modifies the memory engine whitelist.</p>
      * 
      * @param request ModifyMem0SecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11037,7 +11040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the whitelist of a memory engine.</p>
+     * <p>Modifies the memory engine whitelist.</p>
      * 
      * @param request ModifyMem0SecurityIpsRequest
      * @return ModifyMem0SecurityIpsResponse
@@ -11110,7 +11113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the specifications of a PolarDBX Search instance.</p>
+     * <p>Modifies the specifications of a PolarDB-X Search instance.</p>
      * 
      * @param request ModifyOpenSearchClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11157,7 +11160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the specifications of a PolarDBX Search instance.</p>
+     * <p>Modifies the specifications of a PolarDB-X Search instance.</p>
      * 
      * @param request ModifyOpenSearchClassRequest
      * @return ModifyOpenSearchClassResponse
@@ -11299,10 +11302,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the whitelist of the Agent file service.</p>
+     * <p>Modifies the whitelist for the Agent file service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the whitelist of the Agent file service.</p>
+     * <p>Modifies the whitelist for the Agent file service.</p>
      * 
      * @param request ModifyPxfsSecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11350,10 +11353,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the whitelist of the Agent file service.</p>
+     * <p>Modifies the whitelist for the Agent file service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the whitelist of the Agent file service.</p>
+     * <p>Modifies the whitelist for the Agent file service.</p>
      * 
      * @param request ModifyPxfsSecurityIpsRequest
      * @return ModifyPxfsSecurityIpsResponse
@@ -11365,10 +11368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Adjusts the capacity quota, file count quota, request rate limit, and write bandwidth limit for a specified PXFS tenant. Parameters that are not passed remain unchanged.</p>
+     * <p>Adjusts the storage capacity quota, file count quota, maximum request rate, and maximum write bandwidth of a specified PXFS tenant. Parameters that are not passed remain unchanged.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adjusts the quotas for a PXFS tenant.</p>
+     * <p>Adjusts the quotas of a PXFS tenant.</p>
      * 
      * @param request ModifyPxfsTenantQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11424,10 +11427,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Adjusts the capacity quota, file count quota, request rate limit, and write bandwidth limit for a specified PXFS tenant. Parameters that are not passed remain unchanged.</p>
+     * <p>Adjusts the storage capacity quota, file count quota, maximum request rate, and maximum write bandwidth of a specified PXFS tenant. Parameters that are not passed remain unchanged.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adjusts the quotas for a PXFS tenant.</p>
+     * <p>Adjusts the quotas of a PXFS tenant.</p>
      * 
      * @param request ModifyPxfsTenantQuotaRequest
      * @return ModifyPxfsTenantQuotaResponse
@@ -11442,7 +11445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the PXFuse node whitelist.</p>
+     * <p>Modifies the whitelist of a PXFuse node.</p>
      * 
      * @param request ModifyPxfuseSecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11493,7 +11496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the PXFuse node whitelist.</p>
+     * <p>Modifies the whitelist of a PXFuse node.</p>
      * 
      * @param request ModifyPxfuseSecurityIpsRequest
      * @return ModifyPxfuseSecurityIpsResponse
@@ -11568,7 +11571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the Supabase Dashboard password.</p>
+     * <p>Modifies the password for the Supabase dashboard.</p>
      * 
      * @param request ModifySupabaseDashboardPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11611,7 +11614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the Supabase Dashboard password.</p>
+     * <p>Modifies the password for the Supabase dashboard.</p>
      * 
      * @param request ModifySupabaseDashboardPasswordRequest
      * @return ModifySupabaseDashboardPasswordResponse
@@ -11626,7 +11629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP whitelist for Supabase.</p>
+     * <p>Modifies the Supabase IP whitelist.</p>
      * 
      * @param request ModifySupabaseSecurityIPListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11677,7 +11680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP whitelist for Supabase.</p>
+     * <p>Modifies the Supabase IP whitelist.</p>
      * 
      * @param request ModifySupabaseSecurityIPListRequest
      * @return ModifySupabaseSecurityIPListResponse
@@ -11973,10 +11976,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * <p>This API operation confirms that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
-     * <p>Shuts down the public network connection of a specified physical ReplicaSet for the context service.</p>
+     * <p>Initiates a shutdown of the public network connection for a specified physical ReplicaSet of the context service.</p>
      * 
      * @param request ReleaseContext0PublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12020,10 +12023,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * <p>This API operation confirms that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
-     * <p>Shuts down the public network connection of a specified physical ReplicaSet for the context service.</p>
+     * <p>Initiates a shutdown of the public network connection for a specified physical ReplicaSet of the context service.</p>
      * 
      * @param request ReleaseContext0PublicConnectionRequest
      * @return ReleaseContext0PublicConnectionResponse
@@ -12149,7 +12152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to verify that no active connections exist before a rollback task to ensure operational safety.</p>
+     * <p>This operation verifies that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
      * <p>Releases the public domain name for a Mem0 instance.</p>
@@ -12192,7 +12195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to verify that no active connections exist before a rollback task to ensure operational safety.</p>
+     * <p>This operation verifies that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
      * <p>Releases the public domain name for a Mem0 instance.</p>
@@ -12456,7 +12459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Resets the password of a PolarDB-X Search instance without requiring the old password (RAM permission check required).</p>
+     * <p>Resets the password of a PolarDB-X Search instance without requiring the old password. RAM permission verification is required.</p>
      * 
      * @param request ResetOpenSearchPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12503,7 +12506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Resets the password of a PolarDB-X Search instance without requiring the old password (RAM permission check required).</p>
+     * <p>Resets the password of a PolarDB-X Search instance without requiring the old password. RAM permission verification is required.</p>
      * 
      * @param request ResetOpenSearchPasswordRequest
      * @return ResetOpenSearchPasswordResponse
@@ -13016,7 +13019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Scales in nodes of a PolarDB-X Search cluster.</p>
+     * <p>Scales down nodes in a PolarDB-X Search cluster.</p>
      * 
      * @param request ScaleInOpenSearchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13059,7 +13062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Scales in nodes of a PolarDB-X Search cluster.</p>
+     * <p>Scales down nodes in a PolarDB-X Search cluster.</p>
      * 
      * @param request ScaleInOpenSearchRequest
      * @return ScaleInOpenSearchResponse
@@ -13589,7 +13592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes tags from a resource.</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13637,7 +13640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes tags from a resource.</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -13776,7 +13779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates instance labels.</p>
+     * <p>Modifies instance labels.</p>
      * 
      * @param request UpdateCustinsParamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13823,7 +13826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates instance labels.</p>
+     * <p>Modifies instance labels.</p>
      * 
      * @param request UpdateCustinsParamRequest
      * @return UpdateCustinsParamResponse
@@ -14027,7 +14030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the CDC node version of a PolarDB-X instance.</p>
+     * <p>Upgrades the version of a PolarDB-X CDC node.</p>
      * 
      * @param request UpgradeCDCVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14079,7 +14082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the CDC node version of a PolarDB-X instance.</p>
+     * <p>Upgrades the version of a PolarDB-X CDC node.</p>
      * 
      * @param request UpgradeCDCVersionRequest
      * @return UpgradeCDCVersionResponse

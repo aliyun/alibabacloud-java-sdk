@@ -43,7 +43,7 @@ public class ModifySupabaseSecurityIPListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IP whitelist. Separate multiple IP addresses with commas.</p>
+     * <p>The list of IP addresses in the whitelist. Separate multiple IP addresses with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

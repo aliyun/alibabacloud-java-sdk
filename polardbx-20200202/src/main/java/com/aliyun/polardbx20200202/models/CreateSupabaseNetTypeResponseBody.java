@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSupabaseNetTypeResponseBody extends TeaModel {
     /**
-     * <p>The access denial details.</p>
+     * <p>The access denied details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public CreateSupabaseNetTypeResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -59,22 +59,22 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:CreateSupabaseNetType</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The security principal name.</p>
+         * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the security principal.</p>
+         * <p>The owner ID of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The security principal type.</p>
+         * <p>The type of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -183,7 +183,7 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
 
     public static class CreateSupabaseNetTypeResponseBodyData extends TeaModel {
         /**
-         * <p>The public network connection endpoint.</p>
+         * <p>The public endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>test2.polarx.huhehaote.rds.aliyuncs.com</p>
@@ -192,7 +192,7 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-*********</p>
@@ -204,7 +204,7 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>2209883</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;

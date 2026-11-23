@@ -44,7 +44,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         /**
          * <p>Indicates whether TDE is enabled. Valid values:</p>
          * <ul>
-         * <li>0: Not enabled.</li>
+         * <li>0: Disabled.</li>
          * <li>1: Enabled.</li>
          * </ul>
          * 

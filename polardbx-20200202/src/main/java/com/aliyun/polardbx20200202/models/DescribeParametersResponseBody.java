@@ -160,7 +160,7 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     public static class DescribeParametersResponseBodyData extends TeaModel {
         /**
-         * <p>The list of original parameters.</p>
+         * <p>The original parameter list.</p>
          */
         @NameInMap("ConfigParameters")
         public java.util.List<DescribeParametersResponseBodyDataConfigParameters> configParameters;
@@ -193,7 +193,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The list of running parameter details.</p>
+         * <p>The list of running parameters.</p>
          */
         @NameInMap("RunningParameters")
         public java.util.List<DescribeParametersResponseBodyDataRunningParameters> runningParameters;

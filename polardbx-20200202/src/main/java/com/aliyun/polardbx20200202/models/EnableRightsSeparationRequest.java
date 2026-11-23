@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableRightsSeparationRequest extends TeaModel {
     /**
-     * <p>The description of the audit account.</p>
+     * <p>The description of the auditor account.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -14,7 +14,7 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String auditAccountDescription;
 
     /**
-     * <p>The name of the audit account.</p>
+     * <p>The name of the auditor account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,11 +24,11 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String auditAccountName;
 
     /**
-     * <p>The password of the audit account.</p>
+     * <p>The password of the auditor account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>DemoPass1@</p>
      */
     @NameInMap("AuditAccountPassword")
     public String auditAccountPassword;
@@ -63,7 +63,7 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String securityAccountDescription;
 
     /**
-     * <p>The name of the security administrator account.</p>
+     * <p>The security administrator account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,11 +73,11 @@ public class EnableRightsSeparationRequest extends TeaModel {
     public String securityAccountName;
 
     /**
-     * <p>The password of the security administrator account.</p>
+     * <p>The password of the security administrator.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>DemoPass1@</p>
      */
     @NameInMap("SecurityAccountPassword")
     public String securityAccountPassword;

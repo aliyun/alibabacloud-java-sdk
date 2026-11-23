@@ -14,11 +14,17 @@ public class DeleteSubCNInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The name of the instance cluster. You can call the DescribeDBInstanceTopology operation to query the name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example_cluster</p>
+     */
     @NameInMap("InstanceClusterName")
     public String instanceClusterName;
 
     /**
-     * <p>The region where the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

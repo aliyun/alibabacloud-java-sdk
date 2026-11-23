@@ -11,13 +11,13 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
     public DescribePxfsTenantResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DescribePxfsTenantResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -68,7 +68,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -92,7 +92,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The no-permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -183,7 +183,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
 
     public static class DescribePxfsTenantResponseBodyData extends TeaModel {
         /**
-         * <p>The capacity quota.</p>
+         * <p>The storage quota.</p>
          * 
          * <strong>example:</strong>
          * <p>107374182400</p>
@@ -228,7 +228,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>tenant-001</p>
@@ -237,7 +237,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The tenant name.</p>
+         * <p>The name of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-files</p>
@@ -246,7 +246,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
         public String tenantName;
 
         /**
-         * <p>The used capacity.</p>
+         * <p>The used storage capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -255,7 +255,7 @@ public class DescribePxfsTenantResponseBody extends TeaModel {
         public Long usedBytes;
 
         /**
-         * <p>The used file count.</p>
+         * <p>The number of used files.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>

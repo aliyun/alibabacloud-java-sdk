@@ -45,7 +45,7 @@ public class UpdateCustinsParamResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>123456</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;

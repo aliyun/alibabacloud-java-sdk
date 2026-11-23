@@ -45,16 +45,16 @@ public class AllocateMem0PublicConnectionResponseBody extends TeaModel {
          * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:AllocateMem0PublicConnection</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The identity used for authentication in the request.</p>
+         * <p>The identity identifier used for authentication in the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
     /**
-     * <p>The list of result items.</p>
+     * <p>The list of items.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeTasksResponseBodyItems> items;
@@ -20,7 +20,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -102,7 +102,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String beginTime;
 
         /**
-         * <p>The name of the database associated with the task. This field is usually empty.</p>
+         * <p>The name of the database associated with the task. This parameter is usually empty.</p>
          * 
          * <strong>example:</strong>
          * <p>DBName</p>
@@ -129,7 +129,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The detailed progress of the task. This field is usually empty.</p>
+         * <p>The detailed task progress. This parameter is usually empty.</p>
          * 
          * <strong>example:</strong>
          * <p>ProgressInfo</p>
@@ -138,7 +138,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String progressInfo;
 
         /**
-         * <p>The scale-out token. If the task is a scale-out task, this field returns a scale-out ID, which is a unique backend key.</p>
+         * <p>The scale-out ID, which is a unique backend key. This parameter is returned only for scale-out tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
@@ -160,7 +160,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task action. This is a unique key for the backend task type.</p>
+         * <p>The task action, which is a unique key for the backend task type.</p>
          * 
          * <strong>example:</strong>
          * <p>multi_scale_out</p>
@@ -169,7 +169,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskAction;
 
         /**
-         * <p>The error code of the failed task.</p>
+         * <p>The error code returned when the task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>TaskErrorCode</p>
@@ -178,7 +178,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskErrorCode;
 
         /**
-         * <p>The error message of the failed task.</p>
+         * <p>The error message returned when the task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>TaskErrorMessage</p>

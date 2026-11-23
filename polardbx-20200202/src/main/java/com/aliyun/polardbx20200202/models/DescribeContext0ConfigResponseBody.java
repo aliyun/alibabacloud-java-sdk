@@ -59,7 +59,7 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribeContext0Config</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,13 +68,13 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
          * <p>The identity used for authentication in the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authentication principal.</p>
+         * <p>The OwnerId of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the authentication principal.</p>
+         * <p>The description is as above.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -92,7 +92,7 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -110,7 +110,7 @@ public class DescribeContext0ConfigResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The policy type.</p>
+         * <p>The type of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>

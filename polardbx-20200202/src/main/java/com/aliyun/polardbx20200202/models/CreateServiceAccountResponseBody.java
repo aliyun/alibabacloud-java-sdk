@@ -17,10 +17,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
     public CreateServiceAccountResponseBodyData data;
 
     /**
-     * <p>The additional information returned. If the request is successful, <strong>success</strong> is returned. If the request fails, the corresponding error code is returned.</p>
+     * <p>The additional information returned by the API. success is returned for a successful request, and an error code is returned for a failed request.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -93,13 +93,13 @@ public class CreateServiceAccountResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:CreateServiceAccount</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The authentication principal type.</p>
+         * <p>The type of the authenticated principal.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -192,7 +192,7 @@ public class CreateServiceAccountResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Indicates whether the account already exists.</p>
+         * <p>Indicates whether it already exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -210,10 +210,10 @@ public class CreateServiceAccountResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The type of the service account.</p>
+         * <p>The service account type.</p>
          * 
          * <strong>example:</strong>
-         * <p>服务账号类型</p>
+         * <p>Service account type</p>
          */
         @NameInMap("ServiceAccountType")
         public String serviceAccountType;

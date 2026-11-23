@@ -59,16 +59,16 @@ public class DescribeSupabaseApiKeyResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribeSupabaseApiKey</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The authentication principal name.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -101,7 +101,7 @@ public class DescribeSupabaseApiKeyResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The no permission type.</p>
+         * <p>The access denied type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>

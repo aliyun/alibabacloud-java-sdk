@@ -59,7 +59,7 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:AllocateContextDBPublicConnection</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,13 +68,13 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
          * <p>The identity used for authentication in the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The type of the authentication principal.</p>
+         * <p>See the preceding description.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the authentication principal.</p>
+         * <p>See the preceding description.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -92,7 +92,7 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The type of the missing permission.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -183,7 +183,7 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
 
     public static class AllocateContextDBPublicConnectionResponseBodyData extends TeaModel {
         /**
-         * <p>The endpoint.</p>
+         * <p>The connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>test2.polarx.huhehaote.rds.aliyuncs.com</p>
@@ -204,7 +204,7 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>pxsp-xxxxxxxxxx</p>
+         * <p>123456</p>
          */
         @NameInMap("DBInstanceId")
         public Integer DBInstanceId;
@@ -219,7 +219,7 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The network type of the endpoint.</p>
+         * <p>The network type of the connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +228,7 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
         public Integer DBInstanceNetType;
 
         /**
-         * <p>The type of the target node. Valid values: service and dashboard.</p>
+         * <p>The target node type. Valid values: service and dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>service</p>
@@ -237,7 +237,7 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The port of the endpoint.</p>
+         * <p>The port number.</p>
          * 
          * <strong>example:</strong>
          * <p>3300</p>
@@ -255,7 +255,7 @@ public class AllocateContextDBPublicConnectionResponseBody extends TeaModel {
         public Integer taskId;
 
         /**
-         * <p>The IP address of the Anti-DDoS Proxy instance protected by the policy.</p>
+         * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance protected by the policy.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://anchashi.aliyun-inc.coM">https://anchashi.aliyun-inc.coM</a></p>

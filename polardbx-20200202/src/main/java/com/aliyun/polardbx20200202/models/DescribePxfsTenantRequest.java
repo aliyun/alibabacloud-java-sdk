@@ -25,7 +25,7 @@ public class DescribePxfsTenantRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tenant ID.</p>
+     * <p>The ID of the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

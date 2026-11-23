@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocatePxfsPublicConnectionResponseBody extends TeaModel {
     /**
-     * <p>The access denial details.</p>
+     * <p>The details of the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public AllocatePxfsPublicConnectionResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -56,10 +56,10 @@ public class AllocatePxfsPublicConnectionResponseBody extends TeaModel {
 
     public static class AllocatePxfsPublicConnectionResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:AllocatePxfsPublicConnection</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,13 +68,13 @@ public class AllocatePxfsPublicConnectionResponseBody extends TeaModel {
          * <p>The identity used for authentication in the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>Same as above.</p>
+         * <p>The description is the same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -110,7 +110,7 @@ public class AllocatePxfsPublicConnectionResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The policy type.</p>
+         * <p>The type of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>

@@ -17,8 +17,8 @@ public class ModifyOpenSearchAccessProtocolRequest extends TeaModel {
     /**
      * <p>The access protocol. Valid values:</p>
      * <ul>
-     * <li><strong>http</strong>: HTTP protocol.</li>
-     * <li><strong>https</strong>: HTTPS protocol.</li>
+     * <li><strong>http</strong>: HTTP.</li>
+     * <li><strong>https</strong>: HTTPS.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

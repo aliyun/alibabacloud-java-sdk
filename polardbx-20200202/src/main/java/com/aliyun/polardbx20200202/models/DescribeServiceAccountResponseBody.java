@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceAccountResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details of the access denied error.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeServiceAccountResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -17,10 +17,10 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
     public DescribeServiceAccountResponseBodyData data;
 
     /**
-     * <p>The response message. &quot;success&quot; is returned if the request was successful. Otherwise, an error code is returned.</p>
+     * <p>The message returned. If the request is successful, \&quot;success\&quot; is returned. If the request fails, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -35,7 +35,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,13 +93,13 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribeServiceAccount</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The authentication principal type.</p>
+         * <p>The type of the authenticated principal.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -108,7 +108,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic information.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -117,7 +117,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The type of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -126,7 +126,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The policy type.</p>
+         * <p>The type of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
@@ -183,7 +183,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
 
     public static class DescribeServiceAccountResponseBodyDataServiceAccounts extends TeaModel {
         /**
-         * <p>The account name.</p>
+         * <p>The name of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>polardbx_meta_ro</p>
@@ -201,7 +201,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The service account type.</p>
+         * <p>The type of the service account.</p>
          * 
          * <strong>example:</strong>
          * <p>METADATA_READONLY</p>
@@ -210,7 +210,7 @@ public class DescribeServiceAccountResponseBody extends TeaModel {
         public String serviceAccountType;
 
         /**
-         * <p>The status of the backup set. Valid values:</p>
+         * <p>The status of the backup set:</p>
          * <ul>
          * <li><strong>0</strong>: Backing up.</li>
          * <li><strong>1</strong>: Backup succeeded.</li>

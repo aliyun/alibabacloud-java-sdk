@@ -68,7 +68,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -92,7 +92,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -237,7 +237,7 @@ public class CreatePxfsAccessTokenResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The plaintext of the token.</p>
+         * <p>The plaintext token.</p>
          * 
          * <strong>example:</strong>
          * <p>pxfs_tenant-001.token-001.******</p>

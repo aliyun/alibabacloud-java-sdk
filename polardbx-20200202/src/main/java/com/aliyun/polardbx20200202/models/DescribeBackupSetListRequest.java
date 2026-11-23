@@ -15,7 +15,7 @@ public class DescribeBackupSetListRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The region where the backup set resides. After you specify this parameter, backup sets in the specified region are returned. Only one region can be specified at a time.</p>
+     * <p>The region where the backup sets reside. If you specify this parameter, only backup sets in the specified region are returned. You can specify only one region at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -24,7 +24,7 @@ public class DescribeBackupSetListRequest extends TeaModel {
     public String destCrossRegion;
 
     /**
-     * <p>The end time timestamp, in milliseconds.</p>
+     * <p>The timestamp of the end time, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1635707845000</p>
@@ -61,7 +61,7 @@ public class DescribeBackupSetListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time timestamp, in milliseconds.</p>
+     * <p>The timestamp of the start time, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1635707845000</p>

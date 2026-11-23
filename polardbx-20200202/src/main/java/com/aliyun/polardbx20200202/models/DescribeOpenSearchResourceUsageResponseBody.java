@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeOpenSearchResourceUsageResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -59,7 +59,7 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribeOpenSearchResourceUsage</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -92,7 +92,7 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic information.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -192,12 +192,10 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
         public Long docCount;
 
         /**
-         * <p>The number of indexes. This is a filter condition for the number of indexes that the missing index table currently has. The input format is <code>operator + separator &quot;&quot; + index count</code>, for example, <code>&gt;=100</code>.</p>
+         * <p>The number of indexes.</p>
          * 
          * <strong>example:</strong>
-         * <blockquote>
-         * <p>=</p>
-         * </blockquote>
+         * <p>0</p>
          */
         @NameInMap("IndexCount")
         public Integer indexCount;
@@ -221,7 +219,7 @@ public class DescribeOpenSearchResourceUsageResponseBody extends TeaModel {
         public Long storageTotalInBytes;
 
         /**
-         * <p>The storage space usage.</p>
+         * <p>The storage usage percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>20.0</p>

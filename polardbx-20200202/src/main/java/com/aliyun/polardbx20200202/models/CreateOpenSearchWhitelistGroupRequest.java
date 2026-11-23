@@ -45,7 +45,7 @@ public class CreateOpenSearchWhitelistGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The description of the group.</p>
+     * <p>The description of the whitelist group.</p>
      * 
      * <strong>example:</strong>
      * <p>MAIN</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRdsVswitchesResponseBody extends TeaModel {
     /**
-     * <p>The data struct.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public DescribeRdsVswitchesResponseBodyData data;
@@ -60,7 +60,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The description of the database.</p>
+         * <p>The database description.</p>
          * 
          * <strong>example:</strong>
          * <p>describe</p>
@@ -72,7 +72,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
          * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>babac91eff704edf9bdccfaa6ba4efce</p>
+         * <p>123456</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -87,10 +87,10 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
+         * <p>Specifies whether the VPC is the default VPC. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The VPC is the default VPC.</li>
-         * <li><strong>false</strong>: The VPC is not the default VPC.</li>
+         * <li>true: The VPC is the default VPC.</li>
+         * <li>false: The VPC is not the default VPC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>vpc id。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6lis7xmm****t9wrxb5</p>
@@ -207,7 +207,7 @@ public class DescribeRdsVswitchesResponseBody extends TeaModel {
 
     public static class DescribeRdsVswitchesResponseBodyData extends TeaModel {
         /**
-         * <p>The vSwitch list.</p>
+         * <p>The list of vSwitches.</p>
          */
         @NameInMap("VswitchList")
         public java.util.List<DescribeRdsVswitchesResponseBodyDataVswitchList> vswitchList;

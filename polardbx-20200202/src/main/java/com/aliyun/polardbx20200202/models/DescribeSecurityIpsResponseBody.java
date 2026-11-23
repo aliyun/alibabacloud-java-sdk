@@ -11,7 +11,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     public DescribeSecurityIpsResponseBodyData data;
 
     /**
-     * <p>The additional information returned. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * <p>The additional message returned by the API operation. If the call is successful, success is returned. Otherwise, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>14036EBE-CF2E-44DB-ACE9-AC6157D3A6FC</p>
@@ -29,7 +29,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -85,7 +85,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The details of the whitelist in the group.</p>
+         * <p>The IP addresses in the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1,172.168.0.0</p>
@@ -118,7 +118,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     public static class DescribeSecurityIpsResponseBodyData extends TeaModel {
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-hzjasd****</p>

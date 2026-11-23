@@ -59,7 +59,7 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribeOpenSearchAccountInfo</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -83,7 +83,7 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The authentication principal type.</p>
+         * <p>The type of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -92,7 +92,7 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic information.</p>
+         * <p>The encoded diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -183,7 +183,7 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
 
     public static class DescribeOpenSearchAccountInfoResponseBodyDataAccounts extends TeaModel {
         /**
-         * <p>The account status. Valid values: </p>
+         * <p>The account status. Valid values:</p>
          * <ul>
          * <li><strong>Creating</strong>: The account is being created.</li>
          * <li><strong>Available</strong>: The account is available.</li>
@@ -199,8 +199,8 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
         /**
          * <p>The account type.</p>
          * <ul>
-         * <li>Before three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged account.</li>
-         * <li>After three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
+         * <li>Before the three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged account.</li>
+         * <li>After the three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The account name of the OpenSearch instance.</p>
+         * <p>The username of the OpenSearch instance account.</p>
          * 
          * <strong>example:</strong>
          * <p>elastic</p>
@@ -266,7 +266,7 @@ public class DescribeOpenSearchAccountInfoResponseBody extends TeaModel {
         public String passwordLastModified;
 
         /**
-         * <p>The account name of the OpenSearch instance.</p>
+         * <p>The username of the OpenSearch instance account.</p>
          * 
          * <strong>example:</strong>
          * <p>elastic</p>

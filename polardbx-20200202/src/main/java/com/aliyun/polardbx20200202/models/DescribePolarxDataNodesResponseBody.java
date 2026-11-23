@@ -96,7 +96,7 @@ public class DescribePolarxDataNodesResponseBody extends TeaModel {
          * <p>The description of the node instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>pxc-z****nfxsxy728 : PROD-OMS-Auto-ProductionDBCloneInstance</p>
+         * <p>pxc-z****nfxsxy728 : PROD-OMS-Auto-Production database clone instance</p>
          */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;

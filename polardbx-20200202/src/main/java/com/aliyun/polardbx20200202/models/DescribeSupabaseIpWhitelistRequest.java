@@ -15,7 +15,7 @@ public class DescribeSupabaseIpWhitelistRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The name of the whitelist group.</p>
+     * <p>The whitelist group name.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The access denial details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public CreatePolardbxSupabaseInstanceResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -59,7 +59,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:CreatePolardbxSupabaseInstance</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -92,7 +92,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The no permission type.</p>
+         * <p>The access denial type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -183,7 +183,7 @@ public class CreatePolardbxSupabaseInstanceResponseBody extends TeaModel {
 
     public static class CreatePolardbxSupabaseInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The endpoint.</p>
+         * <p>The connection endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>test2.polarx.huhehaote.rds.aliyuncs.com</p>

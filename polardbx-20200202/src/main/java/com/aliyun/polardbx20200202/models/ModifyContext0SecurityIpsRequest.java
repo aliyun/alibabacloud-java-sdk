@@ -27,8 +27,8 @@ public class ModifyContext0SecurityIpsRequest extends TeaModel {
      * <p>The modification mode of the whitelist. Valid values:</p>
      * <ul>
      * <li>0: Overwrites the whitelist group.</li>
-     * <li>1: Adds a whitelist group.</li>
-     * <li>2: Deletes a whitelist group.</li>
+     * <li>1: Appends IP addresses to the whitelist group.</li>
+     * <li>2: Deletes the whitelist group.</li>
      * </ul>
      * 
      * <strong>example:</strong>

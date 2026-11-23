@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribePxfuseSecurityIpsResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The instance details.</p>
+     * <p>The list of instance details.</p>
      */
     @NameInMap("Data")
     public DescribePxfuseSecurityIpsResponseBodyData data;
@@ -56,19 +56,19 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
 
     public static class DescribePxfuseSecurityIpsResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The description is the same as above.</p>
+         * <p>The description as mentioned above.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribePxfuseSecurityIps</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -92,7 +92,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the no-permission error.</p>
+         * <p>The no-permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -201,11 +201,11 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
         public String groupTag;
 
         /**
-         * <p>Specifies whether an IP address that is already used for a DNAT entry can also be used for an SNAT entry. Valid values:</p>
+         * <p>Specifies whether an IP address that is already used in a DNAT entry can also be used in an SNAT entry. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Destination IP address can also be used for an SNAT entry.</p>
+         * <li><p><strong>true</strong>: Destination IP address can also be used in an SNAT entry.</p>
          * </li>
-         * <li><p><strong>false</strong>: Destination IP address cannot be used for an SNAT entry.</p>
+         * <li><p><strong>false</strong>: Destination IP address cannot be used in an SNAT entry.</p>
          * </li>
          * </ul>
          * 
@@ -257,7 +257,7 @@ public class DescribePxfuseSecurityIpsResponseBody extends TeaModel {
         public String custinsName;
 
         /**
-         * <p>The groups corresponding to the consumed service.</p>
+         * <p>The groups corresponding to the consumed services.</p>
          */
         @NameInMap("Groups")
         public java.util.List<DescribePxfuseSecurityIpsResponseBodyDataGroups> groups;

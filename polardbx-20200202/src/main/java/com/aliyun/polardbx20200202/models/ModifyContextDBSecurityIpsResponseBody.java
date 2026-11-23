@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ModifyContextDBSecurityIpsResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The data struct.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public ModifyContextDBSecurityIpsResponseBodyData data;
@@ -59,22 +59,22 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:ModifyContextDBSecurityIps</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the authentication principal belongs.</p>
+         * <p>The Alibaba Cloud account ID of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The identity type used for authentication in the request. Valid values:</p>
+         * <p>The type of identity used for authentication in the request. Valid values:</p>
          * <ul>
          * <li>SubUser: RAM user.</li>
          * <li>AssumedRoleUser: RAM role.</li>
@@ -97,7 +97,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic information.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -106,7 +106,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The no permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -188,7 +188,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
 
     public static class ModifyContextDBSecurityIpsResponseBodyData extends TeaModel {
         /**
-         * <p>The context service instance name.</p>
+         * <p>The name of the context service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxt-*********</p>
@@ -200,7 +200,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>pxc-xxxxxxxxxx</p>
+         * <p>123456</p>
          */
         @NameInMap("DBInstanceId")
         public Integer DBInstanceId;
@@ -218,7 +218,7 @@ public class ModifyContextDBSecurityIpsResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>2209883</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;

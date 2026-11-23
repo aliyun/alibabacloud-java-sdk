@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denied error.</p>
+     * <p>The access denied details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeSupabaseIpWhitelistResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -59,16 +59,16 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribeSupabaseIpWhitelist</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The authentication principal name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -83,7 +83,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the authentication principal.</p>
+         * <p>The authentication principal type.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -92,7 +92,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The no permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -110,7 +110,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The type of the policy.</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
@@ -183,7 +183,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
 
     public static class DescribeSupabaseIpWhitelistResponseBodyDataGroupItems extends TeaModel {
         /**
-         * <p>The name of the group.</p>
+         * <p>The group name.</p>
          * 
          * <strong>example:</strong>
          * <p>defaultGroup</p>
@@ -192,7 +192,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The tag of the group.</p>
+         * <p>The group tag.</p>
          * 
          * <strong>example:</strong>
          * <p>group1</p>
@@ -251,7 +251,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The list of whitelist groups.</p>
+         * <p>The whitelist group list.</p>
          */
         @NameInMap("GroupItems")
         public java.util.List<DescribeSupabaseIpWhitelistResponseBodyDataGroupItems> groupItems;

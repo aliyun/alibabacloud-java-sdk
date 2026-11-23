@@ -65,7 +65,7 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the security principal.</p>
+         * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample RAM user</p>
@@ -74,7 +74,7 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the security principal.</p>
+         * <p>The owner ID of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the security principal, such as RAM user SubUser or RAM role AssumedRoleUser.</p>
+         * <p>The type of the authentication principal, such as RAM user SubUser or RAM role AssumedRoleUser.</p>
          * 
          * <strong>example:</strong>
          * <p>SubUser</p>
@@ -101,7 +101,7 @@ public class ResetMem0AccountPasswordResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the missing permission.</p>
+         * <p>The no-permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>

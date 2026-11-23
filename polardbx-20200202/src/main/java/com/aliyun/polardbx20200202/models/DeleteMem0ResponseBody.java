@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMem0ResponseBody extends TeaModel {
     /**
-     * <p>The detailed cause of the access denial.</p>
+     * <p>The detailed reasons for the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DeleteMem0ResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -92,7 +92,7 @@ public class DeleteMem0ResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic information.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -186,7 +186,7 @@ public class DeleteMem0ResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>2209883</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;

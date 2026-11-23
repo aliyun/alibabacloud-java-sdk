@@ -42,7 +42,7 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
 
     public static class DescribeTransformStatusResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the task can be canceled.</p>
+         * <p>Specifies whether the task can be canceled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,7 +60,7 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         public Boolean canFinish;
 
         /**
-         * <p>Indicates whether a migration switchover can be performed. Valid values:</p>
+         * <p>Specifies whether a migration switchover can be performed. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
@@ -73,13 +73,13 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         public Boolean canSwitch;
 
         /**
-         * <p>Indicates whether the switchover operation can be undone.</p>
+         * <p>Specifies whether the switchover operation can be undone.</p>
          */
         @NameInMap("CanUndoSwitch")
         public Boolean canUndoSwitch;
 
         /**
-         * <p>The name of the Enterprise instance.</p>
+         * <p>The name of the enterprise instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-*****</p>
@@ -97,7 +97,10 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The report summary.</p>
+         * <p>The report summary information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;example&quot;:[&quot;Sample report summary&quot;]}</p>
          */
         @NameInMap("ReportSummary")
         public java.util.Map<String, ?> reportSummary;

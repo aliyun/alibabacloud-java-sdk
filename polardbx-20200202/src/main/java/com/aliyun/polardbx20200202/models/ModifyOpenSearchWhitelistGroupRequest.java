@@ -15,7 +15,7 @@ public class ModifyOpenSearchWhitelistGroupRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The group ID.</p>
+     * <p>The ID of the group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ModifyOpenSearchWhitelistGroupRequest extends TeaModel {
     public String IPs;
 
     /**
-     * <p>The region of the instance.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ModifyOpenSearchWhitelistGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The remark.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>000G2DJ1YGee321432</p>

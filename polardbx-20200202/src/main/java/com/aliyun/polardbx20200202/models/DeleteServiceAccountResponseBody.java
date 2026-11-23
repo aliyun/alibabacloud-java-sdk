@@ -17,7 +17,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
     public DeleteServiceAccountResponseBodyData data;
 
     /**
-     * <p>The error message returned if the request failed. This parameter is empty if the request is successful.</p>
+     * <p>The error message returned if the request fails. This parameter is empty if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -26,7 +26,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
@@ -35,7 +35,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DeleteServiceAccount</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -117,7 +117,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the missing permission.</p>
+         * <p>The type of the permission denial.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -126,7 +126,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The policy type.</p>
+         * <p>The type of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
@@ -183,7 +183,7 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
 
     public static class DeleteServiceAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The account name.</p>
+         * <p>The name of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>polardbx_meta_ro</p>
@@ -192,16 +192,16 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Indicates whether the import task is successful.</p>
+         * <p>Indicates whether the import task was successful.</p>
          * 
          * <strong>example:</strong>
-         * <p>fase</p>
+         * <p>false</p>
          */
         @NameInMap("Deleted")
         public Boolean deleted;
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1E5DCFFC-A00D-****-836E-73318F8CA577</p>
@@ -228,10 +228,10 @@ public class DeleteServiceAccountResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>2209883</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;

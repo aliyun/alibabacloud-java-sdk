@@ -15,7 +15,7 @@ public class EnableOpenSearchPublicEndpointRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The target node type. Valid values:</p>
+     * <p>The type of the target node. Valid values:</p>
      * <ul>
      * <li><strong>search</strong>: data node. This is the default value.</li>
      * <li><strong>dashboard</strong>: dashboard node.</li>

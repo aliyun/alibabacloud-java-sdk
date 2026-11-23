@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsRequest extends TeaModel {
     /**
-     * <p>The region where the instance resides.</p>
+     * <p>The region of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

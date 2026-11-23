@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeContextDBSecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeContextDBSecurityIpsResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -59,22 +59,22 @@ public class DescribeContextDBSecurityIpsResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:DescribeContextDBSecurityIps</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the authenticated principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authentication principal.</p>
+         * <p>The owner ID of the authenticated principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class DescribeContextDBSecurityIpsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The authentication principal type.</p>
+         * <p>The type of the authenticated principal.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -92,7 +92,7 @@ public class DescribeContextDBSecurityIpsResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic information.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -183,7 +183,7 @@ public class DescribeContextDBSecurityIpsResponseBody extends TeaModel {
 
     public static class DescribeContextDBSecurityIpsResponseBodyDataGroupItems extends TeaModel {
         /**
-         * <p>The whitelist group name.</p>
+         * <p>The name of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>defaultGroup</p>
@@ -201,7 +201,7 @@ public class DescribeContextDBSecurityIpsResponseBody extends TeaModel {
         public String groupTag;
 
         /**
-         * <p>The details of the whitelist group.</p>
+         * <p>The whitelist details of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1,172.168.0.0</p>
@@ -242,7 +242,7 @@ public class DescribeContextDBSecurityIpsResponseBody extends TeaModel {
 
     public static class DescribeContextDBSecurityIpsResponseBodyData extends TeaModel {
         /**
-         * <p>The context service instance name.</p>
+         * <p>The name of the context service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxt-*********</p>
@@ -260,7 +260,7 @@ public class DescribeContextDBSecurityIpsResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The whitelist group list.</p>
+         * <p>The list of whitelist groups.</p>
          */
         @NameInMap("GroupItems")
         public java.util.List<DescribeContextDBSecurityIpsResponseBodyDataGroupItems> groupItems;

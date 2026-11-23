@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
     /**
-     * <p>The details of the restoration tasks.</p>
+     * <p>The recovery task details.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeEvaluateAndImportTasksResponseBodyData> data;
 
     /**
-     * <p>The returned message. &gt; This parameter is empty when the request succeeds. When the request fails, exception information such as an error code is returned.</p>
+     * <p>The returned message. &gt; This parameter is empty if the request is successful. If the request fails, an error message (such as an error code) is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -145,10 +145,10 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Indicates whether the task is deleted.</p>
+         * <p>Specifies whether the task is deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>fase</p>
+         * <p>false</p>
          */
         @NameInMap("Deleted")
         public Boolean deleted;
@@ -157,16 +157,16 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
          * <p>The timestamp when the task was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-01-08T15:00Z</p>
+         * <p>1736348400000</p>
          */
         @NameInMap("GmtCreated")
         public Long gmtCreated;
 
         /**
-         * <p>The time when the metadata information was last modified.</p>
+         * <p>The time when the metadata was modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-04-02T02:10:59Z</p>
+         * <p>1743559859000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
@@ -175,7 +175,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ap-northeast-1</p>
+         * <p>76251</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -190,7 +190,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the slink destination database.</p>
+         * <p>The name of the destination Slink database.</p>
          * 
          * <strong>example:</strong>
          * <p>e3plus_*****_prod</p>
@@ -199,7 +199,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkDstDb;
 
         /**
-         * <p>The instance ID of the destination.</p>
+         * <p>The destination instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-hzrehc****5zye</p>
@@ -208,7 +208,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkDstResId;
 
         /**
-         * <p>The username for the data connection of the destination.</p>
+         * <p>The username for the destination data connection.</p>
          * 
          * <strong>example:</strong>
          * <p>dts_temp_2_23</p>
@@ -217,7 +217,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkDstUserName;
 
         /**
-         * <p>The name of the slink source database.</p>
+         * <p>The name of the source Slink database.</p>
          * 
          * <strong>example:</strong>
          * <p>stock</p>
@@ -226,7 +226,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkSrcDb;
 
         /**
-         * <p>The instance ID of the source.</p>
+         * <p>The source instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>drdshbga*****w4p</p>
@@ -235,7 +235,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkSrcResId;
 
         /**
-         * <p>The resource type of the source.</p>
+         * <p>The type of the source resource.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS_MYSQL</p>
@@ -244,7 +244,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkSrcResType;
 
         /**
-         * <p>The username for the data connection of the source.</p>
+         * <p>The username for the source data connection.</p>
          * 
          * <strong>example:</strong>
          * <p>dtdba</p>
@@ -253,7 +253,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkSrcUserName;
 
         /**
-         * <p>The stage of the synchronization task.</p>
+         * <p>The stage of the synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>DATA_IMPORT_RUNNING</p>
@@ -262,7 +262,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkStage;
 
         /**
-         * <p>The running status of the synchronization task.</p>
+         * <p>The running status of the synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>IMPORT_NOT_BEGIN</p>
@@ -271,7 +271,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkStatus;
 
         /**
-         * <p>The description of the slink task.</p>
+         * <p>The description of the Slink task.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -280,7 +280,7 @@ public class DescribeEvaluateAndImportTasksResponseBody extends TeaModel {
         public String slinkTaskDesc;
 
         /**
-         * <p>The slink task ID.</p>
+         * <p>The Slink task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>etx-szr2rr6i*****</p>

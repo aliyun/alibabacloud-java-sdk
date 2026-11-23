@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The detailed cause of the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ReleasePxfsPublicConnectionResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -59,7 +59,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:ReleasePxfsPublicConnection</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
          * <p>The identity used for authentication in the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -92,7 +92,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic information.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -183,7 +183,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
 
     public static class ReleasePxfsPublicConnectionResponseBodyData extends TeaModel {
         /**
-         * <p>The instance ID of the PolarDB-X instance.</p>
+         * <p>The PolarDB-X instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-xxxxxxxx</p>
@@ -192,7 +192,7 @@ public class ReleasePxfsPublicConnectionResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The instance ID of the Agent file service.</p>
+         * <p>The Agent file service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pxfs-xxxxxxxx</p>

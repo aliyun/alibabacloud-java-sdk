@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denied error.</p>
+     * <p>The details of the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ModifySupabaseSecurityIPListResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -59,7 +59,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:ModifySupabaseSecurityIPList</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -68,7 +68,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -92,7 +92,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic message.</p>
+         * <p>The encoded diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the no permission error.</p>
+         * <p>The type of the permission denial.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -201,7 +201,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP whitelist.</p>
+         * <p>The IP addresses in the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>100.104.187.192/26,100.104.225.192/26,100.104.145.64/26</p>

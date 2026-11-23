@@ -11,10 +11,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
     public DescribeGdnInstancesResponseBodyData data;
 
     /**
-     * <p>The message returned for the request.</p>
-     * <blockquote>
-     * <p>This parameter is empty if the request is successful. If the request fails, an error message such as an error code is returned.</p>
-     * </blockquote>
+     * <p>The returned message. If the request is successful, this parameter is empty. If the request fails, an error message such as an error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -110,7 +107,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String cnNodeClassCode;
 
         /**
-         * <p>The number of compute nodes (CNs).</p>
+         * <p>The number of CNs.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -129,6 +126,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The data synchronization status of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYNC</p>
          */
         @NameInMap("DataSyncStatus")
         public String dataSyncStatus;
@@ -160,7 +160,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String dnNodeClassCode;
 
         /**
-         * <p>The number of data nodes (DNs).</p>
+         * <p>The number of DNs.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -169,7 +169,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String dnNodeCount;
 
         /**
-         * <p>The expiration time. The format is YYYY-MM-DDTHH:mm:ss.SSS±HHmm, which includes the time zone offset.</p>
+         * <p>The expiration time. The time is in the YYYY-MM-DDTHH:mm:ss.SSS±HHmm format, which includes the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-02T13:11:10.000+0000</p>
@@ -198,8 +198,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-         * <li><strong>Prepaid</strong>: subscription</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,6 +219,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The read/write status of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R</p>
          */
         @NameInMap("ReadWriteStatus")
         public String readWriteStatus;
@@ -273,17 +276,17 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
          * <p>The status of the switchover task.</p>
          * 
          * <strong>example:</strong>
-         * <p>prepared: Parameter initialization completed
-         * set_old_primary_readonly: Write operations disabled on the original primary instance
-         * set_new_primary_read_write: Switchover completed
-         * timeout: Task timed out
-         * rollback: Rolled back</p>
+         * <p>prepared: Parameter initialization is complete.
+         * set_old_primary_readonly: The original primary instance is set to read-only.
+         * set_new_primary_read_write: The switchover is complete.
+         * timeout: The task timed out.
+         * rollback: The task is rolled back</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
         /**
-         * <p>The third active zone in a three-zone deployment.</p>
+         * <p>The third active zone in a Three-zone deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-a</p>
@@ -495,7 +498,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String gdnInstanceName;
 
         /**
-         * <p>The replication mode of the GDN. Valid values: gdn_mode_master_slave and gdn_mode_bidirectional.</p>
+         * <p>The GDN replication mode. Valid values: gdn_mode_master_slave and gdn_mode_bidirectional.</p>
          * 
          * <strong>example:</strong>
          * <p>gdn_mode_master_slave</p>
@@ -561,7 +564,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The switchover logs.</p>
+         * <p>The switchover log.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -681,7 +684,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

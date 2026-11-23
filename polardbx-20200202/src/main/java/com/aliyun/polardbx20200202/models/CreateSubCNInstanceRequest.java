@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSubCNInstanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including the instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateSubCNInstanceRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>Specifies whether to automatically calculate compute resource parameters. Valid values:</p>
+     * <p>Specifies whether to automatically configure compute resource parameters.</p>
      * <ul>
      * <li><strong>true</strong>:</li>
      * </ul>
@@ -24,11 +24,7 @@ public class CreateSubCNInstanceRequest extends TeaModel {
     public Boolean isAutoCreate;
 
     /**
-     * <p>The read/write type. Valid values:</p>
-     * <ul>
-     * <li>ReadWrite: row store read/write.</li>
-     * <li>ColumnarRead: column store read-only.</li>
-     * </ul>
+     * <p>The read/write type. Valid values: ReadWrite (row store read/write) and ColumnarRead (column store read-only).</p>
      * 
      * <strong>example:</strong>
      * <p>ReadWrite</p>

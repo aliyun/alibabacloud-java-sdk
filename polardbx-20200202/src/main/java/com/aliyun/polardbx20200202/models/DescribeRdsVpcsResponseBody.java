@@ -51,7 +51,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The time when the vSwitch was created. The value is a UNIX timestamp accurate to milliseconds.</p>
+         * <p>The creation time, which is a UNIX timestamp accurate to milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1574156944000</p>
@@ -60,7 +60,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the vSwitch was last modified. The value is a UNIX timestamp.</p>
+         * <p>The last modification time. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-03T19:19:13+08:00</p>
@@ -87,7 +87,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String izNo;
 
         /**
-         * <p>The vSwitch status.</p>
+         * <p>The status of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -96,7 +96,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-8vbkwmpn****4nrd639ih</p>
@@ -231,7 +231,11 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Indicates whether the VPC is the default VPC. Valid values: <strong>true</strong>: The VPC is the default VPC. <strong>false</strong>: The VPC is not the default VPC.</p>
+         * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
+         * <ul>
+         * <li>true: The VPC is the default VPC.</li>
+         * <li>false: The VPC is not the default VPC.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -240,7 +244,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The region in which the VPC resides.</p>
+         * <p>The region where the VPC resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -249,7 +253,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The VPC status.</p>
+         * <p>The status of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScaleInOpenSearchResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details of the access denied error.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ScaleInOpenSearchResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -62,7 +62,7 @@ public class ScaleInOpenSearchResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:ScaleInOpenSearch</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -71,7 +71,7 @@ public class ScaleInOpenSearchResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -95,7 +95,7 @@ public class ScaleInOpenSearchResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encrypted complete diagnostic message.</p>
+         * <p>The encoded complete diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -104,7 +104,7 @@ public class ScaleInOpenSearchResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The type of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>

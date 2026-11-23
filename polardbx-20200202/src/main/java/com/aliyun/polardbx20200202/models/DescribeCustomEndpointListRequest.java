@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomEndpointListRequest extends TeaModel {
     /**
-     * <p>Specifies whether to check if the CN node has been deleted.</p>
+     * <p>Specifies whether to check whether the compute node (CN) is deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class DescribeCustomEndpointListRequest extends TeaModel {
     public Boolean checkDeleteCN;
 
     /**
-     * <p>The custom endpoint IDs.</p>
+     * <p>The IDs of the custom endpoints.</p>
      * 
      * <strong>example:</strong>
      * <p>pxe-b6e****no4pfap1s</p>
@@ -33,7 +33,7 @@ public class DescribeCustomEndpointListRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The region where the instance resides.</p>
+     * <p>The region ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
