@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class Relation extends TeaModel {
     /**
      * <p>ErrMsg</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Failed to create lineage relation.</p>
      */
     @NameInMap("ErrMsg")
     public String errMsg;

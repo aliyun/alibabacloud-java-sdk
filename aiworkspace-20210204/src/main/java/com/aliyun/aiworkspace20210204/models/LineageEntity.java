@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class LineageEntity extends TeaModel {
     /**
      * <p>Attributes</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Path&quot;:&quot;training/data/&quot;,&quot;ResourceType&quot;:&quot;dataset&quot;,&quot;ResourceUse&quot;:&quot;train&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;}</p>
      */
     @NameInMap("Attributes")
     public java.util.Map<String, ?> attributes;
 
     /**
      * <p>The type of the data lineage entity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-file</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
     /**
      * <p>The name of the data lineage entity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>training-dataset</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The unique qualified name of the data lineage entity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>maxcompute-table.demo_project.training_data</p>
      */
     @NameInMap("QualifiedName")
     public String qualifiedName;

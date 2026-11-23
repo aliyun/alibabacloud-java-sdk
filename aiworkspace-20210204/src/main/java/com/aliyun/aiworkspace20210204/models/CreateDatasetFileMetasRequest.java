@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetFileMetasRequest extends TeaModel {
     /**
-     * <p>The list of file metadata entries.</p>
+     * <p>The list of file metadata.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DatasetFileMetas")
     public java.util.List<DatasetFileMetaContentCreate> datasetFileMetas;
 
     /**
-     * <p>The dataset version name.</p>
+     * <p>The name of the dataset version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class CreateDatasetFileMetasRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The ID of the workspace where the dataset resides. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The ID of the workspace to which the dataset belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

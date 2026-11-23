@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConnectionRequest extends TeaModel {
     /**
-     * <p>The configuration of the connection, specified as key-value pairs. The keys in the Configs parameter vary based on the connection type. For more information, see the request parameters in the CreateConnection topic.</p>
+     * <p>The configuration information of the connection. The configurations are in key-value pairs. The keys in the Config parameter vary based on the connection type. For more information, see the supplementary description of the request parameters for the CreateConnection operation.</p>
      */
     @NameInMap("Configs")
     public java.util.Map<String, String> configs;
@@ -14,19 +14,19 @@ public class UpdateConnectionRequest extends TeaModel {
      * <p>The description of the connection.</p>
      * 
      * <strong>example:</strong>
-     * <p>Connection for data labeling.</p>
+     * <p>Connection used for annotation</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>A list of model information.</p>
+     * <p>The list of model information.</p>
      */
     @NameInMap("Models")
     public java.util.List<UpdateConnectionRequestModels> models;
 
     /**
-     * <p>Key-value pairs that require encryption, such as database logon passwords and keys for model connections.</p>
+     * <p>The key-value configurations that need to be encrypted, such as the database logon password and the key for the model connection.</p>
      */
     @NameInMap("Secrets")
     public java.util.Map<String, String> secrets;
@@ -90,12 +90,9 @@ public class UpdateConnectionRequest extends TeaModel {
         /**
          * <p>The model type. Valid values:</p>
          * <ul>
-         * <li><p>LLM</p>
-         * </li>
-         * <li><p>Embedding</p>
-         * </li>
-         * <li><p>ReRank</p>
-         * </li>
+         * <li>LLM</li>
+         * <li>Embedding</li>
+         * <li>ReRank</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,12 +102,10 @@ public class UpdateConnectionRequest extends TeaModel {
         public String modelType;
 
         /**
-         * <p>Indicates whether tool calling is supported. Valid values:</p>
+         * <p>Specifies whether tool calling is supported. Valid values:</p>
          * <ul>
-         * <li><p>true: Tool calling is supported.</p>
-         * </li>
-         * <li><p>false: Tool calling is not supported.</p>
-         * </li>
+         * <li>true: Supported.</li>
+         * <li>false: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>

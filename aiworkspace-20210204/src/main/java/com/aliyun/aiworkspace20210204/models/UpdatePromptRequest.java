@@ -8,20 +8,20 @@ public class UpdatePromptRequest extends TeaModel {
      * <p>The description of the prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is an information extraction prompt for autonomous driving highway scenarios, focusing on extracting lane and weather information</p>
+     * <p>This is an information extraction prompt for autonomous driving highway scenarios, focusing on extracting lane and weather information.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The prompt content.</p>
+     * <p>The content of the prompt.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *   &quot;context&quot;:&quot;You are an experienced driver with ten years of driving experience. Please analyze and make judgments about the following image scenarios.&quot;,
+     *   &quot;context&quot;:&quot;You are an experienced driver with ten years of driving experience. Please analyze and judge the image scenario below.&quot;,
      *   &quot;inputData&quot;:&quot;{
-     *     \&quot;Reflective strips\&quot;: \&quot;Usually yellow, or yellow-black alternating, attached to permanent protruding obstacles such as wall corners to remind drivers to avoid them.\&quot;,
-     *     \&quot;Ground lock\&quot;: \&quot;Also known as a parking space lock. When raised, it prevents the parking space from being occupied. When a ground lock is present, you must indicate whether it is in the raised or lowered state.\&quot;,
+     *     \&quot;Reflective tape\&quot;: \&quot;Usually yellow or yellow-and-black striped, affixed to permanent protruding obstacles such as wall corners to alert drivers.\&quot;,
+     *     \&quot;Parking lock\&quot;: \&quot;Also known as a parking space lock. When raised, it prevents the parking space from being occupied. If a parking lock is present, be sure to indicate whether it is in the raised or lowered state.\&quot;,
      *   }&quot;
      * }</p>
      */
@@ -38,7 +38,7 @@ public class UpdatePromptRequest extends TeaModel {
     public String frameworkType;
 
     /**
-     * <p>The workspace ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation.</p>
+     * <p>The ID of the workspace. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

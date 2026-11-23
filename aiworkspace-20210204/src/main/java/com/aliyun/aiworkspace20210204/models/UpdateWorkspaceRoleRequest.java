@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRoleRequest extends TeaModel {
     /**
-     * <p>The permission settings for the role.</p>
+     * <p>The permission configuration of the role.</p>
      */
     @NameInMap("ModulePermissions")
     public java.util.List<UpdateWorkspaceRoleRequestModulePermissions> modulePermissions;
 
     /**
-     * <p>The name of the custom role. The name must be unique within the workspace. It can be up to 64 characters long and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The name of the custom role. The name must be unique within the same workspace. The name can contain letters, digits, underscores (_), and hyphens (-), and can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>dev-test</p>

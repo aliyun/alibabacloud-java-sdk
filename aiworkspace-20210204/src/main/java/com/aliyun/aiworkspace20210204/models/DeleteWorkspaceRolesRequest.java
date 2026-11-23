@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkspaceRolesRequest extends TeaModel {
     /**
-     * <p>The IDs of the roles to delete.</p>
+     * <p>(Required) The list of role IDs.</p>
      */
     @NameInMap("RoleIds")
     public java.util.List<String> roleIds;

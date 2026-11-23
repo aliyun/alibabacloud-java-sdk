@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPromptRequest extends TeaModel {
     /**
-     * <p>The workspace ID. To obtain the workspace ID, refer to <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The workspace ID. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

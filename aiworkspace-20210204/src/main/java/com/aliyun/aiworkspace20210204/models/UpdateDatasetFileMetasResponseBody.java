@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetFileMetasResponseBody extends TeaModel {
     /**
-     * <p>A list of file metadata that failed to be updated.</p>
+     * <p>The list of file metadata that failed to be updated.</p>
      */
     @NameInMap("FailedDetails")
     public java.util.List<DatasetFileMetaResponse> failedDetails;
@@ -20,7 +20,7 @@ public class UpdateDatasetFileMetasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the batch metadata update. A value of \<code>true\\</code> indicates that all updates succeeded. If the value is \<code>false\\</code>, check the \<code>FailedDetails\\</code> parameter.</p>
+     * <p>The status of the metadata update result for the current batch. A value of true indicates that all updates succeeded. If the value is false, check FailedDetails.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

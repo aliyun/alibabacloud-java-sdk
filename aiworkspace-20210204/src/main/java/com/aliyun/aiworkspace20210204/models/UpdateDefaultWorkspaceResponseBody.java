@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDefaultWorkspaceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17915******4216</p>

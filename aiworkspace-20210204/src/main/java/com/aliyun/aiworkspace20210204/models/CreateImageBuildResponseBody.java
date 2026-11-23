@@ -14,7 +14,7 @@ public class CreateImageBuildResponseBody extends TeaModel {
     public String imageBuildId;
 
     /**
-     * <p>The build task ID.</p>
+     * <p>The build job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-****ks92</p>

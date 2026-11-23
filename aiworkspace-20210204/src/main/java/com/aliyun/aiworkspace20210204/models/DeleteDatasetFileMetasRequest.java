@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDatasetFileMetasRequest extends TeaModel {
     /**
-     * <p>The ID of the dataset file metadata.</p>
+     * <p>The IDs of the file metadata records in the dataset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteDatasetFileMetasRequest extends TeaModel {
     public String datasetFileMetaIds;
 
     /**
-     * <p>The name of the dataset version.</p>
+     * <p>The dataset version name.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -24,7 +24,7 @@ public class DeleteDatasetFileMetasRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The ID of the workspace where the dataset is located. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The ID of the workspace to which the dataset belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>132602</p>

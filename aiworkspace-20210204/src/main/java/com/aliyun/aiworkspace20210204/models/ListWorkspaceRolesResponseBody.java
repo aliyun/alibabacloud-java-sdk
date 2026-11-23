@@ -20,7 +20,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
     public java.util.List<ListWorkspaceRolesResponseBodyRoles> roles;
 
     /**
-     * <p>The total count of matching entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -247,7 +247,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
 
     public static class ListWorkspaceRolesResponseBodyRoles extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account UID of the creator.</p>
+         * <p>The UID of the Alibaba Cloud account of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>2680******4103</p>
@@ -256,7 +256,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The creation time, in UTC and ISO 8601 format.</p>
+         * <p>The creation time. The time is in UTC and formatted in ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-14T07:40:01.000Z</p>
@@ -265,7 +265,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The modification time, in UTC and ISO 8601 format.</p>
+         * <p>The modification time. The time is in UTC and formatted in ISO 8601.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-15T02:29:52Z</p>
@@ -274,7 +274,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>The permission configuration of the role.</p>
+         * <p>The permission configurations of the role.</p>
          */
         @NameInMap("ModulePermissions")
         public java.util.List<ListWorkspaceRolesResponseBodyRolesModulePermissions> modulePermissions;

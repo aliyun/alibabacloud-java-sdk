@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPromptsRequest extends TeaModel {
     /**
-     * <p>The prompt template framework type.</p>
+     * <p>The framework type of the prompt template.</p>
      * 
      * <strong>example:</strong>
      * <p>ICIO</p>
@@ -14,10 +14,10 @@ public class ListPromptsRequest extends TeaModel {
     public String frameworkType;
 
     /**
-     * <p>The sorting order for the specified field during paging. Default value: ASC.</p>
+     * <p>The sorting order for the specified field during paging in a paged query. Default value: ASC. Valid values:</p>
      * <ul>
-     * <li>ASC: ascending order.</li>
-     * <li>DESC: descending order.</li>
+     * <li>ASC: Ascending order.</li>
+     * <li>DESC: Descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListPromptsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number, starting from 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class ListPromptsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The page size. Default value: 20.</p>
+     * <p>The number of entries per page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,10 +45,10 @@ public class ListPromptsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The field used for sorting. Valid values:</p>
+     * <p>The name of the field used for sorting. Valid values:</p>
      * <ul>
-     * <li>Name: the run name.</li>
-     * <li>GmtCreateTime (default): the run creation time.</li>
+     * <li>Name: the name of the Run</li>
+     * <li>GmtCreateTime: the creation time of the Run (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class ListPromptsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The workspace ID. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

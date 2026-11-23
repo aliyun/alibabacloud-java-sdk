@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "AIWorkSpace";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "aiworkspace.aliyuncs.com"),
@@ -214,6 +217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>为自定义镜像添加标签。
+     * 前置条件：仅支持为自定义镜像添加标签。请先调用 AddImage 将自定义镜像添加到工作空间，再使用其返回的 ImageId 调用本接口；传入官方镜像会返回错误码 201200010（Can\&quot;t update official images）。</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds labels to a specified image.</p>
      * 
@@ -248,6 +255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>为自定义镜像添加标签。
+     * 前置条件：仅支持为自定义镜像添加标签。请先调用 AddImage 将自定义镜像添加到工作空间，再使用其返回的 ImageId 调用本接口；传入官方镜像会返回错误码 201200010（Can\&quot;t update official images）。</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds labels to a specified image.</p>
      * 
@@ -262,7 +273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Assigns a role to a member in a workspace, granting that member the role\&quot;s permissions.</p>
+     * <p>Assigns a role to a member in a workspace to grant the permissions associated with the role.</p>
      * 
      * @param request AddMemberRoleRequest
      * @param headers map
@@ -290,7 +301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Assigns a role to a member in a workspace, granting that member the role\&quot;s permissions.</p>
+     * <p>Assigns a role to a member in a workspace to grant the permissions associated with the role.</p>
      * 
      * @param request AddMemberRoleRequest
      * @return AddMemberRoleResponse
@@ -679,7 +690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates file metadata records in a dataset in batches.</p>
+     * <p>Creates file metadata records for a dataset in batches.</p>
      * 
      * @param request CreateDatasetFileMetasRequest
      * @param headers map
@@ -721,7 +732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates file metadata records in a dataset in batches.</p>
+     * <p>Creates file metadata records for a dataset in batches.</p>
      * 
      * @param request CreateDatasetFileMetasRequest
      * @return CreateDatasetFileMetasResponse
@@ -1136,10 +1147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Builds a custom image based on the specified configuration. After the image is successfully built, it is added to the list of custom images in the current workspace.</p>
+     * <p>Builds a custom image based on the specified configurations. After the build succeeds, the image is added to the custom images of the current workspace.</p>
      * 
      * @param request CreateImageBuildRequest
      * @param headers map
@@ -1215,10 +1226,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Builds a custom image based on the specified configuration. After the image is successfully built, it is added to the list of custom images in the current workspace.</p>
+     * <p>Builds a custom image based on the specified configurations. After the build succeeds, the image is added to the custom images of the current workspace.</p>
      * 
      * @param request CreateImageBuildRequest
      * @return CreateImageBuildResponse
@@ -1231,7 +1242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more users to a workspace.</p>
+     * <p>Adds one or more users to a workspace as members.</p>
      * 
      * @param request CreateMemberRequest
      * @param headers map
@@ -1265,7 +1276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more users to a workspace.</p>
+     * <p>Adds one or more users to a workspace as members.</p>
      * 
      * @param request CreateMemberRequest
      * @return CreateMemberResponse
@@ -1887,7 +1898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a role to a workspace.</p>
+     * <p>Adds a workspace role.</p>
      * 
      * @param request CreateWorkspaceRoleRequest
      * @param headers map
@@ -1933,7 +1944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a role to a workspace.</p>
+     * <p>Adds a workspace role.</p>
      * 
      * @param request CreateWorkspaceRoleRequest
      * @return CreateWorkspaceRoleResponse
@@ -2703,9 +2714,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When calling this operation, note the following:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</li>
+     * <li>Tag keys and values must be non-empty strings and cannot exceed 128 characters in length.</li>
      * <li>Tag keys cannot start with aliyun, acs, http://, or https://.</li>
      * </ul>
      * 
@@ -2744,9 +2755,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When calling this operation, note the following:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</li>
+     * <li>Tag keys and values must be non-empty strings and cannot exceed 128 characters in length.</li>
      * <li>Tag keys cannot start with aliyun, acs, http://, or https://.</li>
      * </ul>
      * 
@@ -2938,7 +2949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches a resource from a workspace. This operation does not delete the underlying resource.</p>
+     * <p>Deletes references to resources from a workspace without deleting the underlying resources.</p>
      * 
      * @param request DeleteWorkspaceResourceRequest
      * @param headers map
@@ -2992,7 +3003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches a resource from a workspace. This operation does not delete the underlying resource.</p>
+     * <p>Deletes references to resources from a workspace without deleting the underlying resources.</p>
      * 
      * @param request DeleteWorkspaceResourceRequest
      * @return DeleteWorkspaceResourceResponse
@@ -3005,7 +3016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more roles from a workspace.</p>
+     * <p>Deletes workspace roles in batches.</p>
      * 
      * @param request DeleteWorkspaceRolesRequest
      * @param headers map
@@ -3039,7 +3050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more roles from a workspace.</p>
+     * <p>Deletes workspace roles in batches.</p>
      * 
      * @param request DeleteWorkspaceRolesRequest
      * @return DeleteWorkspaceRolesResponse
@@ -3631,8 +3642,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询异步任务（InstanceJobId）的执行状态和结果。
+     * InstanceJobId 由 CreateWorkspaceRole、UpdateWorkspaceRole 等异步接口在响应字段 InstanceJobId 中返回，对应的任务类型见响应字段 Type。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Gets the details of a job.</p>
+     * <p>Retrieves a task.</p>
      * 
      * @param request GetInstanceJobRequest
      * @param headers map
@@ -3659,8 +3674,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询异步任务（InstanceJobId）的执行状态和结果。
+     * InstanceJobId 由 CreateWorkspaceRole、UpdateWorkspaceRole 等异步接口在响应字段 InstanceJobId 中返回，对应的任务类型见响应字段 Type。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Gets the details of a job.</p>
+     * <p>Retrieves a task.</p>
      * 
      * @param request GetInstanceJobRequest
      * @return GetInstanceJobResponse
@@ -4040,7 +4059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets information about a specific role within a workspace.</p>
+     * <p>Retrieves workspace roles.</p>
      * 
      * @param request GetWorkspaceRoleRequest
      * @param headers map
@@ -4068,7 +4087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets information about a specific role within a workspace.</p>
+     * <p>Retrieves workspace roles.</p>
      * 
      * @param request GetWorkspaceRoleRequest
      * @return GetWorkspaceRoleResponse
@@ -5762,7 +5781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of runs.</p>
+     * <p>Retrieves a list of runs.</p>
      * 
      * @param request ListRunsRequest
      * @param headers map
@@ -5852,7 +5871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of runs.</p>
+     * <p>Retrieves a list of runs.</p>
      * 
      * @param request ListRunsRequest
      * @return ListRunsResponse
@@ -5916,7 +5935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the roles in a specified workspace.</p>
+     * <p>Lists workspace roles.</p>
      * 
      * @param request ListWorkspaceRolesRequest
      * @param headers map
@@ -5982,7 +6001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the roles in a specified workspace.</p>
+     * <p>Lists workspace roles.</p>
      * 
      * @param request ListWorkspaceRolesRequest
      * @return ListWorkspaceRolesResponse
@@ -6147,7 +6166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Records the metrics of a run in a batch.</p>
+     * <p>Records metrics for a run in batches.</p>
      * 
      * @param request LogRunMetricsRequest
      * @param headers map
@@ -6181,7 +6200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Records the metrics of a run in a batch.</p>
+     * <p>Records metrics for a run in batches.</p>
      * 
      * @param request LogRunMetricsRequest
      * @return LogRunMetricsResponse
@@ -6275,6 +6294,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>将镜像的可见性从 PRIVATE 改为 PUBLIC。</p>
+     * <ul>
+     * <li>仅支持对可见性为 PRIVATE 的镜像调用；已是 PUBLIC 的镜像无需再次发布，直接调用会返回 400 错误。</li>
+     * <li>若当前工作空间没有 PRIVATE 镜像，请先调用 AddImage 添加自定义镜像（Accessibility 设为 PRIVATE），再使用其返回的 ImageId 调用本接口。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Publishes an image and changes its visibility from PRIVATE to PUBLIC.</p>
      * 
@@ -6303,6 +6329,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>将镜像的可见性从 PRIVATE 改为 PUBLIC。</p>
+     * <ul>
+     * <li>仅支持对可见性为 PRIVATE 的镜像调用；已是 PUBLIC 的镜像无需再次发布，直接调用会返回 400 错误。</li>
+     * <li>若当前工作空间没有 PRIVATE 镜像，请先调用 AddImage 添加自定义镜像（Accessibility 设为 PRIVATE），再使用其返回的 ImageId 调用本接口。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Publishes an image and changes its visibility from PRIVATE to PUBLIC.</p>
      * 
@@ -6316,6 +6349,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>删除镜像。</p>
+     * <ul>
+     * <li>仅支持删除用户自建（自定义）镜像，传入官方镜像会返回错误码 201200013。</li>
+     * <li>若账号下尚无自建镜像，需先调用 AddImage 创建自定义镜像，再使用其返回的 ImageId 调用本接口。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Deletes an image.</p>
      * 
@@ -6344,6 +6384,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>删除镜像。</p>
+     * <ul>
+     * <li>仅支持删除用户自建（自定义）镜像，传入官方镜像会返回错误码 201200013。</li>
+     * <li>若账号下尚无自建镜像，需先调用 AddImage 创建自定义镜像，再使用其返回的 ImageId 调用本接口。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Deletes an image.</p>
      * 
@@ -6399,7 +6446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a role from a member.</p>
+     * <p>Deletes a member role.</p>
      * 
      * @param request RemoveMemberRoleRequest
      * @param headers map
@@ -6427,7 +6474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes a role from a member.</p>
+     * <p>Deletes a member role.</p>
      * 
      * @param request RemoveMemberRoleRequest
      * @return RemoveMemberRoleResponse
@@ -6585,7 +6632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a code source configuration.</p>
+     * <p>Updates the code configuration.</p>
      * 
      * @param request UpdateCodeSourceRequest
      * @param headers map
@@ -6651,7 +6698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a code source configuration.</p>
+     * <p>Updates the code configuration.</p>
      * 
      * @param request UpdateCodeSourceRequest
      * @return UpdateCodeSourceResponse
@@ -6770,7 +6817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a connection configuration.</p>
+     * <p>Updates the connection configuration.</p>
      * 
      * @param request UpdateConnectionRequest
      * @param headers map
@@ -6816,7 +6863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a connection configuration.</p>
+     * <p>Updates the connection configuration.</p>
      * 
      * @param request UpdateConnectionRequest
      * @return UpdateConnectionResponse
@@ -6904,7 +6951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates multiple file metadata records in a dataset.</p>
+     * <p>Updates the file metadata records of a dataset in batches.</p>
      * 
      * @param request UpdateDatasetFileMetasRequest
      * @param headers map
@@ -6950,7 +6997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates multiple file metadata records in a dataset.</p>
+     * <p>Updates the file metadata records of a dataset in batches.</p>
      * 
      * @param request UpdateDatasetFileMetasRequest
      * @return UpdateDatasetFileMetasResponse
@@ -7146,7 +7193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets a workspace as the default.</p>
+     * <p>Sets a workspace as the default workspace.</p>
      * 
      * @param request UpdateDefaultWorkspaceRequest
      * @param headers map
@@ -7180,7 +7227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets a workspace as the default.</p>
+     * <p>Sets a workspace as the default workspace.</p>
      * 
      * @param request UpdateDefaultWorkspaceRequest
      * @return UpdateDefaultWorkspaceResponse
@@ -7422,10 +7469,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <h2>Request description</h2>
      * 
      * <b>summary</b> : 
-     * <p>Updates the prompt of a dataset.</p>
+     * <p>Update a prompt</p>
      * 
      * @param request UpdatePromptRequest
      * @param headers map
@@ -7471,10 +7518,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description.</h2>
+     * <h2>Request description</h2>
      * 
      * <b>summary</b> : 
-     * <p>Updates the prompt of a dataset.</p>
+     * <p>Update a prompt</p>
      * 
      * @param request UpdatePromptRequest
      * @return UpdatePromptResponse
@@ -7593,7 +7640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates resources in a workspace.</p>
+     * <p>Updates the resources of a workspace.</p>
      * 
      * @param request UpdateWorkspaceResourceRequest
      * @param headers map
@@ -7651,7 +7698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates resources in a workspace.</p>
+     * <p>Updates the resources of a workspace.</p>
      * 
      * @param request UpdateWorkspaceResourceRequest
      * @return UpdateWorkspaceResourceResponse
@@ -7664,7 +7711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a role in a workspace.</p>
+     * <p>Updates the workspace role.</p>
      * 
      * @param request UpdateWorkspaceRoleRequest
      * @param headers map
@@ -7702,7 +7749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a role in a workspace.</p>
+     * <p>Updates the workspace role.</p>
      * 
      * @param request UpdateWorkspaceRoleRequest
      * @return UpdateWorkspaceRoleResponse

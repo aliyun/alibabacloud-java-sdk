@@ -536,7 +536,7 @@ public class ListResourcesResponseBody extends TeaModel {
          * <p>The resource specifications.</p>
          * 
          * <strong>example:</strong>
-         * <p>对于MaxCompute {&quot;Endpoint&quot;: &quot;odps.alibaba-inc.com&quot;, &quot;Project&quot;: &quot;mignshi&quot;}</p>
+         * <p>{&quot;Endpoint&quot;:&quot;odps.alibaba-inc.com&quot;,&quot;Project&quot;:&quot;mignshi&quot;}</p>
          */
         @NameInMap("Spec")
         public java.util.Map<String, ?> spec;

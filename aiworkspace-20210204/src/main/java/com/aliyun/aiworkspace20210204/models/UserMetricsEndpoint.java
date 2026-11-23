@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UserMetricsEndpoint extends TeaModel {
     /**
      * <p>The HTTP path of the metric collection API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/metrics</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
      * <p>The port number on which the metric collection service listens.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40002</p>
      */
     @NameInMap("Port")
     public Integer port;

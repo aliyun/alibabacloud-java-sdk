@@ -20,7 +20,7 @@ public class ListPromptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned under the current request conditions. This parameter is optional and may not be returned by default.</p>
+     * <p>The total number of entries that meet the query conditions. This parameter is optional and is not returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>

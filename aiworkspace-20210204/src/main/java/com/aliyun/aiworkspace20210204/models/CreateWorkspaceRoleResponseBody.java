@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceRoleResponseBody extends TeaModel {
     /**
-     * <p>The task ID corresponding to the request.</p>
+     * <p>The ID of the job corresponding to the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateWorkspaceCustomRole-role-<em><strong>abc</strong></em>****</p>

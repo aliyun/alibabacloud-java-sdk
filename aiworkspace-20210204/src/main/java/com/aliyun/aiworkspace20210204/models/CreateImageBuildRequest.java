@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageBuildRequest extends TeaModel {
     /**
-     * <p>An idempotence token.</p>
+     * <p>The idempotency parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,12 +14,10 @@ public class CreateImageBuildRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The visibility of the image.</p>
+     * <p>The visibility. Valid values:</p>
      * <ul>
-     * <li><p><strong>PUBLIC</strong>: The image is public.</p>
-     * </li>
-     * <li><p><strong>PRIVATE</strong>: The image is private.</p>
-     * </li>
+     * <li><strong>PUBLIC</strong>: Public.</li>
+     * <li><strong>PRIVATE</strong>: Private.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,14 +27,14 @@ public class CreateImageBuildRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p><strong>The build configuration. Specify the content of the Dockerfile to be built.</strong></p>
+     * <p><strong>The build configuration, which specifies the content of the Dockerfile to be built.</strong></p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BuildConfig")
     public CreateImageBuildRequestBuildConfig buildConfig;
 
     /**
-     * <p>The metadata of the image.</p>
+     * <p>The image metadata.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Image")
@@ -52,7 +50,7 @@ public class CreateImageBuildRequest extends TeaModel {
     public String imageBuildJobName;
 
     /**
-     * <p>Specifies whether to overwrite an existing image version in the image repository.</p>
+     * <p>Specifies whether to overwrite the existing image version in the image repository.</p>
      */
     @NameInMap("OverwriteImageTag")
     public Boolean overwriteImageTag;
@@ -74,14 +72,14 @@ public class CreateImageBuildRequest extends TeaModel {
     public CreateImageBuildRequestResource resource;
 
     /**
-     * <p><strong>The configuration of the target image repository.</strong></p>
+     * <p><strong>The target registry configuration.</strong></p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TargetRegistry")
     public CreateImageBuildRequestTargetRegistry targetRegistry;
 
     /**
-     * <p>The information about the user\&quot;s virtual private cloud (VPC). This parameter is required when you use the public resource group.</p>
+     * <p>The user VPC information. This parameter is required when you use a public resource group.</p>
      */
     @NameInMap("UserVpc")
     public CreateImageBuildRequestUserVpc userVpc;
@@ -189,14 +187,122 @@ public class CreateImageBuildRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class CreateImageBuildRequestBuildConfigDataSources extends TeaModel {
+        /**
+         * <p>The ID of the dataset in the workspace. Example: d-************zbs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-************zbs</p>
+         */
+        @NameInMap("DataSourceId")
+        public String dataSourceId;
+
+        /**
+         * <p>The dataset version. If you specify this parameter, you must also specify DataSourceId. Example: v1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
+        @NameInMap("DataSourceVersion")
+        public String dataSourceVersion;
+
+        /**
+         * <p>The read and write permissions. Valid values: RW (default) and RO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RO</p>
+         */
+        @NameInMap("MountAccess")
+        public String mountAccess;
+
+        /**
+         * <p>The mount path. Example: /mnt/data/.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/data/</p>
+         */
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        /**
+         * <p>The mount property for the custom dataset. Only OSS is supported. Example: {&quot;fs.oss.download.thread.concurrency&quot;:&quot;10&quot;}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fs.oss.download.thread.concurrency&quot;:&quot;10&quot;}</p>
+         */
+        @NameInMap("Options")
+        public String options;
+
+        /**
+         * <p>The storage path, including the endpoint. This parameter is mutually exclusive with DataSourceId. Example: OSS storage path oss://{bucket-name}.oss-{region}-internal.aliyuncs.com/{subPath}/.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://{bucket-name}.oss-{region}-internal.aliyuncs.com/{subPath}/</p>
+         */
+        @NameInMap("Uri")
+        public String uri;
+
+        public static CreateImageBuildRequestBuildConfigDataSources build(java.util.Map<String, ?> map) throws Exception {
+            CreateImageBuildRequestBuildConfigDataSources self = new CreateImageBuildRequestBuildConfigDataSources();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImageBuildRequestBuildConfigDataSources setDataSourceId(String dataSourceId) {
+            this.dataSourceId = dataSourceId;
+            return this;
+        }
+        public String getDataSourceId() {
+            return this.dataSourceId;
+        }
+
+        public CreateImageBuildRequestBuildConfigDataSources setDataSourceVersion(String dataSourceVersion) {
+            this.dataSourceVersion = dataSourceVersion;
+            return this;
+        }
+        public String getDataSourceVersion() {
+            return this.dataSourceVersion;
+        }
+
+        public CreateImageBuildRequestBuildConfigDataSources setMountAccess(String mountAccess) {
+            this.mountAccess = mountAccess;
+            return this;
+        }
+        public String getMountAccess() {
+            return this.mountAccess;
+        }
+
+        public CreateImageBuildRequestBuildConfigDataSources setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public CreateImageBuildRequestBuildConfigDataSources setOptions(String options) {
+            this.options = options;
+            return this;
+        }
+        public String getOptions() {
+            return this.options;
+        }
+
+        public CreateImageBuildRequestBuildConfigDataSources setUri(String uri) {
+            this.uri = uri;
+            return this;
+        }
+        public String getUri() {
+            return this.uri;
+        }
+
+    }
+
     public static class CreateImageBuildRequestBuildConfig extends TeaModel {
         /**
-         * <p>The build type. The following types are supported:</p>
+         * <p>The build type. Valid values:</p>
          * <ul>
-         * <li><p><strong>PackageInstallation</strong>: Installs software packages based on a specified image.</p>
-         * </li>
-         * <li><p><strong>CustomDockerfile</strong>: Builds an image based on a custom Dockerfile.</p>
-         * </li>
+         * <li><strong>PackageInstallation</strong>: Installs software packages based on a specified image.</li>
+         * <li><strong>CustomDockerfile</strong>: Uses a custom Dockerfile.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -207,8 +313,13 @@ public class CreateImageBuildRequest extends TeaModel {
         public String buildType;
 
         /**
+         * <p>The list of data sources.</p>
+         */
+        @NameInMap("DataSources")
+        public java.util.List<CreateImageBuildRequestBuildConfigDataSources> dataSources;
+
+        /**
          * <p>The content of the Dockerfile to be built.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>FROM ubuntu:18:04
@@ -218,7 +329,16 @@ public class CreateImageBuildRequest extends TeaModel {
         public String dockerfile;
 
         /**
-         * <p>The authentication information for the private image repository. You can specify the authentication information for an ACR image repository that does not belong to you. The format is \<code>{&quot;user_registry_domain&quot;:{&quot;Auth&quot;:&quot;base64 encoded auth&quot;}}\\</code>.</p>
+         * <p>The Dockerfile path, which is a relative path to the mounted context path. Example: docker/Dockerfile. If the mount path is /mnt/data/, the file is located at /mnt/data/docker/Dockerfile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docker/Dockerfile</p>
+         */
+        @NameInMap("DockerfilePath")
+        public String dockerfilePath;
+
+        /**
+         * <p>The authentication information for private image repositories. You can specify the authentication information for an ACR image repository that does not belong to the current user. Format: {&quot;user_registry_domain&quot;:{&quot;Auth&quot;:&quot;base64 encoded auth&quot;}}.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -243,12 +363,28 @@ public class CreateImageBuildRequest extends TeaModel {
             return this.buildType;
         }
 
+        public CreateImageBuildRequestBuildConfig setDataSources(java.util.List<CreateImageBuildRequestBuildConfigDataSources> dataSources) {
+            this.dataSources = dataSources;
+            return this;
+        }
+        public java.util.List<CreateImageBuildRequestBuildConfigDataSources> getDataSources() {
+            return this.dataSources;
+        }
+
         public CreateImageBuildRequestBuildConfig setDockerfile(String dockerfile) {
             this.dockerfile = dockerfile;
             return this;
         }
         public String getDockerfile() {
             return this.dockerfile;
+        }
+
+        public CreateImageBuildRequestBuildConfig setDockerfilePath(String dockerfilePath) {
+            this.dockerfilePath = dockerfilePath;
+            return this;
+        }
+        public String getDockerfilePath() {
+            return this.dockerfilePath;
         }
 
         public CreateImageBuildRequestBuildConfig setRegistryAuths(java.util.Map<String, ?> registryAuths) {
@@ -305,7 +441,7 @@ public class CreateImageBuildRequest extends TeaModel {
 
     public static class CreateImageBuildRequestImage extends TeaModel {
         /**
-         * <p>The description of the image.</p>
+         * <p>The image description.</p>
          * 
          * <strong>example:</strong>
          * <p>Build test image</p>
@@ -320,14 +456,11 @@ public class CreateImageBuildRequest extends TeaModel {
         public java.util.List<CreateImageBuildRequestImageLabels> labels;
 
         /**
-         * <p>The name of the image. The name must meet the following requirements:</p>
+         * <p>The image name. The naming rules are as follows:</p>
          * <ul>
-         * <li><p>The name must be 1 to 50 characters in length.</p>
-         * </li>
-         * <li><p>The name can contain lowercase letters, digits, and hyphens (-). It must start with a letter.</p>
-         * </li>
-         * <li><p>The name must be unique within the same workspace.</p>
-         * </li>
+         * <li>The name must be 1 to 50 characters in length.</li>
+         * <li>The name can contain lowercase letters, digits, and hyphens (-), and must start with a letter.</li>
+         * <li>The name must be unique within the same workspace.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -338,7 +471,7 @@ public class CreateImageBuildRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The image URL.</p>
+         * <p>The image URI.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -397,7 +530,7 @@ public class CreateImageBuildRequest extends TeaModel {
         public String CPU;
 
         /**
-         * <p>The memory size.</p>
+         * <p>The memory capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>8Gi</p>
@@ -430,7 +563,7 @@ public class CreateImageBuildRequest extends TeaModel {
 
     public static class CreateImageBuildRequestResource extends TeaModel {
         /**
-         * <p>The instance type of the pay-as-you-go resource. This parameter is required when you use the public resource group.</p>
+         * <p>The pay-as-you-go resource specifications. This parameter is required when you use a public resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
@@ -439,13 +572,13 @@ public class CreateImageBuildRequest extends TeaModel {
         public String ecsSpec;
 
         /**
-         * <p>The resource configuration. Specify this parameter when you use subscription resources. Leave it empty when you use the public resource group.</p>
+         * <p>The resource configuration. This parameter is required when you use subscription resources and must be left empty when you use a public resource group.</p>
          */
         @NameInMap("ResourceConfig")
         public CreateImageBuildRequestResourceResourceConfig resourceConfig;
 
         /**
-         * <p>The resource quota ID. This parameter applies only to subscription resources. Do not set this parameter for pay-as-you-go resources.</p>
+         * <p>The resource quota ID. This parameter applies only to subscription resources and must not be specified when you use pay-as-you-go resources.</p>
          * 
          * <strong>example:</strong>
          * <p>quotaadzoqup693z</p>
@@ -454,7 +587,7 @@ public class CreateImageBuildRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the subscription resource. Currently, only Lingjun resources are supported. Specify this parameter when you use subscription resources.</p>
+         * <p>The subscription resource type. Only Lingjun resources are supported. This parameter is required when you use subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>Lingjun</p>
@@ -503,7 +636,7 @@ public class CreateImageBuildRequest extends TeaModel {
 
     public static class CreateImageBuildRequestTargetRegistry extends TeaModel {
         /**
-         * <p>The ID of the image repository instance. This parameter is required when you use ACR as the image repository.</p>
+         * <p>The registry instance ID. This parameter is required when you use Container Registry (ACR) as the image service.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-**abcd</p>
@@ -512,7 +645,7 @@ public class CreateImageBuildRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The type of the target image repository. Only ACR Enterprise Edition is supported.</p>
+         * <p>The registry type. Only Container Registry Enterprise Edition is supported as the target registry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -546,9 +679,9 @@ public class CreateImageBuildRequest extends TeaModel {
 
     public static class CreateImageBuildRequestUserVpc extends TeaModel {
         /**
-         * <p>The default route.</p>
+         * <p>The default routing of the network interface controller (NIC). Valid values:</p>
          * <ul>
-         * <li>eth1: Indicates that the user\&quot;s elastic network interface (ENI) is used to access the external network through a private gateway. For more information, see <a href="https://help.aliyun.com/zh/pai/user-guide/configure-a-dsw-instance-to-access-the-internet-through-a-private-nat-gateway?spm=a2c4g.11186623.0.0.3b3965f6SZWm85">Configure a Distribution Switch (DSW) instance to access the Internet through a private NAT gateway</a>.</li>
+         * <li>eth1: Uses the user\&quot;s elastic network interfaces (ENIs) to access external networks through a private NAT gateway. For the configuration method, refer to <a href="https://www.alibabacloud.com/help/en/pai/user-guide/configure-a-dsw-instance-to-access-the-internet-through-a-private-nat-gateway">Configure a DSW instance to access the Internet through a private NAT gateway</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -560,17 +693,15 @@ public class CreateImageBuildRequest extends TeaModel {
         /**
          * <p>The extended CIDR blocks.</p>
          * <ul>
-         * <li><p>If you do not specify a vSwitch ID, you can leave this parameter empty. The system automatically obtains all CIDR blocks of the VPC.</p>
-         * </li>
-         * <li><p>If you specify a vSwitch ID, you must specify this parameter. For best results, include all CIDR blocks of the VPC.</p>
-         * </li>
+         * <li>If the vSwitch ID is empty, this parameter is optional and the system automatically retrieves all CIDR blocks under the VPC.</li>
+         * <li>If the vSwitch ID is not empty, this parameter is required. We recommend that you specify all CIDR blocks under the VPC.</li>
          * </ul>
          */
         @NameInMap("ExtendedCidrs")
         public java.util.List<String> extendedCidrs;
 
         /**
-         * <p>The security group ID. This parameter is required when you configure a VPC.</p>
+         * <p>The security group ID. This parameter is required when you specify the VPC configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-abcdef**</p>
@@ -588,7 +719,7 @@ public class CreateImageBuildRequest extends TeaModel {
         public String switchId;
 
         /**
-         * <p>The VPC ID. If the build task needs to access your ACR Enterprise Edition instance, specify a VPC that is in the access control list of the instance.</p>
+         * <p>The VPC ID. When the build task accesses a user\&quot;s Container Registry Enterprise Edition instance, you must specify a VPC that is added to the access control list of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-abcdef**</p>

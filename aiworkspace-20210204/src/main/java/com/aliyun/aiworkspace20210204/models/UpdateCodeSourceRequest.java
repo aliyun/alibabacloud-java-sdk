@@ -7,8 +7,8 @@ public class UpdateCodeSourceRequest extends TeaModel {
     /**
      * <p>The clone mode. Valid values:</p>
      * <ul>
-     * <li>0 (default): creates a new subdirectory.</li>
-     * <li>1: tiles to the current directory.</li>
+     * <li>0 (default): Create a subdirectory.</li>
+     * <li>1: Tile to the current directory.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public Integer cloneType;
 
     /**
-     * <p>The branch name of the code.</p>
+     * <p>The name of the code branch.</p>
      * 
      * <strong>example:</strong>
      * <p>dev</p>
@@ -45,7 +45,7 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeRepo;
 
     /**
-     * <p>The access token associated with the username.</p>
+     * <p>The access token corresponding to the username.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -54,7 +54,7 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeRepoAccessToken;
 
     /**
-     * <p>The username used to access the access code repository.</p>
+     * <p>The username used to access the code repository.</p>
      * 
      * <strong>example:</strong>
      * <p>demo-user</p>
@@ -63,16 +63,16 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeRepoUserName;
 
     /**
-     * <p>The description of the code source configuration.</p>
+     * <p>The description of the code configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>用于XX的训练代码</p>
+     * <p>Training code for XX</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the code source configuration.</p>
+     * <p>The name of the code configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCodeSource1</p>

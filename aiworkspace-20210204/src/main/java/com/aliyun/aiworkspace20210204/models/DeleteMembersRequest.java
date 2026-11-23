@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMembersRequest extends TeaModel {
     /**
-     * <p>A list of member IDs. Separate multiple member IDs with commas (,). For more information about how to obtain member IDs, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
+     * <p>The list of member IDs. Separate multiple member IDs with commas (,). For information about how to obtain member IDs, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

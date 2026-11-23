@@ -21,7 +21,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The start time of the file update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
+     * <p>The end time of the file update time range for the query. Specify the time in the ISO 8601 standard in UTC.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String endFileUpdateTime;
 
     /**
-     * <p>The end time of the tag last update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
+     * <p>The end time of the tag last update time range for the query. Specify the time in the ISO 8601 standard in UTC.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String endTagUpdateTime;
 
     /**
-     * <p>The maximum number of results to return per request when using NextToken-based pagination. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The maximum number of results to return per query when NextToken is used. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,9 +50,9 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The pagination cursor.</p>
      * <blockquote>
-     * <p>If this parameter is not specified, the first page of data is returned. If a value is returned for this parameter, more pages are available. Pass the returned NextToken value as a request parameter to retrieve the next page, until no NextToken value is returned, which indicates that all data has been retrieved.</p>
+     * <p>If this parameter is not specified, the first page of data is returned. If this parameter has a return value, it indicates that there is a next page. You can use the returned NextToken as a parameter to request the next page of data until Null is returned, which indicates that all data is retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,10 +62,10 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The sorting order for the specified sorting field in paging queries. Used together with SortBy. Default value: DESC. Valid values:</p>
+     * <p>The ascending or descending order for the specified sorting field in a paged query. This parameter is used together with SortBy during paging. Default value: DESC. Valid values:</p>
      * <ul>
-     * <li>ASC: ascending order.</li>
-     * <li>DESC: descending order.</li>
+     * <li>ASC: Ascending order.</li>
+     * <li>DESC: Descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,9 +75,9 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The number of entries per page. If MaxResults is also specified, MaxResults takes precedence.</p>
+     * <p>The number of entries per page. If MaxResults is also specified, MaxResults prevails.</p>
      * <blockquote>
-     * <p>This parameter will be offline soon. Use NextToken and MaxResults to perform paging query operations.</p>
+     * <p>This parameter will soon be offline. We recommend that you use NextToken and MaxResults for paging in paged query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,15 +88,15 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search condition for &quot;include any of the following content types&quot;. You can select multiple content types, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
+     * <p>The search condition for &quot;including any of the following file content types&quot;. You can select multiple file content types, and the search results only need to meet one of them. If this parameter is empty, this condition is not applied. Separate multiple file content types with commas.</p>
      */
     @NameInMap("QueryContentTypeIncludeAny")
     public String queryContentTypeIncludeAnyShrink;
 
     /**
-     * <p>The query statement (DSL) is a realm-specific language for expressing complex retrieve conditions. It supports grouping, Boolean logic (AND/OR/NOT), range comparisons (&gt;, &gt;=, &lt;, &lt;=), property existence checks (HAS/NOT HAS), token match (:), and exact match (=), which are suitable for advanced retrieve scenarios.
-     * This parameter is typically used for complex advanced retrieve conditional statements.
-     * <notice>To avoid conflicts, after setting this query statement, do not use it together with other query parameters.</notice></p>
+     * <p>The query statement (DSL) is a domain-specific language used to express complex search conditions. It supports grouping, Boolean logic (AND/OR/NOT), range comparison (&gt;, &gt;=, &lt;, &lt;=), property existence (HAS/NOT HAS), token matching (:), and exact matching (=), and is suitable for advanced search scenarios.
+     * It is generally used for complex advanced search conditions.
+     * <notice>To avoid conflicts, do not mix this query statement with other query parameters.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>(FileUpdateTime &gt; \&quot;2025-02-28T00:00:00Z\&quot; AND FileUpdateTime &lt; \&quot;2025-05-30T09:27:29Z\&quot;) AND FileDir:\&quot;blue_car\&quot; AND NOT FileName=&quot;toyota.jpg&quot; AND (( Tags.all=\&quot;lane line\&quot; AND Tags.all=\&quot;barrier gate\&quot;) OR NOT Tags.user=\&quot;rainy days\&quot; ) AND HAS SemanticIndexJobId AND Content:\&quot;a fallen water horse\&quot; AND TopK=100 AND SignMode=\&quot;PUBLIC\&quot;</p>
@@ -105,7 +105,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String queryExpression;
 
     /**
-     * <p>The file directory search condition. Fuzzy match is supported.</p>
+     * <p>The file directory search condition. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cars/20250221/</p>
@@ -114,7 +114,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String queryFileDir;
 
     /**
-     * <p>The file name search condition. Fuzzy match is supported.</p>
+     * <p>The file name search condition. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>car</p>
@@ -123,7 +123,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String queryFileName;
 
     /**
-     * <p>The search condition for &quot;include any of the following file types&quot;. You can select multiple file types, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
+     * <p>The search condition for &quot;including any of the following file types&quot;. You can select multiple file types, and the search results only need to meet one of them. If this parameter is empty, this condition is not applied. Separate multiple file types with commas.</p>
      */
     @NameInMap("QueryFileTypeIncludeAny")
     public String queryFileTypeIncludeAnyShrink;
@@ -131,7 +131,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     /**
      * <p>The image information for image-to-image search.</p>
      * <ul>
-     * <li>An OSS URL with public network access is supported. Format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<blockquote>
+     * <li>Supports passing an OSS URL that allows public network access for the image. Format: oss://{bucket_name}/{object_path}. bucket_name is the bucket name, and object_path is the path of the file in the bucket.<blockquote>
      * <p>This parameter takes effect only when QueryType is set to VECTOR or MIX.</p>
      * </blockquote>
      * </li>
@@ -144,7 +144,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String queryImage;
 
     /**
-     * <p>The search condition for &quot;exclude the following tags&quot;. You can select multiple tags, and the query results must not contain any of them. If this parameter is empty, this condition is not applied.</p>
+     * <p>The search condition for &quot;excluding the following tags&quot;. You can select multiple tags, and the search results must not contain these tags. If this parameter is empty, this condition is not applied.</p>
      * <blockquote>
      * <p>This parameter takes effect only when QueryType is set to TAG or MIX.</p>
      * </blockquote>
@@ -153,16 +153,16 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String queryTagsExcludeShrink;
 
     /**
-     * <p>The search condition for &quot;include all of the following tags&quot;. You can select multiple tags, and the query results must match all of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
+     * <p>The search condition for &quot;including all of the following tags&quot;. You can select multiple tags, and the search results must meet all these tags simultaneously. If this parameter is empty, this condition is not applied. Separate multiple tags with commas.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when QueryType is set to TAG or MIX. When QueryType is set to TAG, the value of QueryText is added to this condition.</p>
+     * <p>This parameter takes effect only when QueryType is set to TAG or MIX. When QueryType is set to TAG, QueryText is added to this condition.</p>
      * </blockquote>
      */
     @NameInMap("QueryTagsIncludeAll")
     public String queryTagsIncludeAllShrink;
 
     /**
-     * <p>The search condition for &quot;include any of the following tags&quot;. You can select multiple tags, and the query results need to match only one of them. If this parameter is empty, this condition is not applied. Array elements are separated by commas.</p>
+     * <p>The search condition for &quot;including any of the following tags&quot;. You can select multiple tags, and the search results only need to meet one of them. If this parameter is empty, this condition is not applied. Separate multiple tags with commas.</p>
      * <blockquote>
      * <p>This parameter takes effect only when QueryType is set to TAG or MIX.</p>
      * </blockquote>
@@ -171,7 +171,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String queryTagsIncludeAnyShrink;
 
     /**
-     * <p>The text content to search for.</p>
+     * <p>The text content to search.</p>
      * 
      * <strong>example:</strong>
      * <p>A fallen water</p>
@@ -182,8 +182,8 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     /**
      * <p>The retrieve type. Valid values:</p>
      * <ul>
-     * <li>MIX: hybrid retrieve (default).</li>
-     * <li>TAG: label-only retrieve.</li>
+     * <li>MIX: Hybrid retrieve. This is the default value.</li>
+     * <li>TAG: Label-only retrieve.</li>
      * <li>VECTOR: AISearch-only retrieve.</li>
      * </ul>
      * 
@@ -194,9 +194,9 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String queryType;
 
     /**
-     * <p>The video file information for video-based search.</p>
+     * <p>The video file information for video search.</p>
      * <ul>
-     * <li>A video OSS URL with public network access is supported. Format: oss://{bucket_name}/{object_path}, where bucket_name is the bucket name and object_path is the file path in the bucket.<blockquote>
+     * <li>Supports passing an OSS URL that allows public network access for the video. Format: oss://{bucket_name}/{object_path}. bucket_name is the bucket name, and object_path is the path of the file in the bucket.<blockquote>
      * <p>This parameter takes effect only when QueryType is set to VECTOR or MIX.</p>
      * </blockquote>
      * </li>
@@ -209,7 +209,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String queryVideo;
 
     /**
-     * <p>The similarity score threshold. Only results with a score greater than ScoreThreshold are returned.</p>
+     * <p>The similarity score threshold for filtering. Only results with a score greater than ScoreThreshold are returned.</p>
      * <blockquote>
      * <p>This parameter takes effect only when QueryType is set to VECTOR or MIX.</p>
      * </blockquote>
@@ -221,10 +221,10 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public Float scoreThreshold;
 
     /**
-     * <p>The sorting field for paging queries. By default, results are sorted by retrieve relevance in descending order. Other valid values:</p>
+     * <p>The sorting field for paged query. If this parameter is not specified, the results are sorted by retrieve relevance in descending order during paging. Valid values:</p>
      * <ul>
-     * <li>FileCreateTime: sorting by file creation time.</li>
-     * <li>FileUpdateTime: sorting by file last modified time.</li>
+     * <li>FileCreateTime: Sort by file creation time.</li>
+     * <li>FileUpdateTime: Sort by file last modification time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The end time of the file update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
+     * <p>The start time of the file update time range for the query. Specify the time in the ISO 8601 standard in UTC.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String startFileUpdateTime;
 
     /**
-     * <p>The start time of the tag last update time range for the query. The value is a UTC timestamp in ISO 8601 format.</p>
+     * <p>The start time of the tag last update time range for the query. Specify the time in the ISO 8601 standard in UTC.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -256,9 +256,9 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     /**
      * <p>The metadata status to query. Valid values:</p>
      * <ul>
-     * <li>ACTIVE: queries only non-deleted data (default).</li>
-     * <li>ALL: queries all data.</li>
-     * <li>DELETED: queries only logically deleted data.</li>
+     * <li>ACTIVE: Query only undeleted data. This is the default value.</li>
+     * <li>ALL: Query all data.</li>
+     * <li>DELETED: Query only logically deleted data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -268,14 +268,14 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The thumbnail mode for images. Currently, only OSS files support thumbnails:</p>
+     * <p>The thumbnail mode for images. Currently, only OSS files support thumbnails. Valid values:</p>
      * <ul>
-     * <li>Proportional scaling: p_{percentage}, where percentage specifies the desired scaling ratio. Valid values: [1, 100]. Example: p_50 uses 50% of the original file size as the thumbnail.</li>
-     * <li>Fixed width with adaptive height: w_{width}, where width specifies the desired image width. Valid values: [1, 16384]. Example: w_200 fixes the image width to 200 pixels and adaptively scales the height.</li>
-     * <li>Fixed height with adaptive width: h_{height}, where height specifies the desired image height. Valid values: [1, 16384]. Example: h_100 fixes the image height to 100 pixels and adaptively scales the width.</li>
-     * <li>Fixed dimensions with padding: m_pad,w_{width},h_{height},color_{RGB}. m_pad scales the image to the largest size that fits within the specified width and height rectangle. RGB specifies the fill color for blank areas. If this parameter is not specified, white is used by default. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example:</li>
-     * <li>Fixed dimensions with center cropping: m_fill,w_{width},h_{height}. m_fill proportionally scales the image to the smallest size that extends beyond the specified width and height rectangle, and center-crops the excess. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fill,w_100,h_100 fixes both the width and height to 100 pixels with center cropping.</li>
-     * <li>Forced dimensions: m_fixed,w_{width},h_{height}. width specifies the desired image width and height specifies the desired image height. Valid values for both width and height: [1, 16384]. Example: m_fixed,w_100,h_100 forces both the width and height to 100 pixels.</li>
+     * <li>Proportional scaling: p_{percentage}. percentage indicates the expected scaling ratio. Valid values: [1, 100]. Example: p_50 indicates that the thumbnail size is 50% of the original file size.</li>
+     * <li>Fixed width and adaptive height: w_{width}. width indicates the expected image width. Valid values: [1, 16384]. Example: w_200 indicates that the image width is fixed at 200 pixels and the height is adaptively scaled.</li>
+     * <li>Fixed height and adaptive width: h_{height}. height indicates the expected image height. Valid values: [1, 16384]. Example: h_100 indicates that the image height is fixed at 100 pixels and the width is adaptively scaled.</li>
+     * <li>Fixed width and height with padding: m_pad,w_{width},h_{height},color_{RGB}. m_pad indicates that the image is scaled to the maximum size within the specified w and h rectangle. RGB specifies the color used to fill the blank space in the center. If this parameter is not specified, white is used by default. width indicates the expected image width, and height indicates the expected image height. Valid values of width and height: [1, 16384]. Example:</li>
+     * <li>Fixed width and height with center cropping: m_fill,w_{width},h_{height}. m_fill indicates that the image is proportionally scaled to the minimum size that extends beyond the specified w and h rectangle, and the excess part is center-cropped. width indicates the expected image width, and height indicates the expected image height. Valid values of width and height: [1, 16384]. Example: m_fill,w_100,h_100 indicates that the image width and height are both fixed at 100 pixels for center cropping and scaling.</li>
+     * <li>Forced width and height scaling: m_fixed,w_{width},h_{height}. width indicates the expected image width, and height indicates the expected image height. Valid values of width and height: [1, 16384]. Example: m_fixed,w_100,h_100 indicates that the image width and height are both fixed at 100 pixels for forced scaling.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String thumbnailMode;
 
     /**
-     * <p>The maximum number of results to return. Only the top K results are returned.</p>
+     * <p>The number of search results to return. A maximum of TopK search results are returned.</p>
      * <blockquote>
      * <p>This parameter takes effect only when QueryType is set to VECTOR or MIX.</p>
      * </blockquote>
@@ -297,7 +297,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public Integer topK;
 
     /**
-     * <p>The workspace ID of the dataset. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The ID of the workspace to which the dataset belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreatePromptRequest extends TeaModel {
     /**
-     * <p>The workspace visibility. Valid values:</p>
+     * <p>The visibility of the workspace. Valid values:</p>
      * <ul>
      * <li>PRIVATE (default): Visible only to you and administrators in this workspace.</li>
-     * <li>PUBLIC: Visible to everyone in this workspace.</li>
+     * <li>PUBLIC: Visible to all users in this workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,23 +18,23 @@ public class CreatePromptRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The prompt description.</p>
+     * <p>The description of the prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a prompt for information extraction in autonomous driving highway scenarios, focusing on extracting lane and weather information</p>
+     * <p>This is an information extraction prompt for autonomous driving highway scenarios, focusing on extracting information such as lanes and weather</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The prompt framework content.</p>
+     * <p>The content of the prompt framework.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *   &quot;context&quot;:&quot;You are an experienced driver with ten years of driving experience. Please analyze and make judgments about the following image scenarios.&quot;,
+     *   &quot;context&quot;:&quot;You are an experienced driver with ten years of driving experience. Please analyze and evaluate the following image scenario.&quot;,
      *   &quot;inputData&quot;:&quot;{
-     *     \&quot;Reflective strips\&quot;: \&quot;Usually yellow or yellow-black alternating, attached to permanent protruding obstacles such as wall corners to remind drivers to avoid them.\&quot;,
-     *     \&quot;Ground lock\&quot;: \&quot;Also called a parking space lock. When raised, it prevents the parking space from being occupied. When a ground lock is present, you must indicate whether it is in the raised or lowered state.\&quot;,
+     *     \&quot;Reflective tape\&quot;: \&quot;Usually yellow or alternating yellow and black, attached to permanent protruding obstacles such as wall corners to remind drivers to avoid them.\&quot;,
+     *     \&quot;Parking lock\&quot;: \&quot;Also known as a parking space lock, it prevents the parking space from being occupied when raised. If a parking lock is present, be sure to output whether it is in the raised or lowered state.\&quot;,
      *   }&quot;
      * }</p>
      */
@@ -51,7 +51,7 @@ public class CreatePromptRequest extends TeaModel {
     public String frameworkType;
 
     /**
-     * <p>The prompt name.</p>
+     * <p>The name of the prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class CreatePromptRequest extends TeaModel {
     public String promptName;
 
     /**
-     * <p>The workspace ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation.</p>
+     * <p>The workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

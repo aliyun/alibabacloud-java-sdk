@@ -7,8 +7,8 @@ public class GetPromptResponseBody extends TeaModel {
     /**
      * <p>The access type. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: All members in the current workspace can access the prompt.</li>
-     * <li>PRIVATE: Only the creator can access the prompt.</li>
+     * <li>PUBLIC: Accessible to all members in the current workspace.</li>
+     * <li>PRIVATE: Accessible only to the creator.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class GetPromptResponseBody extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The creation time in UTC, formatted as YYYY-MM-DDTHH:mm:ssZ in the ISO 8601 standard.</p>
+     * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-10-16T01:44:10Z</p>
@@ -30,7 +30,7 @@ public class GetPromptResponseBody extends TeaModel {
      * <p>The description of the prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is an information extraction prompt for autonomous driving highway scenarios, focusing on extracting lane and weather information</p>
+     * <p>This is an information extraction prompt for autonomous driving highway scenarios, focusing on extracting lanes, weather, and other details</p>
      */
     @NameInMap("Description")
     public String description;
@@ -40,10 +40,10 @@ public class GetPromptResponseBody extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>{
-     *   &quot;context&quot;:&quot;You are an experienced driver with ten years of driving experience. Please analyze and make judgments about the following image scenario.&quot;,
+     *   &quot;context&quot;:&quot;You are an experienced driver with ten years of driving experience. Please analyze and judge the following image scenario.&quot;,
      *   &quot;inputData&quot;:&quot;{
-     *     \&quot;Reflective strips\&quot;: \&quot;Usually yellow or yellow-black alternating, attached to permanent protruding obstacles such as wall corners to remind drivers to avoid them. They are strip-shaped, not cones, not ground locks, not water barriers!\&quot;,
-     *     \&quot;Ground lock\&quot;: \&quot;Also called a parking space lock, it can prevent a parking space from being occupied when raised. When a ground lock is present, you must indicate whether it is in the raised or lowered state. It is in the raised state when there is a raised frame, otherwise it is in the lowered state.\&quot;,
+     *     \&quot;Reflective tape\&quot;: \&quot;Usually yellow or yellow-and-black striped, attached to permanent protruding obstacles such as wall corners to remind drivers to avoid them. It is strip-shaped, not a traffic cone, not a parking lock, and not a water barrier!\&quot;,
+     *     \&quot;Parking lock\&quot;: \&quot;Also known as a parking space lock, it prevents the parking space from being occupied when raised. If a parking lock is present, make sure to output whether it is in the raised or lowered state. It is in the raised state if the lifting frame is up; otherwise, it is in the lowered state.\&quot;
      *   }&quot;
      * }</p>
      */
@@ -60,7 +60,7 @@ public class GetPromptResponseBody extends TeaModel {
     public String frameworkType;
 
     /**
-     * <p>The modification time in UTC, formatted as YYYY-MM-DDTHH:mm:ssZ in the ISO 8601 standard.</p>
+     * <p>The update time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-08-27T02:01:10Z</p>

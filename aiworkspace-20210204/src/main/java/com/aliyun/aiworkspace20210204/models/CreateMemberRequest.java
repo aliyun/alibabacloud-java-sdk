@@ -33,7 +33,7 @@ public class CreateMemberRequest extends TeaModel {
         public java.util.List<String> roles;
 
         /**
-         * <p>The member IDs. Use commas (,) to separate multiple IDs. For more information, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
+         * <p>The list of member IDs. Separate multiple member IDs with commas (,). For information about how to obtain a member ID, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
