@@ -11,7 +11,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._productId = "QwenEduAiSuite";
         com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
         this._spi = gatewayClient;
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("qweneduaisuite", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -31,10 +31,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>开通千问教育API权限</p>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation activates the Qwen learning AI suite capability for the current Alibaba Cloud account.</li>
+     * <li>You must call this operation first. You can call business API operations such as problem solving and grading only after <code>ACTIVE</code> is returned.</li>
+     * </ul>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>Both Alibaba Cloud accounts and RAM users can call this operation.</li>
+     * <li>When a RAM user calls this operation, ensure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</li>
+     * <li>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>开通千问教育API权限</p>
+     * <p>Activates the learning capability for the current Alibaba Cloud account and supports querying the activation status.</p>
      * 
      * @param request ActivateQwenEduApiRequest
      * @param headers map
@@ -62,10 +72,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>开通千问教育API权限</p>
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation activates the Qwen learning AI suite capability for the current Alibaba Cloud account.</li>
+     * <li>You must call this operation first. You can call business API operations such as problem solving and grading only after <code>ACTIVE</code> is returned.</li>
+     * </ul>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>Both Alibaba Cloud accounts and RAM users can call this operation.</li>
+     * <li>When a RAM user calls this operation, ensure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</li>
+     * <li>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>开通千问教育API权限</p>
+     * <p>Activates the learning capability for the current Alibaba Cloud account and supports querying the activation status.</p>
      * 
      * @param request ActivateQwenEduApiRequest
      * @return ActivateQwenEduApiResponse
@@ -78,19 +98,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于提交单页作业图片进行批改，支持通过图片URL或Base64编码的图片数据。</li>
-     * <li>提交后会立即返回任务ID、矫正图及题目检测结果，但不包含具体的批改结论。</li>
-     * <li>需要通过查询接口轮询获取最终的批改结果。</li>
-     * <li>支持对图片进行透视矫正，默认开启。</li>
-     * <li>图片要求：支持多种格式（JPEG, PNG, GIF等），推荐体积不超过1MB，最大支持15MB（Base64编码后）。</li>
-     * <li>每次请求仅处理一张图片，多张图片需分别提交。</li>
-     * <li><code>request_id</code>字段建议由调用方生成并传递，以便于问题排查和对账。</li>
+     * <li>This operation submits a homework image to the server for question segmentation, recognition, and grading.</li>
+     * <li>You can submit the image by using <code>imageBase64</code> or <code>imageUrl</code>. <code>imageBase64</code> takes precedence.</li>
+     * <li>The optional <code>dewarp</code> parameter specifies whether to correct the image distortion. Default value: <code>true</code>.</li>
+     * <li>Provide <code>requestId</code> to facilitate troubleshooting and reconciliation.</li>
+     * <li>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</li>
+     * <li>All requests and responses use the JSON format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>提交单页作业图片，返回任务ID及初步检测结果。</p>
+     * <p>Submits a single-page homework image and asynchronously retrieves the grading results.</p>
      * 
      * @param request CreateEduHomeworkCorrectSubmitRequest
      * @param headers map
@@ -136,19 +155,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于提交单页作业图片进行批改，支持通过图片URL或Base64编码的图片数据。</li>
-     * <li>提交后会立即返回任务ID、矫正图及题目检测结果，但不包含具体的批改结论。</li>
-     * <li>需要通过查询接口轮询获取最终的批改结果。</li>
-     * <li>支持对图片进行透视矫正，默认开启。</li>
-     * <li>图片要求：支持多种格式（JPEG, PNG, GIF等），推荐体积不超过1MB，最大支持15MB（Base64编码后）。</li>
-     * <li>每次请求仅处理一张图片，多张图片需分别提交。</li>
-     * <li><code>request_id</code>字段建议由调用方生成并传递，以便于问题排查和对账。</li>
+     * <li>This operation submits a homework image to the server for question segmentation, recognition, and grading.</li>
+     * <li>You can submit the image by using <code>imageBase64</code> or <code>imageUrl</code>. <code>imageBase64</code> takes precedence.</li>
+     * <li>The optional <code>dewarp</code> parameter specifies whether to correct the image distortion. Default value: <code>true</code>.</li>
+     * <li>Provide <code>requestId</code> to facilitate troubleshooting and reconciliation.</li>
+     * <li>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</li>
+     * <li>All requests and responses use the JSON format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>提交单页作业图片，返回任务ID及初步检测结果。</p>
+     * <p>Submits a single-page homework image and asynchronously retrieves the grading results.</p>
      * 
      * @param request CreateEduHomeworkCorrectSubmitRequest
      * @return CreateEduHomeworkCorrectSubmitResponse
@@ -161,20 +179,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本接口支持通过单张题目图片的URL或Base64编码进行解题请求。</li>
-     * <li>支持处理JPEG、JPG、PNG格式的图片，且图片大小不超过10MB，像素总数不超过260万。</li>
-     * <li>请求必须携带<code>request_id</code>字段，用于链路关联和对账；建议使用UUID以保证唯一性。</li>
-     * <li><code>Authorization</code>头部需包含有效的<code>appKey</code>，采用<code>Bearer &lt;appKey&gt;</code>格式。</li>
-     * <li>接口响应为SSE流式数据，客户端应逐事件读取并解析，不得等待连接关闭后整体读取。</li>
-     * <li>成功响应包括<code>message</code>（过程态全量解题快照）和<code>complete</code>（最终完整结果）两种事件类型。</li>
-     * <li>错误处理分为建流前与建流后两个阶段，根据错误码及<code>retryable</code>字段决定是否重试。</li>
-     * <li>客户端超时设置建议不低于3分钟，并确保代理层不会缓存SSE响应或提前关闭长连接。</li>
+     * <li>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</li>
+     * <li>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</li>
+     * <li>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</li>
+     * <li>Each request can process only one image. Multi-image or plain text requests are not supported.</li>
+     * <li>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</li>
+     * <li>You must use the HTTPS protocol to call the API and provide image URLs.</li>
+     * <li>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</li>
+     * <li>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</li>
+     * <li>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</li>
+     * <li>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</li>
+     * <li>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>通过图片URL或Base64编码接收题目，返回解题过程和结果。</p>
+     * <p>Provides question resolution services by using image URLs or Base64 encoding.</p>
      * 
      * @param tmpReq CreateEduProblemSolveRequest
      * @param headers map
@@ -218,20 +239,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本接口支持通过单张题目图片的URL或Base64编码进行解题请求。</li>
-     * <li>支持处理JPEG、JPG、PNG格式的图片，且图片大小不超过10MB，像素总数不超过260万。</li>
-     * <li>请求必须携带<code>request_id</code>字段，用于链路关联和对账；建议使用UUID以保证唯一性。</li>
-     * <li><code>Authorization</code>头部需包含有效的<code>appKey</code>，采用<code>Bearer &lt;appKey&gt;</code>格式。</li>
-     * <li>接口响应为SSE流式数据，客户端应逐事件读取并解析，不得等待连接关闭后整体读取。</li>
-     * <li>成功响应包括<code>message</code>（过程态全量解题快照）和<code>complete</code>（最终完整结果）两种事件类型。</li>
-     * <li>错误处理分为建流前与建流后两个阶段，根据错误码及<code>retryable</code>字段决定是否重试。</li>
-     * <li>客户端超时设置建议不低于3分钟，并确保代理层不会缓存SSE响应或提前关闭长连接。</li>
+     * <li>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</li>
+     * <li>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</li>
+     * <li>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</li>
+     * <li>Each request can process only one image. Multi-image or plain text requests are not supported.</li>
+     * <li>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</li>
+     * <li>You must use the HTTPS protocol to call the API and provide image URLs.</li>
+     * <li>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</li>
+     * <li>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</li>
+     * <li>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</li>
+     * <li>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</li>
+     * <li>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>通过图片URL或Base64编码接收题目，返回解题过程和结果。</p>
+     * <p>Provides question resolution services by using image URLs or Base64 encoding.</p>
      * 
      * @param request CreateEduProblemSolveRequest
      * @return CreateEduProblemSolveResponse
@@ -243,8 +267,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation queries the status and detailed results of single-page homework grading by using the <code>taskId</code> returned when the task is submitted.</li>
+     * <li>The caller should poll this operation at an interval of 1 to 2 seconds until the task status changes to <code>finished</code> or <code>failed</code>.</li>
+     * <li>When the task status is <code>finished</code>, the response contains complete grading information, including question recognition, grading conclusions, dewarped images, and rendered images.</li>
+     * <li>If the task fails (the status is <code>failed</code>), check the <code>message</code> field in the response or the specific fault information in <code>data</code>.</li>
+     * <li>All requests and responses are in JSON format.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询批改进度、增量结果、终态结果及 Token 用量</p>
+     * <p>Queries the progress and final results of homework grading based on the task ID.</p>
      * 
      * @param request GetEduHomeworkCorrectionResultRequest
      * @param headers map
@@ -277,8 +311,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation queries the status and detailed results of single-page homework grading by using the <code>taskId</code> returned when the task is submitted.</li>
+     * <li>The caller should poll this operation at an interval of 1 to 2 seconds until the task status changes to <code>finished</code> or <code>failed</code>.</li>
+     * <li>When the task status is <code>finished</code>, the response contains complete grading information, including question recognition, grading conclusions, dewarped images, and rendered images.</li>
+     * <li>If the task fails (the status is <code>failed</code>), check the <code>message</code> field in the response or the specific fault information in <code>data</code>.</li>
+     * <li>All requests and responses are in JSON format.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询批改进度、增量结果、终态结果及 Token 用量</p>
+     * <p>Queries the progress and final results of homework grading based on the task ID.</p>
      * 
      * @param request GetEduHomeworkCorrectionResultRequest
      * @return GetEduHomeworkCorrectionResultResponse
@@ -290,8 +334,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation queries whether a specified Alibaba Cloud account or RAM user has successfully activated the Qwen learning AI suite. Before calling any business API operations, you must use this operation to confirm that the service status is <code>ACTIVE</code>. If the service is not activated, perform the corresponding operations based on the returned status information, such as waiting for a period of time and retrying.</p>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>This operation supports calls from Alibaba Cloud accounts and RAM users.</li>
+     * <li>When a RAM user calls this operation, make sure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</li>
+     * <li>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</li>
+     * <li>If the status is <code>ACTIVATING</code>, retry the query after the time interval recommended by the returned <code>retry_after_seconds</code> field.</li>
+     * <li>If a failure occurs (<code>FAILED</code>), refer to the specific error code, take corresponding measures, and then try again.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>千问教育API开通状态查询</p>
+     * <p>Queries whether the current account has activated Qwen education-related services.</p>
      * 
      * @param request GetQwenEduApiActivationStatusRequest
      * @param headers map
@@ -318,8 +374,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation queries whether a specified Alibaba Cloud account or RAM user has successfully activated the Qwen learning AI suite. Before calling any business API operations, you must use this operation to confirm that the service status is <code>ACTIVE</code>. If the service is not activated, perform the corresponding operations based on the returned status information, such as waiting for a period of time and retrying.</p>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>This operation supports calls from Alibaba Cloud accounts and RAM users.</li>
+     * <li>When a RAM user calls this operation, make sure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</li>
+     * <li>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</li>
+     * <li>If the status is <code>ACTIVATING</code>, retry the query after the time interval recommended by the returned <code>retry_after_seconds</code> field.</li>
+     * <li>If a failure occurs (<code>FAILED</code>), refer to the specific error code, take corresponding measures, and then try again.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>千问教育API开通状态查询</p>
+     * <p>Queries whether the current account has activated Qwen education-related services.</p>
      * 
      * @param request GetQwenEduApiActivationStatusRequest
      * @return GetQwenEduApiActivationStatusResponse

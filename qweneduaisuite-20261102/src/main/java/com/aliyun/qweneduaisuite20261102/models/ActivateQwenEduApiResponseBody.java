@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class ActivateQwenEduApiResponseBody extends TeaModel {
     /**
+     * <p>The API status or POP error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The activation result. This parameter is null when an error occurs.</p>
+     */
     @NameInMap("data")
     public ActivateQwenEduApiResponseBodyData data;
 
     /**
+     * <p>The request error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The POP request ID. This parameter is not returned when signature or identity verification fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C5E3F0A-2B0E-4F7B-9C55-0E1A6A0E2F11</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -62,10 +75,23 @@ public class ActivateQwenEduApiResponseBody extends TeaModel {
     }
 
     public static class ActivateQwenEduApiResponseBodyData extends TeaModel {
+        /**
+         * <p>The failure description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service activation failed. Try again later</p>
+         */
         @NameInMap("failMessage")
         public String failMessage;
 
         /**
+         * <p>The activation status. Valid values:</p>
+         * <ul>
+         * <li>ACTIVE: Activated.</li>
+         * <li>ACTIVATING: Activating.</li>
+         * <li>FAILED: Activation failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */

@@ -4,39 +4,143 @@ package com.aliyun.qweneduaisuite20261102.models;
 import com.aliyun.tea.*;
 
 public class CreateEduProblemSolveResponseBody extends TeaModel {
-    @NameInMap("data")
-    public CreateEduProblemSolveResponseBodyData data;
+    /**
+     * <p>The API data identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>change_batch</p>
+     */
+    @NameInMap("code")
+    public String code;
 
     /**
-     * <strong>example:</strong>
-     * <p>message</p>
+     * <p>Specifies whether this is the final full snapshot. The value is fixed to true in the complete event.</p>
      */
-    @NameInMap("event")
-    public String event;
+    @NameInMap("finished")
+    public Boolean finished;
+
+    /**
+     * <p>The current list of complete question results.</p>
+     */
+    @NameInMap("items")
+    public java.util.List<CreateEduProblemSolveResponseBodyItems> items;
+
+    /**
+     * <p>The actual response message of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
+    @NameInMap("message")
+    public String message;
+
+    /**
+     * <p>Echo request ID echoed from echo request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>098E23F7-A74C-5584-87A1-39734D5B83CE</p>
+     */
+    @NameInMap("requestId")
+    public String requestId;
+
+    /**
+     * <p>The type of the question resolution result. Valid values:</p>
+     * <ul>
+     * <li>single: Single question.</li>
+     * <li>multiple: Multiple questions.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>single</p>
+     */
+    @NameInMap("resultType")
+    public String resultType;
+
+    /**
+     * <p>Specifies whether the error is retryable. Default value: true.</p>
+     */
+    @NameInMap("retryable")
+    public Boolean retryable;
+
+    /**
+     * <p>The token usage. Only the complete event carries the final value. The message event does not return this field.</p>
+     */
+    @NameInMap("usage")
+    public CreateEduProblemSolveResponseBodyUsage usage;
 
     public static CreateEduProblemSolveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateEduProblemSolveResponseBody self = new CreateEduProblemSolveResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateEduProblemSolveResponseBody setData(CreateEduProblemSolveResponseBodyData data) {
-        this.data = data;
+    public CreateEduProblemSolveResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public CreateEduProblemSolveResponseBodyData getData() {
-        return this.data;
+    public String getCode() {
+        return this.code;
     }
 
-    public CreateEduProblemSolveResponseBody setEvent(String event) {
-        this.event = event;
+    public CreateEduProblemSolveResponseBody setFinished(Boolean finished) {
+        this.finished = finished;
         return this;
     }
-    public String getEvent() {
-        return this.event;
+    public Boolean getFinished() {
+        return this.finished;
     }
 
-    public static class CreateEduProblemSolveResponseBodyDataItemsThinking extends TeaModel {
+    public CreateEduProblemSolveResponseBody setItems(java.util.List<CreateEduProblemSolveResponseBodyItems> items) {
+        this.items = items;
+        return this;
+    }
+    public java.util.List<CreateEduProblemSolveResponseBodyItems> getItems() {
+        return this.items;
+    }
+
+    public CreateEduProblemSolveResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CreateEduProblemSolveResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateEduProblemSolveResponseBody setResultType(String resultType) {
+        this.resultType = resultType;
+        return this;
+    }
+    public String getResultType() {
+        return this.resultType;
+    }
+
+    public CreateEduProblemSolveResponseBody setRetryable(Boolean retryable) {
+        this.retryable = retryable;
+        return this;
+    }
+    public Boolean getRetryable() {
+        return this.retryable;
+    }
+
+    public CreateEduProblemSolveResponseBody setUsage(CreateEduProblemSolveResponseBodyUsage usage) {
+        this.usage = usage;
+        return this;
+    }
+    public CreateEduProblemSolveResponseBodyUsage getUsage() {
+        return this.usage;
+    }
+
+    public static class CreateEduProblemSolveResponseBodyItemsThinking extends TeaModel {
         /**
+         * <p>The current thinking content.</p>
+         * 
          * <strong>example:</strong>
          * <p>8ci7nsj9WPYXvQb9MJfA</p>
          */
@@ -44,18 +148,24 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The thinking status. Valid values:</p>
+         * <ul>
+         * <li>processing: Processing.</li>
+         * <li>complete: Complete.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
         @NameInMap("status")
         public String status;
 
-        public static CreateEduProblemSolveResponseBodyDataItemsThinking build(java.util.Map<String, ?> map) throws Exception {
-            CreateEduProblemSolveResponseBodyDataItemsThinking self = new CreateEduProblemSolveResponseBodyDataItemsThinking();
+        public static CreateEduProblemSolveResponseBodyItemsThinking build(java.util.Map<String, ?> map) throws Exception {
+            CreateEduProblemSolveResponseBodyItemsThinking self = new CreateEduProblemSolveResponseBodyItemsThinking();
             return TeaModel.build(map, self);
         }
 
-        public CreateEduProblemSolveResponseBodyDataItemsThinking setContent(String content) {
+        public CreateEduProblemSolveResponseBodyItemsThinking setContent(String content) {
             this.content = content;
             return this;
         }
@@ -63,7 +173,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             return this.content;
         }
 
-        public CreateEduProblemSolveResponseBodyDataItemsThinking setStatus(String status) {
+        public CreateEduProblemSolveResponseBodyItemsThinking setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -73,36 +183,59 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
 
     }
 
-    public static class CreateEduProblemSolveResponseBodyDataItems extends TeaModel {
+    public static class CreateEduProblemSolveResponseBodyItems extends TeaModel {
         /**
+         * <p>The complete Markdown content of the question resolution, including the deduction process and the final result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The URL of the unique image for the current question. The URL may be time-sensitive. If the question is not associated with an image resource and no request URL is available for fallback, an empty string is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.jpg">https://xxx.jpg</a></p>
+         */
         @NameInMap("imageUrl")
         public String imageUrl;
 
+        /**
+         * <p>The question identifier. The value is the question title, such as Question 1. The server does not return a separate title field. If the downstream service does not provide a question title, which is always the case for single-question scenarios, titles such as Question 1 and Question 2 are generated in the order of the questions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50a10e43a33e36179e355556d319ebd5</p>
+         */
         @NameInMap("questionId")
         public String questionId;
 
         /**
+         * <p>The current question status. Valid values:</p>
+         * <ul>
+         * <li>processing: Processing.</li>
+         * <li>complete: Complete.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The thinking process. This field is returned only when result_type is single, and is not returned for multiple questions.</p>
+         */
         @NameInMap("thinking")
-        public CreateEduProblemSolveResponseBodyDataItemsThinking thinking;
+        public CreateEduProblemSolveResponseBodyItemsThinking thinking;
 
-        public static CreateEduProblemSolveResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
-            CreateEduProblemSolveResponseBodyDataItems self = new CreateEduProblemSolveResponseBodyDataItems();
+        public static CreateEduProblemSolveResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
+            CreateEduProblemSolveResponseBodyItems self = new CreateEduProblemSolveResponseBodyItems();
             return TeaModel.build(map, self);
         }
 
-        public CreateEduProblemSolveResponseBodyDataItems setContent(String content) {
+        public CreateEduProblemSolveResponseBodyItems setContent(String content) {
             this.content = content;
             return this;
         }
@@ -110,7 +243,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             return this.content;
         }
 
-        public CreateEduProblemSolveResponseBodyDataItems setImageUrl(String imageUrl) {
+        public CreateEduProblemSolveResponseBodyItems setImageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
@@ -118,7 +251,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             return this.imageUrl;
         }
 
-        public CreateEduProblemSolveResponseBodyDataItems setQuestionId(String questionId) {
+        public CreateEduProblemSolveResponseBodyItems setQuestionId(String questionId) {
             this.questionId = questionId;
             return this;
         }
@@ -126,7 +259,7 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             return this.questionId;
         }
 
-        public CreateEduProblemSolveResponseBodyDataItems setStatus(String status) {
+        public CreateEduProblemSolveResponseBodyItems setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -134,29 +267,41 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             return this.status;
         }
 
-        public CreateEduProblemSolveResponseBodyDataItems setThinking(CreateEduProblemSolveResponseBodyDataItemsThinking thinking) {
+        public CreateEduProblemSolveResponseBodyItems setThinking(CreateEduProblemSolveResponseBodyItemsThinking thinking) {
             this.thinking = thinking;
             return this;
         }
-        public CreateEduProblemSolveResponseBodyDataItemsThinking getThinking() {
+        public CreateEduProblemSolveResponseBodyItemsThinking getThinking() {
             return this.thinking;
         }
 
     }
 
-    public static class CreateEduProblemSolveResponseBodyDataUsage extends TeaModel {
+    public static class CreateEduProblemSolveResponseBodyUsage extends TeaModel {
+        /**
+         * <p>The number of output tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("completionTokens")
         public Integer completionTokens;
 
+        /**
+         * <p>The number of input tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("promptTokens")
         public Integer promptTokens;
 
-        public static CreateEduProblemSolveResponseBodyDataUsage build(java.util.Map<String, ?> map) throws Exception {
-            CreateEduProblemSolveResponseBodyDataUsage self = new CreateEduProblemSolveResponseBodyDataUsage();
+        public static CreateEduProblemSolveResponseBodyUsage build(java.util.Map<String, ?> map) throws Exception {
+            CreateEduProblemSolveResponseBodyUsage self = new CreateEduProblemSolveResponseBodyUsage();
             return TeaModel.build(map, self);
         }
 
-        public CreateEduProblemSolveResponseBodyDataUsage setCompletionTokens(Integer completionTokens) {
+        public CreateEduProblemSolveResponseBodyUsage setCompletionTokens(Integer completionTokens) {
             this.completionTokens = completionTokens;
             return this;
         }
@@ -164,120 +309,12 @@ public class CreateEduProblemSolveResponseBody extends TeaModel {
             return this.completionTokens;
         }
 
-        public CreateEduProblemSolveResponseBodyDataUsage setPromptTokens(Integer promptTokens) {
+        public CreateEduProblemSolveResponseBodyUsage setPromptTokens(Integer promptTokens) {
             this.promptTokens = promptTokens;
             return this;
         }
         public Integer getPromptTokens() {
             return this.promptTokens;
-        }
-
-    }
-
-    public static class CreateEduProblemSolveResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>change_batch</p>
-         */
-        @NameInMap("code")
-        public String code;
-
-        @NameInMap("finished")
-        public Boolean finished;
-
-        @NameInMap("items")
-        public java.util.List<CreateEduProblemSolveResponseBodyDataItems> items;
-
-        /**
-         * <strong>example:</strong>
-         * <p>ok</p>
-         */
-        @NameInMap("message")
-        public String message;
-
-        /**
-         * <strong>example:</strong>
-         * <p>098E23F7-A74C-5584-87A1-39734D5B83CE</p>
-         */
-        @NameInMap("requestId")
-        public String requestId;
-
-        @NameInMap("resultType")
-        public String resultType;
-
-        @NameInMap("retryable")
-        public Boolean retryable;
-
-        @NameInMap("usage")
-        public CreateEduProblemSolveResponseBodyDataUsage usage;
-
-        public static CreateEduProblemSolveResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            CreateEduProblemSolveResponseBodyData self = new CreateEduProblemSolveResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateEduProblemSolveResponseBodyData setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public CreateEduProblemSolveResponseBodyData setFinished(Boolean finished) {
-            this.finished = finished;
-            return this;
-        }
-        public Boolean getFinished() {
-            return this.finished;
-        }
-
-        public CreateEduProblemSolveResponseBodyData setItems(java.util.List<CreateEduProblemSolveResponseBodyDataItems> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<CreateEduProblemSolveResponseBodyDataItems> getItems() {
-            return this.items;
-        }
-
-        public CreateEduProblemSolveResponseBodyData setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public CreateEduProblemSolveResponseBodyData setRequestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-        public String getRequestId() {
-            return this.requestId;
-        }
-
-        public CreateEduProblemSolveResponseBodyData setResultType(String resultType) {
-            this.resultType = resultType;
-            return this;
-        }
-        public String getResultType() {
-            return this.resultType;
-        }
-
-        public CreateEduProblemSolveResponseBodyData setRetryable(Boolean retryable) {
-            this.retryable = retryable;
-            return this;
-        }
-        public Boolean getRetryable() {
-            return this.retryable;
-        }
-
-        public CreateEduProblemSolveResponseBodyData setUsage(CreateEduProblemSolveResponseBodyDataUsage usage) {
-            this.usage = usage;
-            return this;
-        }
-        public CreateEduProblemSolveResponseBodyDataUsage getUsage() {
-            return this.usage;
         }
 
     }

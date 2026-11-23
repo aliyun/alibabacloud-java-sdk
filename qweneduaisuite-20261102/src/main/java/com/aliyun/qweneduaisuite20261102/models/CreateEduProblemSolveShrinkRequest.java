@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateEduProblemSolveShrinkRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
+     * <p><strong>The question image container.</strong></p>
      */
     @NameInMap("query")
     public String queryShrink;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>019F593F-D6EE-5F44-819A-6CDA127D1637</p>
      */

@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
     /**
+     * <p>The API status.</p>
+     * 
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>SUCCESS</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The import command.</p>
+     */
     @NameInMap("data")
     public CreateEduHomeworkCorrectSubmitResponseBodyData data;
 
     /**
+     * <p>The request error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The request ID on the caller side.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>req-20261116-0001</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -63,15 +76,19 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
 
     public static class CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResultsAnswerResultsAnswerPoints extends TeaModel {
         /**
+         * <p>The X-axis coordinate value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.0</p>
+         * <p>120</p>
          */
         @NameInMap("x")
         public Long x;
 
         /**
+         * <p>The Y-axis coordinate value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.03</p>
+         * <p>980</p>
          */
         @NameInMap("y")
         public Long y;
@@ -101,15 +118,19 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
 
     public static class CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResultsAnswerResultsCheckPoint extends TeaModel {
         /**
+         * <p>The X-axis coordinate.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.0</p>
+         * <p>120</p>
          */
         @NameInMap("x")
         public Long x;
 
         /**
+         * <p>The Y-axis coordinate.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.90</p>
+         * <p>980</p>
          */
         @NameInMap("y")
         public Long y;
@@ -138,18 +159,42 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
     }
 
     public static class CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResultsAnswerResults extends TeaModel {
+        /**
+         * <p>The coordinate group of the user\&quot;s answering area. It generally contains four vertex coordinates arranged in the order of top-left, top-right, bottom-right, and bottom-left, formatted as <code>[{&quot;x&quot;: ..., &quot;y&quot;: ...}, ...]</code>.</p>
+         */
         @NameInMap("answerPoints")
         public java.util.List<CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResultsAnswerResultsAnswerPoints> answerPoints;
 
+        /**
+         * <p>The coordinates of the grading mark point, formatted as <code>{ &quot;x&quot;: ..., &quot;y&quot;: ... }</code>.</p>
+         */
         @NameInMap("checkPoint")
         public CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResultsAnswerResultsCheckPoint checkPoint;
 
+        /**
+         * <p>The grading conclusion, such as <code>correct</code>, <code>wrong</code>, or <code>partial</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>correct</p>
+         */
         @NameInMap("checkResult")
         public String checkResult;
 
+        /**
+         * <p>The ground truth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("standardAnswer")
         public String standardAnswer;
 
+        /**
+         * <p>The student\&quot;s answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("userAnswer")
         public String userAnswer;
 
@@ -202,15 +247,19 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
 
     public static class CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResultsQuestionPoints extends TeaModel {
         /**
+         * <p>The X-axis coordinate value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.0</p>
+         * <p>120</p>
          */
         @NameInMap("x")
         public Long x;
 
         /**
+         * <p>The Y-axis coordinate value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.0</p>
+         * <p>980</p>
          */
         @NameInMap("y")
         public Long y;
@@ -239,31 +288,66 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
     }
 
     public static class CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResults extends TeaModel {
+        /**
+         * <p>The array of answering and grading results for the question.</p>
+         */
         @NameInMap("answerResults")
         public java.util.List<CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResultsAnswerResults> answerResults;
 
         /**
+         * <p>Specifies whether the task is completed:</p>
+         * <ul>
+         * <li><strong>true</strong>: The task is completed.</li>
+         * <li><strong>false</strong>: The task is not completed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         @NameInMap("finish")
         public Boolean finish;
 
+        /**
+         * <p>The text content of the question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 + 1 = ?</p>
+         */
         @NameInMap("questionContent")
         public String questionContent;
 
+        /**
+         * <p>The question ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q-001</p>
+         */
         @NameInMap("questionId")
         public String questionId;
 
+        /**
+         * <p>The coordinate group of the question area. It generally contains four vertex coordinates arranged in the order of top-left, top-right, bottom-right, and bottom-left.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Formatted as <code>[[{&quot;x&quot;: 0, &quot;y&quot;: 0}, ...]]</code></p>
+         */
         @NameInMap("questionPoints")
         public java.util.List<java.util.List<CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResultsQuestionPoints>> questionPoints;
 
+        /**
+         * <p>The question type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>choice</p>
+         */
         @NameInMap("questionType")
         public String questionType;
 
         /**
+         * <p>The question analysis and solution.</p>
+         * 
          * <strong>example:</strong>
-         * <p>已处理：接口耗时已恢复低于阈值（09:53后分钟平均约1.8s～3.3s）</p>
+         * <p>The question analysis and solution</p>
          */
         @NameInMap("solution")
         public String solution;
@@ -332,22 +416,45 @@ public class CreateEduHomeworkCorrectSubmitResponseBody extends TeaModel {
     }
 
     public static class CreateEduHomeworkCorrectSubmitResponseBodyData extends TeaModel {
+        /**
+         * <p>The clockwise rotation angle of the image, in degrees.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("angle")
         public Long angle;
 
+        /**
+         * <p>The URL of the corrected image. If <code>dewarp</code> is set to <code>false</code>, the URL of the original image is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/dewarp.jpg">https://example.com/dewarp.jpg</a></p>
+         */
         @NameInMap("dewarpUrl")
         public String dewarpUrl;
 
+        /**
+         * <p>The array of question recognition and grading results.</p>
+         */
         @NameInMap("questionResults")
         public java.util.List<CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResults> questionResults;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>Examples: submitted, processing, finished, or failed</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The unique identifier of the task. You must include this ID in subsequent queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-20261116-abc123</p>
+         */
         @NameInMap("taskId")
         public String taskId;
 
