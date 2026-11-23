@@ -5525,6 +5525,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("gatewayId", request.gatewayId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeModelTpm)) {
+            query.put("includeModelTpm", request.includeModelTpm);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -6865,6 +6869,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getModelGroupWithOptions(modelGroupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the token throttling rules for a model.</p>
+     * 
+     * @param request GetModelTokenRateLimitRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetModelTokenRateLimitResponse
+     */
+    public GetModelTokenRateLimitResponse getModelTokenRateLimitWithOptions(String gatewayId, String modelId, GetModelTokenRateLimitRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetModelTokenRateLimit"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/model-tpm/" + com.aliyun.openapiutil.Client.getEncodeParam(modelId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetModelTokenRateLimitResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the token throttling rules for a model.</p>
+     * 
+     * @param request GetModelTokenRateLimitRequest
+     * @return GetModelTokenRateLimitResponse
+     */
+    public GetModelTokenRateLimitResponse getModelTokenRateLimit(String gatewayId, String modelId, GetModelTokenRateLimitRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getModelTokenRateLimitWithOptions(gatewayId, modelId, request, headers, runtime);
     }
 
     /**
@@ -9407,10 +9452,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</p>
+     * <p>Retrieves the historical events delivered by the dedicated Professional AI gateway of the current user to Simple Log Service (SLS). Standard user log delivery and the corresponding indexes must be enabled. The query time range is a left-closed and right-open interval. The time span cannot exceed 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results do not represent an online connection directory, and missing logs do not indicate that no calls occurred.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</p>
+     * <p>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</p>
      * 
      * @param request ListGatewayWebsocketEventsRequest
      * @param headers map
@@ -9476,10 +9521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</p>
+     * <p>Retrieves the historical events delivered by the dedicated Professional AI gateway of the current user to Simple Log Service (SLS). Standard user log delivery and the corresponding indexes must be enabled. The query time range is a left-closed and right-open interval. The time span cannot exceed 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results do not represent an online connection directory, and missing logs do not indicate that no calls occurred.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</p>
+     * <p>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</p>
      * 
      * @param request ListGatewayWebsocketEventsRequest
      * @return ListGatewayWebsocketEventsResponse
@@ -14954,7 +14999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the configurations of listening Ingresses.</p>
+     * <p>Only sources of the <strong>container service</strong> type are allowed to update the configurations of Ingress listeners.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an MCP server.</p>
@@ -15039,7 +15084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the configurations of listening Ingresses.</p>
+     * <p>Only sources of the <strong>container service</strong> type are allowed to update the configurations of Ingress listeners.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an MCP server.</p>
@@ -15268,6 +15313,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateModelGroupWithOptions(modelGroupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the token throttling rules for a model.</p>
+     * 
+     * @param request UpdateModelTokenRateLimitRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateModelTokenRateLimitResponse
+     */
+    public UpdateModelTokenRateLimitResponse updateModelTokenRateLimitWithOptions(String gatewayId, String modelId, UpdateModelTokenRateLimitRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consumers)) {
+            body.put("consumers", request.consumers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedRevision)) {
+            body.put("expectedRevision", request.expectedRevision);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.globalTpm)) {
+            body.put("globalTpm", request.globalTpm);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateModelTokenRateLimit"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/model-tpm/" + com.aliyun.openapiutil.Client.getEncodeParam(modelId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateModelTokenRateLimitResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the token throttling rules for a model.</p>
+     * 
+     * @param request UpdateModelTokenRateLimitRequest
+     * @return UpdateModelTokenRateLimitResponse
+     */
+    public UpdateModelTokenRateLimitResponse updateModelTokenRateLimit(String gatewayId, String modelId, UpdateModelTokenRateLimitRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateModelTokenRateLimitWithOptions(gatewayId, modelId, request, headers, runtime);
     }
 
     /**

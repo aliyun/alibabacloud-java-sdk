@@ -1,3 +1,10 @@
+2026-11-23 Version: 12.12.0
+- Support API GetModelTokenRateLimit.
+- Support API UpdateModelTokenRateLimit.
+- Update API GetConsumerAccessOverview: add request parameters includeModelTpm.
+- Update API GetConsumerAccessOverview: add response parameters Body.data.modelTpmLimits.
+
+
 2026-11-18 Version: 12.11.0
 - Support API GetGatewayWebsocketUsage.
 - Support API ListGatewayWebsocketEvents.

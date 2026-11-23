@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayWebsocketEventsRequest extends TeaModel {
     /**
-     * <p>The connection ID.</p>
+     * <p>The connection identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>connection-example</p>
@@ -14,7 +14,7 @@ public class ListGatewayWebsocketEventsRequest extends TeaModel {
     public String connectionId;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time. The value is a UNIX timestamp in seconds since the UTC epoch. Example: 1793919600.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListGatewayWebsocketEventsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The number of entries per page for cursor-based pagination. If not specified or set to 0, the default value is 50. If the value is greater than 100, it is capped at 100. Negative values are invalid.</p>
+     * <p>The maximum number of results per page for cursor-based pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -42,7 +42,7 @@ public class ListGatewayWebsocketEventsRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The pagination cursor. Do not specify this parameter for the first query. For subsequent pages, use the nextToken value returned in the previous response. The time range and filter conditions must remain unchanged, but you can adjust the maxResults value.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>opaque-token-from-previous-page</p>
@@ -69,7 +69,7 @@ public class ListGatewayWebsocketEventsRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. The value is a UNIX timestamp in seconds since the UTC epoch. Example: 1793916000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class ListGatewayWebsocketEventsRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The turn ID.</p>
+     * <p>The turn identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>turn-example</p>

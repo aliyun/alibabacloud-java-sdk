@@ -19,11 +19,11 @@ public class UpdateMcpServerRequest extends TeaModel {
     /**
      * <p>The creation source type. Valid values:</p>
      * <ul>
-     * <li>ApiGatewayHttpToMCP: API Gateway-managed HTTP-to-MCP</li>
-     * <li>ApiGatewayProxyMcpHosting: API Gateway-managed direct MCP proxy</li>
-     * <li>ApiGatewayAssembly: API Gateway MCP assembly</li>
-     * <li>NacosHttpToMCP: API Gateway-managed Nacos-synchronized HTTP-to-MCP</li>
-     * <li>NacosMcpHosting: API Gateway-managed Nacos-synchronized direct MCP proxy</li>
+     * <li>ApiGatewayHttpToMCP: Gateway-hosted HTTP-to-MCP</li>
+     * <li>ApiGatewayProxyMcpHosting: Gateway-hosted direct MCP proxy</li>
+     * <li>ApiGatewayAssembly: Gateway MCP assembly</li>
+     * <li>NacosHttpToMCP: Gateway-hosted Nacos-synchronized HTTP-to-MCP</li>
+     * <li>NacosMcpHosting: Gateway-hosted Nacos-synchronized direct MCP proxy</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,13 @@ public class UpdateMcpServerRequest extends TeaModel {
     public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs;
 
     /**
-     * <p>The MCP service description.</p>
+     * <p>The MCP service instructions. Only gateway-hosted HTTP-to-MCP services of AI Gateway Professional Edition are supported. The maximum length is 2,048 UTF-8 bytes.</p>
+     * <ul>
+     * <li>Passing a non-empty string replaces the saved instructions.</li>
+     * <li>Omitting this field retains the saved instructions.</li>
+     * <li>Passing an empty string <code>&quot;&quot;</code> clears the saved instructions.</li>
+     * </ul>
+     * <p>After you republish the MCP service, newly established MCP connections can read the updated instructions in <code>result.instructions</code> of the <code>initialize</code> response. If cleared, the response omits <code>instructions</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Used to query order status. An order number is required for the query</p>
@@ -294,11 +300,11 @@ public class UpdateMcpServerRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>TCP.</li>
-         * <li>HTTP.</li>
-         * <li>DUBBO.</li>
+         * <li>TCP: TCP</li>
+         * <li>HTTP: HTTP</li>
+         * <li>DUBBO: Dubbo</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -431,7 +437,7 @@ public class UpdateMcpServerRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The protocol.</p>
+         * <p>The service protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -607,7 +613,7 @@ public class UpdateMcpServerRequest extends TeaModel {
 
     public static class UpdateMcpServerRequestMcpServerConfig extends TeaModel {
         /**
-         * <p>The MCP server configurations. This parameter is mutually exclusive with swaggerConfig.</p>
+         * <p>The MCP server configurations. This parameter is mutually exclusive with the swaggerConfig parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-server-spec-yaml</p>

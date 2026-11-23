@@ -14,7 +14,7 @@ public class ListGatewayWebsocketEventsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The query result.</p>
+     * <p>The query results.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -32,7 +32,7 @@ public class ListGatewayWebsocketEventsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D0A6A1A0-8793-4C10-AB1A-2C03E770A912</p>
@@ -106,7 +106,7 @@ public class ListGatewayWebsocketEventsResponseBody extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> items;
 
         /**
-         * <p>The actual number of entries per page used for the current request. The default value is 50 and the maximum value is 100.</p>
+         * <p>The actual number of results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -115,7 +115,7 @@ public class ListGatewayWebsocketEventsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The encrypted cursor returned when there is a next page. This parameter is empty for the last page. The cursor is valid for 10 minutes and is bound to the user, gateway, time range, and filters. You can adjust maxResults for subsequent pages. SLS snapshot isolation is not guaranteed.</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>opaque-token-from-previous-page</p>
