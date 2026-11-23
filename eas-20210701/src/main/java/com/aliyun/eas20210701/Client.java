@@ -5763,6 +5763,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EnableSSLRedirection", request.enableSSLRedirection);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.idleTimeout)) {
+            body.put("IdleTimeout", request.idleTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
             body.put("InstanceType", request.instanceType);
         }
@@ -5777,6 +5781,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.replicas)) {
             body.put("Replicas", request.replicas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestTimeout)) {
+            body.put("RequestTimeout", request.requestTimeout);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIds)) {

@@ -50,6 +50,15 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String gatewayName;
 
     /**
+     * <p>The idle connection timeout. Default value: 600. Valid values: 1 to 3600. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
+    @NameInMap("IdleTimeout")
+    public String idleTimeout;
+
+    /**
      * <p>The instance type used by the private gateway.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +77,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String internetDomain;
 
     /**
-     * <p>Indicates whether public network access is enabled.</p>
+     * <p>Specifies whether public network access is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +86,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public Boolean internetEnabled;
 
     /**
-     * <p>The status of public network access.</p>
+     * <p>The status of enabling or disabling public network access.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -95,7 +104,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String intranetDomain;
 
     /**
-     * <p>Indicates whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is disabled.</p>
+     * <p>Specifies whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -104,7 +113,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public Boolean intranetEnabled;
 
     /**
-     * <p>Indicates whether the private gateway is the default private gateway.</p>
+     * <p>Specifies whether the private gateway is the default private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -137,7 +146,17 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether HTTP redirection to HTTPS is enabled.</p>
+     * <p>The request timeout. Unit: seconds.</p>
+     * <p>Default value: 600. Valid values: 1 to 3600.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
+    @NameInMap("RequestTimeout")
+    public String requestTimeout;
+
+    /**
+     * <p>Specifies whether HTTP to HTTPS redirection is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -215,6 +234,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
     public String getGatewayName() {
         return this.gatewayName;
+    }
+
+    public DescribeGatewayResponseBody setIdleTimeout(String idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public String getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     public DescribeGatewayResponseBody setInstanceType(String instanceType) {
@@ -295,6 +322,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeGatewayResponseBody setRequestTimeout(String requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    public String getRequestTimeout() {
+        return this.requestTimeout;
     }
 
     public DescribeGatewayResponseBody setSSLRedirectionEnabled(Boolean SSLRedirectionEnabled) {

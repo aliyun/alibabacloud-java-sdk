@@ -1,3 +1,10 @@
+2026-11-23 Version: 7.11.1
+- Update API DescribeGateway: add response parameters Body.IdleTimeout.
+- Update API DescribeGateway: add response parameters Body.RequestTimeout.
+- Update API UpdateGateway: add request parameters body.IdleTimeout.
+- Update API UpdateGateway: add request parameters body.RequestTimeout.
+
+
 2026-11-20 Version: 7.11.0
 - Support API UpdateServiceVersionRemark.
 - Update API CreateAppService: add request parameters ClientToken.

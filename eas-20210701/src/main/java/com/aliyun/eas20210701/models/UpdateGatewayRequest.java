@@ -32,6 +32,15 @@ public class UpdateGatewayRequest extends TeaModel {
     public Boolean enableSSLRedirection;
 
     /**
+     * <p>The idle connection timeout period. Unit: seconds. Default value: 600. Valid values: 1 to 3600.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
+    @NameInMap("IdleTimeout")
+    public Integer idleTimeout;
+
+    /**
      * <p>The instance type used by the private gateway. Valid values:</p>
      * <ul>
      * <li>2c4g</li>
@@ -74,13 +83,22 @@ public class UpdateGatewayRequest extends TeaModel {
     public Integer replicas;
 
     /**
-     * <p>The list of vSwitches. This parameter is only applicable to application dedicated gateways.</p>
+     * <p>The request timeout period. Unit: seconds. Default value: 600. Valid values: 1 to 3600.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
+    @NameInMap("RequestTimeout")
+    public Integer requestTimeout;
+
+    /**
+     * <p>The list of vSwitches. This parameter applies only to dedicated gateways for applications.</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
     /**
-     * <p>The ID of the VPC to which the gateway belongs. This parameter is only applicable to application dedicated gateways.</p>
+     * <p>The ID of the VPC to which the gateway belongs. This parameter applies only to dedicated gateways for applications.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1jkde2******3mew</p>
@@ -126,6 +144,14 @@ public class UpdateGatewayRequest extends TeaModel {
         return this.enableSSLRedirection;
     }
 
+    public UpdateGatewayRequest setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
     public UpdateGatewayRequest setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -156,6 +182,14 @@ public class UpdateGatewayRequest extends TeaModel {
     }
     public Integer getReplicas() {
         return this.replicas;
+    }
+
+    public UpdateGatewayRequest setRequestTimeout(Integer requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
     }
 
     public UpdateGatewayRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
