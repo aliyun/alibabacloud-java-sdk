@@ -15,6 +15,9 @@ public class MosCheckInRequest extends TeaModel {
      * <strong>example:</strong>
      * <p>{}</p>
      */
+    @NameInMap("CheckinPoint")
+    public String checkinPoint;
+
     @NameInMap("ExtParam")
     public String extParam;
 
@@ -36,6 +39,14 @@ public class MosCheckInRequest extends TeaModel {
     }
     public String getActivityId() {
         return this.activityId;
+    }
+
+    public MosCheckInRequest setCheckinPoint(String checkinPoint) {
+        this.checkinPoint = checkinPoint;
+        return this;
+    }
+    public String getCheckinPoint() {
+        return this.checkinPoint;
     }
 
     public MosCheckInRequest setExtParam(String extParam) {

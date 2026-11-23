@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "marketing_event";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("marketing_event", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -461,6 +464,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ActivityId", request.activityId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.checkinPoint)) {
+            body.put("CheckinPoint", request.checkinPoint);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.extParam)) {
             body.put("ExtParam", request.extParam);
         }
@@ -499,6 +506,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>MOS活动报名查询</p>
+     * 
+     * @param request MosQueryRegistrationInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MosQueryRegistrationInfoResponse
+     */
+    public MosQueryRegistrationInfoResponse mosQueryRegistrationInfoWithOptions(MosQueryRegistrationInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MosQueryRegistrationInfo"),
+            new TeaPair("version", "2021-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MosQueryRegistrationInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>MOS活动报名查询</p>
+     * 
+     * @param request MosQueryRegistrationInfoRequest
+     * @return MosQueryRegistrationInfoResponse
+     */
+    public MosQueryRegistrationInfoResponse mosQueryRegistrationInfo(MosQueryRegistrationInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.mosQueryRegistrationInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过活动id查询所有审核通过的报名信息</p>
+     * 
      * @param request QueryAllActivityInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryAllActivityInfoResponse
@@ -524,6 +574,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>通过活动id查询所有审核通过的报名信息</p>
+     * 
      * @param request QueryAllActivityInfoRequest
      * @return QueryAllActivityInfoResponse
      */
@@ -797,6 +850,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>通过活动id, 参会人名称等查询单个审核通过的报名信息</p>
+     * 
      * @param request QuerySingleActivityInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QuerySingleActivityInfoResponse
@@ -822,6 +878,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>通过活动id, 参会人名称等查询单个审核通过的报名信息</p>
+     * 
      * @param request QuerySingleActivityInfoRequest
      * @return QuerySingleActivityInfoResponse
      */
@@ -831,6 +890,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>签到处理</p>
+     * 
      * @param request SyncSignInInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SyncSignInInfoResponse
@@ -856,6 +918,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>签到处理</p>
+     * 
      * @param request SyncSignInInfoRequest
      * @return SyncSignInInfoResponse
      */
@@ -1036,5 +1101,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTicketRecordByticketCodePopResponse updateTicketRecordByticketCodePop(UpdateTicketRecordByticketCodePopRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTicketRecordByticketCodePopWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>核验指定活动当天的入场权限</p>
+     * 
+     * @param request VerifyActivityAdmissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyActivityAdmissionResponse
+     */
+    public VerifyActivityAdmissionResponse verifyActivityAdmissionWithOptions(VerifyActivityAdmissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.activityId)) {
+            body.put("ActivityId", request.activityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idCardNo)) {
+            body.put("IdCardNo", request.idCardNo);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyActivityAdmission"),
+            new TeaPair("version", "2021-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyActivityAdmissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>核验指定活动当天的入场权限</p>
+     * 
+     * @param request VerifyActivityAdmissionRequest
+     * @return VerifyActivityAdmissionResponse
+     */
+    public VerifyActivityAdmissionResponse verifyActivityAdmission(VerifyActivityAdmissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyActivityAdmissionWithOptions(request, runtime);
     }
 }
