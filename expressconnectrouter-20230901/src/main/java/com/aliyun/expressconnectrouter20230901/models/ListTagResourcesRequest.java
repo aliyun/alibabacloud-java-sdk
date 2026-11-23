@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return for a single request. Default value: 20.</p>
+     * <p>The maximum number of entries to return in a single request. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>If NextToken is empty, no next query exists.</li>
+     * <li>If NextToken is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +27,23 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ECR IDs.</p>
+     * <p>The list of resource instance IDs.</p>
+     * <p>You can specify up to 20 resource instance IDs. If you exceed this limit, the IllegalParamSize.ResourceIds error is returned.</p>
+     * <blockquote>
+     * <p>You must specify at least one of ResourceId and Tag. Otherwise, the MissingParam.TagsAndResourceIds error is returned.</p>
+     * </blockquote>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to EXPRESSCONNECTROUTER.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><strong>EXPRESSCONNECTROUTER</strong>: Express Connect Router (ECR) instance.</li>
+     * <li><strong>EXPRESSCONNECTROUTERVPCASSOCIATION</strong>: association between an ECR and a VPC.</li>
+     * <li><strong>EXPRESSCONNECTROUTERTRASSOCIATION</strong>: association between an ECR and a transit router.</li>
+     * <li><strong>ECRFLOWLOG</strong>: ECR flow log.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,8 +53,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag.</p>
-     * <p>You can specify at most 20 tags.</p>
+     * <p>The tags.</p>
+     * <p>You can bind up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -107,9 +117,9 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
-         * <p>You can specify up to 20 tag keys in each call.</p>
+         * <p>The tag key of the resource.</p>
+         * <p>The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -118,8 +128,8 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value can be an empty string.</p>
-         * <p>You can specify up to 20 tag values in each call.</p>
+         * <p>The tag value. It can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>. It can be an empty string.</p>
+         * <p>You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

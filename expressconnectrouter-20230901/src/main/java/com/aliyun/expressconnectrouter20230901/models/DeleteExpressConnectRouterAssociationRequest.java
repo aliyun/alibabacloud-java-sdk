@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteExpressConnectRouterAssociationRequest extends TeaModel {
     /**
-     * <p>The ID of the association between the ECR and the VPC or TR.</p>
+     * <p>The ID used to associate the Express Connect Router (ECR) with a VPC or transit router.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,9 +16,9 @@ public class DeleteExpressConnectRouterAssociationRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate a parameter value from your client to ensure that the parameter value is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class DeleteExpressConnectRouterAssociationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to delete the association between the ECR and the VPC or TR. Valid values:</p>
+     * <p>Specifies whether to delete the association between the Express Connect Router (ECR) and a transit router or VPC. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,10 +41,12 @@ public class DeleteExpressConnectRouterAssociationRequest extends TeaModel {
     public Boolean deleteAttachment;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to only perform a dry run for this request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: Sends a dry run request and does not modify service resources.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default value): Sends a normal request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class DeleteExpressConnectRouterAssociationRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

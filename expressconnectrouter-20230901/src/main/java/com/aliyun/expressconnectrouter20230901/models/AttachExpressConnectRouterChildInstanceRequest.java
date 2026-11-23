@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     /**
-     * <p>The VBR ID.</p>
+     * <p>The ID of the VBR instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,19 +15,19 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+     * <p>The Alibaba Cloud account ID of the account to which the VBR instance belongs.</p>
      * <blockquote>
-     * <p> If you want to connect to a network instance that belongs to a different account, this parameter is required.</p>
+     * <p>If you want to load a network instance that belongs to a different Alibaba Cloud account, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>190550144868****</p>
+     * <p>1905501448682345</p>
      */
     @NameInMap("ChildInstanceOwnerId")
     public Long childInstanceOwnerId;
 
     /**
-     * <p>The region ID of the VBR.</p>
+     * <p>The region ID of the VBR instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
-     * <p>The type of the network instance. Set the value to <strong>VBR</strong>.</p>
+     * <p>The type of the network instance. Valid value: <strong>VBR</strong> (Virtual Border Router).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,9 +48,9 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the sub-instance. It must be 0 to 128 characters in length.</p>
+     * <p>The description of the child instance. The description must be 0 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -69,10 +69,10 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether it is only a dry run for this request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><strong>true</strong>: performs a dry run for the request without modifying EPS resources.</li>
+     * <li><strong>false</strong> (default): sends a normal request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

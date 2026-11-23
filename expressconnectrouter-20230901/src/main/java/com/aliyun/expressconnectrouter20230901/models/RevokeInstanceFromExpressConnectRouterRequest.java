@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class RevokeInstanceFromExpressConnectRouterRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class RevokeInstanceFromExpressConnectRouterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without sending the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: performs a dry run without modifying service resources.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class RevokeInstanceFromExpressConnectRouterRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The Express Connect Router (ECR) instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +43,7 @@ public class RevokeInstanceFromExpressConnectRouterRequest extends TeaModel {
     public String ecrId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the ECR from which you want to revoke permissions.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the ECR instance for which authorization is being revoked.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +63,7 @@ public class RevokeInstanceFromExpressConnectRouterRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the network instance.</p>
+     * <p>The region of the network instance for which authorization is being revoked.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,8 +75,8 @@ public class RevokeInstanceFromExpressConnectRouterRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VBR</strong></li>
-     * <li><strong>VPC</strong></li>
+     * <li><strong>VBR</strong>: virtual border router instance.</li>
+     * <li><strong>VPC</strong>: virtual private cloud instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

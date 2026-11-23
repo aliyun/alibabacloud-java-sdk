@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterChildInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the association between the ECR and the virtual private cloud (VPC) or transit router (TR).</p>
+     * <p>The ID used to associate the Express Connect Router (ECR) with the VBR.</p>
      * 
      * <strong>example:</strong>
      * <p>ecr-assoc-9p2qxx5phpca2m****</p>
@@ -14,7 +14,7 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String associationId;
 
     /**
-     * <p>The ID of the network instance to be queried.</p>
+     * <p>The instance ID of the network instance to be queried.</p>
      * 
      * <strong>example:</strong>
      * <p>vbr-j6cwxhgg0s5nuephp****</p>
@@ -23,7 +23,7 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The region ID of the network instance.</p>
+     * <p>The region where the network instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
-     * <p>The type of network instance. Set the value to VBR.</p>
+     * <p>The type of the network instance. Valid values: <strong>VBR</strong>: virtual border router.</p>
      * 
      * <strong>example:</strong>
      * <p>VBR</p>
@@ -42,9 +42,9 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the value from your client and ensure that the value is unique across different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,10 +54,10 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether this request is only a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><strong>true</strong>: sends a check request without modifying the EPS resource.</li>
+     * <li><strong>false</strong> (default): sends a normal request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,10 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>Instance ID of the Express Connect Router (ECR) instance.</p>
+     * <blockquote>
+     * <p>You can call the DescribeExpressConnectRouter API operation to obtain instance ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,19 +80,19 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String ecrId;
 
     /**
-     * <p>The maximum number of entries to read. Valid values: 1 to 2147483647. Default value: 20.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 2147483647. Default value: 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If NextToken is empty, no next page exists.</li>
-     * <li>If a value of NextToken is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If this is the first query or no next query is required, leave this parameter empty.</li>
+     * <li>If a next query is required, set the value to the NextToken value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>

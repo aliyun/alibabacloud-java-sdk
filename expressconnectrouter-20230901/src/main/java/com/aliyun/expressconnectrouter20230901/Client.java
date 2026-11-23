@@ -8,7 +8,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "ExpressConnectRouter";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-hongkong", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-beijing", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("us-west-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("us-east-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("eu-central-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("eu-west-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("me-central-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "expressconnectrouter.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "expressconnectrouter.cn-shanghai.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("expressconnectrouter", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +64,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables log delivery for flow logs.</p>
+     * <p>Enables log delivery for a flow log.</p>
      * 
      * @param request ActivateFlowLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -78,7 +114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables log delivery for flow logs.</p>
+     * <p>Enables log delivery for a flow log.</p>
      * 
      * @param request ActivateFlowLogRequest
      * @return ActivateFlowLogResponse
@@ -90,10 +126,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call the <strong>AttachExpressConnectRouterChildInstance</strong> operation to associate a VBR with an ECR, make sure that the ECR is in the <strong>Active</strong> state.</p>
+     * <p>Before you invoke the <strong>AttachExpressConnectRouterChildInstance</strong> operation to load a child instance (VBR) to an Express Connect Router (ECR), make sure that the Express Connect Router (ECR) is in the <strong>Active</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates a virtual border router (VBR) with an Express Connect router (ECR).</p>
+     * <p>Attaches a child instance (VBR) to an Express Connect Router (ECR).</p>
      * 
      * @param request AttachExpressConnectRouterChildInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -159,10 +195,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call the <strong>AttachExpressConnectRouterChildInstance</strong> operation to associate a VBR with an ECR, make sure that the ECR is in the <strong>Active</strong> state.</p>
+     * <p>Before you invoke the <strong>AttachExpressConnectRouterChildInstance</strong> operation to load a child instance (VBR) to an Express Connect Router (ECR), make sure that the Express Connect Router (ECR) is in the <strong>Active</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates a virtual border router (VBR) with an Express Connect router (ECR).</p>
+     * <p>Attaches a child instance (VBR) to an Express Connect Router (ECR).</p>
      * 
      * @param request AttachExpressConnectRouterChildInstanceRequest
      * @return AttachExpressConnectRouterChildInstanceResponse
@@ -174,7 +210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the Cloud Data Transfer (CDT) service required to add a region to an Express Connect router (ECR).</p>
+     * <p>Checks the Cloud Data Transfer (CDT) service required to add a specified region to an Express Connect Router (ECR).</p>
      * 
      * @param request CheckAddRegionToExpressConnectRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -224,7 +260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks the Cloud Data Transfer (CDT) service required to add a region to an Express Connect router (ECR).</p>
+     * <p>Checks the Cloud Data Transfer (CDT) service required to add a specified region to an Express Connect Router (ECR).</p>
      * 
      * @param request CheckAddRegionToExpressConnectRouterRequest
      * @return CheckAddRegionToExpressConnectRouterResponse
@@ -236,7 +272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create an ECR, it enters the <strong>Active</strong> state.</p>
+     * <p>After you create an Express Connect Router (ECR) instance, the instance status is <strong>Active</strong>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an Express Connect Router (ECR).</p>
@@ -301,7 +337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create an ECR, it enters the <strong>Active</strong> state.</p>
+     * <p>After you create an Express Connect Router (ECR) instance, the instance status is <strong>Active</strong>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an Express Connect Router (ECR).</p>
@@ -316,7 +352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a virtual private cloud (VPC) or a transit router (TR) with an Express Connect router (ECR).</p>
+     * <p>Associates an Express Connect Router (ECR) with a virtual private cloud (VPC) or a transit router (TR).</p>
      * 
      * @param request CreateExpressConnectRouterAssociationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -406,7 +442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a virtual private cloud (VPC) or a transit router (TR) with an Express Connect router (ECR).</p>
+     * <p>Associates an Express Connect Router (ECR) with a virtual private cloud (VPC) or a transit router (TR).</p>
      * 
      * @param request CreateExpressConnectRouterAssociationRequest
      * @return CreateExpressConnectRouterAssociationResponse
@@ -418,7 +454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a flow log and enables log delivery.</p>
+     * <p>Creates a flow log and enables log delivery by default.</p>
      * 
      * @param request CreateFlowLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -508,7 +544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a flow log and enables log delivery.</p>
+     * <p>Creates a flow log and enables log delivery by default.</p>
      * 
      * @param request CreateFlowLogRequest
      * @return CreateFlowLogResponse
@@ -520,7 +556,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables log delivery.</p>
+     * <p>Creates an association between an Express Connect Router (ECR) and a route map.</p>
+     * 
+     * @param request CreateRouteMapAssociationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRouteMapAssociationResponse
+     */
+    public CreateRouteMapAssociationResponse createRouteMapAssociationWithOptions(CreateRouteMapAssociationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIdList)) {
+            query.put("RegionIdList", request.regionIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeMapId)) {
+            query.put("RouteMapId", request.routeMapId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("Version", request.version);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecrId)) {
+            body.put("EcrId", request.ecrId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRouteMapAssociation"),
+            new TeaPair("version", "2023-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRouteMapAssociationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an association between an Express Connect Router (ECR) and a route map.</p>
+     * 
+     * @param request CreateRouteMapAssociationRequest
+     * @return CreateRouteMapAssociationResponse
+     */
+    public CreateRouteMapAssociationResponse createRouteMapAssociation(CreateRouteMapAssociationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRouteMapAssociationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops log delivery for a flow log.</p>
      * 
      * @param request DeactivateFlowLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -570,7 +672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables log delivery.</p>
+     * <p>Stops log delivery for a flow log.</p>
      * 
      * @param request DeactivateFlowLogRequest
      * @return DeactivateFlowLogResponse
@@ -582,14 +684,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>Before you invoke the DeleteExpressConnectRouter operation to delete an Express Connect Router (ECR) instance, note the following:</p>
      * <ul>
-     * <li>Before you call this operation, make sure that all resources are disassociated from the ECR.</li>
-     * <li>You can delete only ECRs that are in the <strong>Active</strong> state.</li>
+     * <li>Before you delete an Express Connect Router (ECR) instance, you must delete the resources associated with the Express Connect Router (ECR) instance.</li>
+     * <li>You can delete only Express Connect Router (ECR) instances that are in the <strong>Active</strong> state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Express Connect router (ECR).</p>
+     * <p>Deletes an Express Connect Router (ECR).</p>
      * 
      * @param request DeleteExpressConnectRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -635,14 +737,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>Before you invoke the DeleteExpressConnectRouter operation to delete an Express Connect Router (ECR) instance, note the following:</p>
      * <ul>
-     * <li>Before you call this operation, make sure that all resources are disassociated from the ECR.</li>
-     * <li>You can delete only ECRs that are in the <strong>Active</strong> state.</li>
+     * <li>Before you delete an Express Connect Router (ECR) instance, you must delete the resources associated with the Express Connect Router (ECR) instance.</li>
+     * <li>You can delete only Express Connect Router (ECR) instances that are in the <strong>Active</strong> state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Express Connect router (ECR).</p>
+     * <p>Deletes an Express Connect Router (ECR).</p>
      * 
      * @param request DeleteExpressConnectRouterRequest
      * @return DeleteExpressConnectRouterResponse
@@ -654,7 +756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates an Express Connect router (ECR) from a virtual private cloud (VPC) or a transit router (TR).</p>
+     * <p>Disassociates an Express Connect Router (ECR) from a virtual private cloud (VPC) or a transit router.</p>
      * 
      * @param request DeleteExpressConnectRouterAssociationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -708,7 +810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates an Express Connect router (ECR) from a virtual private cloud (VPC) or a transit router (TR).</p>
+     * <p>Disassociates an Express Connect Router (ECR) from a virtual private cloud (VPC) or a transit router.</p>
      * 
      * @param request DeleteExpressConnectRouterAssociationRequest
      * @return DeleteExpressConnectRouterAssociationResponse
@@ -782,7 +884,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the route entries that are disabled on an Express Connect router (ECR).</p>
+     * <p>Deletes the association between an Express Connect Router (ECR) and a route policy.</p>
+     * 
+     * @param request DeleteRouteMapAssociationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRouteMapAssociationResponse
+     */
+    public DeleteRouteMapAssociationResponse deleteRouteMapAssociationWithOptions(DeleteRouteMapAssociationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.associationId)) {
+            query.put("AssociationId", request.associationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("Version", request.version);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecrId)) {
+            body.put("EcrId", request.ecrId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRouteMapAssociation"),
+            new TeaPair("version", "2023-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRouteMapAssociationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the association between an Express Connect Router (ECR) and a route policy.</p>
+     * 
+     * @param request DeleteRouteMapAssociationRequest
+     * @return DeleteRouteMapAssociationResponse
+     */
+    public DeleteRouteMapAssociationResponse deleteRouteMapAssociation(DeleteRouteMapAssociationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRouteMapAssociationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the disabled route entry of an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeDisabledExpressConnectRouterRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -836,7 +1000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the route entries that are disabled on an Express Connect router (ECR).</p>
+     * <p>Queries the disabled route entry of an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeDisabledExpressConnectRouterRouteEntriesRequest
      * @return DescribeDisabledExpressConnectRouterRouteEntriesResponse
@@ -848,7 +1012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of Express Connect routers (ECRs).</p>
+     * <p>Queries a list of Express Connect Router (ECR) instances.</p>
      * 
      * @param request DescribeExpressConnectRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -914,7 +1078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of Express Connect routers (ECRs).</p>
+     * <p>Queries a list of Express Connect Router (ECR) instances.</p>
      * 
      * @param request DescribeExpressConnectRouterRequest
      * @return DescribeExpressConnectRouterResponse
@@ -926,7 +1090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the historical route prefixes of an Express Connect router (ECR).</p>
+     * <p>Queries the history of prefix routes for an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeExpressConnectRouterAllowedPrefixHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -984,7 +1148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the historical route prefixes of an Express Connect router (ECR).</p>
+     * <p>Queries the history of prefix routes for an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeExpressConnectRouterAllowedPrefixHistoryRequest
      * @return DescribeExpressConnectRouterAllowedPrefixHistoryResponse
@@ -996,7 +1160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect router (ECR).</p>
+     * <p>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeExpressConnectRouterAssociationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1078,7 +1242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect router (ECR).</p>
+     * <p>Queries the virtual private clouds (VPCs) and transit routers (TRs) associated with an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeExpressConnectRouterAssociationRequest
      * @return DescribeExpressConnectRouterAssociationResponse
@@ -1090,7 +1254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the virtual border routers (VBRs) that are associated with an Express Connect router (ECR).</p>
+     * <p>Queries the virtual border routers (VBRs) associated with an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeExpressConnectRouterChildInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1160,7 +1324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the virtual border routers (VBRs) that are associated with an Express Connect router (ECR).</p>
+     * <p>Queries the virtual border routers (VBRs) associated with an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeExpressConnectRouterChildInstanceRequest
      * @return DescribeExpressConnectRouterChildInstanceResponse
@@ -1172,7 +1336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cross-region forwarding modes of an Express Connect router (ECR).</p>
+     * <p>Queries the cross-region forwarding mode of an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeExpressConnectRouterInterRegionTransitModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1218,7 +1382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cross-region forwarding modes of an Express Connect router (ECR).</p>
+     * <p>Queries the cross-region forwarding mode of an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeExpressConnectRouterInterRegionTransitModeRequest
      * @return DescribeExpressConnectRouterInterRegionTransitModeResponse
@@ -1230,7 +1394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of regions in which resources related to an Express Connect router (ECR) are deployed.</p>
+     * <p>Queries the regions where Express Connect Router (ECR) resources are located.</p>
      * 
      * @param request DescribeExpressConnectRouterRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1276,7 +1440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of regions in which resources related to an Express Connect router (ECR) are deployed.</p>
+     * <p>Queries the regions where Express Connect Router (ECR) resources are located.</p>
      * 
      * @param request DescribeExpressConnectRouterRegionRequest
      * @return DescribeExpressConnectRouterRegionResponse
@@ -1288,7 +1452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the route entries of an Express Connect router (ECR).</p>
+     * <p>Queries the route entries of an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeExpressConnectRouterRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1362,7 +1526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the route entries of an Express Connect router (ECR).</p>
+     * <p>Queries the route entries of an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeExpressConnectRouterRouteEntriesRequest
      * @return DescribeExpressConnectRouterRouteEntriesResponse
@@ -1468,7 +1632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network instances whose permissions are granted to an Express Connect router (ECR).</p>
+     * <p>Queries the network instances authorized to an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeInstanceGrantedToExpressConnectRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1550,7 +1714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network instances whose permissions are granted to an Express Connect router (ECR).</p>
+     * <p>Queries the network instances authorized to an Express Connect Router (ECR).</p>
      * 
      * @param request DescribeInstanceGrantedToExpressConnectRouterRequest
      * @return DescribeInstanceGrantedToExpressConnectRouterResponse
@@ -1562,10 +1726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call the <strong>DetachExpressConnectRouterChildInstance</strong> operation to uninstall a VBR from an ECR, make sure that the ECR is in the <strong>Active</strong> state.</p>
+     * <p>Before you call the <strong>DetachExpressConnectRouterChildInstance</strong> operation to detach a VBR instance from an Express Connect Router (ECR), ensure that the ECR is in the <strong>Active</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a virtual border router (VBR) from an Express Connect router (ECR).</p>
+     * <p>Detaches a virtual border router (VBR) from an Express Connect Router (ECR).</p>
      * 
      * @param request DetachExpressConnectRouterChildInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1619,10 +1783,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call the <strong>DetachExpressConnectRouterChildInstance</strong> operation to uninstall a VBR from an ECR, make sure that the ECR is in the <strong>Active</strong> state.</p>
+     * <p>Before you call the <strong>DetachExpressConnectRouterChildInstance</strong> operation to detach a VBR instance from an Express Connect Router (ECR), ensure that the ECR is in the <strong>Active</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a virtual border router (VBR) from an Express Connect router (ECR).</p>
+     * <p>Detaches a virtual border router (VBR) from an Express Connect Router (ECR).</p>
      * 
      * @param request DetachExpressConnectRouterChildInstanceRequest
      * @return DetachExpressConnectRouterChildInstanceResponse
@@ -1634,7 +1798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables route entries of an Express Connect router (ECR).</p>
+     * <p>Disables a route entry of an Express Connect Router (ECR).</p>
      * 
      * @param request DisableExpressConnectRouterRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1688,7 +1852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables route entries of an Express Connect router (ECR).</p>
+     * <p>Disables a route entry of an Express Connect Router (ECR).</p>
      * 
      * @param request DisableExpressConnectRouterRouteEntriesRequest
      * @return DisableExpressConnectRouterRouteEntriesResponse
@@ -1700,7 +1864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables route entries of an Express Connect router (ECR).</p>
+     * <p>Enables route entries for an Express Connect Router (ECR).</p>
      * 
      * @param request EnableExpressConnectRouterRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1754,7 +1918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables route entries of an Express Connect router (ECR).</p>
+     * <p>Enables route entries for an Express Connect Router (ECR).</p>
      * 
      * @param request EnableExpressConnectRouterRouteEntriesRequest
      * @return EnableExpressConnectRouterRouteEntriesResponse
@@ -1766,13 +1930,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you forcefully delete an ECR, all the resources associated with the ECR are disassociated at a time. Make sure that the disassociation does not affect the stability of your business.</p>
      * <ul>
-     * <li>You can delete only ECRs that are in the <strong>Active</strong> state.</li>
+     * <li>Force deleting an Express Connect Router (ECR) instance detaches all associated resources. Before you proceed, confirm that this operation does not disrupt your services.</li>
+     * <li>You can delete only ECR instances that are in the <strong>Active</strong> state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Express Connect router (ECR) and disassociates the virtual private cloud (VPC), transit router (TR), and virtual border router (VBR) associated with the ECR.</p>
+     * <p>Force deletes an Express Connect Router (ECR) and detaches its associated virtual private clouds (VPCs), Transit Routers (TRs), and virtual border routers (VBRs).</p>
      * 
      * @param request ForceDeleteExpressConnectRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1818,13 +1982,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you forcefully delete an ECR, all the resources associated with the ECR are disassociated at a time. Make sure that the disassociation does not affect the stability of your business.</p>
      * <ul>
-     * <li>You can delete only ECRs that are in the <strong>Active</strong> state.</li>
+     * <li>Force deleting an Express Connect Router (ECR) instance detaches all associated resources. Before you proceed, confirm that this operation does not disrupt your services.</li>
+     * <li>You can delete only ECR instances that are in the <strong>Active</strong> state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Express Connect router (ECR) and disassociates the virtual private cloud (VPC), transit router (TR), and virtual border router (VBR) associated with the ECR.</p>
+     * <p>Force deletes an Express Connect Router (ECR) and detaches its associated virtual private clouds (VPCs), Transit Routers (TRs), and virtual border routers (VBRs).</p>
      * 
      * @param request ForceDeleteExpressConnectRouterRequest
      * @return ForceDeleteExpressConnectRouterResponse
@@ -1836,10 +2000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you associate a network instance of another account with an ECR, you must grant permissions on the network instance to the ECR.</p>
+     * <p>To associate a cross-account network instance with an Express Connect Router (ECR) instance, you must grant the network instance authorization to the Express Connect Router (ECR) instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Grants permissions on a virtual private cloud (VPC) or a virtual border router (VBR) to an Express Connect router (ECR) of another account.</p>
+     * <p>Grants a virtual private cloud (VPC) or virtual border router (VBR) authorization to a cross-account Express Connect Router (ECR).</p>
      * 
      * @param request GrantInstanceToExpressConnectRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1901,10 +2065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you associate a network instance of another account with an ECR, you must grant permissions on the network instance to the ECR.</p>
+     * <p>To associate a cross-account network instance with an Express Connect Router (ECR) instance, you must grant the network instance authorization to the Express Connect Router (ECR) instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Grants permissions on a virtual private cloud (VPC) or a virtual border router (VBR) to an Express Connect router (ECR) of another account.</p>
+     * <p>Grants a virtual private cloud (VPC) or virtual border router (VBR) authorization to a cross-account Express Connect Router (ECR).</p>
      * 
      * @param request GrantInstanceToExpressConnectRouterRequest
      * @return GrantInstanceToExpressConnectRouterResponse
@@ -1916,7 +2080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of regions in which the Express Connect router (ECR) feature is activated.</p>
+     * <p>Queries the regions that support Express Connect Router (ECR).</p>
      * 
      * @param request ListExpressConnectRouterSupportedRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1958,7 +2122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of regions in which the Express Connect router (ECR) feature is activated.</p>
+     * <p>Queries the regions that support Express Connect Router (ECR).</p>
      * 
      * @param request ListExpressConnectRouterSupportedRegionRequest
      * @return ListExpressConnectRouterSupportedRegionResponse
@@ -1970,7 +2134,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of tags that are added to an Express Connect router (ECR).</p>
+     * <p>Queries the association between an Express Connect Router (ECR) and a route map.</p>
+     * 
+     * @param request ListRouteMapAssociationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRouteMapAssociationsResponse
+     */
+    public ListRouteMapAssociationsResponse listRouteMapAssociationsWithOptions(ListRouteMapAssociationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.associationId)) {
+            query.put("AssociationId", request.associationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeMapId)) {
+            query.put("RouteMapId", request.routeMapId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("Version", request.version);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecrId)) {
+            body.put("EcrId", request.ecrId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRouteMapAssociations"),
+            new TeaPair("version", "2023-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRouteMapAssociationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the association between an Express Connect Router (ECR) and a route map.</p>
+     * 
+     * @param request ListRouteMapAssociationsRequest
+     * @return ListRouteMapAssociationsResponse
+     */
+    public ListRouteMapAssociationsResponse listRouteMapAssociations(ListRouteMapAssociationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRouteMapAssociationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of tags bound to an Express Connect Router (ECR).</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2024,7 +2262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of tags that are added to an Express Connect router (ECR).</p>
+     * <p>Queries the list of tags bound to an Express Connect Router (ECR).</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2036,10 +2274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify only properties of ECRs in the <strong>Active</strong> state.</p>
+     * <p>You can modify an Express Connect Router (ECR) instance only when it is in the <strong>Active</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the properties such as the name of an Express Connect router (ECR).</p>
+     * <p>Modifies the properties of an Express Connect Router (ECR), such as its name.</p>
      * 
      * @param request ModifyExpressConnectRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2093,10 +2331,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify only properties of ECRs in the <strong>Active</strong> state.</p>
+     * <p>You can modify an Express Connect Router (ECR) instance only when it is in the <strong>Active</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the properties such as the name of an Express Connect router (ECR).</p>
+     * <p>Modifies the properties of an Express Connect Router (ECR), such as its name.</p>
      * 
      * @param request ModifyExpressConnectRouterRequest
      * @return ModifyExpressConnectRouterResponse
@@ -2108,7 +2346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改专线网关关联的属性</p>
+     * <p>Modifies the attributes of a child instance associated with an Express Connect Router (ECR).</p>
      * 
      * @param request ModifyExpressConnectRouterAssociationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2162,7 +2400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改专线网关关联的属性</p>
+     * <p>Modifies the attributes of a child instance associated with an Express Connect Router (ECR).</p>
      * 
      * @param request ModifyExpressConnectRouterAssociationRequest
      * @return ModifyExpressConnectRouterAssociationResponse
@@ -2174,7 +2412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the route prefixes of a virtual private cloud (VPC) or a transit router (TR) that is associated with an Express Connect router (ECR).</p>
+     * <p>Modifies the prefixes for a virtual private cloud (VPC) or a transit router that is attached to an Express Connect Router (ECR).</p>
      * 
      * @param request ModifyExpressConnectRouterAssociationAllowedPrefixRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2236,7 +2474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the route prefixes of a virtual private cloud (VPC) or a transit router (TR) that is associated with an Express Connect router (ECR).</p>
+     * <p>Modifies the prefixes for a virtual private cloud (VPC) or a transit router that is attached to an Express Connect Router (ECR).</p>
      * 
      * @param request ModifyExpressConnectRouterAssociationAllowedPrefixRequest
      * @return ModifyExpressConnectRouterAssociationAllowedPrefixResponse
@@ -2248,7 +2486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改专线网关子实例的属性</p>
+     * <p>Modifies the attributes of a child instance (VBR) associated with an Express Connect Router (ECR).</p>
      * 
      * @param request ModifyExpressConnectRouterChildInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2306,7 +2544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改专线网关子实例的属性</p>
+     * <p>Modifies the attributes of a child instance (VBR) associated with an Express Connect Router (ECR).</p>
      * 
      * @param request ModifyExpressConnectRouterChildInstanceRequest
      * @return ModifyExpressConnectRouterChildInstanceResponse
@@ -2318,7 +2556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the cross-region forwarding mode of an Express Connect router (ECR).</p>
+     * <p>Modifies the inter-region forwarding mode of an Express Connect Router (ECR).</p>
      * 
      * @param request ModifyExpressConnectRouterInterRegionTransitModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2368,7 +2606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the cross-region forwarding mode of an Express Connect router (ECR).</p>
+     * <p>Modifies the inter-region forwarding mode of an Express Connect Router (ECR).</p>
      * 
      * @param request ModifyExpressConnectRouterInterRegionTransitModeRequest
      * @return ModifyExpressConnectRouterInterRegionTransitModeResponse
@@ -2380,7 +2618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name, description, sampling rate, and sampling interval.</p>
+     * <p>Modifies the name, description, sampling rate, and sampling interval of a flow log.</p>
      * 
      * @param request ModifyFlowLogAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2446,7 +2684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name, description, sampling rate, and sampling interval.</p>
+     * <p>Modifies the name, description, sampling rate, and sampling interval of a flow log.</p>
      * 
      * @param request ModifyFlowLogAttributeRequest
      * @return ModifyFlowLogAttributeResponse
@@ -2458,7 +2696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the resource group to which an Express Connect router (ECR) belongs.</p>
+     * <p>Modifies the resource group to which an Express Connect Router (ECR) belongs.</p>
      * 
      * @param request MoveResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2512,7 +2750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the resource group to which an Express Connect router (ECR) belongs.</p>
+     * <p>Modifies the resource group to which an Express Connect Router (ECR) belongs.</p>
      * 
      * @param request MoveResourceGroupRequest
      * @return MoveResourceGroupResponse
@@ -2524,7 +2762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes permissions on a virtual private cloud (VPC) or a virtual border router (VBR) from an Express Connect router (ECR) owned by another account.</p>
+     * <p>Revokes the authorization of a virtual private cloud (VPC) or virtual border router (VBR) on a cross-account Express Connect Router (ECR).</p>
      * 
      * @param request RevokeInstanceFromExpressConnectRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2586,7 +2824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes permissions on a virtual private cloud (VPC) or a virtual border router (VBR) from an Express Connect router (ECR) owned by another account.</p>
+     * <p>Revokes the authorization of a virtual private cloud (VPC) or virtual border router (VBR) on a cross-account Express Connect Router (ECR).</p>
      * 
      * @param request RevokeInstanceFromExpressConnectRouterRequest
      * @return RevokeInstanceFromExpressConnectRouterResponse
@@ -2598,10 +2836,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates are allowed only when the ECR is in the <strong>Active</strong> state.</p>
+     * <p>You can update an ECR instance only when it is in the <strong>Active</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Synchronizes the forwarding bandwidth limit between regions for an Express Connect router (ECR).</p>
+     * <p>Synchronizes the inter-region bandwidth limits for an Express Connect Router (ECR).</p>
      * 
      * @param request SynchronizeExpressConnectRouterInterRegionBandwidthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2647,10 +2885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates are allowed only when the ECR is in the <strong>Active</strong> state.</p>
+     * <p>You can update an ECR instance only when it is in the <strong>Active</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Synchronizes the forwarding bandwidth limit between regions for an Express Connect router (ECR).</p>
+     * <p>Synchronizes the inter-region bandwidth limits for an Express Connect Router (ECR).</p>
      * 
      * @param request SynchronizeExpressConnectRouterInterRegionBandwidthRequest
      * @return SynchronizeExpressConnectRouterInterRegionBandwidthResponse
@@ -2662,7 +2900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to an Express Connect router (ECR). You can add tags to only one ECR each time you call this operation. You can add multiple tags at a time.</p>
+     * <p>Binds tags to an Express Connect Router (ECR). Each call to this operation binds tags to a single ECR instance, but you can bind multiple tags at a time.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2716,7 +2954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to an Express Connect router (ECR). You can add tags to only one ECR each time you call this operation. You can add multiple tags at a time.</p>
+     * <p>Binds tags to an Express Connect Router (ECR). Each call to this operation binds tags to a single ECR instance, but you can bind multiple tags at a time.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -2728,7 +2966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from an Express Connect router (ECR).</p>
+     * <p>Unbinds tags from an Express Connect Router (ECR).</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2786,7 +3024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from an Express Connect router (ECR).</p>
+     * <p>Unbinds tags from an Express Connect Router (ECR).</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -2794,5 +3032,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the association between an Express Connect Router (ECR) and a routing policy.</p>
+     * 
+     * @param request UpdateRouteMapAssociationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRouteMapAssociationResponse
+     */
+    public UpdateRouteMapAssociationResponse updateRouteMapAssociationWithOptions(UpdateRouteMapAssociationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.associationId)) {
+            query.put("AssociationId", request.associationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIdList)) {
+            query.put("RegionIdList", request.regionIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("Version", request.version);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecrId)) {
+            body.put("EcrId", request.ecrId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRouteMapAssociation"),
+            new TeaPair("version", "2023-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRouteMapAssociationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the association between an Express Connect Router (ECR) and a routing policy.</p>
+     * 
+     * @param request UpdateRouteMapAssociationRequest
+     * @return UpdateRouteMapAssociationResponse
+     */
+    public UpdateRouteMapAssociationResponse updateRouteMapAssociation(UpdateRouteMapAssociationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRouteMapAssociationWithOptions(request, runtime);
     }
 }

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListExpressConnectRouterSupportedRegionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>A client token to ensure the idempotence of the request.</p>
+     * <p>Generate a value that is unique across different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. Each request has a unique <strong>RequestId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,14 @@ public class ListExpressConnectRouterSupportedRegionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The type of the network instance. Valid values:</p>
+     * <p>The type of network instance. Valid values:</p>
      * <ul>
-     * <li><strong>TR</strong></li>
-     * <li><strong>VBR</strong></li>
-     * <li><strong>VPC</strong></li>
+     * <li><p><strong>TR</strong>: transit router instance.</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: virtual border router instance.</p>
+     * </li>
+     * <li><p><strong>VPC</strong>: virtual private cloud instance.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

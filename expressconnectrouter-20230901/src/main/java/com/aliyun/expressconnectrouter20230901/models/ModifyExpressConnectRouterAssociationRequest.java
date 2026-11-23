@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressConnectRouterAssociationRequest extends TeaModel {
     /**
+     * <p>The ID used to associate the Express Connect Router (ECR) with a VPC or transit router.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class ModifyExpressConnectRouterAssociationRequest extends TeaModel {
     public String associationId;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can generate the parameter value from your client to ensure that the value is unique among different requests. The client token supports only ASCII characters.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request is different.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-00****</p>
      */
@@ -21,6 +30,8 @@ public class ModifyExpressConnectRouterAssociationRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The description of the child instance. The description must be 0 to 128 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -28,6 +39,14 @@ public class ModifyExpressConnectRouterAssociationRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Specifies whether to perform a dry run for this request. Valid values:</p>
+     * <ul>
+     * <li><p>true: Sends a dry run request without modifying any service resources.</p>
+     * </li>
+     * <li><p>false (default): Sends a normal request.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -35,6 +54,7 @@ public class ModifyExpressConnectRouterAssociationRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

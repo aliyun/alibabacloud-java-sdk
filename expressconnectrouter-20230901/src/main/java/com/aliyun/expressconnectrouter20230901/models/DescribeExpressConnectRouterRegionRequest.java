@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterRegionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the token on your client to ensure that it is unique among different requests. The client token supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +17,12 @@ public class DescribeExpressConnectRouterRegionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether this request is a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run.</li>
-     * <li>false (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: sends a check request and does not modify the EPS resource.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +32,7 @@ public class DescribeExpressConnectRouterRegionRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the ECR that you want to query.</p>
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

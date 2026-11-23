@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateFlowLogRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class CreateFlowLogRequest extends TeaModel {
     /**
      * <p>The description of the flow log.</p>
      * <blockquote>
-     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with http:// or https://.</p>
+     * <p>The description can be empty or 0 to 256 characters in length. It cannot start with http:// or https://.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,10 +30,12 @@ public class CreateFlowLogRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether the request is only a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: Performs a dry run without modifying EPS resources.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Sends a normal request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +45,7 @@ public class CreateFlowLogRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the ECR.</p>
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +57,7 @@ public class CreateFlowLogRequest extends TeaModel {
     /**
      * <p>The name of the flow log.</p>
      * <blockquote>
-     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 0 to 128 characters in length. It cannot start with http:// or https://.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,7 +67,11 @@ public class CreateFlowLogRequest extends TeaModel {
     public String flowLogName;
 
     /**
-     * <p>The VBR ID.</p>
+     * <p>The instance ID of the VBR.</p>
+     * <blockquote>
+     * <p>The VBR instance must be created by calling the CreateVirtualBorderRouter operation of the Vpc/2016-04-28 API version. The prerequisite is that a physical connection exists.
+     * The VBR instance must be mounted as a child instance to the Express Connect Router (ECR) corresponding to EcrId by calling AttachExpressConnectRouterChildInstance, and the mount status must be ACTIVE before you can create a flow log. You can call DescribeExpressConnectRouterChildInstance to query the mount status of the child instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,9 +81,9 @@ public class CreateFlowLogRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of network instance. Valid values:</p>
+     * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VBR</strong></li>
+     * <li><strong>VBR</strong>: virtual border router (VBR) instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -88,9 +94,9 @@ public class CreateFlowLogRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The time window for collecting log data. Unit: seconds. Valid values:</p>
+     * <p>The duration of the capture window for traffic captured by the flow log. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li><strong>60</strong></li>
+     * <li><strong>60</strong> </li>
      * <li><strong>600</strong></li>
      * </ul>
      * <p>Default value: <strong>600</strong>.</p>
@@ -102,14 +108,20 @@ public class CreateFlowLogRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The Logstore that stores the captured traffic data.</p>
+     * <p>The name of the Logstore used to store catch traffic.</p>
      * <ul>
-     * <li>If a Logstore is already created in the selected region, enter the name of the Logstore.</li>
-     * <li>If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore. The name of the Logstore. The name must meet the following requirements:</li>
-     * <li>The name must be unique in a project.</li>
-     * <li>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The name must start and end with a lowercase letter or a digit.</li>
-     * <li>The name must be 3 to 63 characters in length.</li>
+     * <li><p>If you have already created a Logstore in the current region, you can enter the name of the existing Logstore.</p>
+     * </li>
+     * <li><p>If you have not created a Logstore in the current region, you can specify a custom name for the Logstore, and the system will automatically create the Logstore. The naming rules for the Logstore name are as follows:</p>
+     * </li>
+     * <li><p>The Logstore name must be unique within the same project.</p>
+     * </li>
+     * <li><p>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>It must start and end with a lowercase letter or a digit.</p>
+     * </li>
+     * <li><p>It must be 3 to 63 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -120,18 +132,18 @@ public class CreateFlowLogRequest extends TeaModel {
     public String logStoreName;
 
     /**
-     * <p>The project that stores the captured traffic data.</p>
+     * <p>The name of the Simple Log Service project used to store catch traffic.</p>
      * <ul>
-     * <li>If a project is already created in the selected region, enter the name of the project.</li>
-     * <li>If no projects are created in the selected region, enter a name and the system automatically creates a project.</li>
+     * <li>If you have already created a project in the current region, you can enter the name of the existing project.</li>
+     * <li>If you have not created a project in the current region, you can specify a custom name for the project, and the system will automatically create the project.</li>
      * </ul>
-     * <p>The project name must be unique in a region. You cannot change the name after the project is created. The name must meet the following requirements:</p>
+     * <p>The project name must be globally unique within an Alibaba Cloud region and cannot be modified after creation. The naming rules are as follows:</p>
      * <ul>
-     * <li>The name must be globally unique.</li>
-     * <li>The name can contain only lowercase letters,</li>
-     * <li>digits, and hyphens (-).</li>
-     * <li>The name must start and end with a lowercase letter or a digit.</li>
-     * <li>The name must be 3 to 63 characters in length.</li>
+     * <li>The project name must be globally unique.</li>
+     * <li>It can contain only lowercase</li>
+     * <li>letters, digits, and hyphens (-).</li>
+     * <li>It must start and end with a lowercase letter or a digit.</li>
+     * <li>It must be 3 to 63 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -141,11 +153,17 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The ID of the resource group to which the flow log instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2aq7f4va****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The sampling proportion. Valid values:</p>
+     * <p>The sampling ratio. Valid values:</p>
      * <ul>
      * <li><strong>1:4096</strong></li>
      * <li><strong>1:2048</strong></li>
@@ -159,9 +177,19 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("SamplingRate")
     public String samplingRate;
 
+    /**
+     * <p>The tags.</p>
+     * <p>You can add up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateFlowLogRequestTag> tag;
 
+    /**
+     * <p>The region where the project to which logs are delivered resides. You only need to specify this parameter for cross-region log delivery. You do not need to specify this parameter for same-region log delivery.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("TargetSlsRegionId")
     public String targetSlsRegionId;
 
@@ -294,9 +322,21 @@ public class CreateFlowLogRequest extends TeaModel {
     }
 
     public static class CreateFlowLogRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the resource. If you specify this parameter, it cannot be an empty string. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. Valid values of N: 1 to 20. If you specify this parameter, it can be an empty string. It can be up to 128 characters in length, and cannot start with acs:. It cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

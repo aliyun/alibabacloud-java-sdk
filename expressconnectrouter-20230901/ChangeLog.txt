@@ -1,3 +1,10 @@
+2026-11-23 Version: 4.2.0
+- Support API CreateRouteMapAssociation.
+- Support API DeleteRouteMapAssociation.
+- Support API ListRouteMapAssociations.
+- Support API UpdateRouteMapAssociation.
+
+
 2026-06-04 Version: 4.1.3
 - Update API CreateExpressConnectRouterAssociation: add request parameters Tag.
 - Update API DescribeExpressConnectRouterAssociation: add request parameters Tag.

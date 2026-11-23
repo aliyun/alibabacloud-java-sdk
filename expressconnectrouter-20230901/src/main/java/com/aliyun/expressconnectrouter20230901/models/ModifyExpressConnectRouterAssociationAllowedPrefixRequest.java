@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends TeaModel {
     /**
-     * <p>The allowed route prefixes.</p>
+     * <p>The list of allowed route prefixes.</p>
      */
     @NameInMap("AllowedPrefixes")
     public java.util.List<String> allowedPrefixes;
 
     /**
-     * <p>The route prefix mode.</p>
+     * <p>The prefix routing pattern. Valid values:</p>
      * <ul>
-     * <li>MatchMode: After you distribute new route CIDR blocks to data centers, original specific routes that are distributed are withdrawn.</li>
-     * <li>IncrementalMode: After you distribute new route CIDR blocks to data centers, the original specific routes that fall in the CIDR blocks that you configure are withdrawn, and the original specific routes that do not fall in the CIDR blocks are still distributed.</li>
+     * <li>MatchMode: Publishes only the configured route prefixes to your data center. Existing specific routes are withdrawn.</li>
+     * <li>IncrementalMode: Publishes the configured route prefixes to your data center. Withdraw previously published more specific routes that are covered by the configured prefixes. More specific routes that are not covered by the configured prefixes remain published.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,10 +34,10 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends T
     public String associationId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>A client token used to ensure the idempotence of the request.</p>
+     * <p>Generate a parameter value from your client to make sure that the value is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,10 +47,10 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends T
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><strong>true</strong>: Performs a dry run.</li>
+     * <li><strong>false</strong> (default): Sends a normal request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends T
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The ID of ECR.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

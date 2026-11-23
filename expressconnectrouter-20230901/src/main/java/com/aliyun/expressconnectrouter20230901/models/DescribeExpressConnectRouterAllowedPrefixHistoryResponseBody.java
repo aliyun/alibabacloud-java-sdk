@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
@@ -14,13 +14,13 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody extend
     public String accessDeniedDetail;
 
     /**
-     * <p>The historical route prefixes.</p>
+     * <p>The list of historical prefix routes.</p>
      */
     @NameInMap("AllowedPrefixHistoryList")
     public java.util.List<DescribeExpressConnectRouterAllowedPrefixHistoryResponseBodyAllowedPrefixHistoryList> allowedPrefixHistoryList;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>Indicates whether the call was successful. A value of 200 indicates that the operation was successful. Other values indicate that the operation failed. For more information about the causes of failures, see error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,9 +38,9 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody extend
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody extend
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -68,7 +68,7 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody extend
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
@@ -77,10 +77,10 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody extend
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>True</strong>: Successful.</li>
+     * <li><strong>False</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -168,13 +168,13 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody extend
 
     public static class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBodyAllowedPrefixHistoryList extends TeaModel {
         /**
-         * <p>The route prefix.</p>
+         * <p>The prefix route.</p>
          */
         @NameInMap("AllowedPrefix")
         public java.util.List<String> allowedPrefix;
 
         /**
-         * <p>The time when the historical route prefix entry was created.</p>
+         * <p>The time when the historical route entry was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1673751163000</p>

@@ -14,13 +14,13 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
     public String accessDeniedDetail;
 
     /**
-     * <p>The associated resources.</p>
+     * <p>The list of associated resources.</p>
      */
     @NameInMap("AssociationList")
     public java.util.List<DescribeExpressConnectRouterAssociationResponseBodyAssociationList> associationList;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>The status code. A value of 200 indicates that the call was successful. Other values indicate that the call failed. For more information about the causes of failures, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,9 +38,9 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of DynamicMessage is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
     public Integer httpStatusCode;
 
     /**
-     * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 2147483647. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -77,10 +77,10 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
     public String message;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query is required.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,10 +99,10 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>True</strong>: successful.</li>
+     * <li><strong>False</strong>: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -222,9 +222,21 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
     }
 
     public static class DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -253,16 +265,16 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
 
     public static class DescribeExpressConnectRouterAssociationResponseBodyAssociationList extends TeaModel {
         /**
-         * <p>The allowed route prefixes.</p>
+         * <p>The allowed route prefix list.</p>
          */
         @NameInMap("AllowedPrefixes")
         public java.util.List<String> allowedPrefixes;
 
         /**
-         * <p>The prefix route mode. Valid values:</p>
+         * <p>The prefix routing mode. Valid values:</p>
          * <ul>
-         * <li>MatchMode</li>
-         * <li>IncrementalMode</li>
+         * <li>MatchMode: match mode.</li>
+         * <li>IncrementalMode: incremental mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,7 +284,7 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         public String allowedPrefixesMode;
 
         /**
-         * <p>The ID of the association between the ECR and the VPC or TR.</p>
+         * <p>The ID used to associate the Express Connect Router (ECR) with a VPC or TR.</p>
          * 
          * <strong>example:</strong>
          * <p>ecr-assoc-9p2qxx5phpca2m****</p>
@@ -283,8 +295,10 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         /**
          * <p>The type of the associated resource. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
-         * <li><strong>TR</strong></li>
+         * <li><p><strong>VPC</strong>: VPC.</p>
+         * </li>
+         * <li><p><strong>TR</strong>: transit router.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,7 +308,7 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         public String associationNodeType;
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
          * 
          * <strong>example:</strong>
          * <p>cen-5510frtx8zi54q****</p>
@@ -312,7 +326,7 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         public String description;
 
         /**
-         * <p>The ECR ID.</p>
+         * <p>The instance ID of the Express Connect Router (ECR).</p>
          * 
          * <strong>example:</strong>
          * <p>ecr-fu8rszhgv7623c****</p>
@@ -321,7 +335,7 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         public String ecrId;
 
         /**
-         * <p>The time when the association was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the association was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-09T12:18:23Z</p>
@@ -330,7 +344,7 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         public String gmtCreate;
 
         /**
-         * <p>The time when the association was modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the association was modified. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-09T12:18:23Z</p>
@@ -339,7 +353,7 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         public String gmtModified;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the resource.</p>
+         * <p>The Alibaba Cloud account ID to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>167509154715****</p>
@@ -348,7 +362,7 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         public Long ownerId;
 
         /**
-         * <p>The region ID of the resource.</p>
+         * <p>The region where the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -357,15 +371,22 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         public String regionId;
 
         /**
-         * <p>The deployment state of the associated resource. Valid values:</p>
+         * <p>The deployment status of the associated resource. Valid values:</p>
          * <ul>
-         * <li><strong>CREATING</strong>: The resource is being created.</li>
-         * <li><strong>ACTIVE</strong>: The resource is created.</li>
-         * <li><strong>INACTIVE</strong>: The TR is pending to be associated with the ECR.</li>
-         * <li><strong>ASSOCIATING</strong>: The resource is being associated.</li>
-         * <li><strong>DISSOCIATING</strong>: The resource is being disassociated.</li>
-         * <li><strong>UPDATING</strong>: The resource is being modified.</li>
-         * <li><strong>DELETING</strong>: The resource is being deleted.</li>
+         * <li><p><strong>CREATING</strong>: The resource is being created.</p>
+         * </li>
+         * <li><p><strong>ACTIVE</strong>: The resource is created.</p>
+         * </li>
+         * <li><p><strong>INACTIVE</strong>: The Express Connect Router (ECR) is associated with the transit router, and the transit router is pending association with the ECR for forward routing.</p>
+         * </li>
+         * <li><p><strong>ASSOCIATING</strong>: The resource is being attached.</p>
+         * </li>
+         * <li><p><strong>DISSOCIATING</strong>: The resource is being disassociated.</p>
+         * </li>
+         * <li><p><strong>UPDATING</strong>: The resource is being modified.</p>
+         * </li>
+         * <li><p><strong>DELETING</strong>: The resource is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -374,11 +395,14 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of tags added to the associated resource.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags> tags;
 
         /**
-         * <p>The TR ID.</p>
+         * <p>The ID of the transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-2ze4i71c6be454e2l****</p>
@@ -386,11 +410,17 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
+        /**
+         * <p>The name of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TransitRouterName")
         public String transitRouterName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the TR.</p>
+         * <p>The Alibaba Cloud account ID to which the transit router for forward routing belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>189159362009****</p>
@@ -399,7 +429,7 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         public Long transitRouterOwnerId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC-connected instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zeeaxet4i2j1a7n7****</p>
@@ -407,11 +437,17 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The name of the VPC-connected instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the VPC belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>146757288406****</p>

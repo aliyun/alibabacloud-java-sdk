@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachExpressConnectRouterChildInstanceRequest extends TeaModel {
     /**
-     * <p>The VBR ID.</p>
+     * <p>The VBR instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DetachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The type of the network instance. Set the value to <strong>VBR</strong>.</p>
+     * <p>The type of the network instance. Valid value: <strong>VBR</strong> (virtual border router).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class DetachExpressConnectRouterChildInstanceRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the value from your client and make sure that the value is unique across different requests. The client token only supports ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,10 +38,10 @@ public class DetachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run for this request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><strong>true</strong>: sends a check request without modifying service resources.</li>
+     * <li><strong>false</strong> (default): sends a normal request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DetachExpressConnectRouterChildInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The ECR instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

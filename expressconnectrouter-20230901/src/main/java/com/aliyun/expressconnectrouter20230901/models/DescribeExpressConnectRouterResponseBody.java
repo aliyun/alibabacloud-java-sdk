@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
@@ -14,7 +14,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>Indicates whether the call was successful. A return value of 200 indicates success, while other values indicate failure. For the cause of failure, see the error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,9 +32,9 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The ECRs.</p>
+     * <p>The list of Express Connect Router (ECR) instances.</p>
      */
     @NameInMap("EcrList")
     public java.util.List<DescribeExpressConnectRouterResponseBodyEcrList> ecrList;
@@ -59,16 +59,16 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 2147483647. Default value: 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -77,10 +77,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If NextToken is empty, no next page exists.</li>
-     * <li>If a value of NextToken is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If NextToken is empty, no next query is available.</li>
+     * <li>If NextToken has a return value, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,10 +99,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the query for created ECR instances was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>True</strong>: The query was successful.</li>
+     * <li><strong>False</strong>: The query failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of ECRs.</p>
+     * <p>The total number of Express Connect Router (ECR) instances.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -223,7 +223,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
 
     public static class DescribeExpressConnectRouterResponseBodyEcrListTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the Express Connect Router (ECR) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -232,7 +232,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the Express Connect Router (ECR) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -265,7 +265,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
 
     public static class DescribeExpressConnectRouterResponseBodyEcrList extends TeaModel {
         /**
-         * <p>The autonomous system number (ASN) of the ECR.</p>
+         * <p>The ASN of the Express Connect Router (ECR) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>45104</p>
@@ -274,10 +274,12 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public Long alibabaSideAsn;
 
         /**
-         * <p>The business state of the ECR. Valid values:</p>
+         * <p>The business status of the service instance. Valid values:</p>
          * <ul>
-         * <li><strong>Normal:</strong> The ECR is running as expected.</li>
-         * <li><strong>FinancialLocked</strong>: The ECR is locked due to overdue payments.</li>
+         * <li><p><strong>Normal</strong>: Normal.</p>
+         * </li>
+         * <li><p><strong>FinancialLocked</strong>: Locked due to overdue payment.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +289,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public String bizStatus;
 
         /**
-         * <p>The description of the ECR.</p>
+         * <p>The description of the Express Connect Router (ECR) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -296,7 +298,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ECR ID.</p>
+         * <p>The ID of the Express Connect Router (ECR) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ecr-mezk2idmsd0vx2****</p>
@@ -305,7 +307,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public String ecrId;
 
         /**
-         * <p>The time when the ECR was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the Express Connect Router (ECR) instance was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-16T01:44:50Z</p>
@@ -314,7 +316,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the ECR was modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the Express Connect Router (ECR) instance was modified. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-16T01:44:50Z</p>
@@ -323,7 +325,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The name of the ECR.</p>
+         * <p>The name of the Express Connect Router (ECR) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -332,7 +334,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the ECR.</p>
+         * <p>The Alibaba Cloud account ID to which the Express Connect Router (ECR) instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>170646818729****</p>
@@ -341,7 +343,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public Long ownerId;
 
         /**
-         * <p>The ID of the resource group to which the ECR belongs.</p>
+         * <p>The ID of the resource group to which the Express Connect Router (ECR) instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzuscospt****</p>
@@ -350,16 +352,24 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The deployment state of the ECR. Valid values:</p>
+         * <p>The deployment status of the service instance. Valid values:</p>
          * <ul>
-         * <li><strong>ACTIVE</strong>: The ECR is created.</li>
-         * <li><strong>UPDATING</strong>: The ECR is being modified.</li>
-         * <li><strong>ASSOCIATING</strong>: The ECR is being associated with resources.</li>
-         * <li><strong>DISSOCIATING</strong>: The resource is being disassociated from resources.</li>
-         * <li><strong>LOCKED_ATTACHING</strong>: The ECR is locked because it is being associated with an external system.</li>
-         * <li><strong>LOCKED_DETACHING</strong>: The ECR is locked because it is being disassociated from an external system.</li>
-         * <li><strong>RECLAIMING</strong>: The ECR is waiting to release resources.</li>
-         * <li><strong>DELETING</strong>: The ECR is being deleted.</li>
+         * <li><p><strong>ACTIVE</strong>: Created.</p>
+         * </li>
+         * <li><p><strong>UPDATING</strong>: Updating.</p>
+         * </li>
+         * <li><p><strong>ASSOCIATING</strong>: Associating resources.</p>
+         * </li>
+         * <li><p><strong>DISSOCIATING</strong>: Dissociating resources.</p>
+         * </li>
+         * <li><p><strong>LOCKED_ATTACHING</strong>: Locked for association by an external system.</p>
+         * </li>
+         * <li><p><strong>LOCKED_DETACHING</strong>: Locked for dissociation by an external system.</p>
+         * </li>
+         * <li><p><strong>RECLAIMING</strong>: Pending resource release.</p>
+         * </li>
+         * <li><p><strong>DELETING</strong>: Deleting.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -369,7 +379,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeExpressConnectRouterResponseBodyEcrListTags> tags;

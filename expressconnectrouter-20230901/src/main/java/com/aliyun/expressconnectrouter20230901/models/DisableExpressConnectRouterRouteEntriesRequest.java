@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DisableExpressConnectRouterRouteEntriesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,20 +18,19 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The destination CIDR block of the route entry in the route table of the ECR.</p>
+     * <p>The destination CIDR block of the route entry in the gateway route table.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10.153.32.16/28</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether the request is a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: sends a check request and does not modify the EPS resource.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +40,7 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +50,7 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends TeaModel {
     public String ecrId;
 
     /**
-     * <p>The ID of the next-hop instance.</p>
+     * <p>The next hop instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

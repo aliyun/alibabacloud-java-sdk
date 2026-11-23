@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>The response code. A value of 200 indicates success. Other values indicate failure. For more information, see error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,10 +32,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,10 +54,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>True</strong>: The call was successful.</li>
+     * <li><strong>False</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,13 +67,13 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
     /**
-     * <p>The total number of records that meet the query conditions.</p>
+     * <p>The total number of records that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -161,7 +161,13 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type. The value is <strong>EXPRESSCONNECTROUTER</strong>.</p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>EXPRESSCONNECTROUTER</strong>: Express Connect Router (ECR) instance.</li>
+         * <li><strong>EXPRESSCONNECTROUTERVPCASSOCIATION</strong>: association between an ECR and a VPC.</li>
+         * <li><strong>EXPRESSCONNECTROUTERTRASSOCIATION</strong>: association between an ECR and a transit router.</li>
+         * <li><strong>ECRFLOWLOG</strong>: ECR flow log.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>EXPRESSCONNECTROUTER</p>
@@ -170,7 +176,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -179,7 +185,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The label value of the Express Connect Router (ECR).</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

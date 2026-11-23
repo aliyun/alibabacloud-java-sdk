@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressConnectRouterAssociationResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
      */
@@ -12,6 +14,8 @@ public class ModifyExpressConnectRouterAssociationResponseBody extends TeaModel 
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code. A value of 200 indicates that the call was successful. Other values indicate that the call failed. For more information about the causes of failure, see error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ModifyExpressConnectRouterAssociationResponseBody extends TeaModel 
     public String code;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>IllegalParamFormat.EcrId</p>
      */
@@ -26,6 +32,11 @@ public class ModifyExpressConnectRouterAssociationResponseBody extends TeaModel 
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>The param format of EcrId **** is illegal.</p>
      */
@@ -33,6 +44,8 @@ public class ModifyExpressConnectRouterAssociationResponseBody extends TeaModel 
     public String dynamicMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +53,8 @@ public class ModifyExpressConnectRouterAssociationResponseBody extends TeaModel 
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -47,6 +62,8 @@ public class ModifyExpressConnectRouterAssociationResponseBody extends TeaModel 
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DFDA79A0-D135-5193-B0AC-3B5608FDB1D0</p>
      */
@@ -54,6 +71,12 @@ public class ModifyExpressConnectRouterAssociationResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>True</strong>: The call was successful.</li>
+     * <li><strong>False</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

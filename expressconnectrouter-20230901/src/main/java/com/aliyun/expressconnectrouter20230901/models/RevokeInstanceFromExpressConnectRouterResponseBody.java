@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeInstanceFromExpressConnectRouterResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
@@ -14,7 +14,7 @@ public class RevokeInstanceFromExpressConnectRouterResponseBody extends TeaModel
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>The response code. A value of 200 indicates success. Other values indicate failure. For more information, see error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,9 +32,9 @@ public class RevokeInstanceFromExpressConnectRouterResponseBody extends TeaModel
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,10 +71,12 @@ public class RevokeInstanceFromExpressConnectRouterResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the authorization of the network instance is revoked. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The authorization is revoked.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The authorization failed to be revoked.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

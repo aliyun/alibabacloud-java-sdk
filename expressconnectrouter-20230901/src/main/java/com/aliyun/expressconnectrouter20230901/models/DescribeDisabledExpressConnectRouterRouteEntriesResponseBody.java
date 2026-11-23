@@ -14,7 +14,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>The status code. A value of 200 indicates that the call was successful. Other values indicate that the call failed. For more information about the causes of failure, see error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String code;
 
     /**
-     * <p>The routes that are queried.</p>
+     * <p>The list of queried route entries.</p>
      */
     @NameInMap("DisabledRouteEntryList")
     public java.util.List<DescribeDisabledExpressConnectRouterRouteEntriesResponseBodyDisabledRouteEntryList> disabledRouteEntryList;
@@ -38,9 +38,9 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsInstanceId</strong>, the request parameter <strong>DtsInstanceId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsInstanceId</strong>, it indicates that the <strong>DtsInstanceId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public Integer httpStatusCode;
 
     /**
-     * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 10.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 2147483647. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -68,7 +68,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public Integer maxResults;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -77,10 +77,10 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String message;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If NextToken is empty, no next page exists.</li>
-     * <li>If a value of NextToken is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If NextToken is empty, no next query is required.</li>
+     * <li>If NextToken is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
@@ -99,10 +99,10 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public String requestId;
 
     /**
-     * <p>Indicates whether routes are disabled by the ECR. Valid values:</p>
+     * <p>Indicates whether the disabled Express Connect Router (ECR) routing is successfully queried. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>True</strong>: The query was successful.</li>
+     * <li><strong>False</strong>: The query failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     public Boolean success;
 
     /**
-     * <p>The total number of routes.</p>
+     * <p>The total number of route entry.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -223,7 +223,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
 
     public static class DescribeDisabledExpressConnectRouterRouteEntriesResponseBodyDisabledRouteEntryList extends TeaModel {
         /**
-         * <p>The destination CIDR block of the route.</p>
+         * <p>The destination CIDR block of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.100.110/32</p>
@@ -232,7 +232,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
         public String destinationCidrBlock;
 
         /**
-         * <p>The ECR ID.</p>
+         * <p>The instance ID of the Express Connect Router (ECR).</p>
          * 
          * <strong>example:</strong>
          * <p>ecr-mezk2idmsd0vx2****</p>
@@ -250,7 +250,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
         public String gmtCreate;
 
         /**
-         * <p>The ID of the next-hop instance.</p>
+         * <p>The instance ID of the next hop.</p>
          * 
          * <strong>example:</strong>
          * <p>br-hp3u4u5f03tfuljis****</p>
@@ -259,7 +259,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
         public String nexthopInstanceId;
 
         /**
-         * <p>The region ID of the next-hop instance.</p>
+         * <p>The region ID of the next hop instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

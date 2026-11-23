@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
@@ -14,7 +14,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>The status code. A value of 200 indicates that the call was successful. Other values indicate that the call failed. For more information about the failure causes, see the error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,9 +32,9 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String dynamicMessage;
 
     /**
-     * <p>The network instances whose permissions are granted to the ECR.</p>
+     * <p>The list of instances authorized to the ECR.</p>
      */
     @NameInMap("EcrGrantedInstanceList")
     public java.util.List<DescribeInstanceGrantedToExpressConnectRouterResponseBodyEcrGrantedInstanceList> ecrGrantedInstanceList;
@@ -59,16 +59,16 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public Integer httpStatusCode;
 
     /**
-     * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</p>
+     * <p>The maximum number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>6</p>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -77,10 +77,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String message;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query is available.</li>
+     * <li>If <strong>NextToken</strong> returns a value, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
@@ -99,10 +99,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>True</strong>: The call was successful.</li>
+     * <li><strong>False</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     public Boolean success;
 
     /**
-     * <p>The total number of network instances whose permissions are granted to the ECR.</p>
+     * <p>The total number of network instances for which authorization is granted to the Express Connect Router (ECR).</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -223,7 +223,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
 
     public static class DescribeInstanceGrantedToExpressConnectRouterResponseBodyEcrGrantedInstanceList extends TeaModel {
         /**
-         * <p>The ECR ID.</p>
+         * <p>The instance ID of the Express Connect Router (ECR).</p>
          * 
          * <strong>example:</strong>
          * <p>ecr-mezk2idmsd0vx2****</p>
@@ -232,16 +232,16 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String ecrId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the ECR to which you want to grant permissions.</p>
+         * <p>The ID of the Alibaba Cloud account to which the Express Connect Router (ECR) instance that receives the authorization belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>1456408190545060</p>
+         * <p>229845258050****</p>
          */
         @NameInMap("EcrOwnerAliUid")
         public String ecrOwnerAliUid;
 
         /**
-         * <p>The time when the network instance was created.</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1669023139000</p>
@@ -250,7 +250,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String gmtCreate;
 
         /**
-         * <p>The time when the network instance was modified.</p>
+         * <p>The time when the instance was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1669023139000</p>
@@ -259,7 +259,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String gmtModified;
 
         /**
-         * <p>The authorization ID.</p>
+         * <p>The ID of the authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>gr-8gdelo13mi99g1****</p>
@@ -268,7 +268,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String grantId;
 
         /**
-         * <p>The ID of the network instance.</p>
+         * <p>The instance ID of the authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-j6cwxhgg0s5nuephp****</p>
@@ -277,16 +277,16 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String nodeId;
 
         /**
-         * <p>The ID of the Alibaba Cloud enterprise account that owns the network instance.</p>
+         * <p>The ID of the Alibaba Cloud enterprise account to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>26842</p>
+         * <p>26842****</p>
          */
         @NameInMap("NodeOwnerBid")
         public String nodeOwnerBid;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the network instance.</p>
+         * <p>The ID of the Alibaba Cloud account to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>129845258050****</p>
@@ -295,7 +295,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public Long nodeOwnerUid;
 
         /**
-         * <p>The region ID of the network instance.</p>
+         * <p>The ID of the region to which the authorized instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -306,8 +306,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         /**
          * <p>The type of the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>VBR</strong></li>
-         * <li><strong>VPC</strong></li>
+         * <li><strong>VBR</strong>: VBR instance.</li>
+         * <li><strong>VPC</strong>: VPC instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -317,7 +317,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         public String nodeType;
 
         /**
-         * <p>The state of the network instance.</p>
+         * <p>The status of the authorized network instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

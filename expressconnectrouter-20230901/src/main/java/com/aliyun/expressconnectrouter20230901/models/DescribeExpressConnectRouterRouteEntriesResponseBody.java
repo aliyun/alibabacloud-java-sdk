@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
@@ -14,7 +14,7 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>The status code that indicates whether the call is successful. A value of 200 indicates success. Other values indicate failure. For more information about the cause of failure, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,9 +32,9 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,16 +53,16 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
     public Integer httpStatusCode;
 
     /**
-     * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 10</p>
+     * <p>The maximum number of entries returned. Valid values: 1 to 2147483647. Default value: 10.</p>
      * 
      * <strong>example:</strong>
-     * <p>6</p>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the instance operation.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -71,10 +71,10 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
     public String message;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
+     * <li>If <strong>NextToken</strong> has a return value, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,16 +93,16 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
     public String requestId;
 
     /**
-     * <p>The routes.</p>
+     * <p>The list of route entries.</p>
      */
     @NameInMap("RouteEntriesList")
     public java.util.List<DescribeExpressConnectRouterRouteEntriesResponseBodyRouteEntriesList> routeEntriesList;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>True</strong>: The call was successful.</li>
+     * <li><strong>False</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
     public Boolean success;
 
     /**
-     * <p>The total number of route entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -223,7 +223,7 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
 
     public static class DescribeExpressConnectRouterRouteEntriesResponseBodyRouteEntriesList extends TeaModel {
         /**
-         * <p>The AS path of the route.</p>
+         * <p>The AS path traversed by the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>[64993,64512]</p>
@@ -232,7 +232,7 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
         public String asPath;
 
         /**
-         * <p>The community value that is carried in the BGP route.</p>
+         * <p>The community value carried by the BGP route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>9001:9263</p>
@@ -241,20 +241,17 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
         public String community;
 
         /**
-         * <p>The destination CIDR block of the route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.0.0/16</p>
+         * <p>The destination CIDR block of the route entry.</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
-         * <p>The MED value of the BGP route, which is used between the ECR and the transit router.</p>
+         * <p>The MED value carried by the BGP route entry, which takes effect for routing between the Express Connect Router (ECR) and the TR. </p>
          * <ul>
-         * <li>You can set the MED value to 2000. In this case, the transit router and the ECR are used as default paths.</li>
-         * <li>If a non-default path is used, the MED value is empty.</li>
-         * <li>You can set the MED value to 2000 only for one object associated with a transit router of a CEN instance.</li>
+         * <li>The MED value can be set to 2000. After the configuration, the TR and the Express Connect Router (ECR) serve as the default path. </li>
+         * <li>For a non-default path, the MED value is empty. </li>
+         * <li>For TRs in the same Cloud Enterprise Network (CEN), only one associated object can have the MED value set to 2000.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,16 +261,16 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
         public Long med;
 
         /**
-         * <p>The ID of the next-hop instance.</p>
+         * <p>The next hop instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>br-hp3u4u5f03tfuljis****</p>
+         * <p>vbr-hp3u4u5f03tfuljis****</p>
          */
         @NameInMap("NexthopInstanceId")
         public String nexthopInstanceId;
 
         /**
-         * <p>The region ID of the next-hop instance.</p>
+         * <p>The region where the next hop instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -282,7 +279,7 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
         public String nexthopInstanceRegionId;
 
         /**
-         * <p>The state of the ECR.</p>
+         * <p>The status of the Express Connect Router (ECR) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>

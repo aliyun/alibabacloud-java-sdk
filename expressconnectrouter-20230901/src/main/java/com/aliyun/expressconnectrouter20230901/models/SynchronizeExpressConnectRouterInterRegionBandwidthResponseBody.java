@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
@@ -14,7 +14,7 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>The response code. A value of 200 indicates that the call was successful. For other return values, the call failed. For more information, see the error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,9 +32,9 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message that is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsInstanceId</strong>, the request parameter <strong>DtsInstanceId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsInstanceId</strong>, the specified <strong>DtsInstanceId</strong> parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -71,10 +71,12 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>True</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>False</strong>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

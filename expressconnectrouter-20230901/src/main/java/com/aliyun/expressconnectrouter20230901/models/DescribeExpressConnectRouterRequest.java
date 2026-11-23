@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeExpressConnectRouterRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The request is checked, but service resources are not modified.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The ID of the Express Connect Router (ECR) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ecr-fu8rszhgv7623c****</p>
@@ -40,16 +42,16 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
     public String ecrId;
 
     /**
-     * <p>The maximum number of entries to read. Valid values: 1 to 2147483647. Default value: 20.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 2147483647. Default value: 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The name of the ECR. The name must be 0 to 128 characters in length.</p>
+     * <p>The name of the Express Connect Router (ECR) instance. The name must be 0 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -58,10 +60,10 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>For the first query or when no next query is required, leave this parameter empty.</li>
+     * <li>If a next query is required, set the value to the NextToken value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +73,7 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the resource group to which the ECR belongs.</p>
+     * <p>The ID of the resource group to which the Express Connect Router (ECR) instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2aq7f4va****</p>
@@ -80,7 +82,7 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource tags. You can specify up to 20 tags.</p>
+     * <p>The list of tags used for filtering. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeExpressConnectRouterRequestTag> tag;
@@ -167,9 +169,8 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
 
     public static class DescribeExpressConnectRouterRequestTag extends TeaModel {
         /**
-         * <p>The tag keys.</p>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify at most 20 tag keys.</p>
+         * <p>The tag key of the instance. If you specify this parameter, it cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -178,8 +179,7 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>A tag value.</p>
-         * <p>A tag value can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code>.</p>
+         * <p>The tag value. The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. If you specify this parameter, it can be an empty string.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

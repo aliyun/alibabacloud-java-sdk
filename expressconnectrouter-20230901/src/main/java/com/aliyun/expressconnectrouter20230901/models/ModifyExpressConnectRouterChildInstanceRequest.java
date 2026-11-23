@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressConnectRouterChildInstanceRequest extends TeaModel {
     /**
+     * <p>The instance ID of the VBR.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class ModifyExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String childInstanceId;
 
     /**
+     * <p>The type of the network instance. Valid values:</p>
+     * <ul>
+     * <li><strong>VBR</strong>: VBR instance.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,14 @@ public class ModifyExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String childInstanceType;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can generate a parameter value from your client to ensure that the parameter value is unique among different requests. The client token only supports ASCII characters.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request is different.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-00****</p>
      */
@@ -30,6 +43,8 @@ public class ModifyExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The description of the child instance. The description must be 0 to 128 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -37,6 +52,12 @@ public class ModifyExpressConnectRouterChildInstanceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Specifies whether the request is a dry run only. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run and does not modify service resources.</li>
+     * <li><strong>false</strong> (default): sends a normal request.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -44,6 +65,7 @@ public class ModifyExpressConnectRouterChildInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

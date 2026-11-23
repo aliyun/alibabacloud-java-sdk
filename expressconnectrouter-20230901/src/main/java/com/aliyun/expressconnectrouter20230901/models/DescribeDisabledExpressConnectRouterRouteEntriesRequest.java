@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Tea
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether the request is a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: performs a dry run on the request without modifying the EPS resources.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Tea
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +43,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Tea
     public String ecrId;
 
     /**
-     * <p>The maximum number of entries to read. Valid values: 1 to 2147483647. Default value: 10.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 2147483647. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,10 +52,10 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Tea
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>If this is the first query or no next query is required, you do not need to specify this parameter.</li>
+     * <li>If a next query is required, set the value to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>

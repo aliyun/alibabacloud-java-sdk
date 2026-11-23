@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterAssociationRequest extends TeaModel {
     /**
-     * <p>The ID of the association between the ECR and the VPC or TR.</p>
+     * <p>The ID used to associate the Express Connect Router (ECR) with a VPC or TR.</p>
      * 
      * <strong>example:</strong>
      * <p>ecr-assoc-9p2qxx5phpca2m****</p>
@@ -16,8 +16,10 @@ public class DescribeExpressConnectRouterAssociationRequest extends TeaModel {
     /**
      * <p>The type of the associated resource. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong></li>
-     * <li><strong>TR</strong></li>
+     * <li><p><strong>VPC</strong>: VPC.</p>
+     * </li>
+     * <li><p><strong>TR</strong>: transit router.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class DescribeExpressConnectRouterAssociationRequest extends TeaModel {
     public String associationNodeType;
 
     /**
-     * <p>The region ID of the VPC or TR.</p>
+     * <p>The region where the VPC or TR resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -46,9 +48,9 @@ public class DescribeExpressConnectRouterAssociationRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the value from your client. Make sure that the value is unique across different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,10 +60,10 @@ public class DescribeExpressConnectRouterAssociationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether this is a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><strong>true</strong>: sends a check request and does not modify service resources.</li>
+     * <li><strong>false</strong> (default): sends a normal request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +73,10 @@ public class DescribeExpressConnectRouterAssociationRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
+     * <blockquote>
+     * <p>You can call the CreateExpressConnectRouter API operation to create an ECR instance and obtain the EcrId.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,19 +86,19 @@ public class DescribeExpressConnectRouterAssociationRequest extends TeaModel {
     public String ecrId;
 
     /**
-     * <p>The maximum number of entries to read. Valid values: 1 to 2147483647. Default value: 20.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 2147483647. Default value: 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>If this is the first query or no next query is required, leave this parameter empty.</li>
+     * <li>If a next query is required, set the value to the NextToken value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,11 +107,15 @@ public class DescribeExpressConnectRouterAssociationRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of tags.</p>
+     * <p>You can add up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeExpressConnectRouterAssociationRequestTag> tag;
 
     /**
-     * <p>The TR ID.</p>
+     * <p>The ID of the transit router.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-2ze4i71c6be454e2l****</p>
@@ -118,7 +127,7 @@ public class DescribeExpressConnectRouterAssociationRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The ID of the VPC-connected instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1h37fchc6jmfyln****</p>
@@ -236,9 +245,21 @@ public class DescribeExpressConnectRouterAssociationRequest extends TeaModel {
     }
 
     public static class DescribeExpressConnectRouterAssociationRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the resource. The tag key cannot be an empty string. It can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the resource. The tag value can be an empty string. It can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>The status code. A value of 200 indicates that the call was successful. For more information about other values, see the error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,10 +41,12 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>True</li>
-     * <li>False</li>
+     * <li><p>True: The call was successful.</p>
+     * </li>
+     * <li><p>False: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
     public Boolean success;
 
     /**
-     * <p>The regions in which the ECR feature is activated.</p>
+     * <p>The list of supported regions.</p>
      */
     @NameInMap("SupportedRegionIdList")
     public java.util.List<String> supportedRegionIdList;

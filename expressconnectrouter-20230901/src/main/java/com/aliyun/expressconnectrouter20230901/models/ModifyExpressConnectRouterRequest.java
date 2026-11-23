@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyExpressConnectRouterRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a unique value for this parameter from your client. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class ModifyExpressConnectRouterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the ECR.</p>
+     * <p>The description of ECR.</p>
      * <blockquote>
-     * <p> The description can be empty or 0 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description can be empty or 0 to 256 characters in length. It cannot start with http\:// or https\://.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,10 +30,10 @@ public class ModifyExpressConnectRouterRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><strong>true</strong>: Sends a check request without modifying the service resource.</li>
+     * <li><strong>false</strong> (default): Sends a normal request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ModifyExpressConnectRouterRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The ID of ECR.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,9 +53,9 @@ public class ModifyExpressConnectRouterRequest extends TeaModel {
     public String ecrId;
 
     /**
-     * <p>The name of the ECR.</p>
+     * <p>The name of ECR.</p>
      * <blockquote>
-     * <p> The name must be 0 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 0 to 128 characters in length. It cannot start with http\:// or https\://.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

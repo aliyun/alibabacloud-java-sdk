@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
@@ -14,10 +14,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether the ECR is used to establish connections between regions in the Chinese mainland and regions outside China. Valid values:</p>
+     * <p>Indicates whether the Express Connect Router (ECR) instance has cross-border connections between the Chinese mainland and regions outside the Chinese mainland. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Boolean anyCrossBorderLink;
 
     /**
-     * <p>Indicates whether the ECR is used to establish connections between regions in the Chinese mainland. Valid values:</p>
+     * <p>Indicates whether the Express Connect Router (ECR) instance has cross-region connections in the Chinese mainland. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +44,7 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Boolean anyInterRegionLink;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>Indicates whether the call was successful. A return value of 200 indicates that the request was successful. Any other value indicates that the request failed. For more information about the causes of failure, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -58,9 +62,9 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsInstanceId</strong>, the request parameter <strong>DtsInstanceId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsInstanceId</strong>, it indicates that the <strong>DtsInstanceId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,10 +83,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Indicates whether the cross-border CDT service is activated for the account to which the ECR belongs. Valid values:</p>
+     * <p>Indicates whether the cross-border Cloud Data Transfer (CDT) service is enabled for the account to which the Express Connect Router (ECR) instance belongs. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,10 +98,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Boolean isCdtCrossBorderEnabled;
 
     /**
-     * <p>Indicates whether the CDT service is activated for the account to which the ECR belongs. Valid values:</p>
+     * <p>Indicates whether the Cloud Data Transfer (CDT) service is enabled for the account to which the Express Connect Router (ECR) instance belongs. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,10 +113,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Boolean isCdtInterRegionEnabled;
 
     /**
-     * <p>Indicates whether the account to which the ECR belongs can create cross-border connections. Valid values:</p>
+     * <p>Indicates whether the account to which the Express Connect Router (ECR) instance belongs is allowed to create cross-border connections. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +128,7 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public Boolean isUserAllowedToCreateCrossBorderLink;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -127,7 +137,7 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
@@ -136,10 +146,12 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>True</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>False</strong>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

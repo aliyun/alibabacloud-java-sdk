@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFlowLogResponseBody extends TeaModel {
     /**
-     * <p>The queried information about the request denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
@@ -14,7 +14,7 @@ public class CreateFlowLogResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * <p>The status code that indicates whether the call was successful. A value of 200 indicates that the request was successful. Other values indicate that the request failed. For more information about the causes of failure, see the error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,9 +32,9 @@ public class CreateFlowLogResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message. This parameter is used to replace the % <strong>s</strong> in the <strong>ErrMessage</strong> error message of the response parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p>For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter</strong> %<strong>s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,10 +44,10 @@ public class CreateFlowLogResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The ID of the flow log.</p>
+     * <p>The ID of the flow log instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>flowlog-m5evbtbpt****</p>
+     * <p>ecr-flog-m5evbtbpt****</p>
      */
     @NameInMap("FlowLogId")
     public String flowLogId;
@@ -62,7 +62,7 @@ public class CreateFlowLogResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -80,10 +80,10 @@ public class CreateFlowLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong></li>
-     * <li><strong>False</strong></li>
+     * <li><strong>True</strong>: The call was successful.</li>
+     * <li><strong>False</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,23 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaModel {
     /**
-     * <p>The type of the user account. Valid values:</p>
+     * <p>The type of the caller. Valid values:</p>
      * <ul>
-     * <li><strong>sub</strong>: a Resource Access Management (RAM) user.</li>
-     * <li><strong>parent</strong>: an Alibaba Cloud account.</li>
+     * <li>ECR</li>
+     * <li>OTHER</li>
      * </ul>
+     * <p>Default value: ECR.</p>
      * 
      * <strong>example:</strong>
-     * <p>OTHER</p>
+     * <p>ECR</p>
      */
     @NameInMap("CallerType")
     public String callerType;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,10 +32,12 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The request is checked but EPS resources are not modified.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +47,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +57,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     public String ecrId;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The ID of the authorized instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vbr-j6cwxhgg0s5nuephp****</p>
@@ -63,16 +66,16 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     public String instanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the network instance.</p>
+     * <p>The ID of the Alibaba Cloud account to which the authorized network instance belongs.</p>
      * 
      * <strong>example:</strong>
-     * <p>129845258050****</p>
+     * <p>1298452580502345</p>
      */
     @NameInMap("InstanceOwnerId")
     public Long instanceOwnerId;
 
     /**
-     * <p>The region ID of the network instance.</p>
+     * <p>The region where the authorized network instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -83,8 +86,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VBR</strong></li>
-     * <li><strong>VPC</strong></li>
+     * <li><strong>VBR</strong>: VBR instance.</li>
+     * <li><strong>VPC</strong>: VPC instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,19 +97,19 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     public String instanceType;
 
     /**
-     * <p>The maximum number of entries to read. Valid values: 1 to 2147483647. Default value: 20.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 2147483647. Default value: 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>6</p>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>If this is the first query or no next query is available, leave this parameter empty.</li>
+     * <li>If a next query is available, set the value to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +119,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     public String nextToken;
 
     /**
-     * <p>The ID of the resource group to which the network instance belongs.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2tsvbnfe****</p>
@@ -125,7 +128,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("TagModels")
     public java.util.List<DescribeInstanceGrantedToExpressConnectRouterRequestTagModels> tagModels;
@@ -244,8 +247,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
 
     public static class DescribeInstanceGrantedToExpressConnectRouterRequestTagModels extends TeaModel {
         /**
-         * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -254,8 +257,8 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
         public String tagKey;
 
         /**
-         * <p>The tag value. You can specify up to 20 tag values. The tag value cannot be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you cannot specify an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>

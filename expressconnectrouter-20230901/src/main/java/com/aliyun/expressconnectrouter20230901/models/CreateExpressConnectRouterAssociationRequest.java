@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     /**
-     * <p>The allowed route prefixes.</p>
+     * <p>The list of allowed route prefixes.</p>
      */
     @NameInMap("AllowedPrefixes")
     public java.util.List<String> allowedPrefixes;
@@ -13,10 +13,8 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     /**
      * <p>The route prefix mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>MatchMode</strong>: After you distribute new route CIDR blocks to data centers, original specific routes that are distributed are withdrawn.</p>
-     * </li>
-     * <li><p><strong>IncrementalMode</strong>: After you distribute new route CIDR blocks to data centers, the original specific routes that fall in the CIDR blocks that you configure are withdrawn, and the original specific routes that do not fall in the CIDR blocks are still distributed.</p>
-     * </li>
+     * <li>MatchMode: match mode. Only the configured route CIDR blocks are advertised to the data center, and the previously advertised specific routes are withdrawn.</li>
+     * <li>IncrementalMode: incremental mode. The configured route CIDR blocks are advertised to the data center. The previously advertised specific routes that fall within the configured route CIDR blocks are withdrawn, and the specific routes that do not fall within the configured CIDR blocks remain advertised.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +24,7 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     public String allowedPrefixesMode;
 
     /**
-     * <p>The region ID of the resource to be associated.</p>
+     * <p>The region where the associated resource resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +35,9 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
 
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <blockquote>
+     * <p>If you specify TransitRouterId, CenId is required. You must first call the CreateCen operation of the Cbn (2017-09-12) service to create a CEN instance and obtain the CEN instance ID.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cen-of3o1the3i4gwb****</p>
@@ -46,9 +47,9 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate a parameter value from your client to ensure that the value is unique among different requests. The client token only supports ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,10 +59,10 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to initiate an association on the TR when the ECR is associated with the TR. Valid values:</p>
+     * <p>Specifies whether to initiate an association when the Express Connect Router is associated with the transit router. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: You do not need to initiate an association on the TR.</li>
-     * <li><strong>false</strong>: You need to initiate an association on the TR.</li>
+     * <li><strong>true</strong>: No association is initiated on the transit router side.</li>
+     * <li><strong>false</strong>: An association is initiated on the transit router side.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +72,7 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     public Boolean createAttachment;
 
     /**
-     * <p>The information about the associated resource. It must be 0 to 128 characters in length.</p>
+     * <p>The description of the associated resource. The description must be 0 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -80,10 +81,12 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to only perform a dry run for this request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: The system sends a check request without modifying service resources.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): The system sends a normal request.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +96,7 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR ID.</p>
+     * <p>The instance ID of the Express Connect Router (ECR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,11 +105,18 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     @NameInMap("EcrId")
     public String ecrId;
 
+    /**
+     * <p>The list of tags.</p>
+     * <p>You can add up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateExpressConnectRouterAssociationRequestTag> tag;
 
     /**
-     * <p>The TR ID.</p>
+     * <p>The ID of the transit router.</p>
+     * <blockquote>
+     * <p>The TransitRouterId and VpcId parameters are mutually exclusive. You must specify one of them. You must first call the CreateTransitRouter operation of the Cbn (2017-09-12) service to create a transit router and obtain the transit router ID.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>tr-2ze4i71c6be454e2l****</p>
@@ -115,9 +125,9 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the TR. Default value: ID of the Alibaba Cloud account that logs in.</p>
+     * <p>The ID of the Alibaba Cloud account to which the transit router instance belongs. The transit router is used to forward routing traffic. Default value: the current logon Alibaba Cloud account ID.</p>
      * <blockquote>
-     * <p> If you want to connect to a network instance that belongs to a different account, this parameter is required.</p>
+     * <p>If you want to load a network instance across accounts, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -130,7 +140,11 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>The VPC ID.</p>
+     * <p>The instance ID of the VPC-connected instance.</p>
+     * <blockquote>
+     * <p>The VpcId and TransitRouterId parameters are mutually exclusive. You must specify one of them.
+     * You must first call the CreateVpc operation of the Vpc (2016-04-28) service to create a VPC and obtain the VPC ID.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1h37fchc6jmfyln****</p>
@@ -139,9 +153,9 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the VPC. Default value: ID of the Alibaba Cloud account that logs in.</p>
+     * <p>The Alibaba Cloud account ID to which the VPC-connected instance belongs. Default value: the current logon Alibaba Cloud account ID.</p>
      * <blockquote>
-     * <p> If you want to connect to a network instance that belongs to a different account, this parameter is required.</p>
+     * <p>If you want to load a network instance across accounts, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -276,9 +290,21 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     }
 
     public static class CreateExpressConnectRouterAssociationRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the resource. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the resource. The tag value can be an empty string and can be up to 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

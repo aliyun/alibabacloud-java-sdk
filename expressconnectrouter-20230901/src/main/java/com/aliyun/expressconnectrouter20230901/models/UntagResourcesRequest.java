@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags. This parameter is valid only when the <strong>TagKey</strong> parameter is not specified. Valid values:</p>
+     * <p>Specifies whether to unbind all tags. This parameter is valid only when <strong>TagKey</strong> is empty. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: Unbinds all tags from the Express Connect Router (ECR) instance.</li>
+     * <li><strong>false</strong> (default): Does not unbind all tags from the Express Connect Router (ECR) instance.</li>
      * </ul>
      * <blockquote>
-     * <p> You must specify one of <strong>TagKey</strong> and <strong>All</strong>.</p>
+     * <p>You must specify either <strong>TagKey</strong> or <strong>All</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,9 +22,9 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,10 +34,12 @@ public class UntagResourcesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+     * <li><p><strong>true</strong>: Performs a dry run without modifying EPS resources.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Sends the request normally.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,14 +49,20 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ECR IDs.</p>
+     * <p>The list of resource instance IDs. You can unbind tags from up to 50 resource instances at a time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to <strong>EXPRESSCONNECTROUTER</strong>.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><strong>EXPRESSCONNECTROUTER</strong>: Express Connect Router (ECR) instance.</li>
+     * <li><strong>EXPRESSCONNECTROUTERVPCASSOCIATION</strong>: the associate relationship between an ECR and a VPC.</li>
+     * <li><strong>EXPRESSCONNECTROUTERTRASSOCIATION</strong>: the associate relationship between an ECR and a transit router.</li>
+     * <li><strong>ECRFLOWLOG</strong>: ECR flow log.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +72,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The keys of the tags that you want to remove from the ECRs.</p>
+     * <p>The tag keys of the Express Connect Router (ECR) instance to unbind.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
