@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceInfoResponseBody extends TeaModel {
     /**
-     * <p>Device details.</p>
+     * <p>The device details.</p>
      */
     @NameInMap("DeviceInfo")
     public QueryDeviceInfoResponseBodyDeviceInfo deviceInfo;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6EEF262B-EA7D-41DC-89B9-20F3D1E28194</p>
@@ -42,7 +42,7 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
 
     public static class QueryDeviceInfoResponseBodyDeviceInfo extends TeaModel {
         /**
-         * <p>Account attached to the device.</p>
+         * <p>The account bound to the device.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
@@ -51,7 +51,7 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         public String account;
 
         /**
-         * <p>Alias attached to the device.</p>
+         * <p>The alias bound to the device.</p>
          * 
          * <strong>example:</strong>
          * <p>test_alias,test_alias2</p>
@@ -60,16 +60,13 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>Device brand.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HUAWEI</p>
+         * <p>The device brand.</p>
          */
         @NameInMap("Brand")
         public String brand;
 
         /**
-         * <p>Device ID.</p>
+         * <p>The device ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a64ae296f3b04a58a05b30c95****</p>
@@ -78,7 +75,7 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         public String deviceId;
 
         /**
-         * <p>Device token.</p>
+         * <p>The APNs token of the iOS device.</p>
          * 
          * <strong>example:</strong>
          * <p>5ecc7b4012aaa801b63******5543ccbda6b4930d09629e936e1ac4b762a7df</p>
@@ -87,7 +84,7 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         public String deviceToken;
 
         /**
-         * <p>Device type.</p>
+         * <p>The device type.</p>
          * 
          * <strong>example:</strong>
          * <p>iOS</p>
@@ -96,7 +93,7 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>Last online time.</p>
+         * <p>The last online time.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-03-27T02:19:40Z</p>
@@ -105,16 +102,13 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         public String lastOnlineTime;
 
         /**
-         * <p>Device model.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>VOG-AL00</p>
+         * <p>The device model.</p>
          */
         @NameInMap("Model")
         public String model;
 
         /**
-         * <p>Is online.</p>
+         * <p>Indicates whether the device is online.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -123,7 +117,7 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         public Boolean online;
 
         /**
-         * <p>Phone number.</p>
+         * <p>The mobile phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>133********</p>
@@ -132,7 +126,7 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Is push feature enabled.</p>
+         * <p>Indicates whether the push feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,7 +135,7 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         public Boolean pushEnabled;
 
         /**
-         * <p>Tags attached to the device.</p>
+         * <p>The tags bound to the device.</p>
          * 
          * <strong>example:</strong>
          * <p>test_tag,test_tag2</p>

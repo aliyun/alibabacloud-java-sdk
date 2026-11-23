@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class PushTask extends TeaModel {
     /**
-     * <p>The push method. This parameter is optional. Default value: PUSH_IMMEDIATELY (push immediately).</p>
+     * <p>The push method. This parameter is optional. Default value: <code>PUSH_IMMEDIATELY</code> (immediate push).</p>
      * <blockquote>
      * <p>Notice: </p>
      * </blockquote>
-     * <p>The MassPushV2 batch push API supports only the following push methods:</p>
+     * <p>The batch push API <code>MassPushV2</code> supports only the following push methods:</p>
      * <ul>
-     * <li>PUSH_IMMEDIATELY (push immediately)</li>
-     * <li>SCHEDULED_PUSH (scheduled push)</li>
+     * <li><code>PUSH_IMMEDIATELY</code> (immediate push)</li>
+     * <li><code>SCHEDULED_PUSH</code> (scheduled push)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,9 +24,9 @@ public class PushTask extends TeaModel {
     /**
      * <p>The pass-through message data sent to the device. The total length cannot exceed 4,000 bytes.</p>
      * <blockquote>
-     * <p>Length calculation rules</p>
+     * <p>Length calculation instructions</p>
      * <ul>
-     * <li>The length is calculated based on the byte length of the UTF-8 encoded string after the Message object is serialized into JSON.</li>
+     * <li>The length is calculated based on the byte length of the UTF-8 encoded string after the Message object is serialized in JSON.</li>
      * <li>A Chinese character typically occupies 3 bytes in UTF-8 encoding.</li>
      * </ul>
      * </blockquote>
@@ -39,10 +39,10 @@ public class PushTask extends TeaModel {
      * <blockquote>
      * <p>Notice: </p>
      * </blockquote>
-     * <p>If both Message and Notification are configured, the device receives only one of them based on the following rules:</p>
+     * <p>When both <code>Message</code> and <code>Notification</code> are set, the device receives only one of them. The sending rules are as follows:</p>
      * <ul>
-     * <li>If the device is online, the pass-through message data is sent.</li>
-     * <li>If the device is offline, the system notification is sent.</li>
+     * <li>If the device is online, pass-through message data is sent.</li>
+     * <li>If the device is offline, a system notification is sent.</li>
      * </ul>
      */
     @NameInMap("Notification")
@@ -55,7 +55,7 @@ public class PushTask extends TeaModel {
     public PushTaskOptions options;
 
     /**
-     * <p>The target object for the message push. This parameter is optional when the Action parameter is set to CREATE_CONTINUOUS_PUSH (create a continuous push task).</p>
+     * <p>The target object for the message push. This parameter is optional when the <code>Action</code> operation type is <code>CREATE_CONTINUOUS_PUSH</code> (create continuous push task).</p>
      */
     @NameInMap("Target")
     public PushTaskTarget target;
@@ -107,7 +107,7 @@ public class PushTask extends TeaModel {
 
     public static class PushTaskMessage extends TeaModel {
         /**
-         * <p>The body of the message to be sent.</p>
+         * <p>The content of the sent message.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key&quot;: &quot;value&quot;}</p>
@@ -116,7 +116,7 @@ public class PushTask extends TeaModel {
         public String body;
 
         /**
-         * <p>The title of the message to be sent.</p>
+         * <p>The title of the sent message.</p>
          * 
          * <strong>example:</strong>
          * <p>title</p>
@@ -151,7 +151,7 @@ public class PushTask extends TeaModel {
         /**
          * <p>The custom notification bar style for Android. Valid values: 1 to 100.</p>
          * <blockquote>
-         * <p>The client must complete the style preset configuration. References: <a href="https://help.aliyun.com/document_detail/2834944.html">Custom notification style API</a>.</p>
+         * <p>You must preset the style on the client. References: <a href="https://help.aliyun.com/document_detail/2834944.html">Custom notification style API</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class PushTask extends TeaModel {
         public Integer customStyle;
 
         /**
-         * <p>The reminder method for the notification. Valid values:</p>
+         * <p>The reminder method of the notification. Valid values:</p>
          * <ul>
          * <li>VIBRATE: Vibration (default).</li>
          * <li>SOUND: Sound.</li>
@@ -176,7 +176,7 @@ public class PushTask extends TeaModel {
         public String notifyType;
 
         /**
-         * <p>Specifies the activity to open when the notification is clicked. Valid only when OpenType is set to ACTIVITY.</p>
+         * <p>The activity to open when the notification is tapped. Valid only when OpenType is set to ACTIVITY.</p>
          * 
          * <strong>example:</strong>
          * <p>com.alibaba.cloudpushdemo.bizactivity</p>
@@ -185,10 +185,10 @@ public class PushTask extends TeaModel {
         public String openActivity;
 
         /**
-         * <p>The action to perform when the notification is clicked. Valid values:</p>
+         * <p>The action to perform after the notification is tapped. Valid values:</p>
          * <ul>
          * <li>APPLICATION: Open the application (default).</li>
-         * <li>ACTIVITY: Open the specified activity OpenActivity.</li>
+         * <li>ACTIVITY: Open the specified page OpenActivity.</li>
          * <li>URL: Open a URL.</li>
          * <li>NONE: No redirection.</li>
          * </ul>
@@ -200,7 +200,7 @@ public class PushTask extends TeaModel {
         public String openType;
 
         /**
-         * <p>The URL to open when the notification is clicked after an Android device receives the push message. Valid only when OpenType is set to URL.</p>
+         * <p>The URL to open when the notification is tapped after the Android device receives the push message. Valid only when OpenType is set to URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -209,7 +209,7 @@ public class PushTask extends TeaModel {
         public String openUrl;
 
         /**
-         * <p>The priority of the display position for Android notifications in the notification bar. Valid values: -2, -1, 0, 1, and 2.</p>
+         * <p>The priority of the Android notification display position in the notification bar. Valid values: -2, -1, 0, 1, and 2.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -218,9 +218,9 @@ public class PushTask extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The message group. Messages in the same group are collapsed and can be expanded in the notification bar. Notifications from different groups are displayed separately.</p>
+         * <p>The message group. Messages in the same group are folded and can be expanded in the notification bar. Notifications in different groups are displayed separately.</p>
          * <blockquote>
-         * <p>Supported by Android SDK 3.9.2 or later.</p>
+         * <p>Supported in Android SDK 3.9.2 or later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -294,12 +294,12 @@ public class PushTask extends TeaModel {
 
     public static class PushTaskNotificationAndroidOptionsHonor extends TeaModel {
         /**
-         * <p>Sets the importance parameter for Honor notification message classification, which determines the notification behavior on user devices. Valid values:</p>
+         * <p>The importance parameter for Honor notification message classification, which determines the notification behavior on user devices. Valid values:</p>
          * <ul>
          * <li>0: Information and marketing messages.</li>
          * <li>1: Service and communication messages.</li>
          * </ul>
-         * <p>You must apply on the Honor platform. See <a href="https://developer.honor.com/cn/docs/11002/guides/notification-class#%E8%87%AA%E5%88%86%E7%B1%BB%E6%9D%83%E7%9B%8A%E7%94%B3%E8%AF%B7">Application link</a>.</p>
+         * <p>You must apply for this on the Honor platform. See <a href="https://developer.honor.com/cn/docs/11002/guides/notification-class#%E8%87%AA%E5%88%86%E7%B1%BB%E6%9D%83%E7%9B%8A%E7%94%B3%E8%AF%B7">Application link</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -324,10 +324,10 @@ public class PushTask extends TeaModel {
 
     public static class PushTaskNotificationAndroidOptionsHuawei extends TeaModel {
         /**
-         * <p>Sets the Huawei fast notification parameter. Valid values:</p>
+         * <p>The Huawei fast notification parameter. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Send standard Huawei notifications (default).</li>
-         * <li><strong>1</strong>: Send Huawei fast notifications.</li>
+         * <li><strong>0</strong>: Send a standard Huawei notification (default).</li>
+         * <li><strong>1</strong>: Send a Huawei fast notification.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -337,16 +337,16 @@ public class PushTask extends TeaModel {
         public Integer businessType;
 
         /**
-         * <p>Purpose 1: After applying for <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835?#section3410731125514">self-classification benefits</a>, this parameter is used to identify the message type, determine the <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#ZH-CN_TOPIC_0000001149358835__p3850133955718">message reminder method</a>, and accelerate the delivery of specific types of messages. For valid values, refer to the <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#section1076611477914">message classification standards</a> in the official Huawei push documentation, and fill in the &quot;Cloud notification category value&quot; or &quot;Local notification category value&quot; from the documentation table.</p>
-         * <p>Purpose 2: After <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/faq-0000001050042183#section037425218509">applying for special permissions</a>, this parameter is used to identify high-priority pass-through scenarios. Valid values:</p>
+         * <p>Purpose 1: After you apply for the <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835?#section3410731125514">self-classification benefit</a>, this parameter is used to identify the message type, determine the <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#ZH-CN_TOPIC_0000001149358835__p3850133955718">message reminder method</a>, and accelerate the sending of specific types of messages. For valid values, see the <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#section1076611477914">message classification standards</a> in the official Huawei push documentation. Enter the &quot;Cloud notification category value&quot; or &quot;Local notification category value&quot; from the documentation table.</p>
+         * <p>Purpose 2: After you <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/faq-0000001050042183#section037425218509">apply for special permissions</a>, this parameter is used to identify high-priority pass-through scenarios. Valid values:</p>
          * <ul>
          * <li>VOIP: Audio and video calls.</li>
          * <li>PLAY_VOICE: Voice broadcast.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If the &quot;Cloud notification category value&quot; is &quot;Not applicable&quot;, the message is sent through the Alibaba Cloud proprietary channel.</li>
-         * <li>If the &quot;Local notification category value&quot; is &quot;Not applicable&quot;, the message is sent through the Huawei channel.</li>
+         * <li>If the &quot;Cloud notification category value&quot; is &quot;Not applicable&quot;, the Alibaba Cloud proprietary channel is used.</li>
+         * <li>If the &quot;Local notification category value&quot; is &quot;Not applicable&quot;, the Huawei channel is used.</li>
          * </ul>
          * </blockquote>
          * 
@@ -357,13 +357,13 @@ public class PushTask extends TeaModel {
         public String category;
 
         /**
-         * <p>Sets the importance parameter for Huawei notification message classification, which determines the notification behavior on user devices. Valid values:</p>
+         * <p>The importance parameter for Huawei notification message classification, which determines the notification behavior on user devices. Valid values:</p>
          * <ul>
          * <li>0: Information and marketing messages.</li>
          * <li>1: Service and communication messages.</li>
          * </ul>
          * <blockquote>
-         * <p>We recommend that you use Category for notification classification. You must apply on the Huawei platform. See <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#section893184112272">Application link</a>.</p>
+         * <p>We recommend that you use Category for notification classification. You must apply for this on the Huawei platform. See <a href="https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/message-classification-0000001149358835#section893184112272">Application link</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -373,7 +373,7 @@ public class PushTask extends TeaModel {
         public Integer importance;
 
         /**
-         * <p>The JSON string of the Huawei Android Live Window data structure <a href="https://developer.huawei.com/consumer/cn/doc/HMSCore-References/rest-live-0000001562939968#ZH-CN_TOPIC_0000001700850537__p195121620102511">LiveNotificationPayload</a>. For development and integration, refer to the <a href="https://help.aliyun.com/document_detail/2983768.html">Huawei Live Window push guide</a>.</p>
+         * <p>The JSON string of the Huawei Android Live Notification data structure <a href="https://developer.huawei.com/consumer/cn/doc/HMSCore-References/rest-live-0000001562939968#ZH-CN_TOPIC_0000001700850537__p195121620102511">LiveNotificationPayload</a>. For development and integration, see <a href="https://help.aliyun.com/document_detail/2983768.html">Huawei Live Notification push guide</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -391,9 +391,9 @@ public class PushTask extends TeaModel {
         public String liveNotificationPayload;
 
         /**
-         * <p>The receipt ID of the Huawei channel. You can view this receipt ID in the receipt parameter settings of the Huawei channel push operations platform.</p>
+         * <p>The receipt ID of the Huawei channel. You can view the receipt ID in the receipt parameter settings of the Huawei channel push operations platform.</p>
          * <blockquote>
-         * <p>If the default receipt configuration on the Huawei channel push operations platform is set to Alibaba Cloud receipt, you do not need to provide this parameter. Otherwise, we recommend that you configure the default receipt ID for the Huawei channel in the Alibaba Cloud EMAS shift push console first.</p>
+         * <p>If the default receipt configured in the Huawei channel push operations platform is the Alibaba Cloud receipt, you do not need to provide this parameter. Otherwise, we recommend that you configure the default receipt ID for the Huawei channel in the Alibaba Cloud EMAS shift push console first.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -403,7 +403,7 @@ public class PushTask extends TeaModel {
         public String receiptId;
 
         /**
-         * <p>The delivery priority for Huawei channel notifications. Valid values:</p>
+         * <p>The delivery priority of the Huawei channel notification. Valid values:</p>
          * <ul>
          * <li>HIGH</li>
          * <li>NORMAL</li>
@@ -502,12 +502,12 @@ public class PushTask extends TeaModel {
 
     public static class PushTaskNotificationAndroidOptionsOppo extends TeaModel {
         /**
-         * <p>OPPO message categorization includes two categories for management: communication and service, and content and marketing. </p>
-         * <p><strong>Communication and service (requires permission application):</strong></p>
+         * <p>OPPO message categorization: communication and service, and content and marketing. </p>
+         * <p><strong>Communication and service (permission required):</strong></p>
          * <ul>
          * <li>IM: Instant messages.</li>
          * <li>ACCOUNT: Accounts and assets.</li>
-         * <li>TODO: Schedules and to-do lists.</li>
+         * <li>TODO: Schedules and to-dos.</li>
          * <li>DEVICE_REMINDER: Device information.</li>
          * <li>ORDER: Orders and logistics.</li>
          * <li>SUBSCRIPTION: subscribe reminders.</li>
@@ -519,7 +519,7 @@ public class PushTask extends TeaModel {
          * <li>MARKETING: operational activity.</li>
          * <li>SOCIAL: Social updates.</li>
          * </ul>
-         * <p>For more information, see the <a href="https://open.oppomobile.com/new/developmentDoc/info?id=13189">OPPO categorization description</a>.</p>
+         * <p>For more information, see <a href="https://open.oppomobile.com/new/developmentDoc/info?id=13189">OPPO categorization description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>NEWS</p>
@@ -569,11 +569,11 @@ public class PushTask extends TeaModel {
         public String intelligentIntent;
 
         /**
-         * <p>The reminder level for OPPO channel notification bar messages. Valid values:</p>
+         * <p>The notification bar message reminder level for the OPPO channel. Valid values:</p>
          * <ul>
          * <li>1: Notification bar.</li>
          * <li>2: Notification bar, lock screen, ringtone, and vibration (default notification level for communication and service messages).</li>
-         * <li>16: Notification bar, lock screen, ringtone, vibration, and banner (requires permission application).</li>
+         * <li>16: Notification bar, lock screen, ringtone, vibration, and banner (permission required).</li>
          * </ul>
          * <blockquote>
          * <p>When you use the NotifyLevel parameter, you must also pass the Category parameter.</p>
@@ -680,7 +680,7 @@ public class PushTask extends TeaModel {
 
     public static class PushTaskNotificationAndroidOptionsVivo extends TeaModel {
         /**
-         * <p>Sets the increment value for the vivo channel badge.</p>
+         * <p>The accumulated value of the badge number for the vivo channel.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -689,12 +689,12 @@ public class PushTask extends TeaModel {
         public Boolean addBadge;
 
         /**
-         * <p>vivo message categorization includes two categories for management: system messages and operation messages. </p>
+         * <p>vivo message categorization: system messages and operation messages. </p>
          * <p><strong>System messages:</strong></p>
          * <ul>
          * <li>IM: Instant messages.</li>
          * <li>ACCOUNT: Accounts and assets.</li>
-         * <li>TODO: Schedules and to-do lists.</li>
+         * <li>TODO: Schedules and to-dos.</li>
          * <li>DEVICE_REMINDER: Device information.</li>
          * <li>ORDER: Orders and logistics.</li>
          * <li>SUBSCRIPTION: subscribe reminders.</li>
@@ -715,13 +715,13 @@ public class PushTask extends TeaModel {
         public String category;
 
         /**
-         * <p>Sets the vivo notification message classification. Valid values:</p>
+         * <p>The vivo notification message classification. Valid values:</p>
          * <ul>
          * <li>0: Operation messages (default).</li>
          * <li>1: System messages.</li>
          * </ul>
          * <blockquote>
-         * <p>We recommend that you use Category for notification classification. You must apply on the vivo platform. For more information, see <a href="https://dev.vivo.com.cn/documentCenter/doc/359">Application link</a>.</p>
+         * <p>We recommend that you use Category for notification classification. You must apply for this on the vivo platform. For more information, see <a href="https://dev.vivo.com.cn/documentCenter/doc/359">Application link</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -749,7 +749,7 @@ public class PushTask extends TeaModel {
         public String liveMessage;
 
         /**
-         * <p>The message receipt identifier for the vivo vendor push channel, used to receive callback notifications for push results.</p>
+         * <p>The message receipt identifier for the vivo vendor push channel, which is used to receive callback notifications for push results.</p>
          * <blockquote>
          * <ul>
          * <li>Location: vivo Open Platform &gt; Push Service &gt; Application Information &gt; Receipt Configuration.</li>
@@ -765,6 +765,8 @@ public class PushTask extends TeaModel {
         public String receiptId;
 
         /**
+         * <p>The vivo template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t1-ge3-lq</p>
          */
@@ -772,6 +774,8 @@ public class PushTask extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The vivo template parameters, in JSON object string format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;keywords1&quot;:&quot;S123&quot;}</p>
          */
@@ -843,9 +847,9 @@ public class PushTask extends TeaModel {
 
     public static class PushTaskNotificationAndroidOptionsXiaomi extends TeaModel {
         /**
-         * <p>Sets the channel ID for the Xiaomi notification type. You must apply on the Xiaomi platform. For more information, see <a href="https://dev.mi.com/console/doc/detail?pId=2422#_4">Application link</a>.</p>
+         * <p>The channel ID for the Xiaomi notification type. You must apply for this on the Xiaomi platform. For more information, see <a href="https://dev.mi.com/console/doc/detail?pId=2422#_4">Application link</a>.</p>
          * <blockquote>
-         * <p>A single application can apply for a maximum of eight channels on the Xiaomi channel. Plan accordingly in advance.</p>
+         * <p>You can apply for up to eight channels for a single application in the Xiaomi channel. Plan accordingly in advance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -900,7 +904,7 @@ public class PushTask extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The Xiaomi private message template parameters, as a JSON string.</p>
+         * <p>The Xiaomi private message template parameters, in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;keywords1&quot;:&quot;Tom&quot;,&quot;keywords2&quot;:&quot;phone&quot;}</p>
@@ -957,7 +961,7 @@ public class PushTask extends TeaModel {
 
     public static class PushTaskNotificationAndroidOptions extends TeaModel {
         /**
-         * <p>The Alibaba Cloud proprietary configuration.</p>
+         * <p>The Alibaba Cloud proprietary configurations.</p>
          * <blockquote>
          * <p>Valid only when the Alibaba Cloud proprietary channel is used.</p>
          * </blockquote>
@@ -966,37 +970,37 @@ public class PushTask extends TeaModel {
         public PushTaskNotificationAndroidOptionsAccs accs;
 
         /**
-         * <p>The Honor configuration.</p>
+         * <p>The Honor configurations.</p>
          */
         @NameInMap("Honor")
         public PushTaskNotificationAndroidOptionsHonor honor;
 
         /**
-         * <p>The Huawei configuration.</p>
+         * <p>The Huawei configurations.</p>
          */
         @NameInMap("Huawei")
         public PushTaskNotificationAndroidOptionsHuawei huawei;
 
         /**
-         * <p>The Meizu configuration.</p>
+         * <p>The Meizu configurations.</p>
          */
         @NameInMap("Meizu")
         public PushTaskNotificationAndroidOptionsMeizu meizu;
 
         /**
-         * <p>The OPPO configuration.</p>
+         * <p>The OPPO configurations.</p>
          */
         @NameInMap("Oppo")
         public PushTaskNotificationAndroidOptionsOppo oppo;
 
         /**
-         * <p>The vivo configuration.</p>
+         * <p>The vivo configurations.</p>
          */
         @NameInMap("Vivo")
         public PushTaskNotificationAndroidOptionsVivo vivo;
 
         /**
-         * <p>The Xiaomi configuration.</p>
+         * <p>The Xiaomi configurations.</p>
          */
         @NameInMap("Xiaomi")
         public PushTaskNotificationAndroidOptionsXiaomi xiaomi;
@@ -1078,7 +1082,7 @@ public class PushTask extends TeaModel {
         public String badgeActivity;
 
         /**
-         * <p>Sets the increment value for the badge, which is added to the original badge number.</p>
+         * <p>The accumulated value of the badge number, which is added to the original badge number.</p>
          * <blockquote>
          * <ul>
          * <li>Supported by Huawei and Honor channels.</li>
@@ -1093,7 +1097,7 @@ public class PushTask extends TeaModel {
         public Integer badgeAddNum;
 
         /**
-         * <p>Sets a fixed value for the badge number. Valid values: 1 to 99.</p>
+         * <p>The fixed value of the badge number. Valid values: 1 to 99.</p>
          * <blockquote>
          * <ul>
          * <li>This parameter takes effect only for Huawei and Honor vendor channel pushes. </li>
@@ -1108,12 +1112,12 @@ public class PushTask extends TeaModel {
         public Integer badgeSetNum;
 
         /**
-         * <p>Sets the channel ID of the Android application. The channel ID must match the channel ID in the vendor application.</p>
+         * <p>The channel ID of the Android app. The channel ID must match the channel ID in the vendor app.</p>
          * <blockquote>
          * <ul>
-         * <li>Because the channel_id of the OPPO private message channel is the same as the channel ID of the application, this value is used as the channel_id when pushing through the OPPO channel.</li>
+         * <li>Because the channel_id of the OPPO private message channel is the same as the channelId of the app, this value is used as the channel_id when pushing through the OPPO channel.</li>
          * <li>This value is also used as the channel_id for Huawei, FCM, and Alibaba Cloud proprietary channel pushes.</li>
-         * <li>For specific use cases, see the FAQ: <a href="https://help.aliyun.com/document_detail/67398.html">Notifications are not received on devices running Android 8.0 or later</a>.</li>
+         * <li>For specific usage, see FAQ: <a href="https://help.aliyun.com/document_detail/67398.html">Notifications are not received on devices running Android 8.0 or later</a>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1124,10 +1128,10 @@ public class PushTask extends TeaModel {
         public String channelId;
 
         /**
-         * <p>The custom extension attributes for Android notifications.</p>
+         * <p>The custom extension attributes of the Android notification.</p>
          * <blockquote>
          * <ul>
-         * <li>The parameter must be passed in standard JSON map format. Incorrect formats will cause parsing failures.</li>
+         * <li>The parameter must be passed in standard JSON map format. Incorrect formats cause parsing failures.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1138,11 +1142,11 @@ public class PushTask extends TeaModel {
         public String extParameters;
 
         /**
-         * <p>The message group. For messages in the same group, only the latest message and the total number of received messages in the group are displayed in the notification bar. All messages are not displayed and cannot be expanded. Currently supported by:</p>
+         * <p>The message group. For messages in the same group, only the latest message and the total number of received messages in the group are displayed in the notification bar. All messages are not displayed and cannot be expanded. Supported channels:</p>
          * <ul>
          * <li>Huawei vendor channel.</li>
          * <li>Honor vendor channel.</li>
-         * <li>Proprietary channels with Android SDK 3.9.1 or earlier.</li>
+         * <li>Proprietary channels: Android SDK 3.9.1 or earlier.</li>
          * </ul>
          * <blockquote>
          * <p>Proprietary channels no longer support this parameter in Android SDK 3.9.2 or later.</p>
@@ -1155,11 +1159,11 @@ public class PushTask extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The URL of the icon on the right side. Currently supported by:</p>
+         * <p>The URL of the icon on the right side. Supported channels:</p>
          * <ul>
-         * <li>Huawei EMUI (applicable only in long text mode and Inbox mode).</li>
-         * <li>Honor Magic UI (applicable only in long text mode).</li>
-         * <li>Proprietary channels (Android SDK 3.5.0 or later).</li>
+         * <li>Huawei EMUI: Applicable only in long text mode and Inbox mode.</li>
+         * <li>Honor Magic UI: Applicable only in long text mode.</li>
+         * <li>Proprietary channels: Android SDK 3.5.0 or later.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1169,7 +1173,7 @@ public class PushTask extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The body text in Inbox mode. The content must be a valid JSON array with a maximum of five elements. Currently supported by:</p>
+         * <p>The body text in Inbox mode. The content must be a valid JSON array with no more than five elements. Supported channels:</p>
          * <ul>
          * <li>Huawei: EMUI 9 or later.</li>
          * <li>Honor: Magic UI 4.0 or later.</li>
@@ -1182,7 +1186,7 @@ public class PushTask extends TeaModel {
         public java.util.List<String> inboxContent;
 
         /**
-         * <p>The notification sound for the Huawei vendor channel. Specify the audio file name stored in the <code>app/src/main/res/raw/</code> directory of the client project. Do not include the file format extension. If not set, the default ringtone is used.</p>
+         * <p>The notification sound for the Huawei vendor channel. Specify the audio file name stored in the <code>app/src/main/res/raw/</code> directory of the client project. Do not include the file format suffix. If this parameter is not set, the default ringtone is used.</p>
          * 
          * <strong>example:</strong>
          * <p>alicloud_notification_sound</p>
@@ -1191,7 +1195,7 @@ public class PushTask extends TeaModel {
         public String music;
 
         /**
-         * <p>The unique identifier of the Android notification bar message, used to control the override and replacement behavior of notifications. A new notification with the same NotifyId automatically overrides the old notification.</p>
+         * <p>The unique identifier of the Android notification bar message, which is used to control the override and replacement behavior of notifications. A new notification with the same NotifyId automatically overrides the old notification.</p>
          * 
          * <strong>example:</strong>
          * <p>233856727</p>
@@ -1200,13 +1204,13 @@ public class PushTask extends TeaModel {
         public Integer notifyId;
 
         /**
-         * <p>The detailed channel configuration.</p>
+         * <p>The detailed configurations of the channel.</p>
          */
         @NameInMap("Options")
         public PushTaskNotificationAndroidOptions options;
 
         /**
-         * <p>The image URL in large image mode. Currently supported by proprietary channels with Android SDK 3.6.0 or later.</p>
+         * <p>The image URL in large image mode. Supported channels: proprietary channels with Android SDK 3.6.0 or later.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></p>
@@ -1230,13 +1234,13 @@ public class PushTask extends TeaModel {
         public String renderStyle;
 
         /**
-         * <p>Sets the notification type for vendor channels. Valid values:</p>
+         * <p>The notification type for the vendor channel. Valid values:</p>
          * <ul>
          * <li>false: Formal notification (default).</li>
          * <li>true: Test notification.</li>
          * </ul>
          * <blockquote>
-         * <p>Currently supported by Huawei channel, Honor channel, vivo channel, and OPPO Fluid Cloud.</p>
+         * <p>Supported channels: Huawei, Honor, vivo, and OPPO Fluid Cloud.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1246,7 +1250,7 @@ public class PushTask extends TeaModel {
         public Boolean testMessage;
 
         /**
-         * <p>Specifies the activity to open when the notification is clicked.</p>
+         * <p>The activity to which the user is redirected after tapping the notification.</p>
          * <blockquote>
          * <p>Warning: This parameter is required when you use Android vendor channels.</warning></p>
          * </blockquote>
@@ -1401,8 +1405,8 @@ public class PushTask extends TeaModel {
          * <p>The number to add to the HarmonyOS application badge.</p>
          * <blockquote>
          * <ul>
-         * <li>Supported by HarmonyOS SDK 1.2.0 and later.</li>
-         * <li>For more information, see the <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section266310382145">addNum field description</a> for HarmonyOS badges.</li>
+         * <li>Supported in HarmonyOS SDK 1.2.0 and later.</li>
+         * <li>For more information, see the description of the <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section266310382145">addNum field</a> for HarmonyOS badges.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1416,8 +1420,8 @@ public class PushTask extends TeaModel {
          * <p>The number to set for the HarmonyOS application badge.</p>
          * <blockquote>
          * <ul>
-         * <li>For more information, see the <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section266310382145">setNum field</a> description for HarmonyOS badges.</li>
-         * <li>Supported by HarmonyOS SDK 1.2.0 and later.</li>
+         * <li>For more information, see the description of the <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section266310382145">setNum field</a> for HarmonyOS badges.</li>
+         * <li>Supported in HarmonyOS SDK 1.2.0 and later.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1428,9 +1432,9 @@ public class PushTask extends TeaModel {
         public Integer badgeSetNum;
 
         /**
-         * <p>The category of the notification message. This parameter is optional. Default value: MARKETING.</p>
+         * <p>The notification message category. This parameter is optional. Default value: <code>MARKETING</code>.</p>
          * <blockquote>
-         * <p>After you apply for the notification message auto-classification permission, this parameter is used to identify the message type. Different notification message types affect the message display and reminder methods. For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.category</a> on the HarmonyOS official website.</p>
+         * <p>After applying for the notification message auto-classification permission, this parameter is used to identify the message type. Different notification message types affect the message display and reminder methods. For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.category</a> on the HarmonyOS official website.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1440,9 +1444,9 @@ public class PushTask extends TeaModel {
         public String category;
 
         /**
-         * <p>Sets the custom extension attributes of the notification message to pass additional business data.</p>
+         * <p>The custom extension attributes of the notification message, which are used to pass additional business data.</p>
          * <blockquote>
-         * <p>The parameter must be passed in standard JSON map format. Incorrect formats will cause parsing failures.</p>
+         * <p>The parameter must be passed in standard JSON map format. Incorrect formats cause parsing failures.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1452,12 +1456,12 @@ public class PushTask extends TeaModel {
         public String extParameters;
 
         /**
-         * <p>The additional data for notification extension messages.</p>
+         * <p>The additional data of the notification extension message.</p>
          * <blockquote>
          * <ul>
          * <li>Valid only when sending HarmonyOS notification extension messages.</li>
-         * <li>Conceptually equivalent to the extraData field of HarmonyOS notification extension messages. For specific definitions, see the <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section161192514234">ExtensionPayload</a> description in HarmonyOS.</li>
-         * <li>Supported by HarmonyOS SDK 1.2.0 and later.</li>
+         * <li>Conceptually equivalent to the extraData field of the HarmonyOS notification extension message. For specific definitions, see the <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section161192514234">ExtensionPayload</a> description in HarmonyOS.</li>
+         * <li>Supported in HarmonyOS SDK 1.2.0 and later.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1468,11 +1472,11 @@ public class PushTask extends TeaModel {
         public String extensionExtraData;
 
         /**
-         * <p>Enables HarmonyOS notification extensions.</p>
+         * <p>Specifies whether to enable HarmonyOS notification extensions.</p>
          * <blockquote>
          * <ul>
          * <li>To send notification extension messages, you must first apply for permissions on the HarmonyOS official website. For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/push-send-extend-noti-V5">HarmonyOS documentation</a>.</li>
-         * <li>Supported by HarmonyOS SDK 1.2.0 and later.</li>
+         * <li>Supported in HarmonyOS SDK 1.2.0 and later.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1486,7 +1490,7 @@ public class PushTask extends TeaModel {
          * <p>The URL of the large icon on the right side of the notification. The URL must use the HTTPS protocol.</p>
          * <blockquote>
          * <ul>
-         * <li>Supported image formats: PNG, JPG, JPEG, HEIF, GIF, and BMP. The total number of pixels (width × height) must be less than 25,000.</li>
+         * <li>Supported image formats: PNG, JPG, JPEG, HEIF, GIF, and BMP. The product of the image width and height must be less than 25,000 pixels.</li>
          * <li>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.image</a> on the HarmonyOS official website.</li>
          * </ul>
          * </blockquote>
@@ -1498,13 +1502,13 @@ public class PushTask extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>When RenderStyle is set to MULTI_LINE, this field is required to define the content for the multi-line text style. A maximum of three content items are supported.</p>
+         * <p>The content of the multi-line text style. This field is required when RenderStyle is set to MULTI_LINE. You can specify up to three content items.</p>
          */
         @NameInMap("InboxContent")
         public java.util.List<String> inboxContent;
 
         /**
-         * <p>The JSON string of the HarmonyOS Live View data structure <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/push-scenariozed-api-request-param-V13#section66881469306">LiveViewPayload</a>. For development and integration, refer to the <a href="https://help.aliyun.com/document_detail/2982112.html">HarmonyOS Live View push guide</a>.</p>
+         * <p>The JSON string of the HarmonyOS Live View data structure <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/push-scenariozed-api-request-param-V13#section66881469306">LiveViewPayload</a>. For development and integration, see <a href="https://help.aliyun.com/document_detail/2982112.html">HarmonyOS Live View push guide</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -1523,7 +1527,7 @@ public class PushTask extends TeaModel {
         public String liveViewPayload;
 
         /**
-         * <p>The unique identifier (notifyId) for each message displayed in the notification bar. If this parameter is not provided, the push service automatically generates a unique identifier. Different notification messages can use the same notifyId to allow new messages to overwrite old ones. For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.notifyId</a> on the HarmonyOS official website.</p>
+         * <p>The unique identifier (notifyId) for each message displayed in the notification bar. If not provided, the push service automatically generates a unique identifier. Different notification messages can use the same notifyId to allow new messages to overwrite old ones. For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section17371529101117">Notification.notifyId</a> on the HarmonyOS official website.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -1532,10 +1536,10 @@ public class PushTask extends TeaModel {
         public Integer notifyId;
 
         /**
-         * <p>The receipt ID of the HarmonyOS channel. You can view this receipt ID in the receipt parameter settings of the HarmonyOS channel push operations platform.</p>
+         * <p>The receipt ID of the HarmonyOS channel. You can view the receipt ID in the receipt parameter settings of the HarmonyOS channel push operations platform.</p>
          * <blockquote>
          * <ul>
-         * <li>If the default receipt configuration on the HarmonyOS channel push operations platform is set to Alibaba Cloud receipt, you do not need to provide this parameter. Otherwise, we recommend that you configure the default receipt ID for the HarmonyOS channel in the Alibaba Cloud EMAS shift push console first.</li>
+         * <li>If the default receipt configured in the HarmonyOS channel push operations platform is the Alibaba Cloud receipt, you do not need to provide this parameter. Otherwise, we recommend that you configure the default receipt ID for the HarmonyOS channel in the Alibaba Cloud EMAS shift push console first.</li>
          * <li>For details, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section418321011212">pushOptions.receiptId</a> on the HarmonyOS official website.</li>
          * </ul>
          * </blockquote>
@@ -1559,7 +1563,7 @@ public class PushTask extends TeaModel {
          * <p>Uses a notification channel of the specified type.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is valid only for Alibaba Cloud proprietary channels.</li>
+         * <li>Valid only for Alibaba Cloud proprietary channels.</li>
          * <li>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/js-apis-notificationmanager-V5#slottype">SlotType</a> on the HarmonyOS official website.</li>
          * </ul>
          * </blockquote>
@@ -1580,7 +1584,7 @@ public class PushTask extends TeaModel {
         public String sound;
 
         /**
-         * <p>The duration of the custom message notification ringtone, in seconds. Valid values: 1 to 60. If the ringtone duration is shorter than the notification display time, the ringtone loops.</p>
+         * <p>The duration of the custom message notification ringtone, in seconds. Valid values: 1 to 60. If the duration is insufficient, the ringtone plays in a loop.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1589,7 +1593,7 @@ public class PushTask extends TeaModel {
         public Integer soundDuration;
 
         /**
-         * <p>Enables test messages.</p>
+         * <p>Specifies whether to enable test messages.</p>
          * <blockquote>
          * <ul>
          * <li>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section418321011212">TestMessage</a> in the HarmonyOS push parameters.</li>
@@ -1606,7 +1610,7 @@ public class PushTask extends TeaModel {
          * <p>The URI corresponding to the ability of the built-in app page.</p>
          * <blockquote>
          * <ul>
-         * <li>If multiple abilities exist, specify the action and URI for each ability. The action is prioritized when searching for the corresponding built-in app page.</li>
+         * <li>When multiple abilities exist, specify the action and URI for each ability. The action is prioritized to find the corresponding built-in app page.</li>
          * <li>For more information, see <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/push-scenariozed-api-request-param-V5#section152462191216">ClickAction.uri</a> on the HarmonyOS official website.</li>
          * </ul>
          * </blockquote>
@@ -1770,15 +1774,15 @@ public class PushTask extends TeaModel {
 
     public static class PushTaskNotificationIosLiveActivity extends TeaModel {
         /**
-         * <p>The static pass-through parameters for iOS Live Activity push, which are used to pass unchanged business identification information.</p>
+         * <p>The static pass-through parameters for iOS Dynamic Island (Live Activities) push, which are used to pass unchanged business identification information.</p>
          * <blockquote>
-         * <p>This parameter is required when Event is set to start.</p>
+         * <p>Required when <code>Event</code> is start.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;orderId&quot;: &quot;ORD20231201001&quot;,
-         *   &quot;restaurantName&quot;: &quot;Tasty Restaurant&quot;,
+         *   &quot;restaurantName&quot;: &quot;Delicious Restaurant&quot;,
          *   &quot;customerAddress&quot;: &quot;No. xx, xx Road, xx District&quot;,
          *   &quot;orderType&quot;: &quot;delivery&quot;
          * }</p>
@@ -1789,7 +1793,7 @@ public class PushTask extends TeaModel {
         /**
          * <p>The type of the Live Activity to be started.</p>
          * <blockquote>
-         * <p>This parameter is required when Event is set to start.</p>
+         * <p>Required when <code>Event</code> is start.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1799,12 +1803,12 @@ public class PushTask extends TeaModel {
         public String attributesType;
 
         /**
-         * <p>The dynamic pass-through parameters for the Live Activity, which contain status information and changing data that can be updated in real time.</p>
+         * <p>The dynamic pass-through parameters for the Dynamic Island activity, which contain status information and changing data that can be updated in real time.</p>
          * <blockquote>
          * <ul>
-         * <li>Avoid excessively frequent updates. An interval of 5 seconds or more is recommended.</li>
+         * <li>Avoid excessively frequent updates. A recommended interval is 5 seconds or more.</li>
          * <li>Update multiple fields in batches to reduce the number of pushes.</li>
-         * <li>Consider the user experience and avoid interface flickering.</li>
+         * <li>Consider user experience and avoid interface flickering.</li>
          * <li>Must be a valid JSON string.</li>
          * </ul>
          * </blockquote>
@@ -1815,14 +1819,14 @@ public class PushTask extends TeaModel {
          *     &quot;estimatedTime&quot;: &quot;10 minutes&quot;,
          *     &quot;progress&quot;: 80,
          *     &quot;driverName&quot;: &quot;Driver Li&quot;,
-         *     &quot;currentStep&quot;: &quot;The courier is on the way&quot;
+         *     &quot;currentStep&quot;: &quot;The driver is on the way&quot;
          * }</p>
          */
         @NameInMap("ContentState")
         public String contentState;
 
         /**
-         * <p>The retention time of a completed Live Activity on the Lock Screen, which allows users to view the information after the activity ends. The value is a UNIX timestamp in seconds.</p>
+         * <p>The retention time of a completed Dynamic Island activity on the lock screen, which allows users to view the information after the activity ends. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1701439800</p>
@@ -1840,14 +1844,14 @@ public class PushTask extends TeaModel {
         public String event;
 
         /**
-         * <p>The unique identifier of the Live Activity, which is used to associate the activity instance on the device with the push target on the server.</p>
+         * <p>The unique identifier of the Live Activity, which is used to associate the device-side activity instance with the server-side push target.</p>
          * <blockquote>
          * <p>Notice: </p>
          * </blockquote>
          * <ul>
-         * <li><p>The ID must be the same as the forActivityId parameter in the registerLiveActivityPushToken method of the client SDK.</p>
+         * <li><p>This <code>ID</code> must be consistent with the <code>forActivityId</code> parameter in the <code>registerLiveActivityPushToken</code> method of the client SDK.</p>
          * </li>
-         * <li><p>The server uses this ID to locate the specific activity instance during a push.</p>
+         * <li><p>The server uses this <code>ID</code> to locate the specific activity instance during push.</p>
          * </li>
          * </ul>
          * 
@@ -1858,11 +1862,11 @@ public class PushTask extends TeaModel {
         public String id;
 
         /**
-         * <p>The expiration timestamp for the content of the iOS Live Activity. The value is a UNIX timestamp in seconds.</p>
+         * <p>The expiration timestamp for the iOS Dynamic Island activity content. The value is a UNIX timestamp in seconds.</p>
          * <blockquote>
          * <ul>
-         * <li>After the specified time is reached, the system automatically marks the activity as stale.</li>
-         * <li>Stale activities are removed from the Dynamic Island and the Lock Screen.</li>
+         * <li>After the specified time, the system automatically marks the activity as expired.</li>
+         * <li>Expired activities are removed from the Dynamic Island and the lock screen.</li>
          * <li>This prevents outdated information from occupying the user interface for a long time.</li>
          * </ul>
          * </blockquote>
@@ -1940,8 +1944,8 @@ public class PushTask extends TeaModel {
         /**
          * <p>To send iOS notifications through the APNs center, you must specify the corresponding environment context. This parameter is optional. Default value: production environment.</p>
          * <ul>
-         * <li>DEV: the development environment, which applies to applications directly installed and debugged by using Xcode.</li>
-         * <li>PRODUCT: the production environment, which applies to applications distributed through the App Store, TestFlight, Ad Hoc, and enterprise distribution.</li>
+         * <li>DEV: development environment. Applicable to applications directly installed and debugged through Xcode.</li>
+         * <li>PRODUCT: production environment. Applicable to applications distributed through the App Store, TestFlight, Ad Hoc, and enterprise distribution.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1951,7 +1955,7 @@ public class PushTask extends TeaModel {
         public String apnsEnv;
 
         /**
-         * <p>The badge of the iOS application.</p>
+         * <p>The iOS application badge.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1960,11 +1964,11 @@ public class PushTask extends TeaModel {
         public Integer badge;
 
         /**
-         * <p>Specifies whether to enable the automatic badge increment feature. This parameter is optional. Default value: false.</p>
+         * <p>Specifies whether to enable the badge auto-increment feature. This parameter is optional. Default value: false.</p>
          * <blockquote>
          * <ul>
          * <li>This parameter cannot be used together with the badge setting parameter.</li>
-         * <li>The automatic badge increment feature maintains the badge count for each device on the Alibaba Cloud push server. You must use SDK version 1.9.5 or later to actively synchronize the badge count to the server.</li>
+         * <li>The badge auto-increment feature maintains the badge count for each device on the Alibaba Cloud push server. You must use SDK version 1.9.5 or later to actively sync the badge number to the server through the SDK.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1975,10 +1979,10 @@ public class PushTask extends TeaModel {
         public Boolean badgeAutoIncrement;
 
         /**
-         * <p>The category identifier of the iOS notification, which is used to define the interactive behavior and display style of the notification.</p>
+         * <p>The category identifier for the iOS notification, which is used to define the interactive behavior and display style of the notification.</p>
          * <blockquote>
          * <ul>
-         * <li>The category must be pre-registered in the application to take effect.</li>
+         * <li>The category must be pre-registered in the app to take effect.</li>
          * <li>Different categories can define different sets of actions.</li>
          * </ul>
          * </blockquote>
@@ -1990,7 +1994,7 @@ public class PushTask extends TeaModel {
         public String category;
 
         /**
-         * <p>The unique identifier used to control notification grouping. Notifications with the same identifier are overwritten.</p>
+         * <p>The unique identifier used to control notification merging. Notifications with the same identifier are overwritten.</p>
          * 
          * <strong>example:</strong>
          * <p>order_status_update_12345</p>
@@ -1999,10 +2003,10 @@ public class PushTask extends TeaModel {
         public String collapseId;
 
         /**
-         * <p>The custom extension attributes of the iOS notification.</p>
+         * <p>The custom extension attributes for the iOS notification.</p>
          * <blockquote>
          * <ul>
-         * <li>The parameter must be passed in standard JSON map format. Incorrect formats cause parsing failures.</li>
+         * <li>The parameter must be passed in standard JSON Map format. Incorrect formats cause parsing failures.</li>
          * </ul>
          * </blockquote>
          * 
@@ -2015,10 +2019,10 @@ public class PushTask extends TeaModel {
         /**
          * <p>The interruption level. This parameter is optional. Valid values:</p>
          * <ul>
-         * <li>passive: The system adds the notification to the notification list without lighting up the screen or playing a sound.</li>
-         * <li>active: The system displays the notification immediately, lights up the screen, and may play a sound.</li>
-         * <li>time-sensitive: The system presents the notification immediately, lights up the screen, and may play a sound, but does not bypass the system notification controls.</li>
-         * <li>critical: The system displays the notification immediately, lights up the screen, and plays a sound bypassing the silent switch.</li>
+         * <li><code>passive</code>: The system adds the notification to the notification list without lighting up the screen or playing a sound.</li>
+         * <li><code>active</code>: The system displays the notification immediately, lights up the screen, and can play a sound.</li>
+         * <li><code>time-sensitive</code>: The system presents the notification immediately, lights up the screen, and can play a sound, but does not bypass system notification controls.</li>
+         * <li><code>critical</code>: The system displays the notification immediately, lights up the screen, and plays a sound bypassing the silent switch.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2028,24 +2032,24 @@ public class PushTask extends TeaModel {
         public String interruptionLevel;
 
         /**
-         * <p>The Live Activity parameter object.</p>
+         * <p>The Dynamic Island parameter object.</p>
          * <blockquote>
          * <p>Notice: </p>
          * </blockquote>
          * <ul>
-         * <li>Live Activity push supports pushing to a <strong>single device</strong> only by using the DEVICE type.</li>
-         * <li>When pushing to a Live Activity, you do not need to specify the title and body parameters.</li>
+         * <li>Dynamic Island push supports pushing to a <strong>single device</strong> only by <code>DEVICE</code> type.</li>
+         * <li>When pushing to Dynamic Island, the <code>title</code> and <code>body</code> parameters are not required.</li>
          * </ul>
          */
         @NameInMap("LiveActivity")
         public PushTaskNotificationIosLiveActivity liveActivity;
 
         /**
-         * <p>The sound of the iOS notification. Specify the name of the audio file stored in the app bundle or the Library/Sounds directory of the sandbox. For more information, see <a href="https://help.aliyun.com/document_detail/48906.html">How to set the notification sound for iOS push</a>.</p>
+         * <p>The iOS notification sound. Specify the audio file name stored in the app bundle or the sandbox Library/Sounds directory. For more information, see <a href="https://help.aliyun.com/document_detail/48906.html">How to set the notification sound for iOS push</a>.</p>
          * <blockquote>
          * <ul>
          * <li>If an empty string (&quot;&quot;) is specified, the notification is silent.</li>
-         * <li>If this parameter is not set, the default value default is used, which indicates the system prompt sound.</li>
+         * <li>If not set, the default value is &quot;default&quot;, which indicates the system prompt sound.</li>
          * </ul>
          * </blockquote>
          * 
@@ -2056,13 +2060,13 @@ public class PushTask extends TeaModel {
         public String music;
 
         /**
-         * <p>Specifies whether to enable extended notifications and allow iOS notifications to be processed by the Notification Service Extension.</p>
+         * <p>Enables extended notifications and specifies whether the iOS notification supports Notification Service Extension processing.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter must be set to true when sending silent notifications.</li>
-         * <li>The processing time of the extension cannot exceed 30 seconds.</li>
+         * <li>When sending a silent notification, this parameter must be set to true.</li>
+         * <li>The Extension processing time cannot exceed 30 seconds.</li>
          * <li>A timeout causes the notification to display the original content.</li>
-         * <li>You must add the Notification Service Extension to your application.</li>
+         * <li>You must add a Notification Service Extension to the application.</li>
          * </ul>
          * </blockquote>
          * 
@@ -2085,7 +2089,7 @@ public class PushTask extends TeaModel {
          * <p>Specifies whether to enable the silent push mode.</p>
          * <blockquote>
          * <ul>
-         * <li>When sending a silent notification, you do not need to specify the title and body parameters.</li>
+         * <li>When sending a silent notification, the <code>title</code> and <code>body</code> parameters are not required.</li>
          * </ul>
          * </blockquote>
          * 
@@ -2096,7 +2100,7 @@ public class PushTask extends TeaModel {
         public Boolean silent;
 
         /**
-         * <p>The subtitle of the iOS notification.</p>
+         * <p>The subtitle content of the iOS notification.</p>
          * 
          * <strong>example:</strong>
          * <p>Please check your order</p>
@@ -2241,13 +2245,13 @@ public class PushTask extends TeaModel {
 
     public static class PushTaskNotification extends TeaModel {
         /**
-         * <p>The Android notification configuration.</p>
+         * <p>The Android notification configurations.</p>
          */
         @NameInMap("Android")
         public PushTaskNotificationAndroid android;
 
         /**
-         * <p>The body of the notification to be pushed.</p>
+         * <p>The content of the pushed notification.</p>
          * <blockquote>
          * <p>Length limits:</p>
          * <ul>
@@ -2256,7 +2260,7 @@ public class PushTask extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Dear customer, your reservation has been successfully canceled</p>
+         * <p>Dear customer, your reservation order has been successfully canceled</p>
          */
         @NameInMap("Body")
         public String body;
@@ -2274,7 +2278,7 @@ public class PushTask extends TeaModel {
         public PushTaskNotificationIos ios;
 
         /**
-         * <p>The title of the notification to be pushed.</p>
+         * <p>The title of the pushed notification.</p>
          * <blockquote>
          * <p>Length limits:</p>
          * <ul>
@@ -2339,7 +2343,7 @@ public class PushTask extends TeaModel {
     public static class PushTaskOptionsSms extends TeaModel {
         /**
          * <p>The delay time before the SMS message is triggered. Unit: seconds.</p>
-         * <p>If you use SMS linkage, this parameter is required. Set this parameter to at least 15 seconds and no more than 3 days to avoid duplicate SMS and push messages.</p>
+         * <p>This parameter is required when SMS linkage is used. We recommend that you set this parameter to at least 15 seconds and at most 3 days to avoid duplicate SMS and push messages.</p>
          * <blockquote>
          * <p>When SMS linkage is used, the ExpireTime parameter becomes invalid. The expiration time of the notification is calculated based on the DelaySecs parameter. The expiration time is the current time plus the DelaySecs value.</p>
          * </blockquote>
@@ -2360,7 +2364,7 @@ public class PushTask extends TeaModel {
         public String params;
 
         /**
-         * <p>The SMS sending policy.</p>
+         * <p>The SMS delivery policy.</p>
          * 
          * <strong>example:</strong>
          * <p>PUSH_NOT_RECEIVED</p>
@@ -2372,13 +2376,13 @@ public class PushTask extends TeaModel {
          * <p>The SMS signature.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleTech</p>
+         * <p>Example Technology</p>
          */
         @NameInMap("SignName")
         public String signName;
 
         /**
-         * <p>The name of the SMS template. You can obtain the name from the SMS template management page. The name is assigned by the system, not specified by the developer.</p>
+         * <p>The name of the SMS template. You can obtain the name on the SMS template management page. The name is assigned by the system, not specified by the developer.</p>
          * 
          * <strong>example:</strong>
          * <p>SMS_123456789</p>
@@ -2435,16 +2439,16 @@ public class PushTask extends TeaModel {
 
     public static class PushTaskOptions extends TeaModel {
         /**
-         * <p>The expiration time of the message. The message is not sent after it expires. The maximum retention period is 72 hours.</p>
+         * <p>Specifies the expiration time of the message. The message is not delivered after it expires. The maximum retention period is 72 hours.</p>
          * <blockquote>
          * <ul>
-         * <li>The time must follow the ISO 8601 standard and use UTC time in the YYYY-MM-DDThh:mm:ssZ format.</li>
+         * <li>The time must be in UTC and follow the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</li>
          * <li>The expiration time must meet the following condition: ExpireTime &gt; PushTime + 3 seconds. The 3 seconds are reserved for network and system latency.</li>
-         * <li>Set the expiration time to at least 1 minute for single-target push tasks and at least 10 minutes for full or batch push tasks.</li>
+         * <li>Recommendation: Set the expiration time to at least 1 minute for single-target push, and at least 10 minutes for full push or batch push.</li>
          * </ul>
          * </blockquote>
          * <blockquote>
-         * <p>Notice: For pass-through messages, if the expiration time is not set, the message is sent only to online devices. If the device is offline, the message is discarded.</notice></p>
+         * <p>Notice: For pass-through messages, if the expiration time is not set, the message is delivered only to online devices. If the device is offline, the message is discarded.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2463,7 +2467,7 @@ public class PushTask extends TeaModel {
         public String jobKey;
 
         /**
-         * <p>The unique identity of the message. This parameter is valid only when the Action parameter is set to CONTINUOUS_PUSH.</p>
+         * <p>The unique ID used as the identity of the message. This parameter takes effect only when the <code>Action</code> parameter is set to <code>CONTINUOUS_PUSH</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1174754033128****</p>
@@ -2472,9 +2476,9 @@ public class PushTask extends TeaModel {
         public Long messageId;
 
         /**
-         * <p>Specifies the sending time of the message, which can be up to seven days later. Valid only when the Action parameter is set to SCHEDULED_PUSH.</p>
+         * <p>Specifies the time to deliver the message. The time can be at most 7 days later than the current time. This parameter takes effect only when the <code>Action</code> parameter is set to <code>SCHEDULED_PUSH</code>.</p>
          * <blockquote>
-         * <p>The time must follow the ISO 8601 standard and use UTC time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The time must be in UTC and follow the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2484,9 +2488,9 @@ public class PushTask extends TeaModel {
         public String pushTime;
 
         /**
-         * <p>The fallback SMS message configuration.</p>
+         * <p>The supplementary SMS message settings.</p>
          * <blockquote>
-         * <p>Currently, only Android and HarmonyOS devices are supported.</p>
+         * <p>Currently, only <code>Android</code> and <code>HarmonyOS</code> devices are supported.</p>
          * </blockquote>
          */
         @NameInMap("Sms")
@@ -2495,7 +2499,7 @@ public class PushTask extends TeaModel {
         /**
          * <p>Specifies whether to automatically truncate excessively long titles and content.</p>
          * <blockquote>
-         * <p>This parameter applies only to vendor channels that explicitly limit the title and content length. It does not apply to channels such as APNs, Huawei, and Honor, which do not limit the title and content length but only limit the total request body size.</p>
+         * <p>This feature applies only to vendor channels that explicitly limit the length of titles and content. It does not apply to channels such as APNs, Huawei, and Honor, which do not limit the length of titles and content but only limit the total request body size.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2505,24 +2509,24 @@ public class PushTask extends TeaModel {
         public Boolean trim;
 
         /**
-         * <p>Specifies the sending channels. Valid values:</p>
+         * <p>Specifies the delivery channels. Valid values:</p>
          * <ul>
-         * <li>accs: Alibaba Cloud proprietary channel.</li>
-         * <li>huawei: Huawei channel.</li>
-         * <li>honor: Honor channel.</li>
-         * <li>xiaomi: Xiaomi channel.</li>
-         * <li>oppo: OPPO channel.</li>
-         * <li>vivo: vivo channel.</li>
-         * <li>meizu: Meizu channel.</li>
-         * <li>fcm: Google Firebase channel (HTTP v1 API).</li>
-         * <li>apns: APNs channel.</li>
-         * <li>harmony: HarmonyOS channel.</li>
+         * <li><code>accs</code>: Alibaba Cloud proprietary channel.</li>
+         * <li><code>huawei</code>: Huawei channel.</li>
+         * <li><code>honor</code>: Honor channel.</li>
+         * <li><code>xiaomi</code>: Xiaomi channel.</li>
+         * <li><code>oppo</code>: OPPO channel.</li>
+         * <li><code>vivo</code>: vivo channel.</li>
+         * <li><code>meizu</code>: Meizu channel.</li>
+         * <li><code>fcm</code>: Google Firebase channel (HTTP v1 API).</li>
+         * <li><code>apns</code>: APNs channel.</li>
+         * <li><code>harmony</code>: HarmonyOS channel.</li>
          * </ul>
          * <blockquote>
          * <ul>
          * <li>If this parameter is not configured, all channels are available.</li>
          * <li>If this parameter is configured, only the specified channels are used.</li>
-         * <li>If the configured channels conflict with the sending policy (for example, iOS notifications only use the APNs channel, but apns is not included in this parameter), the message is not sent.</li>
+         * <li>If the configured channels conflict with the delivery policy (for example, iOS notifications are delivered only through the APNs channel, but <code>apns</code> is not included in this parameter), the message is not delivered.</li>
          * </ul>
          * </blockquote>
          * 
@@ -2606,15 +2610,15 @@ public class PushTask extends TeaModel {
         public String platform;
 
         /**
-         * <p>The type of the push target.</p>
+         * <p>The push target type.</p>
          * <blockquote>
          * <p>Notice: </p>
          * </blockquote>
-         * <p>The MassPushV2 batch push API and the CONTINUOUS_PUSH continuous push support only the following three target types:</p>
+         * <p>The batch push API <code>MassPushV2</code> and continuous push <code>CONTINUOUS_PUSH</code> support only the following three target types:</p>
          * <ul>
-         * <li>DEVICE (device)</li>
-         * <li>ACCOUNT (account)</li>
-         * <li>ALIAS (alias)</li>
+         * <li><code>DEVICE</code> (device)</li>
+         * <li><code>ACCOUNT</code> (account)</li>
+         * <li><code>ALIAS</code> (alias)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2624,14 +2628,14 @@ public class PushTask extends TeaModel {
         public String type;
 
         /**
-         * <p>The push targets based on Target.Type. Separate multiple targets with commas. The following section describes the target types and target values in detail:</p>
+         * <p>Set the push target based on <code>Target.Type</code>. Separate multiple targets with commas. The target types and target values are described as follows:</p>
          * <blockquote>
          * <ul>
-         * <li>DEVICE: device IDs, such as deviceid1,deviceid2. Maximum of 1,000.</li>
-         * <li>ACCOUNT: account IDs, such as account1,account2. Maximum of 1,000.</li>
-         * <li>ALIAS: aliases, such as alias1,alias2. Maximum of 1,000.</li>
-         * <li>TAG: one or more tags. For the format, see <a href="https://help.aliyun.com/document_detail/434847.html">Tag format specifications</a>.</li>
-         * <li>ALL: all targets. No value is required. Pushing to all targets may increase costs. Use this option with caution.</li>
+         * <li><code>DEVICE</code>: device IDs, such as deviceid1,deviceid2. Maximum of 1,000.</li>
+         * <li><code>ACCOUNT</code>: account IDs, such as account1,account2. Maximum of 1,000.</li>
+         * <li><code>ALIAS</code>: aliases, such as alias1,alias2. Maximum of 1,000.</li>
+         * <li><code>TAG</code>: one or more tags. For the format, see <a href="https://help.aliyun.com/document_detail/434847.html">Tag format specifications</a>.</li>
+         * <li><code>ALL</code>: push to all targets. No value is required. Pushing to all targets may increase costs. Use it as needed.</li>
          * </ul>
          * </blockquote>
          * 
