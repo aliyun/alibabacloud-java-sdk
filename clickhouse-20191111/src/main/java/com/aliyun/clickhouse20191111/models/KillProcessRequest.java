@@ -15,9 +15,9 @@ public class KillProcessRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The search statement to stop. To stop multiple statements, separate them with commas (,).</p>
+     * <p>The query statements to stop. Separate multiple statements with commas (,).</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, all search statements are stopped by default.</p>
+     * <p>If this parameter is not specified, all query statements are stopped by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class KillProcessRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

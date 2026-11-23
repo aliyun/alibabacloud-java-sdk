@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoRenewAttributeRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The cluster IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-uf6g4417bo*****</p>

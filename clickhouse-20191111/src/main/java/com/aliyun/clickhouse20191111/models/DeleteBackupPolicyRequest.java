@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupPolicyRequest extends TeaModel {
     /**
-     * <p>A client token used to ensure the idempotence of the request. The value must be a string that contains a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. The token must be a string that contains a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -16,7 +16,7 @@ public class DeleteBackupPolicyRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in the destination region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including their cluster IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DeleteBackupPolicyRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The number of records to return on each page. Valid values: 1 to <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1 to 100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

@@ -7,10 +7,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>Specifies whether the task can be canceled. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: The task cannot be canceled.</p>
-     * </li>
-     * <li><p><strong>1</strong>: The task can be canceled.</p>
-     * </li>
+     * <li><strong>0</strong>: not allowed.</li>
+     * <li><strong>1</strong>: allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,12 +18,10 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowCancel;
 
     /**
-     * <p>Specifies whether the time can be changed. Valid values:</p>
+     * <p>Specifies whether the execution time can be modified. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: The time cannot be changed.</p>
-     * </li>
-     * <li><p><strong>1</strong>: The time can be changed.</p>
-     * </li>
+     * <li><strong>0</strong>: not allowed.</li>
+     * <li><strong>1</strong>: allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,12 +33,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>The task level. Valid values:</p>
      * <ul>
-     * <li><p><strong>all</strong> (Default): All levels.</p>
-     * </li>
-     * <li><p><strong>S0</strong>: Returns tasks for fixing exceptions.</p>
-     * </li>
-     * <li><p><strong>S1</strong>: Returns tasks for system O\&amp;M.</p>
-     * </li>
+     * <li><strong>all</strong> (default): all levels.</li>
+     * <li><strong>S0</strong>: exception fix tasks.</li>
+     * <li><strong>S1</strong>: system O&amp;M tasks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,14 +78,11 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (Default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,7 +101,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -129,20 +119,14 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The task status. This parameter is used to filter tasks.</p>
+     * <p>The task status, which is used to filter returned tasks. Valid values:</p>
      * <ul>
-     * <li><p><strong>-1:</strong> All tasks.</p>
-     * </li>
-     * <li><p><strong>3:</strong> Tasks to be processed.</p>
-     * </li>
-     * <li><p><strong>4:</strong> Tasks in progress.</p>
-     * </li>
-     * <li><p><strong>5:</strong> Successfully completed tasks.</p>
-     * </li>
-     * <li><p><strong>6:</strong> Failed tasks.</p>
-     * </li>
-     * <li><p><strong>7:</strong> Canceled tasks.</p>
-     * </li>
+     * <li><strong>-1</strong>: all tasks.</li>
+     * <li><strong>3</strong>: pending tasks.</li>
+     * <li><strong>4</strong>: in-progress tasks.</li>
+     * <li><strong>5</strong>: successfully completed tasks.</li>
+     * <li><strong>6</strong>: failed tasks.</li>
+     * <li><strong>7</strong>: canceled tasks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -154,10 +138,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><p><strong>rds_apsaradb_upgrade</strong>: Minor version upgrade.</p>
-     * </li>
-     * <li><p><strong>all</strong>: All task types.</p>
-     * </li>
+     * <li><strong>rds_apsaradb_upgrade</strong>: minor version update.</li>
+     * <li><strong>all</strong>: all task types.</li>
      * </ul>
      * 
      * <strong>example:</strong>

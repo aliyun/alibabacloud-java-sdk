@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeOSSStorageResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether tiered storage for hot and cold data can be enabled. Valid values:</p>
+     * <p>Indicates whether hot and cold tiered storage is supported. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Tiered storage can be enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Tiered storage cannot be enabled.</p>
-     * </li>
+     * <li><strong>true</strong>: Supported.</li>
+     * <li><strong>false</strong>: Not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
     public Boolean coldStorage;
 
     /**
-     * <p>The parameters of the tiered storage policy for hot and cold data.</p>
+     * <p>The parameters of the hot and cold tiered storage policy.</p>
      * 
      * <strong>example:</strong>
      * <p>[{ &quot;currentValue&quot;:&quot;0.1&quot;, &quot;defaultValue&quot;:&quot;0.1&quot;, &quot;desc&quot;:&quot;Ratio of free disk space. When the ratio exceeds the value of configuration parameter, ClickHouse start to move data to the cold storage&quot;, &quot;name&quot;:&quot;move_factor&quot;, &quot;restart&quot;:true, &quot;valueRange&quot;:&quot;(0, 1]&quot; },{ &quot;currentValue&quot;:&quot;true&quot;, &quot;defaultValue&quot;:&quot;true&quot;, &quot;desc&quot;:&quot;Disables merging of data parts on cold storage&quot;, &quot;name&quot;:&quot;prefer_not_to_merge&quot;, &quot;restart&quot;:true, &quot;valueRange&quot;:&quot;true|false&quot; }]</p>
@@ -38,14 +36,11 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of tiered storage for hot and cold data. Valid values:</p>
+     * <p>The status of the hot and cold tiered storage. Valid values:</p>
      * <ul>
-     * <li><p><strong>CREATING</strong>: Tiered storage is being enabled.</p>
-     * </li>
-     * <li><p><strong>DISABLE</strong>: Tiered storage is disabled.</p>
-     * </li>
-     * <li><p><strong>ENABLE</strong>: Tiered storage is enabled.</p>
-     * </li>
+     * <li><strong>CREATING</strong>: Enabling.</li>
+     * <li><strong>DISABLE</strong>: Disabled.</li>
+     * <li><strong>ENABLE</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +50,7 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The cold storage space used. Unit: GB.</p>
+     * <p>The amount of storage space used by cold data. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>0.00</p>

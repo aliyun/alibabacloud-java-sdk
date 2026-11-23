@@ -24,7 +24,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+     * <p>The end time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+     * <p>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateClusterPublicConnectionRequest extends TeaModel {
     /**
-     * <p>The prefix of the public endpoint. The value is the cluster ID.</p>
+     * <p>The prefix of the endpoint used to connect to the database. The value is fixed as the cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-bp108z124a8o7****</p>

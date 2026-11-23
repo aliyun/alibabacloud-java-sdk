@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
     /**
-     * <p>The information about the ClickHouse nodes.</p>
+     * <p>The ApsaraDB for ClickHouse node information.</p>
      */
     @NameInMap("NodeInfos")
     public java.util.List<DescribeDBClusterNodeInfosResponseBodyNodeInfos> nodeInfos;
@@ -22,12 +22,9 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +52,7 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
     public Integer totalNodeCount;
 
     /**
-     * <p>The information about the ZooKeeper nodes.</p>
+     * <p>The ZooKeeper node information.</p>
      */
     @NameInMap("ZkNodeInfos")
     public java.util.List<DescribeDBClusterNodeInfosResponseBodyZkNodeInfos> zkNodeInfos;
@@ -115,7 +112,7 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
 
     public static class DescribeDBClusterNodeInfosResponseBodyNodeInfos extends TeaModel {
         /**
-         * <p>Indicates whether a disaster recovery test is in progress.</p>
+         * <p>Indicates whether a disaster recovery drill is in progress.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -124,7 +121,7 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
         public Boolean failoverTesting;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The node IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>172.168.0.1</p>
@@ -208,7 +205,7 @@ public class DescribeDBClusterNodeInfosResponseBody extends TeaModel {
 
     public static class DescribeDBClusterNodeInfosResponseBodyZkNodeInfos extends TeaModel {
         /**
-         * <p>Indicates whether a disaster recovery test is in progress.</p>
+         * <p>Indicates whether a disaster recovery drill is in progress.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

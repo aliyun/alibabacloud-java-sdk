@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRDSToClickhouseDbRequest extends TeaModel {
     /**
-     * <p>The password for the database account of the ApsaraDB for ClickHouse cluster.</p>
+     * <p>The password of the database account for the ApsaraDB for ClickHouse cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
     public String dbClusterId;
 
     /**
-     * <p>The maximum number of rows to sync per second.</p>
+     * <p>The maximum number of rows to synchronize per second.</p>
      * 
      * <strong>example:</strong>
      * <p>50000</p>
@@ -59,7 +59,7 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The instance ID of the ApsaraDB RDS for MySQL database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
     public String rdsId;
 
     /**
-     * <p>The password for the database account of the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The password of the database account for the ApsaraDB RDS for MySQL instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
     public String rdsVpcId;
 
     /**
-     * <p>The internal endpoint of the ApsaraDB RDS instance.</p>
+     * <p>The internal endpoint of ApsaraDB RDS.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-bp16t9h3999xb0a7****.mysql.rds.aliyuncs.com</p>
@@ -122,12 +122,10 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to skip unsupported table schemas. Valid values:</p>
+     * <p>Specifies whether to ignore table schemas that are not supported for synchronization. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Skip.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Do not skip.</p>
-     * </li>
+     * <li><strong>true</strong>: Ignore.</li>
+     * <li><strong>false</strong>: Do not ignore.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -138,7 +136,7 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
     public Boolean skipUnsupported;
 
     /**
-     * <p>The tables to sync.</p>
+     * <p>The tables to be synchronized.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

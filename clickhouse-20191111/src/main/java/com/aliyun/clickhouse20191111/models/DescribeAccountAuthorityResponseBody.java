@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
     /**
-     * <p>The database account name.</p>
+     * <p>The database account.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -28,10 +28,8 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the account has DDL permissions. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: DDL permissions are granted.</p>
-     * </li>
-     * <li><p><strong>false</strong>: DDL permissions are denied.</p>
-     * </li>
+     * <li><strong>true</strong>: DDL is allowed.</li>
+     * <li><strong>false</strong>: DDL is not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,12 +39,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     public Boolean ddlAuthority;
 
     /**
-     * <p>The DML permission level for the account. Valid values:</p>
+     * <p>Indicates whether the account has DML permissions. Valid values:</p>
      * <ul>
-     * <li><p><strong>all</strong>: read, write, and settings permissions.</p>
-     * </li>
-     * <li><p><strong>readOnly,modify</strong>: read and settings permissions.</p>
-     * </li>
+     * <li><strong>all</strong>: Read, write, and settings permissions.</li>
+     * <li><strong>readOnly,modify</strong>: Read and settings permissions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,13 +61,13 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of all databases in the cluster.</p>
+     * <p>The list of all databases.</p>
      */
     @NameInMap("TotalDatabases")
     public java.util.List<String> totalDatabases;
 
     /**
-     * <p>A list of all dictionaries in the cluster.</p>
+     * <p>The list of all dictionaries.</p>
      */
     @NameInMap("TotalDictionaries")
     public java.util.List<String> totalDictionaries;

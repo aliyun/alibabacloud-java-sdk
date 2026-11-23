@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClustersRequest extends TeaModel {
     /**
-     * <p>The cluster description.</p>
+     * <p>The description of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-bp108z124a8o7****</p>
@@ -14,9 +14,9 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The cluster IDs.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, information about all clusters is queried by default.</p>
+     * <p>If you do not specify this parameter, the information about all clusters is queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,18 +26,13 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBClusterIds;
 
     /**
-     * <p>The state of the cluster. Valid values:</p>
+     * <p>The status of the cluster. Valid values:</p>
      * <ul>
-     * <li><p><strong>Preparing</strong>: The cluster is being prepared.</p>
-     * </li>
-     * <li><p><strong>Creating</strong>: The cluster is being created.</p>
-     * </li>
-     * <li><p><strong>Running</strong>: The cluster is running.</p>
-     * </li>
-     * <li><p><strong>Deleting</strong>: The cluster is being deleted.</p>
-     * </li>
-     * <li><p><strong>SCALING_OUT</strong>: The cluster is being scaled out.</p>
-     * </li>
+     * <li><strong>Preparing</strong>: preparing</li>
+     * <li><strong>Creating</strong>: creating</li>
+     * <li><strong>Running</strong>: running</li>
+     * <li><strong>Deleting</strong>: deleting</li>
+     * <li><strong>SCALING_OUT</strong>: scaling out</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,12 +59,9 @@ public class DescribeDBClustersRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (Default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,6 +100,15 @@ public class DescribeDBClustersRequest extends TeaModel {
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDBClustersRequestTag> tag;
+
+    /**
+     * <p>The VPC IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2ze4ee9z******,vpc-2ze4ee9z5l******</p>
+     */
+    @NameInMap("VpcIds")
+    public String vpcIds;
 
     public static DescribeDBClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClustersRequest self = new DescribeDBClustersRequest();
@@ -210,9 +211,17 @@ public class DescribeDBClustersRequest extends TeaModel {
         return this.tag;
     }
 
+    public DescribeDBClustersRequest setVpcIds(String vpcIds) {
+        this.vpcIds = vpcIds;
+        return this;
+    }
+    public String getVpcIds() {
+        return this.vpcIds;
+    }
+
     public static class DescribeDBClustersRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>department</p>
@@ -221,7 +230,7 @@ public class DescribeDBClustersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>it</p>

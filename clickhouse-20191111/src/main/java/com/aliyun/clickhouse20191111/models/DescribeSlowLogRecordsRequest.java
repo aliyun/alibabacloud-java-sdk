@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
-     * <p>The cluster ID. Call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in the destination region, including cluster IDs.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. The format is \<code>yyyy-MM-dd hh:mm:ss\\</code>. The time is in UTC.</p>
+     * <p>The end time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
      * <blockquote>
-     * <p>The end time must be later than the start time. The interval between the start time and the end time cannot exceed 7 days.</p>
+     * <p>The end time must be later than the start time, and the interval between the start time and the end time must be less than 7 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +34,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,14 +43,11 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (Default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +57,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The minimum query duration, in milliseconds. The minimum value is <strong>1000</strong>. The default value is <strong>1000</strong>. The response returns information about queries that take longer than the specified duration.</p>
+     * <p>The minimum query duration. Minimum value: <strong>1000</strong>. Default value: <strong>1000</strong>. Unit: milliseconds. The response includes queries that exceed this duration.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -69,7 +66,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer queryDurationMs;
 
     /**
-     * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -84,7 +81,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. The format is \<code>yyyy-MM-dd hh:mm:ss\\</code>. The time is in UTC.</p>
+     * <p>The start time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

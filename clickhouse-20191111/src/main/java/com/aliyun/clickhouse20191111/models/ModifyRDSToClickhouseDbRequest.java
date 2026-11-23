@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     /**
-     * <p>The password of the ApsaraDB for ClickHouse database account.</p>
+     * <p>The password of the database account for the ApsaraDB for ClickHouse cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public String dbClusterId;
 
     /**
-     * <p>The maximum number of rows to sync per second.</p>
+     * <p>The maximum number of rows that can be synchronized per second.</p>
      * 
      * <strong>example:</strong>
      * <p>50000</p>
@@ -59,7 +59,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The instance ID of the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The instance ID of the ApsaraDB RDS for MySQL database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public String rdsId;
 
     /**
-     * <p>The password of the ApsaraDB RDS for MySQL database account.</p>
+     * <p>The password of the database account for the ApsaraDB RDS for MySQL instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     public Long rdsPort;
 
     /**
-     * <p>The database in the ApsaraDB RDS for MySQL instance.</p>
+     * <p>The databases in the ApsaraDB RDS for MySQL instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,10 +135,8 @@ public class ModifyRDSToClickhouseDbRequest extends TeaModel {
     /**
      * <p>Specifies whether to ignore databases that do not support synchronization. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Ignore the databases.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Do not ignore the databases.</p>
-     * </li>
+     * <li><strong>true</strong>: Ignore.</li>
+     * <li><strong>false</strong>: Do not ignore.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

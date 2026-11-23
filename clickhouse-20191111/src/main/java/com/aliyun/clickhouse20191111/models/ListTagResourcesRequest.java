@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first query. If a query does not return all results, a NextToken value is returned. You can use this token in a subsequent query to retrieve the next page of results.</p>
+     * <p>The token used to return more results. You do not need to specify this parameter for the first query. If not all results are returned in the first query, you can pass the NextToken value returned in the previous response to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707ec21345</p>
@@ -45,7 +45,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to <strong>DBCLUSTER</strong>.</p>
+     * <p>The resource type. Valid value: <strong>DBCLUSTER</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify from 1 to <strong>20</strong> tag keys.</p>
+         * <p>The tag key. You can specify up to N tag keys. N is an integer and ranges from <strong>1 to 20</strong>.</p>
          * <blockquote>
          * <p>If you specify the <strong>ResourceId.N</strong> parameter, you can leave this parameter empty.</p>
          * </blockquote>
@@ -151,7 +151,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. You can specify from 1 to <strong>20</strong> tag values.</p>
+         * <p>The tag value corresponding to the tag key. You can specify up to N tag values. N is an integer and ranges from <strong>1 to 20</strong>.</p>
          * <blockquote>
          * <p>You can leave this parameter empty.</p>
          * </blockquote>

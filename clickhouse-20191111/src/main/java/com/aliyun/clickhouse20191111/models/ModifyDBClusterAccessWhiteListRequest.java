@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     /**
-     * <p>The attribute of the whitelist group. The default value is <strong>empty</strong>.</p>
+     * <p>The attribute of the whitelist group. Default value: <strong>empty</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>NULL</p>
@@ -14,9 +14,9 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     public String DBClusterIPArrayAttribute;
 
     /**
-     * <p>The name of the whitelist group to modify.</p>
+     * <p>The name of the whitelist group to be modified.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the whitelist of the default group is modified.</p>
+     * <p>If you do not specify this parameter, the whitelist in the default group is modified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,17 +36,14 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The modification method. Valid values:</p>
+     * <p>The modification mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>Cover</strong>: Overwrites the whitelist.</p>
-     * </li>
-     * <li><p><strong>Append</strong>: Adds IP addresses to the whitelist.</p>
-     * </li>
-     * <li><p><strong>Delete</strong>: Removes IP addresses from the whitelist.</p>
-     * </li>
+     * <li><strong>Cover</strong>: overwrites the original whitelist.</li>
+     * <li><strong>Append</strong>: appends the specified IP addresses to the original whitelist.</li>
+     * <li><strong>Delete</strong>: deletes the original whitelist.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, the Cover method is used by default.</p>
+     * <p>If you do not specify this parameter, the Cover mode is used by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,20 +65,16 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IP address whitelist. The following formats are supported:</p>
+     * <p>The IP whitelist. Two formats are supported:</p>
      * <ul>
-     * <li><p>IP address: For example, 192.168.0.1. This allows the specified IP address to access the ApsaraDB for ClickHouse cluster.</p>
-     * </li>
-     * <li><p>CIDR block: For example, 192.168.0.0/24. This allows IP addresses from 192.168.0.1 to 192.168.0.255 to access the ApsaraDB for ClickHouse cluster.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
+     * <li>IP address: For example, 192.168.0.1 allows this IP address to access the ApsaraDB for ClickHouse cluster.</li>
+     * <li>CIDR block: For example, 192.168.0.0/24 allows IP addresses from 192.168.0.1 to 192.168.0.255 to access the ApsaraDB for ClickHouse cluster.<blockquote>
      * <ul>
      * <li>Do not enter 0.0.0.0.</li>
      * </ul>
      * </blockquote>
-     * <ul>
-     * <li>Set this parameter to 127.0.0.1 to block access from all IP addresses.</li>
+     * </li>
+     * <li>Set the value to 127.0.0.1 to deny access from all IP addresses.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

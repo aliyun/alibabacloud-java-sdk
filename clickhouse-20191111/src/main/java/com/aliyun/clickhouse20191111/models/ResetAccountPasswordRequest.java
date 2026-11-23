@@ -15,17 +15,15 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The new password for the database account.</p>
+     * <p>The new password of the database account.</p>
      * <blockquote>
      * <ul>
-     * <li>The password must contain characters from at least three of the following types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>The special characters are !@#$%^&amp;\*()_+-=</p>
-     * </li>
-     * <li><p>The password must be 8 to 32 characters in length.</p>
-     * </li>
+     * <li>Special characters include !@#$%^&amp;*()_+-=</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

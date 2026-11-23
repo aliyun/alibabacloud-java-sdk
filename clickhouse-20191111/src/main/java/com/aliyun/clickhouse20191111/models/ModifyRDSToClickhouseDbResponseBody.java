@@ -15,10 +15,8 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>This parameter is not returned if <strong>Status</strong> is <strong>1</strong>.</p>
-     * </li>
-     * <li><p>If <strong>Status</strong> is <strong>0</strong>, this parameter indicates the reason why the modification failed.</p>
-     * </li>
+     * <li>This parameter is not returned when <strong>Status</strong> is <strong>1</strong>.</li>
+     * <li>When <strong>Status</strong> is <strong>0</strong>, this parameter indicates the cause of the modification failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,10 +37,8 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the modification was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: The modification was successful.</p>
-     * </li>
-     * <li><p><strong>0</strong>: The modification failed.</p>
-     * </li>
+     * <li><strong>1</strong>: The modification was successful.</li>
+     * <li><strong>0</strong>: The modification failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

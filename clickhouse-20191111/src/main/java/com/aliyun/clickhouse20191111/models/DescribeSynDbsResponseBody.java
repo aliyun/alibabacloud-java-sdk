@@ -14,7 +14,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,13 +32,13 @@ public class DescribeSynDbsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The synchronized data.</p>
+     * <p>The synchronization data.</p>
      */
     @NameInMap("SynDbs")
     public java.util.List<DescribeSynDbsResponseBodySynDbs> synDbs;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -94,10 +94,8 @@ public class DescribeSynDbsResponseBody extends TeaModel {
     public static class DescribeSynDbsResponseBodySynDbs extends TeaModel {
         /**
          * <ul>
-         * <li><p>This parameter is not returned if <strong>SynStatus</strong> is <strong>true</strong>.</p>
-         * </li>
-         * <li><p>If <strong>SynStatus</strong> is <strong>false</strong>, this parameter indicates the reason for the synchronization failure.</p>
-         * </li>
+         * <li>This parameter is not returned when <strong>SynStatus</strong> is <strong>true</strong>.</li>
+         * <li>When <strong>SynStatus</strong> is <strong>false</strong>, this parameter indicates the cause of the synchronization failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +105,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The instance ID of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The instance ID of the ApsaraDB RDS for MySQL database.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-wz9d11qg1j0h4****</p>
@@ -116,7 +114,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         public String rdsId;
 
         /**
-         * <p>The database account for the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The database account of the ApsaraDB RDS for MySQL instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -125,7 +123,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         public String rdsUserName;
 
         /**
-         * <p>The internal endpoint of the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The internal network connection endpoint of the ApsaraDB RDS for MySQL database.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp16t9h3999xb0a711****.mysql.rds.aliyuncs.com:3306</p>
@@ -134,7 +132,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         public String rdsVpcUrl;
 
         /**
-         * <p>The database in the ApsaraDB RDS for MySQL instance.</p>
+         * <p>The database of the ApsaraDB RDS for MySQL instance.</p>
          * 
          * <strong>example:</strong>
          * <p>database</p>
@@ -143,12 +141,10 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         public String synDb;
 
         /**
-         * <p>Indicates whether the synchronization was successful. Valid values:</p>
+         * <p>Indicates whether the synchronization is successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The synchronization was successful.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The synchronization failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The synchronization is successful.</li>
+         * <li><strong>false</strong>: The synchronization failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

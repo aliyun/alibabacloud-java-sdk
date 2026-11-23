@@ -29,13 +29,13 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     /**
      * <p>Specifies whether to upgrade the minor engine version immediately. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The minor engine version is upgraded immediately.</p>
+     * <li><p><strong>true</strong>: Upgrades the minor engine version immediately.</p>
      * </li>
-     * <li><p><strong>false</strong>: The minor engine version is upgraded at a specified time or within the maintenance window.</p>
+     * <li><p><strong>false</strong>: Upgrades the minor engine version at a specified time or during the maintenance window.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The <strong>UpgradeTime</strong> parameter is required if you want to upgrade the minor engine version at a specified time.</p>
+     * <p>If you specify a time to upgrade the minor engine version, <strong>UpgradeTime</strong> is required.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,9 +46,9 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public Boolean upgradeImmediately;
 
     /**
-     * <p>The time to perform the upgrade. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * <p>The specified upgrade time. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the ApsaraDB for ClickHouse cluster is upgraded within the maintenance window.</p>
+     * <p>If this parameter is left empty, the ApsaraDB for ClickHouse cluster performs a minor kernel version upgrade during the maintenance window.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,9 +58,9 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public String upgradeTime;
 
     /**
-     * <p>The minor engine version to which you want to upgrade.</p>
+     * <p>The target minor engine version.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the cluster is upgraded to the latest minor engine version.</p>
+     * <p>By default, this parameter is left empty, and the minor engine version is upgraded to the latest version.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

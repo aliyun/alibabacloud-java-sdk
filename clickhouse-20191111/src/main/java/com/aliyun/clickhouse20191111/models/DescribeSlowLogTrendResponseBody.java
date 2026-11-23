@@ -14,7 +14,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result set of the slow SQL queries.</p>
+     * <p>The result set of slow SQL statements.</p>
      */
     @NameInMap("SlowLogTrend")
     public DescribeSlowLogTrendResponseBodySlowLogTrend slowLogTrend;
@@ -133,7 +133,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public Integer bytesRead;
 
         /**
-         * <p>The query execution duration. Unit: seconds.</p>
+         * <p>The elapsed time for reading SQL statements. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.001703578</p>
@@ -235,7 +235,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public DescribeSlowLogTrendResponseBodySlowLogTrendData data;
 
         /**
-         * <p>The number of rows in the result set.</p>
+         * <p>The number of rows in the returned result set.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -244,7 +244,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public String rows;
 
         /**
-         * <p>The minimum number of rows that are returned before the \<code>LIMIT\\</code> clause is applied.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -253,7 +253,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         public String rowsBeforeLimitAtLeast;
 
         /**
-         * <p>The statistics of the query results.</p>
+         * <p>The statistics information of the query results.</p>
          */
         @NameInMap("Statistics")
         public DescribeSlowLogTrendResponseBodySlowLogTrendStatistics statistics;

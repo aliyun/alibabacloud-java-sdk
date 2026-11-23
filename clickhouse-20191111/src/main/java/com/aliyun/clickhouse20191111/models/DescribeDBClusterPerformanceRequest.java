@@ -15,9 +15,9 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in UTC using the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+     * <p>The end time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
      * <blockquote>
-     * <p>The end time must be later than the start time. The maximum time range cannot exceed 32 days.</p>
+     * <p>The end time must be later than the start time, and the time interval between the start time and the end time cannot exceed 32 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,66 +28,45 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The performance metrics that you want to query. Separate multiple metric names with a comma (,). You can query up to five performance metrics at a time. The following performance metrics are supported:</p>
+     * <p>The names of the performance metrics to query. Separate multiple values with commas (,). You can query up to 5 performance metrics at a time. The following performance metrics are supported:</p>
      * <blockquote>
      * <p><strong>Key</strong> is required.</p>
      * </blockquote>
      * <ul>
-     * <li><p><strong>CPU</strong>:</p>
-     * <ul>
-     * <li><strong>CPU_USAGE</strong>: The CPU utilization.</li>
+     * <li><strong>CPU</strong>:<ul>
+     * <li><strong>CPU_USAGE</strong>: CPU utilization.</li>
      * </ul>
      * </li>
-     * <li><p><strong>Memory</strong>:</p>
-     * <ul>
-     * <li><p><strong>MEM_USAGE</strong>: The memory utilization.</p>
-     * </li>
-     * <li><p><strong>MEM_USAGE_SIZE</strong>: The memory usage in MB.</p>
-     * </li>
+     * <li><strong>Memory</strong>:<ul>
+     * <li><strong>MEM_USAGE</strong>: Memory utilization.</li>
+     * <li><strong>MEM_USAGE_SIZE</strong>: Memory usage (unit: MB).</li>
      * </ul>
      * </li>
-     * <li><p><strong>Disk</strong>:</p>
-     * <ul>
-     * <li><p><strong>DISK_USAGE</strong>: The disk utilization.</p>
-     * </li>
-     * <li><p><strong>DISK_USAGE_SIZE</strong>: The disk usage in MB.</p>
-     * </li>
-     * <li><p><strong>IOPS</strong>: The disk input/output operations per second (IOPS).</p>
-     * </li>
+     * <li><strong>Disk</strong>:<ul>
+     * <li><strong>DISK_USAGE</strong>: Disk utilization. </li>
+     * <li><strong>DISK_USAGE_SIZE</strong>: Disk usage (unit: MB).</li>
+     * <li><strong>IOPS</strong>: Disk IOPS.</li>
      * </ul>
      * </li>
-     * <li><p><strong>Connection</strong>:</p>
-     * <ul>
-     * <li><p><strong>CONN_USAGE</strong>: The database connection utilization.</p>
-     * </li>
-     * <li><p><strong>CONN_USAGE_COUNT</strong>: The number of database connections.</p>
-     * </li>
+     * <li><strong>Connections</strong>:<ul>
+     * <li><strong>CONN_USAGE</strong>: Database connection utilization.</li>
+     * <li><strong>CONN_USAGE_COUNT</strong>: Number of database connections in use.</li>
      * </ul>
      * </li>
-     * <li><p><strong>Write</strong>:</p>
-     * <ul>
-     * <li><p><strong>TPS</strong>: The number of rows written per second (TPS).</p>
-     * </li>
-     * <li><p><strong>INSERT_SIZE</strong>: The write size per second in MB.</p>
-     * </li>
+     * <li><strong>Writes</strong>: <ul>
+     * <li><strong>TPS</strong>: Number of rows written per second.</li>
+     * <li><strong>INSERT_SIZE</strong>: Size of data written per second (unit: MB).</li>
      * </ul>
      * </li>
-     * <li><p><strong>Query</strong>:</p>
-     * <ul>
-     * <li><p><strong>QPS</strong>: The queries per second (QPS).</p>
-     * </li>
-     * <li><p><strong>AVG_SEEK</strong>: The number of random SEEK calls.</p>
-     * </li>
+     * <li><strong>Queries</strong>: <ul>
+     * <li><strong>QPS</strong>: Queries per second (QPS).</li>
+     * <li><strong>AVG_SEEK</strong>: Number of random SEEK calls.</li>
      * </ul>
      * </li>
-     * <li><p><strong>WAIT</strong>:</p>
-     * <ul>
-     * <li><p><strong>ZK_WAIT</strong>: The average wait time of ZooKeeper (ZK) in ms.</p>
-     * </li>
-     * <li><p><strong>IO_WAIT</strong>: The average I/O wait time in ms.</p>
-     * </li>
-     * <li><p><strong>CPU_WAIT</strong>: The average CPU wait time in ms.</p>
-     * </li>
+     * <li><strong>WAIT</strong>: <ul>
+     * <li><strong>ZK_WAIT</strong>: Average wait time for ZooKeeper (unit: ms).</li>
+     * <li><strong>IO_WAIT</strong>: Average wait time for IO_WAIT (unit: ms).</li>
+     * <li><strong>CPU_WAIT</strong>: Average wait time for CPU_WAIT (unit: ms).</li>
      * </ul>
      * </li>
      * </ul>
@@ -111,7 +90,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in UTC using the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+     * <p>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC time).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

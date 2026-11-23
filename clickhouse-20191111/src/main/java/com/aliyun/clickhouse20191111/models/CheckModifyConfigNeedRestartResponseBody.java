@@ -8,7 +8,7 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
      * <p>Indicates whether a restart is required after the configuration parameters are modified. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: A restart is required.</li>
-     * <li><strong>false</strong>: A restart is not required.</li>
+     * <li><strong>false</strong>: No restart is required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
     public Boolean needRestart;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>06798FEE-BEF2-5FAF-A30D-728973BBE97C</p>

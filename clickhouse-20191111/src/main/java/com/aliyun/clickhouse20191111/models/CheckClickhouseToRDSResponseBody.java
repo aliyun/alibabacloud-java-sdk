@@ -6,10 +6,8 @@ import com.aliyun.tea.*;
 public class CheckClickhouseToRDSResponseBody extends TeaModel {
     /**
      * <ul>
-     * <li><p>This parameter is returned only if the connection fails (<strong>Status</strong> is <strong>false</strong>).</p>
-     * </li>
-     * <li><p>It indicates the reason for the connection failure.</p>
-     * </li>
+     * <li>This parameter is not returned when <strong>Status</strong> is <strong>true</strong>.</li>
+     * <li>When <strong>Status</strong> is <strong>false</strong>, this parameter indicates the cause of the connection failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,12 +26,10 @@ public class CheckClickhouseToRDSResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether a connection can be established. Valid values:</p>
+     * <p>Indicates whether the connection is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: A connection can be established.</p>
-     * </li>
-     * <li><p><strong>false</strong>: A connection cannot be established.</p>
-     * </li>
+     * <li><strong>true</strong>: The connection is successful.</li>
+     * <li><strong>false</strong>: The connection fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

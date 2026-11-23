@@ -13,7 +13,7 @@ public class UntagResourcesRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid only when the <strong>TagKey.N</strong> parameter is empty.</p>
+     * <p>This parameter takes effect only when the <strong>TagKey.N</strong> parameter is left empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

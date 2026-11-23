@@ -14,7 +14,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the slow query logs.</p>
+     * <p>The list of slow log details.</p>
      */
     @NameInMap("SlowLogRecords")
     public DescribeSlowLogRecordsResponseBodySlowLogRecords slowLogRecords;
@@ -190,7 +190,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics extends TeaModel {
         /**
-         * <p>The amount of data read, in bytes.</p>
+         * <p>The maximum amount of data read. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -199,7 +199,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Integer bytesRead;
 
         /**
-         * <p>The time elapsed for the slow query, in milliseconds.</p>
+         * <p>The time elapsed for the slow query. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>21.35</p>
@@ -208,7 +208,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Float elapsedTime;
 
         /**
-         * <p>The number of rows read.</p>
+         * <p>The maximum number of rows read.</p>
          * 
          * <strong>example:</strong>
          * <p>2016722</p>
@@ -301,7 +301,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public DescribeSlowLogRecordsResponseBodySlowLogRecordsData data;
 
         /**
-         * <p>The number of rows in the result set.</p>
+         * <p>The number of rows in the returned result set.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -310,7 +310,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String rows;
 
         /**
-         * <p>The number of entries on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -319,7 +319,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String rowsBeforeLimitAtLeast;
 
         /**
-         * <p>The statistics of the query results.</p>
+         * <p>The statistics information of the query results.</p>
          */
         @NameInMap("Statistics")
         public DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics statistics;

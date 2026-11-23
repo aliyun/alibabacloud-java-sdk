@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>The backup retention period. Default value: 7. Valid values: 7 to 730. Unit: day.</p>
+     * <p>The backup retention period. Default value: 7 days. Valid values: 7 to 730. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -25,20 +25,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The backup cycle. Valid values:</p>
      * <ul>
-     * <li><p><strong>Monday</strong></p>
-     * </li>
-     * <li><p><strong>Tuesday</strong></p>
-     * </li>
-     * <li><p><strong>Wednesday</strong></p>
-     * </li>
-     * <li><p><strong>Thursday</strong></p>
-     * </li>
-     * <li><p><strong>Friday</strong></p>
-     * </li>
-     * <li><p><strong>Saturday</strong></p>
-     * </li>
-     * <li><p><strong>Sunday</strong></p>
-     * </li>
+     * <li><strong>Monday</strong>: Monday.</li>
+     * <li><strong>Tuesday</strong>: Tuesday.</li>
+     * <li><strong>Wednesday</strong>: Wednesday.</li>
+     * <li><strong>Thursday</strong>: Thursday.</li>
+     * <li><strong>Friday</strong>: Friday.</li>
+     * <li><strong>Saturday</strong>: Saturday.</li>
+     * <li><strong>Sunday</strong>: Sunday.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +59,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the backup feature is enabled. Valid values:</p>
+     * <p>Indicates whether the backup service is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The backup feature is enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The backup feature is disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelRestartInstanceRequest extends TeaModel {
     /**
-     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in a specific region. The information includes the cluster IDs.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including their cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,14 +30,11 @@ public class CancelRestartInstanceRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p>30 (default)</p>
-     * </li>
-     * <li><p>50</p>
-     * </li>
-     * <li><p>100</p>
-     * </li>
+     * <li>30 (default)</li>
+     * <li>50</li>
+     * <li>100</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +59,7 @@ public class CancelRestartInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scheduled restart time. The time must be in the \<code>yyyy-MM-ddTHH:mmZ\\</code> format and in UTC.</p>
+     * <p>The scheduled restart time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2023-03-22T00:00:50Z</p>

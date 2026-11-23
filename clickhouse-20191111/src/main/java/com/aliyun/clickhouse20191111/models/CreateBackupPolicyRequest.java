@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The backup retention period in days. The value must be an integer from 7 to 730. The default value is 7.</p>
+     * <p>The backup retention period. Default value: 7 days. Valid values: 7 to 730. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -30,22 +30,15 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The backup cycle. If you specify multiple days, separate them with commas. Valid values:</p>
+     * <p>The backup cycle. Separate multiple values with commas (,). Valid values:</p>
      * <ul>
-     * <li><p><strong>Monday</strong></p>
-     * </li>
-     * <li><p><strong>Tuesday</strong></p>
-     * </li>
-     * <li><p><strong>Wednesday</strong></p>
-     * </li>
-     * <li><p><strong>Thursday</strong></p>
-     * </li>
-     * <li><p><strong>Friday</strong></p>
-     * </li>
-     * <li><p><strong>Saturday</strong></p>
-     * </li>
-     * <li><p><strong>Sunday</strong></p>
-     * </li>
+     * <li><strong>Monday</strong>: Monday.</li>
+     * <li><strong>Tuesday</strong>: Tuesday.</li>
+     * <li><strong>Wednesday</strong>: Wednesday.</li>
+     * <li><strong>Thursday</strong>: Thursday.</li>
+     * <li><strong>Friday</strong>: Friday.</li>
+     * <li><strong>Saturday</strong>: Saturday.</li>
+     * <li><strong>Sunday</strong>: Sunday.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,8 +49,8 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The backup time in UTC. The format is HH:mmZ-HH:mmZ.</p>
-     * <p>Example: 00:00Z-01:00Z. This means that data backup can be performed from 00:00 to 01:00 UTC (08:00 to 09:00 UTC+8).</p>
+     * <p>The backup time in UTC. Format: HH:mmZ-HH:mmZ.</p>
+     * <p>Example: 00:00Z-01:00Z indicates that data can be backed up from 00:00 to 01:00 UTC (08:00 to 09:00 UTC+8).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +60,7 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public String preferredBackupTime;
 
     /**
-     * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

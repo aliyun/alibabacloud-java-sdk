@@ -34,7 +34,7 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
      * <ul>
      * <li><strong>30</strong> (default)</li>
      * <li><strong>50</strong></li>
-     * <li><strong>100</strong>.</li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,12 +60,12 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The specification change type. Valid values:</p>
+     * <p>The upgrade/downgrade type. Valid values:</p>
      * <ul>
-     * <li>ScaleOut: horizontal scale-out</li>
+     * <li>ScaleOut: horizontal scaling</li>
      * <li>ScaleIn: horizontal scale-in</li>
-     * <li>MultiAzUpgrade: upgrade to multi-active zone deployment</li>
-     * <li>DiskDownGrade: cloud disk downgrade.</li>
+     * <li>MultiAzUpgrade: upgrade to multi-zone deployment</li>
+     * <li>DiskDownGrade: decrease the quota for disks</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigInXMLRequest extends TeaModel {
     /**
-     * <p>The configuration parameters to modify. Call the <a href="https://help.aliyun.com/document_detail/452210.html">DescribeDBClusterConfigInXML</a> operation to query the current configuration parameters. Then, modify the returned parameters.</p>
+     * <p>The configuration parameters to be modified. You can call the <a href="https://help.aliyun.com/document_detail/452210.html">DescribeDBClusterConfigInXML</a> operation to query the configuration parameters and modify the returned parameters.</p>
      * <blockquote>
-     * <p>When you modify a parameter, you must include all other configuration parameters in the request. If a parameter is not included, it retains its initial value or the modification fails.</p>
+     * <p>To modify a single parameter, you must pass all configuration parameters. Parameters that are not passed retain their original values or cause the configuration parameter modification to fail.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,8 @@ public class ModifyDBClusterConfigInXMLRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The cluster ID. Call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a region.</p>
+     * <p>The cluster ID.
+     * You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the target region, including their cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +29,7 @@ public class ModifyDBClusterConfigInXMLRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The reason for the modification.</p>
+     * <p>The description of the modification.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -37,7 +38,7 @@ public class ModifyDBClusterConfigInXMLRequest extends TeaModel {
     public String reason;
 
     /**
-     * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query available region IDs.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

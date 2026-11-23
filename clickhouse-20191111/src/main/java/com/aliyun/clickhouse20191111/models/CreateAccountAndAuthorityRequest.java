@@ -7,10 +7,8 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     /**
      * <p>The description of the database account.</p>
      * <ul>
-     * <li><p>Cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * </li>
-     * <li><p>Must be 0 to 256 characters in length.</p>
-     * </li>
+     * <li>The description cannot start with http:// or https://.</li>
+     * <li>The description must be 0 to 256 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,16 +18,12 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The name of the database account.</p>
+     * <p>The database account.</p>
      * <ul>
-     * <li><p>Must be unique within the cluster.</p>
-     * </li>
-     * <li><p>Can contain only lowercase letters, digits, and underscores (_).</p>
-     * </li>
-     * <li><p>Must start with a lowercase letter and end with a lowercase letter or a digit.</p>
-     * </li>
-     * <li><p>Must be 2 to 64 characters in length.</p>
-     * </li>
+     * <li>The name must be unique.</li>
+     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+     * <li>The name must be 2 to 64 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,17 +34,15 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password for the database account.</p>
+     * <p>The password of the database account.</p>
      * <blockquote>
      * <ul>
-     * <li>Must contain characters from at least three of the following types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>The supported special characters are <code>!@#$%^&amp;*()_+-=</code>.</p>
-     * </li>
-     * <li><p>Must be 8 to 32 characters in length.</p>
-     * </li>
+     * <li>Special characters include !@#$%^&amp;*()_+-=.</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,7 +53,7 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The databases to which the account has permissions. Separate multiple database names with commas (,).</p>
+     * <p>The list of databases to be authorized. Separate multiple databases with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +63,7 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String allowDatabases;
 
     /**
-     * <p>The dictionaries to which the account has permissions. Separate multiple dictionary names with commas (,).</p>
+     * <p>The list of dictionaries to be authorized. Separate multiple dictionaries with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,12 +83,10 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to grant DDL permissions to the database account. Valid values:</p>
+     * <p>Specifies whether to grant Data Definition Language (DDL) permissions to the database account. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: DDL operations are allowed.</p>
-     * </li>
-     * <li><p><strong>false</strong>: DDL operations are denied.</p>
-     * </li>
+     * <li><strong>true</strong>: allows DDL operations.</li>
+     * <li><strong>false</strong>: prohibits DDL operations.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -107,12 +97,10 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public Boolean ddlAuthority;
 
     /**
-     * <p>Specifies the DML permissions for the database account. Valid values:</p>
+     * <p>Specifies whether to grant Data Manipulation Language (DML) permissions to the database account. Valid values:</p>
      * <ul>
-     * <li><p><strong>all</strong>: read, write, and settings permissions.</p>
-     * </li>
-     * <li><p><strong>readOnly,modify</strong>: read and settings permissions.</p>
-     * </li>
+     * <li><strong>all</strong>: read, write, and settings permissions.</li>
+     * <li><strong>readOnly,modify</strong>: read and settings permissions.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -129,7 +117,7 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -144,7 +132,7 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>All databases in the cluster. Separate multiple database names with commas (,).</p>
+     * <p>The list of all databases. Separate multiple databases with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>db1,db2</p>
@@ -153,7 +141,7 @@ public class CreateAccountAndAuthorityRequest extends TeaModel {
     public String totalDatabases;
 
     /**
-     * <p>All dictionaries in the cluster. Separate multiple dictionary names with commas (,).</p>
+     * <p>The list of all dictionaries. Separate multiple dictionaries with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>dt1,dt2</p>

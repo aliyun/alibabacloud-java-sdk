@@ -14,12 +14,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     public String clusterNetworkType;
 
     /**
-     * <p>Indicates whether Server Load Balancer (SLB) is enabled in the VPC. Valid values:</p>
+     * <p>Indicates whether SLB is enabled in the VPC. Valid values:</p>
      * <ul>
-     * <li><p>true: enabled.</p>
-     * </li>
-     * <li><p>false: disabled.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

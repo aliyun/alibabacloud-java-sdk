@@ -15,10 +15,8 @@ public class DeleteSyndbResponseBody extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>This parameter is not returned if <strong>Status</strong> is <strong>true</strong>.</p>
-     * </li>
-     * <li><p>If <strong>Status</strong> is <strong>false</strong>, this parameter indicates the reason for the failure.</p>
-     * </li>
+     * <li>If <strong>Status</strong> is <strong>true</strong>, this parameter is not returned.</li>
+     * <li>If <strong>Status</strong> is <strong>false</strong>, this parameter indicates the cause of the deletion failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,10 +37,8 @@ public class DeleteSyndbResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the deletion was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The deletion was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The deletion failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The deletion was successful.</li>
+     * <li><strong>false</strong>: The deletion failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

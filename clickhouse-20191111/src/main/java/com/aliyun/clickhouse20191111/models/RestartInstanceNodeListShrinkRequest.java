@@ -36,14 +36,11 @@ public class RestartInstanceNodeListShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,9 +65,9 @@ public class RestartInstanceNodeListShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scheduled restart time. The time is in the yyyy-MM-ddTHH:mmZ format and is in UTC.</p>
+     * <p>The scheduled restart time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
      * <blockquote>
-     * <p>If this parameter is left empty or set to a time earlier than the current time, the cluster restarts immediately.</p>
+     * <p>If this parameter is left empty or set to a time earlier than the current time, the cluster is restarted immediately.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

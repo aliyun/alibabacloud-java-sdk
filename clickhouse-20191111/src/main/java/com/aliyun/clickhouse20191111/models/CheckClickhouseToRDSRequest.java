@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckClickhouseToRDSRequest extends TeaModel {
     /**
-     * <p>The password for the ApsaraDB for ClickHouse database account.</p>
+     * <p>The password of the database account for the ApsaraDB for ClickHouse cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public String ckPassword;
 
     /**
-     * <p>The database account for the ApsaraDB for ClickHouse cluster.</p>
+     * <p>The database account of the ApsaraDB for ClickHouse cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public Long clickhousePort;
 
     /**
-     * <p>The ID of the community-compatible ApsaraDB for ClickHouse cluster.</p>
+     * <p>The ID of the ApsaraDB for ClickHouse Community-compatible Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the ApsaraDB RDS instance.</p>
+     * <p>The instance ID of the ApsaraDB RDS database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public String rdsId;
 
     /**
-     * <p>The password for the ApsaraDB RDS database account.</p>
+     * <p>The password of the database account for the ApsaraDB RDS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     public Long rdsPort;
 
     /**
-     * <p>The database account for the ApsaraDB RDS instance.</p>
+     * <p>The database account of the ApsaraDB RDS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

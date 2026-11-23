@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigHistoryRequest extends TeaModel {
     /**
-     * <p>The cluster ID. Call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query the information about all clusters in a specific region, including cluster IDs.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in a specific region, including their cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeConfigHistoryRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Use the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+     * <p>The end time of the query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeConfigHistoryRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The start of the time range to query. Use the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+     * <p>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

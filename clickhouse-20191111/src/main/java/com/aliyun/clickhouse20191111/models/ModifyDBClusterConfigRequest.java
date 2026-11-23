@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in a specific region. This information includes the cluster IDs.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query the information about all clusters in the specified region, including cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The reason for the modification.</p>
+     * <p>The description of the modification.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -30,7 +30,7 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public String reason;
 
     /**
-     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -45,10 +45,7 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The configuration parameters to modify.</p>
-     * <blockquote>
-     * <p>You can modify a single configuration parameter. Parameters that are not specified in the request are not affected.</p>
-     * </blockquote>
+     * <p>The configuration parameters to be modified. &gt; You can modify a single configuration parameter. Configuration parameters that are not specified remain unaffected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

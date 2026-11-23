@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigVersionDifferenceResponseBody extends TeaModel {
     /**
-     * <p>The configuration parameters after the change.</p>
+     * <p>The configuration parameters after the changes.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;<?xml version="1.0"?>
@@ -34,7 +34,7 @@ public class DescribeConfigVersionDifferenceResponseBody extends TeaModel {
     public String newConfigXML;
 
     /**
-     * <p>The configuration parameters before the change.</p>
+     * <p>The configuration parameters before the changes.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;<?xml version="1.0"?>

@@ -15,7 +15,7 @@ public class ElectZookeeperLeaderRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to disable writes.</p>
+     * <p>Specifies whether to disable write operations.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -24,7 +24,7 @@ public class ElectZookeeperLeaderRequest extends TeaModel {
     public Boolean disableWrite;
 
     /**
-     * <p>The time to perform the leader switchover.</p>
+     * <p>The time when the primary switchover is performed. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-12T07:28:00Z</p>
@@ -48,14 +48,11 @@ public class ElectZookeeperLeaderRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (Default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,10 +62,7 @@ public class ElectZookeeperLeaderRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID.</p>
-     * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
-     * </blockquote>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

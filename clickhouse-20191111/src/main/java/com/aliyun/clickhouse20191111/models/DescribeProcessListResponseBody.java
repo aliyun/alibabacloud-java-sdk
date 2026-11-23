@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProcessListResponseBody extends TeaModel {
     /**
-     * <p>The list of tasks.</p>
+     * <p>The process list.</p>
      */
     @NameInMap("ProcessList")
     public DescribeProcessListResponseBodyProcessList processList;
@@ -135,16 +135,16 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     public static class DescribeProcessListResponseBodyProcessListStatistics extends TeaModel {
         /**
-         * <p>The size of the scanned data, in bytes.</p>
+         * <p>The size of the scanned data. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>9141300000</p>
+         * <p>1048576</p>
          */
         @NameInMap("BytesRead")
         public Integer bytesRead;
 
         /**
-         * <p>The elapsed time.</p>
+         * <p>The average response time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>4156</p>
@@ -153,7 +153,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public Float elapsedTime;
 
         /**
-         * <p>The number of rows scanned.</p>
+         * <p>The number of scanned data rows.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -246,7 +246,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public DescribeProcessListResponseBodyProcessListData data;
 
         /**
-         * <p>The number of rows returned for the query.</p>
+         * <p>The number of data rows returned by the query.</p>
          * 
          * <strong>example:</strong>
          * <p>1145700</p>
@@ -255,7 +255,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String rows;
 
         /**
-         * <p>The page size in rows.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -264,7 +264,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String rowsBeforeLimitAtLeast;
 
         /**
-         * <p>The statistics of the query result.</p>
+         * <p>The statistics information of the query results.</p>
          */
         @NameInMap("Statistics")
         public DescribeProcessListResponseBodyProcessListStatistics statistics;

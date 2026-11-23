@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
     /**
-     * <p>The cluster ID. Call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in the destination region, including cluster IDs.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,12 +32,9 @@ public class RestartInstanceRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p>30 (default)</p>
-     * </li>
-     * <li><p>50</p>
-     * </li>
-     * <li><p>100</p>
-     * </li>
+     * <li>30 (default)</li>
+     * <li>50</li>
+     * <li>100</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +44,7 @@ public class RestartInstanceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query available region IDs.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,9 +60,9 @@ public class RestartInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scheduled restart time. The time must be in the yyyy-MM-ddTHH:mmZ format and in UTC.</p>
+     * <p>The scheduled restart time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
      * <blockquote>
-     * <p>If this parameter is empty or specifies a time earlier than the current time, the cluster is restarted immediately.</p>
+     * <p>If this parameter is left empty or set to a time earlier than the current time, the cluster restarts immediately.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

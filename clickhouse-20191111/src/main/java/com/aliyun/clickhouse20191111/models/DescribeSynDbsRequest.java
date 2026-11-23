@@ -30,7 +30,7 @@ public class DescribeSynDbsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

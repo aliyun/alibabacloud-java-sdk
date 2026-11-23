@@ -43,7 +43,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,8 +98,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the backup ended.
-         * Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+         * <p>The end time of the backup. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-22T18:28:41Z</p>
@@ -117,7 +116,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupId;
 
         /**
-         * <p>The backup method. The value is <strong>Physical</strong>, which indicates physical backup.</p>
+         * <p>The backup method. The only valid value is <strong>Physical</strong>, which indicates physical backup.</p>
          * 
          * <strong>example:</strong>
          * <p>Physical</p>
@@ -126,7 +125,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupMethod;
 
         /**
-         * <p>The backup type. Valid values: manual (manual backup) and scheduled (automatic backup).</p>
+         * <p>The backup schedule type. Valid values: manual (manual backup) and scheduled (automatic backup).</p>
          * 
          * <strong>example:</strong>
          * <p>manual</p>
@@ -137,8 +136,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The number of nodes in the cluster.</p>
          * <ul>
-         * <li>Single-replica edition: valid values: 1 to 48.</li>
-         * <li>Master-replica cluster: valid values: 1 to 24.</li>
+         * <li>Single-replica edition: 1 to 48.</li>
+         * <li>Master-replica edition: 1 to 24.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,8 +147,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupSetInfo;
 
         /**
-         * <p>The backup size.
-         * Unit: MB.</p>
+         * <p>The backup size. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>131072</p>
@@ -158,7 +156,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long backupSize;
 
         /**
-         * <p>The time when the backup started. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+         * <p>The start time of the backup. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-22T18:28:22Z</p>
@@ -169,7 +167,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The backup status. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong>: The backup is complete.</li>
+         * <li><strong>Success</strong>: The backup is completed.</li>
          * <li><strong>Failure</strong>: The backup failed.</li>
          * </ul>
          * 
@@ -182,8 +180,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The backup type. Valid values:</p>
          * <ul>
-         * <li><strong>FullBackup</strong>: full backup.</li>
-         * <li><strong>IncrementalBackup</strong>: incremental backup.</li>
+         * <li><strong>FullBackup</strong>: full backup</li>
+         * <li><strong>IncrementalBackup</strong>: incremental backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,8 +200,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The expiration time of the backup set.
-         * Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
+         * <p>The expiration time of the backup set. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-22T18:28:41Z</p>

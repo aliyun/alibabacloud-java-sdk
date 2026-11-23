@@ -13,7 +13,7 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +37,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. The value must be <strong>DBCLUSTER</strong>.</p>
+     * <p>The resource type. Valid value: <strong>DBCLUSTER</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can add up to <strong>20</strong> tag keys.</p>
+         * <p>The tag key. You can add N tag keys. N is an integer and ranges from <strong>1 to 20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>testkey1</p>
@@ -133,7 +133,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag key. You can add up to <strong>20</strong> tag values.</p>
+         * <p>The tag value that corresponds to the tag key. You can add N tag values. N is an integer and ranges from <strong>1 to 20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>testvalue1</p>

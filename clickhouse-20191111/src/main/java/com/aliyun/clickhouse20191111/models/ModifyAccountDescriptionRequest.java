@@ -7,10 +7,8 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
      * <p>The new description of the database account.</p>
      * <ul>
-     * <li><p>The description cannot start with http\:// or https\://.</p>
-     * </li>
-     * <li><p>The description must be 0 to 256 characters in length.</p>
-     * </li>
+     * <li>It cannot start with http:// or https://.</li>
+     * <li>It must be 0 to 256 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

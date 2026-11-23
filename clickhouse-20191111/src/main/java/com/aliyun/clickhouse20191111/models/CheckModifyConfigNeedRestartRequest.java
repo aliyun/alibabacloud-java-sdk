@@ -35,7 +35,7 @@ public class CheckModifyConfigNeedRestartRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including cluster IDs.</p>
+     * <p>The ID of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in a specified region and obtain the cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

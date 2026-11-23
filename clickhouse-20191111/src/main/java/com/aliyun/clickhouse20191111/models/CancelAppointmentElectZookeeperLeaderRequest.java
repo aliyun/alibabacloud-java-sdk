@@ -30,14 +30,11 @@ public class CancelAppointmentElectZookeeperLeaderRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p>30 (default)</p>
-     * </li>
-     * <li><p>50</p>
-     * </li>
-     * <li><p>100</p>
-     * </li>
+     * <li>30 (default)</li>
+     * <li>50</li>
+     * <li>100</li>
      * </ul>
      * 
      * <strong>example:</strong>

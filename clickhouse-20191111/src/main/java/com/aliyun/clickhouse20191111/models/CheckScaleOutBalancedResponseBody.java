@@ -31,7 +31,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
      * <ul>
      * <li><strong>30</strong> (default)</li>
      * <li><strong>50</strong></li>
-     * <li><strong>100</strong>.</li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
     public CheckScaleOutBalancedResponseBodyTableDetails tableDetails;
 
     /**
-     * <p>The time required for the migration scale-out. Unit: minutes.</p>
+     * <p>The time required for migration and scaling. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>21</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSLBRequest extends TeaModel {
     /**
-     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to view the cluster ID.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query the cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

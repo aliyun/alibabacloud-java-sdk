@@ -15,7 +15,7 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The list of databases to authorize. Separate multiple database names with commas (,).</p>
+     * <p>The databases to which you want to grant permissions. Separate multiple databases with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public String allowDatabases;
 
     /**
-     * <p>The list of dictionaries to authorize. Separate multiple dictionary names with commas (,).</p>
+     * <p>The dictionaries to which you want to grant permissions. Separate multiple dictionaries with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,12 +45,10 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to grant DDL permissions to the database account. Valid values:</p>
+     * <p>Specifies whether to grant Data Definition Language (DDL) permissions to the database account. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Allows DDL operations.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Denies DDL operations.</p>
-     * </li>
+     * <li><strong>true</strong>: allows DDL operations.</li>
+     * <li><strong>false</strong>: prohibits DDL operations.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,12 +59,10 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public Boolean ddlAuthority;
 
     /**
-     * <p>The DML permissions granted to the database account. Valid values:</p>
+     * <p>Specifies whether to grant Data Manipulation Language (DML) permissions to the database account. Valid values:</p>
      * <ul>
-     * <li><p><strong>all</strong>: Grants read, write, and modify permissions.</p>
-     * </li>
-     * <li><p><strong>readonly,modify</strong>: Grants read and modify permissions.</p>
-     * </li>
+     * <li><strong>all</strong>: read, write, and settings permissions.</li>
+     * <li><strong>readonly,modify</strong>: read and settings permissions.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -83,7 +79,7 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -98,7 +94,7 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>All databases in the cluster. Separate multiple database names with commas (,).</p>
+     * <p>The list of all databases. Separate multiple databases with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>db1,db2</p>
@@ -107,7 +103,7 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public String totalDatabases;
 
     /**
-     * <p>All dictionaries in the cluster. Separate multiple dictionary names with commas (,).</p>
+     * <p>The list of all dictionaries. Separate multiple dictionaries with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>dt1,dt2</p>

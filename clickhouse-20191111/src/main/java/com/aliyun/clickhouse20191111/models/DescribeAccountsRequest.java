@@ -7,7 +7,7 @@ public class DescribeAccountsRequest extends TeaModel {
     /**
      * <p>The name of the database account.</p>
      * <blockquote>
-     * <p>If this parameter is not specified, the operation queries information about all database accounts.</p>
+     * <p>If you do not specify this parameter, the system queries the information of all database accounts by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeAccountsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,14 +42,11 @@ public class DescribeAccountsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigHistoryResponseBody extends TeaModel {
     /**
-     * <p>The change history of the configuration parameters.</p>
+     * <p>The change history of configuration parameters.</p>
      */
     @NameInMap("ConfigHistoryItems")
     public java.util.List<DescribeConfigHistoryResponseBodyConfigHistoryItems> configHistoryItems;
@@ -60,7 +60,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The reason for the parameter change.</p>
+         * <p>The description of the configuration parameter change.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -69,12 +69,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>Indicates whether the parameter change took effect. Valid values:</p>
+         * <p>Indicates whether the configuration parameter change took effect. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The change took effect.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The change did not take effect.</p>
-         * </li>
+         * <li><strong>true</strong>: The change took effect.</li>
+         * <li><strong>false</strong>: The change did not take effect.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -84,7 +82,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>The time when the change was made. Use the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+         * <p>The time when the change occurred. The time is in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-22T10:00:00Z</p>

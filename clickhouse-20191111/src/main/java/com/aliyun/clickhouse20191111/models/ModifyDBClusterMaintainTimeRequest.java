@@ -15,10 +15,10 @@ public class ModifyDBClusterMaintainTimeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The maintenance window of the cluster. The format is HH:mmZ-HH:mmZ.</p>
-     * <p>Example: 00:00Z-01:00Z. This means that routine maintenance can be performed from 00:00 to 01:00 (UTC), which is 08:00 to 09:00 (UTC+8).</p>
+     * <p>The maintenance window of the cluster. Format: HH:mmZ-HH:mmZ.</p>
+     * <p>Example: 00:00Z-01:00Z indicates that routine maintenance can be performed from 00:00 to 01:00 UTC (08:00 to 09:00 UTC+8).</p>
      * <blockquote>
-     * <p>The maintenance window must start on the hour and last for one hour.</p>
+     * <p>The maintenance window Settings must be full hours with a duration of 1 hour.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

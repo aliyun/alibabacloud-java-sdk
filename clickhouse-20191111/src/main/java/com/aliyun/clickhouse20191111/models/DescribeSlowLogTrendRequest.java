@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogTrendRequest extends TeaModel {
     /**
-     * <p>The cluster ID. Call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in a specific region, including cluster IDs.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including their cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the \<code>yyyy-MM-dd hh:mm:ss\\</code> format. The time is in UTC.</p>
+     * <p>The end time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
      * <blockquote>
-     * <p>The end time must be later than the start time. The time range cannot exceed 7 days.</p>
+     * <p>The end time must be later than the start time, and the interval between the start time and the end time must be less than 7 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +34,7 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The execution duration of a slow SQL query, in milliseconds. The minimum value is <strong>1000</strong>. The default value is <strong>1000</strong>. The operation returns slow SQL queries that take longer than this duration to execute.</p>
+     * <p>The execution duration of slow SQL statements. Minimum value: <strong>1000</strong>. Default value: <strong>1000</strong>. Unit: milliseconds. The response returns slow SQL statements whose execution duration exceeds this value.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -43,7 +43,7 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public Integer queryDurationMs;
 
     /**
-     * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -58,7 +58,7 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the \<code>yyyy-MM-dd hh:mm:ss\\</code> format. The time is in UTC.</p>
+     * <p>The start time of the query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

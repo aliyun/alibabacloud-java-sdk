@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that is used to retrieve the next page of results. This parameter is returned only if the results are not fully returned in the current request. You can use this token in a subsequent request to retrieve the next page of results.</p>
+     * <p>The token used to return more results. If not all results are returned in the current query, you can pass the NextToken value returned in the previous response to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707ec21345</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Information about the clusters and their tags.</p>
+     * <p>The information about the queried clusters and tags.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -59,9 +59,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <p>The cluster ID.</p>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Community-Compatible Edition cluster.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-bp1t9lbb7a4z7****</p>
@@ -70,7 +69,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type. The value is <strong>DBCLUSTER</strong>.</p>
+         * <p>The resource type. Valid value: <strong>DBCLUSTER</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>DBCLUSTER</p>
@@ -88,7 +87,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value corresponding to the tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>testvalue1</p>

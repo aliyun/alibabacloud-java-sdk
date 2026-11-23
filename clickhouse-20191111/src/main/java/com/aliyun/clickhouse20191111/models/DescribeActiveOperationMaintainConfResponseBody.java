@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     /**
-     * <p>The active O\&amp;M configuration items.</p>
+     * <p>The proactive maintenance configuration.</p>
      */
     @NameInMap("Config")
     public DescribeActiveOperationMaintainConfResponseBodyConfig config;
 
     /**
-     * <p>Indicates whether a configuration is set.</p>
+     * <p>Indicates whether proactive maintenance is configured. Valid values:</p>
      * <ul>
-     * <li><p>1: A configuration is set.</p>
-     * </li>
-     * <li><p>0: No configuration is set.</p>
-     * </li>
+     * <li>1: Configured.</li>
+     * <li>0: Not configured.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationMaintainConfResponseBodyConfig extends TeaModel {
         /**
-         * <p>The time when the configuration was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-18T06:51:11+08:00</p>
@@ -74,12 +72,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The day of the cycle.</p>
+         * <p>The cycle time.</p>
          * <ul>
-         * <li><p>If CycleType is Month, this parameter returns one or more numbers from 1 to 28 that indicate the day of the month. Multiple numbers are separated by commas (,).</p>
-         * </li>
-         * <li><p>If CycleType is Week, this parameter returns one or more numbers from 1 to 7 that indicate the day of the week. Multiple numbers are separated by commas (,).</p>
-         * </li>
+         * <li>If CycleType is set to Month, the return value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,).</li>
+         * <li>If CycleType is set to Week, the return value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,12 +85,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleTime;
 
         /**
-         * <p>The cycle type.</p>
+         * <p>The cycle type. Valid values:</p>
          * <ul>
-         * <li><p>Month</p>
-         * </li>
-         * <li><p>Week</p>
-         * </li>
+         * <li>Month: Monthly.</li>
+         * <li>Week: Weekly.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,7 +116,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
-         * <p>The time when the configuration was last modified.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-27T07:12:53Z</p>
@@ -131,7 +125,11 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The status of the configuration. A value of 1 indicates that the configuration is enabled. A value of 2 indicates that the configuration is disabled.</p>
+         * <p>Indicates whether the configuration takes effect. Valid values:</p>
+         * <ul>
+         * <li>1: Yes.</li>
+         * <li>2: No.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -15,7 +15,7 @@ public class TransferVersionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The time windows during which writes are disabled.</p>
+     * <p>The write suspension window.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</p>
@@ -39,14 +39,11 @@ public class TransferVersionRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (Default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +53,7 @@ public class TransferVersionRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,8 +79,7 @@ public class TransferVersionRequest extends TeaModel {
     public String sourceAccount;
 
     /**
-     * <p>The name of the self-managed ClickHouse cluster.
-     * To obtain the name, execute <code>SELECT * FROM system.clusters</code>.</p>
+     * <p>The cluster name of the self-managed ClickHouse cluster. You can execute the <code>SELECT * FROM system.clusters</code> statement to obtain the cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -102,7 +98,7 @@ public class TransferVersionRequest extends TeaModel {
     public String sourcePassword;
 
     /**
-     * <p>The addresses and TCP ports of the shards in the self-managed ClickHouse cluster.</p>
+     * <p>The address and TCP port information of the self-managed ClickHouse cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.4:9000,192.168.0.5:9000,192.168.0.6:9000</p>

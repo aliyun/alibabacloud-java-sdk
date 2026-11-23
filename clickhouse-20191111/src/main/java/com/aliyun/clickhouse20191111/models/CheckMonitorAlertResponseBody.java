@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckMonitorAlertResponseBody extends TeaModel {
     /**
-     * <p>The parameters for alert monitoring.</p>
+     * <p>The monitoring and alerting parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{   &quot;monitor&quot;:{     &quot;key1&quot;:&quot;value1&quot;,     &quot;key2&quot;:&quot;value2&quot;   },   &quot;alert&quot;:{     &quot;key1&quot;:&quot;value1&quot;,     &quot;key2&quot;:&quot;value2&quot;   } }</p>
@@ -23,12 +23,10 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the alert monitoring feature is enabled. Valid values:</p>
+     * <p>Indicates whether the monitoring and alerting feature is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>enable</strong>: The feature is enabled.</p>
-     * </li>
-     * <li><p><strong>disable</strong>: The feature is disabled.</p>
-     * </li>
+     * <li><strong>enable</strong>: Enabled.</li>
+     * <li><strong>disable</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
