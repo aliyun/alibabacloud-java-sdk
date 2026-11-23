@@ -1,3 +1,7 @@
+2026-11-23 Version: 3.8.0
+- Support API CreateCustomAgentDebugToken.
+
+
 2026-11-20 Version: 3.7.0
 - Support API ProbeMcpOrigin.
 - Update API ConvertMcpToFreeEdit: add response parameters Body.data.deploymentConfig.mcpConfiguration.sessionMode.
