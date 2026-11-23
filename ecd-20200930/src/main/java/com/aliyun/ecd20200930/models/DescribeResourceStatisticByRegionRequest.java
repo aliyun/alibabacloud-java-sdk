@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceStatisticByRegionRequest extends TeaModel {
     /**
+     * <p>Specifies whether the statistics include the number of shared cloud desktops.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class DescribeResourceStatisticByRegionRequest extends TeaModel {
     public Boolean includeGroupDesktops;
 
     /**
+     * <p>The ID of the service region. Valid values: China (Shanghai) and Singapore.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -19,6 +23,8 @@ public class DescribeResourceStatisticByRegionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the region to search. This parameter is used to filter cloud desktops in the specified region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

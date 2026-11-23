@@ -12865,11 +12865,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>该接口为中心化接口，只可通过上海或新加坡地域的服务进行调用。</li>
+     * <li>This API operation is a centralized operation and can only be called by using the endpoints in the China (Shanghai) or Singapore region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询地域化的统计数据</p>
+     * <p>Retrieves the statistics on the number of different resources by region.</p>
      * 
      * @param request DescribeResourceStatisticByRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12910,11 +12910,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>该接口为中心化接口，只可通过上海或新加坡地域的服务进行调用。</li>
+     * <li>This API operation is a centralized operation and can only be called by using the endpoints in the China (Shanghai) or Singapore region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询地域化的统计数据</p>
+     * <p>Retrieves the statistics on the number of different resources by region.</p>
      * 
      * @param request DescribeResourceStatisticByRegionRequest
      * @return DescribeResourceStatisticByRegionResponse
@@ -13929,12 +13929,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</li>
-     * <li>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
+     * <li>This API operation uses a centralized domain name. The endpoint is in the China (Shanghai) region. Calls from other regions are not supported.</li>
+     * <li>The cloud desktop status information returned by this API operation has a delay of 1 to 3 seconds compared to the actual values.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves cloud desktop information for a vulnerability.</p>
+     * <p>Retrieves the cloud desktop information for vulnerabilities.</p>
      * 
      * @param request DescribeVulDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13961,6 +13961,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeFixResult)) {
             query.put("IncludeFixResult", request.includeFixResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includePatchTask)) {
+            query.put("IncludePatchTask", request.includePatchTask);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
@@ -14031,12 +14035,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</li>
-     * <li>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
+     * <li>This API operation uses a centralized domain name. The endpoint is in the China (Shanghai) region. Calls from other regions are not supported.</li>
+     * <li>The cloud desktop status information returned by this API operation has a delay of 1 to 3 seconds compared to the actual values.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves cloud desktop information for a vulnerability.</p>
+     * <p>Retrieves the cloud desktop information for vulnerabilities.</p>
      * 
      * @param request DescribeVulDesktopsRequest
      * @return DescribeVulDesktopsResponse
@@ -14048,7 +14052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</p>
+     * <p>After security protection is enabled, the system automatically scans cloud desktops for system vulnerability at each epoch (once a day).</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves vulnerability information.</p>
@@ -14111,7 +14115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</p>
+     * <p>After security protection is enabled, the system automatically scans cloud desktops for system vulnerability at each epoch (once a day).</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves vulnerability information.</p>

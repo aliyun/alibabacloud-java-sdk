@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulDesktopsRequest extends TeaModel {
     /**
-     * <p>The connection status of the cloud desktop. Valid values: CONNECTED and DISCONNECTED.</p>
+     * <p>The connection status of the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>Connected</p>
@@ -14,7 +14,7 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public String connectionStatus;
 
     /**
-     * <p>The CVE ID of the vulnerability.</p>
+     * <p>The vulnerability ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CVE-2026-43284</p>
@@ -38,7 +38,7 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public String desktopStatus;
 
     /**
-     * <p>Specifies whether to include patch update results.</p>
+     * <p>Specifies whether to include the patch update results.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -47,11 +47,13 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public Boolean includeFixResult;
 
     /**
-     * <p>The language of the returned information. Valid values:</p>
-     * <ul>
-     * <li><strong>ch</strong>: Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
-     * </ul>
+     * <p>Specifies whether to include cloud desktops that have scheduled patch tasks.</p>
+     */
+    @NameInMap("IncludePatchTask")
+    public Boolean includePatchTask;
+
+    /**
+     * <p>The language of the response.</p>
      * 
      * <strong>example:</strong>
      * <p>ch</p>
@@ -60,9 +62,9 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The number of entries per page in a paged query.</p>
-     * <p>Maximum value: 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries per page for a paging query.
+     * Maximum value: 100.
+     * Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -71,7 +73,7 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -80,7 +82,7 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Specifies whether to include only cloud desktops that have had fix tasks executed in the current month.</p>
+     * <p>Specifies whether to include only cloud desktops for which fix tasks have been executed in the current month.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -89,7 +91,7 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public Boolean onlyCurrentMonthFixAttempted;
 
     /**
-     * <p>The page number of the current page in a paged query.</p>
+     * <p>The page number of the current page for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,7 +100,7 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the current page in a paged query.</p>
+     * <p>The page size for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -116,7 +118,7 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public String patchId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by WUYING Workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -134,7 +136,7 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The region ID used to filter cloud desktop information for a specific region.</p>
+     * <p>The search region ID. This parameter is used to filter cloud desktop information for a specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -149,14 +151,14 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     public java.util.List<String> statusList;
 
     /**
-     * <p>The severity level of the intrusion prevention event. Valid values:</p>
+     * <p>The security level of the intrusion prevention event. Valid values:</p>
      * <ul>
-     * <li><strong>low</strong>: Low.</li>
-     * <li><strong>medium</strong>: Medium.</li>
-     * <li><strong>critical</strong>: Critical.</li>
+     * <li><strong>low</strong>: low-risk.</li>
+     * <li><strong>medium</strong>: medium-risk.</li>
+     * <li><strong>critical</strong>: high-risk.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not set this parameter, vulnerabilities of all severity levels are queried.</p>
+     * <p>If you do not specify this parameter, vulnerabilities of all security levels are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -208,6 +210,14 @@ public class DescribeVulDesktopsRequest extends TeaModel {
     }
     public Boolean getIncludeFixResult() {
         return this.includeFixResult;
+    }
+
+    public DescribeVulDesktopsRequest setIncludePatchTask(Boolean includePatchTask) {
+        this.includePatchTask = includePatchTask;
+        return this;
+    }
+    public Boolean getIncludePatchTask() {
+        return this.includePatchTask;
     }
 
     public DescribeVulDesktopsRequest setLanguage(String language) {

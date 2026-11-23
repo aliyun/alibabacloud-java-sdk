@@ -1,3 +1,8 @@
+2026-11-23 Version: 5.8.1
+- Update API DescribeVulDesktops: add request parameters IncludePatchTask.
+- Update API DescribeVulnerability: add response parameters Body.Vulnerability.CurrentTotalVulCount.
+
+
 2026-11-20 Version: 5.8.0
 - Support API DescribeDesktopIdsByVulNames.
 - Support API DescribeResourceStatisticByRegion.

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics information.</p>
+     */
     @NameInMap("Statistic")
     public DescribeResourceStatisticByRegionResponseBodyStatistic statistic;
 
@@ -37,6 +42,8 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
 
     public static class DescribeResourceStatisticByRegionResponseBodyStatisticRegionStatistics extends TeaModel {
         /**
+         * <p>The number of assigned users in the current region.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +51,8 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
         public Long assignedEndUserCount;
 
         /**
+         * <p>The number of connected users in the current region.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +60,8 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
         public Long connectedEndUserCount;
 
         /**
+         * <p>The number of cloud desktops in the current region.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -58,6 +69,8 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
         public Long desktopCount;
 
         /**
+         * <p>The number of shared cloud desktops in the current region.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -65,6 +78,8 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
         public Long desktopGroupCount;
 
         /**
+         * <p>The number of network packages in the current region.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -72,6 +87,8 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
         public Long networkPackageCount;
 
         /**
+         * <p>The number of policy groups in the current region.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -79,6 +96,8 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
         public Long policyGroupCount;
 
         /**
+         * <p>The region ID. You can call the <a href="https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -149,6 +168,9 @@ public class DescribeResourceStatisticByRegionResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceStatisticByRegionResponseBodyStatistic extends TeaModel {
+        /**
+         * <p>The statistics by region.</p>
+         */
         @NameInMap("RegionStatistics")
         public java.util.List<DescribeResourceStatisticByRegionResponseBodyStatisticRegionStatistics> regionStatistics;
 
