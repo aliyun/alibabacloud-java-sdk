@@ -14,7 +14,7 @@ public class GetStsTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the token.</p>
+     * <p>The token details.</p>
      */
     @NameInMap("StsTokenModel")
     public GetStsTokenResponseBodyStsTokenModel stsTokenModel;
@@ -42,7 +42,7 @@ public class GetStsTokenResponseBody extends TeaModel {
 
     public static class GetStsTokenResponseBodyStsTokenModel extends TeaModel {
         /**
-         * <p>The tenant ID, which is the UID of the Alibaba Cloud account.</p>
+         * <p>The tenant ID (Alibaba Cloud account UID).</p>
          * 
          * <strong>example:</strong>
          * <p>105552640689****</p>
@@ -60,7 +60,7 @@ public class GetStsTokenResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The temporary credentials.</p>
+         * <p>The temporary identity credential.</p>
          * 
          * <strong>example:</strong>
          * <p>sts****</p>
@@ -69,7 +69,7 @@ public class GetStsTokenResponseBody extends TeaModel {
         public String stsToken;
 
         /**
-         * <p>The tenant ID, which is the UID of the Alibaba Cloud account.</p>
+         * <p>The tenant ID (Alibaba Cloud account UID).</p>
          * 
          * <strong>example:</strong>
          * <p>105552640689****</p>

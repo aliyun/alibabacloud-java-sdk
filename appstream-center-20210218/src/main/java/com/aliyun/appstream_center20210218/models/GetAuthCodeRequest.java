@@ -4,17 +4,35 @@ package com.aliyun.appstream_center20210218.models;
 import com.aliyun.tea.*;
 
 public class GetAuthCodeRequest extends TeaModel {
+    /**
+     * <p>The account type. Valid values: ad (enterprise AD account) and simple (convenience account).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>simple</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>The Active Directory domain name. This parameter is required when the account type is ad.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ad.example.com</p>
+     */
     @NameInMap("AdDomain")
     public String adDomain;
 
+    /**
+     * <p>The password of the enterprise AD account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Qa****7!Z9</p>
+     */
     @NameInMap("AdPassword")
     public String adPassword;
 
     /**
-     * <p>Specifies whether to synchronously create an EndUserId based on ExternalUserId. This parameter takes effect only when EndUserId is empty.</p>
+     * <p>Specifies whether to synchronously create an EndUserId based on ExternalUserId. This parameter takes effect only when EndUserId is left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,7 +41,7 @@ public class GetAuthCodeRequest extends TeaModel {
     public Boolean autoCreateUser;
 
     /**
-     * <p>The username of the China Desktop Service (China Desktop Service) convenience account. The username must be unique within an Alibaba Cloud account. This parameter and ExternalUserId cannot both be empty.</p>
+     * <p>The username of the Wuying convenience account. The username must be unique within an Alibaba Cloud account. This parameter and ExternalUserId cannot be left empty at the same time.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -32,7 +50,7 @@ public class GetAuthCodeRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The external user ID. This ID is defined by the caller and must be unique within an Alibaba Cloud account. This parameter and EndUserId cannot both be empty.</p>
+     * <p>The external user ID. This ID is customized by the caller and must be unique within an Alibaba Cloud account. This parameter and ExternalUserId cannot be left empty at the same time.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -46,15 +64,15 @@ public class GetAuthCodeRequest extends TeaModel {
      * <pre><code class="language-json">{
      *       &quot;Version&quot;: &quot;1&quot;,
      *       &quot;Resource&quot;: {
-     *             &quot;Type&quot;: &quot;&lt;Resource type&gt;&quot;,
-     *             &quot;Id&quot;: &quot;&lt;Resource ID&gt;&quot;
+     *             &quot;Type&quot;: &quot;&lt;resource type&gt;&quot;,
+     *             &quot;Id&quot;: &quot;&lt;resource ID&gt;&quot;
      *       }
      * }
      * </code></pre>
-     * <p>Valid values of <Resource type>:</p>
+     * <p>Valid values for <resource type>:</p>
      * <ul>
-     * <li>AppInstanceGroup: delivery group. You can call the ListAppInstanceGroup operation to obtain the ID.</li>
-     * <li>AppInstance: application instance (dedicated field).</li>
+     * <li>AppInstanceGroup: app instance group. You can call the ListAppInstanceGroup operation to obtain the ID.</li>
+     * <li>AppInstance: app instance. This is a dedicated field.</li>
      * <li>App: application. You can call the ListAppInstanceGroup operation to obtain the ID.</li>
      * </ul>
      * 
@@ -70,6 +88,12 @@ public class GetAuthCodeRequest extends TeaModel {
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <p>The token type. Valid values: LoginToken (logon token) and StsToken (temporary identity credential).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>StsToken</p>
+     */
     @NameInMap("TokenType")
     public String tokenType;
 

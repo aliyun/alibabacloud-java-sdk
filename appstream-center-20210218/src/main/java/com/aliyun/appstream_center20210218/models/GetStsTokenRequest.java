@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetStsTokenRequest extends TeaModel {
     /**
-     * <p>The Elastic Desktop Service (EDS) username.</p>
+     * <p>The Wuying username.</p>
      * <blockquote>
-     * <p>Either EndUserId or ExternalId is required.</p>
+     * <p>Either the Wuying username or the external ID is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetStsTokenRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The validity period of the token, in seconds. The maximum period is two days.</p>
+     * <p>The expiration time in seconds. The maximum validity period is two days.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>
@@ -26,7 +26,7 @@ public class GetStsTokenRequest extends TeaModel {
     public Long expiration;
 
     /**
-     * <p>The ID of the external user.</p>
+     * <p>The external user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>Alex</p>

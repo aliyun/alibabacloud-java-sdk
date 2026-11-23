@@ -1,3 +1,8 @@
+2026-11-23 Version: 1.2.0
+- Support API CreateThirdAppAccessToken.
+- Support API GetLatestThirdAppAccessToken.
+
+
 2026-07-09 Version: 1.1.3
 - Update API GetAuthCode: add request parameters AdPassword.
 
