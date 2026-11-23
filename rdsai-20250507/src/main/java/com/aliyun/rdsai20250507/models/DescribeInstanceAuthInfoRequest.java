@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAuthInfoRequest extends TeaModel {
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("BranchName")
     public String branchName;
 
     /**
-     * <p>The instance ID of the AI application.</p>
+     * <p>The ID of the AI application instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>

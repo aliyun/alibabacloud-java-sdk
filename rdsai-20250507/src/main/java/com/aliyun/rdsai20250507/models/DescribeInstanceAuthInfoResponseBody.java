@@ -11,7 +11,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
     public DescribeInstanceAuthInfoResponseBodyApiKeys apiKeys;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -107,7 +107,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
     public static class DescribeInstanceAuthInfoResponseBodyApiKeys extends TeaModel {
         /**
-         * <p>The ANON_KEY of Supabase.</p>
+         * <p>The Supabase ANON_KEY.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz<strong><strong>J9.eyJpc3MiOiJzdXBhYmFzZSIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzU1Nzg1ODc1LCJleHAiOjEzMjY2NDI1ODc1fQ.EGNFdeWRZBsdB051EzQsBwvDJveC9IMEXWUCDLX</strong></strong></p>
@@ -115,11 +115,17 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
         @NameInMap("AnonKey")
         public String anonKey;
 
+        /**
+         * <p>The API key used to access E2B-compatible sandbox APIs. This parameter is returned when the sandbox is enabled and a service key exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2b_65794a30655841694f694a4b563151694c434a68624763694f694a49557a49314e694a392e65794a7063334d694f694a7a64584268596d467a5a534973496e4a76624755694f694a7a5a584a3261574e6c58334a766247556****34a70595851694f6a45334f5451314d6a67774d444173496d5634634349364d544d7a4d4455784e6a67774d4442392e41414543417751464267634943516f4c4441304f4478415245684d554652595847426b6147787764486838</p>
+         */
         @NameInMap("E2bApiKey")
         public String e2bApiKey;
 
         /**
-         * <p>The SERVICE_ROLE_KEY of Supabase.</p>
+         * <p>The Supabase SERVICE_ROLE_KEY.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUz<strong><strong>J9.eyJpc3MiOiJzdXBhYmFzZSIsInJvbGUiOiJzZXJ2aWNlX3JvbGUiLCJpYXQiOjE3NTU3ODU4NzUsImV4cCI6MTMyNjY0MjU4NzV9.oJt4UF8cpSDOvjW39IM4fLp2750rEvxFnkNqcVM</strong></strong></p>
@@ -162,7 +168,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
         /**
          * <p>The name of the configuration item. Valid values:</p>
          * <ul>
-         * <li><strong>GOTRUE_EXTERNAL_EMAIL_ENABLED</strong>: Specifies whether external emails are allowed.</li>
+         * <li><strong>GOTRUE_EXTERNAL_EMAIL_ENABLED</strong>: Specifies whether to allow external emails.</li>
          * <li><strong>GOTRUE_SITE_URL</strong>: The website URL displayed when the AI application sends emails.</li>
          * <li><strong>GOTRUE_SMTP_PORT</strong>: The port of the SMTP service provider.</li>
          * <li><strong>GOTRUE_SMTP_SENDER_NAME</strong>: The name of the email sender.</li>
@@ -170,7 +176,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
          * <li><strong>GOTRUE_SMTP_PASS</strong>: The password of the SMTP service provider.</li>
          * <li><strong>GOTRUE_SMTP_ADMIN_EMAIL</strong>: The email address of the SMTP service provider.</li>
          * <li><strong>GOTRUE_SMTP_HOST</strong>: The host address of the SMTP service provider.</li>
-         * <li><strong>GOTRUE_MAILER_AUTOCONFIRM</strong>: Specifies whether automatic confirmation is enabled.</li>
+         * <li><strong>GOTRUE_MAILER_AUTOCONFIRM</strong>: Specifies whether to enable automatic confirmation.</li>
          * <li><strong>GOTRUE_MAILER_OTP_EXP</strong>: The validity period of the one-time password (OTP). Unit: seconds.</li>
          * <li><strong>GOTRUE_MAILER_OTP_LENGTH</strong>: The length of the one-time password (OTP). The value must be an integer greater than or equal to 6.</li>
          * </ul>

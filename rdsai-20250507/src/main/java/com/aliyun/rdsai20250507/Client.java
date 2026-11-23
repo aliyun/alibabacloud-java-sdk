@@ -2363,7 +2363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
@@ -2409,7 +2409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
@@ -3468,6 +3468,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Queries the credit consumption of the caller account within a specified UTC time range, bucketed by hour or day and by billing item. When WorkspaceId is provided, the query is at the workspace dimension (ownership is verified, and locked workspaces can still be queried). When omitted, the query aggregates all workspaces at the account (primary account UID) dimension. Buckets are sorted by BucketStart, Item, and SubItem. Unpriced records are not included in Credits. Note that member filtering does not split buckets. To view details by member, use ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummaryByMember. Credit is represented as a decimal string (1 credit = 1 CNY, up to 6 decimal places).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the credit consumption trend and total amount for the caller account within a specified time range. If WorkspaceId is specified, the statistics apply to a single workspace. If omitted, the statistics aggregate all workspaces under the account. Results are bucketed by hour or day, billing item, and applicable context evolution sub-item. MemberId only filters records and does not split buckets by member. To obtain only the total amount for the range, you can omit Interval and read TotalCredits. To rank by member, call GetContextDatabaseCreditUsageSummaryByMember.</p>
+     * 
+     * @param request GetContextDatabaseCreditUsageSummaryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseCreditUsageSummaryResponse
+     */
+    public GetContextDatabaseCreditUsageSummaryResponse getContextDatabaseCreditUsageSummaryWithOptions(GetContextDatabaseCreditUsageSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.item)) {
+            query.put("Item", request.item);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subItem)) {
+            query.put("SubItem", request.subItem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseCreditUsageSummary"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseCreditUsageSummaryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the credit consumption of the caller account within a specified UTC time range, bucketed by hour or day and by billing item. When WorkspaceId is provided, the query is at the workspace dimension (ownership is verified, and locked workspaces can still be queried). When omitted, the query aggregates all workspaces at the account (primary account UID) dimension. Buckets are sorted by BucketStart, Item, and SubItem. Unpriced records are not included in Credits. Note that member filtering does not split buckets. To view details by member, use ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummaryByMember. Credit is represented as a decimal string (1 credit = 1 CNY, up to 6 decimal places).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the credit consumption trend and total amount for the caller account within a specified time range. If WorkspaceId is specified, the statistics apply to a single workspace. If omitted, the statistics aggregate all workspaces under the account. Results are bucketed by hour or day, billing item, and applicable context evolution sub-item. MemberId only filters records and does not split buckets by member. To obtain only the total amount for the range, you can omit Interval and read TotalCredits. To rank by member, call GetContextDatabaseCreditUsageSummaryByMember.</p>
+     * 
+     * @param request GetContextDatabaseCreditUsageSummaryRequest
+     * @return GetContextDatabaseCreditUsageSummaryResponse
+     */
+    public GetContextDatabaseCreditUsageSummaryResponse getContextDatabaseCreditUsageSummary(GetContextDatabaseCreditUsageSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseCreditUsageSummaryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Aggregates and ranks the credit consumption of a single workspace by member within a specified UTC time range, with one row per member. This operation uses a fixed workspace dimension: WorkspaceId is required and its ownership is verified (locked workspaces can still be queried), and there are no Dimension, Interval, or sorting input parameters. Members are returned in descending order of aggregated credits. Pagination and ranking are handled by the upstream service. This layer does not re-sort, re-price, or drop rows, so Total represents the number of filtered members rather than the number of records. Credits are represented as decimal strings (1 credit = 1 CNY, up to 6 decimal places) and are null for members without priced records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the ranking of member credit consumption for a single workspace within the caller\&quot;s account over a specified time range. Returns one aggregated record per member covering the entire range, paginated and sorted in descending order of total credits, without hourly or daily bucketing. The total count for pagination is the number of members matching the filter criteria, not the number of metering records. To view individual records, call ListContextDatabaseCreditUsageRecords.</p>
+     * 
+     * @param request GetContextDatabaseCreditUsageSummaryByMemberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseCreditUsageSummaryByMemberResponse
+     */
+    public GetContextDatabaseCreditUsageSummaryByMemberResponse getContextDatabaseCreditUsageSummaryByMemberWithOptions(GetContextDatabaseCreditUsageSummaryByMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.item)) {
+            query.put("Item", request.item);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseCreditUsageSummaryByMember"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseCreditUsageSummaryByMemberResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Aggregates and ranks the credit consumption of a single workspace by member within a specified UTC time range, with one row per member. This operation uses a fixed workspace dimension: WorkspaceId is required and its ownership is verified (locked workspaces can still be queried), and there are no Dimension, Interval, or sorting input parameters. Members are returned in descending order of aggregated credits. Pagination and ranking are handled by the upstream service. This layer does not re-sort, re-price, or drop rows, so Total represents the number of filtered members rather than the number of records. Credits are represented as decimal strings (1 credit = 1 CNY, up to 6 decimal places) and are null for members without priced records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the ranking of member credit consumption for a single workspace within the caller\&quot;s account over a specified time range. Returns one aggregated record per member covering the entire range, paginated and sorted in descending order of total credits, without hourly or daily bucketing. The total count for pagination is the number of members matching the filter criteria, not the number of metering records. To view individual records, call ListContextDatabaseCreditUsageRecords.</p>
+     * 
+     * @param request GetContextDatabaseCreditUsageSummaryByMemberRequest
+     * @return GetContextDatabaseCreditUsageSummaryByMemberResponse
+     */
+    public GetContextDatabaseCreditUsageSummaryByMemberResponse getContextDatabaseCreditUsageSummaryByMember(GetContextDatabaseCreditUsageSummaryByMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseCreditUsageSummaryByMemberWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Retrieves the details of a connection.</p>
      * 
      * <b>summary</b> : 
@@ -3950,6 +4098,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetContextDatabaseSyncSourceSelectionResponse getContextDatabaseSyncSourceSelection(GetContextDatabaseSyncSourceSelectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getContextDatabaseSyncSourceSelectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the context database usage (invocation count, token consumption, and storage usage) of the caller account within a UTC time window, excluding any amounts. If WorkspaceId is provided, the query is at the workspace level. If omitted, the query aggregates all workspaces at the account (primary account UID) level. Returns all billing catalog items and fills zero for missing quantities, so the length of Items is fixed. The account identity is obtained from POP common parameters and cannot be specified by input parameters.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the context database usage of the caller account within a specified time range. If WorkspaceId is specified, queries a single workspace. If omitted, aggregates all workspaces under the account. Returns fixed metering items with their units and quantities, filling zero for items with no data. This operation does not return a separate credit amount field. To query amounts, call ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummary.</p>
+     * 
+     * @param request GetContextDatabaseUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContextDatabaseUsageResponse
+     */
+    public GetContextDatabaseUsageResponse getContextDatabaseUsageWithOptions(GetContextDatabaseUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContextDatabaseUsage"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContextDatabaseUsageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the context database usage (invocation count, token consumption, and storage usage) of the caller account within a UTC time window, excluding any amounts. If WorkspaceId is provided, the query is at the workspace level. If omitted, the query aggregates all workspaces at the account (primary account UID) level. Returns all billing catalog items and fills zero for missing quantities, so the length of Items is fixed. The account identity is obtained from POP common parameters and cannot be specified by input parameters.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the context database usage of the caller account within a specified time range. If WorkspaceId is specified, queries a single workspace. If omitted, aggregates all workspaces under the account. Returns fixed metering items with their units and quantities, filling zero for items with no data. This operation does not return a separate credit amount field. To query amounts, call ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummary.</p>
+     * 
+     * @param request GetContextDatabaseUsageRequest
+     * @return GetContextDatabaseUsageResponse
+     */
+    public GetContextDatabaseUsageResponse getContextDatabaseUsage(GetContextDatabaseUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContextDatabaseUsageWithOptions(request, runtime);
     }
 
     /**
@@ -4576,6 +4782,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListContextDatabaseApiKeysResponse listContextDatabaseApiKeys(ListContextDatabaseApiKeysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listContextDatabaseApiKeysWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the credit consumption details of the caller account within a specified UTC time range in a paginated manner. Each record corresponds to a metered read or write request for a knowledge base or memory base, or a write operation for a knowledge base. The credit amount is frozen at the time of metering and does not change afterward. By default, the records are sorted in descending order of request time, and can be sorted by credit amount. Sorting only changes the order within the page and does not change the total count or the record set. If WorkspaceId is provided, paged query is at the workspace dimension, verifying ownership, and locked workspaces can still be queried. If omitted, paged query aggregates all workspaces under the account dimension, identified by the primary account UID. Storage billing items do not consume credits and do not appear in the details. The credit amount is a decimal string, where 1 credit equals 1 CNY, with up to 6 decimal places. Records that cannot be priced are returned as null and are not included in the aggregated amount.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paging query for the credit consumption of the caller account within a specified time range, where each result corresponds to a metering record. You can query a single workspace or all workspaces under the account, excluding storage items that do not consume credits. By default, the results are in descending order of request time, but sorting by credit amount is supported. Metering records are written asynchronously, so recent usage may not be displayed. To view time trends, invoke <code>GetContextDatabaseCreditUsageSummary</code>.</p>
+     * 
+     * @param request ListContextDatabaseCreditUsageRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseCreditUsageRecordsResponse
+     */
+    public ListContextDatabaseCreditUsageRecordsResponse listContextDatabaseCreditUsageRecordsWithOptions(ListContextDatabaseCreditUsageRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.item)) {
+            query.put("Item", request.item);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subItem)) {
+            query.put("SubItem", request.subItem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseCreditUsageRecords"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseCreditUsageRecordsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the credit consumption details of the caller account within a specified UTC time range in a paginated manner. Each record corresponds to a metered read or write request for a knowledge base or memory base, or a write operation for a knowledge base. The credit amount is frozen at the time of metering and does not change afterward. By default, the records are sorted in descending order of request time, and can be sorted by credit amount. Sorting only changes the order within the page and does not change the total count or the record set. If WorkspaceId is provided, paged query is at the workspace dimension, verifying ownership, and locked workspaces can still be queried. If omitted, paged query aggregates all workspaces under the account dimension, identified by the primary account UID. Storage billing items do not consume credits and do not appear in the details. The credit amount is a decimal string, where 1 credit equals 1 CNY, with up to 6 decimal places. Records that cannot be priced are returned as null and are not included in the aggregated amount.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paging query for the credit consumption of the caller account within a specified time range, where each result corresponds to a metering record. You can query a single workspace or all workspaces under the account, excluding storage items that do not consume credits. By default, the results are in descending order of request time, but sorting by credit amount is supported. Metering records are written asynchronously, so recent usage may not be displayed. To view time trends, invoke <code>GetContextDatabaseCreditUsageSummary</code>.</p>
+     * 
+     * @param request ListContextDatabaseCreditUsageRecordsRequest
+     * @return ListContextDatabaseCreditUsageRecordsResponse
+     */
+    public ListContextDatabaseCreditUsageRecordsResponse listContextDatabaseCreditUsageRecords(ListContextDatabaseCreditUsageRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseCreditUsageRecordsWithOptions(request, runtime);
     }
 
     /**
