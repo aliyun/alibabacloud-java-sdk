@@ -20,7 +20,7 @@ public class GetSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class GetSessionResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The ID of the latest run.</p>
+         * <p>The ID of the last run.</p>
          * 
          * <strong>example:</strong>
          * <p>run_example_001</p>
@@ -77,7 +77,7 @@ public class GetSessionResponseBody extends TeaModel {
         public String lastRunId;
 
         /**
-         * <p>The status of the latest run. Valid values: <code>PENDING</code> (Pending), <code>RUNNING</code> (Running), <code>WAITING_USER</code> (Waiting for interrupt handling), <code>COMPLETED</code> (Completed), <code>FAILED</code> (Failed), <code>CANCELLED</code> (Cancelled), and <code>REJECTED</code> (Rejected).</p>
+         * <p>The status of the last run. Valid values: <code>PENDING</code> (pending), <code>RUNNING</code> (running), <code>WAITING_USER</code> (waiting for interrupt handling), <code>COMPLETED</code> (completed), <code>FAILED</code> (failed), <code>CANCELLED</code> (cancelled), and <code>REJECTED</code> (rejected).</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -104,7 +104,7 @@ public class GetSessionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The status of the session. Valid values: <code>IDLE</code> (Idle), <code>ACTIVE</code> (Running), <code>WAITING_USER_INPUT</code> (Waiting for user input), <code>WAITING_APPROVAL</code> (Waiting for user confirmation), <code>WAITING_OUT_OF_BAND_APPROVAL</code> (Waiting for out-of-band approval), and <code>CLOSED</code> (Closed).</p>
+         * <p>The session status. Valid values: <code>IDLE</code> (idle), <code>ACTIVE</code> (running), <code>WAITING_USER_INPUT</code> (waiting for user input), <code>WAITING_APPROVAL</code> (waiting for user confirmation), <code>WAITING_OUT_OF_BAND_APPROVAL</code> (waiting for out-of-band approval), and <code>CLOSED</code> (closed).</p>
          * 
          * <strong>example:</strong>
          * <p>IDLE</p>
@@ -120,6 +120,15 @@ public class GetSessionResponseBody extends TeaModel {
          */
         @NameInMap("title")
         public String title;
+
+        /**
+         * <p>Indicates whether session UI enhancement is enabled. Valid values: true (enabled) and false (disabled). This feature is supported only for common sessions. If this field is not returned, the feature is considered disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("uiEnabled")
+        public Boolean uiEnabled;
 
         /**
          * <p>The time when the session was last updated, in ISO 8601 format.</p>
@@ -189,6 +198,14 @@ public class GetSessionResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public GetSessionResponseBodyData setUiEnabled(Boolean uiEnabled) {
+            this.uiEnabled = uiEnabled;
+            return this;
+        }
+        public Boolean getUiEnabled() {
+            return this.uiEnabled;
         }
 
         public GetSessionResponseBodyData setUpdatedAt(String updatedAt) {

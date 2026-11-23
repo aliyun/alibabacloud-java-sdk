@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSessionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to pin the session. If this field is not specified, the pinned status remains unchanged.</p>
+     * <p>Specifies whether to pin the session. If this parameter is not specified, the pinned status remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,13 +14,19 @@ public class UpdateSessionRequest extends TeaModel {
     public Boolean pinned;
 
     /**
-     * <p>The new title of the session. Leave this field empty if no update is required.</p>
+     * <p>The updated session title. You can leave this parameter empty if no update is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Updated inspection session</p>
      */
     @NameInMap("title")
     public String title;
+
+    /**
+     * <p>Specifies whether to enable session UI enhancement. This feature is supported only for common sessions.</p>
+     */
+    @NameInMap("uiEnabled")
+    public Boolean uiEnabled;
 
     public static UpdateSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSessionRequest self = new UpdateSessionRequest();
@@ -41,6 +47,14 @@ public class UpdateSessionRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public UpdateSessionRequest setUiEnabled(Boolean uiEnabled) {
+        this.uiEnabled = uiEnabled;
+        return this;
+    }
+    public Boolean getUiEnabled() {
+        return this.uiEnabled;
     }
 
 }

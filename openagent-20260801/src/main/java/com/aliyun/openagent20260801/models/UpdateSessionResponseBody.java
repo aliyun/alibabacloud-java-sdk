@@ -59,7 +59,7 @@ public class UpdateSessionResponseBody extends TeaModel {
 
     public static class UpdateSessionResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the session was created, in RFC 3339 format.</p>
+         * <p>The time when the session was created. The time is in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -68,7 +68,7 @@ public class UpdateSessionResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The ID of the most recent run.</p>
+         * <p>The ID of the last run.</p>
          * 
          * <strong>example:</strong>
          * <p>run_example_001</p>
@@ -77,16 +77,7 @@ public class UpdateSessionResponseBody extends TeaModel {
         public String lastRunId;
 
         /**
-         * <p>The status of the most recent run. Valid values:</p>
-         * <ul>
-         * <li><code>PENDING</code>: pending</li>
-         * <li><code>RUNNING</code>: running</li>
-         * <li><code>WAITING_USER</code>: waiting for interrupt handling</li>
-         * <li><code>COMPLETED</code>: completed</li>
-         * <li><code>FAILED</code>: failed</li>
-         * <li><code>CANCELLED</code>: canceled</li>
-         * <li><code>REJECTED</code>: rejected</li>
-         * </ul>
+         * <p>The status of the last run. Valid values: <code>PENDING</code> (pending), <code>RUNNING</code> (running), <code>WAITING_USER</code> (waiting for interrupt handling), <code>COMPLETED</code> (completed), <code>FAILED</code> (failed), <code>CANCELLED</code> (cancelled), and <code>REJECTED</code> (rejected).</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -113,15 +104,7 @@ public class UpdateSessionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The session status. Valid values:</p>
-         * <ul>
-         * <li><code>IDLE</code>: idle</li>
-         * <li><code>ACTIVE</code>: running</li>
-         * <li><code>WAITING_USER_INPUT</code>: waiting for user input</li>
-         * <li><code>WAITING_APPROVAL</code>: waiting for user confirmation</li>
-         * <li><code>WAITING_OUT_OF_BAND_APPROVAL</code>: waiting for out-of-band approval</li>
-         * <li><code>CLOSED</code>: closed</li>
-         * </ul>
+         * <p>The session status. Valid values: <code>IDLE</code> (idle), <code>ACTIVE</code> (running), <code>WAITING_USER_INPUT</code> (waiting for user input), <code>WAITING_APPROVAL</code> (waiting for user confirmation), <code>WAITING_OUT_OF_BAND_APPROVAL</code> (waiting for out-of-band approval), and <code>CLOSED</code> (closed).</p>
          * 
          * <strong>example:</strong>
          * <p>IDLE</p>
@@ -130,7 +113,7 @@ public class UpdateSessionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The title of the session.</p>
+         * <p>The session title.</p>
          * 
          * <strong>example:</strong>
          * <p>Cloud resource inspection example</p>
@@ -139,7 +122,16 @@ public class UpdateSessionResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The time when the session was last updated, in RFC 3339 format.</p>
+         * <p>Indicates whether session UI enhancement is enabled. A value of true indicates that the feature is enabled, and a value of false indicates that the feature is disabled. This feature is supported only for common sessions. If this field is not returned, the feature is considered disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("uiEnabled")
+        public Boolean uiEnabled;
+
+        /**
+         * <p>The time when the session was last updated. The time is in RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:01:00Z</p>
@@ -206,6 +198,14 @@ public class UpdateSessionResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public UpdateSessionResponseBodyData setUiEnabled(Boolean uiEnabled) {
+            this.uiEnabled = uiEnabled;
+            return this;
+        }
+        public Boolean getUiEnabled() {
+            return this.uiEnabled;
         }
 
         public UpdateSessionResponseBodyData setUpdatedAt(String updatedAt) {

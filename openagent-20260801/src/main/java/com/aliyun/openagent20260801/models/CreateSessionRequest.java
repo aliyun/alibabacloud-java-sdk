@@ -13,6 +13,12 @@ public class CreateSessionRequest extends TeaModel {
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>Specifies whether to enable session UI enhancement. Only common sessions support this feature.</p>
+     */
+    @NameInMap("uiEnabled")
+    public Boolean uiEnabled;
+
     public static CreateSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSessionRequest self = new CreateSessionRequest();
         return TeaModel.build(map, self);
@@ -24,6 +30,14 @@ public class CreateSessionRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public CreateSessionRequest setUiEnabled(Boolean uiEnabled) {
+        this.uiEnabled = uiEnabled;
+        return this;
+    }
+    public Boolean getUiEnabled() {
+        return this.uiEnabled;
     }
 
 }

@@ -20,7 +20,7 @@ public class ListSessionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. true indicates success.</p>
+     * <p>Indicates whether the request is successful. A value of true indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class ListSessionsResponseBody extends TeaModel {
         public String lastRunId;
 
         /**
-         * <p>The status of the most recent run. Valid values: <code>PENDING</code> (pending), <code>RUNNING</code> (running), <code>WAITING_USER</code> (waiting for user intervention), <code>COMPLETED</code> (completed), <code>FAILED</code> (failed), <code>CANCELLED</code> (cancelled), and <code>REJECTED</code> (rejected).</p>
+         * <p>The status of the most recent run. Valid values: <code>PENDING</code> (pending), <code>RUNNING</code> (running), <code>WAITING_USER</code> (waiting for interrupt handling), <code>COMPLETED</code> (completed), <code>FAILED</code> (failed), <code>CANCELLED</code> (cancelled), and <code>REJECTED</code> (rejected).</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -120,6 +120,15 @@ public class ListSessionsResponseBody extends TeaModel {
          */
         @NameInMap("title")
         public String title;
+
+        /**
+         * <p>Indicates whether session UI enhancement is enabled. A value of true indicates that the feature is enabled, and a value of false indicates that the feature is disabled. This feature is supported only for regular sessions. If this field is not returned, the feature is considered disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("uiEnabled")
+        public Boolean uiEnabled;
 
         /**
          * <p>The time when the session was last updated, in RFC 3339 format.</p>
@@ -189,6 +198,14 @@ public class ListSessionsResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public ListSessionsResponseBodyDataSessions setUiEnabled(Boolean uiEnabled) {
+            this.uiEnabled = uiEnabled;
+            return this;
+        }
+        public Boolean getUiEnabled() {
+            return this.uiEnabled;
         }
 
         public ListSessionsResponseBodyDataSessions setUpdatedAt(String updatedAt) {

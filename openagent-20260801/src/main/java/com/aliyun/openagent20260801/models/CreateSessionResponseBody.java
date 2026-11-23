@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSessionResponseBody extends TeaModel {
     /**
-     * <p>The session information of the created session.</p>
+     * <p>The created session information.</p>
      */
     @NameInMap("data")
     public CreateSessionResponseBodyData data;
@@ -86,13 +86,22 @@ public class CreateSessionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The session status. The value is fixed to <code>IDLE</code> upon successful creation.</p>
+         * <p>The session status. The value is fixed to <code>IDLE</code> when the session is successfully created.</p>
          * 
          * <strong>example:</strong>
          * <p>IDLE</p>
          */
         @NameInMap("status")
         public String status;
+
+        /**
+         * <p>Indicates whether session UI enhancement is enabled. A value of true indicates that it is enabled, and a value of false indicates that it is disabled. Only common sessions support this feature. If this field is not returned, it is considered disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("uiEnabled")
+        public Boolean uiEnabled;
 
         /**
          * <p>The time when the session was last updated, in ISO 8601 format.</p>
@@ -138,6 +147,14 @@ public class CreateSessionResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public CreateSessionResponseBodyData setUiEnabled(Boolean uiEnabled) {
+            this.uiEnabled = uiEnabled;
+            return this;
+        }
+        public Boolean getUiEnabled() {
+            return this.uiEnabled;
         }
 
         public CreateSessionResponseBodyData setUpdatedAt(String updatedAt) {

@@ -93,7 +93,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a session and returns the session information. Use the returned sessionId for subsequent operations such as sending messages, querying records, and updating the session.</p>
+     * <p>Creates a session and returns the session information. Use the returned sessionId when sending messages, querying records, and updating the session.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a session.</p>
@@ -108,6 +108,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {
             body.put("title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uiEnabled)) {
+            body.put("uiEnabled", request.uiEnabled);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -139,7 +143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a session and returns the session information. Use the returned sessionId for subsequent operations such as sending messages, querying records, and updating the session.</p>
+     * <p>Creates a session and returns the session information. Use the returned sessionId when sending messages, querying records, and updating the session.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a session.</p>
@@ -305,7 +309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the title, status, pinned status, and the ID and status of the latest run of a specified session.</p>
+     * <p>Queries the title, status, and pinned status of a specified session, as well as the ID and status of its last run.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a session.</p>
@@ -336,7 +340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the title, status, pinned status, and the ID and status of the latest run of a specified session.</p>
+     * <p>Queries the title, status, and pinned status of a specified session, as well as the ID and status of its last run.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a session.</p>
@@ -413,7 +417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</p>
+     * <p>Performs a paging query for the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists sessions.</p>
@@ -454,7 +458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</p>
+     * <p>Performs a paging query for the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</p>
      * 
      * <b>summary</b> : 
      * <p>Lists sessions.</p>
@@ -605,10 +609,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</p>
+     * <p>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the title or pinned status of a session.</p>
+     * <p>Updates a session.</p>
      * 
      * @param request UpdateSessionRequest
      * @param headers UpdateSessionHeaders
@@ -624,6 +628,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {
             body.put("title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uiEnabled)) {
+            body.put("uiEnabled", request.uiEnabled);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -655,10 +663,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</p>
+     * <p>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the title or pinned status of a session.</p>
+     * <p>Updates a session.</p>
      * 
      * @param request UpdateSessionRequest
      * @return UpdateSessionResponse

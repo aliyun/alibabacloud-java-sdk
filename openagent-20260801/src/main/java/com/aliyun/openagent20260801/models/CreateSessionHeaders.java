@@ -8,7 +8,7 @@ public class CreateSessionHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The request idempotency key. Use the same value and the same business parameters when retrying the same request.</p>
+     * <p>The idempotency key of the request. Use the same value and the same business parameters when you retry the request.</p>
      * 
      * <strong>example:</strong>
      * <p>create-session-example-001</p>
