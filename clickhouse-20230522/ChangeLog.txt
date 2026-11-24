@@ -1,3 +1,8 @@
+2026-11-24 Version: 3.2.1
+- Update API RestartDBInstance: add request parameters ComputingGroupId.
+- Update API RestartDBInstance: add request parameters NodeList.
+
+
 2026-11-18 Version: 3.2.0
 - Support API ModifyLangfuseUserAllowOrgCreation.
 

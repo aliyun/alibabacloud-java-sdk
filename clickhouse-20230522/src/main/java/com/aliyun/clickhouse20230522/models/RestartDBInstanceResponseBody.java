@@ -45,7 +45,7 @@ public class RestartDBInstanceResponseBody extends TeaModel {
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cc-bp100p4q1g9z3****</p>
+         * <p>100001</p>
          */
         @NameInMap("DBInstanceID")
         public Long DBInstanceID;
@@ -54,7 +54,7 @@ public class RestartDBInstanceResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Enterprise edition cluster test</p>
+         * <p>Enterprise Edition cluster test</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;

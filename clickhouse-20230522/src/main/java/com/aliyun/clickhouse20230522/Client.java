@@ -3950,7 +3950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Restarts an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request RestartDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3959,8 +3959,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartDBInstanceResponse restartDBInstanceWithOptions(RestartDBInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computingGroupId)) {
+            query.put("ComputingGroupId", request.computingGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeList)) {
+            query.put("NodeList", request.nodeList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3986,7 +3994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Restarts an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request RestartDBInstanceRequest
      * @return RestartDBInstanceResponse
