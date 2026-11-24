@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class LicenseInstanceAppDTO extends TeaModel {
     /**
      * <p>appId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0d3f2a7c1b9e4f58</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>beginOn</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-02T03:04:05Z</p>
      */
     @NameInMap("BeginOn")
     public String beginOn;
 
     /**
      * <p>contractNo</p>
+     * 
+     * <strong>example:</strong>
+     * <p>782590648253664</p>
      */
     @NameInMap("ContractNo")
     public String contractNo;
 
     /**
      * <p>creationTime</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-02T03:04:05Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>expiredOn</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2027-01-02T03:04:05Z</p>
      */
     @NameInMap("ExpiredOn")
     public String expiredOn;
 
     /**
      * <p>instanceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsn_9f2a1c7b3d8e4f56</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>itemId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3ba9c7d21f4e6a80</p>
      */
     @NameInMap("ItemId")
     public String itemId;
@@ -54,18 +75,27 @@ public class LicenseInstanceAppDTO extends TeaModel {
 
     /**
      * <p>modificationTime</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-02T03:04:05Z</p>
      */
     @NameInMap("ModificationTime")
     public String modificationTime;
 
     /**
      * <p>status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>userId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2544469002080159</p>
      */
     @NameInMap("UserId")
     public Long userId;
@@ -166,12 +196,18 @@ public class LicenseInstanceAppDTO extends TeaModel {
     public static class LicenseInstanceAppDTOLicenseConfigs extends TeaModel {
         /**
          * <p>businessType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Player</p>
          */
         @NameInMap("BusinessType")
         public String businessType;
 
         /**
          * <p>featureIds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4326</p>
          */
         @NameInMap("FeatureIds")
         public String featureIds;
@@ -184,30 +220,45 @@ public class LicenseInstanceAppDTO extends TeaModel {
 
         /**
          * <p>sdkId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("SdkId")
         public Integer sdkId;
 
         /**
          * <p>sdkName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VOD Player SDK</p>
          */
         @NameInMap("SdkName")
         public String sdkName;
 
         /**
          * <p>subscription</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard_Bundling</p>
          */
         @NameInMap("Subscription")
         public String subscription;
 
         /**
          * <p>subscriptionImp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("SubscriptionImp")
         public String subscriptionImp;
 
         /**
          * <p>subscriptionPkg</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard_Bundling</p>
          */
         @NameInMap("SubscriptionPkg")
         public String subscriptionPkg;

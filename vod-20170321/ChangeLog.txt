@@ -1,3 +1,10 @@
+2026-11-24 Version: 3.12.0
+- Support API AddManifestEditTemplate.
+- Support API DeleteManifestEditTemplate.
+- Support API ListManifestEditTemplate.
+- Support API SubmitEditMediaManifestJob.
+
+
 2026-11-18 Version: 3.11.2
 - Update API SubmitWorkflowJob: add request parameters ExtraInputs.
 

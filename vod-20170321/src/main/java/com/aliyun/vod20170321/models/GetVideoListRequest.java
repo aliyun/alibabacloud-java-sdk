@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetVideoListRequest extends TeaModel {
     /**
-     * <p>The category ID. You can obtain the category ID by using the following methods:</p>
+     * <p>The category ID. You can obtain the category ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Management Configuration</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
-     * <li>Obtain the value of CateId from the response when you call the <a href="https://help.aliyun.com/document_detail/56401.html">CreateCategory</a> operation.</li>
-     * <li>Obtain the value of CateId from the response when you call the <a href="https://help.aliyun.com/document_detail/56406.html">GetCategories</a> operation.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Configuration</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/56401.html">Create a category</a> operation to create a category. The category ID is the value of the CateId response parameter.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/56406.html">Get categories and subcategories</a> operation to query categories. The category ID is the value of the CateId response parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class GetVideoListRequest extends TeaModel {
     public Long cateId;
 
     /**
-     * <p>The end of the time range to query based on CreationTime. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <p>The end time of the creation time, which must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:59:00Z</p>
@@ -28,7 +28,7 @@ public class GetVideoListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The current page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -46,7 +46,7 @@ public class GetVideoListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of custom IDs. Specify one or more custom IDs separated by commas (,). A maximum of 20 IDs are supported.</p>
+     * <p>The list of custom IDs. You can specify one or more custom IDs separated by commas (,). You can specify up to 20 custom IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>123-123,1234-1234</p>
@@ -55,10 +55,10 @@ public class GetVideoListRequest extends TeaModel {
     public String referenceIds;
 
     /**
-     * <p>The sorting rule of the results. Valid values:</p>
+     * <p>The sorting method of the query results. Valid values:</p>
      * <ul>
-     * <li><strong>CreationTime:Desc</strong> (default): sorted by creation time in descending order.</li>
-     * <li><strong>CreationTime:Asc</strong>: sorted by creation time in ascending order.</li>
+     * <li><strong>CreationTime:Desc</strong> (default): Sort by creation time in descending order.</li>
+     * <li><strong>CreationTime:Asc</strong>: Sort by creation time in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class GetVideoListRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The beginning of the time range to query based on CreationTime (creation time). Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <p>The start time of the creation time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>
@@ -77,19 +77,19 @@ public class GetVideoListRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The video status. You can specify multiple statuses. Separate multiple statuses with commas (,). Valid values:</p>
+     * <p>The video status. You can specify multiple statuses separated by commas (,). Valid values:</p>
      * <ul>
      * <li><strong>Uploading</strong>: The video is being uploaded.</li>
      * <li><strong>UploadFail</strong>: The video failed to be uploaded.</li>
-     * <li><strong>UploadSucc</strong>: The video has been uploaded.</li>
+     * <li><strong>UploadSucc</strong>: The video is uploaded.</li>
      * <li><strong>Transcoding</strong>: The video is being transcoded.</li>
      * <li><strong>TranscodeFail</strong>: The video failed to be transcoded.</li>
      * <li><strong>Checking</strong>: The video is being reviewed.</li>
      * <li><strong>Blocked</strong>: The video is blocked.</li>
-     * <li><strong>Normal</strong>: The video is in a normal state.</li>
+     * <li><strong>Normal</strong>: The video is normal.</li>
      * <li><strong>ProduceFail</strong>: The video failed to be produced.</li>
      * </ul>
-     * <p>For more information about video statuses and related limits, see <a href="~~52839#section-p7c-jgy-070~~">Status: video status</a>.</p>
+     * <p>For more information about the definitions and limits of video statuses, refer to <a href="~~52839#section-p7c-jgy-070~~">Status: video status</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Uploading,Normal</p>

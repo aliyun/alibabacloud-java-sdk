@@ -8,7 +8,7 @@ public class AddCategoryRequest extends TeaModel {
      * <p>The category name.</p>
      * <ul>
      * <li>It can be up to 64 bytes in length.</li>
-     * <li>It is encoded in UTF-8.</li>
+     * <li>It must be encoded in UTF-8.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class AddCategoryRequest extends TeaModel {
 
     /**
      * <p>The ID of the parent category.</p>
-     * <p>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> &gt; <strong>Audio/Video/Image Categories</strong> or <strong>Short Video Material Categories</strong> to view the category ID.</p>
+     * <p>You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration management</strong> &gt; <strong>Media asset management configuration</strong> &gt; <strong>Category management</strong> &gt; <strong>Audio, video, and image categories</strong> or <strong>Short video material categories</strong> to view the category ID.</p>
      * <blockquote>
      * <ul>
      * <li>If you specify this parameter, a subcategory is created under the specified parent category. If you do not specify this parameter, a level-1 category is created.</li>

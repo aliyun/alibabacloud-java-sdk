@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMediaDistributionRequest extends TeaModel {
     /**
-     * <p>The end time of CreationTime. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC). The maximum time span between the start time and end time is six months.</p>
+     * <p>The end time of the creation time. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The maximum time span between the start time and end time is six months.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:59:00Z</p>
@@ -16,10 +16,10 @@ public class DescribeMediaDistributionRequest extends TeaModel {
     /**
      * <p>The statistical interval. Default value: day. Valid values:</p>
      * <ul>
-     * <li>hour: by hour. Statistics are collected based on the calendar hours within the specified time range.</li>
-     * <li>day: by day. Statistics are collected based on the calendar days within the specified time range.</li>
-     * <li>week: by week. Statistics are collected based on the calendar weeks within the specified time range.</li>
-     * <li>month: by month. Statistics are collected based on the calendar months within the specified time range.</li>
+     * <li>hour: Hour. Statistics are collected based on the natural hours of the start time and end time.</li>
+     * <li>day: Day. Statistics are collected based on the natural days of the start time and end time.</li>
+     * <li>week: Week. Statistics are collected based on the natural weeks of the start time and end time.</li>
+     * <li>month: Month. Statistics are collected based on the natural months of the start time and end time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeMediaDistributionRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The start time of CreationTime. Format: yyyy-MM-ddTHH:mm:ssZ (UTC). The maximum time span between the start time and end time is six months.</p>
+     * <p>The start time of the creation time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The maximum time span between the start time and end time is six months.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>
@@ -40,15 +40,15 @@ public class DescribeMediaDistributionRequest extends TeaModel {
     /**
      * <p>The storage class. Valid values:</p>
      * <ul>
-     * <li>Standard: standard storage.</li>
-     * <li>IA: Infrequent Access.</li>
+     * <li>Standard: Standard storage.</li>
+     * <li>IA: Infrequent access.</li>
      * <li>Archive: Archive storage.</li>
-     * <li>ColdArchive: Cold Archive storage.</li>
-     * <li>SourceIA: Infrequent Access for source files.</li>
+     * <li>ColdArchive: Cold archive storage.</li>
+     * <li>SourceIA: Infrequent access for source files.</li>
      * <li>SourceArchive: Archive storage for source files.</li>
-     * <li>SourceColdArchive: Cold Archive storage for source files.</li>
-     * <li>Changing: the media asset storage class is being changed.</li>
-     * <li>SourceChanging: the source file storage class is being changed.</li>
+     * <li>SourceColdArchive: Cold archive storage for source files.</li>
+     * <li>Changing: The storage type of the media asset is being changed.</li>
+     * <li>SourceChanging: The storage type of the source file is being changed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateCategoryRequest extends TeaModel {
     /**
-     * <p>The category ID. Only a single category ID can be specified. You can obtain the category ID by using the following methods:</p>
+     * <p>The category ID. You can specify only one category ID. You can obtain the category ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> &gt; <strong>Audio/Video/Image Category</strong> or <strong>Short Video Material Category</strong> to view the category ID.</li>
-     * <li>Obtain the category ID from the response of the <a href="~~AddCategory~~">AddCategory</a> operation when you create a category.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> &gt; <strong>Audio/Video and Image Categories</strong> or <strong>Short Video Material Categories</strong> to view the category ID.</li>
+     * <li>The category ID is returned when you call the <a href="~~AddCategory~~">AddCategory</a> operation to create a category.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

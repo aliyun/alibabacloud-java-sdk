@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AppInfoDTO extends TeaModel {
     /**
      * <p>The application name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vod-demo-app</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -25,42 +28,60 @@ public class AppInfoDTO extends TeaModel {
 
     /**
      * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-02T03:04:05Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-02 03:04:05</p>
      */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
     /**
      * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-02 03:04:05</p>
      */
     @NameInMap("GmtModified")
     public String gmtModified;
 
     /**
      * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3ba9c7d21f4e6a80</p>
      */
     @NameInMap("ItemId")
     public String itemId;
 
     /**
      * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-02T03:04:05Z</p>
      */
     @NameInMap("ModificationTime")
     public String modificationTime;
 
     /**
-     * <p>The list of platform information for the application.</p>
+     * <p>The list of platform information included in the application.</p>
      */
     @NameInMap("Platforms")
     public java.util.List<AppInfoDTOPlatforms> platforms;
 
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2544469002080159</p>
      */
     @NameInMap("UserId")
     public Long userId;
@@ -145,36 +166,51 @@ public class AppInfoDTO extends TeaModel {
     public static class AppInfoDTOPlatforms extends TeaModel {
         /**
          * <p>The platform ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ba9c7d21f4e6a81</p>
          */
         @NameInMap("ItemId")
         public String itemId;
 
         /**
-         * <p>The list of licenses.</p>
+         * <p>The authorization list.</p>
          */
         @NameInMap("LicenseItemIds")
         public java.util.List<String> licenseItemIds;
 
         /**
          * <p>The package name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.example.vodapp</p>
          */
         @NameInMap("PkgName")
         public String pkgName;
 
         /**
          * <p>The package signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8e610rzjg613h0u58v8473d029h7</p>
          */
         @NameInMap("PkgSignature")
         public String pkgSignature;
 
         /**
          * <p>The platform type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PlatformType")
         public Long platformType;
 
         /**
          * <p>The platform type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Type")
         public Long type;

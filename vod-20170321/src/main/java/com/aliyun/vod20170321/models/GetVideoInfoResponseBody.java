@@ -70,9 +70,9 @@ public class GetVideoInfoResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The final review result of the audio or video file. Valid values:</p>
+         * <p>The final moderation result of the audio or video file. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: Approved.</li>
+         * <li><strong>Normal</strong>: Passed.</li>
          * <li><strong>Blocked</strong>: Blocked.</li>
          * </ul>
          * 
@@ -110,7 +110,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the audio or video file was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The time when the audio or video file was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-14T09:15:50Z</p>
@@ -121,7 +121,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
         /**
          * <p>The custom media asset information.</p>
          * <blockquote>
-         * <p>This parameter is deprecated. The API no longer returns this parameter.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and is no longer returned when you call this operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -140,10 +140,10 @@ public class GetVideoInfoResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The status of the offline download switch. After the offline download feature is enabled, mobile users can cache videos to their local devices for offline viewing by using ApsaraVideo Player. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Offline download</a>. Valid values:</p>
+         * <p>The status of the offline download switch. After the offline download feature is enabled, mobile users can use ApsaraVideo Player to cache videos to their local devices for playback. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Offline download</a>. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enabled. Offline download is allowed.</li>
-         * <li><strong>off</strong>: disabled. Offline download is not allowed.</li>
+         * <li><strong>on</strong>: Enabled. Offline download is allowed.</li>
+         * <li><strong>off</strong>: Disabled. Offline download is prohibited.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
         public Float duration;
 
         /**
-         * <p>The time when the audio or video file was last updated. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The last time when the audio or video file was updated. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-14T10:15:50Z</p>
@@ -171,7 +171,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
         public String modificationTime;
 
         /**
-         * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The length is 6 to 64 characters. The ID is unique at the user level.</p>
+         * <p>The custom ID. The ID must be 6 to 64 characters in length and can contain only lowercase letters, uppercase letters, digits, hyphens, and underscores. The ID must be unique per user.</p>
          * 
          * <strong>example:</strong>
          * <p>123-123</p>
@@ -224,7 +224,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
         public GetVideoInfoResponseBodyVideoSnapshots snapshots;
 
         /**
-         * <p>The status of the audio or video file. For more information about the operations that can be performed on audio and video files in each status and the limits, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: audio and video status</a>. Valid values:</p>
+         * <p>The status of the audio or video file. For more information about the operations that can be performed and the limits in each status, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: Audio and video status</a>. Valid values:</p>
          * <ul>
          * <li><strong>Uploading</strong>: The file is being uploaded.</li>
          * <li><strong>UploadFail</strong>: The file failed to be uploaded.</li>
@@ -232,7 +232,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
          * <li><strong>Transcoding</strong>: The file is being transcoded.</li>
          * <li><strong>TranscodeFail</strong>: The file failed to be transcoded.</li>
          * <li><strong>Blocked</strong>: The file is blocked.</li>
-         * <li><strong>Normal</strong>: The file is in a normal state.</li>
+         * <li><strong>Normal</strong>: The file is normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,13 +244,13 @@ public class GetVideoInfoResponseBody extends TeaModel {
         /**
          * <p>The storage class of the media asset. Valid values:</p>
          * <ul>
-         * <li><strong>Standard</strong>: standard.</li>
-         * <li><strong>IA</strong>: Infrequent Access (media asset).</li>
-         * <li><strong>Archive</strong>: Archive (media asset).</li>
-         * <li><strong>ColdArchive</strong>: Cold Archive (media asset).</li>
-         * <li><strong>SourceIA</strong>: Infrequent Access (source file).</li>
-         * <li><strong>SourceArchive</strong>: Archive (source file).</li>
-         * <li><strong>SourceColdArchive</strong>: Cold Archive (source file).</li>
+         * <li><strong>Standard</strong>: Standard.</li>
+         * <li><strong>IA</strong>: Infrequent Access for media assets.</li>
+         * <li><strong>Archive</strong>: Archive for media assets.</li>
+         * <li><strong>ColdArchive</strong>: Cold Archive for media assets.</li>
+         * <li><strong>SourceIA</strong>: Infrequent Access for source files.</li>
+         * <li><strong>SourceArchive</strong>: Archive for source files.</li>
+         * <li><strong>SourceColdArchive</strong>: Cold Archive for source files.</li>
          * <li><strong>Changing</strong>: The storage class of the media asset is being changed.</li>
          * <li><strong>SourceChanging</strong>: The storage class of the source file is being changed.</li>
          * </ul>
@@ -280,7 +280,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The transcoding template group ID.</p>
+         * <p>The ID of the transcoding template group.</p>
          * 
          * <strong>example:</strong>
          * <p>9ae2af636ca64835b0c10412f448****</p>

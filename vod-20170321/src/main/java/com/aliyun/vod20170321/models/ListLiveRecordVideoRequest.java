@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveRecordVideoRequest extends TeaModel {
     /**
-     * <p>The name of the application used during recording.</p>
+     * <p>The application name used for recording.</p>
      * 
      * <strong>example:</strong>
      * <p>testApp</p>
@@ -14,7 +14,7 @@ public class ListLiveRecordVideoRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The domain name used during recording.</p>
+     * <p>The live streaming domain name used for recording.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -23,7 +23,7 @@ public class ListLiveRecordVideoRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end time of the recording operation (when the live stream recording begins). The end time must be later than the start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>The end time of the recording operation. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T13:00:00Z</p>
@@ -50,10 +50,10 @@ public class ListLiveRecordVideoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sorting method for results. Valid values:</p>
+     * <p>The sorting method for the results. Valid values:</p>
      * <ul>
-     * <li><strong>CreationTime:Desc</strong> (default): sorted by creation time in descending order.</li>
-     * <li><strong>CreationTime:Asc</strong>: sorted by creation time in ascending order.</li>
+     * <li><strong>CreationTime:Desc</strong> (default): Sorts the results by creation time in descending order.</li>
+     * <li><strong>CreationTime:Asc</strong>: Sorts the results by creation time in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListLiveRecordVideoRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The start time of the recording operation (when the live stream recording begins). Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>The start time of the recording operation, which is when the live program recording starts. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>
@@ -72,7 +72,7 @@ public class ListLiveRecordVideoRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the live stream used during recording.</p>
+     * <p>The name of the live stream used for recording.</p>
      * 
      * <strong>example:</strong>
      * <p>live-test</p>

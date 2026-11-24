@@ -355,9 +355,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
     public static class GetPlayInfoResponseBodyVideoBase extends TeaModel {
         /**
-         * <p>The URL of the audio or video thumbnail.</p>
+         * <p>The URL of the thumbnail for the audio or video file.</p>
          * <blockquote>
-         * <p>If you need to obtain the thumbnail URL in real time after a video is uploaded, you can configure VOD callbacks. For more information, refer to <a href="https://help.aliyun.com/document_detail/67214.html">HTTP callbacks</a> and <a href="https://help.aliyun.com/document_detail/57337.html">Snapshot completion event</a>.</p>
+         * <p>If you need to obtain the thumbnail URL in real time after a video is uploaded, you can configure an ApsaraVideo VOD callback. For more information, refer to <a href="https://help.aliyun.com/document_detail/67214.html">HTTP callbacks</a> and <a href="https://help.aliyun.com/document_detail/57337.html">Video snapshot completion event</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -367,7 +367,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the audio or video file was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-06-26T06:38:48Z</p>
@@ -407,7 +407,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String mediaType;
 
         /**
-         * <p>The status of the audio or video file. For more information about the valid values and descriptions, refer to <a href="~~52839#title-vqg-8cz-7p8~~">Status: Audio and video status</a>.</p>
+         * <p>The status of the audio or video file. For more information about the valid values and descriptions, refer to <a href="~~52839#title-vqg-8cz-7p8~~">Status: media status</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -416,17 +416,17 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage class of the media asset. Valid values:</p>
+         * <p>The media storage type. Valid values:</p>
          * <ul>
-         * <li><strong>Standard</strong>: Standard.</li>
-         * <li><strong>IA</strong>: Infrequent Access.</li>
-         * <li><strong>Archive</strong>: Archive.</li>
-         * <li><strong>ColdArchive</strong>: Cold Archive.</li>
-         * <li><strong>SourceIA</strong>: Infrequent Access for mezzanine files.</li>
-         * <li><strong>SourceArchive</strong>: Archive for mezzanine files.</li>
-         * <li><strong>SourceColdArchive</strong>: Cold Archive for mezzanine files.</li>
-         * <li><strong>Changing</strong>: The storage class of the media asset is being changed.</li>
-         * <li><strong>SourceChanging</strong>: The storage class of the mezzanine file is being changed.</li>
+         * <li><strong>Standard</strong>: standard.</li>
+         * <li><strong>IA</strong>: infrequent access for media assets.</li>
+         * <li><strong>Archive</strong>: archive for media assets.</li>
+         * <li><strong>ColdArchive</strong>: cold archive for media assets.</li>
+         * <li><strong>SourceIA</strong>: infrequent access for mezzanine files.</li>
+         * <li><strong>SourceArchive</strong>: archive for mezzanine files.</li>
+         * <li><strong>SourceColdArchive</strong>: cold archive for mezzanine files.</li>
+         * <li><strong>Changing</strong>: the storage type of the media asset is being changed.</li>
+         * <li><strong>SourceChanging</strong>: the storage type of the mezzanine file is being changed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -439,7 +439,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
          * <p>The title of the audio or video file.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud VOD</p>
+         * <p>ApsaraVideo VOD</p>
          */
         @NameInMap("Title")
         public String title;
