@@ -883,10 +883,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Before you begin</h2>
-     * <p>This section describes the prerequisites: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</p>
+     * <p>The Before you begin section specifies the following: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</p>
      * 
      * <b>summary</b> : 
-     * <p>Mounts a specified Polarlakebase instance to a PolarDB application.</p>
+     * <p>Mounts a specified PolarLakebase instance to a PolarDB application.</p>
      * 
      * @param request AttachApplicationPolarFSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -897,6 +897,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
             query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.containerMountPath)) {
+            query.put("ContainerMountPath", request.containerMountPath);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.polarFSAccessKeyId)) {
@@ -931,10 +935,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Before you begin</h2>
-     * <p>This section describes the prerequisites: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</p>
+     * <p>The Before you begin section specifies the following: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</p>
      * 
      * <b>summary</b> : 
-     * <p>Mounts a specified Polarlakebase instance to a PolarDB application.</p>
+     * <p>Mounts a specified PolarLakebase instance to a PolarDB application.</p>
      * 
      * @param request AttachApplicationPolarFSRequest
      * @return AttachApplicationPolarFSResponse
@@ -13627,6 +13631,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointId)) {
+            query.put("EndpointId", request.endpointId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
             query.put("Interval", request.interval);
         }
@@ -13983,10 +13991,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</p>
+     * <p>This API operation queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of the specified PolarDB instance application.</p>
+     * <p>Queries the details of a specified PolarDB application.</p>
      * 
      * @param request DescribeApplicationAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14018,10 +14026,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</p>
+     * <p>This API operation queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of the specified PolarDB instance application.</p>
+     * <p>Queries the details of a specified PolarDB application.</p>
      * 
      * @param request DescribeApplicationAttributeRequest
      * @return DescribeApplicationAttributeResponse
@@ -35638,6 +35646,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
             query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentTypes)) {
+            query.put("ComponentTypes", request.componentTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupNames)) {
+            query.put("GroupNames", request.groupNames);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.operation)) {

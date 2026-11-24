@@ -35,7 +35,7 @@ public class DescribeAgenticDBPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and in UTC.</p>
+     * <p>The start time of the query. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-09-23T01:00Z</p>
@@ -141,6 +141,9 @@ public class DescribeAgenticDBPerformanceResponseBody extends TeaModel {
         @NameInMap("BranchId")
         public String branchId;
 
+        @NameInMap("EndpointId")
+        public String endpointId;
+
         @NameInMap("Measurement")
         public String measurement;
 
@@ -161,6 +164,14 @@ public class DescribeAgenticDBPerformanceResponseBody extends TeaModel {
         }
         public String getBranchId() {
             return this.branchId;
+        }
+
+        public DescribeAgenticDBPerformanceResponseBodyPerformanceKeysPerformanceKeys setEndpointId(String endpointId) {
+            this.endpointId = endpointId;
+            return this;
+        }
+        public String getEndpointId() {
+            return this.endpointId;
         }
 
         public DescribeAgenticDBPerformanceResponseBodyPerformanceKeysPerformanceKeys setMeasurement(String measurement) {

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBPerformanceRequest extends TeaModel {
     /**
-     * <p>The statistical method for alerts. Valid values for different monitoring items:</p>
+     * <p>The alert aggregation method. Valid values vary by metric:</p>
      * <ul>
      * <li>Value: The value of the HTTP status code.</li>
      * <li>Average: The average HTTP wait time.</li>
-     * <li>Value: The value of the TELNET status code.</li>
-     * <li>TelnetLatency: The average TELNET wait time.</li>
-     * <li>Average: The average PING packet loss rate.</li>
+     * <li>Value: The value of the Telnet status code.</li>
+     * <li>TelnetLatency: The average Telnet wait time.</li>
+     * <li>Average: The average ping packet loss rate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeAgenticDBPerformanceRequest extends TeaModel {
     public Boolean aggregate;
 
     /**
-     * <p>The anchor branch ID. If this parameter is not specified, the main branch of the project is used by default.</p>
+     * <p>The anchor branch ID. If you do not specify this parameter, the main branch of the project is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>br-7g8h9i0j1k2l</p>
@@ -50,7 +50,16 @@ public class DescribeAgenticDBPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The data granularity of performance data. Valid values:</p>
+     * <p>The endpoint ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-3m4n5o6p7q8r</p>
+     */
+    @NameInMap("EndpointId")
+    public String endpointId;
+
+    /**
+     * <p>The granularity of performance data. Valid values:</p>
      * <ul>
      * <li>5</li>
      * <li>30</li>
@@ -124,6 +133,14 @@ public class DescribeAgenticDBPerformanceRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeAgenticDBPerformanceRequest setEndpointId(String endpointId) {
+        this.endpointId = endpointId;
+        return this;
+    }
+    public String getEndpointId() {
+        return this.endpointId;
     }
 
     public DescribeAgenticDBPerformanceRequest setInterval(String interval) {

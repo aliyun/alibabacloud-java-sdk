@@ -1,3 +1,18 @@
+2026-11-24 Version: 9.4.3
+- Update API AttachApplicationPolarFS: add request parameters ContainerMountPath.
+- Update API AttachApplicationPolarFS: add response parameters Body.ContainerMountPath.
+- Update API DescribeAgenticDBPerformance: add request parameters EndpointId.
+- Update API DescribeAgenticDBPerformance: add response parameters Body.PerformanceKeys.$.EndpointId.
+- Update API DescribeApplicationAttribute: add response parameters Body.HeadSchedulingMode.
+- Update API DescribeApplicationAttribute: add response parameters Body.MonitorCategory.
+- Update API DescribeApplicationAttribute: add response parameters Body.MonitorRegionId.
+- Update API DescribeApplicationAttribute: add response parameters Body.PrometheusVirtualInstanceId.
+- Update API DescribeApplicationAttribute: add response parameters Body.Storages.$.ContainerMountPath.
+- Update API OperateApplication: add request parameters ComponentTypes.
+- Update API OperateApplication: add request parameters GroupNames.
+- Update API OperateApplication: add response parameters Body.TaskId.
+
+
 2026-11-24 Version: 9.4.2
 - Update API CreateCostRule: add request parameters BypassQuotaCheck.
 - Update API CreateCostRule: add request parameters InputTokenTier.

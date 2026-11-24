@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolarFsRequest extends TeaModel {
     /**
-     * <p>The acceleration space size. Unit: GB. The value must be no less than 5000 and must be a multiple of 1000. This parameter is required when acceleration is enabled for the basic edition.</p>
+     * <p>The acceleration space size. Unit: GB. The value must be no less than 5000 and must be a multiple of 1000. This parameter is required when acceleration is enabled for the Basic Edition.</p>
      * 
      * <strong>example:</strong>
      * <p>5000</p>
@@ -40,7 +40,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public String accelerateType;
 
     /**
-     * <p>The list of authorized accounts for the cold storage edition instance. Separate multiple accounts with commas (<code>,</code>).</p>
+     * <p>The list of authorized accounts for the Cold Storage Edition instance. Separate multiple accounts with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>128***********，198***********</p>
@@ -56,7 +56,7 @@ public class CreatePolarFsRequest extends TeaModel {
      * </ul>
      * <p>Default value: <strong>false</strong>.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
+     * <p>This parameter takes effect only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The edition. Valid values: basic (Basic Edition, default), high_performance (High-performance Edition), and cold (Cold Storage Edition). For the basic edition, you must specify the AccelerateSwitch and AccelerateStorageSize parameters. For the high_performance edition, you must specify the StorageType parameter (essdpl0 or essdpl1). For the cold edition, the StorageType parameter (local_redundancy or city_redundancy) is optional.</p>
+     * <p>The edition. Valid values: basic (Basic Edition, default), high_performance (High-performance Edition), and cold (Cold Storage Edition). For the Basic Edition, you must specify AccelerateSwitch and AccelerateStorageSize. For the High-performance Edition, you must specify StorageType (essdpl0 or essdpl1). For the Cold Storage Edition, StorageType (local_redundancy or city_redundancy) is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>basic</p>
@@ -114,7 +114,7 @@ public class CreatePolarFsRequest extends TeaModel {
     /**
      * <p>The bucket and corresponding path information.</p>
      * <blockquote>
-     * <p>This parameter is required for transparent acceleration scenarios.</p>
+     * <p>This parameter is required for transparent acceleration.</p>
      * </blockquote>
      */
     @NameInMap("CustomBucketPathList")
@@ -170,10 +170,10 @@ public class CreatePolarFsRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>If the billing method is <strong>Prepaid</strong>, this is a required pass parameter. Specifies whether the subscription cluster is billed by year or by month. </p>
+     * <p>The subscription period. This parameter is required when PayType is set to <strong>Prepaid</strong>. Specifies whether the subscription cluster is billed on a yearly or monthly basis. </p>
      * <ul>
-     * <li><strong>Year</strong>: year. If you select subscription, the unit is year.</li>
-     * <li><strong>Month</strong>: month. If you select subscription, the unit is month.</li>
+     * <li><strong>Year</strong>: yearly.</li>
+     * <li><strong>Month</strong>: monthly.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public Long storageSpace;
 
     /**
-     * <p>The storage type. For the high_performance edition, use lowercase essdpl0 or essdpl1. For the cold edition, use local_redundancy or city_redundancy. Select the value based on the edition. The value is case-sensitive.</p>
+     * <p>The storage type. For high_performance, use lowercase essdpl0 or essdpl1. For cold, use local_redundancy or city_redundancy. Select the value based on the edition. The value is case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>local_redundancy</p>
@@ -232,10 +232,10 @@ public class CreatePolarFsRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The subscription duration. This parameter is required when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
+     * <p>The subscription duration. This parameter is required when PayType is set to <strong>Prepaid</strong>.</p>
      * <ul>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> must be an integer in the range of <code>[1-9]</code>.</li>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> must be an integer in the range of <code>[1-3]</code>.</li>
+     * <li>When <strong>Period</strong> is set to <strong>Month</strong>, <strong>UsedTime</strong> must be an integer in the range of <code>[1-9]</code>.</li>
+     * <li>When <strong>Period</strong> is set to <strong>Year</strong>, <strong>UsedTime</strong> must be an integer in the range of <code>[1-3]</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

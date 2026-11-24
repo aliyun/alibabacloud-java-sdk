@@ -14,7 +14,16 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The Polarlakebase instance ID.</p>
+     * <p>The actual container path to which the file system is mounted. If ContainerMountPath is not specified, the effective default value /mnt/<PolarFSInstanceId> is returned. If the file system is repeatedly mounted without changing the path, the original mount point of the instance is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/mnt/datasets</p>
+     */
+    @NameInMap("ContainerMountPath")
+    public String containerMountPath;
+
+    /**
+     * <p>The ID of the PolarLakebase instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pcs-**************</p>
@@ -42,6 +51,14 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
     }
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    public AttachApplicationPolarFSResponseBody setContainerMountPath(String containerMountPath) {
+        this.containerMountPath = containerMountPath;
+        return this;
+    }
+    public String getContainerMountPath() {
+        return this.containerMountPath;
     }
 
     public AttachApplicationPolarFSResponseBody setPolarFSInstanceId(String polarFSInstanceId) {
