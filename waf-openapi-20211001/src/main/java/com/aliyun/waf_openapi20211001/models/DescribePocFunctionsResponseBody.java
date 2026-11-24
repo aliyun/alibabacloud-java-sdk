@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePocFunctionsResponseBody extends TeaModel {
     /**
-     * <p>A list of the POC feature details.</p>
+     * <p>The list of POC feature details.</p>
      */
     @NameInMap("Functions")
     public java.util.List<DescribePocFunctionsResponseBodyFunctions> functions;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1557B42F-B889-460A-B17F-1DE5C5AD7FF2</p>
@@ -42,7 +42,7 @@ public class DescribePocFunctionsResponseBody extends TeaModel {
 
     public static class DescribePocFunctionsResponseBodyFunctions extends TeaModel {
         /**
-         * <p>The expiration time of the POC feature trial. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The expiration time of the instance. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1760581677000</p>
@@ -53,14 +53,10 @@ public class DescribePocFunctionsResponseBody extends TeaModel {
         /**
          * <p>The type of the POC feature trial. Valid values:</p>
          * <ul>
-         * <li><p><strong>apisec</strong>: API security.</p>
-         * </li>
-         * <li><p><strong>botWeb</strong>: bot management for websites.</p>
-         * </li>
-         * <li><p><strong>botApp</strong>: bot management for apps.</p>
-         * </li>
-         * <li><p><strong>largeLanguageModel</strong>: AI-powered application protection.</p>
-         * </li>
+         * <li><strong>apisec</strong>: API security.</li>
+         * <li><strong>botWeb</strong>: Bot management web protection.</li>
+         * <li><strong>botApp</strong>: Bot management app protection.</li>
+         * <li><strong>largeLanguageModel</strong>: AI application protection.</li>
          * </ul>
          * 
          * <strong>example:</strong>

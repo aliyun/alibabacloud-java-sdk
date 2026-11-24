@@ -11,7 +11,7 @@ public class DescribeAddressesResponseBody extends TeaModel {
     public java.util.List<DescribeAddressesResponseBodyAddressList> addressList;
 
     /**
-     * <p>The number of entries per page for paging. Valid values: 1 to 500. Default value: 20.</p>
+     * <p>The number of entries to return per page in a paging query. Valid values: 1 to 500. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,9 +20,9 @@ public class DescribeAddressesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. If a next page exists, this field contains a value.</p>
+     * <p>The pagination token for the next page. This field is returned only when a next page exists.</p>
      * <blockquote>
-     * <p>If this parameter has a return value, a next page exists. You can pass the returned <strong>NextToken</strong> as a request parameter to retrieve the next page of data. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
+     * <p>If this parameter returns a value, a next page exists. You can use the returned <strong>NextToken</strong> value as a request parameter to obtain the data on the next page until no value is returned, which indicates that all data is obtained.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeAddressesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8D8EBFB7-E1EB-5236-952A-092EDC72***</p>
@@ -41,7 +41,7 @@ public class DescribeAddressesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -105,7 +105,7 @@ public class DescribeAddressesResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The most recent modification time of the address. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the address was last modified. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1760408233000</p>
@@ -114,7 +114,7 @@ public class DescribeAddressesResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The address book ID.</p>
+         * <p>The ID of the address book.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678</p>

@@ -69,11 +69,11 @@ public class DescribeApisecSuggestionsResponseBody extends TeaModel {
         public String suggestId;
 
         /**
-         * <p>The content of the protection suggestion rule, which is a string converted from a JSON object constructed with a series of parameters. The parameters include:</p>
+         * <p>The content of the protection suggestion rule. The content is a JSON character string that consists of the following parameters:</p>
          * <ul>
          * <li><strong>event_tags</strong>: the event type.</li>
          * <li><strong>black_iplist</strong>: the IP blacklist.</li>
-         * <li><strong>ip_baseline</strong>: the IP list.</li>
+         * <li><strong>ip_baseline</strong>: the IP address list.</li>
          * <li><strong>freq_baseline</strong>: the throttling frequency information.</li>
          * <li><strong>client_id_baseline</strong>: the client information.</li>
          * <li><strong>country_baseline</strong>: the country information.</li>
@@ -98,7 +98,7 @@ public class DescribeApisecSuggestionsResponseBody extends TeaModel {
          * <li><strong>WhiteIPRule</strong>: IP whitelist rule.</li>
          * <li><strong>RateLimitRule</strong>: throttling rule.</li>
          * <li><strong>ClientRule</strong>: client rule.</li>
-         * <li><strong>GeoRule</strong>: geo-blocking rule.</li>
+         * <li><strong>GeoRule</strong>: region rule.</li>
          * <li><strong>SensitiveRule</strong>: sensitive information rule.</li>
          * <li><strong>UnauthRule</strong>: authentication rule.</li>
          * </ul>

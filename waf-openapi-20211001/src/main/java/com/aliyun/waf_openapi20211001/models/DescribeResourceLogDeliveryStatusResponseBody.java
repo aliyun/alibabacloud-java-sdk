@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
     /**
-     * <p>The list of log delivery configurations for protected objects.</p>
+     * <p>The log forwarding configurations for the protected objects.</p>
      */
     @NameInMap("LogConfigs")
     public java.util.List<DescribeResourceLogDeliveryStatusResponseBodyLogConfigs> logConfigs;
@@ -42,7 +42,7 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
 
     public static class DescribeResourceLogDeliveryStatusResponseBodyLogConfigs extends TeaModel {
         /**
-         * <p>The name of the delivery configuration.</p>
+         * <p>The name of the log forwarding configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>export-kafka</p>
@@ -51,10 +51,10 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
         public String deliveryName;
 
         /**
-         * <p>The delivery type of the protected object. Valid values:</p>
+         * <p>The log forwarding type for the protected object. Valid values:</p>
          * <ul>
-         * <li><strong>syslog</strong>: delivered to a syslog service.</li>
-         * <li><strong>kafka</strong>: delivered to a Kafka service.</li>
+         * <li><strong>syslog</strong>: syslog service.</li>
+         * <li><strong>kafka</strong>: Kafka service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,9 +75,9 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
         /**
          * <p>The log delivery status of the protected object. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: enabled.</p>
+         * <li><p><strong>true</strong>: Enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: disabled.</p>
+         * <li><p><strong>false</strong>: shutdown.</p>
          * </li>
          * </ul>
          * 

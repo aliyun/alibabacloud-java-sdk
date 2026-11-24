@@ -7,7 +7,7 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     /**
      * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number to return when paging is used. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The number of the page to return for the paged query. Default value: <strong>1</strong>, which indicates the first page during paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page when paging is used. Default value: <strong>10</strong>, which indicates that 10 entries are returned on each page.</p>
+     * <p>The number of entries to return on each page for the paged query. Default value: <strong>10</strong>, which indicates 10 entries per page during paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -37,7 +37,7 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     /**
      * <p>The query conditions. The value is a JSON string.</p>
      * <blockquote>
-     * <p>The query results vary based on the query conditions. For more information, see <strong>Query parameter description</strong>.</p>
+     * <p>The returned protected objects vary based on the query conditions. For more information, see <strong>Description of the Query parameter</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>

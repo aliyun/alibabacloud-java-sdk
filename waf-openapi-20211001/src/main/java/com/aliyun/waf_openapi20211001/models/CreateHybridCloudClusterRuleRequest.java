@@ -7,7 +7,7 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain the hybrid cloud cluster information.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     /**
      * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +31,7 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -55,22 +55,22 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The traffic redirection rule configuration.</p>
+     * <p>The traffic redirection rule configuration:</p>
      * <blockquote>
-     * <p>The mode options are mutually exclusive. You can select only one. If you change the mode, all traffic redirection rules under the original mode are cleared.</p>
+     * <p>The mode selections are mutually exclusive. You can select only one mode. If you change the mode, all traffic redirection rules under the original mode are cleared.</p>
      * </blockquote>
      * <ul>
-     * <li><strong>check_mode</strong>: the mode. Valid values:<ul>
-     * <li><strong>all</strong>: full traffic redirection.</li>
-     * <li><strong>part</strong>: partial traffic redirection.</li>
+     * <li><strong>check_mode</strong>: the mode selection. Valid values:<ul>
+     * <li><strong>all</strong>: full traffic redirection</li>
+     * <li><strong>part</strong>: partial traffic redirection</li>
      * </ul>
      * </li>
-     * <li><strong>type</strong>: the rule matching type. Valid values:<ul>
-     * <li><strong>exact</strong>: exact match.</li>
-     * <li><strong>regex</strong>: regular expression.</li>
+     * <li><strong>type</strong>: the rule match type. Valid values:<ul>
+     * <li><strong>exact</strong>: exact match</li>
+     * <li><strong>regex</strong>: regular expression</li>
      * </ul>
      * </li>
-     * <li><strong>substance</strong>: the rule value.</li>
+     * <li><strong>substance</strong>: the rule value</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,8 +83,8 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     /**
      * <p>The rule status. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enabled.</li>
-     * <li><strong>off</strong>: disabled.</li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -97,7 +97,7 @@ public class CreateHybridCloudClusterRuleRequest extends TeaModel {
     /**
      * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li><strong>pullin</strong>: cluster traffic redirection.</li>
+     * <li><strong>pullin</strong>: cluster traffic redirection</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

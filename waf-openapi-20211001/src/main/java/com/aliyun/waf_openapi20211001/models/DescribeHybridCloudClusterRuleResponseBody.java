@@ -42,7 +42,7 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudClusterRuleResponseBodyClusterRule extends TeaModel {
         /**
-         * <p>The cluster rule resource ID.</p>
+         * <p>The ID of the cluster rule resource.</p>
          * 
          * <strong>example:</strong>
          * <p>hdbc-clusterrule-2m*****m0w</p>
@@ -51,19 +51,19 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         public String clusterRuleResourceId;
 
         /**
-         * <p>The traffic redirection rule configuration:</p>
+         * <p>The traffic diversion rule configuration:</p>
          * <ul>
-         * <li><strong>check_mode</strong>: the mode selection. Valid values:<ul>
-         * <li><strong>all</strong>: full traffic redirection</li>
-         * <li><strong>part</strong>: partial traffic redirection</li>
+         * <li><strong>check_mode</strong>: The mode selection. Valid values:<ul>
+         * <li><strong>all</strong>: full traffic diversion</li>
+         * <li><strong>part</strong>: specified partial traffic diversion</li>
          * </ul>
          * </li>
-         * <li><strong>type</strong>: the rule matching type. Valid values:<ul>
+         * <li><strong>type</strong>: The rule match type. Valid values:<ul>
          * <li><strong>exact</strong>: exact match</li>
          * <li><strong>regex</strong>: regular expression</li>
          * </ul>
          * </li>
-         * <li><strong>substance</strong>: the rule value</li>
+         * <li><strong>substance</strong>: The rule value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,9 +75,9 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         /**
          * <p>The rule status. Valid values:</p>
          * <ul>
-         * <li><p><strong>on</strong>: enabled.</p>
+         * <li><p><strong>on</strong>: Enabled.</p>
          * </li>
-         * <li><p><strong>off</strong>: disabled.</p>
+         * <li><p><strong>off</strong>: Disabled.</p>
          * </li>
          * </ul>
          * 
@@ -90,7 +90,7 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         /**
          * <p>The rule type. Valid values:</p>
          * <ul>
-         * <li>pullin: traffic redirection rule</li>
+         * <li>pullin: traffic diversion rule</li>
          * </ul>
          * 
          * <strong>example:</strong>

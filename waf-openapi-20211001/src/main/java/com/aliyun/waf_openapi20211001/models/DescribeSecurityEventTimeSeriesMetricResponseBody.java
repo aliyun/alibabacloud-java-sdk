@@ -14,7 +14,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The returned time series data. The operation can return time series data for multiple values.</p>
+     * <p>The returned time series data. Time series data for multiple values is supported.</p>
      */
     @NameInMap("SecurityEventTimeSeries")
     public java.util.List<DescribeSecurityEventTimeSeriesMetricResponseBodySecurityEventTimeSeries> securityEventTimeSeries;
@@ -56,7 +56,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
 
     public static class DescribeSecurityEventTimeSeriesMetricResponseBodySecurityEventTimeSeries extends TeaModel {
         /**
-         * <p>The content of the returned data. This is consistent with the \<code>Metric\\</code> request parameter.</p>
+         * <p>The returned data content, which is consistent with the meaning of the Metric parameter in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>monitored_requests</p>
@@ -72,6 +72,9 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
 
         /**
          * <p>The data series. Each point represents the statistical count within a specific time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("Values")
         public java.util.List<Long> values;
@@ -109,7 +112,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
 
     public static class DescribeSecurityEventTimeSeriesMetricResponseBodyTimeSeriesMetaDataDateRange extends TeaModel {
         /**
-         * <p>The end time of the query. This is a UNIX timestamp. Unit: seconds. This value is the same as the \<code>EndDate\\</code> request parameter.</p>
+         * <p>The end time used for the data query, represented by a UNIX timestamp in seconds. This value is the same as the EndDate parameter in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888600</p>
@@ -118,7 +121,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
         public Long endDate;
 
         /**
-         * <p>The start time of the query. This is a UNIX timestamp. Unit: seconds. This value is the same as the \<code>StartDate\\</code> request parameter.</p>
+         * <p>The start time used for the data query, represented by a UNIX timestamp in seconds. This value is the same as the StartDate parameter in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888000</p>
@@ -151,7 +154,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
 
     public static class DescribeSecurityEventTimeSeriesMetricResponseBodyTimeSeriesMetaData extends TeaModel {
         /**
-         * <p>The time granularity of each data point in the returned time series data. For example, &quot;15m&quot; indicates that each returned data point represents statistics for a 15-minute interval. For more information about the time granularity of the returned data, see the Time granularity of time series data points section.</p>
+         * <p>The statistical time granularity of each data point in the returned time series data. For example, &quot;15m&quot; indicates that each returned data point is the statistical data for every 15 minutes. For the time granularity of the returned data, see <strong>Time granularity description of time series data points</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1m</p>

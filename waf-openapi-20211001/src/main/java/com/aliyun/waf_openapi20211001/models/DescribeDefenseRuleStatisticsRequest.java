@@ -16,7 +16,7 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +37,7 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     public String primaryKey;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -72,7 +72,7 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the protection template to query.</p>
      * <blockquote>
-     * <p>This operation supports querying protection templates under the new Bot Management (<strong>bot_manager</strong>) and new Web Core Protection (<strong>waf_base</strong>) scenarios. You can call <a href="https://help.aliyun.com/document_detail/2712643.html">DescribeDefenseTemplates</a> to query the protection scenario (DefenseScene) of a protection template.</p>
+     * <p>This operation supports querying protection templates in the new Bot Management (<strong>bot_manager</strong>) and new Web Core Protection (<strong>waf_base</strong>) scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2712643.html">DescribeDefenseTemplates</a> operation to query the protection scenario (DefenseScene) of the protection template.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

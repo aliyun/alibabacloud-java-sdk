@@ -7,7 +7,7 @@ public class DescribeSensitiveRequestsRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
+     * <p>This parameter is applicable only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain the hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeSensitiveRequestsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1725966000</p>
@@ -28,7 +28,7 @@ public class DescribeSensitiveRequestsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class DescribeSensitiveRequestsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number when you use paged query. Default value: <strong>1</strong>, which indicates that the first page is returned in the paging result.</p>
+     * <p>The page number to return for a paged query. Default value: <strong>1</strong>, which indicates that the first page of paging is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +48,7 @@ public class DescribeSensitiveRequestsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page when you use paged query. Default value: 10, which indicates that each page contains 10 entries in the paging result.</p>
+     * <p>The number of entries to return on each page for a paged query. Default value: 10, which indicates that 10 entries are returned on each page of paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,7 +57,7 @@ public class DescribeSensitiveRequestsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -102,7 +102,7 @@ public class DescribeSensitiveRequestsRequest extends TeaModel {
     public String sensitiveData;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1723392000</p>

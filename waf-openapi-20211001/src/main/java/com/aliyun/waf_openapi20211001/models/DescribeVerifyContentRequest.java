@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyContentRequest extends TeaModel {
     /**
-     * <p>The source of the domain name. Valid values:</p>
+     * <p>The access source. Valid values:</p>
      * <ul>
-     * <li><p><strong>share</strong>: The domain name is added to WAF in CNAME record mode.</p>
+     * <li><p><strong>share</strong>: public cloud CNAME access</p>
      * </li>
-     * <li><p><strong>asset</strong>: The domain name is added to WAF as a custom asset.</p>
+     * <li><p><strong>asset</strong>: custom asset access</p>
      * </li>
-     * <li><p><strong>hybrid_cloud_cname</strong>: The domain name is added to WAF in hybrid cloud CNAME record mode.</p>
+     * <li><p><strong>hybrid_cloud_cname</strong>: hybrid cloud CNAME access</p>
      * </li>
-     * <li><p><strong>tgw</strong>: The domain name is added to WAF in cloud native mode.</p>
+     * <li><p><strong>tgw</strong>: cloud native mode</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -25,7 +25,7 @@ public class DescribeVerifyContentRequest extends TeaModel {
     public String accessOrigin;
 
     /**
-     * <p>The domain name that you want to query for ownership verification content.</p>
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,7 @@ public class DescribeVerifyContentRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the WAF instance.</p>
-     * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
-     * </blockquote>
+     * <p>The ID of the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

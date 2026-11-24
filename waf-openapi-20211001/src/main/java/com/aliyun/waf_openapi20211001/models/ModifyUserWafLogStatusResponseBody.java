@@ -17,7 +17,7 @@ public class ModifyUserWafLogStatusResponseBody extends TeaModel {
      * <p>Indicates whether the Simple Log Service project is created.</p>
      * 
      * <strong>example:</strong>
-     * <p>wafng-project-14316572********-cn-hangzhou</p>
+     * <p>false</p>
      */
     @NameInMap("ProjectName")
     public Boolean projectName;

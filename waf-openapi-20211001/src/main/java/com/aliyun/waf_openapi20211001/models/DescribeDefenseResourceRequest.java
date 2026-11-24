@@ -7,7 +7,7 @@ public class DescribeDefenseResourceRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> API operation to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeDefenseResourceRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
      * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
@@ -32,7 +32,7 @@ public class DescribeDefenseResourceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the protected object to query. You can set this parameter to precisely query a protected object that has been added to WAF.</p>
+     * <p>The name of the protected object to query. You can set this parameter to accurately query the protected objects that are added to WAF.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

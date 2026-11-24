@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class VerifyDomainOwnerRequest extends TeaModel {
     /**
-     * <p>The domain name whose ownership you want to verify.</p>
+     * <p>The domain name to query.</p>
+     * <p>You can set this parameter to perform a fuzzy match to check whether a domain name is added to WAF.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +16,9 @@ public class VerifyDomainOwnerRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the WAF instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,12 +29,10 @@ public class VerifyDomainOwnerRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The protocol type used for file verification. This parameter is required only when you set VerifyType to fileCheck. Valid values:</p>
+     * <p>The protocol type used for file verification. This parameter is required only when VerifyType is set to fileCheck. Valid values:</p>
      * <ul>
-     * <li><p><strong>HTTP</strong>: the HTTP protocol.</p>
-     * </li>
-     * <li><p><strong>HTTPS</strong>: the HTTPS protocol.</p>
-     * </li>
+     * <li><strong>HTTP</strong>: HTTP.</li>
+     * <li><strong>HTTPS</strong>: HTTPS.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +44,8 @@ public class VerifyDomainOwnerRequest extends TeaModel {
     /**
      * <p>The verification method. Valid values:</p>
      * <ul>
-     * <li><p><strong>dnsCheck</strong>: DNS verification.</p>
-     * </li>
-     * <li><p><strong>fileCheck</strong>: File verification.</p>
-     * </li>
+     * <li><strong>dnsCheck</strong>: DNS verification.</li>
+     * <li><strong>fileCheck</strong>: File verification.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

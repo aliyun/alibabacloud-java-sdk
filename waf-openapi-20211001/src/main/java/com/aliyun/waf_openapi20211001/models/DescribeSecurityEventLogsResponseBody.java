@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventLogsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D827FCFE-90A7-4330-9326-******4C7726</p>
@@ -14,13 +14,13 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of detailed attack logs.</p>
+     * <p>The list of returned attack log details.</p>
      */
     @NameInMap("SecurityEventLogs")
     public java.util.List<?> securityEventLogs;
 
     /**
-     * <p>The total number of attack logs found.</p>
+     * <p>The total number of queried attack log entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -73,7 +73,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
 
     public static class DescribeSecurityEventLogsResponseBodySecurityEventMetaDataDateRange extends TeaModel {
         /**
-         * <p>The end of the time range used for the query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<code>EndDate\\</code> request parameter.</p>
+         * <p>The end time used for the data query. The end time is represented by a UNIX timestamp in seconds. This value is the same as the EndDate request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888600</p>
@@ -82,7 +82,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The start of the time range used for the query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<code>StartDate\\</code> request parameter.</p>
+         * <p>The start time used for the data query. The start time is represented by a UNIX timestamp in seconds. This value is the same as the StartDate request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888000</p>

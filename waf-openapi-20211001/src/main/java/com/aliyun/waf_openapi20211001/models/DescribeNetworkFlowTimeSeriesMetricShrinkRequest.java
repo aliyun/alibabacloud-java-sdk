@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkFlowTimeSeriesMetricShrinkRequest extends TeaModel {
     /**
-     * <p>The filter conditions for the query. Multiple filter conditions have a logical AND relationship.</p>
+     * <p>The query filter conditions. Multiple filter conditions are combined by using the logical AND operator.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
@@ -14,7 +14,7 @@ public class DescribeNetworkFlowTimeSeriesMetricShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,16 +25,12 @@ public class DescribeNetworkFlowTimeSeriesMetricShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The metric to query. Different metrics return different data. Valid values:</p>
+     * <p>The metric used to distinguish the returned data content. Different metrics correspond to different data content. The metrics supported by this operation are as follows:</p>
      * <ul>
-     * <li><p>qps: The number of requests that WAF processes per second. This is a peak value. WAF calculates a queries per second (QPS) value every 10 seconds and uses the peak value within the specified time granularity as the QPS.</p>
-     * </li>
-     * <li><p>total_requests: The total number of requests that WAF processes.</p>
-     * </li>
-     * <li><p>top5_status: The top five response codes that WAF returns to the client and the corresponding time series statistics.</p>
-     * </li>
-     * <li><p>top5_upstream_status: The top five response codes that the origin server returns to the client and the corresponding time series statistics.</p>
-     * </li>
+     * <li>qps: returns the number of requests processed by WAF per second. The peak calculation method is used. A QPS value is calculated every 10 seconds, and the Peak Volume among multiple values is used as the QPS value within the current statistical time granularity.</li>
+     * <li>total_requests: returns the total number of requests processed by WAF.</li>
+     * <li>top5_status: returns the top 5 response codes returned by WAF to the client and the corresponding time sequence statistics.</li>
+     * <li>top 5_upstream_status: returns the top 5 back-to-origin response codes returned by the origin server to the client and the corresponding time sequence statistics.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,12 +41,10 @@ public class DescribeNetworkFlowTimeSeriesMetricShrinkRequest extends TeaModel {
     public String metric;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>

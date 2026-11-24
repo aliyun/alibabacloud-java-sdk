@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseSceneConfigResponseBody extends TeaModel {
     /**
-     * <p>The value of the configuration item. For more information, see the <strong>ConfigValue</strong> parameter in <a href="https://help.aliyun.com/document_detail/2968435.html">ModifyDefenseSceneConfig</a>.</p>
+     * <p>The value of the queried configuration item. For more information, see the <strong>ConfigValue</strong> parameter in <a href="https://help.aliyun.com/document_detail/2968435.html">ModifyDefenseSceneConfig</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

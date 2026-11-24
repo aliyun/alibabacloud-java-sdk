@@ -15,9 +15,9 @@ public class DescribeThreatEventTopMetricRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,13 +28,13 @@ public class DescribeThreatEventTopMetricRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The statistical metric. Different values of Metric correspond to different statistical objects. Valid values:</p>
+     * <p>The metric used for statistics. Different metrics correspond to different statistical dimensions. Valid values:</p>
      * <ul>
-     * <li><strong>time</strong>: aggregates statistics by attack time, sorts them in descending order, and returns the top 5 records.</li>
-     * <li><strong>src</strong>: aggregates statistics by source IP address of attack requests, sorts them in descending order, and returns the top 5 records.</li>
-     * <li><strong>target</strong>: aggregates statistics by URL of attack requests (excluding query strings), sorts them in descending order, and returns the top 5 records.</li>
-     * <li><strong>type</strong>: aggregates statistics by attack type, sorts them in descending order, and returns the top 5 records.</li>
-     * <li><strong>tools</strong>: aggregates statistics by attack tool, sorts them in descending order, and returns the top 5 records.</li>
+     * <li><strong>time</strong>: aggregates statistics by attack time, sorts the results in descending order, and returns the top 5 entries.</li>
+     * <li><strong>src</strong>: aggregates statistics by the source IP address of attack requests, sorts the results in descending order, and returns the top 5 entries.</li>
+     * <li><strong>target</strong>: aggregates statistics by the URL of attack requests (excluding the query string), sorts the results in descending order, and returns the top 5 entries.</li>
+     * <li><strong>type</strong>: aggregates statistics by attack type, sorts the results in descending order, and returns the top 5 entries.</li>
+     * <li><strong>tools</strong>: aggregates statistics by attack tool, sorts the results in descending order, and returns the top 5 entries.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,7 +45,7 @@ public class DescribeThreatEventTopMetricRequest extends TeaModel {
     public String metric;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>

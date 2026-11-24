@@ -16,7 +16,7 @@ public class DescribeAddressesRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class DescribeAddressesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page for paging. Valid values: 1 to 500. Default value: 20.</p>
+     * <p>The number of entries to return per page in a paging query. Valid values: 1 to 500. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -36,7 +36,7 @@ public class DescribeAddressesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. Set this parameter to the value of <strong>NextToken</strong> returned in the previous API call. Leave this parameter empty for the first page.</p>
+     * <p>The pagination token for the next page. Set the value to the <strong>NextToken</strong> value returned from the previous API call. This parameter is not required for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
@@ -45,7 +45,7 @@ public class DescribeAddressesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -60,7 +60,7 @@ public class DescribeAddressesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm4gh****wela</p>

@@ -14,7 +14,7 @@ public class CreateCertsRequest extends TeaModel {
     public String certContent;
 
     /**
-     * <p>The content of the private key file that corresponds to the certificate.</p>
+     * <p>The content of the private key file for the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN RSA PRIVATE KEY----- DADTPZoOHd9WtZ3U<strong><strong>RgNQmioPQn2bqdKHop+B/dn/4VZL7Jt8zSDGM9sTMThLyvsmLQKBgQCr+ujntC1kN6pGBj2Fw2l/EA/W3rYEce2tyhjgmG7rZ+A/jVE9fld5sQra6ZdwBcQJaiygoIYoaMF2EjRwc0qwHaluq0C15f6ujSoHh2e+D5zdmkTg/3NKNjqNv6xA2gYpinVDzFdZ9Zujxvuh9o4Vqf0YF8</strong></strong>K5G04RtKadOw== -----END RSA PRIVATE KEY-----</p>
@@ -23,7 +23,7 @@ public class CreateCertsRequest extends TeaModel {
     public String certKey;
 
     /**
-     * <p>The certificate name.</p>
+     * <p>The name of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>testrsa1</p>
@@ -34,7 +34,7 @@ public class CreateCertsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -45,11 +45,11 @@ public class CreateCertsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
      * </li>
      * </ul>
      * 
@@ -60,7 +60,7 @@ public class CreateCertsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

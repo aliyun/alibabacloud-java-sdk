@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseResourceXffRequest extends TeaModel {
     /**
-     * <p>The status of the tracking cookie switch.</p>
+     * <p>The status of the tracking cookie switch. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: disabled.</p>
+     * <li><p><strong>0</strong>: Disabled.</p>
      * </li>
-     * <li><p><strong>1 (default)</strong>: enabled.</p>
+     * <li><p><strong>1</strong> (default): Enabled.</p>
      * </li>
      * </ul>
      * 
@@ -20,11 +20,11 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     public Integer acwCookieStatus;
 
     /**
-     * <p>The status of the secure attribute of the tracking cookie.</p>
+     * <p>The status of the Secure attribute for the tracking cookie. Valid values:</p>
      * <ul>
-     * <li><p><strong>0 (default)</strong>: disabled.</p>
+     * <li><p><strong>0</strong> (default): Disabled.</p>
      * </li>
-     * <li><p><strong>1</strong>: enabled.</p>
+     * <li><p><strong>1</strong>: Enabled.</p>
      * </li>
      * </ul>
      * 
@@ -35,11 +35,11 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     public Integer acwSecureStatus;
 
     /**
-     * <p>The status of the secure attribute of the slider cookie.</p>
+     * <p>The status of the Secure attribute for the slider cookie. Valid values:</p>
      * <ul>
-     * <li><p><strong>0 (default)</strong>: disabled.</p>
+     * <li><p><strong>0</strong> (default): Disabled.</p>
      * </li>
-     * <li><p><strong>1</strong>: enabled.</p>
+     * <li><p><strong>1</strong>: Enabled.</p>
      * </li>
      * </ul>
      * 
@@ -50,9 +50,15 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     public Integer acwV3SecureStatus;
 
     /**
+     * <p>The aggregated configuration of cookie attributes.</p>
+     */
+    @NameInMap("CookieConfig")
+    public ModifyDefenseResourceXffRequestCookieConfig cookieConfig;
+
+    /**
      * <p>The list of specified header fields.</p>
      * <blockquote>
-     * <p>The first IP address in the specified header field is used as the client source IP address to prevent XFF spoofing. If multiple headers are specified, the system attempts to obtain the source IP address from the headers in order. If the first header does not contain an IP address, the system tries the second header, and so on. If none of the specified headers contain an IP address, the first IP address in the X-Forwarded-For header is used.</p>
+     * <p>The first IP address in the specified header field is used as the source IP address of the client to prevent X-Forwarded-For (XFF) spoofing. If multiple headers are specified, the system attempts to obtain the source IP address in sequence. If the first header does not contain an IP address, the system checks the second header, and so on. If no IP address is found in any of the specified headers, the first IP address in the X-Forwarded-For header is used.</p>
      * </blockquote>
      */
     @NameInMap("CustomHeaders")
@@ -72,7 +78,7 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -89,7 +95,7 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     /**
      * <p>The name of the protected object.</p>
      * <blockquote>
-     * <p>The protected object must have been added to WAF. You can call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the name of the protected object.</p>
+     * <p>The protected object must be added to WAF. You can call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the name of the protected object.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -115,11 +121,11 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     public java.util.List<ModifyDefenseResourceXffRequestResponseHeaders> responseHeaders;
 
     /**
-     * <p>Specifies whether a Layer 7 proxy (Anti-DDoS Pro, CDN, or similar) is deployed in front of WAF. Valid values:</p>
+     * <p>Specifies whether a Layer 7 proxy, such as Anti-DDoS or CDN, is enabled before WAF. Valid values:</p>
      * <ul>
-     * <li><p><strong>0 (default)</strong>: No Layer 7 proxy is deployed.</p>
+     * <li><p><strong>0</strong> (default): The proxy is disabled.</p>
      * </li>
-     * <li><p><strong>1</strong>: A Layer 7 proxy is deployed.</p>
+     * <li><p><strong>1</strong>: The proxy is enabled.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -157,6 +163,14 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     }
     public Integer getAcwV3SecureStatus() {
         return this.acwV3SecureStatus;
+    }
+
+    public ModifyDefenseResourceXffRequest setCookieConfig(ModifyDefenseResourceXffRequestCookieConfig cookieConfig) {
+        this.cookieConfig = cookieConfig;
+        return this;
+    }
+    public ModifyDefenseResourceXffRequestCookieConfig getCookieConfig() {
+        return this.cookieConfig;
     }
 
     public ModifyDefenseResourceXffRequest setCustomHeaders(java.util.List<String> customHeaders) {
@@ -215,9 +229,73 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
         return this.xffStatus;
     }
 
+    public static class ModifyDefenseResourceXffRequestCookieConfig extends TeaModel {
+        /**
+         * <p>The SameSite policy of the slider cookie. Valid values:</p>
+         * <ul>
+         * <li><p><strong>None</strong>: None.</p>
+         * </li>
+         * <li><p><strong>Lax</strong>: Lax.</p>
+         * </li>
+         * <li><p><strong>Strict</strong>: Strict.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>An empty string indicates that the SameSite attribute is not configured.<br>If the SameSite policy is set to None, the Secure attribute must be enabled for the cookie.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        @NameInMap("AcwScV3SameSite")
+        public String acwScV3SameSite;
+
+        /**
+         * <p>The SameSite policy of the tracking cookie. Valid values:</p>
+         * <ul>
+         * <li><p><strong>None</strong>: None.</p>
+         * </li>
+         * <li><p><strong>Lax</strong>: Lax.</p>
+         * </li>
+         * <li><p><strong>Strict</strong>: Strict.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>An empty string indicates that the SameSite attribute is not configured.<br>If the SameSite policy is set to None, the Secure attribute must be enabled for the cookie.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Lax</p>
+         */
+        @NameInMap("AcwTcSameSite")
+        public String acwTcSameSite;
+
+        public static ModifyDefenseResourceXffRequestCookieConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDefenseResourceXffRequestCookieConfig self = new ModifyDefenseResourceXffRequestCookieConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDefenseResourceXffRequestCookieConfig setAcwScV3SameSite(String acwScV3SameSite) {
+            this.acwScV3SameSite = acwScV3SameSite;
+            return this;
+        }
+        public String getAcwScV3SameSite() {
+            return this.acwScV3SameSite;
+        }
+
+        public ModifyDefenseResourceXffRequestCookieConfig setAcwTcSameSite(String acwTcSameSite) {
+            this.acwTcSameSite = acwTcSameSite;
+            return this;
+        }
+        public String getAcwTcSameSite() {
+            return this.acwTcSameSite;
+        }
+
+    }
+
     public static class ModifyDefenseResourceXffRequestResponseHeaders extends TeaModel {
         /**
-         * <p>The key of the custom response header.</p>
+         * <p>The key of the specified custom response header.</p>
          * 
          * <strong>example:</strong>
          * <p>Header-Key</p>
@@ -226,7 +304,7 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the custom response header.</p>
+         * <p>The value of the specified custom response header.</p>
          * 
          * <strong>example:</strong>
          * <p>Header-Value</p>

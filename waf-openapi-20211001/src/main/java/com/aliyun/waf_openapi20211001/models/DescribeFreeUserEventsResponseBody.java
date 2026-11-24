@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeFreeUserEventsResponseBody extends TeaModel {
     /**
-     * <p>The list of security events detected by basic detection.</p>
+     * <p>The list of security events for basic detection.</p>
      */
     @NameInMap("Event")
     public java.util.List<DescribeFreeUserEventsResponseBodyEvent> event;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8A2DF88D-90C2-56E9-B8D5-36BB9646791C</p>
@@ -60,7 +60,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
         public String attackIP;
 
         /**
-         * <p>The attack time. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+         * <p>The attack time, in the UNIX timestamp format (UTC). Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683703260</p>
@@ -80,9 +80,9 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
         /**
          * <p>The event level. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong>: high risk.</li>
-         * <li><strong>medium</strong>: medium risk.</li>
-         * <li><strong>low</strong>: low risk.</li>
+         * <li><strong>high</strong>: high-risk.</li>
+         * <li><strong>medium</strong>: medium-risk.</li>
+         * <li><strong>low</strong>: low-risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>

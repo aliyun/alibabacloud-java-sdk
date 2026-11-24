@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDomainShrinkRequest extends TeaModel {
     /**
-     * <p>The access type of the WAF instance. Valid values:</p>
+     * <p>The access mode of the WAF instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>share</strong>: CNAME access. This is the default value.</p>
+     * </li>
+     * <li><p><strong>hybrid_cloud_cname</strong>: Hybrid Cloud CNAME access.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>share</p>
@@ -14,7 +20,7 @@ public class ModifyDomainShrinkRequest extends TeaModel {
     public String accessType;
 
     /**
-     * <p>The domain name to operate on.</p>
+     * <p>The domain name.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -23,7 +29,7 @@ public class ModifyDomainShrinkRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The domain name ID.</p>
+     * <p>The ID of the domain name.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
@@ -34,7 +40,7 @@ public class ModifyDomainShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -45,24 +51,26 @@ public class ModifyDomainShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The listening configuration.</p>
+     * <p>The listener configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
     public String listenShrink;
 
     /**
-     * <p>The forwarding configuration.</p>
+     * <p>The forwarding configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Redirect")
     public String redirectShrink;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

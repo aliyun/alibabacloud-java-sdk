@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveOutboundDistributionResponseBody extends TeaModel {
     /**
-     * <p>The list of cross-border traffic distribution that contains personal information.</p>
+     * <p>The list of outbound traffic distribution for personal information.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeSensitiveOutboundDistributionResponseBodyData> data;
@@ -51,7 +51,7 @@ public class DescribeSensitiveOutboundDistributionResponseBody extends TeaModel 
         public String country;
 
         /**
-         * <p>The number of personal information items transferred cross-border.</p>
+         * <p>The number of outbound personal information records.</p>
          * 
          * <strong>example:</strong>
          * <p>213</p>
@@ -60,7 +60,7 @@ public class DescribeSensitiveOutboundDistributionResponseBody extends TeaModel 
         public Long infoOutboundCount;
 
         /**
-         * <p>The number of sensitive information items transferred cross-border.</p>
+         * <p>The number of outbound sensitive information records.</p>
          * 
          * <strong>example:</strong>
          * <p>144</p>

@@ -7,8 +7,8 @@ public class ModifyApisecStatusRequest extends TeaModel {
     /**
      * <p>The API security status. Valid values: </p>
      * <ul>
-     * <li><strong>1</strong>: enabled.</li>
-     * <li><strong>0</strong>: disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,7 +56,7 @@ public class ModifyApisecStatusRequest extends TeaModel {
     public String resourceGroups;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

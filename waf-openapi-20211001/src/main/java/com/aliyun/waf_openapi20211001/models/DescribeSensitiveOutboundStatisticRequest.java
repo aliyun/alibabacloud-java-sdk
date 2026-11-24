@@ -7,7 +7,7 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter is available only for hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query information about hybrid cloud clusters.</p>
+     * <p>This parameter is only applicable to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the information about hybrid cloud clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,10 +19,8 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     /**
      * <p>The assessment result. Valid values:</p>
      * <ul>
-     * <li><p><strong>report</strong>: a data outbound transfer threat exists.</p>
-     * </li>
-     * <li><p><strong>none</strong>: no data outbound transfer threat exists.</p>
-     * </li>
+     * <li><strong>report</strong>: Outbound data risks exist.</li>
+     * <li><strong>none</strong>: No outbound data risks exist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,9 +30,9 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     public String detectionResult;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp that is in UTC. Unit: seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
      * <blockquote>
-     * <p>The compliance assessment feature supports querying data from the last month, the last 3 months, the last 6 months, the last 12 months, and from January 1 of the previous year to the present. Make sure that the time range is valid.</p>
+     * <p>Compliance audit currently supports querying data for the last 1 month, last 3 months, last 6 months, last 12 months, and from January 1 of the previous year to the present. Make sure that the specified time range is valid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,9 +42,9 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -57,12 +55,10 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The field to use for sorting. Valid values:</p>
+     * <p>The name of the field used for sorting. Valid values:</p>
      * <ul>
-     * <li><p><strong>total_count</strong>: sorts by the total number of personal information data entries. This is the default value.</p>
-     * </li>
-     * <li><p><strong>outbound_count</strong>: sorts by the total number of outbound transfer data entries.</p>
-     * </li>
+     * <li><strong>total_count</strong>: the total number of data records (default)</li>
+     * <li><strong>outbound_count</strong>: the total number of outbound data records</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,12 +68,10 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     public String orderKey;
 
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sorting method. Valid values:</p>
      * <ul>
-     * <li><p><strong>desc</strong>: descending order. This is the default value.</p>
-     * </li>
-     * <li><p><strong>asc</strong>: ascending order.</p>
-     * </li>
+     * <li><strong>desc</strong>: descending order (default)</li>
+     * <li><strong>asc</strong>: ascending order</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +81,7 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     public String orderWay;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return in a paging query. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,7 +90,7 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return on each page in a paging query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -107,10 +101,8 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,9 +121,9 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The type of sensitive data. Separate multiple types with commas (,).</p>
+     * <p>The sensitive data types. Separate multiple sensitive data types with commas (,).</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported sensitive data types. This parameter supports only built-in sensitive data types.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types. This parameter only supports built-in sensitive data types.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -141,14 +133,11 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     public String sensitiveCode;
 
     /**
-     * <p>The sensitivity level. Valid values:</p>
+     * <p>The sensitivity level. Valid values: </p>
      * <ul>
-     * <li><p><strong>high</strong>: high.</p>
-     * </li>
-     * <li><p><strong>medium</strong>: medium.</p>
-     * </li>
-     * <li><p><strong>low</strong>: low.</p>
-     * </li>
+     * <li><strong>high</strong>: high sensitivity</li>
+     * <li><strong>medium</strong>: medium sensitivity</li>
+     * <li><strong>low</strong>: low sensitivity</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,12 +147,10 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     public String sensitiveLevel;
 
     /**
-     * <p>The type of information to query. Valid values:</p>
+     * <p>The type of information to query. Valid values: </p>
      * <ul>
-     * <li><p><strong>info</strong>: all personal information. This is the default value.</p>
-     * </li>
-     * <li><p><strong>sensitive</strong>: only sensitive personal information.</p>
-     * </li>
+     * <li><strong>info</strong>: all personal information (default)</li>
+     * <li><strong>sensitive</strong>: only sensitive personal information</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,9 +160,9 @@ public class DescribeSensitiveOutboundStatisticRequest extends TeaModel {
     public String sensitiveType;
 
     /**
-     * <p>The beginning of the time range to query. This value is a UNIX timestamp that is in UTC. Unit: seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
      * <blockquote>
-     * <p>The compliance assessment feature supports querying data from the last month, the last 3 months, the last 6 months, the last 12 months, and from January 1 of the previous year to the present. Make sure that the time range is valid.</p>
+     * <p>Compliance audit currently supports querying data for the last 1 month, last 3 months, last 6 months, last 12 months, and from January 1 of the previous year to the present. Make sure that the specified time range is valid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

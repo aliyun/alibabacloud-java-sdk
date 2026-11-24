@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLogDeliveryConfigsResponseBody extends TeaModel {
     /**
-     * <p>The log delivery configurations.</p>
+     * <p>The delivery configuration information.</p>
      */
     @NameInMap("DeliveryConfigs")
     public java.util.List<DescribeLogDeliveryConfigsResponseBodyDeliveryConfigs> deliveryConfigs;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The number of entries to return per page during paging in a paged query. Valid values: 1 to 50. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,9 +20,9 @@ public class DescribeLogDeliveryConfigsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token for querying the next page. If a next page exists, this field returns a value.</p>
      * <blockquote>
-     * <p>If this parameter is not empty, more results are available. Use the value of <strong>NextToken</strong> in the next request to retrieve the next page of results. If the value is empty, all results have been returned.</p>
+     * <p>If this parameter returns a value, it indicates that more pages exist. You can use the returned <strong>NextToken</strong> value as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeLogDeliveryConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of log delivery configurations returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -96,9 +96,9 @@ public class DescribeLogDeliveryConfigsResponseBody extends TeaModel {
 
     public static class DescribeLogDeliveryConfigsResponseBodyDeliveryConfigs extends TeaModel {
         /**
-         * <p>The details of the log delivery configuration, returned as a JSON string.</p>
+         * <p>The content of the delivery configuration. The content is a JSON string constructed from a series of parameters.</p>
          * <blockquote>
-         * <p>The structure of this parameter is the same as the <strong>DeliveryDetail</strong> request parameter of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</p>
+         * <p>This parameter is the same as the <strong>DeliveryDetail</strong> request parameter of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation. For more information, see the <strong>Delivery configuration content parameters</strong> section of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DescribeLogDeliveryConfigsResponseBody extends TeaModel {
         public String deliveryDetail;
 
         /**
-         * <p>The name of the log delivery configuration.</p>
+         * <p>The name of the delivery configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -126,12 +126,10 @@ public class DescribeLogDeliveryConfigsResponseBody extends TeaModel {
         public String deliveryName;
 
         /**
-         * <p>The type of the log delivery configuration. Valid values:</p>
+         * <p>The type of the delivery configuration. Valid values:</p>
          * <ul>
-         * <li><p><strong>syslog</strong>: Log delivery to a syslog server.</p>
-         * </li>
-         * <li><p><strong>kafka</strong>: Log delivery to a Kafka cluster.</p>
-         * </li>
+         * <li><strong>syslog</strong>: Delivers logs to a Syslog service.</li>
+         * <li><strong>kafka</strong>: Delivers logs to a Kafka service.</li>
          * </ul>
          * 
          * <strong>example:</strong>

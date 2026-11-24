@@ -11,7 +11,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
     public java.util.List<DescribeChargeResultResponseBodyModuleDetails> moduleDetails;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
@@ -85,7 +85,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         public Double credit;
 
         /**
-         * <p>The billing module code.</p>
+         * <p>The identifier of the billing module.</p>
          * 
          * <strong>example:</strong>
          * <p>domainCount</p>

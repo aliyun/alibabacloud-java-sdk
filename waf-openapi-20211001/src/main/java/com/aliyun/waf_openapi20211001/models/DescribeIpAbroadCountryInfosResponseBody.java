@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
     /**
-     * <p>The list of overseas country information.</p>
+     * <p>The list of countries outside China.</p>
      */
     @NameInMap("AbroadInfos")
     public java.util.List<DescribeIpAbroadCountryInfosResponseBodyAbroadInfos> abroadInfos;
 
     /**
-     * <p>The number of entries to return on each page for a paging query. Valid values: 1 to 500. Default value: 20.</p>
+     * <p>The number of entries to return on each page in a paging query. Valid values: 1 to 500. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -162,7 +162,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         public String countryName;
 
         /**
-         * <p>The list of overseas region information.</p>
+         * <p>The list of regions outside China.</p>
          */
         @NameInMap("Regions")
         public java.util.List<DescribeIpAbroadCountryInfosResponseBodyAbroadInfosRegions> regions;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogDeliveryConfigsRequest extends TeaModel {
     /**
-     * <p>The name of the log delivery configuration that you want to query. Fuzzy match is supported.</p>
+     * <p>The name of the delivery configuration to query. You can set this parameter to perform a fuzzy match on a delivery configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,12 +14,10 @@ public class DescribeLogDeliveryConfigsRequest extends TeaModel {
     public String deliveryNameLike;
 
     /**
-     * <p>The type of the log delivery configuration that you want to query. Valid values:</p>
+     * <p>The type of the delivery configuration to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>syslog</strong>: Log delivery to a syslog server.</p>
-     * </li>
-     * <li><p><strong>kafka</strong>: Log delivery to a Kafka cluster.</p>
-     * </li>
+     * <li><strong>syslog</strong>: Delivers logs to a Syslog service.</li>
+     * <li><strong>kafka</strong>: Delivers logs to a Kafka service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +29,7 @@ public class DescribeLogDeliveryConfigsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +40,7 @@ public class DescribeLogDeliveryConfigsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 1 to 50. Default value: 20.</p>
+     * <p>The number of entries to return per page during paging in a paged query. Valid values: 1 to 50. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -51,7 +49,7 @@ public class DescribeLogDeliveryConfigsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the value of <strong>NextToken</strong> returned in the previous call. You do not need to specify this parameter for the first request.</p>
+     * <p>The pagination token for querying the next page. Set the value to the <strong>NextToken</strong> value returned from the previous API call. This parameter is not required for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAINZ+8pH1oQnusEu1tGAc8is</p>
@@ -62,9 +60,9 @@ public class DescribeLogDeliveryConfigsRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
      * </li>
      * </ul>
      * 
@@ -75,7 +73,7 @@ public class DescribeLogDeliveryConfigsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group to which the WAF instance belongs.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

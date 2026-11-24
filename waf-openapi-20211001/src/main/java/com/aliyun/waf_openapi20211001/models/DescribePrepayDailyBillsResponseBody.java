@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayDailyBillsResponseBody extends TeaModel {
     /**
-     * <p>The list of WAF burstable billing records.</p>
+     * <p>The list of elastic pay-as-you-go bills for the WAF instance.</p>
      */
     @NameInMap("Bills")
     public java.util.List<DescribePrepayDailyBillsResponseBodyBills> bills;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EC10C9EA-A367-52D5-<em><strong>-</strong></em></p>
@@ -20,7 +20,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,6 +59,15 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
 
     public static class DescribePrepayDailyBillsResponseBodyBills extends TeaModel {
         /**
+         * <p>Specifies whether Agentic WAF is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AgenticWaf")
+        public Boolean agenticWaf;
+
+        /**
          * <p>The burstable QPS specification of the WAF instance.</p>
          * 
          * <strong>example:</strong>
@@ -68,7 +77,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long elasticQpsSetValue;
 
         /**
-         * <p>The end time of the billing record. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+         * <p>The end time of the bill. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687591200</p>
@@ -77,9 +86,9 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The overuse status of the current period. Valid values:</p>
+         * <p>The overuse status for the current period. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Normal.</li>
+         * <li><strong>0</strong>: normal.</li>
          * <li><strong>1</strong>: overused.</li>
          * <li><strong>2</strong>: sandboxed.</li>
          * </ul>
@@ -91,10 +100,10 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Integer exceedStatus;
 
         /**
-         * <p>Indicates whether the extension plug-in is enabled. Valid values:</p>
+         * <p>Specifies whether the extension plug-in is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The extension plug-in is enabled.</li>
-         * <li><strong>false</strong>: The extension plug-in is not enabled.</li>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +113,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Boolean extensionPlugin;
 
         /**
-         * <p>The number of requests processed by the plug-in.</p>
+         * <p>The number of plug-in requests processed.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -113,7 +122,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long extensionPluginRequest;
 
         /**
-         * <p>The maximum QPS during the current period.</p>
+         * <p>The maximum QPS for the current period.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -122,7 +131,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long maxQps;
 
         /**
-         * <p>The unit price for burstable billing. Unit: CNY for the China site and USD for the international site.</p>
+         * <p>The unit price of elastic billing. Unit: CNY on the Chinese site and USD on the international site.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -131,7 +140,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Float price;
 
         /**
-         * <p>The QPS extension specification of the WAF instance.</p>
+         * <p>The extended QPS specification of the WAF instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -149,10 +158,10 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long qpsVersion;
 
         /**
-         * <p>Indicates whether risk identification is enabled. Valid values:</p>
+         * <p>Specifies whether risk identification is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Risk identification is enabled.</li>
-         * <li><strong>false</strong>: Risk identification is not enabled.</li>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +180,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long riskTraffic;
 
         /**
-         * <p>The start time of the billing record. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+         * <p>The start time of the bill. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687822980</p>
@@ -180,7 +189,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The total QPS that is billed.</p>
+         * <p>The total QPS to be billed.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -189,7 +198,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long total;
 
         /**
-         * <p>The burstable billing type.</p>
+         * <p>The elastic billing type.</p>
          */
         @NameInMap("Type")
         public java.util.List<String> type;
@@ -197,6 +206,14 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public static DescribePrepayDailyBillsResponseBodyBills build(java.util.Map<String, ?> map) throws Exception {
             DescribePrepayDailyBillsResponseBodyBills self = new DescribePrepayDailyBillsResponseBodyBills();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePrepayDailyBillsResponseBodyBills setAgenticWaf(Boolean agenticWaf) {
+            this.agenticWaf = agenticWaf;
+            return this;
+        }
+        public Boolean getAgenticWaf() {
+            return this.agenticWaf;
         }
 
         public DescribePrepayDailyBillsResponseBodyBills setElasticQpsSetValue(Long elasticQpsSetValue) {

@@ -1,3 +1,9 @@
+2026-11-24 Version: 6.9.1
+- Update API CreateDomain: add request parameters Redirect.BackendConfig.
+- Update API DescribeDomainDetail: add response parameters Body.Redirect.BackendConfig.
+- Update API ModifyDomain: add request parameters Redirect.BackendConfig.
+
+
 2026-11-09 Version: 6.8.7
 - Update API DescribeChargeResult: add request parameters ChargeModules.$.UsageDecimal.
 

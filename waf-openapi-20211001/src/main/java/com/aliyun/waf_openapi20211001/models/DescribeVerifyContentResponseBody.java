@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyContentResponseBody extends TeaModel {
     /**
-     * <p>The DNS-based verification content, including the TXT record details.</p>
+     * <p>The DNS verification content.</p>
      */
     @NameInMap("DnsContent")
     public DescribeVerifyContentResponseBodyDnsContent dnsContent;
 
     /**
-     * <p>The file-based verification content, including the file name, path, and download URL.</p>
+     * <p>The file verification content.</p>
      */
     @NameInMap("FileContent")
     public DescribeVerifyContentResponseBodyFileContent fileContent;
@@ -26,7 +26,13 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the domain ownership verification is successful.</p>
+     * <p>The verification result. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Verification passed.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Verification failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -73,7 +79,7 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
 
     public static class DescribeVerifyContentResponseBodyDnsContent extends TeaModel {
         /**
-         * <p>The host record of the DNS TXT record used for domain ownership verification.</p>
+         * <p>The host record.</p>
          * 
          * <strong>example:</strong>
          * <p>verification</p>
@@ -82,7 +88,7 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
         public String RR;
 
         /**
-         * <p>The type of the DNS record used for verification.</p>
+         * <p>The TXT record type.</p>
          * 
          * <strong>example:</strong>
          * <p>TXT</p>
@@ -91,7 +97,7 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the DNS TXT record used for verification.</p>
+         * <p>The TXT record value.</p>
          * 
          * <strong>example:</strong>
          * <p>verify_0a246ca99d504ba087472d***</p>
@@ -132,7 +138,7 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
 
     public static class DescribeVerifyContentResponseBodyFileContent extends TeaModel {
         /**
-         * <p>The download URL of the verification file.</p>
+         * <p>The file download path.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://oss.xxx.com//xxx.html">http://oss.xxx.com//xxx.html</a></p>
@@ -141,7 +147,7 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>The name of the verification file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx.html</p>
@@ -150,7 +156,7 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The root domain of the domain name to be verified.</p>
+         * <p>The primary domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyundemo.com</p>
@@ -159,7 +165,7 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
         public String topDomain;
 
         /**
-         * <p>The content of the verification file.</p>
+         * <p>The file content.</p>
          * 
          * <strong>example:</strong>
          * <p>verify_0a246ca99d504ba08***</p>
@@ -168,7 +174,7 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
         public String value;
 
         /**
-         * <p>The URL that is used to access the verification file.</p>
+         * <p>The access path for file verification.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.xxx.com//xxx.html">http://xxx.xxx.com//xxx.html</a></p>

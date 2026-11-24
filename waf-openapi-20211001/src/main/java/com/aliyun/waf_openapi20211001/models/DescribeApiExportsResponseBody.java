@@ -11,7 +11,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
     public java.util.List<DescribeApiExportsResponseBodyApiExports> apiExports;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D9532525-E885-54E7-A178-D5554D563AFB</p>
@@ -59,7 +59,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
 
     public static class DescribeApiExportsResponseBodyApiExports extends TeaModel {
         /**
-         * <p>The time when the export task was created. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+         * <p>The time when the export task was created. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1725604852</p>
@@ -68,7 +68,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>file_16109541456445334c0f01d9a7444e0e908***.csv</p>
@@ -101,7 +101,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
          * </li>
          * <li><p><strong>exporting</strong>: The export is in progress.</p>
          * </li>
-         * <li><p><strong>completed</strong>: The export is complete.</p>
+         * <li><p><strong>completed</strong>: The export succeeded.</p>
          * </li>
          * </ul>
          * 
@@ -114,11 +114,11 @@ public class DescribeApiExportsResponseBody extends TeaModel {
         /**
          * <p>The type of the export task. Valid values:</p>
          * <ul>
-         * <li><p><strong>apisec_api</strong>: API asset task.</p>
+         * <li><p><strong>apisec_api</strong>: API asset task</p>
          * </li>
-         * <li><p><strong>apisec_abnormal</strong>: API risk task.</p>
+         * <li><p><strong>apisec_abnormal</strong>: API risk task</p>
          * </li>
-         * <li><p><strong>apisec_event</strong>: API security event task.</p>
+         * <li><p><strong>apisec_event</strong>: API security event task</p>
          * </li>
          * </ul>
          * 

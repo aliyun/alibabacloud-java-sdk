@@ -5,11 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseSceneConfigRequest extends TeaModel {
     /**
-     * <p>The name of the configuration item to modify.</p>
-     * <p>If <strong>DefenseScene</strong> is set to <strong>apisec</strong>, the valid value is:</p>
-     * <ul>
-     * <li><strong>autoEnabled</strong>: indicates whether core API security detection is automatically enabled for new resources.</li>
-     * </ul>
+     * <p>The name of the configuration item that you want to modify.</p>
+     * <blockquote>
+     * <p>The supported configuration items vary based on the specified defense scene (<strong>DefenseScene</strong>). For more information, see <strong>Protection settings parameters</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,9 +18,9 @@ public class ModifyDefenseSceneConfigRequest extends TeaModel {
     public String configKey;
 
     /**
-     * <p>The value to set for the configuration item.</p>
+     * <p>The value of the configuration item that you want to modify.</p>
      * <blockquote>
-     * <p>The value of this parameter depends on the value of <strong>ConfigKey</strong>. For more information, see <strong>Description of mitigation setting parameters</strong>.</p>
+     * <p>The valid values vary based on the specified configuration item (<strong>ConfigKey</strong>). For more information, see <strong>Protection settings parameters</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,9 +31,10 @@ public class ModifyDefenseSceneConfigRequest extends TeaModel {
     public String configValue;
 
     /**
-     * <p>The protection scenario for which you want to modify the mitigation settings. Valid values:</p>
+     * <p>The defense scene for which you want to modify the protection settings. Valid values:</p>
      * <ul>
      * <li><strong>apisec</strong>: API security.</li>
+     * <li><strong>ai_engine</strong>: AI Engine.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,7 +47,7 @@ public class ModifyDefenseSceneConfigRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecSensitiveDomainStatisticResponseBodyData> data;
@@ -20,7 +20,7 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>27</p>
@@ -77,9 +77,9 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         public Long domainCount;
 
         /**
-         * <p>The code of the sensitive data type.</p>
+         * <p>The code of the sensitive data.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported sensitive data types.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported types of sensitive data.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -103,10 +103,10 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         public String sensitiveLevel;
 
         /**
-         * <p>The name of the sensitive data type.</p>
+         * <p>The name of the sensitive data.</p>
          * 
          * <strong>example:</strong>
-         * <p>自定义敏感类型。</p>
+         * <p>Custom sensitive data type</p>
          */
         @NameInMap("SensitiveName")
         public String sensitiveName;

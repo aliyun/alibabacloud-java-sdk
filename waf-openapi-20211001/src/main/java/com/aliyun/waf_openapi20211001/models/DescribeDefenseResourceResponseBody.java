@@ -14,7 +14,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the protected object.</p>
+     * <p>The protected object information.</p>
      */
     @NameInMap("Resource")
     public DescribeDefenseResourceResponseBodyResource resource;
@@ -38,6 +38,64 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
     }
     public DescribeDefenseResourceResponseBodyResource getResource() {
         return this.resource;
+    }
+
+    public static class DescribeDefenseResourceResponseBodyResourceCookieConfig extends TeaModel {
+        /**
+         * <p>The SameSite policy for the slider cookie. Valid values:</p>
+         * <ul>
+         * <li><strong>None</strong>: None.</li>
+         * <li><strong>Lax</strong>: Lax.</li>
+         * <li><strong>Strict</strong>: Strict.<blockquote>
+         * <p>An empty string indicates that the SameSite attribute is not set.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Lax</p>
+         */
+        @NameInMap("AcwScV3SameSite")
+        public String acwScV3SameSite;
+
+        /**
+         * <p>The SameSite policy for the tracking cookie. Valid values:</p>
+         * <ul>
+         * <li><strong>None</strong>: None.</li>
+         * <li><strong>Lax</strong>: Lax.</li>
+         * <li><strong>Strict</strong>: Strict.<blockquote>
+         * <p>An empty string indicates that the SameSite attribute is not set.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        @NameInMap("AcwTcSameSite")
+        public String acwTcSameSite;
+
+        public static DescribeDefenseResourceResponseBodyResourceCookieConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDefenseResourceResponseBodyResourceCookieConfig self = new DescribeDefenseResourceResponseBodyResourceCookieConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDefenseResourceResponseBodyResourceCookieConfig setAcwScV3SameSite(String acwScV3SameSite) {
+            this.acwScV3SameSite = acwScV3SameSite;
+            return this;
+        }
+        public String getAcwScV3SameSite() {
+            return this.acwScV3SameSite;
+        }
+
+        public DescribeDefenseResourceResponseBodyResourceCookieConfig setAcwTcSameSite(String acwTcSameSite) {
+            this.acwTcSameSite = acwTcSameSite;
+            return this;
+        }
+        public String getAcwTcSameSite() {
+            return this.acwTcSameSite;
+        }
+
     }
 
     public static class DescribeDefenseResourceResponseBodyResourceResponseHeaders extends TeaModel {
@@ -84,7 +142,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
 
     public static class DescribeDefenseResourceResponseBodyResource extends TeaModel {
         /**
-         * <p>The status of the tracking cookie. Valid values:</p>
+         * <p>The enabling status of the tracking cookie.</p>
          * <ul>
          * <li><p><strong>0</strong>: disabled.</p>
          * </li>
@@ -99,7 +157,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public Integer acwCookieStatus;
 
         /**
-         * <p>The status of the secure attribute of the tracking cookie. Valid values:</p>
+         * <p>The status of the Secure attribute for the tracking cookie.</p>
          * <ul>
          * <li><p><strong>0</strong>: disabled.</p>
          * </li>
@@ -114,7 +172,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public Integer acwSecureStatus;
 
         /**
-         * <p>The status of the secure attribute of the slider cookie. Valid values:</p>
+         * <p>The status of the Secure attribute for the slider cookie.</p>
          * <ul>
          * <li><p><strong>0</strong>: disabled.</p>
          * </li>
@@ -129,9 +187,15 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public Integer acwV3SecureStatus;
 
         /**
+         * <p>The cookie attribute aggregation configuration.</p>
+         */
+        @NameInMap("CookieConfig")
+        public DescribeDefenseResourceResponseBodyResourceCookieConfig cookieConfig;
+
+        /**
          * <p>The list of specified header fields.</p>
          * <blockquote>
-         * <p>When XffStatus is set to 1, the first IP address in the specified header field is used as the client source IP address to prevent XFF forgery. If multiple header fields are specified, they are tried in order to obtain the source IP address. If the source IP address cannot be obtained from the first header field, the second header field is tried, and so on. If the source IP address cannot be obtained from any of the specified header fields, the first IP address in X-Forwarded-For is used. When XffStatus is set to 1, it indicates that the source IP address is obtained from the first header field.</p>
+         * <p>When XffStatus is set to 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent XFF spoofing. If multiple headers are specified, the system attempts to obtain the originating IP address in sequence. If the first header does not contain an IP address, the system checks the second header, and so on. If no IP address is found in any of the specified headers, the first IP address in the X-Forwarded-For header is used. When XffStatus is set to 1, the first IP address is extracted.</p>
          * </blockquote>
          */
         @NameInMap("CustomHeaders")
@@ -147,7 +211,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The detailed description of the protected object. Different key-value pairs in the Map represent different attributes of the protected object.</p>
+         * <p>The detailed description of the protected object. Different key-value pairs in the map represent different attributes of the protected object.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -177,7 +241,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The ID of the WAF instance.</p>
+         * <p>The WAF instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_v2_public_cn-wwo****</p>
@@ -186,7 +250,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The UID of the owner of the protected object.</p>
+         * <p>The owner UID of the protected object.</p>
          * 
          * <strong>example:</strong>
          * <p>170457******9107</p>
@@ -195,7 +259,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
-         * <p>The protection form of the protected object.</p>
+         * <p>The protection mode of the protected object.</p>
          * 
          * <strong>example:</strong>
          * <p>domain</p>
@@ -240,9 +304,9 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public String resourceManagerResourceGroupId;
 
         /**
-         * <p>The origin of the protected object. Valid values:</p>
+         * <p>The source of the protected object. Valid values:</p>
          * <ul>
-         * <li><p><strong>custom</strong>: the protected object created from Access Management.</p>
+         * <li><p><strong>custom</strong>: the protected object created from the Provisioning page.</p>
          * </li>
          * <li><p><strong>access</strong>: the protected object created by the user.</p>
          * </li>
@@ -278,9 +342,9 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         public java.util.List<DescribeDefenseResourceResponseBodyResourceResponseHeaders> responseHeaders;
 
         /**
-         * <p>Indicates whether a Layer 7 proxy (Anti-DDoS/CDN, etc.) is deployed in front of WAF. Valid values:</p>
+         * <p>Specifies whether a Layer 7 proxy, such as Anti-DDoS or CDN, is enabled before WAF. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: not enabled.</p>
+         * <li><p><strong>0</strong>: disabled.</p>
          * </li>
          * <li><p><strong>1</strong>: enabled.</p>
          * </li>
@@ -319,6 +383,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         }
         public Integer getAcwV3SecureStatus() {
             return this.acwV3SecureStatus;
+        }
+
+        public DescribeDefenseResourceResponseBodyResource setCookieConfig(DescribeDefenseResourceResponseBodyResourceCookieConfig cookieConfig) {
+            this.cookieConfig = cookieConfig;
+            return this;
+        }
+        public DescribeDefenseResourceResponseBodyResourceCookieConfig getCookieConfig() {
+            return this.cookieConfig;
         }
 
         public DescribeDefenseResourceResponseBodyResource setCustomHeaders(java.util.List<String> customHeaders) {

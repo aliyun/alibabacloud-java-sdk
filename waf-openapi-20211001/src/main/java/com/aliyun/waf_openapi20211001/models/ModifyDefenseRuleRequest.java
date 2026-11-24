@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseRuleRequest extends TeaModel {
     /**
-     * <p>The protection scenario to modify. For more information, see the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
+     * <p>The protection scenario to be modified. For more information, see the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>waf_group</p>
@@ -23,10 +23,10 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String defenseType;
 
     /**
-     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is initiated. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
-     * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+     * <li><strong>true</strong>: initiates a dry run request. The system only checks whether the request meets the execution conditions and does not perform the operations specified in the request. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+     * <li><strong>false</strong>: initiates a normal request. The system performs the operations specified in the request after the check succeeds.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     /**
      * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +49,7 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -64,7 +64,7 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The protected object associated with the rule to modify.</p>
+     * <p>The protected object to which the modified rule applies.</p>
      * <blockquote>
      * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
      * </blockquote>
@@ -85,11 +85,24 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The details of the protection rule. The value is a string that is converted from a JSON object constructed by a series of parameters. When you configure this parameter, specify the rule ID and the protection rule configuration to modify. The following parameters are included:</p>
+     * <p>The protection target type. This applies to rules where <strong>DefenseType</strong> is set to <strong>resource</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>single</strong> (default): Single protected object.</li>
+     * <li><strong>group</strong>: Protected object group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>single</p>
+     */
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    /**
+     * <p>The details of the protection rule. The value is a JSON string that consists of multiple parameters. When you configure this parameter, you must specify the rule ID and set the configuration of the protection rule to be modified. The details include:</p>
      * <ul>
      * <li><p><strong>id</strong>: Long | Required | The rule ID.</p>
      * </li>
-     * <li><p>Protection rule configuration: Same as the <strong>Rules</strong> parameter of the <strong>CreateDefenseRule</strong> operation. For more information, see the <strong>protection rule parameter description</strong> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
+     * <li><p>Protection rule configuration: Same as the <strong>Rules</strong> parameter of the <strong>CreateDefenseRule</strong> operation. For more information, see the <strong>Protection rule parameter description</strong> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -177,6 +190,14 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     }
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
+    }
+
+    public ModifyDefenseRuleRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public ModifyDefenseRuleRequest setRules(String rules) {

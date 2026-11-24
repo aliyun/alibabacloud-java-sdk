@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveOutboundDistributionRequest extends TeaModel {
     /**
-     * <p>The hybrid cloud cluster ID.</p>
+     * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,10 +17,10 @@ public class DescribeSensitiveOutboundDistributionRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end time of the query. Specify the value as a UNIX timestamp (UTC). Unit: seconds.</p>
+     * <p>The end time of the query. The time is in the UNIX timestamp format (UTC). Unit: seconds.</p>
      * <blockquote>
-     * <p>Compliance audit currently supports querying data only for the last 1 month, last 3 months, last 6 months, last 12 months, or from January 1 of the previous year to the present. The query time range must fall within one of these supported intervals. <strong>StartTime</strong> must not be earlier than the start time of the corresponding interval. The query fails if the time range exceeds the supported scope.
-     * This parameter is optional. Default value: the current time.</p>
+     * <p>Compliance audit currently supports querying data for the last 1 month, last 3 months, last 6 months, last 12 months, and from January 1 of the previous year to the present. The query time range must fall within the supported intervals. <strong>StartTime</strong> must not be earlier than the start time of the corresponding interval. If the time range exceeds the supported range, the query fails.
+     * This parameter is optional. The default value is the current time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeSensitiveOutboundDistributionRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +43,7 @@ public class DescribeSensitiveOutboundDistributionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -58,7 +58,7 @@ public class DescribeSensitiveOutboundDistributionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -67,10 +67,10 @@ public class DescribeSensitiveOutboundDistributionRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The start time of the query. Specify the value as a UNIX timestamp (UTC). Unit: seconds.</p>
+     * <p>The start time of the query. The time is in the UNIX timestamp format (UTC). Unit: seconds.</p>
      * <blockquote>
-     * <p>Compliance audit currently supports querying data only for the last 1 month, last 3 months, last 6 months, last 12 months, or from January 1 of the previous year to the present. The query time range must fall within one of these supported intervals. <strong>StartTime</strong> must not be earlier than the start time of the corresponding interval. The query fails if the time range exceeds the supported scope.
-     * This parameter is optional. Default value: 1 month before the current time.</p>
+     * <p>Compliance audit currently supports querying data for the last 1 month, last 3 months, last 6 months, last 12 months, and from January 1 of the previous year to the present. The query time range must fall within the supported intervals. <strong>StartTime</strong> must not be earlier than the start time of the corresponding interval. If the time range exceeds the supported range, the query fails.
+     * This parameter is optional. The default value is one month before the current time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

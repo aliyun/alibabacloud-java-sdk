@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHybridCloudClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the hybrid cloud cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class CreateHybridCloudClusterResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>66A98669-ER12-WE34-23PO-301469*****E</p>

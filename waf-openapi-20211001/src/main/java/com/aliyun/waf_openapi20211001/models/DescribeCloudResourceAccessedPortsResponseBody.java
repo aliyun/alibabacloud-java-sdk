@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
     /**
      * <p>The HTTP port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[80]</p>
      */
     @NameInMap("Http")
     public java.util.List<Integer> http;
 
     /**
      * <p>The HTTPS port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[443]</p>
      */
     @NameInMap("Https")
     public java.util.List<Integer> https;

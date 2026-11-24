@@ -14,13 +14,13 @@ public class DescribeDefenseGroupValidResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The names of the protected objects.</p>
+     * <p>The names of the protection objects.</p>
      */
     @NameInMap("Resources")
     public java.util.List<String> resources;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>

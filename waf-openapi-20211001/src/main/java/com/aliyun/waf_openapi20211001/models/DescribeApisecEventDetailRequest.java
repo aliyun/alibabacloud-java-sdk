@@ -7,7 +7,7 @@ public class DescribeApisecEventDetailRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud cluster information.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeApisecEventDetailRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of detailed information about the security event.</p>
+     * <p>The type of details for the security event.</p>
      * 
      * <strong>example:</strong>
      * <p>event_info</p>
@@ -36,7 +36,13 @@ public class DescribeApisecEventDetailRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The dimension of the security event.</p>
+     * <p>The scope of the security event. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ip</strong>: IP security events. This is the default value.</p>
+     * </li>
+     * <li><p><strong>account</strong>: account security events.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ip</p>
@@ -45,9 +51,9 @@ public class DescribeApisecEventDetailRequest extends TeaModel {
     public String eventScope;
 
     /**
-     * <p>Instance ID of the WAF instance.</p>
+     * <p>The WAF instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to view the current WAF instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -58,7 +64,7 @@ public class DescribeApisecEventDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>

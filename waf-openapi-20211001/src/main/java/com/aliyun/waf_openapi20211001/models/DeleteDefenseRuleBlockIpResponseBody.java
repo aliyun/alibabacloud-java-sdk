@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDefenseRuleBlockIpResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9D11AC3A-A10C-56E7-A342-E87EC892BAE2</p>

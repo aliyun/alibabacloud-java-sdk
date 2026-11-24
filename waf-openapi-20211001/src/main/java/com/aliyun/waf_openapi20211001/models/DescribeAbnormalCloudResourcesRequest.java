@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAbnormalCloudResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>The WAF instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the WAF instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

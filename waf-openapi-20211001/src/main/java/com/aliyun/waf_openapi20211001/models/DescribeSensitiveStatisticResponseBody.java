@@ -20,7 +20,7 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -97,7 +97,7 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
         /**
          * <p>The sensitive data type.</p>
          * <blockquote>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported sensitive data types.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to query the supported sensitive data types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

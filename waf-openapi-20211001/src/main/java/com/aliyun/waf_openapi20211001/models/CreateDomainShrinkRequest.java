@@ -13,7 +13,8 @@ public class CreateDomainShrinkRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If the value is <strong>share</strong>, or if the value is <strong>hybrid_cloud_cname</strong> and public cloud disaster recovery is enabled, call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to verify domain name ownership first. If the domain name is connected to a region in the Chinese mainland, ICP filing must also be completed.</p>
+     * <p>If the value is <strong>share</strong>, or the value is <strong>hybrid_cloud_cname</strong> and public cloud disaster recovery is enabled, you must first invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to authenticate the domain name ownership. If the website config is added to a region in the Chinese mainland, it must also have an ICP filing.</p>
+     * <p>If the value is <strong>hybrid_cloud_cname</strong> and public cloud disaster recovery is disabled, you do not need to authenticate the domain name ownership and can directly invoke this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +24,7 @@ public class CreateDomainShrinkRequest extends TeaModel {
     public String accessType;
 
     /**
-     * <p>The domain name to query.</p>
+     * <p>The name of the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +36,7 @@ public class CreateDomainShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +47,7 @@ public class CreateDomainShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The listening configuration.</p>
+     * <p>The listener configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
@@ -61,6 +62,12 @@ public class CreateDomainShrinkRequest extends TeaModel {
 
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +86,7 @@ public class CreateDomainShrinkRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The list of tags. You can specify up to 20 tags.</p>
+     * <p>The list of tags. A maximum of 20 tags are supported.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDomainShrinkRequestTag> tag;

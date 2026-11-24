@@ -14,13 +14,13 @@ public class DescribeDefenseTemplateValidResourcesResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The names of the protected objects that are valid for the protection template.</p>
+     * <p>The list of protected object names.</p>
      */
     @NameInMap("Resources")
     public java.util.List<String> resources;
 
     /**
-     * <p>The total number of protected objects that match the query criteria.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>34</p>

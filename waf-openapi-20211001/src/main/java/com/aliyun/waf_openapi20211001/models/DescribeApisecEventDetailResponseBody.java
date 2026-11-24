@@ -20,7 +20,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public java.util.List<String> attackerList;
 
     /**
-     * <p>The detailed information about the security event. The value is a string converted from a JSON object constructed by a series of parameters.</p>
+     * <p>The details of the security event, which are converted into a string in JSON format constructed from a series of parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;location\&quot;:[\&quot;FR\&quot;,\&quot;CN\&quot;],\&quot;location_type\&quot;:\&quot;country\&quot;}</p>
@@ -29,7 +29,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String detailValue;
 
     /**
-     * <p>The end time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+     * <p>The end time of the query. The time is a UNIX timestamp in UTC. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1683703260</p>
@@ -47,11 +47,11 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The event level. Valid values:</p>
+     * <p>The level of the event. Valid values:</p>
      * <ul>
-     * <li><strong>high</strong>: high risk.</li>
-     * <li><strong>medium</strong>: medium risk.</li>
-     * <li><strong>low</strong>: low risk.</li>
+     * <li><strong>high</strong>: high-risk.</li>
+     * <li><strong>medium</strong>: medium-risk.</li>
+     * <li><strong>low</strong>: low-risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,11 +61,11 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String eventLevel;
 
     /**
-     * <p>The dimension of the security event. Valid values:</p>
+     * <p>The scope of the security event. Valid values:</p>
      * <ul>
-     * <li><p><strong>ip</strong> (default): IP security event.</p>
+     * <li><p><strong>ip</strong>: IP security events. This is the default value.</p>
      * </li>
-     * <li><p><strong>account</strong>: account security event.</p>
+     * <li><p><strong>account</strong>: account security events.</p>
      * </li>
      * </ul>
      * 
@@ -76,9 +76,9 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String eventScope;
 
     /**
-     * <p>The event type.</p>
+     * <p>The type of the event.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported event types.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String eventTag;
 
     /**
-     * <p>The remarks.</p>
+     * <p>The note.</p>
      * 
      * <strong>example:</strong>
      * <p>already confirmed.</p>
@@ -110,7 +110,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String origin;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
@@ -119,7 +119,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+     * <p>The start time of the query. The time is a UNIX timestamp in UTC. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1683648000</p>
@@ -128,7 +128,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String startTs;
 
     /**
-     * <p>The event status. Valid values:</p>
+     * <p>The status of the event. Valid values:</p>
      * <ul>
      * <li><strong>toBeConfirmed</strong>: to be confirmed.</li>
      * <li><strong>confirmed</strong>: confirmed.</li>

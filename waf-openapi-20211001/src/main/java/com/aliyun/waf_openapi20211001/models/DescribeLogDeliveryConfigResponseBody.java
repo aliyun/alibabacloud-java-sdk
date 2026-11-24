@@ -42,9 +42,9 @@ public class DescribeLogDeliveryConfigResponseBody extends TeaModel {
 
     public static class DescribeLogDeliveryConfigResponseBodyDeliveryConfig extends TeaModel {
         /**
-         * <p>The details of the log delivery configuration, in JSON format.</p>
+         * <p>The details of the log delivery configuration, which are formatted as a JSON string constructed from a series of parameters.</p>
          * <blockquote>
-         * <p>This parameter is the same as the <strong>DeliveryDetail</strong> parameter of the <strong>CreateLogDeliveryConfig</strong> operation. For more information, see <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a>.</p>
+         * <p>This parameter is the same as the <strong>DeliveryDetail</strong> parameter of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation. For more information, see the description of the log delivery configuration parameters in the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -74,10 +74,8 @@ public class DescribeLogDeliveryConfigResponseBody extends TeaModel {
         /**
          * <p>The type of the log delivery configuration. Valid values:</p>
          * <ul>
-         * <li><p><strong>syslog</strong>: The logs are delivered to a syslog service.</p>
-         * </li>
-         * <li><p><strong>kafka</strong>: The logs are delivered to a Kafka service.</p>
-         * </li>
+         * <li><strong>syslog</strong>: delivers logs to a Syslog service.</li>
+         * <li><strong>kafka</strong>: delivers logs to a Kafka service.</li>
          * </ul>
          * 
          * <strong>example:</strong>

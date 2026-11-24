@@ -14,7 +14,7 @@ public class CreateSM2CertRequest extends TeaModel {
     public String certName;
 
     /**
-     * <p>The content of the SM encryption certificate.</p>
+     * <p>The content of the ShangMi certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
@@ -25,7 +25,7 @@ public class CreateSM2CertRequest extends TeaModel {
     public String encryptCertificate;
 
     /**
-     * <p>The private key content of the SM encryption certificate.</p>
+     * <p>The content of the private key for the ShangMi certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----</p>
@@ -49,7 +49,7 @@ public class CreateSM2CertRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -64,7 +64,7 @@ public class CreateSM2CertRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -73,7 +73,7 @@ public class CreateSM2CertRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The signing certificate content of the SM certificate.</p>
+     * <p>The content of the signing certificate for the ShangMi certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
@@ -84,7 +84,7 @@ public class CreateSM2CertRequest extends TeaModel {
     public String signCertificate;
 
     /**
-     * <p>The private key content of the SM signing certificate.</p>
+     * <p>The content of the private key for the signing certificate of the ShangMi certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----</p>

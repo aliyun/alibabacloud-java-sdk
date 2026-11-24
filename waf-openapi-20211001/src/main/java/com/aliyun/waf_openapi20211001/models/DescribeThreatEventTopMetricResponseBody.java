@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>12EF3845-CCEB-4B84-AE60-2B49B*****EE5</p>
@@ -14,7 +14,7 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of statistics.</p>
+     * <p>The list of statistical data.</p>
      */
     @NameInMap("TopMetrics")
     public java.util.List<DescribeThreatEventTopMetricResponseBodyTopMetrics> topMetrics;
@@ -53,7 +53,7 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
         /**
          * <p>The country to which the source IP address of the attack belongs.</p>
          * <blockquote>
-         * <p>This field returns a meaningful value only when the statistical object (<strong>Metric</strong>) is set to source IP address (<strong>src</strong>).</p>
+         * <p>This field is valid only when <strong>Metric</strong> is set to <strong>src</strong> (source IP address of the attack).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
         /**
          * <p>The region to which the source IP address of the attack belongs.</p>
          * <blockquote>
-         * <p>This field returns a meaningful value only when the statistical object (<strong>Metric</strong>) is set to source IP address (<strong>src</strong>).</p>
+         * <p>This field is valid only when <strong>Metric</strong> is set to <strong>src</strong> (source IP address of the attack).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -75,12 +75,12 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The attack value. The meaning of this field varies depending on the value of <strong>Metric</strong>.</p>
+         * <p>The attack value. The meaning of this field varies based on the value of <strong>Metric</strong>.</p>
          * <ul>
          * <li>If <strong>Metric</strong> is set to <strong>time</strong>, this field indicates the attack time.</li>
          * <li>If <strong>Metric</strong> is set to <strong>src</strong>, this field indicates the source IP address of the attack.</li>
          * <li>If <strong>Metric</strong> is set to <strong>target</strong>, this field indicates the URL of the attack request.</li>
-         * <li>If <strong>Metric</strong> is set to <strong>type</strong>, this field indicates the attack type. <strong>dirscan</strong> indicates directory scanning, <strong>webscan</strong> indicates web scanning, and other attack types are described in the <strong>detectType</strong> (detection type) parameter of the <strong>custom regular rule</strong> (<strong>regular_custom</strong>) in the <a href="https://help.aliyun.com/document_detail/461421.html"><strong>CreateDefenseRule</strong></a> operation.</li>
+         * <li>If <strong>Metric</strong> is set to <strong>type</strong>, this field indicates the attack type. <strong>dirscan</strong> indicates directory scanning, and <strong>webscan</strong> indicates web scanning. For other attack types, see the description of <strong>detectType</strong> in <strong>regular_custom</strong> (custom regular rules) in the <a href="https://help.aliyun.com/document_detail/461421.html"><strong>CreateDefenseRule</strong></a> operation.</li>
          * <li>If <strong>Metric</strong> is set to <strong>tools</strong>, this field indicates the attack tool.</li>
          * </ul>
          * 

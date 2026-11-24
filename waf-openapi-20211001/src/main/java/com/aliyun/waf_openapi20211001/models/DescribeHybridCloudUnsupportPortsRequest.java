@@ -7,7 +7,7 @@ public class DescribeHybridCloudUnsupportPortsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> to query the ID of your WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

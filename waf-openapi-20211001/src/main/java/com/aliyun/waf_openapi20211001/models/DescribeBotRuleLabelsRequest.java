@@ -7,7 +7,7 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     /**
      * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to view instance ID of your WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     public String labelType;
 
     /**
-     * <p>The number of entries to return per paging in a paged query. Valid values: 1 to 200. Default value: 20.</p>
+     * <p>The number of entries to return per page in a paged query. This parameter is used for paging. Valid values: 1 to 200. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -36,9 +36,9 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. This parameter is returned only if a next page exists.</p>
+     * <p>The pagination token for the next page. This parameter is returned only when a next page exists.</p>
      * <blockquote>
-     * <p>If this parameter is returned, it indicates that there is a next page. You can use the returned <strong>NextToken</strong> as a request parameter to obtain the data of the next page until no value is returned, which indicates that all data is obtained.</p>
+     * <p>If this parameter is returned, a next page exists. You can use the returned <strong>NextToken</strong> as a request parameter to obtain the next page of data. Repeat this process until no value is returned, which indicates that all data is retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

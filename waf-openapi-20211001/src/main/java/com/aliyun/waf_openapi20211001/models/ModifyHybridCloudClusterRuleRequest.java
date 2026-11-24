@@ -15,7 +15,7 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     public Long clusterId;
 
     /**
-     * <p>The resource ID of the cluster rule.</p>
+     * <p>The ID of the cluster rule resource.</p>
      * 
      * <strong>example:</strong>
      * <p>hdbc-clusterrule-*******ym0w</p>
@@ -37,7 +37,7 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -61,17 +61,17 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The traffic redirection rule configuration.</p>
+     * <p>The traffic redirection rule configuration:</p>
      * <p><notice>The mode cannot be modified.</notice></p>
      * <ul>
      * <li><strong>check_mode</strong>: the mode. Valid values:<ul>
-     * <li><strong>all</strong>: full traffic redirection.</li>
-     * <li><strong>part</strong>: partial traffic redirection.</li>
+     * <li><strong>all</strong>: full traffic redirection</li>
+     * <li><strong>part</strong>: partial traffic redirection</li>
      * </ul>
      * </li>
-     * <li><strong>type</strong>: the rule matching type. Valid values:<ul>
-     * <li><strong>exact</strong>: exact match.</li>
-     * <li><strong>regex</strong>: regular expression.</li>
+     * <li><strong>type</strong>: the rule match type. Valid values:<ul>
+     * <li><strong>exact</strong>: exact match</li>
+     * <li><strong>regex</strong>: regular expression</li>
      * </ul>
      * </li>
      * <li><strong>substance</strong>: the rule value.</li>
@@ -84,10 +84,10 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     public String ruleConfig;
 
     /**
-     * <p>The rule status. Valid values:</p>
+     * <p>The status of the rule. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enabled.</li>
-     * <li><strong>off</strong>: disabled.</li>
+     * <li><strong>on</strong>: enabled</li>
+     * <li><strong>off</strong>: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     /**
      * <p><strong>[Deprecated]</strong> The rule type. Valid values:</p>
      * <ul>
-     * <li><strong>pullin</strong>: traffic redirection configuration.</li>
+     * <li><strong>pullin</strong>: traffic redirection configuration</li>
      * </ul>
      * 
      * <strong>example:</strong>

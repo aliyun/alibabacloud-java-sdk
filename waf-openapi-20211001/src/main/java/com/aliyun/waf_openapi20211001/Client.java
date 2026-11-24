@@ -423,7 +423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uploads an international certificate to WAF for CNAME-based access.</p>
+     * <p>Uploads an international certificate for WAF CNAME access.</p>
      * 
      * @param request CreateCertsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -475,7 +475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uploads an international certificate to WAF for CNAME-based access.</p>
+     * <p>Uploads an international certificate for WAF CNAME access.</p>
      * 
      * @param request CreateCertsRequest
      * @return CreateCertsResponse
@@ -807,7 +807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Web core protection rule.</p>
+     * <p>Creates a web core protection rule.</p>
      * 
      * @param request CreateDefenseRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -844,6 +844,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             query.put("TemplateId", request.templateId);
         }
@@ -873,7 +877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Web core protection rule.</p>
+     * <p>Creates a web core protection rule.</p>
      * 
      * @param request CreateDefenseRuleRequest
      * @return CreateDefenseRuleResponse
@@ -983,12 +987,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you call this operation, the domain name (<strong>Domain</strong>) must meet the following requirements.</p>
      * <ul>
-     * <li><strong>Domain ownership authentication</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <strong>DomainName</strong> parameter to specify the domain name. The <strong>DescribeVerifyContent</strong> operation also requires the <strong>AccessOrigin</strong> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</li>
-     * <li><strong>ICP filing</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</li>
+     * <li><strong>Domain ownership authentication</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must authenticate the ownership of the domain name first. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain the domain name authentication information, configure a DNS TXT record or upload an HTTP authentication file based on the returned content, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to authenticate the domain name ownership. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, you must use the <strong>DomainName</strong> parameter to specify the domain name. For the <strong>DescribeVerifyContent</strong> operation, you must also use the <strong>AccessOrigin</strong> parameter to specify the access source. For more information about the valid values, see the metric description of the DescribeVerifyContent operation.</li>
+     * <li><strong>ICP filing</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the website config is added to a region in the Chinese mainland, the domain name must have an ICP filing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a domain name to a WAF instance for Website Config protection.</p>
+     * <p>Adds a website config to a WAF instance for protection.</p>
      * 
      * @param tmpReq CreateDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1060,12 +1064,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you call this operation, the domain name (<strong>Domain</strong>) must meet the following requirements.</p>
      * <ul>
-     * <li><strong>Domain ownership authentication</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <strong>DomainName</strong> parameter to specify the domain name. The <strong>DescribeVerifyContent</strong> operation also requires the <strong>AccessOrigin</strong> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</li>
-     * <li><strong>ICP filing</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</li>
+     * <li><strong>Domain ownership authentication</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must authenticate the ownership of the domain name first. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain the domain name authentication information, configure a DNS TXT record or upload an HTTP authentication file based on the returned content, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to authenticate the domain name ownership. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, you must use the <strong>DomainName</strong> parameter to specify the domain name. For the <strong>DescribeVerifyContent</strong> operation, you must also use the <strong>AccessOrigin</strong> parameter to specify the access source. For more information about the valid values, see the metric description of the DescribeVerifyContent operation.</li>
+     * <li><strong>ICP filing</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the website config is added to a region in the Chinese mainland, the domain name must have an ICP filing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds a domain name to a WAF instance for Website Config protection.</p>
+     * <p>Adds a website config to a WAF instance for protection.</p>
      * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
@@ -1076,8 +1080,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Specifically, when you call the DescribeInstance operation, the Details.HybridCloud parameter in the response must be true. If the feature is not enabled, upgrade the instance to a hybrid cloud-compatible version in the WAF console.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a hybrid cloud Web Application Firewall (WAF) cluster.</p>
+     * <p>Creates a hybrid cloud cluster.</p>
      * 
      * @param request CreateHybridCloudClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1168,8 +1175,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Specifically, when you call the DescribeInstance operation, the Details.HybridCloud parameter in the response must be true. If the feature is not enabled, upgrade the instance to a hybrid cloud-compatible version in the WAF console.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates a hybrid cloud Web Application Firewall (WAF) cluster.</p>
+     * <p>Creates a hybrid cloud cluster.</p>
      * 
      * @param request CreateHybridCloudClusterRequest
      * @return CreateHybridCloudClusterResponse
@@ -1181,7 +1191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates cluster rule information.</p>
@@ -1240,7 +1250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates cluster rule information.</p>
@@ -1335,10 +1345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
+     * <p>Before you call this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes are purchased. If no hybrid cloud extension nodes are purchased, you can log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a log delivery configuration for hybrid cloud environments.</p>
+     * <p>Creates a hybrid cloud log delivery configuration.</p>
      * 
      * @param request CreateLogDeliveryConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1390,10 +1400,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
+     * <p>Before you call this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes are purchased. If no hybrid cloud extension nodes are purchased, you can log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a log delivery configuration for hybrid cloud environments.</p>
+     * <p>Creates a hybrid cloud log delivery configuration.</p>
      * 
      * @param request CreateLogDeliveryConfigRequest
      * @return CreateLogDeliveryConfigResponse
@@ -1549,7 +1559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a trial for a proof of concept (POC) feature.</p>
+     * <p>Enables the POC feature trial.</p>
      * 
      * @param request CreatePocFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1593,7 +1603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a trial for a proof of concept (POC) feature.</p>
+     * <p>Enables the POC feature trial.</p>
      * 
      * @param request CreatePocFunctionRequest
      * @return CreatePocFunctionResponse
@@ -1659,7 +1669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uploads a China National Cryptographic Algorithm (SM) certificate for a domain that is added to WAF in CNAME mode.</p>
+     * <p>Uploads a ShangMi certificate for WAF CNAME access.</p>
      * 
      * @param request CreateSM2CertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1719,7 +1729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uploads a China National Cryptographic Algorithm (SM) certificate for a domain that is added to WAF in CNAME mode.</p>
+     * <p>Uploads a ShangMi certificate for WAF CNAME access.</p>
      * 
      * @param request CreateSM2CertRequest
      * @return CreateSM2CertResponse
@@ -1979,7 +1989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the extended certificate for a resource onboarded in cloud native mode.</p>
+     * <p>Deletes the extension certificate for cloud native mode.</p>
      * 
      * @param request DeleteCloudResourceExtensionCertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2027,7 +2037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the extended certificate for a resource onboarded in cloud native mode.</p>
+     * <p>Deletes the extension certificate for cloud native mode.</p>
      * 
      * @param request DeleteCloudResourceExtensionCertRequest
      * @return DeleteCloudResourceExtensionCertResponse
@@ -2184,6 +2194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ruleIds)) {
             query.put("RuleIds", request.ruleIds);
         }
@@ -2223,7 +2237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unblocks an IP address that is blocked by the scan protection module.</p>
+     * <p>Unblocks IP addresses blocked by scan protection.</p>
      * 
      * @param request DeleteDefenseRuleBlockIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2271,7 +2285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unblocks an IP address that is blocked by the scan protection module.</p>
+     * <p>Unblocks IP addresses blocked by scan protection.</p>
      * 
      * @param request DeleteDefenseRuleBlockIpRequest
      * @return DeleteDefenseRuleBlockIpResponse
@@ -2403,7 +2417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, ensure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes cluster rule information.</p>
@@ -2450,7 +2464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, ensure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes cluster rule information.</p>
@@ -2465,7 +2479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a group.</p>
+     * <p>Deletes group information.</p>
      * 
      * @param request DeleteHybridCloudGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2513,7 +2527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a group.</p>
+     * <p>Deletes group information.</p>
      * 
      * @param request DeleteHybridCloudGroupRequest
      * @return DeleteHybridCloudGroupResponse
@@ -2525,10 +2539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</p>
+     * <p>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes are purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a hybrid cloud log forwarding delivery configuration.</p>
+     * <p>Deletes the outbound log delivery configuration for Hybrid Cloud.</p>
      * 
      * @param request DeleteLogDeliveryConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2572,10 +2586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</p>
+     * <p>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes are purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a hybrid cloud log forwarding delivery configuration.</p>
+     * <p>Deletes the outbound log delivery configuration for Hybrid Cloud.</p>
      * 
      * @param request DeleteLogDeliveryConfigRequest
      * @return DeleteLogDeliveryConfigResponse
@@ -2723,7 +2737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries abnormal cloud native mode resources.</p>
+     * <p>Queries abnormal resources in cloud native mode.</p>
      * 
      * @param request DescribeAbnormalCloudResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2763,7 +2777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries abnormal cloud native mode resources.</p>
+     * <p>Queries abnormal resources in cloud native mode.</p>
      * 
      * @param request DescribeAbnormalCloudResourcesRequest
      * @return DescribeAbnormalCloudResourcesResponse
@@ -2771,6 +2785,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAbnormalCloudResourcesResponse describeAbnormalCloudResources(DescribeAbnormalCloudResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAbnormalCloudResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the access configuration.</p>
+     * 
+     * @param request DescribeAccessConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAccessConfigResponse
+     */
+    public DescribeAccessConfigResponse describeAccessConfigWithOptions(DescribeAccessConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configKey)) {
+            query.put("ConfigKey", request.configKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAccessConfig"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAccessConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the access configuration.</p>
+     * 
+     * @param request DescribeAccessConfigRequest
+     * @return DescribeAccessConfigResponse
+     */
+    public DescribeAccessConfigResponse describeAccessConfig(DescribeAccessConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAccessConfigWithOptions(request, runtime);
     }
 
     /**
@@ -2827,7 +2897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries addresses in an address book by paging.</p>
+     * <p>Queries the addresses in an address book by paging.</p>
      * 
      * @param request DescribeAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2883,7 +2953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries addresses in an address book by paging.</p>
+     * <p>Queries the addresses in an address book by paging.</p>
      * 
      * @param request DescribeAddressesRequest
      * @return DescribeAddressesResponse
@@ -2894,8 +2964,632 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If it is not supported, upgrade the instance to the Agentic WAF edition.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the alert banner information of a Web Application Firewall (WAF) instance.</p>
+     * <p>Queries the details of an AI Engine event.</p>
+     * 
+     * @param request DescribeAiEngineEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAiEngineEventResponse
+     */
+    public DescribeAiEngineEventResponse describeAiEngineEventWithOptions(DescribeAiEngineEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAiEngineEvent"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAiEngineEventResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If it is not supported, upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an AI Engine event.</p>
+     * 
+     * @param request DescribeAiEngineEventRequest
+     * @return DescribeAiEngineEventResponse
+     */
+    public DescribeAiEngineEventResponse describeAiEngineEvent(DescribeAiEngineEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAiEngineEventWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, you can upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of AI Engine event nodes.</p>
+     * 
+     * @param request DescribeAiEngineEventNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAiEngineEventNodesResponse
+     */
+    public DescribeAiEngineEventNodesResponse describeAiEngineEventNodesWithOptions(DescribeAiEngineEventNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAiEngineEventNodes"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAiEngineEventNodesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, you can upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of AI Engine event nodes.</p>
+     * 
+     * @param request DescribeAiEngineEventNodesRequest
+     * @return DescribeAiEngineEventNodesResponse
+     */
+    public DescribeAiEngineEventNodesResponse describeAiEngineEventNodes(DescribeAiEngineEventNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAiEngineEventNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, you can upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the operation records of AI Engine events.</p>
+     * 
+     * @param request DescribeAiEngineEventOperationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAiEngineEventOperationsResponse
+     */
+    public DescribeAiEngineEventOperationsResponse describeAiEngineEventOperationsWithOptions(DescribeAiEngineEventOperationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAiEngineEventOperations"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAiEngineEventOperationsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, you can upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the operation records of AI Engine events.</p>
+     * 
+     * @param request DescribeAiEngineEventOperationsRequest
+     * @return DescribeAiEngineEventOperationsResponse
+     */
+    public DescribeAiEngineEventOperationsResponse describeAiEngineEventOperations(DescribeAiEngineEventOperationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAiEngineEventOperationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the AI Engine event trends.</p>
+     * 
+     * @param request DescribeAiEngineEventTrendsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAiEngineEventTrendsResponse
+     */
+    public DescribeAiEngineEventTrendsResponse describeAiEngineEventTrendsWithOptions(DescribeAiEngineEventTrendsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAiEngineEventTrends"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAiEngineEventTrendsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the AI Engine event trends.</p>
+     * 
+     * @param request DescribeAiEngineEventTrendsRequest
+     * @return DescribeAiEngineEventTrendsResponse
+     */
+    public DescribeAiEngineEventTrendsResponse describeAiEngineEventTrends(DescribeAiEngineEventTrendsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAiEngineEventTrendsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of AI Engine events.</p>
+     * 
+     * @param tmpReq DescribeAiEngineEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAiEngineEventsResponse
+     */
+    public DescribeAiEngineEventsResponse describeAiEngineEventsWithOptions(DescribeAiEngineEventsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeAiEngineEventsShrinkRequest request = new DescribeAiEngineEventsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("Filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.seachValue)) {
+            query.put("SeachValue", request.seachValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAiEngineEvents"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAiEngineEventsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of AI Engine events.</p>
+     * 
+     * @param request DescribeAiEngineEventsRequest
+     * @return DescribeAiEngineEventsResponse
+     */
+    public DescribeAiEngineEventsResponse describeAiEngineEvents(DescribeAiEngineEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAiEngineEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance is not of this edition, upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an AI Engine evidence request.</p>
+     * 
+     * @param request DescribeAiEngineEvidenceRequestRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAiEngineEvidenceRequestResponse
+     */
+    public DescribeAiEngineEvidenceRequestResponse describeAiEngineEvidenceRequestWithOptions(DescribeAiEngineEvidenceRequestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evidenceId)) {
+            query.put("EvidenceId", request.evidenceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAiEngineEvidenceRequest"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAiEngineEvidenceRequestResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance is not of this edition, upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an AI Engine evidence request.</p>
+     * 
+     * @param request DescribeAiEngineEvidenceRequestRequest
+     * @return DescribeAiEngineEvidenceRequestResponse
+     */
+    public DescribeAiEngineEvidenceRequestResponse describeAiEngineEvidenceRequest(DescribeAiEngineEvidenceRequestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAiEngineEvidenceRequestWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, you can upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of AI Engine evidence requests.</p>
+     * 
+     * @param tmpReq DescribeAiEngineEvidenceRequestsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAiEngineEvidenceRequestsResponse
+     */
+    public DescribeAiEngineEvidenceRequestsResponse describeAiEngineEvidenceRequestsWithOptions(DescribeAiEngineEvidenceRequestsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeAiEngineEvidenceRequestsShrinkRequest request = new DescribeAiEngineEvidenceRequestsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("Filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.seachValue)) {
+            query.put("SeachValue", request.seachValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAiEngineEvidenceRequests"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAiEngineEvidenceRequestsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.AgenticWaf parameter is set to true, the instance is of the Agentic WAF edition. If the instance does not support this edition, you can upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of AI Engine evidence requests.</p>
+     * 
+     * @param request DescribeAiEngineEvidenceRequestsRequest
+     * @return DescribeAiEngineEvidenceRequestsResponse
+     */
+    public DescribeAiEngineEvidenceRequestsResponse describeAiEngineEvidenceRequests(DescribeAiEngineEvidenceRequestsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAiEngineEvidenceRequestsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. Otherwise, you can upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the AI Engine overview data.</p>
+     * 
+     * @param request DescribeAiEngineOverviewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAiEngineOverviewResponse
+     */
+    public DescribeAiEngineOverviewResponse describeAiEngineOverviewWithOptions(DescribeAiEngineOverviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAiEngineOverview"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAiEngineOverviewResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. Otherwise, you can upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the AI Engine overview data.</p>
+     * 
+     * @param request DescribeAiEngineOverviewRequest
+     * @return DescribeAiEngineOverviewResponse
+     */
+    public DescribeAiEngineOverviewResponse describeAiEngineOverview(DescribeAiEngineOverviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAiEngineOverviewWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries alert banner information.</p>
      * 
      * @param request DescribeAlarmBannerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2935,7 +3629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert banner information of a Web Application Firewall (WAF) instance.</p>
+     * <p>Queries alert banner information.</p>
      * 
      * @param request DescribeAlarmBannerRequest
      * @return DescribeAlarmBannerResponse
@@ -2947,7 +3641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of alerts.</p>
+     * <p>Queries the alert list.</p>
      * 
      * @param request DescribeAlarmListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2987,7 +3681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of alerts.</p>
+     * <p>Queries the alert list.</p>
      * 
      * @param request DescribeAlarmListRequest
      * @return DescribeAlarmListResponse
@@ -3255,7 +3949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of API security assets.</p>
+     * <p>Queries API security assets.</p>
      * 
      * @param request DescribeApisecApiResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3379,7 +4073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of API security assets.</p>
+     * <p>Queries API security assets.</p>
      * 
      * @param request DescribeApisecApiResourcesRequest
      * @return DescribeApisecApiResourcesResponse
@@ -3599,7 +4293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of API security events.</p>
+     * <p>Queries API security events.</p>
      * 
      * @param request DescribeApisecEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3715,7 +4409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of API security events.</p>
+     * <p>Queries API security events.</p>
      * 
      * @param request DescribeApisecEventsRequest
      * @return DescribeApisecEventsResponse
@@ -4155,7 +4849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistics on data endpoints associated with API security sensitive data domains.</p>
+     * <p>Queries the data domain statistics for API security sensitive data.</p>
      * 
      * @param request DescribeApisecSensitiveDomainStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4223,7 +4917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistics on data endpoints associated with API security sensitive data domains.</p>
+     * <p>Queries the data domain statistics for API security sensitive data.</p>
      * 
      * @param request DescribeApisecSensitiveDomainStatisticRequest
      * @return DescribeApisecSensitiveDomainStatisticResponse
@@ -4423,7 +5117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries protection suggestions for API assets.</p>
+     * <p>Queries the protection suggestions for API assets.</p>
      * 
      * @param request DescribeApisecSuggestionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4471,7 +5165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries protection suggestions for API assets.</p>
+     * <p>Queries the protection suggestions for API assets.</p>
      * 
      * @param request DescribeApisecSuggestionsRequest
      * @return DescribeApisecSuggestionsResponse
@@ -4547,7 +5241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the change records of rule group rules by paging.</p>
+     * <p>Queries the change records of rules in a rule library by using paging.</p>
      * 
      * @param request DescribeBaseRuleChangeLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4599,7 +5293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the change records of rule group rules by paging.</p>
+     * <p>Queries the change records of rules in a rule library by using paging.</p>
      * 
      * @param request DescribeBaseRuleChangeLogRequest
      * @return DescribeBaseRuleChangeLogResponse
@@ -4611,7 +5305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the system rules of Web core protection.</p>
+     * <p>Queries the system rules for web core protection.</p>
      * 
      * @param request DescribeBaseSystemRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4695,7 +5389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the system rules of Web core protection.</p>
+     * <p>Queries the system rules for web core protection.</p>
      * 
      * @param request DescribeBaseSystemRulesRequest
      * @return DescribeBaseSystemRulesResponse
@@ -4763,7 +5457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bot management rule label information.</p>
+     * <p>Queries the information about bot management rule labels.</p>
      * 
      * @param request DescribeBotRuleLabelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4819,7 +5513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bot management rule label information.</p>
+     * <p>Queries the information about bot management rule labels.</p>
      * 
      * @param request DescribeBotRuleLabelsRequest
      * @return DescribeBotRuleLabelsResponse
@@ -4955,7 +5649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the pricing module information of WAF.</p>
+     * <p>Queries the billing module information of WAF.</p>
      * 
      * @param request DescribeChargeModuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4999,7 +5693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the pricing module information of WAF.</p>
+     * <p>Queries the billing module information of WAF.</p>
      * 
      * @param request DescribeChargeModuleRequest
      * @return DescribeChargeModuleResponse
@@ -5011,7 +5705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the billing results of WAF billing modules.</p>
+     * <p>Queries the pricing results of WAF billing modules.</p>
      * 
      * @param request DescribeChargeResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5063,7 +5757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the billing results of WAF billing modules.</p>
+     * <p>Queries the pricing results of WAF billing modules.</p>
      * 
      * @param request DescribeChargeResultRequest
      * @return DescribeChargeResultResponse
@@ -5151,7 +5845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the ports of cloud services added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</p>
+     * <p>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB instances are supported.</p>
      * 
      * @param request DescribeCloudResourceAccessedPortsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5195,7 +5889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the ports of cloud services added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</p>
+     * <p>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB instances are supported.</p>
      * 
      * @param request DescribeCloudResourceAccessedPortsRequest
      * @return DescribeCloudResourceAccessedPortsResponse
@@ -5207,7 +5901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of resources connected to WAF in cloud native mode.</p>
+     * <p>Queries the list of resources onboarded to WAF in cloud native mode.</p>
      * 
      * @param request DescribeCloudResourceListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5279,7 +5973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of resources connected to WAF in cloud native mode.</p>
+     * <p>Queries the list of resources onboarded to WAF in cloud native mode.</p>
      * 
      * @param request DescribeCloudResourceListRequest
      * @return DescribeCloudResourceListResponse
@@ -5665,7 +6359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a paginated list of protected objects that can be associated with a defense group.</p>
+     * <p>Queries the protection objects to associate with a protection group by using a paged query with paging.</p>
      * 
      * @param request DescribeDefenseGroupValidResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5721,7 +6415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a paginated list of protected objects that can be associated with a defense group.</p>
+     * <p>Queries the protection objects to associate with a protection group by using a paged query with paging.</p>
      * 
      * @param request DescribeDefenseGroupValidResourcesRequest
      * @return DescribeDefenseGroupValidResourcesResponse
@@ -5733,7 +6427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a single protected object.</p>
+     * <p>Queries a single protected object.</p>
      * 
      * @param request DescribeDefenseResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5777,7 +6471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a single protected object.</p>
+     * <p>Queries a single protected object.</p>
      * 
      * @param request DescribeDefenseResourceRequest
      * @return DescribeDefenseResourceResponse
@@ -6179,7 +6873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries protected objects by paging.</p>
+     * <p>Performs a paged query of protected objects by using paging.</p>
      * 
      * @param request DescribeDefenseResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6235,7 +6929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries protected objects by paging.</p>
+     * <p>Performs a paged query of protected objects by using paging.</p>
      * 
      * @param request DescribeDefenseResourcesRequest
      * @return DescribeDefenseResourcesResponse
@@ -6315,10 +7009,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</p>
+     * <p>This operation queries the statistics of rules in protection templates for the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries statistics of rules under a specified WAF protection module.</p>
+     * <p>Queries the statistics of rules in a specified Web Application Firewall (WAF) protection module.</p>
      * 
      * @param request DescribeDefenseRuleStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6378,10 +7072,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</p>
+     * <p>This operation queries the statistics of rules in protection templates for the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries statistics of rules under a specified WAF protection module.</p>
+     * <p>Queries the statistics of rules in a specified Web Application Firewall (WAF) protection module.</p>
      * 
      * @param request DescribeDefenseRuleStatisticsRequest
      * @return DescribeDefenseRuleStatisticsResponse
@@ -6465,7 +7159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the protection configurations for a specific defense scenario.</p>
+     * <p>Queries the protection settings for user protection scenarios.</p>
      * 
      * @param request DescribeDefenseSceneConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6513,7 +7207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the protection configurations for a specific defense scenario.</p>
+     * <p>Queries the protection settings for user protection scenarios.</p>
      * 
      * @param request DescribeDefenseSceneConfigRequest
      * @return DescribeDefenseSceneConfigResponse
@@ -6653,7 +7347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a paginated list of protected objects that are valid for a specified protection template.</p>
+     * <p>Queries the list of protected objects pending to take effect for a protection template by using paging in a paged query.</p>
      * 
      * @param request DescribeDefenseTemplateValidResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6713,7 +7407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a paginated list of protected objects that are valid for a specified protection template.</p>
+     * <p>Queries the list of protected objects pending to take effect for a protection template by using paging in a paged query.</p>
      * 
      * @param request DescribeDefenseTemplateValidResourcesRequest
      * @return DescribeDefenseTemplateValidResourcesResponse
@@ -6873,7 +7567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a Website Config.</p>
+     * <p>Queries the details of a website configuration.</p>
      * 
      * @param request DescribeDomainDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6917,7 +7611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a Website Config.</p>
+     * <p>Queries the details of a website configuration.</p>
      * 
      * @param request DescribeDomainDetailRequest
      * @return DescribeDomainDetailResponse
@@ -6929,7 +7623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all ports used by domain names of the current user. Only domain names with CNAME access and hybrid cloud CNAME domain names with public network disaster recovery enabled are included.</p>
+     * <p>Queries the ports used by all domain names of a user, including only CNAME-accessed domain names and hybrid cloud CNAME domain names with public network disaster recovery enabled.</p>
      * 
      * @param request DescribeDomainUsedPortsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6965,7 +7659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all ports used by domain names of the current user. Only domain names with CNAME access and hybrid cloud CNAME domain names with public network disaster recovery enabled are included.</p>
+     * <p>Queries the ports used by all domain names of a user, including only CNAME-accessed domain names and hybrid cloud CNAME domain names with public network disaster recovery enabled.</p>
      * 
      * @param request DescribeDomainUsedPortsRequest
      * @return DescribeDomainUsedPortsResponse
@@ -7053,7 +7747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the daily bills of a pay-as-you-go WAF instance for the last 7 days.</p>
+     * <p>Queries the daily bills of a pay-as-you-go Web Application Firewall (WAF) instance over the last seven days.</p>
      * 
      * @param request DescribeElasticBillsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7101,7 +7795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the daily bills of a pay-as-you-go WAF instance for the last 7 days.</p>
+     * <p>Queries the daily bills of a pay-as-you-go Web Application Firewall (WAF) instance over the last seven days.</p>
      * 
      * @param request DescribeElasticBillsRequest
      * @return DescribeElasticBillsResponse
@@ -7305,7 +7999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the asset statistics information for basic API security detection.</p>
+     * <p>Queries the asset statistics information for API security basic detection.</p>
      * 
      * @param request DescribeFreeUserAssetCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7345,7 +8039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the asset statistics information for basic API security detection.</p>
+     * <p>Queries the asset statistics information for API security basic detection.</p>
      * 
      * @param request DescribeFreeUserAssetCountRequest
      * @return DescribeFreeUserAssetCountResponse
@@ -7357,7 +8051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the security event statistics of API security basic detection.</p>
+     * <p>Queries the statistics of security events for basic API security detection.</p>
      * 
      * @param request DescribeFreeUserEventCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7397,7 +8091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the security event statistics of API security basic detection.</p>
+     * <p>Queries the statistics of security events for basic API security detection.</p>
      * 
      * @param request DescribeFreeUserEventCountRequest
      * @return DescribeFreeUserEventCountResponse
@@ -7409,7 +8103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the security event types for basic API security detection.</p>
+     * <p>Queries the security event types for API security basic detection.</p>
      * 
      * @param request DescribeFreeUserEventTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7449,7 +8143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the security event types for basic API security detection.</p>
+     * <p>Queries the security event types for API security basic detection.</p>
      * 
      * @param request DescribeFreeUserEventTypesRequest
      * @return DescribeFreeUserEventTypesResponse
@@ -7461,7 +8155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of security events detected by API security basic detection.</p>
+     * <p>Queries the list of security events for API security basic detection.</p>
      * 
      * @param request DescribeFreeUserEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7501,7 +8195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of security events detected by API security basic detection.</p>
+     * <p>Queries the list of security events for API security basic detection.</p>
      * 
      * @param request DescribeFreeUserEventsRequest
      * @return DescribeFreeUserEventsResponse
@@ -7513,10 +8207,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud parameter in the response is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the system status of hybrid cloud cluster nodes.</p>
+     * <p>Queries the system status of nodes in a hybrid cloud cluster.</p>
      * 
      * @param request DescribeHybridCloudBasicMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7560,10 +8254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud parameter in the response is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the system status of hybrid cloud cluster nodes.</p>
+     * <p>Queries the system status of nodes in a hybrid cloud cluster.</p>
      * 
      * @param request DescribeHybridCloudBasicMonitorRequest
      * @return DescribeHybridCloudBasicMonitorResponse
@@ -7575,10 +8269,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the rule information of a hybrid cloud cluster.</p>
+     * <p>Retrieves the hybrid cloud cluster rule information.</p>
      * 
      * @param request DescribeHybridCloudClusterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7606,10 +8300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the rule information of a hybrid cloud cluster.</p>
+     * <p>Retrieves the hybrid cloud cluster rule information.</p>
      * 
      * @param request DescribeHybridCloudClusterRuleRequest
      * @return DescribeHybridCloudClusterRuleResponse
@@ -7782,8 +8476,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the hybrid cloud clusters of a specified Web Application Firewall (WAF) instance. The response includes information such as the cluster name, cluster type, network access mode, HTTP and HTTPS ports, proxy gateway mode, and the number of protection nodes that can be added.</p>
+     * <h2>Before you begin</h2>
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.
+     * If you call this API operation when the hybrid cloud feature is not enabled, the error code Waf.HybridCloud.HybridCloudNotsupport is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of hybrid cloud clusters.</p>
+     * <p>Queries the hybrid cloud clusters.</p>
      * 
      * @param request DescribeHybridCloudClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7822,8 +8522,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the hybrid cloud clusters of a specified Web Application Firewall (WAF) instance. The response includes information such as the cluster name, cluster type, network access mode, HTTP and HTTPS ports, proxy gateway mode, and the number of protection nodes that can be added.</p>
+     * <h2>Before you begin</h2>
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.
+     * If you call this API operation when the hybrid cloud feature is not enabled, the error code Waf.HybridCloud.HybridCloudNotsupport is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of hybrid cloud clusters.</p>
+     * <p>Queries the hybrid cloud clusters.</p>
      * 
      * @param request DescribeHybridCloudClustersRequest
      * @return DescribeHybridCloudClustersResponse
@@ -7982,8 +8688,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the count of protectable nodes that can be added to a hybrid cloud cluster.</p>
+     * <p>Retrieves the number of protection nodes that can be added to a hybrid cloud cluster.</p>
      * 
      * @param request DescribeHybridCloudProtectableCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8022,8 +8732,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the count of protectable nodes that can be added to a hybrid cloud cluster.</p>
+     * <p>Retrieves the number of protection nodes that can be added to a hybrid cloud cluster.</p>
      * 
      * @param request DescribeHybridCloudProtectableCountRequest
      * @return DescribeHybridCloudProtectableCountResponse
@@ -8257,10 +8971,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the Hybrid Cloud feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the dictionary of region information supported by hybrid cloud, including ISPs, continents, and cities.</p>
+     * <p>Queries the region information dictionary for ISPs, continents, and cities supported by Hybrid Cloud.</p>
      * 
      * @param request DescribeHybridCloudServerRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8308,10 +9022,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the Hybrid Cloud feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the dictionary of region information supported by hybrid cloud, including ISPs, continents, and cities.</p>
+     * <p>Queries the region information dictionary for ISPs, continents, and cities supported by Hybrid Cloud.</p>
      * 
      * @param request DescribeHybridCloudServerRegionsRequest
      * @return DescribeHybridCloudServerRegionsResponse
@@ -8323,7 +9037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the access regions.</p>
@@ -8366,7 +9080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the access regions.</p>
@@ -8381,7 +9095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of unassigned servers in a hybrid cloud cluster.</p>
@@ -8444,7 +9158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of unassigned servers in a hybrid cloud cluster.</p>
@@ -8459,7 +9173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of unsupported ports for a hybrid cloud.</p>
+     * <p>Queries the list of unavailable ports for hybrid cloud.</p>
      * 
      * @param request DescribeHybridCloudUnsupportPortsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8499,7 +9213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of unsupported ports for a hybrid cloud.</p>
+     * <p>Queries the list of unavailable ports for hybrid cloud.</p>
      * 
      * @param request DescribeHybridCloudUnsupportPortsRequest
      * @return DescribeHybridCloudUnsupportPortsResponse
@@ -8569,7 +9283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a WAF instance in the current Alibaba Cloud account.</p>
+     * <p>Queries the details of the WAF instance in the current Alibaba Cloud account.</p>
      * 
      * @param request DescribeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8605,7 +9319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a WAF instance in the current Alibaba Cloud account.</p>
+     * <p>Queries the details of the WAF instance in the current Alibaba Cloud account.</p>
      * 
      * @param request DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -8617,7 +9331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the countries and areas outside China supported by the Location Blacklist.</p>
+     * <p>Queries the countries and areas outside China supported by IP Location Blacklist.</p>
      * 
      * @param request DescribeIpAbroadCountryInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8677,7 +9391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the countries and areas outside China supported by the Location Blacklist.</p>
+     * <p>Queries the countries and areas outside China supported by IP Location Blacklist.</p>
      * 
      * @param request DescribeIpAbroadCountryInfosRequest
      * @return DescribeIpAbroadCountryInfosResponse
@@ -8689,7 +9403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a single log delivery configuration for a hybrid cloud.</p>
+     * <p>Queries a single hybrid cloud log delivery configuration.</p>
      * 
      * @param request DescribeLogDeliveryConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8733,7 +9447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a single log delivery configuration for a hybrid cloud.</p>
+     * <p>Queries a single hybrid cloud log delivery configuration.</p>
      * 
      * @param request DescribeLogDeliveryConfigRequest
      * @return DescribeLogDeliveryConfigResponse
@@ -8745,7 +9459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all log delivery configurations of a Web Application Firewall (WAF) instance for hybrid cloud.</p>
+     * <p>Queries all hybrid cloud log delivery configurations.</p>
      * 
      * @param request DescribeLogDeliveryConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8801,7 +9515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all log delivery configurations of a Web Application Firewall (WAF) instance for hybrid cloud.</p>
+     * <p>Queries all hybrid cloud log delivery configurations.</p>
      * 
      * @param request DescribeLogDeliveryConfigsRequest
      * @return DescribeLogDeliveryConfigsResponse
@@ -8961,7 +9675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time series statistics of all traffic, including malicious requests and normal service requests.</p>
+     * <p>Queries the time-series statistics of all traffic, including malicious requests and normal service requests.</p>
      * 
      * @param tmpReq DescribeNetworkFlowTimeSeriesMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9015,7 +9729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time series statistics of all traffic, including malicious requests and normal service requests.</p>
+     * <p>Queries the time-series statistics of all traffic, including malicious requests and normal service requests.</p>
      * 
      * @param request DescribeNetworkFlowTimeSeriesMetricRequest
      * @return DescribeNetworkFlowTimeSeriesMetricResponse
@@ -9027,7 +9741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the top N statistics for all traffic that passes through Web Application Firewall (WAF), including malicious and normal service requests. The results are aggregated by different dimensions and sorted in descending order.</p>
+     * <p>Queries the top statistics of all traffic aggregated and sorted by various dimensions, including malicious requests and normal service traffic.</p>
      * 
      * @param tmpReq DescribeNetworkFlowTopNMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9085,7 +9799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the top N statistics for all traffic that passes through Web Application Firewall (WAF), including malicious and normal service requests. The results are aggregated by different dimensions and sorted in descending order.</p>
+     * <p>Queries the top statistics of all traffic aggregated and sorted by various dimensions, including malicious requests and normal service traffic.</p>
      * 
      * @param request DescribeNetworkFlowTopNMetricRequest
      * @return DescribeNetworkFlowTopNMetricResponse
@@ -9217,7 +9931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the enabled proof of concept (POC) feature trials.</p>
+     * <p>Queries the details of enabled POC feature trials.</p>
      * 
      * @param request DescribePocFunctionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9257,7 +9971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the enabled proof of concept (POC) feature trials.</p>
+     * <p>Queries the details of enabled POC feature trials.</p>
      * 
      * @param request DescribePocFunctionsRequest
      * @return DescribePocFunctionsResponse
@@ -9341,7 +10055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the burstable pay-as-you-go billing details of a subscription WAF instance, such as burstable QPS.</p>
+     * <p>Queries the elastic pay-as-you-go bills for an upfront WAF instance, such as burstable QPS.</p>
      * 
      * @param request DescribePrepayDailyBillsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9389,7 +10103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the burstable pay-as-you-go billing details of a subscription WAF instance, such as burstable QPS.</p>
+     * <p>Queries the elastic pay-as-you-go bills for an upfront WAF instance, such as burstable QPS.</p>
      * 
      * @param request DescribePrepayDailyBillsRequest
      * @return DescribePrepayDailyBillsResponse
@@ -9697,7 +10411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
+     * <p>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your Web Application Firewall (WAF) instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned value of the Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. Otherwise, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the log delivery status of protected objects.</p>
@@ -9744,7 +10458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
+     * <p>Before calling this operation, ensure that you have purchased hybrid cloud extension nodes for your Web Application Firewall (WAF) instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned value of the Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. Otherwise, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the log delivery status of protected objects.</p>
@@ -9759,7 +10473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log field configuration for a protected object.</p>
+     * <p>Queries the log field configuration of a protected object.</p>
      * 
      * @param request DescribeResourceLogFieldConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9807,7 +10521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log field configuration for a protected object.</p>
+     * <p>Queries the log field configuration of a protected object.</p>
      * 
      * @param request DescribeResourceLogFieldConfigRequest
      * @return DescribeResourceLogFieldConfigResponse
@@ -10627,15 +11341,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</p>
+     * <p>Attack traffic refers to requests with rule hits that are identified as risky. The following three types of data are not included:</p>
      * <ul>
-     * <li>Requests that hit a whitelist rule.</li>
-     * <li>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</li>
-     * <li>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</li>
+     * <li>Requests with rule hits on whitelist rules.</li>
+     * <li>Requests that match bot rules but the rule action is set to back-to-origin mark.</li>
+     * <li>Requests with rule hits where the rule action is set to dynamic token, slider, strict slider, or JavaScript authenticate, but users authenticate successfully and are allowed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed logs of attack traffic. Each log entry contains the details of a request that matched a protection rule.</p>
+     * <p>Queries the detailed logs of attack traffic. Each log entry contains detailed information about a matched request.</p>
      * 
      * @param tmpReq DescribeSecurityEventLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10693,15 +11407,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</p>
+     * <p>Attack traffic refers to requests with rule hits that are identified as risky. The following three types of data are not included:</p>
      * <ul>
-     * <li>Requests that hit a whitelist rule.</li>
-     * <li>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</li>
-     * <li>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</li>
+     * <li>Requests with rule hits on whitelist rules.</li>
+     * <li>Requests that match bot rules but the rule action is set to back-to-origin mark.</li>
+     * <li>Requests with rule hits where the rule action is set to dynamic token, slider, strict slider, or JavaScript authenticate, but users authenticate successfully and are allowed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed logs of attack traffic. Each log entry contains the details of a request that matched a protection rule.</p>
+     * <p>Queries the detailed logs of attack traffic. Each log entry contains detailed information about a matched request.</p>
      * 
      * @param request DescribeSecurityEventLogsRequest
      * @return DescribeSecurityEventLogsResponse
@@ -10713,15 +11427,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</p>
+     * <p>Attack traffic refers to requests that hit rules and are identified as risky. The following three types of data are not included:</p>
      * <ul>
-     * <li>Requests that hit a whitelist rule.</li>
-     * <li>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</li>
-     * <li>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</li>
+     * <li>Requests that hit whitelist rules.</li>
+     * <li>Requests that hit bot rules, but the rule action is back-to-origin mark.</li>
+     * <li>Requests that hit rules and the rule action is set to dynamic token, slider CAPTCHA, strict slider CAPTCHA, or JavaScript authenticate, but the requests passed user verification and were allowed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the time series data of attack traffic. Attack requests are requests that hit a rule and are identified as a threat.</p>
+     * <p>Queries the time series data of attack traffic. Attack requests refer to requests that hit rules and are identified as risky.</p>
      * 
      * @param tmpReq DescribeSecurityEventTimeSeriesMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10775,15 +11489,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</p>
+     * <p>Attack traffic refers to requests that hit rules and are identified as risky. The following three types of data are not included:</p>
      * <ul>
-     * <li>Requests that hit a whitelist rule.</li>
-     * <li>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</li>
-     * <li>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</li>
+     * <li>Requests that hit whitelist rules.</li>
+     * <li>Requests that hit bot rules, but the rule action is back-to-origin mark.</li>
+     * <li>Requests that hit rules and the rule action is set to dynamic token, slider CAPTCHA, strict slider CAPTCHA, or JavaScript authenticate, but the requests passed user verification and were allowed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the time series data of attack traffic. Attack requests are requests that hit a rule and are identified as a threat.</p>
+     * <p>Queries the time series data of attack traffic. Attack requests refer to requests that hit rules and are identified as risky.</p>
      * 
      * @param request DescribeSecurityEventTimeSeriesMetricRequest
      * @return DescribeSecurityEventTimeSeriesMetricResponse
@@ -11025,7 +11739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the distribution of cross-border traffic that contains personal information.</p>
+     * <p>Queries the distribution of outbound traffic containing personal information.</p>
      * 
      * @param request DescribeSensitiveOutboundDistributionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11077,7 +11791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the distribution of cross-border traffic that contains personal information.</p>
+     * <p>Queries the distribution of outbound traffic containing personal information.</p>
      * 
      * @param request DescribeSensitiveOutboundDistributionRequest
      * @return DescribeSensitiveOutboundDistributionResponse
@@ -11089,7 +11803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistics about outbound transfers of personal information.</p>
+     * <p>Queries the statistics on the types of outbound personal information.</p>
      * 
      * @param request DescribeSensitiveOutboundStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11173,7 +11887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistics about outbound transfers of personal information.</p>
+     * <p>Queries the statistics on the types of outbound personal information.</p>
      * 
      * @param request DescribeSensitiveOutboundStatisticRequest
      * @return DescribeSensitiveOutboundStatisticResponse
@@ -11185,7 +11899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trend of cross-border transfer of personal information data.</p>
+     * <p>Queries the trend of outbound personal information.</p>
      * 
      * @param request DescribeSensitiveOutboundTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11237,7 +11951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trend of cross-border transfer of personal information data.</p>
+     * <p>Queries the trend of outbound personal information.</p>
      * 
      * @param request DescribeSensitiveOutboundTrendRequest
      * @return DescribeSensitiveOutboundTrendResponse
@@ -11345,7 +12059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the results of sensitive data tracing.</p>
+     * <p>Queries sensitive data tracing results.</p>
      * 
      * @param request DescribeSensitiveRequestsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11413,7 +12127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the results of sensitive data tracing.</p>
+     * <p>Queries sensitive data tracing results.</p>
      * 
      * @param request DescribeSensitiveRequestsRequest
      * @return DescribeSensitiveRequestsResponse
@@ -11425,7 +12139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the sensitive data statistics of tracing watermark audits.</p>
+     * <p>Queries the sensitive data statistics for tracing audit.</p>
      * 
      * @param request DescribeSensitiveStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11489,7 +12203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the sensitive data statistics of tracing watermark audits.</p>
+     * <p>Queries the sensitive data statistics for tracing audit.</p>
      * 
      * @param request DescribeSensitiveStatisticRequest
      * @return DescribeSensitiveStatisticResponse
@@ -11789,7 +12503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a paginated list of notable security events.</p>
+     * <p>Queries the list of noteworthy security events by paging in a paged query.</p>
      * 
      * @param request DescribeThreatEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11849,7 +12563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a paginated list of notable security events.</p>
+     * <p>Queries the list of noteworthy security events by paging in a paged query.</p>
      * 
      * @param request DescribeThreatEventRequest
      * @return DescribeThreatEventResponse
@@ -11861,7 +12575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a security event that requires attention.</p>
+     * <p>Retrieves the details of noteworthy security events.</p>
      * 
      * @param request DescribeThreatEventDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11905,7 +12619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a security event that requires attention.</p>
+     * <p>Retrieves the details of noteworthy security events.</p>
      * 
      * @param request DescribeThreatEventDetailRequest
      * @return DescribeThreatEventDetailResponse
@@ -11917,7 +12631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the top 5 statistics of security events aggregated by different statistical objects and sorted in descending order.</p>
+     * <p>Queries the top 5 statistics for security events, aggregated and sorted in descending order based on different metrics.</p>
      * 
      * @param request DescribeThreatEventTopMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11965,7 +12679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the top 5 statistics of security events aggregated by different statistical objects and sorted in descending order.</p>
+     * <p>Queries the top 5 statistics for security events, aggregated and sorted in descending order based on different metrics.</p>
      * 
      * @param request DescribeThreatEventTopMetricRequest
      * @return DescribeThreatEventTopMetricResponse
@@ -12237,7 +12951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attack trend of API security.</p>
+     * <p>Queries the trend of API security attacks.</p>
      * 
      * @param request DescribeUserEventTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12285,7 +12999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attack trend of API security.</p>
+     * <p>Queries the trend of API security attacks.</p>
      * 
      * @param request DescribeUserEventTrendRequest
      * @return DescribeUserEventTrendResponse
@@ -12603,7 +13317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain ownership verification content of a Web Application Firewall (WAF) instance.</p>
+     * <p>Queries the ownership verification content.</p>
      * 
      * @param request DescribeVerifyContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12643,7 +13357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain ownership verification content of a Web Application Firewall (WAF) instance.</p>
+     * <p>Queries the ownership verification content.</p>
      * 
      * @param request DescribeVerifyContentRequest
      * @return DescribeVerifyContentResponse
@@ -12835,7 +13549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initializes a service-linked role for WAF.</p>
+     * <p>Creates a service-linked role for WAF.</p>
      * 
      * @param request InitializeWafOperationRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12875,7 +13589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initializes a service-linked role for WAF.</p>
+     * <p>Creates a service-linked role for WAF.</p>
      * 
      * @param request InitializeWafOperationRoleRequest
      * @return InitializeWafOperationRoleResponse
@@ -12943,7 +13657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are attached to a resource.</p>
+     * <p>Queries the tags bound to resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12991,7 +13705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are attached to a resource.</p>
+     * <p>Queries the tags bound to resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -13063,6 +13777,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagValuesResponse listTagValues(ListTagValuesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagValuesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the user provisioning configuration.</p>
+     * 
+     * @param request ModifyAccessConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAccessConfigResponse
+     */
+    public ModifyAccessConfigResponse modifyAccessConfigWithOptions(ModifyAccessConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configKey)) {
+            query.put("ConfigKey", request.configKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configValue)) {
+            query.put("ConfigValue", request.configValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAccessConfig"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAccessConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the user provisioning configuration.</p>
+     * 
+     * @param request ModifyAccessConfigRequest
+     * @return ModifyAccessConfigResponse
+     */
+    public ModifyAccessConfigResponse modifyAccessConfig(ModifyAccessConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAccessConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the status of an AI Engine event.</p>
+     * 
+     * @param request ModifyAiEngineEventStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAiEngineEventStatusResponse
+     */
+    public ModifyAiEngineEventStatusResponse modifyAiEngineEventStatusWithOptions(ModifyAiEngineEventStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetStatus)) {
+            query.put("TargetStatus", request.targetStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAiEngineEventStatus"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAiEngineEventStatusResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that the WAF instance is of the Agentic WAF edition. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.AgenticWaf parameter is true, the instance is of the Agentic WAF edition. If not, upgrade the instance to the Agentic WAF edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the status of an AI Engine event.</p>
+     * 
+     * @param request ModifyAiEngineEventStatusRequest
+     * @return ModifyAiEngineEventStatusResponse
+     */
+    public ModifyAiEngineEventStatusResponse modifyAiEngineEventStatus(ModifyAiEngineEventStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAiEngineEventStatusWithOptions(request, runtime);
     }
 
     /**
@@ -13203,7 +14047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the statuses of multiple API security events in a batch.</p>
+     * <p>Updates the status of multiple API security events.</p>
      * 
      * @param request ModifyApisecEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13263,7 +14107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the statuses of multiple API security events in a batch.</p>
+     * <p>Updates the status of multiple API security events.</p>
      * 
      * @param request ModifyApisecEventsRequest
      * @return ModifyApisecEventsResponse
@@ -13361,12 +14205,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you invoke this operation, make sure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</p>
+     * <p>Before invoking this operation, ensure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</p>
      * <ol>
-     * <li>Confirm that the API security feature is enabled. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticApisec or Details.Apisec parameter in the response is true, the API security feature is enabled.</li>
-     * <li>Confirm that WAF is authorized to access cloud resources. Invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the authorization.</li>
-     * <li>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active SLS projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
-     * After you complete the preceding steps, invoke this operation to enable or disable the delivery status of API security logs.</li>
+     * <li>Confirm that the API security feature is enabled. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details and check the relevant status. If the Details.AgenticApisec or Details.Apisec response parameter is set to true, the API security feature is enabled.</li>
+     * <li>Confirm that WAF is authorized to access cloud resources. You can invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the required permissions.</li>
+     * <li>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active Simple Log Service projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
+     * After completing these steps, invoke this operation to enable or disable the API security log delivery status.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -13418,12 +14262,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you invoke this operation, make sure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</p>
+     * <p>Before invoking this operation, ensure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</p>
      * <ol>
-     * <li>Confirm that the API security feature is enabled. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticApisec or Details.Apisec parameter in the response is true, the API security feature is enabled.</li>
-     * <li>Confirm that WAF is authorized to access cloud resources. Invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the authorization.</li>
-     * <li>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active SLS projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
-     * After you complete the preceding steps, invoke this operation to enable or disable the delivery status of API security logs.</li>
+     * <li>Confirm that the API security feature is enabled. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details and check the relevant status. If the Details.AgenticApisec or Details.Apisec response parameter is set to true, the API security feature is enabled.</li>
+     * <li>Confirm that WAF is authorized to access cloud resources. You can invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the required permissions.</li>
+     * <li>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active Simple Log Service projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
+     * After completing these steps, invoke this operation to enable or disable the API security log delivery status.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -13439,7 +14283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</p>
+     * <p>Before calling this operation, ensure that protected objects or protected object groups exist. For protected objects added to WAF, you can call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For existing protected object groups, you can call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group exists, you must first call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the status of protected objects or protected object groups for the API security protection module.</p>
@@ -13498,7 +14342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</p>
+     * <p>Before calling this operation, ensure that protected objects or protected object groups exist. For protected objects added to WAF, you can call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For existing protected object groups, you can call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group exists, you must first call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the status of protected objects or protected object groups for the API security protection module.</p>
@@ -13513,7 +14357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the status of protected objects or protected object groups for API security.</p>
+     * <p>Modifies the status of API security protected objects or protected object groups.</p>
      * 
      * @param request ModifyApisecStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13565,7 +14409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the status of protected objects or protected object groups for API security.</p>
+     * <p>Modifies the status of API security protected objects or protected object groups.</p>
      * 
      * @param request ModifyApisecStatusRequest
      * @return ModifyApisecStatusResponse
@@ -13919,17 +14763,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</p>
+     * <p>Before invoking this operation, make sure that a protected object is added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME access resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects added to WAF.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the client IP and cookie settings of a protected object.</p>
+     * <p>Modifies the client IP address and cookie settings of a protected object.</p>
      * 
-     * @param request ModifyDefenseResourceXffRequest
+     * @param tmpReq ModifyDefenseResourceXffRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDefenseResourceXffResponse
      */
-    public ModifyDefenseResourceXffResponse modifyDefenseResourceXffWithOptions(ModifyDefenseResourceXffRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyDefenseResourceXffResponse modifyDefenseResourceXffWithOptions(ModifyDefenseResourceXffRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyDefenseResourceXffShrinkRequest request = new ModifyDefenseResourceXffShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cookieConfig)) {
+            request.cookieConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cookieConfig, "CookieConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acwCookieStatus)) {
             query.put("AcwCookieStatus", request.acwCookieStatus);
@@ -13941,6 +14791,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.acwV3SecureStatus)) {
             query.put("AcwV3SecureStatus", request.acwV3SecureStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cookieConfigShrink)) {
+            query.put("CookieConfig", request.cookieConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.customHeaders)) {
@@ -13990,10 +14844,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</p>
+     * <p>Before invoking this operation, make sure that a protected object is added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME access resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects added to WAF.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the client IP and cookie settings of a protected object.</p>
+     * <p>Modifies the client IP address and cookie settings of a protected object.</p>
      * 
      * @param request ModifyDefenseResourceXffRequest
      * @return ModifyDefenseResourceXffResponse
@@ -14040,6 +14894,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
             query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
@@ -14171,8 +15029,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
             query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
@@ -14221,7 +15087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the mitigation settings for a protection scenario.</p>
+     * <p>Modifies the protection settings for a defense scene.</p>
      * 
      * @param request ModifyDefenseSceneConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14273,7 +15139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the mitigation settings for a protection scenario.</p>
+     * <p>Modifies the protection settings for a defense scene.</p>
      * 
      * @param request ModifyDefenseSceneConfigRequest
      * @return ModifyDefenseSceneConfigResponse
@@ -14421,7 +15287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a CNAME-based domain name.</p>
+     * <p>Modifies a domain name that is added to WAF in CNAME access mode.</p>
      * 
      * @param tmpReq ModifyDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14487,7 +15353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a CNAME-based domain name.</p>
+     * <p>Modifies a domain name that is added to WAF in CNAME access mode.</p>
      * 
      * @param request ModifyDomainRequest
      * @return ModifyDomainResponse
@@ -14633,7 +15499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable it.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies cluster information.</p>
@@ -14732,7 +15598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before calling this operation, ensure that the Hybrid Cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the Hybrid Cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable it.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies cluster information.</p>
@@ -14813,10 +15679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the rule information of a hybrid cloud cluster.</p>
+     * <p>Modifies the information about a hybrid cloud cluster rule.</p>
      * 
      * @param request ModifyHybridCloudClusterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14876,10 +15742,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * <p>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.HybridCloud parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the rule information of a hybrid cloud cluster.</p>
+     * <p>Modifies the information about a hybrid cloud cluster rule.</p>
      * 
      * @param request ModifyHybridCloudClusterRuleRequest
      * @return ModifyHybridCloudClusterRuleResponse
@@ -14965,7 +15831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a node to a node group in a hybrid cloud cluster of a Web Application Firewall (WAF) instance.</p>
+     * <p>Adds nodes to a cluster group.</p>
      * 
      * @param request ModifyHybridCloudGroupExpansionServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15017,7 +15883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a node to a node group in a hybrid cloud cluster of a Web Application Firewall (WAF) instance.</p>
+     * <p>Adds nodes to a cluster group.</p>
      * 
      * @param request ModifyHybridCloudGroupExpansionServerRequest
      * @return ModifyHybridCloudGroupExpansionServerResponse
@@ -15305,10 +16171,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
+     * <p>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection must be purchased separately through an upgrade. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.MajorProtection parameter is set to true, the instance supports critical event protection. If the instance does not support critical event protection, you can upgrade the instance to enable this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP blacklist for a critical event protection scenario.</p>
+     * <p>Modifies the IP blacklist for critical event protection.</p>
      * 
      * @param request ModifyMajorProtectionBlackIpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15368,10 +16234,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
+     * <p>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection must be purchased separately through an upgrade. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.MajorProtection parameter is set to true, the instance supports critical event protection. If the instance does not support critical event protection, you can upgrade the instance to enable this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP blacklist for a critical event protection scenario.</p>
+     * <p>Modifies the IP blacklist for critical event protection.</p>
      * 
      * @param request ModifyMajorProtectionBlackIpRequest
      * @return ModifyMajorProtectionBlackIpResponse
@@ -15957,7 +16823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Re-onboards a cloud service to WAF. This operation is used only when the protection status of the cloud service in cloud native mode is abnormal.</p>
+     * <p>Reconnects a cloud service to WAF. This operation is applicable only when the protection status of the cloud service in cloud native mode is abnormal.</p>
      * 
      * @param request ReCreateCloudResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16013,7 +16879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Re-onboards a cloud service to WAF. This operation is used only when the protection status of the cloud service in cloud native mode is abnormal.</p>
+     * <p>Reconnects a cloud service to WAF. This operation is applicable only when the protection status of the cloud service in cloud native mode is abnormal.</p>
      * 
      * @param request ReCreateCloudResourceRequest
      * @return ReCreateCloudResourceResponse
@@ -16025,7 +16891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a Web Application Firewall (WAF) 3.0 instance.</p>
+     * <p>Releases a WAF 3.0 instance.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16065,7 +16931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a Web Application Firewall (WAF) 3.0 instance.</p>
+     * <p>Releases a WAF 3.0 instance.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @return ReleaseInstanceResponse
@@ -16251,7 +17117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies that you own the specified domain name. Domain ownership must be verified before you can add a domain name to Web Application Firewall (WAF) by using CNAME access.</p>
+     * <p>Verifies the ownership of a domain name.</p>
      * 
      * @param request VerifyDomainOwnerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16295,7 +17161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies that you own the specified domain name. Domain ownership must be verified before you can add a domain name to Web Application Firewall (WAF) by using CNAME access.</p>
+     * <p>Verifies the ownership of a domain name.</p>
      * 
      * @param request VerifyDomainOwnerRequest
      * @return VerifyDomainOwnerResponse

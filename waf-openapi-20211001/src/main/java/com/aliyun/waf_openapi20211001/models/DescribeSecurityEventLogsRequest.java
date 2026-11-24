@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventLogsRequest extends TeaModel {
     /**
-     * <p>The filter conditions. A logical AND relationship exists between multiple filter conditions.</p>
+     * <p>The query filter conditions. Multiple filter conditions are connected by the logical AND operator.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
     public DescribeSecurityEventLogsRequestFilter filter;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,7 +25,7 @@ public class DescribeSecurityEventLogsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number to return for a paged query. The default value is <strong>1</strong>, which indicates the first page.</p>
+     * <p>The page number to return during paging in a paged query. Default value: <strong>1</strong>, which indicates the first page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeSecurityEventLogsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page for a paged query. The maximum value is <strong>100</strong>.</p>
+     * <p>The number of entries per page for paging in a paged query. Maximum value: <strong>100</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,12 +45,10 @@ public class DescribeSecurityEventLogsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,7 +121,7 @@ public class DescribeSecurityEventLogsRequest extends TeaModel {
 
     public static class DescribeSecurityEventLogsRequestFilterConditions extends TeaModel {
         /**
-         * <p>The name of the field to filter. This operation supports all fields.</p>
+         * <p>The name of the field on which the filter operation is performed. This operation supports all fields.</p>
          * 
          * <strong>example:</strong>
          * <p>matched_host</p>
@@ -141,7 +139,7 @@ public class DescribeSecurityEventLogsRequest extends TeaModel {
         public String opValue;
 
         /**
-         * <p>The filter value.</p>
+         * <p>The filter values.</p>
          * 
          * <strong>example:</strong>
          * <p>test.waf-top</p>
@@ -182,7 +180,7 @@ public class DescribeSecurityEventLogsRequest extends TeaModel {
 
     public static class DescribeSecurityEventLogsRequestFilterDateRange extends TeaModel {
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. The end time is represented by a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,9 +190,9 @@ public class DescribeSecurityEventLogsRequest extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The start of the time range to query. The time range cannot exceed the last 30 days. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. The data query range cannot exceed the past 30 days. The start time is represented by a UNIX timestamp in seconds.</p>
          * <blockquote>
-         * <p>The start time must be within the last 30 days from the current time.</p>
+         * <h2>The start time must be later than the current time minus 30 days.</h2>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -229,13 +227,13 @@ public class DescribeSecurityEventLogsRequest extends TeaModel {
 
     public static class DescribeSecurityEventLogsRequestFilter extends TeaModel {
         /**
-         * <p>A list of filter conditions. Each node describes a filter condition.</p>
+         * <p>The list of filter conditions. Each node describes a filter condition.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeSecurityEventLogsRequestFilterConditions> conditions;
 
         /**
-         * <p>The time range to query.</p>
+         * <p>The time range for the query.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DateRange")

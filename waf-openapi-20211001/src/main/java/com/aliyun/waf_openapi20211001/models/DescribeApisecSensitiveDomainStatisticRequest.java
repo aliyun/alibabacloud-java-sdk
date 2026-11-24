@@ -7,7 +7,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end time. This value is a UNIX timestamp (UTC) in milliseconds.</p>
+     * <p>The end time in the UNIX timestamp format. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1686895256</p>
@@ -28,7 +28,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The sort order of the list. Valid values:</p>
+     * <p>The sorting order of the list. Valid values:</p>
      * <ul>
      * <li><p>asc: ascending order.</p>
      * </li>
@@ -54,7 +54,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public String orderWay;
 
     /**
-     * <p>The page number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates the first page. For more information about paging, see the paging parameters.</p>
+     * <p>The page number. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,7 +63,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Default value: <strong>5</strong>, which indicates 5 entries per page. For more information about paging, see the paging parameters.</p>
+     * <p>The number of entries to return per page. Default value: <strong>5</strong>, which indicates that each page contains 5 entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -72,7 +72,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -96,7 +96,7 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The start time. This value is a UNIX timestamp (UTC) in milliseconds.</p>
+     * <p>The start time in the UNIX timestamp format. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1668496310</p>
@@ -107,9 +107,9 @@ public class DescribeApisecSensitiveDomainStatisticRequest extends TeaModel {
     /**
      * <p>The type of sensitive data. Valid values:</p>
      * <ul>
-     * <li><p>request: request sensitive data.</p>
+     * <li><p>request: sensitive data in requests.</p>
      * </li>
-     * <li><p>response: response sensitive data.</p>
+     * <li><p>response: sensitive data in responses.</p>
      * </li>
      * </ul>
      * 

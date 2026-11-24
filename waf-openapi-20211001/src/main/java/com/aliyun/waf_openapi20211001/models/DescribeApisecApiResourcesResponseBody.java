@@ -20,7 +20,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -104,17 +104,17 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>API-related information, which is a JSON string constructed from a series of parameters. The parameters include:</p>
+         * <p>The information about the API. The information is converted into a JSON string constructed by a series of parameters. The parameters include:</p>
          * <ul>
          * <li><strong>param_num</strong>: the number of API parameters.</li>
          * <li><strong>request_method</strong>: the request method.</li>
          * <li><strong>protocol</strong>: the request protocol.</li>
          * <li><strong>api_url</strong>: the request URL.</li>
-         * <li><strong>poc_payload</strong>: the request.</li>
-         * <li><strong>request</strong>: the request example.</li>
-         * <li><strong>response</strong>: the response example.</li>
+         * <li><strong>poc_payload</strong>: the request payload.</li>
+         * <li><strong>request</strong>: the request sample.</li>
+         * <li><strong>response</strong>: the response sample.</li>
          * <li><strong>param</strong>: the request parameters.<blockquote>
-         * <p>This value is returned only when the <strong>ApiId</strong> request parameter is specified.</p>
+         * <p>This parameter is returned only if the <strong>ApiId</strong> request parameter is specified.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -142,7 +142,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String apiMethod;
 
         /**
-         * <p>Sensitive information related to the API, which is a JSON string constructed from a series of parameters. The parameters include:</p>
+         * <p>The sensitive information involved in the API. The information is converted into a JSON string constructed by a series of parameters. The parameters include:</p>
          * <ul>
          * <li><strong>request_sensitive_list</strong>: the list of sensitive data types in requests.</li>
          * <li><strong>response_sensitive_list</strong>: the list of sensitive data types in responses.</li>
@@ -182,7 +182,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         /**
          * <p>The status of the API. Valid values:</p>
          * <ul>
-         * <li><strong>NewbornInterface</strong>: New.</li>
+         * <li><strong>NewbornInterface</strong>: Newly added.</li>
          * <li><strong>OfflineInterface</strong>: Inactive.</li>
          * <li><strong>normal</strong>: Normal.</li>
          * </ul>
@@ -196,7 +196,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         /**
          * <p>The business purpose of the API.</p>
          * <blockquote>
-         * <p>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported business purposes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -206,10 +206,10 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String apiTag;
 
         /**
-         * <p>The service object. Valid values:</p>
+         * <p>The service object of the API. Valid values:</p>
          * <ul>
          * <li><strong>PublicAPI</strong>: Public service.</li>
-         * <li><strong>ThirdpartAPI</strong>: Third-party collaboration.</li>
+         * <li><strong>ThirdpartAPI</strong>: Third-party cooperation.</li>
          * <li><strong>InternalAPI</strong>: Internal office.</li>
          * </ul>
          * 
@@ -222,8 +222,8 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         /**
          * <p>Specifies whether the API has an authentication field. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Has authentication.</li>
-         * <li><strong>1</strong>: Does not have authentication.</li>
+         * <li><strong>0</strong>: Has authentication field.</li>
+         * <li><strong>1</strong>: No authentication field.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public java.util.List<String> examples;
 
         /**
-         * <p>The time when the API asset was first discovered. The value is a UNIX timestamp (UTC), in seconds.</p>
+         * <p>The time when the API asset was first discovered. The time is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683388800</p>
@@ -289,7 +289,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Integer follow;
 
         /**
-         * <p>The most recent access time of the API asset. The value is a UNIX timestamp (UTC), in seconds.</p>
+         * <p>The time when the API asset was last accessed. The time is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683388800</p>
@@ -307,7 +307,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String matchedHost;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The note.</p>
          * 
          * <strong>example:</strong>
          * <p>loginApi</p>
@@ -316,7 +316,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String note;
 
         /**
-         * <p>The list of protected objects associated with the asset.</p>
+         * <p>The list of protected objects corresponding to the asset.</p>
          */
         @NameInMap("Resources")
         public java.util.List<String> resources;

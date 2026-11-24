@@ -14,9 +14,9 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The expiration timestamp, in seconds.</p>
+     * <p>The expiration timestamp. Unit: seconds.</p>
      * <blockquote>
-     * <p>If the value is <strong>0</strong>, the rule takes effect permanently.</p>
+     * <p>A value of <strong>0</strong> indicates that the rule permanently takes effect.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP blacklist to add. You can specify custom IP addresses or CIDR blocks. Both IPv4 and IPv6 are supported. Separate multiple IP addresses with commas (,).
+     * <p>The IP blacklist to be added. You can specify custom IP addresses or CIDR blocks for the IP blacklist. Both IPv4 and IPv6 addresses are supported. Separate multiple IP addresses with commas (,).
      * For more information, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</p>
      * <p>This parameter is required.</p>
      * 
@@ -51,11 +51,11 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     public String ipList;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
      * </li>
      * </ul>
      * 
@@ -75,7 +75,7 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the IP blacklist rule for critical event protection.</p>
+     * <p>The ID of the IP blacklist rule for critical event protection. Before you obtain the rule ID, enable the critical event protection feature. Then, call the <a href="https://help.aliyun.com/document_detail/2712643.html">DescribeDefenseTemplates</a> operation and set DefenseScene to major_protection to obtain the ID of the critical event protection template. After that, call the <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a> operation to obtain the ID of the IP blacklist rule under the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,9 +85,9 @@ public class ModifyMajorProtectionBlackIpRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The ID of the critical event protection scenario template.</p>
+     * <p>The ID of the critical event protection template. Before you obtain the template ID, enable the critical event protection feature. Then, call the <a href="https://help.aliyun.com/document_detail/2712643.html">DescribeDefenseTemplates</a> operation and set DefenseScene to major_protection to obtain the ID of the critical event protection template.</p>
      * <blockquote>
-     * <p>This parameter requires the ID of a protection template of the critical event protection type. You can create this type of template only after you purchase the critical event protection upgrade.</p>
+     * <p>You can create this type of template only after you purchase critical event protection through an upgrade.</p>
      * <p>For more information about how to enable critical event protection and create a critical event protection rule template, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>

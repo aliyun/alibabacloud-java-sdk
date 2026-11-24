@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeChargeModuleRequest extends TeaModel {
     /**
-     * <p>The pricing unit.</p>
+     * <p>The billing unit.</p>
      * 
      * <strong>example:</strong>
      * <p>SeCU</p>
@@ -14,9 +14,9 @@ public class DescribeChargeModuleRequest extends TeaModel {
     public String chargeUnit;
 
     /**
-     * <p>The billing type of the instance. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>POSTPAY</strong>: pay-as-you-go WAF instance.</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go WAF instances.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class DescribeChargeModuleRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region of the WAF instance. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -42,7 +42,7 @@ public class DescribeChargeModuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

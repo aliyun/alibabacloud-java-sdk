@@ -14,11 +14,11 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String defenseType;
 
     /**
-     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+     * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is initiated. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: A dry run request is sent. Only the request conditions are checked, and the specified operation is not performed. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</p>
+     * <li><p><strong>true</strong>: initiates a dry run request. The system only checks whether the request meets the execution conditions and does not perform the operations specified in the request. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</p>
      * </li>
-     * <li><p><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</p>
+     * <li><p><strong>false</strong>: initiates a normal request. If the check succeeds, the operations specified in the request are performed.</p>
      * </li>
      * </ul>
      * 
@@ -42,7 +42,7 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -57,6 +57,15 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The protection object or protection group. This parameter is used for protection rules whose <strong>DefenseType</strong> is <strong>resource</strong>. Specify the name of the protection object or protection group based on <strong>ResourceType</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>resource-api-example</p>
+     */
+    @NameInMap("Resource")
+    public String resource;
+
+    /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
@@ -66,9 +75,22 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The ID of the protection rule that you want to modify.</p>
+     * <p>The type of the protection target. This parameter is applicable to rules whose <strong>DefenseType</strong> is <strong>resource</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>single (default)</strong>: single protection object.</li>
+     * <li><strong>group</strong>: protection group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>single</p>
+     */
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    /**
+     * <p>The ID of the protection rule to be modified.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a> operation to query the protection rule ID. You can create a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a> operation to query the ID of the protection rule. You can create a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -79,10 +101,10 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The status of the protection rule that you want to modify. Valid values: </p>
+     * <p>The status of the protection rule to be modified. Valid values: </p>
      * <ul>
-     * <li><strong>0</strong>: disabled.  </li>
-     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: disabled  </li>
+     * <li><strong>1</strong>: enabled</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -138,12 +160,28 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ModifyDefenseRuleStatusRequest setResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    public String getResource() {
+        return this.resource;
+    }
+
     public ModifyDefenseRuleStatusRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
+    }
+
+    public ModifyDefenseRuleStatusRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public ModifyDefenseRuleStatusRequest setRuleId(Long ruleId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeThreatEventDetailResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B1****</p>
@@ -42,7 +42,7 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
 
     public static class DescribeThreatEventDetailResponseBodyThreatEventDetail extends TeaModel {
         /**
-         * <p>The time of the most recent attack. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The most recent attack time. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1749916800000</p>
@@ -51,7 +51,7 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The number of attacks that were blocked in the security event.</p>
+         * <p>The number of blocked attacks.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -60,7 +60,7 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         public String eventBlock;
 
         /**
-         * <p>The total number of attacks in the security event.</p>
+         * <p>The total number of attacks.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -69,7 +69,7 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         public String eventCnt;
 
         /**
-         * <p>The filter condition for viewing logs. The value is a JSON object in the string format.</p>
+         * <p>The filter condition for the log query feature. The value is a string converted from a <strong>JSON</strong> structure constructed with a series of parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;end_ts&quot;: 1766637714, &quot;start_ts&quot;: 1764096746, &quot;condition&quot;: {&quot;real_client_ip&quot;: [&quot;78.153.140.179&quot;, &quot;78.153.140.203&quot;, &quot;78.153.140.177&quot;, &quot;78.153.140.178&quot;, &quot;78.153.140.151&quot;]}}</p>
@@ -78,7 +78,7 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         public String eventCondition;
 
         /**
-         * <p>The threat intelligence associated with the event. The value is a JSON array in the string format.</p>
+         * <p>The threat intelligence associated with the event. The value is a string converted from a <strong>JSON</strong> array.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;CVE-2020-14882&quot;,&quot;DDoS Attack&quot;]</p>
@@ -89,14 +89,10 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         /**
          * <p>The severity level of the event. Valid values:</p>
          * <ul>
-         * <li><p><strong>critical</strong>: Critical severity.</p>
-         * </li>
-         * <li><p><strong>high</strong>: High severity.</p>
-         * </li>
-         * <li><p><strong>medium</strong>: Medium severity.</p>
-         * </li>
-         * <li><p><strong>low</strong>: Low severity.</p>
-         * </li>
+         * <li><strong>critical</strong>: critical.</li>
+         * <li><strong>high</strong>: high.</li>
+         * <li><strong>medium</strong>: medium.</li>
+         * <li><strong>low</strong>: low.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,9 +102,9 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         public String eventLevel;
 
         /**
-         * <p>The source IP address of the attack.</p>
+         * <p>The attack source IP addresses.</p>
          * <blockquote>
-         * <p>A security event may have multiple source IP addresses. This operation returns only one of them.</p>
+         * <p>A security event may have multiple attack source IP addresses. This operation returns only one.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -118,7 +114,7 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         public String eventSrc;
 
         /**
-         * <p>The country of the source IP address of the attack.</p>
+         * <p>The country to which the attack source IP addresses belong.</p>
          * 
          * <strong>example:</strong>
          * <p>GB</p>
@@ -127,7 +123,7 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         public String eventSrcCountry;
 
         /**
-         * <p>The region of the source IP address of the attack.</p>
+         * <p>The region to which the attack source IP addresses belong.</p>
          * 
          * <strong>example:</strong>
          * <p>GB-ENG</p>
@@ -138,22 +134,14 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         /**
          * <p>The security suggestion. Valid values:</p>
          * <ul>
-         * <li><p><strong>ProtectInterface</strong>: The attack target appears to be a backend management address. If the address has specific access patterns, configure custom rules in the access control module to restrict access.</p>
-         * </li>
-         * <li><p><strong>BlockArea</strong>: Monitor the attack source region. If the attack source region is different from your normal business regions, configure a location blacklist or an IP address blacklist in the access control module to restrict access.</p>
-         * </li>
-         * <li><p><strong>SwitchBlock</strong>: The current protection rule is in Alert mode. To ensure business security, switch to Block mode. Before you switch, check for false positives.</p>
-         * </li>
-         * <li><p><strong>FixBug</strong>: Check the attack target for security vulnerabilities. If any vulnerabilities exist, fix them promptly to prevent exploitation.</p>
-         * </li>
-         * <li><p><strong>SwitchStrict</strong>: If it does not affect your normal business, change the policies of modules, such as protection rules and scan protection, to a stricter mode. Before you change the policies, check for false positives.</p>
-         * </li>
-         * <li><p><strong>ProtectFile</strong>: Check the target domain name for sensitive files or paths to prevent them from being detected and exploited.</p>
-         * </li>
-         * <li><p><strong>BlockIP</strong>: The source IP address has a high degree of maliciousness. Keep monitoring it. If it does not affect your normal business, use an IP address blacklist to block access from the malicious IP address.</p>
-         * </li>
-         * <li><p><strong>KeepConcerned</strong>: No threats are found. Continue to monitor the situation.</p>
-         * </li>
+         * <li><strong>ProtectInterface</strong>: The Attack Target is suspected to be a backend management address. If the address has fixed access characteristics, configure custom rules in the access control module to restrict access.</li>
+         * <li><strong>BlockArea</strong>: Monitor the source region of the attack. If the attack source differs from the normal regional distribution of your service, configure Location Blacklist or IP blacklist rules in the access control module to restrict access.</li>
+         * <li><strong>SwitchBlock</strong>: The current rule protection is in alerting mode. To ensure service security, switch to block mode. Before switching, check for false positives.</li>
+         * <li><strong>FixBug</strong>: Check whether the Attack Target has a security vulnerability. If the security vulnerability exists, fix it promptly to prevent exploitation by attackers.</li>
+         * <li><strong>SwitchStrict</strong>: If normal service is not affected, adjust the policy of modules such as rule protection and scan protection to a stricter pattern. Before adjusting the policy, check for false positives.</li>
+         * <li><strong>ProtectFile</strong>: Check whether sensitive files or paths exist under the target domain name to prevent detection and exploitation by attackers.</li>
+         * <li><strong>BlockIP</strong>: The source IP address of the attack is highly malicious. Monitor the IP address. If normal service is not affected, block access from the malicious IP address by using an IP blacklist.</li>
+         * <li><strong>KeepConcerned</strong>: No risks are detected. Continue to monitor the event.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,28 +153,17 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         /**
          * <p>The name of the event. Valid values:</p>
          * <ul>
-         * <li><p><strong>MultipleDomainDirscan</strong>: A directory and file scan for multiple domain names.</p>
-         * </li>
-         * <li><p><strong>SingleDomainDirscan</strong>: A directory and file scan for a single domain name.</p>
-         * </li>
-         * <li><p><strong>MultipleDomainWebscan</strong>: A web vulnerability scan for multiple domain names.</p>
-         * </li>
-         * <li><p><strong>SingleDomainWebscan</strong>: A web vulnerability scan for a single domain name.</p>
-         * </li>
-         * <li><p><strong>MultipleDomainWebattack</strong>: A web vulnerability attack on multiple domain names.</p>
-         * </li>
-         * <li><p><strong>SingleDomainWebattack</strong>: A web vulnerability attack on a single domain name.</p>
-         * </li>
-         * <li><p><strong>SingleURLWebattack</strong>: A web vulnerability attack on a specific URL.</p>
-         * </li>
-         * <li><p><strong>SingleURLSqlattack</strong>: An SQL injection attack on a specific URL.</p>
-         * </li>
-         * <li><p><strong>SingleURLXssattack</strong>: A cross-site scripting (XSS) attack on a specific URL.</p>
-         * </li>
-         * <li><p><strong>WebshellUpload</strong>: An attempt to upload backdoor trojans.</p>
-         * </li>
-         * <li><p><strong>RandomVulnTest</strong>: A random web vulnerability probe.</p>
-         * </li>
+         * <li><strong>MultipleDomainDirscan</strong>: directory and file scanning targeting multiple domain names</li>
+         * <li><strong>SingleDomainDirscan</strong>: directory and file scanning targeting a single domain name</li>
+         * <li><strong>MultipleDomainWebscan</strong>: web vulnerability scanning targeting multiple domain names</li>
+         * <li><strong>SingleDomainWebscan</strong>: web vulnerability scanning targeting a single domain name</li>
+         * <li><strong>MultipleDomainWebattack</strong>: web vulnerability attacks targeting multiple domain names</li>
+         * <li><strong>SingleDomainWebattack</strong>: web vulnerability attacks targeting a single domain name</li>
+         * <li><strong>SingleURLWebattack</strong>: web vulnerability attacks targeting a specific URL</li>
+         * <li><strong>SingleURLSqlattack</strong>: SQL injection attacks targeting a specific URL</li>
+         * <li><strong>SingleURLXssattack</strong>: XSS attacks targeting a specific URL</li>
+         * <li><strong>WebshellUpload</strong>: attack behavior attempting to upload backdoor trojans</li>
+         * <li><strong>RandomVulnTest</strong>: random web vulnerability detection behavior</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,11 +173,11 @@ public class DescribeThreatEventDetailResponseBody extends TeaModel {
         public String eventTag;
 
         /**
-         * <p>Indicates whether the event is a persistent attack. Valid values:</p>
+         * <p>Indicates whether the attack event is a targeted persistent attack event. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: The event is not a persistent attack.</p>
+         * <li><p><strong>0</strong>: non-persistent attack.</p>
          * </li>
-         * <li><p><strong>1</strong>: The event is a persistent attack.</p>
+         * <li><p><strong>1</strong>: persistent attack.</p>
          * </li>
          * </ul>
          * 

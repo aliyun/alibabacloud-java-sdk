@@ -20,7 +20,7 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
     public java.util.List<DescribeBaseSystemRulesResponseBodyRules> rules;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -95,12 +95,12 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
          * <li><strong>lfilei</strong>: local file inclusion (LFI).</li>
          * <li><strong>protocol_violation</strong>: protocol violation.</li>
          * <li><strong>scanner_behavior</strong>: scanner behavior.</li>
-         * <li><strong>logic_flaw</strong>: business logic bug.</li>
-         * <li><strong>arbitrary_file_reading</strong>: arbitrary file read.</li>
+         * <li><strong>logic_flaw</strong>: business logic flaw.</li>
+         * <li><strong>arbitrary_file_reading</strong>: arbitrary file reading.</li>
          * <li><strong>arbitrary_file_download</strong>: arbitrary file download.</li>
-         * <li><strong>xxe</strong>: XML external entity injection.</li>
-         * <li><strong>csrf</strong>: cross-site request forgery.</li>
-         * <li><strong>crlf</strong>: CRLF injection.</li>
+         * <li><strong>xxe</strong>: external entity injection.</li>
+         * <li><strong>csrf</strong>: cross-site request forgery (CSRF).</li>
+         * <li><strong>crlf</strong>: CRLF.</li>
          * <li><strong>other</strong>: other.</li>
          * </ul>
          * 
@@ -113,13 +113,13 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><p><strong>super_strict</strong>: super strict.</p>
+         * <li><p><strong>super_strict</strong>: Super strict.</p>
          * </li>
-         * <li><p><strong>strict</strong>: strict.</p>
+         * <li><p><strong>strict</strong>: Strict.</p>
          * </li>
-         * <li><p><strong>medium</strong>: medium.</p>
+         * <li><p><strong>medium</strong>: Medium.</p>
          * </li>
-         * <li><p><strong>loose</strong>: loose.</p>
+         * <li><p><strong>loose</strong>: Loose.</p>
          * </li>
          * </ul>
          * 
@@ -130,7 +130,7 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The rule action. Valid values:</p>
+         * <p>The action of the rule. Valid values:</p>
          * <ul>
          * <li><p><strong>block</strong>: Block.</p>
          * </li>
@@ -145,7 +145,7 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         public String ruleAction;
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>113089</p>
@@ -163,10 +163,10 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule status. Valid values:</p>
+         * <p>The status of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: disabled.</li>
-         * <li><strong>0</strong>: enabled.</li>
+         * <li><strong>1</strong>: Disabled.</li>
+         * <li><strong>0</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         public Integer ruleStatus;
 
         /**
-         * <p>The time when the rule was last updated. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time of the rule. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1665460629000</p>

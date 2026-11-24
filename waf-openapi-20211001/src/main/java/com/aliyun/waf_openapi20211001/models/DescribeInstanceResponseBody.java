@@ -20,7 +20,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String edition;
 
     /**
-     * <p>The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds. Format: ms.</p>
+     * <p>The time when the instance expires. The value is a UNIX timestamp in the format of milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>4809859200000</p>
@@ -29,7 +29,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Indicates whether the current instance has an overdue payment. Valid values:</p>
+     * <p>Specifies whether the instance has an overdue payment. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Normal.</li>
+     * <li><strong>1</strong>: Overdue payment.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,6 +52,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>POSTPAY</strong>: Pay-as-you-go.</p>
+     * </li>
+     * <li><p><strong>PREPAY</strong>: Subscription.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
@@ -56,15 +66,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String payType;
 
     /**
-     * <p>The instance execution status. Valid values:</p>
+     * <p>The execution status of the instance. Valid values:</p>
      * <ul>
      * <li><p><strong>commodity_converting</strong>: The commodity is being converted.</p>
      * </li>
-     * <li><p><strong>commodity_convert_check_failed</strong>: The commodity conversion check failed.</p>
+     * <li><p><strong>commodity_convert_check_failed</strong>: The commodity conversion verification failed.</p>
      * </li>
      * <li><p><strong>commodity_convert_process_failed</strong>: The commodity conversion failed.</p>
      * </li>
-     * <li><p><strong>order_create_failed</strong>: The order failed to be created.</p>
+     * <li><p><strong>order_create_failed</strong>: The order creation failed.</p>
      * </li>
      * <li><p><strong>order_pending_payment</strong>: The order is pending payment.</p>
      * </li>
@@ -218,7 +228,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static class DescribeInstanceResponseBodyDetails extends TeaModel {
         /**
-         * <p>The maximum number of IP addresses that can be added to the match content. For more information about match content, refer to <a href="https://help.aliyun.com/document_detail/374354.html">Match condition description</a>.</p>
+         * <p>The maximum number of IP addresses that can be added to the match content. For more information about match content, see <a href="https://help.aliyun.com/document_detail/374354.html">Match condition description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -227,7 +237,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long aclRuleMaxIpCount;
 
         /**
-         * <p>Indicates whether Agentic API security is enabled.</p>
+         * <p>Specifies whether the Agentic API security feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -236,7 +246,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean agenticApisec;
 
         /**
+         * <p>Specifies whether the instance is an Agentic WAF edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AgenticWaf")
+        public Boolean agenticWaf;
+
+        /**
          * <p>Specifies whether scan protection is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not supported.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -254,7 +279,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long antiScanTemplateMaxCount;
 
         /**
-         * <p>Indicates whether API security is enabled.</p>
+         * <p>Specifies whether the API security feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -306,6 +331,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether bot management is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -314,7 +343,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean bot;
 
         /**
-         * <p>Indicates whether scenario-specific protection against app crawlers is supported. Valid values:</p>
+         * <p>Specifies whether scenario-specific anti-crawler protection for apps is supported. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Supported.</li>
          * <li><strong>false</strong>: Not supported.</li>
@@ -336,7 +365,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long botTemplateMaxCount;
 
         /**
-         * <p>Specifies whether scenario-specific protection against web crawlers is supported. Valid values:</p>
+         * <p>Specifies whether scenario-specific anti-crawler protection for websites is supported. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Supported.</li>
          * <li><strong>false</strong>: Not supported.</li>
@@ -349,7 +378,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String botWeb;
 
         /**
-         * <p>The maximum number of CNAMEs that can be added.</p>
+         * <p>The maximum number of CNAME records that can be added.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -358,7 +387,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long cnameResourceMaxCount;
 
         /**
-         * <p>Indicates whether custom responses are supported. Valid values:</p>
+         * <p>Specifies whether custom responses are supported. Valid values:</p>
          * <ul>
          * <li><p><strong>true</strong>: Supported.</p>
          * </li>
@@ -373,7 +402,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean customResponse;
 
         /**
-         * <p>The maximum number of protection rules that a single custom response template can contain.</p>
+         * <p>The maximum number of protection rules that can be included in a single custom response template.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -415,7 +444,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String customRuleAction;
 
         /**
-         * <p>The match conditions for custom rules. For more information, refer to the parameter description of <strong>custom rule (custom_acl) conditions</strong> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
+         * <p>The match conditions for custom rules. For more information, see the parameter description of <strong>conditions</strong> for <strong>custom rules (custom_acl)</strong> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>URL</p>
@@ -424,7 +453,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String customRuleCondition;
 
         /**
-         * <p>The maximum number of protection rules that a single custom rule template can contain.</p>
+         * <p>The maximum number of protection rules that can be included in a single custom rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -433,7 +462,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long customRuleInTemplateMaxCount;
 
         /**
-         * <p>The rate limiting object for custom rules.</p>
+         * <p>The rate limiting objects for custom rules.</p>
          * 
          * <strong>example:</strong>
          * <p>header</p>
@@ -460,7 +489,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long defenseGroupMaxCount;
 
         /**
-         * <p>The maximum number of protection objects that a protection group can contain.</p>
+         * <p>The maximum number of protected objects that can be included in a protection group.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -469,7 +498,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long defenseObjectInGroupMaxCount;
 
         /**
-         * <p>The maximum number of protection objects that can be associated with a single template.</p>
+         * <p>The maximum number of protected objects that can be associated with a single template.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -478,7 +507,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long defenseObjectInTemplateMaxCount;
 
         /**
-         * <p>The maximum number of protection objects that can be configured.</p>
+         * <p>The maximum number of protected objects that can be configured.</p>
          * 
          * <strong>example:</strong>
          * <p>20000</p>
@@ -487,7 +516,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long defenseObjectMaxCount;
 
         /**
-         * <p>Specifies whether data leak prevention is supported. Valid values:</p>
+         * <p>Specifies whether information leak prevention is supported. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Supported.</li>
          * <li><strong>false</strong>: Not supported.</li>
@@ -500,7 +529,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean dlp;
 
         /**
-         * <p>The maximum number of protection rules that a single information leak prevention template can contain.</p>
+         * <p>The maximum number of protection rules that can be included in a single information leak prevention template.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -518,9 +547,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long dlpTemplateMaxCount;
 
         /**
-         * <p>The burstable QPS value for the subscription instance with pay-as-you-go billing for burstable capacity. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 editions</a>.</p>
+         * <p>The burstable pay-as-you-go QPS value for subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 editions</a>.</p>
          * <blockquote>
-         * <p>This parameter has no practical meaning for <strong>pay-as-you-go</strong> instances.</p>
+         * <p>This parameter is not applicable to <strong>pay-as-you-go</strong> instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -531,6 +560,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether exclusive IP addresses are supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not supported.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -539,7 +574,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean exclusiveIp;
 
         /**
-         * <p>The extended QPS value of the subscription instance. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 editions</a>.</p>
+         * <p>The extended QPS value for subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 editions</a>.</p>
          * <blockquote>
          * <p>This parameter is not applicable to <strong>pay-as-you-go</strong> instances.</p>
          * </blockquote>
@@ -551,9 +586,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Integer extendQps;
 
         /**
-         * <p>The free QPS value included in the subscription plan. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 editions</a>.</p>
+         * <p>The free QPS value for subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/441231.html">WAF 3.0 editions</a>.</p>
          * <blockquote>
-         * <p>This parameter has no practical meaning for <strong>pay-as-you-go</strong> instances.</p>
+         * <p>This parameter is not applicable to <strong>pay-as-you-go</strong> instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -564,6 +599,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether Global Server Load Balancing (GSLB) is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not supported.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -572,7 +613,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean gslb;
 
         /**
-         * <p>The available HTTP port range. For more information, refer to <a href="https://help.aliyun.com/document_detail/385578.html">Ports supported by WAF</a>.</p>
+         * <p>The available HTTP port range. For more information, see <a href="https://help.aliyun.com/document_detail/385578.html">Port ranges supported by WAF</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -581,7 +622,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String httpPorts;
 
         /**
-         * <p>The available HTTPS port range. For more information, refer to <a href="https://help.aliyun.com/document_detail/385578.html">Ports supported by WAF</a>.</p>
+         * <p>The available HTTPS port range. For more information, see <a href="https://help.aliyun.com/document_detail/385578.html">Port ranges supported by WAF</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -590,7 +631,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String httpsPorts;
 
         /**
-         * <p>Indicates whether hybrid cloud is enabled.</p>
+         * <p>Specifies whether the hybrid cloud feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -599,7 +640,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean hybridCloud;
 
         /**
-         * <p>The number of hybrid cloud extended nodes.</p>
+         * <p>The number of extended nodes for the hybrid cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -608,7 +649,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Integer hybridCloudNodeExtend;
 
         /**
-         * <p>Indicates whether the IP blacklist is supported. Valid values:</p>
+         * <p>Specifies whether IP blacklist is supported. Valid values:</p>
          * <ul>
          * <li><p><strong>true</strong>: Supported.</p>
          * </li>
@@ -632,7 +673,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long ipBlacklistIpInRuleMaxCount;
 
         /**
-         * <p>The maximum number of protection rules that a single blacklist template can contain.</p>
+         * <p>The maximum number of protection rules that can be included in a single blacklist template.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -651,6 +692,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether IPv6 is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not supported.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -659,7 +706,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean ipv6;
 
         /**
-         * <p>Specifies whether the log service is supported. Valid values:</p>
+         * <p>Specifies whether Simple Log Service is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not supported.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -692,9 +745,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long majorProtectionTemplateMaxCount;
 
         /**
-         * <p>The QPS billing protection threshold for the pay-as-you-go edition. For more information, see <a href="https://help.aliyun.com/document_detail/2249021.html">Traffic billing protection</a> for pay-as-you-go.</p>
+         * <p>The QPS traffic billing protection threshold for pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/2249021.html">Traffic billing protection</a> for pay-as-you-go instances.</p>
          * <blockquote>
-         * <p>This parameter has no practical meaning for <strong>subscription</strong> instances.</p>
+         * <p>This parameter is not applicable to <strong>subscription</strong> instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -704,7 +757,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Integer qpsBillingCap;
 
         /**
-         * <p>Indicates whether the multi-account management feature is supported.</p>
+         * <p>Specifies whether the multi-account management feature is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -714,6 +767,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether web tamper proofing is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -722,7 +779,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean tamperproof;
 
         /**
-         * <p>The maximum number of protection rules that a single web tamper proofing template can contain.</p>
+         * <p>The maximum number of protection rules that can be included in a single web tamper proofing template.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -740,7 +797,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long tamperproofTemplateMaxCount;
 
         /**
-         * <p>The maximum number of IP addresses that can be imported to the IP blacklist in a single bulk import.</p>
+         * <p>The maximum number of IP addresses that can be imported to an IP blacklist in a single batch.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -749,7 +806,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long vastIpBlacklistInFileMaxCount;
 
         /**
-         * <p>The maximum number of IP addresses that can be added to the IP blacklist in a single page operation.</p>
+         * <p>The maximum number of IP addresses that can be added to an IP blacklist in a single page operation.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -758,7 +815,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long vastIpBlacklistInOperationMaxCount;
 
         /**
-         * <p>The maximum number of IP blacklist entries that a single user can configure.</p>
+         * <p>The maximum number of IP blacklists that can be configured per user.</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -767,7 +824,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long vastIpBlacklistMaxCount;
 
         /**
-         * <p>Specifies whether the IP whitelist is supported. Valid values:</p>
+         * <p>Specifies whether IP address whitelists are supported. Valid values:</p>
          * <ul>
          * <li><p><strong>true</strong>: Supported.</p>
          * </li>
@@ -782,7 +839,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean whitelist;
 
         /**
-         * <p>The logical operators for whitelist rules. For more information, refer to the parameter description of <strong>whitelist rule (whitelist) conditions</strong> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
+         * <p>The logical operators for whitelist rules. For more information, see the parameter description of <strong>conditions</strong> for <strong>whitelist rules</strong> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>contain</p>
@@ -791,7 +848,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String whitelistLogical;
 
         /**
-         * <p>The match fields for whitelist rules. For more information, refer to the parameter description of <strong>whitelist rule (whitelist) conditions</strong> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
+         * <p>The match fields for whitelist rules. For more information, see the parameter description of <strong>conditions</strong> for <strong>whitelist rules</strong> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>URL</p>
@@ -800,7 +857,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String whitelistRuleCondition;
 
         /**
-         * <p>The maximum number of protection rules that a single whitelist template can contain.</p>
+         * <p>The maximum number of protection rules that can be included in a single whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -836,6 +893,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Boolean getAgenticApisec() {
             return this.agenticApisec;
+        }
+
+        public DescribeInstanceResponseBodyDetails setAgenticWaf(Boolean agenticWaf) {
+            this.agenticWaf = agenticWaf;
+            return this;
+        }
+        public Boolean getAgenticWaf() {
+            return this.agenticWaf;
         }
 
         public DescribeInstanceResponseBodyDetails setAntiScan(Boolean antiScan) {

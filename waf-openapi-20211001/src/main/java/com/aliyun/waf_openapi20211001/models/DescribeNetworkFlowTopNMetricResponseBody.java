@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
     /**
-     * <p>An array of the top N statistics.</p>
+     * <p>The array of returned top statistics.</p>
      */
     @NameInMap("NetworkFlowTopNValues")
     public java.util.List<DescribeNetworkFlowTopNMetricResponseBodyNetworkFlowTopNValues> networkFlowTopNValues;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D827FCFE-90A7-4330-9326-******4C7726</p>
@@ -56,7 +56,7 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
 
     public static class DescribeNetworkFlowTopNMetricResponseBodyNetworkFlowTopNValues extends TeaModel {
         /**
-         * <p>The additional attribute associated with the entry. For example, when the Metric is set to real_client_ip, this parameter indicates the country or region to which the IP address belongs.</p>
+         * <p>The additional information returned, such as the country, province, and city to which an IP address belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -65,7 +65,7 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The dimension value that corresponds to the specified Metric request parameter. For example, if the Metric is set to real_client_ip, this parameter indicates the source IP address.</p>
+         * <p>The value of a field. The meaning varies depending on the queried metric.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -74,7 +74,7 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The total number of requests or the QPS value, depending on the specified Metric. This value is used for top N ranking.</p>
+         * <p>The statistical count used for top sorting.</p>
          * 
          * <strong>example:</strong>
          * <p>1123</p>
@@ -115,7 +115,7 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
 
     public static class DescribeNetworkFlowTopNMetricResponseBodyTopNMetaDataDateRange extends TeaModel {
         /**
-         * <p>The end of the time range. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time used for the data query. The end time is represented by a UNIX timestamp in seconds. This value is the same as the EndDate request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888600</p>
@@ -124,7 +124,7 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The beginning of the time range. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time used for the data query. The start time is represented by a UNIX timestamp in seconds. This value is the same as the StartDate request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888000</p>
@@ -163,7 +163,7 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
         public DescribeNetworkFlowTopNMetricResponseBodyTopNMetaDataDateRange dateRange;
 
         /**
-         * <p>The unit of the returned statistical data.</p>
+         * <p>The unit of the returned statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>requests</p>

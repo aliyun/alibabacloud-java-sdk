@@ -42,7 +42,7 @@ public class ModifyDomainResponseBody extends TeaModel {
 
     public static class ModifyDomainResponseBodyDomainInfo extends TeaModel {
         /**
-         * <p>The CNAME assigned by WAF to the domain name.</p>
+         * <p>The CNAME address assigned by WAF to the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxcvdaf.****.com</p>

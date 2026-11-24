@@ -14,7 +14,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>28</p>
@@ -68,7 +68,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
         public Long cpu;
 
         /**
-         * <p>The node name.</p>
+         * <p>The name of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleName</p>

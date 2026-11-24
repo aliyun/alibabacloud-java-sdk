@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
     /**
-     * <p>The filter conditions for the query. Multiple filter conditions have a logical AND relationship.</p>
+     * <p>The query filter conditions. Multiple filter conditions are connected by the logical AND operator.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
     public DescribeSecurityEventTimeSeriesMetricRequestFilter filter;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,16 +25,12 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies the content of the returned data. Different metrics correspond to different data content. This operation supports the following metrics:</p>
+     * <p>The metric used to distinguish the returned data content. Different metrics correspond to different data content. This operation supports the following metrics:</p>
      * <ul>
-     * <li><p>mitigated_requests: Returns the time series statistics of blocked requests.</p>
-     * </li>
-     * <li><p>monitored_requests: Returns the time series statistics of requests that hit only observation-type rules.</p>
-     * </li>
-     * <li><p>mitigated_requests_group_by_defense_scene: Returns data grouped by module. It records a time series graph of the hit count for each module. A single request may hit multiple modules. Therefore, the hit count returned by this metric may not be consistent with the number of requests.</p>
-     * </li>
-     * <li><p>mitigated_requests_group_by_block_defense_scene: Returns data grouped by module. It records a time series graph of the number of blocked requests for each module. A single request is blocked by only one module. Therefore, the count returned by this metric is consistent with the number of requests.</p>
-     * </li>
+     * <li>mitigated_requests: returns the time series statistics of blocked requests.</li>
+     * <li>monitored_requests: returns the time series statistics of requests that only hit monitor rules.</li>
+     * <li>mitigated_requests_group_by_defense_scene: returns data grouped by protection module, recording the time series statistics of hits for each module. A single request may hit multiple modules, so the number of module hits returned by this metric may not match the number of requests.</li>
+     * <li>mitigated_requests_group_by_block_defense_scene: returns data grouped by protection module, recording the time series statistics of blocked requests for each module. A single request is blocked by only one module, so the statistical count returned by this metric is consistent with the number of requests.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,10 +43,8 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,7 +109,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTimeSeriesMetricRequestFilterConditions extends TeaModel {
         /**
-         * <p>The name of the field to filter. This operation supports all fields.</p>
+         * <p>The name of the field on which the filter operation is performed. This operation supports all fields.</p>
          * 
          * <strong>example:</strong>
          * <p>matched_host</p>
@@ -174,7 +168,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTimeSeriesMetricRequestFilterDateRange extends TeaModel {
         /**
-         * <p>The end time of the query. This is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. The end time is represented by a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,9 +178,9 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>You can query data from the last 30 days. The start time of the query. This is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. The data query range cannot exceed the past 30 days. The start time is represented by a UNIX timestamp in seconds.</p>
          * <blockquote>
-         * <h2>The start time must be within the last 30 days.</h2>
+         * <h2>The start time must be later than the current time minus 30 days.</h2>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -221,13 +215,13 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTimeSeriesMetricRequestFilter extends TeaModel {
         /**
-         * <p>A list of filter conditions. Each node describes one filter condition.</p>
+         * <p>The list of filter conditions. Each node describes a filter condition.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeSecurityEventTimeSeriesMetricRequestFilterConditions> conditions;
 
         /**
-         * <p>The time range to query.</p>
+         * <p>The time range for the query.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DateRange")
