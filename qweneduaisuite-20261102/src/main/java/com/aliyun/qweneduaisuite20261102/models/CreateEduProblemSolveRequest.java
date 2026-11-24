@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEduProblemSolveRequest extends TeaModel {
     /**
-     * <p><strong>The question image container.</strong></p>
+     * <p>The query information.</p>
      */
     @NameInMap("query")
     public CreateEduProblemSolveRequestQuery query;
@@ -42,17 +42,16 @@ public class CreateEduProblemSolveRequest extends TeaModel {
 
     public static class CreateEduProblemSolveRequestQueryImage extends TeaModel {
         /**
-         * <p><strong>The Base64-encoded image</strong>. If both this parameter and the URL are provided, this parameter takes precedence.</p>
+         * <p>The Base64 encoding of the image.</p>
          * 
          * <strong>example:</strong>
-         * <p>iVBORw0KGgoAAAANSUhEUgAAAAUA...</p>
+         * <p>/9j/4AAQSkZJRgABAQAASABIAAD/4QCMRXhpZgAATU0AK...</p>
          */
         @NameInMap("base64")
         public String base64;
 
         /**
-         * <p><strong>The image format</strong>: jpg, jpeg, or png. The value must match the actual file format.</p>
-         * <p>This parameter is required.</p>
+         * <p>The image format. Valid values: jpg, jpeg, and png. The value must match the actual file format.</p>
          * 
          * <strong>example:</strong>
          * <p>jpg</p>
@@ -61,10 +60,10 @@ public class CreateEduProblemSolveRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The URL of a single question image.</p>
+         * <p>The image URL.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://your-cdn.example.com/question.jpg">https://your-cdn.example.com/question.jpg</a></p>
+         * <p><a href="https://xxx/xxx.jpg">https://xxx/xxx.jpg</a></p>
          */
         @NameInMap("url")
         public String url;
@@ -102,7 +101,7 @@ public class CreateEduProblemSolveRequest extends TeaModel {
 
     public static class CreateEduProblemSolveRequestQuery extends TeaModel {
         /**
-         * <p><strong>The image information.</strong></p>
+         * <p>The query image.</p>
          */
         @NameInMap("image")
         public CreateEduProblemSolveRequestQueryImage image;

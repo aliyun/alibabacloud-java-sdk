@@ -5,34 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateEduHomeworkCorrectSubmitRequest extends TeaModel {
     /**
-     * <p>Specifies whether to correct the image distortion. Default value: <code>true</code>. If you set this parameter to <code>false</code>, the image is not corrected, <code>dewarp_url</code> returns the original image, and the coordinates are based on <code>dewarp_url</code>.</p>
+     * <p>Specifies whether to correct the image distortion.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("dewarp")
     public Boolean dewarp;
 
     /**
-     * <p>The pure Base64-encoded string of the image, excluding the <code>data:</code> prefix and MIME declaration. The encoded size cannot exceed 15 MB. If both parameters are specified, <code>image_base64</code> takes precedence.</p>
+     * <p>The Base64-encoded image.</p>
      * 
      * <strong>example:</strong>
-     * <p>The pure Base64-encoded string of the image, excluding the data: prefix and MIME declaration. The encoded size cannot exceed 15 MB. If both parameters are specified, image_base64 takes precedence</p>
+     * <p>/9j/4AAQSkZJRgABAQAASABIAAD/4QCMRXhpZgAATU0AK...</p>
      */
     @NameInMap("imageBase64")
     public String imageBase64;
 
     /**
-     * <p>The publicly accessible HTTP or HTTPS URL of the image. The server downloads the image from this URL.</p>
+     * <p>The URL of the image.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://example.com/homework.jpg">https://example.com/homework.jpg</a></p>
+     * <p><a href="https://xxx/xxx.jpg">https://xxx/xxx.jpg</a></p>
      */
     @NameInMap("imageUrl")
     public String imageUrl;
 
     /**
-     * <p>The request ID on the caller side. Use a UUID for reconciliation and troubleshooting. If this parameter is not specified, the server generates a request ID and returns it in the response.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>req-20261116-0001</p>
+     * <p>019F593F-D6EE-5F44-819A-6CDA127D1637</p>
      */
     @NameInMap("requestId")
     public String requestId;
