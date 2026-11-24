@@ -24,11 +24,7 @@ public class DescribeApiMeteringRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The type. Valid values:</p>
-     * <ul>
-     * <li>1: subscription package.</li>
-     * <li>2: resource plan.</li>
-     * </ul>
+     * <p>The type. Valid values: 1: package. 2: resource plan.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

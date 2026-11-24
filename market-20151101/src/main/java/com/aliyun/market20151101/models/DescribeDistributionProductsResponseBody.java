@@ -105,7 +105,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
          * <p>The first-level category name of the product.</p>
          * 
          * <strong>example:</strong>
-         * <p>API市场</p>
+         * <p>API Marketplace</p>
          */
         @NameInMap("FirstCategoryName")
         public String firstCategoryName;
@@ -123,7 +123,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
          * <p>The product name.</p>
          * 
          * <strong>example:</strong>
-         * <p>手机号码在网状态查询</p>
+         * <p>Mobile phone number online status query</p>
          */
         @NameInMap("Name")
         public String name;
@@ -150,7 +150,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
          * <p>The second-level category name of the product.</p>
          * 
          * <strong>example:</strong>
-         * <p>生活服务</p>
+         * <p>Life services</p>
          */
         @NameInMap("SecondCategoryName")
         public String secondCategoryName;
@@ -159,7 +159,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
          * <p>The brief description of the product.</p>
          * 
          * <strong>example:</strong>
-         * <p>运营商号码状态查询】精准实时空号检测，手机号在网状态查询，返回正常、空号、通话中、在网但不可用、关机、呼叫转移、疑似关机、携号转网、号码错误、停机等多种状态。</p>
+         * <p>Carrier phone number status query] Provides accurate and real-time detection of empty numbers. You can query the online status of phone numbers, and statuses such as normal, empty, in-call, online but unavailable, powered off, call forwarding, suspected power-off, number portability, wrong number, and suspended are returned.</p>
          */
         @NameInMap("ShortDescription")
         public String shortDescription;
@@ -177,7 +177,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
          * <p>The name of the promotion service provider.</p>
          * 
          * <strong>example:</strong>
-         * <p>深圳市****有限公司</p>
+         * <p>Shenzhen **** Co., Ltd.</p>
          */
         @NameInMap("SupplierName")
         public String supplierName;
@@ -228,7 +228,7 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
          *         SAAS_WUYING: application software - Wuying application.</p>
          * 
          * <strong>example:</strong>
-         * <p>API类</p>
+         * <p>API</p>
          */
         @NameInMap("Type")
         public String type;

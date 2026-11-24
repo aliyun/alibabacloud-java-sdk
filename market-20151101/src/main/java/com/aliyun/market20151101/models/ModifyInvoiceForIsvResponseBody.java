@@ -26,7 +26,7 @@ public class ModifyInvoiceForIsvResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;成功&quot;</p>
+     * <p>&quot;Success&quot;</p>
      */
     @NameInMap("Message")
     public String message;

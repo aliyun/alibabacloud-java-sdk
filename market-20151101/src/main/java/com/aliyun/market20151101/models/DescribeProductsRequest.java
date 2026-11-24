@@ -32,7 +32,7 @@ public class DescribeProductsRequest extends TeaModel {
      * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>镜像</p>
+     * <p>Image</p>
      */
     @NameInMap("SearchTerm")
     public String searchTerm;

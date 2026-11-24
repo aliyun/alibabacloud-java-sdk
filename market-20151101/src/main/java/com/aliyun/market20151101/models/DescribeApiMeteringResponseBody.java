@@ -35,7 +35,7 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;成功&quot;</p>
+     * <p>&quot;Success&quot;</p>
      */
     @NameInMap("Message")
     public String message;
@@ -68,13 +68,13 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of results.</p>
+     * <p>The list of return values.</p>
      */
     @NameInMap("Result")
     public java.util.List<DescribeApiMeteringResponseBodyResult> result;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>The result indicator.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -178,7 +178,7 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
 
     public static class DescribeApiMeteringResponseBodyResult extends TeaModel {
         /**
-         * <p>The Alibaba Cloud primary key.</p>
+         * <p>The Alibaba Cloud PK.</p>
          * 
          * <strong>example:</strong>
          * <p>102277855749****</p>
@@ -199,11 +199,17 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
          * <p>The commodity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>身份证实名认证-身份证实名</p>
+         * <p>ID card real-name authentication - ID card real-name</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The total API capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCapacity")
         public Long totalCapacity;
 
@@ -229,7 +235,7 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
          * <p>The unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>次</p>
+         * <p>Calls</p>
          */
         @NameInMap("Unit")
         public String unit;

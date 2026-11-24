@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInvoiceForIsvRequest extends TeaModel {
     /**
-     * <p>The end time. The time 23:59:59 is appended to the date by default.</p>
+     * <p>The end time. By default, 23:59:59 is appended to the date.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-01 00:00:00</p>
@@ -14,7 +14,7 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
-     * <p>The start time. The time 00:00:00 is appended to the date by default.</p>
+     * <p>The start time. By default, 00:00:00 is appended to the date.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-31 23:59:59</p>
@@ -23,7 +23,7 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     public String createTimeStart;
 
     /**
-     * <p>The invoice application ID. This corresponds to the Result.Id field in the response of the DescribeInvoiceForIsv operation.</p>
+     * <p>The ID of the invoice application. This corresponds to the Result.Id field in the response of the DescribeInvoiceForIsv operation.</p>
      * 
      * <strong>example:</strong>
      * <p>4072040****</p>
@@ -32,7 +32,7 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     public Long invoiceId;
 
     /**
-     * <p>The maximum number of entries per page for a paged query. Maximum value: 50. Default value: 10. (This parameter is not enabled.)</p>
+     * <p>The maximum number of entries per page in a paging query. Maximum value: 50. Default value: 10. (This parameter is not enabled.)</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -41,7 +41,7 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token returned by this call. (This parameter is not enabled.)</p>
+     * <p>The pagination token returned by the current call. This parameter is not enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>3v3mzZN1QdVsTPNiT0OkD9v+MeV8LSqSQDSuTTVFCUMMWShmnj/LXRMScqm242bB</p>
@@ -50,7 +50,7 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     public Long pageIndex;
 
     /**
-     * <p>The number of instances per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -70,8 +70,8 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     /**
      * <p>The current invoice status. Valid values:</p>
      * <ul>
-     * <li>0: processing</li>
-     * <li>1: completed</li>
+     * <li>0: Applying.</li>
+     * <li>1: Completed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,8 +83,8 @@ public class DescribeInvoiceForIsvRequest extends TeaModel {
     /**
      * <p>The invoice type. If this parameter is left empty, all types are queried by default. Valid values:</p>
      * <ul>
-     * <li>2: general digital electronic invoice</li>
-     * <li>3: special digital electronic invoice</li>
+     * <li>2: Digital electronic ordinary invoice.</li>
+     * <li>3: Digital electronic special invoice.</li>
      * </ul>
      * 
      * <strong>example:</strong>

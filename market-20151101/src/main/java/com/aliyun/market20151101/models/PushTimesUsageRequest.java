@@ -11,7 +11,7 @@ public class PushTimesUsageRequest extends TeaModel {
     public Long adjustDate;
 
     /**
-     * <p>The client token that ensures the idempotency of the request. We recommend that you use a UUID. The same <code>ClientToken</code> can be submitted only once within 24 hours. Use the same <code>ClientToken</code> when retrying the same operation. Use a new <code>ClientToken</code> for new business operations.</p>
+     * <p>The client token used to ensure request idempotence. We recommend that you use a UUID. The same <code>ClientToken</code> can be submitted only once within 24 hours. Retries for the same operation must use the same <code>ClientToken</code>, and new operations must use a new <code>ClientToken</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>6dff6c70-3484-4a39-b725-164e3ad9b20d</p>

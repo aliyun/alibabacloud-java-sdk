@@ -28,7 +28,7 @@ public class ResumeProjectRequest extends TeaModel {
      * <p>The reason for the remark.</p>
      * 
      * <strong>example:</strong>
-     * <p>仓库库存已补充，可安排发货。</p>
+     * <p>The warehouse inventory has been replenished. Delivery can be arranged.</p>
      */
     @NameInMap("Remark")
     public String remark;

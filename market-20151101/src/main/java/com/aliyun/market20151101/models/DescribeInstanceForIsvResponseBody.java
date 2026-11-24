@@ -80,7 +80,7 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
      * <p>The extended information.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;说明&quot;: &quot;如有使用问题，请联系...&quot;}</p>
+     * <p>{&quot;description&quot;: &quot;If you have any problems, contact us...&quot;}</p>
      */
     @NameInMap("ExtendJson")
     public String extendJson;
@@ -159,7 +159,7 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
      * <p>The product name.</p>
      * 
      * <strong>example:</strong>
-     * <p>***协同办公</p>
+     * <p>***Collaborative Office</p>
      */
     @NameInMap("ProductName")
     public String productName;
@@ -241,7 +241,7 @@ public class DescribeInstanceForIsvResponseBody extends TeaModel {
      * <p>The service provider name.</p>
      * 
      * <strong>example:</strong>
-     * <p>*****有限公司</p>
+     * <p>***** Co., Ltd.</p>
      */
     @NameInMap("SupplierName")
     public String supplierName;

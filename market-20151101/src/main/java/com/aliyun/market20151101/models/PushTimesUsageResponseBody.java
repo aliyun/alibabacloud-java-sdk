@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PushTimesUsageResponseBody extends TeaModel {
     /**
-     * <p>The authentication error message.</p>
+     * <p>The authentication error details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -29,7 +29,7 @@ public class PushTimesUsageResponseBody extends TeaModel {
     public Boolean forceFatal;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -65,7 +65,7 @@ public class PushTimesUsageResponseBody extends TeaModel {
     public Boolean result;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -13,6 +13,9 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of project messages.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeProjectMessagesResponseBodyResult> result;
 
@@ -76,13 +79,13 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
          * <p>The content of the message.</p>
          * 
          * <strong>example:</strong>
-         * <p>尊敬的客户您好，我们已经为您上传了方案，请您查阅，然后尽快将您的意见反馈给我们。</p>
+         * <p>Dear customer, we have uploaded the solution for you. Please review it and provide your feedback as soon as possible</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The time when the message was created, in UNIX timestamp format.</p>
+         * <p>The time when the message was created. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1589015560000</p>
@@ -91,7 +94,7 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The Alibaba Cloud UID of the user who left the message.</p>
+         * <p>The Alibaba Cloud UID of the message sender.</p>
          * 
          * <strong>example:</strong>
          * <p>452611111****</p>
@@ -100,10 +103,10 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         public Long operator;
 
         /**
-         * <p>The name of the user who left the message.</p>
+         * <p>The name of the message sender.</p>
          * 
          * <strong>example:</strong>
-         * <p>***科技技术有限公司</p>
+         * <p>*** Technology Co., Ltd</p>
          */
         @NameInMap("OperatorName")
         public String operatorName;
@@ -111,9 +114,9 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         /**
          * <p>The role of the operator. Valid values:</p>
          * <ul>
-         * <li>System: system.</li>
-         * <li>Custom: customer.</li>
-         * <li>Provider: service provider.</li>
+         * <li>System: The system.</li>
+         * <li>Custom: The customer.</li>
+         * <li>Provider: The service provider.</li>
          * </ul>
          * 
          * <strong>example:</strong>

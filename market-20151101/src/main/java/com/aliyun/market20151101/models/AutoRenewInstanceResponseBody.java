@@ -7,6 +7,10 @@ public class AutoRenewInstanceResponseBody extends TeaModel {
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2D29E31F-73C7-4E82-8A44-035E39DCB601</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

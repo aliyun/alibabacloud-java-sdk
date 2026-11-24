@@ -36,7 +36,7 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;package_version&quot;:{&quot;code&quot;:&quot;package_version&quot;,&quot;globarKey&quot;:&quot;cmgj0<em><em><strong><strong>8_package_version_package_version_yuncode4176</strong></strong></em>1&quot;,&quot;name&quot;:&quot;0.01&quot;,&quot;value&quot;:&quot;yuncode4176</em><strong><strong>1&quot;},&quot;ord_time&quot;:{&quot;code&quot;:&quot;ord_time&quot;,&quot;globarKey&quot;:&quot;cmgj0</strong></strong><strong>8_ord_time_ord_time_1:Month&quot;,&quot;name&quot;:&quot;1个月&quot;,&quot;value&quot;:&quot;1:Month&quot;},&quot;order_num&quot;:{&quot;code&quot;:&quot;order_num&quot;,&quot;globarKey&quot;:&quot;cmgj0</strong>****8_order_num_order_num_1&quot;,&quot;name&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;}}</p>
+     * <p>{&quot;package_version&quot;:{&quot;code&quot;:&quot;package_version&quot;,&quot;globarKey&quot;:&quot;cmgj0<em><em><strong><strong>8_package_version_package_version_yuncode4176</strong></strong></em>1&quot;,&quot;name&quot;:&quot;0.01&quot;,&quot;value&quot;:&quot;yuncode4176</em><strong><strong>1&quot;},&quot;ord_time&quot;:{&quot;code&quot;:&quot;ord_time&quot;,&quot;globarKey&quot;:&quot;cmgj0</strong></strong><strong>8_ord_time_ord_time_1:Month&quot;,&quot;name&quot;:&quot;1 month&quot;,&quot;value&quot;:&quot;1:Month&quot;},&quot;order_num&quot;:{&quot;code&quot;:&quot;order_num&quot;,&quot;globarKey&quot;:&quot;cmgj0</strong>****8_order_num_order_num_1&quot;,&quot;name&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;}}</p>
      */
     @NameInMap("Components")
     public Object components;
@@ -175,7 +175,7 @@ public class DescribeOrderForIsvResponseBody extends TeaModel {
      * <p>The name of the subscribed product.</p>
      * 
      * <strong>example:</strong>
-     * <p>saas服务产品</p>
+     * <p>SaaS service product</p>
      */
     @NameInMap("ProductName")
     public String productName;

@@ -28,7 +28,7 @@ public class PauseProjectRequest extends TeaModel {
      * <p>The reason for the remark.</p>
      * 
      * <strong>example:</strong>
-     * <p>等待与仓库确认库存，目前库存显示异常。</p>
+     * <p>Waiting for the warehouse to confirm the inventory. The inventory is displayed as abnormal.</p>
      */
     @NameInMap("Remark")
     public String remark;

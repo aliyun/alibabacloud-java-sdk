@@ -28,7 +28,7 @@ public class RollbackCurrentProjectNodeRequest extends TeaModel {
      * <p>The remarks for the rejection reason.</p>
      * 
      * <strong>example:</strong>
-     * <p>尊敬的顾客您好，您提交的收货地址存在多个匹配结果，请您核对后再重新提交。</p>
+     * <p>Dear customer, the shipping address you submitted matches multiple records. Check the address and submit it again.</p>
      */
     @NameInMap("Remark")
     public String remark;

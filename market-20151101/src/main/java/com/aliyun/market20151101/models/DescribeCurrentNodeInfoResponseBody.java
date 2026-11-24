@@ -143,7 +143,7 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
          * <p>The name of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>等待服务开通</p>
+         * <p>Waiting for service activation</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -206,10 +206,10 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
         /**
          * <p>The form content of the process node in JSON format.
          * Sample code:
-         * <code>[ { &quot;fieldKey&quot;: &quot;TFD0&quot;, //form key &quot;isRequired&quot;: true, //whether the field is required &quot;maxLength&quot;: 50, //maximum length &quot;placeHolder&quot;: &quot;姓名&quot;, //form value description &quot;stepNum&quot;: 0, //sort value (ascending) &quot;title&quot;: &quot;收货人姓名&quot;, //form title &quot;type&quot;: &quot;text&quot; //form type }, { &quot;fieldKey&quot;: &quot;TFD1&quot;, &quot;isRequired&quot;: true, &quot;maxLength&quot;: 50, &quot;placeHolder&quot;: &quot;手机号码&quot;, &quot;stepNum&quot;: 1, &quot;title&quot;: &quot;收货人电话&quot;, &quot;type&quot;: &quot;text&quot; }, { &quot;fieldKey&quot;: &quot;TFD2&quot;, &quot;isRequired&quot;: true, &quot;maxLength&quot;: 50, &quot;placeHolder&quot;: &quot;省市区街道门牌号码&quot;, &quot;stepNum&quot;: 2, &quot;title&quot;: &quot;详细收货地址&quot;, &quot;type&quot;: &quot;textarea&quot; } ]</code>.</p>
+         * <code>[ { &quot;fieldKey&quot;: &quot;TFD0&quot;, //form key &quot;isRequired&quot;: true, //whether the field is required &quot;maxLength&quot;: 50, //maximum length &quot;placeHolder&quot;: &quot;Name&quot;, //form value description &quot;stepNum&quot;: 0, //sort value (ascending) &quot;title&quot;: &quot;Consignee name&quot;, //form title &quot;type&quot;: &quot;text&quot; //form type }, { &quot;fieldKey&quot;: &quot;TFD1&quot;, &quot;isRequired&quot;: true, &quot;maxLength&quot;: 50, &quot;placeHolder&quot;: &quot;Phone number&quot;, &quot;stepNum&quot;: 1, &quot;title&quot;: &quot;Consignee phone number&quot;, &quot;type&quot;: &quot;text&quot; }, { &quot;fieldKey&quot;: &quot;TFD2&quot;, &quot;isRequired&quot;: true, &quot;maxLength&quot;: 50, &quot;placeHolder&quot;: &quot;Province, city, district, street, and house number&quot;, &quot;stepNum&quot;: 2, &quot;title&quot;: &quot;Detailed shipping address&quot;, &quot;type&quot;: &quot;textarea&quot; } ]</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>[ {&quot;fieldKey&quot;: &quot;TFD0&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50, &quot;placeHolder&quot;: &quot;姓名&quot;,&quot;stepNum&quot;: 0,&quot;title&quot;: &quot;收货人姓名&quot;,&quot;type&quot;: &quot;text&quot; },{ &quot;fieldKey&quot;: &quot;TFD1&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50,&quot;placeHolder&quot;: &quot;手机号码&quot;,&quot;stepNum&quot;: 1,&quot;title&quot;: &quot;收货人电话&quot;,&quot;type&quot;: &quot;text&quot;},{&quot;fieldKey&quot;: &quot;TFD2&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50,&quot;placeHolder&quot;: &quot;省市区街道门牌号码&quot;,&quot;stepNum&quot;: 2,&quot;title&quot;: &quot;详细收货地址&quot;,&quot;type&quot;: &quot;textarea&quot;}]</p>
+         * <p>[ {&quot;fieldKey&quot;: &quot;TFD0&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50, &quot;placeHolder&quot;: &quot;Name&quot;,&quot;stepNum&quot;: 0,&quot;title&quot;: &quot;Consignee name&quot;,&quot;type&quot;: &quot;text&quot; },{ &quot;fieldKey&quot;: &quot;TFD1&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50,&quot;placeHolder&quot;: &quot;Phone number&quot;,&quot;stepNum&quot;: 1,&quot;title&quot;: &quot;Consignee phone number&quot;,&quot;type&quot;: &quot;text&quot;},{&quot;fieldKey&quot;: &quot;TFD2&quot;,&quot;isRequired&quot;: true,&quot;maxLength&quot;: 50,&quot;placeHolder&quot;: &quot;Province, city, district, street, and house number&quot;,&quot;stepNum&quot;: 2,&quot;title&quot;: &quot;Detailed shipping address&quot;,&quot;type&quot;: &quot;textarea&quot;}]</p>
          */
         @NameInMap("TemplateForm")
         public String templateForm;

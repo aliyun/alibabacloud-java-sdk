@@ -88,7 +88,7 @@ public class DescribeDistributionProductsLinkResponseBody extends TeaModel {
          * <p>The name of the promoted product.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试商品</p>
+         * <p>Test product</p>
          */
         @NameInMap("Name")
         public String name;

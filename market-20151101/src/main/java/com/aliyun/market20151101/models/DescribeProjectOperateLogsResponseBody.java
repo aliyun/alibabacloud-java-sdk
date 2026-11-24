@@ -62,7 +62,7 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
          * <p>The description of the operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>进入分配服务商操作人</p>
+         * <p>Entered the service provider assignment step</p>
          */
         @NameInMap("Description")
         public String description;
@@ -89,7 +89,7 @@ public class DescribeProjectOperateLogsResponseBody extends TeaModel {
          * <p>The name of the operator.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统</p>
+         * <p>System</p>
          */
         @NameInMap("OperatorName")
         public String operatorName;

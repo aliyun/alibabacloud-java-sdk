@@ -11,6 +11,9 @@ public class AutoRenewInstanceRequest extends TeaModel {
      * <li>Month: month.</li>
      * <li>Year: year.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("AutoRenewCycle")
     public String autoRenewCycle;
@@ -39,6 +42,9 @@ public class AutoRenewInstanceRequest extends TeaModel {
      * </ul>
      * <p>This parameter is required.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("Type")
     public String type;

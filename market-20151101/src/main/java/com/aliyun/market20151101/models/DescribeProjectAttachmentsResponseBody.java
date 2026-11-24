@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProjectAttachmentsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>e03a9f78-7b40-4fb3-a015-350913e37e3f</p>
@@ -13,11 +13,14 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of project attachments.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeProjectAttachmentsResponseBodyResult> result;
 
     /**
-     * <p>The success status identifier.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -65,7 +68,7 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public String attachmentToken;
 
         /**
-         * <p>The attachment type.</p>
+         * <p>The type of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>File</p>
@@ -77,13 +80,13 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
          * <p>The content text.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The file access URL.</p>
+         * <p>The access URL of the file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&OSSAccessKeyId=wI2r*********&Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D">http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&amp;OSSAccessKeyId=wI2r*********&amp;Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D</a></p>
@@ -101,7 +104,7 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public Long fileLinkGmtExpired;
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>f8-test-perview.jpeg</p>
@@ -110,7 +113,7 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file size, in bytes.</p>
+         * <p>The size of the file (in bytes).</p>
          * 
          * <strong>example:</strong>
          * <p>109124</p>
@@ -137,7 +140,7 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The ID of the process node where the attachment was uploaded.</p>
+         * <p>The ID of the flow node where the attachment was uploaded.</p>
          * 
          * <strong>example:</strong>
          * <p>8472</p>
@@ -146,10 +149,10 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
-         * <p>The node name.</p>
+         * <p>The name of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>等待服务开通</p>
+         * <p>Waiting for service activation</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -167,7 +170,7 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
          * <p>The name of the operator.</p>
          * 
          * <strong>example:</strong>
-         * <p>**科技技术有限公司</p>
+         * <p>** Technology Co., Ltd</p>
          */
         @NameInMap("OperatorName")
         public String operatorName;
@@ -182,7 +185,7 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
         public String operatorRole;
 
         /**
-         * <p>The sequence number of the process node.</p>
+         * <p>The sequence number of the flow node.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

@@ -1,3 +1,7 @@
+2026-11-24 Version: 4.3.2
+- Update API DescribeInvoiceForIsv: add response parameters Body.Result.$.InvoiceTitleRelation.
+
+
 2026-08-20 Version: 4.3.1
 - Update API DescribeInvoiceForIsv: add response parameters Body.Result.$.ReceiptUserInfoDto.BankAccount.
 - Update API DescribeInvoiceForIsv: add response parameters Body.Result.$.ReceiptUserInfoDto.BankName.

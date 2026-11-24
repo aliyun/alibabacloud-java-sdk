@@ -157,7 +157,7 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
          * <p>The name of the Cloud Marketplace product.</p>
          * 
          * <strong>example:</strong>
-         * <p>公司宝****记账</p>
+         * <p>Gongsibao**** accounting</p>
          */
         @NameInMap("ProductName")
         public String productName;
@@ -175,7 +175,7 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
          * <p>The name of the Cloud Marketplace product SKU.</p>
          * 
          * <strong>example:</strong>
-         * <p>小***纳税人</p>
+         * <p>Small*** taxpayer</p>
          */
         @NameInMap("ProductSkuName")
         public String productSkuName;
