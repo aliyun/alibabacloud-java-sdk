@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingActivitiesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,22 +23,22 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>CC107349-57B7-4405-B1BF-9BF5AF7F2A46</p>
+     * <p>CC107349-57B7-4405-B1BF-9BF5AF7F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The scaling activities.</p>
+     * <p>The collection of scaling activity information.</p>
      */
     @NameInMap("ScalingActivities")
     public java.util.List<DescribeScalingActivitiesResponseBodyScalingActivities> scalingActivities;
 
     /**
-     * <p>The total number of scaling activities.</p>
+     * <p>The total number of scaling activity records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
 
     public static class DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages extends TeaModel {
         /**
-         * <p>The error code that is returned when the scaling activity failed.</p>
+         * <p>The error code returned when the scaling activity fails or is partially successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OperationDenied.NoStock</p>
@@ -102,7 +102,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The description of the scaling activity exception.</p>
+         * <p>The exception description of the scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>Fail to create instances into scaling group.</p>
@@ -111,13 +111,13 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The IDs of the instances included in the failed scaling activities.</p>
+         * <p>The list of failed instance ID.</p>
          */
         @NameInMap("FailedInstanceIds")
         public java.util.List<String> failedInstanceIds;
 
         /**
-         * <p>The error message that is returned when the scaling activity failed or is partially successful.</p>
+         * <p>The error messages returned when the scaling activity fails or is partially successful.</p>
          * 
          * <strong>example:</strong>
          * <p>The resource is out of stock in the specified zone. Please try other types, or choose other regions and zones.</p>
@@ -166,10 +166,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
 
     public static class DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext extends TeaModel {
         /**
-         * <p>Indicates whether all lifecycle hooks are disabled when the scaling activity is triggered. Valid values:</p>
+         * <p>Specifies whether all lifecycle hooks are disabled for the scaling activity. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Disabled.</li>
+         * <li>false: Not disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public Boolean disableLifecycleHook;
 
         /**
-         * <p>The IDs of the lifecycle hooks that are disabled.</p>
+         * <p>The list of IDs of the lifecycle hooks disabled for the scaling activity.</p>
          */
         @NameInMap("IgnoredLifecycleHookIds")
         public java.util.List<String> ignoredLifecycleHookIds;
@@ -218,7 +218,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String activityMetadata;
 
         /**
-         * <p>The total number of instances that are manually added to the scaling group after the scaling activity is complete.</p>
+         * <p>The total number of manually added instances in the scaling group after the scaling activity is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -227,7 +227,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String attachedCapacity;
 
         /**
-         * <p>The total number of instances that are created by Auto Scaling after the scaling activity was complete.</p>
+         * <p>The total number of instances in the scaling group that are generated through automatic creation after you execute the scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -236,7 +236,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String autoCreatedCapacity;
 
         /**
-         * <p>The reason why the scaling activity was triggered.</p>
+         * <p>The cause that triggered the scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>A user requests to execute scaling rule \&quot;asr-bp12tcnol686y1ik****\&quot;, changing the Total Capacity from \&quot;1\&quot; to \&quot;2\&quot;.</p>
@@ -245,7 +245,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String cause;
 
         /**
-         * <p>The number of instances that are created during the scale-out event.</p>
+         * <p>The number of instances created during the current scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -254,7 +254,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public Integer createdCapacity;
 
         /**
-         * <p>The instances that are created during the scale-out event.</p>
+         * <p>The list of instances created during the current scaling activity.</p>
          */
         @NameInMap("CreatedInstances")
         public java.util.List<String> createdInstances;
@@ -269,7 +269,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The number of instances that are released during the scale-in event.</p>
+         * <p>The number of instances released during the current scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -278,13 +278,13 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public Integer destroyedCapacity;
 
         /**
-         * <p>The instances that are released during the scale-in event.</p>
+         * <p>The list of instances released during the current scaling activity.</p>
          */
         @NameInMap("DestroyedInstances")
         public java.util.List<String> destroyedInstances;
 
         /**
-         * <p>Details of the scaling activity.</p>
+         * <p>The details of the scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;new ECS instances &quot;i-j6c8ilerw, i-j6c8iler4mx&quot; are created.&quot;</p>
@@ -293,7 +293,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The time when the scaling activity was complete.</p>
+         * <p>The end time of the scaling activity. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-10T09:54Z</p>
@@ -302,7 +302,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The error code that is returned when the scaling activity failed.</p>
+         * <p>The error code returned when the scaling activity fails.</p>
          * 
          * <strong>example:</strong>
          * <p>OperationDenied.NoStock</p>
@@ -311,7 +311,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message that is returned when the scaling activity failed.</p>
+         * <p>The error message returned when the scaling activity fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified ECS resource is out of stock in this region. Please try again later.</p>
@@ -320,7 +320,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The error messages that are returned when the scaling activities failed or are partially successful.</p>
+         * <p>The error messages returned when the scaling activity fails or is partially successful.</p>
          */
         @NameInMap("ErrorMessages")
         public java.util.List<DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages> errorMessages;
@@ -335,13 +335,13 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String instanceRefreshTaskId;
 
         /**
-         * <p>The context of the lifecycle hook.</p>
+         * <p>The context information of the lifecycle hook.</p>
          */
         @NameInMap("LifecycleHookContext")
         public DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext lifecycleHookContext;
 
         /**
-         * <p>The execution progress of the scaling activity.</p>
+         * <p>The progress of the scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -369,8 +369,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from Economical Mode.</li>
-         * <li>If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in Economical Mode.</li>
+         * <li><p>If the scaling activity is a scale-out activity, this parameter indicates the number of instances that are created or started from the stopped and reclaimed state during the scaling activity.</p>
+         * </li>
+         * <li><p>If the scaling activity is a scale-in activity, this parameter indicates the number of instances that are deleted or enter the stopped and reclaimed state during the scaling activity.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -380,7 +382,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public Integer scalingInstanceNumber;
 
         /**
-         * <p>The time when the scaling activity was started.</p>
+         * <p>The start time of the scaling activity. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-10T09:54Z</p>
@@ -389,7 +391,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The number of instances that are started from the Economical Mode during the scale-out event.</p>
+         * <p>The number of instances started from the economical mode during the current scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -398,7 +400,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public Integer startedCapacity;
 
         /**
-         * <p>The instances that are started from the Economical Mode during the scale-out event.</p>
+         * <p>The list of instances started from the economical mode during the current scaling activity.</p>
          */
         @NameInMap("StartedInstances")
         public java.util.List<String> startedInstances;
@@ -406,11 +408,11 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         /**
          * <p>The status of the scaling activity. Valid values:</p>
          * <ul>
-         * <li>Successful: The scaling activity is successful.</li>
-         * <li>Warning: The scaling activity is partially successful.</li>
-         * <li>Failed: The scaling activity failed.</li>
-         * <li>InProgress: The scaling activity is in progress.</li>
-         * <li>Rejected: The request to trigger the scaling activity is rejected.</li>
+         * <li>Successful: The scaling activity is successful. </li>
+         * <li>Warning: The scaling activity is partially successful. </li>
+         * <li>Failed: The scaling activity failed. </li>
+         * <li>InProgress: The scaling activity is in progress. </li>
+         * <li>Rejected: The request to execute the scaling activity is rejected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -429,7 +431,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String statusMessage;
 
         /**
-         * <p>The number of instances that are stopped in the Economical Mode during the scale-in event.</p>
+         * <p>The number of instances that entered the economical mode during the current scaling activity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -438,13 +440,13 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public Integer stoppedCapacity;
 
         /**
-         * <p>The instances that are stopped in the Economical Mode during the scale-in event.</p>
+         * <p>The list of instances that entered the economical mode during the current scaling activity.</p>
          */
         @NameInMap("StoppedInstances")
         public java.util.List<String> stoppedInstances;
 
         /**
-         * <p>The total number of instances in the scaling group after the scaling activity was complete.</p>
+         * <p>The total number of instances in the scaling group after the scaling activity is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -453,11 +455,11 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String totalCapacity;
 
         /**
-         * <p>The ID of the trigger source of the scaling activity. Valid values:</p>
+         * <p>The ID of the trigger source for the scaling activity. Valid values:</p>
          * <ul>
-         * <li>If the scaling activity is triggered by an event-triggered task, the ID of the trigger source is the ID of the event-triggered task.</li>
-         * <li>If the scaling activity is triggered by calling an API operation, the ID of the trigger source is the ID of the Alibaba Cloud account or Resource Access Management (RAM) user that you use to call the API operation.</li>
-         * <li>If the scaling activity is triggered by Auto Scaling, the ID of the trigger source is null.</li>
+         * <li>Cms trigger source ID: displayed as the event-triggered task ID.</li>
+         * <li>Api trigger source ID: displayed as the Alibaba Cloud account ID or RAM user ID.</li>
+         * <li>Ess trigger source ID: displayed as empty.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -467,11 +469,11 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String triggerSourceId;
 
         /**
-         * <p>The type of the trigger source of the scaling activity. Valid values:</p>
+         * <p>The type of the trigger source for the scaling activity. Valid values:</p>
          * <ul>
          * <li>Cms: The scaling activity is triggered by an event-triggered task.</li>
-         * <li>APIs: The scaling activity is triggered by calling an API operation.</li>
-         * <li>Ess: The scaling activity is triggered by Auto Scaling.</li>
+         * <li>Api: The scaling activity is triggered by a user through an API call.</li>
+         * <li>Ess: The scaling activity is triggered by a system task.</li>
          * </ul>
          * 
          * <strong>example:</strong>

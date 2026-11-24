@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingActivitiesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance refresh task. If you specify this parameter, this operation returns the list of scaling activities associated with the instance refresh task.</p>
+     * <p>The ID of the instance refresh task node. You can configure the Settings of this parameter to perform a parameter query for the scaling activity list related to the instance refresh task.</p>
      * 
      * <strong>example:</strong>
      * <p>ir-a12ds234fasd*****</p>
@@ -20,7 +20,7 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number of the scaling activity list. Pages start from 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 50.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the scaling group to which the scaling activity that you want to query belongs.</p>
+     * <p>The region ID of the scaling group to which the scaling activity belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,9 +56,9 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the scaling activities that you want to query.</p>
+     * <p>The ID of the scaling activity to be queried.</p>
      * <blockquote>
-     * <p> When you call this operation, you must specify one of the following parameters: <code>ScalingGroupId</code> and <code>ScalingActivityIds</code>. You cannot specify both of them at the same time. If you specify neither of them, an error is reported.</p>
+     * <p>When you invoke this API, you must specify either the ScalingGroupId or ScalingActivityIds parameter. If neither parameter is specified, an error occurs.</p>
      * </blockquote>
      */
     @NameInMap("ScalingActivityIds")
@@ -67,7 +67,7 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     /**
      * <p>The ID of the scaling group.</p>
      * <blockquote>
-     * <p> When you call this operation, you must specify one of the following parameters: <code>ScalingGroupId</code> and <code>ScalingActivityIds</code>. You cannot specify both of them at the same time. If you specify neither of them, an error is reported.</p>
+     * <p>When you call this operation, you must specify either ScalingGroupId or ScalingActivityIds. If neither is specified, an error occurs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,11 +79,11 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     /**
      * <p>The status of the scaling activity. Valid values:</p>
      * <ul>
-     * <li>Successful: The scaling activity is successful.</li>
-     * <li>Warning: The scaling activity is partially successful.</li>
-     * <li>Failed: The scaling activity failed.</li>
-     * <li>InProgress: The scaling activity is in progress.</li>
-     * <li>Rejected: The request to trigger the scaling activity is rejected.</li>
+     * <li>Successful: The scaling activity is successful. </li>
+     * <li>Warning: The scaling activity is partially successful. </li>
+     * <li>Failed: The scaling activity failed. </li>
+     * <li>InProgress: The scaling activity is in progress. </li>
+     * <li>Rejected: The request to execute the scaling activity is rejected.</li>
      * </ul>
      * 
      * <strong>example:</strong>

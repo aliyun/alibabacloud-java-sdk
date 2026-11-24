@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLifecycleHooksRequest extends TeaModel {
     /**
-     * <p>The IDs of the lifecycle hooks that you want to query.</p>
+     * <p>The IDs of the lifecycle hooks.</p>
+     * <blockquote>
+     * <p>Conditionally required: You must specify at least one of LifecycleHookIds or ScalingGroupId when you query lifecycle hooks. If you specify both parameters, LifecycleHookIds takes precedence. If you specify only RegionId without specifying either of the two parameters, a 400 InvalidParameter error is returned.</p>
+     * </blockquote>
      */
     @NameInMap("LifecycleHookIds")
     public java.util.List<String> lifecycleHookIds;
@@ -26,7 +29,7 @@ public class DescribeLifecycleHooksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <p>The page number of the instance status list. Pages start from 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +62,9 @@ public class DescribeLifecycleHooksRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * <blockquote>
+     * <p>Conditionally required: You must specify at least one of LifecycleHookIds or ScalingGroupId when you query lifecycle hooks. If you specify only RegionId without specifying either of the two parameters, a 400 InvalidParameter error is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>asg-bp1igpak5ft1flyp****</p>

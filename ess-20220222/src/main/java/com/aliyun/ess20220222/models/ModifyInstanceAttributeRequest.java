@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow the scaling group to manage the lifecycles of the manually added ECS instances. Valid values:</p>
+     * <p>Specifies whether the lifecycle (epoch) of an instance manually added to the scaling group is managed by the scaling group. Valid values:</p>
      * <ul>
-     * <li>true: allows the scaling group to manage the lifecycles of the manually added ECS instances. The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.</li>
-     * <li>false: does not allow the scaling group to manage the lifecycles of the manually added ECS instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.</li>
+     * <li>true: Managed. The lifecycle (epoch) of the instance is managed by Auto Scaling, which is consistent with that of instances automatically created in the scaling group. The instance is automatically released when it is removed from the scaling group, excluding instances removed when you invoke the DetachInstances operation.</li>
+     * <li>false: Unmanaged. The instance is not released when it is removed from the scaling group.</li>
      * </ul>
      * <blockquote>
-     * <p> You can specify this parameter only for ECS instances that are manually added to the scaling group.</p>
+     * <p>This parameter applies only to instances manually added to the scaling group, not to instances created within the scaling group.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public Boolean entrusted;
 
     /**
-     * <p>The ID of the ECS instance.</p>
+     * <p>The ID of the ECS instance in the scaling group.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp109k5j3dum1ce6****</p>
@@ -30,7 +30,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -39,7 +39,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the scaling group.</p>
+     * <p>The ID of the region to which the scaling group belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -37,12 +37,6 @@ public class ApplyEciScalingConfigurationRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
-    /**
-     * <p>Optional. Set the value to YAML.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>YAML</p>
-     */
     @NameInMap("Format")
     public String format;
 
@@ -56,8 +50,7 @@ public class ApplyEciScalingConfigurationRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the scaling configuration.</p>
-     * <p>If you want the system to update a scaling configuration of the Elastic Container Instance type based on a YAML configuration file, you must specify <code>ScalingConfigurationId</code>. If you do not specify <code>ScalingConfigurationId</code>, the system creates a new scaling configuration based on the YAML configuration file.</p>
+     * <p>The ID of the scaling configuration to be updated. Specify ScalingConfigurationId when you update an ECI scaling configuration based on the Content parameter. If you do not specify ScalingConfigurationId, an ECI scaling configuration is created based on the Content parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>asc-bp1i65jd06v04vdh****</p>

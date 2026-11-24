@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveInstancesRequest extends TeaModel {
     /**
-     * <p>A client-generated token to ensure request idempotence. This token must be unique for each request, contain only ASCII characters, and not exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -14,12 +14,10 @@ public class RemoveInstancesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to decrease the desired capacity of the scaling group. Valid values:</p>
+     * <p>Specifies whether to modify the expected number of instances. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Decreases the desired capacity of the scaling group by the number of removed instances.</p>
-     * </li>
-     * <li><p><code>false</code>: The desired capacity of the scaling group remains unchanged.</p>
-     * </li>
+     * <li>true: After the ECS instances are removed from the scaling group, the expected number of instances is decreased by the number of removed instances.</li>
+     * <li>false: After the ECS instances are removed from the scaling group, the expected number of instances remains unchanged.</li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -30,12 +28,10 @@ public class RemoveInstancesRequest extends TeaModel {
     public Boolean decreaseDesiredCapacity;
 
     /**
-     * <p>Specifies whether to ignore invalid instances when you remove multiple instances from a scaling group. Valid values:</p>
+     * <p>Specifies whether to ignore invalid instances when removing a batch of instances from the scaling group. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Invalid instances are ignored. If valid instances are removed while invalid ones are present, the scaling activity status is set to Warning. The invalid instances are listed in the scaling activity details.</p>
-     * </li>
-     * <li><p><code>false</code>: The request is rejected and an error is returned if it contains any invalid instances.</p>
-     * </li>
+     * <li>true: Invalid instances are ignored when removing a batch of instances from the scaling group. If invalid instances exist and valid instances are successfully removed, the execution status of the scaling activity is displayed as Warning. You can view the invalid instances in the scaling activity details.</li>
+     * <li>false: Invalid instances are not ignored when removing a batch of instances from the scaling group. If invalid instances exist in the batch, an error is reported.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -46,14 +42,14 @@ public class RemoveInstancesRequest extends TeaModel {
     public Boolean ignoreInvalidInstance;
 
     /**
-     * <p>The IDs of the ECS instances to remove.</p>
+     * <p>The IDs of the ECS instances to be removed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The context of the lifecycle hook.</p>
+     * <p>The context information of the lifecycle hook.</p>
      */
     @NameInMap("LifecycleHookContext")
     public RemoveInstancesRequestLifecycleHookContext lifecycleHookContext;
@@ -74,26 +70,22 @@ public class RemoveInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies the action to take on removed ECS instances. Valid values:</p>
+     * <p>Specifies the action for the removed ECS instances. Valid values:</p>
      * <ul>
-     * <li><p>recycle: The ECS instances enter the economical mode.</p>
+     * <li><p>recycle: The ECS instances are stopped in economical mode.</p>
      * <blockquote>
-     * <p>This value takes effect only when the <code>ScalingPolicy</code> parameter of the scaling group is set to <code>recycle</code>.</p>
+     * <p>This value takes effect only when <code>ScalingPolicy</code> is set to <code>recycle</code>.</p>
      * </blockquote>
      * </li>
      * <li><p>release: The ECS instances are released.</p>
      * </li>
      * </ul>
-     * <p>The <code>ScalingPolicy</code> parameter of the <code>CreateScalingGroup</code> operation specifies the reclamation mode of a scaling group. However, the <code>RemovePolicy</code> parameter of the <code>RemoveInstances</code> operation determines the action taken when an instance is removed. For example:</p>
+     * <p>The ScalingPolicy parameter of CreateScalingGroup specifies the reclaim mode of the scaling group, but the specific action when an instance is removed is determined by the RemovePolicy parameter of RemoveInstances. Examples:</p>
      * <ul>
-     * <li><p>If <code>ScalingPolicy</code> is <code>recycle</code> and <code>RemovePolicy</code> is <code>recycle</code>, the ECS instances enter the economical mode.</p>
-     * </li>
-     * <li><p>If <code>ScalingPolicy</code> is <code>recycle</code> and <code>RemovePolicy</code> is <code>release</code>, the ECS instances are released.</p>
-     * </li>
-     * <li><p>If <code>ScalingPolicy</code> is <code>release</code> and <code>RemovePolicy</code> is <code>recycle</code>, the ECS instances are released.</p>
-     * </li>
-     * <li><p>If <code>ScalingPolicy</code> is <code>release</code> and <code>RemovePolicy</code> is <code>release</code>, the ECS instances are released.</p>
-     * </li>
+     * <li>If ScalingPolicy is set to recycle and RemovePolicy is set to recycle, the ECS instances are stopped in economical mode.</li>
+     * <li>If ScalingPolicy is set to recycle and RemovePolicy is set to release, the ECS instances are released.</li>
+     * <li>If ScalingPolicy is set to release and RemovePolicy is set to recycle, the ECS instances are released.</li>
+     * <li>If ScalingPolicy is set to release and RemovePolicy is set to release, the ECS instances are released.</li>
      * </ul>
      * <p>Default value: release.</p>
      * 
@@ -120,17 +112,14 @@ public class RemoveInstancesRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The timeout period, in seconds, for an ECS instance to stop during a scale-in. Valid values: 30 to 240.</p>
+     * <p>The timeout period for waiting for the ECS instances to be successfully stopped during the scale-in process. Unit: seconds.
+     * Valid values: 30 to 240.</p>
      * <blockquote>
      * <ul>
-     * <li><p>By default, this parameter inherits its value from the scaling group, but you can override it when calling the <code>RemoveInstances</code> operation.</p>
-     * </li>
-     * <li><p>This parameter takes effect only during scale-in events where <code>RemovePolicy</code> is set to <code>release</code>.</p>
-     * </li>
-     * <li><p>If this parameter is set, the system waits for the specified duration for the instance to stop. The scale-in process continues after the timeout expires, regardless of the instance\&quot;s state.</p>
-     * </li>
-     * <li><p>If this parameter is not set, the system waits until the instance stops before continuing the scale-in process. If the instance fails to stop, the scale-in operation is rolled back and fails.</p>
-     * </li>
+     * <li>By default, this parameter inherits the value from the scaling group. You can also reset it when calling RemoveInstances.</li>
+     * <li>This parameter takes effect only in the scale-in process when RemovePolicy is set to release.  </li>
+     * <li>If this parameter is set, the system waits for a maximum of the StopInstanceTimeout period for the instances to be successfully stopped. After the timeout period, the scale-in process continues regardless of whether the instances are successfully stopped.  </li>
+     * <li>If this parameter is not set, the system waits for a long time for the instances to be successfully stopped. The scale-in process continues only after the instances are successfully stopped. If the instances fail to be stopped, the scale-in process is rolled back and the scale-in fails.</li>
      * </ul>
      * </blockquote>
      * 
@@ -253,10 +242,8 @@ public class RemoveInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to disable all lifecycle hooks for the scaling activity. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Disables all lifecycle hooks.</p>
-         * </li>
-         * <li><p><code>false</code>: Does not disable lifecycle hooks.</p>
-         * </li>
+         * <li>true: Disables all lifecycle hooks.</li>
+         * <li>false: Does not disable lifecycle hooks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,11 +253,17 @@ public class RemoveInstancesRequest extends TeaModel {
         public Boolean disableLifecycleHook;
 
         /**
-         * <p>A list of lifecycle hook IDs to ignore for the scaling activity.</p>
+         * <p>The IDs of the lifecycle hooks disabled for the scaling activity.</p>
          */
         @NameInMap("IgnoredLifecycleHookIds")
         public java.util.List<String> ignoredLifecycleHookIds;
 
+        /**
+         * <p>The default execution result of the lifecycle hook in this scaling activity. After this parameter is set, it overwrites the original default execution result of the hook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTINUE</p>
+         */
         @NameInMap("LifecycleHookResult")
         public String lifecycleHookResult;
 

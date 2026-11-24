@@ -20,7 +20,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
+     * <p>The token for the next query. An empty NextToken indicates that no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f****</p>
@@ -93,7 +93,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
 
     public static class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints extends TeaModel {
         /**
-         * <p>The percentage of new instances relative to the total instances in the scaling group. The task automatically pauses when this percentage is reached.</p>
+         * <p>The percentage of new instances out of the total instances in the scaling group. The task is automatically paused when this percentage is reached.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -179,13 +179,13 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
 
     public static class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers extends TeaModel {
         /**
-         * <p>The arguments for the container startup commands.</p>
+         * <p>The arguments for the container startup command.</p>
          */
         @NameInMap("Args")
         public java.util.List<String> args;
 
         /**
-         * <p>The container startup commands.</p>
+         * <p>The startup command of the container.</p>
          */
         @NameInMap("Commands")
         public java.util.List<String> commands;
@@ -206,7 +206,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The custom container name.</p>
+         * <p>The custom name of the container.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -263,7 +263,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
 
     public static class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides extends TeaModel {
         /**
-         * <p>The instance type that overrides the instance type specified in the launch template.</p>
+         * <p>The specified instance type, which overrides the instance type in the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.sn1ne.large</p>
@@ -294,7 +294,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers> containers;
 
         /**
-         * <p>The ID of the image file used for automatic creation of instances.</p>
+         * <p>The ID of the image file, which is the image resource used for the automatic creation of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>m-uf6g5noisr****</p>
@@ -303,7 +303,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The ID of the launch template from which the scaling group obtains launch configuration information.</p>
+         * <p>The ID of the launch template, which specifies that the scaling group obtains the launch configuration information from the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>lt-2ze5x4mp*****</p>
@@ -312,7 +312,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public String launchTemplateId;
 
         /**
-         * <p>The instance type information that overrides the launch template.</p>
+         * <p>The instance type override information for the launch template.</p>
          */
         @NameInMap("LaunchTemplateOverrides")
         public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides> launchTemplateOverrides;
@@ -320,9 +320,9 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         /**
          * <p>The version of the launch template. Valid values:</p>
          * <ul>
-         * <li>A fixed template version number.</li>
-         * <li>Default: always uses the default version of the template.</li>
-         * <li>Latest: always uses the latest version of the template.</li>
+         * <li>A specific template version number.</li>
+         * <li>Default: Always uses the default version of the template.</li>
+         * <li>Latest: Always uses the latest version of the template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,7 +397,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
 
     public static class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks extends TeaModel {
         /**
-         * <p>The duration for which the task pauses when a checkpoint is reached. Unit: minutes.</p>
+         * <p>The pause duration when a refresh task checkpoint is reached. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -406,7 +406,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public Integer checkpointPauseTime;
 
         /**
-         * <p>The checkpoints for the refresh task. A checkpoint specifies that the task automatically pauses for CheckpointPauseTime minutes when the proportion of new instances reaches the specified value during the instance refresh.</p>
+         * <p>The refresh task checkpoints. Specifies that during the instance refresh, the task is automatically paused for CheckpointPauseTime minutes when the percentage of new instances reaches the specified value.</p>
          */
         @NameInMap("Checkpoints")
         public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints> checkpoints;
@@ -418,7 +418,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration desiredConfiguration;
 
         /**
-         * <p>The failure reason when the instance refresh task fails.</p>
+         * <p>The specific cause of the failure when the instance refresh task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The task exceeded its maximum run time of one week. So the task failed.</p>
@@ -427,7 +427,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The end time of the instance refresh task.</p>
+         * <p>The end time of the instance refresh task. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-22T02:09:00Z</p>
@@ -490,14 +490,14 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public String scalingGroupId;
 
         /**
-         * <p>Indicates whether instances that already match the desired configuration are skipped.</p>
+         * <p>Specifies whether to skip instances that match the desired configuration.</p>
          * <blockquote>
-         * <p>The system determines whether an instance matches based on the ID of the desired scaling configuration, not by comparing individual configuration items.</p>
+         * <p>The system determines whether an instance matches based on the ID of the desired scaling configuration, without comparing specific configuration items.</p>
          * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: Skipped. When the instance refresh task starts, the system checks the configuration of each instance. Instances that were already created with the desired configuration are not refreshed.</li>
-         * <li>false: Not skipped. After the instance refresh task starts, all instances in the scaling group are refreshed.</li>
+         * <li>true: Skips matching instances. When the instance refresh task starts, the system checks the configuration of each instance. Instances that are already created with the desired configuration are not refreshed.</li>
+         * <li>false: Does not skip matching instances. After the instance refresh task starts, all instances in the scaling group are refreshed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -507,7 +507,7 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public Boolean skipMatching;
 
         /**
-         * <p>The start time of the instance refresh task.</p>
+         * <p>The start time of the instance refresh task. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-22T01:09:00Z</p>
@@ -518,10 +518,10 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         /**
          * <p>The current status of the instance refresh task. Valid values:</p>
          * <ul>
-         * <li>Pending: The instance refresh task is created and waiting to be scheduled.</li>
+         * <li>Pending: The instance refresh task is created and pending scheduling.</li>
          * <li>InProgress: The instance refresh task is in progress.</li>
          * <li>Paused: The instance refresh task is paused.</li>
-         * <li>CheckpointPause: The instance refresh task is paused because the task progress reached a checkpoint (<code>Checkpoint.Percentage</code>).</li>
+         * <li>CheckpointPause: The instance refresh task is paused because the task progress has reached the refresh task checkpoint (<code>Checkpoint.Percentage</code>).</li>
          * <li>Failed: The instance refresh task failed.</li>
          * <li>Successful: The instance refresh task succeeded.</li>
          * <li>Cancelling: The instance refresh task is being canceled.</li>
@@ -537,6 +537,18 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The execution strategy of the instance refresh task. Valid values:</p>
+         * <ul>
+         * <li><p>Rolling: Refreshes instances by creating new instances and releasing old ones.</p>
+         * </li>
+         * <li><p>ReplaceSystemDisk: Updates the system disk on the existing instances.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Rolling</p>
+         */
         @NameInMap("Strategy")
         public String strategy;
 

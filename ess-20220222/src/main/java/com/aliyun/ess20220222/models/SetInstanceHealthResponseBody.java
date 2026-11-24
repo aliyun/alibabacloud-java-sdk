@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetInstanceHealthResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B755AE57-6093-43E4-938E-DEA422A9****</p>

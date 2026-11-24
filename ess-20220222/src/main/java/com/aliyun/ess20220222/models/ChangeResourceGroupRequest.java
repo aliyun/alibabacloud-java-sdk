@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group to which you want to move the scaling group.</p>
+     * <p>The ID of the new resource group to which you want to move the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the scaling group that you want to move from the current resource group to another resource group.</p>
+     * <p>The ID of the scaling group whose resource group you want to change.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The resource type. Set the value to scalinggroup.</p>
+     * <p>The resource type. Currently, only scaling groups are supported. Valid value: scalinggroup.</p>
      * 
      * <strong>example:</strong>
      * <p>scalinggroup</p>

@@ -5,24 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribePatternTypesRequest extends TeaModel {
     /**
-     * <p>The architecture types of the instance types. Valid values:</p>
+     * <p>The architecture type of the instance type. Valid values:</p>
      * <ul>
-     * <li>X86: x86 architecture.</li>
-     * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</li>
-     * <li>BareMetal: ECS Bare Metal Instance.</li>
-     * <li>Arm: Arm.</li>
+     * <li>X86: x86 computing</li>
+     * <li>Heterogeneous: heterogeneous computing, such as GPU or FPGA</li>
+     * <li>BareMental: Elastic Compute Service Bare Metal Server</li>
+     * <li>Arm: Arm computing</li>
      * </ul>
-     * <p>By default, all values are selected.</p>
+     * <p>Default value: all architecture types.</p>
      */
     @NameInMap("Architecture")
     public java.util.List<String> architecture;
 
     /**
-     * <p>Specifies whether to include burstable instance types. Valid values:</p>
+     * <p>Specifies whether the instance type is a burstable instance type. Valid values:</p>
      * <ul>
-     * <li>Exclude: does not include burstable instance types.</li>
-     * <li>Include: includes burstable instance types.</li>
-     * <li>Required: includes only burstable instance types.</li>
+     * <li>Exclude: Burstable instance types are excluded.</li>
+     * <li>Include: Burstable instance types are included.</li>
+     * <li>Required: Only burstable instance types are included.</li>
      * </ul>
      * <p>Default value: Include.</p>
      * 
@@ -33,7 +33,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public String burstablePerformance;
 
     /**
-     * <p>The channel ID. This parameter is not for public use.</p>
+     * <p>The channel ID. This parameter is reserved for internal use.</p>
      * 
      * <strong>example:</strong>
      * <p>79425074</p>
@@ -42,7 +42,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Long channelId;
 
     /**
-     * <p>The number of vCPUs that you want to assign to the instance type.</p>
+     * <p>The number of vCPUs for the instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -51,19 +51,19 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer cores;
 
     /**
-     * <p>The number of vCPUs that you want to assign to the instance type. You can specify multiple vCPUs.</p>
+     * <p>The number of vCPUs for the instance type. You can specify multiple values.</p>
      */
     @NameInMap("CoresList")
     public java.util.List<Integer> coresList;
 
     /**
-     * <p>The CPU architectures of the instance types. Valid values:</p>
+     * <p>The CPU architecture of the instance type. Valid values:</p>
      * <blockquote>
-     * <p> You can specify 1 to 2 CPU architectures.</p>
+     * <p>N specifies the number of CPU architectures that you can set. Valid values of N: 1 to 2.</p>
      * </blockquote>
      * <ul>
-     * <li>x86</li>
-     * <li>Arm</li>
+     * <li>X86</li>
+     * <li>ARM</li>
      * </ul>
      */
     @NameInMap("CpuArchitectures")
@@ -73,29 +73,29 @@ public class DescribePatternTypesRequest extends TeaModel {
     public java.util.List<String> excludedInstanceType;
 
     /**
-     * <p>The GPU models.</p>
+     * <p>The GPU type.</p>
      */
     @NameInMap("GpuSpecs")
     public java.util.List<String> gpuSpecs;
 
     /**
-     * <p>The classifications of the instance types. Valid values:</p>
+     * <p>The categorization of the instance type. Valid values:</p>
      * <ul>
-     * <li>General-purpose: general-purpose instance type.</li>
-     * <li>Compute-optimized: compute-optimized instance type.</li>
-     * <li>Memory-optimized: memory-optimized instance type.</li>
-     * <li>Big data: big data instance type.</li>
-     * <li>Local SSDs: instance type with local SSDs.</li>
-     * <li>High Clock Speed: instance type with high clock speeds.</li>
-     * <li>Enhanced: enhanced instance type.</li>
-     * <li>Shared: shared instance type.</li>
-     * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</li>
-     * <li>Visual Compute-optimized: visual compute-optimized instance type.</li>
-     * <li>Heterogeneous Service: heterogeneous service instance type.</li>
-     * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</li>
-     * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</li>
-     * <li>ECS Bare Metal: ECS Bare Metal Instance type.</li>
-     * <li>High Performance Compute: HPC-optimized instance type.</li>
+     * <li>General-purpose: general-purpose</li>
+     * <li>Compute-optimized: compute-optimized</li>
+     * <li>Memory-optimized: memory-optimized</li>
+     * <li>Big data: big data</li>
+     * <li>Local SSDs: local SSD</li>
+     * <li>High Clock Speed: high frequency</li>
+     * <li>Enhanced: enhanced</li>
+     * <li>Shared: shared</li>
+     * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized</li>
+     * <li>Visual Compute-optimized: visual compute-optimized</li>
+     * <li>Heterogeneous Service: heterogeneous service</li>
+     * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized</li>
+     * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized</li>
+     * <li>ECS Bare Metal: Elastic Compute Service Bare Metal Server</li>
+     * <li>High Performance Compute: high-performance computing (HPC)</li>
      * </ul>
      */
     @NameInMap("InstanceCategories")
@@ -104,9 +104,9 @@ public class DescribePatternTypesRequest extends TeaModel {
     /**
      * <p>The level of the instance family. Valid values:</p>
      * <ul>
-     * <li>EntryLevel: entry level</li>
-     * <li>EnterpriseLevel: enterprise level</li>
-     * <li>CreditEntryLevel: credit-based entry level For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</li>
+     * <li>EntryLevel: Entry-level instance family.</li>
+     * <li>EnterpriseLevel: Enterprise-level instance family.</li>
+     * <li>CreditEntryLevel: Credit entry-level instance family. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,13 +116,13 @@ public class DescribePatternTypesRequest extends TeaModel {
     public String instanceFamilyLevel;
 
     /**
-     * <p>The instance families that you want to query. You can query 1 to 10 instance families in each call.</p>
+     * <p>The instance families to be queried. N specifies the number of instance families that you can set. Valid values of N: 1 to 10.</p>
      */
     @NameInMap("InstanceTypeFamilies")
     public java.util.List<String> instanceTypeFamilies;
 
     /**
-     * <p>The maximum hourly price for pay-as-you-go or preemptible instances.</p>
+     * <p>The maximum acceptable hourly price for the pay-as-you-go or spot instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -131,7 +131,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Float maxPrice;
 
     /**
-     * <p>The maximum number of vCPUs per instance type.</p>
+     * <p>The maximum number of vCPUs for the instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -140,7 +140,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer maximumCpuCoreCount;
 
     /**
-     * <p>The maximum number of GPUs per instance. The value must be a positive integer.</p>
+     * <p>The maximum number of GPUs for the instance. Valid values: positive integers.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -149,7 +149,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer maximumGpuAmount;
 
     /**
-     * <p>The maximum memory size per instance. Unit: GiB.</p>
+     * <p>The maximum memory size of the instance. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -158,7 +158,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Float maximumMemorySize;
 
     /**
-     * <p>The memory size that you want to assign to the instance type. Unit: GiB.</p>
+     * <p>The memory size of the instance type. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -167,13 +167,13 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Float memory;
 
     /**
-     * <p>The memory size that you want to assign to the instance type. Unit: GiB. You can specify multiple memory sizes.</p>
+     * <p>The memory size of the instance type. Unit: GiB. You can specify multiple values.</p>
      */
     @NameInMap("MemoryList")
     public java.util.List<Float> memoryList;
 
     /**
-     * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+     * <p>The minimum baseline vCPU computing performance (sum of all vCPUs) for burstable instances of the t5 and t6 instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -182,7 +182,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumBaselineCredit;
 
     /**
-     * <p>The minimum number of vCPUs per instance type.</p>
+     * <p>The minimum number of vCPUs for the instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -191,7 +191,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumCpuCoreCount;
 
     /**
-     * <p>The minimum number of IPv6 addresses per ENI.</p>
+     * <p>The minimum upper limit on the number of IPv6 addresses per elastic network interface controller (NIC) for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -200,7 +200,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumEniIpv6AddressQuantity;
 
     /**
-     * <p>The minimum number of IPv4 addresses per ENI.</p>
+     * <p>The minimum upper limit on the number of IPv4 addresses per elastic network interface controller (NIC) for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -209,7 +209,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumEniPrivateIpAddressQuantity;
 
     /**
-     * <p>The minimum number of elastic network interfaces (ENIs) per instance.</p>
+     * <p>The minimum upper limit on the number of elastic network interfaces (ENIs) that can be bound to the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -218,7 +218,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumEniQuantity;
 
     /**
-     * <p>The minimum number of GPUs per instance. The value must be a positive integer.</p>
+     * <p>The minimum number of GPUs for the instance. Valid values: positive integers.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -227,7 +227,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumGpuAmount;
 
     /**
-     * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+     * <p>The minimum initial vCPU credit for burstable instances of the t5 and t6 instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -236,7 +236,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumInitialCredit;
 
     /**
-     * <p>The minimum memory size per instance. Unit: GiB.</p>
+     * <p>The minimum memory size of the instance. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -245,7 +245,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Float minimumMemorySize;
 
     /**
-     * <p>The processor models of the instance types. You can specify 1 to 10 processor models.</p>
+     * <p>The processor model of the instance. N specifies the number of processor models that you can set. Valid values of N: 1 to 10.</p>
      */
     @NameInMap("PhysicalProcessorModels")
     public java.util.List<String> physicalProcessorModels;
@@ -261,11 +261,11 @@ public class DescribePatternTypesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The preemption policy that you want to apply to pay-as-you-go instances. Valid values:</p>
+     * <p>The preemption policy for the pay-as-you-go instance. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instances are created as regular pay-as-you-go instances.</li>
-     * <li>SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</li>
+     * <li>NoSpot: regular pay-as-you-go instance</li>
+     * <li>SpotWithPriceLimit: spot instance with a maximum price limit</li>
+     * <li>SpotAsPriceGo: spot instance whose price is automatically offered by the system based on the current market price</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * 
@@ -276,13 +276,13 @@ public class DescribePatternTypesRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The IDs of the vSwitches.</p>
+     * <p>The list of vSwitch IDs. You must specify at least one of VSwitchId and ZoneId.</p>
      */
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;
 
     /**
-     * <p>The zone IDs. If you pass vSwitch IDs to the system, this parameter does not take effect.</p>
+     * <p>The list of zone IDs. This parameter is invalid if a vSwitch ID is specified. You must specify at least one of VSwitchId and ZoneId.</p>
      */
     @NameInMap("ZoneId")
     public java.util.List<String> zoneId;

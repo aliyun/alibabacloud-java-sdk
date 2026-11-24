@@ -11,7 +11,7 @@ public class DescribeScalingConfigurationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the scaling configuration list. Pages start from 1.</p>
+     * <p>The page number of the scaling configuration list. The starting value is 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeScalingConfigurationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in paged queries. Maximum value: 50.</p>
+     * <p>The number of entries per page set in the paging Settings for a paged query. Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -47,21 +47,21 @@ public class DescribeScalingConfigurationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the scaling configurations to query.</p>
-     * <p>The query results include both active and inactive scaling configurations, identified by the response parameter <code>LifecycleState</code>.</p>
+     * <p>The ID of the scaling configuration to be queried.</p>
+     * <p>The query results include both active and inactive scaling configurations. The response parameter LifecycleState identifies the state.</p>
      */
     @NameInMap("ScalingConfigurationIds")
     public java.util.List<String> scalingConfigurationIds;
 
     /**
-     * <p>The names of the scaling configurations to query.</p>
-     * <p>The query ignores invalid scaling configuration names without returning an error.</p>
+     * <p>The name of the scaling configuration to be queried.</p>
+     * <p>The query results ignore invalid scaling configuration names and do not return an error.</p>
      */
     @NameInMap("ScalingConfigurationNames")
     public java.util.List<String> scalingConfigurationNames;
 
     /**
-     * <p>The ID of the scaling group. You can query all scaling configurations under this scaling group.</p>
+     * <p>The ID of the scaling group. You can query all scaling configurations in the scaling group.</p>
      * 
      * <strong>example:</strong>
      * <p>asg-bp17pelvl720x3v7****</p>

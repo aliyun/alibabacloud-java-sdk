@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingGroupsRequest extends TeaModel {
     /**
-     * <p>The type of instances that are managed by the scaling group. Valid values:</p>
+     * <p>The type of instances managed by the scaling group. Valid values:</p>
      * <ul>
-     * <li>ECS: Elastic Compute Service (ECS) instances.</li>
-     * <li>ECI: elastic container instances.</li>
+     * <li><p>ECS: The scaling group manages ECS instances.</p>
+     * </li>
+     * <li><p>ECI: The scaling group manages ECI instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +26,7 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Page starts from page 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +36,7 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <p>The Settings for the number of entries per page during paging in a paged query. Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the scaling group.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,9 +56,9 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the scaling group that you want to query belongs.</p>
+     * <p>The ID of the resource group to which the scaling groups to query belong.</p>
      * <blockquote>
-     * <p> If no scaling group belongs to the specified resource group, the query result is empty and no error is reported.</p>
+     * <p>If no scaling group belongs to the specified resource group, an empty result is returned and no error is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,8 +74,8 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the scaling groups that you want to query.</p>
-     * <p>The IDs of inactive scaling groups are not included in the query results, and no error is returned.</p>
+     * <p>The IDs of the scaling groups to query.</p>
+     * <p>Invalid scaling group IDs are ignored in the response and no error is returned.</p>
      */
     @NameInMap("ScalingGroupIds")
     public java.util.List<String> scalingGroupIds;
@@ -88,8 +90,8 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     public String scalingGroupName;
 
     /**
-     * <p>The names of the scaling groups that you want to query.</p>
-     * <p>The names of inactive scaling groups are not displayed in the query results, and no error is reported.</p>
+     * <p>The names of the scaling groups to query.</p>
+     * <p>Invalid scaling group names are ignored in the response and no error is returned.</p>
      */
     @NameInMap("ScalingGroupNames")
     public java.util.List<String> scalingGroupNames;

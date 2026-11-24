@@ -23,13 +23,13 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The diagnostic reports.</p>
+     * <p>The list of diagnostic reports.</p>
      */
     @NameInMap("Reports")
     public java.util.List<DescribeDiagnoseReportsResponseBodyReports> reports;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>ECA123C6-107B-5F70-A177-740A7224C996</p>
@@ -95,15 +95,24 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         /**
          * <p>The type of the diagnostic item. Valid values:</p>
          * <ul>
-         * <li>AccountArrearage: Checks whether your Alibaba Cloud account has overdue payments.</li>
-         * <li>AccountNotEnoughBalance: Checks whether the balance of your Alibaba Cloud account at the China site (aliyun.com) is greater than or equal to CNY 100.</li>
-         * <li>ElasticStrength: Checks whether the instance types that are specified in the scaling configuration are sufficient.</li>
-         * <li>VSwitch: Checks whether a specific vSwitch can work as expected. For example, if a vSwitch is deleted, the vSwitch cannot provide services and an exception occurs.</li>
-         * <li>SecurityGroup: Checks whether a specific security group can work as expected. For example, if a security group is deleted, the security group cannot provide services and an exception occurs.</li>
-         * <li>KeyPair: Checks whether the key pair is available. If the specified key pair is deleted, specify another key pair for the scaling group.</li>
-         * <li>SlbBackendServerQuota: Checks whether the number of ECS instances that are added to the default server group and the vServer groups of the SLB instances associated with the scaling group has reached the upper limit.</li>
-         * <li>AlbBackendServerQuota: Checks whether the number of ECS instances that are added to the backend server groups of the ALB instances associated with the scaling group has reached the upper limit.</li>
-         * <li>NlbBackendServerQuota: Checks whether the number of ECS instances that are added to the backend server groups of the NLB instances associated with the scaling group has reached the upper limit.</li>
+         * <li><p>AccountArrearage: account overdue payment. Checks whether the user account has overdue payments.</p>
+         * </li>
+         * <li><p>AccountNotEnoughBalance: insufficient account balance. Checks whether the balance of a user account on the China site is greater than or equal to CNY 100.</p>
+         * </li>
+         * <li><p>ElasticStrength: inventory health. Checks the inventory health of the instance type configured for the scaling group.</p>
+         * </li>
+         * <li><p>VSwitch: vSwitch status. Checks whether the vSwitch is active, such as whether it is deleted.</p>
+         * </li>
+         * <li><p>SecurityGroup: security group status. Checks whether the security group is active, such as whether it is deleted.</p>
+         * </li>
+         * <li><p>KeyPair: key pair status. Checks whether the key pair is active, such as whether it is deleted.</p>
+         * </li>
+         * <li><p>SlbBackendServerQuota: number of instances mounted to the SLB instance in the scaling group. Checks whether the number of ECS instances mounted to the default server group and virtual service groups of the SLB instance exceeds the quota.</p>
+         * </li>
+         * <li><p>AlbBackendServerQuota: number of instances mounted to the ALB instance in the scaling group. Checks whether the number of ECS instances mounted to the server groups of the ALB instance exceeds the quota.</p>
+         * </li>
+         * <li><p>NlbBackendServerQuota: number of instances mounted to the NLB instance in the scaling group. Checks whether the number of ECS instances mounted to the server groups of the NLB instance exceeds the quota.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,15 +124,24 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         /**
          * <p>The error code of the diagnostic item. Valid values:</p>
          * <ul>
-         * <li>VSwitchIdNotFound: The vSwitch does not exist.</li>
-         * <li>SecurityGroupNotFound: The security group does not exist.</li>
-         * <li>KeyPairNotFound: The key pair does not exist.</li>
-         * <li>SlbBackendServerQuotaExceeded: The number of ECS instances that are added to the default server group and the vServer groups of the SLB instances associated with the scaling group has reached the upper limit.</li>
-         * <li>AlbBackendServerQuotaExceeded: The number of ECS instances that are attached to the ALB instances of the scaling group has reached the upper limit.</li>
-         * <li>NlbBackendServerQuotaExceeded: The number of ECS instances that are attached to the NLB instances of the scaling group has reached the upper limit.</li>
-         * <li>AccountArrearage: Your account has overdue payments.</li>
-         * <li>AccountNotEnoughBalance: The balance of your Alibaba Cloud account is less than CNY 100.</li>
-         * <li>ElasticStrengthAlert: The inventory levels are lower than expected.</li>
+         * <li><p>VSwitchIdNotFound: the vSwitch does not exist.</p>
+         * </li>
+         * <li><p>SecurityGroupNotFound: the security group does not exist.</p>
+         * </li>
+         * <li><p>KeyPairNotFound: the key pair does not exist.</p>
+         * </li>
+         * <li><p>SlbBackendServerQuotaExceeded: the number of ECS instances mounted to the default server group and virtual service groups of the SLB instance exceeds the quota.</p>
+         * </li>
+         * <li><p>AlbBackendServerQuotaExceeded: the number of ECS instances mounted to the server groups of the ALB instance exceeds the quota.</p>
+         * </li>
+         * <li><p>NlbBackendServerQuotaExceeded: the number of ECS instances mounted to the server groups of the NLB instance exceeds the quota.</p>
+         * </li>
+         * <li><p>AccountArrearage: the account has overdue payments.</p>
+         * </li>
+         * <li><p>AccountNotEnoughBalance: the account balance is insufficient (less than CNY 100).</p>
+         * </li>
+         * <li><p>ElasticStrengthAlert: the inventory health is poor.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +151,7 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-280ih****</p>
@@ -142,11 +160,14 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The status of the diagnostic item. Valid values:</p>
+         * <p>The diagnostic status of the diagnostic item. Valid values:</p>
          * <ul>
-         * <li>Normal: The diagnostic result is normal.</li>
-         * <li>Warn: The diagnostic result is warning.</li>
-         * <li>Critical: The diagnostic result is critical.</li>
+         * <li><p>Normal: the diagnostic result is normal.</p>
+         * </li>
+         * <li><p>Warn: the diagnostic result is a warning.</p>
+         * </li>
+         * <li><p>Critical: the diagnostic result is critical.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,7 +217,7 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
 
     public static class DescribeDiagnoseReportsResponseBodyReports extends TeaModel {
         /**
-         * <p>The time when the diagnostic report was created.</p>
+         * <p>The time when the diagnostic report was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-23T02:22:30Z</p>
@@ -211,11 +232,14 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         public java.util.List<DescribeDiagnoseReportsResponseBodyReportsDetails> details;
 
         /**
-         * <p>The status of the diagnostic item. Only the severe status is displayed in the diagnostic report. Valid values:</p>
+         * <p>The diagnostic status. The value is the most severe status among the diagnostic details. Valid values:</p>
          * <ul>
-         * <li>Normal: The diagnostic result is normal.</li>
-         * <li>Warn: The diagnostic result is warning.</li>
-         * <li>Critical: The diagnostic result is critical.</li>
+         * <li><p>Normal: the diagnostic result is normal.</p>
+         * </li>
+         * <li><p>Warn: the diagnostic result is a warning.</p>
+         * </li>
+         * <li><p>Critical: the diagnostic result is critical.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,8 +251,10 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         /**
          * <p>The status of the diagnostic report. Valid values:</p>
          * <ul>
-         * <li>processing: The diagnosis is in progress.</li>
-         * <li>Finished: The diagnosis is complete.</li>
+         * <li><p>Processing: in progress.</p>
+         * </li>
+         * <li><p>Finished: completed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,7 +264,7 @@ public class DescribeDiagnoseReportsResponseBody extends TeaModel {
         public String processStatus;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>

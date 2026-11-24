@@ -5,18 +5,24 @@ import com.aliyun.tea.*;
 
 public class CreateAlarmRequest extends TeaModel {
     /**
-     * <p>The list of unique identifiers of the scaling rules that are associated with the event-triggered task.</p>
+     * <p>The list of unique identifiers of the scaling rules associated with the event-triggered task.</p>
      */
     @NameInMap("AlarmActions")
     public java.util.List<String> alarmActions;
 
     /**
-     * <p>The operator that you want to use to compare the metric value and the threshold. Valid values:</p>
+     * <p>The comparison operator used to compare the aggregated metric value with the threshold. This operator specifies the condition under which the threshold is met. Valid values:</p>
      * <ul>
-     * <li>If the metric value is greater than or equal to the threshold, set the value to &gt;=.</li>
-     * <li>If the metric value is less than or equal to the metric threshold, set the value to &lt;=.</li>
-     * <li>If the metric value is greater than the metric threshold, set the value to &gt;.</li>
-     * <li>If the metric value is less than the metric threshold, set the value to &lt;.</li>
+     * <li><blockquote>
+     * <p>=: The aggregated metric value is greater than or equal to the threshold.</p>
+     * </blockquote>
+     * </li>
+     * <li>&lt;=: The aggregated metric value is less than or equal to the threshold.</li>
+     * <li><blockquote>
+     * <p>: The aggregated metric value is greater than the threshold.</p>
+     * </blockquote>
+     * </li>
+     * <li>&lt;: The aggregated metric value is less than the threshold.</li>
      * </ul>
      * <p>Default value: &gt;=.</p>
      * 
@@ -38,26 +44,31 @@ public class CreateAlarmRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The metric dimensions.</p>
+     * <p>The dimension information associated with the metric.</p>
      */
     @NameInMap("Dimensions")
     public java.util.List<CreateAlarmRequestDimensions> dimensions;
 
     /**
-     * <p>The effective period of the event-triggered task. By default, the event-triggered task is in effect all the time.</p>
-     * <p>This parameter follows the cron expression format. The default format is <code>X X X X X ?</code>. In the format:</p>
+     * <p>Specifies the effective period of the event-triggered task. By default, the task takes effect at all times.</p>
+     * <p>This parameter follows the cron expression format. The default format is <code>X X X X X ?</code>, which is described as follows:</p>
      * <ul>
-     * <li>X: a placeholder for a field, which represents seconds, minutes, hours, days, and months in sequence. X can be a definite value or a special character that has logical meaning. For information about the valid values of X, see <a href="https://help.aliyun.com/document_detail/25907.html">Cron expression</a>.</li>
-     * <li>?: No value is specified.</li>
+     * <li><p>X: a placeholder for a field, representing seconds, minutes, hours, day of month, and month in sequence. X can be a specific value or a special character with logical meaning. For more information about the valid values of X, see <a href="https://help.aliyun.com/document_detail/25907.html">Cron expressions</a>.</p>
+     * </li>
+     * <li><p>?: indicates that no value is specified.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>By default, this parameter value is specified in <strong>UTC+8</strong>. You can specify the time zone in the <code>TZ=+yy</code> format before a cron expression. y indicates the time zone. For example, <code>TZ=+00 * * 1-2 * * ?</code> specifies that the event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.</p>
+     * <p>The specified value of this parameter <strong>defaults to the UTC+8 time zone</strong>. You can add the time zone information <code>TZ=+yy</code> before the cron expression to specify a time zone, where y represents the time zone offset. For example, <code>TZ=+00 * * 1-2 * * ?</code> indicates that the event-triggered task takes effect between 01:00 and 02:59 every day in the UTC+0 time zone.</p>
      * </blockquote>
-     * <p>Sample values:</p>
+     * <p>Examples and their meanings:</p>
      * <ul>
-     * <li><code>* * * * * ? </code>: The event-triggered task is in effect all the time.</li>
-     * <li><code>* * 17-18 * * ? </code>: The event-triggered task is in effect between 17:00 and 18:59 (UTC+8) every day.</li>
-     * <li><code>TZ=+00 * * 1-2 * * ?</code>: The event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.</li>
+     * <li><p><code>* * * * * ?</code>: takes effect at all times.</p>
+     * </li>
+     * <li><p><code>* * 17-18 * * ?</code>: takes effect between 17:00 and 18:59 every day in the UTC+8 time zone.</p>
+     * </li>
+     * <li><p><code>TZ=+00 * * 1-2 * * ?</code>: takes effect between 01:00 and 02:59 every day in the UTC+0 time zone.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +78,7 @@ public class CreateAlarmRequest extends TeaModel {
     public String effective;
 
     /**
-     * <p>The number of consecutive times that the threshold must be reached before a scaling rule is executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before the scaling rule is executed.</p>
+     * <p>The number of times that the threshold expression must be met to trigger a scaling rule. For example, if this parameter is set to 3, the scaling rule is triggered when the average CPU utilization is greater than or equal to 80% for three consecutive times.</p>
      * <p>Default value: 3.</p>
      * 
      * <strong>example:</strong>
@@ -77,16 +88,16 @@ public class CreateAlarmRequest extends TeaModel {
     public Integer evaluationCount;
 
     /**
-     * <p>The information about the multi-metric alert rules.</p>
+     * <p>The information about the multi-metric alert rule.</p>
      */
     @NameInMap("Expressions")
     public java.util.List<CreateAlarmRequestExpressions> expressions;
 
     /**
-     * <p>The relationship between the trigger conditions in the multi-metric alert rule. Valid values:</p>
+     * <p>The logical operator between multiple metric alert conditions. Valid values:</p>
      * <ul>
-     * <li><code>&amp;&amp;</code>: An alert is triggered only if all metrics in the multi-metric alert rule meet the trigger conditions. In this case, an alert is triggered only if the results of all trigger conditions that are specified in the multi-metric alert rule are <code>true</code>.</li>
-     * <li><code>||</code>: An alert is triggered if one of the metrics in the multi-metric alert rule meets the trigger conditions.</li>
+     * <li><code>&amp;&amp;</code>: An alert is triggered only when all monitoring metrics meet the alert conditions. That is, an alert is triggered only when all expressions in the multi-metric alert rule evaluate to <code>true</code>.</li>
+     * <li><code>||</code>: An alert is triggered if any one of the metrics meets the alert condition.</li>
      * </ul>
      * <p>Default value: <code>&amp;&amp;</code>.</p>
      * 
@@ -97,7 +108,7 @@ public class CreateAlarmRequest extends TeaModel {
     public String expressionsLogicOperator;
 
     /**
-     * <p>The ID of the application group to which the custom metric belongs. If you set the MetricType parameter to custom, you must specify this parameter.</p>
+     * <p>The ID of the CloudMonitor application group to which the custom metric belongs. This parameter is required only when the metric type is custom.</p>
      * 
      * <strong>example:</strong>
      * <p>4055401</p>
@@ -106,41 +117,66 @@ public class CreateAlarmRequest extends TeaModel {
     public Integer groupId;
 
     /**
-     * <p>The metric name. The valid values of this parameter vary based on the metric type.</p>
+     * <p>The name of the metric. The valid values vary based on the monitoring type of the event-triggered task:</p>
      * <ul>
-     * <li><p>If you set MetricType to custom, the valid values are the metrics that you have.</p>
+     * <li><p>If the event-triggered task is of the custom monitoring type (MetricType=custom), the valid values are your custom metrics.</p>
      * </li>
-     * <li><p>If you set MetricType to system, this parameter has the following valid values:</p>
+     * <li><p>If the event-triggered task is of the system monitoring type (MetricType=system), valid values: </p>
      * <ul>
-     * <li>CpuUtilization: the CPU utilization. Unit: %.</li>
-     * <li>ConcurrentConnections: the number of concurrent connections.</li>
-     * <li>IntranetTx: the outbound traffic over an internal network. Unit: KB/min.</li>
-     * <li>IntranetRx: the inbound traffic over an internal network. Unit: KB/min.</li>
-     * <li>VpcInternetTx: the outbound traffic over a virtual private cloud (VPC). Unit: KB/min.</li>
-     * <li>VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.</li>
-     * <li>SystemDiskReadBps: the number of bytes read from the system disk per second.</li>
-     * <li>SystemDiskWriteBps: the number of bytes written to the system disk per second.</li>
-     * <li>SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.</li>
-     * <li>SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.</li>
-     * <li>CpuUtilizationAgent: the CPU utilization. Unit: %.</li>
-     * <li>GpuUtilizationAgent: the GPU utilization. Unit: %.</li>
-     * <li>GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.</li>
-     * <li>GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.</li>
-     * <li>MemoryUtilization: the memory usage. Unit: %.</li>
-     * <li>LoadAverage: the average system load.</li>
-     * <li>TcpConnection: the total number of TCP connections.</li>
-     * <li>TcpConnection: the number of established TCP connections.</li>
-     * <li>PackagesNetOut: the number of packets sent by the internal network interface controller (NIC). Unit: counts/s.</li>
-     * <li>PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.</li>
-     * <li>PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.</li>
-     * <li>PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.</li>
-     * <li>EciPodCpuUtilization: the CPU utilization. Unit: %.</li>
-     * <li>EciPodMemoryUtilization: the memory usage. Unit: %.</li>
-     * <li>LoadBalancerRealServerAverageQps: the queries per second (QPS) of an instance.</li>
+     * <li><p>CpuUtilization: the CPU utilization of an ECS instance (%).</p>
+     * </li>
+     * <li><p>ConcurrentConnections: the number of concurrent connections to an ECS instance.</p>
+     * </li>
+     * <li><p>IntranetTx: the outbound internal network traffic of an ECS instance (Kb/min).</p>
+     * </li>
+     * <li><p>IntranetRx: the inbound internal network traffic of an ECS instance (Kb/min).</p>
+     * </li>
+     * <li><p>VpcInternetTx: the outbound Internet traffic of an ECS instance (Kb/min).</p>
+     * </li>
+     * <li><p>VpcInternetRx: the inbound Internet traffic of an ECS instance (Kb/min).</p>
+     * </li>
+     * <li><p>SystemDiskReadBps: the read BPS of the system cloud disk (Byte/s).</p>
+     * </li>
+     * <li><p>SystemDiskWriteBps: the write BPS of the system cloud disk (Byte/s).</p>
+     * </li>
+     * <li><p>SystemDiskReadOps: the read IOPS of the system cloud disk (operations/s).</p>
+     * </li>
+     * <li><p>SystemDiskWriteOps: the write IOPS of the system cloud disk (operations/s).</p>
+     * </li>
+     * <li><p>CpuUtilizationAgent: the CPU utilization monitored by the agent (%).</p>
+     * </li>
+     * <li><p>GpuUtilizationAgent: the GPU utilization monitored by the agent (%).</p>
+     * </li>
+     * <li><p>GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory monitored by the agent (%).</p>
+     * </li>
+     * <li><p>GpuMemoryUtilizationAgent: the GPU memory utilization monitored by the agent (%).</p>
+     * </li>
+     * <li><p>MemoryUtilization: the memory utilization monitored by the agent (%).</p>
+     * </li>
+     * <li><p>LoadAverage: the average system load monitored by the agent.</p>
+     * </li>
+     * <li><p>TcpConnection: the total number of TCP connections monitored by the agent.</p>
+     * </li>
+     * <li><p>TcpConnection: the number of established TCP connections monitored by the agent.</p>
+     * </li>
+     * <li><p>PackagesNetOut: the number of packets sent by the internal NIC per second monitored by the agent (packets/s).</p>
+     * </li>
+     * <li><p>PackagesNetIn: the number of packets received by the internal NIC per second monitored by the agent (packets/s).</p>
+     * </li>
+     * <li><p>PackagesNetOut: the number of packets sent by the public NIC per second monitored by the agent (packets/s).</p>
+     * </li>
+     * <li><p>PackagesNetIn: the number of packets received by the public NIC per second monitored by the agent (packets/s).</p>
+     * </li>
+     * <li><p>EciPodCpuUtilization: the CPU utilization (%).</p>
+     * </li>
+     * <li><p>EciPodMemoryUtilization: the memory utilization (%).</p>
+     * </li>
+     * <li><p>LoadBalancerRealServerAverageQps: the average QPS per backend server in an ALB server group (queries/s).</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">System monitoring event-triggered tasks</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CpuUtilization</p>
@@ -149,10 +185,10 @@ public class CreateAlarmRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The metric type. Valid values:</p>
+     * <p>The type of the metric. Valid values:</p>
      * <ul>
-     * <li>system: system metrics of CloudMonitor.</li>
-     * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+     * <li>system: uses system metrics of CloudMonitor.</li>
+     * <li>custom: uses custom metrics reported to CloudMonitor.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -174,7 +210,7 @@ public class CreateAlarmRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The statistical period of the metric data. Unit: seconds. Valid values:</p>
+     * <p>The epoch for aggregating monitoring metric data. Unit: seconds. Valid values:</p>
      * <ul>
      * <li>15</li>
      * <li>60</li>
@@ -183,7 +219,7 @@ public class CreateAlarmRequest extends TeaModel {
      * <li>900</li>
      * </ul>
      * <blockquote>
-     * <p> You can set this parameter to 15 seconds only for scaling groups of the ECS type.</p>
+     * <p>Only scaling groups of the ECS instance type support a 15-second statistical period.</p>
      * </blockquote>
      * <p>Default value: 300.</p>
      * 
@@ -207,7 +243,7 @@ public class CreateAlarmRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The scaling group ID of the event-triggered task.</p>
+     * <p>The ID of the scaling group associated with the event-triggered task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -217,11 +253,11 @@ public class CreateAlarmRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The statistical method of the metric data. Valid values:</p>
+     * <p>The method for aggregating metric data. Valid values:</p>
      * <ul>
-     * <li>Average: calculates the average value of the metric data.</li>
-     * <li>Minimum: calculates the minimum value of the metric data.</li>
-     * <li>Maximum: calculates the maximum value of the metric data.</li>
+     * <li>Average: the average value.</li>
+     * <li>Minimum: the minimum value.</li>
+     * <li>Maximum: the maximum value.</li>
      * </ul>
      * <p>Default value: Average.</p>
      * 
@@ -232,7 +268,7 @@ public class CreateAlarmRequest extends TeaModel {
     public String statistics;
 
     /**
-     * <p>The threshold of the metric value. If the threshold is reached the specified number of times within the specified period, a scaling rule is executed.</p>
+     * <p>The threshold of the monitoring metrics. When the monitoring threshold expression is met for a specified number of times, it triggers the execution of a scaling rule.</p>
      * 
      * <strong>example:</strong>
      * <p>80.0</p>
@@ -399,16 +435,17 @@ public class CreateAlarmRequest extends TeaModel {
 
     public static class CreateAlarmRequestDimensions extends TeaModel {
         /**
-         * <p>The dimension key of the metric. The valid values vary based on the metric type.</p>
+         * <p>The key of the dimension information associated with the metric. Valid values vary based on the monitoring type of the event-triggered task:</p>
          * <ul>
-         * <li><p>If you set MetricType to custom, you can specify this parameter based on your business requirements.</p>
+         * <li><p>If the event-triggered task is of the custom monitoring type (MetricType=custom), the valid values are not limited and can be specified by you.</p>
          * </li>
-         * <li><p>If you set MetricType to system, this parameter has the following valid values:</p>
+         * <li><p>If the event-triggered task is of the system monitoring type (MetricType=system), valid values:</p>
          * <ul>
-         * <li>user_id: the ID of your Alibaba Cloud account.</li>
-         * <li>scaling_group: the scaling group that you want to monitor by using the event-triggered task.</li>
-         * <li>device: the NIC type.</li>
-         * <li>state: the status of the TCP connection.</li>
+         * <li>user_id: the ID of your account.</li>
+         * <li>scaling_group: the monitored scaling group.</li>
+         * <li>device: the type of the network interface controller (NIC) device.</li>
+         * <li>state: the state of the TCP connection.</li>
+         * <li>rulePool: the ALB server group specified for the QPS monitoring metrics.</li>
          * </ul>
          * </li>
          * </ul>
@@ -420,27 +457,33 @@ public class CreateAlarmRequest extends TeaModel {
         public String dimensionKey;
 
         /**
-         * <p>The dimension value of the metric. The valid values of this parameter vary based on the value of Dimensions.DimensionKey.</p>
+         * <p>The value of the dimension information associated with the metric. Valid values vary based on Dimensions.DimensionKey:</p>
          * <ul>
-         * <li><p>If you set MetricType to custom, you can specify this parameter based on your business requirements.</p>
+         * <li><p>If Dimensions.DimensionKey is custom, which means the event-triggered task is of the custom monitoring type (MetricType=custom), the valid values are not limited and can be specified by you.</p>
          * </li>
-         * <li><p>If you set MetricType to system, this parameter has the following valid values:</p>
+         * <li><p>If Dimensions.DimensionKey is within the system-specified range, which means the event-triggered task is of the system monitoring type (MetricType=system), valid values:</p>
          * <ul>
-         * <li><p>user_id: The system specifies the value.</p>
+         * <li><p>user_id: automatically populated by the system.</p>
          * </li>
-         * <li><p>scaling_group: The system specifies the value.</p>
+         * <li><p>scaling_group: automatically populated by the system.</p>
          * </li>
-         * <li><p>device: You can set this parameter to eth0 or eth1.</p>
+         * <li><p>device:</p>
          * <ul>
-         * <li>For instances of the classic network type, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in VPCs.</li>
-         * <li>For instances of the classic network type, eth1 specifies the public NIC.</li>
+         * <li><p>eth0: For classic network instances, eth0 represents the internal NIC. For VPC-connected instances, only the eth0 NIC exists.</p>
+         * </li>
+         * <li><p>eth1: For classic network instances, eth1 represents the public NIC.</p>
+         * </li>
          * </ul>
          * </li>
-         * <li><p>state: You can set this parameter to TCP_TOTAL or ESTABLISHED.</p>
+         * <li><p>state:</p>
          * <ul>
-         * <li>TCP_TOTAL specifies the total number of TCP connections.</li>
-         * <li>ESTABLISHED specifies the number of TCP connections that are established.</li>
+         * <li><p>TCP_TOTAL: the total number of TCP connections.</p>
+         * </li>
+         * <li><p>ESTABLISHED: the number of established TCP connections.</p>
+         * </li>
          * </ul>
+         * </li>
+         * <li><p>rulePool: the ID of the ALB server group. Example: sgp-xxxxx.</p>
          * </li>
          * </ul>
          * </li>
@@ -477,12 +520,18 @@ public class CreateAlarmRequest extends TeaModel {
 
     public static class CreateAlarmRequestExpressions extends TeaModel {
         /**
-         * <p>The operator that you want to use to compare the metric value and the threshold in the multi-metric alert rule. Valid values:</p>
+         * <p>The comparison operator used to compare the aggregated metric value with the threshold for the multi-metric alert rule. This operator specifies the condition under which the threshold is met. Valid values:</p>
          * <ul>
-         * <li>If the metric value is greater than or equal to the threshold, set the value to &gt;=.</li>
-         * <li>If the metric value is less than or equal to the metric threshold, set the value to &lt;=.</li>
-         * <li>If the metric value is greater than the metric threshold, set the value to &gt;.</li>
-         * <li>If the metric value is less than the metric threshold, set the value to &lt;.</li>
+         * <li><blockquote>
+         * <p>=: The aggregated metric value is greater than or equal to the threshold.</p>
+         * </blockquote>
+         * </li>
+         * <li>&lt;=: The aggregated metric value is less than or equal to the threshold.</li>
+         * <li><blockquote>
+         * <p>: The aggregated metric value is greater than the threshold.</p>
+         * </blockquote>
+         * </li>
+         * <li>&lt;: The aggregated metric value is less than the threshold.</li>
          * </ul>
          * <p>Default value: &gt;=.</p>
          * 
@@ -495,41 +544,66 @@ public class CreateAlarmRequest extends TeaModel {
         public String comparisonOperator;
 
         /**
-         * <p>The names of the metrics in the multi-metric alert rule. The valid values of this parameter vary based on the metric type.</p>
+         * <p>The name of the monitoring metrics for the multi-metric alert rule. Valid values vary based on the monitoring type of the event-triggered task:</p>
          * <ul>
-         * <li><p>If you set MetricType to custom, the valid values are the metrics that you have.</p>
+         * <li><p>If the event-triggered task is of the custom monitoring type (MetricType=custom), the valid values are your custom metrics.</p>
          * </li>
-         * <li><p>If you set MetricType to system, this parameter has the following valid values:</p>
+         * <li><p>If the event-triggered task is of the system monitoring type (MetricType=system), valid values: </p>
          * <ul>
-         * <li>CpuUtilization: the CPU utilization. Unit: %.</li>
-         * <li>ConcurrentConnections: the number of concurrent connections.</li>
-         * <li>IntranetTx: the outbound traffic over an internal network. Unit: KB/min.</li>
-         * <li>IntranetRx: the inbound traffic over an internal network. Unit: KB/min.</li>
-         * <li>VpcInternetTx: the outbound traffic over a VPC. Unit: KB/min.</li>
-         * <li>VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.</li>
-         * <li>SystemDiskReadBps: the number of bytes read from the system disk per second.</li>
-         * <li>SystemDiskWriteBps: the number of bytes written to the system disk per second.</li>
-         * <li>SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.</li>
-         * <li>SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.</li>
-         * <li>CpuUtilizationAgent: the CPU utilization. Unit: %.</li>
-         * <li>GpuUtilizationAgent: the GPU utilization. Unit: %.</li>
-         * <li>GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.</li>
-         * <li>GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.</li>
-         * <li>MemoryUtilization: the memory usage. Unit: %.</li>
-         * <li>LoadAverage: the average system load.</li>
-         * <li>TcpConnection: the total number of TCP connections.</li>
-         * <li>TcpConnection: the number of established TCP connections.</li>
-         * <li>PackagesNetOut: the number of packets sent by the internal NIC. Unit: counts/s.</li>
-         * <li>PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.</li>
-         * <li>PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.</li>
-         * <li>PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.</li>
-         * <li>EciPodCpuUtilization: the CPU utilization. Unit: %.</li>
-         * <li>EciPodMemoryUtilization: the memory usage. Unit: %.</li>
-         * <li>LoadBalancerRealServerAverageQps: the QPS of an instance.</li>
+         * <li><p>CpuUtilization: the CPU utilization of an ECS instance (%).</p>
+         * </li>
+         * <li><p>ConcurrentConnections: the number of concurrent connections to an ECS instance.</p>
+         * </li>
+         * <li><p>IntranetTx: the outbound internal network traffic of an ECS instance (Kb/min).</p>
+         * </li>
+         * <li><p>IntranetRx: the inbound internal network traffic of an ECS instance (Kb/min).</p>
+         * </li>
+         * <li><p>VpcInternetTx: the outbound Internet traffic of an ECS instance (Kb/min).</p>
+         * </li>
+         * <li><p>VpcInternetRx: the inbound Internet traffic of an ECS instance (Kb/min).</p>
+         * </li>
+         * <li><p>SystemDiskReadBps: the read BPS of the system cloud disk (Byte/s).</p>
+         * </li>
+         * <li><p>SystemDiskWriteBps: the write BPS of the system cloud disk (Byte/s).</p>
+         * </li>
+         * <li><p>SystemDiskReadOps: the read IOPS of the system cloud disk (operations/s).</p>
+         * </li>
+         * <li><p>SystemDiskWriteOps: the write IOPS of the system cloud disk (operations/s).</p>
+         * </li>
+         * <li><p>CpuUtilizationAgent: the CPU utilization monitored by the agent (%).</p>
+         * </li>
+         * <li><p>GpuUtilizationAgent: the GPU utilization monitored by the agent (%).</p>
+         * </li>
+         * <li><p>GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory monitored by the agent (%).</p>
+         * </li>
+         * <li><p>GpuMemoryUtilizationAgent: the GPU memory utilization monitored by the agent (%).</p>
+         * </li>
+         * <li><p>MemoryUtilization: the memory utilization monitored by the agent (%).</p>
+         * </li>
+         * <li><p>LoadAverage: the average system load monitored by the agent.</p>
+         * </li>
+         * <li><p>TcpConnection: the total number of TCP connections monitored by the agent.</p>
+         * </li>
+         * <li><p>TcpConnection: the number of established TCP connections monitored by the agent.</p>
+         * </li>
+         * <li><p>PackagesNetOut: the number of packets sent by the internal network interface controller (NIC) per second monitored by the agent (packets/s).</p>
+         * </li>
+         * <li><p>PackagesNetIn: the number of packets received by the internal network interface controller (NIC) per second monitored by the agent (packets/s).</p>
+         * </li>
+         * <li><p>PackagesNetOut: the number of packets sent by the public network interface controller (NIC) per second monitored by the agent (packets/s).</p>
+         * </li>
+         * <li><p>PackagesNetIn: the number of packets received by the public network interface controller (NIC) per second monitored by the agent (packets/s).</p>
+         * </li>
+         * <li><p>EciPodCpuUtilization: the CPU utilization (%).</p>
+         * </li>
+         * <li><p>EciPodMemoryUtilization: the memory utilization (%).</p>
+         * </li>
+         * <li><p>LoadBalancerRealServerAverageQps: the average QPS per backend server in an ALB server group (queries/s).</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">System monitoring event-triggered tasks</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>CpuUtilization</p>
@@ -538,7 +612,7 @@ public class CreateAlarmRequest extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The statistical period of the metric data in the multi-metric alert rule. Unit: seconds. Valid values:</p>
+         * <p>The epoch for aggregating monitoring metric data in the multi-metric alert rule. Unit: seconds. Valid values:</p>
          * <ul>
          * <li>15</li>
          * <li>60</li>
@@ -547,7 +621,7 @@ public class CreateAlarmRequest extends TeaModel {
          * <li>900</li>
          * </ul>
          * <blockquote>
-         * <p> You can set this parameter to 15 seconds only for scaling groups of the ECS type.</p>
+         * <p>Only scaling groups of the ECS instance type support a 15-second statistical period.</p>
          * </blockquote>
          * <p>Default value: 300.</p>
          * 
@@ -558,11 +632,11 @@ public class CreateAlarmRequest extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The method that you want to use to aggregate the metric data in the multi-metric alert rule. Valid values:</p>
+         * <p>The method for aggregating metric data in the multi-metric alert rule. Valid values:</p>
          * <ul>
          * <li>Average: the average value.</li>
-         * <li>Minimum: the minimum value</li>
-         * <li>Maximum: the maximum value</li>
+         * <li>Minimum: the minimum value.</li>
+         * <li>Maximum: the maximum value.</li>
          * </ul>
          * <p>Default value: Average.</p>
          * 
@@ -573,7 +647,7 @@ public class CreateAlarmRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold of the metric value in the multi-metric alert rule. If the threshold is reached the specified number of times within the statistical period, a scaling rule is executed.</p>
+         * <p>The threshold of the monitoring metrics in the multi-metric alert rule. When the monitoring threshold expression is met for a specified number of times, it triggers the execution of a scaling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>40.0</p>

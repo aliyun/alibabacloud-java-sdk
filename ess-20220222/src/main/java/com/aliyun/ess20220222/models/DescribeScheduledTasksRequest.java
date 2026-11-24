@@ -11,7 +11,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number of the scheduled task list. Pages start from page 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 50.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -31,12 +31,12 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The interval at which scheduled task N is repeatedly executed. Valid values:</p>
+     * <p>The recurrence type of the scheduled task. Valid values: </p>
      * <ul>
-     * <li>Daily: Scheduled task N is executed once every specified number of days.</li>
-     * <li>Weekly: Scheduled task N is executed on each specified day of a week.</li>
-     * <li>Monthly: Scheduled task N is executed on each specified day of a month.</li>
-     * <li>Cron: Scheduled task N is executed based on the specified Cron expression.</li>
+     * <li>Daily: The scheduled task is executed once every specified number of days. </li>
+     * <li>Weekly: The scheduled task is executed on specified days of each week. </li>
+     * <li>Monthly: The scheduled task is executed on specified days of each month. </li>
+     * <li>Cron: The scheduled task is executed based on a specified cron expression.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,8 +46,8 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public String recurrenceType;
 
     /**
-     * <p>The number of times scheduled task N is repeatedly executed.</p>
-     * <p>You can specify this parameter only if you set RecurrenceType to Weekly. Separate multiple values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.</p>
+     * <p>The recurrence value of the scheduled task.</p>
+     * <p>This parameter is supported only when RecurrenceType is set to Weekly. You can specify multiple values separated by commas (,). For example, the values for Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
@@ -72,7 +72,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the scaling group to which the scheduled task belongs.</p>
+     * <p>The ID of the scaling group that executes the scheduled task.</p>
      * 
      * <strong>example:</strong>
      * <p>asg-bp1bo5tca4m56nap****</p>
@@ -81,28 +81,28 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The scaling rules of the scheduled tasks. Once the scheduled tasks are triggered, the scaling rules are executed.</p>
+     * <p>The scaling rules that are used when the scheduled tasks are triggered. This parameter is valid only when a scaling rule is specified for the scheduled task.</p>
      */
     @NameInMap("ScheduledActions")
     public java.util.List<String> scheduledActions;
 
     /**
-     * <p>The IDs of the scheduled tasks that you want to query.</p>
+     * <p>The IDs of the scheduled tasks to be queried.</p>
      */
     @NameInMap("ScheduledTaskIds")
     public java.util.List<String> scheduledTaskIds;
 
     /**
-     * <p>The names of the scheduled tasks that you want to query.</p>
+     * <p>The names of the scheduled tasks to be queried.</p>
      */
     @NameInMap("ScheduledTaskNames")
     public java.util.List<String> scheduledTaskNames;
 
     /**
-     * <p>Specifies whether scheduled task N is enabled.</p>
+     * <p>Specifies whether the scheduled task is started. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The task is started.</li>
+     * <li>false: The task is stopped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Boolean taskEnabled;
 
     /**
-     * <p>The name of scheduled task N. Fuzzy search based on keywords is supported.</p>
+     * <p>The name of the task. Fuzzy match by keyword is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>scheduled****</p>

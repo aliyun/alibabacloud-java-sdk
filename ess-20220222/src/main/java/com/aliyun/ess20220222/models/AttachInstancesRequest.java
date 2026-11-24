@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachInstancesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request.</p>
+     * <p>You can generate a parameter value from your client to ensure that the value is unique among different requests. The value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -15,13 +15,13 @@ public class AttachInstancesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to use the scaling group to manage the lifecycles of manually added instances. Valid values:</p>
+     * <p>Specifies whether to entrust the lifecycle of an existing instance to the scaling group when the instance is manually added to the scaling group. Valid values:</p>
      * <ul>
-     * <li>true: The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.</li>
-     * <li>false: The scaling group does not manage the lifecycles of manually added instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.</li>
+     * <li>true: Entrusted. The lifecycle of the instance is managed by Auto Scaling, which is the same as that of instances automatically created by the scaling group. The instance is automatically released when it is removed from the scaling group (excluding instances removed when you invoke the DetachInstances operation).</li>
+     * <li>false: Not entrusted. The instance is not released when it is removed from the scaling group.</li>
      * </ul>
      * <blockquote>
-     * <p> You cannot specify this parameter for subscription instances, non-Alibaba Cloud instances, and instances in Economical Mode.</p>
+     * <p>This parameter is not supported for subscription instances, managed instances, and instances in the Economical Mode in the scaling group.</p>
      * </blockquote>
      * <p>Default value: false.</p>
      * 
@@ -34,8 +34,10 @@ public class AttachInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to ignore invalid instances when a batch of instances is added to the scaling group. Valid values:</p>
      * <ul>
-     * <li>true: ignores invalid instances. If invalid instances exist and valid instances are added, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.</li>
-     * <li>false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to add to the scaling group, an error is reported.</li>
+     * <li><p>true: Invalid instances are ignored when a batch of instances is added to the scaling group. If invalid instances exist and valid instances are successfully added, the execution status of the scaling activity is displayed as Warning. You can view the invalid instances in the scaling activity details.</p>
+     * </li>
+     * <li><p>false: Invalid instances are not ignored when a batch of instances is added to the scaling group. If invalid instances exist in the batch, an error is reported.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -46,20 +48,20 @@ public class AttachInstancesRequest extends TeaModel {
     public Boolean ignoreInvalidInstance;
 
     /**
-     * <p>The IDs of the ECS instances, elastic container instances, non-Alibaba Cloud instances, or instances in Economical Mode.</p>
+     * <p>The IDs of the ECS instances, ECI instances, managed instances, or instances in the Economical Mode in the scaling group to be added.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>Specifies whether to trigger the lifecycle hook for scale-outs when you call this operation. Valid values:</p>
+     * <p>Specifies whether to trigger the scale-out lifecycle hook when instances are added to the scaling group. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
-     * <blockquote>
-     * <p> You cannot specify this parameter for subscription instances and instances in Economical Mode.</p>
+     * <li>true: Triggered.</li>
+     * <li>false: Not triggered.<blockquote>
+     * <p>This parameter is not supported for managed instances and instances in the Economical Mode in the scaling group.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +71,7 @@ public class AttachInstancesRequest extends TeaModel {
     public Boolean lifecycleHook;
 
     /**
-     * <p>The weight of an ECS instance or elastic container instance as a backend server. You can use this parameter to specify weights for multiple instances at the same time.</p>
+     * <p>The weight of the ECS instance or ECI instance as a backend server of the load balancing instance.</p>
      */
     @NameInMap("LoadBalancerWeights")
     public java.util.List<Integer> loadBalancerWeights;

@@ -15,10 +15,10 @@ public class SetInstancesProtectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to protect ECS instances from being stopped or removed from the scaling group during scale-ins. Valid values:</p>
+     * <p>Specifies whether to protect the ECS instance from being terminated or removed from the scaling group during automatic scale-in. Valid values: </p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: Protects the ECS instance.</li>
+     * <li>false: Does not protect the ECS instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

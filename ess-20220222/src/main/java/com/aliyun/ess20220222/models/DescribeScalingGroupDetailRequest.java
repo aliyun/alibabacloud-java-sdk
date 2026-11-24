@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingGroupDetailRequest extends TeaModel {
     /**
-     * <p>The output format. Set the value to yaml.</p>
+     * <p>The output format. Only the YAML format is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>YAML</p>

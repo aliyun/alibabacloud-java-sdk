@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingInstancesRequest extends TeaModel {
     /**
-     * <p>The method used to create the instance in the scaling group. Valid values: </p>
+     * <p>The creation type of the instances in the scaling group. Valid values: </p>
      * <ul>
-     * <li>AutoCreated: The ECS instance is created by automatic creation based on the instance configuration source in Auto Scaling. </li>
-     * <li>Attached: The ECS instance is not created by Auto Scaling but manually added to the scaling group.</li>
-     * <li>Managed: The managed instance is not created by Auto Scaling but manually added to the scaling group.</li>
+     * <li>AutoCreated: The ECS instance is created by Auto Scaling through automatic creation based on the instance configuration source. </li>
+     * <li>Attached: The ECS instance is not created by Auto Scaling, but is manually added to the scaling group.</li>
+     * <li>Managed: The managed instance is not created by Auto Scaling, but is manually added to the scaling group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,21 +19,21 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     public String creationType;
 
     /**
-     * <p>The methods used to create instances in the scaling group. You can specify only one of this parameter and CreationType.</p>
+     * <p>The creation types of the instances in the scaling group. You can specify only one of the CreationTypes and CreationType parameters at a time.</p>
      */
     @NameInMap("CreationTypes")
     public java.util.List<String> creationTypes;
 
     /**
-     * <p>The health check status of the ECS instance in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values: </p>
+     * <p>The health status of the ECS instances in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values: </p>
      * <ul>
      * <li>Healthy: The ECS instance is healthy. </li>
      * <li>Unhealthy: The ECS instance is unhealthy.</li>
      * </ul>
-     * <p>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and releases the ECS instances created by automatic creation.</p>
-     * <p>Whether a manually added ECS instance is released depends on its managed state. If the instance lifecycle is not managed by the scaling group, the instance is only removed but not released. If the instance lifecycle is managed by the scaling group, the instance is removed and released.</p>
+     * <p>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and releases ECS instances created through automatic creation.</p>
+     * <p>Whether to release manually added ECS instances depends on their managed state. If the instance lifecycle is not managed by the scaling group, the instance is only removed but not released. If the instance lifecycle is managed by the scaling group, the instance is removed and released.</p>
      * <blockquote>
-     * <p>Make sure that your account has a sufficient available quota. If your account has an overdue payment, all pay-as-you-go ECS instances (including pay-as-you-go instances and spot instances) are stopped or even released. For information about how the status of ECS instances in a scaling group changes after an overdue payment occurs, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</p>
+     * <p>Make sure that your account has sufficient active balance. If your account has overdue payments, all pay-as-you-go ECS instances, including pay-as-you-go instances and spot instances, are stopped or even released. For more information about the instance status changes of ECS instances in a scaling group after overdue payments, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,22 +44,22 @@ public class DescribeScalingInstancesRequest extends TeaModel {
 
     /**
      * <p>The IDs of the ECS instances.</p>
-     * <p>Invalid InstanceId values are ignored in the query results, and no error is returned.</p>
+     * <p>Invalid InstanceIds are ignored in the returned query results, and no error is reported.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The lifecycle state of the ECS instance in the scaling group. Valid values:</p>
+     * <p>The lifecycle state of the ECS instances in the scaling group. Valid values:</p>
      * <ul>
-     * <li>InService: The ECS instance is added to the scaling group and provides services in the Normal state. </li>
-     * <li>Pending: The ECS instance is being added to the scaling group. During this procedure, the ECS instance is added to the backend server group of the associated load balancing instance and to the access whitelist of the associated ApsaraDB RDS instance.</li>
-     * <li>Pending:Wait: The ECS instance is waiting to be added to the scaling group. If a lifecycle hook that applies to scale-out activities is created for the scaling group, the ECS instance is suspended and waits for the lifecycle hook timeout to end.</li>
-     * <li>Protected: The ECS instance is protected. The ECS instance provides services as expected, but Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</li>
-     * <li>Standby: The ECS instance is in the standby state. The ECS instance does not provide services, the weight of SLB backend server is set to zero, and Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</li>
+     * <li>InService: The ECS instance is added to the scaling group and provides services normally. </li>
+     * <li>Pending: The ECS instance is being added to the scaling group. The procedure of adding an ECS instance to a scaling group includes adding the instance to the backend server group of a load balancing instance and adding the IP address of the instance to the access whitelist of an ApsaraDB RDS instance.</li>
+     * <li>Pending:Wait: The addition of the ECS instance to the scaling group is suspended. If a lifecycle hook applicable to scale-out activities is created in the scaling group, the ECS instance is suspended when it is added to the scaling group and waits for the hook timeout to end.</li>
+     * <li>Protected: The ECS instance provides services normally, but Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</li>
+     * <li>Standby: The ECS instance does not provide services, the weight of SLB backend server is set to zero, and Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</li>
      * <li>Stopped: The ECS instance is stopped and does not provide services.</li>
-     * <li>Removing: The ECS instance is being removed from the scaling group. During this procedure, the ECS instance is removed from the backend server group of the associated load balancing instance and from the access whitelist of the associated ApsaraDB RDS instance. </li>
-     * <li>Removing:Wait: The ECS instance is waiting to be removed from the scaling group. If a lifecycle hook that applies to scale-down activities is created for the scaling group, the ECS instance is suspended and waits for the lifecycle hook timeout to end.</li>
+     * <li>Removing: The ECS instance is being removed from the scaling group. The procedure of removing an ECS instance from a scaling group includes removing the instance from the backend server group of a load balancing instance and removing the IP address of the instance from the access whitelist of an ApsaraDB RDS instance. </li>
+     * <li>Removing:Wait: The removal of the ECS instance from the scaling group is suspended. If a lifecycle hook applicable to scale-down activities is created in the scaling group, the ECS instance is suspended when it is removed from the scaling group and waits for the hook timeout to end.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     public String lifecycleState;
 
     /**
-     * <p>The lifecycle states of ECS instances in the scaling group. You can specify only one of this parameter and LifecycleState. We recommend that you use this parameter.</p>
+     * <p>The lifecycle statuses of the ECS instances in the scaling group. You can specify only one of the LifecycleStates and LifecycleState parameters at a time. We recommend that you use this parameter.</p>
      */
     @NameInMap("LifecycleStates")
     public java.util.List<String> lifecycleStates;
@@ -81,7 +81,7 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the ECS instance list. Minimum value: 1.</p>
+     * <p>The page number of the ECS instance list. Pages start from page 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Settings: Maximum value: 100.</p>
+     * <p>The number of entries to return on each page in a paging query. Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the scaling group.</p>
+     * <p>The ID of the region to which the scaling group belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeProcessesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E38EB733-D714-4658-8A5F-0688AB68****</p>

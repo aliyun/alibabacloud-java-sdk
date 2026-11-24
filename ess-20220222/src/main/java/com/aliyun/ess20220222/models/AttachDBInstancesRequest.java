@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AttachDBInstancesRequest extends TeaModel {
     /**
-     * <p>The mode in which you want to attach the database to the scaling group. Valid values:</p>
+     * <p>The association mode between the scaling group and the database. Valid values:</p>
      * <ul>
-     * <li>SecurityIp: adds the private IP addresses of scaled out ECS instances to the IP address whitelist of the database. Take note that you can choose this mode only when the database that you want to attach is an ApsaraDB RDS instance.</li>
-     * <li>SecurityGroup: adds the security group of the scaling configuration based on which ECS instances are created in the scaling group to the security group whitelist of the database for registration.</li>
+     * <li>SecurityIp: The SecurityIp mode. In this mode, the IP addresses of scaled-out instances are automatically added to the IP address whitelist of the database. Currently, only ApsaraDB RDS databases support this mode.</li>
+     * <li>SecurityGroup: The security group mode. In this mode, the security group of the scaling configuration is added to the security group whitelist of the database for association and registration.</li>
      * </ul>
      * <p>Default value: SecurityIp.</p>
      * 
@@ -19,8 +19,8 @@ public class AttachDBInstancesRequest extends TeaModel {
     public String attachMode;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
-     * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure the idempotence of a request</a>.</p>
+     * <p>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the parameter value is unique across different requests.</p>
+     * <p>The value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -29,17 +29,19 @@ public class AttachDBInstancesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The IDs of the ApsaraDB RDS instances that you want to attach to the scaling group.</p>
+     * <p>The IDs of the RDS instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstances")
     public java.util.List<String> DBInstances;
 
     /**
-     * <p>Specifies whether to add the private IP addresses of all ECS instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance that you want to attach to the scaling group. Valid values:</p>
+     * <p>Specifies whether to add the private IP addresses of all instances in the current scaling group to the IP address whitelist of the RDS instances when the RDS instances are attached to the scaling group. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Adds the private IP addresses.</p>
+     * </li>
+     * <li><p>false: Does not add the private IP addresses.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -75,7 +77,7 @@ public class AttachDBInstancesRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The type of the database that you want to attach to the scaling group. Valid values:</p>
+     * <p>The database type. Valid values:</p>
      * <ul>
      * <li>RDS</li>
      * <li>Redis</li>

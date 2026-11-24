@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachServerGroupsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the token value from your client and ensure that it is unique across different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -15,10 +14,12 @@ public class AttachServerGroupsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances (ECI) in the scaling group to the server group. Valid values:</p>
+     * <p>Specifies whether to add the existing ECS instances or ECI instances in the scaling group to the newly added server groups. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: adds the instances.</p>
+     * </li>
+     * <li><p>false: does not add the instances.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -32,7 +33,7 @@ public class AttachServerGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the scaling group.</p>
+     * <p>The ID of the region to which the scaling group belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +56,7 @@ public class AttachServerGroupsRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The information about the server groups.</p>
+     * <p>The information about the load balancing server groups.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ServerGroups")
@@ -124,10 +125,10 @@ public class AttachServerGroupsRequest extends TeaModel {
 
     public static class AttachServerGroupsRequestServerGroups extends TeaModel {
         /**
-         * <p>The port used by ECS or ECI instances after being added as backend servers to the server group.</p>
+         * <p>The port number used by the ECS instance or ECI instance after Auto Scaling adds it to the server group.</p>
          * <p>Valid values: 1 to 65535.</p>
          * <blockquote>
-         * <p>For ALB and NLB types, this parameter is required. GWLB type cannot set this parameter and the default value is 6081.</p>
+         * <p>This parameter is required for ALB and NLB load balancing. You cannot modify the Settings of this parameter for GWLB load balancing, and the default value is 6081.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,7 @@ public class AttachServerGroupsRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the server group.</p>
+         * <p>The ID of the load balancing server group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,11 +148,11 @@ public class AttachServerGroupsRequest extends TeaModel {
         public String serverGroupId;
 
         /**
-         * <p>The type of the server group. Valid Values:</p>
+         * <p>The type of the load balancing server group. Valid values:</p>
          * <ul>
-         * <li>ALB</li>
-         * <li>NLB</li>
-         * <li>GWLB</li>
+         * <li>ALB: Application Load Balancer (ALB).</li>
+         * <li>NLB: Network Load Balancer (NLB).</li>
+         * <li>GWLB: Gateway Load Balancer (GWLB).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -162,10 +163,10 @@ public class AttachServerGroupsRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The weight of an ECS or ECI instance as a backend server of the server group. Valid values: 0 to 100</p>
-         * <p>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If the weight is 0, the ECS or ECI instance does not receive access requests.</p>
+         * <p>The weight of the ECS instance or ECI instance as a backend server after Auto Scaling adds it to the server group. Valid values: 0 to 100.</p>
+         * <p>A higher weight indicates that Auto Scaling will allocate more access requests to the ECS instance or ECI instance. If the weight is set to 0, the instance does not receive access requests.</p>
          * <blockquote>
-         * <p>For ALB and NLB types, this parameter is required. GWLB type cannot be set.</p>
+         * <p>This parameter is required for ALB and NLB load balancing. You cannot modify the Settings of this parameter for GWLB load balancing.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

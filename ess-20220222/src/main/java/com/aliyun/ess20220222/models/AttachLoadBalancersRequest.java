@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AttachLoadBalancersRequest extends TeaModel {
     /**
-     * <p>Specifies whether to attach the CLB instance to the scaling group in an asynchronous manner. If you attach the CLB instance from the scaling group in an asynchronous manner, the call is successful only after all operations are successful. If a specific operation fails, the call fails. We recommend that you set this parameter to true. Valid values:</p>
+     * <p>Specifies whether to use asynchronous calls when adding load balancing instances. Asynchronous calls ensure the transactionality of operations, meaning that either all operations succeed or none of the operations take effect if any operation fails. Use asynchronous calls. Valid values:</p>
      * <ul>
-     * <li>true: attaches the CLB instance to the scaling group in an asynchronous manner. In this case, the ID of the scaling activity is returned.</li>
-     * <li>false: does not attach the CLB instance to the scaling group in an asynchronous manner.</li>
+     * <li>true: asynchronous call. The request returns the ID of the scaling activity.</li>
+     * <li>false: synchronous call.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -19,8 +19,8 @@ public class AttachLoadBalancersRequest extends TeaModel {
     public Boolean async;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request.</p>
+     * <p>Generate a parameter value from your client to ensure that the value is unique across different requests. The value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -29,13 +29,14 @@ public class AttachLoadBalancersRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to add the existing instances in the scaling group as backend servers of the load balancer. Valid values:</p>
+     * <p>Specifies whether to add all existing instances in the scaling group as backend servers of the load balancing instances. Valid values:</p>
      * <ul>
-     * <li><p>true: If you set this parameter to <code>true</code>, the attachment of the load balancer entails the addition of the existing instances in the scaling group to the backend server groups of the load balancer.</p>
-     * <p>**</p>
-     * <p><strong>Note</strong> If a load balancer is currently attached to your scaling group, and you only want to add the instances in your scaling group to the backend server groups of the load balancer, you can call this operation again and set ForceAttach request to true.</p>
+     * <li><p>true: adds all existing instances. If this parameter is set to <code>true</code>, when the load balancing instances are added to the scaling group, the system adds all existing instances in the scaling group as backend servers of the load balancing instances.</p>
+     * <blockquote>
+     * <p>If a load balancing instance is already added to the scaling group and you want to add all instances in the scaling group as backend servers of the load balancing instance, you can add the load balancing instance to the scaling group again and set ForceAttach to true.</p>
+     * </blockquote>
      * </li>
-     * <li><p>false: If you set this parameter to false, the attachment of the load balancer does not entail the addition of the existing instances in the scaling group to the backend server groups of the load balancer.</p>
+     * <li><p>false: does not add existing instances. If this parameter is set to false, when the load balancing instances are added to the scaling group, the system does not add the existing instances in the scaling group as backend servers of the load balancing instances.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -47,13 +48,13 @@ public class AttachLoadBalancersRequest extends TeaModel {
     public Boolean forceAttach;
 
     /**
-     * <p>The configurations of the classic load balancer (CLB, formerly known as SLB) instance.</p>
+     * <p>The configurations of the load balancing CLB (formerly SLB) instances.</p>
      */
     @NameInMap("LoadBalancerConfigs")
     public java.util.List<AttachLoadBalancersRequestLoadBalancerConfigs> loadBalancerConfigs;
 
     /**
-     * <p>The IDs of the load balancers that you want to attach to the scaling group.</p>
+     * <p>The IDs of the load balancing CLB (formerly SLB) instances to add.</p>
      */
     @NameInMap("LoadBalancers")
     public java.util.List<String> loadBalancers;
@@ -145,7 +146,7 @@ public class AttachLoadBalancersRequest extends TeaModel {
 
     public static class AttachLoadBalancersRequestLoadBalancerConfigs extends TeaModel {
         /**
-         * <p>The ID of the CLB instance.</p>
+         * <p>The ID of the load balancing CLB (formerly SLB) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>147b46d767c-cn-qingdao-cm5****</p>
@@ -154,7 +155,7 @@ public class AttachLoadBalancersRequest extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>The weight of an Elastic Compute Service (ECS) instance or elastic container instance as a backend sever of the CLB instance. If an instance has a higher weight, more access traffic is routed to the instance. If an instance has zero weight, no access traffic is routed to the instance.</p>
+         * <p>The weight of the ECS instance or ECI instance as a backend server after Auto Scaling adds the instance to the SLB server group. A higher weight indicates that the ECS instance or ECI instance is allocated more access requests. If the weight is 0, the ECS instance or ECI instance does not receive access requests.</p>
          * <p>Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>

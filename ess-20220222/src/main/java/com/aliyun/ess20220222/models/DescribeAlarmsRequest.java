@@ -14,10 +14,10 @@ public class DescribeAlarmsRequest extends TeaModel {
     public String alarmTaskId;
 
     /**
-     * <p>Specifies whether to enable the event-triggered task. Valid values:</p>
+     * <p>Specifies whether the event-triggered task is enabled. Valid values:</p>
      * <ul>
-     * <li>true: enables the event-triggered task.</li>
-     * <li>false: disables the event-triggered task.</li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeAlarmsRequest extends TeaModel {
     public Boolean isEnable;
 
     /**
-     * <p>The metric name.</p>
+     * <p>The name of the metric.</p>
      * 
      * <strong>example:</strong>
      * <p>CpuUtilization</p>
@@ -36,15 +36,15 @@ public class DescribeAlarmsRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The metric type. Valid values:</p>
+     * <p>The type of the metric. Valid values:</p>
      * <ul>
-     * <li>system: a system metric of CloudMonitor</li>
-     * <li>custom: a custom metric that is reported to CloudMonitor.</li>
-     * <li>hybrid: a metric of Hybrid Cloud Monitoring.</li>
+     * <li>system: system metrics of CloudMonitor.</li>
+     * <li>custom: custom metrics reported to CloudMonitor.</li>
+     * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>system</p>
      */
     @NameInMap("MetricType")
     public String metricType;
@@ -53,7 +53,7 @@ public class DescribeAlarmsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number of the scaling rule list. Pages start from page 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeAlarmsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 50.</p>
+     * <p>The Settings for the number of entries per page in a paged query. Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class DescribeAlarmsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the event-triggered task.</p>
+     * <p>The ID of the region to which the event-triggered task belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,11 +95,11 @@ public class DescribeAlarmsRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The status of the event-triggered task. Valid values:</p>
+     * <p>The state of the event-triggered task. Valid values:</p>
      * <ul>
-     * <li>ALARM: The alert condition is met and an alert is triggered.</li>
-     * <li>OK: The alert condition is not met.</li>
-     * <li>INSUFFICIENT_DATA: Auto Scaling cannot determine whether the alert condition is met due to insufficient data.</li>
+     * <li>ALARM: Alerting. The alert condition is met.</li>
+     * <li>OK: Normal. The alert condition is not met.</li>
+     * <li>INSUFFICIENT_DATA: Insufficient data. The data is insufficient to determine whether the alert condition is met.</li>
      * </ul>
      * 
      * <strong>example:</strong>

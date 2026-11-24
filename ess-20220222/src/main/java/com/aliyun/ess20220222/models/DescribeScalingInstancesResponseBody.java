@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingInstancesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B13527BF-1FBD-4334-A512-20F5E9D3****</p>
@@ -47,7 +47,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The total number of running spot instances in the current scaling group.</p>
+     * <p>The total number of running spot instances in the scaling group.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -110,7 +110,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
 
     public static class DescribeScalingInstancesResponseBodyScalingInstances extends TeaModel {
         /**
-         * <p>The time when the ECS instance was added to the scaling group. The value is accurate to the second.</p>
+         * <p>The time when the ECS instance was added to the scaling group. The time is accurate to seconds and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-05-18T03:11:39Z</p>
@@ -119,7 +119,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The time when the ECS instance was added to the scaling group. The value is accurate to the minute.</p>
+         * <p>The time when the ECS instance was added to the scaling group. The time is accurate to minutes and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-05-18T03:11Z</p>
@@ -128,10 +128,10 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The method used to create the ECS instance. Valid values: </p>
+         * <p>The creation type of the ECS instance. Valid values: </p>
          * <ul>
-         * <li>AutoCreated: The ECS instance is created by automatic creation based on the instance configuration source in Auto Scaling. </li>
-         * <li>Attached: The ECS instance is not created by Auto Scaling but manually added to the scaling group.</li>
+         * <li>AutoCreated: The ECS instance is created by Auto Scaling through automatic creation based on the instance configuration source. </li>
+         * <li>Attached: The ECS instance is not created by Auto Scaling, but is manually added to the scaling group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public String creationType;
 
         /**
-         * <p>Indicates whether the manually added instance is managed by the scaling group. A managed manually added instance is released when it is removed from the scaling group (excluding manual removal). Valid values:</p>
+         * <p>Specifies whether the instance is managed by the scaling group when it is manually added to the scaling group. A manually added instance in the managed state is released when it is removed from the scaling group, excluding manual removal. Valid values:</p>
          * <ul>
          * <li>true: The instance is managed by the scaling group.</li>
          * <li>false: The instance is not managed by the scaling group.</li>
@@ -154,15 +154,15 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public Boolean entrusted;
 
         /**
-         * <p>The health check status of the ECS instance in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values: </p>
+         * <p>The health status of the ECS instance in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values: </p>
          * <ul>
          * <li>Healthy: The ECS instance is healthy. </li>
          * <li>Unhealthy: The ECS instance is unhealthy.</li>
          * </ul>
-         * <p>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and releases the ECS instances created by automatic creation.</p>
-         * <p>Whether a manually added ECS instance is released depends on its managed state. If the instance lifecycle is not managed by the scaling group, the instance is only removed but not released. If the instance lifecycle is managed by the scaling group, the instance is removed and released.</p>
+         * <p>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and releases ECS instances created through automatic creation.</p>
+         * <p>Whether to release manually added ECS instances depends on their managed state. If the instance lifecycle is not managed by the scaling group, the instance is only removed but not released. If the instance lifecycle is managed by the scaling group, the instance is removed and released.</p>
          * <blockquote>
-         * <p>Make sure that your account has a sufficient available quota. If your account has an overdue payment, all pay-as-you-go ECS instances (including pay-as-you-go instances and spot instances) are stopped or even released. For information about how the status of ECS instances in a scaling group changes after an overdue payment occurs, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</p>
+         * <p>Make sure that your account has sufficient active balance. If your account has overdue payments, all pay-as-you-go ECS instances, including pay-as-you-go instances and spot instances, are stopped or even released. For more information about the instance status changes of ECS instances in a scaling group after overdue payments, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the launch template.</p>
+         * <p>The ID of the instance launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>lt-m5e3ofjr1zn1aw7****</p>
@@ -190,7 +190,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public String launchTemplateId;
 
         /**
-         * <p>The version of the launch template.</p>
+         * <p>The version of the instance launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -201,14 +201,14 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         /**
          * <p>The lifecycle state of the ECS instance in the scaling group. Valid values:</p>
          * <ul>
-         * <li>InService: The ECS instance is added to the scaling group and provides services in the Normal state. </li>
-         * <li>Pending: The ECS instance is being added to the scaling group. During this procedure, the ECS instance is added to the backend server group of the associated load balancing instance and to the access whitelist of the associated ApsaraDB RDS instance.</li>
-         * <li>Pending:Wait: The ECS instance is waiting to be added to the scaling group. If a lifecycle hook that applies to scale-out activities is created for the scaling group, the ECS instance is suspended and waits for the lifecycle hook timeout to end.</li>
-         * <li>Protected: The ECS instance is protected. The ECS instance provides services as expected, but Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</li>
-         * <li>Standby: The ECS instance is in the standby state. The ECS instance does not provide services, the weight of SLB backend server is set to zero, and Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</li>
+         * <li>InService: The ECS instance is added to the scaling group and provides services normally. </li>
+         * <li>Pending: The ECS instance is being added to the scaling group. The procedure of adding an ECS instance to a scaling group includes adding the instance to the backend server group of a load balancing instance and adding the IP address of the instance to the access whitelist of an ApsaraDB RDS instance.</li>
+         * <li>Pending:Wait: The addition of the ECS instance to the scaling group is suspended. If a lifecycle hook applicable to scale-out activities is created in the scaling group, the ECS instance is suspended when it is added to the scaling group and waits for the hook timeout to end.</li>
+         * <li>Protected: The ECS instance provides services normally, but Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</li>
+         * <li>Standby: The ECS instance does not provide services, the weight of SLB backend server is set to zero, and Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</li>
          * <li>Stopped: The ECS instance is stopped and does not provide services.</li>
-         * <li>Removing: The ECS instance is being removed from the scaling group. During this procedure, the ECS instance is removed from the backend server group of the associated load balancing instance and from the access whitelist of the associated ApsaraDB RDS instance. </li>
-         * <li>Removing:Wait: The ECS instance is waiting to be removed from the scaling group. If a lifecycle hook that applies to scale-down activities is created for the scaling group, the ECS instance is suspended and waits for the lifecycle hook timeout to end.</li>
+         * <li>Removing: The ECS instance is being removed from the scaling group. The procedure of removing an ECS instance from a scaling group includes removing the instance from the backend server group of a load balancing instance and removing the IP address of the instance from the access whitelist of an ApsaraDB RDS instance. </li>
+         * <li>Removing:Wait: The removal of the ECS instance from the scaling group is suspended. If a lifecycle hook applicable to scale-down activities is created in the scaling group, the ECS instance is suspended when it is removed from the scaling group and waits for the hook timeout to end.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,9 +218,9 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public String lifecycleState;
 
         /**
-         * <p>The weight of the load balancing instance.</p>
+         * <p>The weight of the SLB backend server.</p>
          * <blockquote>
-         * <p>This parameter is deprecated and is not recommended.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. Do not use it.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public Integer loadBalancerWeight;
 
         /**
-         * <p>The private IP address of the instance in the scaling group.</p>
+         * <p>The internal IP address of the instance in the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>1**.2*.1**.2**</p>
@@ -238,11 +238,25 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
+        /**
+         * <p>The instance replacement process that the instance is in. Valid values:</p>
+         * <ul>
+         * <li>Normal: The instance is not in any replacement process.</li>
+         * <li>ReBalance: The instance is in the rebalancing replacement process of the scaling group.</li>
+         * <li>SpotRemedy: The instance is in the spot instance remedy replacement process.</li>
+         * <li>MaxInstanceLifetimeExpire: The instance is in the replacement process due to the expiration of the maximum instance lifetime.</li>
+         * <li>InstanceRefresh: The instance is in the instance refresh replacement process.</li>
+         * <li>SpotReplaceOnDemand: The instance is in the process of replacing a spot instance with a pay-as-you-go instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ReBalance</p>
+         */
         @NameInMap("ReplaceStatus")
         public String replaceStatus;
 
         /**
-         * <p>The ID of the scaling activity during which the ECS instance was added to the scaling group.</p>
+         * <p>The ID of the scaling activity when the ECS instance was added to the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>asa-bp1c9djwrgxjyk31****</p>
@@ -269,7 +283,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public String scalingGroupId;
 
         /**
-         * <p>The instance identity in the scaling group, which has a one-to-one mapping with the ECS instance ID or Elastic Container Instance (ECI) instance identity.</p>
+         * <p>The instance identity in the scaling group, which corresponds one-to-one with the ID of the ECS instance or elastic container instance.</p>
          * 
          * <strong>example:</strong>
          * <p>asi-j6cj1gcte640ekhb****</p>
@@ -278,10 +292,10 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public String scalingInstanceId;
 
         /**
-         * <p>The preemption policy of the spot instance. Valid values:</p>
+         * <p>The bidding policy for the spot instance. Valid values:</p>
          * <ul>
-         * <li>SpotWithPriceLimit: The spot instance has a maximum price limit.</li>
-         * <li>SpotAsPriceGo: The system automatically bids at the current market price.</li>
+         * <li>SpotWithPriceLimit: The spot instance with a maximum price.</li>
+         * <li>SpotAsPriceGo: The system automatically bids based on the current market price.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,11 +305,11 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>The warmup state of the ECS instance. Valid values: </p>
+         * <p>The warmup status of the ECS instance. Valid values: </p>
          * <ul>
          * <li>NoNeedWarmup: No warmup is required.</li>
-         * <li>WaitingForInstanceWarmup: The instance is waiting for warmup to complete.</li>
-         * <li>InstanceWarmupFinish: Warmup is complete.</li>
+         * <li>WaitingForInstanceWarmup: The instance is waiting for the warmup to complete.</li>
+         * <li>InstanceWarmupFinish: The warmup is complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,7 +319,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public String warmupState;
 
         /**
-         * <p>The weight of the instance type. The weight indicates the capacity that a single instance of this instance type represents in the scaling group. A higher weight means that fewer instances of this type are required to meet the expected capacity.</p>
+         * <p>The weight of the instance type, which indicates the capacity of a single instance of the instance type in the scaling group. A greater weight indicates that fewer instances of the instance type are required to meet the expected capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -314,7 +328,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         public Integer weightedCapacity;
 
         /**
-         * <p>The zone ID of the ECS instance.</p>
+         * <p>The ID of the zone to which the ECS instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>

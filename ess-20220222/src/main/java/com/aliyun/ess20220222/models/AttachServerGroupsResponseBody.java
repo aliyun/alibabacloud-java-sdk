@@ -14,9 +14,9 @@ public class AttachServerGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the scaling activity. During the scaling activity, the server group is attached to the scaling group and the existing ECS instances or elastic container instances in the scaling group are added to the server group.</p>
+     * <p>The ID of the scaling activity that is triggered when the load balancing server groups are added and the ECS instances or ECI instances in the scaling group are added to the server groups.</p>
      * <blockquote>
-     * <p> This parameter is returned only if you set ForceAttach to true.</p>
+     * <p>This parameter is returned only when the ForceAttach parameter is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeEciScalingConfigurationDetailRequest extends TeaModel {
     /**
-     * <p>The output format. Set the value to YAML.</p>
+     * <p>The output format. Only YAML is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>yaml</p>
+     * <p>YAML</p>
      */
     @NameInMap("OutputFormat")
     public String outputFormat;
 
     /**
-     * <p>The region ID of the scaling group to which the scaling configuration belongs.</p>
+     * <p>The region ID of the scaling group to which the scaling rule belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeEciScalingConfigurationDetailRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the scaling configuration based on which elastic container instances are created.</p>
+     * <p>The ID of the scaling configuration for the ECI scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

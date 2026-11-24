@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRefreshesRequest extends TeaModel {
     /**
-     * <p>The IDs of the instance refresh tasks to query.</p>
+     * <p>The IDs of the instance refresh tasks to be queried.</p>
      */
     @NameInMap("InstanceRefreshTaskIds")
     public java.util.List<String> instanceRefreshTaskIds;
 
     /**
-     * <p>The maximum number of entries per page in a paging query. Valid values: 1 to 50.
+     * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 50.
      * Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeInstanceRefreshesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous call. You do not need to specify this parameter for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -54,8 +54,7 @@ public class DescribeInstanceRefreshesRequest extends TeaModel {
     /**
      * <p>The ID of the scaling group.</p>
      * <blockquote>
-     * <p>You must specify at least one of ScalingGroupId and InstanceRefreshTaskIds. If neither parameter is specified, an error is returned.
-     * .</p>
+     * <p>When you call this operation, you must specify either ScalingGroupId or InstanceRefreshTaskIds. If neither is specified, an error occurs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

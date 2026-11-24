@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyScalingRuleRequest extends TeaModel {
     /**
-     * <p>The adjustment method of the scaling rule. This is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. Valid values:</p>
+     * <p>The adjustment method of the scaling rule. This parameter is required and applicable only to simple scaling rules and step scaling rules. Valid values: </p>
      * <ul>
-     * <li>QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</li>
-     * <li>PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</li>
-     * <li>TotalCapacity: adjusts the number of ECS instances in the scaling group to the specified number.</li>
+     * <li>QuantityChangeInCapacity: adds or removes a specified number of ECS instances. </li>
+     * <li>PercentChangeInCapacity: adds or removes a specified percentage of ECS instances. </li>
+     * <li>TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String adjustmentType;
 
     /**
-     * <p>The target value specified in the scaling rule. This parameter is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. The number of ECS instances that are scaled in a single scaling activity cannot exceed 1,000.</p>
+     * <p>The adjustment value of the scaling rule. This parameter is required and applicable only to simple scaling rules and step scaling rules. The number of ECS instances adjusted in a single operation cannot exceed 1,000. Valid values vary based on the adjustment method:</p>
      * <ul>
-     * <li>Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</li>
-     * <li>Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</li>
-     * <li>Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</li>
+     * <li>QuantityChangeInCapacity: -1000 to 1000.</li>
+     * <li>PercentChangeInCapacity: -100 to 10000.</li>
+     * <li>TotalCapacity: 0 to 2000.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer adjustmentValue;
 
     /**
-     * <p>The dimensions. This parameter is applicable to target tracking scaling rules. You can specify this parameter if your predefined metric requires extra dimensions. For example, if you predefine the LoadBalancerRealServerAverageQps metric, you must use this parameter to specify the rulePool dimension.</p>
+     * <p>The dimension values of the monitoring metric. This parameter is applicable to target tracking scaling rules and is configured when the monitoring metric requires additional dimension information. For example, the LoadBalancerRealServerAverageQps metric requires the rulePool dimension.</p>
      */
     @NameInMap("AlarmDimensions")
     public java.util.List<ModifyScalingRuleRequestAlarmDimensions> alarmDimensions;
@@ -45,7 +45,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public ModifyScalingRuleRequestAlarmOptions alarmOptions;
 
     /**
-     * <p>The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule.</p>
+     * <p>The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules.</p>
      * <p>Valid values: 0 to 86400. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer cooldown;
 
     /**
-     * <p>Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.</p>
+     * <p>Specifies whether to disable scale-in. This parameter is applicable only to target tracking scaling rules.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -64,9 +64,9 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Boolean disableScaleIn;
 
     /**
-     * <p>The warmup period of an instance. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the warmup state to a scaling group but does not report monitoring data to CloudMonitor during the warmup period.</p>
+     * <p>The warmup period of instances. This parameter is applicable to target tracking scaling rules and step scaling rules. ECS instances in the warmup state are added to the scaling group as usual, but they do not report monitoring data to CloudMonitor during the warmup period.</p>
      * <blockquote>
-     * <p>Auto Scaling calculates the number of ECS instances that need to be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.</p>
+     * <p>When the system dynamically calculates the number of ECS instances to scale out or scale in, instances in the warmup state are not counted as existing instances.</p>
      * </blockquote>
      * <p>Valid values: 0 to 86400. Unit: seconds.</p>
      * 
@@ -77,14 +77,14 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer estimatedInstanceWarmup;
 
     /**
-     * <p>The Hybrid Cloud Monitoring metrics. For more information, see <a href="https://help.aliyun.com/document_detail/2852162.html">Create a custom target tracking scaling rule</a>.</p>
+     * <p>The Hybrid Cloud Monitoring monitoring metrics settings. For more information about how to configure the settings, see <a href="https://help.aliyun.com/document_detail/2852162.html">Use formula operations to customize target tracking scaling rules</a>.</p>
      */
     @NameInMap("HybridMetrics")
     public java.util.List<ModifyScalingRuleRequestHybridMetrics> hybridMetrics;
 
     /**
-     * <p>The ID of the Hybrid Cloud Monitoring namespace.</p>
-     * <p>For information about how to manage Hybrid Cloud Monitoring namespaces, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage namespaces</a>.</p>
+     * <p>The ID of the Hybrid Cloud Monitoring monitoring metrics repository.</p>
+     * <p>For more information about how to manage monitoring metrics repositories, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage monitoring metrics repositories</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun-test</p>
@@ -93,7 +93,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String hybridMonitorNamespace;
 
     /**
-     * <p>The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify <code>PredictiveValueBehavior</code>.</p>
+     * <p>The maximum number of instances in the scaling group. This parameter is used together with <code>PredictiveValueBehavior</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -102,25 +102,25 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer initialMaxSize;
 
     /**
-     * <p>The predefined metric. This parameter is required only if you create a target tracking scaling rule or predictive scaling rule.</p>
-     * <p>Valid values if you create a target tracking scaling rule:</p>
+     * <p>The predefined monitoring metric. This parameter is required and applicable to target tracking scaling rules and predictive scaling rules.</p>
+     * <p>Valid values for target tracking scaling rules:</p>
      * <ul>
-     * <li>CpuUtilizationAgent (recommended): the CPU utilization.</li>
-     * <li>MemoryUtilization (recommended): the memory usage.</li>
-     * <li>CpuUtilization: the average CPU utilization.</li>
-     * <li>IntranetTx: the average outbound traffic over an internal network.</li>
-     * <li>IntranetRx: the average inbound traffic over an internal network.</li>
-     * <li>VpcInternetTx: the average outbound traffic from a virtual private cloud (VPC) to the Internet.</li>
-     * <li>VpcInternetRx: the average inbound traffic from the Internet to a VPC.</li>
-     * <li>LoadBalancerRealServerAverageQps: the queries per second (QPS) per Application Load Balancer (ALB) server group.</li>
+     * <li>CpuUtilizationAgent: the CPU utilization collected by the CloudMonitor agent (recommended).</li>
+     * <li>MemoryUtilization: the memory usage collected by the CloudMonitor agent (recommended).</li>
+     * <li>CpuUtilization: the average CPU utilization of ECS instances.</li>
+     * <li>IntranetTx: the average outbound internal traffic of ECS instances.</li>
+     * <li>IntranetRx: the average inbound internal traffic of ECS instances.</li>
+     * <li>VpcInternetTx: the average outbound Internet traffic of ECS instances.</li>
+     * <li>VpcInternetRx: the average inbound Internet traffic of ECS instances.</li>
+     * <li>LoadBalancerRealServerAverageQps: the average queries per second (QPS) per backend server in an Application Load Balancer (ALB) server group.</li>
      * </ul>
-     * <p>Valid values if you create a predictive scaling rule:</p>
+     * <p>Valid values for predictive scaling rules:</p>
      * <ul>
-     * <li>CpuUtilization: the average CPU utilization.</li>
-     * <li>IntranetRx: the average inbound traffic over an internal network.</li>
-     * <li>IntranetTx: the average outbound traffic over an internal network.</li>
+     * <li>CpuUtilization: the average CPU utilization of ECS instances.</li>
+     * <li>IntranetRx: the average inbound internal traffic of ECS instances.</li>
+     * <li>IntranetTx: the average outbound internal traffic of ECS instances.</li>
      * </ul>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">System monitoring event-triggered tasks</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CpuUtilization</p>
@@ -129,11 +129,11 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The metric type. Valid values:</p>
+     * <p>The type of the monitoring metric. Valid values:</p>
      * <ul>
-     * <li>system: system metrics of CloudMonitor.</li>
-     * <li>custom: custom metrics that are reported to CloudMonitor.</li>
-     * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
+     * <li>system: uses system metrics of CloudMonitor.</li>
+     * <li>custom: uses custom metrics reported to CloudMonitor.</li>
+     * <li>hybrid: uses metrics of Hybrid Cloud Monitoring.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String metricType;
 
     /**
-     * <p>The minimum number of instances to scale. This parameter takes effect only if you create a simple scaling rule or step scaling rule and set <code>AdjustmentType</code> to <code>PercentChangeInCapacity</code>.</p>
+     * <p>The minimum number of instances to adjust. This parameter takes effect only when the scaling rule type is SimpleScalingRule or StepScalingRule and <code>AdjustmentType</code> is set to <code>PercentChangeInCapacity</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -160,8 +160,8 @@ public class ModifyScalingRuleRequest extends TeaModel {
     /**
      * <p>The mode of the predictive scaling rule. Valid values:</p>
      * <ul>
-     * <li>PredictAndScale: produces predictions and creates prediction tasks.</li>
-     * <li>PredictOnly: produces predictions but does not create prediction tasks.</li>
+     * <li>PredictAndScale: generates prediction results and creates predictive tasks.</li>
+     * <li>PredictOnly: generates prediction results but does not create predictive tasks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String predictiveScalingMode;
 
     /**
-     * <p>The amount of buffer time before the prediction task is executed. By default, all prediction tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify an amount of buffer time for resource preparation before the prediction tasks are executed. Valid values: 0 to 60.</p>
+     * <p>By default, predictive tasks automatically created by predictive scaling rules are executed on the hour. You can set a pre-start time to execute the predictive tasks in advance and prepare resources. Valid values: 0 to 60. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -180,11 +180,11 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer predictiveTaskBufferTime;
 
     /**
-     * <p>Specifies which one of the initial maximum capacity and the predicted value can be used as the maximum value for prediction tasks. Valid values:</p>
+     * <p>The method to handle the maximum value for the predictive scaling rule. Valid values:</p>
      * <ul>
-     * <li>MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</li>
-     * <li>PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks when the predicted value is greater than the initial maximum capacity.</li>
-     * <li>PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.</li>
+     * <li>MaxOverridePredictiveValue: the initial maximum value overrides the predicted value. If the predicted value is greater than the initial maximum value, the initial maximum value is used as the maximum value for the predictive task.</li>
+     * <li>PredictiveValueOverrideMax: the predicted value overrides the initial maximum value. If the predicted value is greater than the initial maximum value, the predicted value is used as the maximum value for the predictive task.</li>
+     * <li>PredictiveValueOverrideMaxWithBuffer: a buffer ratio is added to the predicted value. The predicted value is increased by the ratio specified by PredictiveValueBuffer. If the increased value is greater than the initial maximum value, the increased value is used.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String predictiveValueBehavior;
 
     /**
-     * <p>The ratio based on which the predicted value is increased when <code>PredictiveValueBehavior</code> is set to <code>PredictiveValueOverrideMaxWithBuffer</code>. If the predicted value increased by this ratio is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.</p>
+     * <p>The buffer ratio added to the predicted value. This parameter takes effect only when <code>PredictiveValueBehavior</code> is set to <code>PredictiveValueOverrideMaxWithBuffer</code>. The predicted value is increased by this ratio. If the increased value is greater than the initial maximum value, the increased value is used. Valid values: 0 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -209,7 +209,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
+     * <p>After a target tracking scaling rule is created, an event-triggered task is automatically created. This parameter specifies the number of consecutive times that the threshold condition must be met before the scale-in event-triggered task triggers an alert.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -218,7 +218,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public Integer scaleInEvaluationCount;
 
     /**
-     * <p>The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
+     * <p>After a target tracking scaling rule is created, an event-triggered task is automatically created. This parameter specifies the number of consecutive times that the threshold condition must be met before the scale-out event-triggered task triggers an alert.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -237,8 +237,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String scalingRuleId;
 
     /**
-     * <p>The name of the scaling rule. The name must be 2 to 64 letters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or digit.</p>
-     * <p>The name of each scaling rule must be unique under the same account within the same region.</p>
+     * <p>The name of the scaling rule. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or digit. The scaling rule name must be unique within a scaling group in a region for an Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>scalingrule****</p>
@@ -247,13 +246,13 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String scalingRuleName;
 
     /**
-     * <p>Details of the step adjustments.</p>
+     * <p>The set of instance scaling configurations for step adjustments.</p>
      */
     @NameInMap("StepAdjustments")
     public java.util.List<ModifyScalingRuleRequestStepAdjustments> stepAdjustments;
 
     /**
-     * <p>The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can have up to three decimal places.</p>
+     * <p>The target value. This parameter is applicable to target tracking scaling rules and predictive scaling rules. The value can have up to three decimal places and must be greater than 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0.125</p>
@@ -484,7 +483,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
 
     public static class ModifyScalingRuleRequestAlarmDimensions extends TeaModel {
         /**
-         * <p>The dimension key of the metric.</p>
+         * <p>The key of the dimension associated with the monitoring metric.</p>
          * 
          * <strong>example:</strong>
          * <p>rulePool</p>
@@ -493,7 +492,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
         public String dimensionKey;
 
         /**
-         * <p>The dimension value of the metric.</p>
+         * <p>The value of the dimension associated with the monitoring metric.</p>
          * 
          * <strong>example:</strong>
          * <p>sgp-l1cbirz451yxu2dxxx</p>
@@ -526,7 +525,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
 
     public static class ModifyScalingRuleRequestAlarmOptions extends TeaModel {
         /**
-         * <p>The statistical period of the metric data in the target tracking scaling rule. Unit: seconds. Valid values:</p>
+         * <p>The period for collecting monitoring metric data in the target tracking scaling rule. Unit: seconds. Valid values:</p>
          * <ul>
          * <li>15</li>
          * <li>60</li>
@@ -535,7 +534,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
          * <li>900</li>
          * </ul>
          * <blockquote>
-         * <p> Default value: 60.</p>
+         * <p>Default value: 60.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -603,14 +602,14 @@ public class ModifyScalingRuleRequest extends TeaModel {
 
     public static class ModifyScalingRuleRequestHybridMetrics extends TeaModel {
         /**
-         * <p>The metric dimensions. You can use this parameter to specify the monitored resources.</p>
+         * <p>The dimensions of the metric. This parameter is used to specify the resources monitored by the metric.</p>
          */
         @NameInMap("Dimensions")
         public java.util.List<ModifyScalingRuleRequestHybridMetricsDimensions> dimensions;
 
         /**
-         * <p>The metric expression that consists of multiple Hybrid Cloud Monitoring metrics. It calculates a result used to trigger scaling events.</p>
-         * <p>The expression must be written in Reverse Polish Notation (RPN) format and supports only the following operators: <code>+, -, *, /</code>.</p>
+         * <p>The metric operation expression for multiple Hybrid Cloud Monitoring metrics. The calculation result of the expression is used to trigger scaling activities.</p>
+         * <p>The operation expression must comply with the Reverse Polish Notation (RPN) specification, and only the <code>+</code>, <code>-</code>, <code>*</code>, and <code>/</code> operators are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>(a+b)/2</p>
@@ -619,7 +618,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The reference ID of the metric in the metric expression.</p>
+         * <p>The reference ID of the metric in the metric operation expression.</p>
          * 
          * <strong>example:</strong>
          * <p>a</p>
@@ -628,7 +627,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the Hybrid Cloud Monitoring metric.</p>
+         * <p>The name of the metric in the Hybrid Cloud Monitoring monitoring metrics repository.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunSmq_NumberOfMessagesVisible</p>
@@ -637,11 +636,11 @@ public class ModifyScalingRuleRequest extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The statistical method of the metric value. Valid values:</p>
+         * <p>The statistical method of the metric. Valid values:</p>
          * <ul>
-         * <li>Average: calculates the average value of all metric values within a specified interval.</li>
-         * <li>Minimum: calculates the minimum value of all metric values within a specified interval.</li>
-         * <li>Maximum: calculates the maximum value of all metric values within a specified interval.</li>
+         * <li>Average: the average value of all data points in the specified period.</li>
+         * <li>Minimum: the minimum value of all data points in the specified period.</li>
+         * <li>Maximum: the maximum value of all data points in the specified period.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -699,7 +698,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
 
     public static class ModifyScalingRuleRequestStepAdjustments extends TeaModel {
         /**
-         * <p>The lower limit that is specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.</p>
+         * <p>The lower boundary of the step adjustment. This parameter is applicable only to step scaling rules. Valid values: -9.999999E18 to 9.999999E18.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -708,7 +707,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
         public Float metricIntervalLowerBound;
 
         /**
-         * <p>The upper limit specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.</p>
+         * <p>The upper boundary of the step adjustment. This parameter is applicable only to step scaling rules. Valid values: -9.999999E18 to 9.999999E18.</p>
          * 
          * <strong>example:</strong>
          * <p>5.0</p>
@@ -717,7 +716,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
         public Float metricIntervalUpperBound;
 
         /**
-         * <p>The number of ECS instances that you want to scale in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule.</p>
+         * <p>The number of instances to adjust for the step adjustment. This parameter is applicable only to step scaling rules.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

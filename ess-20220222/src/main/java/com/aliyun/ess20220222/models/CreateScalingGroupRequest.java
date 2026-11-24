@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateScalingGroupRequest extends TeaModel {
     /**
-     * <p>The Application Load Balancer (ALB) server groups to associate with the scaling group.</p>
+     * <p>The collection of information about the ALB server groups.</p>
      */
     @NameInMap("AlbServerGroups")
     public java.util.List<CreateScalingGroupRequestAlbServerGroups> albServerGroups;
 
     /**
-     * <p>The capacity allocation policy determines how the scaling group selects available instance types to meet capacity requirements. The policy applies to both on-demand and preemptible capacity (effective only when the <code>MultiAZPolicy</code> parameter is set to <code>COMPOSABLE</code>). Valid values:</p>
+     * <p>The capacity allocation policy, which determines how the scaling group selects available instance types to meet the capacity requirements. The capacity distribution policy applies to both pay-as-you-go and spot capacities. This parameter takes effect only when the MultiAZPolicy parameter is set to COMPOSABLE. Valid values:</p>
      * <ul>
-     * <li><p>priority: Creates instances in the order of the configured instance types.</p>
-     * </li>
-     * <li><p>lowestPrice: Create instances based on the price per vCPU of instance types, from lowest to highest.</p>
-     * </li>
+     * <li>priority: Creates instances based on the order of the configured instance types.</li>
+     * <li>lowestPrice: Creates instances based on the unit price per vCPU of the instance types in ascending order.</li>
      * </ul>
      * <p>Default value: priority.</p>
      * 
@@ -27,12 +25,10 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String allocationStrategy;
 
     /**
-     * <p>Specifies whether to enable automatic balancing for the scaling group. This setting takes effect only when BalancedOnly is enabled for a scaling group that is balanced across availability zones. Value range:</p>
+     * <p>Specifies whether to enable automatic balancing for the scaling group. This parameter takes effect only when BalancedOnly is enabled for the zone-balanced scaling group. Valid values:</p>
      * <ul>
-     * <li><p>false: Does not enable automatic balancing for the scaling group.</p>
-     * </li>
-     * <li><p>true: When automatic balancing for the scaling group is enabled, the scaling group automatically detects the capacity across availability zones. If the capacity is imbalanced, the scaling group proactively performs scaling across availability zones to rebalance the capacity.</p>
-     * </li>
+     * <li>false: Does not enable automatic balancing for the scaling group.</li>
+     * <li>true: Enables automatic balancing for the scaling group. The scaling group automatically detects the capacity across zones. When the capacity is unbalanced across zones, the scaling group proactively scales out or in to rebalance the capacity across zones.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -43,17 +39,15 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Boolean autoRebalance;
 
     /**
-     * <p>Specifies whether to evenly distribute the capacity of the scaling group across multiple availability zones. This parameter is valid only when <code>MultiAZPolicy</code> is set to <code>COMPOSABLE</code>. Valid values:</p>
+     * <p>Specifies whether the capacity of the scaling group is evenly distributed across multiple zones. This parameter takes effect only when the MultiAZPolicy parameter is set to COMPOSABLE. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The capacity of the scaling group is evenly distributed across multiple availability zones.</p>
-     * </li>
-     * <li><p><code>false</code>: The capacity of the scaling group is not evenly distributed across multiple availability zones.</p>
-     * </li>
+     * <li>true: The capacity of the scaling group is evenly distributed across multiple zones.</li>
+     * <li>false: The capacity of the scaling group is not evenly distributed across multiple zones.</li>
      * </ul>
      * <blockquote>
-     * <p>If <code>MultiAZPolicy</code> is set to <code>COMPOSABLE</code> and <code>AzBalance</code> is set to <code>true</code>, the effect is the same as setting <code>MultiAZPolicy</code> to <code>BALANCE</code>.</p>
+     * <p>If the MultiAZPolicy parameter is set to COMPOSABLE and the AzBalance parameter is set to true, the effect is the same as when the MultiAZPolicy parameter is set to BALANCE.</p>
      * </blockquote>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -62,12 +56,11 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Boolean azBalance;
 
     /**
-     * <p>The zone balancing mode is effective only when enabled. Valid values:</p>
+     * <p>The zone balancing mode. This parameter takes effect only when the zone balancing mode is enabled. Valid values:</p>
      * <ul>
-     * <li><p>BalancedBestEffort: If a resource fails to be created in an availability zone, the system falls back to other availability zones to ensure best-effort delivery.</p>
+     * <li><p>BalancedBestEffort: When resource creation fails in a zone, the system falls back to other zones to ensure best-effort delivery of resources.</p>
      * </li>
-     * <li><p>BalancedOnly:
-     * If resource creation fails in an availability zone, the system does not fall back to other availability zones. The scaling activity is partially successful, which prevents an excessive imbalance of resources across different availability zones.</p>
+     * <li><p>BalancedOnly: When resource creation fails in a zone, the system does not fall back to other zones. The scale-out activity partially succeeds to avoid excessive imbalance of resources across different zones.</p>
      * </li>
      * </ul>
      * <p>Default value: BalancedBestEffort.</p>
@@ -85,8 +78,8 @@ public class CreateScalingGroupRequest extends TeaModel {
     public CreateScalingGroupRequestCapacityOptions capacityOptions;
 
     /**
-     * <p>A client-generated token to ensure the idempotence of the request.</p>
-     * <p>The token must be unique across requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -95,14 +88,12 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>This parameter is effective only when <code>MultiAZPolicy</code> is set to <code>COST_OPTIMIZED</code>. If <code>true</code>, Auto Scaling creates on-demand instances to meet capacity requirements when spot instances are unavailable due to price or inventory. Valid values:</p>
+     * <p>Specifies whether to automatically attempt to create pay-as-you-go instances to meet the required number of ECS instances when the MultiAZPolicy parameter is set to COST_OPTIMIZED and sufficient spot instances cannot be created due to price or inventory reasons. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Yes.</p>
-     * </li>
-     * <li><p><code>false</code>: No.</p>
-     * </li>
+     * <li>true: allows the creation.</li>
+     * <li>false: does not allow the creation.</li>
      * </ul>
-     * <p>Default value: <code>true</code>.</p>
+     * <p>Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -111,7 +102,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Boolean compensateWithOnDemand;
 
     /**
-     * <p>The ID of the ECI instance, also known as the container group ID.</p>
+     * <p>The ECI instance ID, which is the container group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>eci-uf6fonnghi50u374****</p>
@@ -120,7 +111,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String containerGroupId;
 
     /**
-     * <p>The ARN of the custom scale-in policy function. This parameter is valid only when the first removal policy in <code>RemovalPolicies</code> is <code>CustomPolicy</code>.</p>
+     * <p>The ARN of the Function Compute function for the custom scale-in policy. This parameter takes effect only when the first removal policy configured in RemovalPolicies is CustomPolicy.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:fc:cn-zhangjiakou:16145688****:services/ess_custom_terminate_policy.LATEST/functions/ess_custom_terminate_policy_name</p>
@@ -129,13 +120,10 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String customPolicyARN;
 
     /**
-     * <p>A JSON array of RDS instance IDs.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The number of RDS instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <strong>Maximum number of RDS instances that can be associated with a single scaling group</strong>.</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>The number of RDS instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <strong>Maximum number of RDS instances that can be associated with a single scaling group</strong>.</p>
-     * <p>&lt;props=&quot;partner&quot;&gt;</p>
-     * <p>The number of RDS instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to Quota Center to view the quota for <strong>Maximum number of RDS instances that can be associated with a single scaling group</strong>.</p>
+     * <p>The IDs of the ApsaraDB RDS instances. The value can be a JSON array that contains multiple ApsaraDB RDS instance IDs. Separate multiple IDs with commas (,). </p>
+     * <p>&lt;props=&quot;china&quot;&gt;The maximum number of ApsaraDB RDS instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of ApsaraDB RDS instances that can be associated with a scaling group</strong>.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;The maximum number of ApsaraDB RDS instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of ApsaraDB RDS instances that can be associated with a scaling group</strong>.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;The maximum number of ApsaraDB RDS instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to Quota Center to check the quota for the <strong>maximum number of ApsaraDB RDS instances that can be associated with a scaling group</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;rm-bp142f86de0t7****&quot;, &quot;rm-bp18l1z42ar4o****&quot;, &quot;rm-bp1lqr97h4aqk****&quot;]</p>
@@ -144,14 +132,14 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String DBInstanceIds;
 
     /**
-     * <p>The databases that are associated with the scaling group.</p>
+     * <p>The list of databases associated with the scaling group.</p>
      */
     @NameInMap("DBInstances")
     public java.util.List<CreateScalingGroupRequestDBInstances> DBInstances;
 
     /**
-     * <p>The cooldown period, in seconds, after a scaling activity completes. Valid values: 0 to 86400.</p>
-     * <p>During the cooldown period, the scaling group does not execute other scaling activities that are triggered by CloudMonitor alarm tasks.</p>
+     * <p>The cooldown time after a scaling activity (adding or removing instances) is completed. Valid values: 0 to 86400. Unit: seconds.</p>
+     * <p>During the cooldown time, the scaling group does not execute other scaling activities. This parameter takes effect only for scaling activities triggered by CloudMonitor event-triggered tasks.  </p>
      * <p>Default value: 300.</p>
      * 
      * <strong>example:</strong>
@@ -161,7 +149,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Integer defaultCooldown;
 
     /**
-     * <p>The desired number of instances in the scaling group. Auto Scaling automatically maintains this number of instances. The value must be less than or equal to <code>MaxSize</code> and greater than or equal to <code>MinSize</code>.</p>
+     * <p>The expected number of instances in the scaling group. The scaling group automatically maintains the number of instances at the expected number. The value cannot be greater than MaxSize or less than MinSize.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -172,12 +160,10 @@ public class CreateScalingGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable deletion protection for the scaling group. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Enables deletion protection. The scaling group cannot be deleted.</p>
-     * </li>
-     * <li><p><code>false</code>: Disables deletion protection.</p>
-     * </li>
+     * <li>true: enables deletion protection for the scaling group. In this case, the scaling group cannot be deleted.</li>
+     * <li>false: disables deletion protection for the scaling group.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -188,12 +174,12 @@ public class CreateScalingGroupRequest extends TeaModel {
     /**
      * <p>The type of instances managed by the scaling group. Valid values:</p>
      * <ul>
-     * <li><p><code>ECS</code>: The scaling group manages ECS instances.</p>
+     * <li><p>ECS: the scaling group manages ECS instances.</p>
      * </li>
-     * <li><p><code>ECI</code>: The scaling group manages ECI instances.</p>
+     * <li><p>ECI: the scaling group manages ECI instances.</p>
      * </li>
      * </ul>
-     * <p>Default value: <code>ECS</code>.</p>
+     * <p>Default value: ECS.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
@@ -202,18 +188,15 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>The health check method for the scaling group. Valid values:</p>
+     * <p>The health check type of the scaling group. Valid values:</p>
      * <ul>
-     * <li><p><code>NONE</code>: No health checks are performed.</p>
-     * </li>
-     * <li><p><code>ECS</code>: Health checks are performed on instances in the scaling group. This value enables health checks for scaling groups of both the ECS and ECI types.</p>
-     * </li>
-     * <li><p><code>LOAD_BALANCER</code>: The instance health status is based on health check results from the attached load balancer. This option does not support Classic Load Balancer (CLB) instances.</p>
-     * </li>
+     * <li>NONE: disables health checks.</li>
+     * <li>ECS: performs health checks on instances in the scaling group. This value is used to enable instance health checks for both ECS and ECI scaling groups.</li>
+     * <li>LOAD_BALANCER: determines the health status of instances based on the health check results of the load balancer. CLB is not supported.</li>
      * </ul>
-     * <p>Default value: <code>ECS</code>.</p>
+     * <p>Default value: ECS.</p>
      * <blockquote>
-     * <p>To enable both instance health checks and load balancer health checks, use the <code>HealthCheckTypes</code> parameter.</p>
+     * <p>If you want to enable both instance health checks and load balancer health checks, use the <code>HealthCheckTypes</code> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -223,16 +206,16 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String healthCheckType;
 
     /**
-     * <p>The health check methods for the scaling group.</p>
+     * <p>The health check modes of the scaling group.</p>
      * <blockquote>
-     * <p>You can use this parameter to set multiple values and enable multiple health check options. If you set the <code>HealthCheckType</code> parameter, this parameter is ignored.</p>
+     * <p>You can set multiple values for this parameter to enable multiple health check options. If the HealthCheckType parameter is specified, this parameter is ignored.</p>
      * </blockquote>
      */
     @NameInMap("HealthCheckTypes")
     public java.util.List<String> healthCheckTypes;
 
     /**
-     * <p>The ID of an existing instance to use as a template. Auto Scaling uses this instance to create a new scaling configuration for the scaling group.</p>
+     * <p>The ID of the instance. When you create a scaling group, Auto Scaling obtains the required configuration information from the specified instance and automatically creates a scaling configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>i-28wt4****</p>
@@ -241,7 +224,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the launch template that provides the configuration for the scaling group.</p>
+     * <p>The ID of the launch template. This parameter is used to specify the launch template from which the scaling group obtains launch configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>lt-m5e3ofjr1zn1aw7****</p>
@@ -250,7 +233,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String launchTemplateId;
 
     /**
-     * <p>The instance type information for extending the launch template.</p>
+     * <p>The extended instance type information of the launch template.</p>
      */
     @NameInMap("LaunchTemplateOverrides")
     public java.util.List<CreateScalingGroupRequestLaunchTemplateOverrides> launchTemplateOverrides;
@@ -258,11 +241,11 @@ public class CreateScalingGroupRequest extends TeaModel {
     /**
      * <p>The version of the launch template. Valid values:</p>
      * <ul>
-     * <li><p>A specific version number of the template.</p>
+     * <li><p>A specific version number.</p>
      * </li>
-     * <li><p><code>Default</code>: Uses the default version of the template.</p>
+     * <li><p>Default: always uses the default version of the launch template.</p>
      * </li>
-     * <li><p><code>Latest</code>: Uses the latest version of the template.</p>
+     * <li><p>Latest: always uses the latest version of the launch template.</p>
      * </li>
      * </ul>
      * 
@@ -273,25 +256,22 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String launchTemplateVersion;
 
     /**
-     * <p>The list of lifecycle hooks.</p>
+     * <p>The list of lifecycle hook information.</p>
      */
     @NameInMap("LifecycleHooks")
     public java.util.List<CreateScalingGroupRequestLifecycleHooks> lifecycleHooks;
 
     /**
-     * <p>The load balancer configurations.</p>
+     * <p>The list of load balancing configurations.</p>
      */
     @NameInMap("LoadBalancerConfigs")
     public java.util.List<CreateScalingGroupRequestLoadBalancerConfigs> loadBalancerConfigs;
 
     /**
-     * <p>A JSON array of Classic Load Balancer (CLB) instance IDs.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The number of CLB instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <strong>Maximum number of load balancer instances that can be associated with a single scaling group</strong>.</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>The number of CLB instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <strong>Maximum number of load balancer instances that can be associated with a single scaling group</strong>.</p>
-     * <p>&lt;props=&quot;partner&quot;&gt;</p>
-     * <p>The number of CLB instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to Quota Center to view the quota for <strong>Maximum number of load balancer instances that can be associated with a single scaling group</strong>.</p>
+     * <p>The IDs of the Classic Load Balancer (CLB) instances. The value can be a JSON array that contains multiple CLB instance IDs. Separate multiple IDs with commas (,).</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The maximum number of CLB instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of load balancing instances that can be associated with a scaling group</strong>.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;The maximum number of CLB instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of load balancing instances that can be associated with a scaling group</strong>.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;The maximum number of CLB instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to Quota Center to check the quota for the <strong>maximum number of load balancing instances that can be associated with a scaling group</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;lb-bp1u7etiogg38yvwz****&quot;, &quot;lb-bp168cqrux9ai9l7f****&quot;, &quot;lb-bp1jv3m9zvj22ufxp****&quot;]</p>
@@ -301,24 +281,21 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     /**
      * <p>The maximum lifetime of an instance in the scaling group. Unit: seconds.</p>
-     * <p>Value range: [86400, Integer.maxValue].</p>
+     * <p>Valid values: [86400, Integer.maxValue].</p>
      * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>86400</p>
      */
     @NameInMap("MaxInstanceLifetime")
     public Integer maxInstanceLifetime;
 
     /**
-     * <p>The maximum number of instances in the scaling group. If the total number of instances exceeds this value, Auto Scaling removes instances to meet this maximum.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The value range of <code>MaxSize</code> depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <strong>Maximum number of instances per scaling group</strong>.</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>The value range of <code>MaxSize</code> depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <strong>Maximum number of instances per scaling group</strong>.</p>
-     * <p>&lt;props=&quot;partner&quot;&gt;</p>
-     * <p>The value range of <code>MaxSize</code> depends on your Auto Scaling usage. Go to Quota Center to view the quota for <strong>Maximum number of instances per scaling group</strong>.</p>
-     * <p>If the quota for <strong>Maximum number of instances per scaling group</strong> is 2,000, the value of <code>MaxSize</code> can range from 0 to 2,000.</p>
+     * <p>The maximum number of instances in the scaling group. If the number of instances in the scaling group is greater than the value of MaxSize, Auto Scaling automatically removes instances. </p>
+     * <p>&lt;props=&quot;china&quot;&gt;The value range of MaxSize depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of instances in a scaling group</strong>.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;The value range of MaxSize depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <strong>maximum number of instances in a scaling group</strong>.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;The value range of MaxSize depends on your Auto Scaling usage. Go to Quota Center to check the quota for the <strong>maximum number of instances in a scaling group</strong>.</p>
+     * <p>If the quota for the <strong>maximum number of instances in a scaling group</strong> is 2000, the value range of MaxSize is 0 to 2000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -328,9 +305,9 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Integer maxSize;
 
     /**
-     * <p>The minimum number of instances in the scaling group. If the total number of instances falls below this value, Auto Scaling adds instances to meet this minimum.</p>
+     * <p>The minimum number of instances in the scaling group. If the number of instances in the scaling group is less than the value of MinSize, Auto Scaling automatically creates instances. </p>
      * <blockquote>
-     * <p>The value of <code>MinSize</code> must be less than or equal to the value of <code>MaxSize</code>.</p>
+     * <p>The value of MinSize must be less than or equal to the value of MaxSize.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -341,24 +318,24 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Integer minSize;
 
     /**
-     * <p>The scaling policy for ECS instances in a multi-zone scaling group. Valid values:</p>
+     * <p>The multi-zone scaling policy for ECS instances in the scaling group. Valid values: </p>
      * <ul>
-     * <li><p><code>PRIORITY</code>: Auto Scaling prioritizes the vSwitches specified in <code>VSwitchIds</code>. If an operation fails in a higher-priority availability zone, Auto Scaling automatically attempts it in the next-highest-priority zone.</p>
+     * <li><p>PRIORITY: the vSwitches specified by VSwitchIds are prioritized. Auto Scaling preferentially attempts to scale ECS instances in the zone where the highest-priority vSwitch resides. If the scaling fails, Auto Scaling automatically attempts to scale instances in the zone of the next highest-priority vSwitch.  </p>
      * </li>
-     * <li><p><code>COST_OPTIMIZED</code>: During scale-out, creates instances from the instance types with the lowest vCPU unit price. During scale-in, removes instances from the instance types with the highest vCPU unit price. If the scaling configuration includes multiple spot instance types, spot instances are prioritized for creation. You can use the <code>CompensateWithOnDemand</code> parameter to specify whether to automatically create on-demand instances when spot instances cannot be created due to reasons such as insufficient inventory.</p>
+     * <li><p>COST_OPTIMIZED: during scale-out, Auto Scaling attempts to create ECS instances in ascending order of vCPU unit price. During scale-in, Auto Scaling attempts to remove ECS instances in descending order of vCPU unit price. If the scaling configuration settings specify multiple instance types that use the preemptible billing method, spot instances are preferentially created. You can use the CompensateWithOnDemand parameter to specify whether to automatically attempt to create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory or other reasons. </p>
      * <blockquote>
-     * <p>The <code>COST_OPTIMIZED</code> policy takes effect only when the scaling configuration specifies multiple instance types or includes spot instances.</p>
+     * <p>COST_OPTIMIZED takes effect only when the scaling configuration settings specify multiple instance types or use spot instances. </p>
      * </blockquote>
      * </li>
-     * <li><p><code>BALANCE</code>: Distributes ECS instances evenly across the specified availability zones in the scaling group. If the distribution of instances becomes uneven due to insufficient inventory, you can call the <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstance</a> API operation to rebalance the instances.</p>
+     * <li><p>BALANCE: evenly distributes ECS instances across the zones specified for the scaling group. If the instances are unevenly allocated across zones due to insufficient inventory or other reasons, you can invoke the <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstance</a> operation to balance the resources.</p>
      * <blockquote>
-     * <p>If <code>MultiAZPolicy</code> is set to <code>BALANCE</code>, the effect is the same as setting <code>MultiAZPolicy</code> to <code>COMPOSABLE</code> and <code>AzBalance</code> to <code>true</code>.</p>
+     * <p>If the <code>MultiAZPolicy</code> parameter is set to <code>BALANCE</code>, the effect is the same as when the <code>MultiAZPolicy</code> parameter is set to <code>COMPOSABLE</code> and the <code>AzBalance</code> parameter is set to <code>true</code>. </p>
      * </blockquote>
      * </li>
-     * <li><p><code>COMPOSABLE</code>: A composite policy that allows you to combine the preceding policies for multi-zone scaling groups as needed. You can also specify additional parameters to gain finer control over the capacity of your scaling group.</p>
+     * <li><p>COMPOSABLE: a combined policy that allows you to combine the preceding multi-zone scaling policies for ECS instances based on your needs. You can also specify additional parameters to control the capacity of the scaling group in a more fine-grained manner.</p>
      * </li>
      * </ul>
-     * <p>Default value: <code>PRIORITY</code>.</p>
+     * <p>Default value: PRIORITY.</p>
      * 
      * <strong>example:</strong>
      * <p>PRIORITY</p>
@@ -367,7 +344,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String multiAZPolicy;
 
     /**
-     * <p>The minimum number of on-demand instances required in the scaling group. Valid values: 0 to 1,000. If the number of on-demand instances is less than this value, Auto Scaling preferentially creates on-demand instances.</p>
+     * <p>The minimum number of pay-as-you-go instances required in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than this value, pay-as-you-go instances are preferentially created.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -376,7 +353,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Integer onDemandBaseCapacity;
 
     /**
-     * <p>The percentage of on-demand instances among the excess instances after the minimum number of on-demand instances (<code>OnDemandBaseCapacity</code>) is met. Valid values: 0 to 100.</p>
+     * <p>The percentage of pay-as-you-go instances in the excess instances after the scaling group meets the minimum number of pay-as-you-go instances (OnDemandBaseCapacity). Valid values: 0 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -391,7 +368,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the scaling group resides.</p>
+     * <p>The region ID of the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -401,29 +378,25 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instance removal policies. Valid values:</p>
+     * <p>The filtering policy for the instance removal policy. Valid values:</p>
      * <ul>
-     * <li><p><code>OldestInstance</code>: Removes the ECS instance that was first added to the scaling group.</p>
-     * </li>
-     * <li><p><code>NewestInstance</code>: Removes the ECS instance that was most recently added to the scaling group.</p>
-     * </li>
-     * <li><p><code>OldestScalingConfiguration</code>: Removes the ECS instance that was created based on the earliest scaling configuration.</p>
-     * </li>
-     * <li><p><code>CustomPolicy</code>: Removes ECS instances based on a custom scale-in policy defined by a function.</p>
-     * </li>
+     * <li>OldestInstance: removes the ECS instances that were added to the scaling group at the earliest point in time.</li>
+     * <li>NewestInstance: removes the ECS instances that were added to the scaling group at the latest point in time.</li>
+     * <li>OldestScalingConfiguration: removes the ECS instances that were created based on the earliest scaling configuration.</li>
+     * <li>CustomPolicy: removes ECS instances based on a custom scale-in policy function.</li>
      * </ul>
-     * <p>The term <code>scaling configuration</code> in <code>OldestScalingConfiguration</code> refers to the source of instance configuration information, which includes both scaling configurations and launch templates. <code>CustomPolicy</code> can only be set as the first removal policy. If you specify <code>CustomPolicy</code>, you must also specify the <code>CustomPolicyARN</code> parameter.</p>
+     * <p>The scaling configuration mentioned in OldestScalingConfiguration refers to the instance configuration source in the scaling group, including scaling configurations and launch templates. CustomPolicy can only be set as the first removal policy. If you specify CustomPolicy, you must also specify the CustomPolicyARN parameter.</p>
      * <blockquote>
-     * <p>The removal of instances is also affected by the scaling group\&quot;s multi-AZ policy (<code>MultiAZPolicy</code>). For more information, see <a href="https://help.aliyun.com/document_detail/254822.html">Configure a combination of removal policies</a>.</p>
+     * <p>The removal of ECS instances from a scaling group is also affected by the multi-zone scaling policy (MultiAZPolicy) of the scaling group. For more information, see <a href="https://help.aliyun.com/document_detail/254822.html">Configure a combined policy for removing instances</a>.</p>
      * </blockquote>
      */
     @NameInMap("RemovalPolicies")
     public java.util.List<String> removalPolicies;
 
     /**
-     * <p>The ID of the resource group to which the new scaling group belongs.</p>
+     * <p>The ID of the resource group to which the newly created scaling group belongs.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the new scaling group is added to the default resource group.</p>
+     * <p>Assigns the newly created scaling group to the specified resource group. If you do not specify this parameter, the scaling group belongs to the default resource group.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -437,8 +410,8 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the scaling group. The name must be unique within a region.</p>
-     * <p>The name must be 2 to 64 characters in length. It must start with a letter, a digit, or a Chinese character and can contain digits, underscores (_), hyphens (-), and periods (.).</p>
-     * <p>If you do not specify this parameter, the value of <code>ScalingGroupId</code> is used.</p>
+     * <p>It must be 2 to 64 characters in length. It must start with a digit, a letter, or a Chinese character, and can contain digits, underscores (_), hyphens (-), and periods (.).</p>
+     * <p>Default value: the value of ScalingGroupId.</p>
      * 
      * <strong>example:</strong>
      * <p>scalinggroup****</p>
@@ -447,24 +420,20 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String scalingGroupName;
 
     /**
-     * <p>The reclamation mode of the scaling group. Valid values:</p>
+     * <p>The reclaim mode of the scaling group. Valid values: </p>
      * <ul>
-     * <li><p><code>recycle</code>: The reclamation mode is Economical Mode.</p>
-     * </li>
-     * <li><p><code>release</code>: The reclamation mode is Release Mode.</p>
-     * </li>
-     * <li><p><code>forcerelease</code>: The reclamation mode is Force Release Mode.</p>
-     * <blockquote>
-     * <p>A forced release is equivalent to a power-off operation, which erases data in the memory and ephemeral storage of the instances. This data cannot be recovered. Use this option with caution.</p>
+     * <li>recycle: sets the reclaim mode of the scaling group to shutdown and reclaim mode.  </li>
+     * <li>release: sets the reclaim mode of the scaling group to release mode.</li>
+     * <li>forcerelease: sets the reclaim mode of the scaling group to force release mode.<blockquote>
+     * <p>If you select forcerelease, the system forcibly releases instances in the <code>Running</code> state during scale-down activities. Forcibly releasing an instance is equivalent to a power-off operation, which erases temporary data in the memory and storage of the instance. The data cannot be recovered. Proceed with caution.</p>
      * </blockquote>
      * </li>
-     * <li><p><code>forcerecycle</code>: The reclamation mode is Force Economical Mode.</p>
-     * <blockquote>
-     * <p>A forced stop is equivalent to a power-off operation, which erases data in the memory and ephemeral storage of the instances. This data cannot be recovered. Use this option with caution.</p>
+     * <li>forcerecycle: sets the reclaim mode of the scaling group to force shutdown and reclaim mode.<blockquote>
+     * <p>If you select forcerecycle, the system forcibly shuts down instances in the <code>Running</code> state during scale-down activities. Forcibly shutting down an instance is equivalent to a power-off operation, which erases temporary data in the memory and storage of the instance. The data cannot be recovered. Proceed with caution.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * <p><code>ScalingPolicy</code> specifies the reclamation mode of the scaling group. The specific action taken when an instance is removed from the scaling group is determined by the <code>RemovePolicy</code> parameter of the <code>RemoveInstances</code> operation. For more information, see <a href="https://help.aliyun.com/document_detail/25955.html">RemoveInstances</a>.</p>
+     * <p>The ScalingPolicy parameter specifies the reclaim mode of the scaling group, but the specific action taken when an instance is removed from the scaling group is determined by the RemovePolicy parameter of RemoveInstances. For more information, see <a href="https://help.aliyun.com/document_detail/25955.html">RemoveInstances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>recycle</p>
@@ -473,21 +442,19 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String scalingPolicy;
 
     /**
-     * <p>The load balancer server groups.</p>
+     * <p>The collection of information about the server groups.</p>
      * <blockquote>
-     * <p>You cannot specify the same server group in both <code>AlbServerGroups</code> and <code>ServerGroups</code>.</p>
+     * <p>You cannot configure the same server group settings in both AlbServerGroups and ServerGroups at the same time.</p>
      * </blockquote>
      */
     @NameInMap("ServerGroups")
     public java.util.List<CreateScalingGroupRequestServerGroups> serverGroups;
 
     /**
-     * <p>The distribution strategy for spot capacity. You can use this parameter to specify a separate strategy for spot capacity (effective only when the <code>MultiAZPolicy</code> parameter is set to <code>COMPOSABLE</code>). Valid values:</p>
+     * <p>The spot capacity distribution policy. You can use this parameter to separately specify the distribution policy for spot capacity. This parameter takes effect only when the MultiAZPolicy parameter is set to COMPOSABLE. Valid values:</p>
      * <ul>
-     * <li><p>priority: Creates instances in the order of the configured instance types.</p>
-     * </li>
-     * <li><p>lowestPrice: Creates instances in ascending order of the price per vCPU of the instance types.</p>
-     * </li>
+     * <li>priority: Creates instances based on the order of the configured instance types.</li>
+     * <li>lowestPrice: Creates instances based on the unit price per vCPU of the instance types in ascending order.</li>
      * </ul>
      * <p>Default value: priority.</p>
      * 
@@ -498,7 +465,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String spotAllocationStrategy;
 
     /**
-     * <p>The number of instance types to use. The scaling group creates spot instances in a balanced manner across the specified number of lowest-cost instance types. Valid values: 1 to 10.</p>
+     * <p>The number of available instance types. The scaling group evenly creates spot instances across multiple instance types with the lowest cost. Valid values: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -507,7 +474,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Integer spotInstancePools;
 
     /**
-     * <p>If set to <code>true</code>, Auto Scaling attempts to create a new instance to replace a spot instance that is about to be reclaimed.</p>
+     * <p>Specifies whether to enable the Auto Scaling policy to supplement spot instances. After this feature is enabled, when a system message indicating that a spot instance is to be reclaimed is received, the scaling group attempts to create a new instance to replace the spot instance to be reclaimed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -516,16 +483,13 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Boolean spotInstanceRemedy;
 
     /**
-     * <p>The timeout period for the system to wait for an ECS instance to be stopped during a scale-in event. Unit: seconds.
+     * <p>The timeout period for waiting for an ECS instance to be stopped during the scale-in process. Unit: seconds.
      * Valid values: 30 to 240.</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only during scale-in events when <code>ScalingPolicy</code> is set to <code>release</code>.</p>
-     * </li>
-     * <li><p>If this parameter is set, the system waits for the specified <code>StopInstanceTimeout</code> period for the instance to be stopped. If the instance is not stopped after the timeout period, the scale-in process continues regardless of the instance status.</p>
-     * </li>
-     * <li><p>If this parameter is not set, the system waits for an extended period for the instance to be stopped. The scale-in process continues only after the instance is stopped. If the instance fails to stop, the scale-in process is rolled back, and the scale-in event fails.</p>
-     * </li>
+     * <li>This parameter takes effect only in the scale-in process when ScalingPolicy is set to release.  </li>
+     * <li>If this parameter is specified, the system waits for a maximum of the StopInstanceTimeout period for the instance to be stopped. After the timeout period elapses, the scale-in process continues regardless of whether the instance is stopped.  </li>
+     * <li>If this parameter is not specified, the system waits for a long time for the instance to be stopped. The scale-in process continues only after the instance is stopped. If the instance fails to be stopped, the scale-in process is rolled back and the scale-in fails.</li>
      * </ul>
      * </blockquote>
      * 
@@ -537,7 +501,7 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -547,21 +511,21 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Boolean syncAlarmRuleToCms;
 
     /**
-     * <p>The tags to apply to the scaling group.</p>
+     * <p>The collection of tag information for the scaling group.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateScalingGroupRequestTags> tags;
 
     /**
-     * <p>The vServer groups to associate with the scaling group.</p>
+     * <p>The collection of information about the virtual server groups associated with the scaling group.</p>
      */
     @NameInMap("VServerGroups")
     public java.util.List<CreateScalingGroupRequestVServerGroups> VServerGroups;
 
     /**
-     * <p>The ID of the vSwitch. If you specify this parameter, the network type of the scaling group is Virtual Private Cloud (VPC).</p>
+     * <p>The ID of the vSwitch. After this parameter is specified, the network type of the scaling group is VPC.</p>
      * <blockquote>
-     * <p>If you do not specify the <code>VSwitchId</code> or <code>VSwitchIds</code> parameter, the network type of the scaling group defaults to classic network.</p>
+     * <p>If neither VSwitchId nor VSwitchIds is specified for the scaling group, the network type of the scaling group is classic network by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -571,22 +535,28 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The IDs of one or more vSwitches. If you specify this parameter, the <code>VSwitchId</code> parameter is ignored. If you specify this parameter, the network type of the scaling group is Virtual Private Cloud (VPC).</p>
-     * <p>If you specify multiple vSwitches:</p>
+     * <p>The IDs of one or more vSwitches. If you use the VSwitchIds parameter, the VSwitchId parameter is ignored. After this parameter is specified, the network type of the scaling group is VPC.</p>
+     * <p>When you specify multiple vSwitches:</p>
      * <ul>
-     * <li><p>They must belong to the same VPC.</p>
+     * <li><p>The vSwitches must belong to the same VPC.</p>
      * </li>
-     * <li><p>They can be in different availability zones.</p>
+     * <li><p>The vSwitches can belong to different zones.</p>
      * </li>
-     * <li><p>The vSwitches are prioritized based on their order in the list, with the first vSwitch having the highest priority. If an instance cannot be created in the availability zone of a higher-priority vSwitch, Auto Scaling automatically attempts to create the instance in the availability zone of the next-highest-priority vSwitch.</p>
+     * <li><p>The vSwitches are prioritized in ascending order of numbers. 1 indicates the highest priority. If instances cannot be created in the zone of a higher-priority vSwitch, the system automatically selects the next highest-priority vSwitch to create instances.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify the <code>VSwitchId</code> or <code>VSwitchIds</code> parameter, the network type of the scaling group defaults to classic network.</p>
+     * <p>If neither VSwitchId nor VSwitchIds is specified for the scaling group, the network type of the scaling group is classic network by default.</p>
      * </blockquote>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
+
+    /**
+     * <p>The behavior policy of the scaling group during zone shift.</p>
+     */
+    @NameInMap("ZoneShiftPolicy")
+    public CreateScalingGroupRequestZoneShiftPolicy zoneShiftPolicy;
 
     public static CreateScalingGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScalingGroupRequest self = new CreateScalingGroupRequest();
@@ -985,10 +955,18 @@ public class CreateScalingGroupRequest extends TeaModel {
         return this.vSwitchIds;
     }
 
+    public CreateScalingGroupRequest setZoneShiftPolicy(CreateScalingGroupRequestZoneShiftPolicy zoneShiftPolicy) {
+        this.zoneShiftPolicy = zoneShiftPolicy;
+        return this;
+    }
+    public CreateScalingGroupRequestZoneShiftPolicy getZoneShiftPolicy() {
+        return this.zoneShiftPolicy;
+    }
+
     public static class CreateScalingGroupRequestAlbServerGroups extends TeaModel {
         /**
          * <p>The ID of the ALB server group.</p>
-         * <p>A scaling group can be associated with a limited number of ALB server groups. To view or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * <p>A scaling group supports a limited number of associated ALB server groups. To view or manually apply for a quota increase, go to the <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>sgp-ddwb0y0g6y9bjm****</p>
@@ -997,7 +975,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String albServerGroupId;
 
         /**
-         * <p>The port number used by an instance after it is added to the ALB server group. Valid values: 1 to 65535.</p>
+         * <p>The port number used by the instance after Auto Scaling adds the instance to the ALB server group. Valid values: 1 to 65535.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -1006,7 +984,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The weight of an instance as a backend server after the instance is added to the ALB server group. The higher the weight, the more access requests are distributed to the instance. If the weight is 0, no access requests are distributed to the instance. Valid values: 0 to 100.</p>
+         * <p>The weight of the instance as a backend server after Auto Scaling adds the instance to the ALB server group. A higher weight specifies that more requests are distributed to the instance. If the weight is 0, the instance does not receive requests. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1047,14 +1025,12 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestCapacityOptions extends TeaModel {
         /**
-         * <p>When <code>MultiAZPolicy</code> is set to <code>COST_OPTIMIZED</code>, this parameter specifies whether to automatically create on-demand instances to meet capacity requirements when spot instances are unavailable due to price or inventory. Valid values:</p>
+         * <p>Specifies whether to allow the system to automatically attempt to create pay-as-you-go instances to meet the required number of ECS instances when the MultiAZPolicy parameter is set to COST_OPTIMIZED and sufficient spot instances cannot be created due to price or inventory reasons. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Yes.</p>
-         * </li>
-         * <li><p><code>false</code>: No.</p>
-         * </li>
+         * <li>true: Allowed.</li>
+         * <li>false: Not allowed.</li>
          * </ul>
-         * <p>Default value: <code>true</code>.</p>
+         * <p>Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1063,8 +1039,8 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Boolean compensateWithOnDemand;
 
         /**
-         * <p>The minimum number of on-demand instances required in the scaling group. When the number of on-demand instances in the scaling group is less than this value, the system preferentially creates on-demand instances. Valid values: 0 to 1,000.</p>
-         * <p>When <code>MultiAZPolicy</code> is set to <code>COMPOSABLE</code>, the default value is 0.</p>
+         * <p>The minimum number of pay-as-you-go instances required in the scaling group. When the number of pay-as-you-go instances in the scaling group is less than this value, the system preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</p>
+         * <p>When the MultiAZPolicy parameter is set to COMPOSABLE, the default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1073,8 +1049,8 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Integer onDemandBaseCapacity;
 
         /**
-         * <p>The percentage of on-demand instances among the excess instances after the <code>OnDemandBaseCapacity</code> requirement is met. Valid values: 0 to 100.</p>
-         * <p>When <code>MultiAZPolicy</code> is set to <code>COMPOSABLE</code>, the default value is 100.</p>
+         * <p>The percentage of pay-as-you-go instances in the excess instances after the scaling group meets the minimum number of pay-as-you-go instances specified by OnDemandBaseCapacity. Valid values: 0 to 100.</p>
+         * <p>When the MultiAZPolicy parameter is set to COMPOSABLE, the default value is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1083,15 +1059,15 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Integer onDemandPercentageAboveBaseCapacity;
 
         /**
-         * <p>The price comparison mode for the cost optimization strategy of the scaling group. Valid values:</p>
+         * <p>The price comparison mode for the cost optimization policy of the scaling group. Valid values:</p>
          * <ul>
-         * <li><p><code>PricePerUnit</code>: Compares prices based on per-unit capacity.</p>
-         * <p>The capacity of an instance in a scaling group is equal to the weight set for the instance type, with a default of 1, meaning one ECS instance equals one unit of capacity.</p>
+         * <li><p>PricePerUnit: Compares prices based on the price per unit of capacity.</p>
+         * <p>The capacity of an instance in the scaling group is equal to the weight set for the instance type. The default weight is 1, which means one ECS instance occupies a capacity of 1.</p>
          * </li>
-         * <li><p><code>PricePerVCpu</code>: Compares prices based on per-vCPU price.</p>
+         * <li><p>PricePerVCpu: Compares prices based on the price per vCPU.</p>
          * </li>
          * </ul>
-         * <p>Default value: <code>PricePerUnit</code>.</p>
+         * <p>Default value: PricePerUnit.</p>
          * 
          * <strong>example:</strong>
          * <p>PricePerUnit</p>
@@ -1100,14 +1076,12 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String priceComparisonMode;
 
         /**
-         * <p>After you enable <code>CompensateWithOnDemand</code>, if the on-demand percentage exceeds the <code>OnDemandPercentageAboveBaseCapacity</code> ratio, the system attempts to replace on-demand capacity with spot capacity. A common scenario is when <code>CompensateWithOnDemand</code> leads to on-demand instances being created due to spot inventory or price issues. To avoid the prolonged existence of these on-demand instances, the system attempts to replace the excess on-demand capacity with spot instances. Valid values:</p>
+         * <p>Specifies whether to attempt to use spot instances to replace pay-as-you-go capacity when CompensateWithOnDemand is enabled and the proportion of pay-as-you-go instances exceeds the OnDemandPercentageAboveBaseCapacity value. In common scenarios where CompensateWithOnDemand downgrades spot instances to pay-as-you-go instances due to spot inventory or price reasons, this parameter attempts to use spot instances to replace the excess pay-as-you-go capacity to avoid long-term existence of pay-as-you-go instances. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Allows replacement.</p>
-         * </li>
-         * <li><p><code>false</code>: Does not allow replacement.</p>
-         * </li>
+         * <li>true: Allowed.</li>
+         * <li>false: Not allowed.</li>
          * </ul>
-         * <p>Default value: <code>false</code>.</p>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1164,12 +1138,10 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestDBInstances extends TeaModel {
         /**
-         * <p>The method that is used to associate the scaling group with the database. Valid values:</p>
+         * <p>The association mode between the scaling group and the database. Valid values:</p>
          * <ul>
-         * <li><p><code>SecurityIp</code>: The IP address whitelist mode. This mode automatically adds the scaled-out instances to the IP address whitelist of the database. This mode is supported only by RDS databases.</p>
-         * </li>
-         * <li><p><code>SecurityGroup</code>: The security group mode. This mode adds the security group of the scaling configuration to the security group whitelist of the database. This allows instances in the security group to access the database.</p>
-         * </li>
+         * <li>SecurityIp: Modifies the IP whitelist mode by automatically adding scaled-out instances to the IP whitelist of the database. Only ApsaraDB RDS databases are supported.</li>
+         * <li>SecurityGroup: Uses the security group mode by adding the security group of the scaling configuration to the security group whitelist of the database to allow instances in the security group to access the database.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1179,7 +1151,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String attachMode;
 
         /**
-         * <p>The ID of the database instance.</p>
+         * <p>The database instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-m5eqju85s45mu0***</p>
@@ -1190,12 +1162,9 @@ public class CreateScalingGroupRequest extends TeaModel {
         /**
          * <p>The type of the database. Valid values:</p>
          * <ul>
-         * <li><p>RDS</p>
-         * </li>
-         * <li><p>Redis</p>
-         * </li>
-         * <li><p>MongoDB</p>
-         * </li>
+         * <li>RDS</li>
+         * <li>Redis</li>
+         * <li>MongoDB</li>
          * </ul>
          * <p>Default value: RDS.</p>
          * 
@@ -1238,12 +1207,12 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestLaunchTemplateOverrides extends TeaModel {
         /**
-         * <p>To enable the scaling group to scale based on instance type capacity, you must specify both this parameter and <code>LaunchTemplateOverrides.WeightedCapacity</code>.</p>
-         * <p>This parameter specifies the instance type, which overrides the instance type specified in the launch template.</p>
+         * <p>If you want the scaling group to scale based on the capacity of the instance type, specify both this parameter and LaunchTemplateOverrides.WeightedCapacity.</p>
+         * <p>This parameter is used to specify the instance type and overrides the instance type in the launch template.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when the <code>LaunchTemplateId</code> parameter is specified.</p>
+         * <p>This parameter takes effect only when the LaunchTemplateId parameter is specified.</p>
          * </blockquote>
-         * <p>Must be a valid ECS instance type.</p>
+         * <p>Valid values of InstanceType: available ECS instance types.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c5.xlarge</p>
@@ -1252,7 +1221,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The maximum hourly price for the instance type specified in <code>LaunchTemplateOverride.InstanceType</code>.</p>
+         * <p>This parameter is used to specify the maximum price for the overridden instance type (namely, <code>LaunchTemplateOverride.InstanceType</code>) in the launch template.</p>
          * <blockquote>
          * <p>This parameter takes effect only when the <code>LaunchTemplateId</code> parameter is specified.</p>
          * </blockquote>
@@ -1264,23 +1233,23 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Float spotPriceLimit;
 
         /**
-         * <p>To enable the scaling group to scale based on instance type capacity, you must specify this parameter after you specify <code>LaunchTemplateOverrides.InstanceType</code>.</p>
-         * <p>This parameter specifies the weight of the instance type, which represents the capacity of a single instance of that type in the scaling group. A higher weight means that fewer instances of this type are needed to meet the desired capacity.</p>
-         * <p>Because instance types have different performance metrics, such as the number of vCPUs and memory size, you can assign different weights to different instance types based on your requirements.</p>
+         * <p>If you want the scaling group to scale based on the capacity of the instance type, specify this parameter after you specify LaunchTemplateOverrides.InstanceType.</p>
+         * <p>This parameter is used to specify the weight of the instance type, which indicates the capacity represented by a single instance of the instance type in the scaling group. A larger weight indicates that fewer instances of this instance type are required to meet the expected capacity.</p>
+         * <p>Because performance metrics such as the number of vCPUs and memory size vary among instance types, you can configure different weights for different instance types based on your needs.</p>
          * <p>Example:</p>
          * <ul>
          * <li><p>Current capacity: 0.</p>
          * </li>
-         * <li><p>Desired capacity: 6.</p>
+         * <li><p>Expected capacity: 6.</p>
          * </li>
-         * <li><p>Capacity of ecs.c5.xlarge: 4.</p>
+         * <li><p>Capacity of the ecs.c5.xlarge instance type: 4.</p>
          * </li>
          * </ul>
-         * <p>To meet the desired capacity, the scaling group will create two ecs.c5.xlarge instances.</p>
+         * <p>To meet the expected capacity, the scaling group scales out two ecs.c5.xlarge instances for you.</p>
          * <blockquote>
-         * <p>During a scale-out activity, the capacity of the scaling group cannot exceed the sum of the maximum capacity (<code>MaxSize</code>) and the maximum weight of an instance type.</p>
+         * <p>During scale-out, the capacity of the scaling group cannot exceed the sum of the maximum capacity (MaxSize) and the maximum weight of the instance type.</p>
          * </blockquote>
-         * <p>Valid values: 1 to 500.</p>
+         * <p>Valid values of WeightedCapacity: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -1321,15 +1290,15 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestLifecycleHooks extends TeaModel {
         /**
-         * <p>The action to take after the wait state ends. Valid values:</p>
+         * <p>The action to be performed after the wait state ends. Valid values:</p>
          * <ul>
-         * <li><p><code>CONTINUE</code>: Continues the scale-out or scale-in activity.</p>
+         * <li><p>CONTINUE: continues the response to the scale-out activity or continues the response to the scale-down activity.</p>
          * </li>
-         * <li><p><code>ABANDON</code>: Aborts the scale-out activity by releasing the created instances, or aborts the scale-in activity by keeping the instances in the scaling group.</p>
+         * <li><p>ABANDON: directly releases the instances created by the scale-out activity or directly removes the instances in the scale-down activity from the scaling group.</p>
          * </li>
          * </ul>
-         * <p>If a scale-in (SCALE_IN) activity triggers multiple lifecycle hooks, and the <code>DefaultResult</code> of one of the lifecycle hooks is <code>ABANDON</code>, the wait state of the other lifecycle hooks ends prematurely. In other cases, the action is determined by the last lifecycle hook to complete.</p>
-         * <p>Default value: <code>CONTINUE</code>.</p>
+         * <p>When a scale-down activity (SCALE_IN) occurs in the scaling group and triggers multiple lifecycle hooks, if the wait state triggered by a lifecycle hook whose DefaultResult is ABANDON ends, the other corresponding wait states end in advance. In other cases, the next action is subject to the next action of the last wait state that ends.</p>
+         * <p>Default value: CONTINUE.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTINUE</p>
@@ -1338,8 +1307,8 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String defaultResult;
 
         /**
-         * <p>The wait time that is defined in the lifecycle hook for a scaling activity. After the wait time expires, the next action is performed. Valid values: 30 to 21600. Unit: seconds.</p>
-         * <p>After you create a lifecycle hook, you can call the <code>RecordLifecycleActionHeartbeat</code> operation to extend the wait time of an instance, or call the <code>CompleteLifecycleAction</code> operation to end the wait state of the scaling activity in advance.</p>
+         * <p>The wait time set by the lifecycle hook for the scaling group activity. After the wait state times out, the next action is performed. Valid values: 30 to 21600. Unit: seconds.</p>
+         * <p>After you create a lifecycle hook, you can call RecordLifecycleActionHeartbeat to extend the wait time of the instance, or call CompleteLifecycleAction to end the wait state of the scaling activity in advance.</p>
          * <p>Default value: 600.</p>
          * 
          * <strong>example:</strong>
@@ -1349,7 +1318,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Integer heartbeatTimeout;
 
         /**
-         * <p>The name of the lifecycle hook. The name cannot be modified after it is specified. If you do not specify a name, the ID of the lifecycle hook is used.</p>
+         * <p>The name of the lifecycle hook. The name cannot be modified after it is specified. If you do not specify this parameter, the default value is the same as the lifecycle hook ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lifecyclehook****</p>
@@ -1360,13 +1329,13 @@ public class CreateScalingGroupRequest extends TeaModel {
         /**
          * <p>The type of scaling activity to which the lifecycle hook applies. Valid values:</p>
          * <ul>
-         * <li><p><code>SCALE_OUT</code>: A scale-out activity.</p>
+         * <li><p>SCALE_OUT: scale-out activities of the scaling group.</p>
          * </li>
-         * <li><p><code>SCALE_IN</code>: A scale-in activity.</p>
+         * <li><p>SCALE_IN: scale-down activities of the scaling group.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required if you specify a lifecycle hook for the scaling group. Other related parameters are optional.</p>
+         * <p>If you specify a lifecycle hook for the scaling group, this parameter is required, and other related parameters are optional.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1376,18 +1345,18 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String lifecycleTransition;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient for the lifecycle hook. Message Service (MNS) queues and topics are supported. The format is <code>acs:ess:{region}:{account-id}:{resource-relative-id}</code>.</p>
+         * <p>The identifier of the notification recipient for the lifecycle hook. Simple Message Queue (formerly MNS) queues or topics are supported. The parameter value format is acs:ess:{region}:{account-id}:{resource-relative-id}.</p>
          * <ul>
-         * <li><p><code>region</code>: the region where the scaling group is located.</p>
+         * <li><p>region: the region where the scaling group resides.</p>
          * </li>
-         * <li><p><code>account-id</code>: the ID of your Alibaba Cloud account.</p>
+         * <li><p>account-id: the Alibaba Cloud account ID.</p>
          * </li>
          * </ul>
          * <p>Examples:</p>
          * <ul>
-         * <li><p>MNS queue: <code>acs:ess:{region}:{account-id}:queue/{queuename}</code>.</p>
+         * <li><p>Simple Message Queue (formerly MNS) queue: acs:ess:{region}:{account-id}:queue/{queuename}.</p>
          * </li>
-         * <li><p>MNS topic: <code>acs:ess:{region}:{account-id}:topic/{topicname}</code>.</p>
+         * <li><p>Simple Message Queue (formerly MNS) topic: acs:ess:{region}:{account-id}:topic/{topicname}.</p>
          * </li>
          * </ul>
          * 
@@ -1398,7 +1367,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String notificationArn;
 
         /**
-         * <p>A fixed string of information for the wait state of a scaling activity. The value cannot exceed 4,096 characters in length. When Auto Scaling sends a message to the specified notification recipient, it includes the value of this parameter. This allows you to manage and categorize notifications. This parameter is valid only when you specify the <code>NotificationArn</code> parameter.</p>
+         * <p>The fixed string information for the wait state of the scaling activity. The value cannot exceed 4,096 characters in length. Each time Auto Scaling pushes a message to the notification recipient, it also sends the predefined value of the NotificationMetadata parameter to help you manage and mark different types of notification information. The NotificationMetadata parameter takes effect only when you also specify the NotificationArn parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -1472,7 +1441,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>The weight of an instance as a backend server after the instance is added to the SLB server group. The higher the weight, the more access requests are distributed to the instance. If the weight is 0, no access requests are distributed to the instance. Valid values: 0 to 100.</p>
+         * <p>The weight of the instance as a backend server after Auto Scaling adds the instance to the CLB server group. A higher weight specifies that more requests are distributed to the instance. If the weight is 0, the instance does not receive requests. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1505,7 +1474,7 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestServerGroups extends TeaModel {
         /**
-         * <p>The port number used by an instance after it is added to the server group. Valid values: 1 to 65535.</p>
+         * <p>The port number used by the instance after Auto Scaling adds the instance to the server group. Valid values: 1 to 65535.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -1525,12 +1494,9 @@ public class CreateScalingGroupRequest extends TeaModel {
         /**
          * <p>The type of the server group. Valid values:</p>
          * <ul>
-         * <li><p><code>ALB</code>: Application Load Balancer.</p>
-         * </li>
-         * <li><p><code>NLB</code>: Network Load Balancer.</p>
-         * </li>
-         * <li><p><code>GWLB</code>: Gateway Load Balancer.</p>
-         * </li>
+         * <li>ALB: Application Load Balancer (ALB).</li>
+         * <li>NLB: Network Load Balancer (NLB).</li>
+         * <li>GWLB: Gateway Load Balancer (GWLB).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1540,10 +1506,10 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The weight of an instance as a backend server after the instance is added to the server group. Valid values: 0 to 100.</p>
-         * <p>A higher weight indicates that more access requests are distributed to the instance. If the weight is 0, no access requests are distributed to the instance.</p>
+         * <p>The weight of the instance as a backend server after Auto Scaling adds the instance to the server group. Valid values: 0 to 100.</p>
+         * <p>A higher weight specifies that more access requests are allocated to the instance. If the weight is 0, the instance does not receive access requests.</p>
          * <blockquote>
-         * <p>This parameter is required for ALB and NLB server groups. You cannot set this parameter for GWLB server groups.</p>
+         * <p>This parameter is required for ALB and NLB. You cannot configure this parameter for GWLB.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1593,7 +1559,7 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key of the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>Department</p>
@@ -1602,14 +1568,12 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Specifies whether the tag can be propagated. Valid values:</p>
+         * <p>Specifies whether the tag is a propagatable tag. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: The tag is propagated from the scaling group only to newly created instances, not to instances that are already running in the scaling group.</p>
-         * </li>
-         * <li><p><code>false</code>: The tag is not propagated from the scaling group to any instances.</p>
-         * </li>
+         * <li>true: tags on the scaling group are propagated only to newly created instances, not to existing instances in the scaling group.</li>
+         * <li>false: tags on the scaling group are not propagated to instances.</li>
          * </ul>
-         * <p>Default value: <code>false</code>.</p>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1618,7 +1582,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Boolean propagate;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value of the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>Finance</p>
@@ -1659,7 +1623,7 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestVServerGroupsVServerGroupAttributes extends TeaModel {
         /**
-         * <p>The port number used by an instance after it is added to the vServer group. Valid values: 1 to 65535.</p>
+         * <p>The port number used by the instance after Auto Scaling adds the instance to the virtual server group. Valid values: 1 to 65535.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -1668,7 +1632,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the vServer group.</p>
+         * <p>The ID of the virtual server group.</p>
          * 
          * <strong>example:</strong>
          * <p>rsp-bp1443g77****</p>
@@ -1677,7 +1641,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String VServerGroupId;
 
         /**
-         * <p>The weight of an instance as a backend server after the instance is added to the vServer group. The higher the weight, the more access requests are distributed to the instance. If the weight is 0, no access requests are distributed to the instance. Valid values: 0 to 100.</p>
+         * <p>The weight of the instance as a backend server after Auto Scaling adds the instance to the virtual server group. A higher weight indicates that more access requests are allocated to the instance. If the weight is 0, the instance does not receive access requests. Valid values: 0 to 100.</p>
          * <p>Default value: 50.</p>
          * 
          * <strong>example:</strong>
@@ -1719,7 +1683,7 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestVServerGroups extends TeaModel {
         /**
-         * <p>The ID of the Classic Load Balancer (CLB) instance to which the vServer group belongs.</p>
+         * <p>The ID of the Classic Load Balancer (CLB) instance to which the virtual server group belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-bp1u7etiogg38yvwz****</p>
@@ -1752,6 +1716,81 @@ public class CreateScalingGroupRequest extends TeaModel {
         }
         public java.util.List<CreateScalingGroupRequestVServerGroupsVServerGroupAttributes> getVServerGroupAttributes() {
             return this.VServerGroupAttributes;
+        }
+
+    }
+
+    public static class CreateScalingGroupRequestZoneShiftPolicy extends TeaModel {
+        /**
+         * <p>The health check behavior in impaired zones. Valid values: </p>
+         * <ul>
+         * <li>ReplaceUnhealthy: Replaces unhealthy instances in all zones normally. </li>
+         * <li>IgnoreUnhealthy: Does not replace unhealthy instances in impaired zones. Healthy zones are not affected.</li>
+         * </ul>
+         * <p>Default value: ReplaceUnhealthy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReplaceUnhealthy</p>
+         */
+        @NameInMap("ImpairedZoneHealthCheckBehavior")
+        public String impairedZoneHealthCheckBehavior;
+
+        /**
+         * <p>Blocks scale-in triggered by specified types of scaling rules. The blocking scope applies to all zones under the scaling group, not just the impaired zones. This prevents false scale-in caused by fake improvements in monitoring metrics due to unreachable instances in impaired zones. Valid values: </p>
+         * <ul>
+         * <li>StepScalingRule: Blocks scale-in triggered by step scaling rules. </li>
+         * <li>TargetTrackingScalingRule: Blocks scale-in triggered by target tracking scaling rules. </li>
+         * <li>None: Does not block.</li>
+         * </ul>
+         * <p>Default value: None.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StepScalingRule</p>
+         */
+        @NameInMap("ScaleInBlockedRuleTypes")
+        public java.util.List<String> scaleInBlockedRuleTypes;
+
+        /**
+         * <p>Specifies whether scale-out creates instances only in healthy zones during zone shift. Valid values: </p>
+         * <ul>
+         * <li>true: Scale-out creates instances only in healthy zones and skips impaired zones. </li>
+         * <li>false: Scale-out is not restricted by zone and can create instances in any zone of the scaling group.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ScaleOutInHealthyZonesOnly")
+        public Boolean scaleOutInHealthyZonesOnly;
+
+        public static CreateScalingGroupRequestZoneShiftPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingGroupRequestZoneShiftPolicy self = new CreateScalingGroupRequestZoneShiftPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingGroupRequestZoneShiftPolicy setImpairedZoneHealthCheckBehavior(String impairedZoneHealthCheckBehavior) {
+            this.impairedZoneHealthCheckBehavior = impairedZoneHealthCheckBehavior;
+            return this;
+        }
+        public String getImpairedZoneHealthCheckBehavior() {
+            return this.impairedZoneHealthCheckBehavior;
+        }
+
+        public CreateScalingGroupRequestZoneShiftPolicy setScaleInBlockedRuleTypes(java.util.List<String> scaleInBlockedRuleTypes) {
+            this.scaleInBlockedRuleTypes = scaleInBlockedRuleTypes;
+            return this;
+        }
+        public java.util.List<String> getScaleInBlockedRuleTypes() {
+            return this.scaleInBlockedRuleTypes;
+        }
+
+        public CreateScalingGroupRequestZoneShiftPolicy setScaleOutInHealthyZonesOnly(Boolean scaleOutInHealthyZonesOnly) {
+            this.scaleOutInHealthyZonesOnly = scaleOutInHealthyZonesOnly;
+            return this;
+        }
+        public Boolean getScaleOutInHealthyZonesOnly() {
+            return this.scaleOutInHealthyZonesOnly;
         }
 
     }

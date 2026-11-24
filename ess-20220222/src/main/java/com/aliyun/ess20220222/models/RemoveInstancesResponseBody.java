@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RemoveInstancesResponseBody extends TeaModel {
     /**
-     * <p>The instances that were not removed and the reasons why they were not removed.</p>
+     * <p>The list of ignored invalid instance information in the request.</p>
      */
     @NameInMap("IgnoredInstances")
     public java.util.List<RemoveInstancesResponseBodyIgnoredInstances> ignoredInstances;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -59,19 +59,28 @@ public class RemoveInstancesResponseBody extends TeaModel {
 
     public static class RemoveInstancesResponseBodyIgnoredInstances extends TeaModel {
         /**
-         * <p>The error code that indicates the reason why the instance was not removed.</p>
+         * <p>The code of the reason why the instance is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IncorrectInstanceStatus</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The ID of the instance that was not removed.</p>
+         * <p>The instance ID of the ignored instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-28wt4****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The error message that indicates the reason why the instance was not removed.</p>
+         * <p>The description of the reason why the instance is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The current status of instance &quot;i-28wt4****&quot; does not support this action.</p>
          */
         @NameInMap("Message")
         public String message;

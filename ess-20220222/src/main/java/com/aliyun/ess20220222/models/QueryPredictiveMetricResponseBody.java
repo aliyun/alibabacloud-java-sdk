@@ -8,7 +8,7 @@ public class QueryPredictiveMetricResponseBody extends TeaModel {
     public QueryPredictiveMetricResponseBodyPredictiveMetrics predictiveMetrics;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CC107349-57B7-4405-B1BF-9BF5AF7F****</p>
