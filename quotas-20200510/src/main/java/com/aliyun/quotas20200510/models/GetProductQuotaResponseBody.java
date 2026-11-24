@@ -44,15 +44,15 @@ public class GetProductQuotaResponseBody extends TeaModel {
         /**
          * <p>The unit of the quota period. Valid values:</p>
          * <ul>
-         * <li><p>second: Seconds.</p>
+         * <li><p>second: seconds</p>
          * </li>
-         * <li><p>minute: Minutes.</p>
+         * <li><p>minute: minutes</p>
          * </li>
-         * <li><p>hour: Hours.</p>
+         * <li><p>hour: hours</p>
          * </li>
-         * <li><p>day: Days.</p>
+         * <li><p>day: days</p>
          * </li>
-         * <li><p>week: Weeks.</p>
+         * <li><p>week: weeks</p>
          * </li>
          * </ul>
          * 
@@ -107,7 +107,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         /**
          * <p>The quota unit.</p>
          * <blockquote>
-         * <p>The unit varies for each quota. For example, the unit of the q_cbdch3 quota (maximum number of clusters) for Container Service for Kubernetes is Cluster, and the unit of the q_security-groups quota (maximum number of security groups) for Elastic Compute Service servers is count.</p>
+         * <p>The unit varies with each quota. For example, the unit of the q_cbdch3 quota (maximum number of clusters) for Container Service for Kubernetes is Cluster, and the unit of the q_security-groups quota (maximum number of security groups) for Elastic Compute Service (ECS) servers is count.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -117,11 +117,11 @@ public class GetProductQuotaResponseBody extends TeaModel {
         public String quotaUnit;
 
         /**
-         * <p>The quota item type. Valid values:</p>
+         * <p>The type of the quota item. Valid values:</p>
          * <ul>
-         * <li><p>BaseQuota: Base quota.</p>
+         * <li><p>BaseQuota: base quota</p>
          * </li>
-         * <li><p>ReservedQuota: Reserved quota.</p>
+         * <li><p>ReservedQuota: reserved quota</p>
          * </li>
          * </ul>
          * 
@@ -184,12 +184,15 @@ public class GetProductQuotaResponseBody extends TeaModel {
          * <p>The CloudMonitor monitoring dimensions.</p>
          * <p>Format: a collection of <code>key:value</code> pairs. Example:
          * <code>{&quot;productCode&quot;:&quot;***&quot;,&quot;metricKey&quot;:&quot;***&quot;,&quot;regionId&quot;:&quot;***&quot;,&quot;label&quot;:&quot;***&quot;}</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;productCode&quot;:&quot;ecs&quot;}</p>
          */
         @NameInMap("MetricDimensions")
         public java.util.Map<String, String> metricDimensions;
 
         /**
-         * <p>The CloudMonitor metric name.</p>
+         * <p>The name of the CloudMonitor metric.</p>
          * 
          * <strong>example:</strong>
          * <p>Usage</p>
@@ -198,7 +201,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The CloudMonitor metric namespace.</p>
+         * <p>The namespace of the CloudMonitor monitoring data.</p>
          * 
          * <strong>example:</strong>
          * <p>acs_quotas_flowcontrol</p>
@@ -262,9 +265,9 @@ public class GetProductQuotaResponseBody extends TeaModel {
         /**
          * <p>The type of quota adjustment. Valid values:</p>
          * <ul>
-         * <li><p>continuous: Continuous.</p>
+         * <li><p>continuous: continuous</p>
          * </li>
-         * <li><p>discontinuous: Discontinuous.</p>
+         * <li><p>discontinuous: discontinuous</p>
          * </li>
          * </ul>
          * 
@@ -374,11 +377,11 @@ public class GetProductQuotaResponseBody extends TeaModel {
         /**
          * <p>The quota category. Valid values:</p>
          * <ul>
-         * <li><p>CommonQuota: General quota.</p>
+         * <li><p>CommonQuota: general quota</p>
          * </li>
-         * <li><p>FlowControl: API rate limit.</p>
+         * <li><p>FlowControl: API rate limit</p>
          * </li>
-         * <li><p>WhiteListLabel: Privilege.</p>
+         * <li><p>WhiteListLabel: privilege</p>
          * </li>
          * </ul>
          * 
@@ -415,9 +418,9 @@ public class GetProductQuotaResponseBody extends TeaModel {
         /**
          * <p>The quota type. Valid values:</p>
          * <ul>
-         * <li><p>privilege: Privilege.</p>
+         * <li><p>privilege: privileged</p>
          * </li>
-         * <li><p>normal: Normal.</p>
+         * <li><p>normal: normal</p>
          * </li>
          * </ul>
          * 
@@ -430,7 +433,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         /**
          * <p>The quota unit.</p>
          * <blockquote>
-         * <p>The unit varies for each quota. For example, the unit of the q_cbdch3 quota (maximum number of clusters) for Container Service for Kubernetes is Cluster, and the unit of the q_security-groups quota (maximum number of security groups) for Elastic Compute Service servers is count.</p>
+         * <p>The unit varies with each quota. For example, the unit of the q_cbdch3 quota (maximum number of clusters) for Container Service for Kubernetes is Cluster, and the unit of the q_security-groups quota (maximum number of security groups) for Elastic Compute Service (ECS) servers is count.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -441,6 +444,9 @@ public class GetProductQuotaResponseBody extends TeaModel {
 
         /**
          * <p>The supported range of quota values for the current quota item, which can be used as a reference when configuring a quota template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[802,1000]</p>
          */
         @NameInMap("SupportedRange")
         public java.util.List<Float> supportedRange;
@@ -472,7 +478,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
          * </li>
          * <li><p>limitReached: The quota limit is reached.</p>
          * </li>
-         * <li><p>supportTicketRequired: A ticket must be submitted for the application.</p>
+         * <li><p>supportTicketRequired: A ticket is required.</p>
          * </li>
          * </ul>
          * 

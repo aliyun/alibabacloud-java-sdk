@@ -6,16 +6,16 @@ import com.aliyun.tea.*;
 public class ListQuotaApplicationsRequest extends TeaModel {
     /**
      * <p>The quota dimensions.
-     * The dimensions are properties of a quota item. A combination of dimensions (Dimensions) and a quota ID (QuotaActionCode) uniquely identifies a quota item.</p>
+     * The properties of the quota item. The combination of dimensions and the quota ID (QuotaActionCode) uniquely identifies a quota item.</p>
      * <blockquote>
-     * <p>Some cloud services require dimensions. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The <code>Requisite</code> response parameter indicates whether a dimension is required.</p>
+     * <p>The dimensions are required for some cloud services. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quota dimensions supported by a cloud service. The Requisite response parameter indicates whether a dimension is required.</p>
      * </blockquote>
      */
     @NameInMap("Dimensions")
     public java.util.List<ListQuotaApplicationsRequestDimensions> dimensions;
 
     /**
-     * <p>The keyword for searching quota increase applications.</p>
+     * <p>The search keyword for quota increase applications.</p>
      * 
      * <strong>example:</strong>
      * <p>Cluster</p>
@@ -24,7 +24,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The maximum number of records to return in this query.</p>
+     * <p>The maximum number of entries to return for the current query.</p>
      * <p>Valid values: 1 to 200. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start the query. Leave this parameter empty to query from the beginning.</p>
+     * <p>The pagination token that specifies the start position of the query. An empty value indicates that the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The abbreviation of the cloud service name.</p>
+     * <p>The abbreviation of the cloud service.</p>
      * 
      * <strong>example:</strong>
      * <p>csk</p>
@@ -61,11 +61,11 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String quotaActionCode;
 
     /**
-     * <p>The quota category. Valid values:</p>
+     * <p>The quota type. Valid values:</p>
      * <ul>
-     * <li>CommonQuota: general quota.</li>
+     * <li>CommonQuota: General quota.</li>
      * <li>FlowControl: API rate limit.</li>
-     * <li>WhiteListLabel: privilege.</li>
+     * <li>WhiteListLabel: Privilege.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,6 +84,8 @@ public class ListQuotaApplicationsRequest extends TeaModel {
      * <li><p>Process: Under review.</p>
      * </li>
      * <li><p>Cancel: Closed.</p>
+     * </li>
+     * <li><p>Withdrawn: Withdrawn.</p>
      * </li>
      * </ul>
      * 
@@ -166,7 +168,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
         /**
          * <p>The key of the quota dimension.</p>
          * <blockquote>
-         * <p><code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</p>
+         * <p>Dimensions.N.Key and Dimensions.N.Value must be specified at the same time. The value range of N depends on the number of dimensions supported by the corresponding cloud service. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quota dimensions supported by the cloud service. The length of the returned array is the value of N.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -178,7 +180,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
         /**
          * <p>The value of the quota dimension.</p>
          * <blockquote>
-         * <p><code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</p>
+         * <p>Dimensions.N.Key and Dimensions.N.Value must be specified at the same time. The value range of N depends on the number of dimensions supported by the corresponding cloud service. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quota dimensions supported by the cloud service. The length of the returned array is the value of N.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

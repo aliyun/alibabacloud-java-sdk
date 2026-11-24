@@ -11,7 +11,7 @@ public class ListProductQuotasRequest extends TeaModel {
     public java.util.List<ListProductQuotasRequestDimensions> dimensions;
 
     /**
-     * <p>The code of the dimension group.</p>
+     * <p>The dimension group code.</p>
      * 
      * <strong>example:</strong>
      * <p>entconsole_w1j3ms****</p>
@@ -32,7 +32,7 @@ public class ListProductQuotasRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The maximum number of entries to return in a single request.</p>
+     * <p>The maximum number of entries to return for the current query.</p>
      * <p>Valid values: 1 to 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -42,10 +42,10 @@ public class ListProductQuotasRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results.</p>
+     * <p>The token for the next query.</p>
      * <ul>
-     * <li>Leave this parameter empty for the first request or when no more results are available.</li>
-     * <li>If more results are available, set this parameter to the NextToken value returned when you invoke the previous API call.</li>
+     * <li>For the first query or when no subsequent query is required, you do not need to specify this parameter.</li>
+     * <li>If a subsequent query is required, set the value to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,9 +55,9 @@ public class ListProductQuotasRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The abbreviation of the cloud service.</p>
+     * <p>The abbreviated name of the cloud service.</p>
      * <blockquote>
-     * <p>For more information about how to obtain the abbreviation of a cloud service, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+     * <p>For more information about how to obtain the abbreviated name of a cloud service, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -68,7 +68,7 @@ public class ListProductQuotasRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the quota.</p>
+     * <p>The quota ID.</p>
      * 
      * <strong>example:</strong>
      * <p>q_security-groups</p>
@@ -89,7 +89,7 @@ public class ListProductQuotasRequest extends TeaModel {
     /**
      * <p>The sorting method supported by the quota.</p>
      * <blockquote>
-     * <p>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If no Settings are specified, it is left empty.</p>
+     * <p>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If the Settings are not specified, it is left empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class ListProductQuotasRequest extends TeaModel {
     /**
      * <p>The sorting method supported by the quota.</p>
      * <blockquote>
-     * <p>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If no Settings are specified, it is left empty.</p>
+     * <p>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If the Settings are not specified, it is left empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

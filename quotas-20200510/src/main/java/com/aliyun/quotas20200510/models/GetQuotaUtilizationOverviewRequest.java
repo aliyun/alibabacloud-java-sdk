@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetQuotaUtilizationOverviewRequest extends TeaModel {
     /**
+     * <p>CommonQuota, FlowControl</p>
+     * 
      * <strong>example:</strong>
      * <p>CommonQuota</p>
      */

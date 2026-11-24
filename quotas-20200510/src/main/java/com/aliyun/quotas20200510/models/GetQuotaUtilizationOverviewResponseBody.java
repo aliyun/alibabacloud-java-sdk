@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>RAM.PERMISSION.DENIED</p>
      */
@@ -12,6 +14,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>You are not authorized to do this action or the API input parameter is invalid.</p>
      */
@@ -19,6 +23,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The data generation time or statistical date. For general quotas, the time is in UTC and formatted as yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;. For API rate limits, the format is yyyy-MM-dd.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-10-21T07:30:10Z</p>
      */
@@ -26,16 +32,23 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
     public String generatedAt;
 
     /**
+     * <p>The supplementary description of the report status. Use Status to determine the status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Quota utilization data is available.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The quota overview data.</p>
+     */
     @NameInMap("QuotaOverview")
     public GetQuotaUtilizationOverviewResponseBodyQuotaOverview quotaOverview;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>920D8A47-26BB-49FA-A09F-F98D7DAA55F3</p>
      */
@@ -43,6 +56,16 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The query result status of the quota utilization report. Valid values:</p>
+     * <ul>
+     * <li><p>AVAILABLE: The data is available.</p>
+     * </li>
+     * <li><p>GENERATING: A new report is being generated. If an unexpired historical report exists, the most recent historical report is returned.</p>
+     * </li>
+     * <li><p>UNAVAILABLE: No general quota report is available. You must call StartQuotaUtilizationReport to start report generation first.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AVAILABLE</p>
      */
@@ -50,6 +73,12 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -127,6 +156,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
 
     public static class GetQuotaUtilizationOverviewResponseBodyQuotaOverviewInUse extends TeaModel {
         /**
+         * <p>The number of adjustable quotas in use.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -134,6 +165,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         public Long adjustable;
 
         /**
+         * <p>The adjustment rate of quotas in use, without the percentage sign.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -141,6 +174,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         public Double adjustableRatio;
 
         /**
+         * <p>The total number of quotas in use.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -180,6 +215,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
 
     public static class GetQuotaUtilizationOverviewResponseBodyQuotaOverviewOver80Percent extends TeaModel {
         /**
+         * <p>The number of adjustable quotas with a utilization rate exceeding 80%.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -187,6 +224,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         public Long adjustable;
 
         /**
+         * <p>The adjustment rate of quotas with a utilization rate exceeding 80%, without the percentage sign.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -194,6 +233,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         public Double adjustableRatio;
 
         /**
+         * <p>The number of quotas with a utilization rate exceeding 80%.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -233,6 +274,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
 
     public static class GetQuotaUtilizationOverviewResponseBodyQuotaOverviewOver95Percent extends TeaModel {
         /**
+         * <p>The number of adjustable quotas with a utilization rate exceeding 95%.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -240,6 +283,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         public Long adjustable;
 
         /**
+         * <p>The adjustment rate of quotas with a utilization rate exceeding 95%, without the percentage sign.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -247,6 +292,8 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
         public Double adjustableRatio;
 
         /**
+         * <p>The number of quotas with a utilization rate exceeding 95%.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -285,12 +332,21 @@ public class GetQuotaUtilizationOverviewResponseBody extends TeaModel {
     }
 
     public static class GetQuotaUtilizationOverviewResponseBodyQuotaOverview extends TeaModel {
+        /**
+         * <p>The quotas in use.</p>
+         */
         @NameInMap("InUse")
         public GetQuotaUtilizationOverviewResponseBodyQuotaOverviewInUse inUse;
 
+        /**
+         * <p>The quotas with a utilization rate exceeding 80%.</p>
+         */
         @NameInMap("Over80Percent")
         public GetQuotaUtilizationOverviewResponseBodyQuotaOverviewOver80Percent over80Percent;
 
+        /**
+         * <p>The quotas with a utilization rate exceeding 95%.</p>
+         */
         @NameInMap("Over95Percent")
         public GetQuotaUtilizationOverviewResponseBodyQuotaOverviewOver95Percent over95Percent;
 

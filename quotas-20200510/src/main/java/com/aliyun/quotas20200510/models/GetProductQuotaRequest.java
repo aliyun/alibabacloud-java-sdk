@@ -6,13 +6,13 @@ import com.aliyun.tea.*;
 public class GetProductQuotaRequest extends TeaModel {
     /**
      * <p>The quota dimensions.
-     * The properties of the quota item. The combination of dimensions and QuotaActionCode determines a unique quota item.</p>
+     * The properties of the quota item. The combination of dimensions and the quota ID (QuotaActionCode) uniquely identifies a quota item.</p>
      * <blockquote>
-     * <p>Dimensions are required for some cloud services. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quota dimensions of a cloud service and check whether a dimension is required. The Requisite response parameter indicates whether the dimension is required.</p>
+     * <p>Dimensions are required for some cloud services. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quotas of a cloud service and check whether dimensions are required. The Requisite response parameter indicates whether a dimension is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;regionId\&quot;:\&quot;cn-beijing\&quot;}</p>
+     * <p>[{&quot;Key&quot;:&quot;regionId&quot;,&quot;Value&quot;:&quot;cn-beijing&quot;}]</p>
      */
     @NameInMap("Dimensions")
     public java.util.List<GetProductQuotaRequestDimensions> dimensions;
@@ -20,7 +20,7 @@ public class GetProductQuotaRequest extends TeaModel {
     /**
      * <p>The abbreviated name of the cloud service.</p>
      * <blockquote>
-     * <p>For more information about how to obtain the abbreviated name of a cloud service, see the ProductCode parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+     * <p>For more information about how to obtain the abbreviated name of a cloud service, see ProductCode in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +33,7 @@ public class GetProductQuotaRequest extends TeaModel {
     /**
      * <p>The quota ID.</p>
      * <blockquote>
-     * <p>For more information about how to obtain the quota ID of a specified cloud service, see the QuotaActionCode parameter in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+     * <p>For more information about how to obtain the quota ID of a specified cloud service, see QuotaActionCode in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

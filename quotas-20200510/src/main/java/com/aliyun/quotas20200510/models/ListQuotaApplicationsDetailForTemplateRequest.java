@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account for which the quota increase is requested.</p>
+     * <p>The Alibaba Cloud account that submitted the quota increase application.</p>
      * 
      * <strong>example:</strong>
      * <p>135048337611****</p>
@@ -14,7 +14,7 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     public String aliyunUid;
 
     /**
-     * <p>The ID of the quota application batch.</p>
+     * <p>The ID of the batch quota application.</p>
      * 
      * <strong>example:</strong>
      * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
@@ -23,7 +23,7 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     public String batchQuotaApplicationId;
 
     /**
-     * <p>The maximum number of records to return for the current query.</p>
+     * <p>The maximum number of entries to return for the current query.</p>
      * <p>Valid values: 1 to 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which the query starts.</p>
+     * <p>The token that specifies the starting position of the query.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the query starts from the beginning.</p>
      * </blockquote>
@@ -45,9 +45,9 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service name.</p>
      * <blockquote>
-     * <p>For more information about how to obtain the abbreviation of an Alibaba Cloud service name, see the <code>ProductCode</code> parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
+     * <p>For more information about how to obtain the abbreviation of a cloud service name, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,12 +68,9 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     /**
      * <p>The quota type. Valid values:</p>
      * <ul>
-     * <li><p>CommonQuota: General quota.</p>
-     * </li>
-     * <li><p>FlowControl: API rate limit quota.</p>
-     * </li>
-     * <li><p>WhiteListLabel: Privilege quota.</p>
-     * </li>
+     * <li>CommonQuota: General quota.</li>
+     * <li>FlowControl: API rate limit.</li>
+     * <li>WhiteListLabel: Privilege.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,15 +80,15 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     public String quotaCategory;
 
     /**
-     * <p>The approval status of the quota increase request. Valid values:</p>
+     * <p>The approval status of the quota increase application. Valid values:</p>
      * <ul>
-     * <li><p>Disagree: The request is rejected.</p>
+     * <li><p>Disagree: Rejected.</p>
      * </li>
-     * <li><p>Agree: The request is approved.</p>
+     * <li><p>Agree: Approved.</p>
      * </li>
-     * <li><p>Process: The request is in review.</p>
+     * <li><p>Process: Under review.</p>
      * </li>
-     * <li><p>Cancel: The request is closed.</p>
+     * <li><p>Cancel: Closed.</p>
      * </li>
      * </ul>
      * 
