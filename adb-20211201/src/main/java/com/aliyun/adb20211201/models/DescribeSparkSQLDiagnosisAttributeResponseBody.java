@@ -26,7 +26,7 @@ public class DescribeSparkSQLDiagnosisAttributeResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The collection of diagnostic suggestions.</p>
+     * <p>The diagnostic suggestions.</p>
      */
     @NameInMap("DiagnosisInfos")
     public java.util.List<Adb4MysqlSparkDiagnosisInfo> diagnosisInfos;
@@ -50,7 +50,7 @@ public class DescribeSparkSQLDiagnosisAttributeResponseBody extends TeaModel {
     public Long innerQueryId;
 
     /**
-     * <p>The operator queue sorted by metrics.</p>
+     * <p>The list of operators sorted by metrics.</p>
      */
     @NameInMap("OperatorListSortedByMetrics")
     public DescribeSparkSQLDiagnosisAttributeResponseBodyOperatorListSortedByMetrics operatorListSortedByMetrics;
@@ -141,13 +141,13 @@ public class DescribeSparkSQLDiagnosisAttributeResponseBody extends TeaModel {
 
     public static class DescribeSparkSQLDiagnosisAttributeResponseBodyOperatorListSortedByMetrics extends TeaModel {
         /**
-         * <p>The operator queue sorted by execution time.</p>
+         * <p>The list of operators sorted by execution time.</p>
          */
         @NameInMap("OperatorListSortedByExclusiveTime")
         public java.util.List<SparkOperatorInfo> operatorListSortedByExclusiveTime;
 
         /**
-         * <p>The operator queue sorted by maximum memory consumption.</p>
+         * <p>The list of operators sorted by maximum memory consumption.</p>
          */
         @NameInMap("OperatorListSortedByMaxMemory")
         public java.util.List<SparkOperatorInfo> operatorListSortedByMaxMemory;

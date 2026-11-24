@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSqlPatternCompareReportResponseBody extends TeaModel {
     /**
-     * <p>The ID of the created report. This value only indicates that the request has been accepted.</p>
+     * <p>The ID of the newly created report. The returned value only indicates that the request is accepted.</p>
      * 
      * <strong>example:</strong>
      * <p>1001</p>

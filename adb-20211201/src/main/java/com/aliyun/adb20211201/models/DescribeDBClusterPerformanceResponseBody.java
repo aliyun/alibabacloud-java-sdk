@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</p>
      * </blockquote>
@@ -17,7 +17,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. The time is in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</p>
+     * <p>The end time of the query. The time is in UTC and follows the <i>yyyy-MM-ddTHH:mmZ</i> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-11T15:01Z</p>
@@ -32,7 +32,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformances> performances;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BD8C3096-8BC6-51DF-A4AB-BACD9DC10435</p>
@@ -41,7 +41,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</p>
+     * <p>The start time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mmZ</i> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-10T23:56Z</p>
@@ -96,7 +96,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformancesSeries extends TeaModel {
         /**
-         * <p>The name of the performance metric (monitoring metric value name). For more information, see <a href="https://help.aliyun.com/document_detail/2863211.html">Monitoring metrics overview</a>.</p>
+         * <p>The name of the performance metrics (the value name of the monitoring metrics). For details, see <a href="https://help.aliyun.com/document_detail/2863211.html">Overview of monitoring metrics</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>AnalyticDB_Storage_CPU_Avg_Usage_Percentage</p>
@@ -105,7 +105,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>{instance_name: &quot;am-***&quot;}</p>
@@ -114,7 +114,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The key used for internationalization translation. You can ignore this parameter in most cases.</p>
+         * <p>The key used for internationalization. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>AnalyticDB_RP_WaitTime</p>
@@ -123,7 +123,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public String translateKey;
 
         /**
-         * <p>The performance values at different points in time.</p>
+         * <p>The details of the performance values at different points in time.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -169,7 +169,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformances extends TeaModel {
         /**
-         * <p>The name of the performance metric.</p>
+         * <p>The name of the performance metrics.</p>
          * 
          * <strong>example:</strong>
          * <p>AnalyticDB_CPU_Usage_Percentage</p>
@@ -184,7 +184,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> series;
 
         /**
-         * <p>The unit of the monitoring metric.</p>
+         * <p>The unit of the monitoring metrics.</p>
          * 
          * <strong>example:</strong>
          * <p>%</p>

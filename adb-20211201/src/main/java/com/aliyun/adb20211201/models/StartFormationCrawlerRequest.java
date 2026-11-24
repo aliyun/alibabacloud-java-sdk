@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartFormationCrawlerRequest extends TeaModel {
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class StartFormationCrawlerRequest extends TeaModel {
     public Long crawlerTaskId;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>test-crawler-dbname</p>
@@ -24,7 +24,7 @@ public class StartFormationCrawlerRequest extends TeaModel {
     public String crawlerTaskName;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>am-bp1pke2pcfavw****</p>
@@ -35,7 +35,7 @@ public class StartFormationCrawlerRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query available region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the IDs of available regions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

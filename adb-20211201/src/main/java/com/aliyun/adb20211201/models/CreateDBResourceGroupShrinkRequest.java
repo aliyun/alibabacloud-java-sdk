@@ -11,7 +11,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String atmConfigShrink;
 
     /**
-     * <p>The automatic stop interval, in minutes (m).</p>
+     * <p>The auto-stop time, in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -35,23 +35,19 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String classification;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>The reserved parameter. This parameter is not applicable.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>AutoScale</p>
      */
     @NameInMap("ClusterMode")
     public String clusterMode;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>The reserved parameter. This parameter is not applicable.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>24ACU</p>
      */
     @NameInMap("ClusterSizeResource")
     public String clusterSizeResource;
@@ -67,10 +63,10 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable the spot instance feature for the resource group. After the spot instance feature is enabled, the unit price of resources is reduced, but the resources may be released. Only Job resource groups support this feature. Valid values:</p>
+     * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable spot instances, the unit price of resources decreases, but the instances may be released. This feature can be enabled only for Job resource groups. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong>: Enables the spot instance feature.</li>
-     * <li><strong>False</strong>: Disables the spot instance feature.</li>
+     * <li><strong>True</strong>: enables the spot instance feature.</li>
+     * <li><strong>False</strong>: disables the spot instance feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,16 +89,16 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The engine configuration.</p>
+     * <p>The engine configurations.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</p>
+     * <p>{&quot;spark.adb.version&quot;:&quot;3.5&quot;}</p>
      */
     @NameInMap("EngineParams")
     public String engineParamsShrink;
 
     /**
-     * <p>The GPU time-sharing elastic plan.</p>
+     * <p>The GPU time-based elastic plan.</p>
      */
     @NameInMap("GpuElasticPlan")
     public String gpuElasticPlanShrink;
@@ -127,7 +123,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
      * <ul>
      * <li><strong>Interactive</strong></li>
      * <li><strong>Job</strong><blockquote>
-     * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
+     * <p>For more information about resource groups in Data Lakehouse Edition, refer to <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -140,12 +136,10 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>The reserved parameter. This parameter is not applicable.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>1</p>
      */
     @NameInMap("MaxClusterCount")
     public Integer maxClusterCount;
@@ -153,8 +147,8 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The maximum reserved computing resources, in ACUs.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the maximum reserved computing resources are the current unallocated resources of the cluster, with a step size of 16 ACUs.</li>
-     * <li>If the resource group type is Job, the maximum reserved computing resources are the current unallocated resources of the cluster, with a step size of 8 ACUs.</li>
+     * <li>If the resource group type is Interactive, the maximum reserved computing resources are the currently unallocated resources of the cluster, and the step size is 16 ACUs.</li>
+     * <li>If the resource group type is Job, the maximum reserved computing resources are the currently unallocated resources of the cluster, and the step size is 8 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,12 +167,10 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public Integer maxGpuQuantity;
 
     /**
-     * <p>A reserved parameter (not applicable).</p>
+     * <p>The reserved parameter. This parameter is not applicable.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>1</p>
      */
     @NameInMap("MinClusterCount")
     public Integer minClusterCount;
@@ -217,7 +209,7 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the region IDs of AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the region ID of an AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -233,11 +225,11 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String rulesShrink;
 
     /**
-     * <p>The scaling policy of the resource group. Valid values:</p>
+     * <p>The scale-out policy for the resource group. Valid values:</p>
      * <ul>
-     * <li>AutoScaling: enables the AutoScaling automatic scaling policy.</li>
-     * <li>Disable: disables automatic scaling.</li>
-     * <li>MultiCluster: enables the MultiCluster automatic scaling policy.</li>
+     * <li>AutoScaling: enables the AutoScaling policy for auto scaling.</li>
+     * <li>Disable: disables auto scaling.</li>
+     * <li>MultiCluster: enables the MultiCluster policy for auto scaling.</li>
      * </ul>
      * 
      * <strong>example:</strong>

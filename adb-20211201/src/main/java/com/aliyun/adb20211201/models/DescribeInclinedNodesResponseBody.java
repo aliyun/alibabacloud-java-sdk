@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInclinedNodesResponseBody extends TeaModel {
     /**
-     * <p>The queried storage nodes.</p>
+     * <p>The list information.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeInclinedNodesResponseBodyItems> items;
@@ -51,7 +51,7 @@ public class DescribeInclinedNodesResponseBody extends TeaModel {
         public String diskUsageRatio;
 
         /**
-         * <p>The number of the storage node.</p>
+         * <p>The storage node number.</p>
          * 
          * <strong>example:</strong>
          * <p>Node1</p>

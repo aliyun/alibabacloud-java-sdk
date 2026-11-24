@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     /**
-     * <p>The information about columns.</p>
+     * <p>The column information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>[{&quot;MapName&quot;:&quot;map_name&quot;,&quot;MapType&quot;:&quot;bigint&quot;,&quot;Name&quot;:&quot;test_name&quot;,&quot;Type&quot;:&quot;bigint&quot;}]</p>
      */
     @NameInMap("Columns")
     public String columnsShrink;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +42,7 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String dirtyDataProcessPattern;
 
     /**
-     * <p>Specifies whether to enable the consistency check.</p>
+     * <p>Specifies whether exactly-once processing is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -53,7 +51,7 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String exactlyOnce;
 
     /**
-     * <p>The password of the database account.</p>
+     * <p>The password.</p>
      * 
      * <strong>example:</strong>
      * <p>test_123</p>
@@ -72,7 +70,7 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start offset.</p>
+     * <p>The starting offset.</p>
      * 
      * <strong>example:</strong>
      * <p>end_cursor</p>
@@ -93,15 +91,13 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
      * <p>The timestamp conversion.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;Transform&quot;:false}</p>
      */
     @NameInMap("UnixTimestampConvert")
     public String unixTimestampConvert;
 
     /**
-     * <p>The name of the database account.</p>
+     * <p>The username.</p>
      * 
      * <strong>example:</strong>
      * <p>user-name</p>
@@ -110,7 +106,7 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String userName;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The ID of the data link task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

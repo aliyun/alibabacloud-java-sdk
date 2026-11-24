@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAppliedAdvicesResponseBody extends TeaModel {
     /**
-     * <p>Details.</p>
+     * <p>The details.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeAppliedAdvicesResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+     * <p>The page number. The value must be greater than 0 and no more than the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,14 +20,11 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (Default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,13 +43,13 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The concatenated strings of database and table names.</p>
+     * <p>The concatenated string of the database name and table name.</p>
      */
     @NameInMap("SchemaTableNames")
     public java.util.List<String> schemaTableNames;
 
     /**
-     * <p>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</p>
+     * <p>The total number of returned results. The value must be greater than or equal to 0 and no more than the maximum value of the Integer data type. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -115,7 +112,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
 
     public static class DescribeAppliedAdvicesResponseBodyItems extends TeaModel {
         /**
-         * <p>The advice ID.</p>
+         * <p>The suggestion ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7417db9c-914d-43f3-a123-4d0e448f****</p>
@@ -124,16 +121,16 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String adviceId;
 
         /**
-         * <p>The benefit of the advice.</p>
+         * <p>The benefit of the suggestion.</p>
          * 
          * <strong>example:</strong>
-         * <p>节省0.4 GB的存储空间</p>
+         * <p>Saves 0.4 GB of storage space</p>
          */
         @NameInMap("Benefit")
         public String benefit;
 
         /**
-         * <p>The SQL statement of the build task.</p>
+         * <p>The SQL statement used to execute the build task.</p>
          * 
          * <strong>example:</strong>
          * <p>build table <code>schema1</code>.<code>table1</code></p>
@@ -151,12 +148,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String indexFields;
 
         /**
-         * <p>The status of the task that is used to apply the advice. Valid values:</p>
+         * <p>The status of the task that executes the suggestion. Valid values:</p>
          * <ul>
-         * <li><p><strong>SUCCEED</strong>: The task is successful.</p>
-         * </li>
-         * <li><p><strong>FAILED</strong>: The task has failed.</p>
-         * </li>
+         * <li><strong>SUCCEED</strong>: Succeeded.</li>
+         * <li><strong>FAILED</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +161,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String jobStatus;
 
         /**
-         * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * <p>The page number. The value must be greater than 0 and no more than the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -175,14 +170,11 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><p><strong>30</strong> (Default)</p>
-         * </li>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>100</strong></p>
-         * </li>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +184,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The SQL statement that is used to roll back the advice.</p>
+         * <p>The rollback SQL statement for the suggestion.</p>
          * 
          * <strong>example:</strong>
          * <p>alter table <code>schema1</code>.<code>table1</code> add key col1_1_idx(col1)</p>
@@ -201,7 +193,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String rollbackSQL;
 
         /**
-         * <p>The SQL statement that is used to apply the advice.</p>
+         * <p>The SQL statement used to apply the suggestion.</p>
          * 
          * <strong>example:</strong>
          * <p>alter table <code>schema1</code>.<code>table1</code> drop key col1_1_idx</p>
@@ -219,12 +211,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String schemaName;
 
         /**
-         * <p>The submission status of the advice. Valid values:</p>
+         * <p>The delivery status of the suggestion. Valid values:</p>
          * <ul>
-         * <li><p><strong>SUCCEED</strong>: The advice is submitted.</p>
-         * </li>
-         * <li><p><strong>FAILED</strong>: The advice fails to be submitted.</p>
-         * </li>
+         * <li><strong>SUCCEED</strong>: Succeeded.</li>
+         * <li><strong>FAILED</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +224,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String submitStatus;
 
         /**
-         * <p>The time when the advice was submitted. The time is in the <code>yyMMddHHmm</code> format. The time is displayed in UTC.</p>
+         * <p>The time when the suggestion was issued. Format: yyMMddHHmm (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2208131600</p>
@@ -252,7 +242,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</p>
+         * <p>The total number of returned results. The value must be greater than or equal to 0 and no more than the maximum value of the Integer data type. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetSparkAppInfoResponseBody extends TeaModel {
     /**
-     * <p>The queried Spark application. Fields in the response parameter:</p>
+     * <p>The information about the Spark application. Response parameter description:</p>
      * <ul>
-     * <li><strong>Data</strong>: the data of the Spark application template.</li>
-     * <li><strong>EstimateExecutionCpuTimeInSeconds</strong>: the amount of time that is required to consume CPU resources for running the Spark application. Unit: milliseconds.</li>
-     * <li><strong>LogRootPath</strong>: the storage path of log files.</li>
-     * <li><strong>LastAttemptId</strong>: the most recent attempt ID.</li>
-     * <li><strong>WebUiAddress</strong>: the web UI URL.</li>
-     * <li><strong>SubmittedTimeInMillis</strong>: the time when the Spark application was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
-     * <li><strong>StartedTimeInMillis</strong>: the time when the Spark application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
-     * <li><strong>LastUpdatedTimeInMillis</strong>: the time when the Spark application was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
-     * <li><strong>TerminatedTimeInMillis</strong>: the time when the Spark application was terminated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
-     * <li><strong>DBClusterId</strong>: the ID of the cluster on which the Spark application runs.</li>
+     * <li><strong>Data</strong>: the Spark application template data.</li>
+     * <li><strong>EstimateExecutionCpuTimeInSeconds</strong>: the CPU time consumed to execute the Spark application, in milliseconds.</li>
+     * <li><strong>LogRootPath</strong>: the storage path of the log file.</li>
+     * <li><strong>LastAttemptId</strong>: the retry ID.</li>
+     * <li><strong>WebUiAddress</strong>: the web UI address.</li>
+     * <li><strong>SubmittedTimeInMillis</strong>: the time when the Spark application was submitted. The value is a UNIX timestamp in milliseconds.</li>
+     * <li><strong>StartedTimeInMillis</strong>: the time when the Spark application was created. The value is a UNIX timestamp in milliseconds.</li>
+     * <li><strong>LastUpdatedTimeInMillis</strong>: the time when the Spark application was last updated. The value is a UNIX timestamp in milliseconds.</li>
+     * <li><strong>TerminatedTimeInMillis</strong>: the time when the execution of the Spark application was terminated. The value is a UNIX timestamp in milliseconds.</li>
+     * <li><strong>DBClusterId</strong>: the ID of the cluster where the Spark application is executed.</li>
      * <li><strong>ResourceGroupName</strong>: the name of the job resource group.</li>
-     * <li><strong>DurationInMillis</strong>: the amount of time that is required to run the Spark application. Unit: milliseconds.</li>
+     * <li><strong>DurationInMillis</strong>: the execution duration of the Spark application, in milliseconds.</li>
      * </ul>
      * 
      * <strong>example:</strong>

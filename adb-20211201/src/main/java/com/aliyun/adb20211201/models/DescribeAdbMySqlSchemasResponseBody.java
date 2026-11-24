@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
     /**
-     * <p>The additional information about the call result. Valid values:</p>
+     * <p>The additional information about the call result.</p>
      * <ul>
-     * <li><strong>Success</strong>: The request is successful. </li>
-     * <li>Specific error code: An exception occurred.</li>
+     * <li>If the request is successful, <strong>Success</strong> is returned. </li>
+     * <li>If an exception occurs, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "adb";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-qingdao", "adb.aliyuncs.com"),
@@ -1132,7 +1135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an APS task.</p>
@@ -1211,7 +1214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an APS task.</p>
@@ -1398,7 +1401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an APS data source.</p>
@@ -1511,7 +1514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an APS data source.</p>
@@ -1624,7 +1627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an APS Kafka lakehouse ingestion task.</p>
+     * <p>Creates an APS Kafka data lake ingestion task.</p>
      * 
      * @param tmpReq CreateApsKafkaHudiJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1778,7 +1781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an APS Kafka lakehouse ingestion task.</p>
+     * <p>Creates an APS Kafka data lake ingestion task.</p>
      * 
      * @param request CreateApsKafkaHudiJobRequest
      * @return CreateApsKafkaHudiJobResponse
@@ -1790,7 +1793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</p>
+     * <p>Creates an APS pipeline from SLS to an ADB data warehouse.</p>
      * 
      * @param tmpReq CreateApsSlsADBJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1960,7 +1963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</p>
+     * <p>Creates an APS pipeline from SLS to an ADB data warehouse.</p>
      * 
      * @param request CreateApsSlsADBJobRequest
      * @return CreateApsSlsADBJobResponse
@@ -1972,7 +1975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a webhook for a specified database cluster and task type.</p>
+     * <p>Creates a new webhook for a specified database cluster and job type.</p>
      * 
      * @param tmpReq CreateApsWebhookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2022,7 +2025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a webhook for a specified database cluster and task type.</p>
+     * <p>Creates a new webhook for a specified database cluster and job type.</p>
      * 
      * @param request CreateApsWebhookRequest
      * @return CreateApsWebhookResponse
@@ -2278,7 +2281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
@@ -2427,7 +2430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
@@ -2528,21 +2531,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL instance.</li>
-     * <li>The created task configuration is not executed immediately. Call <code>StartFormationCrawler</code> to start the task.</li>
-     * <li>The <code>CrawlerInfo</code> field is a JSON string that contains the core configuration of the task, such as the target database name and data source type.</li>
-     * <li>Some parameters, such as <code>classifiers</code> and <code>frequency</code>, require double JSON encoding.</li>
-     * <li>The database name specified in <code>dbName</code> is automatically converted to lowercase by the server.</li>
-     * <li><code>schemaChangePolicy</code> is required. You must specify both <code>updateRule</code> and <code>deleteRule</code>.</li>
+     * <li>The created task configuration is not executed immediately. You must call <code>StartFormationCrawler</code> to start the task.</li>
+     * <li>The <code>CrawlerInfo</code> field is a JSON string that contains the core configuration information of the task, such as the target database name and data source type.</li>
+     * <li>Note that some parameters, such as <code>classifiers</code> and <code>frequency</code>, require double JSON encoding.</li>
+     * <li>The database name <code>dbName</code> is automatically converted to lowercase by the server.</li>
+     * <li><code>schemaChangePolicy</code> is required. You must provide both <code>updateRule</code> and <code>deleteRule</code>.</li>
      * <li>Use the <code>RUN_ON_DEMAND</code> scheduling mode to avoid unnecessary repeated scans.</li>
-     * <li>Make sure the product name is <code>adb</code> and the endpoint format is <code>adb.{regionId}.aliyuncs.com</code>.</li>
-     * <li>After the task is created, manually call <code>StartFormationCrawler</code> to trigger the first metadata discovery.</li>
+     * <li>Make sure that the product name is <code>adb</code> and the domain name format is <code>adb.{regionId}.aliyuncs.com</code>.</li>
+     * <li>After the task is created, you must manually call <code>StartFormationCrawler</code> to trigger the first metadata discovery.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL (ADB) instance.</p>
+     * <p>Creates a Formation Crawler metadata discovery task in an ADB instance.</p>
      * 
      * @param request CreateFormationCrawlerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2582,21 +2585,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL instance.</li>
-     * <li>The created task configuration is not executed immediately. Call <code>StartFormationCrawler</code> to start the task.</li>
-     * <li>The <code>CrawlerInfo</code> field is a JSON string that contains the core configuration of the task, such as the target database name and data source type.</li>
-     * <li>Some parameters, such as <code>classifiers</code> and <code>frequency</code>, require double JSON encoding.</li>
-     * <li>The database name specified in <code>dbName</code> is automatically converted to lowercase by the server.</li>
-     * <li><code>schemaChangePolicy</code> is required. You must specify both <code>updateRule</code> and <code>deleteRule</code>.</li>
+     * <li>The created task configuration is not executed immediately. You must call <code>StartFormationCrawler</code> to start the task.</li>
+     * <li>The <code>CrawlerInfo</code> field is a JSON string that contains the core configuration information of the task, such as the target database name and data source type.</li>
+     * <li>Note that some parameters, such as <code>classifiers</code> and <code>frequency</code>, require double JSON encoding.</li>
+     * <li>The database name <code>dbName</code> is automatically converted to lowercase by the server.</li>
+     * <li><code>schemaChangePolicy</code> is required. You must provide both <code>updateRule</code> and <code>deleteRule</code>.</li>
      * <li>Use the <code>RUN_ON_DEMAND</code> scheduling mode to avoid unnecessary repeated scans.</li>
-     * <li>Make sure the product name is <code>adb</code> and the endpoint format is <code>adb.{regionId}.aliyuncs.com</code>.</li>
-     * <li>After the task is created, manually call <code>StartFormationCrawler</code> to trigger the first metadata discovery.</li>
+     * <li>Make sure that the product name is <code>adb</code> and the domain name format is <code>adb.{regionId}.aliyuncs.com</code>.</li>
+     * <li>After the task is created, you must manually call <code>StartFormationCrawler</code> to trigger the first metadata discovery.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL (ADB) instance.</p>
+     * <p>Creates a Formation Crawler metadata discovery task in an ADB instance.</p>
      * 
      * @param request CreateFormationCrawlerRequest
      * @return CreateFormationCrawlerResponse
@@ -2923,6 +2926,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>创建语义视图。调用前请确认已满足以下条件：</p>
+     * <ol>
+     * <li>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</li>
+     * <li>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</li>
+     * <li>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</li>
+     * <li>SchemaName 指定的数据库已存在。</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Creates a semantic view.</p>
      * 
@@ -2967,6 +2979,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>创建语义视图。调用前请确认已满足以下条件：</p>
+     * <ol>
+     * <li>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</li>
+     * <li>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</li>
+     * <li>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</li>
+     * <li>SchemaName 指定的数据库已存在。</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Creates a semantic view.</p>
      * 
@@ -3058,18 +3079,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Compares two time windows and asynchronously generates a SQL pattern comparison report.</p>
+     * <p>Compares two time windows and asynchronously generates an SQL pattern comparison report.</p>
      * <blockquote>
      * <ul>
-     * <li>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</li>
-     * <li>The returned <code>ReportId</code> only indicates that the request has been accepted. Call <code>DescribeSqlPatternCompareReports</code> to query the report status, and query the details when <code>DetailEnabled</code> is <code>true</code>.</li>
-     * <li>Only one report can be generated for an instance at a time.</li>
-     * <li>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</li>
+     * <li>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows with the same duration and similar business cycles.</li>
+     * <li>The returned <code>ReportId</code> only indicates that the request is accepted. Call <code>DescribeSqlPatternCompareReports</code> to query the report status, and query the details when <code>DetailEnabled</code> is <code>true</code>.</li>
+     * <li>Only one report can be generated for the same instance at a time.</li>
+     * <li>The report is valid for 7 days and is isolated by instance and Alibaba Cloud account.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a SQL pattern comparison report.</p>
+     * <p>Creates an SQL pattern comparison report.</p>
      * 
      * @param request CreateSqlPatternCompareReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3125,18 +3146,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Compares two time windows and asynchronously generates a SQL pattern comparison report.</p>
+     * <p>Compares two time windows and asynchronously generates an SQL pattern comparison report.</p>
      * <blockquote>
      * <ul>
-     * <li>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</li>
-     * <li>The returned <code>ReportId</code> only indicates that the request has been accepted. Call <code>DescribeSqlPatternCompareReports</code> to query the report status, and query the details when <code>DetailEnabled</code> is <code>true</code>.</li>
-     * <li>Only one report can be generated for an instance at a time.</li>
-     * <li>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</li>
+     * <li>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows with the same duration and similar business cycles.</li>
+     * <li>The returned <code>ReportId</code> only indicates that the request is accepted. Call <code>DescribeSqlPatternCompareReports</code> to query the report status, and query the details when <code>DetailEnabled</code> is <code>true</code>.</li>
+     * <li>Only one report can be generated for the same instance at a time.</li>
+     * <li>The report is valid for 7 days and is isolated by instance and Alibaba Cloud account.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a SQL pattern comparison report.</p>
+     * <p>Creates an SQL pattern comparison report.</p>
      * 
      * @param request CreateSqlPatternCompareReportRequest
      * @return CreateSqlPatternCompareReportResponse
@@ -3744,10 +3765,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a lake storage.</p>
+     * <p>Deletes lake storage.</p>
      * 
      * @param request DeleteLakeStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3789,10 +3810,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a lake storage.</p>
+     * <p>Deletes lake storage.</p>
      * 
      * @param request DeleteLakeStorageRequest
      * @return DeleteLakeStorageResponse
@@ -4124,10 +4145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</p>
+     * <p>Queries the performance monitoring data of a specific cluster within a specified time range based on performance parameters. The collection granularity is 30 seconds. This operation supports querying slow SQL statements and provides monitoring content such as SQL query duration, number of scanned rows, and scanned data volume.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</p>
+     * <p>Retrieves the list of AnalyticDB for MySQL instances for APS federated analytics.</p>
      * 
      * @param request DescribeAPSADBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4155,10 +4176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</p>
+     * <p>Queries the performance monitoring data of a specific cluster within a specified time range based on performance parameters. The collection granularity is 30 seconds. This operation supports querying slow SQL statements and provides monitoring content such as SQL query duration, number of scanned rows, and scanned data volume.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</p>
+     * <p>Retrieves the list of AnalyticDB for MySQL instances for APS federated analytics.</p>
      * 
      * @param request DescribeAPSADBInstancesRequest
      * @return DescribeAPSADBInstancesResponse
@@ -4308,10 +4329,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the databases, tables, and columns on which a database account has permissions.</p>
+     * <p>Retrieves the databases, tables, and columns visible to a specified account.</p>
      * 
      * @param request DescribeAccountPrivilegeObjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4375,10 +4396,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the databases, tables, and columns on which a database account has permissions.</p>
+     * <p>Retrieves the databases, tables, and columns visible to a specified account.</p>
      * 
      * @param request DescribeAccountPrivilegeObjectsRequest
      * @return DescribeAccountPrivilegeObjectsResponse
@@ -4390,10 +4411,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>See <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the permissions of a specified database account at a specific level.</p>
+     * <p>Queries the permissions granted to a specified database account at a specific level.</p>
      * 
      * @param request DescribeAccountPrivilegesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4457,10 +4478,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>See <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the permissions of a specified database account at a specific level.</p>
+     * <p>Queries the permissions granted to a specified database account at a specific level.</p>
      * 
      * @param request DescribeAccountPrivilegesRequest
      * @return DescribeAccountPrivilegesResponse
@@ -4472,7 +4493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the database accounts of a cluster.</p>
@@ -4523,7 +4544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the database accounts of a cluster.</p>
@@ -4610,7 +4631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about table indexes.</p>
+     * <p>Queries the index information of a table.</p>
      * 
      * @param request DescribeAdbMySqlIndexesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4654,7 +4675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about table indexes.</p>
+     * <p>Queries the index information of a table.</p>
      * 
      * @param request DescribeAdbMySqlIndexesRequest
      * @return DescribeAdbMySqlIndexesResponse
@@ -4667,8 +4688,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4713,8 +4734,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4730,7 +4751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about table metadata.</p>
+     * <p>Queries the metadata of a table.</p>
      * 
      * @param request DescribeAdbMySqlTableMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4774,7 +4795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about table metadata.</p>
+     * <p>Queries the metadata of a table.</p>
      * 
      * @param request DescribeAdbMySqlTableMetaRequest
      * @return DescribeAdbMySqlTableMetaResponse
@@ -4787,8 +4808,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4837,8 +4858,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4854,7 +4875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries whether the advisory service is enabled.</p>
@@ -4893,7 +4914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries whether the advisory service is enabled.</p>
@@ -4976,7 +4997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shows applied recommendations.</p>
+     * <p>Queries the accepted optimization suggestions.</p>
      * 
      * @param request DescribeAppliedAdvicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5048,7 +5069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shows applied recommendations.</p>
+     * <p>Queries the accepted optimization suggestions.</p>
      * 
      * @param request DescribeAppliedAdvicesRequest
      * @return DescribeAppliedAdvicesResponse
@@ -5060,14 +5081,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The central public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the logs of a real-time data ingestion job for an AnalyticDB for MySQL cluster.</p>
+     * <p>Queries the detailed log information of real-time data ingestion tasks for a cluster.</p>
      * 
      * @param request DescribeApsActionLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5151,14 +5172,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The central public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the logs of a real-time data ingestion job for an AnalyticDB for MySQL cluster.</p>
+     * <p>Queries the detailed log information of real-time data ingestion tasks for a cluster.</p>
      * 
      * @param request DescribeApsActionLogsRequest
      * @return DescribeApsActionLogsResponse
@@ -5222,7 +5243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries APS data sources.</p>
+     * <p>Queries the list of APS data sources.</p>
      * 
      * @param request DescribeApsDatasourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5282,7 +5303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries APS data sources.</p>
+     * <p>Queries the list of APS data sources.</p>
      * 
      * @param request DescribeApsDatasourcesRequest
      * @return DescribeApsDatasourcesResponse
@@ -5394,7 +5415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of APS tasks.</p>
+     * <p>Queries APS tasks.</p>
      * 
      * @param request DescribeApsJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5446,7 +5467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of APS tasks.</p>
+     * <p>Queries APS tasks.</p>
      * 
      * @param request DescribeApsJobsRequest
      * @return DescribeApsJobsResponse
@@ -6688,10 +6709,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service access address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>View a cluster\&quot;s health status.</p>
+     * <p>Checks the health status of a cluster.</p>
      * 
      * @param request DescribeDBClusterHealthStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6727,10 +6748,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service access address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>View a cluster\&quot;s health status.</p>
+     * <p>Checks the health status of a cluster.</p>
      * 
      * @param request DescribeDBClusterHealthStatusRequest
      * @return DescribeDBClusterHealthStatusResponse
@@ -6742,7 +6763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the performance data of a specified cluster.</p>
@@ -6797,7 +6818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the performance data of a specified cluster.</p>
@@ -6811,6 +6832,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: 目前该功能处于内测阶段，控制台界面展示及API调用接口尚未稳定，可能持续变化。</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Queries the SSL configurations of a cluster.</p>
      * 
@@ -6847,6 +6873,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: 目前该功能处于内测阶段，控制台界面展示及API调用接口尚未稳定，可能持续变化。</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Queries the SSL configurations of a cluster.</p>
      * 
@@ -6860,10 +6891,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the storage overview of an instance, including the total data volume, hot data volume, cold data volume, and data growth.</p>
+     * <p>Retrieves the storage overview of an instance, including the total data size, hot data size, cold data size, and data growth.</p>
      * 
      * @param request DescribeDBClusterSpaceSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6915,10 +6946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the storage overview of an instance, including the total data volume, hot data volume, cold data volume, and data growth.</p>
+     * <p>Retrieves the storage overview of an instance, including the total data size, hot data size, cold data size, and data growth.</p>
      * 
      * @param request DescribeDBClusterSpaceSummaryRequest
      * @return DescribeDBClusterSpaceSummaryResponse
@@ -7066,7 +7097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the resource group information of a cluster.</p>
@@ -7117,7 +7148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration endpoints</a>.</p>
+     * <p>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the resource group information of a cluster.</p>
@@ -7132,10 +7163,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>Queries the deduplicated statistics information of SQL statements that meet the specified conditional retrieve in an AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster across dimensions such as resource groups, database names, usernames, and access source addresses.</p>
      * 
      * @param request DescribeDiagnosisDimensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7187,10 +7218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>Queries the deduplicated statistics information of SQL statements that meet the specified conditional retrieve in an AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster across dimensions such as resource groups, database names, usernames, and access source addresses.</p>
      * 
      * @param request DescribeDiagnosisDimensionsRequest
      * @return DescribeDiagnosisDimensionsResponse
@@ -7202,10 +7233,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the summary of SQL statements that meet specified conditions in an AnalyticDB for MySQL cluster.</p>
+     * <p>Queries the SQL summary information that meets specified conditions in a specified AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeDiagnosisRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7309,10 +7340,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the summary of SQL statements that meet specified conditions in an AnalyticDB for MySQL cluster.</p>
+     * <p>Queries the SQL summary information that meets specified conditions in a specified AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeDiagnosisRecordsRequest
      * @return DescribeDiagnosisRecordsResponse
@@ -7324,10 +7355,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration addresses of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnostics results.</p>
+     * <p>Retrieves the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnosis results.</p>
      * 
      * @param request DescribeDiagnosisSQLInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7383,10 +7414,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration addresses of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnostics results.</p>
+     * <p>Retrieves the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnosis results.</p>
      * 
      * @param request DescribeDiagnosisSQLInfoRequest
      * @return DescribeDiagnosisSQLInfoResponse
@@ -7717,13 +7748,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>The global public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>The public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the supported permission levels and the list of permissions.</p>
+     * <p>Retrieves the supported permission levels and permissions.</p>
      * 
      * @param request DescribeEnabledPrivilegesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7752,13 +7783,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>The global public endpoint: <code>adb.aliyuncs.com</code>.</li>
+     * <li>The public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the supported permission levels and the list of permissions.</p>
+     * <p>Retrieves the supported permission levels and permissions.</p>
      * 
      * @param request DescribeEnabledPrivilegesRequest
      * @return DescribeEnabledPrivilegesResponse
@@ -8164,7 +8195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the disk usage of all storage nodes.</p>
@@ -8223,7 +8254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the disk usage of all storage nodes.</p>
@@ -8306,10 +8337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
+     * <p>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves job resource usage statistics.</p>
+     * <p>Retrieves the resource usage statistics of jobs.</p>
      * 
      * @param request DescribeJobResourceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8361,10 +8392,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
+     * <p>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves job resource usage statistics.</p>
+     * <p>Retrieves the resource usage statistics of jobs.</p>
      * 
      * @param request DescribeJobResourceUsageRequest
      * @return DescribeJobResourceUsageResponse
@@ -8574,7 +8605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution list of subtasks for a materialized view recommendation task.</p>
+     * <p>Queries the list of subtask executions for a materialized view recommendation task.</p>
      * 
      * @param request DescribeMvRecommendSubTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8638,7 +8669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution list of subtasks for a materialized view recommendation task.</p>
+     * <p>Queries the list of subtask executions for a materialized view recommendation task.</p>
      * 
      * @param request DescribeMvRecommendSubTasksRequest
      * @return DescribeMvRecommendSubTasksResponse
@@ -8866,10 +8897,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoint</a>.</p>
+     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>View metric details (such as query time and average memory consumption) for SQL patterns over a specified time range in a cluster.</p>
+     * <p>Queries the details of various metrics, such as query time and average memory consumption, for SQL patterns in a cluster within a specified time period.</p>
      * 
      * @param request DescribePatternPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8917,10 +8948,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoint</a>.</p>
+     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>View metric details (such as query time and average memory consumption) for SQL patterns over a specified time range in a cluster.</p>
+     * <p>Queries the details of various metrics, such as query time and average memory consumption, for SQL patterns in a cluster within a specified time period.</p>
      * 
      * @param request DescribePatternPerformanceRequest
      * @return DescribePatternPerformanceResponse
@@ -9064,7 +9095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the DescribeProcessList operation to view the running queries of an instance.</p>
+     * <p>Queries the running queries of an instance.</p>
      * 
      * @param request DescribeProcessListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9140,7 +9171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the DescribeProcessList operation to view the running queries of an instance.</p>
+     * <p>Queries the running queries of an instance.</p>
      * 
      * @param request DescribeProcessListRequest
      * @return DescribeProcessListResponse
@@ -9152,7 +9183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the regions and zones supported by AnalyticDB for MySQL Data Lakehouse Edition.</p>
@@ -9207,7 +9238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the service registration endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the regions and zones supported by AnalyticDB for MySQL Data Lakehouse Edition.</p>
@@ -9282,7 +9313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the user-configured result set export settings.</p>
+     * <p>Retrieves the result set export configurations.</p>
      * 
      * @param request DescribeResultExportConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9322,7 +9353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the user-configured result set export settings.</p>
+     * <p>Retrieves the result set export configurations.</p>
      * 
      * @param request DescribeResultExportConfigRequest
      * @return DescribeResultExportConfigResponse
@@ -9335,13 +9366,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for the center: <code>adb.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified time range.</p>
+     * <p>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified date range.</p>
      * 
      * @param request DescribeSQLPatternsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9414,13 +9445,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Central public endpoint: <code>adb.aliyuncs.com</code>.</li>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>Regional VPC endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for the center: <code>adb.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified time range.</p>
+     * <p>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified date range.</p>
      * 
      * @param request DescribeSQLPatternsRequest
      * @return DescribeSQLPatternsResponse
@@ -9544,7 +9575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the diagnostic information about a Spark application.</p>
+     * <p>Queries the diagnostic information of a Spark application.</p>
      * 
      * @param request DescribeSparkAppDiagnosisInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9588,7 +9619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the diagnostic information about a Spark application.</p>
+     * <p>Queries the diagnostic information of a Spark application.</p>
      * 
      * @param request DescribeSparkAppDiagnosisInfoRequest
      * @return DescribeSparkAppDiagnosisInfoResponse
@@ -9652,13 +9683,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL auditing is turned off midway, when it is re-enabled, you can only query the SQL audit logs generated after it was turned back on.</p>
+     * <p>SQL audit logs can be queried only when the SQL audit feature is enabled, and only logs generated within the last 30 days are supported. If the SQL audit feature is disabled and then re-enabled, only the logs generated after it is re-enabled can be queried.</p>
      * <blockquote>
-     * <p> You can query only SQL audit logs that are executed by using Spark Interactive Resource Group.</p>
+     * <p>Notice: This operation can only query SQL audit logs executed through <strong>Spark Interactive resource groups</strong>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the SQL audit logs for a Spark Interactive resource group.</p>
+     * <p>Queries the SQL audit logs of a Spark Interactive resource group.</p>
      * 
      * @param request DescribeSparkAuditLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9770,13 +9801,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL auditing is turned off midway, when it is re-enabled, you can only query the SQL audit logs generated after it was turned back on.</p>
+     * <p>SQL audit logs can be queried only when the SQL audit feature is enabled, and only logs generated within the last 30 days are supported. If the SQL audit feature is disabled and then re-enabled, only the logs generated after it is re-enabled can be queried.</p>
      * <blockquote>
-     * <p> You can query only SQL audit logs that are executed by using Spark Interactive Resource Group.</p>
+     * <p>Notice: This operation can only query SQL audit logs executed through <strong>Spark Interactive resource groups</strong>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the SQL audit logs for a Spark Interactive resource group.</p>
+     * <p>Queries the SQL audit logs of a Spark Interactive resource group.</p>
      * 
      * @param request DescribeSparkAuditLogRecordsRequest
      * @return DescribeSparkAuditLogRecordsResponse
@@ -10040,7 +10071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Spark SQL diagnostics list.</p>
+     * <p>Queries the list of Spark SQL diagnostics.</p>
      * 
      * @param request DescribeSparkSQLDiagnosisListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10100,7 +10131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Spark SQL diagnostics list.</p>
+     * <p>Queries the list of Spark SQL diagnostics.</p>
      * 
      * @param request DescribeSparkSQLDiagnosisListRequest
      * @return DescribeSparkSQLDiagnosisListResponse
@@ -10112,7 +10143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
+     * <p>For the service registration address, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of SQL patterns for an AnalyticDB for MySQL cluster on a specified date.</p>
@@ -10175,7 +10206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
+     * <p>For the service registration address, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of SQL patterns for an AnalyticDB for MySQL cluster on a specified date.</p>
@@ -10468,10 +10499,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the number of times a specified table or all tables in a cluster are accessed within a specified date range.</p>
+     * <p>Queries the access count of a specified table or all tables in a cluster within a specified date range.</p>
      * 
      * @param request DescribeTableAccessCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10527,10 +10558,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</p>
+     * <p>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the number of times a specified table or all tables in a cluster are accessed within a specified date range.</p>
+     * <p>Queries the access count of a specified table or all tables in a cluster within a specified date range.</p>
      * 
      * @param request DescribeTableAccessCountRequest
      * @return DescribeTableAccessCountResponse
@@ -10542,7 +10573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about data distribution among shards of a table.</p>
+     * <p>Queries the data distribution of a table across shards.</p>
      * 
      * @param request DescribeTableDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10586,7 +10617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about data distribution among shards of a table.</p>
+     * <p>Queries the data distribution of a table across shards.</p>
      * 
      * @param request DescribeTableDetailRequest
      * @return DescribeTableDetailResponse
@@ -10598,7 +10629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about partition diagnostics.</p>
+     * <p>Queries partition diagnostics information.</p>
      * 
      * @param request DescribeTablePartitionDiagnoseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10650,7 +10681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about partition diagnostics.</p>
+     * <p>Queries partition diagnostics information.</p>
      * 
      * @param request DescribeTablePartitionDiagnoseRequest
      * @return DescribeTablePartitionDiagnoseResponse
@@ -11463,6 +11494,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>地域的公网接入地址：<code>adb.&lt;region-id&gt;.aliyuncs.com</code>。示例：<code>adb.cn-hangzhou.aliyuncs.com</code>。</li>
+     * <li>地域的VPC接入地址：<code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>。示例：<code>adb-vpc.cn-hangzhou.aliyuncs.com</code>。<blockquote>
+     * <p>如果华北1（青岛）、华南1（深圳）、华南3（广州）、中国香港发起请求时，遇到409错误，请联系技术支持。</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Executes Spark SQL statements in batches.</p>
      * 
@@ -11523,6 +11563,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>地域的公网接入地址：<code>adb.&lt;region-id&gt;.aliyuncs.com</code>。示例：<code>adb.cn-hangzhou.aliyuncs.com</code>。</li>
+     * <li>地域的VPC接入地址：<code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>。示例：<code>adb-vpc.cn-hangzhou.aliyuncs.com</code>。<blockquote>
+     * <p>如果华北1（青岛）、华南1（深圳）、华南3（广州）、中国香港发起请求时，遇到409错误，请联系技术支持。</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Executes Spark SQL statements in batches.</p>
      * 
@@ -11609,6 +11658,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>创建知识库文件引用记录。调用前需确保当前 RAM 用户已绑定到该 ADB 实例的数据库账号，可通过 CreateAccount 的 RamUserList 参数或 BindAccount 完成绑定；未绑定时接口返回错误码 119。</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a reference record for a knowledge base file.</p>
      * 
@@ -11657,6 +11709,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>创建知识库文件引用记录。调用前需确保当前 RAM 用户已绑定到该 ADB 实例的数据库账号，可通过 CreateAccount 的 RamUserList 参数或 BindAccount 完成绑定；未绑定时接口返回错误码 119。</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a reference record for a knowledge base file.</p>
      * 
@@ -11722,10 +11777,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic report for this API indicates whether the current user has all the permissions required for ADB Spark features. The scope of the checked permissions may exceed the minimum business requirements. This diagnostic report is used for quick environment initialization of ADB Spark. To configure fine-grained permissions, refer to <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</p>
+     * <p>The API diagnostic report indicates whether the current user has all the permissions required for ADB Spark-related features. The scope of the checked permissions may exceed the minimum business requirements. The diagnostic report of this API is used for the quick environment initialization scenario of ADB Spark. For fine-grained permission configuration, refer to the <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the diagnostic report on basic Spark permissions for the current user.</p>
+     * <p>Retrieves the Spark basic permission diagnostic report for the current user.</p>
      * 
      * @param request GetADBSparkNecessaryRAMPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11757,10 +11812,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic report for this API indicates whether the current user has all the permissions required for ADB Spark features. The scope of the checked permissions may exceed the minimum business requirements. This diagnostic report is used for quick environment initialization of ADB Spark. To configure fine-grained permissions, refer to <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</p>
+     * <p>The API diagnostic report indicates whether the current user has all the permissions required for ADB Spark-related features. The scope of the checked permissions may exceed the minimum business requirements. The diagnostic report of this API is used for the quick environment initialization scenario of ADB Spark. For fine-grained permission configuration, refer to the <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the diagnostic report on basic Spark permissions for the current user.</p>
+     * <p>Retrieves the Spark basic permission diagnostic report for the current user.</p>
      * 
      * @param request GetADBSparkNecessaryRAMPermissionsRequest
      * @return GetADBSparkNecessaryRAMPermissionsResponse
@@ -11772,7 +11827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the table creation statement for tables.</p>
+     * <p>Queries the CREATE TABLE statement of a specified table.</p>
      * 
      * @param request GetCreateTableSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11832,7 +11887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the table creation statement for tables.</p>
+     * <p>Queries the CREATE TABLE statement of a specified table.</p>
      * 
      * @param request GetCreateTableSQLRequest
      * @return GetCreateTableSQLResponse
@@ -11845,8 +11900,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -11907,8 +11962,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12302,16 +12357,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 error when making requests in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an Spark application.</p>
+     * <p>Retrieves the information about a Spark application.</p>
      * 
      * @param request GetSparkAppInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12349,16 +12404,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 error when making requests in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about an Spark application.</p>
+     * <p>Retrieves the information about a Spark application.</p>
      * 
      * @param request GetSparkAppInfoRequest
      * @return GetSparkAppInfoResponse
@@ -12371,8 +12426,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
      * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
@@ -12430,8 +12485,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
      * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
@@ -12521,8 +12576,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <li>The public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
      * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
@@ -12568,8 +12623,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <li>The public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
      * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
@@ -12776,7 +12831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a Spark session.</p>
+     * <p>Retrieves the session status.</p>
      * 
      * @param request GetSparkReplSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12812,7 +12867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a Spark session.</p>
+     * <p>Retrieves the session status.</p>
      * 
      * @param request GetSparkReplSessionRequest
      * @return GetSparkReplSessionResponse
@@ -12824,7 +12879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution result of a code block.</p>
+     * <p>Retrieves the execution result of a code snippet.</p>
      * 
      * @param request GetSparkReplStatementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12864,7 +12919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution result of a code block.</p>
+     * <p>Retrieves the execution result of a code snippet.</p>
      * 
      * @param request GetSparkReplStatementRequest
      * @return GetSparkReplStatementResponse
@@ -12876,16 +12931,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the state information about the Spark SQL engine.</p>
+     * <p>Queries the status of the Spark SQL engine.</p>
      * 
      * @deprecated OpenAPI GetSparkSQLEngineState is deprecated
      * 
@@ -12925,16 +12980,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
-     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the state information about the Spark SQL engine.</p>
+     * <p>Queries the status of the Spark SQL engine.</p>
      * 
      * @deprecated OpenAPI GetSparkSQLEngineState is deprecated
      * 
@@ -13141,15 +13196,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.<blockquote>
-     * <p>If you encounter a 409 error when sending requests from China North 1 (Qingdao), China South 1 (Shenzhen), China South 3 (Guangzhou), or Hong Kong (China), contact technical support.</p>
+     * <li>The public endpoint for the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the execution results of a Spark SQL statement.</p>
+     * <p>Retrieves the execution results of Spark SQL.</p>
      * 
      * @param request GetSparkWarehouseBatchSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13190,15 +13245,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.<blockquote>
-     * <p>If you encounter a 409 error when sending requests from China North 1 (Qingdao), China South 1 (Shenzhen), China South 3 (Guangzhou), or Hong Kong (China), contact technical support.</p>
+     * <li>The public endpoint for the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the execution results of a Spark SQL statement.</p>
+     * <p>Retrieves the execution results of Spark SQL.</p>
      * 
      * @param request GetSparkWarehouseBatchSQLRequest
      * @return GetSparkWarehouseBatchSQLResponse
@@ -13211,8 +13266,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -13261,8 +13316,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -13279,8 +13334,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -13341,8 +13396,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -13358,13 +13413,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the statement that is used to create a table.</p>
+     * <p>Queries the CREATE TABLE statement.</p>
      * 
      * @param request GetTableDDLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13408,13 +13463,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the statement that is used to create a table.</p>
+     * <p>Queries the CREATE TABLE statement.</p>
      * 
      * @param request GetTableDDLRequest
      * @return GetTableDDLResponse
@@ -13518,13 +13573,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the statement that is used to create a view.</p>
+     * <p>Queries the creation statement of a view.</p>
      * 
      * @param request GetViewDDLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13568,13 +13623,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the statement that is used to create a view.</p>
+     * <p>Queries the creation statement of a view.</p>
      * 
      * @param request GetViewDDLRequest
      * @return GetViewDDLResponse
@@ -13587,8 +13642,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -13661,8 +13716,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The public endpoint for the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -14262,7 +14317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution records of result set export jobs of a Resource Access Management (RAM) user.</p>
+     * <p>Queries the execution history of result set export jobs for the current Resource Access Management (RAM) user.</p>
      * 
      * @param tmpReq ListResultExportJobHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14340,7 +14395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution records of result set export jobs of a Resource Access Management (RAM) user.</p>
+     * <p>Queries the execution history of result set export jobs for the current Resource Access Management (RAM) user.</p>
      * 
      * @param request ListResultExportJobHistoryRequest
      * @return ListResultExportJobHistoryResponse
@@ -14407,9 +14462,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.<blockquote>
-     * <p>If you encounter a 409 fault when initiating a request from Hong Kong (China), submit a ticket or contact technical support.</p>
+     * <li>The public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 error when initiating a request in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -14460,9 +14515,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.<blockquote>
-     * <p>If you encounter a 409 fault when initiating a request from Hong Kong (China), submit a ticket or contact technical support.</p>
+     * <li>The public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 error when initiating a request in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -14481,9 +14536,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.<blockquote>
-     * <p>If you encounter a 409 fault when initiating a request from Hong Kong (China), contact technical support.</p>
+     * <li>The public endpoint for the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -14538,9 +14593,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.<blockquote>
-     * <p>If you encounter a 409 fault when initiating a request from Hong Kong (China), contact technical support.</p>
+     * <li>The public endpoint for the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint for the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -14689,8 +14744,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 error when sending requests from the China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China) regions, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of Spark SQL statements.</p>
+     * <p>Queries all executed Spark SQL statements by paging.</p>
      * 
      * @param request ListSparkWarehouseBatchSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14733,8 +14797,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>The VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p>If you encounter a 409 error when sending requests from the China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China) regions, contact technical support.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of Spark SQL statements.</p>
+     * <p>Queries all executed Spark SQL statements by paging.</p>
      * 
      * @param request ListSparkWarehouseBatchSQLRequest
      * @return ListSparkWarehouseBatchSQLResponse
@@ -15030,14 +15103,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a></h3>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</li>
-     * <li>You cannot modify the number of nodes for the USER_DEFAULT resource group.</li>
+     * <li>This operation is applicable only to elastic mode Cluster Edition (new version) clusters with 32 or more cores.</li>
+     * <li>You cannot modify the number of nodes in the default resource group USER_DEFAULT.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an AnalyticDB Pipeline Service (APS) data source.</p>
+     * <p>Modifies an APS data source.</p>
      * 
      * @param tmpReq ModifyApsDatasoureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15127,14 +15200,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a></h3>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</li>
-     * <li>You cannot modify the number of nodes for the USER_DEFAULT resource group.</li>
+     * <li>This operation is applicable only to elastic mode Cluster Edition (new version) clusters with 32 or more cores.</li>
+     * <li>You cannot modify the number of nodes in the default resource group USER_DEFAULT.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an AnalyticDB Pipeline Service (APS) data source.</p>
+     * <p>Modifies an APS data source.</p>
      * 
      * @param request ModifyApsDatasoureRequest
      * @return ModifyApsDatasoureResponse
@@ -15207,8 +15280,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>修改 SLS 投递 ADB 数仓任务。调用前需确认：</p>
+     * <ol>
+     * <li>已创建并处于运行中的 ADB 集群，可通过 CreateDBCluster 创建、DescribeDBClusters 查询状态。</li>
+     * <li>集群已创建数据库账号，可通过 CreateAccount 创建。</li>
+     * <li>已通过 CreateApsSlsADBJob 创建 SLS 数据链路任务，并从响应获取 WorkloadId。</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <p>Modifies a Simple Log Service (SLS) data shipping task to an AnalyticDB data warehouse.</p>
      * 
      * @param tmpReq ModifyApsSlsADBJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15293,8 +15374,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>修改 SLS 投递 ADB 数仓任务。调用前需确认：</p>
+     * <ol>
+     * <li>已创建并处于运行中的 ADB 集群，可通过 CreateDBCluster 创建、DescribeDBClusters 查询状态。</li>
+     * <li>集群已创建数据库账号，可通过 CreateAccount 创建。</li>
+     * <li>已通过 CreateApsSlsADBJob 创建 SLS 数据链路任务，并从响应获取 WorkloadId。</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <p>Modifies a Simple Log Service (SLS) data shipping task to an AnalyticDB data warehouse.</p>
      * 
      * @param request ModifyApsSlsADBJobRequest
      * @return ModifyApsSlsADBJobResponse
@@ -16172,7 +16261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the resource group of a cluster.</p>
@@ -16313,7 +16402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the resource group of a cluster.</p>
@@ -17046,7 +17135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of metadata discovery task instances.</p>
+     * <p>Queries the metadata discovery task instances.</p>
      * 
      * @param request QueryFormationInstsByTaskIDRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17086,7 +17175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of metadata discovery task instances.</p>
+     * <p>Queries the metadata discovery task instances.</p>
      * 
      * @param request QueryFormationInstsByTaskIDRequest
      * @return QueryFormationInstsByTaskIDResponse
@@ -17154,7 +17243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries metadata discovery tasks by task type.</p>
+     * <p>Query metadata discovery tasks by task type</p>
      * 
      * @param request QueryFormationTasksByTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17194,7 +17283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries metadata discovery tasks by task type.</p>
+     * <p>Query metadata discovery tasks by task type</p>
      * 
      * @param request QueryFormationTasksByTypeRequest
      * @return QueryFormationTasksByTypeResponse
@@ -17860,8 +17949,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Operation description</h3>
-     * <p>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require Alibaba Cloud technical support, if the helpdesk needs to perform operations on your cluster during the support procedure, authorize the service account of the AnalyticDB for MySQL cluster so that the helpdesk can provide technical support through the service account. After the authorization expires, the permissions of the service account are automatically revoked.</p>
+     * <h3>Usage notes</h3>
+     * <p>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require technical support from Alibaba Cloud, if the helpdesk needs to perform operations on your cluster during the support procedure, you must authorize the service account of the AnalyticDB for MySQL cluster. This allows the helpdesk to provide technical support through the service account. After the authorization validity period expires, the permissions of the service account are automatically revoked.</p>
      * 
      * <b>summary</b> : 
      * <p>Manually triggers a metadata discovery task.</p>
@@ -17908,8 +17997,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Operation description</h3>
-     * <p>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require Alibaba Cloud technical support, if the helpdesk needs to perform operations on your cluster during the support procedure, authorize the service account of the AnalyticDB for MySQL cluster so that the helpdesk can provide technical support through the service account. After the authorization expires, the permissions of the service account are automatically revoked.</p>
+     * <h3>Usage notes</h3>
+     * <p>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require technical support from Alibaba Cloud, if the helpdesk needs to perform operations on your cluster during the support procedure, you must authorize the service account of the AnalyticDB for MySQL cluster. This allows the helpdesk to provide technical support through the service account. After the authorization validity period expires, the permissions of the service account are automatically revoked.</p>
      * 
      * <b>summary</b> : 
      * <p>Manually triggers a metadata discovery task.</p>
@@ -18070,10 +18159,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Stops only the currently running task without canceling subsequent cron-scheduled executions.</p>
+     * <p>Stops only the currently running task without stopping subsequent cron schedules.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a metadata discovery task that is currently running.</p>
+     * <p>Stops the currently running metadata discovery task.</p>
      * 
      * @param request StopFormationCrawlerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18117,10 +18206,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Stops only the currently running task without canceling subsequent cron-scheduled executions.</p>
+     * <p>Stops only the currently running task without stopping subsequent cron schedules.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a metadata discovery task that is currently running.</p>
+     * <p>Stops the currently running metadata discovery task.</p>
      * 
      * @param request StopFormationCrawlerRequest
      * @return StopFormationCrawlerResponse
@@ -18131,6 +18220,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>提交结果集导出任务。调用前须先调用 ConfigureResultExport 配置导出目标（SLS 或 OSS），否则接口返回 APS.NotExists 错误。</p>
+     * 
      * <b>summary</b> : 
      * <p>Submits an SQL query and exports a result set.</p>
      * 
@@ -18187,6 +18279,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>提交结果集导出任务。调用前须先调用 ConfigureResultExport 配置导出目标（SLS 或 OSS），否则接口返回 APS.NotExists 错误。</p>
+     * 
      * <b>summary</b> : 
      * <p>Submits an SQL query and exports a result set.</p>
      * 
@@ -18622,7 +18717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information of a metadata discovery task.</p>
+     * <p>Updates the metadata discovery task information.</p>
      * 
      * @param request UpdateFormationCrawlerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18666,7 +18761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the information of a metadata discovery task.</p>
+     * <p>Updates the metadata discovery task information.</p>
      * 
      * @param request UpdateFormationCrawlerRequest
      * @return UpdateFormationCrawlerResponse
@@ -18678,7 +18773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Pauses or resumes the periodic scheduling of metadata discovery.</p>
+     * <p>Pause or resume periodic scheduling for metadata discovery</p>
      * 
      * @param request UpdateFormationCrawlerScheduleStateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18726,7 +18821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Pauses or resumes the periodic scheduling of metadata discovery.</p>
+     * <p>Pause or resume periodic scheduling for metadata discovery</p>
      * 
      * @param request UpdateFormationCrawlerScheduleStateRequest
      * @return UpdateFormationCrawlerScheduleStateResponse
@@ -18737,8 +18832,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>更新湖存储。LakeStorageId 和 DBClusterId 为更新湖存储的必要标识，实际调用时需同时传入，未传时请求会被拒绝。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a lake storage.</p>
+     * <p>Updates the lake storage.</p>
      * 
      * @param tmpReq UpdateLakeStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18791,8 +18889,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>更新湖存储。LakeStorageId 和 DBClusterId 为更新湖存储的必要标识，实际调用时需同时传入，未传时请求会被拒绝。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a lake storage.</p>
+     * <p>Updates the lake storage.</p>
      * 
      * @param request UpdateLakeStorageRequest
      * @return UpdateLakeStorageResponse

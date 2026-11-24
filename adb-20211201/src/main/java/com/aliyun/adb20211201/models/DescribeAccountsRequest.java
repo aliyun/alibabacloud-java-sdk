@@ -17,8 +17,8 @@ public class DescribeAccountsRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster can be of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
-     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster runs Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the cluster. The cluster runs Data Lakehouse Edition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DescribeAccountsRequest extends TeaModel {
      * <p>The database engine. Valid values:</p>
      * <ul>
      * <li><strong>AnalyticDB</strong> (default): AnalyticDB for MySQL engine</li>
-     * <li><strong>Clickhouse</strong>: wide-table engine</li>
+     * <li><strong>Clickhouse</strong>: wide table engine</li>
      * </ul>
      * 
      * <strong>example:</strong>

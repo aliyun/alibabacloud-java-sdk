@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFormationCrawlerRequest extends TeaModel {
     /**
-     * <p>The JSON string that contains the complete crawler configuration. This is the most important parameter. For the internal JSON structure, see the CrawlerInfo structure definition section.</p>
+     * <p>The JSON string that contains the complete configuration information of the crawler. This field is the core parameter. For more information about its internal JSON structure, see the CrawlerInfo structure definition section.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateFormationCrawlerRequest extends TeaModel {
     public String crawlerInfo;
 
     /**
-     * <p>The ADB instance ID. This specifies the resource-level scope of the operation.</p>
+     * <p>The ID of the ADB instance. This parameter specifies the resource-level scope of the operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

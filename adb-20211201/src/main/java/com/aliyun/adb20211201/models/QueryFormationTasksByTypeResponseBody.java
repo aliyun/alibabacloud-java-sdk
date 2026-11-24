@@ -29,7 +29,7 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. OK is returned if the call was successful.</p>
+     * <p>The message returned. The value is OK if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
      * <li><strong>true</strong>: The call was successful.</li>
      * <li><strong>false</strong>: The call failed.</li>
@@ -123,7 +123,7 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The execution duration of the most recent task.</p>
+         * <p>The execution time of the most recent task.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -144,13 +144,13 @@ public class QueryFormationTasksByTypeResponseBody extends TeaModel {
          * <p>The error message of the most recent task.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>The task execution failed.</p>
          */
         @NameInMap("LastTaskInstMessage")
         public String lastTaskInstMessage;
 
         /**
-         * <p>The instance status of the most recent node.</p>
+         * <p>The status of the most recent task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>

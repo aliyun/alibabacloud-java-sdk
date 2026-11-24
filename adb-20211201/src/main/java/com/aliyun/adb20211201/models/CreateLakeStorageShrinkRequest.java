@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateLakeStorageShrinkRequest extends TeaModel {
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The client token that is used to ensure request idempotence. If you use the same token for requests with different parameters, the IdempotentParameterMismatch error is returned.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>b2cd****3efg</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID of the ADB instance attached to the lake storage.</p>
+     * <p>The instance ID of the ADB instance to which the lake storage is attached.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-******</p>
@@ -34,12 +32,10 @@ public class CreateLakeStorageShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>When lake storage is created, permissions are automatically granted to the Resource Access Management (RAM) users performing the operation and the Alibaba Cloud account. You can increase additional Alibaba Cloud account authorizations here.</p>
+     * <p>When you create a lake storage, permissions are automatically granted to the Resource Access Management (RAM) users and the primary account used for the operation. You can increase additional authorizations for the primary account here.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>[{&quot;Account&quot;:&quot;1234567890123456&quot;,&quot;Read&quot;:true,&quot;Type&quot;:&quot;CUSTOMER&quot;,&quot;Write&quot;:true}]</p>
      */
     @NameInMap("Permissions")
     public String permissionsShrink;

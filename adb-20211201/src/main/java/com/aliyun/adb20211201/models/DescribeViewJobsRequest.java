@@ -23,7 +23,7 @@ public class DescribeViewJobsRequest extends TeaModel {
     public String filterOwner;
 
     /**
-     * <p>The view name.</p>
+     * <p>The name of the view.</p>
      * 
      * <strong>example:</strong>
      * <p>test_mv</p>
@@ -32,13 +32,12 @@ public class DescribeViewJobsRequest extends TeaModel {
     public String filterViewName;
 
     /**
-     * <p>The view type.</p>
-     * <p>Valid values:</p>
+     * <p>The view type. Valid values:</p>
      * <ul>
      * <li>VIRTUAL_VIEW</li>
-     * <li>MATERIALIZED_VIEW</li>
+     * <li>MATERIALIZED_VIEW
+     * Default value: empty.</li>
      * </ul>
-     * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>MATERIALIZED_VIEW</p>
@@ -47,14 +46,11 @@ public class DescribeViewJobsRequest extends TeaModel {
     public String filterViewType;
 
     /**
-     * <p>The sort field.</p>
-     * <p>Valid values for the sort order:</p>
+     * <p>The sort field. Valid values for the sort order:</p>
      * <ul>
      * <li>Asc</li>
-     * <li>Desc</li>
-     * </ul>
-     * <p>Valid values for the sort field:</p>
-     * <ul>
+     * <li>Desc
+     * Valid values for the field:</li>
      * <li>StartTime</li>
      * <li>EndTime</li>
      * <li>ScheduledStartTime</li>
@@ -76,7 +72,7 @@ public class DescribeViewJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -94,7 +90,7 @@ public class DescribeViewJobsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>demo_db</p>

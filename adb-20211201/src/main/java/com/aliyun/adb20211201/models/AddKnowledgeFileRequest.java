@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddKnowledgeFileRequest extends TeaModel {
     /**
-     * <p>The AnalyticDB for MySQL cluster ID.</p>
+     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class AddKnowledgeFileRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>Specifies whether the path is a folder.</p>
+     * <p>Specifies whether the object is a directory.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -52,7 +52,7 @@ public class AddKnowledgeFileRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The file tags in JSON format.</p>
+     * <p>The tags of the file, in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;type&quot;:&quot;game&quot;}</p>
@@ -61,7 +61,7 @@ public class AddKnowledgeFileRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The user who uploads the knowledge base file.</p>
+     * <p>The user who uploads the file to the knowledge base.</p>
      * 
      * <strong>example:</strong>
      * <p>user1</p>

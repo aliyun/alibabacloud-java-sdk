@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsKafkaHudiJobRequest extends TeaModel {
     /**
-     * <p>The RAM role whose trusted entity is an Alibaba Cloud account. For more information about how to create a RAM role, see Create a RAM role for a trusted Alibaba Cloud account.
-     * In the RAM role, the Alibaba Cloud account to which AnalyticDB for MySQL belongs must be configured as a trusted account for the Alibaba Cloud account to which the Kafka instance belongs.</p>
+     * <p>The RAM role whose trusted entity is an Alibaba Cloud account. For more information about how to create a RAM role, see Create a RAM role for a trusted Alibaba Cloud account. In the RAM role, the Alibaba Cloud account to which AnalyticDB for MySQL belongs is configured as a trusted account for the Alibaba Cloud account to which Kafka belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>aps</p>
@@ -44,7 +43,7 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in the specified region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in the target region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -66,8 +65,8 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     /**
      * <p>The data output format. Valid values:</p>
      * <ul>
-     * <li>Single: The source is a single-line JSON record.</li>
-     * <li>Multi: The source is a JSON array. A single JSON record must be output.</li>
+     * <li>Single: the source is a single-line JSON record.</li>
+     * <li>Multi: the source is a JSON array. A single JSON record must be output.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +95,7 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     public String dbName;
 
     /**
-     * <p>The full synchronization configurations.</p>
+     * <p>The full data synchronization configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>2ACU</p>
@@ -105,7 +104,7 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     public String fullComputeUnit;
 
     /**
-     * <p>The destination Hudi configurations.</p>
+     * <p>The advanced HUDI configurations for the target.</p>
      * 
      * <strong>example:</strong>
      * <p>hoodie.keep.min.commits=20</p>
@@ -114,7 +113,7 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     public String hudiAdvancedConfig;
 
     /**
-     * <p>The incremental synchronization configurations.</p>
+     * <p>The incremental data synchronization configurations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,14 +123,14 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     public String incrementalComputeUnit;
 
     /**
-     * <p>The nesting parse level for JSON. Valid values:</p>
+     * <p>Specifies the JSON nesting parse level. Valid values:</p>
      * <ul>
-     * <li>0: No parsing.</li>
-     * <li>1: Parse one level.</li>
-     * <li>2: Parse two levels.</li>
-     * <li>3: Parse three levels.</li>
-     * <li>4: Parse four levels.
-     * Default value: 1. For more information about the JSON nesting parse strategy, see JSON parse levels and schema field inference examples.</li>
+     * <li>0: does not parse JSON.</li>
+     * <li>1: parses one level.</li>
+     * <li>2: parses two levels.</li>
+     * <li>3: parses three levels.</li>
+     * <li>4: parses four levels.
+     * Default value: 1. For more information about the JSON nesting parse strategy, see JSON parsing levels and schema field inference examples.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,16 +140,16 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     public Integer jsonParseLevel;
 
     /**
-     * <p>Instance ID of the Kafka instance. You can obtain instance ID in the Kafka console.</p>
+     * <p>Instance ID of the Kafka instance. You can obtain instance ID from the Kafka console.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>alikafka_pre-cn-aaa1a1aa1111</p>
      */
     @NameInMap("KafkaClusterId")
     public String kafkaClusterId;
 
     /**
-     * <p>The ID of the Kafka topic. You can obtain the ID in the Kafka console.</p>
+     * <p>The ID of the Kafka topic. You can obtain the ID from the Kafka console.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -177,7 +176,7 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     public Long maxOffsetsPerTrigger;
 
     /**
-     * <p>The destination lakehouse address, which is a complete OSS path.</p>
+     * <p>The destination data lakehouse address, which is the complete OSS path.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test-xx-zzz/yyy/</p>
@@ -212,8 +211,8 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
      *  &quot;f1&quot;,
      *  &quot;f2&quot;
      * ],
-     * &quot;RecordVersionField&quot;,&quot;xxx&quot;
-     * RecordVersionField specifies the Hudi record version.</p>
+     * &quot;RecordVersionField&quot;:&quot;xxx&quot;
+     * RecordVersionField specifies the HUDI record version.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;Strategy&quot;: &quot;mapping&quot;</p>
@@ -253,9 +252,9 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     /**
      * <p>The starting consumption offset for Kafka. Valid values:</p>
      * <ul>
-     * <li>begin_cursor: The earliest offset.</li>
-     * <li>end_cursor: The latest offset.</li>
-     * <li>timestamp: A specified time.</li>
+     * <li>begin_cursor: the earliest offset.</li>
+     * <li>end_cursor: the latest offset.</li>
+     * <li>timestamp: a specified timestamp.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -276,7 +275,7 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The destination generation rule.</p>
+     * <p>The target generation rule.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -285,7 +284,7 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
     public String targetGenerateRule;
 
     /**
-     * <p>The destination type.</p>
+     * <p>The target type.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -542,7 +541,7 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
 
     public static class CreateApsKafkaHudiJobRequestColumns extends TeaModel {
         /**
-         * <p>The name of the destination field.</p>
+         * <p>The name of the target field.</p>
          * 
          * <strong>example:</strong>
          * <p>b</p>
@@ -551,7 +550,7 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
         public String mapName;
 
         /**
-         * <p>The type of the destination field.</p>
+         * <p>The data type of the target field.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -569,7 +568,7 @@ public class CreateApsKafkaHudiJobRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the source field.</p>
+         * <p>The data type of the source field.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>

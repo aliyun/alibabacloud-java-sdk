@@ -15,7 +15,7 @@ public class DescribeAccountPrivilegeObjectsRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The column name that is used to filter columns.</p>
+     * <p>The column name used to filter the results.</p>
      * 
      * <strong>example:</strong>
      * <p>col1</p>
@@ -24,7 +24,8 @@ public class DescribeAccountPrivilegeObjectsRequest extends TeaModel {
     public String columnPrivilegeObject;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +35,7 @@ public class DescribeAccountPrivilegeObjectsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The database name that is used to filter databases.</p>
+     * <p>The database name used to filter the results.</p>
      * 
      * <strong>example:</strong>
      * <p>database1</p>
@@ -43,7 +44,7 @@ public class DescribeAccountPrivilegeObjectsRequest extends TeaModel {
     public String databasePrivilegeObject;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +53,7 @@ public class DescribeAccountPrivilegeObjectsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20.</p>
+     * <p>The maximum number of entries per page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -61,7 +62,7 @@ public class DescribeAccountPrivilegeObjectsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The permission level. Valid values: Database, Table, and Column. Global is not supported.</p>
+     * <p>The privilege level. Only the Database, Table, and Column levels are supported. The Global level is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Column</p>
@@ -70,7 +71,7 @@ public class DescribeAccountPrivilegeObjectsRequest extends TeaModel {
     public String privilegeType;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +81,7 @@ public class DescribeAccountPrivilegeObjectsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The table name that is used to filter tables.</p>
+     * <p>The table name used to filter the results.</p>
      * 
      * <strong>example:</strong>
      * <p>table1</p>

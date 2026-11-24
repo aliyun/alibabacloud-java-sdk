@@ -15,12 +15,12 @@ public class DescribeTablePartitionDiagnoseRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: simplified Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
-     * <li><strong>ja</strong>: Japanese.</li>
-     * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * <li><strong>ja</strong>: Japanese</li>
+     * <li><strong>zh-tw</strong>: Traditional Chinese</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,25 +30,23 @@ public class DescribeTablePartitionDiagnoseRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The order by which to sort query results. Specify the parameter value in the JSON string format. Example: <code>[{&quot;Field&quot;:&quot;TotalSize&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</code>.</p>
+     * <p>Sorts the query results by a specified field. The value must be a JSON string. Example: <code>[{&quot;Field&quot;:&quot;TotalSize&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</code>. The JSON string contains the following parameters:</p>
      * <ul>
-     * <li><p><code>Field</code> specifies the field by which to sort the query results. Valid values:</p>
-     * <ul>
+     * <li><code>Field</code>: the field by which to sort the results. Valid values:<ul>
      * <li><code>SchemaName</code>: the name of the database to which the table belongs.</li>
-     * <li><code>TableName</code>: the name of the table.</li>
-     * <li><code>TotalSize</code>: the total data size of the table.</li>
-     * <li><code>SpaceRatio</code>: the storage percentage of the table.</li>
+     * <li><code>TableName</code>: the table name.</li>
+     * <li><code>TotalSize</code>: the total data volume.</li>
+     * <li><code>SpaceRatio</code>: the storage space proportion.</li>
      * </ul>
      * </li>
-     * <li><p><code>Type</code> specifies the sorting order. Valid values:</p>
-     * <ul>
+     * <li><code>Type</code>: the sort order. Valid values:<ul>
      * <li><code>Asc</code>: ascending order.</li>
      * <li><code>Desc</code>: descending order.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the query results are sorted by the TotalSize field in descending order.</p>
+     * <p>If this parameter is not specified, the results are sorted in descending order of the total data volume of the target table by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

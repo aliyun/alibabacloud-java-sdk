@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApsDatasoureResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code or the error code.</p>
+     * <p>The API status code or POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
@@ -14,7 +14,7 @@ public class ModifyApsDatasoureResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The list of resource group information.</p>
      * 
      * <strong>example:</strong>
      * <p>150</p>
@@ -23,7 +23,7 @@ public class ModifyApsDatasoureResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code returned. A status code of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,10 +32,10 @@ public class ModifyApsDatasoureResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The execution result of the application suggestion. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, a success message is returned.****</li>
-     * <li>If the request failed, an error message is returned.</li>
+     * <li>If the request is normal, <strong>SUCCESS</strong> is returned. </li>
+     * <li>If the request is abnormal, the specific error message is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ModifyApsDatasoureResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>A3EB3BCD-D974-52D4-B75C-BB06505916CB</p>
@@ -54,10 +54,10 @@ public class ModifyApsDatasoureResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Specifies whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

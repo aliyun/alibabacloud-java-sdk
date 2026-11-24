@@ -19,9 +19,9 @@ public class CreateApsHiveJobRequest extends TeaModel {
      * <p>The policy for handling databases and tables with the same name at the destination.</p>
      * 
      * <strong>example:</strong>
-     * <p>Intercept: reports error and aborts.
-     * Ignore: ignores and continues.
-     * Skip: skips relevant tables.</p>
+     * <p>Intercept：报错拦截，暂停迁移
+     * Ignore：忽略并继续执行，仍然迁移相关库表
+     * Skip：跳过相关库表，只迁移其他库表</p>
      */
     @NameInMap("ConflictStrategy")
     public String conflictStrategy;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountPrivilegesRequest extends TeaModel {
     /**
-     * <p>The name of the database account whose privileges you want to query.</p>
+     * <p>The name of the database account whose permissions you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeAccountPrivilegesRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>Filters the results by column name. This parameter is used only when <code>PrivilegeType</code> is set to <code>Column</code>.</p>
+     * <p>Filters the results by column name. This parameter is available only when the privilege level is column.</p>
      * 
      * <strong>example:</strong>
      * <p>col1</p>
@@ -24,8 +24,8 @@ public class DescribeAccountPrivilegesRequest extends TeaModel {
     public String columnPrivilegeObject;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Lakehouse Edition cluster.
-     * &lt;props=&quot;intl&quot;&gt;The ID of the Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeAccountPrivilegesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Filters the results by database name. This parameter is used only when <code>PrivilegeType</code> is set to <code>Database</code>, <code>Table</code>, or <code>Column</code>.</p>
+     * <p>Filters the results by database name. This parameter is available only when the privilege level is database, table, or column.</p>
      * 
      * <strong>example:</strong>
      * <p>db1</p>
@@ -44,7 +44,7 @@ public class DescribeAccountPrivilegesRequest extends TeaModel {
     public String databasePrivilegeObject;
 
     /**
-     * <p>The page number. Pages start at 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +62,7 @@ public class DescribeAccountPrivilegesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The privilege level to query. To obtain the valid values for this parameter, call the <code>DescribeEnabledPrivileges</code> operation.</p>
+     * <p>The privilege level to query. This value is returned by the DescribeEnabledPrivileges operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Global</p>
@@ -81,7 +81,7 @@ public class DescribeAccountPrivilegesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Filters the results by table name. You can use this parameter with <code>DatabasePrivilegeObject</code> to refine the search. This parameter is used only when <code>PrivilegeType</code> is set to <code>Table</code> or <code>Column</code>.</p>
+     * <p>Filters the results by table name. You can use this parameter together with the database name for joint filtering. This parameter is available only when the privilege level is table or column.</p>
      * 
      * <strong>example:</strong>
      * <p>table1</p>

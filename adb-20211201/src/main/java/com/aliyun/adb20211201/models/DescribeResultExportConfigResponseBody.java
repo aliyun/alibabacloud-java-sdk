@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResultExportConfigResponseBody extends TeaModel {
     /**
-     * <p>API status or POP error code.</p>
+     * <p>The operation status code or POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
@@ -14,13 +14,13 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeResultExportConfigResponseBodyData data;
 
     /**
-     * <p>The HTTP response status code. A value of 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code returned. A status code of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,10 +29,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The message returned for the call result.</p>
      * <ul>
-     * <li>The request succeeded, and the server returns <strong>OK</strong>.</li>
-     * <li>The request failed, and the server returns an error message.</li>
+     * <li>If the request is successful, <strong>OK</strong> is returned. </li>
+     * <li>If an exception occurs, the specific error message is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -51,10 +51,10 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values: Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>True: Succeeded.</strong></li>
-     * <li>**False: Failed.</li>
+     * <li><strong>True</strong>: The request is successful.</li>
+     * <li><strong>False</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
 
     public static class DescribeResultExportConfigResponseBodyDataOssInfo extends TeaModel {
         /**
-         * <p>The path of the OSS bucket to which the result sets are exported.</p>
+         * <p>The OSS path where the export results are stored.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://testBucketName/data_result</p>
@@ -127,7 +127,7 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         public String exportBasePath;
 
         /**
-         * <p>The name of the resource group that runs the export SQL.</p>
+         * <p>The name of the resource group in which the export SQL statement is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>aps</p>
@@ -136,7 +136,7 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         public String resourceGroup;
 
         /**
-         * <p>The expiration period (in days) for the OSS file. The returned value is between 1 and 30 days (inclusive).</p>
+         * <p>The expiration time of the OSS files. Unit: days. Minimum value: 1. Maximum value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -177,7 +177,7 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
 
     public static class DescribeResultExportConfigResponseBodyDataSlsInfo extends TeaModel {
         /**
-         * <p>The expiration period (in days) for the temporary Logstore automatically created during result set export. The Logstore is automatically deleted after expiration. The returned value is between 1 and 30 days (inclusive).</p>
+         * <p>The expiration time of the temporarily generated Logstore for result set export. Unit: days. The Logstore is automatically deleted after it expires. Minimum value: 1. Maximum value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -186,7 +186,7 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         public Integer logstoreTtl;
 
         /**
-         * <p>The name of the resource group that runs the export SQL.</p>
+         * <p>The name of the resource group in which the export SQL statement is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>aps</p>
@@ -238,8 +238,8 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         /**
          * <p>The export type. Valid values:</p>
          * <ul>
-         * <li>SLS: Indicates that the export destination is SLS.</li>
-         * <li>OSS: Indicates that the export destination is OSS.</li>
+         * <li>SLS: The export destination is SLS.</li>
+         * <li>OSS: The export destination is OSS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,13 +249,13 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         public String exportType;
 
         /**
-         * <p>The configured OSS export settings, returned when the export destination is OSS.</p>
+         * <p>The OSS information when the export type is OSS.</p>
          */
         @NameInMap("OssInfo")
         public DescribeResultExportConfigResponseBodyDataOssInfo ossInfo;
 
         /**
-         * <p>The configured SLS export settings, returned when the export destination is SLS.</p>
+         * <p>The SLS configurations when the export type is SLS.</p>
          */
         @NameInMap("SlsInfo")
         public DescribeResultExportConfigResponseBodyDataSlsInfo slsInfo;

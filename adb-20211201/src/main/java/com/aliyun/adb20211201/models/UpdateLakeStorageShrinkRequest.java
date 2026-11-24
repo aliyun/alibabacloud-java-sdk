@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLakeStorageShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL cluster that is associated with the lake storage.</p>
+     * <p>The ADB instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-*******</p>
@@ -26,20 +26,16 @@ public class UpdateLakeStorageShrinkRequest extends TeaModel {
      * <p>The unique identifier of the lake storage.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>adb-lake-cn-hangzhou-1a1aaaa11a</p>
      */
     @NameInMap("LakeStorageId")
     public String lakeStorageId;
 
     /**
-     * <p>The permissions on the lake storage.</p>
+     * <p>The permissions of the lake storage.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>[{&quot;Account&quot;:&quot;1234567890123456&quot;,&quot;Read&quot;:true,&quot;Type&quot;:&quot;User&quot;,&quot;Write&quot;:true}]</p>
      */
     @NameInMap("Permissions")
     public String permissionsShrink;

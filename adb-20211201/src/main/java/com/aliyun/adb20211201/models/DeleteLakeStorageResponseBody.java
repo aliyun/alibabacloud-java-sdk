@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLakeStorageResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteLakeStorageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the delete operation was successful.</p>
+     * <p>The deletion result.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -32,7 +32,7 @@ public class DeleteLakeStorageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message. If the operation is asynchronously implemented, the job ID is returned.</p>
+     * <p>The job ID returned if the creation API is implemented asynchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -50,10 +50,10 @@ public class DeleteLakeStorageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

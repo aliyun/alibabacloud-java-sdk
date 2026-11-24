@@ -38,7 +38,7 @@ public class CreateAPSJobRequest extends TeaModel {
      * <p>The password of the destination instance.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>Example****123!</p>
      */
     @NameInMap("DestinationEndpointPassword")
     public String destinationEndpointPassword;
@@ -47,7 +47,7 @@ public class CreateAPSJobRequest extends TeaModel {
      * <p>The username of the destination instance.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>example_user</p>
      */
     @NameInMap("DestinationEndpointUserName")
     public String destinationEndpointUserName;
@@ -62,10 +62,7 @@ public class CreateAPSJobRequest extends TeaModel {
     public String partitionList;
 
     /**
-     * <p>The region ID.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID.</p>
-     * </blockquote>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +85,7 @@ public class CreateAPSJobRequest extends TeaModel {
      * <p>The password of the source endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>Example****123!</p>
      */
     @NameInMap("SourceEndpointPassword")
     public String sourceEndpointPassword;
@@ -106,13 +103,13 @@ public class CreateAPSJobRequest extends TeaModel {
      * <p>The username of the source endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>example_user</p>
      */
     @NameInMap("SourceEndpointUserName")
     public String sourceEndpointUserName;
 
     /**
-     * <p>The destination table mode.</p>
+     * <p>The mode of the destination table.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

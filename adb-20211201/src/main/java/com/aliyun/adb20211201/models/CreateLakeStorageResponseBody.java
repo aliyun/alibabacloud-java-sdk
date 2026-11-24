@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLakeStorageResponseBody extends TeaModel {
     /**
-     * <p>The API status or POP error code.</p>
+     * <p>The API status code or POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
@@ -14,7 +14,7 @@ public class CreateLakeStorageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The resource usage details of the cluster.</p>
+     * <p>The details of cluster resource usage.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class CreateLakeStorageResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The HTTP status code returned. A value of 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code returned. 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class CreateLakeStorageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>If the creation operation is implemented asynchronously, a specific JobId is returned.</p>
+     * <p>The explicit job ID returned if the creation operation is asynchronous.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -44,7 +44,7 @@ public class CreateLakeStorageResponseBody extends TeaModel {
      * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>12345678-1234-4ABC-8DEF-123456789012</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,8 +52,8 @@ public class CreateLakeStorageResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Successful.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

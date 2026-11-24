@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
     /**
-     * <p>The queried source IP addresses.</p>
+     * <p>The source IP addresses.</p>
      */
     @NameInMap("ClientIps")
     public java.util.List<String> clientIps;
 
     /**
-     * <p>The queried database names.</p>
+     * <p>The database names.</p>
      */
     @NameInMap("Databases")
     public java.util.List<String> databases;
@@ -26,13 +26,13 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried resource group names.</p>
+     * <p>The resource group names.</p>
      */
     @NameInMap("ResourceGroups")
     public java.util.List<String> resourceGroups;
 
     /**
-     * <p>The queried usernames.</p>
+     * <p>The usernames.</p>
      */
     @NameInMap("UserNames")
     public java.util.List<String> userNames;

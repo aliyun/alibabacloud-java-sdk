@@ -15,18 +15,27 @@ public class DatabaseSummaryModel extends TeaModel {
 
     /**
      * <p>The creation source of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XIHE</p>
      */
     @NameInMap("CreatedBySource")
     public String createdBySource;
 
     /**
      * <p>The user who created the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example_user</p>
      */
     @NameInMap("CreatedByUser")
     public String createdByUser;
 
     /**
      * <p>The database type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXTERNAL_DB</p>
      */
     @NameInMap("DbType")
     public String dbType;
@@ -42,6 +51,9 @@ public class DatabaseSummaryModel extends TeaModel {
 
     /**
      * <p>The data storage location of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://example-bucket/database/</p>
      */
     @NameInMap("Location")
     public String location;

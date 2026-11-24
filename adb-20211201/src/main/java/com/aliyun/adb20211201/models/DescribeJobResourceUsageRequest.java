@@ -16,7 +16,7 @@ public class DescribeJobResourceUsageRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC time).</p>
+     * <p>The end time of the query, which must be later than the start time. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC time).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

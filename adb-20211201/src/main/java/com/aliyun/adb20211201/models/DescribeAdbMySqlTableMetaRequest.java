@@ -7,7 +7,7 @@ public class DescribeAdbMySqlTableMetaRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all AnalyticDB for MySQL Data Lakehouse Edition clusters in a specified region, including the cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class DescribeAdbMySqlTableMetaRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +43,7 @@ public class DescribeAdbMySqlTableMetaRequest extends TeaModel {
     /**
      * <p>The name of the table.</p>
      * <blockquote>
-     * <p> If you leave this parameter empty, the information about all the current tables in the cluster is returned.</p>
+     * <p>If this parameter is left empty, the usage frequency data of all tables in the specified cluster on the current day is returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

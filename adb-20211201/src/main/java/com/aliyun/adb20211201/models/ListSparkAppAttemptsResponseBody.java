@@ -42,36 +42,36 @@ public class ListSparkAppAttemptsResponseBody extends TeaModel {
 
     public static class ListSparkAppAttemptsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of retry information. Metric description:</p>
+         * <p>The retry information list. Response parameter description:</p>
          * <ul>
-         * <li><strong>AttemptId</strong>: the retry ID.</li>
-         * <li><strong>State</strong>: the execute status of the application. Valid values:<ul>
-         * <li><strong>SUBMITTED</strong>: commit.</li>
-         * <li><strong>STARTING</strong>: starting.</li>
-         * <li><strong>RUNNING</strong>: executing.</li>
-         * <li><strong>FAILING</strong>: the node failed and the environment is being cleaned up.</li>
-         * <li><strong>FAILED</strong>: failed.</li>
-         * <li><strong>KILLING</strong>: aborting the task and cleaning up the environment.</li>
-         * <li><strong>KILLED</strong>: the task is aborted.</li>
-         * <li><strong>SUCCEEDING</strong>: the node execution is complete and the environment is being cleaned up.</li>
-         * <li><strong>COMPLETED</strong>: the node execution is complete.</li>
-         * <li><strong>FATAL</strong>: unexpected failure.</li>
-         * <li><strong>UNKNOWN</strong>: unknown fault.</li>
+         * <li><strong>AttemptId</strong>: The retry ID.</li>
+         * <li><strong>State</strong>: The execution state of the application. Valid values:<ul>
+         * <li><strong>SUBMITTED</strong>: Submitted.</li>
+         * <li><strong>STARTING</strong>: Starting.</li>
+         * <li><strong>RUNNING</strong>: Running.</li>
+         * <li><strong>FAILING</strong>: The task failed. Cleaning up the environment.</li>
+         * <li><strong>FAILED</strong>: Failed.</li>
+         * <li><strong>KILLING</strong>: Aborting the task. Cleaning up the environment.</li>
+         * <li><strong>KILLED</strong>: The task aborted.</li>
+         * <li><strong>SUCCEEDING</strong>: The task execution ended. Cleaning up the environment.</li>
+         * <li><strong>COMPLETED</strong>: The task execution ended.</li>
+         * <li><strong>FATAL</strong>: Unexpected failure.</li>
+         * <li><strong>UNKNOWN</strong>: Unknown error.</li>
          * </ul>
          * </li>
-         * <li><strong>Message</strong>: the alerting message. This parameter is empty if no alerting is generated.</li>
-         * <li><strong>Data</strong>: the Spark application template data.</li>
-         * <li><strong>EstimateExecutionCpuTimeInSeconds</strong>: the CPU time consumed to execute the Spark application, in milliseconds (ms).</li>
-         * <li><strong>LogRootPath</strong>: the storage path of log files.</li>
-         * <li><strong>LastAttemptId</strong>: the ID of the last retry.</li>
-         * <li><strong>WebUiAddress</strong>: the web UI address.</li>
-         * <li><strong>SubmittedTimeInMillis</strong>: the time when the Spark application was committed. This value is a UNIX timestamp in milliseconds (ms).</li>
-         * <li><strong>StartedTimeInMillis</strong>: the time when the Spark application was created. This value is a UNIX timestamp in milliseconds (ms).</li>
-         * <li><strong>LastUpdatedTimeInMillis</strong>: the time when the Spark application was last updated. This value is a UNIX timestamp in milliseconds (ms).</li>
-         * <li><strong>TerminatedTimeInMillis</strong>: the time when the Spark application stopped executing. This value is a UNIX timestamp in milliseconds (ms).</li>
-         * <li><strong>DBClusterId</strong>: the ID of the cluster that executes the Spark application.</li>
-         * <li><strong>ResourceGroupName</strong>: the name of the Job-type resource group.</li>
-         * <li><strong>DurationInMillis</strong>: the execution duration of the Spark application, in milliseconds (ms).</li>
+         * <li><strong>Message</strong>: The alert information. If no alert is generated, an empty value is returned.</li>
+         * <li><strong>Data</strong>: The Spark application template data.</li>
+         * <li><strong>EstimateExecutionCpuTimeInSeconds</strong>: The CPU time consumed to execute the Spark application, in milliseconds.</li>
+         * <li><strong>LogRootPath</strong>: The storage path of the log file.</li>
+         * <li><strong>LastAttemptId</strong>: The ID of the last retry.</li>
+         * <li><strong>WebUiAddress</strong>: The Web UI address.</li>
+         * <li><strong>SubmittedTimeInMillis</strong>: The time when the Spark application was submitted. The value is a UNIX timestamp in milliseconds.</li>
+         * <li><strong>StartedTimeInMillis</strong>: The time when the Spark application was created. The value is a UNIX timestamp in milliseconds.</li>
+         * <li><strong>LastUpdatedTimeInMillis</strong>: The time when the Spark application was last updated. The value is a UNIX timestamp in milliseconds.</li>
+         * <li><strong>TerminatedTimeInMillis</strong>: The time when the execution of the Spark application was stopped. The value is a UNIX timestamp in milliseconds.</li>
+         * <li><strong>DBClusterId</strong>: The ID of the cluster where the Spark application is executed.</li>
+         * <li><strong>ResourceGroupName</strong>: The name of the job resource group.</li>
+         * <li><strong>DurationInMillis</strong>: The execution duration of the Spark application, in milliseconds.</li>
          * </ul>
          */
         @NameInMap("AttemptInfoList")

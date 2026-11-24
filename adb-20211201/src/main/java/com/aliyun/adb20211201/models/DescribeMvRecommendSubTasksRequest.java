@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMvRecommendSubTasksRequest extends TeaModel {
     /**
-     * <p>A fixed value. This value cannot be modified.</p>
+     * <p>A fixed value. This parameter cannot be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>Not modifiable</p>
@@ -23,7 +23,7 @@ public class DescribeMvRecommendSubTasksRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>A fixed value. This value cannot be modified.</p>
+     * <p>A fixed value. This parameter cannot be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>Not modifiable</p>
@@ -38,7 +38,7 @@ public class DescribeMvRecommendSubTasksRequest extends TeaModel {
      * <li>Asc</li>
      * <li>Desc</li>
      * </ul>
-     * <p>Valid values for the sort field:</p>
+     * <p>Valid values for the field:</p>
      * <ul>
      * <li>StartTime</li>
      * <li>EndTime</li>

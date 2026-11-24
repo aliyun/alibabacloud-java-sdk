@@ -7,7 +7,7 @@ public class DescribePatternPerformanceRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all clusters in a region, including their cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all clusters in the specified region, including the cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribePatternPerformanceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in UTC in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format.</p>
+     * <p>The end time of the query. The time is in UTC and follows the <i>yyyy-MM-ddTHH:mmZ</i> format.</p>
      * <blockquote>
      * <p>The end time must be later than the start time.</p>
      * </blockquote>
@@ -32,7 +32,7 @@ public class DescribePatternPerformanceRequest extends TeaModel {
     /**
      * <p>The ID of the SQL pattern.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/321868.html">DescribeSQLPatterns</a> operation to query information about all SQL patterns in a cluster within a specified time range, including the ID of each SQL pattern.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/321868.html">DescribeSQLPatterns</a> operation to query the list of all SQL patterns in the specified cluster within a specified time period, including the SQL pattern IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,14 +52,14 @@ public class DescribePatternPerformanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in UTC in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format.</p>
+     * <p>The start time of the query. The time is in UTC and follows the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</p>
      * <blockquote>
      * <ul>
-     * <li>You can query data from the last 14 days. If you specify a start time earlier than this period, an empty value is returned. For example, if the current date is August 22, 2022 (China Standard Time), the earliest valid start time is 2022-08-08T16:00:00Z.</li>
+     * <li>If the current date is August 22, 2022 (UTC+8), the earliest data you can query is from August 9, 2022 (UTC+8), which corresponds to 2022-08-08T16:00:00Z in UTC. If the specified start time is earlier than August 9, 2022 (UTC+8) or 2022-08-08T16:00:00Z in UTC, an empty response is returned.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>The interval between the start time and the end time cannot exceed 24 hours.</li>
+     * <li>The interval between the start time and the end time of the query cannot exceed 24 hours.</li>
      * </ul>
      * 
      * <strong>example:</strong>

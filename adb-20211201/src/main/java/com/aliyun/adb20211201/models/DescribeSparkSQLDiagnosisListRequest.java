@@ -7,7 +7,7 @@ public class DescribeSparkSQLDiagnosisListRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in a specific region, including the cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in a specific region, including the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,9 +36,9 @@ public class DescribeSparkSQLDiagnosisListRequest extends TeaModel {
     public String minStartTime;
 
     /**
-     * <p>Sorts the query results by a specified field. The value must be a JSON string. Example: <code>[{&quot;Field&quot;:&quot;MaxExclusiveTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters in the JSON string:</p>
+     * <p>Sorts the query results by a specified field. The value must be a JSON string. Example: <code>[{&quot;Field&quot;:&quot;MaxExclusiveTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. The parameters are as follows:</p>
      * <ul>
-     * <li><p><code>Field</code>: the sort field. Valid values:</p>
+     * <li><p><code>Field</code>: the field by which to sort the results. Valid values:</p>
      * <ul>
      * <li><code>MaxExclusiveTime</code>: the maximum execution time.</li>
      * <li><code>PeakMemory</code>: the peak memory usage.</li>
@@ -86,7 +86,7 @@ public class DescribeSparkSQLDiagnosisListRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including the region ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

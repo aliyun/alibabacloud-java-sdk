@@ -18,7 +18,7 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</p>
+     * <p>The end time of the query. Specify the time in the ISO 8601 standard in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format. The time must be in UTC.</p>
      * <blockquote>
      * <p>The end time must be later than the start time.</p>
      * </blockquote>
@@ -41,7 +41,7 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     /**
      * <p>The language configuration. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Simplified Chinese (default language).</li>
+     * <li><strong>zh</strong>: Simplified Chinese (default).</li>
      * <li><strong>en</strong>: English.</li>
      * <li><strong>ja</strong>: Japanese.</li>
      * <li><strong>zh-tw</strong>: Traditional Chinese.</li>
@@ -54,24 +54,24 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The sorting rule for the query results. The format is a JSON character string. Example: <code>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. The JSON character string contains the following parameters:</p>
+     * <p>The sorting configuration for the query results. The value is a JSON string. Example: <code>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters:</p>
      * <ul>
-     * <li><p><code>Field</code>: the field by which to sort the results. Valid values:</p>
+     * <li><p><code>Field</code>: the sorting field. Valid values:</p>
      * <ul>
-     * <li><code>PatternCreationTime</code>: the earliest commit time of the pattern within the query time range.</li>
-     * <li><code>AverageQueryTime</code>: the average total time consumed by the pattern within the query time range.</li>
-     * <li><code>MaxQueryTime</code>: the maximum total time consumed by the pattern within the query time range.</li>
+     * <li><code>PatternCreationTime</code>: the earliest submission time of the pattern within the query time range.</li>
+     * <li><code>AverageQueryTime</code>: the average total duration of the pattern within the query time range.</li>
+     * <li><code>MaxQueryTime</code>: the maximum total duration of the pattern within the query time range.</li>
      * <li><code>AverageExecutionTime</code>: the average execution duration of the pattern within the query time range.</li>
      * <li><code>MaxExecutionTime</code>: the maximum execution duration of the pattern within the query time range.</li>
-     * <li><code>AveragePeakMemory</code>: the average peak memory usage of the pattern within the query time range.</li>
-     * <li><code>MaxPeakMemory</code>: the maximum peak memory usage of the pattern within the query time range.</li>
+     * <li><code>AveragePeakMemory</code>: the average peak memory of the pattern within the query time range.</li>
+     * <li><code>MaxPeakMemory</code>: the maximum peak memory of the pattern within the query time range.</li>
      * <li><code>AverageScanSize</code>: the average amount of data read by the pattern within the query time range.</li>
      * <li><code>MaxScanSize</code>: the maximum amount of data read by the pattern within the query time range.</li>
      * <li><code>QueryCount</code>: the number of executions of the pattern within the query time range.</li>
-     * <li><code>FailedCount</code>: the number of failed executions of the pattern within the query time range.</li>
+     * <li><code>FailedCount</code>: the number of failures of the pattern within the query time range.</li>
      * </ul>
      * </li>
-     * <li><p><code>Type</code>: the sort order. The value is not case-sensitive. Valid values:</p>
+     * <li><p><code>Type</code>: the sorting method. The value is case-insensitive. Valid values:</p>
      * <ul>
      * <li><code>Asc</code>: ascending order.</li>
      * <li><code>Desc</code>: descending order.</li>
@@ -86,7 +86,7 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Valid values: integers greater than 0 and up to the maximum integer value.
+     * <p>The page number. Valid values: positive integers up to the maximum value of the Integer data type.
      * Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>10</strong> (default value)</li>
+     * <li><strong>10</strong> (default)</li>
      * <li><strong>30</strong></li>
      * <li><strong>50</strong></li>
      * <li><strong>100</strong></li>
@@ -121,13 +121,16 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The hash value of the SQL pattern, which is used to filter a specific SQL pattern.</p>
+     * <p>The hash value of the SQL pattern, which is used to filter specific SQL patterns.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890123456789</p>
      */
     @NameInMap("SqlPatternHash")
     public Long sqlPatternHash;
 
     /**
-     * <p>The start time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</p>
+     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format. The time must be in UTC.</p>
      * <blockquote>
      * <ul>
      * <li>You can only query data from the last 14 days.</li>

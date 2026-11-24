@@ -15,12 +15,18 @@ public class TableSummaryModel extends TeaModel {
 
     /**
      * <p>The creation source of the table or view.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XIHE</p>
      */
     @NameInMap("CreatedBySource")
     public String createdBySource;
 
     /**
      * <p>The user who created the table or view.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example_user</p>
      */
     @NameInMap("CreatedByUser")
     public String createdByUser;

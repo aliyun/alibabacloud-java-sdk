@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsSlsADBJobResponseBody extends TeaModel {
     /**
-     * <p>The API status or POP error code.</p>
+     * <p>The operation status code or POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
@@ -17,15 +17,13 @@ public class CreateApsSlsADBJobResponseBody extends TeaModel {
      * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>aps-aa11111aa1aa1a1a</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The HTTP status code returned. A value of 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code returned by the request. A status code of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -34,10 +32,10 @@ public class CreateApsSlsADBJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned for the call. Valid values:</p>
+     * <p>The message returned for the call result. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, <strong>Success</strong> is returned. </li>
-     * <li>If the request failed, the specific error message is returned.</li>
+     * <li>If the request is normal, <strong>Success</strong> is returned. </li>
+     * <li>If the request is abnormal, the specific error message is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +54,7 @@ public class CreateApsSlsADBJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the precheck. Valid values:</p>
+     * <p>The precheck result. Valid values:</p>
      * <ul>
      * <li><strong>success</strong>: The check passed.</li>
      * <li><strong>false</strong>: The check failed.</li>

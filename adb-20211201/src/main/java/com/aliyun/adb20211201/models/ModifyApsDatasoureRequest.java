@@ -15,7 +15,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The description of the data source.</p>
+     * <p>The data source description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -34,7 +34,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public Long datasourceId;
 
     /**
-     * <p>The name of the data source.</p>
+     * <p>The data source name.</p>
      * 
      * <strong>example:</strong>
      * <p>sls-******</p>
@@ -43,27 +43,25 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public String datasourceName;
 
     /**
-     * <p>The information about the Kafka instance.</p>
+     * <p>The Kafka data source information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;KafkaTopic&quot;:&quot;test-topic&quot;}</p>
      */
     @NameInMap("KafkaInfo")
     public ModifyApsDatasoureRequestKafkaInfo kafkaInfo;
 
     /**
-     * <p>The lakehouse ID.</p>
+     * <p>The Lakehouse ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>{&quot;VpcId&quot;:&quot;vpc-******&quot;}</p>
      */
     @NameInMap("LakehouseId")
     public ModifyApsDatasoureRequestLakehouseId lakehouseId;
 
     /**
-     * <p>The parameter is no longer supported.</p>
+     * <p>The deprecated data source information.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -74,7 +72,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public ModifyApsDatasoureRequestPolarDBMysqlInfo polarDBMysqlInfo;
 
     /**
-     * <p>The parameter is no longer supported.</p>
+     * <p>The deprecated data source information.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -95,12 +93,10 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The information about Simple Log Service (SLS).</p>
+     * <p>The Simple Log Service (SLS) information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;Project&quot;:&quot;example-project&quot;,&quot;Store&quot;:&quot;example-logstore&quot;,&quot;Across&quot;:false}</p>
      */
     @NameInMap("SlsInfo")
     public ModifyApsDatasoureRequestSlsInfo slsInfo;
@@ -192,7 +188,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
 
     public static class ModifyApsDatasoureRequestKafkaInfo extends TeaModel {
         /**
-         * <p>The ID of the Kafka instance.</p>
+         * <p>The Kafka instance ID.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -203,7 +199,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String kafkaClusterId;
 
         /**
-         * <p>The topic of the Kafka instance.</p>
+         * <p>The Kafka topic name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-topic</p>
@@ -236,7 +232,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
 
     public static class ModifyApsDatasoureRequestLakehouseId extends TeaModel {
         /**
-         * <p>The name of the security group.</p>
+         * <p>The security group name.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-******</p>
@@ -245,7 +241,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String securityGroup;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-******</p>
@@ -254,7 +250,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The name of the vSwitch.</p>
+         * <p>The vSwitch name.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-******</p>
@@ -295,7 +291,9 @@ public class ModifyApsDatasoureRequest extends TeaModel {
 
     public static class ModifyApsDatasoureRequestPolarDBMysqlInfo extends TeaModel {
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -306,7 +304,9 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String connectUrl;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -317,7 +317,9 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -328,7 +330,9 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -379,7 +383,9 @@ public class ModifyApsDatasoureRequest extends TeaModel {
 
     public static class ModifyApsDatasoureRequestRdsMysqlInfo extends TeaModel {
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -390,7 +396,9 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String connectUrl;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -401,7 +409,9 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -412,7 +422,9 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The parameter is no longer supported.</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -463,10 +475,10 @@ public class ModifyApsDatasoureRequest extends TeaModel {
 
     public static class ModifyApsDatasoureRequestSlsInfo extends TeaModel {
         /**
-         * <p>Specifies whether to use a cross-account resource as the data source. Valid values:</p>
+         * <p>Specifies whether the resource is cross-account. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The current network instance is a cross-account resource.</li>
+         * <li><strong>false</strong>: The current network instance is a resource within the current account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -476,7 +488,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public Boolean across;
 
         /**
-         * <p>The name of the cross-account role.</p>
+         * <p>The cross-account role.</p>
          * 
          * <strong>example:</strong>
          * <p>test-role</p>
@@ -494,7 +506,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String acrossUid;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The source region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsSlsADBJobRequest extends TeaModel {
     /**
-     * <p>The role name for cross-account access.</p>
+     * <p>The cross-account role name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-role</p>
@@ -14,7 +14,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String acrossRole;
 
     /**
-     * <p>The UID for cross-account access.</p>
+     * <p>The cross-account UID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -38,9 +38,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>[{&quot;MapName&quot;:&quot;test&quot;,&quot;MapType&quot;:&quot;int&quot;,&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;}]</p>
      */
     @NameInMap("Columns")
     public java.util.List<CreateApsSlsADBJobRequestColumns> columns;
@@ -79,9 +77,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>STOP</p>
      */
     @NameInMap("DirtyDataHandleMode")
     public String dirtyDataHandleMode;
@@ -96,7 +92,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String dirtyDataProcessPattern;
 
     /**
-     * <p>Specifies whether to enable exactly-once semantics.</p>
+     * <p>Specifies whether exactly-once semantics is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -105,7 +101,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String exactlyOnce;
 
     /**
-     * <p>The number of AnalyticDB compute units (ACUs) for full data synchronization.</p>
+     * <p>The full ACUs.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -125,7 +121,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String hudiAdvancedConfig;
 
     /**
-     * <p>The number of AnalyticDB compute units (ACUs) for incremental data synchronization.</p>
+     * <p>The incremental ACUs.</p>
      * 
      * <strong>example:</strong>
      * <p>168</p>
@@ -134,7 +130,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String incrementalComputeUnit;
 
     /**
-     * <p>lakehosue ID。</p>
+     * <p>The lakehouse ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -143,18 +139,16 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public Long lakehouseId;
 
     /**
-     * <p>The maximum offset.</p>
+     * <p>The maximum number of offsets per trigger.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>20000</p>
      */
     @NameInMap("MaxOffsetsPerTrigger")
     public Long maxOffsetsPerTrigger;
 
     /**
-     * <p>The OSS address.</p>
+     * <p>The OSS location.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test*</p>
@@ -177,9 +171,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
      * <p>The partition information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>[]</p>
      */
     @NameInMap("PartitionSpecs")
     public java.util.List<java.util.Map<String, ?>> partitionSpecs;
@@ -243,7 +235,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String sourceRegionId;
 
     /**
-     * <p>The starting offset for delivery.</p>
+     * <p>The starting offset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -253,7 +245,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String startingOffsets;
 
     /**
-     * <p>sls Store。</p>
+     * <p>The SLS store.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -272,7 +264,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The generation rule for the destination.</p>
+     * <p>The destination generation rule.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -292,12 +284,10 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The UNIX timestamp conversion configuration.</p>
+     * <p>The UNIX timestamp conversion.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;Transform&quot;:false}</p>
      */
     @NameInMap("UnixTimestampConvert")
     public CreateApsSlsADBJobRequestUnixTimestampConvert unixTimestampConvert;
@@ -612,7 +602,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The column data type.</p>
+         * <p>The data type of the column.</p>
          * 
          * <strong>example:</strong>
          * <p>bigint</p>
@@ -661,7 +651,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
 
     public static class CreateApsSlsADBJobRequestUnixTimestampConvert extends TeaModel {
         /**
-         * <p>The conversion method.</p>
+         * <p>The conversion.</p>
          * 
          * <strong>example:</strong>
          * <p>false。</p>
@@ -679,7 +669,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>Specifies whether to enable conversion.</p>
+         * <p>Specifies whether to enable the conversion.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

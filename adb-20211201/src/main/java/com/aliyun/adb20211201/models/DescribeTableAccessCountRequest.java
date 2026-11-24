@@ -8,7 +8,7 @@ public class DescribeTableAccessCountRequest extends TeaModel {
      * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
      * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in the specified region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -19,22 +19,22 @@ public class DescribeTableAccessCountRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Sorts the query results by a specified field. The value is a JSON string. Example: <code>[{&quot;Field&quot;:&quot;TableSchema&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
+     * <p>Sorts the query results by a specified field. The value is a JSON string. Example: <code>[{&quot;Field&quot;:&quot;TableSchema&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters in the JSON string:</p>
      * <ul>
-     * <li><code>Field</code> specifies the field by which to sort. Valid values:<ul>
+     * <li><code>Field</code>: the field by which to sort. Valid values:<ul>
      * <li><code>TableSchema</code>: the name of the database to which the table belongs.</li>
-     * <li><code>TableName</code>: the table name.</li>
+     * <li><code>TableName</code>: the name of the table.</li>
      * <li><code>AccessCount</code>: the number of times the table is accessed.</li>
      * </ul>
      * </li>
-     * <li><code>Type</code> specifies the sort order. Valid values:<ul>
+     * <li><code>Type</code>: the sort order. Valid values:<ul>
      * <li><code>Asc</code>: ascending order.</li>
      * <li><code>Desc</code>: descending order.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is not specified, the results are sorted by the database name of the table in ascending order by default.</p>
+     * <p>If this parameter is not specified, the results are sorted in ascending order by the database to which the target table belongs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,9 +78,9 @@ public class DescribeTableAccessCountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query, in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time of the query. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</p>
      * <blockquote>
-     * <p>Only data within the last 30 days can be queried.</p>
+     * <p>You can only query data within the last 30 days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class DescribeTableAccessCountRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The name of the target table.</p>
      * <blockquote>
      * <p>If this parameter is left empty, the access frequency data of all tables in the cluster within the specified date range is returned.</p>
      * </blockquote>

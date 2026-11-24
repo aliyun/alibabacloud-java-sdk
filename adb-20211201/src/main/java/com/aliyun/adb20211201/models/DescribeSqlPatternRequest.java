@@ -7,8 +7,7 @@ public class DescribeSqlPatternRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the DescribeDBClusters operation to query the IDs of all clusters in a specified region.
-     * <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a></p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -19,40 +18,40 @@ public class DescribeSqlPatternRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies the sorting of query results by a specified field. The format is a JSON character string, such as <code>[{&quot;Field&quot;:&quot;Pattern&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters:</p>
+     * <p>Sorts the query results by a specified field. The format is a JSON character string, such as <code>[{&quot;Field&quot;:&quot;Pattern&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters:</p>
      * <ul>
-     * <li><p>Field: the sorting field. Valid values:</p>
+     * <li><p><code>Field</code>: the sorting field. Valid values:</p>
      * <ul>
-     * <li>Pattern: SQL pattern.</li>
-     * <li>AccessIP: client IP address.</li>
-     * <li>User: username.</li>
-     * <li>QueryCount: total number of queries.</li>
-     * <li>AvgPeakMemory: average peak memory. Unit: KB.</li>
-     * <li>MaxPeakMemory: Peak Volume memory. Unit: KB.</li>
-     * <li>AvgCpuTime: average computing duration. Unit: milliseconds.</li>
-     * <li>MaxCpuTime: maximum computing duration. Unit: milliseconds.</li>
-     * <li>AvgStageCount: average number of stages.</li>
-     * <li>MaxStageCount: maximum number of stages.</li>
-     * <li>AvgTaskCount: average number of tasks.</li>
-     * <li>MaxTaskCount: maximum number of tasks.</li>
-     * <li>AvgScanSize: average scan size. Unit: KB.</li>
-     * <li>MaxScanSize: maximum scan size. Unit: KB.</li>
+     * <li><code>Pattern</code>: SQL pattern.</li>
+     * <li><code>AccessIP</code>: client IP address.</li>
+     * <li><code>User</code>: username.</li>
+     * <li><code>QueryCount</code>: total number of queries.</li>
+     * <li><code>AvgPeakMemory</code>: average peak memory usage. Unit: KB.</li>
+     * <li><code>MaxPeakMemory</code>: Peak Volume memory. Unit: KB.</li>
+     * <li><code>AvgCpuTime</code>: average computing duration. Unit: milliseconds.</li>
+     * <li><code>MaxCpuTime</code>: maximum computing duration. Unit: milliseconds.</li>
+     * <li><code>AvgStageCount</code>: average number of stages.</li>
+     * <li><code>MaxStageCount</code>: maximum number of stages.</li>
+     * <li><code>AvgTaskCount</code>: average number of tasks.</li>
+     * <li><code>MaxTaskCount</code>: maximum number of tasks.</li>
+     * <li><code>AvgScanSize</code>: average scanned data size. Unit: KB.</li>
+     * <li><code>MaxScanSize</code>: maximum scanned data size. Unit: KB.</li>
      * </ul>
      * </li>
-     * <li><p>Type: the sorting method. Valid values:</p>
+     * <li><p><code>Type</code>: the sorting method. Valid values:</p>
      * <ul>
-     * <li>Asc: ascending sorting.</li>
-     * <li>Desc: descending sorting.</li>
+     * <li><code>Asc</code>: ascending sorting.</li>
+     * <li><code>Desc</code>: descending sorting.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If no Settings are specified for this parameter, the results are sorted in ascending order by the Pattern field by default.</li>
+     * <li>If the Settings are not specified, the results are sorted in ascending order by the <code>Pattern</code> field by default.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>To perform sorting by the AccessIP field, you must set the Type parameter to accessip. To perform sorting by the User field, you must leave the Type parameter empty or set it to user.</li>
+     * <li>To sort by the <code>AccessIP</code> field, you must set the <code>Type</code> parameter to <code>accessip</code>. To sort by the <code>User</code> field, you must leave the <code>Type</code> parameter empty or set it to <code>user</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +61,7 @@ public class DescribeSqlPatternRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Valid values: integers greater than 0 and no greater than the maximum value of the Integer type.
+     * <p>The page number. Valid values: integers greater than 0 and less than or equal to the maximum value of the Integer type.
      * Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -99,7 +98,7 @@ public class DescribeSqlPatternRequest extends TeaModel {
     /**
      * <p>The keyword that the SQL pattern must contain.</p>
      * <blockquote>
-     * <p>If this parameter is not specified, the details of all SQL patterns for the cluster on the date specified by the StartTime parameter are returned by default.</p>
+     * <p>If this parameter is not specified, the details of all SQL patterns for the cluster on the date specified by the <code>StartTime</code> parameter are returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,9 +108,9 @@ public class DescribeSqlPatternRequest extends TeaModel {
     public String sqlPattern;
 
     /**
-     * <p>The start date of the query. The time is in UTC and formatted as yyyy-MM-dd.</p>
+     * <p>The start date for the query. The time is in UTC and formatted as yyyy-MM-dd.</p>
      * <blockquote>
-     * <p>You can only query data within the last 30 days.</p>
+     * <p>Only data from the last 30 days can be queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,13 +120,13 @@ public class DescribeSqlPatternRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>Aggregates SQL patterns by a specified dimension. Valid values:</p>
+     * <p>The dimension by which to aggregate SQL patterns. Valid values:</p>
      * <ul>
-     * <li>user: aggregates by user.</li>
-     * <li>accessip: aggregates by access IP address.</li>
+     * <li><code>user</code>: aggregates by user.</li>
+     * <li><code>accessip</code>: aggregates by access IP address.</li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is not specified, SQL patterns are aggregated by user by default.</p>
+     * <p>If this parameter is not specified, SQL patterns are aggregated by the <code>user</code> dimension by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -8,9 +8,7 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
      * <p>The job details.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;SourceEndpointRegion&quot;:&quot;cn-beijing&quot;,&quot;DestinationEndpointRegion&quot;:&quot;cn-beijing&quot;,&quot;Status&quot;:&quot;Running&quot;,&quot;TargetTableMode&quot;:&quot;0&quot;}</p>
      */
     @NameInMap("APSJobDetail")
     public DescribeApsJobDetailResponseBodyAPSJobDetail APSJobDetail;
@@ -56,7 +54,7 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         public String dbList;
 
         /**
-         * <p>The target database instance ID.</p>
+         * <p>The instance ID of the destination database.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-******</p>
@@ -74,7 +72,7 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         public String destinationEndpointRegion;
 
         /**
-         * <p>The list of partitions.</p>
+         * <p>The partition list.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -83,7 +81,7 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         public String partitionList;
 
         /**
-         * <p>The source database instance ID.</p>
+         * <p>The instance ID of the source database.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-*******</p>

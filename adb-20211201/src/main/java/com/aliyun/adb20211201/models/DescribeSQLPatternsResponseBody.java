@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLPatternsResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial. This field is returned only when RAM authentication fails.</p>
+     * <p>The details of the access denial. This field is returned only when the RAM authentication fails.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -40,7 +40,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of patterns.</p>
+     * <p>The list.</p>
      */
     @NameInMap("PatternDetails")
     public java.util.List<DescribeSQLPatternsResponseBodyPatternDetails> patternDetails;
@@ -127,7 +127,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public String accessIp;
 
         /**
-         * <p>The average execution time of the pattern within the specified time range. Unit: milliseconds.</p>
+         * <p>The average execution duration of the pattern within the specified time range. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>234.78</p>
@@ -154,7 +154,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double averagePeakMemory;
 
         /**
-         * <p>The average total time consumed by the pattern within the specified time range. Unit: milliseconds.</p>
+         * <p>The average total duration of the pattern within the specified time range. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -163,7 +163,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double averageQueryTime;
 
         /**
-         * <p>The average scan time.</p>
+         * <p>The average scan duration.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -197,7 +197,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Boolean blockable;
 
         /**
-         * <p>The number of failed executions of the pattern within the specified time range.</p>
+         * <p>The number of failures of the pattern within the specified time range.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -206,7 +206,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Long failedCount;
 
         /**
-         * <p>The maximum execution time of the pattern within the specified time range. Unit: milliseconds.</p>
+         * <p>The maximum execution duration of the pattern within the specified time range. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2142</p>
@@ -224,7 +224,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double maxOperatorCost;
 
         /**
-         * <p>The maximum peak memory usage for the SQL statement related to the pattern. Unit: bytes.</p>
+         * <p>The maximum peak memory for the SQL statement related to the pattern. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>234149</p>
@@ -233,7 +233,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Long maxPeakMemory;
 
         /**
-         * <p>The maximum total time consumed by the pattern within the specified time range. Unit: milliseconds.</p>
+         * <p>The maximum total duration of the pattern within the specified time range. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2341</p>
@@ -242,7 +242,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Long maxQueryTime;
 
         /**
-         * <p>The maximum scan time.</p>
+         * <p>The maximum scan duration.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -287,7 +287,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public String patternCreationTime;
 
         /**
-         * <p>The ID of the SQL pattern.</p>
+         * <p>The ID of the SQL pattern statement.</p>
          * 
          * <strong>example:</strong>
          * <p>5575924945138******</p>
@@ -323,7 +323,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Long queryCount;
 
         /**
-         * <p>The percentage of the time consumed by a single pattern within the query time range out of the total time consumed by all patterns. Unit: %.</p>
+         * <p>The percentage of the total duration of a single pattern within the query time range out of the total duration of all patterns. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -332,7 +332,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double queryTimePercentage;
 
         /**
-         * <p>The total time consumed. Unit: milliseconds.</p>
+         * <p>The total duration. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -341,7 +341,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double queryTimeSum;
 
         /**
-         * <p>The SQL statement of the pattern.</p>
+         * <p>The SQL pattern statement.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM KEPLER_META_NODE_STATIC_INFO WHERE elastic_node = ? OR (elastic_node = ? AND enable = ?)</p>

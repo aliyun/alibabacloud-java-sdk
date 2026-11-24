@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
     /**
-     * <p>The supported permission levels and the list of permissions.</p>
+     * <p>The supported permission levels and permissions.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeEnabledPrivilegesResponseBodyData> data;
@@ -45,7 +45,7 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
          * <p>The permission description.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询数据</p>
+         * <p>Query data</p>
          */
         @NameInMap("Description")
         public String description;
@@ -88,7 +88,7 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>全局权限</p>
+         * <p>Global permissions</p>
          */
         @NameInMap("Description")
         public String description;

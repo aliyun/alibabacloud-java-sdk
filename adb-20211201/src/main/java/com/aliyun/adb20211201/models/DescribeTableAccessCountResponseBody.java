@@ -38,7 +38,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -102,7 +102,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         public String accessCount;
 
         /**
-         * <p>The cluster ID of the cluster to which the table belongs.</p>
+         * <p>The ID of the cluster to which the table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-2ze627uzpkh8a8****</p>
@@ -111,7 +111,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The date on which the table was used.</p>
+         * <p>The date when the table was used.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-26</p>
@@ -120,7 +120,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         public String reportDate;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOMER</p>

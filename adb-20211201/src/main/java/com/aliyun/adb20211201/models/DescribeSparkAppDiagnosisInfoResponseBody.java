@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     /**
-     * <p>The information about the request denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -24,7 +24,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     /**
      * <p>The application ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The CPU utilization. Unit: %.</p>
+     * <p>The CPU utilization. Unit: percentage (%).</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -43,13 +43,13 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Double cpuUtilization;
 
     /**
-     * <p>The queried diagnostic information.</p>
+     * <p>The list of Spark analysis information.</p>
      */
     @NameInMap("DiagnosisInfoList")
     public java.util.List<Adb4MysqlSparkDiagnosisInfo> diagnosisInfoList;
 
     /**
-     * <p>The execution duration of the application. Unit: milliseconds.</p>
+     * <p>The execution duration of the Spark application. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>281063</p>
@@ -58,7 +58,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long durationInMillis;
 
     /**
-     * <p>The amount of time consumed by the Java virtual machine to perform garbage collection operations. Unit: milliseconds.</p>
+     * <p>The time consumed by the Java Virtual Machine (JVM) to perform garbage collection. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>81055</p>
@@ -85,7 +85,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The amount of data used for shuffle reads. Unit: bytes.</p>
+     * <p>The amount of data read during the shuffle process. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>4096000</p>
@@ -94,7 +94,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long shuffleReadInByte;
 
     /**
-     * <p>The amount of data used for shuffle writes. Unit: bytes.</p>
+     * <p>The amount of data written during the shuffle process. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>4096000</p>
@@ -103,7 +103,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long shuffleWriteInByte;
 
     /**
-     * <p>The amount of data spilled to disks when the memory is insufficient. Unit: bytes.</p>
+     * <p>The data volume spilled to disk when out of memory. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -112,7 +112,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long spillInByte;
 
     /**
-     * <p>The time when the application started to be executed.</p>
+     * <p>The start time of the execution.</p>
      * 
      * <strong>example:</strong>
      * <p>1718329831000</p>
@@ -121,11 +121,11 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
     public Long startedTime;
 
     /**
-     * <p>The status of the asynchronous import or export job. Valid values:</p>
+     * <p>The status of the asynchronous import or export task to query. Valid values:</p>
      * <ul>
-     * <li><strong>RUNNING</strong></li>
-     * <li><strong>FINISHED</strong></li>
-     * <li><strong>FAILED</strong></li>
+     * <li><strong>RUNNING</strong>: The task is in progress.</li>
+     * <li><strong>FINISHED</strong>: The task succeeded.</li>
+     * <li><strong>FAILED</strong>: The task failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

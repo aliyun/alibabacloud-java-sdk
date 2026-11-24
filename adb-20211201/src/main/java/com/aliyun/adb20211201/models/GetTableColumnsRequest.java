@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableColumnsRequest extends TeaModel {
     /**
-     * <p>The name of the column.</p>
+     * <p>The column name.</p>
      * 
      * <strong>example:</strong>
      * <p>assist_user_phone</p>
@@ -24,7 +24,7 @@ public class GetTableColumnsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Valid values: an integer greater than 0 and up to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -57,7 +57,7 @@ public class GetTableColumnsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>adb_demo</p>
@@ -66,7 +66,7 @@ public class GetTableColumnsRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The table name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

@@ -93,20 +93,20 @@ public class ListSparkAppsResponseBody extends TeaModel {
 
     public static class ListSparkAppsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of application information. Response parameter description:</p>
+         * <p>The application information list. Returned parameter descriptions:</p>
          * <ul>
-         * <li><strong>Data</strong>: the Spark application template data.</li>
-         * <li><strong>EstimateExecutionCpuTimeInSeconds</strong>: the CPU time consumed to execute the Spark application, in milliseconds (ms).</li>
-         * <li><strong>LogRootPath</strong>: the storage path of log files.</li>
-         * <li><strong>LastAttemptId</strong>: the retry ID.</li>
-         * <li><strong>WebUiAddress</strong>: the Web UI address.</li>
-         * <li><strong>SubmittedTimeInMillis</strong>: the time when the Spark application was submitted, in UNIX timestamp format, in milliseconds (ms).</li>
-         * <li><strong>StartedTimeInMillis</strong>: the time when the Spark application was created, in UNIX timestamp format, in milliseconds (ms).</li>
-         * <li><strong>LastUpdatedTimeInMillis</strong>: the time when the Spark application was last updated, in UNIX timestamp format, in milliseconds (ms).</li>
-         * <li><strong>TerminatedTimeInMillis</strong>: the time when the Spark application stopped execution, in UNIX timestamp format, in milliseconds (ms).</li>
-         * <li><strong>DBClusterId</strong>: the ID of the cluster that executed the Spark application.</li>
-         * <li><strong>ResourceGroupName</strong>: the name of the job resource group.</li>
-         * <li><strong>DurationInMillis</strong>: the execution duration of the Spark application, in milliseconds (ms).</li>
+         * <li><strong>Data</strong>: The Spark application template data.</li>
+         * <li><strong>EstimateExecutionCpuTimeInSeconds</strong>: The CPU time consumed to execute the Spark application, in milliseconds.</li>
+         * <li><strong>LogRootPath</strong>: The storage path of log files.</li>
+         * <li><strong>LastAttemptId</strong>: The retry ID.</li>
+         * <li><strong>WebUiAddress</strong>: The Web UI address.</li>
+         * <li><strong>SubmittedTimeInMillis</strong>: The time when the Spark application was committed. The value is a UNIX timestamp in milliseconds.</li>
+         * <li><strong>StartedTimeInMillis</strong>: The time when the Spark application was created. The value is a UNIX timestamp in milliseconds.</li>
+         * <li><strong>LastUpdatedTimeInMillis</strong>: The time when the Spark application was last updated. The value is a UNIX timestamp in milliseconds.</li>
+         * <li><strong>TerminatedTimeInMillis</strong>: The time when the execution of the Spark application was stopped. The value is a UNIX timestamp in milliseconds.</li>
+         * <li><strong>DBClusterId</strong>: The ID of the cluster where the Spark application is executed.</li>
+         * <li><strong>ResourceGroupName</strong>: The name of the job resource group.</li>
+         * <li><strong>DurationInMillis</strong>: The execution duration of the Spark application, in milliseconds.</li>
          * </ul>
          */
         @NameInMap("AppInfoList")

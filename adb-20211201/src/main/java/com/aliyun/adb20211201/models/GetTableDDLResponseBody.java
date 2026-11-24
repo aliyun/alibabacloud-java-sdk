@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableDDLResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>863D51B7-5321-41D8-A0B6-A088B0******</p>

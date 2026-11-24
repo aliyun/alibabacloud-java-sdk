@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeApsActionLogsRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster must be of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,20 +19,20 @@ public class DescribeApsActionLogsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the logs to be queried. Specify the time in the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mmZ</strong> format. The time must be in UTC.</p>
+     * <p>The end time of the logs. Specify the time in the <strong>yyyy-MM-ddTHH:mmZ</strong> format. The time must be in UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time. The maximum time range that can be specified is 30 days.</p>
+     * <p>When you query logs, the end time must be later than the start time, and the time span between the start time and the end time cannot exceed 30 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-02-11T09:30:00Z</p>
+     * <p>2023-02-11T09:30Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The keyword that you want to use for fuzzy match in the query.</p>
+     * <p>The keyword for the query. Fuzzy matching is applied during log query.</p>
      * 
      * <strong>example:</strong>
      * <p>table_test</p>
@@ -46,7 +47,7 @@ public class DescribeApsActionLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value must be a positive integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,9 +70,9 @@ public class DescribeApsActionLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -88,14 +89,14 @@ public class DescribeApsActionLogsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The phase during which the logs to be queried were generated. Valid values:</p>
+     * <p>The task stage. Valid values:</p>
      * <ul>
-     * <li><strong>StructureMigrate</strong>: schema migration.</li>
-     * <li><strong>FullDataSync</strong>: full data synchronization.</li>
-     * <li><strong>IncrementalSync</strong>: incremental data synchronization.</li>
+     * <li><strong>StructureMigrate</strong>: Schema migration.</li>
+     * <li><strong>FullDataSync</strong>: Full data synchronization.</li>
+     * <li><strong>IncrementalSync</strong>: Incremental data synchronization.</li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, logs of all the phases are queried.</p>
+     * <p>If you do not specify this parameter, logs of all task stages are queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -105,24 +106,24 @@ public class DescribeApsActionLogsRequest extends TeaModel {
     public String stage;
 
     /**
-     * <p>The start time of the logs to be queried. Specify the time in the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mmZ</strong> format. The time must be in UTC.</p>
+     * <p>The start time of the logs. Specify the time in the <strong>yyyy-MM-ddTHH:mmZ</strong> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-02-11T08:30:00Z</p>
+     * <p>2023-02-11T08:30Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The types of the logs. Separate multiple log types with commas (,). Valid values:</p>
+     * <p>The log type. Separate multiple log types with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>INFO</strong></li>
-     * <li><strong>WARN</strong></li>
-     * <li><strong>ERROR</strong></li>
+     * <li><strong>INFO</strong>: Information.</li>
+     * <li><strong>WARN</strong>: Warning.</li>
+     * <li><strong>ERROR</strong>: Error.</li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, logs of all types are queried.</p>
+     * <p>If you do not specify this parameter, logs of all types are queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -132,7 +133,7 @@ public class DescribeApsActionLogsRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>The ID of the real-time data ingestion job.</p>
+     * <p>The ID of the data link task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

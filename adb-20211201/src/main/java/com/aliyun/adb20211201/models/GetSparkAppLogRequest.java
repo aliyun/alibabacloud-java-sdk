@@ -7,7 +7,7 @@ public class GetSparkAppLogRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the ID of the Spark application.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the ID of the Spark application.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +49,7 @@ public class GetSparkAppLogRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of data rows per page.</p>
+     * <p>The number of rows per page.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>

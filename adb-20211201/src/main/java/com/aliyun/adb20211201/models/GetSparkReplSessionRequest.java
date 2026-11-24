@@ -7,7 +7,7 @@ public class GetSparkReplSessionRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetSparkReplSessionRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the session that executes the code.</p>
+     * <p>The ID of the session for code execution.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

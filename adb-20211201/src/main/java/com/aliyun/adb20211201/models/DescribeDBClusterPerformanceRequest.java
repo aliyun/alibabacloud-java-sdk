@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterPerformanceRequest extends TeaModel {
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The ID of the cluster in Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
      * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~~612397~~~">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -19,9 +19,9 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</p>
+     * <p>The end time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mmZ</i> format.</p>
      * <blockquote>
-     * <p>The end time must be later than the start time, and the interval between the start time and end time cannot exceed two days.</p>
+     * <p>The end time must be later than the start time, and the time span between the start time and the end time cannot exceed two days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The name of the performance metric (metric key) to query. Separate multiple values with commas (,). For more information about supported metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Monitoring metrics overview</a>.</p>
+     * <p>The names of the performance metrics to query, which are the keys of the monitored items. Separate multiple values with commas (,). For more information about the supported metrics, refer to <a href="https://help.aliyun.com/document_detail/2863211.html">Overview of monitoring metrics</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>AnalyticDB_CPU_Usage_Percentage</p>
@@ -62,7 +62,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String resourcePools;
 
     /**
-     * <p>The start time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</p>
+     * <p>The start time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mmZ</i> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-10T23:56Z</p>

@@ -8,9 +8,7 @@ public class DescribeApsProgressResponseBody extends TeaModel {
      * <p>The migration progress.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>[{&quot;DbName&quot;:&quot;example_db&quot;,&quot;TbName&quot;:&quot;example_table&quot;,&quot;Progress&quot;:&quot;95&quot;,&quot;Speed&quot;:&quot;2&quot;}]</p>
      */
     @NameInMap("ApsHiveProgress")
     public java.util.List<DescribeApsProgressResponseBodyApsHiveProgress> apsHiveProgress;

@@ -5,43 +5,39 @@ import com.aliyun.tea.*;
 
 public class OpenStructMvDetailModel extends TeaModel {
     /**
-     * <p>All direct parent base tables of the materialized view.</p>
+     * <p>All direct parent base tables of the current materialized view.</p>
      */
     @NameInMap("BaseTableInfos")
     public java.util.List<OpenStructMvDetailModelBaseTableInfos> baseTableInfos;
 
     /**
-     * <p>All direct parent base tables of the materialized view.</p>
+     * <p>All direct parent base tables of the current materialized view.</p>
      */
     @NameInMap("BaseTableNames")
     public java.util.List<java.util.List<String>> baseTableNames;
 
     /**
-     * <p>Indicates whether to enable alerting for refresh latency. Valid values:</p>
+     * <p>Specifies whether to enable the refresh delay alert. Valid values:</p>
      * <ul>
-     * <li><p>true: Yes.</p>
-     * </li>
-     * <li><p>false: No.</p>
-     * </li>
+     * <li>1: Yes.</li>
+     * <li>0: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>0</p>
      */
     @NameInMap("EnableDelayAlert")
     public Integer enableDelayAlert;
 
     /**
-     * <p>Indicates whether to enable alerting for refresh task failures. Valid values:</p>
+     * <p>Specifies whether to enable the refresh task failure alert. Valid values:</p>
      * <ul>
-     * <li><p>true: Yes.</p>
-     * </li>
-     * <li><p>false: No.</p>
-     * </li>
+     * <li>1: Yes.</li>
+     * <li>0: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>0</p>
      */
     @NameInMap("EnableFailureAlert")
     public Integer enableFailureAlert;
@@ -74,7 +70,7 @@ public class OpenStructMvDetailModel extends TeaModel {
     public Long implicitHit;
 
     /**
-     * <p>Indicates whether the materialized view has not been accessed by explicit or implicit queries for more than 30 days since its creation.</p>
+     * <p>Indicates whether the current materialized view has not been accessed (including explicit and implicit queries) for more than 30 days since its creation.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -83,7 +79,7 @@ public class OpenStructMvDetailModel extends TeaModel {
     public Boolean isInactive;
 
     /**
-     * <p>The refresh latency toleration, in minutes.</p>
+     * <p>The refresh delay tolerance, in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -92,7 +88,7 @@ public class OpenStructMvDetailModel extends TeaModel {
     public Integer latencyTolerance;
 
     /**
-     * <p>The disk space that the materialized view occupies for hot data, in bytes.</p>
+     * <p>The hot data disk space occupied by the materialized view, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -101,7 +97,7 @@ public class OpenStructMvDetailModel extends TeaModel {
     public Long localSize;
 
     /**
-     * <p>Whether query rewrite is enabled for the materialized view.</p>
+     * <p>Specifies whether query rewrite is enabled for the current materialized view.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -128,7 +124,7 @@ public class OpenStructMvDetailModel extends TeaModel {
     public String refreshState;
 
     /**
-     * <p>The disk space that the materialized view occupies for cold data, in bytes.</p>
+     * <p>The cold data disk space occupied by the materialized view, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -137,7 +133,7 @@ public class OpenStructMvDetailModel extends TeaModel {
     public Long remoteSize;
 
     /**
-     * <p>The resource group on which the refresh depends.</p>
+     * <p>The resource group that the refresh depends on.</p>
      * 
      * <strong>example:</strong>
      * <p>user_default</p>
@@ -306,7 +302,7 @@ public class OpenStructMvDetailModel extends TeaModel {
 
     public static class OpenStructMvDetailModelBaseTableInfos extends TeaModel {
         /**
-         * <p>Whether the base table is a materialized view.</p>
+         * <p>Specifies whether the base table is a materialized view.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

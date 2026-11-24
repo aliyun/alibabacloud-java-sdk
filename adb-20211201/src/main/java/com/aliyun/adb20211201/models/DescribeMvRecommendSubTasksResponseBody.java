@@ -93,7 +93,7 @@ public class DescribeMvRecommendSubTasksResponseBody extends TeaModel {
 
     public static class DescribeMvRecommendSubTasksResponseBodyData extends TeaModel {
         /**
-         * <p>The execution list of the materialized view recommendation task.</p>
+         * <p>The list of materialized view recommendation task executions.</p>
          */
         @NameInMap("MvRecommendSubTaskModels")
         public java.util.List<OpenStructMvRecommendSubTaskModel> mvRecommendSubTaskModels;

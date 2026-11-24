@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The code, which is the same as the HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
      * <p>The ID of the created task.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>aps-aa1a1a11a1aaaa1a</p>
      */
     @NameInMap("Data")
     public String data;
@@ -52,8 +52,8 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request is successful.</li>
-     * <li>false: The request fails.</li>
+     * <li>True: successful.</li>
+     * <li>False: unsuccessful.</li>
      * </ul>
      * 
      * <strong>example:</strong>

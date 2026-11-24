@@ -4,16 +4,36 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class Adb4MysqlSparkDiagnosisInfo extends TeaModel {
+    /**
+     * <p>The diagnostic code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task_long_tail</p>
+     */
     @NameInMap("DiagnosisCode")
     public String diagnosisCode;
 
+    /**
+     * <p>The diagnostic cause.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>查询执行耗时较长。</p>
+     */
     @NameInMap("DiagnosisCodeLabel")
     public String diagnosisCodeLabel;
 
+    /**
+     * <p>The diagnostic suggestion.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>检查查询执行计划并优化 SQL。</p>
+     */
     @NameInMap("DiagnosisMsg")
     public String diagnosisMsg;
 
     /**
+     * <p>The diagnostic information type.</p>
+     * 
      * <strong>example:</strong>
      * <p>APPLICATION</p>
      */

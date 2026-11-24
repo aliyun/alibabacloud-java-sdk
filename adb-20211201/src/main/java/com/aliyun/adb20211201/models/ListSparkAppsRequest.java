@@ -16,11 +16,11 @@ public class ListSparkAppsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The filter conditions defined as a JSON-formatted string. The following valid KEY values and their meanings are supported in the JSON string:</p>
+     * <p>The filter conditions defined as a JSON string. The valid keys and their descriptions are as follows:</p>
      * <ul>
      * <li>SubmittedTimeRange: the start time.</li>
      * <li>TerminatedTimeRange: the end time.</li>
-     * <li>AppStates: the status of the Spark job.</li>
+     * <li>AppStates: the state of the Spark job.</li>
      * <li>AppId: the ID of the Spark job.</li>
      * <li>AppNameRegex: the regular expression for the name of the Spark job.</li>
      * <li>Tag: the tag information.</li>
@@ -28,8 +28,8 @@ public class ListSparkAppsRequest extends TeaModel {
      * </ul>
      * <p>For the start time and end time filter conditions, specify the range by using the following substructure:</p>
      * <ul>
-     * <li>Min: the lower bound of the time range. A value of null indicates no limit.</li>
-     * <li>Max: the upper bound of the time range. A value of null indicates no limit.</li>
+     * <li>Min: the lower limit of the time range. A value of null indicates no limit.</li>
+     * <li>Max: the upper limit of the time range. A value of null indicates no limit.</li>
      * </ul>
      * 
      * <strong>example:</strong>

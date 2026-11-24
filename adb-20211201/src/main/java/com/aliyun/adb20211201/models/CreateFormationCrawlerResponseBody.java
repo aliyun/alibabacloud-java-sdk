@@ -14,7 +14,7 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is processed.</p>
+     * <p>Indicates whether the request was processed successfully.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -32,7 +32,7 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. A value of OK indicates success.</p>
+     * <p>The returned message. The value is OK if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -41,7 +41,7 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019F3BE7-E8FA-3DC5-8EE7-501A90B5A54D</p>
@@ -50,9 +50,9 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>true</strong>: The call was successful.</li>
      * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
@@ -63,7 +63,7 @@ public class CreateFormationCrawlerResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The operation result. A value of true indicates that the task is created.</p>
+     * <p>The operation result. A value of true indicates that the task was created successfully.</p>
      * 
      * <strong>example:</strong>
      * <p>241</p>

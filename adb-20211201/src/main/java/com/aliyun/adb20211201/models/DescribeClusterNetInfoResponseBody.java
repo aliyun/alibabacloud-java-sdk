@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterNetInfoResponseBody extends TeaModel {
     /**
-     * <p>The network type of the cluster. Only VPCs are supported. The value is fixed as <strong>VPC</strong>.</p>
+     * <p>The network type of the cluster. Only virtual private clouds (VPCs) are supported. The value is fixed to <strong>VPC</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>

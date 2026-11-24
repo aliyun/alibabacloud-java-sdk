@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopFormationCrawlerRequest extends TeaModel {
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class StopFormationCrawlerRequest extends TeaModel {
     public Long crawlerTaskId;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class StopFormationCrawlerRequest extends TeaModel {
     public String crawlerTaskName;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

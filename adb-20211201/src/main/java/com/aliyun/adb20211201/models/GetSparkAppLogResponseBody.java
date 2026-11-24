@@ -64,13 +64,13 @@ public class GetSparkAppLogResponseBody extends TeaModel {
          * <p>The number of log lines. A value of 0 indicates that no valid logs exist.</p>
          * 
          * <strong>example:</strong>
-         * <p>3517972480</p>
+         * <p>100</p>
          */
         @NameInMap("LogSize")
         public Integer logSize;
 
         /**
-         * <p>The alert information, such as task execution failure or insufficient resources. If no alerts are triggered, an empty value is returned.</p>
+         * <p>The alert information, such as task execution failure or insufficient resources. This parameter is empty if no alerts are generated.</p>
          * 
          * <strong>example:</strong>
          * <p>WARNING:  log file maybe deleted, please check oss path: oss://TestBucketName/applog/</p>

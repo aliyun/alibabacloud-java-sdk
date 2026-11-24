@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountPrivilegesResponseBody extends TeaModel {
     /**
-     * <p>A list of privilege details.</p>
+     * <p>The list of permission details.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeAccountPrivilegesResponseBodyData> data;
 
     /**
-     * <p>The page number. This value matches the <code>PageNumber</code> input parameter.</p>
+     * <p>The page number, which is the same as the page number in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. This value matches the <code>PageSize</code> input parameter.</p>
+     * <p>The number of entries per page, which is the same as the page size in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of privileges at the specified privilege level.</p>
+     * <p>The total number of permissions that the user has at the privilege level.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -169,13 +169,13 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
 
     public static class DescribeAccountPrivilegesResponseBodyData extends TeaModel {
         /**
-         * <p>The privilege object, which specifies the database, table, column, and description.</p>
+         * <p>The privilege object, which is a triplet of database, table, and column, along with additional description information.</p>
          */
         @NameInMap("PrivilegeObject")
         public DescribeAccountPrivilegesResponseBodyDataPrivilegeObject privilegeObject;
 
         /**
-         * <p>The privilege level. Valid values: <code>Global</code>, <code>Database</code>, <code>Table</code>, and <code>Column</code>. The <code>DescribeEnabledPrivileges</code> API returns this value.</p>
+         * <p>The privilege level, which can be Global, Databae, Table, or Column. This value is returned by the DescribeEnabledPrivileges operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Column</p>
@@ -184,7 +184,7 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
         public String privilegeType;
 
         /**
-         * <p>A list of privileges.</p>
+         * <p>The list of permissions.</p>
          */
         @NameInMap("Privileges")
         public java.util.List<String> privileges;

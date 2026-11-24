@@ -11,7 +11,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     public ModifyDBResourceGroupRequestAtmConfig atmConfig;
 
     /**
-     * <p>The auto-stop time.</p>
+     * <p>The automatic stop time.</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -49,7 +49,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable this feature, the unit price of resources decreases, but the resources may be released. This feature can be enabled only for Job resource groups. Valid values:</p>
+     * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable spot instances, the unit price of resources decreases, but the instances may be released. This feature can be enabled only for Job resource groups. Valid values:</p>
      * <ul>
      * <li><strong>True</strong>: Enables the spot instance feature.</li>
      * <li><strong>False</strong>: Disables the spot instance feature.</li>
@@ -62,10 +62,10 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     public Boolean enableSpot;
 
     /**
-     * <p>The engine configurations.</p>
+     * <p>The engine configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</p>
+     * <p>{&quot;spark.adb.version&quot;:&quot;3.5&quot;}</p>
      */
     @NameInMap("EngineParams")
     public java.util.Map<String, ?> engineParams;
@@ -94,7 +94,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
      * <ul>
      * <li><strong>Interactive</strong></li>
      * <li><strong>Job</strong><blockquote>
-     * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
+     * <p>For more information about Data Lakehouse Edition resource groups, refer to <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -110,7 +110,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
      * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>1</p>
      */
     @NameInMap("MaxClusterCount")
     public Integer maxClusterCount;
@@ -118,8 +118,8 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The maximum reserved computing resources.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the currently unallocated resources of the cluster, and the step size is 16 ACUs.</li>
-     * <li>If the resource group type is Job, the maximum reserved computing resources is the currently unallocated resources of the cluster, and the step size is 8 ACUs.</li>
+     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 16 ACU.</li>
+     * <li>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 8 ACU.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
      * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>Reserved parameter</p>
+     * <p>1</p>
      */
     @NameInMap("MaxGpuQuantity")
     public Integer maxGpuQuantity;
@@ -141,7 +141,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
      * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>1</p>
      */
     @NameInMap("MinClusterCount")
     public Integer minClusterCount;
@@ -149,8 +149,8 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The minimum reserved computing resources.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACUs.</li>
-     * <li>If the resource group type is Job, the minimum reserved computing resources is 0 ACUs.</li>
+     * <li>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACU.</li>
+     * <li>If the resource group type is Job, the minimum reserved computing resources is 0 ACU.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
      * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>Reserved parameter</p>
+     * <p>1</p>
      */
     @NameInMap("MinGpuQuantity")
     public Integer minGpuQuantity;
@@ -187,7 +187,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The job delivery rules.</p>
+     * <p>The job routing rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ModifyDBResourceGroupRequestRules> rules;
@@ -438,7 +438,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String insertNodeSpec;
 
         /**
-         * <p>The query node cache size (GB).</p>
+         * <p>The query node cache size (in GB).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -474,7 +474,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public Integer storageNodeDiskSize;
 
         /**
-         * <p>The storage node disk type (essd_pl1, essd_pl2).</p>
+         * <p>The disk type of the storage node (essd_pl1, essd_pl2).</p>
          * 
          * <strong>example:</strong>
          * <p>essd_pl1</p>
@@ -597,7 +597,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
 
     public static class ModifyDBResourceGroupRequestGpuElasticPlanRules extends TeaModel {
         /**
-         * <p>The end time specified by a cron expression. The interval must be at least 1 hour.</p>
+         * <p>The end time, specified as a cron expression. The interval must be no less than 1 hour.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 3 * * ?</p>
@@ -606,7 +606,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String endCronExpression;
 
         /**
-         * <p>The start time specified by a cron expression. The interval must be at least 1 hour.</p>
+         * <p>The start time, specified as a cron expression. The interval must be no less than 1 hour.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 2 * * ?</p>
@@ -682,7 +682,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
 
     public static class ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector extends TeaModel {
         /**
-         * <p>The name of the image.</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>lab2.10.0-ray2.43.0</p>
@@ -741,7 +741,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
 
     public static class ModifyDBResourceGroupRequestRayConfigAppConfig extends TeaModel {
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>app01</p>
@@ -750,7 +750,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String appName;
 
         /**
-         * <p>The type of the application.</p>
+         * <p>The application type.</p>
          * 
          * <strong>example:</strong>
          * <p>IsaacLab</p>
@@ -806,7 +806,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The ID of the storage.</p>
+         * <p>The storage ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -815,7 +815,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public Long storageId;
 
         /**
-         * <p>The name of the storage to mount. You must specify either this parameter or StorageId.</p>
+         * <p>The name of the storage to mount. Specify either this parameter or StorageId.</p>
          * 
          * <strong>example:</strong>
          * <p>training-data</p>
@@ -991,9 +991,9 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         /**
          * <p>The type of the Ray cluster. Valid values:</p>
          * <ul>
-         * <li><p>BASIC: Basic type, non-high-availability.</p>
+         * <li><p>BASIC: basic type without high availability</p>
          * </li>
-         * <li><p>HIGH_AVAILABILITY: High-availability type.</p>
+         * <li><p>HIGH_AVAILABILITY: high-availability type</p>
          * </li>
          * </ul>
          * 
@@ -1046,13 +1046,13 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String headSpecType;
 
         /**
-         * <p>The list of storage mounts.</p>
+         * <p>The storage mount list.</p>
          */
         @NameInMap("StorageMounts")
         public java.util.List<ModifyDBResourceGroupRequestRayConfigStorageMounts> storageMounts;
 
         /**
-         * <p>The custom Python dependencies for RayCluster. The content must be in the requirements.txt format, with one pip dependency per line. A maximum of 200 lines are allowed, and each line cannot exceed 512 characters. Version constraints, extras, PEP 440 direct URLs, and # comments are supported, but shell metacharacters are not supported. This parameter applies only to AI resource groups of the RayCluster type.</p>
+         * <p>The custom Python dependencies for RayCluster. Specify the content in the requirements.txt format, with one pip dependency per line. A maximum of 200 lines are supported, and each line cannot exceed 512 characters. Version constraints, extras, PEP 440 direct URLs, and # comments are supported. Shell metacharacters are not supported. This parameter applies only to AI resource groups of the RayCluster type.</p>
          * 
          * <strong>example:</strong>
          * <p>numpy==1.24.0</p>
@@ -1061,7 +1061,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String userDefinedRequirements;
 
         /**
-         * <p>The list of Ray worker group configuration information.</p>
+         * <p>The Ray worker group configuration list.</p>
          */
         @NameInMap("WorkerGroups")
         public java.util.List<ModifyDBResourceGroupRequestRayConfigWorkerGroups> workerGroups;
@@ -1164,7 +1164,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The threshold for query execution time, in milliseconds.</p>
+         * <p>The query execution time threshold, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>180000</p>

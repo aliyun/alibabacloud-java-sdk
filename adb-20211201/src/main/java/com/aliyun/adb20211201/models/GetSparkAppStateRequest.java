@@ -7,7 +7,7 @@ public class GetSparkAppStateRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query the ID of the Spark application.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query the Spark application ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLakeStorageRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL cluster that is associated with the lake storage.</p>
+     * <p>The ADB instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-*******</p>
@@ -26,20 +26,16 @@ public class UpdateLakeStorageRequest extends TeaModel {
      * <p>The unique identifier of the lake storage.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>adb-lake-cn-hangzhou-1a1aaaa11a</p>
      */
     @NameInMap("LakeStorageId")
     public String lakeStorageId;
 
     /**
-     * <p>The permissions on the lake storage.</p>
+     * <p>The permissions of the lake storage.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>[{&quot;Account&quot;:&quot;1234567890123456&quot;,&quot;Read&quot;:true,&quot;Type&quot;:&quot;User&quot;,&quot;Write&quot;:true}]</p>
      */
     @NameInMap("Permissions")
     public java.util.List<UpdateLakeStorageRequestPermissions> permissions;
@@ -104,13 +100,13 @@ public class UpdateLakeStorageRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>1234567890123456</p>
          */
         @NameInMap("Account")
         public String account;
 
         /**
-         * <p>The read permissions.</p>
+         * <p>The read permission.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,13 +120,13 @@ public class UpdateLakeStorageRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>SUB</p>
+         * <p>User</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The write permissions.</p>
+         * <p>The write permission.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -29,7 +29,7 @@ public class GetFormationCrawlerResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. OK is returned if the call was successful.</p>
+     * <p>The returned message. The value is OK if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,7 +38,7 @@ public class GetFormationCrawlerResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>

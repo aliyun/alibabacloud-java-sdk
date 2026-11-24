@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetTableRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>dbName</p>
@@ -34,7 +34,7 @@ public class GetTableRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The table name to query.</p>
+     * <p>The name of the table to query.</p>
      * 
      * <strong>example:</strong>
      * <p>tableName</p>

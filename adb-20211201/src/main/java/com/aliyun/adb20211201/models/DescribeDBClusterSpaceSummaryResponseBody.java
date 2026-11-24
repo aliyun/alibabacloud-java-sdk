@@ -42,7 +42,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
 
     public static class DescribeDBClusterSpaceSummaryResponseBodyDataColdData extends TeaModel {
         /**
-         * <p>The data volume of table records. Unit: bytes.</p>
+         * <p>The table record data size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -51,7 +51,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         public Long dataSize;
 
         /**
-         * <p>The data volume of regular indexes. Unit: bytes.</p>
+         * <p>The secondary index data size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -60,7 +60,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         public Long indexSize;
 
         /**
-         * <p>The volume of other data. Unit: bytes.</p>
+         * <p>The size of other data. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -69,7 +69,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         public Long otherSize;
 
         /**
-         * <p>The data volume of primary key indexes. Unit: bytes.</p>
+         * <p>The primary key index data size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -78,9 +78,9 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         public Long primaryKeyIndexSize;
 
         /**
-         * <p>The total cold data volume. Unit: bytes.</p>
+         * <p>The total cold data size. Unit: bytes.</p>
          * <blockquote>
-         * <p>Calculation formula: Total cold data volume = Table record data volume + Regular index data volume + Primary key index data volume + Others.</p>
+         * <p>Calculation formula: Total cold data size = Table record data size + Secondary index data size + Primary key index data size + Others.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -138,9 +138,9 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
 
     public static class DescribeDBClusterSpaceSummaryResponseBodyDataDataGrowth extends TeaModel {
         /**
-         * <p>The data growth in the past day. Unit: bytes.</p>
+         * <p>The data growth over the past day. Unit: bytes.</p>
          * <blockquote>
-         * <p>Calculation formula: Data growth in the past day = Current total data volume - Total data volume 1 day ago.</p>
+         * <p>Calculation formula: Data growth over the past day = Current total data size - Total data size one day ago.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         /**
          * <p>The average daily data growth over the past 7 days. Unit: bytes.</p>
          * <blockquote>
-         * <p>Calculation formula: Average daily data growth over the past 7 days = (Current total data volume - Total data volume 7 days ago) / 7.</p>
+         * <p>Calculation formula: Average daily data growth over the past 7 days = (Current total data size - Total data size 7 days ago) / 7.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
 
     public static class DescribeDBClusterSpaceSummaryResponseBodyDataHotData extends TeaModel {
         /**
-         * <p>The data volume of table records. Unit: bytes.</p>
+         * <p>The table record data size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -195,7 +195,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         public Long dataSize;
 
         /**
-         * <p>The data volume of regular indexes. Unit: bytes.</p>
+         * <p>The secondary index data size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -204,7 +204,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         public Long indexSize;
 
         /**
-         * <p>The volume of other data. Unit: bytes.</p>
+         * <p>The size of other data. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -213,7 +213,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         public Long otherSize;
 
         /**
-         * <p>The data volume of primary key indexes. Unit: bytes.</p>
+         * <p>The primary key index data size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1048576</p>
@@ -222,9 +222,9 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         public Long primaryKeyIndexSize;
 
         /**
-         * <p>The total hot data volume. Unit: bytes.</p>
+         * <p>The total hot data size. Unit: bytes.</p>
          * <blockquote>
-         * <p>Calculation formula: Total hot data volume = Table record data volume + Regular index data volume + Primary key index data volume + Others.</p>
+         * <p>Calculation formula: Total hot data size = Table record data size + Secondary index data size + Primary key index data size + Others.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -300,9 +300,9 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         public DescribeDBClusterSpaceSummaryResponseBodyDataHotData hotData;
 
         /**
-         * <p>The total data volume. Unit: bytes.</p>
+         * <p>The total data size. Unit: bytes.</p>
          * <blockquote>
-         * <p>Calculation formula: Total data volume = Total hot data volume + Total cold data volume.</p>
+         * <p>Calculation formula: Total data size = Total hot data size + Total cold data size.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

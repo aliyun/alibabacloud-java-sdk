@@ -60,7 +60,7 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The queried Spark SQL statements.</p>
+         * <p>The list of executed Spark SQL statements.</p>
          */
         @NameInMap("Queries")
         public java.util.List<SparkBatchSQL> queries;

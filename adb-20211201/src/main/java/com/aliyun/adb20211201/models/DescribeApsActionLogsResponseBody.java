@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApsActionLogsResponseBody extends TeaModel {
     /**
-     * <p>The information about the request denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -22,13 +22,13 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The queried logs.</p>
+     * <p>The list of logs.</p>
      */
     @NameInMap("ActionLogs")
     public java.util.List<DescribeApsActionLogsResponseBodyActionLogs> actionLogs;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-bp1r053byu48p****</p>
@@ -64,7 +64,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -73,7 +73,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
     public String totalCount;
 
     /**
-     * <p>The ID of the real-time data ingestion job.</p>
+     * <p>The ID of the data link task.</p>
      * 
      * <strong>example:</strong>
      * <p>aps-hz109vpvt4fg8528d****</p>
@@ -152,7 +152,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
 
     public static class DescribeApsActionLogsResponseBodyActionLogs extends TeaModel {
         /**
-         * <p>The content of the log.</p>
+         * <p>The log content.</p>
          * 
          * <strong>example:</strong>
          * <p>DDL migration job finished</p>
@@ -161,11 +161,11 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         public String context;
 
         /**
-         * <p>The phase during which the log was generated. Valid values:</p>
+         * <p>The task stage. Valid values:</p>
          * <ul>
-         * <li><strong>StructureMigrate</strong>: schema migration.</li>
-         * <li><strong>FullDataSync</strong>: full data synchronization.</li>
-         * <li><strong>IncrementalSync</strong>: incremental data synchronization.</li>
+         * <li><strong>StructureMigrate</strong>: Schema migration.</li>
+         * <li><strong>FullDataSync</strong>: Full data synchronization.</li>
+         * <li><strong>IncrementalSync</strong>: Incremental data synchronization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,11 +175,11 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         public String stage;
 
         /**
-         * <p>The type of the log. Multiple log types are separated by commas (,). Valid values:</p>
+         * <p>The log type. Separate multiple log types with commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>INFO</strong></li>
-         * <li><strong>WARN</strong></li>
-         * <li><strong>ERROR</strong></li>
+         * <li><strong>INFO</strong>: Information.</li>
+         * <li><strong>WARN</strong>: Warning.</li>
+         * <li><strong>ERROR</strong>: Error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The time when the log was generated. The time follows the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. The time is displayed in UTC.</p>
+         * <p>The log time. The time is in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format and must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-01T05:46:30Z</p>

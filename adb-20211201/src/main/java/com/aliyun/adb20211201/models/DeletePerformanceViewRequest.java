@@ -48,7 +48,7 @@ public class DeletePerformanceViewRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Custom-All metrics-2 columns-Linked</p>
+     * <p>自定义-全部指标-2列-联动</p>
      */
     @NameInMap("ViewName")
     public String viewName;

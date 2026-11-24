@@ -15,7 +15,7 @@ public class ListSparkWarehouseBatchSQLRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

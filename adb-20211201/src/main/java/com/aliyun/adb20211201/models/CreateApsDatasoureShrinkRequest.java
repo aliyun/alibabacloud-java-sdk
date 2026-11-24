@@ -58,9 +58,7 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
      * <p>The Hive data source information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;Vswitch&quot;:&quot;vsw-bp1*<strong><strong>k&quot;,&quot;SecurityGroup&quot;:&quot;sg-uf</strong></strong>***h&quot;}</p>
      */
     @NameInMap("HiveInfo")
     public String hiveInfoShrink;
@@ -69,9 +67,7 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
      * <p>The Kafka information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;KafkaClusterId&quot;:&quot;alikafka_pre-cn-aaa1a1aaa111&quot;,&quot;KafkaTopic&quot;:&quot;example-topic&quot;}</p>
      */
     @NameInMap("KafkaInfo")
     public String kafkaInfoShrink;
@@ -89,9 +85,7 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
      * <p>The PolarDB for MySQL data source information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;RegionId&quot;:&quot;cn-shanghai&quot;}</p>
      */
     @NameInMap("PolarDBMysqlInfo")
     public String polarDBMysqlInfoShrink;
@@ -111,9 +105,7 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
      * <p>The ApsaraDB RDS for MySQL data source information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;RegionId&quot;:&quot;cn-shanghai&quot;}</p>
      */
     @NameInMap("RdsMysqlInfo")
     public String rdsMysqlInfoShrink;
@@ -132,9 +124,7 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
      * <p>The Simple Log Service (SLS) information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;Project&quot;:&quot;example-project&quot;,&quot;Store&quot;:&quot;example-logstore&quot;,&quot;Across&quot;:false}</p>
      */
     @NameInMap("SlsInfo")
     public String slsInfoShrink;

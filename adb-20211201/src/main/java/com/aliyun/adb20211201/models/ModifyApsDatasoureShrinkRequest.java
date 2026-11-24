@@ -15,7 +15,7 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The description of the data source.</p>
+     * <p>The data source description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -34,7 +34,7 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public Long datasourceId;
 
     /**
-     * <p>The name of the data source.</p>
+     * <p>The data source name.</p>
      * 
      * <strong>example:</strong>
      * <p>sls-******</p>
@@ -43,27 +43,25 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String datasourceName;
 
     /**
-     * <p>The information about the Kafka instance.</p>
+     * <p>The Kafka data source information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;KafkaTopic&quot;:&quot;test-topic&quot;}</p>
      */
     @NameInMap("KafkaInfo")
     public String kafkaInfoShrink;
 
     /**
-     * <p>The lakehouse ID.</p>
+     * <p>The Lakehouse ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>{&quot;VpcId&quot;:&quot;vpc-******&quot;}</p>
      */
     @NameInMap("LakehouseId")
     public String lakehouseIdShrink;
 
     /**
-     * <p>The parameter is no longer supported.</p>
+     * <p>The deprecated data source information.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -74,7 +72,7 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String polarDBMysqlInfoShrink;
 
     /**
-     * <p>The parameter is no longer supported.</p>
+     * <p>The deprecated data source information.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -95,12 +93,10 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The information about Simple Log Service (SLS).</p>
+     * <p>The Simple Log Service (SLS) information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;Project&quot;:&quot;example-project&quot;,&quot;Store&quot;:&quot;example-logstore&quot;,&quot;Across&quot;:false}</p>
      */
     @NameInMap("SlsInfo")
     public String slsInfoShrink;

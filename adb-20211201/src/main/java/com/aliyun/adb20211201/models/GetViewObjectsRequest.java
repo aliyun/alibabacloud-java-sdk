@@ -33,12 +33,13 @@ public class GetViewObjectsRequest extends TeaModel {
     public String filterViewName;
 
     /**
-     * <p>The view type. Valid values:</p>
+     * <p>The view type.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li>VIRTUAL_VIEW</li>
      * <li>MATERIALIZED_VIEW</li>
      * </ul>
-     * <p>Default value: empty.</p>
+     * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
      * <p>VIRTUAL_VIEW</p>
@@ -48,12 +49,12 @@ public class GetViewObjectsRequest extends TeaModel {
 
     /**
      * <p>The sort field.
-     * Valid values for the sort type:</p>
+     * Valid values for Type:</p>
      * <ul>
      * <li>Asc</li>
      * <li>Desc</li>
      * </ul>
-     * <p>Valid values for the sort field:</p>
+     * <p>Valid values for Field:</p>
      * <ul>
      * <li>ViewName</li>
      * <li>CreateTime</li>
@@ -110,7 +111,7 @@ public class GetViewObjectsRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>Specifies whether to display the base table information of materialized views.</p>
+     * <p>Specifies whether to display the base table information of the materialized view.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

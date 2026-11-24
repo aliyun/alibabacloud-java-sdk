@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSparkAppTypeResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why the access was denied.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -33,8 +33,8 @@ public class DescribeSparkAppTypeResponseBody extends TeaModel {
     /**
      * <p>The type of the Spark application. Valid values:</p>
      * <ul>
-     * <li>BATCH</li>
-     * <li>SQLENGINE</li>
+     * <li>BATCH: batch application.</li>
+     * <li>SQLENGINE: SQL engine application.</li>
      * </ul>
      * 
      * <strong>example:</strong>

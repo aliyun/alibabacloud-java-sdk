@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePatternPerformanceResponseBody extends TeaModel {
     /**
-     * <p>The client IP address that submitted the queries that match the sql pattern.</p>
+     * <p>The IP address of the client that submits the SQL statements related to the pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.14.*</p>
@@ -14,7 +14,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     public String accessIp;
 
     /**
-     * <p>The end of the query time range. The time is in UTC and is formatted as <em>yyyy-MM-ddTHH:mmZ</em>.</p>
+     * <p>The end time of the query. The time is in UTC and follows the <i>yyyy-MM-ddTHH:mmZ</i> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-08-22T01:06:00Z</p>
@@ -23,7 +23,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The number of failed executions for the sql pattern within the query time range.</p>
+     * <p>The number of failures of the pattern within the query time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,13 +32,13 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     public Long failedCount;
 
     /**
-     * <p>The performance metrics.</p>
+     * <p>The performance details.</p>
      */
     @NameInMap("Performances")
     public java.util.List<DescribePatternPerformanceResponseBodyPerformances> performances;
 
     /**
-     * <p>The number of executions for the sql pattern within the query time range.</p>
+     * <p>The number of executions of the pattern within the query time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1202</p>
@@ -56,7 +56,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The SQL statement for the sql pattern.</p>
+     * <p>The specific statement of the SQL pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>SELECT *nFROM HIVE.<code>ADB_EXTERNAL_TPCH_10GB</code>.<code>External_customer</code>nLIMIT ?</p>
@@ -65,7 +65,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     public String SQLPattern;
 
     /**
-     * <p>The start of the query time range. The time is in UTC and is formatted as <em>yyyy-MM-ddTHH:mmZ</em>.</p>
+     * <p>The start time of the query. The time is in UTC and follows the <i>yyyy-MM-ddTHH:mmZ</i> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-08-21T02:15:00Z</p>
@@ -74,7 +74,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The tables queried by the sql pattern.</p>
+     * <p>The information about the tables involved in the SQL pattern query.</p>
      * 
      * <strong>example:</strong>
      * <p>tpch_1g.part;tpch_1g.supplier;tpch_1g.lineitem;tpch_1g.partsupp;tpch_1g.orders;tpch_1g.nation</p>
@@ -83,7 +83,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     public String tables;
 
     /**
-     * <p>The database account that executes the SQL statements.</p>
+     * <p>The database account that executes the SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>test_user</p>
@@ -178,40 +178,27 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
 
     public static class DescribePatternPerformanceResponseBodyPerformancesSeries extends TeaModel {
         /**
-         * <p>The name of the performance value. The value of this parameter varies based on the value of <code>Key</code>:</p>
+         * <p>The name of the performance value. Valid values:</p>
          * <ul>
-         * <li><p>If <code>Key</code> is <code>AnalyticDB_PatternQueryCount</code>, this parameter returns <code>pattern_query_count</code>, which indicates the query count for the sql pattern.</p>
-         * </li>
-         * <li><p>If <code>Key</code> is <code>AnalyticDB_PatternQueryTime</code>, this parameter can be one of the following values:</p>
-         * <ul>
-         * <li><p><code>average_query_time</code>: the average total time of queries that match the sql pattern.</p>
-         * </li>
-         * <li><p><code>max_query_time</code>: the maximum total time of queries that match the sql pattern.</p>
-         * </li>
+         * <li>When the <code>Key</code> value is <code>AnalyticDB_PatternQueryCount</code>, this parameter returns <code>pattern_query_count</code>, which indicates the executions of SQL statements related to the current pattern.</li>
+         * <li>When the <code>Key</code> value is <code>AnalyticDB_PatternQueryTime</code>, this parameter returns:<ul>
+         * <li><code>average_query_time</code>: the average total time consumed by SQL statements related to the current pattern.</li>
+         * <li><code>max_query_time</code>: the maximum total time consumed by SQL statements related to the current pattern.</li>
          * </ul>
          * </li>
-         * <li><p>If <code>Key</code> is <code>AnalyticDB_PatternExecutionTime</code>, this parameter can be one of the following values:</p>
-         * <ul>
-         * <li><p><code>average_execution_time</code>: the average execution time of queries that match the sql pattern.</p>
-         * </li>
-         * <li><p><code>max_execution_time</code>: the maximum execution time of queries that match the sql pattern.</p>
-         * </li>
+         * <li>When the <code>Key</code> value is <code>AnalyticDB_PatternExecutionTime</code>, this parameter returns:<ul>
+         * <li><code>average_execution_time</code>: the average execution duration of SQL statements related to the current pattern.</li>
+         * <li><code>max_execution_time</code>: the maximum execution duration of SQL statements related to the current pattern.</li>
          * </ul>
          * </li>
-         * <li><p>If <code>Key</code> is <code>AnalyticDB_PatternPeakMemory</code>, this parameter can be one of the following values:</p>
-         * <ul>
-         * <li><p><code>average_peak_memory</code>: the average peak memory usage of queries that match the sql pattern.</p>
-         * </li>
-         * <li><p><code>max_peak_memory</code>: the maximum peak memory usage of queries that match the sql pattern.</p>
-         * </li>
+         * <li>When the <code>Key</code> value is <code>AnalyticDB_PatternPeakMemory</code>, this parameter returns:<ul>
+         * <li><code>average_peak_memory</code>: the average peak memory consumed by SQL statements related to the current pattern.</li>
+         * <li><code>max_peak_memory</code>: the maximum peak memory consumed by SQL statements related to the current pattern.</li>
          * </ul>
          * </li>
-         * <li><p>If <code>Key</code> is <code>AnalyticDB_PatternScanSize</code>, this parameter can be one of the following values:</p>
-         * <ul>
-         * <li><p><code>average_scan_size</code>: the average data scan size of queries that match the sql pattern.</p>
-         * </li>
-         * <li><p><code>max_scan_size</code>: the maximum data scan size of queries that match the sql pattern.</p>
-         * </li>
+         * <li>When the <code>Key</code> value is <code>AnalyticDB_PatternScanSize</code>, this parameter returns:<ul>
+         * <li><code>average_scan_size</code>: the average data volume read by SQL statements related to the current pattern.</li>
+         * <li><code>max_scan_size</code>: the maximum data volume read by SQL statements related to the current pattern.</li>
          * </ul>
          * </li>
          * </ul>
@@ -253,18 +240,13 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
 
     public static class DescribePatternPerformanceResponseBodyPerformances extends TeaModel {
         /**
-         * <p>The performance metric. Valid values:</p>
+         * <p>The queried performance metrics. Valid values:</p>
          * <ul>
-         * <li><p><strong>AnalyticDB_PatternQueryCount</strong>: The total number of queries that match the sql pattern.</p>
-         * </li>
-         * <li><p><strong>AnalyticDB_PatternQueryTime</strong>: The total time for queries that match the sql pattern.</p>
-         * </li>
-         * <li><p><strong>AnalyticDB_PatternExecutionTime</strong>: The total execution time of queries that match the sql pattern.</p>
-         * </li>
-         * <li><p><strong>AnalyticDB_PatternPeakMemory</strong>: The peak memory usage of queries that match the sql pattern.</p>
-         * </li>
-         * <li><p><strong>AnalyticDB_PatternScanSize</strong>: The total data scan size of queries that match the sql pattern.</p>
-         * </li>
+         * <li><strong>AnalyticDB_PatternQueryCount</strong>: the total number of queries related to the pattern.</li>
+         * <li><strong>AnalyticDB_PatternQueryTime</strong>: the total time consumed by queries related to the pattern.</li>
+         * <li><strong>AnalyticDB_PatternExecutionTime</strong>: the execution duration of queries related to the pattern.</li>
+         * <li><strong>AnalyticDB_PatternPeakMemory</strong>: the peak memory consumed by queries related to the pattern.</li>
+         * <li><strong>AnalyticDB_PatternScanSize</strong>: the data volume read by queries related to the pattern.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,22 +256,18 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The time series data for the performance metric.</p>
+         * <p>The details of each performance value under the performance metrics.</p>
          */
         @NameInMap("Series")
         public java.util.List<DescribePatternPerformanceResponseBodyPerformancesSeries> series;
 
         /**
-         * <p>The unit of the performance metric. The returned unit varies based on the value of <code>Key</code>:</p>
+         * <p>The units corresponding to the performance metrics. Valid values:</p>
          * <ul>
-         * <li><p>If <code>Key</code> is <code>AnalyticDB_PatternQueryTime</code> or <code>AnalyticDB_PatternExecutionTime</code>, the unit is <strong>ms</strong>.</p>
-         * </li>
-         * <li><p>If <code>Key</code> is <code>AnalyticDB_PatternPeakMemory</code>, the unit is <strong>MB</strong>.</p>
-         * </li>
-         * <li><p>If <code>Key</code> is <code>AnalyticDB_PatternScanSize</code>, the unit is <strong>MB</strong>.</p>
-         * </li>
-         * <li><p>If <code>Key</code> is <code>AnalyticDB_PatternQueryCount</code>, this parameter is empty.</p>
-         * </li>
+         * <li><strong>ms</strong>: returned when the performance metric is related to query time, which means the <code>Key</code> value is <code>AnalyticDB_PatternQueryTime</code> or <code>AnalyticDB_PatternExecutionTime</code>.</li>
+         * <li><strong>MB</strong>: returned when the performance metric is related to peak memory, which means the <code>Key</code> value is <code>AnalyticDB_PatternPeakMemory</code>.</li>
+         * <li><strong>MB</strong>: returned when the performance metric is the data volume read, which means the <code>Key</code> value is <code>AnalyticDB_PatternScanSize</code>.</li>
+         * <li>Empty: returned when the performance metric is the number of queries, which means the <code>Key</code> value is <code>AnalyticDB_PatternQueryCount</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

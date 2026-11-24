@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeApsJobsResponseBody extends TeaModel {
     /**
-     * <p>The list of APS tasks.</p>
+     * <p>The list of tasks.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>[{&quot;ApsJobId&quot;:&quot;aps-example&quot;,&quot;ApsJobName&quot;:&quot;example-job&quot;,&quot;CreateTime&quot;:&quot;2022-06-28 15:00:04&quot;}]</p>
      */
     @NameInMap("APSJobs")
     public java.util.List<DescribeApsJobsResponseBodyAPSJobs> APSJobs;
@@ -25,7 +23,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code returned for the request. A value of 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code. A status code of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -36,8 +34,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     /**
      * <p>The additional information about the call result. Valid values:</p>
      * <ul>
-     * <li>If the request is successful, <strong>Success</strong> is returned. </li>
-     * <li>If the request fails, a specific error code is returned.</li>
+     * <li>If the request is normal, <strong>Success</strong> is returned. </li>
+     * <li>If the request is abnormal, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,8 +74,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Successful.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -192,7 +190,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         public String apsJobName;
 
         /**
-         * <p>The creation time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-28 15:00:04</p>
@@ -249,9 +247,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
          * <p>The status of the task.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>Synchronizing</p>
          */
         @NameInMap("Status")
         public String status;
@@ -260,9 +256,7 @@ public class DescribeApsJobsResponseBody extends TeaModel {
          * <p>The status of the subtask.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>Synchronizing</p>
          */
         @NameInMap("SubStatus")
         public String subStatus;

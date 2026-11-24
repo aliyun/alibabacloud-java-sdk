@@ -199,6 +199,9 @@ public class DescribeSqlPatternCompareReportResponseBody extends TeaModel {
          * <blockquote>
          * <p>Each result contains only one key that matches the <code>MetricType</code> request parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CPU_COST&quot;:{&quot;MetricCode&quot;:&quot;CPU_COST&quot;,&quot;MetricName&quot;:&quot;OperatorCost&quot;,&quot;Primary&quot;:true,&quot;Time2&quot;:{&quot;AvgDisplayValue&quot;:&quot;3s&quot;,&quot;AvgRatioPercent&quot;:10.0,&quot;AvgValue&quot;:3.0,&quot;MaxDisplayValue&quot;:&quot;9s&quot;,&quot;MaxValue&quot;:9.0,&quot;SumDisplayValue&quot;:&quot;180s&quot;,&quot;SumRatioPercent&quot;:10.0,&quot;SumValue&quot;:180.0}}}</p>
          */
         @NameInMap("MetricValues")
         public java.util.Map<String, ItemsMetricValuesValue> metricValues;

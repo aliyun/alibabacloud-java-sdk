@@ -48,11 +48,11 @@ public class UpdateFormationCrawlerScheduleStateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The scheduling state. Valid values:</p>
+     * <p>The schedule state. Valid values:</p>
      * <ul>
-     * <li><p>NORMAL: resume.</p>
+     * <li><p>NORMAL: resumes the schedule.</p>
      * </li>
-     * <li><p>DISABLED: pause.</p>
+     * <li><p>DISABLED: pauses the schedule.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

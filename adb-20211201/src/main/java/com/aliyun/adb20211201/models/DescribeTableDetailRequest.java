@@ -24,7 +24,7 @@ public class DescribeTableDetailRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>adb_demo</p>
@@ -33,7 +33,7 @@ public class DescribeTableDetailRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The table name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

@@ -30,12 +30,18 @@ public class TableDetailModel extends TeaModel {
 
     /**
      * <p>The creation source of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APS</p>
      */
     @NameInMap("CreatedBySource")
     public String createdBySource;
 
     /**
      * <p>The user who created the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example_user</p>
      */
     @NameInMap("CreatedByUser")
     public String createdByUser;
@@ -69,6 +75,9 @@ public class TableDetailModel extends TeaModel {
 
     /**
      * <p>The table property parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;escape.delim&quot;:&quot;\\&quot;,&quot;field.delim&quot;:&quot; &quot;}</p>
      */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;

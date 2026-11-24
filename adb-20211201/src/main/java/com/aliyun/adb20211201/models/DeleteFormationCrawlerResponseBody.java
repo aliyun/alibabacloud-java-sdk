@@ -14,11 +14,7 @@ public class DeleteFormationCrawlerResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the task is deleted. Valid values:</p>
-     * <ul>
-     * <li>true: The task is deleted.</li>
-     * <li>false: The task failed to be deleted.</li>
-     * </ul>
+     * <p>Indicates whether the deletion is successful. Valid values: - true: The deletion is successful. - false: The deletion fails.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSqlPatternCompareReportRequest extends TeaModel {
     /**
-     * <p>The end time of time window 2. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The end time of the second time window. The time is in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateSqlPatternCompareReportRequest extends TeaModel {
     public String compareEndTime;
 
     /**
-     * <p>The start time of time window 2. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The start time of the second time window. The time is in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateSqlPatternCompareReportRequest extends TeaModel {
     public String compareStartTime;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateSqlPatternCompareReportRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of time window 1. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The end time of the first time window. The time is in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,8 +47,8 @@ public class CreateSqlPatternCompareReportRequest extends TeaModel {
     /**
      * <p>The report type. Valid values:</p>
      * <ul>
-     * <li><code>NEW</code>: Patterns that are new in time window 2.</li>
-     * <li><code>CHANGED</code>: Patterns that exist in both time windows and have an increased average value in at least one metric.</li>
+     * <li><code>NEW</code>: SQL patterns added in the second time window</li>
+     * <li><code>CHANGED</code>: SQL patterns that exist in both time windows and have an increased average value in at least one dimension</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -69,7 +69,7 @@ public class CreateSqlPatternCompareReportRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of time window 1. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The start time of the first time window. The time is in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

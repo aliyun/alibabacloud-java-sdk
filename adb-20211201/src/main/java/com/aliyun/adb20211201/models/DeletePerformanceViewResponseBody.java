@@ -32,7 +32,7 @@ public class DeletePerformanceViewResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>SUCCESS</p>
+     * <p>true</p>
      */
     @NameInMap("DeleteStatus")
     public Boolean deleteStatus;

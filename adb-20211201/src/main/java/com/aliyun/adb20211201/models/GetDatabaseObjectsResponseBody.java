@@ -104,7 +104,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
         public java.util.List<DatabaseSummaryModel> databaseSummaryModels;
 
         /**
-         * <p>The page number. The value must be greater than 0 and no greater than the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

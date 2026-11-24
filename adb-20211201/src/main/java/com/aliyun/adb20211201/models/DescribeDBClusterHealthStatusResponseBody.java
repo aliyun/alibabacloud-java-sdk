@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     /**
-     * <p>Details of the authentication failure.</p>
+     * <p>The details of the authentication failure.</p>
      * 
      * <strong>example:</strong>
      * <p>Authentication failed.</p>
@@ -14,13 +14,13 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The health status of the instance access nodes.</p>
+     * <p>The list of instance access node statuses.</p>
      */
     @NameInMap("CS")
     public DescribeDBClusterHealthStatusResponseBodyCS CS;
 
     /**
-     * <p>The health status of the executor groups.</p>
+     * <p>The list of health statuses for compute node groups.</p>
      */
     @NameInMap("Executor")
     public DescribeDBClusterHealthStatusResponseBodyExecutor executor;
@@ -28,16 +28,13 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     /**
      * <p>The health status of the cluster. Valid values:</p>
      * <ul>
-     * <li><p><strong>RISK</strong>: The cluster is at risk.</p>
-     * </li>
-     * <li><p><strong>NORMAL</strong>: The cluster is healthy.</p>
-     * </li>
-     * <li><p><strong>UNAVAILABLE</strong>: The cluster is unavailable.</p>
+     * <li><strong>RISK</strong>: At risk.</li>
+     * <li><strong>NORMAL</strong>: Healthy.</li>
+     * <li><strong>UNAVAILABLE</strong>: Unavailable.<blockquote>
+     * <p>If the instance access node status, compute node group health status, and storage node group health status are all <strong>Healthy</strong> and the instance health check succeeds, the cluster health status is <strong>Healthy</strong>. If any of the three statuses is <strong>At risk</strong>, the cluster health status is <strong>At risk</strong>. If any of the three statuses is <strong>Unavailable</strong>, the cluster health status is <strong>Unavailable</strong>.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>The cluster health status is considered <strong>NORMAL</strong> only if the instance access nodes, executor groups, and worker node groups are all <strong>NORMAL</strong>, and the instance is responsive. If any of these components has a <strong>RISK</strong> status, the cluster status is <strong>RISK</strong>. If any component has an <strong>UNAVAILABLE</strong> status, the cluster status is <strong>UNAVAILABLE</strong>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -55,7 +52,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The health status of the worker node groups.</p>
+     * <p>The list of health statuses for storage node groups.</p>
      */
     @NameInMap("Worker")
     public DescribeDBClusterHealthStatusResponseBodyWorker worker;
@@ -115,7 +112,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     public static class DescribeDBClusterHealthStatusResponseBodyCS extends TeaModel {
         /**
-         * <p>The number of healthy instance access nodes.</p>
+         * <p>The number of healthy nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -124,7 +121,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long activeCount;
 
         /**
-         * <p>The total number of instance access nodes.</p>
+         * <p>The total number of access nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -133,7 +130,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long expectedCount;
 
         /**
-         * <p>The number of instance access nodes at risk.</p>
+         * <p>The number of nodes at risk.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -142,14 +139,11 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long riskCount;
 
         /**
-         * <p>The health status of the instance access nodes. Valid values:</p>
+         * <p>The status of instance access nodes. Valid values:</p>
          * <ul>
-         * <li><p><strong>RISK</strong>: The instance access nodes are at risk.</p>
-         * </li>
-         * <li><p><strong>NORMAL</strong>: The instance access nodes are healthy.</p>
-         * </li>
-         * <li><p><strong>UNAVAILABLE</strong>: The instance access nodes are unavailable.</p>
-         * </li>
+         * <li><strong>RISK</strong>: At risk.</li>
+         * <li><strong>NORMAL</strong>: Healthy.</li>
+         * <li><strong>UNAVAILABLE</strong>: Unavailable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +153,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The number of unavailable instance access nodes.</p>
+         * <p>The number of unavailable nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,7 +210,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     public static class DescribeDBClusterHealthStatusResponseBodyExecutor extends TeaModel {
         /**
-         * <p>The number of healthy executor nodes.</p>
+         * <p>The number of healthy nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -225,7 +219,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long activeCount;
 
         /**
-         * <p>The total number of executor nodes.</p>
+         * <p>The total number of compute nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -234,7 +228,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long expectedCount;
 
         /**
-         * <p>The number of executor nodes at risk.</p>
+         * <p>The number of nodes at risk.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -243,14 +237,11 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long riskCount;
 
         /**
-         * <p>The health status of the executor groups. Valid values:</p>
+         * <p>The health status of compute node groups. Valid values:</p>
          * <ul>
-         * <li><p><strong>RISK</strong>: The executor groups are at risk.</p>
-         * </li>
-         * <li><p><strong>NORMAL</strong>: The executor groups are healthy.</p>
-         * </li>
-         * <li><p><strong>UNAVAILABLE</strong>: The executor groups are unavailable.</p>
-         * </li>
+         * <li><strong>RISK</strong>: At risk.</li>
+         * <li><strong>NORMAL</strong>: Healthy.</li>
+         * <li><strong>UNAVAILABLE</strong>: Unavailable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +251,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The number of unavailable executor nodes.</p>
+         * <p>The number of unavailable nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -317,7 +308,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     public static class DescribeDBClusterHealthStatusResponseBodyWorker extends TeaModel {
         /**
-         * <p>The number of healthy worker node groups.</p>
+         * <p>The number of healthy storage node groups.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -326,7 +317,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long activeCount;
 
         /**
-         * <p>The total number of worker node groups.</p>
+         * <p>The total number of storage node groups.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -335,7 +326,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long expectedCount;
 
         /**
-         * <p>The number of worker node groups at risk.</p>
+         * <p>The number of storage node groups at risk.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -344,14 +335,11 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long riskCount;
 
         /**
-         * <p>The health status of the worker node groups. Valid values:</p>
+         * <p>The health status of storage node groups. Valid values:</p>
          * <ul>
-         * <li><p><strong>RISK</strong>: The worker node groups are at risk.</p>
-         * </li>
-         * <li><p><strong>NORMAL</strong>: The worker node groups are healthy.</p>
-         * </li>
-         * <li><p><strong>UNAVAILABLE</strong>: The worker node groups are unavailable.</p>
-         * </li>
+         * <li><strong>RISK</strong>: At risk.</li>
+         * <li><strong>NORMAL</strong>: Healthy.</li>
+         * <li><strong>UNAVAILABLE</strong>: Unavailable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -361,7 +349,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The number of unavailable worker node groups.</p>
+         * <p>The number of unavailable storage node groups.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

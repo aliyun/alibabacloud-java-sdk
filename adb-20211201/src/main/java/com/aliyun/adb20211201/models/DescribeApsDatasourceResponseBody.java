@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApsDatasourceResponseBody extends TeaModel {
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The APS data source information.</p>
      */
     @NameInMap("ApsDatasource")
     public DescribeApsDatasourceResponseBodyApsDatasource apsDatasource;
@@ -47,7 +45,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
          * <p>The token used to access Databricks.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>example****token</p>
          */
         @NameInMap("accessToken")
         public String accessToken;
@@ -56,9 +54,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
          * <p>The URL of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p><a href="https://workspace.example.com">https://workspace.example.com</a></p>
          */
         @NameInMap("workspaceURL")
         public String workspaceURL;
@@ -88,12 +84,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceHiveInfo extends TeaModel {
         /**
-         * <p>The ID of the E-MapReduce (EMR) cluster.</p>
+         * <p>The ID of the EMR cluster.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>c-b933c5aac8fe****</p>
          */
         @NameInMap("EmrClusterId")
         public String emrClusterId;
@@ -110,7 +104,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String metaStoreUri;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-******</p>
@@ -119,7 +113,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String securityGroup;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-******</p>
@@ -171,9 +165,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
          * <p>The Kafka instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>alikafka_pre-cn-aaa1a1aaa111</p>
          */
         @NameInMap("KafkaClusterId")
         public String kafkaClusterId;
@@ -501,7 +493,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceSlsInfo extends TeaModel {
         /**
-         * <p>Specifies whether the resource is cross-account. Valid values:</p>
+         * <p>Specifies whether the resource belongs to a different account. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The current network instance is a cross-account resource.</li>
          * <li><strong>false</strong>: The current network instance belongs to the current account.</li>
@@ -535,7 +527,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
          * <p>The name of the SLS project.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>example-project</p>
          */
         @NameInMap("Project")
         public String project;
@@ -553,7 +545,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
          * <p>The name of the SLS Logstore.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>example-logstore</p>
          */
         @NameInMap("Store")
         public String store;
@@ -636,9 +628,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
          * <p>The Databricks information.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;workspaceURL&quot;:&quot;<a href="https://workspace.example.com%22%7D">https://workspace.example.com&quot;}</a></p>
          */
         @NameInMap("DatabricksInfo")
         public DescribeApsDatasourceResponseBodyApsDatasourceDatabricksInfo databricksInfo;
@@ -674,9 +664,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
          * <p>The Hive data source information.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;Vswitch&quot;:&quot;vsw-<strong><strong><strong>&quot;,&quot;SecurityGroup&quot;:&quot;sg-</strong></strong></strong>&quot;}</p>
          */
         @NameInMap("HiveInfo")
         public DescribeApsDatasourceResponseBodyApsDatasourceHiveInfo hiveInfo;
@@ -685,9 +673,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
          * <p>The Kafka instance information.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;KafkaClusterId&quot;:&quot;alikafka_pre-cn-aaa1a1aaa111&quot;,&quot;KafkaTopic&quot;:&quot;example-topic&quot;}</p>
          */
         @NameInMap("KafkaInfo")
         public DescribeApsDatasourceResponseBodyApsDatasourceKafkaInfo kafkaInfo;
@@ -718,9 +704,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
          * <p>The Simple Log Service (SLS) project.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;Project&quot;:&quot;example-project&quot;,&quot;Store&quot;:&quot;example-logstore&quot;}</p>
          */
         @NameInMap("SlsInfo")
         public DescribeApsDatasourceResponseBodyApsDatasourceSlsInfo slsInfo;

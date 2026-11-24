@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListResultExportJobHistoryShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in the specified region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ListResultExportJobHistoryShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the database account.</p>
+     * <p>The database user.</p>
      * 
      * <strong>example:</strong>
      * <p>test1</p>
@@ -27,9 +27,9 @@ public class ListResultExportJobHistoryShrinkRequest extends TeaModel {
     public String databaseUser;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time.</p>
+     * <p>The end time must be later than the start time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,20 +39,20 @@ public class ListResultExportJobHistoryShrinkRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The order in which to sort the SQL statements by field, which contains the <code>Field</code> and <code>Type</code> fields. Specify the order in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;CreateTimee&quot;, &quot;Type&quot;: &quot;desc&quot; }]</code>.</p>
+     * <p>The sorting conditions for SQL statements based on specified fields. The value is in JSON format and is an ordered JSON array that specifies composite sorting based on the sequence of the input array. The array contains the <code>Field</code> and <code>Type</code> fields. Example: <code>[{&quot;Field&quot;:&quot;CreateTimee&quot;, &quot;Type&quot;: &quot;desc&quot; }]</code>. Details:</p>
      * <ul>
-     * <li><p><code>Field</code> specifies the field that is used to sort the SQL statements. Valid values:</p>
+     * <li><p><code>Field</code>: the name of the field by which to sort the statements. Valid values:</p>
      * <ul>
-     * <li><code>CreateTime</code>: the time when the result set export job was created.</li>
+     * <li><code>CreateTime</code>: the execution start time.</li>
      * <li><code>Status</code>: the execution status.</li>
-     * <li><code>DatabaseUser</code>: the name of the database account.</li>
+     * <li><code>DatabaseUser</code>: the username.</li>
      * <li><code>TimeCost</code>: the execution duration.</li>
-     * <li><code>ResourceGroup</code>: the name of the resource group.</li>
+     * <li><code>ResourceGroup</code>: the resource group.</li>
      * <li><code>ExportRows</code>: the number of exported rows.</li>
      * <li><code>Progress</code>: the export progress.</li>
      * </ul>
      * </li>
-     * <li><p><code>Type</code> specifies the sorting order. Valid values (case-insensitive):</p>
+     * <li><p><code>Type</code>: the sorting type. Valid values (case-insensitive):</p>
      * <ul>
      * <li><code>Desc</code>: descending order.</li>
      * <li><code>Asc</code>: ascending order.</li>
@@ -64,7 +64,7 @@ public class ListResultExportJobHistoryShrinkRequest extends TeaModel {
     public String orderShrink;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. The value must be an integer greater than 0 and less than or equal to the maximum value of the Integer data type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -87,9 +87,9 @@ public class ListResultExportJobHistoryShrinkRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -100,7 +100,7 @@ public class ListResultExportJobHistoryShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the resource group that runs the result set export jobs. You can use this parameter to query the execution records of export jobs that are run in a specific resource group.</p>
+     * <p>The resource group in which the task is executed. You can filter tasks by resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>user_default</p>
@@ -109,7 +109,7 @@ public class ListResultExportJobHistoryShrinkRequest extends TeaModel {
     public String resourceGroup;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</p>
+     * <p>The start time of the query. Specify the time in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-01T12:01:00Z</p>
@@ -118,7 +118,7 @@ public class ListResultExportJobHistoryShrinkRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The execution status of result set export jobs. You can use this parameter to query the execution records of export jobs that are in a specific state.</p>
+     * <p>The list of task execution statuses. You can filter tasks by status.</p>
      */
     @NameInMap("StatusList")
     public String statusListShrink;

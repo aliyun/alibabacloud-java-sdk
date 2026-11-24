@@ -95,7 +95,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         /**
          * <p>The client IP address.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the Type parameter is set to accessip.</p>
+         * <p>This parameter is returned only when the <strong>Type</strong> parameter is set to <strong>accessip</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String avgCpuTime;
 
         /**
-         * <p>The average peak memory. Unit: KB.</p>
+         * <p>The average peak memory usage. Unit: KB.</p>
          * 
          * <strong>example:</strong>
          * <p>240048</p>
@@ -123,7 +123,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String avgPeakMemory;
 
         /**
-         * <p>The average scan size. Unit: KB.</p>
+         * <p>The average scanned data size. Unit: KB.</p>
          * 
          * <strong>example:</strong>
          * <p>244</p>
@@ -177,7 +177,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String maxPeakMemory;
 
         /**
-         * <p>The maximum scan size. Unit: KB.</p>
+         * <p>The maximum scanned data size. Unit: KB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -233,7 +233,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         /**
          * <p>The username.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the Type parameter is left empty or set to user.</p>
+         * <p>This parameter is returned only when the <strong>Type</strong> parameter is left empty or set to <strong>user</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

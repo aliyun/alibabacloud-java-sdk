@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApsDatasourcesRequest extends TeaModel {
     /**
-     * <p>The ADB instance ID. This parameter is required. You can invoke the DescribeDBClusters operation to query the cluster ID in the specified region.</p>
+     * <p>The ADB instance ID. This parameter is required when you invoke the operation. You can invoke the DescribeDBClusters operation to query the cluster ID in the target region.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-******</p>

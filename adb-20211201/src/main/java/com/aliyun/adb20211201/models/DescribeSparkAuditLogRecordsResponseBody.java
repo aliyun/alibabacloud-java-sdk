@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * <p>The details of the access denial. This field is returned only when RAM authentication fails.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -31,7 +31,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The list of SQL audit logs.</p>
+     * <p>The list of SQL records.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeSparkAuditLogRecordsResponseBodyItems> items;
@@ -46,7 +46,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -64,7 +64,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -153,7 +153,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>The SQL execution error message.</p>
+         * <p>The error message of the SQL execution.</p>
          * 
          * <strong>example:</strong>
          * <p>notFoundIp</p>
@@ -162,7 +162,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The SQL execution error stack trace.</p>
+         * <p>The error stack trace of the SQL execution.</p>
          * 
          * <strong>example:</strong>
          * <p>notFoundIpException</p>
@@ -171,7 +171,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public String errorTrace;
 
         /**
-         * <p>The start time of the SQL statement. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+         * <p>The start time of the SQL execution. The time is in UTC and follows the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-23T16:05:08Z</p>
@@ -180,7 +180,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public String executeTime;
 
         /**
-         * <p>The ID of the query executed within the Spark application.</p>
+         * <p>The internal query execution ID of the Spark application.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +189,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public String innerQueryId;
 
         /**
-         * <p>Whether it can be diagnosed.</p>
+         * <p>Indicates whether the SQL statement can be diagnosed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -207,7 +207,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>The resource group name.</p>
+         * <p>The name of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>test_job</p>
@@ -216,7 +216,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
-         * <p>The SQL statement.</p>
+         * <p>The details of the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM adb_hdfs_import_source</p>
@@ -225,7 +225,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public String SQLText;
 
         /**
-         * <p>The ID of the statement.</p>
+         * <p>The statement ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fbd22066-1c03-xxxx-aa16-6ae28288****</p>
@@ -234,12 +234,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public String statementId;
 
         /**
-         * <p>The source from which the query was initiated.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SQL_EDITOR: SQL_EDITOR.</li>
-         * <li>JDBC: JDBC.</li>
-         * </ul>
+         * <p>The source from which the query is initiated.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL_EDITOR</p>
@@ -249,13 +244,6 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The execution status of the SQL statement.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cancel: The task is canceled .</li>
-         * <li>finished: The execution succeeds .</li>
-         * <li>error: The execution fails .</li>
-         * <li>timeout: The execution of the command timed out.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>finish</p>
@@ -264,7 +252,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The duration of the SQL statement. Unit: milliseconds.</p>
+         * <p>The execution duration of the SQL statement. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>40000</p>
@@ -273,7 +261,7 @@ public class DescribeSparkAuditLogRecordsResponseBody extends TeaModel {
         public Long totalTime;
 
         /**
-         * <p>The username that is used to execute SQL statements.</p>
+         * <p>The username that executed the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>test_user</p>

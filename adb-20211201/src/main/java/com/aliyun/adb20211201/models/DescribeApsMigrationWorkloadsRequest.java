@@ -14,7 +14,7 @@ public class DescribeApsMigrationWorkloadsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the query. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-20T16:00:00Z</p>
@@ -52,7 +52,7 @@ public class DescribeApsMigrationWorkloadsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time of the query. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-20T16:00:00Z</p>

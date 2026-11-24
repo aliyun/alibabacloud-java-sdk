@@ -14,7 +14,7 @@ public class StartFormationCrawlerResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
@@ -25,8 +25,8 @@ public class StartFormationCrawlerResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Successful.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class StartFormationCrawlerResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>1564657730</p>

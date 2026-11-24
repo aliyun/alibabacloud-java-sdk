@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsWebhookRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,10 @@ public class CreateApsWebhookRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The task type. Valid values:</p>
-     * <p>ResultExport: SLS/OSS export task.</p>
+     * <p>The node type. Valid values:</p>
+     * <ul>
+     * <li>ResultExport: SLS or OSS export task.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +85,7 @@ public class CreateApsWebhookRequest extends TeaModel {
          * <p>The signing key.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>example****key</p>
          */
         @NameInMap("Key")
         public String key;

@@ -8,31 +8,43 @@ public class AccessTokenModel extends TeaModel {
      * <p>The access token.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>example****token</p>
      */
     @NameInMap("AccessToken")
     public String accessToken;
 
     /**
      * <p>The comment for the access token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sample access token</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The creation time of the access token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-11-20T02:00:00Z</p>
      */
     @NameInMap("CreatedAt")
     public String createdAt;
 
     /**
      * <p>The expiration time of the access token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-12-20T02:00:00Z</p>
      */
     @NameInMap("ExpiredAt")
     public String expiredAt;
 
     /**
      * <p>The status of the access token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENABLE</p>
      */
     @NameInMap("Status")
     public String status;

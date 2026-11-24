@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeApsDatasourcesResponseBody extends TeaModel {
     /**
-     * <p>The data sources.</p>
+     * <p>The array of data sources.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>[{&quot;CreateTime&quot;:&quot;2024-01-10 14:44:33&quot;,&quot;DatasourceDescription&quot;:&quot;Sample data source&quot;,&quot;DatasourceId&quot;:1,&quot;DatasourceName&quot;:&quot;example-source&quot;,&quot;DatasourceType&quot;:&quot;SLS&quot;,&quot;HasJob&quot;:false}]</p>
      */
     @NameInMap("ApsDatasources")
     public java.util.List<DescribeApsDatasourcesResponseBodyApsDatasources> apsDatasources;
@@ -43,7 +41,7 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -125,7 +123,7 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         public Long datasourceId;
 
         /**
-         * <p>The name of the data source.</p>
+         * <p>The name of the target data source.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -143,7 +141,7 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         public String datasourceType;
 
         /**
-         * <p>Indicates whether a job is using the data source.</p>
+         * <p>Indicates whether a task is using the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

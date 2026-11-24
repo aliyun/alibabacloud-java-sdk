@@ -11,7 +11,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String atmConfigShrink;
 
     /**
-     * <p>The auto-stop time.</p>
+     * <p>The automatic stop time.</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -49,7 +49,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable this feature, the unit price of resources decreases, but the resources may be released. This feature can be enabled only for Job resource groups. Valid values:</p>
+     * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable spot instances, the unit price of resources decreases, but the instances may be released. This feature can be enabled only for Job resource groups. Valid values:</p>
      * <ul>
      * <li><strong>True</strong>: Enables the spot instance feature.</li>
      * <li><strong>False</strong>: Disables the spot instance feature.</li>
@@ -62,10 +62,10 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public Boolean enableSpot;
 
     /**
-     * <p>The engine configurations.</p>
+     * <p>The engine configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</p>
+     * <p>{&quot;spark.adb.version&quot;:&quot;3.5&quot;}</p>
      */
     @NameInMap("EngineParams")
     public String engineParamsShrink;
@@ -94,7 +94,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
      * <ul>
      * <li><strong>Interactive</strong></li>
      * <li><strong>Job</strong><blockquote>
-     * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
+     * <p>For more information about Data Lakehouse Edition resource groups, refer to <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -110,7 +110,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
      * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>1</p>
      */
     @NameInMap("MaxClusterCount")
     public Integer maxClusterCount;
@@ -118,8 +118,8 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The maximum reserved computing resources.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the currently unallocated resources of the cluster, and the step size is 16 ACUs.</li>
-     * <li>If the resource group type is Job, the maximum reserved computing resources is the currently unallocated resources of the cluster, and the step size is 8 ACUs.</li>
+     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 16 ACU.</li>
+     * <li>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 8 ACU.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
      * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>Reserved parameter</p>
+     * <p>1</p>
      */
     @NameInMap("MaxGpuQuantity")
     public Integer maxGpuQuantity;
@@ -141,7 +141,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
      * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>None</p>
+     * <p>1</p>
      */
     @NameInMap("MinClusterCount")
     public Integer minClusterCount;
@@ -149,8 +149,8 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The minimum reserved computing resources.</p>
      * <ul>
-     * <li>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACUs.</li>
-     * <li>If the resource group type is Job, the minimum reserved computing resources is 0 ACUs.</li>
+     * <li>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACU.</li>
+     * <li>If the resource group type is Job, the minimum reserved computing resources is 0 ACU.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
      * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>Reserved parameter</p>
+     * <p>1</p>
      */
     @NameInMap("MinGpuQuantity")
     public Integer minGpuQuantity;
@@ -187,7 +187,7 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The job delivery rules.</p>
+     * <p>The job routing rules.</p>
      */
     @NameInMap("Rules")
     public String rulesShrink;

@@ -7,7 +7,7 @@ public class DescribeDiagnosisDimensionsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in the specified region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,15 +18,13 @@ public class DescribeDiagnosisDimensionsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end time of the query. Specify the time as a UNIX timestamp in milliseconds.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>The end time must be later than the start time.</p>
-     * </li>
-     * <li><p>The maximum time range that can be specified is 24 hours.</p>
-     * </li>
+     * <li>The end time must be later than the start time.</li>
+     * <li>The interval between the start time and the end time cannot exceed 24 hours.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1625220213000</p>
@@ -35,9 +33,9 @@ public class DescribeDiagnosisDimensionsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language. Valid values:</p>
+     * <p>The language configuration. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong> (default): simplified Chinese.</li>
+     * <li><strong>zh-CN</strong>: Simplified Chinese (default).</li>
      * <li><strong>en-US</strong>: English.</li>
      * <li><strong>ja</strong>: Japanese.</li>
      * </ul>
@@ -49,11 +47,11 @@ public class DescribeDiagnosisDimensionsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The query condition for SQL statements, which can contain the <code>Type</code>, <code>Value</code>, <code>Min</code>, and <code>Max</code> fields. Specify the condition in the JSON format. <code>Type</code> specifies the query dimension. Valid values for Type: <code>maxCost</code>, <code>status</code>, and <code>cost</code>. <code>Value</code>, <code>Min</code>, or <code>Max</code> specifies the query range for the dimension. Valid values:</p>
+     * <p>The search conditions for SQL queries. The value is a JSON string that contains fields such as <code>Type</code>, <code>Value</code>, <code>Min</code>, and <code>Max</code>. The <code>Type</code> field specifies the query dimension. Valid values: <code>maxCost</code>, <code>status</code>, and <code>cost</code>. The <code>Value</code>, <code>Min</code>, or <code>Max</code> field specifies the query range for the dimension. Valid values:</p>
      * <ul>
-     * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;100&quot;}</code>: queries the top 100 most time-consuming SQL statements. Set <code>Value</code> to 100.</li>
-     * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: queries the executed SQL statements. You can set <code>Value</code> to <code>running</code> to query the SQL statements that are being executed. You can also set Value to <code>failed</code> to query the SQL statements that failed to be executed.</li>
-     * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;10&quot;,&quot;Max&quot;:&quot;200&quot;}</code>: queries the SQL statements whose execution duration is in the range of 10 to 200 milliseconds. You can also specify custom values for the Min and Max fields.</li>
+     * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;100&quot;}</code>: queries the details of the top 100 SQL statements with the longest execution duration. Currently, you can only set <code>Value</code> to 100.</li>
+     * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: queries the details of completed SQL statements. You can also set <code>Value</code> to <code>running</code> or <code>failed</code> to query the details of running or failed SQL statements.</li>
+     * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;10&quot;,&quot;Max&quot;:&quot;200&quot;}</code>: queries the details of SQL statements whose execution duration is between 10 milliseconds and 200 milliseconds. You can also customize the minimum and maximum execution duration in milliseconds.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,9 +61,9 @@ public class DescribeDiagnosisDimensionsRequest extends TeaModel {
     public String queryCondition;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of the specified AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -76,9 +74,9 @@ public class DescribeDiagnosisDimensionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time of the query. Specify the time as a UNIX timestamp in milliseconds.</p>
      * <blockquote>
-     * <p> You can query data only within the last 14 days.</p>
+     * <p>You can only query data from the last 14 days. If you query data from more than 14 days ago, an empty result is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

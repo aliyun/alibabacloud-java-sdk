@@ -58,9 +58,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
      * <p>The Hive data source information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;Vswitch&quot;:&quot;vsw-bp1*<strong><strong>k&quot;,&quot;SecurityGroup&quot;:&quot;sg-uf</strong></strong>***h&quot;}</p>
      */
     @NameInMap("HiveInfo")
     public CreateApsDatasoureRequestHiveInfo hiveInfo;
@@ -69,9 +67,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
      * <p>The Kafka information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;KafkaClusterId&quot;:&quot;alikafka_pre-cn-aaa1a1aaa111&quot;,&quot;KafkaTopic&quot;:&quot;example-topic&quot;}</p>
      */
     @NameInMap("KafkaInfo")
     public CreateApsDatasoureRequestKafkaInfo kafkaInfo;
@@ -89,9 +85,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
      * <p>The PolarDB for MySQL data source information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;RegionId&quot;:&quot;cn-shanghai&quot;}</p>
      */
     @NameInMap("PolarDBMysqlInfo")
     public CreateApsDatasoureRequestPolarDBMysqlInfo polarDBMysqlInfo;
@@ -111,9 +105,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
      * <p>The ApsaraDB RDS for MySQL data source information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;RegionId&quot;:&quot;cn-shanghai&quot;}</p>
      */
     @NameInMap("RdsMysqlInfo")
     public CreateApsDatasoureRequestRdsMysqlInfo rdsMysqlInfo;
@@ -132,9 +124,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
      * <p>The Simple Log Service (SLS) information.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>{&quot;Project&quot;:&quot;example-project&quot;,&quot;Store&quot;:&quot;example-logstore&quot;,&quot;Across&quot;:false}</p>
      */
     @NameInMap("SlsInfo")
     public CreateApsDatasoureRequestSlsInfo slsInfo;
@@ -388,13 +378,13 @@ public class CreateApsDatasoureRequest extends TeaModel {
          * <p>The Kafka instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>alikafka_pre-cn-aaa1a1aaa111</p>
          */
         @NameInMap("KafkaClusterId")
         public String kafkaClusterId;
 
         /**
-         * <p>The name of the allocated Kafka topic.</p>
+         * <p>The assigned Kafka topic name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -458,7 +448,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String acrossUid;
 
         /**
-         * <p>The endpoint of the private custom RDS instance.</p>
+         * <p>The private custom RDS endpoint.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -479,7 +469,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
          * <p>The password.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Example****123!</p>
          */
         @NameInMap("Password")
         public String password;
@@ -640,7 +630,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
          * <p>The password.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Example****123!</p>
          */
         @NameInMap("Password")
         public String password;
@@ -667,7 +657,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
          * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>Username.</p>
+         * <p>username</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -738,7 +728,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public Boolean across;
 
         /**
-         * <p>The name of the cross-account role.</p>
+         * <p>The cross-account role name.</p>
          * 
          * <strong>example:</strong>
          * <p>yyy</p>
@@ -774,7 +764,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String sourceRegionId;
 
         /**
-         * <p>The Simple Log Service Logstore.</p>
+         * <p>The Simple Log Service (SLS) Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>test-store</p>

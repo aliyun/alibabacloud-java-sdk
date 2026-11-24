@@ -15,12 +15,12 @@ public class DescribeInclinedNodesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The language of file titles and error messages. Valid values:</p>
+     * <p>Specifies the language for the title of the downloaded file and some error messages. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: simplified Chinese.</li>
+     * <li><strong>zh</strong>: Simplified Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * <li><strong>ja</strong>: Japanese.</li>
-     * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+     * <li><strong>zh-tw</strong>: Traditional Chinese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeInclinedNodesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

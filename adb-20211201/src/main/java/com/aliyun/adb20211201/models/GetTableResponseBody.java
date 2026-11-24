@@ -23,7 +23,7 @@ public class GetTableResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -41,7 +41,7 @@ public class GetTableResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The detailed table information.</p>
+     * <p>The details of the table.</p>
      */
     @NameInMap("Table")
     public TableModel table;

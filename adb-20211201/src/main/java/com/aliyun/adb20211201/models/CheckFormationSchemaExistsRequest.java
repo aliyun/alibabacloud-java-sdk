@@ -18,7 +18,7 @@ public class CheckFormationSchemaExistsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable the prefix mode. Valid values:</p>
+     * <p>Specifies whether the prefix mode is enabled. Valid values:</p>
      * <ul>
      * <li>true: Yes.</li>
      * <li>false: No.</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StorageDescriptorModel extends TeaModel {
     /**
-     * <p>Indicates whether the storage description is compressed.</p>
+     * <p>Specifies whether the data is compressed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class StorageDescriptorModel extends TeaModel {
     public Boolean compressed;
 
     /**
-     * <p>The input format of the storage description.</p>
+     * <p>The input format.</p>
      * 
      * <strong>example:</strong>
      * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</p>
@@ -23,7 +23,7 @@ public class StorageDescriptorModel extends TeaModel {
     public String inputFormat;
 
     /**
-     * <p>The location of the storage description.</p>
+     * <p>The storage location.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://**************</p>
@@ -41,7 +41,7 @@ public class StorageDescriptorModel extends TeaModel {
     public Long numBuckets;
 
     /**
-     * <p>The output format of the storage description.</p>
+     * <p>The output format.</p>
      * 
      * <strong>example:</strong>
      * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</p>
@@ -50,13 +50,16 @@ public class StorageDescriptorModel extends TeaModel {
     public String outputFormat;
 
     /**
-     * <p>The storage configuration parameter.</p>
+     * <p>The storage configuration parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
     /**
-     * <p>The ID of the storage description.</p>
+     * <p>The storage ID of the description.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,13 +68,13 @@ public class StorageDescriptorModel extends TeaModel {
     public Long sdId;
 
     /**
-     * <p>The information about serialization or deserialization.</p>
+     * <p>The serialization and deserialization sequence information.</p>
      */
     @NameInMap("SerDeInfo")
     public SerDeInfoModel serDeInfo;
 
     /**
-     * <p>Indicates whether the storage description is stored in subdirectories.</p>
+     * <p>Specifies whether the data is stored in subdirectories.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

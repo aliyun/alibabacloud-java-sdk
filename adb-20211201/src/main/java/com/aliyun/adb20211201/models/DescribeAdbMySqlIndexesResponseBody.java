@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
     /**
-     * <p>The number of indexes.````</p>
+     * <p>The filter condition for the number of indexes (the number of indexes currently owned by the table with missing indexes). The input format is <code>operator + separator &quot;&quot; + number of indexes</code>, such as <code>&gt;=100</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,16 +14,16 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
     public Integer indexCount;
 
     /**
-     * <p>The queried indexes.</p>
+     * <p>The list of indexes.</p>
      */
     @NameInMap("Indexes")
     public java.util.List<DescribeAdbMySqlIndexesResponseBodyIndexes> indexes;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The message returned for the call. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, a success message is returned.****</li>
-     * <li>If the request failed, an error message is returned.</li>
+     * <li><strong>Success</strong>: The request is successful. </li>
+     * <li>Specific error message: returned when the request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F0983B43-B2EC-536A-8791-142B5CF1E9B6</p>
@@ -42,9 +42,10 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the database.</p>
-     * <p>**</p>
-     * <p>****\</p>
+     * <p>The name of the database.  </p>
+     * <blockquote>
+     * <p><br>If this parameter is specified, subsequent migration or synchronization operations are performed only on this database.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>adb_demo</p>
@@ -53,10 +54,10 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
     public String schema;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,7 +156,7 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The index type.</p>
+         * <p>The type of the index.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>

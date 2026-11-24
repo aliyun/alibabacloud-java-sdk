@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SerDeInfoModel extends TeaModel {
     /**
-     * <p>The name of the serialization or deserialization information.</p>
+     * <p>The name of the serialization information.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -14,13 +14,16 @@ public class SerDeInfoModel extends TeaModel {
     public String name;
 
     /**
-     * <p>The serialization or deserialization configuration parameter.</p>
+     * <p>The configuration parameters for the serialization and deserialization sequence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;serialization.format&quot;:&quot;|&quot;,&quot;field.delim&quot;:&quot;|&quot;}</p>
      */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
     /**
-     * <p>The ID of the serialization or deserialization information.</p>
+     * <p>The ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -29,7 +32,7 @@ public class SerDeInfoModel extends TeaModel {
     public Long serDeId;
 
     /**
-     * <p>The library that is used for serialization.</p>
+     * <p>The library used for serialization.</p>
      * 
      * <strong>example:</strong>
      * <p>org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe</p>

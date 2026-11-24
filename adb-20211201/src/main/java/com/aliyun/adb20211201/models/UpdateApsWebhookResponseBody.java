@@ -46,7 +46,7 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Operation succeeded</p>
+     * <p>操作成功</p>
      */
     @NameInMap("Message")
     public String message;
