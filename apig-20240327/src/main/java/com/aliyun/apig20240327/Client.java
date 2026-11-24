@@ -397,6 +397,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Batch requests are processed individually after passing route ownership validation. If some routes fail to be published, other successfully published routes remain valid.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes specified routes or all visible routes under the same HTTP API in batches.</p>
+     * 
+     * @param request BatchDeployHttpApiRoutesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchDeployHttpApiRoutesResponse
+     */
+    public BatchDeployHttpApiRoutesResponse batchDeployHttpApiRoutesWithOptions(String httpApiId, BatchDeployHttpApiRoutesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.async)) {
+            body.put("async", request.async);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deployAll)) {
+            body.put("deployAll", request.deployAll);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeIds)) {
+            body.put("routeIds", request.routeIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchDeployHttpApiRoutes"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + "/routes/batch-deploy"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeployHttpApiRoutesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Batch requests are processed individually after passing route ownership validation. If some routes fail to be published, other successfully published routes remain valid.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes specified routes or all visible routes under the same HTTP API in batches.</p>
+     * 
+     * @param request BatchDeployHttpApiRoutesRequest
+     * @return BatchDeployHttpApiRoutesResponse
+     */
+    public BatchDeployHttpApiRoutesResponse batchDeployHttpApiRoutes(String httpApiId, BatchDeployHttpApiRoutesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchDeployHttpApiRoutesWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Performs a batch export of HTTP APIs.</p>
      * 
@@ -8249,6 +8310,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listBatchExportTasksWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of batch import tasks.</p>
+     * 
+     * @param request ListBatchImportTasksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBatchImportTasksResponse
+     */
+    public ListBatchImportTasksResponse listBatchImportTasksWithOptions(ListBatchImportTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statuses)) {
+            query.put("statuses", request.statuses);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBatchImportTasks"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-api-batch-import-tasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBatchImportTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of batch import tasks.</p>
+     * 
+     * @param request ListBatchImportTasksRequest
+     * @return ListBatchImportTasksResponse
+     */
+    public ListBatchImportTasksResponse listBatchImportTasks(ListBatchImportTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listBatchImportTasksWithOptions(request, headers, runtime);
     }
 
     /**
