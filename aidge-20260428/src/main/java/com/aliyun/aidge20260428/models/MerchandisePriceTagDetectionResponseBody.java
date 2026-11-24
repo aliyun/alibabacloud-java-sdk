@@ -20,7 +20,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
     public MerchandisePriceTagDetectionResponseBodyData data;
 
     /**
-     * <p>The return message or failure description.</p>
+     * <p>The response message or failure description.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -158,7 +158,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
         public String coverage;
 
         /**
-         * <p>The region list.</p>
+         * <p>The list of regions.</p>
          */
         @NameInMap("Regions")
         public java.util.List<MerchandisePriceTagDetectionResponseBodyDataResultGroundingRegions> regions;
@@ -279,7 +279,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
         public String originalPrice;
 
         /**
-         * <p>The selling price, retained as a string to avoid being parsed as a reserved word or reserved character.</p>
+         * <p>The selling price, retained as a character string.</p>
          * 
          * <strong>example:</strong>
          * <p>5.50</p>
@@ -288,7 +288,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
         public String price;
 
         /**
-         * <p>The associated product code.</p>
+         * <p>The code of the associated product.</p>
          * 
          * <strong>example:</strong>
          * <p>001</p>
@@ -297,7 +297,7 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
         public String skuCode;
 
         /**
-         * <p>The associated product name.</p>
+         * <p>The name of the associated product.</p>
          * 
          * <strong>example:</strong>
          * <p>sku_test</p>
@@ -354,19 +354,19 @@ public class MerchandisePriceTagDetectionResponseBody extends TeaModel {
 
     public static class MerchandisePriceTagDetectionResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The localization information.</p>
+         * <p>The grounding information.</p>
          */
         @NameInMap("Grounding")
         public MerchandisePriceTagDetectionResponseBodyDataResultGrounding grounding;
 
         /**
-         * <p>The price tag list. This can be an empty array if no price tags are recognized under normal conditions.</p>
+         * <p>The list of price tags. This can be an empty array if no price tags are recognized under normal conditions.</p>
          */
         @NameInMap("PriceTags")
         public java.util.List<MerchandisePriceTagDetectionResponseBodyDataResultPriceTags> priceTags;
 
         /**
-         * <p>The value is fixed to priceTag.</p>
+         * <p>The fixed value priceTag.</p>
          * 
          * <strong>example:</strong>
          * <p>priceTag</p>

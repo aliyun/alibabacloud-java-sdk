@@ -111,7 +111,7 @@ public class AddDisplayKnowledgeResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The index of the record in the original request array.</p>
+         * <p>The index of the original request array.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -138,7 +138,7 @@ public class AddDisplayKnowledgeResponseBody extends TeaModel {
         public String skuId;
 
         /**
-         * <p>The record status.</p>
+         * <p>The status of the record.</p>
          * 
          * <strong>example:</strong>
          * <p>UPDATING-Updating
@@ -258,7 +258,7 @@ public class AddDisplayKnowledgeResponseBody extends TeaModel {
         public Integer failedCount;
 
         /**
-         * <p>The knowledge base status.</p>
+         * <p>The status of the knowledge base.</p>
          * 
          * <strong>example:</strong>
          * <p>UPDATING-Updating
@@ -303,6 +303,9 @@ public class AddDisplayKnowledgeResponseBody extends TeaModel {
 
         /**
          * <p>The usage information. This parameter is empty for free API operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ProcessedImageCount&quot;:1}</p>
          */
         @NameInMap("UsageMap")
         public java.util.Map<String, Long> usageMap;

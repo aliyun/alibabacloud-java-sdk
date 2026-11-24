@@ -38,11 +38,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
-     * </ul>
+     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

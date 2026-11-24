@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateProductContentResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned for successful calls.</p>
+     * <p>The error code. This parameter is not returned for normal calls.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class GenerateProductContentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The processing result. Contains copy data upon success. Returns null upon business failure.</p>
+     * <p>The processing result. If the call is successful, this parameter contains the copy data. If the business processing fails, an empty value is returned.</p>
      */
     @NameInMap("Data")
     public GenerateProductContentResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned for successful calls.</p>
+     * <p>The error message. This parameter is not returned for normal calls.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class GenerateProductContentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used for troubleshooting. This parameter may be empty in extreme exception scenarios.</p>
+     * <p>The request ID, which is used for troubleshooting. This parameter may be empty in extreme exceptions.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,7 +38,7 @@ public class GenerateProductContentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the business processing is successful. Valid values: true (the output passes verification) and false (the business processing fails).</p>
+     * <p>Indicates whether the business processing is successful. Valid values: true (the output passes the verification) and false (the business processing fails).</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class GenerateProductContentResponseBody extends TeaModel {
 
     public static class GenerateProductContentResponseBodyData extends TeaModel {
         /**
-         * <p>The actual copy type processed.</p>
+         * <p>The actual copy type that is processed.</p>
          * 
          * <strong>example:</strong>
          * <p>title</p>
@@ -102,7 +102,7 @@ public class GenerateProductContentResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The total number of characters in data.text, including formatting characters such as spaces, punctuation marks, and line breaks.</p>
+         * <p>The total number of characters in Data.Text, including formatting characters such as spaces, punctuation marks, and line breaks.</p>
          * 
          * <strong>example:</strong>
          * <p>54</p>
@@ -120,13 +120,13 @@ public class GenerateProductContentResponseBody extends TeaModel {
         public String outputLanguage;
 
         /**
-         * <p>The number of characters for each selling point, which corresponds to data.points one by one. This parameter is returned only when bullet points are successfully processed.</p>
+         * <p>Returned only when bullet points are successfully processed. The number of characters for each bullet point, which corresponds to Data.Points one by one.</p>
          */
         @NameInMap("PointLengths")
         public java.util.List<Integer> pointLengths;
 
         /**
-         * <p>The selling point texts arranged in output order. This parameter is returned only when bullet points are successfully processed.</p>
+         * <p>Returned only when bullet points are successfully processed. The text of the bullet points arranged in the output order.</p>
          */
         @NameInMap("Points")
         public java.util.List<String> points;
@@ -142,6 +142,9 @@ public class GenerateProductContentResponseBody extends TeaModel {
 
         /**
          * <p>The usage information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;OutputCharacterCount&quot;:53,&quot;InputCharacterCount&quot;:8408}</p>
          */
         @NameInMap("UsageMap")
         public java.util.Map<String, Integer> usageMap;

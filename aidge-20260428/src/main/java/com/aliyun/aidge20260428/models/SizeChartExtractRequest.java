@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SizeChartExtractRequest extends TeaModel {
     /**
-     * <p>The list of column names (such as Size, Bust, and Length).</p>
+     * <p>The list of column names, such as Size, Bust, and Length.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;Size&quot;,&quot;Bust&quot;,&quot;Length&quot;]</p>
@@ -14,7 +14,7 @@ public class SizeChartExtractRequest extends TeaModel {
     public java.util.List<String> columnNameList;
 
     /**
-     * <p>The URL of the size chart image to extract.</p>
+     * <p>The URL of the image from which the size chart is extracted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class SizeChartExtractRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The language model (such as en and cn).</p>
+     * <p>The language model, such as en and cn.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

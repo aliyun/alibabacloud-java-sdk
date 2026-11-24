@@ -15,9 +15,6 @@ public class CategoryAttributeMatchShrinkRequest extends TeaModel {
 
     /**
      * <p>The URLs of the product images. Up to 10 images are supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="https://frametour-assets.oss-cn-shanghai.aliyuncs.com/user-faces/viid_face/dd0dd06c-9351-4e5f-bc70-24166a754d7f.jpg">https://frametour-assets.oss-cn-shanghai.aliyuncs.com/user-faces/viid_face/dd0dd06c-9351-4e5f-bc70-24166a754d7f.jpg</a></p>
      */
     @NameInMap("ImageUrl")
     public String imageUrlShrink;
@@ -63,7 +60,7 @@ public class CategoryAttributeMatchShrinkRequest extends TeaModel {
     public String sourcePlatform;
 
     /**
-     * <p>The target platform. Currently, only TEMU is supported.</p>
+     * <p>The target platform for product listing. Currently, only TEMU is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +74,7 @@ public class CategoryAttributeMatchShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Women\&quot;s spring new arrival clothing</p>
+     * <p>Women\&quot;s spring new clothing</p>
      */
     @NameInMap("Title")
     public String title;

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ProductHotspotDetectionRequest extends TeaModel {
     /**
-     * <p>The HTTPS URLs of reference images that define the SKU whitelist. A maximum of 20 images are supported.</p>
+     * <p>The HTTPS URLs of the reference images that define the SKU whitelist. A maximum of 20 images are supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ReferenceImageUrls")
     public java.util.List<String> referenceImageUrls;
 
     /**
-     * <p>The unique business ID for this single-scene call.</p>
+     * <p>The unique business ID for the single-scene call.</p>
      * 
      * <strong>example:</strong>
      * <p>hotspot-request-001</p>

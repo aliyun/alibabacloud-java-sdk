@@ -65,7 +65,7 @@ public class AddDisplayKnowledgeRequest extends TeaModel {
          * <p>The SKU name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product front image</p>
+         * <p>Front image of the product</p>
          */
         @NameInMap("SkuName")
         public String skuName;

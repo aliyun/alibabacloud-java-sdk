@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssetOptimizeProShrinkRequest extends TeaModel {
     /**
-     * <p>The list of column names to be recognized in the size chart. This parameter is optional.</p>
+     * <p>The list of column names to be recognized in the size chart. Optional.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;Bust&quot;,&quot;Waist&quot;,&quot;Hip&quot;]</p>
@@ -14,7 +14,7 @@ public class AssetOptimizeProShrinkRequest extends TeaModel {
     public String columnNameListShrink;
 
     /**
-     * <p>The ID of the intervention glossary. This parameter is optional. You must create the glossary in the console and provide its ID. If this parameter is left empty, the translation results are not modified.</p>
+     * <p>The ID of the intervention glossary. Optional. You must create the glossary in the console and provide its ID. If this parameter is left empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -32,7 +32,7 @@ public class AssetOptimizeProShrinkRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>The output language format for the size chart. If this parameter is left empty, the original language is used. Valid values: en for English, cn for Chinese.</p>
+     * <p>The output language format for the size chart. If this parameter is left empty, the original language is used. Set this parameter to en for English output or cn for Chinese output.</p>
      * 
      * <strong>example:</strong>
      * <p>cn</p>
@@ -51,7 +51,7 @@ public class AssetOptimizeProShrinkRequest extends TeaModel {
     public Boolean needTrans;
 
     /**
-     * <p>The product URL. This parameter is required. Currently, only 1688 product links are supported.</p>
+     * <p>The product URL. Required. Only 1688 product links are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class AssetOptimizeProShrinkRequest extends TeaModel {
     public String productUrl;
 
     /**
-     * <p>The source language code. This parameter is optional. For supported language pairs, see the list of supported translation languages. This parameter is required if NeedTrans is set to true.</p>
+     * <p>The source language code. Optional. For supported language pairs, refer to the list of supported translation language pairs. Required if NeedTrans is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -70,7 +70,7 @@ public class AssetOptimizeProShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The source platform. Currently, only 1688 is supported.</p>
+     * <p>The source platform. Only 1688 is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class AssetOptimizeProShrinkRequest extends TeaModel {
     public String sourcePlatform;
 
     /**
-     * <p>The target language code. This parameter is optional. For supported language pairs, see the list of supported translation languages. This parameter is required if NeedTrans is set to true.</p>
+     * <p>The target language code. Optional. For supported language pairs, refer to the list of supported translation language pairs. Required if NeedTrans is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -89,7 +89,7 @@ public class AssetOptimizeProShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The target platform for product listing. Currently, only TEMU is supported.</p>
+     * <p>The target platform for listing. Only TEMU is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class AssetOptimizeProShrinkRequest extends TeaModel {
     public Double threshold;
 
     /**
-     * <p>Specifies whether to translate brand names in images. This parameter is optional. Default value: false. This helps protect brand names from being translated.</p>
+     * <p>Specifies whether to translate the brand name in the image. Optional. Default value: false. This helps protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StorefrontSceneRecognitionRequest extends TeaModel {
     /**
-     * <p>The HTTP(S) URL of the image to be reviewed.</p>
+     * <p>The HTTP(S) URL of the image to be checked.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

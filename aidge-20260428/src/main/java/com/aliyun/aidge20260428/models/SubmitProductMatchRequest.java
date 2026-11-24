@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitProductMatchRequest extends TeaModel {
     /**
-     * <p>The product brand. If this value is not specified, the system attempts to extract the brand from the shop name.</p>
+     * <p>The product brand. If this parameter is not specified, the system attempts to extract the brand from the shop name.</p>
      * 
      * <strong>example:</strong>
      * <p>FILA</p>
@@ -14,10 +14,10 @@ public class SubmitProductMatchRequest extends TeaModel {
     public String brandName;
 
     /**
-     * <p>The Miaojie product category. Currently used for extension and auditing purposes.</p>
+     * <p>The Miaojie product category. It is currently used for extension and auditing.</p>
      * 
      * <strong>example:</strong>
-     * <p>Children\&quot;s Shoes</p>
+     * <p>Kids Shoes</p>
      */
     @NameInMap("Category")
     public String category;
@@ -52,11 +52,11 @@ public class SubmitProductMatchRequest extends TeaModel {
     public String productUrl;
 
     /**
-     * <p>The shop name. This value is also used as the extraction source when the brand name is missing.</p>
+     * <p>The shop name. It also serves as the extraction source when the brand name is missing.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>FILA斐乐官方旗舰店</p>
+     * <p>FILA Official Flagship Store</p>
      */
     @NameInMap("ShopName")
     public String shopName;

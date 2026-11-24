@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateProductContentRequest extends TeaModel {
     /**
-     * <p>Takes effect only when contentType is set to bulletPoint. Valid values: 1 to 5. Default value in generate mode: 1. In rewrite mode, if manually specified, the value must match the number of non-empty paragraphs in sourceText. This parameter is ignored for other copy types.</p>
+     * <p>Takes effect only when ContentType is set to bulletPoint. Valid values: 1 to 5. Default value in generate mode: 1. In rewrite mode, if you manually specify this parameter, the value must be the same as the number of non-empty paragraphs in SourceText. This parameter is ignored for other copy types.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -14,7 +14,7 @@ public class GenerateProductContentRequest extends TeaModel {
     public Integer bulletPointCount;
 
     /**
-     * <p>The copy type. Valid values: title, highlight, keywords, bulletPoint, and description. When a platform is specified, you must select a type supported by the platform.</p>
+     * <p>The copy type. Valid values: title, highlight, keywords, bulletPoint, description, and general. The general value is supported only when Operation is set to customize. If a platform is specified, you must select a type supported by the platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GenerateProductContentRequest extends TeaModel {
     public Boolean enableTranslation;
 
     /**
-     * <p>The maximum number of characters for the final output text. If specified, the value must be an integer greater than or equal to 30. If a platform is specified and this parameter is not provided, the configured upper limit for the content type on the platform is used. Example: 60.</p>
+     * <p>The maximum number of characters for the final output text. If you specify this parameter, the value must be an integer greater than or equal to 30. If a platform is specified and this parameter is not specified, the configured upper limit for the content type on the platform is used. Example: 60.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -42,7 +42,7 @@ public class GenerateProductContentRequest extends TeaModel {
     public Integer maxLength;
 
     /**
-     * <p>The minimum number of characters for the final output text. If specified, the value must be an integer greater than or equal to 10. If a platform is specified and this parameter is not provided, the configured lower limit for the content type on the platform is used.</p>
+     * <p>The minimum number of characters for the final output text. If you specify this parameter, the value must be an integer greater than or equal to 10. If a platform is specified and this parameter is not specified, the configured lower limit for the content type on the platform is used.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -51,11 +51,7 @@ public class GenerateProductContentRequest extends TeaModel {
     public Integer minLength;
 
     /**
-     * <p>The operation type. Valid values:</p>
-     * <ul>
-     * <li>generate: Generates copy.</li>
-     * <li>rewrite: Rewrites copy.</li>
-     * </ul>
+     * <p>The operation type. Valid values: generate, rewrite, and customize. The customize value allows you to enter custom prompts.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +61,7 @@ public class GenerateProductContentRequest extends TeaModel {
     public String operation;
 
     /**
-     * <p>The target platform. Valid values: amazon, temu, tiktok, shopify, Wildberries, and tmall. If this parameter is not provided, the request is processed as a general scenario. Enum values are case-sensitive.</p>
+     * <p>The target platform. Valid values: amazon, temu, tiktok, shopify, Wildberries, and tmall. If this parameter is not specified, the general scenario is used. Enum values are case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>amazon</p>
@@ -86,10 +82,19 @@ public class GenerateProductContentRequest extends TeaModel {
      * <p>The product category. Default value: an empty string. The length must be 0 to 100 characters. This parameter helps understand the category during generation and eliminates ambiguity during rewriting.</p>
      * 
      * <strong>example:</strong>
-     * <p>Kitchen utensils</p>
+     * <p>Kitchenware</p>
      */
     @NameInMap("ProductCategory")
     public String productCategory;
+
+    /**
+     * <p>The custom prompt. The maximum length is 10,000 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
+     */
+    @NameInMap("Prompt")
+    public String prompt;
 
     /**
      * <p>The source language. Valid values: zh and en. Automatic language detection is not supported. Supported source languages: Chinese (zh) and English (en).</p>
@@ -106,13 +111,13 @@ public class GenerateProductContentRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Stainless steel 28 cm 3-tier large-capacity steamer for home kitchens</p>
+     * <p>Stainless steel steamer 28cm 3-tier large capacity household kitchen essential steaming and boiling dual-use cookware</p>
      */
     @NameInMap("SourceText")
     public String sourceText;
 
     /**
-     * <p>Required when enableTranslation is set to true. For valid values, see the multilingual processing section. If translation is disabled, this parameter is optional. If provided, it must be the same as the source language. Supported target languages: Chinese (zh), English (en), Russian (ru), German (de), French (fr), Korean (ko), Italian (it), Thai (th), Arabic (ar), Turkish (tr), Hebrew (he), Ukrainian (uk), Polish (pl), Japanese (ja), Dutch (nl), Portuguese (pt), Spanish (es), Malay (ms), Bulgarian (bg), Indonesian (id), and Vietnamese (vi).</p>
+     * <p>Required when EnableTranslation is set to true. For valid values, see Multilingual processing. If translation is disabled, this parameter is optional. If specified, the value must be the same as SourceLanguage. Supported target languages: Chinese (zh), English (en), Russian (ru), German (de), French (fr), Korean (ko), Italian (it), Thai (th), Arabic (ar), Turkish (tr), Hebrew (he), Ukrainian (uk), Polish (pl), Japanese (ja), Dutch (nl), Portuguese (pt), Spanish (es), Malay (ms), Bulgarian (bg), Indonesian (id), and Vietnamese (vi).</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -195,6 +200,14 @@ public class GenerateProductContentRequest extends TeaModel {
     }
     public String getProductCategory() {
         return this.productCategory;
+    }
+
+    public GenerateProductContentRequest setPrompt(String prompt) {
+        this.prompt = prompt;
+        return this;
+    }
+    public String getPrompt() {
+        return this.prompt;
     }
 
     public GenerateProductContentRequest setSourceLanguage(String sourceLanguage) {

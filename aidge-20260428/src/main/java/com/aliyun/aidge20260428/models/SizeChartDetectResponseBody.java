@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SizeChartDetectResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * <p>The error code. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class SizeChartDetectResponseBody extends TeaModel {
     public SizeChartDetectResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,10 +38,10 @@ public class SizeChartDetectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class SizeChartDetectResponseBody extends TeaModel {
         public Boolean isSizeChart;
 
         /**
-         * <p>The usage information. The key is the usage name and the value is the count.</p>
+         * <p>The usage information. The key is the usage metric name and the value is the count.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessedImageCount&quot;:1}</p>

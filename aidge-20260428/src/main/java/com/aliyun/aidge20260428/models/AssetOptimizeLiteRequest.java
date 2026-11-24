@@ -33,7 +33,7 @@ public class AssetOptimizeLiteRequest extends TeaModel {
     public Boolean needTrans;
 
     /**
-     * <p>The product URL.</p>
+     * <p>The product link URL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

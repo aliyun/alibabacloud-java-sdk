@@ -20,7 +20,7 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
     public StorefrontSceneRecognitionResponseBodyData data;
 
     /**
-     * <p>The returned message or failure description.</p>
+     * <p>The response message or failure description.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -96,13 +96,13 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
          * <p>The non-empty category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>oppo vivo smartphone specialty store</p>
+         * <p>OPPO VIVO Smartphone Store</p>
          */
         @NameInMap("Clazz")
         public String clazz;
 
         /**
-         * <p>A finite numerical value. The source document does not specify a value range.</p>
+         * <p>A finite numeric value. The value range is not specified.</p>
          * 
          * <strong>example:</strong>
          * <p>0.99</p>
@@ -136,6 +136,9 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
     public static class StorefrontSceneRecognitionResponseBodyDataResultGroundingRegions extends TeaModel {
         /**
          * <p>The bounding box coordinates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0,0,456,398]</p>
          */
         @NameInMap("Bbox2d")
         public java.util.List<Float> bbox2d;
@@ -200,7 +203,7 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
         public String coverage;
 
         /**
-         * <p>The region list.</p>
+         * <p>The list of regions.</p>
          */
         @NameInMap("Regions")
         public java.util.List<StorefrontSceneRecognitionResponseBodyDataResultGroundingRegions> regions;
@@ -242,7 +245,7 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
         public StorefrontSceneRecognitionResponseBodyDataResultGrounding grounding;
 
         /**
-         * <p>The non-empty scene classification array.</p>
+         * <p>The non-empty array of scene classifications.</p>
          */
         @NameInMap("Scenes")
         public java.util.List<String> scenes;
@@ -280,7 +283,7 @@ public class StorefrontSceneRecognitionResponseBody extends TeaModel {
 
     public static class StorefrontSceneRecognitionResponseBodyData extends TeaModel {
         /**
-         * <p>The scene recognition result details.</p>
+         * <p>The details of the scene recognition result.</p>
          */
         @NameInMap("Result")
         public StorefrontSceneRecognitionResponseBodyDataResult result;

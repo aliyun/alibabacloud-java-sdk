@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextCorrectResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value &quot;success&quot; is returned if the call is successful.</p>
+     * <p>The response code. &quot;success&quot; is returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class TextCorrectResponseBody extends TeaModel {
     public TextCorrectResponseBodyData data;
 
     /**
-     * <p>The error message. The value &quot;Success&quot; is returned if the call is successful. If an error occurs, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+     * <p>The error message. &quot;Success&quot; is returned for successful calls. For failed calls, a specific error message is returned, such as &quot;The parameter contains sensitive information. Please try another input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class TextCorrectResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The request ID, which is used to uniquely identify a request.</p>
      * 
      * <strong>example:</strong>
      * <p>32882AD0-50D1-1D90-A221-3987325EC03E</p>
@@ -38,7 +38,7 @@ public class TextCorrectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

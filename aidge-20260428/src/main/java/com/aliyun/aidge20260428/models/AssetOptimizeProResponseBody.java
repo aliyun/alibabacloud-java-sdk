@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssetOptimizeProResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of success is returned for successful calls.</p>
+     * <p>The status code. A value of success indicates a successful call.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class AssetOptimizeProResponseBody extends TeaModel {
     public AssetOptimizeProResponseBodyData data;
 
     /**
-     * <p>The error message. A value of Success is returned for successful calls.</p>
+     * <p>The error message. A value of Success is returned for a successful call.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

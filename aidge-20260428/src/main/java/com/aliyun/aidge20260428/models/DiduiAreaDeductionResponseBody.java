@@ -195,7 +195,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
          * <p>The downstream HTTP status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>200</p>
          */
         @NameInMap("HttpStatus")
         public Integer httpStatus;

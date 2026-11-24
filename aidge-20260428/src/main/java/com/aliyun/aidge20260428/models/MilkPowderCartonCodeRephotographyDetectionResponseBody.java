@@ -20,7 +20,7 @@ public class MilkPowderCartonCodeRephotographyDetectionResponseBody extends TeaM
     public MilkPowderCartonCodeRephotographyDetectionResponseBodyData data;
 
     /**
-     * <p>The returned message or failure description.</p>
+     * <p>The response message or failure description.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -93,13 +93,18 @@ public class MilkPowderCartonCodeRephotographyDetectionResponseBody extends TeaM
 
     public static class MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResultGroundingRegions extends TeaModel {
         /**
-         * <p>The coordinates of the bounding box in the <code>[top-left x, top-left y, bottom-right x, bottom-right y]</code> format. The value range is 0 to 1000. The left value must be less than the right value, and the top value must be less than the bottom value.</p>
+         * <p>The bounding box coordinates.</p>
+         * <ul>
+         * <li><code>[top-left x, top-left y, bottom-right x, bottom-right y]</code></li>
+         * <li>Value range: 0–1000.</li>
+         * <li>Left &lt; right, top &lt; bottom.</li>
+         * </ul>
          */
         @NameInMap("Bbox2d")
         public java.util.List<Float> bbox2d;
 
         /**
-         * <p>The category of the target. For enumerated values, see the following table.</p>
+         * <p>The target category. For valid values, see the following table.</p>
          * 
          * <strong>example:</strong>
          * <p>milk_powder</p>
@@ -108,7 +113,7 @@ public class MilkPowderCartonCodeRephotographyDetectionResponseBody extends TeaM
         public String label;
 
         /**
-         * <p>The confirmed short name or text, which contains up to 24 characters. This field is an empty string if the text is unclear.</p>
+         * <p>The recognized text. It contains up to 24 characters of a confirmed short name or text. It is an empty string if the text is unclear.</p>
          * 
          * <strong>example:</strong>
          * <p>Milk powder</p>
@@ -149,7 +154,7 @@ public class MilkPowderCartonCodeRephotographyDetectionResponseBody extends TeaM
 
     public static class MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResultGrounding extends TeaModel {
         /**
-         * <p>The coverage of the grounding. Valid values:</p>
+         * <p>The coverage. Valid values:</p>
          * <ul>
          * <li><code>complete</code>: The relevant visible targets are complete.</li>
          * <li><code>partial</code>: Only some targets are valid or recognizable.</li>
@@ -162,7 +167,7 @@ public class MilkPowderCartonCodeRephotographyDetectionResponseBody extends TeaM
         public String coverage;
 
         /**
-         * <p>The array of targets, which contains up to 12 items. This array can be empty if no relevant targets are found.</p>
+         * <p>The target array. It contains up to 12 items. It can be empty if no relevant targets are found.</p>
          */
         @NameInMap("Regions")
         public java.util.List<MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResultGroundingRegions> regions;
@@ -192,13 +197,13 @@ public class MilkPowderCartonCodeRephotographyDetectionResponseBody extends TeaM
 
     public static class MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The supplementary element grounding results.</p>
+         * <p>The supplementary element localization result.</p>
          */
         @NameInMap("Grounding")
         public MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResultGrounding grounding;
 
         /**
-         * <p>Indicates whether the image is recaptured.</p>
+         * <p>Indicates whether the image is a recapture.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -207,7 +212,7 @@ public class MilkPowderCartonCodeRephotographyDetectionResponseBody extends TeaM
         public Boolean isFake;
 
         /**
-         * <p>Indicates whether the image is suspected to be recaptured.</p>
+         * <p>Indicates whether the image is suspected to be a recapture.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -230,7 +235,7 @@ public class MilkPowderCartonCodeRephotographyDetectionResponseBody extends TeaM
         public Integer photoStatus;
 
         /**
-         * <p>The confidence score for recapture detection.</p>
+         * <p>The recapture confidence score.</p>
          * 
          * <strong>example:</strong>
          * <p>0.89</p>
@@ -239,7 +244,7 @@ public class MilkPowderCartonCodeRephotographyDetectionResponseBody extends TeaM
         public Float score;
 
         /**
-         * <p>The detection type. The value is fixed to <code>boxCode</code>.</p>
+         * <p>The detection type. Fixed to <code>boxCode</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>boxCode</p>
@@ -310,7 +315,7 @@ public class MilkPowderCartonCodeRephotographyDetectionResponseBody extends TeaM
         public MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResult result;
 
         /**
-         * <p>The usage information. The value is <code>{&quot;ProcessingCount&quot;:1}</code> if the call is successful, or an empty object if the call fails.</p>
+         * <p>The usage information. It is <code>{&quot;ProcessingCount&quot;:1}</code> if the call is successful, or an empty object if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessingCount&quot;:1}</p>

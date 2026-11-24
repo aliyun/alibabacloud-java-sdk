@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SizeChartExtractResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * <p>The error code. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class SizeChartExtractResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The size chart extraction result.</p>
+     * <p>The size chart extraction results.</p>
      */
     @NameInMap("Data")
     public SizeChartExtractResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -93,7 +93,7 @@ public class SizeChartExtractResponseBody extends TeaModel {
 
     public static class SizeChartExtractResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID, which is used to query the result later.</p>
+         * <p>The ID of the asynchronous task. You can use this ID to query the task results.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxxxx</p>

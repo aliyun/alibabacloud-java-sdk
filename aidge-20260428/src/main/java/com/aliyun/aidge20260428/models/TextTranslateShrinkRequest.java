@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextTranslateShrinkRequest extends TeaModel {
     /**
-     * <p>This field represents your identity and facilitates subsequent communication on various issues. If you are an Alibaba internal organization, specify a value based on your actual scenario, such as BU name-product or BU name-chat. If you are an external Alibaba partner, specify the full name of your company. This company name must be consistent with the company name used when you registered your Alibaba Cloud account.</p>
+     * <p>This field represents your identity and facilitates communication for various issues. If you are an internal Alibaba organization, we recommend that you specify this parameter based on the actual scenario, such as BU name-product or BU name-chat. If you are an external Alibaba partner, we recommend that you specify the full name of your company. The company name must be the same as the company name you used when registering your Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCompany-Chat</p>
@@ -14,7 +14,11 @@ public class TextTranslateShrinkRequest extends TeaModel {
     public String bizName;
 
     /**
-     * <p>The format type of the source text. This parameter is optional. Valid values: text (plain text format) and html (web page format, which preserves HTML tags).</p>
+     * <p>The format type of the source text. This parameter is optional. Valid values:</p>
+     * <ul>
+     * <li>text: Plain text format.</li>
+     * <li>html: Web page format, which retains HTML tags.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -23,7 +27,7 @@ public class TextTranslateShrinkRequest extends TeaModel {
     public String formatType;
 
     /**
-     * <p>The intervention glossary ID. This parameter is optional. The glossary must be created separately in the console, and its ID must be provided. If the specified glossary ID is empty, the translation results are not modified.</p>
+     * <p>The ID of the intervention glossary. This parameter is optional. You must create the glossary in the console and provide its ID. If the provided intervention glossary ID is empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -32,8 +36,8 @@ public class TextTranslateShrinkRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The source language code. If this parameter is not specified, the language is automatically detected. This parameter is optional. You can pass auto for language detection.<br>&lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a>      </p>
-     * <p>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a></p>
+     * <p>The source language code. If this parameter is not specified, the language is automatically detected. This parameter is optional. You can set this parameter to auto for language identification.<br>&lt;props=&quot;china&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.      </p>
+     * <p>&lt;props=&quot;intl&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language pair mapping table</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>auto</p>
@@ -42,7 +46,7 @@ public class TextTranslateShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The list of texts to translate. This parameter is required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</p>
+     * <p>The list of text to be translated. This parameter is required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,8 +56,8 @@ public class TextTranslateShrinkRequest extends TeaModel {
     public String sourceTextListShrink;
 
     /**
-     * <p>The target language code. This parameter is required.<br>&lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a>      </p>
-     * <p>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a></p>
+     * <p>The target language code. This parameter is required.<br>&lt;props=&quot;china&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.      </p>
+     * <p>&lt;props=&quot;intl&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language pair mapping table</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +67,15 @@ public class TextTranslateShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The business scenario identifier. You can pass only one of the following values. When specified, the translation engine invokes the corresponding industry terminology library and style policy to produce translations that better fit the industry. If this field is not specified or is specified incorrectly, the general translation policy is used. Valid values: e-commerce-title (cross-border e-commerce product title translation), e-commerce-description (cross-border e-commerce product description translation), e-commerce-chat (cross-border e-commerce conversation translation), e-commerce-cpv (cross-border e-commerce product CPV attribute translation), novel (novel translation), game (game translation).</p>
+     * <p>The business scenario identifier. You can specify only one of the following values. After the value is specified, the translation engine calls the terminology library and style policy of the corresponding industry to output translations that better fit the industry. If this parameter is not specified or an invalid value is specified, the general translation policy is used. Valid values:</p>
+     * <ul>
+     * <li>e-commerce-title: Cross-border e-commerce product title translation.</li>
+     * <li>e-commerce-description: Cross-border e-commerce product description translation.</li>
+     * <li>e-commerce-chat: Cross-border e-commerce conversation translation.</li>
+     * <li>e-commerce-cpv: Cross-border e-commerce product CPV attribute translation.</li>
+     * <li>novel: Novel translation.</li>
+     * <li>game: Game translation.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>e-commerce-title</p>

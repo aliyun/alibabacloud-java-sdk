@@ -20,7 +20,7 @@ public class MerchandiseSceneDetectionResponseBody extends TeaModel {
     public MerchandiseSceneDetectionResponseBodyData data;
 
     /**
-     * <p>The response message or failure description.</p>
+     * <p>The return message or failure description.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -93,7 +93,10 @@ public class MerchandiseSceneDetectionResponseBody extends TeaModel {
 
     public static class MerchandiseSceneDetectionResponseBodyDataResultGroundingRegions extends TeaModel {
         /**
-         * <p>The 2D bounding box in the format of [top-left x, top-left y, bottom-right x, bottom-right y]. Valid values: 0 to 1000. The left coordinate must be less than the right coordinate, and the top coordinate must be less than the bottom coordinate.</p>
+         * <p>The 2D bounding box in the format of [top-left X, top-left Y, bottom-right X, bottom-right Y]. Values range from 0 to 1000. Left &lt; right, and top &lt; bottom.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0,130,1000,850]</p>
          */
         @NameInMap("Bbox_2d")
         public java.util.List<Double> bbox2d;
@@ -111,7 +114,7 @@ public class MerchandiseSceneDetectionResponseBody extends TeaModel {
          * <p>The recognized text.</p>
          * 
          * <strong>example:</strong>
-         * <p>Multi-tier product display shelf</p>
+         * <p>Multi-layer product display shelf</p>
          */
         @NameInMap("Text")
         public String text;
@@ -188,7 +191,7 @@ public class MerchandiseSceneDetectionResponseBody extends TeaModel {
 
     public static class MerchandiseSceneDetectionResponseBodyDataResultScenesSceneLocation extends TeaModel {
         /**
-         * <p>The x-coordinate of the region point.</p>
+         * <p>The X-coordinate of the region point.</p>
          * 
          * <strong>example:</strong>
          * <p>0.431</p>
@@ -197,7 +200,7 @@ public class MerchandiseSceneDetectionResponseBody extends TeaModel {
         public Double x;
 
         /**
-         * <p>The y-coordinate of the region point.</p>
+         * <p>The Y-coordinate of the region point.</p>
          * 
          * <strong>example:</strong>
          * <p>0.973</p>
@@ -239,7 +242,7 @@ public class MerchandiseSceneDetectionResponseBody extends TeaModel {
         public Double areaRate;
 
         /**
-         * <p>Optional. The purity metric for proprietary products. The specific business criteria are subject to the recognition service.</p>
+         * <p>Optional. The purity metric for proprietary products. The specific business definition is subject to the recognition service.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -260,13 +263,16 @@ public class MerchandiseSceneDetectionResponseBody extends TeaModel {
          * <p>The display name of the scene. If omitted, the value is an empty string.</p>
          * 
          * <strong>example:</strong>
-         * <p>Air-cooled display cabinet</p>
+         * <p>Refrigerated display cabinet</p>
          */
         @NameInMap("SceneActualName")
         public String sceneActualName;
 
         /**
-         * <p>The center point of the scene, which retains the original normalized coordinates. If omitted, the value is an empty array.</p>
+         * <p>The center point of the scene. The original normalized coordinates are retained. If omitted, the value is an empty array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0.501,0.493]</p>
          */
         @NameInMap("SceneCenter")
         public java.util.List<Double> sceneCenter;
@@ -278,7 +284,7 @@ public class MerchandiseSceneDetectionResponseBody extends TeaModel {
         public java.util.List<MerchandiseSceneDetectionResponseBodyDataResultScenesSceneLocation> sceneLocation;
 
         /**
-         * <p>The scene identifier. This parameter is required and cannot be empty.</p>
+         * <p>The scene identifier. This field is required and cannot be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>yl_cj_lfg</p>
@@ -287,7 +293,7 @@ public class MerchandiseSceneDetectionResponseBody extends TeaModel {
         public String sceneName;
 
         /**
-         * <p>Optional. The shelf distribution proportion metric. The specific business criteria are subject to the recognition service.</p>
+         * <p>Optional. The shelf distribution proportion metric. The specific business definition is subject to the recognition service.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -380,7 +386,7 @@ public class MerchandiseSceneDetectionResponseBody extends TeaModel {
         public java.util.List<MerchandiseSceneDetectionResponseBodyDataResultScenes> scenes;
 
         /**
-         * <p>Fixed value: scene.</p>
+         * <p>The type. Fixed to scene.</p>
          * 
          * <strong>example:</strong>
          * <p>scene</p>

@@ -14,7 +14,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of deleting content from the display knowledge base.</p>
+     * <p>The deletion result of the display knowledge base content.</p>
      */
     @NameInMap("Data")
     public DeleteDisplayKnowledgeResponseBodyData data;
@@ -38,7 +38,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -129,7 +129,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         public Long recordId;
 
         /**
-         * <p>The SKU ID. This field is empty for deletion results.</p>
+         * <p>The SKU ID. This parameter is empty in deletion results.</p>
          * 
          * <strong>example:</strong>
          * <p>sku-001</p>
@@ -138,16 +138,16 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         public String skuId;
 
         /**
-         * <p>The record status. This field is empty for deletion results.</p>
+         * <p>The record status. This parameter is empty in deletion results.</p>
          * 
          * <strong>example:</strong>
-         * <p>Empty for deletion API operations</p>
+         * <p>Empty for deletion operations</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Indicates whether the deletion was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -256,7 +256,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         public Integer failedCount;
 
         /**
-         * <p>The status of the knowledge base.</p>
+         * <p>The knowledge base status.</p>
          * 
          * <strong>example:</strong>
          * <p>UPDATING</p>
@@ -289,7 +289,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         public java.util.List<DeleteDisplayKnowledgeResponseBodyDataResults> results;
 
         /**
-         * <p>Indicates whether the business processing was successful.</p>
+         * <p>Indicates whether the business processing is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -298,7 +298,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>The asynchronous task ID. This field is empty for synchronous API operations.</p>
+         * <p>The asynchronous task ID. This parameter is empty for synchronous API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxxxx</p>
@@ -307,7 +307,10 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The usage information. This field is empty for free API operations.</p>
+         * <p>The usage information. This parameter is empty for free API operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ProcessedImageCount&quot;:1}</p>
          */
         @NameInMap("UsageMap")
         public java.util.Map<String, Long> usageMap;

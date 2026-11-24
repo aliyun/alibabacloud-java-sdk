@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LanguageDetectRequest extends TeaModel {
     /**
-     * <p>The detection scenario. Default value: common. If you are identifying search phrases, set this parameter to query. If an incorrect value is specified or this parameter is left empty, the common general identification mode is used. Note: pass query in lowercase.</p>
+     * <p>The detection scenario. Default value: common. For search phrase scenarios, set this parameter to query. If an invalid value is specified or this parameter is left empty, the common general detection scenario is used. Note: The value query must be in lowercase.</p>
      * 
      * <strong>example:</strong>
      * <p>query</p>
@@ -14,11 +14,11 @@ public class LanguageDetectRequest extends TeaModel {
     public String scene;
 
     /**
-     * <p>The source text to identify. This parameter is required.</p>
+     * <p>The source text to be detected. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample text</p>
+     * <p>Test text</p>
      */
     @NameInMap("SourceText")
     public String sourceText;

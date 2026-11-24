@@ -23,7 +23,7 @@ public class QueryDisplayKnowledgeShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the knowledge base.</p>
+     * <p>The knowledge base ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

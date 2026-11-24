@@ -44,7 +44,7 @@ public class UpdateDisplayKnowledgeRequest extends TeaModel {
 
     public static class UpdateDisplayKnowledgeRequestRecords extends TeaModel {
         /**
-         * <p>The HTTP or HTTPS URL of the product image.</p>
+         * <p>The HTTP(S) URL of the product image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx/96f21ebdaeeba27a.jpg">https://xxxx/96f21ebdaeeba27a.jpg</a></p>
@@ -62,7 +62,7 @@ public class UpdateDisplayKnowledgeRequest extends TeaModel {
         public Long recordId;
 
         /**
-         * <p>The SKU ID. If this parameter is not empty, the original value is overwritten.</p>
+         * <p>The SKU ID. If specified, this value overwrites the original value.</p>
          * 
          * <strong>example:</strong>
          * <p>sku-001</p>

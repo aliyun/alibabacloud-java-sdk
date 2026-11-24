@@ -20,7 +20,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
     public GeneralRephotographyDetectionResponseBodyData data;
 
     /**
-     * <p>The return message or failure description.</p>
+     * <p>The response message or failure description.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -91,112 +91,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions extends TeaModel {
-        /**
-         * <p>The bounding box coordinates.</p>
-         */
-        @NameInMap("Bbox2d")
-        public java.util.List<Float> bbox2d;
-
-        /**
-         * <p>The target category. For enumerations, see the following table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>product</p>
-         */
-        @NameInMap("Label")
-        public String label;
-
-        /**
-         * <p>The confirmed short name or text of up to 24 characters. This is an empty string if the text is unclear.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Product</p>
-         */
-        @NameInMap("Text")
-        public String text;
-
-        public static GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions build(java.util.Map<String, ?> map) throws Exception {
-            GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions self = new GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions();
-            return TeaModel.build(map, self);
-        }
-
-        public GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions setBbox2d(java.util.List<Float> bbox2d) {
-            this.bbox2d = bbox2d;
-            return this;
-        }
-        public java.util.List<Float> getBbox2d() {
-            return this.bbox2d;
-        }
-
-        public GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions setText(String text) {
-            this.text = text;
-            return this;
-        }
-        public String getText() {
-            return this.text;
-        }
-
-    }
-
-    public static class GeneralRephotographyDetectionResponseBodyDataResultGrounding extends TeaModel {
-        /**
-         * <p>The coverage. Valid values:</p>
-         * <ul>
-         * <li><code>complete</code>: The relevant visible targets are complete.</li>
-         * <li><code>partial</code>: Only some targets are valid or recognizable.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>complete</p>
-         */
-        @NameInMap("Coverage")
-        public String coverage;
-
-        /**
-         * <p>The target array. It contains up to 12 items and can be empty if no relevant targets are found.</p>
-         */
-        @NameInMap("Regions")
-        public java.util.List<GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions> regions;
-
-        public static GeneralRephotographyDetectionResponseBodyDataResultGrounding build(java.util.Map<String, ?> map) throws Exception {
-            GeneralRephotographyDetectionResponseBodyDataResultGrounding self = new GeneralRephotographyDetectionResponseBodyDataResultGrounding();
-            return TeaModel.build(map, self);
-        }
-
-        public GeneralRephotographyDetectionResponseBodyDataResultGrounding setCoverage(String coverage) {
-            this.coverage = coverage;
-            return this;
-        }
-        public String getCoverage() {
-            return this.coverage;
-        }
-
-        public GeneralRephotographyDetectionResponseBodyDataResultGrounding setRegions(java.util.List<GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions> regions) {
-            this.regions = regions;
-            return this;
-        }
-        public java.util.List<GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions> getRegions() {
-            return this.regions;
-        }
-
-    }
-
     public static class GeneralRephotographyDetectionResponseBodyDataResult extends TeaModel {
-        /**
-         * <p>The supplementary element localization result.</p>
-         */
-        @NameInMap("Grounding")
-        public GeneralRephotographyDetectionResponseBodyDataResultGrounding grounding;
-
         /**
          * <p>Indicates whether the image is recaptured.</p>
          * 
@@ -207,7 +102,7 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
         public Boolean isFake;
 
         /**
-         * <p>The detection type. The value is fixed to general.</p>
+         * <p>Fixed to general.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>
@@ -218,14 +113,6 @@ public class GeneralRephotographyDetectionResponseBody extends TeaModel {
         public static GeneralRephotographyDetectionResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             GeneralRephotographyDetectionResponseBodyDataResult self = new GeneralRephotographyDetectionResponseBodyDataResult();
             return TeaModel.build(map, self);
-        }
-
-        public GeneralRephotographyDetectionResponseBodyDataResult setGrounding(GeneralRephotographyDetectionResponseBodyDataResultGrounding grounding) {
-            this.grounding = grounding;
-            return this;
-        }
-        public GeneralRephotographyDetectionResponseBodyDataResultGrounding getGrounding() {
-            return this.grounding;
         }
 
         public GeneralRephotographyDetectionResponseBodyDataResult setIsFake(Boolean isFake) {

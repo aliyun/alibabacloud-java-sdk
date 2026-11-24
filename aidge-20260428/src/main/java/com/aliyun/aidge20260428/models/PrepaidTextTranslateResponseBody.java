@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PrepaidTextTranslateResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value &quot;success&quot; is returned for successful calls.</p>
+     * <p>The response code. success is returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The translation result data, including the translation list and usage information.</p>
+     * <p>The translation result data, which includes the translation list and usage information.</p>
      */
     @NameInMap("Data")
     public PrepaidTextTranslateResponseBodyData data;
 
     /**
-     * <p>The error message. The value &quot;Success&quot; is returned for successful calls. For exceptions, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+     * <p>The error message. Success is returned for successful calls. If an exception occurs, a specific error message is returned, such as \&quot;The parameter contains sensitive information. Try another input.\&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, used to uniquely identify a request.</p>
+     * <p>The ID of the request, which is used to identify a unique request call.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,7 +38,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -114,7 +114,7 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
          * <p>The translated text.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hello World</p>
+         * <p>Hello world</p>
          */
         @NameInMap("TranslatedText")
         public String translatedText;
@@ -152,13 +152,16 @@ public class PrepaidTextTranslateResponseBody extends TeaModel {
 
     public static class PrepaidTextTranslateResponseBodyData extends TeaModel {
         /**
-         * <p>The translation result list. Each element corresponds to a translation result for an entry in the input text list.</p>
+         * <p>The list of translation results. Each element corresponds to a translation result for an item in the input text list.</p>
          */
         @NameInMap("Translations")
         public java.util.List<PrepaidTextTranslateResponseBodyDataTranslations> translations;
 
         /**
-         * <p>The usage information, including the input character count.</p>
+         * <p>The usage information, which includes the number of input characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;InputCharacterCount&quot;:5}</p>
          */
         @NameInMap("UsageMap")
         public java.util.Map<String, Long> usageMap;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageRemovalProRequest extends TeaModel {
     /**
-     * <p>Specifies the call type. Valid values:</p>
+     * <p>Specifies the invocation type. Valid values:</p>
      * <ul>
      * <li>true: Asynchronous.</li>
      * <li>false: Synchronous.

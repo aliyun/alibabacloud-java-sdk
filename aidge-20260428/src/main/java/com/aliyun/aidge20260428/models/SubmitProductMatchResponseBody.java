@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitProductMatchResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * <p>The error code. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class SubmitProductMatchResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The submit result of the matching product identification asynchronous task.</p>
+     * <p>The submission result of the asynchronous task for identical product recognition.</p>
      */
     @NameInMap("Data")
     public SubmitProductMatchResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,11 +38,7 @@ public class SubmitProductMatchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call failed.</li>
-     * </ul>
+     * <p>Indicates whether the call was successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -97,7 +93,7 @@ public class SubmitProductMatchResponseBody extends TeaModel {
 
     public static class SubmitProductMatchResponseBodyData extends TeaModel {
         /**
-         * <p>The task acceptance time in ISO 8601 UTC format.</p>
+         * <p>The time when the task was accepted, in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-20T09:30:00Z</p>
@@ -106,7 +102,7 @@ public class SubmitProductMatchResponseBody extends TeaModel {
         public String submittedAt;
 
         /**
-         * <p>The asynchronous task ID used for QueryAsyncTaskResult queries.</p>
+         * <p>The asynchronous task ID used to query the task result by calling QueryAsyncTaskResult.</p>
          * 
          * <strong>example:</strong>
          * <p>b7ea15cb609f47b7999d2d68dfbf3c90</p>

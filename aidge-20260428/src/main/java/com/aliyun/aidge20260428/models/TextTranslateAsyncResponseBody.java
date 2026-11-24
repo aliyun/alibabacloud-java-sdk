@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextTranslateAsyncResponseBody extends TeaModel {
     /**
-     * <p>The response code for the submission call. A success example is success.</p>
+     * <p>The response code of the submission call. This parameter is not returned during normal calls. Example of a successful response: success.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class TextTranslateAsyncResponseBody extends TeaModel {
     public TextTranslateAsyncResponseBodyData data;
 
     /**
-     * <p>The call description. A success example is Success. If the call fails, read the actual error message.</p>
+     * <p>The invocation message. This parameter is not returned during normal calls. Example of a successful invocation: Success. If the invocation fails, check the actual error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class TextTranslateAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the submission request. It is used for troubleshooting.</p>
+     * <p>The ID of the submission request, which is used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,7 +38,7 @@ public class TextTranslateAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the submission call is successful. It does not indicate that the translation is complete.</p>
+     * <p>Indicates whether the submission call is successful. This does not mean that the translation is complete.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class TextTranslateAsyncResponseBody extends TeaModel {
 
     public static class TextTranslateAsyncResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the asynchronous task. It is used for result queries and notification association. Do not use the example prefix as a business validation rule.</p>
+         * <p>The identifier of the asynchronous task, which is used for result queries and notification association. Do not use the example prefix as a business validation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>TID_550e8400-e29b-41d4-a716-446655440000</p>

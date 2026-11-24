@@ -14,7 +14,7 @@ public class ImageRemovalProResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of the intelligent object removal Pro operation.</p>
+     * <p>The result of Intelligent removal Pro.</p>
      */
     @NameInMap("Data")
     public ImageRemovalProResponseBodyData data;
@@ -97,10 +97,10 @@ public class ImageRemovalProResponseBody extends TeaModel {
 
     public static class ImageRemovalProResponseBodyData extends TeaModel {
         /**
-         * <p>The URL of the result image. This parameter is returned in synchronous mode.</p>
+         * <p>The URL of the processed image. This parameter is returned in synchronous mode.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGjGp5wixZgHLc3bV&Expires=4999655814&Signature=shvGNDmkyv9MLTw4%2BOxYglJCpAE%3D">https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGjGp5wixZgHLc3bV&amp;Expires=4999655814&amp;Signature=shvGNDmkyv9MLTw4%2BOxYglJCpAE%3D</a></p>
+         * <p><a href="https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGj****ixZgHLc3bV&Expires=4999655814&Signature=shvGNDmkyv9MLT*****OxYglJCpAE%3D">https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGj****ixZgHLc3bV&amp;Expires=4999655814&amp;Signature=shvGNDmkyv9MLT*****OxYglJCpAE%3D</a></p>
          */
         @NameInMap("ImageUrl")
         public String imageUrl;
@@ -116,6 +116,9 @@ public class ImageRemovalProResponseBody extends TeaModel {
 
         /**
          * <p>The usage details. This parameter is returned in synchronous mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ProcessedImageCount&quot;:1}</p>
          */
         @NameInMap("UsageMap")
         public java.util.Map<String, Long> usageMap;

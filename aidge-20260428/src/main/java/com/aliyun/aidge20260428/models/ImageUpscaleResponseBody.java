@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageUpscaleResponseBody extends TeaModel {
     /**
-     * <p>The status code, such as success.</p>
+     * <p>The status code, such as &quot;success&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result struct information.</p>
+     * <p>The returned result struct.</p>
      */
     @NameInMap("Data")
     public ImageUpscaleResponseBodyData data;
@@ -38,7 +38,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
+     * <p>Indicates whether the call was successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -102,7 +102,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
         public Integer imageHeight;
 
         /**
-         * <p>The result information of the high-definition upscaling for a single image.</p>
+         * <p>The URL of the upscaled single image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/output.png">https://example.com/output.png</a></p>
@@ -177,13 +177,13 @@ public class ImageUpscaleResponseBody extends TeaModel {
 
     public static class ImageUpscaleResponseBodyData extends TeaModel {
         /**
-         * <p>The high-definition upscaling result data.</p>
+         * <p>The upscaling result data.</p>
          */
         @NameInMap("Data")
         public ImageUpscaleResponseBodyDataData data;
 
         /**
-         * <p>The error code. Returned upon failure, such as InvalidParameter or DownstreamUnavailable.</p>
+         * <p>The error code returned when the operation fails, such as InvalidParameter or DownstreamUnavailable.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -192,7 +192,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message. Returned upon failure.</p>
+         * <p>The error message returned when the operation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -201,7 +201,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>Indicates whether the operation is successful. A value of true indicates success, and a value of false indicates failure.</p>
+         * <p>Indicates whether the operation was successful. A value of true indicates success, and a value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -210,7 +210,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>The downstream task ID. This parameter is empty for synchronous operations.</p>
+         * <p>The ID of the downstream task. This parameter is left empty for synchronous API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>ed9d8504-6141-9fbb-8345-4fa36433483f</p>
@@ -219,7 +219,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The usage information.</p>
+         * <p>The usage information. The key is the billing dimension name.</p>
          */
         @NameInMap("UsageMap")
         public ImageUpscaleResponseBodyDataUsageMap usageMap;

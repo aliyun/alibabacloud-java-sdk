@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PackageWeightSizeCheckRequest extends TeaModel {
     /**
-     * <p>The URL of the image with manual bounding box annotations, which is the original image overlaid with blue or red rectangular bounding box lines. The URL must be publicly accessible. The image must not exceed 4000 × 4000 pixels or 10 MB in size. Supported formats: png, jpeg, and jpg.</p>
+     * <p>The URL of the annotated image, which is the original image overlaid with blue or red rectangular bounding box lines drawn manually. The URL must be publicly accessible. The image size cannot exceed 4000 × 4000 pixels or 10 MB. Supported formats include PNG, JPEG, and JPG.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class PackageWeightSizeCheckRequest extends TeaModel {
     public String annotatedImageUrl;
 
     /**
-     * <p>The URL of the raw image, which is the unannotated photo of the parcel on the scanning platform. The URL must be publicly accessible. The image must not exceed 4000 × 4000 pixels or 10 MB in size. Supported formats: png, jpeg, and jpg.</p>
+     * <p>The URL of the raw image, which is the unannotated photo of the parcel on the scanning platform. The URL must be publicly accessible. The image size cannot exceed 4000 × 4000 pixels or 10 MB. Supported formats include PNG, JPEG, and JPG.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

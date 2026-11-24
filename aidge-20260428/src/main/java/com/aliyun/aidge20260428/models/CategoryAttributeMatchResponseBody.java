@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CategoryAttributeMatchResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned when the call is successful.</p>
+     * <p>The error code. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
     public CategoryAttributeMatchResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned when the call is successful.</p>
+     * <p>The error message. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -156,13 +156,16 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;].</p>
+         * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;\].</p>
          */
         @NameInMap("SelectedValues")
         public java.util.List<String> selectedValues;
 
         /**
-         * <p>The list of selected attribute value IDs, such as [30127,30128].</p>
+         * <p>The list of selected attribute value IDs, such as [30127,30128\].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[30127,30128]</p>
          */
         @NameInMap("SelectedVids")
         public java.util.List<Integer> selectedVids;
@@ -282,7 +285,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
          * <p>The category ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>FC-F3A8A2802D10606D</p>
+         * <p>1516</p>
          */
         @NameInMap("CategoryId")
         public Integer categoryId;
@@ -300,7 +303,7 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
          * <p>The full path of the category, separated by forward slashes (/).</p>
          * 
          * <strong>example:</strong>
-         * <p>Pet Supplies/Cat Supplies/Cat Pendants, Collars, Leashes/Cat Collar</p>
+         * <p>Pet Supplies/Cat Supplies/Cat Pendants, Collars, and Leashes/Cat Collar</p>
          */
         @NameInMap("CategoryPath")
         public String categoryPath;

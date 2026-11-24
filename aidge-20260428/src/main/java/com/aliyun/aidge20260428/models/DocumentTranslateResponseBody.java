@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DocumentTranslateResponseBody extends TeaModel {
     /**
-     * <p>The response code. This parameter is not returned when the call is successful.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -30,7 +30,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier of the request, used for troubleshooting and tracing analysis.</p>
+     * <p>The unique identity of the request, which is used for troubleshooting and Tracing Analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>39E8A74B-F99E-1195-A5FF-3ECC5F94F304</p>

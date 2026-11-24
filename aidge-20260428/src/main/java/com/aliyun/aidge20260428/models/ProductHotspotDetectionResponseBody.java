@@ -14,7 +14,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The product hotzone recognition result.</p>
+     * <p>The product hot zone recognition results.</p>
      */
     @NameInMap("Data")
     public ProductHotspotDetectionResponseBodyData data;
@@ -93,7 +93,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
 
     public static class ProductHotspotDetectionResponseBodyDataProductsBoxes extends TeaModel {
         /**
-         * <p>The bottom boundary of the bounding box.</p>
+         * <p>The bottom boundary of the detection box.</p>
          * 
          * <strong>example:</strong>
          * <p>947</p>
@@ -102,7 +102,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
         public Double bottom;
 
         /**
-         * <p>The left boundary of the bounding box.</p>
+         * <p>The left boundary of the detection box.</p>
          * 
          * <strong>example:</strong>
          * <p>280</p>
@@ -111,7 +111,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
         public Double left;
 
         /**
-         * <p>The right boundary of the bounding box.</p>
+         * <p>The right boundary of the detection box.</p>
          * 
          * <strong>example:</strong>
          * <p>743</p>
@@ -120,7 +120,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
         public Double right;
 
         /**
-         * <p>The top boundary of the bounding box.</p>
+         * <p>The top boundary of the detection box.</p>
          * 
          * <strong>example:</strong>
          * <p>965</p>
@@ -169,7 +169,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
 
     public static class ProductHotspotDetectionResponseBodyDataProducts extends TeaModel {
         /**
-         * <p>The bounding boxes of the detected product instances.</p>
+         * <p>The detection boxes for product instances.</p>
          */
         @NameInMap("Boxes")
         public java.util.List<ProductHotspotDetectionResponseBodyDataProductsBoxes> boxes;
@@ -225,7 +225,7 @@ public class ProductHotspotDetectionResponseBody extends TeaModel {
 
     public static class ProductHotspotDetectionResponseBodyData extends TeaModel {
         /**
-         * <p>The list of detected products and their bounding boxes.</p>
+         * <p>The list of recognized products and detection boxes.</p>
          */
         @NameInMap("Products")
         public java.util.List<ProductHotspotDetectionResponseBodyDataProducts> products;

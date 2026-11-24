@@ -14,13 +14,13 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The submit status result data, which contains the asynchronous task ID.</p>
+     * <p>The asynchronous submit result data, which includes the asynchronous task ID.</p>
      */
     @NameInMap("Data")
     public PackageWeightSizeCheckResponseBodyData data;
 
     /**
-     * <p>The error message. &quot;Success&quot; is returned for successful calls. A specific error message is returned for failed calls.</p>
+     * <p>The error message. Success is returned for successful calls, and specific error information is returned for failed calls.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The request ID, which is used to identify a unique request.</p>
      * 
      * <strong>example:</strong>
      * <p>F93D82E4-D0B6-1043-AC58-282597BC3C10</p>
@@ -38,7 +38,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class PackageWeightSizeCheckResponseBody extends TeaModel {
 
     public static class PackageWeightSizeCheckResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID used to query the review result later by calling QueryAsyncTaskResult.</p>
+         * <p>The asynchronous task ID, which is used to query the audit result by calling QueryAsyncTaskResult.</p>
          * 
          * <strong>example:</strong>
          * <p>a8323ada-a196-9061-976f-90e38b27323a</p>

@@ -12,7 +12,7 @@ public class DiduiAreaDeductionShrinkRequest extends TeaModel {
     public String productsShrink;
 
     /**
-     * <p>The ID of the customer\&quot;s dedicated SKU vector database, which determines the database used for retrieval. The database must be created through the database creation process in advance.</p>
+     * <p>The ID of the customer-specific SKU vector database, which determines the database used for retrieval. The database must be created through the database creation process in advance.</p>
      * 
      * <strong>example:</strong>
      * <p>rag_xxx</p>
@@ -21,7 +21,7 @@ public class DiduiAreaDeductionShrinkRequest extends TeaModel {
     public String ragId;
 
     /**
-     * <p>The optional business request ID, used for end-to-end Tracing Analysis.</p>
+     * <p>The optional business request ID, which is used for Tracing Analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>didui-request-001</p>

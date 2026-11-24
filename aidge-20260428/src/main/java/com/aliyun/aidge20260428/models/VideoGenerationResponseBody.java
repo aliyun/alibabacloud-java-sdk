@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VideoGenerationResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of success indicates that the call is successful, and a value of failed indicates that the call fails.</p>
+     * <p>The response code. This parameter is not returned for successful calls. A value of success indicates a successful call, and a value of failed indicates a failed call.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class VideoGenerationResponseBody extends TeaModel {
     public VideoGenerationResponseBodyData data;
 
     /**
-     * <p>The returned message. An error message is returned when the call fails.</p>
+     * <p>The return message. This parameter is not returned for successful calls. An error message is returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -103,6 +103,9 @@ public class VideoGenerationResponseBody extends TeaModel {
 
         /**
          * <p>The metering and usage information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ProcessedVideoDurationSeconds&quot;:10}</p>
          */
         @NameInMap("UsageMap")
         public java.util.Map<String, Long> usageMap;

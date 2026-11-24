@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MerchandisePlacementDetectionProRequest extends TeaModel {
     /**
-     * <p>The HTTPS URL of the display image to detect.</p>
+     * <p>The HTTPS URL of the display image to be detected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,19 +15,19 @@ public class MerchandisePlacementDetectionProRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The detection rule. When non-empty, this value takes priority as the model prompt.</p>
+     * <p>The detection rule. If this parameter is not empty, it takes precedence as the model prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>Identify all Genki Forest beverages on the shelf and mark their positions</p>
+     * <p>Recognize all Genki Forest beverages on the shelf and draw bounding boxes around their positions</p>
      */
     @NameInMap("Rule")
     public String rule;
 
     /**
-     * <p>The product type. This parameter must be set to Genki Forest when Rule is empty.</p>
+     * <p>The product type. If the Rule parameter is empty, you must set this parameter to Genki Forest.</p>
      * 
      * <strong>example:</strong>
-     * <p>元气森林</p>
+     * <p>Genki Forest</p>
      */
     @NameInMap("Type")
     public String type;

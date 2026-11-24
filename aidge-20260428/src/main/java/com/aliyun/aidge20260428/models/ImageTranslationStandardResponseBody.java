@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationStandardResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</p>
+     * <p>The response code. A value of 200 indicates a successful call. For other response codes, see the error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The translation result data, including the URL of the translated image and usage information.</p>
+     * <p>The translation result data, including the translated image URL and usage information.</p>
      */
     @NameInMap("Data")
     public ImageTranslationStandardResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter returns Success for successful calls and specific error messages for exceptions.</p>
+     * <p>The error message. &quot;Success&quot; is returned for a successful call, and specific error details are returned when an exception occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CEC4D94-905A-1ED1-A7B4-1BFEFFB3D850</p>
@@ -38,7 +38,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of true indicates success, and a value of false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -414,7 +414,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The number of lines.</p>
+         * <p>The line count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -580,7 +580,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String horizontalLayout;
 
         /**
-         * <p>The number of lines.</p>
+         * <p>The line count.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -677,7 +677,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public java.util.List<String> font;
 
         /**
-         * <p>The product area rectangles.</p>
+         * <p>The product area rectangle.</p>
          */
         @NameInMap("GoodsRects")
         public ImageTranslationStandardResponseBodyDataEditInfoGoodsRects goodsRects;
@@ -701,7 +701,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public java.util.List<String> languages;
 
         /**
-         * <p>The original image URL.</p>
+         * <p>The URL of the original image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg">https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg</a></p>
@@ -710,7 +710,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String pictUrl;
 
         /**
-         * <p>The repaired image URL.</p>
+         * <p>The URL of the repaired image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png</a></p>
@@ -846,7 +846,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public ImageTranslationStandardResponseBodyDataEditInfo editInfo;
 
         /**
-         * <p>The URL of the image generated after the image translation.</p>
+         * <p>The URL of the image generated after image translation.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></p>
@@ -855,7 +855,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The usage information, such as the number of processed images.</p>
+         * <p>The usage information, including the number of processed images.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessedImageCount&quot;:1}</p>

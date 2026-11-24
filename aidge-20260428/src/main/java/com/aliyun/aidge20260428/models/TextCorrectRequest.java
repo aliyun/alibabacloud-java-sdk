@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextCorrectRequest extends TeaModel {
     /**
-     * <p>The source language code. This parameter is required. You can set this parameter to auto for automatic language detection. 14 languages are supported.</p>
+     * <p>The language code of the source text. This parameter is required. You can set this parameter to auto for automatic language detection. 14 languages are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class TextCorrectRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The text to correct. This parameter is required.</p>
+     * <p>The text to be corrected. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

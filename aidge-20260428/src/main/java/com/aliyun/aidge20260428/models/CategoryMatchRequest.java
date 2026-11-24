@@ -9,16 +9,16 @@ public class CategoryMatchRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Silk, new spring arrival</p>
+     * <p>Silk, spring new arrival</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The product attributes and feature descriptions, such as the material of the product. Enter the product attribute name and attribute value.</p>
+     * <p>The product attributes and feature descriptions, such as the product material. Specify the attribute names and values.</p>
      * 
      * <strong>example:</strong>
-     * <p>Material:Polyester,Target user:Universal,Brand:AMASON PET</p>
+     * <p>Material:Polyester,Target audience:Universal,Brand:AMASON PET</p>
      */
     @NameInMap("ItemSpec")
     public String itemSpec;
@@ -67,7 +67,7 @@ public class CategoryMatchRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Women\&quot;s new spring clothing</p>
+     * <p>Women\&quot;s spring new arrival clothing</p>
      */
     @NameInMap("Title")
     public String title;

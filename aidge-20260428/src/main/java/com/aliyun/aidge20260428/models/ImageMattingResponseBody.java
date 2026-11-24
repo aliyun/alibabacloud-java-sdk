@@ -14,7 +14,7 @@ public class ImageMattingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The image matting result.</p>
+     * <p>The matting result.</p>
      */
     @NameInMap("Data")
     public ImageMattingResponseBodyData data;
@@ -40,8 +40,8 @@ public class ImageMattingResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class ImageMattingResponseBody extends TeaModel {
 
     public static class ImageMattingResponseBodyData extends TeaModel {
         /**
-         * <p>The height of the result image. Unit: pixels.</p>
+         * <p>The height of the result image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -106,7 +106,7 @@ public class ImageMattingResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The URL of the result image.</p>
+         * <p>The URL of the matting result image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></p>
@@ -124,7 +124,7 @@ public class ImageMattingResponseBody extends TeaModel {
         public Double score;
 
         /**
-         * <p>The returned layer information. This includes the URL of the original image, the URL of the matting result, and the matting area information.</p>
+         * <p>The returned layer information, which includes the original image URL, the matting result URL, and the matting area information.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;origin_url&quot;: &quot;xxx&quot;,
@@ -153,7 +153,7 @@ public class ImageMattingResponseBody extends TeaModel {
         public java.util.Map<String, Long> usageMap;
 
         /**
-         * <p>The width of the result image. Unit: pixels.</p>
+         * <p>The width of the result image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>

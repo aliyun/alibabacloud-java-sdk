@@ -65,7 +65,7 @@ public class ImageTranslationPlusRequest extends TeaModel {
      * <p>Specifies whether to use the image translation editor protocol. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("UseImageEditor")
     public Boolean useImageEditor;

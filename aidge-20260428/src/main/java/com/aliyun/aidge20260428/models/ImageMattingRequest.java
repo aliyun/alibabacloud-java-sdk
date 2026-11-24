@@ -38,7 +38,7 @@ public class ImageMattingRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The height of the target image. Unit: pixels.</p>
+     * <p>The target height of the image, in pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>
@@ -47,7 +47,7 @@ public class ImageMattingRequest extends TeaModel {
     public Integer targetHeight;
 
     /**
-     * <p>The width of the target image. Unit: pixels.</p>
+     * <p>The target width of the image, in pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>

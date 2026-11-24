@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EcomVideoRecreationShrinkRequest extends TeaModel {
     /**
-     * <p>The input parameters for video replication.</p>
+     * <p>The input parameters for video variation generation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")

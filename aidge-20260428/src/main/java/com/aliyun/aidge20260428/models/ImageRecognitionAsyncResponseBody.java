@@ -14,13 +14,13 @@ public class ImageRecognitionAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned struct information of the result.</p>
+     * <p>The returned data structure.</p>
      */
     @NameInMap("Data")
     public ImageRecognitionAsyncResponseBodyData data;
 
     /**
-     * <p>The error message, such as The parameter contains sensitive information. Try another input.</p>
+     * <p>The error message, such as \&quot;The parameter contains sensitive information. Try another input.\&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ImageRecognitionAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. It is used to identify a unique request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -93,7 +93,7 @@ public class ImageRecognitionAsyncResponseBody extends TeaModel {
 
     public static class ImageRecognitionAsyncResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the task. It is used to query the result of the asynchronous task.</p>
+         * <p>The task ID used to query the asynchronous task result.</p>
          * 
          * <strong>example:</strong>
          * <p>TID_550e8400-e29b-41d4-a716-446655440000</p>

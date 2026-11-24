@@ -93,7 +93,7 @@ public class ImageMattingAsyncResponseBody extends TeaModel {
 
     public static class ImageMattingAsyncResponseBodyData extends TeaModel {
         /**
-         * <p>The task ID used to query the result of the asynchronous task.</p>
+         * <p>The task ID, which is used to query the result of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>TID_550e8400-e29b-41d4-a716-446655440000</p>

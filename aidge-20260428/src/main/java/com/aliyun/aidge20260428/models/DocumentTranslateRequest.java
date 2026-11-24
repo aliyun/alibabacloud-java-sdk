@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class DocumentTranslateRequest extends TeaModel {
     /**
-     * <p>The type of the document. Valid values: PDF and word. Size limits: </p>
-     * <ul>
-     * <li>Word: 200 MB or 100 pages. </li>
-     * <li>PDF: 200 MB or 100 pages. </li>
-     * <li>Maximum size of a single file: 200 MB.</li>
-     * </ul>
+     * <p>Supports PDF, WORD, and EXCEL formats. Use uppercase letters for the input parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +15,8 @@ public class DocumentTranslateRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The ID of the intervention glossary. Specify this parameter when the intervention feature is required. This parameter supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-null value). It is commonly used in scenarios such as brand word protection.</p>
+     * <p>● Specify the intervention glossary ID when the intervention feature is required.<br>● Supports custom translation results, including:<br>○ Do-not-translate (ABC-ABC).<br>○ Specified translation (ABC-DEF).<br>○ Translation omission (ABC-null).
+     * Commonly used in scenarios such as brand word protection.<br>Example value: &quot;glossary_1&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -29,7 +25,7 @@ public class DocumentTranslateRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The target language. The language code uses the two-letter representation of the ISO 639-1 standard.</p>
+     * <p>The target language.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,11 +35,11 @@ public class DocumentTranslateRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The OSS URL of the document to be translated.</p>
+     * <p>The OSS URL path of the document to be translated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://aib-innovation-oss.oss-accelerate.aliyuncs.com/AI_Business/38dao/testdemo.pdf?Expires=3356578313&OSSAccessKeyId=LTAI5tE8X3gEy66SRU1V8dig&Signature=8niQY2HtMQY7h05zmSUdyORML9E%3D">https://aib-innovation-oss.oss-accelerate.aliyuncs.com/AI_Business/38dao/testdemo.pdf?Expires=3356578313&amp;OSSAccessKeyId=LTAI5tE8X3gEy66SRU1V8dig&amp;Signature=8niQY2HtMQY7h05zmSUdyORML9E%3D</a></p>
+     * <p><a href="https://aib-innovation-oss.oss-accelerate.aliyuncs.com/AI_Business/38dao/testdemo.pdf?Expires=3356578313&OSSAccessKeyId=LTAI5tE8X3****6SRU1V8dig&Signature=8niQY2HtMQY7h****SUdyORML9E%3D">https://aib-innovation-oss.oss-accelerate.aliyuncs.com/AI_Business/38dao/testdemo.pdf?Expires=3356578313&amp;OSSAccessKeyId=LTAI5tE8X3****6SRU1V8dig&amp;Signature=8niQY2HtMQY7h****SUdyORML9E%3D</a></p>
      */
     @NameInMap("Url")
     public String url;
