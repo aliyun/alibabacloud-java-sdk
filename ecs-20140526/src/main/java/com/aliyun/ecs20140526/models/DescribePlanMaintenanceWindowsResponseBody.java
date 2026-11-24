@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries to return on each page in a paging query. Maximum value: 100. Default value: 10. If you do not specify a value or the specified value is less than 10, the default value 10 is used. If the specified value is greater than 100, the default value 100 is used.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: 100. Default value: 10. If no value is specified or the specified value is less than 10, the default value 10 is used. If the specified value is greater than 100, the default value 100 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -191,7 +191,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
 
     public static class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriodRangeList extends TeaModel {
         /**
-         * <p>The end time of the maintenance time window. Format: DayOfWeek,HH:mm. Example: Monday,22:00.</p>
+         * <p>The end time of the maintenance time window. The format is DayOfWeek,HH:mm, such as Monday,22:00.</p>
          * 
          * <strong>example:</strong>
          * <p>Monday,22:00</p>
@@ -200,7 +200,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The start time of the maintenance time window. Format: DayOfWeek,HH:mm. Example: Monday,22:00.</p>
+         * <p>The start time of the maintenance time window. The format is DayOfWeek,HH:mm, such as Monday,22:00.</p>
          * 
          * <strong>example:</strong>
          * <p>Monday,22:00</p>
@@ -233,7 +233,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
 
     public static class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriod extends TeaModel {
         /**
-         * <p>The type of the recurrence cycle. Valid values: Daily and Weekly.</p>
+         * <p>The type of the recurrence period. Valid values: Daily and Weekly.</p>
          * 
          * <strong>example:</strong>
          * <p>Year</p>
@@ -242,7 +242,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The time periods of the O&amp;M window recurrence cycle in the UTC time zone.</p>
+         * <p>The time ranges of the recurrence period of the O&amp;M window in UTC.</p>
          */
         @NameInMap("RangeList")
         public java.util.List<DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriodRangeList> rangeList;
@@ -272,8 +272,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
 
     public static class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowList extends TeaModel {
         /**
-         * <p>The time when the O&amp;M window was created.</p>
-         * <p>The time is displayed in UTC and follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the O&amp;M window was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-11T02:20:41Z</p>
@@ -300,8 +299,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public Integer minMaintenanceInterval;
 
         /**
-         * <p>The time when the O&amp;M window was last modified.</p>
-         * <p>The time is displayed in UTC and follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The time when the O&amp;M window was modified. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-22 10:14:28 +0800</p>
@@ -343,7 +341,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTargetResource targetResource;
 
         /**
-         * <p>The recurrence cycle of the window.</p>
+         * <p>The recurrence period of the window.</p>
          */
         @NameInMap("TimePeriod")
         public DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriod timePeriod;

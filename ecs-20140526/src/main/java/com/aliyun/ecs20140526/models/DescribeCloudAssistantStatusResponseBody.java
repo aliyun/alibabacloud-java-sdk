@@ -46,7 +46,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     /**
      * <p>The total number of instances.</p>
      * <blockquote>
-     * <p>If you use the MaxResults and NextToken parameters for paging in a paged query, the returned TotalCount value is meaningless.</p>
+     * <p>The TotalCount value is meaningless when you use the MaxResults and NextToken parameters for paging in a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

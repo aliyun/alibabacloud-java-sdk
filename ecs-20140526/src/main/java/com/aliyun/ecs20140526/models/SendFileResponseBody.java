@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendFileResponseBody extends TeaModel {
     /**
-     * <p>The execution ID.</p>
+     * <p>The invocation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>f-7d2a745b412b46****</p>

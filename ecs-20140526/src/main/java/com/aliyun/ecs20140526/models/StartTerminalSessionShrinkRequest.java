@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartTerminalSessionShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that it is unique among different requests. The <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,9 +14,9 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The command to execute after the session is initiated. The value cannot exceed 512 characters in length.</p>
+     * <p>The command to be executed after the session is initiated. The command cannot exceed 512 characters in length.</p>
      * <blockquote>
-     * <p>If you specify <code>CommandLine</code>, you cannot specify <code>PortNumber</code> or <code>TargetServer</code>.</p>
+     * <p>After CommandLine is specified, you cannot specify PortNumber or TargetServer.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public String commandLine;
 
     /**
-     * <p>The network type of the WebSocket URL required for remotely connecting to the instance. Valid values:</p>
+     * <p>The network type of the WebSocket URL required for a remote connection to the instance. Valid values:</p>
      * <ul>
-     * <li>Internet: the Internet (default).</li>
+     * <li>Internet: the Internet. This is the default value.</li>
      * <li>Intranet: the internal network.</li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public String connectionType;
 
     /**
-     * <p>The session encryption configuration.</p>
+     * <p>The session encryption configurations.</p>
      */
     @NameInMap("EncryptionOptions")
     public String encryptionOptionsShrink;
@@ -58,8 +58,8 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the user password used when using Session Manager on a Windows instance. The value cannot exceed 255 characters in length.
-     * If you want to use Session Manager on a Windows instance as a non-default user (other than System), you must specify both <code>Username</code> and this parameter. To reduce the risk of password leakage, the plaintext password must be hosted in the parameter repository of CloudOps Orchestration Service, and you only need to pass the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encrypt a parameter</a>.</p>
+     * <p>The name of the user password used when Session Manager is used on a Windows instance. The name cannot exceed 255 characters in length.
+     * If you want to use Session Manager on a Windows instance as a non-default user (System), you must specify both the Username parameter and this parameter. To reduce the risk of password leakage, the plaintext password must be hosted in the operations management parameter repository, and only the password name is passed here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encrypted parameters</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>axtSecretPassword</p>
@@ -68,8 +68,8 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public String passwordName;
 
     /**
-     * <p>The port number of the ECS instance used for port forwarding. If you specify this parameter, the Cloud Assistant Agent forwards data to the specified port. For example, SSH uses port 22.</p>
-     * <p>Default value: empty, which indicates that no port number is specified for port forwarding.</p>
+     * <p>The port number of the ECS instance, which is used for data forwarding. After this parameter is specified, data forwarding of Cloud Assistant Agent is directed to the specified port number for port forwarding. For example, SSH uses port 22.</p>
+     * <p>Default value: null, which indicates that the port number for data forwarding is not specified.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -78,7 +78,7 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public Integer portNumber;
 
     /**
-     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest regions.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,9 +94,9 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The address of the destination service in the VPC that is accessed through the instance.</p>
+     * <p>The destination service address in the VPC that is accessed through the instance.</p>
      * <blockquote>
-     * <p>If this parameter is not empty, <code>PortNumber</code> specifies the port number of the destination service in the VPC accessed through the managed instance.</p>
+     * <p>When this parameter is not empty, PortNumber specifies the port number of the destination service in the VPC that is accessed through the managed instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public String targetServer;
 
     /**
-     * <p>The username used to connect to the instance.</p>
+     * <p>The username used for the connection.</p>
      * 
      * <strong>example:</strong>
      * <p>testUser</p>

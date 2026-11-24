@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyCommandRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is deprecated and does not take effect even if specified.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. Specifying this parameter does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class ModifyCommandRequest extends TeaModel {
     public String commandContent;
 
     /**
-     * <p>The command ID. You can call <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> to query all available command IDs.</p>
+     * <p>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ModifyCommandRequest extends TeaModel {
     public String commandId;
 
     /**
-     * <p>The command description. The description supports all character sets and can be up to 512 characters in length.</p>
+     * <p>The command description. It supports all character sets and can be up to 512 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -35,7 +35,7 @@ public class ModifyCommandRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The bootstrap program for script execution. The value can be up to 1 KB in length.</p>
+     * <p>The bootstrap program for script execution. It can be up to 1 KB in length.</p>
      * 
      * <strong>example:</strong>
      * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
@@ -44,7 +44,7 @@ public class ModifyCommandRequest extends TeaModel {
     public String launcher;
 
     /**
-     * <p>The command name. The name supports all character sets and can be up to 128 characters in length.</p>
+     * <p>The command name. It supports all character sets and can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test-CommandName</p>
@@ -59,7 +59,7 @@ public class ModifyCommandRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class ModifyCommandRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The maximum timeout period for the command to run on ECS instances. Unit: seconds. If the command cannot be completed within the specified timeout period, the command times out. When a timeout occurs, the command process is forcefully terminated by canceling the PID of the command.</p>
+     * <p>The maximum timeout period for executing the command on an ECS instance, in seconds. If the command cannot be run and completed within the specified period, a timeout occurs. After a timeout occurs, the command process is forcibly terminated and the PID of the command is canceled.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -84,7 +84,7 @@ public class ModifyCommandRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>The execution path. The path can be up to 200 characters in length.</p>
+     * <p>The execution path. It can be up to 200 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>/home/</p>

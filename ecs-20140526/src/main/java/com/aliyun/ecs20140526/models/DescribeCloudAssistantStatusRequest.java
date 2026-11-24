@@ -8,13 +8,13 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
      * <p>The list of instance IDs.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-bp1iudwa5b1tqa****</p>
+     * <p>[&quot;i-bp1iudwa5b1tqa****&quot;]</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The maximum number of entries per page for paging in a paged query. This parameter is invalid if the <strong>InstanceId</strong> parameter settings are specified.</p>
+     * <p>The maximum number of entries to return on each page during paging in a paged query. This parameter is invalid if the Settings of the <strong>InstanceId</strong> parameter are specified.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -25,7 +25,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set the value to the NextToken value returned from the previous call.</p>
+     * <p>The pagination token. Set the value to the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -55,7 +55,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be taken offline soon. Use NextToken and MaxResults for paging in a paged query.</p>
+     * <p>This parameter will be taken offline soon. We recommend that you use NextToken and MaxResults to complete paging for paged query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be taken offline soon. Use NextToken and MaxResults for paging in a paged query.</p>
+     * <p>This parameter will be taken offline soon. We recommend that you use NextToken and MaxResults to complete paging for paged query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

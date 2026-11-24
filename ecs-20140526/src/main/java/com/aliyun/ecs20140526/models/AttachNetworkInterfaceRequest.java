@@ -15,9 +15,9 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The index of the network card specified for the ENI.</p>
+     * <p>The index of the physical network card specified for the ENI.</p>
      * <blockquote>
-     * <p>The valid values of NetworkCardIndex depend on the instance family. If the instance type does not support NetworkCard, you cannot specify this parameter. If the instance type supports NetworkCard, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> for valid values.</p>
+     * <p>The valid values of NetworkCardIndex depend on the instance family. If the instance type does not support NetworkCard, this parameter cannot be specified. If it is supported, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> for valid values.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public Integer networkCardIndex;
 
     /**
-     * <p>The network interface controller (NIC) ID.</p>
+     * <p>The ID of the Elastic Network Interface (ENI) network interface controller (NIC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,9 +59,9 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The trunk ENI ID.</p>
+     * <p>The ID of the trunk ENI.</p>
      * <blockquote>
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong></p>
      * </blockquote>
      * 
      * <strong>example:</strong>

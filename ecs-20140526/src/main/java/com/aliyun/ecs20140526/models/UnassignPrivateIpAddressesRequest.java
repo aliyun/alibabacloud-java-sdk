@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UnassignPrivateIpAddressesRequest extends TeaModel {
     /**
-     * <p>One or more IPv4 prefixes to remove.</p>
+     * <p>The IPv4 prefixes to delete.</p>
      */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 
     /**
-     * <p>The ID of the Elastic Network Interface (ENI).</p>
+     * <p>The ID of the Elastic Network Interface (ENI) (network interface controller (NIC)).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>One or more secondary private IP addresses to remove.</p>
+     * <p>The secondary private IP addresses to delete.</p>
      * 
      * <strong>example:</strong>
      * <p><code>192.168.**.**</code></p>
@@ -36,7 +36,7 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

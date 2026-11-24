@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceSecurityOptionsRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. You can generate the value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. You can generate the value on the client side and make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -16,8 +16,8 @@ public class ModifyInstanceSecurityOptionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The secure boot option of the instance is not modified.</li>
-     * <li>false: performs a dry run and sends the request. If the request passes the dry run, the secure boot option of the instance is modified.</li>
+     * <li>true: performs a dry run only. The secure boot options of the instance are not modified.</li>
+     * <li>false: performs a dry run and modifies the secure boot options of the instance if the dry run succeeds.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -28,7 +28,7 @@ public class ModifyInstanceSecurityOptionsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to enable or disable UEFI secure boot. If this parameter is set to true, the instance type must support secure boot. You can call the DescribeInstanceTypes operation and check whether the value of SecurityOptions.SecureBootSupport is supported. Valid values:</p>
+     * <p>Specifies whether to enable or disable Unified Extensible Firmware Interface (UEFI) secure boot. If you set this parameter to true, the instance type must support secure boot. You can call the DescribeInstanceTypes operation and check whether the value of SecurityOptions.SecureBootSupport is supported. Valid values:</p>
      * <ul>
      * <li>true: enables UEFI secure boot.</li>
      * <li>false: disables UEFI secure boot.</li>

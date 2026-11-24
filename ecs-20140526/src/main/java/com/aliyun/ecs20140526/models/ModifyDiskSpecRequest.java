@@ -16,9 +16,9 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String destinationZoneId;
 
     /**
-     * <p>Changes the category of a disk. Valid values:</p>
+     * <p>The new category of the disk. Valid values:</p>
      * <ul>
-     * <li><p>cloud_essd: enterprise SSD.</p>
+     * <li><p>cloud_essd: ESSD.</p>
      * </li>
      * <li><p>cloud_auto: ESSD AutoPL disk.</p>
      * </li>
@@ -33,12 +33,12 @@ public class ModifyDiskSpecRequest extends TeaModel {
      * <p>Default value: null, which indicates that no specification change is performed on the disk.</p>
      * <blockquote>
      * <ul>
-     * <li>The preceding valid values are sorted in descending order of disk performance. If the specified disk is a subscription disk, you cannot downgrade the disk.</li>
+     * <li>The preceding valid values are listed in descending order of disk performance. If the specified disk is a subscription disk, you cannot downgrade the disk.</li>
      * </ul>
      * </blockquote>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>ESSD Entry disks can only be changed to enterprise SSDs or ESSD AutoPL disks. For more information, see <a href="https://help.aliyun.com/document_detail/161980.html">Change the category of a disk</a>.</li>
+     * <li>ESSD Entry disks can only be changed to ESSDs and ESSD AutoPL disks. For more information, see <a href="https://help.aliyun.com/document_detail/161980.html">Change the category of a disk</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String diskCategory;
 
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The ID of the disk.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,11 +58,11 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><p>true: The request is prechecked. Items to be checked include whether required parameters are specified, the request format, business limits, and ECS inventory. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p>true: performs a dry run. The system checks whether required parameters are specified, the request format is valid, and the business limits and ECS inventory are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p>false: The request is sent. If the request passes the precheck, a 2xx HTTP status code is returned and the cloud disk specifications or ESSD performance level are directly changed.</p>
+     * <li><p>false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the disk specifications are changed or the ESSD performance level is modified.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -80,18 +80,18 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The collection of disk performance control parameters.</p>
+     * <p>The disk performance control parameters.</p>
      */
     @NameInMap("PerformanceControlOptions")
     public ModifyDiskSpecRequestPerformanceControlOptions performanceControlOptions;
 
     /**
-     * <p>Modifies the performance level (PL) of an enterprise SSD. Valid values:</p>
+     * <p>The performance level (PL) of an ESSD. Valid values:</p>
      * <ul>
-     * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
-     * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
-     * <li>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</li>
-     * <li>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</li>
+     * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+     * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+     * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+     * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
      * </ul>
      * <p>Default value: PL1.</p>
      * 
@@ -102,8 +102,8 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String performanceLevel;
 
     /**
-     * <p>Specifies whether to modify the provisioned read/write IOPS of an ESSD AutoPL disk.</p>
-     * <p>Valid values: 0 to min{50000, 1000 × Capacity - Baseline performance}.</p>
+     * <p>The provisioned read/write IOPS of the ESSD AutoPL disk.</p>
+     * <p>Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline performance}.</p>
      * <p>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
      * <blockquote>
      * <p>This parameter is supported only when <code>DiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the provisioned information of an ESSD AutoPL disk</a>.</p>
@@ -216,9 +216,9 @@ public class ModifyDiskSpecRequest extends TeaModel {
 
     public static class ModifyDiskSpecRequestPerformanceControlOptions extends TeaModel {
         /**
-         * <p>The target IOPS of the cloud disk. You can only modify the IOPS of cloud disks in dedicated block storage clusters.</p>
-         * <p>Valid values: 900 to the maximum IOPS of a single disk, in increments of 100.</p>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Cloud disk performance</a>.</p>
+         * <p>The target IOPS of the disk. You can modify the IOPS only for disks in dedicated block storage clusters.</p>
+         * <p>Valid values: 900 to the maximum IOPS of a single disk. Step: 100.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Disk performance</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -227,9 +227,9 @@ public class ModifyDiskSpecRequest extends TeaModel {
         public Integer IOPS;
 
         /**
-         * <p>Resets the cloud disk performance. This is supported only for cloud disks in dedicated block storage clusters.</p>
-         * <p>After you specify this parameter, the PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput parameters do not take effect.</p>
-         * <p>Currently, you can only set this parameter to All, which resets the IOPS and throughput of the cloud disk to their initial values.</p>
+         * <p>Resets the disk performance. This parameter is supported only for disks in dedicated block storage clusters.</p>
+         * <p>After this parameter is specified, the PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput parameters do not take effect.</p>
+         * <p>Currently, you can only set this parameter to All, which resets the disk IOPS and throughput to their initial values.</p>
          * 
          * <strong>example:</strong>
          * <p>All</p>
@@ -238,9 +238,9 @@ public class ModifyDiskSpecRequest extends TeaModel {
         public String recover;
 
         /**
-         * <p>The target throughput of the cloud disk. You can only modify the throughput of cloud disks in dedicated block storage clusters. Unit: MB/s.</p>
+         * <p>The target throughput of the disk. You can modify the throughput only for disks in dedicated block storage clusters. Unit: MB/s.</p>
          * <p>Valid values: 60 to the maximum throughput of a single disk.</p>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Cloud disk performance</a>.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Disk performance</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

@@ -25,7 +25,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public Integer capacity;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -43,7 +43,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The source of the request. Default value: OpenAPI. You do not need to manually specify this parameter.</p>
+     * <p>The source of the request. Default value: OpenAPI. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI</p>
@@ -52,7 +52,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String fromApp;
 
     /**
-     * <p>The name of the SCU. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the SCU. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>ScuPurchaseDemo</p>
@@ -95,7 +95,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID of the SCU. After the region is specified, the SCU can be used to offset only the pay-as-you-go bills of disks in this region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the SCU. After the region is specified, the SCU can be used to offset only the pay-as-you-go bills of cloud disks in this region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
 
     public static class PurchaseStorageCapacityUnitRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the SCU. The tag key cannot be an empty string. It can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the SCU. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -279,7 +279,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the SCU. The tag value can be an empty string. It can be up to 128 characters in length, and cannot start with <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the SCU. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

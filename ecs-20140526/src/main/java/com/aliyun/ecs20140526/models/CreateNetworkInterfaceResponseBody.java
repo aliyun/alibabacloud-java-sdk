@@ -92,7 +92,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public CreateNetworkInterfaceResponseBodySecurityGroupIds securityGroupIds;
 
     /**
-     * <p>The ID of the Virtual Network Operator (VNO) associated with the Elastic Network Interface (ENI).</p>
+     * <p>The ID of the Virtual Network Operator (VNO) corresponding to the Elastic Network Interface (ENI).</p>
      * 
      * <strong>example:</strong>
      * <p>12345678910</p>
@@ -121,7 +121,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public Boolean sourceDestCheck;
 
     /**
-     * <p>The status of the Elastic Network Interface (ENI).</p>
+     * <p>The status of the elastic network interface (ENI).</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -151,7 +151,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the ENI belongs.</p>
+     * <p>The ID of the VPC to which the ENI belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1j7w3gc1cexjqd****</p>

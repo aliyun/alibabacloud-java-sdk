@@ -14,6 +14,10 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[3,2,1]</p>
+     */
     @NameInMap("LaunchTemplateVersionNumbers")
     public DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers launchTemplateVersionNumbers;
 

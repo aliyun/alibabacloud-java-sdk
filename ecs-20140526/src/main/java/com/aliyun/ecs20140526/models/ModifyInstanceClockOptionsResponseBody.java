@@ -14,7 +14,7 @@ public class ModifyInstanceClockOptionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The modification task ID.</p>
+     * <p>The ID of the modification task.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the modification result.</p>
      * 
      * <strong>example:</strong>

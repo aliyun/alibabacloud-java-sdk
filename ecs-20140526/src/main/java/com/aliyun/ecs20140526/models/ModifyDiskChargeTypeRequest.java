@@ -7,8 +7,8 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values: </p>
      * <ul>
-     * <li>true (default): enables automatic payment. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated and can only be canceled. </li>
-     * <li>false: generates an order without deducting fees. If your account balance is insufficient, a normal unpaid order is generated. You can log on to the Alibaba Cloud <strong>Expenses and Costs</strong> console and pay the order on the &lt;props=&quot;china&quot;&gt;<ph><a href="https://usercenter2.aliyun.com/order/list">My Orders</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://usercenter2-intl.aliyun.com/order/list">Order Management</a></ph> page.</li>
+     * <li>true: enables automatic payment. This is the default value. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated and can only be canceled. </li>
+     * <li>false: generates an order without deducting fees. If your account balance is insufficient, a normal unpaid order is generated. You can log on to the Alibaba Cloud <strong>Expenses and Costs</strong> console and pay the order on the &lt;props=&quot;china&quot;&gt;<ph><a href="https://usercenter2.aliyun.com/order/list">My Orders</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://usercenter2-intl.aliyun.com/order/list">Orders</a></ph> page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +27,13 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The billing method of the disk. Valid values: </p>
+     * <p>The new billing method of the disk. Valid values: </p>
      * <ul>
-     * <li>PrePaid (default): switches the pay-as-you-go data disk to a subscription data disk. </li>
-     * <li>PostPaid: switches the subscription data disk to a pay-as-you-go data disk.</li>
+     * <li>PrePaid: changes the billing method of the data disk from pay-as-you-go to subscription. This is the default value. </li>
+     * <li>PostPaid: changes the billing method of the data disk from subscription to pay-as-you-go.</li>
      * </ul>
      * <blockquote>
-     * <p>When you switch a pay-as-you-go disk to a subscription disk, the billing cycle of the disk capacity is automatically synchronized with that of the associated ECS instance.</p>
+     * <p>When you change the billing method of a pay-as-you-go disk to subscription, the billing cycle of the disk capacity fee is automatically synchronized with that of the associated ECS instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public String diskChargeType;
 
     /**
-     * <p>The list of disk IDs. The value is a JSON array. You can specify up to 16 disk IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the disks. The value is a JSON array. You can specify up to 16 disk IDs. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

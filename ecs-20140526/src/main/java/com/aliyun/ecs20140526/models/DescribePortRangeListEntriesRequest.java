@@ -11,7 +11,7 @@ public class DescribePortRangeListEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the port list.</p>
+     * <p>The port list ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

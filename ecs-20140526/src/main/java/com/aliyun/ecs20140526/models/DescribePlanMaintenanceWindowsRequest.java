@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
     /**
-     * <p>Specifies whether the O&amp;M window is enabled.</p>
+     * <p>Specifies whether the window is enabled or disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The number of entries to return on each page in a paging query. Maximum value: 100. Default value: 10. If you do not specify a value or the specified value is less than 10, the default value 10 is used. If the specified value is greater than 100, the default value 100 is used.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: 100. Default value: 10. If no value is specified or the specified value is less than 10, the default value 10 is used. If the specified value is greater than 100, the default value 100 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set the value to the NextToken value returned from the previous API call.</p>
+     * <p>The pagination token. Set the value to the NextToken value returned in the last API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -50,7 +50,7 @@ public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
     public String planWindowName;
 
     /**
-     * <p>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, setting any region ID for this operation makes no difference. The operation returns all O&amp;M windows across the network that meet the specified conditions.</p>
+     * <p>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, setting any region ID for this operation makes no difference, and the operation returns O&amp;M windows that meet the conditions across the entire network.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
 
     public static class DescribePlanMaintenanceWindowsRequestTargetResourceTags extends TeaModel {
         /**
-         * <p>The key of the tag to which the window applies.</p>
+         * <p>The key of the tag to which the O&amp;M window applies.</p>
          * 
          * <strong>example:</strong>
          * <p>tagKey</p>
@@ -154,7 +154,7 @@ public class DescribePlanMaintenanceWindowsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag to which the window applies.</p>
+         * <p>The value of the tag to which the O&amp;M window applies.</p>
          * 
          * <strong>example:</strong>
          * <p>tagValue</p>

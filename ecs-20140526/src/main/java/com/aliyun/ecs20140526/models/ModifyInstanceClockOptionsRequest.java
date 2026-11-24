@@ -14,11 +14,11 @@ public class ModifyInstanceClockOptionsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><p>true: sends a check request without querying resource status. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p>true: Sends a check request and does not query the resource status. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the check, a corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p>false: sends a Normal request. If the request passes the check, a 2xx HTTP status code is returned and the resource status is directly queried.</p>
+     * <li><p>false: Sends a normal request. If the request passes the check, a 2XX HTTP status code is returned and the resource status is directly queried.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>

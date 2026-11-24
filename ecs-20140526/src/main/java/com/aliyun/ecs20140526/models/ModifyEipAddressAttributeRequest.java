@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class ModifyEipAddressAttributeRequest extends TeaModel {
     /**
+     * <p>The ID of the EIP.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zeerraiwb7uj6i0d****</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
+     * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
@@ -22,6 +30,12 @@ public class ModifyEipAddressAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

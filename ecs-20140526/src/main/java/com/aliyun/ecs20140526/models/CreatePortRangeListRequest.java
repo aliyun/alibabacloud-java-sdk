@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePortRangeListRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. You can generate the value from your client and make sure that the value is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotency of the request. You can generate the value on the client side and ensure that the value is unique across different requests. The <strong>ClientToken</strong> parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class CreatePortRangeListRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the port list. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The description of the port list. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>Description information of PortRangeList</p>
@@ -29,7 +29,7 @@ public class CreatePortRangeListRequest extends TeaModel {
     public java.util.List<CreatePortRangeListRequestEntry> entry;
 
     /**
-     * <p>The maximum number of entries supported by the port list. This parameter cannot be modified after the port list is created. Valid values: 1 to 2000.</p>
+     * <p>The maximum number of entries supported by the port list. This value cannot be changed after the port list is created. Valid values: 1 to 2000.</p>
      * <blockquote>
      * <p>Notice: When a port list is associated with a resource such as a security group, the rule quota is calculated based on the maximum number of entries rather than the actual number of entries. Set this parameter properly.</p>
      * </blockquote>
@@ -48,7 +48,7 @@ public class CreatePortRangeListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the port list. The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It cannot start with http://, https://, com.aliyun, or com.alibabacloud. It can contain Chinese characters, English letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the port list. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with http://, https://, com.aliyun, or com.alibabacloud. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class CreatePortRangeListRequest extends TeaModel {
     public String portRangeListName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class CreatePortRangeListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The array of tags bound to the port list. The array length ranges from 0 to 20.</p>
+     * <p>The array of tags bound to the port list. Array length: 0 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreatePortRangeListRequestTag> tag;
@@ -191,7 +191,7 @@ public class CreatePortRangeListRequest extends TeaModel {
 
     public static class CreatePortRangeListRequestEntry extends TeaModel {
         /**
-         * <p>The description of the port range. The description must be 2 to 32 characters in length, and cannot start with http:// or https://. Valid values of N: 0 to 200.</p>
+         * <p>The description of the port range. The description must be 2 to 32 characters in length and cannot start with http:// or https://. Valid values of N: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>Description information of Entry</p>
@@ -202,9 +202,9 @@ public class CreatePortRangeListRequest extends TeaModel {
         /**
          * <p>The port range. Valid values of N: 0 to 200.</p>
          * <ul>
-         * <li><p>The number of entries cannot exceed the maximum number of entries (MaxEntries).</p>
+         * <li><p>The number of entries cannot exceed the maximum number of entries (<code>MaxEntries</code>).</p>
          * </li>
-         * <li><p>The PortRange values in multiple entries must be unique.</p>
+         * <li><p>The <code>PortRange</code> values in different entries must be unique.</p>
          * </li>
          * </ul>
          * 
@@ -240,7 +240,7 @@ public class CreatePortRangeListRequest extends TeaModel {
     public static class CreatePortRangeListRequestTag extends TeaModel {
         /**
          * <p>The tag key of the port list.</p>
-         * <p>When you use this parameter, it cannot be left empty or set to an empty string. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>This parameter cannot be left empty or set to an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>key for PortRangeList</p>
@@ -250,7 +250,7 @@ public class CreatePortRangeListRequest extends TeaModel {
 
         /**
          * <p>The tag value of the port list.</p>
-         * <p>When you use this parameter, it cannot be left empty, but it can be set to an empty string. It can be up to 128 characters in length, and cannot contain http:// or https://.</p>
+         * <p>This parameter cannot be left empty but can be set to an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>value for PortRangeList</p>

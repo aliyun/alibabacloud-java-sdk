@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ReInitDiskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically start the instance after the cloud disk is reinitialized. Valid values:</p>
+     * <p>Specifies whether to automatically start the instance after the disk is reinitialized. Valid values:</p>
      * <ul>
-     * <li>true: Yes. The instance is automatically started.</li>
-     * <li>false: No.</li>
+     * <li>true: automatically starts the instance.</li>
+     * <li>false: does not automatically start the instance.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -19,7 +19,7 @@ public class ReInitDiskRequest extends TeaModel {
     public Boolean autoStartInstance;
 
     /**
-     * <p>The ID of the cloud disk to be reinitialized. The instance to which the cloud disk is attached must have been started at least once and must currently be in the Stopped state.</p>
+     * <p>The ID of the disk to be reinitialized. The instance to which the disk is attached must have been started at least once and must currently be in the Stopped state.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ReInitDiskRequest extends TeaModel {
     /**
      * <p>The name of the key pair.</p>
      * <blockquote>
-     * <p>This parameter is applicable only to Linux instances. When you reinitialize the system cloud disk, you can bind an SSH key pair to the ECS instance as the logon credential. After an SSH key pair is used, the password logon method is disabled.</p>
+     * <p>This parameter is applicable only to Linux instances. When you reinitialize the system disk, you can bind an SSH key pair to the ECS instance as the logon credential. After an SSH key pair is used, the password logon method is disabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,12 +47,12 @@ public class ReInitDiskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to reset the logon password of the ECS instance when you reinitialize the system cloud disk. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
+     * <p>Specifies whether to reset the logon password of the ECS instance when you reinitialize the system disk. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The special characters include:</p>
      * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
      * </code></pre>
      * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
      * <blockquote>
-     * <p>If you specify the <code>Password</code> parameter, send the request over HTTPS to prevent password leaks.</p>
+     * <p>If you specify the <code>Password</code> parameter, send requests over HTTPS to prevent password leaks.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,11 +68,11 @@ public class ReInitDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to use Security Center for free after the cloud disk is reinitialized when the specified cloud disk is a system cloud disk. Valid values: </p>
+     * <p>Specifies whether to use Security Center for free after the system disk is reinitialized. Valid values: </p>
      * <ul>
-     * <li><p>Active: Uses Security Center. This value is supported only for public images.  </p>
+     * <li><p>Active: enables Security Center. This value is supported only for public images.  </p>
      * </li>
-     * <li><p>Deactive: Does not use Security Center. This value is supported for all images.</p>
+     * <li><p>Deactive: disables Security Center. This value is supported for all images.</p>
      * </li>
      * </ul>
      * <p>Default value: Deactive.</p>

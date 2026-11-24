@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeLockedSnapshotsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to only precheck the request. Valid values: </p>
+     * <p>Specifies whether to perform only a dry run on the request. Valid values: </p>
      * <ul>
-     * <li>true: The request is prechecked but not executed. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, an error is returned. If the request passes the precheck, the DryRunOperation error code is returned. </li>
-     * <li>false: The request is prechecked and executed if it passes the precheck. This is the default value.</li>
+     * <li>true: Performs a dry run only. The request is not actually executed. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned. </li>
+     * <li>false (default): Sends a normal request and executes the request after it passes the dry run.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class DescribeLockedSnapshotsRequest extends TeaModel {
     /**
      * <p>The lock status. Valid values: </p>
      * <ul>
-     * <li>compliance-cooloff: The snapshot is locked in compliance mode but is still in the cooling-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cooling-off period, and extend or shorten the lock duration. </li>
-     * <li>compliance: The snapshot is locked in compliance mode and the cooling-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </li>
+     * <li>compliance-cooloff: The snapshot is locked in compliance mode but is still in the cool-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cool-off period, and extend or shorten the lock duration. </li>
+     * <li>compliance: The snapshot is locked in compliance mode and the cool-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </li>
      * <li>expired: The snapshot was locked, but the lock duration has ended and the lock has expired. The snapshot is currently unlocked and can be deleted.</li>
      * </ul>
      * 
@@ -32,7 +32,7 @@ public class DescribeLockedSnapshotsRequest extends TeaModel {
     public String lockStatus;
 
     /**
-     * <p>The number of entries per page during paging for a paged query. Maximum value: 100. </p>
+     * <p>The number of entries per page for paging in a paged query. Maximum value: 100. </p>
      * <p>Default value: </p>
      * <ul>
      * <li>If no Settings are specified or the Settings value is less than 10, the default value is 10. </li>
@@ -46,7 +46,7 @@ public class DescribeLockedSnapshotsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the NextToken parameter value returned by the previous API call.</p>
+     * <p>The query token. Set the value to the NextToken parameter value returned from the previous API call to invoke the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>

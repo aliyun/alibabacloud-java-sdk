@@ -7,7 +7,7 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends TeaModel {
     /**
      * <p>The ID of the automatic snapshot policy.</p>
      * <ul>
-     * <li>You can specify only one of AutoSnapshotPolicyId and DiskId.</li>
+     * <li>You can specify only one of the AutoSnapshotPolicyId and DiskId parameters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The cloud disk ID.</p>
+     * <p>The ID of the cloud disk.</p>
      * <ul>
-     * <li>You can specify only one of AutoSnapshotPolicyId and DiskId.</li>
+     * <li>You can specify only one of the AutoSnapshotPolicyId and DiskId parameters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,11 +29,11 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The maximum number of entries per page for paging queries. Maximum value: 100.</p>
+     * <p>The number of entries per page for a paged query. The maximum paging value is 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>When no value is set or the value is set to less than 10, the default value is 10.</li>
-     * <li>When the value is set to greater than 100, the default value is 100.</li>
+     * <li>If you do not specify Settings or the Settings value is less than 10, the default value is 10.</li>
+     * <li>If the Settings value is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</p>
+     * <p>The query token. The value is the <code>NextToken</code> parameter value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -58,7 +58,7 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the automatic snapshot policy. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the automatic snapshot policy. You can call the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

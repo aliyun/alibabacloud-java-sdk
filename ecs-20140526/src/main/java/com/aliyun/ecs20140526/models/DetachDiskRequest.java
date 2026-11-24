@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DetachDiskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to release the system cloud disk or data cloud disk when the ECS instance is released. This parameter sets the automatic release attribute when you unmount a system cloud disk or data cloud disk.</p>
+     * <p>The Settings for the automatic release property when uninstalling a system disk or data disk. Specifies whether the system disk or data disk is released when the ECS instance is released.</p>
      * <ul>
      * <li>true: The disk is released.</li>
-     * <li>false: The disk is not released. The cloud disk is converted to a pay-as-you-go data cloud disk and is retained.</li>
+     * <li>false: The disk is not released. The disk is retained and transformed to a pay-as-you-go data disk.</li>
      * </ul>
      * <p>Default value: true.</p>
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li>This parameter cannot be set for cloud disks that have the multi-attach feature enabled.</li>
-     * <li>If you unmount a data cloud disk, the default value is <code>false</code>.</li>
-     * <li>If the disk to be unmounted is an elastic ephemeral disk, you must set the <code>DeleteWithInstance</code> parameter to <code>true</code>.</li>
+     * <li>This parameter cannot be configured for disks that have the multi-attach attribute enabled.</li>
+     * <li>If you uninstall a data disk, the default value is <code>false</code>.</li>
+     * <li>If the disk to be uninstalled is an elastic ephemeral disk, you must set the <code>DeleteWithInstance</code> parameter to <code>true</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,13 +25,13 @@ public class DetachDiskRequest extends TeaModel {
     public Boolean deleteWithInstance;
 
     /**
-     * <p>The ID of the disk to be unmounted.</p>
+     * <p>The ID of the disk to be detached.</p>
      * <ul>
-     * <li><p>The disk must be mounted to an instance and be in the In Use (<code>In_use</code>) state.</p>
+     * <li><p>The disk must be attached to an instance and be in the In Use (<code>In_use</code>) state.</p>
      * </li>
-     * <li><p>When you unmount a data cloud disk, the instance to which the disk is mounted must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state.</p>
+     * <li><p>When you detach a data disk, the instance to which the disk is attached must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state.</p>
      * </li>
-     * <li><p>When you unmount a system cloud disk, the instance to which the disk is mounted must be in the Stopped (<code>Stopped</code>) state.</p>
+     * <li><p>When you detach a system disk, the instance to which the disk is attached must be in the Stopped (<code>Stopped</code>) state.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -43,7 +43,7 @@ public class DetachDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The instance ID of the ECS instance to which the disk to be uninstalled is attached.</p>
+     * <p>The ECS instance ID to which the disk to be uninstalled is attached.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

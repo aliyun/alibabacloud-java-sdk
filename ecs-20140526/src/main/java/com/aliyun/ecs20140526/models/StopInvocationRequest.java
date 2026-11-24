@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class StopInvocationRequest extends TeaModel {
     /**
-     * <p>The IDs of the instances on which to stop the command execution. You can specify up to 50 instance IDs. Valid values of N: 1 to 50.</p>
+     * <p>The IDs of the instances on which you want to stop the command. You can specify up to 50 instance IDs. Valid values of N: 1 to 50.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-bp67acfmxazb4p****</p>
+     * <p>[&quot;i-bp67acfmxazb4p****&quot;]</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The command execution ID. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query all execution IDs.</p>
+     * <p>The invocation ID. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query all invocation IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

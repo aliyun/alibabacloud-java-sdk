@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVscsResponseBody extends TeaModel {
     /**
-     * <p>The query token. The value is the NextToken value returned by the previous API call.</p>
+     * <p>The query token. Set the value to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -119,9 +119,9 @@ public class DescribeVscsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
+         * <p>The ID of the resource group. If you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
          * <blockquote>
-         * <p>Filtering by the default resource group is not supported.</p>
+         * <p>You cannot filter resources by the default resource group.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,11 +133,11 @@ public class DescribeVscsResponseBody extends TeaModel {
         /**
          * <p>The status of the VSC. Valid values:</p>
          * <ul>
-         * <li>In_use: The VSC is in use.</li>
-         * <li>Attaching: The VSC is being attached.</li>
-         * <li>Detaching: The VSC is being detached.</li>
-         * <li>AttachFailed: The VSC failed to be attached.</li>
-         * <li>DetachFailed: The VSC failed to be detached.</li>
+         * <li>In_use: In use.</li>
+         * <li>Attaching: Being attached.</li>
+         * <li>Detaching: Being detached.</li>
+         * <li>AttachFailed: Attachment failed.</li>
+         * <li>DetachFailed: Detachment failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class DescribeVscsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag keys of the snapshots in the snapshot-consistent group. The default values of Key and Value provide the snapshot source information.</p>
+         * <p>The tag keys of the snapshots in the snapshot consistency group. The default values of Key and Value provide the snapshot source information.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeVscsResponseBodyVscsTags> tags;

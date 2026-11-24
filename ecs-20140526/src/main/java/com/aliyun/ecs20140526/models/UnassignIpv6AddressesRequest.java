@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnassignIpv6AddressesRequest extends TeaModel {
     /**
-     * <p>One or more IPv6 addresses to delete. Valid values of N: 1 to 10.</p>
+     * <p>The IPv6 addresses to be revoked. Valid values of N: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>2001:db8:1234:1a00::***</p>
@@ -14,13 +14,13 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     public java.util.List<String> ipv6Address;
 
     /**
-     * <p>One or more IPv6 prefixes to revoke. Valid values of N: 1 to 10.</p>
+     * <p>The IPv6 prefixes to be revoked. Valid values of N: 1 to 10.</p>
      */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
     /**
-     * <p>The network interface controller (NIC) ID.</p>
+     * <p>The ID of the elastic network interface controller (NIC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the elastic network interface controller (NIC). You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

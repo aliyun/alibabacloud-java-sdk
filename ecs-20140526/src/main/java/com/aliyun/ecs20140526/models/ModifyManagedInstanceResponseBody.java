@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyManagedInstanceResponseBody extends TeaModel {
     /**
-     * <p>The managed instance information.</p>
+     * <p>The collection of managed instance information.</p>
      */
     @NameInMap("Instance")
     public ModifyManagedInstanceResponseBodyInstance instance;

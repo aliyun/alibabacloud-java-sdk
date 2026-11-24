@@ -14,7 +14,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length and can contain characters that are classified as letter in Unicode, including Chinese characters, English letters, and digits. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length, and can contain letters and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>TestName</p>
@@ -29,9 +29,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return for the automatic snapshot policy list.</p>
-     * <p>Minimum value: 1.</p>
-     * <p>Default value: 1.</p>
+     * <p>The page number. The returned automatic snapshot policy list is displayed in a paging manner. Starting value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -40,9 +38,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for the automatic snapshot policy list.</p>
-     * <p>Maximum value: 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries per page when the returned automatic snapshot policy list is displayed in a paging manner. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +47,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the automatic snapshot policies that you want to query. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the automatic snapshot policy to query. You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +75,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeAutoSnapshotPolicyExRequestTag> tag;
@@ -179,7 +175,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
 
     public static class DescribeAutoSnapshotPolicyExRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -188,7 +184,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+         * <p>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     /**
-     * <p>The additional options in JSON format.</p>
+     * <p>The extended parameters in JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("AdditionalOptions")
     public String additionalOptionsShrink;
 
     /**
-     * <p>The end time. Specify the time in the ISO 8601 standard in the UTC time zone. This parameter takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be executed in the guest OS.</p>
+     * <p>The end time. The time follows the ISO 8601 standard and is displayed in UTC. This parameter takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be executed in the guest OS.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T14:00Z</p>
@@ -29,7 +32,7 @@ public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     public String metricSetId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +52,7 @@ public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The start time. Specify the time in the ISO 8601 standard in the UTC time zone. This parameter takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be executed in the guest OS.</p>
+     * <p>The start time. The time follows the ISO 8601 standard and is displayed in UTC. This parameter takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be executed in the guest OS.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T12:00Z</p>

@@ -8,13 +8,13 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
      * <p>The type of the system event. Valid values: </p>
      * <ul>
      * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
-     * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
-     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
+     * <li>SystemFailure.Reboot: The instance is restarted due to a system failure.</li>
+     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</li>
      * <li>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</li>
      * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
-     * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
-     * <li>SystemFailure.Stop: The instance is stopped due to a system error.</li>
-     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
+     * <li>SystemFailure.Redeploy: The instance is redeployed due to a system failure.</li>
+     * <li>SystemFailure.Stop: The instance is stopped due to a system failure.</li>
+     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +27,6 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     /**
      * <p>The IDs of the ECS instances. You can specify up to 100 instance IDs.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>i-bp1gtjxuuvwj17zr****</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -37,7 +34,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     /**
      * <p>The scheduled start time of the event. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>When the TriggerRealOps parameter is set to false, you must specify the NotBefore parameter.</p>
+     * <p>If the TriggerRealOps parameter is set to false, you must specify the NotBefore parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,7 +66,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to trigger actual O&amp;M operations. Valid values:<br>- true: Triggers actual O&amp;M operations. The system actually stops or releases the instance. Proceed with caution during testing, or select an instance that does not run business workloads for testing. The O&amp;M event is generated approximately 1 minute after the API call succeeds.<br>- false: Simulates only event notifications without affecting the actual lifecycle of the instance. This is the default value.</p>
+     * <p>Specifies whether to trigger actual O&amp;M operations. Valid values:<br>- true: Triggers actual O&amp;M operations. The system actually stops or releases the instance. Proceed with caution during testing, or select an instance that does not run business workloads for testing. The O&amp;M event is generated approximately 1 minute after the API call succeeds.<br>- false: Simulates only event notifications and does not affect the actual lifecycle of the instance. This is the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

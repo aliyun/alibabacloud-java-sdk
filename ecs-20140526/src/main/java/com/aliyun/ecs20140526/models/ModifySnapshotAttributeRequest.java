@@ -14,14 +14,14 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to shutdown the instant access feature for the snapshot. Valid values:</p>
+     * <p>Specifies whether to trigger a shutdown of the snapshot instant access (active) feature. Valid values:</p>
      * <ul>
-     * <li>true: shutdown the instant access feature.</li>
-     * <li>false: do not shutdown the instant access feature.
-     * Default value: false.</li>
+     * <li>true: Triggers a shutdown of the snapshot instant access (active) feature.</li>
+     * <li>false: Does not trigger a shutdown of the snapshot instant access (active) feature.</li>
      * </ul>
+     * <p>Default value: false.</p>
      * <blockquote>
-     * <p><strong>[Deprecated]</strong> This parameter is deprecated. Standard snapshots of ESSD cloud disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to perform additional configurations, and no additional fees are incurred.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. Standard snapshots of an ESSD disk (enterprise SSD, not standard SSD) are upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to perform additional configurations, and no additional fees are incurred.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     /**
      * <p>The retention period of the snapshot in days. When you specify this parameter, the retention period is calculated from the <strong>creation time</strong> of the snapshot. The creation time is represented in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC. Valid values: 1 to 65536.</p>
      * <blockquote>
-     * <p>You can only extend the retention period of a snapshot. You cannot shorten the existing retention period.</p>
+     * <p>The retention period of a snapshot can only be extended. You cannot shorten the existing retention period of a snapshot.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

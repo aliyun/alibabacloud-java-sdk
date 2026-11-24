@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPlanMaintenanceWindowResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F3CD6886-D8D0-4FEE-B93E-1B732396****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceSystemDiskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the new system disk.</p>
+     * <p>The disk ID of the new system disk.</p>
      * 
      * <strong>example:</strong>
      * <p>d-bp67acfmxazb4ph****</p>

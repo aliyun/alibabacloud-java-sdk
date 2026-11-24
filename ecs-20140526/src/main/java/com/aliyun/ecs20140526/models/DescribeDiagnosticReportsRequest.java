@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportsRequest extends TeaModel {
     /**
-     * <p>The number of entries per page for a paging query. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page in a paged query. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If no Settings are specified, the default value is 10.</li>
-     * <li>If the Settings value is greater than 100, the default value is 100.</li>
+     * <li>If you do not specify a value in the Settings, the default value is 10.</li>
+     * <li>If the value specified in the Settings is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the <code>NextToken</code> value returned from the previous call. You do not need to specify this parameter for the first call.</p>
+     * <p>The query token. Set the value to the <code>NextToken</code> parameter returned from the previous call. You do not need to specify this parameter for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -28,7 +28,7 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of diagnostic report IDs.</p>
+     * <p>The list of diagnostic report IDs. A maximum of 100 IDs are supported.</p>
      */
     @NameInMap("ReportIds")
     public java.util.List<String> reportIds;
@@ -52,7 +52,7 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     /**
      * <p>The severity level. Valid values:</p>
      * <ul>
-     * <li>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnostic program exited abnormally, and no diagnostic conclusion is available.</li>
+     * <li>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnostic program exited abnormally. No diagnostic conclusion is available.</li>
      * <li>Normal: The diagnosis is normal and no issues are found.</li>
      * <li>Info: Associated information is available, which may be related to an exception.</li>
      * <li>Warn: Associated information is available, which may cause an exception.</li>
@@ -70,7 +70,7 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
      * <ul>
      * <li>InProgress: The diagnosis is in progress.</li>
      * <li>Failed: The diagnosis failed.</li>
-     * <li>Finished: The diagnosis is finished.</li>
+     * <li>Finished: The diagnosis is completed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

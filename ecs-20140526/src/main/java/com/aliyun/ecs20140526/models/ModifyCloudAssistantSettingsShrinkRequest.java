@@ -39,7 +39,7 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Cloud Assistant resource usage configuration. This setting takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</p>
+     * <p>The Cloud Assistant resource usage configuration. This parameter takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <ul>
      * <li><p>Windows: 2.1.4.1065</p>
      * </li>
@@ -59,10 +59,10 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     /**
      * <p>The service configuration type. Valid values:</p>
      * <ul>
-     * <li>SessionManagerDelivery: session operation log delivery.</li>
-     * <li>InvocationDelivery: task execution log delivery.</li>
-     * <li>AgentUpgradeConfig: Cloud Assistant Agent upgrade configuration.</li>
-     * <li>SessionManagerConfig: Cloud Assistant SessionManager configuration.</li>
+     * <li>SessionManagerDelivery: session operation record delivery</li>
+     * <li>InvocationDelivery: task execution record delivery</li>
+     * <li>AgentUpgradeConfig: Cloud Assistant Agent upgrade configuration</li>
+     * <li>SessionManagerConfig: Cloud Assistant SessionManager configuration</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -73,7 +73,7 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     public String settingType;
 
     /**
-     * <p>The Simple Log Service (SLS) delivery configuration.</p>
+     * <p>The SLS delivery configuration.</p>
      */
     @NameInMap("SlsDeliveryConfig")
     public String slsDeliveryConfigShrink;

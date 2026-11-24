@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVscRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -23,10 +23,10 @@ public class CreateVscRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
      * <ul>
-     * <li>true: sends a check request and does not query the resource status. The check items include whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user has the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
-     * <li>false: sends a normal request. If the check succeeds, the 2XX HTTP status code is returned and the resource status is queried.
+     * <li>true: performs only a dry run and does not query the resource status. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li>false: sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the resource status is queried.
      * Default value: false.</li>
      * </ul>
      * 
@@ -63,7 +63,7 @@ public class CreateVscRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the enterprise resource group to which the resource belongs.</p>
+     * <p>The ID of the resource group to which the resource belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -93,7 +93,7 @@ public class CreateVscRequest extends TeaModel {
     public String vscName;
 
     /**
-     * <p>Specifies the VSC type. Valid values: Primary and Standard. Default value: Primary.</p>
+     * <p>The VSC type. Valid values: Primary and Standard. Default value: Primary.</p>
      * 
      * <strong>example:</strong>
      * <p>Primary</p>
@@ -212,7 +212,7 @@ public class CreateVscRequest extends TeaModel {
 
     public static class CreateVscRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the instance, cloud disk, and primary ENI created by using this template version. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * <p>The tag key of the instance, disk, and primary ENI created by using this template version. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -221,8 +221,8 @@ public class CreateVscRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the command. Valid values of N: 1 to 20. The value can be an empty string.</p>
-         * <p>The value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

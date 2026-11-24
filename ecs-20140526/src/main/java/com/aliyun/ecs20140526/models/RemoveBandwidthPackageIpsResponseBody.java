@@ -4,6 +4,10 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RemoveBandwidthPackageIpsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-42d3-a456-426614174000</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

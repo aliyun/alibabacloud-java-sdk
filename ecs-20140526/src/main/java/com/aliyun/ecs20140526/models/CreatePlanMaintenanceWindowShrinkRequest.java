@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the window. Valid values:</p>
+     * <p>Specifies whether to enable or disable the window. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Enabled.</li>
      * <li><strong>false</strong>: Disabled.</li>
@@ -38,7 +38,7 @@ public class CreatePlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String planWindowName;
 
     /**
-     * <p>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, specifying any region ID for this operation yields the same result. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</p>
+     * <p>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, setting any region ID for this operation makes no difference. The O&amp;M window takes effect on all ECS instances across the network that meet the resource filtering conditions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

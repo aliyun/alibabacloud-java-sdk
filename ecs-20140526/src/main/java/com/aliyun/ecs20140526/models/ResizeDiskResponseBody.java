@@ -7,7 +7,7 @@ public class ResizeDiskResponseBody extends TeaModel {
     /**
      * <p>The ID of the generated order.</p>
      * <blockquote>
-     * <p>The order ID is returned only when you resize a subscription cloud disk.</p>
+     * <p>The order ID is returned only when you resize a subscription disk.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

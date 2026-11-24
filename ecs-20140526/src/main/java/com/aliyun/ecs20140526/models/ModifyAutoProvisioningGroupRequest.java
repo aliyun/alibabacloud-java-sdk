@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the auto provisioning group.</p>
+     * <p>The ID of the auto-provisioning group.</p>
      * 
      * <strong>example:</strong>
      * <p>apg-bp67acfmxazb4ph****</p>
@@ -14,7 +14,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String autoProvisioningGroupId;
 
     /**
-     * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. The name can contain digits, colons (:), underscores (_), or hyphens (-).</p>
+     * <p>The name of the auto-provisioning group. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter or a Chinese character and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>apg-test</p>
@@ -23,10 +23,10 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String autoProvisioningGroupName;
 
     /**
-     * <p>The billing method of the capacity difference when the sum of PayAsYouGoTargetCapacity and SpotTargetCapacity is less than TotalTargetCapacity. Valid values:</p>
+     * <p>Specifies the billing method for the supplemental capacity when the sum of PayAsYouGoTargetCapacity and SpotTargetCapacity is less than TotalTargetCapacity. Valid values:</p>
      * <ul>
-     * <li>PayAsYouGo: pay-as-you-go instance.</li>
-     * <li>Spot: spot instance.</li>
+     * <li>PayAsYouGo: pay-as-you-go instances.</li>
+     * <li>Spot: spot instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,10 +36,10 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String defaultTargetCapacityType;
 
     /**
-     * <p>Specifies whether to release instances when the real-time capacity of the auto provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:</p>
+     * <p>Specifies whether to release the instances that are removed during a scale-in event when the real-time capacity of the auto-provisioning group exceeds the target capacity and triggers a scale-in. Valid values:</p>
      * <ul>
-     * <li>termination: Releases the scaled-in instances.</li>
-     * <li>no-termination: Only removes the scaled-in instances from the auto provisioning group.</li>
+     * <li>termination: releases the instances that are removed during the scale-in.</li>
+     * <li>no-termination: only removes the instances from the auto-provisioning group without releasing them.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,15 +49,15 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String excessCapacityTerminationPolicy;
 
     /**
-     * <p>The extended launch template list.</p>
+     * <p>The extended launch templates.</p>
      */
     @NameInMap("LaunchTemplateConfig")
     public java.util.List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
 
     /**
-     * <p>The maximum price of spot instances in the auto provisioning group.</p>
+     * <p>The maximum price of spot instances in the auto-provisioning group.</p>
      * <blockquote>
-     * <p>If both MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice are specified, the lower value is used. LaunchTemplateConfig.N.MaxPrice is specified in Settings when the auto provisioning group is created and cannot be modified.</p>
+     * <p>If both MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice are specified, the lower value takes precedence. LaunchTemplateConfig.N.MaxPrice is specified when the auto-provisioning group is created and cannot be modified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: less than the parameter value of TotalTargetCapacity.</p>
+     * <p>The target capacity of pay-as-you-go instances in the auto-provisioning group. Valid values: less than the value of TotalTargetCapacity.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -82,7 +82,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String payAsYouGoTargetCapacity;
 
     /**
-     * <p>The region ID of the auto provisioning group. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The ID of the region where the auto-provisioning group resides. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The target capacity of spot instances in the auto provisioning group. Valid values: less than the parameter value of TotalTargetCapacity.</p>
+     * <p>The target capacity of spot instances in the auto-provisioning group. Valid values: less than the value of TotalTargetCapacity.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -107,10 +107,10 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String spotTargetCapacity;
 
     /**
-     * <p>Specifies whether to release instances in the auto provisioning group when the group expires. Valid values:</p>
+     * <p>Specifies whether to release the instances in the auto-provisioning group when the group expires. Valid values:</p>
      * <ul>
-     * <li>true: Releases the instances in the group.</li>
-     * <li>false: Only removes the instances from the auto provisioning group.</li>
+     * <li>true: releases the instances in the group.</li>
+     * <li>false: only removes the instances from the group without releasing them.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,8 +120,8 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public Boolean terminateInstancesWithExpiration;
 
     /**
-     * <p>The total target capacity of the auto provisioning group. Valid values: positive integers.</p>
-     * <p>The total capacity must be greater than or equal to the sum of PayAsYouGoTargetCapacity (the target capacity of pay-as-you-go instances) and SpotTargetCapacity (the target capacity of spot instances).</p>
+     * <p>The total target capacity of the auto-provisioning group. Valid values: positive integers.</p>
+     * <p>The total target capacity must be greater than or equal to the sum of PayAsYouGoTargetCapacity (the target capacity of pay-as-you-go instances) and SpotTargetCapacity (the target capacity of spot instances).</p>
      * 
      * <strong>example:</strong>
      * <p>70</p>
@@ -256,7 +256,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
 
     public static class ModifyAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
         /**
-         * <p>The instance type specified in the extension launch template. Valid values of N: 1 to 20. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</p>
+         * <p>The instance type specified in the extended launch template. Valid values of N: 1 to 20. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g5.large</p>
@@ -283,7 +283,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The ID of the vSwitch to which the ECS instance belongs in the extended launch template. The zone of the ECS instance launched from the extended template is determined by the vSwitch.</p>
+         * <p>The ID of the vSwitch to which the ECS instances in the extended launch template belong. The zone of the ECS instances launched by using the extended template is determined by the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-sn5bsitu4lfzgc5o7****</p>
@@ -292,11 +292,11 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The weight of the instance type specified in the extended launch template. A higher value indicates that a single instance can meet more computing requirements, which means fewer instances are required. Valid values: greater than 0.</p>
-         * <p>You can calculate the weight based on the computing power of the specified instance type and the minimum computing power of a single node in the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB:</p>
+         * <p>The weight of the instance type in the extended launch template. A higher weight indicates that a single instance has more computing power and fewer instances are required. Valid values: greater than 0.</p>
+         * <p>You can determine the weight based on the computing power of the specified instance type and the minimum computing power of a single node in the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB of memory:</p>
          * <ul>
-         * <li>The weight of an instance type with 8 vCPUs and 60 GiB can be set to 1.</li>
-         * <li>The weight of an instance type with 16 vCPUs and 120 GiB can be set to 2.</li>
+         * <li>You can set the weight of an instance type with 8 vCPUs and 60 GiB of memory to 1.</li>
+         * <li>You can set the weight of an instance type with 16 vCPUs and 120 GiB of memory to 2.</li>
          * </ul>
          * 
          * <strong>example:</strong>

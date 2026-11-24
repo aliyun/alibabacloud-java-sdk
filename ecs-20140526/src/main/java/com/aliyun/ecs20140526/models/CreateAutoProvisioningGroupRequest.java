@@ -8,7 +8,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public CreateAutoProvisioningGroupRequestLaunchConfiguration launchConfiguration;
 
     /**
-     * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>apg-test</p>
@@ -19,14 +19,11 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>The delivery type of the auto provisioning group. Valid values:</p>
      * <ul>
-     * <li><p>request: one-time asynchronous delivery. The auto provisioning group asynchronously delivers the instance cluster only at startup and does not retry if the scheduling fails.</p>
-     * </li>
-     * <li><p>instant: one-time synchronization delivery. The auto provisioning group synchronously creates instances only at startup and returns the list of successfully created instances and the reasons for creation failed in the response.</p>
-     * </li>
-     * <li><p>maintain: continuous delivery. The auto provisioning group attempts to deliver the instance cluster at startup, monitoring the real-time capacity, and continues to create ECS instances if the target capacity is not reached.</p>
-     * </li>
+     * <li>request: one-time asynchronous delivery. The auto provisioning group asynchronously delivers the instance cluster only at startup and does not retry if the scheduling fails.</li>
+     * <li>instant: one-time synchronization delivery. The auto provisioning group creates instances in synchronization only at startup and returns the list of successfully created instances and the reasons why the creation failed in the response.</li>
+     * <li>maintain: continuous delivery. The auto provisioning group attempts to deliver the instance cluster at startup, performs monitoring on the real-time capacity, and continues to create ECS instances if the target capacity is not reached.
+     * Default value: maintain.</li>
      * </ul>
-     * <p>Default value: maintain.</p>
      * 
      * <strong>example:</strong>
      * <p>maintain</p>
@@ -41,7 +38,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public CreateAutoProvisioningGroupRequestCandidateOptions candidateOptions;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -56,12 +53,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public java.util.List<CreateAutoProvisioningGroupRequestDataDiskConfig> dataDiskConfig;
 
     /**
-     * <p>The Billable methods for the capacity difference when the sum of <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> is less than <code>TotalTargetCapacity</code>. Valid values:</p>
+     * <p>The billing method for the capacity difference when the sum of PayAsYouGoTargetCapacity and SpotTargetCapacity is less than TotalTargetCapacity. Valid values:</p>
      * <ul>
      * <li>PayAsYouGo: pay-as-you-go instances.</li>
-     * <li>Spot: spot instances.</li>
+     * <li>Spot: spot instances.
+     * Default value: Spot.</li>
      * </ul>
-     * <p>Default value: Spot.</p>
      * 
      * <strong>example:</strong>
      * <p>Spot</p>
@@ -81,10 +78,10 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to release the instances that are removed during a scale-down event when the real-time capacity of the auto provisioning group exceeds the target capacity and trigger a scale-down. Valid values:</p>
      * <ul>
-     * <li>termination: releases the removed instances.</li>
-     * <li>no-termination: only removes the instances from the auto provisioning group without releasing them.</li>
+     * <li>termination: releases the instances.</li>
+     * <li>no-termination: only removes the instances from the auto provisioning group.
+     * Default value: no-termination.</li>
      * </ul>
-     * <p>Default value: no-termination.</p>
      * 
      * <strong>example:</strong>
      * <p>termination</p>
@@ -113,7 +110,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
 
     /**
-     * <p>The ID of the launch template associated with the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation to query active instance launch templates. If you specify both a launch template and launch configurations (<code>LaunchConfiguration.*</code>), the system preferentially uses the launch template.</p>
+     * <p>The ID of the instance launch template associated with the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation to query active instance launch templates. If you specify both a launch template and launch configurations (LaunchConfiguration.*), the system preferentially uses the launch template.</p>
      * 
      * <strong>example:</strong>
      * <p>lt-bp1fgzds4bdogu03****</p>
@@ -122,8 +119,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String launchTemplateId;
 
     /**
-     * <p>The version of the launch template associated with the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/73761.html">DescribeLaunchTemplateVersions</a> operation to query active instance launch template versions.</p>
-     * <p>Default value: the default version of the launch template.</p>
+     * <p>The version of the instance launch template associated with the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/73761.html">DescribeLaunchTemplateVersions</a> operation to query active instance launch template versions.
+     * Default value: the default version of the launch template.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -134,7 +131,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>The maximum price of spot instances in the auto provisioning group.</p>
      * <blockquote>
-     * <p>If the Settings for both <code>MaxSpotPrice</code> and <code>LaunchTemplateConfig.N.MaxPrice</code> are specified, the lower value takes precedence.</p>
+     * <p>If both MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice are Settings, the lower value is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -145,7 +142,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     /**
      * <p>The minimum target capacity of the auto provisioning group. Valid values: positive integers.</p>
-     * <p>Take note of the following items when you configure this parameter:</p>
+     * <p>When you specify this parameter, take note of the following items:</p>
      * <ul>
      * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
      * <li>If the instance inventory in the current region is less than the value of this parameter, the API call fails and no instances are created.</li>
@@ -165,14 +162,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The policy for creating pay-as-you-go instances. Valid values:</p>
+     * <p>The strategy for creating pay-as-you-go instances. Valid values:</p>
      * <ul>
-     * <li><p>lowest-price: cost optimization policy. The instance type with the lowest price is selected.</p>
-     * </li>
-     * <li><p>prioritized: priority-based policy. Instances are created based on the priority specified by <code>LaunchTemplateConfig.N.Priority</code>.</p>
-     * </li>
+     * <li>lowest-price: the cost optimization strategy. The instance type with the lowest price is selected.</li>
+     * <li>prioritized: the priority-based strategy. Instances are created based on the priorities specified by LaunchTemplateConfig.N.Priority.
+     * Default value: lowest-price.</li>
      * </ul>
-     * <p>Default value: lowest-price.</p>
      * 
      * <strong>example:</strong>
      * <p>prioritized</p>
@@ -181,7 +176,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String payAsYouGoAllocationStrategy;
 
     /**
-     * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: an integer less than or equal to the parameter value of <code>TotalTargetCapacity</code>.</p>
+     * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: an integer less than or equal to the parameter value of TotalTargetCapacity.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -196,7 +191,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public CreateAutoProvisioningGroupRequestPrePaidOptions prePaidOptions;
 
     /**
-     * <p>The ID of the region where the auto provisioning group resides. You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the auto provisioning group. You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -206,7 +201,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the auto provisioning group belongs.</p>
+     * <p>The ID of the enterprise resource group to which the auto provisioning group belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -221,7 +216,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource pool policy used when creating instances. Take note of the following items when you configure this parameter:</p>
+     * <p>The resource pool policy used when creating instances. When you specify this parameter, take note of the following items:</p>
      * <ul>
      * <li>This parameter takes effect only when you create pay-as-you-go instances.</li>
      * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
@@ -231,16 +226,13 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public CreateAutoProvisioningGroupRequestResourcePoolOptions resourcePoolOptions;
 
     /**
-     * <p>The policy for creating spot instances. Valid values:</p>
+     * <p>The strategy for creating spot instances. Valid values:</p>
      * <ul>
-     * <li><p>lowest-price: cost optimization policy. The instance type with the lowest price is selected.</p>
-     * </li>
-     * <li><p>diversified: balanced zone distribution policy. Instances are created in the zones specified by the extended launch template and evenly distributed across the zones.</p>
-     * </li>
-     * <li><p>capacity-optimized: capacity optimization distribution policy. The optimal instance type and zone are selected based on inventory.</p>
-     * </li>
+     * <li>lowest-price: the cost optimization strategy. The instance type with the lowest price is selected.</li>
+     * <li>diversified: the balanced zone distribution strategy. Instances are created in the zones specified by the extended launch template and evenly distributed across the zones.</li>
+     * <li>capacity-optimized: the capacity optimization distribution strategy. The optimal instance type and zone are selected based on inventory availability.
+     * Default value: lowest-price.</li>
      * </ul>
-     * <p>Default value: lowest-price.</p>
      * 
      * <strong>example:</strong>
      * <p>diversified</p>
@@ -249,14 +241,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String spotAllocationStrategy;
 
     /**
-     * <p>The behavior when a spot instance is interrupted. Valid values:</p>
+     * <p>The behavior of spot instances when they are interrupted. Valid values:</p>
      * <ul>
-     * <li><p>stop: stops the instance.</p>
-     * </li>
-     * <li><p>terminate: releases the instance.</p>
-     * </li>
+     * <li>stop: stops the instances.</li>
+     * <li>terminate: releases the instances.
+     * Default value: terminate.</li>
      * </ul>
-     * <p>Default value: terminate.</p>
      * 
      * <strong>example:</strong>
      * <p>terminate</p>
@@ -265,8 +255,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String spotInstanceInterruptionBehavior;
 
     /**
-     * <p>The number of instance types with the lowest prices that are selected by the auto provisioning group to create instances. This parameter takes effect only when <code>SpotAllocationStrategy</code> is set to <code>lowest-price</code>.</p>
-     * <p>Valid values: an integer less than the value of N in <code>LaunchTemplateConfig.N</code>.</p>
+     * <p>The number of instance types with the lowest price that are selected by the auto provisioning group to create instances. This parameter takes effect only when SpotAllocationStrategy is set to lowest-price.
+     * Valid values: an integer less than the value of N in LaunchTemplateConfig.N.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -275,7 +265,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public Integer spotInstancePoolsToUseCount;
 
     /**
-     * <p>The target capacity of spot instances in the auto provisioning group. Valid values: an integer less than or equal to the parameter value of <code>TotalTargetCapacity</code>.</p>
+     * <p>The target capacity of spot instances in the auto provisioning group. Valid values: an integer less than or equal to the parameter value of TotalTargetCapacity.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -299,9 +289,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
      * <p>Specifies whether to release the instances in the auto-provisioning group when the group is deleted. Valid values:</p>
      * <ul>
      * <li>true: releases the instances auto provisioning group.</li>
-     * <li>false: retains the instances auto provisioning group.</li>
+     * <li>false: retains the instances auto provisioning group.
+     * Default value: false.</li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -313,9 +303,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
      * <p>Specifies whether to release the instances in the auto provisioning group when the group expires. Valid values:</p>
      * <ul>
      * <li>true: releases the instances in the group.</li>
-     * <li>false: only removes the instances from the group without releasing them.</li>
+     * <li>false: only removes the instances from the auto provisioning group.
+     * Default value: false.</li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -324,8 +314,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public Boolean terminateInstancesWithExpiration;
 
     /**
-     * <p>The total target capacity of the auto provisioning group. Valid values: positive integers.</p>
-     * <p>The total target capacity must be greater than or equal to the sum of <code>PayAsYouGoTargetCapacity</code> (the target capacity of pay-as-you-go instances) and <code>SpotTargetCapacity</code> (the target capacity of spot instances).</p>
+     * <p>The total target capacity of the auto provisioning group. Valid values: positive integers.
+     * The total target capacity must be greater than or equal to the sum of PayAsYouGoTargetCapacity (the target capacity of pay-as-you-go instances) and SpotTargetCapacity (the target capacity of spot instances).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -335,9 +325,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String totalTargetCapacity;
 
     /**
-     * <p>The time when the auto provisioning group starts. This parameter and <code>ValidUntil</code> determine the validity period.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <p>Default value: the UNIX timestamp when the API operation takes effect.
+     * <p>The time when the auto provisioning group starts. This parameter and ValidUntil determine the validity period.
+     * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+     * Default value: the UNIX timestamp when the API operation takes effect.
      * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
      * 
      * <strong>example:</strong>
@@ -347,9 +337,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String validFrom;
 
     /**
-     * <p>The time when the auto provisioning group expires. This parameter and <code>ValidFrom</code> determine the validity period.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <p>Default value: 2099-12-31T23:59:59Z.
+     * <p>The time when the auto provisioning group expires. This parameter and ValidFrom determine the validity period.
+     * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+     * Default value: 2099-12-31T23:59:59Z.
      * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
      * 
      * <strong>example:</strong>
@@ -727,7 +717,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk extends TeaModel {
         /**
          * <p>The ID of the automatic snapshot policy applied to the data disk.</p>
-         * <p>Take note of the following items when you configure this parameter:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * </ul>
@@ -762,7 +752,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <li>cloud_essd: enterprise SSD.</li>
          * <li>cloud: basic disk.</li>
          * </ul>
-         * <p>For instances with I/O optimization, the default value is cloud_efficiency. For instances without I/O optimization, the default value is cloud.</p>
+         * <p>For an I/O optimized instance, the default value is cloud_efficiency. For a non-I/O optimized instance, the default value is cloud.</p>
          * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -805,9 +795,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of the data disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
-         * <p>Default value: empty.</p>
-         * <p>If both a launch template and launch configurations are specified, the launch template takes precedence.</p>
+         * <p>The name of the data disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * <p>Default value: null.</p>
+         * <p>If both a launch template and a launch configuration are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssdData</p>
@@ -851,14 +841,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String kmsKeyId;
 
         /**
-         * <p>When you create an enterprise SSD to use as a data disk, configure the Settings for the performance level of the disk. The value of N must be the same as the value of N in LaunchConfiguration.DataDisk.N.Category. Valid values:</p>
+         * <p>The performance level settings of the ESSD when it is used as a data disk. The value of N must be the same as the value of N in LaunchConfiguration.DataDisk.N.Category. Valid values:</p>
          * <ul>
-         * <li>PL0: A single enterprise SSD delivers up to 10,000 random read/write IOPS.</li>
-         * <li>PL1 (default): A single enterprise SSD delivers up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: A single enterprise SSD delivers up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single enterprise SSD delivers up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1 (default): A single disk can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
-         * <p>For more information about how to select the performance level of an enterprise SSD, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+         * <p>For more information about how to select the performance level of an ESSD, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
          * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -868,8 +858,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</p>
-         * <p>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>The number of provisioned read/write IOPS for the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Disk capacity - Baseline performance}.</p>
+         * <p>Baseline performance = min{1,800 + 50 × Disk capacity, 50,000}.</p>
          * <blockquote>
          * <p>This parameter is supported only when the DiskCategory parameter is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * </blockquote>
@@ -885,7 +875,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <ul>
          * <li>cloud_efficiency: 20 to 32768.</li>
          * <li>cloud_ssd: 20 to 32768.</li>
-         * <li>cloud_essd: The valid values are related to the value of LaunchConfiguration.DataDisk.N.PerformanceLevel.<ul>
+         * <li>cloud_essd: The valid values are subject to the value of LaunchConfiguration.DataDisk.N.PerformanceLevel.<ul>
          * <li>PL0: 40 to 32768.</li>
          * <li>PL1: 20 to 32768.</li>
          * <li>PL2: 461 to 32768.</li>
@@ -907,7 +897,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
         /**
          * <p>The ID of the snapshot used to create data disk N. Valid values of N: 1 to 16.</p>
-         * <p>If this parameter is specified, the LaunchConfiguration.DataDisk.N.Size parameter is ignored, and the size of the created disk is the same as the size of the specified snapshot. You cannot use snapshots that were created on or before July 15, 2013. Otherwise, the request is rejected and an error is returned.</p>
+         * <p>If this parameter is specified, the LaunchConfiguration.DataDisk.N.Size parameter is ignored, and the size of the created disk is equal to the size of the specified snapshot. You cannot use snapshots that were created on or before July 15, 2013. Otherwise, the request is rejected and an error is returned.</p>
          * <p>If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -1038,7 +1028,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk extends TeaModel {
         /**
          * <p>The ID of the automatic snapshot policy applied to the system disk.</p>
-         * <p>Take note of the following items when you configure this parameter:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * </ul>
@@ -1113,8 +1103,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</p>
-         * <p>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>The number of provisioned read/write IOPS for the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Disk capacity - Baseline performance}.</p>
+         * <p>Baseline performance = min{1,800 + 50 × Disk capacity, 50,000}.</p>
          * <blockquote>
          * <p>This parameter is supported only when the SystemDisk.Category parameter is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * </blockquote>
@@ -1182,7 +1172,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationTag extends TeaModel {
         /**
-         * <p>The tag key of the instance. Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://. If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
+         * <p>The tag key of the instance. Valid values of N: 1 to 20. If this parameter is specified, it cannot be left empty. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://. If both the launch template and the launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1237,7 +1227,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>The number of threads per core. The number of vCPUs of the ECS instance = Value of CpuOptions.Core × Value of CpuOptions.ThreadsPerCore.</p>
          * <p>A value of 1 for CpuOptions.ThreadsPerCore indicates that CPU hyper-threading is disabled.</p>
          * <p>Only specific instance types support the configuration of the number of threads per core.</p>
-         * <p>Valid values and default value: For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/specify-and-view-cpu-options">Customize CPU options</a>.</p>
+         * <p>For the valid values and default value, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/specify-and-view-cpu-options">Customize CPU options</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1270,7 +1260,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions extends TeaModel {
         /**
-         * <p>Specifies whether the instance that uses this image supports logons by using the ecs-user username. Valid values:</p>
+         * <p>Specifies whether the instance that uses this image supports logons by using the ecs-user user. Valid values:</p>
          * <ul>
          * <li>true: yes.</li>
          * <li>false: no.</li>
@@ -1374,14 +1364,13 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> arn;
 
         /**
-         * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <ul>
-         * <li><p>If the value of the seconds (ss) field is not 00, the time is automatically rounded down to the current minute (mm).</p>
+         * <li><p>If the value of seconds (ss) is not 00, the release time is automatically rounded down to the current minute (mm).</p>
          * </li>
-         * <li><p>The release time must be at least 30 minutes later than the current time.</p>
+         * <li><p>The earliest release time is half an hour after the current time.</p>
          * </li>
-         * <li><p>The release time cannot be more than three years later than the current time.
-         * <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a></p>
+         * <li><p>The latest release time cannot be more than three years after the current time.</p>
          * </li>
          * </ul>
          * 
@@ -1392,13 +1381,13 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String autoReleaseTime;
 
         /**
-         * <p>The performance mode of the burstable instance. Valid values:</p>
+         * <p>The running mode of the burstable instance. Valid values:</p>
          * <ul>
          * <li>Standard: standard mode. For more information about instance performance, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
-         * <li>Unlimited: unlimited mode. For more information about instance performance, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>Unlimited: unlimited mode. For more information about instance performance, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.
+         * Default value: null.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</li>
          * </ul>
-         * <p>Default value: null.</p>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -1426,8 +1415,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <ul>
          * <li>The hostname cannot start or end with a period (.) or a hyphen (-), and cannot contain consecutive periods (.) or hyphens (-).</li>
          * <li>For Windows instances: The hostname must be 2 to 15 characters in length. It cannot contain periods (.) and cannot contain only digits. It can contain letters, digits, and hyphens (-).</li>
-         * <li>For other instances such as Linux instances: The hostname must be 2 to 64 characters in length. It can contain multiple periods (.). The characters between two consecutive periods are considered a segment. Each segment can contain letters, digits, and hyphens (-).</li>
-         * <li>You cannot specify both <code>LaunchConfiguration.HostName</code> and <code>LaunchConfiguration.HostNames.N</code>. Otherwise, an error is returned.</li>
+         * <li>For other instances such as Linux instances: The hostname must be 2 to 64 characters in length. It can contain multiple periods (.). The string between two consecutive periods is a segment, which can contain letters, digits, and hyphens (-).</li>
+         * <li>You cannot specify both LaunchConfiguration.HostName and LaunchConfiguration.HostNames.N at the same time. Otherwise, an error is returned.</li>
          * <li>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</li>
          * </ul>
          * 
@@ -1442,12 +1431,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <ul>
          * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * <li>N indicates the number of instances. Valid values of N: 1 to 1000. The value of N must be the same as the value of the TotalTargetCapacity parameter.</li>
-         * <li>Periods (.) and hyphens (-) cannot be used as the first or last character and cannot be used consecutively.</li>
+         * <li>Periods (.) and hyphens (-) cannot be used as the first or last characters and cannot be used consecutively.</li>
          * <li>If both the launch template and the launch configurations are specified, the launch template takes precedence.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ecs-host-01</p>
+         * <p>[&quot;ecs-host-01&quot;]</p>
          */
         @NameInMap("HostNames")
         public java.util.List<String> hostNames;
@@ -1462,7 +1451,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String imageFamily;
 
         /**
-         * <p>The ID of the image. The image resource selected when the instance is started. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available image resources. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
+         * <p>The image ID. The image used to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>m-bp1g7004ksh0oeuc****</p>
@@ -1471,7 +1460,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
+         * <p>The instance description. The description must be 2 to 256 characters in length and cannot start with http:// or https://. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance_Description</p>
@@ -1480,10 +1469,10 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String instanceDescription;
 
         /**
-         * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with an uppercase or lowercase letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain Chinese characters, English letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <p>Default value: the <code>InstanceId</code> of the instance.</p>
-         * <p>When you create multiple ECS instances, you can batch configure sequential instance names. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential instance names or hostnames</a>.</p>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
+         * <p>When you create multiple ECS instances, you can specify sequential instance names in batches. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Specify sequential instance names or hostnames</a>.</p>
+         * <p>If you specify both a launch template and launch configurations, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-node-[1,4]-alibabacloud</p>
@@ -1495,12 +1484,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>The network billing method. Valid values:</p>
          * <ul>
          * <li>PayByBandwidth: pay-by-bandwidth.</li>
-         * <li>PayByTraffic: pay-by-traffic.</li>
-         * </ul>
-         * <blockquote>
-         * <p>In pay-by-traffic mode, the peak inbound and outbound bandwidths are upper limits and are not guaranteed. During resource contention, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the pay-by-bandwidth mode.</p>
+         * <li>PayByTraffic: pay-by-traffic.<blockquote>
+         * <p>In pay-by-traffic mode, the peak inbound and outbound bandwidth values are upper limits and are not guaranteed. During resource contention, the peak bandwidth may be limited. If your business requires guaranteed bandwidth, use the pay-by-bandwidth mode.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * </blockquote>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PayByTraffic</p>
@@ -1512,9 +1501,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
          * <ul>
          * <li>When the outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</li>
-         * <li>When the outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <code>LaunchConfiguration.InternetMaxBandwidthOut</code>. Default value: the value of <code>LaunchConfiguration.InternetMaxBandwidthOut</code>.</li>
+         * <li>When the outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of LaunchConfiguration.InternetMaxBandwidthOut. Default value: the value of LaunchConfiguration.InternetMaxBandwidthOut.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</li>
          * </ul>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1523,9 +1512,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public Integer internetMaxBandwidthIn;
 
         /**
-         * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
-         * <p>Default value: 0.</p>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
+         * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
+         * Default value: 0.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1534,13 +1523,13 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public Integer internetMaxBandwidthOut;
 
         /**
-         * <p>Specifies whether the instance is an I/O optimization instance. Valid values:</p>
+         * <p>Specifies whether the instance is an I/O optimized instance. Valid values:</p>
          * <ul>
-         * <li>none: The instance does not support I/O optimization.</li>
-         * <li>optimized: The instance supports I/O optimization.</li>
+         * <li>none: The instance is not I/O optimization.</li>
+         * <li>optimized: The instance is I/O optimization.
+         * The default value is none for retired instance types and optimized for other instance types.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</li>
          * </ul>
-         * <p>The default value is none for retired instance types and optimized for other instance types.</p>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>optimized</p>
@@ -1549,12 +1538,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String ioOptimized;
 
         /**
-         * <p>The name of the key pair.</p>
+         * <p>The name of the SSH key pair.</p>
          * <ul>
-         * <li>For Windows instances, this parameter is ignored. Default value: null.</li>
-         * <li>For Linux instances, password logon is disabled by default.</li>
+         * <li>For Windows instances, this parameter is ignored and is empty by default.</li>
+         * <li>For Linux instances, password logon is disabled by default.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</li>
          * </ul>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>KeyPair_Name</p>
@@ -1563,10 +1552,10 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String keyPairName;
 
         /**
-         * <p>The password of the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
-         * <p><code>()`~!@#$%^&amp;*-_+=|{}`[]`:;\\&quot;&lt;&gt;,.?/</code></p>
-         * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
+         * <p>The password of the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The special characters can be:
+         * <code>()`~!@#$%^&amp;*-_+=|{}`[]`:;\\&quot;&lt;&gt;,.?/</code>
+         * For Windows instances, the password cannot start with a forward slash (/).
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>EcsV587!</p>
@@ -1578,9 +1567,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>Specifies whether to use the password preset in the image. Valid values:</p>
          * <ul>
          * <li>true: uses the preset password.</li>
-         * <li>false: does not use the preset password.</li>
+         * <li>false: does not use the preset password.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</li>
          * </ul>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1598,7 +1587,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String ramRoleName;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
+         * <p>The ID of the enterprise resource group to which the instance belongs. If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4p****</p>
@@ -1610,9 +1599,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <p>Specifies whether to enable security hardening. Valid values:</p>
          * <ul>
          * <li>Active: enables security hardening. This value is applicable only to public images.</li>
-         * <li>Deactive: disables security hardening. This value is applicable to all image types.</li>
+         * <li>Deactive: disables security hardening. This value is applicable to all image types.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</li>
          * </ul>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -1647,10 +1636,10 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
          * <li>cloud_essd: enterprise SSD.</li>
-         * <li>cloud: basic disk.</li>
+         * <li>cloud: basic disk.
+         * The default value is cloud for retired instance types that are not I/O optimization instances, and cloud_efficiency for other instance types.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</li>
          * </ul>
-         * <p>The default value is cloud for retired instance types that are not I/O optimization instances, and cloud_efficiency for other instance types.</p>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -1659,8 +1648,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The description of the system disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
+         * <p>The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>SystemDisk_Description</p>
@@ -1669,9 +1658,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String systemDiskDescription;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
-         * <p>Default value: null.</p>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
+         * <p>The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * <p>Default value: empty.</p>
+         * <p>If both a launch template and launch configurations are specified, the launch template takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssdSystem</p>
@@ -1680,15 +1669,15 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String systemDiskName;
 
         /**
-         * <p>The performance level Settings for the standard SSD used as the system disk. Valid values:</p>
+         * <p>Settings for the performance level of the enterprise SSD used as the system disk. Valid values:</p>
          * <ul>
          * <li>PL0 (default): A single enterprise SSD can deliver up to 10,000 random read/write IOPS.</li>
          * <li>PL1: A single enterprise SSD can deliver up to 50,000 random read/write IOPS.</li>
          * <li>PL2: A single enterprise SSD can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single enterprise SSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL3: A single enterprise SSD can deliver up to 1,000,000 random read/write IOPS.
+         * For more information about how to select a standard SSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">standard SSD</a>.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</li>
          * </ul>
-         * <p>For more information about how to select an enterprise SSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">enterprise SSDs</a>.</p>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -1697,9 +1686,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values: 20 to 500. The value of this parameter must be greater than or equal to max{20, the size of the image specified by LaunchConfiguration.ImageId}.</p>
-         * <p>Default value: max{40, the size of the image specified by LaunchConfiguration.ImageId}.</p>
-         * <p>If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
+         * <p>The size of the system disk. Unit: GiB. Valid values: 20 to 500. The value of this parameter must be greater than or equal to max{20, the size of the image specified by LaunchConfiguration.ImageId}.
+         * Default value: max{40, the size of the image specified by LaunchConfiguration.ImageId}.
+         * If you specify both a launch template and launch configurations, the system preferentially uses the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -1759,7 +1748,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
         /**
          * <p>The image properties.</p>
-         * <p>Take note of the following items when you configure this parameter:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * </ul>
@@ -1768,7 +1757,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions imageOptions;
 
         /**
-         * <p>The subscription period of the resource. The unit is specified by the PeriodUnit parameter. This parameter is required and takes effect only when you create subscription instances. Valid values:</p>
+         * <p>The subscription period of the resource. The unit is specified by PeriodUnit. This parameter is required and takes effect only when you create subscription instances. Valid values:</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
          * <li>When PeriodUnit is set to Week, valid values of Period are 1, 2, 3, and 4.</li>
@@ -1784,7 +1773,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The time unit of the subscription Billable methods. Valid values: </p>
+         * <p>The billing unit for subscription. Valid values: </p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
          * <li>Week.</li>
@@ -1813,11 +1802,11 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
          * <ul>
-         * <li>1: Alibaba Cloud guarantees that the instance is not subject to automatic release within 1 hour after it is created. After 1 hour, the system automatically compares your bid with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</li>
-         * <li>0: Alibaba Cloud does not guarantee that the instance is retained for 1 hour after it is created. The system automatically compares your bid with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</li>
+         * <li>1: Alibaba Cloud guarantees that no automatic release occurs within 1 hour after the instance is created. After 1 hour, the system automatically compares your bid with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</li>
+         * <li>0: Alibaba Cloud does not guarantee that the instance runs for 1 hour after it is created. The system automatically compares your bid with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</li>
          * </ul>
-         * <p>Alibaba Cloud sends you a notification by using an ECS system event 5 minutes before the instance is revoked. Spot instances use pay-as-you-go billing by the second. We recommend that you select an appropriate protection period based on the execution duration of your specific nodes.</p>
-         * <p>Take note of the following items when you configure the Settings for this parameter:</p>
+         * <p>Alibaba Cloud sends you a notification through an ECS system event 5 minutes before the instance is revoked. Spot instances use billing by the second. We recommend that you select an appropriate protection period based on the execution duration of your tasks.</p>
+         * <p>When you configure the settings for this parameter, take note of the following items:</p>
          * <ul>
          * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * </ul>
@@ -1836,9 +1825,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
          * <li><p>Stop: The instance enters economical mode.</p>
          * </li>
          * </ul>
-         * <p>For more information about economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
+         * <p>For more information about economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">economical mode</a>.</p>
          * <p>Default value: Terminate.</p>
-         * <p>Take note of the following items when you configure the Settings for this parameter:</p>
+         * <p>When you configure the settings for this parameter, take note of the following items:</p>
          * <ul>
          * <li>This parameter takes effect only when you create an auto provisioning group of the one-time synchronous delivery type (AutoProvisioningGroupType=instant).</li>
          * </ul>
@@ -2186,13 +2175,13 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupRequestCandidateOptions extends TeaModel {
         /**
-         * <p>Specifies whether to only evaluate the success rate of candidate delivery for the target capacity in the current request. If you set this parameter to true, no scale-out is performed. The system only evaluates the delivery success rate and returns the result in the LaunchResult.CandidateEvaluateLevel field of the response. Default value: false.</p>
+         * <p>Specifies whether to only evaluate the success rate of delivering the target capacity by using candidate instance types in the current request. If this parameter is set to true, no scale-out is performed. The system only evaluates the delivery success rate and returns the result in the LaunchResult.CandidateEvaluateLevel response parameter. Default value: false.</p>
          */
         @NameInMap("Evaluate")
         public Boolean evaluate;
 
         /**
-         * <p>The timeout period for the auto provisioning group to scale out instances to reach the target capacity. After the timeout period expires, no further scale-out attempts are made. Unit: minutes.</p>
+         * <p>The timeout period for the auto provisioning group to scale out instances to the target capacity. After the timeout period expires, no further scale-out attempts are made. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -2225,7 +2214,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupRequestDataDiskConfig extends TeaModel {
         /**
-         * <p>The category of the instance data disk. You can use this parameter to specify multiple candidate disk categories. The specified order determines the priority of the disk categories. If a disk category is not active, the system automatically switches to the next disk category. Valid values:</p>
+         * <p>The data disk category of the instance. You can use this parameter to specify multiple candidate disk categories. The specified order determines the priority of the disk categories. If a disk category is not active, the system automatically switches to the next disk category. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
@@ -2264,11 +2253,11 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether the instance type is a burstable instance type. Valid values:</p>
          * <ul>
-         * <li>Exclude: does not include burstable instance types.</li>
+         * <li>Exclude: excludes burstable instance types.</li>
          * <li>Include: includes burstable instance types.</li>
-         * <li>Required: includes only burstable instance types.</li>
+         * <li>Required: includes only burstable instance types.
+         * Default value: Include.</li>
          * </ul>
-         * <p>Default value: Include.</p>
          * 
          * <strong>example:</strong>
          * <p>Include</p>
@@ -2283,14 +2272,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public java.util.List<Integer> cores;
 
         /**
-         * <p>The list of instance types to be excluded.</p>
+         * <p>The list of instance types to exclude.</p>
          */
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
 
         /**
-         * <p>The ID of the image. You can use this parameter to specify the image used by the current resource pool. If this parameter is not specified, the image specified by <code>LaunchConfiguration.ImageId</code> or the image configured in the launch template is used by default. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available image resources.
-         * Note: This parameter is supported only when <code>AutoProvisioningGroupType</code> is set to <code>instant</code>.</p>
+         * <p>The image ID. You can use this parameter to specify the image used by the current resource pool. If this parameter is not specified, the image specified by LaunchConfiguration.ImageId or in the launch template is used by default. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images.
+         * Note: This parameter is supported only when AutoProvisioningGroupType is set to instant.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20210425.vhd</p>
@@ -2299,13 +2288,13 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The level of the instance family, which is used to filter the instance types that meet the requirements. Valid values:</p>
+         * <p>The level of the instance family. This parameter is used to filter instance types that meet the requirements. Valid values:</p>
          * <ul>
-         * <li>EntryLevel: entry-level, which refers to shared instance types. These instance types are more cost-effective but cannot guarantee stable computing performance. They are suitable for business scenarios with low CPU utilization. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
-         * <li>EnterpriseLevel: enterprise-level. These instance types provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
-         * <li>CreditEntryLevel: credit entry-level, which refers to burstable instances. These instance types use CPU credits to ensure computing performance and are suitable for business scenarios with low CPU utilization but occasional CPU bursts. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</li>
+         * <li>EntryLevel: entry-level, which refers to shared instance types. These instance types are more cost-effective but do not guarantee stable computing performance. They are suitable for scenarios with low CPU utilization. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+         * <li>EnterpriseLevel: enterprise-level. These instance types provide stable performance and dedicated resources, and are suitable for scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
+         * <li>CreditEntryLevel: credit entry-level, which refers to burstable instances. These instance types use CPU credits to ensure computing performance and are suitable for scenarios with low CPU utilization but occasional CPU usage spikes. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.
+         * Valid values of N: 1 to 10.</li>
          * </ul>
-         * <p>Valid values of N: 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>EnterpriseLevel</p>
@@ -2314,7 +2303,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String instanceFamilyLevel;
 
         /**
-         * <p>The instance type in the extension launch template. Valid values of N: 1 to 20. For more information about valid instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</p>
+         * <p>The instance type specified in the extension launch template. Valid values of N: 1 to 20. For more information about valid instance family, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g5.large</p>
@@ -2325,7 +2314,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The maximum price of spot instances in the extended launch template.</p>
          * <blockquote>
-         * <p>After <code>LaunchTemplateConfig</code> is specified, <code>LaunchTemplateConfig.N.MaxPrice</code> is required.</p>
+         * <p>After LaunchTemplateConfig is specified, LaunchTemplateConfig.N.MaxPrice is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2373,11 +2362,11 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The weight of the instance type in the extended launch template. A higher weight indicates that a single instance has more computing power and fewer instances are required. Valid values: greater than 0.</p>
-         * <p>You can determine the weight based on the computing power of the specified instance type and the minimum computing power of a single node in the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB of memory:</p>
+         * <p>The weight of the instance type in the extended launch template. A higher weight indicates that a single instance has more computing power and fewer instances are required. Valid values: greater than 0.
+         * You can determine the weight based on the computing power of the specified instance type and the minimum computing power of a single node in the cluster. For example, if the minimum computing power of a single node is 8 vCPUs and 60 GiB of memory:</p>
          * <ul>
-         * <li>The weight of an instance type with 8 vCPUs and 60 GiB of memory can be set to 1.</li>
-         * <li>The weight of an instance type with 16 vCPUs and 120 GiB of memory can be set to 2.</li>
+         * <li>You can set the weight to 1 for an instance type that provides 8 vCPUs and 60 GiB of memory.</li>
+         * <li>You can set the weight to 2 for an instance type that provides 16 vCPUs and 120 GiB of memory.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2499,15 +2488,15 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution extends TeaModel {
         /**
-         * <p>The set of instance types. Duplicate instance types are not allowed, and the instance types must be within the range of LaunchTemplateConfig.InstanceType.</p>
+         * <p>The set of instance types. Duplicate values are not allowed, and the instance types must be within the scope of LaunchTemplateConfig.InstanceType.</p>
          */
         @NameInMap("InstanceTypes")
         public java.util.List<String> instanceTypes;
 
         /**
-         * <p>The minimum number of instances to be delivered within the InstanceTypes range.</p>
+         * <p>The minimum number of instances to be delivered within the scope of InstanceTypes.</p>
          * <blockquote>
-         * <p>sum(MinTargetCapacity) &lt;= TotalTargetCapacity. The sum of MinTargetCapacity for all instance type sets cannot exceed TotalTargetCapacity. If any instance type set cannot meet the MinTargetCapacity requirement due to inventory or other reasons, the entire request fails.</p>
+         * <p>sum(MinTargetCapacity) &lt;= TotalTargetCapacity. The sum of MinTargetCapacity for all instance type sets cannot exceed TotalTargetCapacity. If the MinTargetCapacity requirement for any instance type set cannot be met due to insufficient inventory or other reasons, the entire request fails to create instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2563,17 +2552,17 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupRequestResourcePoolOptions extends TeaModel {
         /**
-         * <p>The list of private pool IDs. You can specify 1 to 20 private pool IDs.</p>
+         * <p>The list of private pool IDs. You can specify 1 to 20 IDs.</p>
          */
         @NameInMap("PrivatePoolIds")
         public java.util.List<String> privatePoolIds;
 
         /**
-         * <p>The resource pool policy. Resource pools include private pools generated after the Resource Assurance or Capacity Reservation service takes effect, as well as the public pool. Valid values:</p>
+         * <p>Resource pools include private pools generated after the Resource Assurance or Capacity Reservation service takes effect, as well as the public pool. You can select a resource pool when you start an instance. Valid values:</p>
          * <ul>
-         * <li><p>PrivatePoolFirst: Private pools are used first. If this policy is selected and ResourcePoolOptions.PrivatePoolIds is specified, the specified private pools are used first. If no private pools are specified or the specified private pools do not have sufficient capacity, the system automatically matches open private pools. If no eligible private pools are available, the public pool is used to create instances.</p>
+         * <li><p>PrivatePoolFirst: Private pools take precedence. If you select this policy and specify ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If no private pools are specified or the specified private pools have insufficient capacity, the system automatically matches open private pools. If no eligible private pools are available, the public pool is used to create instances.</p>
          * </li>
-         * <li><p>PrivatePoolOnly: Only private pools are used. If this policy is selected, you must specify ResourcePoolOptions.PrivatePoolIds. If the specified private pools do not have sufficient capacity, the instances fail to start.</p>
+         * <li><p>PrivatePoolOnly: Only private pools are used. If you select this policy, you must specify ResourcePoolOptions.PrivatePoolIds. If the specified private pools have insufficient capacity, the instance fails to start.</p>
          * </li>
          * <li><p>PublicPoolOnly: The public pool is used to create instances.</p>
          * </li>
@@ -2611,7 +2600,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupRequestSystemDiskConfig extends TeaModel {
         /**
-         * <p>The category of the instance system disk. You can use this parameter to specify multiple candidate disk categories. The specified order determines the priority of the disk categories. If a disk category is not active, the system automatically switches to the next disk category. Valid values:</p>
+         * <p>The system disk category of the instance. You can use this parameter to specify multiple candidate disk categories. The specified order determines the priority of the disk categories. If a disk category is not active, the system automatically switches to the next disk category. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
@@ -2643,7 +2632,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public static class CreateAutoProvisioningGroupRequestTag extends TeaModel {
         /**
          * <p>The tag key of the auto provisioning group.</p>
-         * <p>Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * <p>Valid values of N: 1 to 20. If this parameter is specified, it cannot be left empty. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

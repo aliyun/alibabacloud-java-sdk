@@ -18,7 +18,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be deprecated soon. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paged queries.</p>
+     * <p>This parameter will be deprecated soon. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for pagination.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be deprecated soon. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paged queries.</p>
+     * <p>This parameter will be deprecated soon. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for pagination.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,9 +48,9 @@ public class DescribeDisksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of queried entries.</p>
      * <blockquote>
-     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paged queries, the returned <code>TotalCount</code> value is invalid.</p>
+     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for pagination, the returned value of the <code>TotalCount</code> parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -478,6 +478,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
+         */
+        @NameInMap("ReadWriteMode")
+        public String readWriteMode;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -813,6 +820,14 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
         public Long getProvisionedIops() {
             return this.provisionedIops;
+        }
+
+        public DescribeDisksResponseBodyDisksDisk setReadWriteMode(String readWriteMode) {
+            this.readWriteMode = readWriteMode;
+            return this;
+        }
+        public String getReadWriteMode() {
+            return this.readWriteMode;
         }
 
         public DescribeDisksResponseBodyDisksDisk setRegionId(String regionId) {

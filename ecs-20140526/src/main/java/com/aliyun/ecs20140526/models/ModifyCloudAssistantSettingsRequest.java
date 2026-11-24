@@ -39,7 +39,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Cloud Assistant resource usage configuration. This setting takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</p>
+     * <p>The Cloud Assistant resource usage configuration. This parameter takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</p>
      * <ul>
      * <li><p>Windows: 2.1.4.1065</p>
      * </li>
@@ -59,10 +59,10 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
     /**
      * <p>The service configuration type. Valid values:</p>
      * <ul>
-     * <li>SessionManagerDelivery: session operation log delivery.</li>
-     * <li>InvocationDelivery: task execution log delivery.</li>
-     * <li>AgentUpgradeConfig: Cloud Assistant Agent upgrade configuration.</li>
-     * <li>SessionManagerConfig: Cloud Assistant SessionManager configuration.</li>
+     * <li>SessionManagerDelivery: session operation record delivery</li>
+     * <li>InvocationDelivery: task execution record delivery</li>
+     * <li>AgentUpgradeConfig: Cloud Assistant Agent upgrade configuration</li>
+     * <li>SessionManagerConfig: Cloud Assistant SessionManager configuration</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -73,7 +73,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
     public String settingType;
 
     /**
-     * <p>The Simple Log Service (SLS) delivery configuration.</p>
+     * <p>The SLS delivery configuration.</p>
      */
     @NameInMap("SlsDeliveryConfig")
     public ModifyCloudAssistantSettingsRequestSlsDeliveryConfig slsDeliveryConfig;
@@ -173,21 +173,13 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
 
     public static class ModifyCloudAssistantSettingsRequestAgentUpgradeConfig extends TeaModel {
         /**
-         * <p>The list of time windows during which upgrades are allowed. The time can be specified down to the minute. The default time zone is UTC.</p>
-         * <p>The interval between time windows cannot be less than 1 hour.</p>
-         * <p>Format: start time (HH:mm)-end time (HH:mm).</p>
-         * <p>For example, [
-         * &quot;02:00-03:00&quot;,
-         * &quot;05:00-06:00&quot;
-         * ]
-         * indicates that upgrades are allowed daily from 02:00 to 03:00 and from 05:00 to 06:00 in the UTC time zone.</p>
+         * <p>The list of time windows allowed for upgrades, accurate to the minute. The default time zone is UTC. The interval between time windows cannot be less than 1 hour. Format: start time (HH:mm)-end time (HH:mm). For example, [&quot;02:00-03:00&quot;, &quot;05:00-06:00&quot;] indicates that upgrades are allowed every day from 02:00 to 03:00 and from 05:00 to 06:00 in the UTC time zone.</p>
          */
         @NameInMap("AllowedUpgradeWindow")
         public java.util.List<String> allowedUpgradeWindow;
 
         /**
-         * <p>Specifies whether the Cloud Assistant Agent checks for version updates and performs upgrades immediately upon startup. Default value: true.</p>
-         * <p>This setting takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</p>
+         * <p>Specifies whether to check the version and perform updates immediately when the Cloud Assistant Agent starts. Default value: true. This parameter takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</p>
          * <ul>
          * <li><p>Windows: 2.1.4.1065</p>
          * </li>
@@ -202,14 +194,16 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         public Boolean bootstrapUpgrade;
 
         /**
-         * <p>Specifies whether to prevent the Cloud Assistant Agent from checking for and performing updates. Default value: false.</p>
-         * <p>This setting takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</p>
-         * <ul>
-         * <li><p>Windows: 2.1.4.1065</p>
-         * </li>
-         * <li><p>Linux: 2.2.4.1065</p>
-         * </li>
+         * <p>Specifies whether to disable the Cloud Assistant Agent from checking and performing updates. Default value: false. Precautions:</p>
+         * <ol>
+         * <li>Fully evaluate the security risks and business impacts caused by disabling upgrades or continuing to run an earlier version of the Agent. You are responsible for the resulting risks and impacts.</li>
+         * <li>The disable upgrade configuration takes effect at the account level. It applies to all ECS instances under the account and does not support individual exemptions by instance. Therefore, the aforementioned risks cover all instances within the account.</li>
+         * <li>This parameter takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:<ul>
+         * <li>Windows: 2.1.4.1065</li>
+         * <li>Linux: 2.2.4.1065</li>
          * </ul>
+         * </li>
+         * </ol>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -218,8 +212,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         public Boolean disableUpgrade;
 
         /**
-         * <p>Specifies whether to enable custom Agent upgrade configuration. If set to false, the default behavior of attempting an upgrade every 30 minutes is retained.</p>
-         * <p>Default value: false.</p>
+         * <p>Specifies whether to enable the custom Agent upgrade configuration. If set to false, the system attempts to upgrade the Agent every 30 minutes by default. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -228,11 +221,10 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The time zone for the allowed upgrade time windows. The default time zone is UTC.
-         * The time zone can be specified in the following two formats:</p>
+         * <p>The time zone for the allowed upgrade time windows. The default time zone is UTC. The time zone supports the following two formats:</p>
          * <ul>
-         * <li>Full time zone name: such as Asia/Shanghai or America/Los_Angeles.</li>
-         * <li>GMT offset from Greenwich Mean Time: such as GMT+8:00 or GMT-7:00. Leading zeros are not supported for the hour value.</li>
+         * <li>Full time zone name: such as Asia/Shanghai (China/Shanghai time) and America/Los_Angeles (US/Los Angeles time).</li>
+         * <li>Time zone offset from Greenwich Mean Time (GMT): such as GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). Leading zeros are not supported for the hour value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -321,7 +313,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         public String encryptionAlgorithm;
 
         /**
-         * <p>The customer master key (CMK) ID when the encryption method is set to KMS.</p>
+         * <p>The ID of the customer master key (CMK) when the encryption method is KMS.</p>
          * 
          * <strong>example:</strong>
          * <p>a807****7a70e</p>
@@ -332,9 +324,9 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         /**
          * <p>The OSS encryption method. Valid values:</p>
          * <ul>
-         * <li>Inherit: Inherits the encryption method of the bucket.</li>
-         * <li>OssManaged: Uses OSS-managed encryption.</li>
-         * <li>KMS: Uses KMS-based encryption.</li>
+         * <li>Inherit: inherit from the bucket</li>
+         * <li>OssManaged: fully managed by OSS</li>
+         * <li>KMS: KMS encryption</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -346,12 +338,10 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         /**
          * <p>The directory prefix of the OSS bucket. Constraints:</p>
          * <ul>
-         * <li>The prefix cannot exceed 254 characters in length.</li>
-         * <li>The prefix cannot start with a forward slash (/) or a backslash (\).</li>
+         * <li>The length cannot exceed 254 characters.</li>
+         * <li>It cannot start with a forward slash (/) or a backslash (\).</li>
          * </ul>
-         * <blockquote>
-         * <p>Note: Pass an empty string (&quot;&quot;) to indicate that no directory prefix is required. If a prefix was previously set and is no longer needed, pass an empty string (&quot;&quot;) to clear it.</p>
-         * </blockquote>
+         * <p>Note: Pass an empty string (&quot;&quot;) if no directory prefix is required. If a directory prefix was previously set and is no longer needed, pass an empty string (&quot;&quot;) to clear it.</p>
          * 
          * <strong>example:</strong>
          * <p>sessionmanager/audit</p>
@@ -416,7 +406,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
 
     public static class ModifyCloudAssistantSettingsRequestResourceUsageConfig extends TeaModel {
         /**
-         * <p>The maximum CPU usage allowed for the Cloud Assistant Agent main process.</p>
+         * <p>The maximum allowed CPU usage limit for the main process of the Cloud Assistant Agent.</p>
          * <ul>
          * <li><p>Unit: percentage.</p>
          * </li>
@@ -433,8 +423,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         public Integer cpuLimit;
 
         /**
-         * <p>Specifies whether to retain the script file in the Cloud Assistant directory after command execution is complete.
-         * Default value: false.</p>
+         * <p>Specifies whether to retain the script file in the Cloud Assistant directory after the command execution is completed. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -457,7 +446,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         public Integer logFileCountLimit;
 
         /**
-         * <p>The size limit of a single Cloud Assistant log file. You must specify the unit (B|KB|MB).</p>
+         * <p>The size limit for a single Cloud Assistant log file. A unit (B, KB, or MB) must be specified.</p>
          * <ul>
          * <li>Default value: 100MB.</li>
          * <li>Minimum value: 10MB.</li>
@@ -471,7 +460,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         public String logSizeLimit;
 
         /**
-         * <p>The maximum memory usage allowed for the Cloud Assistant Agent main process. You must specify the unit (B|KB|MB).</p>
+         * <p>The maximum allowed memory usage limit for the main process of the Cloud Assistant Agent. A unit (B, KB, or MB) must be specified.</p>
          * <ul>
          * <li>Default value: 50MB.</li>
          * <li>Minimum value: 35MB.</li>
@@ -485,7 +474,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         public String memoryLimit;
 
         /**
-         * <p>The maximum number of consecutive times that CPU or memory resources usage can exceed the limit. When this limit is reached, the Cloud Assistant Agent automatically stops running.</p>
+         * <p>The maximum number of consecutive times that the usage of CPU or memory resources exceeds the limit. When this limit is reached, the Cloud Assistant Agent automatically stops.</p>
          * <ul>
          * <li>Default value: 3.</li>
          * <li>Minimum value: 3.</li>
@@ -556,8 +545,8 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the Cloud Assistant session feature. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Disabled.</li>
+         * <li>true: enabled</li>
+         * <li>false: disabled</li>
          * </ul>
          * <p>Precautions:</p>
          * <ul>
@@ -587,8 +576,7 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
 
     public static class ModifyCloudAssistantSettingsRequestSlsDeliveryConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable delivery to SLS.
-         * Default value: false.</p>
+         * <p>Specifies whether to enable delivery to SLS. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

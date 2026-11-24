@@ -42,7 +42,7 @@ public class DeleteActivationResponseBody extends TeaModel {
 
     public static class DeleteActivationResponseBodyActivation extends TeaModel {
         /**
-         * <p>The activation code ID.</p>
+         * <p>The ID of the activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
@@ -51,7 +51,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String activationId;
 
         /**
-         * <p>The creation time. The time is formatted in ISO 8601 and in the UTC time zone.</p>
+         * <p>The time when the activation code was created. The time follows the ISO 8601 standard and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T06:00:00Z</p>
@@ -60,7 +60,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The number of unregistered instances.</p>
+         * <p>The number of deregistered instances.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -78,7 +78,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum number of times the activation code can be used to register managed instances.</p>
+         * <p>The maximum number of managed instances that can be registered by using the activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -96,7 +96,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The IP addresses of the hosts that are allowed to use the activation code.</p>
+         * <p>The IP address range of the hosts that are allowed to use the activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>

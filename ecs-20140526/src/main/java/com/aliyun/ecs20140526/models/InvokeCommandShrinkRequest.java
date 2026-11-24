@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InvokeCommandShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -14,9 +14,9 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The command ID. You can call <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> to query all available command IDs. </p>
+     * <p>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs. </p>
      * <blockquote>
-     * <p>You can run public commands by specifying the command name. For more information, see <a href="https://help.aliyun.com/document_detail/429635.html">View and run Cloud Assistant public commands</a>.</p>
+     * <p>For public commands, you can run them by command name. For more information, see <a href="https://help.aliyun.com/document_detail/429635.html">View and run Cloud Assistant public commands</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,17 +30,17 @@ public class InvokeCommandShrinkRequest extends TeaModel {
      * <p>The container ID. Only 64-bit hexadecimal strings are supported. You can use the <code>docker://</code>, <code>containerd://</code>, or <code>cri-o://</code> prefix to specify the container runtime.</p>
      * <p>Precautions:</p>
      * <ul>
-     * <li><p>If you specify this parameter, Cloud Assistant executes the script in the specified container of the instance.</p>
+     * <li><p>If you specify this parameter, Cloud Assistant runs the script in the specified container on the instance.</p>
      * </li>
-     * <li><p>If you specify this parameter, the command can run only on Linux instances with Cloud Assistant Agent version 2.2.3.344 or later.</p>
+     * <li><p>If you specify this parameter, the command can only be run on Linux instances where the Cloud Assistant Agent version is 2.2.3.344 or later.</p>
      * <ul>
-     * <li>To view the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</li>
-     * <li>To upgrade the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.</li>
+     * <li>For more information about how to view the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/64921.html">Install the Cloud Assistant Agent</a>.</li>
+     * <li>For more information about how to upgrade the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable the upgrade of the Cloud Assistant Agent</a>.</li>
      * </ul>
      * </li>
-     * <li><p>If you specify this parameter, the <code>Username</code> parameter specified in this operation and the <code>WorkingDir</code> parameter specified in <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> do not take effect. The command is executed only by the default user in the default working directory of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+     * <li><p>If you specify this parameter, the <code>Username</code> parameter specified in this operation and the <code>WorkingDir</code> parameter specified in <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> do not take effect. The command can only be run by the default user of the container in the default working directory of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
      * </li>
-     * <li><p>If you specify this parameter, only Shell scripts can be executed in Linux containers. You cannot use a format such as <code>#!/usr/bin/python</code> at the beginning of the script to specify an interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+     * <li><p>If you specify this parameter, only shell scripts can be run in Linux containers. You cannot specify an interpreter for the script content by using a command such as <code>#!/usr/bin/python</code> at the beginning of the script. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
      * </li>
      * </ul>
      * 
@@ -54,17 +54,17 @@ public class InvokeCommandShrinkRequest extends TeaModel {
      * <p>The container name.</p>
      * <p>Precautions:</p>
      * <ul>
-     * <li><p>If you specify this parameter, Cloud Assistant executes the script in the specified container of the instance.</p>
+     * <li><p>If you specify this parameter, Cloud Assistant runs the script in the specified container on the instance.</p>
      * </li>
-     * <li><p>If you specify this parameter, the command can run only on Linux instances with Cloud Assistant Agent version 2.2.3.344 or later.</p>
+     * <li><p>If you specify this parameter, the command can only be run on Linux instances where the Cloud Assistant Agent version is 2.2.3.344 or later.</p>
      * <ul>
-     * <li>To view the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</li>
-     * <li>To upgrade the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.</li>
+     * <li>For more information about how to view the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/64921.html">Install the Cloud Assistant Agent</a>.</li>
+     * <li>For more information about how to upgrade the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable the upgrade of the Cloud Assistant Agent</a>.</li>
      * </ul>
      * </li>
-     * <li><p>If you specify this parameter, the <code>Username</code> parameter specified in this operation and the <code>WorkingDir</code> parameter specified in <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> do not take effect. The command is executed only by the default user in the default working directory of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+     * <li><p>If you specify this parameter, the <code>Username</code> parameter specified in this operation and the <code>WorkingDir</code> parameter specified in <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> do not take effect. The command can only be run by the default user of the container in the default working directory of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
      * </li>
-     * <li><p>If you specify this parameter, only Shell scripts can be executed in Linux containers. You cannot use a format such as <code>#!/usr/bin/python</code> at the beginning of the script to specify an interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+     * <li><p>If you specify this parameter, only shell scripts can be run in Linux containers. You cannot specify an interpreter for the script content by using a command such as <code>#!/usr/bin/python</code> at the beginning of the script. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
      * </li>
      * </ul>
      * 
@@ -75,32 +75,32 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String containerName;
 
     /**
-     * <p>The schedule on which the command is executed. Three types of scheduled execution are supported: fixed interval (based on a Rate expression), one-time execution at a specified time, and clock-based scheduling (based on a Cron expression).</p>
+     * <p>The execution time of the scheduled command. Three scheduled execution modes are supported: execution at fixed intervals (based on rate expressions), one-time execution at a specified time, and clock-based scheduled execution (based on cron expressions).</p>
      * <ul>
-     * <li><p>Fixed interval execution: Based on a Rate expression, the command is executed at a set interval. The interval can be specified in seconds (s), minutes (m), hours (h), or days (d). This is suitable for scenarios that require execution at fixed intervals. Format: <code>rate(&lt;interval value&gt;&lt;interval unit&gt;)</code>. For example, to execute every 5 minutes, use <code>rate(5m)</code>. Fixed interval execution has the following limits:</p>
+     * <li><p>Execution at fixed intervals: runs the command at a specified interval based on a rate expression. The interval can be set in seconds (s), minutes (m), hours (h), or days (d). This mode is suitable for scenarios where tasks are run at fixed intervals. The format is <code>rate(&lt;interval value&gt;&lt;interval unit&gt;)</code>. For example, to run the command every 5 minutes, use <code>rate(5m)</code>. The following limits apply to execution at fixed intervals:</p>
      * <ul>
-     * <li>The interval must not exceed 7 days or be less than 60 seconds, and must be greater than the timeout period of the scheduled task.</li>
-     * <li>The execution interval is based on a fixed frequency and is independent of the actual execution time of the task. For example, if the command is set to execute every 5 minutes and the task takes 2 minutes to complete, the next execution starts 3 minutes after the task completes.</li>
-     * <li>The command is not executed immediately when the task is created. For example, if the command is set to execute every 5 minutes, the first execution starts 5 minutes after the task is created.</li>
+     * <li>The specified interval must not exceed 7 days or be less than 60 seconds, and must be greater than the timeout period of the scheduled task.</li>
+     * <li>The execution interval is based only on the fixed frequency and is independent of the actual time required to run the task. For example, if you set the command to run every 5 minutes and the task takes 2 minutes to complete, the next execution starts 3 minutes after the task is completed.</li>
+     * <li>The task is not run immediately upon creation. For example, if you set the command to run every 5 minutes, the command is not run immediately upon task creation, but starts 5 minutes after the task is created.</li>
      * </ul>
      * </li>
-     * <li><p>One-time execution at a specified time: The command is executed once at the specified time zone and time. Format: <code>at(yyyy-MM-dd HH:mm:ss &lt;time zone&gt;)</code>. If no time zone is specified, UTC is used by default. The time zone supports the following three formats:</p>
+     * <li><p>One-time execution at a specified time: runs the command once at the specified time zone and time point. The format is <code>at(yyyy-MM-dd HH:mm:ss &lt;time zone&gt;)</code>. If you do not specify a time zone, the UTC time zone is used by default. The time zone supports the following three formats:</p>
      * <ul>
-     * <li>Full time zone name: For example, <code>Asia/Shanghai</code> (China/Shanghai time) or <code>America/Los_Angeles</code> (US/Los Angeles time).</li>
-     * <li>Time zone offset from Greenwich Mean Time: For example, <code>GMT+8:00</code> (UTC+8) or <code>GMT-7:00</code> (UTC-7). When using the GMT format, leading zeros are not supported for the hour value.</li>
-     * <li>Time zone abbreviation: Only UTC (Coordinated Universal Time) is supported.</li>
+     * <li>Time zone full name: for example, <code>Asia/Shanghai</code> (China/Shanghai time) and <code>America/Los_Angeles</code> (US/Los Angeles time).</li>
+     * <li>Time zone offset from Greenwich Mean Time: for example, <code>GMT+8:00</code> (East 8th zone) and <code>GMT-7:00</code> (West 7th zone). When you use the GMT format, leading zeros are not supported for the hour.</li>
+     * <li>Time zone abbreviation: only UTC (Coordinated Universal Time) is supported.</li>
      * </ul>
-     * <p>For example, to execute once at 13:15:30 on June 6, 2022 in China/Shanghai time, use: <code>at(2022-06-06 13:15:30 Asia/Shanghai)</code>. To execute once at 13:15:30 on June 6, 2022 in UTC-7, use: <code>at(2022-06-06 13:15:30 GMT-7:00)</code>.</p>
+     * <p>For example, to run the command once at 13:15:30 on June 6, 2022 in the China/Shanghai time zone, use <code>at(2022-06-06 13:15:30 Asia/Shanghai)</code>. To run the command once at 13:15:30 on June 6, 2022 in the West 7th zone, use <code>at(2022-06-06 13:15:30 GMT-7:00)</code>.</p>
      * </li>
-     * <li><p>Clock-based scheduling (based on a Cron expression): Based on a Cron expression, the command is executed on a set schedule. Format: <code>&lt;seconds&gt; &lt;minutes&gt; &lt;hours&gt; &lt;day of month&gt; &lt;month&gt; &lt;day of week&gt; &lt;year (optional)&gt; &lt;time zone&gt;</code>. The scheduled execution time is calculated based on the Cron expression in the specified time zone. If no time zone is specified, the system time zone of the instance is used by default. For more information about Cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. The time zone supports the following three formats:</p>
+     * <li><p>Clock-based scheduled execution (based on cron expressions): runs the command based on a cron expression. The format is <code>&lt;seconds&gt; &lt;minutes&gt; &lt;hours&gt; &lt;day of month&gt; &lt;month&gt; &lt;day of week&gt; &lt;year (optional)&gt; &lt;time zone&gt;</code>, which is <code>&lt;cron expression&gt; &lt;time zone&gt;</code>. The scheduled task execution time is calculated and executed based on the cron expression in the specified time zone. If you do not specify a time zone, the internal system time zone of the instance that runs the scheduled task is used by default. For more information about cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. The time zone supports the following three formats:</p>
      * <ul>
-     * <li>Full time zone name: For example, <code>Asia/Shanghai</code> (China/Shanghai time) or <code>America/Los_Angeles</code> (US/Los Angeles time).</li>
-     * <li>Time zone offset from Greenwich Mean Time: For example, <code>GMT+8:00</code> (UTC+8) or <code>GMT-7:00</code> (UTC-7). When using the GMT format, leading zeros are not supported for the hour value.</li>
-     * <li>Time zone abbreviation: Only UTC (Coordinated Universal Time) is supported.
-     * For example, to execute once at 10:15 every day in 2022 in China/Shanghai time, use <code>0 15 10 ? * * 2022 Asia/Shanghai</code>. To execute every 30 minutes from 10:00 to 11:30 every day in 2022 in UTC+8, use <code>0 0/30 10-11 * * ? 2022 GMT+8:00</code>. To execute every 5 minutes from 14:00 to 14:55 every day in October every two years starting from 2022 in UTC, use <code>0 0/5 14 * 10 ? 2022/2 UTC</code>.</li>
+     * <li>Time zone full name: for example, <code>Asia/Shanghai</code> (China/Shanghai time) and <code>America/Los_Angeles</code> (US/Los Angeles time).</li>
+     * <li>Time zone offset from Greenwich Mean Time: for example, <code>GMT+8:00</code> (East 8th zone) and <code>GMT-7:00</code> (West 7th zone). When you use the GMT format, leading zeros are not supported for the hour.</li>
+     * <li>Time zone abbreviation: only UTC (Coordinated Universal Time) is supported.
+     * For example, to run the command once at 10:15 every day in 2022 in the China/Shanghai time zone, use <code>0 15 10 ? * * 2022 Asia/Shanghai</code>. To run the command every half hour from 10:00 to 11:30 every day in 2022 in the East 8th zone, use <code>0 0/30 10-11 * * ? 2022 GMT+8:00</code>. To run the command every 5 minutes from 14:00 to 14:55 every day in October every two years starting from 2022 in the UTC time zone, use <code>0 0/5 14 * 10 ? 2022/2 UTC</code>.</li>
      * </ul>
      * <blockquote>
-     * <p>The minimum interval must be greater than or equal to the timeout period of the scheduled task and no less than 10 seconds.</p>
+     * <p>The minimum specified time interval must be greater than or equal to the timeout period of the scheduled task and not less than 10 seconds.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -109,17 +109,17 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String frequency;
 
     /**
-     * <p>The list of instances on which to execute the command. You can specify up to 100 instance IDs. Valid values of N: 1 to 100.</p>
-     * <p>You can also apply for a quota increase in Quota Center (quota name: Maximum number of instances supported for command execution).</p>
+     * <p>The list of instance IDs on which the command is run. You can specify up to 100 instance IDs. Valid values of N: 1 to 100.</p>
+     * <p>You can also apply for a quota increase in Quota Center. The quota name is the maximum number of instances supported for command execution.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-bp185dy2o3o6n****</p>
+     * <p>[&quot;i-bp185dy2o3o6n****&quot;]</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The bootstrap program for script execution. The value cannot exceed 1 KB in length.</p>
+     * <p>The bootstrap program for script execution. The length cannot exceed 1 KB.</p>
      * 
      * <strong>example:</strong>
      * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
@@ -128,9 +128,9 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String launcher;
 
     /**
-     * <p>The OSS delivery configuration for the command execution output.</p>
+     * <p>The OSS data shipping configuration for the command execution output.</p>
      * <ul>
-     * <li>Format: oss://${BucketName}/${Prefix}, where ${BucketName} is the name of the destination OSS bucket and ${Prefix} is the directory prefix for delivery.</li>
+     * <li>Format: <code>oss://${BucketName}/${Prefix}</code>. <code>${BucketName}</code> is the name of the OSS bucket to which the data is shipped, and <code>${Prefix}</code> is the directory prefix to which the data is shipped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -146,14 +146,14 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The key-value pairs of custom parameters to pass in when the custom parameter feature is enabled. The number of custom parameters ranges from 0 to 10.</p>
+     * <p>The key-value pairs of custom parameters passed when the command is run if the custom parameter feature is enabled. The number of custom parameters ranges from 0 to 10.</p>
      * <ul>
-     * <li>Map keys cannot be empty strings and can contain up to 64 characters.</li>
-     * <li>Map values can be empty strings.</li>
-     * <li>After Base64 encoding, the total length of the custom parameters and the original command content cannot exceed 24 KB.</li>
-     * <li>The set of custom parameter names must be a subset of the parameter set defined when the command was created. For parameters that are not passed in, you can use empty strings as substitutes.</li>
+     * <li>The key in the map cannot be an empty string and can be up to 64 characters in length.</li>
+     * <li>The value in the map can be an empty string.</li>
+     * <li>The total length of the custom parameters and the original command content cannot exceed 24 KB after Base64 encoding.</li>
+     * <li>The set of custom parameter names must be a subset of the parameter set defined when the command was created. For parameters that are not passed, you can use an empty string instead.</li>
      * </ul>
-     * <p>You can unset this parameter to disable custom parameters.</p>
+     * <p>You can leave this parameter unspecified to disable custom parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI************&quot;}</p>
@@ -162,7 +162,7 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String parametersShrink;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -172,23 +172,23 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies how the command is executed. Valid values:</p>
+     * <p>The execution mode of the command. Valid values:</p>
      * <ul>
-     * <li>Once: immediately executes the command.</li>
-     * <li>Period: executes the command on a schedule. If you set this parameter to <code>Period</code>, you must also specify the <code>Frequency</code> parameter.</li>
-     * <li>NextRebootOnly: automatically executes the command the next time the instance starts.</li>
-     * <li>EveryReboot: automatically executes the command every time the instance starts.</li>
-     * <li>DryRun: performs a dry run of the request without actually executing the command. The dry run checks request parameters, the instance execution environment, and the Cloud Assistant Agent status.</li>
+     * <li>Once: runs the command immediately.</li>
+     * <li>Period: runs the command on a schedule. If you set this parameter to <code>Period</code>, you must also specify the <code>Frequency</code> parameter.</li>
+     * <li>NextRebootOnly: automatically runs the command the next time the instance starts.</li>
+     * <li>EveryReboot: automatically runs the command every time the instance starts.</li>
+     * <li>DryRun: only prechecks the request. The command is not actually run. The check items include the request parameters, instance execution environment, and Cloud Assistant Agent running status.</li>
      * </ul>
      * <p>Default value:</p>
      * <ul>
      * <li>If you do not specify the <code>Frequency</code> parameter, the default value is <code>Once</code>.</li>
-     * <li>If you specify the <code>Frequency</code> parameter, the command is executed as <code>Period</code> regardless of whether you set this parameter.</li>
+     * <li>If you specify the <code>Frequency</code> parameter, the value is processed as <code>Period</code> regardless of whether this parameter is set.</li>
      * </ul>
      * <p>Precautions:</p>
      * <ul>
-     * <li>You can call <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> to stop a pending or scheduled command execution.</li>
-     * <li>If you set this parameter to <code>Period</code> or <code>EveryReboot</code>, you can call <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> and specify <code>IncludeHistory=true</code> to view the execution history of the scheduled command.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop a pending or scheduled command.</li>
+     * <li>If you set this parameter to <code>Period</code> or <code>EveryReboot</code>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation and set <code>IncludeHistory</code> to <code>true</code> to view the historical records of the scheduled command execution.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -198,11 +198,11 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String repeatMode;
 
     /**
-     * <p>The ID of the resource group for the command execution. When you specify this parameter:</p>
+     * <p>The ID of the resource group in which the command is run. When you specify this parameter:</p>
      * <ul>
-     * <li><p>The ECS instance specified by InstanceId must belong to this resource group if the instance is not in the default resource group.</p>
+     * <li><p>If the ECS instance specified by InstanceId belongs to a non-default resource group, the ECS instance must belong to this resource group.</p>
      * </li>
-     * <li><p>You can filter command execution results by specifying this parameter (by calling <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a>).</p>
+     * <li><p>You can specify this parameter to filter the corresponding command execution results by calling the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation.</p>
      * </li>
      * </ul>
      * 
@@ -219,22 +219,22 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags used to filter instances. You can use tags to run commands in batches on instances with the same tag without specifying InstanceId.</p>
+     * <p>The list of tags used to filter instances. You can run the command on instances with the same tag in batches without specifying InstanceId.</p>
      */
     @NameInMap("ResourceTag")
     public java.util.List<InvokeCommandShrinkRequestResourceTag> resourceTag;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<InvokeCommandShrinkRequestTag> tag;
 
     /**
-     * <p>The mode in which the task is stopped (manually stopped or interrupted due to timeout). Valid values:</p>
+     * <p>The mode used when the task is stopped (manually stopped or interrupted due to execution timeout). Valid values:</p>
      * <ul>
      * <li>Process: stops the current script process.</li>
-     * <li>ProcessTree: stops the current process tree (the script process and all child processes it created).</li>
+     * <li>ProcessTree: stops the current process tree, which includes the script process and all its child processes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -244,9 +244,7 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String terminationMode;
 
     /**
-     * <blockquote>
-     * <p>This parameter is deprecated and has no effect if specified.</p>
-     * </blockquote>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not take effect even if it is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -255,13 +253,13 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public Boolean timed;
 
     /**
-     * <p>The timeout period for the command execution. Unit: seconds.</p>
+     * <p>The timeout period for running the command. Unit: seconds.</p>
      * <ul>
-     * <li><p>The value must be at least 10 seconds.</p>
+     * <li><p>The value cannot be less than 10.</p>
      * </li>
-     * <li><p>If the command cannot run because of process issues, missing modules, or missing Cloud Assistant Agent, a timeout occurs. When a timeout occurs, the command process is forcefully terminated.</p>
+     * <li><p>A timeout occurs when the command cannot be run due to process issues, missing modules, or a missing Cloud Assistant Agent. After a timeout, the command process is forcibly terminated.</p>
      * </li>
-     * <li><p>If you do not set this value, the timeout period specified when the command was created is used.</p>
+     * <li><p>If you do not specify this parameter, the timeout period specified when the command was created is used.</p>
      * </li>
      * <li><p>This value applies only to the current command execution and does not change the timeout period of the command itself.</p>
      * </li>
@@ -274,12 +272,12 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>The username used to execute the command on the ECS instance. The value can be up to 255 characters in length.</p>
+     * <p>The name of the user that runs the command on the ECS instance. The name can be up to 255 characters in length.</p>
      * <ul>
-     * <li>For Linux instances, the command is executed as the root user by default.</li>
-     * <li>For Windows instances, the command is executed as the System user by default.</li>
+     * <li>For ECS instances that run Linux, the command is run by the root user by default.</li>
+     * <li>For ECS instances that run Windows, the command is run by the System user by default.</li>
      * </ul>
-     * <p>You can also specify another existing user on the instance to execute the command. Executing Cloud Assistant commands as a regular user is more secure. For more information, see <a href="https://help.aliyun.com/document_detail/203771.html">Configure a regular user to run Cloud Assistant commands</a>.</p>
+     * <p>You can also specify another existing user on the instance to run the command. Running Cloud Assistant commands as a regular user is more secure. For more information, see <a href="https://help.aliyun.com/document_detail/203771.html">Configure a regular user to run Cloud Assistant commands</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -288,10 +286,10 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String username;
 
     /**
-     * <p>The name of the password used by the user to execute the command on a Windows instance. The value can be up to 255 characters in length.</p>
-     * <p>If you want to execute a command as a non-default user (System) on a Windows instance, you must specify both <code>Username</code> and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management, and pass in only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a> and <a href="https://help.aliyun.com/document_detail/203771.html">Configure a regular user to run Cloud Assistant commands</a>.</p>
+     * <p>The name of the password for the user that executes the command on a Windows instance. The name can be up to 255 characters in length.</p>
+     * <p>If you want to execute the command on a Windows instance as a non-default user (other than System), you must specify both <code>Username</code> and this parameter. To reduce the risk of password leakage, the plaintext password must be hosted in the parameter repository of System Operations Management. Here, you only pass the name of the password. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encrypt parameters</a> and <a href="https://help.aliyun.com/document_detail/203771.html">Settings for regular users to execute Cloud Assistant commands</a>.</p>
      * <blockquote>
-     * <p>This parameter is not required when you execute a command as the root user on a Linux instance or the System user on a Windows instance.</p>
+     * <p>You do not need to pass this parameter when you run the command as the root user on a Linux instance or the System user on a Windows instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -301,10 +299,10 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String windowsPasswordName;
 
     /**
-     * <p>The directory in which the command is executed on the ECS instance. The value can be up to 200 characters in length.</p>
+     * <p>The directory in which the command is run on the ECS instance. The length cannot exceed 200 characters.</p>
      * <ul>
-     * <li>If you do not set this value, the working directory specified when the command was created is used.</li>
-     * <li>This value applies only to the current command execution and does not change the working directory of the command itself.</li>
+     * <li>If you do not specify this parameter, the running directory specified when the command was created is used.</li>
+     * <li>This value applies only to the current command execution and does not change the running directory of the command itself.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -515,13 +513,13 @@ public class InvokeCommandShrinkRequest extends TeaModel {
          * <p>The tag key used to filter instances.</p>
          * <p>Precautions:</p>
          * <ul>
-         * <li><p>This parameter conflicts with the InstanceId parameter. You cannot specify both parameters at the same time.</p>
+         * <li><p>This parameter conflicts with the InstanceId parameter and cannot be specified at the same time.</p>
          * </li>
-         * <li><p>Valid values of N: 1 to 10. The tag key cannot be an empty string.</p>
+         * <li><p>Valid values of N: 1 to 10. The value cannot be an empty string.</p>
          * </li>
-         * <li><p>The number of instances with the specified tag cannot exceed the limit of InstanceId.N. If the number of instances exceeds the limit, control the number of instances by adding batch tags, such as batch: b1.</p>
+         * <li><p>The number of instances under the tag cannot exceed the limit of InstanceId.N. If the number of instances exceeds the limit, control the number of instances by adding batch tags, such as batch: b1.</p>
          * </li>
-         * <li><p>The tag key can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <li><p>The value can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * </li>
          * </ul>
          * 
@@ -536,8 +534,8 @@ public class InvokeCommandShrinkRequest extends TeaModel {
          * <p>Precautions:</p>
          * <ul>
          * <li>Valid values of N: 1 to 10.</li>
-         * <li>The tag value can be an empty string.</li>
-         * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://.</li>
+         * <li>The value can be an empty string.</li>
+         * <li>The value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -571,9 +569,9 @@ public class InvokeCommandShrinkRequest extends TeaModel {
 
     public static class InvokeCommandShrinkRequestTag extends TeaModel {
         /**
-         * <p>The tag key for the command execution. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the number of resources with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources with all specified tags attached cannot exceed 1,000. If the number of resources exceeds 1,000, execute the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key for the command to execute. Valid values of N: 1 to 20. The value cannot be an empty string.</p>
+         * <p>If you use a single tag to filter resources, the resource count under the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources attached to all the specified tags cannot exceed 1,000. If the resource count exceeds 1,000, you must use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+         * <p>The value can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -582,8 +580,8 @@ public class InvokeCommandShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value for the command execution. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the command execution. Valid values of N: 1 to 20. The value can be an empty string.</p>
+         * <p>The value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -42,7 +42,7 @@ public class ModifyPlanMaintenanceWindowShrinkRequest extends TeaModel {
     public String planWindowName;
 
     /**
-     * <p>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, specifying any region ID for this operation makes no difference. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</p>
+     * <p>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, setting any region ID for this operation makes no difference. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

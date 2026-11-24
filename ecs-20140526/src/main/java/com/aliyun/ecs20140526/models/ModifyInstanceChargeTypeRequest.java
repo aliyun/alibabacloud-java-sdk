@@ -7,14 +7,14 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><p>true: enables automatic payment. Make sure that your account balance is sufficient. If your account balance is insufficient, abnormal orders are generated, and you can only cancel the orders.</p>
+     * <li><p>true: Automatic payment is enabled. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated and can only be canceled.</p>
      * </li>
-     * <li><p>false: generates orders without charging.</p>
+     * <li><p>false: Only an order is generated and no payment is made.</p>
      * </li>
      * </ul>
      * <p>Default value: true.</p>
      * <blockquote>
-     * <p>If your payment method has an insufficient balance, you can set AutoPay to false. In this case, unpaid orders are generated, and you can log on to the ECS console to complete the payment.</p>
+     * <p>If the balance of your payment method is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated, and you can log on to the ECS console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and make sure that the value is unique across different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -33,11 +33,11 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values:</p>
+     * <p>Specifies whether to only perform a dry run for this request. Valid values:</p>
      * <ul>
-     * <li><p>true: sends a check request without querying resource status. The check items include whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error message is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p>true: send a dry run request. The system does not query resources. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user has the required authorization, and whether required parameters are specified. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p>false: sends a normal request. If the request passes the check, a 2XX HTTP status code is returned and the operation is performed.</p>
+     * <li><p>false: send a normal request. If the dry run succeeds, the 2xx HTTP status code is returned and resources are queried.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -49,10 +49,10 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to convert all pay-as-you-go data disks attached to the instance to subscription data disks.</p>
+     * <p>Specifies whether to change the billing method of all pay-as-you-go data disks attached to the instance to subscription. Valid values:</p>
      * <ul>
-     * <li>true: Yes.</li>
-     * <li>false: No.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -65,9 +65,9 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>The target billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p>PrePaid: converts pay-as-you-go instances to subscription instances.</p>
+     * <li><p>PrePaid: switches the billing method of the instance from pay-as-you-go to subscription.</p>
      * </li>
-     * <li><p>PostPaid: converts subscription instances to pay-as-you-go instances.</p>
+     * <li><p>PostPaid: switches the billing method of the instance from subscription to pay-as-you-go.</p>
      * </li>
      * </ul>
      * <p>Default value: PrePaid.</p>
@@ -79,7 +79,7 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The IDs of instances. The value can be a JSON array that consists of up to 20 instance IDs. Separate the IDs with commas (,).</p>
+     * <p>The instance IDs. The value can be a JSON array that consists of up to 20 instance IDs. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,10 +89,10 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>Specifies whether to return order fee details when the billing method is converted from subscription to pay-as-you-go. Valid values:</p>
+     * <p>Specifies whether to return the order fee details when you switch the billing method from subscription to pay-as-you-go. Valid values:</p>
      * <ul>
-     * <li>true: Returns the fee details.</li>
-     * <li>false: Does not return the fee details.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -109,13 +109,13 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription renewal period. If the ECS instance is hosted on a dedicated host, the value cannot exceed the subscription period of the dedicated host. Valid values:</p>
+     * <p>The subscription period. If the host of the ECS instance is a dedicated host (DDH), the value cannot exceed the subscription period of the DDH. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If <code>PeriodUnit</code> is set to <code>Week</code>, valid values of <code>Period</code>: 1, 2, 3, and 4.</li>
-     * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of <code>Period</code>: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+     * <li>When <code>PeriodUnit</code> is set to <code>Week</code>, valid values of <code>Period</code> are 1, 2, 3, and 4.</li>
+     * <li>When <code>PeriodUnit</code> is set to <code>Month</code>, valid values of <code>Period</code> are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of <code>Period</code>: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;When <code>PeriodUnit</code> is set to <code>Month</code>, valid values of <code>Period</code> are 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -124,7 +124,7 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal period, which is the unit of the <code>Period</code> parameter. Valid values:</p>
+     * <p>The unit of the subscription period, which is the unit of the <code>Period</code> parameter. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>Week</li>

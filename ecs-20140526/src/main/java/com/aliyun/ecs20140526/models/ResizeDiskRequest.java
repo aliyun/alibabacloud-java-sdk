@@ -14,7 +14,7 @@ public class ResizeDiskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the cloud disk. You can call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query the ID of the cloud disk.</p>
+     * <p>The disk ID. You can call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query the disk ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,29 +24,29 @@ public class ResizeDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The new capacity of the cloud disk. Unit: GiB. Valid values:</p>
+     * <p>The target capacity for the disk scale-out. Unit: GiB. Valid values:</p>
      * <ul>
-     * <li><p>System cloud disk:</p>
+     * <li><p>System disks:</p>
      * <ul>
-     * <li>Basic cloud disk: 20 to 500.</li>
-     * <li>ESSD:<ul>
+     * <li>Basic disks: 20 to 500.</li>
+     * <li>Enterprise SSDs:<ul>
      * <li>PL0: 1 to 2048.</li>
      * <li>PL1: 20 to 2048.</li>
      * <li>PL2: 461 to 2048.</li>
      * <li>PL3: 1261 to 2048.</li>
      * </ul>
      * </li>
-     * <li>ESSD AutoPL disk: 1 to 2048.</li>
-     * <li>Other cloud disk types: 20 to 2048.</li>
+     * <li>ESSD AutoPL disks: 1 to 2048.</li>
+     * <li>Other disk types: 20 to 2048.</li>
      * </ul>
      * </li>
-     * <li><p>Data cloud disk:</p>
+     * <li><p>Data disks:</p>
      * <ul>
-     * <li><p>Ultra cloud disk (cloud_efficiency): 20 to 32768.</p>
+     * <li><p>Ultra disks (cloud_efficiency): 20 to 32768.</p>
      * </li>
-     * <li><p>Standard SSD (cloud_ssd): 20 to 32768.</p>
+     * <li><p>Standard SSDs (cloud_ssd): 20 to 32768.</p>
      * </li>
-     * <li><p>ESSD (cloud_essd): The valid values vary based on the <code>PerformanceLevel</code> parameter. You can call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query the cloud disk information and check the valid values based on the <code>PerformanceLevel</code> parameter in the response.</p>
+     * <li><p>Enterprise SSDs (cloud_essd): The valid values vary based on the <code>PerformanceLevel</code> parameter. You can invoke the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the valid values based on the <code>PerformanceLevel</code> parameter in the response.</p>
      * <ul>
      * <li>PL0: 1 to 65536.</li>
      * <li>PL1: 20 to 65536.</li>
@@ -54,22 +54,22 @@ public class ResizeDiskRequest extends TeaModel {
      * <li>PL3: 1261 to 65536.</li>
      * </ul>
      * </li>
-     * <li><p>Basic cloud disk (cloud): 5 to 2000.</p>
+     * <li><p>Basic disks (cloud): 5 to 2000.</p>
      * </li>
-     * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 65536.
+     * <li><p>ESSD AutoPL disks (cloud_auto): 1 to 65536.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </li>
-     * <li><p>ESSD Entry disk (cloud_essd_entry): 10 to 32768.</p>
+     * <li><p>ESSD Entry disks (cloud_essd_entry): 10 to 32768.</p>
      * </li>
-     * <li><p>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</p>
+     * <li><p>Standard Edition elastic ephemeral disks (elastic_ephemeral_disk_standard): 64 to 8192.</p>
      * </li>
-     * <li><p>Premium elastic ephemeral disk (elastic_ephemeral_disk_premium): 64 to 8192.</p>
+     * <li><p>Premium Edition elastic ephemeral disks (elastic_ephemeral_disk_premium): 64 to 8192.</p>
      * </li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The new capacity must be greater than the original capacity. Otherwise, an error is returned when you call this operation.</p>
+     * <p>The specified new capacity must be greater than the original capacity. Otherwise, an error is returned when you invoke the API operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -92,11 +92,11 @@ public class ResizeDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The method used to resize the cloud disk. Valid values:</p>
+     * <p>The method for disk scale-out. Valid values:</p>
      * <ul>
-     * <li><p>offline: offline resizing. This is the default value. After the cloud disk is resized, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> in the console or call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the resize to take effect.</p>
+     * <li><p>offline (default): offline scale-out. After the scale-out, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> in the console or invoke the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> API operation for the scale-out to take effect.</p>
      * </li>
-     * <li><p>online: online resizing. The cloud disk is resized without the need to restart the instance. This value supports ultra cloud disks, standard SSDs, ESSDs, and elastic ephemeral disks.</p>
+     * <li><p>online: online scale-out. The scale-out is completed without the need to restart the instance. This value is supported for ultra disks, standard SSDs, enterprise SSDs, and elastic ephemeral disks.</p>
      * </li>
      * </ul>
      * 

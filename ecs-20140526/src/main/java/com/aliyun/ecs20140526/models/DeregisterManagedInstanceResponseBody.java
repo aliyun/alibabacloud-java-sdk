@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeregisterManagedInstanceResponseBody extends TeaModel {
     /**
-     * <p>The collection of managed instance information.</p>
+     * <p>The details of the managed instances.</p>
      */
     @NameInMap("Instance")
     public DeregisterManagedInstanceResponseBodyInstance instance;
@@ -51,7 +51,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public String activationId;
 
         /**
-         * <p>The version number of the Cloud Assistant Agent.</p>
+         * <p>The version number of the Cloud Assistant agent.</p>
          * 
          * <strong>example:</strong>
          * <p>2.2.0.102</p>
@@ -69,7 +69,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public String hostname;
 
         /**
-         * <p>The instance ID of the managed instance.</p>
+         * <p>The managed instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mi-hz01axdfas****</p>
@@ -114,7 +114,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public Long invocationCount;
 
         /**
-         * <p>The time when the last Cloud Assistant task was executed. The time follows the ISO 8601 standard and is in the UTC time zone.</p>
+         * <p>The time when the last Cloud Assistant task was executed. The time follows the ISO 8601 standard and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T09:00:40Z</p>
@@ -141,7 +141,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The version information of the operating system.</p>
+         * <p>The version of the operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>Linux_#38~18.04.1-Ubuntu SMP Wed Jan 6 18:26:30 UTC 2021_x86_64</p>
@@ -150,7 +150,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         public String osVersion;
 
         /**
-         * <p>The time when the managed instance was registered. The time follows the ISO 8601 standard and is in the UTC time zone.</p>
+         * <p>The time when the managed instance was registered. The time follows the ISO 8601 standard and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T08:57:56Z</p>

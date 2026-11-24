@@ -15,8 +15,12 @@ public class DescribeManagedInstancesRequest extends TeaModel {
 
     /**
      * <p>Indicates whether the managed instance is connected. Valid values:</p>
-     * <p>true: The managed instance is connected. You can manage the managed instance by using Cloud Assistant.</p>
-     * <p>false: The managed instance is not connected. The server may be stopped or the Cloud Assistant Agent is not properly installed.</p>
+     * <ul>
+     * <li><p>true: The managed instance is connected. You can use Cloud Assistant to manage the managed instance.</p>
+     * </li>
+     * <li><p>false: The managed instance is not connected. The server may be stopped or the Cloud Assistant Agent is not properly installed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -28,7 +32,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
      * <p>The ID of the managed instance. Valid values of N: 1 to 50.</p>
      * 
      * <strong>example:</strong>
-     * <p>mi-hz018jrc1o0****</p>
+     * <p>[&quot;mi-hz018jrc1o0****&quot;]</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -52,7 +56,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The value of the MachineId parameter specified when the managed instance is registered. The value can be up to 36 characters in length.
+     * <p>The value of the MachineId parameter specified when the managed instance was registered. The value can be up to 36 characters in length.
      * Sample registration script:</p>
      * <pre><code>aliyun-service --register \\
      *   --RegionId=cn-hangznou \\
@@ -64,7 +68,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
      * <ul>
      * <li>If the MachineId and ForceResult parameters are specified during registration, Cloud Assistant generates a fixed managed instance ID for the MachineId.</li>
      * <li>If the MachineId parameter is not explicitly specified, Cloud Assistant automatically generates a MachineId value based on the hardware information of the machine.</li>
-     * <li>Recommended: Explicitly specify the MachineId and ForceResult parameters to mark the mapping between the managed instance and the on-premises machine.</li>
+     * <li>Recommendation: Explicitly specify the MachineId and ForceResult parameters to mark the mapping between the managed instance and the on-premises machine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +78,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public String machineId;
 
     /**
-     * <p>The maximum number of entries to return on each page during paging and paged query.</p>
+     * <p>The maximum number of entries per page during paging.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -115,7 +119,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be taken offline. We recommend that you use NextToken and MaxResults for paging and paged query operations.</p>
+     * <p>This parameter will be deprecated. Use NextToken and MaxResults to perform paged query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -126,7 +130,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be taken offline. We recommend that you use NextToken and MaxResults for paging and paged query operations.</p>
+     * <p>This parameter will be deprecated. Use NextToken and MaxResults to perform paged query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -137,7 +141,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
 
     /**
      * <p>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), Hong Kong (China), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to view region IDs and other information.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to view region IDs and other information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -319,7 +323,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public static class DescribeManagedInstancesRequestTag extends TeaModel {
         /**
          * <p>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources attached to multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+         * <p>If you use a single tag to filter resources, the number of returned resources cannot exceed 1,000. If you use multiple tags to filter resources, the number of returned resources that have multiple tags attached cannot exceed 1,000. If the number of resources exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
          * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
