@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetComputeJobResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetComputeJobResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
      */
@@ -22,6 +29,8 @@ public class GetComputeJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,7 @@ public class GetComputeJobResponseBody extends TeaModel {
 
     public static class GetComputeJobResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -76,6 +86,8 @@ public class GetComputeJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The CU limit for the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
@@ -83,6 +95,8 @@ public class GetComputeJobResponseBody extends TeaModel {
         public Double cuLimit;
 
         /**
+         * <p>The reserved CUs for the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -90,6 +104,8 @@ public class GetComputeJobResponseBody extends TeaModel {
         public Double cuReserved;
 
         /**
+         * <p>The used CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.5</p>
          */
@@ -97,6 +113,12 @@ public class GetComputeJobResponseBody extends TeaModel {
         public Double cuUsed;
 
         /**
+         * <p>Indicates whether the job is a debug job. Valid values:</p>
+         * <ul>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -104,6 +126,8 @@ public class GetComputeJobResponseBody extends TeaModel {
         public Integer debugMode;
 
         /**
+         * <p>The currently deployed SQL.</p>
+         * 
          * <strong>example:</strong>
          * <p>INSERT INTO sink_table SELECT * FROM source_table;</p>
          */
@@ -111,6 +135,8 @@ public class GetComputeJobResponseBody extends TeaModel {
         public String deployedSql;
 
         /**
+         * <p>The Flink SQL draft.</p>
+         * 
          * <strong>example:</strong>
          * <p>INSERT INTO sink_table SELECT * FROM source_table;</p>
          */
@@ -118,13 +144,16 @@ public class GetComputeJobResponseBody extends TeaModel {
         public String draftSql;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
-         * <p>SQL 校验或编译失败：Column \&quot;xxx\&quot; not found</p>
+         * <p>SQL validation or compilation failed: Column \&quot;xxx\&quot; not found</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
+         * <p>The expiration time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -134,6 +163,8 @@ public class GetComputeJobResponseBody extends TeaModel {
         public String expirationTime;
 
         /**
+         * <p>The compute instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alikafka_streaming-cn-hangzhou-a1b2c3d4</p>
          */
@@ -141,6 +172,8 @@ public class GetComputeJobResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the compute job.</p>
+         * 
          * <strong>example:</strong>
          * <p>order_enrichment</p>
          */
@@ -148,6 +181,8 @@ public class GetComputeJobResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The owner of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
          */
@@ -155,6 +190,8 @@ public class GetComputeJobResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -162,13 +199,17 @@ public class GetComputeJobResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The remark for the job.</p>
+         * 
          * <strong>example:</strong>
-         * <p>订单流实时清洗</p>
+         * <p>Real-time order stream cleansing</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
+         * <p>The status of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -176,6 +217,8 @@ public class GetComputeJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The startup mode, such as savepoint or stateless.</p>
+         * 
          * <strong>example:</strong>
          * <p>savepoint</p>
          */

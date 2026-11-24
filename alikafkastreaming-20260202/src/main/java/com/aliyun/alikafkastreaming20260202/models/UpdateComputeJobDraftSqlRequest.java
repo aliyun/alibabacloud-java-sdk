@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateComputeJobDraftSqlRequest extends TeaModel {
     /**
+     * <p>The Flink SQL draft.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateComputeJobDraftSqlRequest extends TeaModel {
     public String draftSql;
 
     /**
+     * <p>The compute instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateComputeJobDraftSqlRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the compute job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class UpdateComputeJobDraftSqlRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

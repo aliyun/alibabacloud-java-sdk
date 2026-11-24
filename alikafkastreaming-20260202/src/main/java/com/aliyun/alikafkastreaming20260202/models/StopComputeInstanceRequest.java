@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopComputeInstanceRequest extends TeaModel {
     /**
+     * <p>The compute instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StopComputeInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

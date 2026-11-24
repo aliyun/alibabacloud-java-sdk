@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateComputeJobRequest extends TeaModel {
     /**
+     * <p><strong>The compute instance ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateComputeJobRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p><strong>The compute job name.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateComputeJobRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p><strong>The region ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,8 +35,10 @@ public class UpdateComputeJobRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p><strong>The job remarks.</strong></p>
+     * 
      * <strong>example:</strong>
-     * <p>订单流实时清洗</p>
+     * <p>Real-time order flow cleaning</p>
      */
     @NameInMap("Remark")
     public String remark;

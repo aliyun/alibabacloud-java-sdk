@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckSqlContentRequest extends TeaModel {
     /**
+     * <p>The compute instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CheckSqlContentRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The compute job name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CheckSqlContentRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class CheckSqlContentRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The Flink SQL statement to be validated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

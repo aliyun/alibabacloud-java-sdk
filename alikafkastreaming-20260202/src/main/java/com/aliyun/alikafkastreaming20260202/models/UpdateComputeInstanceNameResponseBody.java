@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateComputeInstanceNameResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateComputeInstanceNameResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class UpdateComputeInstanceNameResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>019F6DD7-A85E-56CF-BF45-BACA73D3FC2F</p>
      */
@@ -26,6 +32,8 @@ public class UpdateComputeInstanceNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

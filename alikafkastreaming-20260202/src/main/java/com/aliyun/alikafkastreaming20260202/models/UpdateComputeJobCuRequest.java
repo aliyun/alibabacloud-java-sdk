@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateComputeJobCuRequest extends TeaModel {
     /**
+     * <p><strong>The CU limit for the job.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,20 @@ public class UpdateComputeJobCuRequest extends TeaModel {
     public Double cuLimit;
 
     /**
+     * <p><strong>The reserved CUs for the job.</strong></p>
+     * <blockquote>
+     * <p>The number of reserved CUs must not exceed the CU limit.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.0</p>
+     * <p>2.0</p>
      */
     @NameInMap("CuReserved")
     public Double cuReserved;
 
     /**
+     * <p><strong>The compute instance ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +38,7 @@ public class UpdateComputeJobCuRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p><strong>The name of the compute job.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +48,7 @@ public class UpdateComputeJobCuRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p><strong>The region ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListComputeJobsRequest extends TeaModel {
     /**
+     * <p>The compute instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListComputeJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The maximum number of jobs to return in the current request. Default value: 10. Maximum value: 1000. If you set this parameter to 0, the default value is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -21,6 +24,8 @@ public class ListComputeJobsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. Do not specify this parameter in the first request. For subsequent requests, use the <code>NextToken</code> value returned in the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjIwfQ==</p>
      */
@@ -28,6 +33,7 @@ public class ListComputeJobsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class ListComputeJobsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The keyword used to search for jobs by name or remark.</p>
+     * 
      * <strong>example:</strong>
      * <p>order</p>
      */
@@ -44,6 +52,8 @@ public class ListComputeJobsRequest extends TeaModel {
     public String search;
 
     /**
+     * <p>The sort direction. The value is not case-sensitive. Valid values: <code>ASC</code> and <code>DESC</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -51,6 +61,8 @@ public class ListComputeJobsRequest extends TeaModel {
     public String sortDirection;
 
     /**
+     * <p>The sort field. Valid values: <code>createTime</code>, <code>cuReserved</code>, <code>cuLimit</code>, <code>cuUsed</code>, <code>status</code>, and <code>jobName</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>createTime</p>
      */

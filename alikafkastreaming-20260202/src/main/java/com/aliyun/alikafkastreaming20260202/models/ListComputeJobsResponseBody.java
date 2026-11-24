@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListComputeJobsResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListComputeJobsResponseBodyData> data;
 
     /**
+     * <p>The maximum number of returned entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjIwfQ==</p>
      */
@@ -29,6 +38,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
      */
@@ -36,6 +47,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +56,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records that match the query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -112,6 +127,7 @@ public class ListComputeJobsResponseBody extends TeaModel {
 
     public static class ListComputeJobsResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -121,6 +137,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The CU limit for the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
@@ -128,6 +146,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
         public Double cuLimit;
 
         /**
+         * <p>The reserved CUs for the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -135,6 +155,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
         public Double cuReserved;
 
         /**
+         * <p>The number of CUs used.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.5</p>
          */
@@ -142,6 +164,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
         public Double cuUsed;
 
         /**
+         * <p>Specifies whether the job is a debug job. Valid values: 0: No. 1: Yes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -149,6 +173,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
         public Integer debugMode;
 
         /**
+         * <p>The compute instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alikafka_streaming-cn-a1b2c3d4</p>
          */
@@ -156,6 +182,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the compute job.</p>
+         * 
          * <strong>example:</strong>
          * <p>order_enrichment</p>
          */
@@ -163,6 +191,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The owner of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
          */
@@ -170,6 +200,8 @@ public class ListComputeJobsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -177,13 +209,17 @@ public class ListComputeJobsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The job remark.</p>
+         * 
          * <strong>example:</strong>
-         * <p>订单流实时清洗</p>
+         * <p>Real-time order stream cleansing</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
+         * <p>The job status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */

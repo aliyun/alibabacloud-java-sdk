@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateComputeInstanceNameRequest extends TeaModel {
     /**
+     * <p>The ID of the compute instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateComputeInstanceNameRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the compute instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateComputeInstanceNameRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

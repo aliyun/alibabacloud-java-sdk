@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateComputeInstanceResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateComputeInstanceResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
      */
@@ -22,6 +29,8 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
 
     public static class CreateComputeInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The compute instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alikafka_streaming-cn-pe333xxxxxx</p>
          */
@@ -74,6 +85,8 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567890</p>
          */

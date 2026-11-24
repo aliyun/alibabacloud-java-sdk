@@ -1,3 +1,6 @@
+2026-11-24 Version: 2.0.2
+- Generated java 2026-02-02 for AlikafkaStreaming.
+
 2026-09-15 Version: 2.0.1
 - Update API GetComputeInstance: add response parameters Body.Data.ResourceGroupId.
 

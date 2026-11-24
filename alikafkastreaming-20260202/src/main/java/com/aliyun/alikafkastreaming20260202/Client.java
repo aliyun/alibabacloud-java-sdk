@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "AlikafkaStreaming";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("alikafkastreaming", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -28,18 +31,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该接口支持通过 GET 或 POST 方法调用。</li>
-     * <li>必须提供 <code>InstanceId</code>、<code>JobName</code> 和 <code>SqlContent</code> 参数，其中 <code>SqlContent</code> 是待校验的 Flink SQL 语句。</li>
-     * <li>返回结果中，<code>Data.Valid</code> 字段指示 SQL 是否通过校验；若未通过，则错误详情位于 <code>Data.ErrorList</code> 中。</li>
-     * <li>当前版本要求同时传入实例 ID (<code>InstanceId</code>) 和作业名称 (<code>JobName</code>) 以构建作业上下文。</li>
-     * <li>接口返回成功仅表示校验流程执行完成，并不直接反映 SQL 的有效性，请检查 <code>Data.Valid</code> 字段来确定 SQL 是否有效。</li>
-     * <li>错误码和异常处理请参考文档中的“错误码”部分。</li>
+     * <li>You can invoke this operation by using the GET or POST method.</li>
+     * <li>You must specify the <code>InstanceId</code>, <code>JobName</code>, and <code>SqlContent</code> parameters. The <code>SqlContent</code> parameter specifies the Flink SQL statement to be validated.</li>
+     * <li>In the response, the <code>Data.Valid</code> field indicates whether the SQL statement passed the validation. If the validation fails, the fault details are returned in the <code>Data.ErrorList</code> field.</li>
+     * <li>The current version requires both the instance ID (<code>InstanceId</code>) and the job name (<code>JobName</code>) to build the job context.</li>
+     * <li>A successful response only indicates that the system starts to execute the validation flow. It does not directly indicate whether the SQL statement is valid. Check the <code>Data.Valid</code> field to determine whether the SQL statement is valid.</li>
+     * <li>For error codes and exception handling, refer to the Error codes section in the References.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>检查sql语法</p>
+     * <p>Validates whether a specified Flink SQL statement complies with the specifications.</p>
      * 
      * @param request CheckSqlContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -83,18 +86,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该接口支持通过 GET 或 POST 方法调用。</li>
-     * <li>必须提供 <code>InstanceId</code>、<code>JobName</code> 和 <code>SqlContent</code> 参数，其中 <code>SqlContent</code> 是待校验的 Flink SQL 语句。</li>
-     * <li>返回结果中，<code>Data.Valid</code> 字段指示 SQL 是否通过校验；若未通过，则错误详情位于 <code>Data.ErrorList</code> 中。</li>
-     * <li>当前版本要求同时传入实例 ID (<code>InstanceId</code>) 和作业名称 (<code>JobName</code>) 以构建作业上下文。</li>
-     * <li>接口返回成功仅表示校验流程执行完成，并不直接反映 SQL 的有效性，请检查 <code>Data.Valid</code> 字段来确定 SQL 是否有效。</li>
-     * <li>错误码和异常处理请参考文档中的“错误码”部分。</li>
+     * <li>You can invoke this operation by using the GET or POST method.</li>
+     * <li>You must specify the <code>InstanceId</code>, <code>JobName</code>, and <code>SqlContent</code> parameters. The <code>SqlContent</code> parameter specifies the Flink SQL statement to be validated.</li>
+     * <li>In the response, the <code>Data.Valid</code> field indicates whether the SQL statement passed the validation. If the validation fails, the fault details are returned in the <code>Data.ErrorList</code> field.</li>
+     * <li>The current version requires both the instance ID (<code>InstanceId</code>) and the job name (<code>JobName</code>) to build the job context.</li>
+     * <li>A successful response only indicates that the system starts to execute the validation flow. It does not directly indicate whether the SQL statement is valid. Check the <code>Data.Valid</code> field to determine whether the SQL statement is valid.</li>
+     * <li>For error codes and exception handling, refer to the Error codes section in the References.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>检查sql语法</p>
+     * <p>Validates whether a specified Flink SQL statement complies with the specifications.</p>
      * 
      * @param request CheckSqlContentRequest
      * @return CheckSqlContentResponse
@@ -106,14 +109,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建一个计算实例。接口只完成购买阶段；创建成功后需调用 StartComputeInstance 完成网络配置和部署。</p>
+     * <p>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</p>
      * <ul>
-     * <li>API 版本：2026-02-02</li>
-     * <li>Action：CreateComputeInstance</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: CreateComputeInstance</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建 流计算实例</p>
+     * <p>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</p>
      * 
      * @param request CreateComputeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -153,14 +156,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建一个计算实例。接口只完成购买阶段；创建成功后需调用 StartComputeInstance 完成网络配置和部署。</p>
+     * <p>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</p>
      * <ul>
-     * <li>API 版本：2026-02-02</li>
-     * <li>Action：CreateComputeInstance</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: CreateComputeInstance</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建 流计算实例</p>
+     * <p>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</p>
      * 
      * @param request CreateComputeInstanceRequest
      * @return CreateComputeInstanceResponse
@@ -172,19 +175,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该API用于在指定的运行中的计算实例上创建一个新的Flink SQL作业。</li>
-     * <li>创建后的作业将处于<code>INIT</code>状态。</li>
-     * <li>用户可以通过设置<code>CuLimit</code>和<code>CuReserved</code>来控制作业的资源使用情况。</li>
-     * <li><code>Remark</code>字段允许用户为作业添加备注信息，便于管理和识别。</li>
-     * <li>确保提供的<code>RegionId</code>、<code>InstanceId</code>以及<code>JobName</code>参数准确无误，否则可能导致请求失败。</li>
-     * <li>如果尝试创建同名作业，则会返回错误提示。</li>
-     * <li>计算实例必须处于运行状态才能成功创建作业。</li>
+     * <li>This API creates a new Flink SQL job on a specified running compute instance.</li>
+     * <li>The created job is in the <code>INIT</code> state.</li>
+     * <li>You can control the resource usage of the job by setting <code>CuLimit</code> and <code>CuReserved</code>.</li>
+     * <li>The <code>Remark</code> field allows you to add remarks to the job for easier management and identification.</li>
+     * <li>Make sure that the <code>RegionId</code>, <code>InstanceId</code>, and <code>JobName</code> parameters are accurate. Otherwise, the request may fail.</li>
+     * <li>If you attempt to create a job with a duplicate name, an error is returned.</li>
+     * <li>The compute instance must be in the running state to successfully create a job.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建 JOB</p>
+     * <p>Creates a Flink SQL job on a running compute instance.</p>
      * 
      * @param request CreateComputeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -236,19 +239,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该API用于在指定的运行中的计算实例上创建一个新的Flink SQL作业。</li>
-     * <li>创建后的作业将处于<code>INIT</code>状态。</li>
-     * <li>用户可以通过设置<code>CuLimit</code>和<code>CuReserved</code>来控制作业的资源使用情况。</li>
-     * <li><code>Remark</code>字段允许用户为作业添加备注信息，便于管理和识别。</li>
-     * <li>确保提供的<code>RegionId</code>、<code>InstanceId</code>以及<code>JobName</code>参数准确无误，否则可能导致请求失败。</li>
-     * <li>如果尝试创建同名作业，则会返回错误提示。</li>
-     * <li>计算实例必须处于运行状态才能成功创建作业。</li>
+     * <li>This API creates a new Flink SQL job on a specified running compute instance.</li>
+     * <li>The created job is in the <code>INIT</code> state.</li>
+     * <li>You can control the resource usage of the job by setting <code>CuLimit</code> and <code>CuReserved</code>.</li>
+     * <li>The <code>Remark</code> field allows you to add remarks to the job for easier management and identification.</li>
+     * <li>Make sure that the <code>RegionId</code>, <code>InstanceId</code>, and <code>JobName</code> parameters are accurate. Otherwise, the request may fail.</li>
+     * <li>If you attempt to create a job with a duplicate name, an error is returned.</li>
+     * <li>The compute instance must be in the running state to successfully create a job.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建 JOB</p>
+     * <p>Creates a Flink SQL job on a running compute instance.</p>
      * 
      * @param request CreateComputeJobRequest
      * @return CreateComputeJobResponse
@@ -260,14 +263,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除处于待部署、已停止或已释放状态的计算实例。</p>
+     * <p>Deletes a compute instance that is in the pending deployment, stopped, or released state.</p>
      * <ul>
-     * <li>API版本：2026-02-02</li>
-     * <li>Action：DeleteComputeInstance</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: DeleteComputeInstance</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>删除实例</p>
+     * <p>Deletes a compute instance that is in the pending deployment, stopped, or released state.</p>
      * 
      * @param request DeleteComputeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -303,14 +306,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除处于待部署、已停止或已释放状态的计算实例。</p>
+     * <p>Deletes a compute instance that is in the pending deployment, stopped, or released state.</p>
      * <ul>
-     * <li>API版本：2026-02-02</li>
-     * <li>Action：DeleteComputeInstance</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: DeleteComputeInstance</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>删除实例</p>
+     * <p>Deletes a compute instance that is in the pending deployment, stopped, or released state.</p>
      * 
      * @param request DeleteComputeInstanceRequest
      * @return DeleteComputeInstanceResponse
@@ -322,17 +325,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于删除一个特定的计算作业。</li>
-     * <li>成功调用此接口仅表示删除请求已被系统接受，并非立即完成删除操作。</li>
-     * <li>确保提供的<code>RegionId</code>、<code>InstanceId</code>以及<code>JobName</code>参数准确无误，否则可能导致请求失败。</li>
-     * <li>如果计算实例或作业处于不允许删除的状态（例如：非运行状态），则会返回相应的错误信息。</li>
-     * <li>删除操作不可逆，请谨慎使用。</li>
+     * <li>This operation deletes a specific compute job.</li>
+     * <li>A successful call to this operation only indicates that the deletion request has been accepted by the system. The deletion is not completed immediately.</li>
+     * <li>Make sure that the <code>RegionId</code>, <code>InstanceId</code>, and <code>JobName</code> parameters are accurate. Otherwise, the request may fail.</li>
+     * <li>If the compute instance or job is in a state that does not allow deletion, such as a non-running state, an error message is returned.</li>
+     * <li>The deletion operation is irreversible. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>删除 JOB</p>
+     * <p>Deletes a specified compute job. A successful request indicates that the deletion request has been accepted.</p>
      * 
      * @param request DeleteComputeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -372,17 +375,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于删除一个特定的计算作业。</li>
-     * <li>成功调用此接口仅表示删除请求已被系统接受，并非立即完成删除操作。</li>
-     * <li>确保提供的<code>RegionId</code>、<code>InstanceId</code>以及<code>JobName</code>参数准确无误，否则可能导致请求失败。</li>
-     * <li>如果计算实例或作业处于不允许删除的状态（例如：非运行状态），则会返回相应的错误信息。</li>
-     * <li>删除操作不可逆，请谨慎使用。</li>
+     * <li>This operation deletes a specific compute job.</li>
+     * <li>A successful call to this operation only indicates that the deletion request has been accepted by the system. The deletion is not completed immediately.</li>
+     * <li>Make sure that the <code>RegionId</code>, <code>InstanceId</code>, and <code>JobName</code> parameters are accurate. Otherwise, the request may fail.</li>
+     * <li>If the compute instance or job is in a state that does not allow deletion, such as a non-running state, an error message is returned.</li>
+     * <li>The deletion operation is irreversible. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>删除 JOB</p>
+     * <p>Deletes a specified compute job. A successful request indicates that the deletion request has been accepted.</p>
      * 
      * @param request DeleteComputeJobRequest
      * @return DeleteComputeJobResponse
@@ -394,7 +397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个实例</p>
+     * <p>Queries the details of a specified compute instance.</p>
      * 
      * @param request GetComputeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -430,7 +433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个实例</p>
+     * <p>Queries the details of a specified compute instance.</p>
      * 
      * @param request GetComputeInstanceRequest
      * @return GetComputeInstanceResponse
@@ -442,17 +445,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本接口用于查询指定计算作业的详情。</li>
-     * <li>支持使用 GET 或 POST 方法进行请求。</li>
-     * <li>所有时间字段以 Unix 时间戳形式返回，单位为毫秒。</li>
-     * <li>必须提供 <code>RegionId</code>、<code>InstanceId</code> 和 <code>JobName</code> 参数。</li>
-     * <li>授权操作为 <code>alikafkastreaming:GetComputeJob</code>，访问级别为读取（Read）。</li>
+     * <li>This operation queries the details of a specified compute job.</li>
+     * <li>You can use the GET or POST method to send requests.</li>
+     * <li>The <code>RegionId</code>, <code>InstanceId</code>, and <code>JobName</code> parameters are required.</li>
+     * <li>The authorization action is <code>alikafkastreaming:GetComputeJob</code>, and the access level is Read.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询 JOB 详情</p>
+     * <p>Queries the details of a compute job in Alikafka Streaming by using a parameter query.</p>
      * 
      * @param request GetComputeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -492,17 +494,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本接口用于查询指定计算作业的详情。</li>
-     * <li>支持使用 GET 或 POST 方法进行请求。</li>
-     * <li>所有时间字段以 Unix 时间戳形式返回，单位为毫秒。</li>
-     * <li>必须提供 <code>RegionId</code>、<code>InstanceId</code> 和 <code>JobName</code> 参数。</li>
-     * <li>授权操作为 <code>alikafkastreaming:GetComputeJob</code>，访问级别为读取（Read）。</li>
+     * <li>This operation queries the details of a specified compute job.</li>
+     * <li>You can use the GET or POST method to send requests.</li>
+     * <li>The <code>RegionId</code>, <code>InstanceId</code>, and <code>JobName</code> parameters are required.</li>
+     * <li>The authorization action is <code>alikafkastreaming:GetComputeJob</code>, and the access level is Read.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询 JOB 详情</p>
+     * <p>Queries the details of a compute job in Alikafka Streaming by using a parameter query.</p>
      * 
      * @param request GetComputeJobRequest
      * @return GetComputeJobResponse
@@ -652,7 +653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例列表（分页）</p>
+     * <p>Queries compute instances under the current account by using paging.</p>
      * 
      * @param tmpReq ListComputeInstancesInPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -706,7 +707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例列表（分页）</p>
+     * <p>Queries compute instances under the current account by using paging.</p>
      * 
      * @param request ListComputeInstancesInPageRequest
      * @return ListComputeInstancesInPageResponse
@@ -718,17 +719,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口支持通过 <code>MaxResults</code> 和 <code>NextToken</code> 参数进行游标分页查询。</li>
-     * <li>首次请求时不需要传递 <code>NextToken</code>，后续请求需使用上一次响应中返回的 <code>NextToken</code> 值。</li>
-     * <li>支持按作业名称或备注搜索，并可选择不同的排序字段和方向。</li>
-     * <li>返回的时间字段均为 Unix 时间戳（单位：毫秒）。</li>
-     * <li>授权操作为 <code>alikafkastreaming:ListComputeJobs</code>，访问级别为列出（List），适用于全部资源。</li>
+     * <li>This operation supports a cursor-based paged query by using the <code>MaxResults</code> and <code>NextToken</code> parameters.</li>
+     * <li>You do not need to specify <code>NextToken</code> in the first request. For subsequent requests, use the <code>NextToken</code> value returned in the previous response.</li>
+     * <li>You can search by job name or remark, and specify different sorting fields and directions.</li>
+     * <li>The authorization action is <code>alikafkastreaming:ListComputeJobs</code>. The access level is List, which applies to all resources.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>分页查询 JOB 列表</p>
+     * <p>Queries all job information under a specified compute instance by using paging.</p>
      * 
      * @param request ListComputeJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -784,17 +784,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口支持通过 <code>MaxResults</code> 和 <code>NextToken</code> 参数进行游标分页查询。</li>
-     * <li>首次请求时不需要传递 <code>NextToken</code>，后续请求需使用上一次响应中返回的 <code>NextToken</code> 值。</li>
-     * <li>支持按作业名称或备注搜索，并可选择不同的排序字段和方向。</li>
-     * <li>返回的时间字段均为 Unix 时间戳（单位：毫秒）。</li>
-     * <li>授权操作为 <code>alikafkastreaming:ListComputeJobs</code>，访问级别为列出（List），适用于全部资源。</li>
+     * <li>This operation supports a cursor-based paged query by using the <code>MaxResults</code> and <code>NextToken</code> parameters.</li>
+     * <li>You do not need to specify <code>NextToken</code> in the first request. For subsequent requests, use the <code>NextToken</code> value returned in the previous response.</li>
+     * <li>You can search by job name or remark, and specify different sorting fields and directions.</li>
+     * <li>The authorization action is <code>alikafkastreaming:ListComputeJobs</code>. The access level is List, which applies to all resources.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>分页查询 JOB 列表</p>
+     * <p>Queries all job information under a specified compute instance by using paging.</p>
      * 
      * @param request ListComputeJobsRequest
      * @return ListComputeJobsResponse
@@ -854,14 +853,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>重新启用一个已停止的后付费计算实例。接口返回成功表示启用请求已受理。</p>
+     * <p>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</p>
      * <ul>
-     * <li>API版本：2026-02-02</li>
-     * <li>Action：ReopenComputeInstance</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: ReopenComputeInstance</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>重新启动后付费实例</p>
+     * <p>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</p>
      * 
      * @param request ReopenComputeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -897,14 +896,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>重新启用一个已停止的后付费计算实例。接口返回成功表示启用请求已受理。</p>
+     * <p>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</p>
      * <ul>
-     * <li>API版本：2026-02-02</li>
-     * <li>Action：ReopenComputeInstance</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: ReopenComputeInstance</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>重新启动后付费实例</p>
+     * <p>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</p>
      * 
      * @param request ReopenComputeInstanceRequest
      * @return ReopenComputeInstanceResponse
@@ -974,14 +973,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>为处于待部署状态的计算实例配置网络并发起部署。</p>
+     * <p>Configures the network and deploys a compute instance in the pending deployment state.</p>
      * <ul>
-     * <li>API 版本：2026-02-02</li>
-     * <li>Action：StartComputeInstance</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: StartComputeInstance</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>部署实例</p>
+     * <p>Configures the network and deploys a compute instance in the pending deployment state.</p>
      * 
      * @param tmpReq StartComputeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1035,14 +1034,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>为处于待部署状态的计算实例配置网络并发起部署。</p>
+     * <p>Configures the network and deploys a compute instance in the pending deployment state.</p>
      * <ul>
-     * <li>API 版本：2026-02-02</li>
-     * <li>Action：StartComputeInstance</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: StartComputeInstance</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>部署实例</p>
+     * <p>Configures the network and deploys a compute instance in the pending deployment state.</p>
      * 
      * @param request StartComputeInstanceRequest
      * @return StartComputeInstanceResponse
@@ -1054,15 +1053,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>RecoveryMode</code> 支持两种模式：<code>savepoint</code> 和 <code>stateless</code>。如果选择 <code>savepoint</code> 模式但没有可用的 savepoint，则会返回错误。</li>
-     * <li><code>CuLimit</code> 和 <code>CuReserved</code> 参数分别用来设定作业的 CU 上限和预留 CU 数量，支持整数或小数形式输入。</li>
-     * <li>确保提供的 <code>RegionId</code>, <code>InstanceId</code>, 和 <code>JobName</code> 参数值正确且存在，否则将导致请求失败。</li>
+     * <li><code>RecoveryMode</code> supports two modes: <code>savepoint</code> and <code>stateless</code>. If you select the <code>savepoint</code> mode but no savepoint is available, an error is returned.</li>
+     * <li>The <code>CuLimit</code> and <code>CuReserved</code> parameters are used to set the CU limit and the number of reserved CUs for the job, respectively. Integers and decimals are supported.</li>
+     * <li>Make sure that the values of the <code>RegionId</code>, <code>InstanceId</code>, and <code>JobName</code> parameters are correct and exist. Otherwise, the request fails.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建 JOB</p>
+     * <p>Starts, resumes, or debugs a compute job.</p>
      * 
      * @param request StartComputeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1118,15 +1117,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>RecoveryMode</code> 支持两种模式：<code>savepoint</code> 和 <code>stateless</code>。如果选择 <code>savepoint</code> 模式但没有可用的 savepoint，则会返回错误。</li>
-     * <li><code>CuLimit</code> 和 <code>CuReserved</code> 参数分别用来设定作业的 CU 上限和预留 CU 数量，支持整数或小数形式输入。</li>
-     * <li>确保提供的 <code>RegionId</code>, <code>InstanceId</code>, 和 <code>JobName</code> 参数值正确且存在，否则将导致请求失败。</li>
+     * <li><code>RecoveryMode</code> supports two modes: <code>savepoint</code> and <code>stateless</code>. If you select the <code>savepoint</code> mode but no savepoint is available, an error is returned.</li>
+     * <li>The <code>CuLimit</code> and <code>CuReserved</code> parameters are used to set the CU limit and the number of reserved CUs for the job, respectively. Integers and decimals are supported.</li>
+     * <li>Make sure that the values of the <code>RegionId</code>, <code>InstanceId</code>, and <code>JobName</code> parameters are correct and exist. Otherwise, the request fails.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建 JOB</p>
+     * <p>Starts, resumes, or debugs a compute job.</p>
      * 
      * @param request StartComputeJobRequest
      * @return StartComputeJobResponse
@@ -1138,14 +1137,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>停止一个正在运行的后付费计算实例。接口返回成功表示停止请求已受理。</p>
+     * <p>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</p>
      * <ul>
-     * <li>API 版本：2026-02-02</li>
-     * <li>Action：StopComputeInstance</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: StopComputeInstance</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>停用/释放后付费实例</p>
+     * <p>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</p>
      * 
      * @param request StopComputeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1181,14 +1180,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>停止一个正在运行的后付费计算实例。接口返回成功表示停止请求已受理。</p>
+     * <p>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</p>
      * <ul>
-     * <li>API 版本：2026-02-02</li>
-     * <li>Action：StopComputeInstance</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: StopComputeInstance</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>停用/释放后付费实例</p>
+     * <p>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</p>
      * 
      * @param request StopComputeInstanceRequest
      * @return StopComputeInstanceResponse
@@ -1200,14 +1199,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于停止指定的计算作业生产或 Debug 运行实例。</li>
-     * <li>接口返回成功表示停止请求已被受理，但并不意味着作业立即停止。</li>
+     * <li>This operation stops the production or debug runtime instance of a specified compute job.</li>
+     * <li>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>停止 JOB</p>
+     * <p>Stops a compute job in a specified region and instance.</p>
      * 
      * @param request StopComputeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1247,14 +1246,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该接口用于停止指定的计算作业生产或 Debug 运行实例。</li>
-     * <li>接口返回成功表示停止请求已被受理，但并不意味着作业立即停止。</li>
+     * <li>This operation stops the production or debug runtime instance of a specified compute job.</li>
+     * <li>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>停止 JOB</p>
+     * <p>Stops a compute job in a specified region and instance.</p>
      * 
      * @param request StopComputeJobRequest
      * @return StopComputeJobResponse
@@ -1266,14 +1265,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>修改计算实例名称。实例需处于部署准备阶段或运行中状态。</p>
+     * <p>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</p>
      * <ul>
-     * <li>API 版本：2026-02-02</li>
-     * <li>Action：UpdateComputeInstanceName</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: UpdateComputeInstanceName</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新实例名称</p>
+     * <p>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</p>
      * 
      * @param request UpdateComputeInstanceNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1313,14 +1312,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>修改计算实例名称。实例需处于部署准备阶段或运行中状态。</p>
+     * <p>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</p>
      * <ul>
-     * <li>API 版本：2026-02-02</li>
-     * <li>Action：UpdateComputeInstanceName</li>
+     * <li>API version: 2026-02-02</li>
+     * <li>Action: UpdateComputeInstanceName</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新实例名称</p>
+     * <p>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</p>
      * 
      * @param request UpdateComputeInstanceNameRequest
      * @return UpdateComputeInstanceNameResponse
@@ -1332,15 +1331,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>确保提供的 <code>InstanceId</code> 和 <code>JobName</code> 是有效的，否则将返回错误。</li>
-     * <li>如果实例状态不在运行中，则不允许执行此操作。</li>
-     * <li>当前作业状态如果为调试任务正在运行或变更中，则不支持修改。</li>
+     * <li>Ensure that the provided <code>InstanceId</code> and <code>JobName</code> are valid. Otherwise, an error is returned.</li>
+     * <li>You cannot execute this operation if the instance is not in the running state.</li>
+     * <li>Modifications are not supported if the current job is running as a debug node or undergoing changes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新 JOB</p>
+     * <p>Modifies the remarks of a specified compute job.</p>
      * 
      * @param request UpdateComputeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1384,15 +1383,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>确保提供的 <code>InstanceId</code> 和 <code>JobName</code> 是有效的，否则将返回错误。</li>
-     * <li>如果实例状态不在运行中，则不允许执行此操作。</li>
-     * <li>当前作业状态如果为调试任务正在运行或变更中，则不支持修改。</li>
+     * <li>Ensure that the provided <code>InstanceId</code> and <code>JobName</code> are valid. Otherwise, an error is returned.</li>
+     * <li>You cannot execute this operation if the instance is not in the running state.</li>
+     * <li>Modifications are not supported if the current job is running as a debug node or undergoing changes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新 JOB</p>
+     * <p>Modifies the remarks of a specified compute job.</p>
      * 
      * @param request UpdateComputeJobRequest
      * @return UpdateComputeJobResponse
@@ -1404,11 +1403,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API允许用户修改特定计算作业的计算单元（CU）上限和预留CU数量。在调用此接口前，请确保提供的<code>InstanceId</code>和<code>JobName</code>正确无误，并且实例处于运行状态。此外，注意检查<code>CuLimit</code>与<code>CuReserved</code>参数的有效性和合理性，避免因超出限制或不符合业务逻辑导致请求失败。</p>
+     * <h2>Request description</h2>
+     * <p>This operation allows you to modify the compute unit (CU) limit and the number of reserved CUs for a specific compute job. Before calling this operation, ensure that the specified <code>InstanceId</code> and <code>JobName</code> are correct and that the instance is in the running state. Additionally, verify the validity and reasonableness of the <code>CuLimit</code> and <code>CuReserved</code> parameters to prevent request failures caused by exceeding limits or violating business logic.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新 JOB 的 CU 配额</p>
+     * <p>Modifies the compute unit (CU) limit and the number of reserved CUs for a specified compute job.</p>
      * 
      * @param request UpdateComputeJobCuRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1456,11 +1455,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API允许用户修改特定计算作业的计算单元（CU）上限和预留CU数量。在调用此接口前，请确保提供的<code>InstanceId</code>和<code>JobName</code>正确无误，并且实例处于运行状态。此外，注意检查<code>CuLimit</code>与<code>CuReserved</code>参数的有效性和合理性，避免因超出限制或不符合业务逻辑导致请求失败。</p>
+     * <h2>Request description</h2>
+     * <p>This operation allows you to modify the compute unit (CU) limit and the number of reserved CUs for a specific compute job. Before calling this operation, ensure that the specified <code>InstanceId</code> and <code>JobName</code> are correct and that the instance is in the running state. Additionally, verify the validity and reasonableness of the <code>CuLimit</code> and <code>CuReserved</code> parameters to prevent request failures caused by exceeding limits or violating business logic.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新 JOB 的 CU 配额</p>
+     * <p>Modifies the compute unit (CU) limit and the number of reserved CUs for a specified compute job.</p>
      * 
      * @param request UpdateComputeJobCuRequest
      * @return UpdateComputeJobCuResponse
@@ -1472,19 +1471,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本接口用于更新特定计算实例下的某个计算作业所保存的Flink SQL草稿内容。请确保提供的<code>InstanceId</code>和<code>JobName</code>准确无误，并且该作业当前状态支持进行SQL修改操作。</p>
+     * <h2>Request description</h2>
+     * <p>This operation updates the Flink SQL draft saved for a specific compute job under a given compute instance. Make sure that the provided <code>InstanceId</code> and <code>JobName</code> are accurate, and the current status of the job supports SQL modification.</p>
      * <ul>
-     * <li><strong>注意事项</strong>：<ul>
-     * <li>确保目标实例处于运行状态。</li>
-     * <li>当前作业状态需允许修改SQL，即作业不应处于调试或变更过程中。</li>
-     * <li><code>DraftSql</code>参数应包含完整的、格式正确的Flink SQL语句。</li>
+     * <li><strong>Precautions</strong>:<ul>
+     * <li>Make sure that the target instance is in the running state.</li>
+     * <li>The current job status must allow SQL modification. The job must not be undergoing debugging or modification.</li>
+     * <li>The <code>DraftSql</code> parameter must contain a complete and correctly formatted Flink SQL statement.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新 JOB 的 SQL</p>
+     * <p>Updates the Flink SQL draft saved for a specified compute job.</p>
      * 
      * @param request UpdateComputeJobDraftSqlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1528,19 +1527,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本接口用于更新特定计算实例下的某个计算作业所保存的Flink SQL草稿内容。请确保提供的<code>InstanceId</code>和<code>JobName</code>准确无误，并且该作业当前状态支持进行SQL修改操作。</p>
+     * <h2>Request description</h2>
+     * <p>This operation updates the Flink SQL draft saved for a specific compute job under a given compute instance. Make sure that the provided <code>InstanceId</code> and <code>JobName</code> are accurate, and the current status of the job supports SQL modification.</p>
      * <ul>
-     * <li><strong>注意事项</strong>：<ul>
-     * <li>确保目标实例处于运行状态。</li>
-     * <li>当前作业状态需允许修改SQL，即作业不应处于调试或变更过程中。</li>
-     * <li><code>DraftSql</code>参数应包含完整的、格式正确的Flink SQL语句。</li>
+     * <li><strong>Precautions</strong>:<ul>
+     * <li>Make sure that the target instance is in the running state.</li>
+     * <li>The current job status must allow SQL modification. The job must not be undergoing debugging or modification.</li>
+     * <li>The <code>DraftSql</code> parameter must contain a complete and correctly formatted Flink SQL statement.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>更新 JOB 的 SQL</p>
+     * <p>Updates the Flink SQL draft saved for a specified compute job.</p>
      * 
      * @param request UpdateComputeJobDraftSqlRequest
      * @return UpdateComputeJobDraftSqlResponse

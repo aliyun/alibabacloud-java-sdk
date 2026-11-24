@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetComputeInstanceResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetComputeInstanceResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>019F5939-507B-57C1-B82C-E55821456FA6</p>
      */
@@ -22,6 +29,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
 
     public static class GetComputeInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The billing method.</p>
+         * 
          * <strong>example:</strong>
          * <p>POST_PAID</p>
          */
@@ -74,6 +85,7 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -83,6 +95,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The total CU limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>4.0</p>
          */
@@ -90,6 +104,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public Double cuLimitSum;
 
         /**
+         * <p>The total number of reserved CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
@@ -97,6 +113,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public Double cuReservedSum;
 
         /**
+         * <p>The total number of used CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.5</p>
          */
@@ -104,6 +122,7 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public Double cuUsedSum;
 
         /**
+         * <p>The expiration time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -113,6 +132,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The compute instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alikafka_streaming-cn-pe333xxxxxx</p>
          */
@@ -120,6 +141,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the compute instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>streaming-prod</p>
          */
@@ -127,6 +150,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -134,6 +159,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aek53bg4tl6fgma</p>
          */
@@ -141,6 +168,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The service status of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -148,6 +177,8 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public String serviceStatus;
 
         /**
+         * <p>The total number of jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -155,16 +186,23 @@ public class GetComputeInstanceResponseBody extends TeaModel {
         public Long totalJobs;
 
         /**
+         * <p>The number of running jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("TotalRunningJobs")
         public Long totalRunningJobs;
 
+        /**
+         * <p>The list of vSwitch IDs.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
+         * <p>VPC ID</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp1abcdefg</p>
          */

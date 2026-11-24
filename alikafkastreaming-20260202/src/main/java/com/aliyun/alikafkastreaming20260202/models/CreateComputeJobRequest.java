@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateComputeJobRequest extends TeaModel {
     /**
+     * <p>The compute unit (CU) limit for the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,20 @@ public class CreateComputeJobRequest extends TeaModel {
     public Double cuLimit;
 
     /**
+     * <p>The reserved compute units (CUs) for the job.</p>
+     * <blockquote>
+     * <p>The reserved CUs must not exceed the CU limit.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.0</p>
+     * <p>2.0</p>
      */
     @NameInMap("CuReserved")
     public Double cuReserved;
 
     /**
+     * <p>The compute instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +38,7 @@ public class CreateComputeJobRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the compute job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +48,7 @@ public class CreateComputeJobRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,8 +58,10 @@ public class CreateComputeJobRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The remarks for the job.</p>
+     * 
      * <strong>example:</strong>
-     * <p>订单流实时清洗</p>
+     * <p>Real-time order stream cleaning</p>
      */
     @NameInMap("Remark")
     public String remark;

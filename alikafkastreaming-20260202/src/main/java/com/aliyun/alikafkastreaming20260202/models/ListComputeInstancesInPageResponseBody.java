@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListComputeInstancesInPageResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,23 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListComputeInstancesInPageResponseBodyData> data;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9079DD86-09F1-5303-A64F-D9089F96BC16</p>
      */
@@ -36,6 +47,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +56,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries that meet the query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -112,6 +127,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
 
     public static class ListComputeInstancesInPageResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether auto-renewal is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -119,6 +136,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public Boolean autoRenewFlag;
 
         /**
+         * <p>The billing method.</p>
+         * 
          * <strong>example:</strong>
          * <p>POST_PAID</p>
          */
@@ -126,6 +145,7 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +155,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The total CU limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>4.0</p>
          */
@@ -142,6 +164,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public Double cuLimitSum;
 
         /**
+         * <p>The total number of reserved CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
@@ -149,6 +173,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public Double cuReservedSum;
 
         /**
+         * <p>The total number of used CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.5</p>
          */
@@ -156,6 +182,7 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public Double cuUsedSum;
 
         /**
+         * <p>The expiration time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +192,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The compute instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alikafka_streaming-cn-xxxxxxx</p>
          */
@@ -172,6 +201,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>streaming-prod</p>
          */
@@ -179,6 +210,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The owner of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
          */
@@ -186,6 +219,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -193,6 +228,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The service status of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -200,6 +237,8 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public String serviceStatus;
 
         /**
+         * <p>The total number of jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -207,16 +246,23 @@ public class ListComputeInstancesInPageResponseBody extends TeaModel {
         public Long totalJobs;
 
         /**
+         * <p>The number of running jobs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("TotalRunningJobs")
         public Long totalRunningJobs;
 
+        /**
+         * <p>The list of vSwitch IDs.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp1abcdefg</p>
          */

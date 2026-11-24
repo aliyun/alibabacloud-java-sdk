@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CheckSqlContentResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CheckSqlContentResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</p>
      */
@@ -22,6 +29,8 @@ public class CheckSqlContentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +76,8 @@ public class CheckSqlContentResponseBody extends TeaModel {
 
     public static class CheckSqlContentResponseBodyDataErrorList extends TeaModel {
         /**
+         * <p>The SQL snippet where the error occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>SELECT FROM source_table</p>
          */
@@ -74,6 +85,8 @@ public class CheckSqlContentResponseBody extends TeaModel {
         public String codeSnippet;
 
         /**
+         * <p>The starting column number of the error.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -81,6 +94,8 @@ public class CheckSqlContentResponseBody extends TeaModel {
         public Integer columnNumber;
 
         /**
+         * <p>The ending column number of the error.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -88,6 +103,8 @@ public class CheckSqlContentResponseBody extends TeaModel {
         public Integer endColumnNumber;
 
         /**
+         * <p>The ending line number of the error.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -95,6 +112,8 @@ public class CheckSqlContentResponseBody extends TeaModel {
         public Integer endLineNumber;
 
         /**
+         * <p>The error type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SYNTAX_ERROR</p>
          */
@@ -102,6 +121,8 @@ public class CheckSqlContentResponseBody extends TeaModel {
         public String errorType;
 
         /**
+         * <p>The starting line number of the error.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -109,6 +130,8 @@ public class CheckSqlContentResponseBody extends TeaModel {
         public Integer lineNumber;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>SQL parse failed near FROM</p>
          */
@@ -179,10 +202,15 @@ public class CheckSqlContentResponseBody extends TeaModel {
     }
 
     public static class CheckSqlContentResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of SQL validation errors.</p>
+         */
         @NameInMap("ErrorList")
         public java.util.List<CheckSqlContentResponseBodyDataErrorList> errorList;
 
         /**
+         * <p>Indicates whether the SQL statement passed the validation.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

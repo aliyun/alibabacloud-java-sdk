@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteComputeJobRequest extends TeaModel {
     /**
+     * <p>The ID of the compute instance, excluding the region name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteComputeJobRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the compute job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteComputeJobRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

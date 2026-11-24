@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartComputeJobRequest extends TeaModel {
     /**
+     * <p>The CU limit for the job. Integers and decimals are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
@@ -12,13 +14,20 @@ public class StartComputeJobRequest extends TeaModel {
     public Double cuLimit;
 
     /**
+     * <p>The number of reserved CUs for the job. Integers and decimals are supported.</p>
+     * <blockquote>
+     * <p>The number of reserved CUs cannot exceed the CU limit.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>1.0</p>
+     * <p>2.0</p>
      */
     @NameInMap("CuReserved")
     public Double cuReserved;
 
     /**
+     * <p><strong>The Flink SQL draft, which must be a self-contained and complete DDL and DML statement.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>CREATE TEMPORARY TABLE src (id BIGINT) WITH (\&quot;connector\&quot; = \&quot;datagen\&quot;); CREATE TEMPORARY TABLE sink (id BIGINT) WITH (\&quot;connector\&quot; = \&quot;print\&quot;); INSERT INTO sink SELECT id FROM src;</p>
      */
@@ -26,6 +35,7 @@ public class StartComputeJobRequest extends TeaModel {
     public String draftSql;
 
     /**
+     * <p><strong>The compute instance ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +45,7 @@ public class StartComputeJobRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p><strong>The name of the compute job.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +55,8 @@ public class StartComputeJobRequest extends TeaModel {
     public String jobName;
 
     /**
+     * <p><strong>The recovery mode, such as savepoint or stateless.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>savepoint</p>
      */
@@ -51,6 +64,7 @@ public class StartComputeJobRequest extends TeaModel {
     public String recoveryMode;
 
     /**
+     * <p><strong>The region ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

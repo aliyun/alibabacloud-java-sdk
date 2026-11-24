@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteComputeInstanceResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteComputeInstanceResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class DeleteComputeInstanceResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2834B42F-FBAD-516B-94FA-95E675A5D6CC</p>
      */
@@ -26,6 +32,8 @@ public class DeleteComputeInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
