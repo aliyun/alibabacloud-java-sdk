@@ -32,7 +32,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public String currentStage;
 
     /**
-     * <p>The task fault information.</p>
+     * <p>The error message of the node fault.</p>
      */
     @NameInMap("error")
     public DescribeTaskInfoResponseBodyError error;
@@ -76,7 +76,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The task execution target.</p>
+     * <p>The execution target of the task.</p>
      */
     @NameInMap("target")
     public DescribeTaskInfoResponseBodyTarget target;
@@ -394,7 +394,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The information about the task stage.</p>
+         * <p>The message of the task stage.</p>
          * 
          * <strong>example:</strong>
          * <p>success to xxxxx</p>
@@ -484,7 +484,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The type of the task execution target.</p>
+         * <p>The object type of the execute target of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster</p>
@@ -517,7 +517,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeTaskInfoResponseBodyTaskResult extends TeaModel {
         /**
-         * <p>The resource operated by the task. For example, if the operated resource during a scale-out is an instance, this value is the instance ID.</p>
+         * <p>The resource operated by the task. For example, if the operated resource during scale-out is an instance, this value is the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxx</p>
@@ -530,7 +530,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
          * <ul>
          * <li><code>success</code>: The scale-out succeeded.</li>
          * <li><code>failed</code>: The scale-out failed.</li>
-         * <li><code>initial</code>: The scale-out is being initialized.</li>
+         * <li><code>initial</code>: The resource is being initialized.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -24,7 +24,7 @@ public class DeployPolicyInstanceRequest extends TeaModel {
     public java.util.List<String> namespaces;
 
     /**
-     * <p>The parameter settings of the current rule instance. For more information about the parameters supported by each policy governance rule and the corresponding metric description, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Container security policy rule library</a>.</p>
+     * <p>The parameter settings of the current rule instance. For more information about the parameters supported by each policy governance rule and the corresponding metric descriptions, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Container security policy rule library</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{   &quot;repos&quot;: [     &quot;registry-vpc.cn-hangzhou.aliyuncs.com/acs/&quot;,     &quot;registry.cn-hangzhou.aliyuncs.com/acs/&quot;   ] }</p>

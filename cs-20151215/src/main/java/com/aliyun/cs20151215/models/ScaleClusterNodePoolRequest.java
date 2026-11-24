@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScaleClusterNodePoolRequest extends TeaModel {
     /**
-     * <p>The number of nodes to add. For example, if the node pool currently has 2 nodes and you add 2 more, the total number of nodes becomes 4. Subject to the node quota limit of the current cluster, you can add a maximum of 500 nodes in a single operation.</p>
+     * <p>The number of nodes to add. For example, if the node pool currently has two nodes and you add two more, the total number of nodes becomes four. You can add a maximum of 500 nodes in a single operation due to the node quota limit of the current cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

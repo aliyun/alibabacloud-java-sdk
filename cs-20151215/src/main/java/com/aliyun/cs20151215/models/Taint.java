@@ -7,11 +7,11 @@ public class Taint extends TeaModel {
     /**
      * <p>The scheduling policy. Valid values:</p>
      * <ul>
-     * <li><p><code>NoSchedule</code>: Not tolerated. This affects only the scheduling process. Already scheduled pods are not affected. This applies only to newly added pods.</p>
+     * <li><p><code>NoSchedule</code>: Not tolerated. It affects only the scheduling process and applies only to newly added pods. Already scheduled pods are not affected.</p>
      * </li>
-     * <li><p><code>NoExecute</code>: Not tolerated. When the taint changes, the pod is evicted.</p>
+     * <li><p><code>NoExecute</code>: Not tolerated. Pods are evicted when the taint changes.</p>
      * </li>
-     * <li><p><code>PreferNoSchedule</code>: Soft constraint. Existing pods on the node are not affected. The scheduler tries to avoid scheduling pods that do not tolerate the taint to the node.</p>
+     * <li><p><code>PreferNoSchedule</code>: Soft constraint. Existing pods on the node are not affected. The system tries to avoid scheduling pods that do not meet the requirements to the node.</p>
      * </li>
      * </ul>
      * <p>Default value: <code>NoSchedule</code>.</p>

@@ -71,7 +71,8 @@ public class GetKubernetesTriggerResponse extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The trigger project name. It consists of the namespace and name of the application, in the <code>${namespace}/${name}</code> format. Example: default/test-app.</p>
+         * <p>The trigger project name.</p>
+         * <p>It consists of the namespace and application name, in the format of <code>${namespace}/${name}</code>. Example: default/test-app.</p>
          * 
          * <strong>example:</strong>
          * <p>default/test-app</p>
@@ -80,11 +81,12 @@ public class GetKubernetesTriggerResponse extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The trigger type. Valid values:</p>
+         * <p>The trigger type.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>deployment</code>: the trigger for stateless applications. </p>
+         * <li><p><code>deployment</code>: The trigger for stateless applications. </p>
          * </li>
-         * <li><p><code>application</code>: the trigger for applications in the Hybrid Cloud Application Center.</p>
+         * <li><p><code>application</code>: The trigger for applications in the Application Center.</p>
          * </li>
          * </ul>
          * <p>Default value: <code>deployment</code>.</p>
@@ -97,7 +99,7 @@ public class GetKubernetesTriggerResponse extends TeaModel {
 
         /**
          * <p>The trigger action. Valid values:</p>
-         * <p><code>redeploy</code>: redeploys the resources defined in project_id.</p>
+         * <p><code>redeploy</code>: Redeploys the resources defined in project_id.</p>
          * 
          * <strong>example:</strong>
          * <p>redeploy</p>

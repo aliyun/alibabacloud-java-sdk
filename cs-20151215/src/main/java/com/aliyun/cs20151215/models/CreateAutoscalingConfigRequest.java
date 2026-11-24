@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAutoscalingConfigRequest extends TeaModel {
     /**
-     * <p>The scale-in trigger delay, which is the time interval between when a scale-in need is detected (the scale-in threshold is reached) and when the scale-in operation (reducing the number of Pods) is actually performed.</p>
-     * <p>Valid values: [1,60]. Unit: minutes.</p>
-     * <p>Default value: 10.</p>
+     * <p>The delay for triggering scale-in. This is the time interval between detecting a scale-in requirement (reaching the scale-in threshold) and actually executing the scale-in operation (reducing the number of pods). Valid values: 1 to 60. Unit: minutes. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -16,10 +14,10 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public String coolDownDuration;
 
     /**
-     * <p>Specifies whether cluster-autoscaler evicts DaemonSet Pods on a node during scale-in. Valid values:</p>
+     * <p>Specifies whether cluster-autoscaler evicts DaemonSet pods on nodes during scale-in. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Eviction is performed.</li>
-     * <li><code>false</code>: Eviction is not performed.</li>
+     * <li>true: The pods are evicted.</li>
+     * <li>false: The pods are not evicted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,9 +29,9 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     /**
      * <p>The node pool scale-out order policy. Valid values:</p>
      * <ul>
-     * <li><code>least-waste</code>: The default policy. If multiple node pools are available for scale-out, the node pool with the least resource waste is selected.</li>
-     * <li><code>random</code>: The random policy. If multiple node pools are available for scale-out, a node pool is randomly selected.</li>
-     * <li><code>priority</code>: The priority policy. If multiple node pools are available for scale-out, the node pool with the highest priority based on your custom scaling group order is selected. Node pool priorities are defined by the <code>priorities</code> parameter.</li>
+     * <li>least-waste: the default policy. If multiple node pools can be scaled out, the system selects the node pool that wastes the least resources.</li>
+     * <li>random: the random policy. If multiple node pools can be scaled out, the system randomly selects a node pool.</li>
+     * <li>priority: the priority policy. If multiple node pools can be scaled out, the system selects the node pool with the highest priority based on the custom scaling group order. The node pool priority is defined by the priorities parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,10 +41,7 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public String expander;
 
     /**
-     * <p>The GPU scale-in threshold, which is the ratio of requested resources to total resources on a node.</p>
-     * <p>A GPU node can be scaled in only when this ratio falls below the configured threshold, meaning the CPU, memory, and GPU resource utilization of the node are all below the GPU scale-in threshold.</p>
-     * <p>Valid values: [0.1~1].</p>
-     * <p>Default value: 0.3, which indicates 30%.</p>
+     * <p>The GPU scale-in threshold, which is the ratio of requested resources to total resources on a node. A GPU node can be scaled in only when this ratio is lower than the configured threshold, meaning that the CPU, memory, and GPU utilization of the node are all lower than the GPU scale-in threshold. Valid values: 0.1 to 1. Default value: 0.3, which indicates 30%.</p>
      * 
      * <strong>example:</strong>
      * <p>0.3</p>
@@ -55,9 +50,7 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public String gpuUtilizationThreshold;
 
     /**
-     * <p>The timeout period for cluster-autoscaler to wait for Pod termination during node draining in a scale-in scenario.</p>
-     * <p>Unit: seconds.</p>
-     * <p>Default value: 14400.</p>
+     * <p>The timeout period for cluster-autoscaler to wait for pod termination during node draining in a scale-in scenario. Unit: seconds. Default value: 14400.</p>
      * 
      * <strong>example:</strong>
      * <p>14400</p>
@@ -66,8 +59,7 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public Integer maxGracefulTerminationSec;
 
     /**
-     * <p>The minimum number of Pods allowed in each ReplicaSet before a node can be scaled in.</p>
-     * <p>Default value: 0.</p>
+     * <p>The minimum number of pods allowed in each ReplicaSet before a node is scaled in. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -76,17 +68,16 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public Integer minReplicaCount;
 
     /**
-     * <p>The priority configuration for auto scaling. After you create a node pool with elastic scaling enabled, you can configure priority policies and priority settings for the scaling groups of specified auto scaling node pools by using <a href="https://help.aliyun.com/document_detail/119099.html">Enable node auto scaling</a>.</p>
-     * <p>Valid values: [1, 100]. The value must be a positive integer. A larger value indicates a higher priority.</p>
+     * <p>The auto scaling priority configuration. After you create a node pool with auto scaling enabled, you can choose whether to configure the priority policy and priority configuration by referring to <a href="https://help.aliyun.com/document_detail/119099.html">Enable auto scaling for nodes</a>. This allows you to configure priorities for the scaling groups of specified auto scaling node pools. Valid values: 1 to 100. The value must be a positive integer. A larger value indicates a higher priority.</p>
      */
     @NameInMap("priorities")
     public java.util.Map<String, java.util.List<String>> priorities;
 
     /**
-     * <p>Specifies whether to delete the corresponding Kubernetes Node object after a node in rapid mode is successfully scaled in. For more information about rapid mode, see <a href="https://help.aliyun.com/document_detail/119099.html">Scaling modes</a>. Default value: false. Valid values:</p>
+     * <p>Specifies whether to delete the corresponding Kubernetes node objects after nodes are successfully scaled in fast mode. For more information about fast mode, see <a href="https://help.aliyun.com/document_detail/119099.html">Scaling modes</a>. Default value: false. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The Kubernetes Node object is deleted after the node in rapid mode is stopped. Setting this parameter to true is not recommended because it may cause data inconsistency in Kubernetes objects.</li>
-     * <li><code>false</code>: The Kubernetes Node object is retained after the node in rapid mode is stopped.</li>
+     * <li>true: Kubernetes node objects are also deleted after nodes are stopped in fast mode. Do not set this parameter to true because it may cause data inconsistency of Kubernetes objects.</li>
+     * <li>false: Kubernetes node objects are retained after nodes are stopped in fast mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,8 +89,8 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow node scale-in. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Scale-in is allowed.</li>
-     * <li><code>false</code>: Scale-in is prohibited.</li>
+     * <li>true: Scale-in is allowed.</li>
+     * <li>false: Scale-in is prohibited.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,10 +100,10 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public Boolean scaleDownEnabled;
 
     /**
-     * <p>Specifies whether cluster-autoscaler performs scale-out when the number of Ready nodes in the cluster is 0. Default value: true. Valid values:</p>
+     * <p>Specifies whether cluster-autoscaler performs scale-out when the number of ready nodes in the cluster is 0. Default value: true. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Scale-out is performed.</li>
-     * <li><code>false</code>: Scale-out is not performed.</li>
+     * <li>true: Scale-out is performed.</li>
+     * <li>false: Scale-out is not performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,12 +113,10 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public Boolean scaleUpFromZero;
 
     /**
-     * <p>The elastic component type. For clusters running version 1.24 or later, the default value is goatscaler. For earlier versions, the default value is cluster-autoscaler. Valid values:</p>
+     * <p>The auto scaling component type. For clusters of version 1.24 and later, the default value is goatscaler. For clusters of earlier versions, the default value is cluster-autoscaler. Valid values:</p>
      * <ul>
-     * <li><p><code>goatscaler</code>: Instant scaling.</p>
-     * </li>
-     * <li><p><code>cluster-autoscaler</code>: Auto scaling.</p>
-     * </li>
+     * <li>goatscaler: instant elasticity.</li>
+     * <li>cluster-autoscaler: auto scaling.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -137,9 +126,7 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public String scalerType;
 
     /**
-     * <p>The scaling sensitivity, which adjusts the interval for the system to evaluate scaling decisions.</p>
-     * <p>Valid values: 15, 30, 60, 120, 180, 300. Unit: seconds.</p>
-     * <p>Default value: 60.</p>
+     * <p>The auto scaling sensitivity, which is used to adjust the interval at which the system evaluates scaling. Valid values: 15, 30, 60, 120, 180, and 300. Unit: seconds. Default value: 60.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -148,10 +135,10 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public String scanInterval;
 
     /**
-     * <p>Specifies whether cluster-autoscaler skips scale-in for nodes that run Pods with local storage (such as EmptyDir or HostPath). Valid values:</p>
+     * <p>Specifies whether cluster-autoscaler scales in nodes that contain pods with local storage, such as EmptyDir or HostPath. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Scale-in is skipped.</li>
-     * <li><code>false</code>: Scale-in is performed.</li>
+     * <li>true: The nodes are not scaled in.</li>
+     * <li>false: The nodes are scaled in.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,10 +148,10 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public Boolean skipNodesWithLocalStorage;
 
     /**
-     * <p>Specifies whether cluster-autoscaler skips scale-in for nodes that run Pods in the kube-system namespace. This feature does not apply to DaemonSet Pods or Mirror Pods. Valid values:</p>
+     * <p>Specifies whether cluster-autoscaler scales in nodes that run pods in the kube-system namespace. This feature does not take effect for DaemonSet pods and mirror pods. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Scale-in is skipped.</li>
-     * <li><code>false</code>: Scale-in is performed.</li>
+     * <li>true: The nodes are not scaled in.</li>
+     * <li>false: The nodes are scaled in.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -174,9 +161,7 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public Boolean skipNodesWithSystemPods;
 
     /**
-     * <p>The cool-down period. The time interval after the most recent scale-out event during which the elastic component does not perform scale-in operations. A node that is scaled out can be considered for scale-in only after the cool-down period elapses.</p>
-     * <p>Valid values: [1,60]. Unit: minutes.</p>
-     * <p>Default value: 10.</p>
+     * <p>The cool-down period. This is the time interval during which the auto scaling component does not perform scale-in after the most recent scale-out is completed. Scaled-out nodes can be evaluated for scale-in only after the cool-down period ends. Valid values: 1 to 60. Unit: minutes. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -185,10 +170,7 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     public String unneededDuration;
 
     /**
-     * <p>The scale-in threshold, which is the ratio of requested resources to total resources on a node.</p>
-     * <p>A node can be scaled in only when this ratio falls below the configured threshold, meaning both the CPU and memory resources utilization of the node are below the scale-in threshold.</p>
-     * <p>Valid values: [0.1~1].</p>
-     * <p>Default value: 0.5, which indicates 50%.</p>
+     * <p>The scale-in threshold, which is the ratio of requested resources to total resources on a node. A node can be scaled in only when this ratio is lower than the configured threshold, meaning that the utilization of both CPU and memory resources on the node is lower than the scale-in threshold. Valid values: 0.1 to 1. Default value: 0.5, which indicates 50%.</p>
      * 
      * <strong>example:</strong>
      * <p>0.5</p>

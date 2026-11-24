@@ -188,7 +188,7 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The inspection report summary.</p>
+         * <p>The summary of the inspection report.</p>
          */
         @NameInMap("summary")
         public ListClusterInspectReportsResponseBodyReportsSummary summary;

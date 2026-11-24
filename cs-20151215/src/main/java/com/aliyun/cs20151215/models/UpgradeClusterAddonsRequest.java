@@ -25,7 +25,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
 
     public static class UpgradeClusterAddonsRequestBody extends TeaModel {
         /**
-         * <p>The component name.</p>
+         * <p>The name of the add-on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String componentName;
 
         /**
-         * <p>The custom component parameters, encoded as a JSON string.</p>
+         * <p>The custom parameters of the add-on, encoded as a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;CpuRequest&quot;:&quot;800m&quot;}</p>
@@ -44,7 +44,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String config;
 
         /**
-         * <p>The target version to upgrade to. You can call the <code>DescribeAddon</code> operation to query the upgradable versions of a component.</p>
+         * <p>The target version to which the add-on is upgraded. You can call the DescribeAddon operation to view the upgradable versions of the add-on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,10 +54,10 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String nextVersion;
 
         /**
-         * <p>The component upgrade policy. Valid values:</p>
+         * <p>The upgrade policy for the add-on. Valid values:</p>
          * <ul>
-         * <li>overwrite: overwrite upgrade.</li>
-         * <li>canary: canary upgrade.</li>
+         * <li>overwrite: Overwrite.</li>
+         * <li>canary: Canary.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The current component version.</p>
+         * <p>The current version of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>v1.11.3.2-f57ea7ed6-aliyun</p>

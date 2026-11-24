@@ -57,7 +57,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -101,8 +101,8 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
          * <p>Specifies whether the content is consistent with the default cluster role template.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: The content is consistent with the default cluster role template.</li>
-         * <li>false: The content is inconsistent with the default cluster role template.</li>
+         * <li>true: Consistent.</li>
+         * <li>false: Inconsistent.</li>
          * </ul>
          */
         @NameInMap("is_default_template")
@@ -203,7 +203,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The account state.</p>
+         * <p>The account status.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Active: The account is active.</li>
@@ -233,7 +233,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The expiration time of the KubeConfig client certificate. The time is displayed in ISO 8601 format and includes time zone information.</p>
+         * <p>The expiration time of the KubeConfig client certificate. The time is in ISO 8601 format and includes time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2027-07-15T01:32:20Z</p>
@@ -242,12 +242,12 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String certExpireTime;
 
         /**
-         * <p>The state of the KubeConfig client certificate.</p>
+         * <p>The status of the KubeConfig client certificate.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Unexpired: The certificate is not expired.</li>
-         * <li>Expired: The certificate is expired.</li>
-         * <li>Unknown: The certificate state is unknown (abnormal state).</li>
+         * <li>Unexpired: The certificate has not expired.</li>
+         * <li>Expired: The certificate has expired.</li>
+         * <li>Unknown: The status is unknown, which indicates an exception.</li>
          * </ul>
          * 
          * <strong>example:</strong>

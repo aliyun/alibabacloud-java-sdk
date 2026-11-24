@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterChecksRequest extends TeaModel {
     /**
-     * <p>Filters specific check objects.</p>
+     * <p>Filters the specified check objects.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp19ay6nnvd4cexxxx</p>
@@ -16,14 +16,10 @@ public class ListClusterChecksRequest extends TeaModel {
     /**
      * <p>The check type. Valid values:</p>
      * <ul>
-     * <li><p>ClusterMigrate: cluster migration</p>
-     * </li>
-     * <li><p>MasterUpgrade: cluster control plane upgrade</p>
-     * </li>
-     * <li><p>NodePoolUpgrade: node pool upgrade</p>
-     * </li>
-     * <li><p>ClusterUpgrade: cluster upgrade</p>
-     * </li>
+     * <li>ClusterMigrate: cluster migration</li>
+     * <li>MasterUpgrade: cluster control plane upgrade</li>
+     * <li>NodePoolUpgrade: node pool upgrade</li>
+     * <li>ClusterUpgrade: cluster upgrade</li>
      * </ul>
      * 
      * <strong>example:</strong>

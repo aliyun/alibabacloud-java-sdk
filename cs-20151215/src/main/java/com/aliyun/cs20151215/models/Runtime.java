@@ -20,7 +20,7 @@ public class Runtime extends TeaModel {
     public String name;
 
     /**
-     * <p>The container runtime version. By default, the latest version is used. For more information about the release notes, see <a href="https://help.aliyun.com/document_detail/207829.html">Container runtime release notes</a>.</p>
+     * <p>The container runtime version. Default value: the latest version. For more information, see <a href="https://help.aliyun.com/document_detail/207829.html">Runtime release notes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1.6.20</p>

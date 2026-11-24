@@ -14,8 +14,7 @@ public class CreateTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the template. </p>
-     * <p>Naming rules: The name must be 1 to 63 characters in length, and can contain digits, Chinese characters, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+     * <p>The name of the template. The name must be 1 to 63 characters in length and can contain digits, Chinese characters, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,14 +43,14 @@ public class CreateTemplateRequest extends TeaModel {
     public String template;
 
     /**
-     * <p>The templatetype.</p>
+     * <p>The template type.</p>
      * <ul>
-     * <li><p>If you set this parameter to <code>kubernetes</code>, the template is displayed on the Orchestration Templates page in the console.</p>
+     * <li><p>If the value is <code>kubernetes</code>, the template is displayed on the Orchestration Templates page in the console.</p>
      * </li>
-     * <li><p>If you do not specify this parameter or set it to another value, the template is not displayed on the Orchestration Templates page in the console.</p>
+     * <li><p>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
      * </li>
      * </ul>
-     * <p>Recommended Settings: <code>kubernetes</code>.</p>
+     * <p>Set this parameter to <code>kubernetes</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>kubernetes</p>

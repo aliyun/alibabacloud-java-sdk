@@ -5,43 +5,55 @@ import com.aliyun.tea.*;
 
 public class ContainerdConfig extends TeaModel {
     /**
-     * <p>Whether to ignore volumes defined in the image.</p>
+     * <p>The configuration to ignore volumes defined in the image.</p>
      */
     @NameInMap("ignoreImageDefinedVolume")
     public Boolean ignoreImageDefinedVolume;
 
     /**
-     * <p>A list of insecure registries that skip TLS certificate verification.</p>
+     * <p>The registries that skip certificate verification.</p>
      */
     @NameInMap("insecureRegistries")
     public java.util.List<String> insecureRegistries;
 
     /**
-     * <p>Maximum core dump size in bytes.</p>
+     * <p>The core dump size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("limitCore")
     public Long limitCore;
 
     /**
-     * <p>Maximum locked memory in bytes.</p>
+     * <p>The maximum memory lock limit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65536</p>
      */
     @NameInMap("limitMemLock")
     public Long limitMemLock;
 
     /**
-     * <p>Maximum number of open file handles.</p>
+     * <p>The maximum number of file handles.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1048576</p>
      */
     @NameInMap("limitNoFile")
     public Long limitNoFile;
 
     /**
-     * <p>The maximum number of concurrent image layer downloads.</p>
+     * <p>The maximum number of concurrent downloads.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("maxConcurrentDownloads")
     public Long maxConcurrentDownloads;
 
     /**
-     * <p>A list of registry mirrors to accelerate image pulls.</p>
+     * <p>The registry mirror configuration.</p>
      */
     @NameInMap("registryMirrors")
     public java.util.List<String> registryMirrors;

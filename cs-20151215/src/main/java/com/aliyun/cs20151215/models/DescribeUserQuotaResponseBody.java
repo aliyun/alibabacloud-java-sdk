@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserQuotaResponseBody extends TeaModel {
     /**
-     * <p>The managed cluster quota. Default value: 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
+     * <p>The quota for managed clusters. The default value is 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     public Long amkClusterQuota;
 
     /**
-     * <p>The ASK cluster quota. Default value: 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
+     * <p>The quota for ASK clusters. The default value is 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -23,7 +23,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     public Long askClusterQuota;
 
     /**
-     * <p>The node pool quota per cluster. Default value: 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
+     * <p>The node pool quota per cluster. The default value is 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     public Long clusterNodepoolQuota;
 
     /**
-     * <p>The total cluster quota per account. Default value: 50. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
+     * <p>The total cluster quota per account. The default value is 50. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -44,7 +44,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     public DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota;
 
     /**
-     * <p>The node quota per cluster. Default value: 100. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
+     * <p>The node quota per cluster. The default value is 100. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

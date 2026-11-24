@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateClusterRequest extends TeaModel {
     /**
-     * <p>The bucket endpoint.</p>
+     * <p>The access endpoint of the bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>*******.oss-cn-hangzhou.aliyuncs.com</p>
@@ -14,7 +14,7 @@ public class MigrateClusterRequest extends TeaModel {
     public String ossBucketEndpoint;
 
     /**
-     * <p>The bucket name.</p>
+     * <p>The name of the bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>bucket-****</p>

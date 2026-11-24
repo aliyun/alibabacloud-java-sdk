@@ -23,7 +23,7 @@ public class UpdateControlPlaneLogRequest extends TeaModel {
     public java.util.List<String> components;
 
     /**
-     * <p>The name of the SLS project where control plane component logs are stored.</p>
+     * <p>The name of the Simple Log Service (SLS) project where the control plane component logs are stored.</p>
      * <p>Default value: k8s-log-$ClusterId.</p>
      * 
      * <strong>example:</strong>

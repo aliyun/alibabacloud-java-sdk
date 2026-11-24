@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatesRequest extends TeaModel {
     /**
-     * <p>The page number of the returned results.</p>
+     * <p>The page number of the returned page. </p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeTemplatesRequest extends TeaModel {
     public Long pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries to return on each page. </p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -25,14 +25,14 @@ public class DescribeTemplatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The templatetype. Valid values:</p>
+     * <p>The templatetype. </p>
      * <ul>
      * <li><p><code>kubernetes</code>: The template is displayed on the Orchestration Templates page in the console.</p>
      * </li>
-     * <li><p>If this parameter is left empty or set to other values: The template is not displayed on the Orchestration Templates page in the console.</p>
+     * <li><p>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
      * </li>
      * </ul>
-     * <p>Recommended settings: <code>kubernetes</code>.</p>
+     * <p>Recommended Settings: <code>kubernetes</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>kubernetes</p>

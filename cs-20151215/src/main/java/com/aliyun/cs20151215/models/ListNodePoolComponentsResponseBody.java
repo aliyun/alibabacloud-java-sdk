@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNodePoolComponentsResponseBody extends TeaModel {
     /**
-     * <p>The node components.</p>
+     * <p>The list of node components.</p>
      */
     @NameInMap("components")
     public java.util.List<ListNodePoolComponentsResponseBodyComponents> components;
 
     /**
-     * <p>The maximum number of results per page. Default value: 200.</p>
+     * <p>The maximum number of results to return. Default value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class ListNodePoolComponentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The next token for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>5c0a1c0f91c14c6****</p>
@@ -59,7 +59,7 @@ public class ListNodePoolComponentsResponseBody extends TeaModel {
 
     public static class ListNodePoolComponentsResponseBodyComponents extends TeaModel {
         /**
-         * <p>The parameter schema of the node component, including custom parameters and system parameters.</p>
+         * <p>The configuration schema of the node component, including custom parameters and system parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;$schema\&quot;: \&quot;\&quot;,\&quot;properties\&quot;: {}&quot;</p>

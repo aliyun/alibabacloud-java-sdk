@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterNodesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically drain pods from the nodes. Valid values:</p>
+     * <p>Specifies whether to automatically drain the pods on the node. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Automatically drains pods from the nodes.</li>
-     * <li><code>false</code>: Does not automatically drain pods from the nodes.</li>
+     * <li><code>true</code>: Automatically drains the pods on the node.</li>
+     * <li><code>false</code>: Does not automatically drain the pods on the node.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -37,12 +37,12 @@ public class DeleteClusterNodesRequest extends TeaModel {
     /**
      * <p>Specifies whether to release the associated ECS instances. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Releases the associated ECS instances.</li>
-     * <li><code>false</code>: Retains the associated ECS instances.</li>
+     * <li><code>true</code>: Releases the ECS instances.</li>
+     * <li><code>false</code>: Retains the ECS instances.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * <blockquote>
-     * <p>When a node is a subscription instance, you cannot release the associated ECS instance.</p>
+     * <p>You cannot release the ECS instance if the node is a subscription instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

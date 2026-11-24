@@ -25,9 +25,9 @@ public class GrantPermissionsRequest extends TeaModel {
 
     public static class GrantPermissionsRequestBody extends TeaModel {
         /**
-         * <p>The ID of the target cluster for authorization.</p>
+         * <p>The ID of the target cluster.</p>
          * <ul>
-         * <li>If the <code>role_type</code> parameter is set to <code>all-clusters</code>, set this parameter to an empty string.</li>
+         * <li>If the value of the <code>role_type</code> parameter is <code>all-clusters</code>, set this parameter to an empty string.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -38,7 +38,7 @@ public class GrantPermissionsRequest extends TeaModel {
         public String cluster;
 
         /**
-         * <p>Specifies whether the authorization is a custom authorization (the <code>role_name</code> parameter uses a custom ClusterRole name).</p>
+         * <p>Specifies whether the authorization is custom. For custom authorizations, the <code>role_name</code> parameter uses a custom ClusterRole name.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -78,8 +78,8 @@ public class GrantPermissionsRequest extends TeaModel {
          * <p>Notice: </p>
          * </blockquote>
          * <ul>
-         * <li><code>admin</code>, <code>admin-view</code>, <code>ops</code>: cannot be granted at the namespace level.</li>
-         * <li><code>admin-view</code>: cannot be granted at the all-clusters level.</li>
+         * <li><code>admin</code>, <code>admin-view</code>, and <code>ops</code>: Namespace-level authorization is not supported.</li>
+         * <li><code>admin-view</code>: Cluster-wide authorization is currently not supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -94,7 +94,7 @@ public class GrantPermissionsRequest extends TeaModel {
          * <ul>
          * <li><code>cluster</code>: cluster level.</li>
          * <li><code>namespace</code>: namespace level.</li>
-         * <li><code>all-clusters</code>: all-clusters level.</li>
+         * <li><code>all-clusters</code>: all clusters.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

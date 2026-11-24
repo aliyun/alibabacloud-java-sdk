@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Tag extends TeaModel {
     /**
-     * <p>The tag <code>key</code>.</p>
+     * <p>The tag key.</p>
      * 
      * <strong>example:</strong>
      * <p>env</p>
@@ -14,7 +14,7 @@ public class Tag extends TeaModel {
     public String key;
 
     /**
-     * <p>The tag <code>value</code>.</p>
+     * <p>The tag value.</p>
      * 
      * <strong>example:</strong>
      * <p>prod</p>

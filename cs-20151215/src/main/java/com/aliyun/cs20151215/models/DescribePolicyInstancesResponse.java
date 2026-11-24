@@ -116,9 +116,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String policySeverity;
 
         /**
-         * <p>The enforcement scope of the policy instance.</p>
-         * <p>A value of &quot;*&quot; indicates all namespaces in the cluster.</p>
-         * <p>Otherwise, the names of the target namespaces are returned, separated by commas (,).</p>
+         * <p>The enforcement scope of the policy instance. A value of &quot;*&quot; indicates all namespaces in the cluster. Otherwise, the names of the target namespaces are returned, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -174,7 +172,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String resourceId;
 
         /**
-         * <p><strong>[Deprecated]</strong> The number of processed violations in the cluster. Do not use this parameter.</p>
+         * <p><strong>[Deprecated]</strong> The count of processed violations in the cluster. Do not use this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

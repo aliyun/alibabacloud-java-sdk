@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClusterAddonInstanceResponseBody extends TeaModel {
     /**
-     * <p>The custom parameter settings of the add-on.</p>
+     * <p>The custom parameter settings of the component.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;sls_project_name&quot;:&quot;&quot;}</p>
@@ -14,13 +14,13 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The log feature status of the add-on.</p>
+     * <p>The logging status of the component.</p>
      */
     @NameInMap("logging")
     public GetClusterAddonInstanceResponseBodyLogging logging;
 
     /**
-     * <p>The name of the add-on instance.</p>
+     * <p>The name of the component instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ack-node-problem-detector</p>
@@ -29,7 +29,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The state of the add-on. Valid values:</p>
+     * <p>The component state. Valid values:</p>
      * <ul>
      * <li>active: Installed.</li>
      * <li>updating: Updating.</li>
@@ -44,7 +44,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The version of the add-on instance.</p>
+     * <p>The version of the component instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.16</p>
@@ -99,7 +99,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
 
     public static class GetClusterAddonInstanceResponseBodyLogging extends TeaModel {
         /**
-         * <p>Specifies whether the add-on supports the log feature. Valid values:</p>
+         * <p>Indicates whether the component supports the logging feature. Valid values:</p>
          * <ul>
          * <li><p>true: Supported.</p>
          * </li>
@@ -114,7 +114,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         public Boolean capable;
 
         /**
-         * <p>Specifies whether the log feature is enabled. Valid values:</p>
+         * <p>Indicates whether the logging feature is enabled. Valid values:</p>
          * <ul>
          * <li><p>true: Enabled.</p>
          * </li>
@@ -129,7 +129,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The Log Service project used by the add-on log feature.</p>
+         * <p>The log project used by the component logging feature.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-log-c02b3e03be10643e8a644a843ffcb****</p>
@@ -138,7 +138,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         public String logProject;
 
         /**
-         * <p>The Logstore used by the add-on log feature.</p>
+         * <p>The Logstore used by the component logging feature.</p>
          * 
          * <strong>example:</strong>
          * <p>my-logstore</p>

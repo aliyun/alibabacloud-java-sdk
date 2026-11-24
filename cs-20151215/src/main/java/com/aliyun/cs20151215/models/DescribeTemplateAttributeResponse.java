@@ -44,7 +44,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
 
     public static class DescribeTemplateAttributeResponseBody extends TeaModel {
         /**
-         * <p>The ID of the orchestration template. A new template ID is generated each time the template is modified.</p>
+         * <p>The ID of the orchestration template. This ID changes every time the template is modified.</p>
          * 
          * <strong>example:</strong>
          * <p>72d20cf8-a533-4ea9-a10d-e7630d3d****</p>

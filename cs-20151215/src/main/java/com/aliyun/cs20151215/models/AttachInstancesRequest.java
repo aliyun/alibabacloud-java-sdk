@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class AttachInstancesRequest extends TeaModel {
     /**
-     * <p>The CPU management policy for the node. The following two policies are supported when the cluster version is 1.12.6 or later:</p>
+     * <p>The CPU management policy for the node. The following policies are supported if the cluster version is 1.12.6 or later. Valid values:</p>
      * <ul>
-     * <li><code>static</code>: allows you to enhance CPU affinity and exclusivity for pods with specific resource characteristics on the node.</li>
-     * <li><code>none</code>: uses the existing default CPU affinity policy.</li>
+     * <li>static: allows you to enhance CPU affinity and exclusivity for pods with specific resource characteristics on the node.</li>
+     * <li>none: uses the existing default CPU affinity policy.</li>
      * </ul>
-     * <p>Default value: <code>none</code>.</p>
+     * <p>Default value: none.</p>
      * <blockquote>
      * <p>This parameter is not supported if nodepool_id is specified.</p>
      * </blockquote>
@@ -24,15 +24,15 @@ public class AttachInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to store container data and images on a data cloud disk. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: stores container data and images on a data cloud disk.</li>
-     * <li><code>false</code>: does not store container data and images on a data cloud disk.</li>
+     * <li>true: stores container data and images on a data cloud disk.</li>
+     * <li>false: does not store container data and images on a data cloud disk.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: false.</p>
      * <p>Data cloud disk mounting rules:</p>
      * <ul>
      * <li>If the ECS instance has data cloud disks attached and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to EXT4 to store the /var/lib/docker and /var/lib/kubelet directories, which are the default data directories for the Docker container runtime and kubelet component.</li>
      * <li>If the ECS instance does not have data cloud disks attached, no new data cloud disk is attached.<blockquote>
-     * <p>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks attached, the existing data on the data cloud disks will be lost. Back up your data first.</p>
+     * <p>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks attached, the existing data on the data cloud disks will be lost. Back up your data in advance.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -41,7 +41,17 @@ public class AttachInstancesRequest extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("format_disk")
+    @Deprecated
     public Boolean formatDisk;
+
+    /**
+     * <p>The disk formatting method. This parameter is mutually exclusive with format_disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NodePoolDiskConfig</p>
+     */
+    @NameInMap("format_disk_option")
+    public String formatDiskOption;
 
     /**
      * <p>The custom image ID.</p>
@@ -69,12 +79,12 @@ public class AttachInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether the node to be added is an edge node, namely an ENS node. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The node to be added is an edge node.</li>
-     * <li><code>false</code>: The node to be added is not an edge node.</li>
+     * <li>true: The node to be added is an edge node.</li>
+     * <li>false: The node to be added is not an edge node.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: false.</p>
      * <blockquote>
-     * <p>If the node is an edge node, you must set this parameter to <code>true</code> to identify the node type as an ENS node.</p>
+     * <p>If the node is an edge node, you must set this parameter to true to identify the node type as an ENS node.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,10 +96,10 @@ public class AttachInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to retain the original instance name. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: retains the instance name.</li>
-     * <li><code>false</code>: does not retain the instance name.</li>
+     * <li>true: retains the instance name.</li>
+     * <li>false: does not retain the instance name.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -98,7 +108,7 @@ public class AttachInstancesRequest extends TeaModel {
     public Boolean keepInstanceName;
 
     /**
-     * <p>The name of the key pair for the instances to be added. You can specify either the key_pair or password parameter, or leave both empty.</p>
+     * <p>The name of the key pair for the instances to be added. You can specify either key_pair or password, or leave both empty.</p>
      * <blockquote>
      * <p>This parameter is not supported if nodepool_id is specified.</p>
      * </blockquote>
@@ -119,11 +129,11 @@ public class AttachInstancesRequest extends TeaModel {
     public String nodepoolId;
 
     /**
-     * <p>The SSH logon password for the instances to be added. You can specify either the key_pair or password parameter, or leave both empty.</p>
+     * <p>The SSH logon password for the instances to be added. You can specify either key_pair or password, or leave both empty.</p>
      * <p>The password must meet the following requirements:</p>
      * <ul>
-     * <li>The password must be 8 to 30 characters in length.</li>
-     * <li>The password must contain uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The password is 8 to 30 characters in length.</li>
+     * <li>The password contains uppercase letters, lowercase letters, digits, and special characters.</li>
      * <li>The password cannot contain backslashes (\) or double quotation marks (&quot;).</li>
      * </ul>
      * <p>For security purposes, the password is encrypted during transmission.</p>
@@ -164,7 +174,7 @@ public class AttachInstancesRequest extends TeaModel {
      * <li>A label is a case-sensitive key-value pair. You can configure up to 20 labels.</li>
      * <li>Label keys must be unique and can be up to 64 characters in length.</li>
      * <li>Label values can be empty and can be up to 128 characters in length.</li>
-     * <li>Label keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>.</li>
+     * <li>Label keys and values cannot start with aliyun, acs:, https://, or http://.</li>
      * </ul>
      * <p>For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</p>
      * <blockquote>
@@ -199,12 +209,21 @@ public class AttachInstancesRequest extends TeaModel {
         return this.cpuPolicy;
     }
 
+    @Deprecated
     public AttachInstancesRequest setFormatDisk(Boolean formatDisk) {
         this.formatDisk = formatDisk;
         return this;
     }
     public Boolean getFormatDisk() {
         return this.formatDisk;
+    }
+
+    public AttachInstancesRequest setFormatDiskOption(String formatDiskOption) {
+        this.formatDiskOption = formatDiskOption;
+        return this;
+    }
+    public String getFormatDiskOption() {
+        return this.formatDiskOption;
     }
 
     public AttachInstancesRequest setImageId(String imageId) {

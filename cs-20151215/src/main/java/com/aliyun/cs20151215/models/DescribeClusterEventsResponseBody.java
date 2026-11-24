@@ -145,7 +145,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The object associated with the event.</p>
+         * <p>The operation object associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>npdd89dc2b76c04f14b06774883b******</p>
@@ -154,7 +154,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public String subject;
 
         /**
-         * <p>The start time of the event. The time is in ISO 8601 format and includes time zone information.</p>
+         * <p>The start time of the event in ISO 8601 format, including the time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-14T10:00:56+08:00</p>
@@ -165,22 +165,22 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         /**
          * <p>The event type. Valid values:</p>
          * <ul>
-         * <li>cluster_create: cluster creation</li>
-         * <li>cluster_scaleout: cluster scale-out</li>
-         * <li>cluster_attach: addition of existing nodes</li>
-         * <li>cluster_delete: cluster deletion</li>
-         * <li>cluster_upgrade: cluster upgrade</li>
-         * <li>cluster_migrate: cluster migration</li>
-         * <li>cluster_node_delete: node removal</li>
-         * <li>cluster_node_drain: node draining</li>
-         * <li>cluster_modify: cluster modification</li>
-         * <li>cluster_configuration_modify: cluster management configuration modification</li>
-         * <li>cluster_addon_install: add-on installation</li>
-         * <li>cluster_addon_upgrade: add-on upgrade</li>
-         * <li>cluster_addon_uninstall: add-on uninstallation</li>
-         * <li>runtime_upgrade: runtime upgrade</li>
-         * <li>nodepool_upgrade: node pool upgrade</li>
-         * <li>nodepool_update: node pool update</li>
+         * <li>cluster_create: Cluster creation.</li>
+         * <li>cluster_scaleout: Cluster scale-out.</li>
+         * <li>cluster_attach: Addition of existing nodes.</li>
+         * <li>cluster_delete: Cluster deletion.</li>
+         * <li>cluster_upgrade: Cluster upgrade.</li>
+         * <li>cluster_migrate: Cluster migration.</li>
+         * <li>cluster_node_delete: Node removal.</li>
+         * <li>cluster_node_drain: Node draining.</li>
+         * <li>cluster_modify: Cluster modification.</li>
+         * <li>cluster_configuration_modify: Cluster management configuration modification.</li>
+         * <li>cluster_addon_install: Add-on installation.</li>
+         * <li>cluster_addon_upgrade: Add-on upgrade.</li>
+         * <li>cluster_addon_uninstall: Add-on uninstallation.</li>
+         * <li>runtime_upgrade: Runtime upgrade.</li>
+         * <li>nodepool_upgrade: Node pool upgrade.</li>
+         * <li>nodepool_update: Node pool update.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,7 +263,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The maximum number of results to display on each page.</p>
+         * <p>The maximum number of results to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

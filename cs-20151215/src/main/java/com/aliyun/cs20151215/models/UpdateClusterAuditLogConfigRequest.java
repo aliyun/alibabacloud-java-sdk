@@ -20,13 +20,13 @@ public class UpdateClusterAuditLogConfigRequest extends TeaModel {
     public Boolean disable;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">SLS project</a> where the <a href="https://help.aliyun.com/document_detail/48874.html">Logstore</a> for cluster audit logs is stored.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">SLS Project</a> where the <a href="https://help.aliyun.com/document_detail/48874.html">Logstore</a> for cluster audit logs is stored.</p>
      * <ul>
      * <li><p>Default value: k8s-log-{clusterid}.</p>
      * </li>
-     * <li><p>After you enable the cluster audit log feature, a Logstore for cluster audit logs is created in the specified SLS project.</p>
+     * <li><p>After you enable the cluster audit log feature, a Logstore for cluster audit logs is created in the specified SLS Project.</p>
      * </li>
-     * <li><p>If you need to change the SLS project after enabling the cluster audit log feature, you can use this parameter to specify a new SLS project. Only ACK managed clusters support changing the SLS project.</p>
+     * <li><p>If you need to change the SLS Project after enabling the cluster audit log feature, you can use this parameter to specify a new SLS Project. Only ACK managed clusters support changing the SLS Project.</p>
      * </li>
      * </ul>
      * 

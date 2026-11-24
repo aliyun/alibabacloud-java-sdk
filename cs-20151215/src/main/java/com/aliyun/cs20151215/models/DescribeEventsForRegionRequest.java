@@ -15,12 +15,15 @@ public class DescribeEventsForRegionRequest extends TeaModel {
 
     /**
      * <p>The maximum number of results to return for a single request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("max_results")
     public Integer maxResults;
 
     /**
-     * <p>The query token. The value is the next_token parameter value returned by the previous API call.</p>
+     * <p>The pagination token. Set the value to the next_token value returned by the previous API call.</p>
      */
     @NameInMap("next_token")
     public String nextToken;
@@ -35,7 +38,7 @@ public class DescribeEventsForRegionRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The maximum number of results to return per page.</p>
+     * <p>The maximum number of results to display per page.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 50.</p>
      * 

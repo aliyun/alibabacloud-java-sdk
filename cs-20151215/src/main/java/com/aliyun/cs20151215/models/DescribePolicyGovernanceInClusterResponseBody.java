@@ -17,7 +17,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     public DescribePolicyGovernanceInClusterResponseBodyAdmitLog admitLog;
 
     /**
-     * <p>The counts of enabled policies at different severity levels in the cluster.</p>
+     * <p>The counts of enabled policies at different severity levels in the current cluster.</p>
      */
     @NameInMap("on_state")
     public java.util.List<DescribePolicyGovernanceInClusterResponseBodyOnState> onState;
@@ -182,7 +182,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String policyDescription;
 
         /**
-         * <p>The Policy Name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>ACKNamespacesDeleteProtection</p>
@@ -258,7 +258,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String policyDescription;
 
         /**
-         * <p>The Policy Name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>ACKRestrictALBCreation</p>
@@ -408,8 +408,8 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         /**
          * <p>The action taken by the policy. Valid values:</p>
          * <ul>
-         * <li>warn: Generates an alert for the policy violation but does not intercept the request.</li>
-         * <li>deny: Intercepts the request that violates the policy.</li>
+         * <li>warn: Alerts on policy violations but does not intercept the requests.</li>
+         * <li>deny: Intercepts requests that violate the policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -446,7 +446,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String constraintGroup;
 
         /**
-         * <p>The corresponding Policy Name in policy management.</p>
+         * <p>The policy name in policy management.</p>
          * 
          * <strong>example:</strong>
          * <p>ACKNamespacesDeleteProtection</p>
@@ -682,7 +682,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String logProject;
 
         /**
-         * <p>The Logstore that stores the policy action information.</p>
+         * <p>The log store that stores the policy action information.</p>
          * 
          * <strong>example:</strong>
          * <p>policyadmit-clusterid</p>
@@ -691,7 +691,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String logStore;
 
         /**
-         * <p>The log information about policy violations.</p>
+         * <p>The log information of policy violations.</p>
          */
         @NameInMap("logs")
         public java.util.List<DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs> logs;
@@ -699,8 +699,8 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         /**
          * <p>The status of the query result. Valid values:</p>
          * <ul>
-         * <li><code>Complete</code>: The query is complete and the returned result is complete.</li>
-         * <li><code>Incomplete</code>: The query is complete but the returned result is incomplete. You must repeat the request to obtain the complete result.</li>
+         * <li><code>Complete</code>: The query is complete, and the returned result is complete.</li>
+         * <li><code>Incomplete</code>: The query is complete, but the returned result is incomplete. You must repeat the request to obtain the complete result.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -758,7 +758,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyOnState extends TeaModel {
         /**
-         * <p>The number of enabled policy types.</p>
+         * <p>The count of currently enabled policy types.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -767,7 +767,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public Integer enabledCount;
 
         /**
-         * <p>The severity level of the policy governance.</p>
+         * <p>The policy governance severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>

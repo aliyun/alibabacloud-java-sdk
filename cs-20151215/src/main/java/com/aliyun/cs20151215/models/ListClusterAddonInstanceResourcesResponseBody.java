@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
     /**
-     * <p>The Helm release instance information corresponding to the component.</p>
+     * <p>The information about the Helm release instance corresponding to the component.</p>
      */
     @NameInMap("helm_release")
     public ListClusterAddonInstanceResourcesResponseBodyHelmRelease helmRelease;
@@ -142,7 +142,7 @@ public class ListClusterAddonInstanceResourcesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace to which the object belongs.</p>
+         * <p>The namespace of the object.</p>
          * 
          * <strong>example:</strong>
          * <p>kube-system</p>

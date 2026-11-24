@@ -39,7 +39,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
 
     public static class DescribeClusterNodesResponseBodyNodes extends TeaModel {
         /**
-         * <p>The time when the node was created. The time follows the ISO 8601 standard and includes the time zone.</p>
+         * <p>The time when the node was created. The time is displayed in ISO 8601 format and includes the time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-16T07:28:00Z</p>
@@ -57,7 +57,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The time when the node expires. The time follows the ISO 8601 standard and includes the time zone.</p>
+         * <p>The time when the node expires. The time is displayed in ISO 8601 format and includes the time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2099-12-31T15:59:00Z</p>
@@ -117,8 +117,8 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         /**
          * <p>The role of the node. Valid values:</p>
          * <ul>
-         * <li>Master: the master node of the cluster.</li>
-         * <li>Worker: the worker node of the cluster.</li>
+         * <li>Master: master node in the cluster.</li>
+         * <li>Worker: worker node in the cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,11 +130,11 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         /**
          * <p>The ECS instance status of the node. Valid values:</p>
          * <ul>
-         * <li><code>Pending</code>: the instance is being created.</li>
-         * <li><code>Running</code>: the instance is running.</li>
-         * <li><code>Starting</code>: the instance is starting.</li>
-         * <li><code>Stopping</code>: the instance is stopping.</li>
-         * <li><code>Stopped</code>: the instance is stopped.</li>
+         * <li><code>Pending</code>: being created.</li>
+         * <li><code>Running</code>: running.</li>
+         * <li><code>Starting</code>: starting.</li>
+         * <li><code>Stopping</code>: stopping.</li>
+         * <li><code>Stopped</code>: stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,10 +168,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public java.util.List<String> ipAddress;
 
         /**
-         * <p>Specifies whether the node is an Alibaba Cloud instance. Valid values:</p>
+         * <p>Indicates whether the node is an Alibaba Cloud instance. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: the node is an Alibaba Cloud instance.</li>
-         * <li><code>false</code>: the node is not an Alibaba Cloud instance.</li>
+         * <li><code>true</code>: yes.</li>
+         * <li><code>false</code>: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public Boolean isAliyunNode;
 
         /**
-         * <p>The name of the node, which is the node identifier in the cluster.</p>
+         * <p>The name of the node. This name is used as the node identifier in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-chengdu.192.168xx.xx</p>
@@ -190,12 +190,12 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>Specifies whether the node is ready. Valid values:</p>
+         * <p>Indicates whether the node is ready. Valid values:</p>
          * <ul>
-         * <li><code>Ready</code>: the node is ready.</li>
-         * <li><code>NotReady</code>: the node is not ready.</li>
-         * <li><code>Unknown</code>: the status is unknown.</li>
-         * <li><code>Offline</code>: the node is offline.</li>
+         * <li><code>Ready</code>: ready.</li>
+         * <li><code>NotReady</code>: not ready.</li>
+         * <li><code>Unknown</code>: unknown.</li>
+         * <li><code>Offline</code>: offline.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String nodepoolId;
 
         /**
-         * <p>The method used to initialize the node, such as manual creation or creation by Resource Orchestration Service (ROS).</p>
+         * <p>The method used to initialize the node, such as manual creation or creation by using Resource Orchestration Service (ROS).</p>
          * 
          * <strong>example:</strong>
          * <p>ess</p>
@@ -225,9 +225,9 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         /**
          * <p>The type of the spot instance. Valid values:</p>
          * <ul>
-         * <li>NoSpot: the instance is not a spot instance.</li>
-         * <li>SpotWithPriceLimit: the instance is a spot instance with a maximum price limit.</li>
-         * <li>SpotAsPriceGo: the instance is a spot instance whose price is automatically set based on the current market price.</li>
+         * <li>NoSpot: non-spot instance.</li>
+         * <li>SpotWithPriceLimit: spot instance with a maximum price limit.</li>
+         * <li>SpotAsPriceGo: spot instance whose price is automatically set based on the current market price.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,11 +239,11 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         /**
          * <p>The running state of the node. Valid values:</p>
          * <ul>
-         * <li><code>pending</code>: the node is being created.</li>
-         * <li><code>running</code>: the node is running.</li>
-         * <li><code>starting</code>: the node is starting.</li>
-         * <li><code>stopping</code>: the node is stopping.</li>
-         * <li><code>stopped</code>: the node is stopped.</li>
+         * <li><code>pending</code>: being created.</li>
+         * <li><code>running</code>: running.</li>
+         * <li><code>starting</code>: starting.</li>
+         * <li><code>stopping</code>: stopping.</li>
+         * <li><code>stopped</code>: stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -430,7 +430,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The maximum number of records to return per page.</p>
+         * <p>The maximum number of entries that can be displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

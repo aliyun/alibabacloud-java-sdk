@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DiskInit extends TeaModel {
     /**
-     * <p>The unique identifier for a disk in the node pool.</p>
+     * <p>The name of the disk, which uniquely identifies a disk in the node pool.</p>
      * <ul>
-     * <li>When local_disk is set to false, the value must match one of the disk_name values in scaling_group.data_disks.</li>
-     * <li>When local_disk is set to true, the value must be different from all disk_name values in scaling_group.data_disks.</li>
+     * <li>If local_disk is set to false, the value must match a disk_name in scaling_group.data_disks.</li>
+     * <li>If local_disk is set to true, the value must be different from any disk_name in scaling_group.data_disks.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,19 +19,19 @@ public class DiskInit extends TeaModel {
     public String diskName;
 
     /**
-     * <p>Specifies whether this configuration applies to a local disk. When this parameter is set to true:</p>
+     * <p>The configuration for the local disk. If this parameter is set to true:</p>
      * <ul>
-     * <li>If the disk cannot be matched by using the ECS DiskName and symbolic links, the local disk can be matched.</li>
+     * <li>If the disk cannot be matched by using the ECS DiskName and symbolic links, the local disk is matched.</li>
      * <li>If the disk is detected as uninitialized during boot, it is reinitialized.</li>
-     * <li>Both mount_target and mkfs_type must be set or left empty at the same time.</li>
-     * <li>When used in combination with mount_for_runtime, if the local disk is reinitialized, the node must be removed from and then re-added to the node pool.</li>
+     * <li>Both mount_target and mkfs_type must be specified or left empty at the same time.</li>
+     * <li>If this parameter is used in combination with mount_for_runtime and the local disk is reinitialized, the node must be removed from and then re-imported to the node pool.</li>
      * </ul>
      */
     @NameInMap("local_disk")
     public Boolean localDisk;
 
     /**
-     * <p>The type of the file system for automatic formatting. An empty value indicates that the disk is not formatted.</p>
+     * <p>The type of the file system for automatic formatting. If this parameter is left empty, the disk is not formatted.</p>
      * 
      * <strong>example:</strong>
      * <p>ext4</p>
@@ -40,13 +40,13 @@ public class DiskInit extends TeaModel {
     public String mkfsType;
 
     /**
-     * <p>Specifies whether container runtime data is stored on the disk.</p>
+     * <p>The disk used to store container runtime data.</p>
      */
     @NameInMap("mount_for_runtime")
     public Boolean mountForRuntime;
 
     /**
-     * <p>The mount directory. An empty value indicates that the disk is not mounted.</p>
+     * <p>The mount directory. If this parameter is left empty, the disk is not mounted.</p>
      * 
      * <strong>example:</strong>
      * <p>/mnt/disk0</p>

@@ -23,7 +23,7 @@ public class DescribeEventsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned from the previous API call.</p>
+     * <p>The query token, which is the value of the NextToken parameter returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>5c0a1c0f91c14c6****</p>
@@ -32,7 +32,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number for paging in the paged query.</p>
+     * <p>The page number for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,22 +54,22 @@ public class DescribeEventsRequest extends TeaModel {
     /**
      * <p>The event type. If you do not specify this parameter, events of all types are queried. Valid values:</p>
      * <ul>
-     * <li><code>cluster_create</code>: Cluster creation.</li>
-     * <li><code>cluster_scaleout</code>: Cluster scale-out.</li>
-     * <li><code>cluster_attach</code>: Addition of existing nodes.</li>
-     * <li><code>cluster_delete</code>: Cluster deletion.</li>
-     * <li><code>cluster_upgrade</code>: Cluster upgrade.</li>
-     * <li><code>cluster_migrate</code>: Cluster migration.</li>
-     * <li><code>cluster_node_delete</code>: Node removal.</li>
-     * <li><code>cluster_node_drain</code>: Node draining.</li>
-     * <li><code>cluster_modify</code>: Cluster modification.</li>
-     * <li><code>cluster_configuration_modify</code>: Cluster control configuration modification.</li>
-     * <li><code>cluster_addon_install</code>: Add-on installation.</li>
-     * <li><code>cluster_addon_upgrade</code>: Add-on upgrade.</li>
-     * <li><code>cluster_addon_uninstall</code>: Add-on uninstallation.</li>
-     * <li><code>runtime_upgrade</code>: Runtime upgrade.</li>
-     * <li><code>nodepool_upgrade</code>: Node pool upgrade.</li>
-     * <li><code>nodepool_update</code>: Node pool update.</li>
+     * <li><code>cluster_create</code>: cluster creation</li>
+     * <li><code>cluster_scaleout</code>: cluster scale-out</li>
+     * <li><code>cluster_attach</code>: adding existing nodes</li>
+     * <li><code>cluster_delete</code>: cluster deletion</li>
+     * <li><code>cluster_upgrade</code>: cluster upgrade</li>
+     * <li><code>cluster_migrate</code>: cluster migration</li>
+     * <li><code>cluster_node_delete</code>: node removal</li>
+     * <li><code>cluster_node_drain</code>: node draining</li>
+     * <li><code>cluster_modify</code>: cluster modification</li>
+     * <li><code>cluster_configuration_modify</code>: cluster management configuration modification</li>
+     * <li><code>cluster_addon_install</code>: add-on installation</li>
+     * <li><code>cluster_addon_upgrade</code>: add-on upgrade</li>
+     * <li><code>cluster_addon_uninstall</code>: add-on uninstallation</li>
+     * <li><code>runtime_upgrade</code>: runtime upgrade</li>
+     * <li><code>nodepool_upgrade</code>: node pool upgrade</li>
+     * <li><code>nodepool_update</code>: node pool update</li>
      * </ul>
      * 
      * <strong>example:</strong>

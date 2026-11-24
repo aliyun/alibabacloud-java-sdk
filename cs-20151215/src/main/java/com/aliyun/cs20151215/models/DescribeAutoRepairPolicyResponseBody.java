@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the self-healing rule.</p>
+     * <p>The self-healing rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-xxx</p>
@@ -53,10 +53,10 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
     public java.util.List<DescribeAutoRepairPolicyResponseBodyRules> rules;
 
     /**
-     * <p>The rule type. The value is case-sensitive. Valid values:</p>
+     * <p>The rule type. Valid values (case-sensitive):</p>
      * <ul>
-     * <li>custom: user-defined rules that support modification and deletion</li>
-     * <li>builtin: built-in system rules that are read-only and do not support creation, modification, or deletion</li>
+     * <li>custom: User-defined rule. Supports modification and deletion.</li>
+     * <li>builtin: System built-in rule. Read-only. Does not support creation, modification, or deletion.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
 
     public static class DescribeAutoRepairPolicyResponseBodyRulesIncidents extends TeaModel {
         /**
-         * <p>The fault name.</p>
+         * <p>The name of the fault.</p>
          * 
          * <strong>example:</strong>
          * <p>Node.FaultNeedReboot.HOST</p>
@@ -137,7 +137,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The fault type.</p>
+         * <p>The type of the fault.</p>
          * 
          * <strong>example:</strong>
          * <p>system</p>
@@ -254,7 +254,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
 
     public static class DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureIntervention extends TeaModel {
         /**
-         * <p>The label configuration for authorization confirmation. When you add the following label to a node, you authorize ACK to perform the operations in this phase. After completing the operations in this phase, ACK automatically removes the inquiry and confirmation labels for this phase. If you do not add the following label in time, ACK will not perform the operations in this phase and subsequent phases, and the node may remain in a damaged state.</p>
+         * <p>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the action for this stage. After completing the action for this stage, ACK automatically removes the authorization inquiry and confirmation labels for this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</p>
          */
         @NameInMap("approved_label")
         public DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureInterventionApprovedLabel approvedLabel;
@@ -269,7 +269,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The label configuration for authorization inquiry. When this phase is entered, ACK adds the following label to your node and waits for your authorization to perform the operations in this phase.</p>
+         * <p>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following labels to your node and waits for your authorization to execute the action for this stage.</p>
          */
         @NameInMap("inquiring_label")
         public DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureInterventionInquiringLabel inquiringLabel;
@@ -330,7 +330,7 @@ public class DescribeAutoRepairPolicyResponseBody extends TeaModel {
         public java.util.Map<String, ?> config;
 
         /**
-         * <p>The manual intervention procedure.</p>
+         * <p>The manual intervention procedure configuration.</p>
          */
         @NameInMap("intervention")
         public DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureIntervention intervention;

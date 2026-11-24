@@ -84,7 +84,7 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
 
     public static class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel extends TeaModel {
         /**
-         * <p>The key of the label.</p>
+         * <p>The <code>key</code> of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s.aliyun.com/incident</p>
@@ -93,7 +93,7 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the label.</p>
+         * <p>The <code>value</code> of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>approved</p>
@@ -126,7 +126,7 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
 
     public static class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel extends TeaModel {
         /**
-         * <p>The key of the label.</p>
+         * <p>The <code>key</code> of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s.aliyun.com/incident</p>
@@ -135,7 +135,7 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the label.</p>
+         * <p>The <code>value</code> of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>inquiring</p>
@@ -168,7 +168,7 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
 
     public static class ModifyAutoRepairPolicyRequestRulesRepairProcedureIntervention extends TeaModel {
         /**
-         * <p>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</p>
+         * <p>The label configuration for authorization confirmation. Adding the following labels to the node authorizes ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and confirmation labels for this stage. If you do not promptly add the following labels to grant authorization, ACK does not execute the action for this stage or subsequent actions, and the node may remain in an impaired state.</p>
          */
         @NameInMap("approved_label")
         public ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel approvedLabel;
@@ -238,7 +238,7 @@ public class ModifyAutoRepairPolicyRequest extends TeaModel {
 
     public static class ModifyAutoRepairPolicyRequestRulesRepairProcedure extends TeaModel {
         /**
-         * <p>The parameter settings of the flow.</p>
+         * <p>The parameter settings for the flow.</p>
          */
         @NameInMap("config")
         public java.util.Map<String, ?> config;

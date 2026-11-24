@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenAckServiceResponseBody extends TeaModel {
     /**
-     * <p>The order ID for activating the service.</p>
+     * <p>The order ID for the service activation.</p>
      * 
      * <strong>example:</strong>
      * <p>2067*******0374</p>

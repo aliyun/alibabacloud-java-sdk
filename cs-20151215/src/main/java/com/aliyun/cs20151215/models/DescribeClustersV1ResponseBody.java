@@ -39,7 +39,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
     public static class DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade extends TeaModel {
         /**
-         * <p>The auto-upgrade channel for the cluster. For more information, refer to <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade channels</a>. Valid values:</p>
+         * <p>The cluster auto-upgrade channel. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade channels</a>.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>patch: The latest patch version.</li>
          * <li>stable: The second latest minor version.</li>
@@ -53,7 +54,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>Specifies whether auto-upgrade is enabled for the cluster.</p>
+         * <p>Indicates whether cluster auto-upgrade is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -86,7 +87,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
     public static class DescribeClustersV1ResponseBodyClustersOperationPolicy extends TeaModel {
         /**
-         * <p>The auto-upgrade settings for the cluster.</p>
+         * <p>The cluster auto-upgrade.</p>
          */
         @NameInMap("cluster_auto_upgrade")
         public DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;
@@ -117,7 +118,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String clusterDomain;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>c3fb96524f9274b4495df0f12a6b5****</p>
@@ -153,7 +154,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String containerCidr;
 
         /**
-         * <p>The time when the cluster was created.</p>
+         * <p>The cluster creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-07T09:57:26+08:00</p>
@@ -171,10 +172,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String currentVersion;
 
         /**
-         * <p>Specifies whether deletion protection is enabled for the cluster to prevent accidental deletion through the console or API. Valid values:</p>
+         * <p>Indicates whether deletion protection is enabled for the cluster to prevent accidental deletion through the console or API operations. Valid values:</p>
          * <ul>
-         * <li>true: Deletion protection is enabled. The cluster cannot be deleted through the console or API.</li>
-         * <li>false: Deletion protection is disabled. The cluster can be deleted through the console or API.</li>
+         * <li><code>true</code>: Deletion protection is enabled. The cluster cannot be deleted through the console or API operations.</li>
+         * <li><code>false</code>: Deletion protection is disabled. The cluster can be deleted through the console or API operations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +185,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public Boolean deletionProtection;
 
         /**
-         * <p>The Docker version used by the cluster.</p>
+         * <p>The Docker version of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>19.03.5</p>
@@ -194,8 +195,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String dockerVersion;
 
         /**
-         * <p>The ID of the Server Load Balancer (SLB) instance for the Ingress in the cluster.</p>
-         * <p>Default instance type: guaranteed-performance instance (slb.s1.small).</p>
+         * <p>The Ingress Server Load Balancer (SLB) instance in the cluster. Default instance type: guaranteed-performance (slb.s1.small).</p>
          * 
          * <strong>example:</strong>
          * <p>lb-2vcrbmlevo6kjpgch****</p>
@@ -205,7 +205,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String externalLoadbalancerId;
 
         /**
-         * <p>The initial version of the cluster. For the Kubernetes versions supported by ACK, refer to <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes versions</a>.</p>
+         * <p>The cluster version. For the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version overview</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.32.1-aliyun.1</p>
@@ -216,8 +216,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The IP protocol stack of the cluster. Valid values:</p>
          * <ul>
-         * <li>ipv4: Creates a cluster that supports only the IPv4 protocol stack.</li>
-         * <li>dual: Creates a cluster that supports both IPv4 and IPv6 protocol stacks.</li>
+         * <li><code>ipv4</code>: Creates a cluster that supports only the IPv4 protocol stack.</li>
+         * <li><code>dual</code>: Creates a cluster that supports the dual-stack IPv4/IPv6 protocol stack.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,13 +227,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String ipStack;
 
         /**
-         * <p>The maintenance window of the cluster. This feature takes effect only in ACK managed clusters and ACK Serverless clusters.</p>
+         * <p>The cluster maintenance window. This feature takes effect only in ACK managed clusters and ACK Serverless clusters.</p>
          */
         @NameInMap("maintenance_window")
         public MaintenanceWindow maintenanceWindow;
 
         /**
-         * <p>The access endpoints of the cluster API server, including the internal network access address and the public network access address.</p>
+         * <p>The access addresses of the cluster API server, including the internal network access address and the public network access address.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;api_server_endpoint\&quot;:\&quot;\&quot;,\&quot;intranet_api_server_endpoint\&quot;:\&quot;<a href="https://192.168.xx.xx:6443%5C%5C%22%7D">https://192.168.xx.xx:6443\\&quot;}</a></p>
@@ -242,7 +242,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String masterUrl;
 
         /**
-         * <p>The metadata of the cluster.</p>
+         * <p>The metadata information of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Addons\&quot;:[{\&quot;config\&quot;:***}}</p>
@@ -262,10 +262,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The network mode of the cluster. Valid values:</p>
          * <ul>
-         * <li>classic: classic network</li>
-         * <li>vpc: VPC</li>
-         * <li>overlay: overlay network</li>
-         * <li>calico: Calico network</li>
+         * <li><code>classic</code>: Classic network.</li>
+         * <li><code>vpc</code>: Virtual private cloud (VPC).</li>
+         * <li><code>overlay</code>: Overlay network.</li>
+         * <li><code>calico</code>: Calico network.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,8 +293,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The Private Zone configuration of the cluster. Valid values:</p>
          * <ul>
-         * <li>true: Private Zone is enabled.</li>
-         * <li>false: Private Zone is disabled.</li>
+         * <li><code>true</code>: Private Zone is enabled.</li>
+         * <li><code>false</code>: Private Zone is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public Boolean privateZone;
 
         /**
-         * <p>The subtype of the cluster.</p>
+         * <p>The cluster subtype.</p>
          * 
          * <strong>example:</strong>
          * <p>Default</p>
@@ -316,8 +316,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The kube-proxy mode. Valid values:</p>
          * <ul>
-         * <li>iptables: The mature and stable kube-proxy mode. Service discovery and load balancing for Kubernetes services are configured by using iptables rules. This mode provides average performance and is affected by the cluster scale. It is suitable for clusters with a small number of services.</li>
-         * <li>ipvs: The high-performance kube-proxy mode. Service discovery and load balancing for Kubernetes services are configured by using the Linux IPVS module. This mode is suitable for clusters with a large number of services and scenarios that require high-performance load balancing.</li>
+         * <li><code>iptables</code>: The mature and stable kube-proxy mode. Service discovery and load balancing for Kubernetes services are configured by using iptables rules. However, the performance is average and heavily affected by the scale. This mode is suitable for clusters with a small number of services.</li>
+         * <li><code>ipvs</code>: The high-performance kube-proxy mode. Service discovery and load balancing for Kubernetes services are configured by using the Linux IPVS module. This mode is suitable for clusters with a large number of services and scenarios that require high-performance load balancing.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -354,7 +354,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The CIDR block of the service network.</p>
+         * <p>The service network CIDR block.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -364,7 +364,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String serviceCidr;
 
         /**
-         * <p>The current number of nodes in the cluster, including the master node and worker nodes.</p>
+         * <p>The current number of nodes in the cluster, including master nodes and worker nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -375,21 +375,21 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The running status of the cluster. Valid values:</p>
          * <ul>
-         * <li>initial: The cluster is being created.</li>
-         * <li>failed: The cluster failed to be created.</li>
-         * <li>running: The cluster is running.</li>
-         * <li>updating: The cluster is being updated.</li>
-         * <li>upgrading: The cluster is being upgraded.</li>
-         * <li>removing: Nodes are being removed.</li>
-         * <li>draining: Nodes are being drained.</li>
-         * <li>scaling: The cluster is being scaled.</li>
-         * <li>inactive: The cluster is inactive.</li>
-         * <li>unavailable: The cluster is unavailable.</li>
-         * <li>deleting: The cluster is being deleted.</li>
-         * <li>deleted: The cluster is deleted.</li>
-         * <li>delete_failed: The cluster failed to be deleted.</li>
-         * <li>waiting: The cluster is waiting for the accessed state.</li>
-         * <li>disconnected: The cluster is disconnected.</li>
+         * <li><code>initial</code>: The cluster is being created.</li>
+         * <li><code>failed</code>: The cluster failed to be created.</li>
+         * <li><code>running</code>: The cluster is running.</li>
+         * <li><code>updating</code>: The cluster is being updated.</li>
+         * <li><code>upgrading</code>: The cluster is being upgraded.</li>
+         * <li><code>removing</code>: Nodes are being removed.</li>
+         * <li><code>draining</code>: Nodes are being drained.</li>
+         * <li><code>scaling</code>: The cluster is being scaled.</li>
+         * <li><code>inactive</code>: The cluster is inactive.</li>
+         * <li><code>unavailable</code>: The cluster is unavailable.</li>
+         * <li><code>deleting</code>: The cluster is being deleted.</li>
+         * <li><code>deleted</code>: The cluster is deleted.</li>
+         * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
+         * <li><code>waiting</code>: The cluster is waiting to be connected.</li>
+         * <li><code>disconnected</code>: The cluster is disconnected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -424,7 +424,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The time when the cluster was last updated.</p>
+         * <p>The time when the cluster was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-07T09:57:26+08:00</p>
@@ -452,13 +452,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
-         * <p>The vSwitches of the cluster control plane.</p>
+         * <p>The vSwitches for the cluster control plane.</p>
          */
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;
 
         /**
-         * <p>The name of the worker RAM role, which authorizes ECS instances to serve as worker nodes in the cluster.</p>
+         * <p>The name of the worker RAM role, which is used to authorize ECS instances as worker nodes of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>KubernetesWorkerRole-ec87d15b-edca-4302-933f-c8a16bf0****</p>
@@ -468,7 +468,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String workerRamRoleName;
 
         /**
-         * <p>The ID of the zone to which the cluster belongs.</p>
+         * <p>The ID of the zone where the cluster is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-b</p>
@@ -808,7 +808,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of results.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

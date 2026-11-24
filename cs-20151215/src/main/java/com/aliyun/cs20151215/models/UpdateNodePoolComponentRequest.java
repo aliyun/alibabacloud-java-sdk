@@ -11,7 +11,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
     public UpdateNodePoolComponentRequestConfig config;
 
     /**
-     * <p>Specifies whether to disable rolling updates. Default value: false. When set to false, updating the baseline configuration triggers a rolling update of nodes.</p>
+     * <p>Specifies whether to disable rolling updates. Default value: false. Updating the baseline configuration synchronously triggers a rolling update on nodes.</p>
      */
     @NameInMap("disableRolling")
     public Boolean disableRolling;
@@ -26,7 +26,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The list of nodes to include in the rolling update. By default, all nodes are included.</p>
+     * <p>The list of nodes to perform the rolling update on. Default value: all nodes.</p>
      */
     @NameInMap("nodeNames")
     public java.util.List<String> nodeNames;
@@ -182,7 +182,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
 
     public static class UpdateNodePoolComponentRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The interval between batches during the upgrade, in seconds.</p>
+         * <p>The upgrade interval between batches, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -191,7 +191,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
         public Long batchInterval;
 
         /**
-         * <p>The maximum number of nodes that can fail during the rolling update. Default value: 0, which means the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</p>
+         * <p>The maximum number of nodes allowed to fail during the rolling update. Default value: 0, which means the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -200,7 +200,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
         public Long maxFailedNodes;
 
         /**
-         * <p>The maximum number of nodes that can be updated in parallel per batch. Default value: 1.</p>
+         * <p>The maximum number of parallel updates per batch. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -209,7 +209,7 @@ public class UpdateNodePoolComponentRequest extends TeaModel {
         public Long maxParallelism;
 
         /**
-         * <p>The automatic pause policy during node upgrades.</p>
+         * <p>The automatic pause policy during the node upgrade process.</p>
          * 
          * <strong>example:</strong>
          * <p>NotPause</p>

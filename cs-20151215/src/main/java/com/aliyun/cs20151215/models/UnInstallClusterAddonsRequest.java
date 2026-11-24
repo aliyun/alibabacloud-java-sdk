@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnInstallClusterAddonsRequest extends TeaModel {
     /**
-     * <p>The list of components.</p>
+     * <p>The list of add-ons.</p>
      */
     @NameInMap("addons")
     public java.util.List<UnInstallClusterAddonsRequestAddons> addons;
@@ -25,10 +25,10 @@ public class UnInstallClusterAddonsRequest extends TeaModel {
 
     public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
         /**
-         * <p>Specifies whether to clean up the associated cloud resources when uninstalling the component. Valid values:</p>
+         * <p>Specifies whether to delete the associated cloud resources when uninstalling the add-on. Valid values:</p>
          * <ul>
-         * <li>true: Clean up.</li>
-         * <li>false: Retain.</li>
+         * <li>true: Deletes the resources.</li>
+         * <li>false: Retains the resources.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class UnInstallClusterAddonsRequest extends TeaModel {
         public Boolean cleanupCloudResources;
 
         /**
-         * <p>The name of the component to uninstall. You can call the <a href="https://help.aliyun.com/document_detail/2667940.html">ListClusterAddonInstances</a> operation to query the components installed in the cluster.</p>
+         * <p>The name of the add-on to uninstall. You can call the <a href="https://help.aliyun.com/document_detail/2667940.html">ListClusterAddonInstances</a> operation to query the add-ons installed in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ack-node-problem-detector</p>

@@ -36,9 +36,9 @@ public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     /**
      * <p>The type of the resource to update. Valid values:</p>
      * <ul>
-     * <li><p>namespaces: namespace.</p>
+     * <li><p>namespaces: namespace</p>
      * </li>
-     * <li><p>services: service.</p>
+     * <li><p>services: service</p>
      * </li>
      * </ul>
      * 

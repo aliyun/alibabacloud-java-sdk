@@ -57,16 +57,16 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The specification of the cluster. Valid values:</p>
+         * <p>The specifications of the cluster. Valid values:</p>
          * <ul>
          * <li><code>ack.standard</code>: Basic Edition.</li>
          * <li><code>ack.pro.small</code>: Pro Edition.</li>
          * <li><code>ack.pro.xlarge</code>: Pro XL.</li>
          * <li><code>ack.pro.2xlarge</code>: Pro 2XL.</li>
-         * <li><code>ack.pro.4xlarge</code>: Pro 4XL. To use this specification, you must contact customer service to apply for whitelist access.</li>
+         * <li><code>ack.pro.4xlarge</code>: Pro 4XL (contact customer service to apply for whitelist access).</li>
          * </ul>
-         * <p>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. These tiers pre-allocate and reserve control plane resources to ensure that API concurrency and pod scheduling capabilities remain consistently high. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
-         * <p>For more information about the cluster management fees for the Pro Edition and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
+         * <p>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain consistently high. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+         * <p>For more information about the cluster management fees for Pro Edition and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ack.standard</p>
@@ -75,7 +75,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String clusterSpec;
 
         /**
-         * <p>The type of the cluster. Valid values:</p>
+         * <p>The cluster type. Valid values:</p>
          * <ul>
          * <li>Kubernetes: ACK dedicated cluster.</li>
          * <li>ManagedKubernetes: ACK managed cluster, including ACK managed clusters (Pro Edition and Basic Edition), ACK Serverless clusters (Pro Edition and Basic Edition), ACK Edge clusters (Pro Edition and Basic Edition), and ACK Lingjun clusters (Pro Edition).</li>
@@ -116,7 +116,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String currentVersion;
 
         /**
-         * <p>Indicates whether deletion protection is enabled for the cluster to prevent accidental deletion through the console or API. Valid values:</p>
+         * <p>Specifies whether deletion protection is enabled for the cluster to prevent accidental deletion through the console or API. Valid values:</p>
          * <ul>
          * <li>true: Deletion protection is enabled. The cluster cannot be deleted through the console or API.</li>
          * <li>false: Deletion protection is disabled. The cluster can be deleted through the console or API.</li>
@@ -138,7 +138,11 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String initVersion;
 
         /**
-         * <p>The IP stack of the cluster.</p>
+         * <p>The IP stack of the cluster. Valid values:</p>
+         * <ul>
+         * <li>ipv4: The cluster supports only the IPv4 protocol stack.</li>
+         * <li>dual: The cluster supports both IPv4 and IPv6 protocol stacks.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -216,7 +220,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The CIDR block for services in the cluster.</p>
+         * <p>The CIDR block for services.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +254,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
          * <li><code>deleting</code>: The cluster is being deleted.</li>
          * <li><code>deleted</code>: The cluster is deleted.</li>
          * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
-         * <li><code>waiting</code>: The cluster is waiting for the accessed state.</li>
+         * <li><code>waiting</code>: Waiting for the accessed state.</li>
          * <li><code>disconnected</code>: The cluster is disconnected.</li>
          * </ul>
          * 
@@ -290,7 +294,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The time when the cluster was last updated.</p>
+         * <p>The time when the cluster was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-08T15:37:00+08:00</p>

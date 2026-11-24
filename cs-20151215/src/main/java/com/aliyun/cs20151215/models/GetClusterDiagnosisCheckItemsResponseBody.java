@@ -103,7 +103,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The evaluation result of the check item.</p>
+         * <p>The check item evaluation result.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -121,7 +121,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The name of the check item.</p>
+         * <p>The check item name.</p>
          * 
          * <strong>example:</strong>
          * <p>HostDNS</p>
@@ -139,7 +139,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         public String refer;
 
         /**
-         * <p>The value of the check item.</p>
+         * <p>The check item value.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

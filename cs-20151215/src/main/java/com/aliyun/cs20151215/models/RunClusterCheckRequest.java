@@ -11,7 +11,9 @@ public class RunClusterCheckRequest extends TeaModel {
     public java.util.Map<String, String> options;
 
     /**
-     * <p>The check target. If the type parameter is set to NodePoolUpgrade, this parameter must be set to the node pool ID. For other check types, this parameter is not required.</p>
+     * <p>The check target.</p>
+     * <p>If the type parameter is set to NodePoolUpgrade, this parameter must be set to the node pool ID.</p>
+     * <p>For other check types, this parameter is not required.</p>
      * 
      * <strong>example:</strong>
      * <p>np1f6779297c4444a3a1cdd29be8******</p>

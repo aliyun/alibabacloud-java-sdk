@@ -11,7 +11,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
     public ListUserKubeConfigStatesResponseBodyPage page;
 
     /**
-     * <p>The KubeConfig status details for the user.</p>
+     * <p>The details of the KubeConfig status for the user.</p>
      */
     @NameInMap("states")
     public java.util.List<ListUserKubeConfigStatesResponseBodyStates> states;
@@ -57,7 +57,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of results.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -98,7 +98,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
 
     public static class ListUserKubeConfigStatesResponseBodyStates extends TeaModel {
         /**
-         * <p>The expiration time of the KubeConfig certificate. The time is in UTC and follows the RFC 3339 format.</p>
+         * <p>The expiration time of the KubeConfig certificate. The time is displayed in UTC and follows the RFC 3339 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2028-04-09T06:20:47Z</p>
@@ -109,11 +109,16 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         /**
          * <p>The current status of the KubeConfig certificate. Valid values:</p>
          * <ul>
-         * <li>Expired: The certificate has expired.</li>
-         * <li>Unexpired: The certificate has not expired.</li>
-         * <li>Unissued: The certificate has not been issued.</li>
-         * <li>Unknown: The status is unknown.</li>
-         * <li>Removed: The certificate has been removed, but an issuance record exists.</li>
+         * <li><p>Expired: The certificate has expired.</p>
+         * </li>
+         * <li><p>Unexpired: The certificate has not expired.</p>
+         * </li>
+         * <li><p>Unissued: The certificate has not been issued.</p>
+         * </li>
+         * <li><p>Unknown: The status is unknown.</p>
+         * </li>
+         * <li><p>Removed: The certificate has been removed, but an issuance record exists.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

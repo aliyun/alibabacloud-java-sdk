@@ -104,7 +104,7 @@ public class InstallNodePoolComponentsRequest extends TeaModel {
         public java.util.Map<String, ?> customConfig;
 
         /**
-         * <p>The environment variables for the node component.</p>
+         * <p>The environment variables of the node component.</p>
          */
         @NameInMap("envs")
         public java.util.List<InstallNodePoolComponentsRequestComponentsConfigEnvs> envs;

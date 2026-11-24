@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateClusterResponseBody extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>c21e0591548ba4c10bdb535d657******</p>
@@ -14,7 +14,7 @@ public class MigrateClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>687C5BAA-D103-4993-884B-C35E43******</p>
@@ -23,7 +23,7 @@ public class MigrateClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>T-62ccd14aacb8db06ca******</p>

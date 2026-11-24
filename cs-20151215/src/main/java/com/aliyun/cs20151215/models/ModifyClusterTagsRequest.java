@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterTagsRequest extends TeaModel {
     /**
-     * <p>The data to be updated.</p>
+     * <p>The data to modify.</p>
      */
     @NameInMap("body")
     public java.util.List<Tag> body;

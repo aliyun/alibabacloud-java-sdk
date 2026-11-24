@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RepairClusterNodePoolRequest extends TeaModel {
     /**
-     * <p><strong>[Deprecated]</strong> Specifies whether to restart the instance.</p>
+     * <p><strong>[Deprecated]</strong> Specifies whether to allow restarting instances.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

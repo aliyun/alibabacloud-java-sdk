@@ -166,8 +166,8 @@ public class DescribeAddonResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the component can be upgraded to this version. Valid values:</p>
          * <ul>
-         * <li>true: Supported.</li>
-         * <li>false: Not supported.</li>
+         * <li>true: The component can be upgraded to this version.</li>
+         * <li>false: The component cannot be upgraded to this version.</li>
          * </ul>
          * 
          * <strong>example:</strong>

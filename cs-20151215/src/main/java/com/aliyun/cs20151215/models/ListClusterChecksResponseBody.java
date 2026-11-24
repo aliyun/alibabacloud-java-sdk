@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterChecksResponseBody extends TeaModel {
     /**
-     * <p>The list of checks.</p>
+     * <p>The check list.</p>
      */
     @NameInMap("checks")
     public java.util.List<ListClusterChecksResponseBodyChecks> checks;

@@ -14,7 +14,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     public java.util.Map<String, ?> instancesSeverityCount;
 
     /**
-     * <p>The list of policy instance counts by policy type.</p>
+     * <p>The list of policy instance counts for different policy types.</p>
      */
     @NameInMap("policy_instances")
     public java.util.List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> policyInstances;
@@ -42,7 +42,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     public static class DescribePolicyInstancesStatusResponseBodyPolicyInstances extends TeaModel {
         /**
-         * <p>The policy type. For more information about supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</p>
+         * <p>The policy type. For supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>compliance</p>

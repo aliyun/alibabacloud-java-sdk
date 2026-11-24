@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WakeUpClusterRequest extends TeaModel {
     /**
+     * <p>The client token.</p>
+     * 
      * <strong>example:</strong>
      * <p>c82e6987e2961451182edacd74faf</p>
      */

@@ -6,9 +6,7 @@ import com.aliyun.tea.*;
 public class CreateTriggerRequest extends TeaModel {
     /**
      * <p>The action of the trigger. Valid values:</p>
-     * <ul>
-     * <li><code>redeploy</code>: Redeploys the resources defined in <code>project_id</code>.</li>
-     * </ul>
+     * <p><code>redeploy</code>: Redeploys the resources defined in <code>project_id</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,9 +26,7 @@ public class CreateTriggerRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The project name of the trigger.</p>
-     * <p>It consists of the namespace and the name of the application, in the format of <code>${namespace}/${name}</code>.</p>
-     * <p>Example: <code>default/test-app</code>.</p>
+     * <p>The project name of the trigger. It consists of the namespace and the application name in the <code>${namespace}/${name}</code> format. Example: <code>default/test-app</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,9 +38,9 @@ public class CreateTriggerRequest extends TeaModel {
     /**
      * <p>The type of the trigger. Valid values:</p>
      * <ul>
-     * <li><p><code>deployment</code>: The trigger for stateless applications. </p>
+     * <li><p><code>deployment</code>: the trigger for stateless applications. </p>
      * </li>
-     * <li><p><code>application</code>: The trigger for Application Center applications.</p>
+     * <li><p><code>application</code>: the trigger for Application Center applications.</p>
      * </li>
      * </ul>
      * <p>Default value: <code>deployment</code>.</p>

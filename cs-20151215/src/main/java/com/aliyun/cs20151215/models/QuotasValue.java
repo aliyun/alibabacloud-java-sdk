@@ -23,7 +23,7 @@ public class QuotasValue extends TeaModel {
     public String operationCode;
 
     /**
-     * <p>Indicates whether the quota can be adjusted.</p>
+     * <p>Specifies whether the quota can be adjusted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

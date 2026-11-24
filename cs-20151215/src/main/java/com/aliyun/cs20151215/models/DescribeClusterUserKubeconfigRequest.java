@@ -19,9 +19,9 @@ public class DescribeClusterUserKubeconfigRequest extends TeaModel {
     public Boolean privateIpAddress;
 
     /**
-     * <p>The validity period of the temporary kubeconfig file, in minutes. Valid values: 15 to 4320.</p>
+     * <p>The validity period of the temporary kubeconfig. Unit: minutes. Valid values: 15 to 4320.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically determines a longer validity period. You can determine the specific expiration time based on the value of the <code>expiration</code> field in the response.</p>
+     * <p>If you do not specify this parameter, the system automatically determines a longer validity period. The specific expiration time is determined by the value of the expiration field in the response.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

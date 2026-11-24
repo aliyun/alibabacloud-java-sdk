@@ -128,7 +128,7 @@ public class DescribeClustersResponse extends TeaModel {
         public String dataDiskCategory;
 
         /**
-         * <p>The data disk size of the node.</p>
+         * <p>The size of the data disk for the node.</p>
          */
         @NameInMap("data_disk_size")
         public Long dataDiskSize;
@@ -167,7 +167,7 @@ public class DescribeClustersResponse extends TeaModel {
         public String initVersion;
 
         /**
-         * <p>The access address of the cluster API server, including the internal network access address and the public network access address.</p>
+         * <p>The access endpoint of the cluster API server, including the internal network access endpoint and the public network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;api_server_endpoint&quot;:&quot;&quot;,&quot;intranet_api_server_endpoint&quot;:&quot;<a href="https://192.0.2.10:6443%22%7D">https://192.0.2.10:6443&quot;}</a></p>
@@ -203,7 +203,7 @@ public class DescribeClustersResponse extends TeaModel {
         public String networkMode;
 
         /**
-         * <p>Indicates whether Private Zone is enabled for the cluster. Default value: false.</p>
+         * <p>Indicates whether PrivateZone is enabled for the cluster. Default value: false.</p>
          */
         @NameInMap("private_zone")
         public Boolean privateZone;
@@ -245,7 +245,7 @@ public class DescribeClustersResponse extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The current number of nodes in the cluster, including master and worker nodes.</p>
+         * <p>The current number of nodes in the cluster, including master nodes and worker nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -254,7 +254,7 @@ public class DescribeClustersResponse extends TeaModel {
         public Long size;
 
         /**
-         * <p>The state of the cluster.</p>
+         * <p>The running state of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -263,7 +263,7 @@ public class DescribeClustersResponse extends TeaModel {
         public String state;
 
         /**
-         * <p>The subnet CIDR of the cluster.</p>
+         * <p>The subnet CIDR block of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.0.0/16</p>
@@ -287,7 +287,7 @@ public class DescribeClustersResponse extends TeaModel {
         public String updated;
 
         /**
-         * <p>The VPC ID of the cluster.</p>
+         * <p>The virtual private cloud (VPC) ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
@@ -296,7 +296,7 @@ public class DescribeClustersResponse extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The vSwitch CIDR.</p>
+         * <p>The CIDR block of the vSwitch.</p>
          */
         @NameInMap("vswitch_cidr")
         public String vswitchCidr;
@@ -311,7 +311,7 @@ public class DescribeClustersResponse extends TeaModel {
         public String vswitchId;
 
         /**
-         * <p>The name of the RAM role used by the worker nodes.</p>
+         * <p>The name of the Resource Access Management (RAM) role used by the worker nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>example-worker-ram-role</p>

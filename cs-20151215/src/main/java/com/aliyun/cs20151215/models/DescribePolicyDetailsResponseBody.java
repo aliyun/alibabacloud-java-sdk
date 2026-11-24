@@ -8,7 +8,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
      * <p>The governance action of the rule. Valid values:</p>
      * <ul>
      * <li><code>enforce</code>: Blocks non-compliant deployments.</li>
-     * <li><code>inform</code>: Triggers alerts.</li>
+     * <li><code>inform</code>: Generates alerts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,10 +36,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether the rule is deleted. Valid values:</p>
+     * <p>Specifies whether the rule is deleted. Valid values:</p>
      * <ul>
-     * <li>0: Not deleted.</li>
-     * <li>1: Deleted.</li>
+     * <li>0: The rule is not deleted.</li>
+     * <li>1: The rule is deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether policy configuration is required. Valid values: </p>
+     * <p>Specifies whether policy configuration is required. Valid values:</p>
      * <ul>
      * <li>0: Parameter settings are required.</li>
      * <li>1: No parameter settings are required.</li>
@@ -73,9 +73,9 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     /**
      * <p>The governance severity of the rule. Valid values:</p>
      * <ul>
-     * <li><code>high</code>: High-risk.</li>
-     * <li><code>medium</code>: Medium-risk.</li>
-     * <li><code>low</code>: Low-risk.</li>
+     * <li><code>high</code>: High risk.</li>
+     * <li><code>medium</code>: Medium risk.</li>
+     * <li><code>low</code>: Low risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>

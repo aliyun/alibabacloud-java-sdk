@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterAddonMetadataRequest extends TeaModel {
     /**
-     * <p>The component version.</p>
+     * <p>The version of the add-on.</p>
      * 
      * <strong>example:</strong>
      * <p>1.8.4.1</p>

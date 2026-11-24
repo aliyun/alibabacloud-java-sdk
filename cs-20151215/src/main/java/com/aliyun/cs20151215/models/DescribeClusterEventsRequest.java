@@ -32,7 +32,7 @@ public class DescribeClusterEventsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The maximum number of entries to return on each page. Valid values: 1 to 100. Default value: 50.</p>
+     * <p>The maximum number of results to return per page. Valid values: 1 to 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

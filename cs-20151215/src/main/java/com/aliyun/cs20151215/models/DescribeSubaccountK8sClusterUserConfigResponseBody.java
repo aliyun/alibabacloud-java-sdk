@@ -15,7 +15,7 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
     public String config;
 
     /**
-     * <p>The expiration time of the KubeConfig. Format: UTC time in RFC 3339 format.</p>
+     * <p>The expiration time of the KubeConfig. The time is displayed in UTC and follows the RFC 3339 standard.</p>
      * 
      * <strong>example:</strong>
      * <p>2028-04-09T06:20:47Z</p>
