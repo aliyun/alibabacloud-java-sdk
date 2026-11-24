@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMessagesResponseBody extends TeaModel {
     /**
-     * <p>The query result.</p>
+     * <p>The query results.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetMessagesResponseBodyData> data;
@@ -20,7 +20,7 @@ public class GetMessagesResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -76,7 +76,7 @@ public class GetMessagesResponseBody extends TeaModel {
 
     public static class GetMessagesResponseBodyDataEvents extends TeaModel {
         /**
-         * <p>The approval status of the tool calling.</p>
+         * <p>The tool invocation approval status.</p>
          * 
          * <strong>example:</strong>
          * <p>pending</p>
@@ -85,7 +85,7 @@ public class GetMessagesResponseBody extends TeaModel {
         public String approvalStatus;
 
         /**
-         * <p>The tool calling ID.</p>
+         * <p>The tool invocation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>call-example</p>
@@ -94,7 +94,7 @@ public class GetMessagesResponseBody extends TeaModel {
         public String callId;
 
         /**
-         * <p>The session ID.</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>conversation-example</p>
@@ -103,7 +103,7 @@ public class GetMessagesResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>The description of the tool calling.</p>
+         * <p>The tool invocation description.</p>
          * 
          * <strong>example:</strong>
          * <p>Search ContextDB records</p>
@@ -130,7 +130,7 @@ public class GetMessagesResponseBody extends TeaModel {
         public String roundId;
 
         /**
-         * <p>The parameters of the tool calling.</p>
+         * <p>The tool invocation parameters.</p>
          */
         @NameInMap("ToolArguments")
         public java.util.Map<String, ?> toolArguments;
@@ -248,7 +248,7 @@ public class GetMessagesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The upload file ID.</p>
+         * <p>The uploaded file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>file-example</p>
@@ -297,16 +297,16 @@ public class GetMessagesResponseBody extends TeaModel {
 
     public static class GetMessagesResponseBodyData extends TeaModel {
         /**
-         * <p>The answer.</p>
+         * <p>The reply.</p>
          * 
          * <strong>example:</strong>
-         * <p>The disk usage of the instance rm-bp14as9914vd3**** you queried is 23%, and no capacity expansion is needed at this time. If you need to view the detailed configurations or performance monitoring of a specific instance, or perform other operations, let me know your specific requirements!</p>
+         * <p>The instance rm-bp14as9914vd3**** you inquired about has a disk usage of 23%, so no storage expansion is needed at the moment. If you need to view detailed configurations, check performance monitoring, or perform other operations on a specific instance, please let me know your specific requirements.</p>
          */
         @NameInMap("Answer")
         public String answer;
 
         /**
-         * <p>The session ID.</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9cbbe885-b240-4803-9d15-6781a3fd****</p>
@@ -315,7 +315,7 @@ public class GetMessagesResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the message was created. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1763986004</p>
@@ -323,6 +323,9 @@ public class GetMessagesResponseBody extends TeaModel {
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        /**
+         * <p>The list of events.</p>
+         */
         @NameInMap("Events")
         public java.util.List<GetMessagesResponseBodyDataEvents> events;
 
@@ -363,13 +366,13 @@ public class GetMessagesResponseBody extends TeaModel {
          * <p>The query statement.</p>
          * 
          * <strong>example:</strong>
-         * <p>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</p>
+         * <p>Disk usage of instance rm-bp14as9914vd3**** and whether capacity expansion is required</p>
          */
         @NameInMap("Query")
         public String query;
 
         /**
-         * <p>The retrieval resources.</p>
+         * <p>The retrieved resources.</p>
          */
         @NameInMap("RetrieverResources")
         public java.util.List<?> retrieverResources;

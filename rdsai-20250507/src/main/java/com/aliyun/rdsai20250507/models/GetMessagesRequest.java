@@ -13,6 +13,12 @@ public class GetMessagesRequest extends TeaModel {
     @NameInMap("ConversationId")
     public String conversationId;
 
+    /**
+     * <p>The event output type. Valid values: inline and separate. Default value: inline. In inline mode, tool invocation events, child node events, and document events are unified into the answer field of the event where event = message. In separate mode, tool invocation events, child node events, and document events have their own respective events.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inline</p>
+     */
     @NameInMap("EventMode")
     public String eventMode;
 
@@ -26,7 +32,16 @@ public class GetMessagesRequest extends TeaModel {
     public String firstId;
 
     /**
-     * <p>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The flow instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow-90ea18a8254645968325</p>
+     */
+    @NameInMap("FlowId")
+    public String flowId;
+
+    /**
+     * <p>The number of rows per page for paging. Valid values: 1 to 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -70,6 +85,14 @@ public class GetMessagesRequest extends TeaModel {
     }
     public String getFirstId() {
         return this.firstId;
+    }
+
+    public GetMessagesRequest setFlowId(String flowId) {
+        this.flowId = flowId;
+        return this;
+    }
+    public String getFlowId() {
+        return this.flowId;
     }
 
     public GetMessagesRequest setLimit(Long limit) {

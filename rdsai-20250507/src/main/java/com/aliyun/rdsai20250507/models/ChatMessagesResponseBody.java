@@ -8,13 +8,13 @@ public class ChatMessagesResponseBody extends TeaModel {
      * <p>The answer content.</p>
      * 
      * <strong>example:</strong>
-     * <p>The disk usage of instance rm-bp14as9914vd3**** is 23%, so capacity expansion is not required at this time. If you need to view detailed configurations, performance monitoring, or perform other operations for a specific instance, let me know your specific requirements</p>
+     * <p>The disk usage of the instance rm-bp14as9914vd3**** you asked about is 23%, and it does not need to be scaled up at the moment. If you need to further view the detailed configuration, performance monitoring, or perform other operations for a specific instance, please let me know your specific requirements!</p>
      */
     @NameInMap("Answer")
     public String answer;
 
     /**
-     * <p>The tool calling invoke approval status.</p>
+     * <p>The tool invoke approval status.</p>
      * 
      * <strong>example:</strong>
      * <p>pending</p>
@@ -23,7 +23,7 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String approvalStatus;
 
     /**
-     * <p>The tool calling invoke ID.</p>
+     * <p>The tool invoke ID.</p>
      * 
      * <strong>example:</strong>
      * <p>call-example</p>
@@ -50,7 +50,7 @@ public class ChatMessagesResponseBody extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The tool calling invoke description.</p>
+     * <p>The tool invoke description.</p>
      * 
      * <strong>example:</strong>
      * <p>Search ContextDB records</p>
@@ -89,7 +89,7 @@ public class ChatMessagesResponseBody extends TeaModel {
      * <p>The query mode.</p>
      * 
      * <strong>example:</strong>
-     * <p>This will be deprecated in the future and can be ignored</p>
+     * <p>This will be deprecated in the future. You can ignore it</p>
      */
     @NameInMap("Mode")
     public String mode;
@@ -122,7 +122,7 @@ public class ChatMessagesResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The tool calling invoke parameters.</p>
+     * <p>The tool invoke parameters.</p>
      */
     @NameInMap("ToolArguments")
     public java.util.Map<String, ?> toolArguments;

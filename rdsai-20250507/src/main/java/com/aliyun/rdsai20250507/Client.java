@@ -4160,7 +4160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the historical conversations of a user.</p>
+     * <p>Queries the conversation history of a user.</p>
      * 
      * @param request GetConversationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4169,6 +4169,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConversationsResponse getConversationsWithOptions(GetConversationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {
+            query.put("FlowId", request.flowId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lastId)) {
             query.put("LastId", request.lastId);
         }
@@ -4208,7 +4212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the historical conversations of a user.</p>
+     * <p>Queries the conversation history of a user.</p>
      * 
      * @param request GetConversationsRequest
      * @return GetConversationsResponse
@@ -4316,7 +4320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of specific conversation messages.</p>
+     * <p>Retrieves the details of a specific conversation message.</p>
      * 
      * @param request GetMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4335,6 +4339,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.firstId)) {
             query.put("FirstId", request.firstId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowId)) {
+            query.put("FlowId", request.flowId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
@@ -4364,7 +4372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of specific conversation messages.</p>
+     * <p>Retrieves the details of a specific conversation message.</p>
      * 
      * @param request GetMessagesRequest
      * @return GetMessagesResponse

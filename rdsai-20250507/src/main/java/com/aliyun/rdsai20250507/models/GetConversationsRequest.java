@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetConversationsRequest extends TeaModel {
     /**
+     * <p>The ID of the flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow-c5007b4a03a2446cbe9d</p>
+     */
+    @NameInMap("FlowId")
+    public String flowId;
+
+    /**
      * <p>The ID of the last conversation record.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +23,7 @@ public class GetConversationsRequest extends TeaModel {
     public String lastId;
 
     /**
-     * <p>The number of entries per page for a paged query. Valid values: 1 to 100.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +32,7 @@ public class GetConversationsRequest extends TeaModel {
     public String limit;
 
     /**
-     * <p>The pinned bookmark flag for the application.</p>
+     * <p>The pin mark for application favorites.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +50,7 @@ public class GetConversationsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The ContextDB workspace ID.</p>
+     * <p>The ID of the ContextDB workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000-0000-4000-8000-000000000001</p>
@@ -52,6 +61,14 @@ public class GetConversationsRequest extends TeaModel {
     public static GetConversationsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetConversationsRequest self = new GetConversationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetConversationsRequest setFlowId(String flowId) {
+        this.flowId = flowId;
+        return this;
+    }
+    public String getFlowId() {
+        return this.flowId;
     }
 
     public GetConversationsRequest setLastId(String lastId) {

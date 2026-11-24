@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     /**
-     * <p>The account-level capability information of the current request. It only indicates the operations that the account compatibility adapter can perform and does not represent resource-level authorization. This field is optional and is not returned if no account-level executable operations are provided.</p>
+     * <p>The account-level capability information of the current call. It only indicates the operations that the account compatibility adapter can perform and does not represent resource-level authorization. This field is optional and is not returned if no account-level executable operations are provided.</p>
      */
     @NameInMap("Capabilities")
     public UpdateContextDatabaseWorkspaceResponseBodyCapabilities capabilities;
@@ -20,12 +20,12 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The permission mode used by the server to parse the identity of the current request. Valid values:</p>
+     * <p>The permission mode used by the server to parse the identity of the current call. Valid values:</p>
      * <ul>
      * <li><code>personal_compatibility</code>: compatibility mode.</li>
      * <li><code>advanced</code>: advanced permission mode.</li>
      * </ul>
-     * <p>This field describes the identity context of the current request. For the actual permission mode of the workspace, refer to PermissionMode.</p>
+     * <p>This field describes the identity context of the current call. For the actual permission mode of the workspace, refer to PermissionMode.</p>
      * 
      * <strong>example:</strong>
      * <p>advanced</p>
@@ -34,7 +34,7 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String consolePermissionMode;
 
     /**
-     * <p>The creation time in ISO 8601 format.</p>
+     * <p>The time when the workspace was created, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-28T17:59:55Z</p>
@@ -56,7 +56,7 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String permissionMode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -65,7 +65,7 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The workspace status.</p>
+     * <p>The status of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -74,7 +74,7 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The workspace type.</p>
+     * <p>The type of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>personal</p>
@@ -83,13 +83,13 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The viewer identity information of the current request, including the identity resolution mode, caller account type, and member information. Member-related fields are optional.</p>
+     * <p>The viewer identity information of the current call, including the identity parsing mode, caller account type, and member information. Member-related fields are optional.</p>
      */
     @NameInMap("Viewer")
     public UpdateContextDatabaseWorkspaceResponseBodyViewer viewer;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The ID of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-as1llqmkol****</p>
@@ -201,7 +201,7 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
 
     public static class UpdateContextDatabaseWorkspaceResponseBodyCapabilities extends TeaModel {
         /**
-         * <p>The list of operation names that the account compatibility adapter can perform. The list content does not represent read/write, member group, or access control authorization for specific resources.</p>
+         * <p>The list of names of operations that the account compatibility adapter can perform. The list content does not represent read/write, member group, or access control authorization for specific resources.</p>
          */
         @NameInMap("ExecutableActions")
         public java.util.List<String> executableActions;
@@ -223,7 +223,7 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
 
     public static class UpdateContextDatabaseWorkspaceResponseBodyViewer extends TeaModel {
         /**
-         * <p>The ID of the bound workspace member in the identity information of the current request. Optional. This field is empty if no bound member information is provided.</p>
+         * <p>The ID of the bound workspace member in the identity information of the current call. Optional. This field is empty if no bound member information is provided.</p>
          * 
          * <strong>example:</strong>
          * <p>member-example</p>
@@ -250,7 +250,7 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
         public String boundMemberStatus;
 
         /**
-         * <p>The account type of the caller for the current request, such as <code>customer</code>. This field describes the caller account and does not indicate the role of a workspace member.</p>
+         * <p>The account type of the caller for the current call, such as <code>customer</code>. This field describes the caller account and does not indicate the role of the workspace member.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -259,12 +259,12 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
         public String callerType;
 
         /**
-         * <p>The identity resolution mode of the current request. Valid values:</p>
+         * <p>The identity parsing mode of the current call. Valid values:</p>
          * <ul>
          * <li><code>account_compatibility</code>: account compatibility identity mode.</li>
          * <li><code>bound_member</code>: bound member identity mode.</li>
          * </ul>
-         * <p>The identity resolution mode and the workspace permission mode are different concepts. You cannot infer whether advanced permissions are enabled for the workspace based on this field.</p>
+         * <p>The identity parsing mode and the permission mode of the workspace are different concepts. You cannot infer whether advanced permissions are enabled for the workspace based on this field.</p>
          * 
          * <strong>example:</strong>
          * <p>account_compatibility</p>
@@ -273,7 +273,7 @@ public class UpdateContextDatabaseWorkspaceResponseBody extends TeaModel {
         public String identityMode;
 
         /**
-         * <p>The ID of the selected workspace member in the account compatibility identity mode. Optional. This field is empty if no member is selected for the current request. This field and the bound member ID represent the member selection result and the binding relationship, respectively.</p>
+         * <p>The ID of the selected workspace member in the account compatibility identity mode. Optional. This field is empty if no member is selected for the current call. This field and the bound member ID represent the member selection result and the binding relationship, respectively.</p>
          * 
          * <strong>example:</strong>
          * <p>member-example</p>

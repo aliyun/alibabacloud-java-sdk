@@ -1,3 +1,9 @@
+2026-11-24 Version: 3.11.1
+- Update API ChatMessages: add request parameters Inputs.FlowId.
+- Update API GetConversations: add request parameters FlowId.
+- Update API GetMessages: add request parameters FlowId.
+
+
 2026-11-23 Version: 3.11.0
 - Support API GetContextDatabaseCreditUsageSummary.
 - Support API GetContextDatabaseCreditUsageSummaryByMember.
