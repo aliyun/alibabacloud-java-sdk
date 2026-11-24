@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRepoBuildRecordResponseBody extends TeaModel {
     /**
-     * <p>The ID of the image building record.</p>
+     * <p>The build record ID.</p>
      * 
      * <strong>example:</strong>
      * <p>79174CBA-8556-443A-8976-22C922D7****</p>
@@ -23,7 +23,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the image building was completed.</p>
+     * <p>The end time, in UNIX timestamp format. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1568718698000</p>
@@ -32,7 +32,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The information about the image.</p>
+     * <p>The image information.</p>
      */
     @NameInMap("Image")
     public GetRepoBuildRecordResponseBodyImage image;
@@ -47,7 +47,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>a78ec6fb-16ea-4649-93b7-f52afba7d9de1</p>
@@ -56,7 +56,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the image building started.</p>
+     * <p>The start time, in UNIX timestamp format. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1568718468000</p>
@@ -65,7 +65,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The status of the instance.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -144,7 +144,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
 
     public static class GetRepoBuildRecordResponseBodyImage extends TeaModel {
         /**
-         * <p>The tag of the image.</p>
+         * <p>The image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>master</p>
@@ -153,7 +153,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         public String imageTag;
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The image repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -162,7 +162,7 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The name of the namespace to which the image repository belongs.</p>
+         * <p>The namespace name of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

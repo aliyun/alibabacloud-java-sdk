@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The region ID of the resources.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,14 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify a maximum of 20 resource IDs.</p>
+     * <p>The resource IDs. You can specify up to 20 resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Instance resources are supported.</p>
+     * <p>The resource type. Currently supports Instance resources.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -78,7 +78,7 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length. It cannot start with acs: or aliyun, and cannot contain http:// or https://.</p>
+         * <p>A tag key can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>test-key</p>
@@ -88,7 +88,7 @@ public class TagResourcesRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>A tag value can be up to 128 characters in length. It cannot start with acs: or aliyun, and cannot contain http:// or https://.</p>
+         * <p>A tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>test-val</p>

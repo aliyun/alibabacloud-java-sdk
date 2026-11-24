@@ -23,7 +23,7 @@ public class CreateChainResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

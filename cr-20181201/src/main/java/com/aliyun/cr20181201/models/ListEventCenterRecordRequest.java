@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEventCenterRecordRequest extends TeaModel {
     /**
-     * <p>The type of the event. Valid values:</p>
+     * <p>The event type. Valid values:</p>
      * <ul>
-     * <li><code>cr:Artifact:DeliveryChainCompleted</code>: The delivery chain is processed.</li>
-     * <li><code>cr:Artifact:SynchronizationCompleted</code>: The image is replicated.</li>
-     * <li><code>cr:Artifact:BuildCompleted</code>: The image is built.</li>
-     * <li><code>cr:Artifact:ScanCompleted</code>: The image is scanned.</li>
-     * <li><code>cr:Artifact:SigningCompleted</code>: The image is signed.</li>
+     * <li><code>cr:Artifact:DeliveryChainCompleted</code>: Delivery chain processing completed.</li>
+     * <li><code>cr:Artifact:SynchronizationCompleted</code>: Image synchronization completed.</li>
+     * <li><code>cr:Artifact:BuildCompleted</code>: Image building completed.</li>
+     * <li><code>cr:Artifact:ScanCompleted</code>: Image scanning completed.</li>
+     * <li><code>cr:Artifact:SigningCompleted</code>: Image signing completed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ListEventCenterRecordRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ListEventCenterRecordRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -40,7 +40,7 @@ public class ListEventCenterRecordRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -49,7 +49,7 @@ public class ListEventCenterRecordRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the repository.</p>
+     * <p>The repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -58,7 +58,7 @@ public class ListEventCenterRecordRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace to which the repository belongs.</p>
+     * <p>The repository namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -67,7 +67,7 @@ public class ListEventCenterRecordRequest extends TeaModel {
     public String repoNamespaceName;
 
     /**
-     * <p>The ID of the event notification rule.</p>
+     * <p>The event rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>crecr-n6pbhgjxtla***</p>

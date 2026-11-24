@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,11 +14,11 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request was successful.</p>
+     * <li><p><code>true</code>: The call was successful.</p>
      * </li>
-     * <li><p><code>false</code>: The request failed.</p>
+     * <li><p><code>false</code>: The call failed.</p>
      * </li>
      * </ul>
      * 
@@ -56,7 +56,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The subscription rules.</p>
+     * <p>The list of rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ListArtifactSubscriptionRuleResponseBodyRules> rules;
@@ -133,7 +133,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
 
     public static class ListArtifactSubscriptionRuleResponseBodyRules extends TeaModel {
         /**
-         * <p>Indicates whether to enable the accelerated subscription channel. This feature is in public preview. Based on an optimized scheduling policy and network link, the speed of image subscription is improved.</p>
+         * <p>Indicates whether the acceleration link is enabled. The subscription acceleration feature is in public preview and can improve image subscription speed based on scheduling policies and network link optimization.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -142,7 +142,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public Boolean accelerate;
 
         /**
-         * <p>The time when the rule was created.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1638187989000</p>
@@ -160,7 +160,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the rule was last modified.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1678341923385</p>
@@ -169,7 +169,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ns</p>
@@ -178,7 +178,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>Indicates whether to overwrite the image.</p>
+         * <p>Specifies whether to overwrite images.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -187,13 +187,13 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public Boolean override;
 
         /**
-         * <p>The operating system and architecture. If the source repository contains a multi-architecture image, only images that have a specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance.</p>
+         * <p>The operating system and architecture. If the source repository contains multi-architecture images, only the specified operating system and architecture are subscribed to the destination repository of the Enterprise instance.</p>
          */
         @NameInMap("Platform")
         public java.util.List<String> platform;
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-repo</p>
@@ -210,6 +210,12 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The domain name of the source image repository for the subscription rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>anolis-registry.cn-zhangjiakou.cr.aliyuncs.com</p>
+         */
         @NameInMap("SourceDomain")
         public String sourceDomain;
 
@@ -223,7 +229,7 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public String sourceNamespaceName;
 
         /**
-         * <p>The source of the artifact. Valid values:</p>
+         * <p>The artifact source.</p>
          * 
          * <strong>example:</strong>
          * <p>DOCKER_HUB</p>
@@ -250,7 +256,16 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         public Long tagCount;
 
         /**
-         * <p>The regular expression that is used to subscribe to the source repository.</p>
+         * <p>The list of subscribed tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
+         */
+        @NameInMap("TagList")
+        public java.util.List<String> tagList;
+
+        /**
+         * <p>The image versions subscribed from the source repository. Regular expressions are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>release.*</p>
@@ -373,6 +388,14 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
         public Long getTagCount() {
             return this.tagCount;
+        }
+
+        public ListArtifactSubscriptionRuleResponseBodyRules setTagList(java.util.List<String> tagList) {
+            this.tagList = tagList;
+            return this;
+        }
+        public java.util.List<String> getTagList() {
+            return this.tagList;
         }
 
         public ListArtifactSubscriptionRuleResponseBodyRules setTagRegexp(String tagRegexp) {

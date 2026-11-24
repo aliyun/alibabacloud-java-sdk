@@ -23,7 +23,7 @@ public class UpdateRepoTriggerResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>32535049-ED91-4589-98C0-7C88766EDF1F</p>

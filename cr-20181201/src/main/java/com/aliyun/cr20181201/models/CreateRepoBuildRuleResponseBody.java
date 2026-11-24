@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRepoBuildRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the building rule.</p>
+     * <p>The build rule ID.</p>
      * 
      * <strong>example:</strong>
      * <p>crbr-ly77w5i3t31f****</p>
@@ -14,7 +14,7 @@ public class CreateRepoBuildRuleResponseBody extends TeaModel {
     public String buildRuleId;
 
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,10 +23,12 @@ public class CreateRepoBuildRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The call is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class CreateRepoBuildRuleResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventCenterRuleNameResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>031572FA-7D8F-4C05-B790-1071E0E05DE6</p>
@@ -32,7 +32,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of names of event notification rules.</p>
+     * <p>The list of event rule names.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;RuleName\&quot;: \&quot;mlf\&quot;, \&quot;RuleId\&quot;: \&quot;crecr-73q93pgljm1pc2fp\&quot;}]</p>
@@ -79,7 +79,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
 
     public static class ListEventCenterRuleNameResponseBodyRuleNames extends TeaModel {
         /**
-         * <p>The ID of the event notification rule.</p>
+         * <p>The event rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crecr-n6pbhgjxtl*****</p>
@@ -88,7 +88,7 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The name of the event notification rule.</p>
+         * <p>The event rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-chain</p>

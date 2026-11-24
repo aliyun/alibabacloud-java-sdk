@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRepoTagScanStatusResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The return value.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,11 +14,11 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Specifies whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request was successful.</p>
+     * <li><p><code>true</code>: The API call succeeded.</p>
      * </li>
-     * <li><p><code>false</code>: The request failed.</p>
+     * <li><p><code>false</code>: The API call failed.</p>
      * </li>
      * </ul>
      * 
@@ -40,10 +40,8 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
     /**
      * <p>The scan engine type. Valid values:</p>
      * <ul>
-     * <li><p><code>ACR_SCAN_SERVICE</code>: the ACR Trivy scan engine.</p>
-     * </li>
-     * <li><p><code>SAS_SCAN_SERVICE</code>: the Cloud Security scan engine.</p>
-     * </li>
+     * <li><code>ACR_SCAN_SERVICE</code>: The ACR Trivy scan engine.</li>
+     * <li><code>SAS_SCAN_SERVICE</code>: The cloud security scan engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,15 +51,15 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
     public String scanService;
 
     /**
-     * <p>The scan status of the image. Valid values:</p>
+     * <p>The scan status of the image version. Valid values:</p>
      * <ul>
-     * <li><p><code>SCANNING</code>: The image is being scanned.</p>
+     * <li><p><code>SCANNING</code>: Scanning.</p>
      * </li>
-     * <li><p><code>COMPLETE</code>: The scan is complete.</p>
+     * <li><p><code>COMPLETE</code>: Completed.</p>
      * </li>
-     * <li><p><code>FAILED</code>: The scan failed.</p>
+     * <li><p><code>FAILED</code>: Failed.</p>
      * </li>
-     * <li><p><code>RETRYING</code>: The scan is being retried.</p>
+     * <li><p><code>RETRYING</code>: Retrying.</p>
      * </li>
      * </ul>
      * 

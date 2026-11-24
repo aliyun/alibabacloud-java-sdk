@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateRepoBuildRuleRequest extends TeaModel {
     /**
-     * <p>Building arguments.</p>
+     * <p>The build parameters.</p>
      */
     @NameInMap("BuildArgs")
     public java.util.List<String> buildArgs;
 
     /**
-     * <p>The ID of the building rule.</p>
+     * <p>The build rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     public String buildRuleId;
 
     /**
-     * <p>The path of the Dockerfile.</p>
+     * <p>The path to the Dockerfile.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -39,7 +39,7 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     public String dockerfileName;
 
     /**
-     * <p>The tag of the image.</p>
+     * <p>The image tag version.</p>
      * 
      * <strong>example:</strong>
      * <p>v0.9.5</p>
@@ -48,7 +48,7 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     public String imageTag;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,15 +58,15 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Architecture for image building. Valid values:</p>
+     * <p>The architecture of the image to build. Valid values:</p>
      * <ul>
      * <li><code>linux/amd64</code></li>
      * <li><code>linux/arm64</code></li>
      * <li><code>linux/386</code></li>
      * <li><code>linux/arm/v7</code></li>
-     * <li><code>linux/arm/v6</code></li>
+     * <li><code>linux/arm/v6</code>
+     * Default value: <code>linux/amd64</code>.</li>
      * </ul>
-     * <p>Default value: <code>linux/amd64</code></p>
      * 
      * <strong>example:</strong>
      * <p>linux/amd64</p>
@@ -75,7 +75,7 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     public java.util.List<String> platforms;
 
     /**
-     * <p>The name of the push that triggers the building rule.</p>
+     * <p>The trigger name.</p>
      * 
      * <strong>example:</strong>
      * <p>master</p>
@@ -84,10 +84,10 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     public String pushName;
 
     /**
-     * <p>The type of the push that triggers the building rule. Valid values:</p>
+     * <p>The push type. Valid values:</p>
      * <ul>
-     * <li><code>GIT_TAG</code>: tag push</li>
-     * <li><code>GIT_BRANCH</code>: branch push</li>
+     * <li><code>GIT_TAG</code>: Triggered by a tag.</li>
+     * <li><code>GIT_BRANCH</code>: Triggered by a branch.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     public String pushType;
 
     /**
-     * <p>The ID of the image repository.</p>
+     * <p>The image repository ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRepositoryRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetRepositoryRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the repository.</p>
+     * <p>The repository ID. This API supports querying by RepoId, or by RepoNamespaceName and RepoName together.</p>
      * 
      * <strong>example:</strong>
      * <p>crr-03cuozrsqhkw****</p>
@@ -24,7 +24,7 @@ public class GetRepositoryRequest extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The name of the repository.</p>
+     * <p>The repository name. This API supports querying by RepoId, or by RepoNamespaceName and RepoName together.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -33,7 +33,7 @@ public class GetRepositoryRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace to which the repository belongs.</p>
+     * <p>The repository namespace name. This API supports querying by RepoId, or by RepoNamespaceName and RepoName together.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateChainRequest extends TeaModel {
     /**
-     * <p>The configuration of the delivery chain in the JSON format.</p>
+     * <p>The JSON-formatted entity object that describes the delivery chain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateChainRequest extends TeaModel {
     public String chainConfig;
 
     /**
-     * <p>The ID of the delivery chain.</p>
+     * <p>The delivery chain ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdateChainRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class UpdateChainRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Repositories in which the delivery chain does not take effect.</p>
+     * <p>The set of repositories excluded from delivery chain execution.</p>
      */
     @NameInMap("ScopeExclude")
     public java.util.List<String> scopeExclude;

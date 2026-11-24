@@ -14,7 +14,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -41,13 +41,13 @@ public class ListChartRepositoryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The queried repositories.</p>
+     * <p>The list of repositories.</p>
      */
     @NameInMap("Repositories")
     public java.util.List<ListChartRepositoryResponseBodyRepositories> repositories;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0AB62FB8-6873-4032-8515-4578D27523B7</p>
@@ -56,7 +56,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -127,7 +127,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
 
     public static class ListChartRepositoryResponseBodyRepositories extends TeaModel {
         /**
-         * <p>The time when the repository was created.</p>
+         * <p>The time when the repository was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1571926644000</p>
@@ -136,7 +136,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xkx6vujuhay0****</p>
@@ -145,7 +145,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the repository was last modified.</p>
+         * <p>The time when the repository was last modified. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1571930329000</p>
@@ -154,7 +154,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The ID of the repository.</p>
+         * <p>The repository ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crcr-gpsu7b8chmxk****</p>
@@ -163,7 +163,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         public String repoId;
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>repo1</p>
@@ -172,7 +172,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The name of the namespace to which the repository belongs.</p>
+         * <p>The namespace of the repository.</p>
          * 
          * <strong>example:</strong>
          * <p>ns1</p>
@@ -183,8 +183,10 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         /**
          * <p>The status of the repository. Valid values:</p>
          * <ul>
-         * <li><code>NORMAL</code>: The repository is normal.</li>
-         * <li><code>DELETING</code>: The repository is being deleted.</li>
+         * <li><p><code>NORMAL</code>: Normal.</p>
+         * </li>
+         * <li><p><code>DELETING</code>: The repository is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,8 +198,8 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         /**
          * <p>The type of the repository. Valid values:</p>
          * <ul>
-         * <li><code>PRIVATE</code>: a private repository</li>
-         * <li><code>PUBLIC</code>: a public repository</li>
+         * <li><code>PRIVATE</code>: a private repository.</li>
+         * <li><code>PUBLIC</code>: a public repository.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +209,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         public String repoType;
 
         /**
-         * <p>The ID of the resource group to which the repository belongs.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2ikd5rxxxxxx</p>
@@ -216,7 +218,7 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The summary about the repository.</p>
+         * <p>The summary of the repository.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

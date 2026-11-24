@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepoBuildRecordResponseBody extends TeaModel {
     /**
-     * <p>The list of image building records.</p>
+     * <p>The list of build records.</p>
      */
     @NameInMap("BuildRecords")
     public java.util.List<ListRepoBuildRecordResponseBodyBuildRecords> buildRecords;
@@ -20,10 +20,12 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The API call is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The API call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +44,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -51,7 +53,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9D23DEDF-E91D-434B-B7D5-9D12C648D166</p>
@@ -60,7 +62,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,7 +133,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
 
     public static class ListRepoBuildRecordResponseBodyBuildRecordsImage extends TeaModel {
         /**
-         * <p>The tag of the image.</p>
+         * <p>The image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>v0.1</p>
@@ -140,7 +142,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         public String imageTag;
 
         /**
-         * <p>The ID of the repository.</p>
+         * <p>The repository ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-gzsrlevmvoaq****</p>
@@ -149,7 +151,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         public String repoId;
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -158,7 +160,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The name of the namespace to which the repository belongs.</p>
+         * <p>The repository namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -207,7 +209,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
 
     public static class ListRepoBuildRecordResponseBodyBuildRecords extends TeaModel {
         /**
-         * <p>The ID of the image building record.</p>
+         * <p>The build record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>537e08ab-735e-415f-b7c2-160eb87f8****</p>
@@ -216,7 +218,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         public String buildRecordId;
 
         /**
-         * <p>The status of the image building.</p>
+         * <p>The build status.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -225,7 +227,7 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         public String buildStatus;
 
         /**
-         * <p>The time when the image building ended.</p>
+         * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1572875610000</p>
@@ -234,13 +236,13 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The information about the image.</p>
+         * <p>The image information.</p>
          */
         @NameInMap("Image")
         public ListRepoBuildRecordResponseBodyBuildRecordsImage image;
 
         /**
-         * <p>The time when the image building started.</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1572872207000</p>

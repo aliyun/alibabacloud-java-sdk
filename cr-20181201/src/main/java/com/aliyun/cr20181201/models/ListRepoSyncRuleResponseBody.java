@@ -50,7 +50,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of synchronization rules.</p>
+     * <p>The synchronization rules.</p>
      */
     @NameInMap("SyncRules")
     public java.util.List<ListRepoSyncRuleResponseBodySyncRules> syncRules;
@@ -127,7 +127,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
 
     public static class ListRepoSyncRuleResponseBodySyncRules extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1572604642000</p>
@@ -136,14 +136,12 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Indicates whether images are synchronized across accounts. Valid values:</p>
+         * <p>Specifies whether to synchronize images across accounts. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Images are synchronized across accounts.</p>
-         * </li>
-         * <li><p><code>false</code>: Images are synchronized within the same account.</p>
-         * </li>
+         * <li><code>true</code>: synchronizes images across accounts</li>
+         * <li><code>false</code>: synchronizes images within the same account
+         * Default value: <code>false</code>.</li>
          * </ul>
-         * <p>Default value: <code>false</code></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -197,7 +195,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         public String localRepoName;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1572604642000</p>
@@ -206,18 +204,21 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The namespace regex at the instance level.</p>
+         * <p>The instance-level namespace regular expression.</p>
          * <blockquote>
-         * <p>This parameter is valid only when SyncScope is set to <code>INSTANCE</code>.</p>
+         * <p>This parameter is valid only when the SyncScope parameter is set to <code>INSTANCE</code>.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>.*</p>
          */
         @NameInMap("NamespaceNameFilter")
         public String namespaceNameFilter;
 
         /**
-         * <p>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Tasks with the same priority are executed in random order.</p>
-         * <p>Valid values: 1 to 5.</p>
-         * <p>Default value: 3.</p>
+         * <p>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Synchronization tasks with the same priority are executed in random order.
+         * Valid values: 1 to 5.
+         * Default value: 3.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -228,7 +229,7 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         /**
          * <p>The repository filtering rule.</p>
          * <blockquote>
-         * <p>This parameter is valid only when SyncScope is set to <code>INSTANCE</code> or <code>NAMESPACE</code>.</p>
+         * <p>This parameter is valid only when the SyncScope parameter is set to <code>INSTANCE</code> or <code>NAMESPACE</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -240,10 +241,8 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><p><code>FROM</code>: synchronizes from the source instance to the target instance</p>
-         * </li>
-         * <li><p><code>TO</code>: synchronizes from the target instance to the source instance</p>
-         * </li>
+         * <li><code>FROM</code>: synchronizes from the source instance to the target instance</li>
+         * <li><code>TO</code>: synchronizes from the target instance to the source instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,12 +272,9 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         /**
          * <p>The synchronization scope. Valid values:</p>
          * <ul>
-         * <li><p><code>INSTANCE</code>: synchronizes based on namespace regex and repository regex rules</p>
-         * </li>
-         * <li><p><code>NAMESPACE</code>: synchronizes by namespace</p>
-         * </li>
-         * <li><p><code>REPO</code>: synchronizes by image repository</p>
-         * </li>
+         * <li><code>INSTANCE</code>: synchronizes based on namespace and repository regular expressions</li>
+         * <li><code>NAMESPACE</code>: synchronizes based on namespaces</li>
+         * <li><code>REPO</code>: synchronizes based on image repositories</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,10 +286,8 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         /**
          * <p>The trigger policy. Valid values:</p>
          * <ul>
-         * <li><p><code>INITIATIVE</code>: proactive trigger</p>
-         * </li>
-         * <li><p><code>PASSIVE</code>: passive trigger</p>
-         * </li>
+         * <li><code>INITIATIVE</code>: active trigger</li>
+         * <li><code>PASSIVE</code>: passive trigger</li>
          * </ul>
          * 
          * <strong>example:</strong>

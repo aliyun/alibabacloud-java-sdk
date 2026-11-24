@@ -22,7 +22,7 @@ public class ListInstanceEndpointRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Registry</p>
+     * <p>Chart</p>
      */
     @NameInMap("ModuleName")
     public String moduleName;

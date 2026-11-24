@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DiagnosisIssue extends TeaModel {
     /**
-     * <p>A unique code that identifies the issue type.</p>
+     * <p>The event code.</p>
      * 
      * <strong>example:</strong>
      * <p>RepoNumOverLimit</p>
@@ -14,13 +14,13 @@ public class DiagnosisIssue extends TeaModel {
     public String code;
 
     /**
-     * <p>An object that contains additional, unstructured key-value information about the issue.</p>
+     * <p>The additional information.</p>
      */
     @NameInMap("Extra")
     public java.util.Map<String, String> extra;
 
     /**
-     * <p>The time, in ISO 8601 format, when the issue was first detected.</p>
+     * <p>The first occurrence time of the event.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DiagnosisIssue extends TeaModel {
     public String firstOccurrence;
 
     /**
-     * <p>The time, in ISO 8601 format, when the issue was last detected.</p>
+     * <p>The last occurrence time of the event.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DiagnosisIssue extends TeaModel {
     public String lastOccurrence;
 
     /**
-     * <p>Specifies the severity of the issue. Valid values are <code>INFO</code>, <code>WARN</code>, and <code>ERROR</code>.</p>
+     * <p>The event level.</p>
      * 
      * <strong>example:</strong>
      * <p>INFO</p>
@@ -49,7 +49,7 @@ public class DiagnosisIssue extends TeaModel {
     public String level;
 
     /**
-     * <p>The total number of times the issue has occurred.</p>
+     * <p>The number of occurrences of the event.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -58,7 +58,7 @@ public class DiagnosisIssue extends TeaModel {
     public Long occurrenceCount;
 
     /**
-     * <p>The recommended action to resolve the issue.</p>
+     * <p>The Solutions.</p>
      * 
      * <strong>example:</strong>
      * <p>Buy repository quota</p>

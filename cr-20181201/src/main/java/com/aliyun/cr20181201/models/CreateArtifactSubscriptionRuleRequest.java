@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateArtifactSubscriptionRuleRequest extends TeaModel {
     /**
-     * <p>Indicates whether an acceleration link is enabled for image subscription. The subscription acceleration feature is in public preview. The feature is optimized based on scheduling policies and network links to accelerate image subscription.</p>
+     * <p>Specifies whether to enable the acceleration link. The subscription acceleration feature is in public preview. Based on scheduling policies and network link optimization, it can improve the image subscription speed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -24,7 +24,7 @@ public class CreateArtifactSubscriptionRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the Container Registry namespace.</p>
+     * <p>The ACR namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateArtifactSubscriptionRuleRequest extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>Indicates whether the original image is overwritten.</p>
+     * <p>Specifies whether to overwrite images.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -43,14 +43,14 @@ public class CreateArtifactSubscriptionRuleRequest extends TeaModel {
     public Boolean override;
 
     /**
-     * <p>The operating system and architecture. If the source repository contains a multi-arch image, only the specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance. Subscribe to the destination repository of an Enterprise Edition instance</p>
+     * <p>The operating system or architecture. If the source repository contains multi-architecture images, only images with the specified operating system or architecture are subscribed to the destination repository of the Enterprise instance.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Platform")
     public java.util.List<String> platform;
 
     /**
-     * <p>The name of the Container Registry repository.</p>
+     * <p>The ACR repository.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class CreateArtifactSubscriptionRuleRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The source namespace.</p>
+     * <p>The source namespace. If <code>SourceProvider</code> is set to <code>DOCKER_HUB</code>, the default value is <code>library</code>. This parameter is required in other scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>library</p>
@@ -69,13 +69,7 @@ public class CreateArtifactSubscriptionRuleRequest extends TeaModel {
     public String sourceNamespaceName;
 
     /**
-     * <p>The source of the artifact.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>DOCKER_HUB: Docker Hub</li>
-     * <li>GCR: GCR</li>
-     * <li>QUAY: Quay.io</li>
-     * </ul>
+     * <p>The artifact source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,8 +89,7 @@ public class CreateArtifactSubscriptionRuleRequest extends TeaModel {
     public String sourceRepoName;
 
     /**
-     * <p>The number of subscribed images.</p>
-     * <p>This parameter is required.</p>
+     * <p>The number of images to subscribe to.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -105,8 +98,20 @@ public class CreateArtifactSubscriptionRuleRequest extends TeaModel {
     public Long tagCount;
 
     /**
-     * <p>The image tag in the subscription source repository. Regular expressions are supported.</p>
-     * <p>This parameter is required.</p>
+     * <ul>
+     * <li>The image tags to subscribe to when matching by tag list. A maximum of 10 tags are supported.</li>
+     * <li>If TagList is specified, these tags are queried one by one. TagRegexp and TagCount cannot be specified at the same time. If TagList is not specified, TagRegexp and TagCount are used for matching, and both must be specified.</li>
+     * <li>The matching method cannot be changed after the rule is created. To change the matching method, delete the rule and create a new one.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>latest</p>
+     */
+    @NameInMap("TagList")
+    public java.util.List<String> tagList;
+
+    /**
+     * <p>The image versions to subscribe to from the source repository. Regular expressions are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>release-v.*</p>
@@ -197,6 +202,14 @@ public class CreateArtifactSubscriptionRuleRequest extends TeaModel {
     }
     public Long getTagCount() {
         return this.tagCount;
+    }
+
+    public CreateArtifactSubscriptionRuleRequest setTagList(java.util.List<String> tagList) {
+        this.tagList = tagList;
+        return this;
+    }
+    public java.util.List<String> getTagList() {
+        return this.tagList;
     }
 
     public CreateArtifactSubscriptionRuleRequest setTagRegexp(String tagRegexp) {

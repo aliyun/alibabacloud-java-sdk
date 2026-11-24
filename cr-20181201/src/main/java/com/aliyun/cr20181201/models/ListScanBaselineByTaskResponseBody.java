@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScanBaselineByTaskResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,10 +14,10 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Indicates whether the API request was successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: successful</li>
-     * <li><code>false</code>: failed</li>
+     * <li><code>true</code>: The API call is successful.</li>
+     * <li><code>false</code>: The API call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,13 +54,13 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The scanned baseline risks.</p>
+     * <p>The baseline list.</p>
      */
     @NameInMap("ScanBaselines")
     public java.util.List<ListScanBaselineByTaskResponseBodyScanBaselines> scanBaselines;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -131,34 +131,34 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
 
     public static class ListScanBaselineByTaskResponseBodyScanBaselines extends TeaModel {
         /**
-         * <p>The category to which the baseline risk belongs.</p>
+         * <p>The baseline check category.</p>
          * 
          * <strong>example:</strong>
-         * <p>服务配置</p>
+         * <p>Service Configuration</p>
          */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
         /**
-         * <p>Suggestions about how to fix the baseline risk.</p>
+         * <p>The baseline check remediation suggestion.</p>
          * 
          * <strong>example:</strong>
-         * <p>建议对ak混淆加密，避免被利用</p>
+         * <p>Obfuscate and encrypt the AccessKey to prevent exploitation</p>
          */
         @NameInMap("BaselineDetailAdvice")
         public String baselineDetailAdvice;
 
         /**
-         * <p>The description of the baseline risk.</p>
+         * <p>The baseline description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Access Key明文存储</p>
+         * <p>Access Key stored in plaintext</p>
          */
         @NameInMap("BaselineDetailDescription")
         public String baselineDetailDescription;
 
         /**
-         * <p>The path and content of the baseline risk.</p>
+         * <p>The baseline check path and content.</p>
          * 
          * <strong>example:</strong>
          * <p>usr/local/www/project/environments/dev/common/config/paramsxxx</p>
@@ -167,7 +167,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public String baselineDetailPrompt;
 
         /**
-         * <p>The number of baseline risks.</p>
+         * <p>The number of baseline check items.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -176,16 +176,16 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public Integer baselineItemCount;
 
         /**
-         * <p>The name of the baseline risk.</p>
+         * <p>The baseline check name.</p>
          * 
          * <strong>example:</strong>
-         * <p>服务配置</p>
+         * <p>Service Configuration</p>
          */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
 
         /**
-         * <p>The key of the baseline name.</p>
+         * <p>The baseline name key.</p>
          * 
          * <strong>example:</strong>
          * <p>ak_leak</p>
@@ -194,7 +194,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public String baselineNameKey;
 
         /**
-         * <p>The severity of the baseline risk.</p>
+         * <p>The baseline check risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -203,7 +203,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public String baselineNameLevel;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1695090008000</p>
@@ -221,7 +221,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public Long firstScanTime;
 
         /**
-         * <p>High risk quantity.</p>
+         * <p>The number of high-risk items.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -230,7 +230,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public Integer highRiskItemCount;
 
         /**
-         * <p>Low risk quantity.</p>
+         * <p>The number of low-risk items.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -239,7 +239,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public Integer lowRiskItemCount;
 
         /**
-         * <p>Medium risk quantity.</p>
+         * <p>The number of medium-risk items.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -248,7 +248,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public Integer middleRiskItemCount;
 
         /**
-         * <p>The ID of the image scan task.</p>
+         * <p>The image scan task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2328fcaa-f28a-405d-a357-asdvfrew23</p>
@@ -257,7 +257,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public String scanTaskId;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684220824226</p>

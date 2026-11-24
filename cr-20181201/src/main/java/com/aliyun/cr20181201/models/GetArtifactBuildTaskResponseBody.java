@@ -7,9 +7,9 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     /**
      * <p>The artifact build type. Valid values:</p>
      * <ul>
-     * <li><p><code>IMAGE_TO_ACCELERATED_IMAGE</code>: Accelerated image creation optimized for ACK scenarios.</p>
+     * <li><p><code>IMAGE_TO_ACCELERATED_IMAGE</code>: accelerated image optimized for ACK scenarios.</p>
      * </li>
-     * <li><p><code>IMAGE_TO_ECI_ACCELERATED_IMAGE</code>: Accelerated image artifact optimized for ECI scenarios.</p>
+     * <li><p><code>IMAGE_TO_ECI_ACCELERATED_IMAGE</code>: accelerated image artifact optimized for Elastic Container Instance (ECI) scenarios.</p>
      * </li>
      * </ul>
      * 
@@ -59,7 +59,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public java.util.List<String> instructions;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,6 +68,8 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The task priority.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -107,9 +109,9 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     /**
      * <p>The artifact build status. Valid values:</p>
      * <ul>
-     * <li><p><code>PENDING</code>: Scheduling in progress.</p>
+     * <li><p><code>PENDING</code>: Scheduling.</p>
      * </li>
-     * <li><p><code>BUILDING</code>: Building in progress.</p>
+     * <li><p><code>BUILDING</code>: Building.</p>
      * </li>
      * <li><p><code>SUCCESS</code>: Build succeeded.</p>
      * </li>
@@ -234,7 +236,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     public static class GetArtifactBuildTaskResponseBodyArtifactCompression extends TeaModel {
         /**
-         * <p>The operating system and architecture.</p>
+         * <p>The operating system/architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>linux/arm64</p>
@@ -243,7 +245,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The number of layers to retain after compression.</p>
+         * <p>The number of layers retained after compression.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -293,7 +295,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     public static class GetArtifactBuildTaskResponseBodySourceArtifact extends TeaModel {
         /**
-         * <p>The artifact type. Only IMAGE is supported.</p>
+         * <p>The artifact type. Currently, only IMAGE is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
@@ -311,7 +313,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public Integer layerCount;
 
         /**
-         * <p>The repository ID. Only image repositories are supported.</p>
+         * <p>The repository ID. Currently, only image repositories are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-shac42yvqzvq****</p>
@@ -329,7 +331,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The artifact version. Only image versions are supported.</p>
+         * <p>The artifact version. Currently, only image versions are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -386,7 +388,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
 
     public static class GetArtifactBuildTaskResponseBodyTargetArtifact extends TeaModel {
         /**
-         * <p>The artifact type. Only IMAGE is supported.</p>
+         * <p>The artifact type. Currently, only IMAGE is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
@@ -404,7 +406,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public Integer layerCount;
 
         /**
-         * <p>The repository ID. Only image repositories are supported. The repository ID of the target artifact must be the same as that of the source artifact.</p>
+         * <p>The repository ID. Currently, only image repositories are supported. The repository ID of the target artifact must be the same as that of the source artifact.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-1234567</p>
@@ -422,7 +424,7 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The artifact version. Only images are supported.</p>
+         * <p>The artifact version. Currently, only images are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>latest_accelerated</p>

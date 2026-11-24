@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepoBuildRecordLogRequest extends TeaModel {
     /**
-     * <p>The ID of the image building record.</p>
+     * <p>The build record ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListRepoBuildRecordLogRequest extends TeaModel {
     public String buildRecordId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListRepoBuildRecordLogRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The offset of log lines.</p>
+     * <p>The log line offset.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -34,7 +34,7 @@ public class ListRepoBuildRecordLogRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>The ID of the image repository.</p>
+     * <p>The image repository ID.</p>
      * 
      * <strong>example:</strong>
      * <p>crr-z4dvahhku9wv4****</p>

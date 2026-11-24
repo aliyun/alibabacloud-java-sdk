@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRepositoryResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the repository was created.</p>
+     * <p>The creation time, represented as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1570759546000</p>
@@ -23,7 +23,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The details of the repository.</p>
+     * <p>The detailed information.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,7 +32,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String detail;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-kmsiwlxxdcva****</p>
@@ -41,7 +41,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The time when the repository was last modified.</p>
+     * <p>The last modification time, represented as a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1570759546100</p>
@@ -59,10 +59,12 @@ public class GetRepositoryResponseBody extends TeaModel {
     public Long modifiedTime;
 
     /**
-     * <p>Indicates how the repository was created. Valid values:</p>
+     * <p>The repository build type. Valid values:</p>
      * <ul>
-     * <li><code>MANUAL</code>: The repository was manually created.</li>
-     * <li><code>AUTO</code>: The repository was automatically created.</li>
+     * <li><p><code>MANUAL</code>: manually triggered build.</p>
+     * </li>
+     * <li><p><code>AUTO</code>: automatically triggered build.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +74,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String repoBuildType;
 
     /**
-     * <p>The ID of the repository.</p>
+     * <p>The repository ID.</p>
      * 
      * <strong>example:</strong>
      * <p>crr-l5eoubonp0l****</p>
@@ -81,7 +83,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The name of the repository.</p>
+     * <p>The repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -90,7 +92,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -99,7 +101,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String repoNamespaceName;
 
     /**
-     * <p>The status of the repository.</p>
+     * <p>The repository status.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -108,10 +110,12 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String repoStatus;
 
     /**
-     * <p>The type of the repository. Valid values:</p>
+     * <p>The repository type. Valid values:</p>
      * <ul>
-     * <li><code>PUBLIC</code>: public repository.</li>
-     * <li><code>PRIVATE</code>: private repository.</li>
+     * <li><p><code>PUBLIC</code>: public repository.</p>
+     * </li>
+     * <li><p><code>PRIVATE</code>: private repository.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,7 +125,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String repoType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>915E6734-3E50-4640-8DBA-126D2D94DE29</p>
@@ -130,7 +134,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmv36i4is****</p>
@@ -139,7 +143,7 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The summary of the repository.</p>
+     * <p>The summary information.</p>
      * 
      * <strong>example:</strong>
      * <p>Automatically created repository</p>
@@ -148,10 +152,12 @@ public class GetRepositoryResponseBody extends TeaModel {
     public String summary;
 
     /**
-     * <p>Indicates whether the feature of image tag immutability is enabled. Valid values:</p>
+     * <p>The image tag immutability setting. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The feature of image tag immutability is enabled.</li>
-     * <li><code>false</code>: The feature of image tag immutability is disabled.</li>
+     * <li><p><code>true</code>: Enabled.</p>
+     * </li>
+     * <li><p><code>false</code>: Disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

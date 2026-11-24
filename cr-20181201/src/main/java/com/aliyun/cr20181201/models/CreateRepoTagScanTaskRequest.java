@@ -34,12 +34,10 @@ public class CreateRepoTagScanTaskRequest extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The scan engine type:</p>
+     * <p>The scan engine type. Valid values:</p>
      * <ul>
-     * <li><p><code>SAS_SCAN_SERVICE</code>: The cloud security scan engine. This is a paid service.</p>
-     * </li>
-     * <li><p><code>ACR_SCAN_SERVICE</code>: The ACR scan engine.</p>
-     * </li>
+     * <li><code>SAS_SCAN_SERVICE</code>: Security Center scan engine (requires paid activation).</li>
+     * <li><code>ACR_SCAN_SERVICE</code>: ACR scan engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,11 +46,17 @@ public class CreateRepoTagScanTaskRequest extends TeaModel {
     @NameInMap("ScanService")
     public String scanService;
 
+    /**
+     * <p>The image security scan type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
+     */
     @NameInMap("ScanType")
     public String scanType;
 
     /**
-     * <p>The image tag.</p>
+     * <p>The image version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

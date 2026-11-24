@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
+     * <p>Specifies whether to unbind all tags from the resource. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Unbinds all tags from the resource.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Does not unbind all tags.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>If you specify both this parameter and the TagKey parameter, this parameter does not take effect.</p>
+     * <p>If you set both <strong>TagKey.n</strong> and this parameter, this parameter does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The ID of the region in which the resources are deployed.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,13 +33,13 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify a maximum of 20 resource IDs.</p>
+     * <p>The resource ID. You can specify up to 20 resources.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resources. Instance resources are supported.</p>
+     * <p>The resource type. Currently, Instance resources are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +49,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The key of tag N added to the resource. Valid values of N: 1 to 20.</p>
+     * <p>The tag key. Valid values of N: 1 to 20.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

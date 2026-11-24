@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRepoTriggerRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateRepoTriggerRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the image repository.</p>
+     * <p>The image repository ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateRepoTriggerRequest extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The ID of the trigger.</p>
+     * <p>The trigger ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,8 +35,7 @@ public class UpdateRepoTriggerRequest extends TeaModel {
     public String triggerId;
 
     /**
-     * <p>The name of the trigger.</p>
-     * <p>You can specify the TriggerName or TriggerUrl parameter. The TriggerName parameter is optional.</p>
+     * <p>The trigger name. This parameter is optional. You must specify either TriggerName or TriggerUrl.</p>
      * 
      * <strong>example:</strong>
      * <p>test_trigger</p>
@@ -45,7 +44,7 @@ public class UpdateRepoTriggerRequest extends TeaModel {
     public String triggerName;
 
     /**
-     * <p>The image tag based on which the trigger is set.</p>
+     * <p>The image version that triggers the trigger.</p>
      * 
      * <strong>example:</strong>
      * <p>master</p>
@@ -54,11 +53,14 @@ public class UpdateRepoTriggerRequest extends TeaModel {
     public String triggerTag;
 
     /**
-     * <p>The type of the trigger. Valid values:</p>
+     * <p>The trigger type. Valid values:</p>
      * <ul>
-     * <li><code>ALL</code>: a trigger that supports both tags and regular expressions.</li>
-     * <li><code>TAG_LISTTAG</code>: a tag-based trigger.</li>
-     * <li><code>TAG_REG_EXP</code>: a regular expression-based trigger.</li>
+     * <li><p><code>ALL</code>: all.</p>
+     * </li>
+     * <li><p><code>TAG_LISTTAG</code>: tag list.</p>
+     * </li>
+     * <li><p><code>TAG_REG_EXP</code>: regular expression.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +70,7 @@ public class UpdateRepoTriggerRequest extends TeaModel {
     public String triggerType;
 
     /**
-     * <p>The URL of the trigger.</p>
+     * <p>The trigger URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.test.com">https://www.test.com</a></p>

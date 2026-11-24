@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRepoTagResponseBody extends TeaModel {
     /**
-     * <p>The ID of the image.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class GetRepoTagResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The size of the image. Unit: Bytes.</p>
+     * <p>The digest value.</p>
      * 
      * <strong>example:</strong>
      * <p>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1****</p>
@@ -23,7 +23,7 @@ public class GetRepoTagResponseBody extends TeaModel {
     public String digest;
 
     /**
-     * <p>crr-tquyps22md8p****</p>
+     * <p>The time when the image was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1572839125000</p>
@@ -32,7 +32,7 @@ public class GetRepoTagResponseBody extends TeaModel {
     public Long imageCreate;
 
     /**
-     * <p>Image ID</p>
+     * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>45023655bf39c382e26a8607d057c27871dee163c1ecf48cc1ebf2a1****</p>
@@ -41,7 +41,7 @@ public class GetRepoTagResponseBody extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The number of milliseconds that have elapsed since the image was last updated.</p>
+     * <p>The size of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>27107966</p>
@@ -50,7 +50,7 @@ public class GetRepoTagResponseBody extends TeaModel {
     public Long imageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The time when the image was last updated. This value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1572875608000</p>
@@ -59,11 +59,7 @@ public class GetRepoTagResponseBody extends TeaModel {
     public Long imageUpdate;
 
     /**
-     * <p>The status of the image. Valid values:</p>
-     * <ul>
-     * <li><code>NORMAL</code>: The image is normal.</li>
-     * <li><code>DELETING</code>: The image is being deleted.</li>
-     * </ul>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -72,7 +68,7 @@ public class GetRepoTagResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>1.0</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>031572FA-7D8F-4C05-B790-1071E0E05DE6</p>
@@ -81,7 +77,13 @@ public class GetRepoTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The status of the image. Valid values:</p>
+     * <ul>
+     * <li><p><code>NORMAL</code>: Normal.</p>
+     * </li>
+     * <li><p><code>DELETING</code>: The image is being deleted.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -90,7 +92,7 @@ public class GetRepoTagResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The version of the repository.</p>
+     * <p>The repository tag.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0</p>

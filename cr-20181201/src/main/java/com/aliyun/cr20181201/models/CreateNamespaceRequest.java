@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
     /**
-     * <p>Specifies whether a repository is automatically created when an image is pushed to a repository that does not yet exist in the namespace.</p>
+     * <p>Specifies whether automatic creation of an image repository is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -17,7 +17,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public RepoConfiguration defaultRepoConfiguration;
 
     /**
-     * <p>The default type of automatically created repositories. Valid values:</p>
+     * <p>The default repository type for automatic creation. Valid values:</p>
      * <ul>
      * <li><p><code>PUBLIC</code>: public</p>
      * </li>
@@ -43,7 +43,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the namespace. The name must be 2 to 120 characters long and can contain only lowercase letters, digits, and the following separators: underscores (_), hyphens (-), and periods (.). A separator cannot be used as the first or last character.</p>
+     * <p>The name of the namespace. The name must be 2 to 120 characters in length and can contain lowercase letters and digits. The following separators are supported: underscores (_), hyphens (-), and periods (.). A separator cannot be placed at the beginning or end of the name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

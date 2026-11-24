@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceRegionRequest extends TeaModel {
     /**
-     * <p>The language used for response parameters. Set this parameter to <code>zh-CN</code>.</p>
+     * <p>The language of the response parameters. Valid values: <code>zh_CN</code> and <code>en_US</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>zh_CN</p>

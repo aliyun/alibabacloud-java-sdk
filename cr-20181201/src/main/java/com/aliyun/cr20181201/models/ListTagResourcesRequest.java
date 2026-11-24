@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no next query exists. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAfj+3fkqd8igM6VLaQjlaYc=</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region in which the resources are deployed.</p>
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,13 +24,13 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify a maximum of 20 resource IDs.</p>
+     * <p>The resource ID. You can specify up to 20 resources.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resources. Instance resources are supported.</p>
+     * <p>The resource type. Currently, Instance resources are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -92,8 +92,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length. It cannot start with acs: or aliyun, and cannot contain http:// or https://.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot set it to an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test-key</p>
@@ -102,8 +102,8 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>It can be up to 128 characters in length. It cannot start with acs: or aliyun and cannot contain http:// or https://.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can set it to an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test-val</p>

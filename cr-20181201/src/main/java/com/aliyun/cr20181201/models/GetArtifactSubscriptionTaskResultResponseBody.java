@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,10 +14,12 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Specifies whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The call was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,13 +56,13 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the artifact subscription task.</p>
+     * <p>The image task results.</p>
      */
     @NameInMap("TaskResults")
     public java.util.List<GetArtifactSubscriptionTaskResultResponseBodyTaskResults> taskResults;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,7 +133,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
 
     public static class GetArtifactSubscriptionTaskResultResponseBodyTaskResults extends TeaModel {
         /**
-         * <p>The end time of the subscription task.</p>
+         * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1692756630000</p>
@@ -149,7 +151,16 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The error message returned when the task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tag not found.</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ns</p>
@@ -158,7 +169,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-reop</p>
@@ -167,7 +178,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The result of the task.</p>
+         * <p>The result.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -176,7 +187,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The start time of the subscription task.</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1691719501000</p>
@@ -185,7 +196,7 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -230,6 +241,14 @@ public class GetArtifactSubscriptionTaskResultResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetArtifactSubscriptionTaskResultResponseBodyTaskResults setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
         public GetArtifactSubscriptionTaskResultResponseBodyTaskResults setNamespaceName(String namespaceName) {

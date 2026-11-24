@@ -14,7 +14,7 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1571926439000</p>
@@ -23,7 +23,7 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The modification time.</p>
+     * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1571926439000</p>
@@ -41,7 +41,7 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The routing list.</p>
+     * <p>The list of routes.</p>
      */
     @NameInMap("Routes")
     public java.util.List<RouteItem> routes;
@@ -56,7 +56,7 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The request status identifier.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

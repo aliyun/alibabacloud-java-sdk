@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateChartRepositoryRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateChartRepositoryRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace to which the repository belongs.</p>
+     * <p>The name of the repository namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,12 @@ public class UpdateChartRepositoryRequest extends TeaModel {
     public String repoNamespaceName;
 
     /**
-     * <p>The type of the repository. Valid values:</p>
+     * <p>The repository type. Valid values:</p>
      * <ul>
-     * <li><code>PUBLIC</code>: a public repository.</li>
-     * <li><code>PRIVATE</code>: a private repository.</li>
+     * <li><p><code>PUBLIC</code>: public repository</p>
+     * </li>
+     * <li><p><code>PRIVATE</code>: private repository</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +50,7 @@ public class UpdateChartRepositoryRequest extends TeaModel {
     public String repoType;
 
     /**
-     * <p>The summary of the repository.</p>
+     * <p>The summary.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

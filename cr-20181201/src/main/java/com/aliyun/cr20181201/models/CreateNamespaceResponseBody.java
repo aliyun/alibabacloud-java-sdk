@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value <code>success</code> indicates that the request was successful.</p>
+     * <p>The return value.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

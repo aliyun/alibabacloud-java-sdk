@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChartRepositoryResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the chart repository was created.</p>
+     * <p>The time when the chart repository was created. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1563767620000</p>
@@ -23,7 +23,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-kmsiwlxxdcva****</p>
@@ -32,10 +32,12 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The API call is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The API call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +47,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The time when the chart repository was last modified.</p>
+     * <p>The time when the chart repository was last modified. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1563767700000</p>
@@ -54,7 +56,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     public Long modifiedTime;
 
     /**
-     * <p>The ID of the chart repository.</p>
+     * <p>The chart repository ID.</p>
      * 
      * <strong>example:</strong>
      * <p>crcr-c7letfwev5oq****</p>
@@ -63,7 +65,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The name of the chart repository.</p>
+     * <p>The chart repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -72,7 +74,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace to which the chart repository belongs.</p>
+     * <p>The namespace to which the chart repository belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -83,8 +85,10 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     /**
      * <p>The status of the chart repository. Valid values:</p>
      * <ul>
-     * <li><code>NORMAL</code>: The repository is normal.</li>
-     * <li><code>DELETING</code>: The repository is being deleted.</li>
+     * <li><p><code>NORMAL</code>: Normal.</p>
+     * </li>
+     * <li><p><code>DELETING</code>: Being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,8 +100,10 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     /**
      * <p>The type of the chart repository. Valid values:</p>
      * <ul>
-     * <li><code>PUBLIC</code>: a public repository</li>
-     * <li><code>PRIVATE</code>: a private repository</li>
+     * <li><p><code>PUBLIC</code>: public repository.</p>
+     * </li>
+     * <li><p><code>PRIVATE</code>: private repository.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +122,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmv36i4is****</p>
@@ -125,7 +131,7 @@ public class GetChartRepositoryResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The summary about the chart repository.</p>
+     * <p>The chart repository summary.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

@@ -17,8 +17,8 @@ public class CreateScanRuleRequest extends TeaModel {
     /**
      * <p>The collection of namespaces.</p>
      * <ul>
-     * <li>If the scan scope is set to NAMESPACE, this parameter cannot be empty.</li>
-     * <li>If the scan scope is set to REPO, this parameter must contain exactly one namespace.</li>
+     * <li>If the scan scope is NAMESPACE, this parameter cannot be empty.</li>
+     * <li>If the scan scope is REPO, specify exactly one namespace for this parameter.</li>
      * </ul>
      * 
      * <strong>if can be null:</strong>
@@ -30,8 +30,8 @@ public class CreateScanRuleRequest extends TeaModel {
     /**
      * <p>The list of repositories.</p>
      * <ul>
-     * <li>If the scan scope is set to NAMESPACE, this parameter must be empty.</li>
-     * <li>If the scan scope is set to REPO, this parameter cannot be empty.</li>
+     * <li>If the scan scope is NAMESPACE, this parameter must be empty.</li>
+     * <li>If the scan scope is REPO, this parameter cannot be empty.</li>
      * </ul>
      * 
      * <strong>if can be null:</strong>
@@ -73,8 +73,8 @@ public class CreateScanRuleRequest extends TeaModel {
     /**
      * <p>The scan type. Valid values:</p>
      * <ul>
-     * <li><code>VUL</code>: cloud native artifact vulnerability scanning.</li>
-     * <li><code>SBOM</code>: cloud native artifact content analysis.</li>
+     * <li><code>VUL</code>: Artifact vulnerability scanning.</li>
+     * <li><code>SBOM</code>: Artifact content analysis.</li>
      * </ul>
      * <p>Default value: <code>VUL</code>.</p>
      * 

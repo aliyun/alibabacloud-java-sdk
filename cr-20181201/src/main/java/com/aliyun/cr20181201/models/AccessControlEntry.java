@@ -4,9 +4,21 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class AccessControlEntry extends TeaModel {
+    /**
+     * <p>The description of the whitelist entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The IP address or CIDR block that is allowed to access the public endpoint of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.1.1/32</p>
+     */
     @NameInMap("Entry")
     public String entry;
 

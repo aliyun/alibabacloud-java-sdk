@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceEndpointRequest extends TeaModel {
     /**
-     * <p>The type of the endpoint. Set the value to Internet.</p>
+     * <p>The endpoint type. Only Internet is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetInstanceEndpointRequest extends TeaModel {
     public String endpointType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,12 @@ public class GetInstanceEndpointRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the module that you want to access. Valid values:</p>
+     * <p>The access module. Valid values:</p>
      * <ul>
-     * <li><code>Registry</code>: the image repository.</li>
-     * <li><code>Chart</code>: a Helm chart.</li>
+     * <li><p><code>Registry</code>: image repository</p>
+     * </li>
+     * <li><p><code>Chart</code>: Helm chart</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

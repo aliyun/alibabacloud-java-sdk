@@ -23,7 +23,7 @@ public class ListScanRuleRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -32,12 +32,12 @@ public class ListScanRuleRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the vulnerability. Valid values:</p>
+     * <p>The vulnerability type. Valid values:</p>
      * <ul>
-     * <li><code>VUL</code>: Products Cloud Security Scanner.</li>
-     * <li><code>SBOM</code>: Product Content Analysis.</li>
+     * <li><code>VUL</code>: artifact vulnerability scanning.</li>
+     * <li><code>SBOM</code>: artifact content analysis.</li>
      * </ul>
-     * <p>Default value: <code>VUL</code></p>
+     * <p>Default value: <code>VUL</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>SBOM</p>

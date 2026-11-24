@@ -19,7 +19,7 @@ public class CreateInstanceEndpointAclPolicyShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>internet</p>
+     * <p>Internet</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;

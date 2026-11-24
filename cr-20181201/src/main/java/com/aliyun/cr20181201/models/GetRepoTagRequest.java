@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRepoTagRequest extends TeaModel {
     /**
-     * <p>The return value of status code.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetRepoTagRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>GetRepoTag</strong>.</p>
+     * <p>The repository ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetRepoTagRequest extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The number of milliseconds that have elapsed since the image was created.</p>
+     * <p>The repository tag.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

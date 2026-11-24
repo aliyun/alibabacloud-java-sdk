@@ -17,8 +17,8 @@ public class UpdateScanRuleShrinkRequest extends TeaModel {
     /**
      * <p>The collection of namespaces.</p>
      * <ul>
-     * <li>If the scan scope is set to NAMESPACE, this parameter is required.</li>
-     * <li>If the scan scope is set to REPO, specify exactly one namespace for this parameter.</li>
+     * <li>When the scan scope is NAMESPACE, this parameter cannot be empty.</li>
+     * <li>When the scan scope is REPO, this parameter must contain exactly one namespace.</li>
      * </ul>
      * 
      * <strong>if can be null:</strong>
@@ -30,8 +30,8 @@ public class UpdateScanRuleShrinkRequest extends TeaModel {
     /**
      * <p>The list of repositories.</p>
      * <ul>
-     * <li>If the scan scope is set to NAMESPACE, this parameter must be empty.</li>
-     * <li>If the scan scope is set to REPO, this parameter is required.</li>
+     * <li>When the scan scope is NAMESPACE, this parameter must be empty.</li>
+     * <li>When the scan scope is REPO, this parameter cannot be empty.</li>
      * </ul>
      * 
      * <strong>if can be null:</strong>
@@ -71,11 +71,7 @@ public class UpdateScanRuleShrinkRequest extends TeaModel {
     public String scanRuleId;
 
     /**
-     * <p>The scan scope. Valid values:</p>
-     * <ul>
-     * <li>NAMESPACE: namespace</li>
-     * <li>REPO: repository.</li>
-     * </ul>
+     * <p>The scan scope.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,11 +81,7 @@ public class UpdateScanRuleShrinkRequest extends TeaModel {
     public String scanScope;
 
     /**
-     * <p>The trigger type. Valid values:</p>
-     * <ul>
-     * <li>AUTO: Automatically triggered upon push.</li>
-     * <li>MANUAL: Manually triggered.</li>
-     * </ul>
+     * <p>The trigger type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

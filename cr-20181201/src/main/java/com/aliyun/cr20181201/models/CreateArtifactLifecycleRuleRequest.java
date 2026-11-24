@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateArtifactLifecycleRuleRequest extends TeaModel {
     /**
-     * <p>Specify whether to automatically execute the lifecycle management rule.</p>
+     * <p>Specifies whether to automatically execute the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -13,11 +13,18 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
     @NameInMap("Auto")
     public Boolean auto;
 
+    /**
+     * <p>Specifies whether to enable DryRun mode. If DryRun mode is enabled, only the lifecycle task scan is performed and no actual data cleanup is executed. This mode is disabled by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specify whether to enable lifecycle management for the artifact.</p>
+     * <p>Specifies whether to enable lifecycle management.</p>
+     * <p>Only one of this parameter and EnableDeleteUntaggedManifest can be set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -25,6 +32,13 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
     @NameInMap("EnableDeleteTag")
     public Boolean enableDeleteTag;
 
+    /**
+     * <p>Specifies whether to enable artifact cleanup.</p>
+     * <p>Only one of this parameter and EnableDeleteTag can be set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableDeleteUntaggedManifest")
     public Boolean enableDeleteUntaggedManifest;
 
@@ -39,7 +53,7 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>dev-backend</p>
@@ -48,7 +62,7 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>The name of the image repository.</p>
+     * <p>The image repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_1</p>
@@ -57,7 +71,7 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The number of images that you want to retain.</p>
+     * <p>The number of images to retain.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -66,7 +80,7 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
     public Long retentionTagCount;
 
     /**
-     * <p>The execution cycle of the lifecycle management rule.</p>
+     * <p>The execution cycle.</p>
      * 
      * <strong>example:</strong>
      * <p>WEEK</p>
@@ -75,7 +89,7 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
     public String scheduleTime;
 
     /**
-     * <p>The deletion scope.</p>
+     * <p>The cleanup scope.</p>
      * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>
@@ -84,7 +98,7 @@ public class CreateArtifactLifecycleRuleRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The regular expression that is used to indicate which image tags are retained.</p>
+     * <p>The regular expression used to match image versions to retain.</p>
      * 
      * <strong>example:</strong>
      * <p>release-.*</p>

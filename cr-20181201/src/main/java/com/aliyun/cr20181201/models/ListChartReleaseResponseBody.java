@@ -11,7 +11,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
     public java.util.List<ListChartReleaseResponseBodyChartReleases> chartReleases;
 
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -47,7 +47,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F68823F6-F1B5-4A4E-8421-A83CAB8F2963</p>
@@ -56,7 +56,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -127,7 +127,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
 
     public static class ListChartReleaseResponseBodyChartReleases extends TeaModel {
         /**
-         * <p>The name of the chart version.</p>
+         * <p>The chart version name.</p>
          * 
          * <strong>example:</strong>
          * <p>chart1</p>
@@ -136,7 +136,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         public String chart;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xkx6vujuhay0****</p>
@@ -145,7 +145,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the chart was last modified.</p>
+         * <p>The time when the chart was last modified. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1571930323000</p>
@@ -154,7 +154,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The version number of the chart.</p>
+         * <p>The chart version number.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1.0</p>
@@ -163,7 +163,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         public String release;
 
         /**
-         * <p>The ID of the chart repository.</p>
+         * <p>The chart repository ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crcr-gpsu7b8chmxk****</p>
@@ -172,7 +172,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         public String repoId;
 
         /**
-         * <p>The size of the chart of the version. Unit: bytes.</p>
+         * <p>The size of the chart version, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2826</p>
@@ -181,7 +181,7 @@ public class ListChartReleaseResponseBody extends TeaModel {
         public String size;
 
         /**
-         * <p>The status of the chart.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLED</p>

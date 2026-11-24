@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepoTagResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class ListRepoTagResponseBody extends TeaModel {
     public java.util.List<ListRepoTagResponseBodyImages> images;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,7 +29,7 @@ public class ListRepoTagResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of results returned.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -38,7 +38,7 @@ public class ListRepoTagResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
+     * <p>The pagination token. If a next page exists, the service returns a NextToken value, which you can include in the subsequent request.</p>
      * 
      * <strong>example:</strong>
      * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
@@ -56,7 +56,7 @@ public class ListRepoTagResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -188,7 +188,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The image size, in bytes.</p>
+         * <p>The size of the image. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>27107966</p>
@@ -197,7 +197,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         public Long imageSize;
 
         /**
-         * <p>The time when the image was last updated.</p>
+         * <p>The time when the image was updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1572875608000</p>

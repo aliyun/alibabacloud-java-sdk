@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateArtifactBuildRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The type of the artifact.</p>
+     * <p>The type of the accelerated image. Valid values:</p>
      * <ul>
-     * <li><code>ACCELERATED_IMAGE</code>: accelerated images.</li>
+     * <li><code>ACCELERATED_IMAGE</code>: accelerated image.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class CreateArtifactBuildRuleShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Additional parameters.</p>
+     * <p>The additional parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -37,9 +37,9 @@ public class CreateArtifactBuildRuleShrinkRequest extends TeaModel {
     public String parametersShrink;
 
     /**
-     * <p>The ID of the effective range of the rule.</p>
+     * <p>The ID of the scope in which the rule takes effect. Valid values:</p>
      * <ul>
-     * <li>Set the value to the ID of the image repository.</li>
+     * <li>The ID of the image repository.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -50,9 +50,9 @@ public class CreateArtifactBuildRuleShrinkRequest extends TeaModel {
     public String scopeId;
 
     /**
-     * <p>The effective range of the rule. Valid values:</p>
+     * <p>The scope in which the rule takes effect. Valid values:</p>
      * <ul>
-     * <li><code>REPOSITORY</code></li>
+     * <li><code>REPOSITORY</code>: repository level.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

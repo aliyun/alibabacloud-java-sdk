@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRepoBuildRuleResponseBody extends TeaModel {
     /**
-     * <p>The build rules.</p>
+     * <p>The list of build rules.</p>
      */
     @NameInMap("BuildRules")
     public java.util.List<ListRepoBuildRuleResponseBodyBuildRules> buildRules;
 
     /**
-     * <p>The response code. A value of <code>success</code> indicates that the request was successful.</p>
+     * <p>The return value.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,11 +20,11 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request was successful.</p>
+     * <li><p><code>true</code>: The API call was successful.</p>
      * </li>
-     * <li><p><code>false</code>: The request failed.</p>
+     * <li><p><code>false</code>: The API call failed.</p>
      * </li>
      * </ul>
      * 
@@ -44,7 +44,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -62,7 +62,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of build rules.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -132,11 +132,14 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
     }
 
     public static class ListRepoBuildRuleResponseBodyBuildRules extends TeaModel {
+        /**
+         * <p>The list of build arguments.</p>
+         */
         @NameInMap("BuildArgs")
         public java.util.List<String> buildArgs;
 
         /**
-         * <p>The ID of the build rule.</p>
+         * <p>The build rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crbr-khys0nd3asbe****</p>
@@ -144,11 +147,14 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         @NameInMap("BuildRuleId")
         public String buildRuleId;
 
+        /**
+         * <p>The destination artifact type.</p>
+         */
         @NameInMap("DestArtifactType")
         public String destArtifactType;
 
         /**
-         * <p>The directory of the Dockerfile.</p>
+         * <p>The directory where the Dockerfile is located.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -157,7 +163,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         public String dockerfileLocation;
 
         /**
-         * <p>Dockerfile name</p>
+         * <p>The name of the Dockerfile.</p>
          * 
          * <strong>example:</strong>
          * <p>Dockerfile</p>
@@ -166,7 +172,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         public String dockerfileName;
 
         /**
-         * <p>Image Tag</p>
+         * <p>The image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>v0.1</p>
@@ -175,13 +181,13 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         public String imageTag;
 
         /**
-         * <p>Image operating system and platform</p>
+         * <p>The operating system and platform of the image.</p>
          */
         @NameInMap("Platforms")
         public java.util.List<String> platforms;
 
         /**
-         * <p>Code push-triggered build name</p>
+         * <p>The name of the code push that triggers the build.</p>
          * 
          * <strong>example:</strong>
          * <p>v0.1</p>
@@ -190,11 +196,11 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         public String pushName;
 
         /**
-         * <p>The type of the event that triggers the build rule. Valid values:</p>
+         * <p>The type of source code push that triggers the build. Valid values:</p>
          * <ul>
-         * <li><p><code>GIT_BRANCH</code>: A code branch is pushed.</p>
+         * <li><p>GIT_BRANCH: Source code is pushed from a branch.</p>
          * </li>
-         * <li><p>GIT_TAG: Push source code from a tag.</p>
+         * <li><p>GIT_TAG: Source code is pushed from a tag.</p>
          * </li>
          * </ul>
          * 

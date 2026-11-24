@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChartRepositoryRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateChartRepositoryRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the repository.</p>
+     * <p>The name of the image repository.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateChartRepositoryRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace to which the repository belongs.</p>
+     * <p>The name of the namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,12 +35,14 @@ public class CreateChartRepositoryRequest extends TeaModel {
     public String repoNamespaceName;
 
     /**
-     * <p>The default repository type. Valid values:</p>
+     * <p>The default type of the repository. Valid values:</p>
      * <ul>
-     * <li><code>PUBLIC</code>: a public repository.</li>
-     * <li><code>PRIVATE</code>: a private repository.</li>
+     * <li><p><code>PUBLIC</code>: public repository</p>
+     * </li>
+     * <li><p><code>PRIVATE</code>: private repository</p>
+     * </li>
      * </ul>
-     * <p>You can specify the RepoType or Summary parameter. The RepoType parameter is optional.</p>
+     * <p>Specify either RepoType or Summary. This parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>

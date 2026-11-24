@@ -14,7 +14,7 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
     public String digest;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the repository.</p>
+     * <p>The image repository ID.</p>
      * 
      * <strong>example:</strong>
      * <p>crr-uf082u9dg8do****</p>
@@ -33,7 +33,7 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The ID of the image scan task.</p>
+     * <p>The image scan task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>838152F9-F725-5A52-A344-8972D65AC045</p>
@@ -41,6 +41,12 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
     @NameInMap("ScanTaskId")
     public String scanTaskId;
 
+    /**
+     * <p>The image security scan type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cve</p>
+     */
     @NameInMap("ScanType")
     public String scanType;
 

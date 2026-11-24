@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChartRepositoryRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListChartRepositoryRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListChartRepositoryRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -33,7 +33,7 @@ public class ListChartRepositoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the repository.</p>
+     * <p>The repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>ns1</p>
@@ -42,7 +42,7 @@ public class ListChartRepositoryRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace to which the repository belongs.</p>
+     * <p>The namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>repo1</p>
@@ -51,11 +51,12 @@ public class ListChartRepositoryRequest extends TeaModel {
     public String repoNamespaceName;
 
     /**
-     * <p>The status of the chart repositories that you want to query. Valid values:</p>
+     * <p>The status of the chart repository. Valid values:</p>
      * <ul>
-     * <li><code>ALL</code>: query repositories of all status.</li>
-     * <li><code>NORMAL</code>: query normal repositories.</li>
-     * <li><code>DELETING</code>: query repositories that are being deleted.</li>
+     * <li><p><code>NORMAL</code>: The chart repository is in the Normal state.</p>
+     * </li>
+     * <li><p><code>DELETING</code>: The chart repository is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

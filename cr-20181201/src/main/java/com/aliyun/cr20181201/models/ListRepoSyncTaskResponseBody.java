@@ -313,7 +313,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
 
     public static class ListRepoSyncTaskResponseBodySyncTasks extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1572839126000</p>
@@ -368,7 +368,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public String linkId;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1572839133000</p>
@@ -378,7 +378,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         public Long modifedTime;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1572839133000</p>
@@ -460,9 +460,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         /**
          * <p>The trigger policy. Valid values:</p>
          * <ul>
-         * <li><p><code>PASSIVE</code>: Synchronization is automatically triggered.</p>
+         * <li><p><code>PASSIVE</code>: Automatically triggered synchronization.</p>
          * </li>
-         * <li><p><code>INITIATIVE</code>: Synchronization is manually triggered.</p>
+         * <li><p><code>INITIATIVE</code>: Manually triggered synchronization.</p>
          * </li>
          * </ul>
          * <p>Default value: <code>PASSIVE</code></p>

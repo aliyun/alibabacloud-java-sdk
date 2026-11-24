@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
     /**
-     * <p>Return value</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The time when the instance was created.</p>
+     * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1571926439000</p>
@@ -23,7 +23,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The ID of the Container Registry instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-xkx6vujuhay0****</p>
@@ -32,20 +32,20 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The issue occurs on the instance.</p>
+     * <p>The instance issue.</p>
      * 
      * <strong>example:</strong>
-     * <p>实例问题，取值：
-     * OSS_TOO_MANY_BUCKETS：OSS Bucket 数量超限</p>
-     * <p>OSS_BUCKET_ALREADY_EXISTS：同名 OSS Bucket 已存在</p>
-     * <p>OSS_SERVICE_ROLE_UNAUTHORIZED：OSS 权限未授权</p>
-     * <p>USER_NOT_REGISTERED_BY_REAL_NAME：国际站账号在购买中国站 OSS Bucket 时未进行实名认证</p>
+     * <p>The instance issue. Valid values:
+     * OSS_TOO_MANY_BUCKETS: The number of OSS buckets exceeds the limit.</p>
+     * <p>OSS_BUCKET_ALREADY_EXISTS: An OSS bucket with the same name already exists.</p>
+     * <p>OSS_SERVICE_ROLE_UNAUTHORIZED: OSS permissions are not authorized.</p>
+     * <p>USER_NOT_REGISTERED_BY_REAL_NAME: The China site account has not completed real-name verification when purchasing an OSS bucket on the China site</p>
      */
     @NameInMap("InstanceIssue")
     public String instanceIssue;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>shanghai-instance1</p>
@@ -54,7 +54,10 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The edition of the instance. Valid values: Enterprise_Basic: Basic Edition instances Enterprise_Standard: Standard Edition instances Enterprise_Advanced: Advanced Edition instances</p>
+     * <p>The instance specification. Valid values:
+     * Enterprise_Basic: basic instance.
+     * Enterprise_Standard: standard instance.
+     * Enterprise_Advanced: advanced instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Enterprise_Basic</p>
@@ -63,16 +66,24 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceSpecification;
 
     /**
-     * <p>The status of the instance. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><code>PENDING</code>: The instance is being initialized.</li>
-     * <li><code>INIT_ERROR</code>: The instance failed to be initialized.</li>
-     * <li><code>STARTING</code>: The instance is being started.</li>
-     * <li><code>RUNNING</code>: The instance is running.</li>
-     * <li><code>STOPPING</code>: The instance is being stopped.</li>
-     * <li><code>STOPPED</code>: The instance is stopped.</li>
-     * <li><code>DELETING</code>: The instance is being deleted.</li>
-     * <li><code>DELETED</code>: The instance is deleted.</li>
+     * <li><p><code>PENDING</code>: Initializing.</p>
+     * </li>
+     * <li><p><code>INIT_ERROR</code>: Initialization failed.</p>
+     * </li>
+     * <li><p><code>STARTING</code>: Starting.</p>
+     * </li>
+     * <li><p><code>RUNNING</code>: Running.</p>
+     * </li>
+     * <li><p><code>STOPPING</code>: Stopping.</p>
+     * </li>
+     * <li><p><code>STOPPED</code>: Stopped.</p>
+     * </li>
+     * <li><p><code>DELETING</code>: Deleting.</p>
+     * </li>
+     * <li><p><code>DELETED</code>: Deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,10 +93,12 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The call was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,7 +108,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The time when the instance was last modified.</p>
+     * <p>The modification time, in UNIX timestamp format. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1571926560000</p>
@@ -113,7 +126,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmv36i4isx****</p>
@@ -122,7 +135,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the instance.</p>
+     * <p>The tag collection of the instance.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetInstanceResponseBodyTags> tags;

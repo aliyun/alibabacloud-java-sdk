@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScanMaliciousFileByTaskRequest extends TeaModel {
     /**
-     * <p>The image digest.</p>
+     * <p>The digest of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>sha256:aa4bffff6406785e930dab1f94c9a1297ba22xxxx71d71504a015764*********</p>
@@ -23,7 +23,7 @@ public class ListScanMaliciousFileByTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The severity of the malicious file.</p>
+     * <p>The severity level of the malicious file.</p>
      * 
      * <strong>example:</strong>
      * <p>serious、suspicious、remind</p>
@@ -41,7 +41,7 @@ public class ListScanMaliciousFileByTaskRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. If the value that you specify exceeds 100, the system returns a parameter error or uses 100 as the maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -50,7 +50,7 @@ public class ListScanMaliciousFileByTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The image repository ID.</p>
+     * <p>The ID of the image repository.</p>
      * 
      * <strong>example:</strong>
      * <p>crr-h1y4l279wb8*****</p>
@@ -68,7 +68,7 @@ public class ListScanMaliciousFileByTaskRequest extends TeaModel {
     public String scanTaskId;
 
     /**
-     * <p>The image tag.</p>
+     * <p>The image version.</p>
      * 
      * <strong>example:</strong>
      * <p>V6.11</p>

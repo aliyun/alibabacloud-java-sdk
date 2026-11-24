@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChainRequest extends TeaModel {
     /**
-     * <p>Delivery chain ID</p>
+     * <p>The delivery chain ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetChainRequest extends TeaModel {
     public String chainId;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

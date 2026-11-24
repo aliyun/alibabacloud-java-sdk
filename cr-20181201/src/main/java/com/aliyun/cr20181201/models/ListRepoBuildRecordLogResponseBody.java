@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepoBuildRecordLogResponseBody extends TeaModel {
     /**
-     * <p>The log content of the image building record.</p>
+     * <p>The build log content.</p>
      */
     @NameInMap("BuildRecordLogs")
     public java.util.List<ListRepoBuildRecordLogResponseBodyBuildRecordLogs> buildRecordLogs;
@@ -29,7 +29,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of log entries displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -47,7 +47,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>
@@ -56,7 +56,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -127,7 +127,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
 
     public static class ListRepoBuildRecordLogResponseBodyBuildRecordLogs extends TeaModel {
         /**
-         * <p>The stage of the building that is recorded in the log entry.</p>
+         * <p>The build stage of the log entry.</p>
          * 
          * <strong>example:</strong>
          * <p>GIT_CLONE</p>
@@ -145,7 +145,7 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         public Integer lineNumber;
 
         /**
-         * <p>The content of the log.</p>
+         * <p>The log content.</p>
          * 
          * <strong>example:</strong>
          * <p>fetch stage begin</p>

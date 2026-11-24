@@ -1,3 +1,11 @@
+2026-11-24 Version: 2.2.4
+- Update API CreateArtifactSubscriptionRule: add request parameters TagList.
+- Update API GetArtifactSubscriptionRule: add response parameters Body.TagList.
+- Update API GetArtifactSubscriptionTaskResult: add response parameters Body.TaskResults.$.Message.
+- Update API ListArtifactSubscriptionRule: add response parameters Body.Rules.$.TagList.
+- Update API UpdateArtifactSubscriptionRule: add request parameters TagList.
+
+
 2026-09-16 Version: 2.2.3
 - Update API CreateArtifactLifecycleRule: add request parameters DryRun.
 - Update API CreateArtifactLifecycleRule: add request parameters EnableDeleteUntaggedManifest.

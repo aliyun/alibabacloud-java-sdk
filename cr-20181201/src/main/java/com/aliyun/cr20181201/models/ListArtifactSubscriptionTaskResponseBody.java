@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,10 +14,12 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request is successful.</li>
-     * <li><code>false</code>: The request fails.</li>
+     * <li><p><code>true</code>: The API call is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The API call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,13 +56,13 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried artifact subscription tasks.</p>
+     * <p>The task list.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<ListArtifactSubscriptionTaskResponseBodyTasks> tasks;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -131,7 +133,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
 
     public static class ListArtifactSubscriptionTaskResponseBodyTasks extends TeaModel {
         /**
-         * <p>The type of the artifact.</p>
+         * <p>The artifact type.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
@@ -140,7 +142,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
         public String artifactType;
 
         /**
-         * <p>The end time of the artifact subscription task.</p>
+         * <p>The end time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1692756630000</p>
@@ -167,7 +169,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ns</p>
@@ -176,7 +178,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-repo</p>
@@ -185,7 +187,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The name of the source namespace.</p>
+         * <p>The source namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>library</p>
@@ -203,7 +205,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
         public String sourceProvider;
 
         /**
-         * <p>The name of the source repository.</p>
+         * <p>The source repository.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx</p>
@@ -212,7 +214,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
         public String sourceRepoName;
 
         /**
-         * <p>The type of the source artifact.</p>
+         * <p>The source artifact type.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
@@ -221,7 +223,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
         public String sourceRepoType;
 
         /**
-         * <p>The start time of the artifact subscription task.</p>
+         * <p>The start time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1695348301000</p>
@@ -230,7 +232,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The total number of subscribed tags.</p>
+         * <p>The number of subscribed tags.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -266,7 +268,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
         public String taskResult;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -275,7 +277,7 @@ public class ListArtifactSubscriptionTaskResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
-         * <p>The type of the task.</p>
+         * <p>The task type.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTO</p>

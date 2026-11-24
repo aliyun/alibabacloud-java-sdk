@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRepoSourceCodeRepoResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class CreateRepoSourceCodeRepoResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>

@@ -53,10 +53,8 @@ public class UpdateRepositoryRequest extends TeaModel {
     /**
      * <p>The repository type. Valid values:</p>
      * <ul>
-     * <li><p><code>PUBLIC</code>: public repository</p>
-     * </li>
-     * <li><p><code>PRIVATE</code>: private repository.</p>
-     * </li>
+     * <li><code>PUBLIC</code>: public repository</li>
+     * <li><code>PRIVATE</code>: private repository</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -79,10 +77,8 @@ public class UpdateRepositoryRequest extends TeaModel {
     /**
      * <p>Specifies whether image tag immutability is enabled. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: enabled</p>
-     * </li>
-     * <li><p><code>false</code>: disabled.</p>
-     * </li>
+     * <li><code>true</code>: enabled</li>
+     * <li><code>false</code>: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>

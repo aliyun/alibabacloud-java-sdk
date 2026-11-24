@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateRepoBuildRuleRequest extends TeaModel {
     /**
-     * <p>Building arguments.</p>
+     * <p>The build arguments.</p>
      */
     @NameInMap("BuildArgs")
     public java.util.List<String> buildArgs;
 
     /**
-     * <p>The path of the Dockerfile.</p>
+     * <p>The Dockerfile path.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>
@@ -20,7 +20,7 @@ public class CreateRepoBuildRuleRequest extends TeaModel {
     public String dockerfileLocation;
 
     /**
-     * <p>The name of the Dockerfile.</p>
+     * <p>The Dockerfile name.</p>
      * 
      * <strong>example:</strong>
      * <p>Dockerfile</p>
@@ -29,7 +29,7 @@ public class CreateRepoBuildRuleRequest extends TeaModel {
     public String dockerfileName;
 
     /**
-     * <p>The tag of the image.</p>
+     * <p>The image version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateRepoBuildRuleRequest extends TeaModel {
     public String imageTag;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,21 +49,26 @@ public class CreateRepoBuildRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Architecture for image building. Valid values:</p>
+     * <p>The image architecture. Valid values:</p>
      * <ul>
-     * <li><code>linux/amd64</code></li>
-     * <li><code>linux/arm64</code></li>
-     * <li><code>linux/386</code></li>
-     * <li><code>linux/arm/v7</code></li>
-     * <li><code>inux/arm/v6</code></li>
+     * <li><p><code>linux/amd64</code></p>
+     * </li>
+     * <li><p><code>linux/arm64</code></p>
+     * </li>
+     * <li><p><code>linux/386</code></p>
+     * </li>
+     * <li><p><code>linux/arm/v7</code></p>
+     * </li>
+     * <li><p><code>linux/arm/v6</code></p>
+     * </li>
      * </ul>
-     * <p>Default value: <code>linux/amd64</code></p>
+     * <p>Default value: <code>linux/amd64</code>.</p>
      */
     @NameInMap("Platforms")
     public java.util.List<String> platforms;
 
     /**
-     * <p>The name of the push that triggers the building rule.</p>
+     * <p>The trigger name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,10 +78,12 @@ public class CreateRepoBuildRuleRequest extends TeaModel {
     public String pushName;
 
     /**
-     * <p>The type of the push that triggers the building rule. Valid values:</p>
+     * <p>The push type. Valid values:</p>
      * <ul>
-     * <li><code>GIT_TAG</code>: tag push</li>
-     * <li><code>GIT_BRANCH</code>: branch push</li>
+     * <li><p><code>GIT_TAG</code>: Triggered by tag.</p>
+     * </li>
+     * <li><p><code>GIT_BRANCH</code>: Triggered by branch.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -87,7 +94,7 @@ public class CreateRepoBuildRuleRequest extends TeaModel {
     public String pushType;
 
     /**
-     * <p>The ID of the image repository.</p>
+     * <p>The image repository ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,8 +15,7 @@ public class ListRepoTagRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries to return.</p>
-     * <p>Use this parameter together with NextToken. This parameter takes priority over PageNo and PageSize.</p>
+     * <p>The maximum number of results to return. Use this parameter together with the NextToken parameter. This parameter takes precedence over PageNo and PageSize.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -25,8 +24,7 @@ public class ListRepoTagRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</p>
-     * <p>Use this parameter together with MaxResults. This parameter takes priority over PageNo and PageSize.</p>
+     * <p>The pagination token. If a next page exists, the service returns a NextToken value, which you can include in the subsequent request. Use this parameter together with the MaxResults parameter. This parameter takes precedence over PageNo and PageSize.</p>
      * 
      * <strong>example:</strong>
      * <p>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</p>
@@ -45,7 +43,7 @@ public class ListRepoTagRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. A maximum of 100 entries can be returned per page.</p>
+     * <p>The page size. The maximum number of entries per page is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

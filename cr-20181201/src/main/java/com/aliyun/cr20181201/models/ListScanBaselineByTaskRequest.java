@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScanBaselineByTaskRequest extends TeaModel {
     /**
-     * <p>The digest value of the image.</p>
+     * <p>The image digest value.</p>
      * 
      * <strong>example:</strong>
      * <p>sha256:1c89806cfaf66d2990e2cf1131ebd56ff24b133745a33abf1228*************</p>
@@ -14,7 +14,7 @@ public class ListScanBaselineByTaskRequest extends TeaModel {
     public String digest;
 
     /**
-     * <p>The ID of the Container Registry instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-***********</p>
@@ -23,7 +23,7 @@ public class ListScanBaselineByTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The level of the baseline risk.</p>
+     * <p>The level.</p>
      * 
      * <strong>example:</strong>
      * <p>High</p>
@@ -41,7 +41,7 @@ public class ListScanBaselineByTaskRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -50,7 +50,7 @@ public class ListScanBaselineByTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the image repository.</p>
+     * <p>The repository ID.</p>
      * 
      * <strong>example:</strong>
      * <p>crr-**************</p>
@@ -59,7 +59,7 @@ public class ListScanBaselineByTaskRequest extends TeaModel {
     public String repoId;
 
     /**
-     * <p>The ID of the image scan task.</p>
+     * <p>The image scan task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3e526d7e-4b45-4703-b046-***********</p>

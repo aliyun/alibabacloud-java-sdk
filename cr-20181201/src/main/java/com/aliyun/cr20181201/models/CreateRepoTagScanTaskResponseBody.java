@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRepoTagScanTaskResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The return value.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,9 +14,9 @@ public class CreateRepoTagScanTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the API call succeeded. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The API call succeeded.</p>
+     * <li><p><code>true</code>: The API call was successful.</p>
      * </li>
      * <li><p><code>false</code>: The API call failed.</p>
      * </li>
