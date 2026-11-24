@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApprovalProcessesRequest extends TeaModel {
     /**
-     * <p>The page number of the current page for paging in a paged query. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListApprovalProcessesRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The Settings for the number of entries per page for paging in a paged query. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page in a paging query. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListApprovalProcessesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the associated business policy.</p>
+     * <p>The ID of the associated business policy. If you use this parameter, you must also specify PolicyType.</p>
      * 
      * <strong>example:</strong>
      * <p>pid-6d6ad77d5b52****</p>
@@ -34,14 +34,14 @@ public class ListApprovalProcessesRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The type of the adapted policy. Valid values:</p>
+     * <p>The type of the business policy. Valid values:</p>
      * <ul>
-     * <li><strong>DomainBlacklist</strong>: domain name blacklist</li>
-     * <li><strong>DomainWhitelist</strong>: domain name whitelist</li>
-     * <li><strong>SoftwareBlock</strong>: software blocking</li>
-     * <li><strong>AppUninstall</strong>: endpoint uninstallation</li>
-     * <li><strong>DlpSend</strong>: file sending</li>
-     * <li><strong>PeripheralBlock</strong>: peripheral control</li>
+     * <li><strong>DomainBlacklist</strong>: domain name blacklist.</li>
+     * <li><strong>DomainWhitelist</strong>: domain name whitelist.</li>
+     * <li><strong>SoftwareBlock</strong>: software block.</li>
+     * <li><strong>AppUninstall</strong>: endpoint uninstallation.</li>
+     * <li><strong>DlpSend</strong>: file sending.</li>
+     * <li><strong>PeripheralBlock</strong>: peripheral control.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,24 +51,24 @@ public class ListApprovalProcessesRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The IDs of the approval processes.</p>
+     * <p>The IDs of the approval processes. A maximum of 100 approval process IDs are supported.</p>
      */
     @NameInMap("ProcessIds")
     public java.util.List<String> processIds;
 
     /**
-     * <p>The name of the template. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the approval process. The name must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-). Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>File sending approval</p>
      */
     @NameInMap("ProcessName")
     public String processName;
 
     /**
-     * <p>The ID of the associated approver. You can call the following operation to obtain the value:</p>
+     * <p>The ID of the approver, which starts with su_. Only approval processes that include this approver in the approval nodes are returned. Value source:</p>
      * <ul>
-     * <li><a href="~~ListUsers~~">ListUsers</a>: List users.</li>
+     * <li><a href="~~ListUsers~~">ListUsers</a>: Lists users.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class ListApprovalProcessesRequest extends TeaModel {
     public String saseUserId;
 
     /**
-     * <p>The username of the associated approver.</p>
+     * <p>The username of the approver. Fuzzy match is supported. Only approval processes that include this approver in the approval nodes are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Mr. Wang</p>

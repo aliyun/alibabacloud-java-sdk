@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProcessItem extends TeaModel {
     /**
-     * <p>The bundle identity (Bundle ID) of the application to which the process belongs. The example value com.apple.Terminal is the Bundle ID of the macOS terminal application.</p>
+     * <p>The bundle ID of the application to which the process belongs. The example value com.apple.Terminal is the bundle ID of the macOS Terminal application.</p>
      * 
      * <strong>example:</strong>
      * <p>com.apple.Terminal</p>
@@ -14,11 +14,11 @@ public class ProcessItem extends TeaModel {
     public String bundleId;
 
     /**
-     * <p>The operating system type of the user terminal device to which the process belongs. Valid values:</p>
+     * <p>The operating system type of the user endpoint device to which the process belongs. Valid values:</p>
      * <ul>
-     * <li>windows: Windows operating system</li>
-     * <li>macOS: macOS operating system</li>
-     * <li>linux: Linux operating system</li>
+     * <li>windows: Windows.</li>
+     * <li>macOS: macOS.</li>
+     * <li>linux: Linux.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ProcessItem extends TeaModel {
     public String devType;
 
     /**
-     * <p>The process folder path.</p>
+     * <p>The process directory path.</p>
      * 
      * <strong>example:</strong>
      * <p>/System/Applications/Utilities/Terminal.app/Contents/MacOS</p>

@@ -84,13 +84,13 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
 
     public static class GetPrivateAccessApplicationResponseBodyApplication extends TeaModel {
         /**
-         * <p>The application address groups. Required when ConfigMode is set to Precise. Cannot be specified when ConfigMode is an empty string.</p>
+         * <p>The application address groups. This parameter is required when ConfigMode is set to Precise and cannot be specified when ConfigMode is an empty string.</p>
          */
         @NameInMap("AddressGroups")
         public java.util.List<AddressGroup> addressGroups;
 
         /**
-         * <p>The collection of addresses for the private access application.</p>
+         * <p>The addresses of the private access application.</p>
          */
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
@@ -105,7 +105,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>Specifies whether the application is created through automatic creation. Valid values:</p>
+         * <p>Specifies whether the application is automatically created. Valid values:</p>
          * <ul>
          * <li>0: Manual creation.</li>
          * <li>1: Automatic creation.</li>
@@ -120,8 +120,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         /**
          * <p>The browser access mode. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: enabled.</li>
-         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,8 +133,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         /**
          * <p>The configuration mode. Valid values:</p>
          * <ul>
-         * <li>Empty string: default mode.</li>
-         * <li>Precise: precise mode.</li>
+         * <li>Empty string: Default mode.</li>
+         * <li>Precise: Precise mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         public String configMode;
 
         /**
-         * <p>The collection of connector IDs.</p>
+         * <p>The IDs of the connectors.</p>
          */
         @NameInMap("ConnectorIds")
         public java.util.List<String> connectorIds;
@@ -168,7 +168,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The health check configuration. This parameter contains valid configurations only when the health check mode is set to Continuous.</p>
+         * <p>The health check configuration. This parameter contains a valid configuration only when the health check mode is set to Continuous.</p>
          */
         @NameInMap("HealthCheckConfig")
         public HealthCheckConfig healthCheckConfig;
@@ -176,8 +176,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         /**
          * <p>The health check mode. Valid values:</p>
          * <ul>
-         * <li>OnAccess: on-access check.</li>
-         * <li>Continuous: continuous check.</li>
+         * <li>OnAccess: On-access check.</li>
+         * <li>Continuous: Continuous check.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,13 +187,13 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         public String healthCheckMode;
 
         /**
-         * <p>The browser access mode parameter: application configuration.</p>
+         * <p>The application configuration for the browser access mode.</p>
          */
         @NameInMap("L7Config")
         public PAL7Config l7Config;
 
         /**
-         * <p>The browser access mode parameter: mapped proxy domain name.</p>
+         * <p>The mapped proxy domain name for the browser access mode.</p>
          * 
          * <strong>example:</strong>
          * <p>app.example.com</p>
@@ -202,7 +202,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         public String l7ProxyDomainAutomatic;
 
         /**
-         * <p>The browser access mode parameter: custom proxy domain name.</p>
+         * <p>The custom proxy domain name for the browser access mode.</p>
          * 
          * <strong>example:</strong>
          * <p>app.example.com</p>
@@ -220,13 +220,13 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The collection of private access policy IDs.</p>
+         * <p>The IDs of the private access policies.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The collection of port ranges for the private access application. Multiple port ranges cannot be duplicated or overlap.</p>
+         * <p>The port ranges of the private access application. Multiple port ranges cannot be duplicate or overlap.</p>
          */
         @NameInMap("PortRanges")
         public java.util.List<GetPrivateAccessApplicationResponseBodyApplicationPortRanges> portRanges;
@@ -234,7 +234,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         /**
          * <p>The protocol of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: all protocols.</li>
+         * <li><strong>All</strong>: All protocols.</li>
          * <li><strong>TCP</strong>.</li>
          * <li><strong>UDP</strong>.</li>
          * </ul>
@@ -248,8 +248,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         /**
          * <p>The status of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: enabled.</li>
-         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,7 +259,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The collection of private access tag IDs.</p>
+         * <p>The IDs of the private access tags.</p>
          */
         @NameInMap("TagIds")
         public java.util.List<String> tagIds;

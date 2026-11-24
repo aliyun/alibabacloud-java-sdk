@@ -101,7 +101,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
 
     public static class ListPrivateAccessApplicationsResponseBodyApplications extends TeaModel {
         /**
-         * <p>The application address groups. This parameter is returned when ConfigMode is set to Precise, and is empty when ConfigMode is an empty string.</p>
+         * <p>The application address groups. This parameter is returned when ConfigMode is Precise, and is empty when ConfigMode is an empty string.</p>
          */
         @NameInMap("AddressGroups")
         public java.util.List<AddressGroup> addressGroups;
@@ -122,10 +122,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>Specifies whether the application is created by automatic creation. Valid values:</p>
+         * <p>Specifies whether the application is automatically created. Valid values:</p>
          * <ul>
-         * <li>0: manual creation.</li>
-         * <li>1: automatic creation.</li>
+         * <li>0: Manually created.</li>
+         * <li>1: Automatically created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,8 +137,8 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         /**
          * <p>The browser access mode. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: enabled.</li>
-         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,8 +150,8 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         /**
          * <p>The configuration mode. Valid values:</p>
          * <ul>
-         * <li>Empty string: default mode.</li>
-         * <li>Precise: precise mode.</li>
+         * <li>Empty string: Default mode.</li>
+         * <li>Precise: Precise mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,8 +193,8 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         /**
          * <p>The health check mode. Valid values:</p>
          * <ul>
-         * <li>OnAccess: checks upon access.</li>
-         * <li>Continuous: continuous checks.</li>
+         * <li>OnAccess: Check on access.</li>
+         * <li>Continuous: Continuous check.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The port ranges of the private access application. Multiple port ranges cannot be duplicate or overlap.</p>
+         * <p>The port ranges of the private access application. Multiple port ranges cannot be duplicated or overlap.</p>
          */
         @NameInMap("PortRanges")
         public java.util.List<ListPrivateAccessApplicationsResponseBodyApplicationsPortRanges> portRanges;
@@ -245,7 +245,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         /**
          * <p>The protocol of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong>: all protocols.</li>
+         * <li><strong>All</strong>: All protocols.</li>
          * <li><strong>TCP</strong></li>
          * <li><strong>UDP</strong></li>
          * </ul>
@@ -259,8 +259,8 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         /**
          * <p>The status of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: enabled.</li>
-         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

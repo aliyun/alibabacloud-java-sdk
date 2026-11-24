@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UserCertificate extends TeaModel {
     /**
+     * <p>The certificate ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cert-aabbccdd</p>
      */
@@ -12,23 +14,34 @@ public class UserCertificate extends TeaModel {
     public String certId;
 
     /**
+     * <p>The certificate content in PEM format.</p>
+     * 
      * <strong>example:</strong>
-     * <p>用于测试</p>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIID...****
+     * -----END CERTIFICATE-----</p>
      */
     @NameInMap("Certificate")
     public String certificate;
 
     /**
+     * <p>The certificate description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>Internal network application access certificate</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The domain names for which the certificate is valid.</p>
+     */
     @NameInMap("DnsNames")
     public java.util.List<String> dnsNames;
 
     /**
+     * <p>The expiration time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1734492686</p>
      */
@@ -36,6 +49,8 @@ public class UserCertificate extends TeaModel {
     public Long expTimeUnix;
 
     /**
+     * <p>The creation timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1734523812</p>
      */
@@ -43,6 +58,8 @@ public class UserCertificate extends TeaModel {
     public Long gmtCreateUnix;
 
     /**
+     * <p>The update timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1734523812</p>
      */
@@ -50,15 +67,21 @@ public class UserCertificate extends TeaModel {
     public Long gmtModifiedUnix;
 
     /**
+     * <p>The certificate name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>证书1</p>
+     * <p>Certificate 1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The PEM private key.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>-----BEGIN PRIVATE KEY-----
+     * MIIE...****
+     * -----END PRIVATE KEY-----</p>
      */
     @NameInMap("PrivateKey")
     public String privateKey;

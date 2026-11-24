@@ -16,8 +16,8 @@ public class CreatePADiagnosisTaskRequest extends TeaModel {
     /**
      * <p>The diagnosis type. Valid values:</p>
      * <ul>
-     * <li><strong>FullLink</strong>: full-link diagnosis.</li>
-     * <li><strong>Application</strong>: application diagnosis.</li>
+     * <li><strong>FullLink</strong>: End-to-end diagnosis.</li>
+     * <li><strong>Application</strong>: Application diagnosis.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class CreatePADiagnosisTaskRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>The POP point ID.</p>
+     * <p>The ID of the PoP.</p>
      * 
      * <strong>example:</strong>
      * <p>pop-3e244b62357dcafc</p>
@@ -47,10 +47,10 @@ public class CreatePADiagnosisTaskRequest extends TeaModel {
     public String popId;
 
     /**
-     * <p>The POP point selection mode. Valid values:</p>
+     * <p>The PoP selection mode. Valid values:</p>
      * <ul>
-     * <li><strong>AutoSelect</strong>: automatic selection.</li>
-     * <li><strong>ManualSelect</strong>: manual selection.</li>
+     * <li><strong>AutoSelect</strong>: Automatic selection.</li>
+     * <li><strong>ManualSelect</strong>: Manual selection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,10 +71,10 @@ public class CreatePADiagnosisTaskRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>The protocol used by the internal network access application. Valid values:</p>
+     * <p>The application protocol for internal network access. Valid values:</p>
      * <ul>
      * <li><strong>TCP</strong></li>
-     * <li><strong>UDP</strong>.</li>
+     * <li><strong>UDP</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -85,16 +85,16 @@ public class CreatePADiagnosisTaskRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The extra configurations for UDP diagnosis. If this parameter is not specified, any response received is considered a success.</p>
+     * <p>The additional configurations for UDP diagnosis. If this parameter is not configured, receiving any response content is considered a success.</p>
      */
     @NameInMap("UdpExtraConfigs")
     public CreatePADiagnosisTaskRequestUdpExtraConfigs udpExtraConfigs;
 
     /**
-     * <p>The user group ID.</p>
+     * <p>The ID of the user group.</p>
      * 
      * <strong>example:</strong>
-     * <p>用户组ID。</p>
+     * <p>User group ID</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;

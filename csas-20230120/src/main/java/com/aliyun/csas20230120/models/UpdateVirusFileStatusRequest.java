@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateVirusFileStatusRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the user terminal device where the virus file is located. The value can be up to 64 characters in length. You can obtain the value from the following operation:</p>
+     * <p>The unique identifier of the user terminal device where the virus file is located. The value can be up to 64 characters in length. You can obtain the value from the following source:</p>
      * <ul>
-     * <li><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: lists virus file statuses.</li>
+     * <li><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: Queries the statuses of virus files in batches.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class UpdateVirusFileStatusRequest extends TeaModel {
     public String devTag;
 
     /**
-     * <p>The MD5 value of the virus file. The value must be a 32-character hexadecimal string. You can obtain the value from the following operation:</p>
+     * <p>The MD5 hash value of the virus file. The value must be a 32-character hexadecimal string. You can obtain the value from the following source:</p>
      * <ul>
-     * <li><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: lists virus file statuses.</li>
+     * <li><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: Queries the statuses of virus files in batches.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +31,9 @@ public class UpdateVirusFileStatusRequest extends TeaModel {
     public String fileMd5;
 
     /**
-     * <p>The absolute path of the virus file on the user terminal device. You can obtain the value from the following operation:</p>
+     * <p>The absolute path of the virus file on the user terminal device. You can obtain the value from the following source:</p>
      * <ul>
-     * <li><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: lists virus file statuses.</li>
+     * <li><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: Queries the statuses of virus files in batches.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,10 +44,10 @@ public class UpdateVirusFileStatusRequest extends TeaModel {
     public String filePath;
 
     /**
-     * <p>The disposal action. Valid values:</p>
+     * <p>The processing action. Valid values:</p>
      * <ul>
-     * <li><strong>AdminQuarantine</strong>: quarantines the virus file. The server creates a disposal task and returns a TaskId. The user terminal device pulls and executes the quarantine.</li>
-     * <li><strong>AdminTrust</strong>: trusts the virus file. Only the disposal status is updated. No disposal task is created, and TaskId returns an empty string.</li>
+     * <li><strong>AdminQuarantine</strong>: Quarantines the virus file. The server creates a processing task and returns a TaskId. The user terminal device pulls and executes the quarantine task.</li>
+     * <li><strong>AdminTrust</strong>: Marks the virus file as trusted. This action only updates the processing status and does not create a processing task. An empty string is returned for TaskId.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -60,32 +60,32 @@ public class UpdateVirusFileStatusRequest extends TeaModel {
     /**
      * <p>The virus type. This parameter is used for synchronization to update the virus type of the file. Valid values:</p>
      * <ul>
-     * <li><strong>Backdoor</strong>: backdoor program.</li>
-     * <li><strong>DDoS</strong>: DDoS Trojan.</li>
-     * <li><strong>Downloader</strong>: downloader Trojan.</li>
+     * <li><strong>Backdoor</strong>: Backdoor program.</li>
+     * <li><strong>DDoS</strong>: DDoS trojan.</li>
+     * <li><strong>Downloader</strong>: Downloader trojan.</li>
      * <li><strong>Engtest</strong>: DPI engine test program.</li>
-     * <li><strong>Hacktool</strong>: hacker tool.</li>
-     * <li><strong>Trojan</strong>: self-mutating Trojan.</li>
-     * <li><strong>Malbaseware</strong>: contaminated base software.</li>
-     * <li><strong>MalScript</strong>: malicious script.</li>
-     * <li><strong>Malware</strong>: malicious program.</li>
-     * <li><strong>Miner</strong>: mining programs.</li>
-     * <li><strong>Proxytool</strong>: proxy tool.</li>
-     * <li><strong>RansomWare</strong>: ransomware.</li>
-     * <li><strong>RiskWare</strong>: riskware.</li>
-     * <li><strong>Rootkit</strong>: kernel-hidden program.</li>
-     * <li><strong>Stealer</strong>: credential stealer.</li>
-     * <li><strong>Scanner</strong>: scanner.</li>
-     * <li><strong>Suspicious</strong>: suspicious program.</li>
-     * <li><strong>Virus</strong>: file-infecting virus.</li>
-     * <li><strong>WebShell</strong>: webshell.</li>
-     * <li><strong>Worm</strong>: worms.</li>
-     * <li><strong>BlackList</strong>: file that hit a blacklist entry.</li>
-     * <li><strong>Exp</strong>: vulnerability exploits program.</li>
-     * <li><strong>Patcher</strong>: cracking program.</li>
-     * <li><strong>Gametool</strong>: private server tool.</li>
-     * <li><strong>AdWare</strong>: adware.</li>
-     * <li><strong>Maldoc</strong>: malicious document.</li>
+     * <li><strong>Hacktool</strong>: Hacker tool.</li>
+     * <li><strong>Trojan</strong>: Self-mutating trojan.</li>
+     * <li><strong>Malbaseware</strong>: Contaminated basic software.</li>
+     * <li><strong>MalScript</strong>: Malicious script.</li>
+     * <li><strong>Malware</strong>: Malicious program.</li>
+     * <li><strong>Miner</strong>: Mining programs.</li>
+     * <li><strong>Proxytool</strong>: Proxy tool.</li>
+     * <li><strong>RansomWare</strong>: Ransomware.</li>
+     * <li><strong>RiskWare</strong>: Riskware.</li>
+     * <li><strong>Rootkit</strong>: Kernel hiding program.</li>
+     * <li><strong>Stealer</strong>: Stealer tool.</li>
+     * <li><strong>Scanner</strong>: Scanner.</li>
+     * <li><strong>Suspicious</strong>: Suspicious program.</li>
+     * <li><strong>Virus</strong>: Infectious virus.</li>
+     * <li><strong>WebShell</strong>: Web shell.</li>
+     * <li><strong>Worm</strong>: Worms.</li>
+     * <li><strong>BlackList</strong>: Files that hit the blacklist.</li>
+     * <li><strong>Exp</strong>: Vulnerability exploits program.</li>
+     * <li><strong>Patcher</strong>: Cracking program.</li>
+     * <li><strong>Gametool</strong>: Private server tool.</li>
+     * <li><strong>AdWare</strong>: Adware.</li>
+     * <li><strong>Maldoc</strong>: Malicious document.</li>
      * </ul>
      * 
      * <strong>example:</strong>

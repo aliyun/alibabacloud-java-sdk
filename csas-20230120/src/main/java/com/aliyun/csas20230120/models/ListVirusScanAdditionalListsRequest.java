@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVirusScanAdditionalListsRequest extends TeaModel {
     /**
-     * <p>Filters by matching dimension. Duplicate values are not allowed. If this parameter is not specified, all matching dimensions are returned.</p>
+     * <p>Filters by match dimension. Duplicate values are not allowed. If this parameter is not specified, all match dimensions are returned.</p>
      */
     @NameInMap("AdditionalTypes")
     public java.util.List<String> additionalTypes;
@@ -25,7 +25,7 @@ public class ListVirusScanAdditionalListsRequest extends TeaModel {
     public String devType;
 
     /**
-     * <p>The content of the list entry, using exact match. This parameter is used to locate a specific list entry by content and does not support fuzzy match.</p>
+     * <p>The content of the list entry. Exact match is used. This parameter is used to locate a specific list by content. Fuzzy match is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>.tmp</p>
@@ -34,7 +34,7 @@ public class ListVirusScanAdditionalListsRequest extends TeaModel {
     public String listDetail;
 
     /**
-     * <p>Filters by list entry ID. Duplicate values are not allowed. If this parameter is not specified, no filtering by list entry ID is applied.</p>
+     * <p>Filters by list entry ID. Duplicate values are not allowed. If this parameter is not specified, no filtering by list entry ID is performed.</p>
      */
     @NameInMap("ListIds")
     public java.util.List<String> listIds;
@@ -42,8 +42,8 @@ public class ListVirusScanAdditionalListsRequest extends TeaModel {
     /**
      * <p>Filters by list type. If this parameter is not specified, both blacklists and whitelists are returned. Valid values:</p>
      * <ul>
-     * <li><strong>Blacklist</strong>: Blacklist. Files that match are directly identified as virus files.</li>
-     * <li><strong>Whitelist</strong>: Whitelist. Files that match are excluded from virus detection.</li>
+     * <li><strong>Blacklist</strong>: Blacklist. Matched files are directly identified as virus files.</li>
+     * <li><strong>Whitelist</strong>: Whitelist. Matched files are excluded from virus detection.</li>
      * </ul>
      * 
      * <strong>example:</strong>

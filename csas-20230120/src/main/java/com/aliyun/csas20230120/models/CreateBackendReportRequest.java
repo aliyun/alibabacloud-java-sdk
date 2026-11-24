@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackendReportRequest extends TeaModel {
     /**
-     * <p>The filing expiration time as a UNIX timestamp in seconds. This parameter is required when ValidityType is set to FixedTime or ValidityType is not specified, and the value must be later than the current time. When ValidityType is set to Permanent, do not specify this parameter or set it to 0.</p>
+     * <p>The expiration time of the report, which is a UNIX timestamp in seconds. This parameter is required when ValidityType is set to FixedTime or is not specified, and the value must be later than the current time. When ValidityType is set to Permanent, do not specify this parameter or set it to 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1788192000</p>
@@ -14,14 +14,14 @@ public class CreateBackendReportRequest extends TeaModel {
     public Long endTimestamp;
 
     /**
-     * <p>The filing policy type. Valid values:</p>
+     * <p>The policy type. Valid values:</p>
      * <ul>
-     * <li>PrivateAccessBlock: private access.</li>
-     * <li>DomainWhitelist: domain name whitelist.</li>
-     * <li>DomainBlacklist: domain name blacklist.</li>
-     * <li>SoftwareBlock: software blocking.</li>
-     * <li>DlpSend: file outbound transfer.</li>
-     * <li>PeripheralBlock: peripheral control.</li>
+     * <li>PrivateAccessBlock: private network access</li>
+     * <li>DomainWhitelist: domain name whitelist</li>
+     * <li>DomainBlacklist: domain name blacklist</li>
+     * <li>SoftwareBlock: software blocking</li>
+     * <li>DlpSend: outbound file transfer</li>
+     * <li>PeripheralBlock: peripheral control</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,34 +32,34 @@ public class CreateBackendReportRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The filing reason. The value must be 1 to 1024 characters in length.</p>
+     * <p>The reason for the report. The value must be 1 to 1,024 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Temporary project access</p>
+     * <p>Temporary access for a project</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
-     * <p>The list of filing objects, serialized in Flat format. You can specify 1 to 100 filing objects of the same policy type. The object fields must match the PolicyType value.</p>
+     * <p>The list of report objects in flat serialization format. You can specify 1 to 100 report objects of the same policy type. The object fields must match the policy type.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ReportObjects")
     public java.util.List<CreateBackendReportRequestReportObjects> reportObjects;
 
     /**
-     * <p>The list of filing users, serialized in Flat format. You can specify 1 to 100 users. Only specific SASE users under the current Alibaba Cloud account are supported. The product of the number of deduplicated users and the number of filing objects cannot exceed 100.</p>
+     * <p>The list of target users in flat serialization format. You can specify 1 to 100 users. Only specific SASE users under the current Alibaba Cloud account are supported. The product of the number of deduplicated users and the number of report objects cannot exceed 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Targets")
     public java.util.List<CreateBackendReportRequestTargets> targets;
 
     /**
-     * <p>The validity duration type. Default value: FixedTime. Valid values:</p>
+     * <p>The validity type. If you do not specify this parameter, the default value is FixedTime. Valid values:</p>
      * <ul>
-     * <li>FixedTime: Expires at the specified time.</li>
-     * <li>Permanent: Permanently valid.</li>
+     * <li>FixedTime: The exemption expires at the specified time.</li>
+     * <li>Permanent: The exemption is permanently valid.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class CreateBackendReportRequest extends TeaModel {
 
     public static class CreateBackendReportRequestReportObjects extends TeaModel {
         /**
-         * <p>The private access application ID. This parameter is required when PolicyType is set to PrivateAccessBlock. You can call ListPrivateAccessApplications to query the ID.</p>
+         * <p>The ID of the private access application. This parameter is required when PolicyType is set to PrivateAccessBlock. You can call ListPrivateAccessApplications to query the application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-app-****************1234</p>
@@ -132,10 +132,10 @@ public class CreateBackendReportRequest extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The endpoint operating system. This parameter is required when PolicyType is set to PeripheralBlock. Valid values:</p>
+         * <p>The operating system of the endpoint. This parameter is required when PolicyType is set to PeripheralBlock. Valid values:</p>
          * <ul>
-         * <li>windows: Windows.</li>
-         * <li>macOS: macOS.</li>
+         * <li>windows: Windows</li>
+         * <li>macOS: macOS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class CreateBackendReportRequest extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>The file MD5 hash. This parameter is required when PolicyType is set to DlpSend. The value must be a 32-character hexadecimal string and is case-insensitive.</p>
+         * <p>The MD5 hash of the file. This parameter is required when PolicyType is set to DlpSend. The value must be a 32-character hexadecimal string and is not case-sensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>c936226c4745125b5786527d205a****</p>
@@ -163,7 +163,7 @@ public class CreateBackendReportRequest extends TeaModel {
         public String fileMd5;
 
         /**
-         * <p>The filing domain name. This parameter is required when PolicyType is set to DomainWhitelist or DomainBlacklist. Regular domain names and wildcard domain names that start with *. are supported. Protocols, ports, and paths are not supported.</p>
+         * <p>The domain name to be reported. This parameter is required when PolicyType is set to DomainWhitelist or DomainBlacklist. Regular domain names and wildcard domain names starting with *. are supported. Protocols, ports, and paths are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>*.example.com</p>
@@ -172,7 +172,7 @@ public class CreateBackendReportRequest extends TeaModel {
         public String reportDomain;
 
         /**
-         * <p>The peripheral filing granularity. This parameter is required when PolicyType is set to PeripheralBlock. Currently, only Channel is supported, which indicates filing by peripheral channel.</p>
+         * <p>The reporting granularity for peripherals. This parameter is required when PolicyType is set to PeripheralBlock. Only Channel is supported, which indicates reporting by peripheral channel.</p>
          * 
          * <strong>example:</strong>
          * <p>Channel</p>
@@ -181,7 +181,7 @@ public class CreateBackendReportRequest extends TeaModel {
         public String scope;
 
         /**
-         * <p>The blocked software ID. This parameter is required when PolicyType is set to SoftwareBlock.</p>
+         * <p>The ID of the blocked software. This parameter is required when PolicyType is set to SoftwareBlock.</p>
          * 
          * <strong>example:</strong>
          * <p>swb-c717ee516145****</p>
@@ -254,7 +254,7 @@ public class CreateBackendReportRequest extends TeaModel {
 
     public static class CreateBackendReportRequestTargets extends TeaModel {
         /**
-         * <p>The SASE user ID. You can call ListUsers to query the ID.</p>
+         * <p>The SASE user ID. You can call ListUsers to query the user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

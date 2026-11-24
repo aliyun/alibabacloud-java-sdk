@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UnbindSaseUserTagRequest extends TeaModel {
     /**
-     * <p>The collection of user IDs.</p>
+     * <p>The IDs of the users.</p>
      */
     @NameInMap("SaseUserIds")
     public java.util.List<String> saseUserIds;
 
     /**
-     * <p>The collection of user label IDs.</p>
+     * <p>The IDs of the user tags.</p>
      */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;

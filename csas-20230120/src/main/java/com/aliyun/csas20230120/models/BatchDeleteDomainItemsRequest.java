@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteDomainItemsRequest extends TeaModel {
     /**
-     * <p>The IDs of domain name list entries.</p>
+     * <p>The IDs of the domain name list entries.</p>
      */
     @NameInMap("ItemIds")
     public java.util.List<Long> itemIds;
 
     /**
-     * <p>The list ID. This is the unique business identifier used for policy references and CRUD operations.</p>
+     * <p>The ID of the list, which is a unique business identifier used for policy references and add, delete, and modify operations.</p>
      * 
      * <strong>example:</strong>
      * <p>ladl-61aae0c0ba715e3b</p>
@@ -20,7 +20,7 @@ public class BatchDeleteDomainItemsRequest extends TeaModel {
     public String listId;
 
     /**
-     * <p>The list type (Blacklist/Whitelist).</p>
+     * <p>The type of the list (Blacklist/Whitelist).</p>
      * 
      * <strong>example:</strong>
      * <p>la_domain_white_list</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSaseUserTagRequest extends TeaModel {
     /**
-     * <p>The description of the employee tag.</p>
+     * <p>The description of the user tag.</p>
      * 
      * <strong>example:</strong>
      * <p>These are the company\&quot;s employees</p>

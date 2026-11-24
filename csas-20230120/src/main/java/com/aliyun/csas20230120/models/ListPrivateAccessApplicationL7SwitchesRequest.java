@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrivateAccessApplicationL7SwitchesRequest extends TeaModel {
     /**
-     * <p>The IDs of internal-facing applications. You can specify up to 100 internal-facing application IDs.</p>
+     * <p>The IDs of the internal-facing applications. You can specify up to 100 internal-facing application IDs.</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;

@@ -14,7 +14,7 @@ public class CreateSaseUserTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The user tag ID.</p>
+     * <p>The ID of the user tag.</p>
      * 
      * <strong>example:</strong>
      * <p>su-tag-1ae52f66039fa0d4****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeletePrivateAccessPolicyRequest extends TeaModel {
     /**
-     * <p>The IDs of internal network access policies. You can specify up to 100 internal network access policy IDs.</p>
+     * <p>The IDs of the internal network access policies. You can specify up to 100 internal network access policy IDs.</p>
      */
     @NameInMap("PolicyIds")
     public java.util.List<String> policyIds;

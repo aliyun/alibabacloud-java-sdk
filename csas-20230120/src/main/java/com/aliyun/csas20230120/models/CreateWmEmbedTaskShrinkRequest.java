@@ -23,7 +23,7 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     public String documentControlShrink;
 
     /**
-     * <p>The URL for downloading the file to be embedded. The URL must be active for public network access.</p>
+     * <p>The active URL for downloading the file to be embedded. The URL must support public network access.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>The name of the file to be embedded. The backend validates the file type based on the file name extension.</p>
+     * <p>The file name of the file to be embedded. The backend determines and verifies the file type based on the file name extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     public Long imageEmbedJpegQuality;
 
     /**
-     * <p>The image watermark parameter. A larger value indicates higher robustness but lower visual quality. Default value: 2. Valid values: 0 to 4.</p>
+     * <p>The image watermark parameter that specifies the embedding level. A larger value indicates higher robustness but lower visual quality. Default value: 2. Valid values: 0 to 4.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -67,13 +67,17 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     public Long imageEmbedLevel;
 
     /**
-     * <p>Specifies whether to enable invisible watermark embedding. Default value: true.</p>
+     * <p>Specifies whether to enable invisible watermark embedding. Default value: true. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
      */
     @NameInMap("InvisibleEnable")
     public Boolean invisibleEnable;
 
     /**
-     * <p>The short video watermark parameter that specifies the video bitrate. By default, the video bitrate is automatically obtained. You can use this parameter to forcibly specify the bitrate used during extraction. Typically, you do not need to set this parameter.</p>
+     * <p>The short video watermark parameter that specifies the video bitrate. By default, the system automatically obtains the video bitrate. You can use this parameter to force the bitrate used during extraction. Typically, you do not need to set this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>3000k</p>
@@ -88,12 +92,11 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     public String videoControlShrink;
 
     /**
-     * <p>Video watermark parameter. Specifies whether to use the long video watermark SDK. Valid values:</p>
+     * <p>The video watermark parameter that specifies whether to use the long video watermark SDK. Default value: false. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The long video watermark SDK is used.</li>
-     * <li><strong>false</strong>: The long video watermark SDK is not used.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -102,7 +105,7 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     public Boolean videoIsLong;
 
     /**
-     * <p>The watermark information in Base64-encoded string format. If this parameter is set, WmInfoUint cannot be set.</p>
+     * <p>The watermark information in Base64-encoded string format. If you set this parameter, you cannot set WmInfoUint.</p>
      * 
      * <strong>example:</strong>
      * <p>aGVsbG8gc2F*****</p>
@@ -111,7 +114,7 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     public String wmInfoBytesB64;
 
     /**
-     * <p>The bit width of the watermark information capacity. Default value: 32. This parameter must be consistent between embedding and extraction. For example, if the 40-bit SDK is used for embedding, set this parameter to 40 during extraction as well.</p>
+     * <p>The capacity bit width of the watermark information. Default value: 32. This parameter must be consistent during embedding and extraction. For example, if a 40-bit SDK is used for embedding, you must also set this value to 40 for extraction.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -120,7 +123,16 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     public Long wmInfoSize;
 
     /**
-     * <p>The watermark information in decimal number format. If this parameter is set, WmInfoBytesB64 cannot be set.</p>
+     * <p>The watermark information in decimal numeric format. If you set this parameter, you cannot set WmInfoBytesB64.</p>
+     * <p>The valid value range depends on the WmInfoSize parameter:</p>
+     * <ul>
+     * <li><p>When WmInfoSize is 32, the valid values are 1 to 4294967295.</p>
+     * </li>
+     * <li><p>When WmInfoSize is 40, the valid values are 1 to 1099511627775.</p>
+     * </li>
+     * <li><p>When WmInfoSize is 64, the valid values are 1 to 18446744073709551615.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>123***</p>
@@ -131,10 +143,10 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     /**
      * <p>The watermark type. Valid values:</p>
      * <ul>
-     * <li><strong>PureDocument</strong>: document watermark.</li>
-     * <li><strong>PureImage</strong>: image watermark.</li>
-     * <li><strong>PureAudio</strong>: audio watermark.</li>
-     * <li><strong>PureVideo</strong>: video watermark.</li>
+     * <li><strong>PureDocument</strong>: Document watermark.</li>
+     * <li><strong>PureImage</strong>: Image watermark.</li>
+     * <li><strong>PureAudio</strong>: Audio watermark.</li>
+     * <li><strong>PureVideo</strong>: Video watermark.</li>
      * <li><strong>AigcDocument</strong>: AIGC document watermark.</li>
      * <li><strong>AigcImage</strong>: AIGC image watermark.</li>
      * <li><strong>AigcAudio</strong>: AIGC audio watermark.</li>

@@ -41,12 +41,30 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reason for reporting</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the control in the external approval form. The value is in the Type%%%Control ID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as approvalReason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approvalReason</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -82,14 +100,23 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. If the approval type is 1 (DingTalk) or 3 (Lark), the process code from the external approval platform is returned. For other approval types, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap> fieldMap;
 
         /**
-         * <p>The list of terminal uninstall policy IDs.</p>
+         * <p>The list of endpoint uninstallation policy IDs.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
@@ -143,12 +170,30 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Report domain name</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the control in the external approval form. The value is in the Type%%%Control ID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as report_domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>report_domain</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -184,9 +229,18 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. If the approval type is 1 (DingTalk) or 3 (Lark), the process code from the external approval platform is returned. For other approval types, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap> fieldMap;
 
@@ -245,12 +299,30 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>File name</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the control in the external approval form. The value is in the Type%%%Control ID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as fileName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileName</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -286,14 +358,23 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessDlpSendPolicies extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. If the approval type is 1 (DingTalk) or 3 (Lark), the process code from the external approval platform is returned. For other approval types, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap> fieldMap;
 
         /**
-         * <p>The list of file outgoing policy IDs.</p>
+         * <p>The list of outbound file transfer policy IDs.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
@@ -347,12 +428,30 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Report website access</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the control in the external approval form. The value is in the Type%%%Control ID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as reportDomain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reportDomain</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -388,9 +487,18 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. If the approval type is 1 (DingTalk) or 3 (Lark), the process code from the external approval platform is returned. For other approval types, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap> fieldMap;
 
@@ -449,12 +557,30 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Report website access</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the control in the external approval form. The value is in the Type%%%Control ID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as reportDomain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reportDomain</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -490,9 +616,18 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. If the approval type is 1 (DingTalk) or 3 (Lark), the process code from the external approval platform is returned. For other approval types, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap> fieldMap;
 
@@ -551,12 +686,30 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Process name</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the control in the external approval form. The value is in the Type%%%Control ID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The system field identifier, such as processName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>processName</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -592,15 +745,33 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. If the approval type is 1 (DingTalk) or 3 (Lark), the process code from the external approval platform is returned. For other approval types, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The list of endpoint hardening policy IDs.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
+        /**
+         * <p>The ID of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -644,12 +815,30 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operating system</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the control in the external approval form. The value is in the Type%%%Control ID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as devType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>devType</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -685,9 +874,18 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. If the approval type is 1 (DingTalk) or 3 (Lark), the process code from the external approval platform is returned. For other approval types, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap> fieldMap;
 
@@ -746,12 +944,30 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reported application</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the control in the external approval form. The value is in the Type%%%Control ID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The system field identifier, such as applicationId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>applicationId</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -787,15 +1003,33 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. If the approval type is 1 (DingTalk) or 3 (Lark), the process code from the external approval platform is returned. For other approval types, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The list of internal network access control policy IDs.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
+        /**
+         * <p>The ID of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -840,7 +1074,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     public static class UpdateApprovalProcessResponseBodyProcessProcessNodes extends TeaModel {
         /**
-         * <p>The approver ID.</p>
+         * <p>The ID of the approver.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -849,10 +1083,10 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
-         * <p>The approver username.</p>
+         * <p>The username of the approver.</p>
          * 
          * <strong>example:</strong>
-         * <p>Mr. Wang</p>
+         * <p>王先生</p>
          */
         @NameInMap("Username")
         public String username;
@@ -881,12 +1115,30 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Report software</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the control in the external approval form. The value is in the Type%%%Control ID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as softwareName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>softwareName</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -922,14 +1174,23 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. If the approval type is 1 (DingTalk) or 3 (Lark), the process code from the external approval platform is returned. For other approval types, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap> fieldMap;
 
         /**
-         * <p>The list of software blocking policy IDs.</p>
+         * <p>The list of software block policy IDs.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
@@ -983,12 +1244,30 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Process name</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the control in the external approval form. The value is in the Type%%%Control ID format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The system field identifier, such as processName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>processName</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -1024,15 +1303,33 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. If the approval type is 1 (DingTalk) or 3 (Lark), the process code from the external approval platform is returned. For other approval types, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The list of software hardening policy IDs.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
+        /**
+         * <p>The ID of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -1077,16 +1374,28 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     public static class UpdateApprovalProcessResponseBodyProcess extends TeaModel {
         /**
-         * <p>The list of policies associated with terminal uninstall.</p>
+         * <p>The list of policies associated with endpoint uninstallation.</p>
          */
         @NameInMap("AppUninstallPolicies")
         public UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies appUninstallPolicies;
 
+        /**
+         * <p>The approval type. Valid values:</p>
+         * <ul>
+         * <li>0: Built-in approval.</li>
+         * <li>1: DingTalk approval.</li>
+         * <li>2: WeCom approval.</li>
+         * <li>3: Lark approval.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ApprovalType")
         public Integer approvalType;
 
         /**
-         * <p>The time when the approval process was created.</p>
+         * <p>The time when the approval process was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-11 15:31:39</p>
@@ -1098,7 +1407,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
          * <p>The description of the approval process.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a test</p>
+         * <p>Office endpoint software installation and uninstallation approval process</p>
          */
         @NameInMap("Description")
         public String description;
@@ -1110,7 +1419,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies deviceRegistrationPolicies;
 
         /**
-         * <p>The list of policies associated with file outgoing.</p>
+         * <p>The list of policies associated with outbound file transfer.</p>
          */
         @NameInMap("DlpSendPolicies")
         public UpdateApprovalProcessResponseBodyProcessDlpSendPolicies dlpSendPolicies;
@@ -1127,12 +1436,27 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("DomainWhitelistPolicies")
         public UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies domainWhitelistPolicies;
 
+        /**
+         * <p>The list of associated endpoint hardening policies.</p>
+         */
         @NameInMap("EndpointHardeningPolicies")
         public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies endpointHardeningPolicies;
 
+        /**
+         * <p>The event callback URL. This field returns the complete event callback URL of the external platform when the approval type is 1 (DingTalk approval) or 3 (Lark approval). For other approval types, this field is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://callback.example.com/sase/api/v1/approval/dingtalk/callback/9m4e2mr0ui3e8a21">https://callback.example.com/sase/api/v1/approval/dingtalk/callback/9m4e2mr0ui3e8a21</a>****</p>
+         */
         @NameInMap("EventLabel")
         public String eventLabel;
 
+        /**
+         * <p>The external approval configuration. This field contains the integration information for the external approval platform when the approval type is 1 (DingTalk approval) or 3 (Lark approval). For other approval types, this field is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;appKey&quot;:&quot;dingn1a2b3c4d5e6f****&quot;,&quot;appSecret&quot;:&quot;f9c8e7d6a5b4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0****&quot;,&quot;eventVerifyToken&quot;:&quot;7a8b9c0d1e2f3a4b5c6d7e8f9a0b****&quot;,&quot;eventAesKey&quot;:&quot;1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t****&quot;}</p>
+         */
         @NameInMap("ExternalConfig")
         public String externalConfig;
 
@@ -1142,6 +1466,9 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("PeripheraBlockPolicies")
         public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies peripheraBlockPolicies;
 
+        /**
+         * <p>The list of associated internal network access control policies.</p>
+         */
         @NameInMap("PrivateAccessBlockPolicies")
         public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies privateAccessBlockPolicies;
 
@@ -1158,7 +1485,7 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
          * <p>The name of the approval process.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>Endpoint software installation approval process</p>
          */
         @NameInMap("ProcessName")
         public String processName;
@@ -1175,6 +1502,9 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("SoftwareBlockPolicies")
         public UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies softwareBlockPolicies;
 
+        /**
+         * <p>The list of associated software hardening policies.</p>
+         */
         @NameInMap("SoftwareHardeningPolicies")
         public UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies softwareHardeningPolicies;
 

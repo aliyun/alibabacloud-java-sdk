@@ -51,7 +51,7 @@ public class GetSaseUserTagResponseBody extends TeaModel {
         public String aliuid;
 
         /**
-         * <p>The user tag description.</p>
+         * <p>The description of the user tag.</p>
          * 
          * <strong>example:</strong>
          * <p>These are the company\&quot;s employees</p>
@@ -60,7 +60,7 @@ public class GetSaseUserTagResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The user tag name.</p>
+         * <p>The name of the user tag.</p>
          * 
          * <strong>example:</strong>
          * <p>boss</p>
@@ -69,7 +69,7 @@ public class GetSaseUserTagResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The user tag ID.</p>
+         * <p>The ID of the user tag.</p>
          * 
          * <strong>example:</strong>
          * <p>su-tag-1ae52f66039fa0d4****</p>

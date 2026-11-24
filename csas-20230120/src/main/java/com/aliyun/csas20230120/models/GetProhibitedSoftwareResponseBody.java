@@ -14,7 +14,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The prohibited software details.</p>
+     * <p>The details of the prohibited software.</p>
      */
     @NameInMap("Software")
     public GetProhibitedSoftwareResponseBodySoftware software;
@@ -42,7 +42,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
 
     public static class GetProhibitedSoftwareResponseBodySoftwareLinuxProcesses extends TeaModel {
         /**
-         * <p>The application bundle identifier (Bundle ID). This parameter is required only for macOS processes.</p>
+         * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
          * 
          * <strong>example:</strong>
          * <p>com.xunlei.Thunder</p>
@@ -51,7 +51,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
         public String bundleId;
 
         /**
-         * <p>The command-line arguments for starting the process.</p>
+         * <p>The command-line arguments used to start the process.</p>
          * 
          * <strong>example:</strong>
          * <p>--start-minimized</p>
@@ -69,7 +69,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
         public String directory;
 
         /**
-         * <p>The process name.</p>
+         * <p>The name of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>thuner.exe</p>
@@ -118,7 +118,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
 
     public static class GetProhibitedSoftwareResponseBodySoftwareMacOSProcesses extends TeaModel {
         /**
-         * <p>The application bundle identifier (Bundle ID). This parameter is required only for macOS processes.</p>
+         * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
          * 
          * <strong>example:</strong>
          * <p>com.xunlei.Thunder</p>
@@ -127,7 +127,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
         public String bundleId;
 
         /**
-         * <p>The command-line arguments for starting the process.</p>
+         * <p>The command-line arguments used to start the process.</p>
          * 
          * <strong>example:</strong>
          * <p>--start-minimized</p>
@@ -145,7 +145,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
         public String directory;
 
         /**
-         * <p>The process name.</p>
+         * <p>The name of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>thuner.exe</p>
@@ -194,7 +194,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
 
     public static class GetProhibitedSoftwareResponseBodySoftwareWindowsProcesses extends TeaModel {
         /**
-         * <p>The application bundle identifier (Bundle ID). This parameter is required only for macOS processes.</p>
+         * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
          * 
          * <strong>example:</strong>
          * <p>com.xunlei.Thunder</p>
@@ -203,7 +203,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
         public String bundleId;
 
         /**
-         * <p>The command-line arguments for starting the process.</p>
+         * <p>The command-line arguments used to start the process.</p>
          * 
          * <strong>example:</strong>
          * <p>--start-minimized</p>
@@ -221,7 +221,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
         public String directory;
 
         /**
-         * <p>The process name.</p>
+         * <p>The name of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>thuner.exe</p>
@@ -270,7 +270,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
 
     public static class GetProhibitedSoftwareResponseBodySoftware extends TeaModel {
         /**
-         * <p>The creation time of the prohibited software, in the yyyy-MM-dd HH:mm:ss format. The time is displayed in UTC+8.</p>
+         * <p>The time when the prohibited software was created. The time is in the yyyy-MM-dd HH:mm:ss format and follows the UTC+8 time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-05 10:20:46</p>
@@ -288,10 +288,10 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the prohibited software is a system built-in prohibited software. Valid values:</p>
+         * <p>Specifies whether the prohibited software is a built-in prohibited software. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: A system built-in prohibited software that is shared across all Alibaba Cloud accounts and cannot be modified or deleted.</li>
-         * <li><strong>false</strong>: A custom prohibited software under the current Alibaba Cloud account.</li>
+         * <li><strong>true</strong>: The software is a built-in prohibited software. It is shared by all Alibaba Cloud accounts and cannot be modified or deleted.</li>
+         * <li><strong>false</strong>: The software is a custom prohibited software within the current Alibaba Cloud account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,13 +301,13 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The list of process configurations for the Linux operating system.</p>
+         * <p>The list of process configurations in the Linux operating system.</p>
          */
         @NameInMap("LinuxProcesses")
         public java.util.List<GetProhibitedSoftwareResponseBodySoftwareLinuxProcesses> linuxProcesses;
 
         /**
-         * <p>The list of process configurations for the macOS operating system.</p>
+         * <p>The list of process configurations in the macOS operating system.</p>
          */
         @NameInMap("MacOSProcesses")
         public java.util.List<GetProhibitedSoftwareResponseBodySoftwareMacOSProcesses> macOSProcesses;
@@ -328,7 +328,7 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
         public java.util.List<String> policyIds;
 
         /**
-         * <p>The prohibited software ID.</p>
+         * <p>The ID of the prohibited software.</p>
          * 
          * <strong>example:</strong>
          * <p>swb-3e6a1f9c4b28****</p>
@@ -337,13 +337,13 @@ public class GetProhibitedSoftwareResponseBody extends TeaModel {
         public String softwareId;
 
         /**
-         * <p>The IDs of the prohibited software tags associated with the prohibited software.</p>
+         * <p>The IDs of the prohibited software tags that are associated with the prohibited software.</p>
          */
         @NameInMap("TagIds")
         public java.util.List<String> tagIds;
 
         /**
-         * <p>The list of process configurations for the Windows operating system.</p>
+         * <p>The list of process configurations in the Windows operating system.</p>
          */
         @NameInMap("WindowsProcesses")
         public java.util.List<GetProhibitedSoftwareResponseBodySoftwareWindowsProcesses> windowsProcesses;

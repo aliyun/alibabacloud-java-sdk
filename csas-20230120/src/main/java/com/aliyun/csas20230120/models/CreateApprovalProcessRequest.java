@@ -8,7 +8,7 @@ public class CreateApprovalProcessRequest extends TeaModel {
      * <p>The description of the approval process. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is an approval process</p>
+     * <p>Process for approving employees\&quot; temporary access to internal network applications</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,7 +24,7 @@ public class CreateApprovalProcessRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_process</p>
+     * <p>Internal network access approval process</p>
      */
     @NameInMap("ProcessName")
     public String processName;
@@ -119,6 +119,12 @@ public class CreateApprovalProcessRequest extends TeaModel {
         @NameInMap("DomainWhitelistSchemaId")
         public String domainWhitelistSchemaId;
 
+        /**
+         * <p>The ID of the endpoint hardening approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("EndpointHardeningSchemaId")
         public String endpointHardeningSchemaId;
 
@@ -131,6 +137,12 @@ public class CreateApprovalProcessRequest extends TeaModel {
         @NameInMap("PeripheralBlockSchemaId")
         public String peripheralBlockSchemaId;
 
+        /**
+         * <p>The ID of the internal network access control approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("PrivateAccessBlockSchemaId")
         public String privateAccessBlockSchemaId;
 
@@ -143,6 +155,12 @@ public class CreateApprovalProcessRequest extends TeaModel {
         @NameInMap("SoftwareBlockSchemaId")
         public String softwareBlockSchemaId;
 
+        /**
+         * <p>The ID of the software hardening approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SoftwareHardeningSchemaId")
         public String softwareHardeningSchemaId;
 

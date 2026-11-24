@@ -7,8 +7,8 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     /**
      * <p>The action to take on high-risk virus files. Valid values:</p>
      * <ul>
-     * <li><strong>Quarantine</strong>: quarantine quarantined file.</li>
-     * <li><strong>Notify</strong>: report an alert only without taking action on quarantined file.</li>
+     * <li><strong>Quarantine</strong>: quarantines quarantined files</li>
+     * <li><strong>Notify</strong>: reports alerts only and does not process quarantined files</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,9 +21,9 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     /**
      * <p>The action to take on low-risk virus files. Valid values:</p>
      * <ul>
-     * <li><strong>Quarantine</strong>: quarantine quarantined file.</li>
-     * <li><strong>Notify</strong>: report an alert only without taking action on quarantined file.</li>
-     * <li><strong>None</strong>: take no action.</li>
+     * <li><strong>Quarantine</strong>: quarantines quarantined files</li>
+     * <li><strong>Notify</strong>: reports alerts only and does not process quarantined files</li>
+     * <li><strong>None</strong>: takes no action</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,10 +34,10 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     public String lowRiskOperation;
 
     /**
-     * <p>The matching method for the effective scope. Valid values:</p>
+     * <p>The matching mode for the effective scope. Valid values:</p>
      * <ul>
-     * <li><strong>UserGroupAll</strong>: the policy takes effect for all users under the current Alibaba Cloud account.</li>
-     * <li><strong>UserGroupNormal</strong>: the policy takes effect only for users in specified user groups. UserGroupIds is required when this value is specified.</li>
+     * <li><strong>UserGroupAll</strong>: applies to all users under the current Alibaba Cloud account</li>
+     * <li><strong>UserGroupNormal</strong>: applies only to users in the specified user groups, which requires UserGroupIds</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,7 +48,7 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     public String matchMode;
 
     /**
-     * <p>The maximum percentage of terminal CPU usage during scanning. Valid values: 0 to 100. If this parameter is not specified or is set to 0, the default value based on PerformanceMode is used: 50 for SecurityFirst, 30 for Balance, and 15 for ExperienceFirst.</p>
+     * <p>The maximum percentage of the endpoint CPU usage during the scan. Valid values: 0 to 100. If you do not specify this parameter or set it to 0, the default value is determined by PerformanceMode: 50 for SecurityFirst, 30 for Balance, and 15 for ExperienceFirst.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -59,8 +59,8 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     /**
      * <p>The action to take on medium-risk virus files. Valid values:</p>
      * <ul>
-     * <li><strong>Quarantine</strong>: quarantine quarantined file.</li>
-     * <li><strong>Notify</strong>: report an alert only without taking action on quarantined file.</li>
+     * <li><strong>Quarantine</strong>: quarantines quarantined files</li>
+     * <li><strong>Notify</strong>: reports alerts only and does not process quarantined files</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,11 +71,11 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     public String midRiskOperation;
 
     /**
-     * <p>The scan performance mode. Valid values:</p>
+     * <p>The scan performance schema pattern. Valid values:</p>
      * <ul>
-     * <li><strong>SecurityFirst</strong>: security first. The default CPU usage limit is 50%.</li>
-     * <li><strong>Balance</strong>: balanced. The default CPU usage limit is 30%.</li>
-     * <li><strong>ExperienceFirst</strong>: experience first. The default CPU usage limit is 15%.</li>
+     * <li><strong>SecurityFirst</strong>: security first, with a default maximum CPU usage of 50%</li>
+     * <li><strong>Balance</strong>: balanced, with a default maximum CPU usage of 30%</li>
+     * <li><strong>ExperienceFirst</strong>: experience first, with a default maximum CPU usage of 15%</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -95,7 +95,7 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The start hour for triggering scans, specified as a whole hour. Valid values: 0 to 23 (inclusive). This field is not a timestamp.</p>
+     * <p>The start hour for triggering the scan. The value must be an integer on the hour. Valid values: 0 to 23. The specified hour is included. This field is not a timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     public Long scanBeginTime;
 
     /**
-     * <p>The end hour for triggering scans, specified as a whole hour. Valid values: 1 to 24 (exclusive of the specified hour). The value must be greater than ScanBeginTime. Scan tasks generated by each trigger expire at this hour on the same day. This field is not a timestamp.</p>
+     * <p>The end hour for triggering the scan. The value must be an integer on the hour. Valid values: 1 to 24. The specified hour is excluded and must be greater than ScanBeginTime. The scan task generated by each trigger becomes invalid at this hour on the same day. This field is not a timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,8 +117,8 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     /**
      * <p>The unit of the trigger cycle. Valid values:</p>
      * <ul>
-     * <li><strong>day</strong>: by day.</li>
-     * <li><strong>week</strong>: by week.</li>
+     * <li><strong>day</strong>: day</li>
+     * <li><strong>week</strong>: week</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -129,7 +129,7 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     public String scanFrequency;
 
     /**
-     * <p>The interval number of the trigger cycle. This parameter works together with ScanFrequency to determine the trigger cycle. Valid values: 1 to 30. For example, if ScanFrequency is set to week and ScanInterval is set to 1, the scan is triggered once a week.</p>
+     * <p>The interval of the trigger cycle. This parameter and ScanFrequency determine the trigger cycle. Valid values: 1 to 30. For example, if ScanFrequency is set to week and ScanInterval is set to 1, the scan is performed once a week.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -141,9 +141,9 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     /**
      * <p>The path scope of the scan. Valid values:</p>
      * <ul>
-     * <li><strong>Quick</strong>: quick scan. Only system critical directories and common risk locations are scanned.</li>
-     * <li><strong>Full</strong>: full disk scan.</li>
-     * <li><strong>Custom</strong>: custom path scan. ScanPath is required when this value is specified.</li>
+     * <li><strong>Quick</strong>: quick scan, which scans only system key directories and common risk locations</li>
+     * <li><strong>Full</strong>: full scan</li>
+     * <li><strong>Custom</strong>: custom path scan, which requires ScanPath</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -154,13 +154,13 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     public String scanMode;
 
     /**
-     * <p>The collection of custom scan paths. This parameter is required when ScanMode is set to Custom and cannot be specified when ScanMode is set to Quick or Full. A maximum of 100 paths can be specified. Duplicate values are not allowed.</p>
+     * <p>The custom scan paths. This parameter is required when ScanMode is set to Custom, and cannot be specified when ScanMode is set to Quick or Full. You can specify up to 100 paths. Duplicate values are not allowed.</p>
      */
     @NameInMap("ScanPath")
     public java.util.List<String> scanPath;
 
     /**
-     * <p>The collection of virus types to be handled in this scan. At least one type must be specified. Duplicate values are not allowed.</p>
+     * <p>The types of viruses to be handled in this scan. You must specify at least one virus type. Duplicate values are not allowed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ScanTargets")
@@ -169,10 +169,9 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     /**
      * <p>The enabling status. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: Enabled.</li>
-     * <li><strong>Disabled</strong>: Disabled.</li>
+     * <li><strong>Enabled</strong>: Enabled. The policy immediately participates in periodic scheduling.</li>
+     * <li><strong>Disabled</strong>: Disabled. The policy is only saved and does not trigger scans.</li>
      * </ul>
-     * <p>After the policy is enabled, it immediately participates in periodic scheduling. When the policy is disabled, it is only saved and does not trigger scans.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -182,32 +181,32 @@ public class CreateVirusScanScheduledStrategyRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The policy description. The description can contain Chinese characters, uppercase and lowercase letters, digits, spaces, periods (.), commas (,), semicolons (;), forward slashes (/), at signs (@), hyphens (-), and underscores (_).</p>
+     * <p>The description of the policy. The description can contain Chinese characters, uppercase and lowercase letters, digits, spaces, periods (.), commas (,), semicolons (;), forward slashes (/), at signs (@), hyphens (-), and underscores (_).</p>
      * 
      * <strong>example:</strong>
-     * <p>Full disk scan for R&amp;D department terminals every Sunday at midnight</p>
+     * <p>Full scan of endpoints in the R&amp;D department every Sunday morning</p>
      */
     @NameInMap("StrategyDescription")
     public String strategyDescription;
 
     /**
-     * <p>The policy name. The name can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
+     * <p>Policy Name of the policy. Policy Name can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not allowed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>WeeklyScanForRDDept</p>
+     * <p>Weekly scan for the R&amp;D department</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;
 
     /**
-     * <p>The collection of user group IDs for the effective scope. This parameter is required when MatchMode is set to UserGroupNormal and cannot be specified when MatchMode is set to UserGroupAll. At least 1 and at most 100 IDs can be specified. Duplicate values are not allowed.</p>
+     * <p>The IDs of the effective user groups. This parameter is required when MatchMode is set to UserGroupNormal, and cannot be specified when MatchMode is set to UserGroupAll. You must specify at least one and up to 100 user group IDs. Duplicate values are not allowed.</p>
      */
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>The list of exempt users. Users in this list are excluded from the scan triggered by this policy. A maximum of 1000 users can be specified. Duplicate values are not allowed.</p>
+     * <p>The whitelist of users. Users in the whitelist are excluded from the scan policy. You can specify up to 1,000 users. Duplicate values are not allowed.</p>
      */
     @NameInMap("Whitelist")
     public java.util.List<String> whitelist;

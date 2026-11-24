@@ -17,13 +17,13 @@ public class ListUserDevicesRequest extends TeaModel {
     public java.util.List<String> appVersions;
 
     /**
-     * <p>The automatic logon statuses used to filter user endpoint devices.</p>
+     * <p>Filters the results by the automatic logon status of the user terminal devices.</p>
      */
     @NameInMap("AutoLoginStatuses")
     public java.util.List<String> autoLoginStatuses;
 
     /**
-     * <p>The current page number for paging queries. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page for paging in a paged query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The department to which the user belongs. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
+     * <p>The department to which the user belongs. The value must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>Test Department</p>
@@ -42,10 +42,10 @@ public class ListUserDevicesRequest extends TeaModel {
     public String department;
 
     /**
-     * <p>The ownership of the endpoint device. Valid values:</p>
+     * <p>The ownership of the terminal device. Valid values:</p>
      * <ul>
      * <li><strong>Personal</strong>: Personal device.</li>
-     * <li><strong>Company</strong>: Company device.</li>
+     * <li><strong>Company</strong>: Corporate device.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public String deviceBelong;
 
     /**
-     * <p>The ID of the device group.</p>
+     * <p>The device group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>device-group-5191cf830a5e****</p>
@@ -64,22 +64,28 @@ public class ListUserDevicesRequest extends TeaModel {
     public String deviceGroupId;
 
     /**
-     * <p>The endpoint device statuses.</p>
+     * <p>The terminal device statuses.</p>
      */
     @NameInMap("DeviceStatuses")
     public java.util.List<String> deviceStatuses;
 
     /**
-     * <p>The IDs of the endpoint devices.</p>
+     * <p>The terminal device IDs.</p>
      */
     @NameInMap("DeviceTags")
     public java.util.List<String> deviceTags;
 
     /**
-     * <p>The operating system types of the endpoint devices.</p>
+     * <p>The terminal device operating system types.</p>
      */
     @NameInMap("DeviceTypes")
     public java.util.List<String> deviceTypes;
+
+    /**
+     * <p>Filters the results by the disk encryption status of the user terminal devices. You can select multiple statuses, which are evaluated with an OR logical operator. If you select Unencrypted, the result includes user terminal devices that have not reported their disk encryption status.</p>
+     */
+    @NameInMap("DiskEncryptStatuses")
+    public java.util.List<String> diskEncryptStatuses;
 
     /**
      * <p>The office data protection statuses.</p>
@@ -88,7 +94,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public java.util.List<String> dlpStatuses;
 
     /**
-     * <p>The name of the endpoint device. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), the system also queries all endpoint devices whose names contain 4-byte UTF-8 characters.</p>
+     * <p>The name of the terminal device. The value must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), the system also queries all terminal devices whose names contain 4-byte UTF-8 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>win10-64bit</p>
@@ -103,7 +109,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public java.util.List<String> iaStatuses;
 
     /**
-     * <p>The internal IP address of the endpoint device.</p>
+     * <p>The internal IP address of the terminal device.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -112,7 +118,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public String innerIp;
 
     /**
-     * <p>The MAC address of the endpoint device.</p>
+     * <p>The MAC address of the terminal device.</p>
      * 
      * <strong>example:</strong>
      * <p>00:16:XX:XX:7c:46</p>
@@ -133,7 +139,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public java.util.List<String> paStatuses;
 
     /**
-     * <p>The number of entries per page for paging queries. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -145,8 +151,8 @@ public class ListUserDevicesRequest extends TeaModel {
     /**
      * <p>The user ID. You can obtain the value from the following operations:</p>
      * <ul>
-     * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user endpoint device.</li>
-     * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of user endpoint devices.</li>
+     * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user terminal device.</li>
+     * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Lists user terminal devices.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,7 +175,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public Boolean sharingStatus;
 
     /**
-     * <p>The BIOS system SN.</p>
+     * <p>The BIOS system serial number.</p>
      * 
      * <strong>example:</strong>
      * <p>5CG003****</p>
@@ -178,7 +184,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public String snBios;
 
     /**
-     * <p>The system serial number (SN).</p>
+     * <p>The system serial number.</p>
      * 
      * <strong>example:</strong>
      * <p>KVN9C9****</p>
@@ -202,7 +208,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The username. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
+     * <p>The username. The value must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>Mr. Wang</p>
@@ -302,6 +308,14 @@ public class ListUserDevicesRequest extends TeaModel {
     }
     public java.util.List<String> getDeviceTypes() {
         return this.deviceTypes;
+    }
+
+    public ListUserDevicesRequest setDiskEncryptStatuses(java.util.List<String> diskEncryptStatuses) {
+        this.diskEncryptStatuses = diskEncryptStatuses;
+        return this;
+    }
+    public java.util.List<String> getDiskEncryptStatuses() {
+        return this.diskEncryptStatuses;
     }
 
     public ListUserDevicesRequest setDlpStatuses(java.util.List<String> dlpStatuses) {

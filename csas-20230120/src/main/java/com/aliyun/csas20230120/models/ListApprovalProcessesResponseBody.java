@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApprovalProcessesResponseBody extends TeaModel {
     /**
-     * <p>The list of approval processes.</p>
+     * <p>The approval processes.</p>
      */
     @NameInMap("Processes")
     public java.util.List<ListApprovalProcessesResponseBodyProcesses> processes;
@@ -253,9 +253,18 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
     }
 
     public static class ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies extends TeaModel {
+        /**
+         * <p>The IDs of the endpoint hardening policies.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
+        /**
+         * <p>The ID of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -284,7 +293,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies extends TeaModel {
         /**
-         * <p>The IDs of the peripheral control policy.</p>
+         * <p>The IDs of the peripheral control policies.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
@@ -322,9 +331,18 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
     }
 
     public static class ListApprovalProcessesResponseBodyProcessesPrivateAccessBlockPolicies extends TeaModel {
+        /**
+         * <p>The IDs of the internal network access control applications.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
+        /**
+         * <p>The ID of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -395,7 +413,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcessesSoftwareBlockPolicies extends TeaModel {
         /**
-         * <p>The IDs of the software blocking policies.</p>
+         * <p>The IDs of the software block policies.</p>
          */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
@@ -433,9 +451,18 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
     }
 
     public static class ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies extends TeaModel {
+        /**
+         * <p>The IDs of the software hardening policies.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
+        /**
+         * <p>The ID of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -464,11 +491,17 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     public static class ListApprovalProcessesResponseBodyProcesses extends TeaModel {
         /**
-         * <p>The list of policies associated with endpoint uninstallation.</p>
+         * <p>The policies associated with endpoint uninstallation.</p>
          */
         @NameInMap("AppUninstallPolicies")
         public ListApprovalProcessesResponseBodyProcessesAppUninstallPolicies appUninstallPolicies;
 
+        /**
+         * <p>The type of the approval process. Valid values: 0 (built-in approval), 1 (DingTalk approval), 2 (WeCom approval), and 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ApprovalType")
         public Integer approvalType;
 
@@ -485,44 +518,50 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
          * <p>The description of the approval process.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is an approval process</p>
+         * <p>Approval process for file sending scenarios</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The list of policies associated with device registration.</p>
+         * <p>The policies associated with device registration.</p>
          */
         @NameInMap("DeviceRegistrationPolicies")
         public ListApprovalProcessesResponseBodyProcessesDeviceRegistrationPolicies deviceRegistrationPolicies;
 
         /**
-         * <p>The list of policies associated with file sending.</p>
+         * <p>The policies associated with file sending.</p>
          */
         @NameInMap("DlpSendPolicies")
         public ListApprovalProcessesResponseBodyProcessesDlpSendPolicies dlpSendPolicies;
 
         /**
-         * <p>The list of policies associated with the domain name blacklist.</p>
+         * <p>The policies associated with the domain name blacklist.</p>
          */
         @NameInMap("DomainBlacklistPolicies")
         public ListApprovalProcessesResponseBodyProcessesDomainBlacklistPolicies domainBlacklistPolicies;
 
         /**
-         * <p>The list of policies associated with the domain name whitelist.</p>
+         * <p>The policies associated with the domain name whitelist.</p>
          */
         @NameInMap("DomainWhitelistPolicies")
         public ListApprovalProcessesResponseBodyProcessesDomainWhitelistPolicies domainWhitelistPolicies;
 
+        /**
+         * <p>The policies associated with endpoint hardening. If the approval process is not configured with an approval template of this type, SchemaId and PolicyIds are empty.</p>
+         */
         @NameInMap("EndpointHardeningPolicies")
         public ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies endpointHardeningPolicies;
 
         /**
-         * <p>The list of policies associated with peripheral control.</p>
+         * <p>The policies associated with peripheral control.</p>
          */
         @NameInMap("PeripheralBlockPolicies")
         public ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies peripheralBlockPolicies;
 
+        /**
+         * <p>The policies associated with internal network access control. If the approval process is not configured with an approval template of this type, SchemaId and PolicyIds are empty.</p>
+         */
         @NameInMap("PrivateAccessBlockPolicies")
         public ListApprovalProcessesResponseBodyProcessesPrivateAccessBlockPolicies privateAccessBlockPolicies;
 
@@ -539,23 +578,26 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
          * <p>The name of the approval process.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>File sending approval</p>
          */
         @NameInMap("ProcessName")
         public String processName;
 
         /**
-         * <p>The list of approval nodes.</p>
+         * <p>The approval nodes.</p>
          */
         @NameInMap("ProcessNodes")
         public java.util.List<java.util.List<ListApprovalProcessesResponseBodyProcessesProcessNodes>> processNodes;
 
         /**
-         * <p>The list of policies associated with software blocking.</p>
+         * <p>The policies associated with the software block.</p>
          */
         @NameInMap("SoftwareBlockPolicies")
         public ListApprovalProcessesResponseBodyProcessesSoftwareBlockPolicies softwareBlockPolicies;
 
+        /**
+         * <p>The policies associated with software hardening. If the approval process is not configured with an approval template of this type, SchemaId and PolicyIds are empty.</p>
+         */
         @NameInMap("SoftwareHardeningPolicies")
         public ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies softwareHardeningPolicies;
 

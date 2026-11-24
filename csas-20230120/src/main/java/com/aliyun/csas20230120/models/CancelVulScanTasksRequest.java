@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelVulScanTasksRequest extends TeaModel {
     /**
-     * <p>The IDs of the vulnerability scanning tasks to cancel. The collection must contain at least 1 and at most 100 IDs. Duplicate IDs are not allowed.</p>
+     * <p>The IDs of the vulnerability scanning nodes to cancel. You can specify 1 to 100 unique node IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TaskIds")

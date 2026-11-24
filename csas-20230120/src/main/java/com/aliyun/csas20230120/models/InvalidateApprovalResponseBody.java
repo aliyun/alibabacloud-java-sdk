@@ -14,7 +14,7 @@ public class InvalidateApprovalResponseBody extends TeaModel {
     public String approvalId;
 
     /**
-     * <p>The effective status of the approval. When the invalidation succeeds, the value is fixed as Expired, which indicates that the approval has been invalidated.</p>
+     * <p>The effective status of the report. If the invalidation succeeds, Expired is returned to indicate that the report is invalidated.</p>
      * 
      * <strong>example:</strong>
      * <p>Expired</p>
@@ -23,10 +23,10 @@ public class InvalidateApprovalResponseBody extends TeaModel {
     public String effectStatus;
 
     /**
-     * <p>The approval type. Valid values:</p>
+     * <p>The report type. Valid values:</p>
      * <ul>
-     * <li>ApprovalReport: approval.</li>
-     * <li>BackendReport: backend approval.</li>
+     * <li>ApprovalReport: approval report.</li>
+     * <li>BackendReport: backend report.</li>
      * </ul>
      * 
      * <strong>example:</strong>

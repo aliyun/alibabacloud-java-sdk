@@ -17,10 +17,10 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public java.util.List<String> addresses;
 
     /**
-     * <p>The browser access status of the private access application. After you enable this feature, you can access private access applications without a client. Default value: <strong>Disabled</strong>. Valid values:</p>
+     * <p>The browser access status of the private access application. After you enable this feature, you can access private access applications in clientless mode. Default value: <strong>Disabled</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: Enabled.</li>
-     * <li><strong>Disabled</strong>: Disabled.</li>
+     * <li><strong>Enabled</strong>: enabled.</li>
+     * <li><strong>Disabled</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,8 +32,8 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     /**
      * <p>The configuration mode. Valid values:</p>
      * <ul>
-     * <li>Empty string: Default mode.</li>
-     * <li>Precise: Precise mode.</li>
+     * <li>Empty string: default mode.</li>
+     * <li>Precise: precise mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,8 +60,8 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     /**
      * <p>The health check mode. Valid values:</p>
      * <ul>
-     * <li>OnAccess: Checks upon access without proactive probing.</li>
-     * <li>Continuous: Performs continuous checks and proactive probing based on the configurations in HealthCheckConfig.
+     * <li>OnAccess: checks upon access without proactive probing.</li>
+     * <li>Continuous: performs continuous checks and proactive probing based on the configurations in HealthCheckConfig.
      * If this parameter is not specified, the default value is OnAccess. When the application addresses include wildcard domain names or CIDR blocks, or when the number of application addresses exceeds 10, only OnAccess is supported.</li>
      * </ul>
      * 
@@ -114,7 +114,7 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     /**
      * <p>The protocol of the private access application. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: All protocols.</li>
+     * <li><strong>All</strong>: all protocols.</li>
      * <li><strong>TCP</strong></li>
      * <li><strong>UDP</strong></li>
      * </ul>
@@ -129,8 +129,8 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     /**
      * <p>The status of the private access application. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: Enabled.</li>
-     * <li><strong>Disabled</strong>: Disabled.</li>
+     * <li><strong>Enabled</strong>: enabled.</li>
+     * <li><strong>Disabled</strong>: disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

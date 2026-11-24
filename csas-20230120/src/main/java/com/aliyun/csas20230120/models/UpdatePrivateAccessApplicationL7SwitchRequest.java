@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePrivateAccessApplicationL7SwitchRequest extends TeaModel {
     /**
-     * <p>The ID of the internal-facing application. Required.</p>
+     * <p>The ID of the internal access application. Required.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-application-e12860ef6c48****</p>
@@ -14,7 +14,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The device tag mark switch. Required. Valid values:</p>
+     * <p>The device tag marking switch. Required. Valid values:</p>
      * <ul>
      * <li><strong>Enabled</strong>: Enabled.</li>
      * <li><strong>Disabled</strong>: Disabled.</li>
@@ -27,7 +27,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends TeaModel {
     public String devTagMarkStatus;
 
     /**
-     * <p>The sensitive application download audit switch. Optional. Valid values:</p>
+     * <p>The download audit switch for sensitive applications. Optional. Valid values:</p>
      * <ul>
      * <li><strong>Enabled</strong>: Enabled.</li>
      * <li><strong>Disabled</strong>: Disabled.</li>
@@ -40,13 +40,13 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends TeaModel {
     public String downloadAuditStatus;
 
     /**
-     * <p>The collection of port ranges for the internal-facing application. Multiple port ranges cannot be duplicated or overlap. You can specify up to 50 port ranges. This parameter takes effect and is validated only when Status is set to <strong>Enabled</strong>. If this parameter is not specified or an empty collection is passed in, the default ports 80, 443, 8080, and 465 are used. The effective ports are the intersection of the ports specified in this request and the port ranges already configured for the internal-facing application.</p>
+     * <p>The port ranges for the internal access application. Multiple port ranges cannot overlap or be duplicated. You can specify up to 50 port ranges. This parameter takes effect and is verified only when Status is set to <strong>Enabled</strong>. If this parameter is not specified or an empty set is specified, the default ports 80, 443, 8080, and 465 are used. The effective ports are the intersection of the ports specified in this request and the configured port ranges of the internal access application.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<UpdatePrivateAccessApplicationL7SwitchRequestPortRanges> portRanges;
 
     /**
-     * <p>The source IP mark switch. Required. Valid values:</p>
+     * <p>The source IP marking switch. Required. Valid values:</p>
      * <ul>
      * <li><strong>Enabled</strong>: Enabled.</li>
      * <li><strong>Disabled</strong>: Disabled.</li>
@@ -59,12 +59,12 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends TeaModel {
     public String srcIpMarkStatus;
 
     /**
-     * <p>The master switch for Layer 7 access of the internal-facing application. Required. Valid values:</p>
+     * <p>The master switch for the Layer 7 access switch of the internal access application. Required. Valid values:</p>
      * <ul>
      * <li><strong>Enabled</strong>: Enabled.</li>
      * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
-     * <p>When the value is <strong>Disabled</strong>, PortRanges is neither validated nor saved.</p>
+     * <p>When the value is set to <strong>Disabled</strong>, PortRanges is neither verified nor saved.</p>
      * 
      * <strong>example:</strong>
      * <p>Enabled</p>
@@ -73,7 +73,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The request timeout period, in seconds. Valid values: 1 to 3600. Default value: 60. If this parameter is not specified or an invalid value is specified, the value 60 is used.</p>
+     * <p>The request timeout period, in seconds. Valid values: 1 to 3600. Default value: 60. If this parameter is not specified or an invalid value is specified, the default value 60 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -81,8 +81,11 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends TeaModel {
     @NameInMap("TimeoutSec")
     public Integer timeoutSec;
 
+    @NameInMap("UrlAccessPaths")
+    public java.util.List<UpdatePrivateAccessApplicationL7SwitchRequestUrlAccessPaths> urlAccessPaths;
+
     /**
-     * <p>The user mark switch. Required. Valid values:</p>
+     * <p>The user marking switch. Required. Valid values:</p>
      * <ul>
      * <li><strong>Enabled</strong>: Enabled.</li>
      * <li><strong>Disabled</strong>: Disabled.</li>
@@ -95,7 +98,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends TeaModel {
     public String userMarkStatus;
 
     /**
-     * <p>The host bypass prevention switch. Required. Valid values:</p>
+     * <p>The Host bypass prevention switch. Required. Valid values:</p>
      * <ul>
      * <li><strong>Enabled</strong>: Enabled.</li>
      * <li><strong>Disabled</strong>: Disabled.</li>
@@ -168,6 +171,14 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends TeaModel {
         return this.timeoutSec;
     }
 
+    public UpdatePrivateAccessApplicationL7SwitchRequest setUrlAccessPaths(java.util.List<UpdatePrivateAccessApplicationL7SwitchRequestUrlAccessPaths> urlAccessPaths) {
+        this.urlAccessPaths = urlAccessPaths;
+        return this;
+    }
+    public java.util.List<UpdatePrivateAccessApplicationL7SwitchRequestUrlAccessPaths> getUrlAccessPaths() {
+        return this.urlAccessPaths;
+    }
+
     public UpdatePrivateAccessApplicationL7SwitchRequest setUserMarkStatus(String userMarkStatus) {
         this.userMarkStatus = userMarkStatus;
         return this;
@@ -222,6 +233,36 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends TeaModel {
         }
         public Integer getEnd() {
             return this.end;
+        }
+
+    }
+
+    public static class UpdatePrivateAccessApplicationL7SwitchRequestUrlAccessPaths extends TeaModel {
+        @NameInMap("AllowMethods")
+        public java.util.List<String> allowMethods;
+
+        @NameInMap("Urls")
+        public java.util.List<String> urls;
+
+        public static UpdatePrivateAccessApplicationL7SwitchRequestUrlAccessPaths build(java.util.Map<String, ?> map) throws Exception {
+            UpdatePrivateAccessApplicationL7SwitchRequestUrlAccessPaths self = new UpdatePrivateAccessApplicationL7SwitchRequestUrlAccessPaths();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdatePrivateAccessApplicationL7SwitchRequestUrlAccessPaths setAllowMethods(java.util.List<String> allowMethods) {
+            this.allowMethods = allowMethods;
+            return this;
+        }
+        public java.util.List<String> getAllowMethods() {
+            return this.allowMethods;
+        }
+
+        public UpdatePrivateAccessApplicationL7SwitchRequestUrlAccessPaths setUrls(java.util.List<String> urls) {
+            this.urls = urls;
+            return this;
+        }
+        public java.util.List<String> getUrls() {
+            return this.urls;
         }
 
     }

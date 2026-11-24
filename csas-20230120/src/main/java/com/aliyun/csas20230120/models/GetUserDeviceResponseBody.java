@@ -42,7 +42,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
     public static class GetUserDeviceResponseBodyDeviceHistoryUsers extends TeaModel {
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -126,7 +126,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
     public static class GetUserDeviceResponseBodyDeviceProcesses extends TeaModel {
         /**
-         * <p>The CPU usage percentage of the process.</p>
+         * <p>The percentage of CPU usage by the process.</p>
          * 
          * <strong>example:</strong>
          * <p>0.05</p>
@@ -144,7 +144,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The memory usage of the process, in MB.</p>
+         * <p>The memory usage of the process. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>233</p>
@@ -202,10 +202,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
     public static class GetUserDeviceResponseBodyDevice extends TeaModel {
         /**
-         * <p>The status of the client. Valid values:</p>
+         * <p>The client status. Valid values:</p>
          * <ul>
-         * <li><strong>Online</strong>: Online.</li>
-         * <li><strong>Offline</strong>: Offline.</li>
+         * <li><strong>Online</strong>: online</li>
+         * <li><strong>Offline</strong>: offline</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,11 +224,11 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String appVersion;
 
         /**
-         * <p>The password-free logon status of the device. Valid values:</p>
+         * <p>The passwordless login status of the device. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: Enabled.</li>
-         * <li><strong>Disabled</strong>: Disabled.</li>
-         * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
+         * <li><strong>Enabled</strong>: enabled</li>
+         * <li><strong>Disabled</strong>: disabled</li>
+         * <li><strong>Unprovisioned</strong>: unprovisioned</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,7 +238,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String autoLoginStatus;
 
         /**
-         * <p>The battery health percentage.</p>
+         * <p>The battery health.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -346,7 +346,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String countryZh;
 
         /**
-         * <p>The registration time of the endpoint device. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The registration time of the endpoint device. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-16 17:18:46</p>
@@ -366,8 +366,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         /**
          * <p>The ownership of the endpoint device. Valid values:</p>
          * <ul>
-         * <li><strong>Personal</strong>: Personal device.</li>
-         * <li><strong>Company</strong>: Company device.</li>
+         * <li><strong>Personal</strong>: personal device</li>
+         * <li><strong>Company</strong>: company device</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -388,12 +388,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
         /**
          * <p>The status of the endpoint device. Valid values:</p>
          * <ul>
-         * <li><strong>Online</strong>: Online.</li>
-         * <li><strong>Offline</strong>: Offline.</li>
-         * <li><strong>LongTermOffline</strong>: Long-term offline.</li>
-         * <li><strong>Locked</strong>: Locked.</li>
-         * <li><strong>Lost</strong>: Reported as lost.</li>
-         * <li><strong>Unbound</strong>: Unbound.</li>
+         * <li><strong>Online</strong>: online</li>
+         * <li><strong>Offline</strong>: offline</li>
+         * <li><strong>LongTermOffline</strong>: long-term offline</li>
+         * <li><strong>Locked</strong>: locked</li>
+         * <li><strong>Lost</strong>: lost</li>
+         * <li><strong>Unbound</strong>: unbound</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -414,12 +414,12 @@ public class GetUserDeviceResponseBody extends TeaModel {
         /**
          * <p>The operating system type of the endpoint device. Valid values:</p>
          * <ul>
-         * <li><strong>Windows</strong>: Windows.</li>
-         * <li><strong>macOS</strong>: macOS.</li>
-         * <li><strong>Linux</strong>: Linux.</li>
-         * <li><strong>Android</strong>: Android.</li>
-         * <li><strong>iOS</strong>: iOS.</li>
-         * <li><strong>Windows_Wuying</strong>: WUYING Workspace.</li>
+         * <li><strong>Windows</strong>: Windows</li>
+         * <li><strong>macOS</strong>: macOS</li>
+         * <li><strong>Linux</strong>: Linux</li>
+         * <li><strong>Android</strong>: Android</li>
+         * <li><strong>iOS</strong>: iOS</li>
+         * <li><strong>Windows_Wuying</strong>: WUYING Workspace</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -447,7 +447,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String disk;
 
         /**
-         * <p>The available disk space, in GB.</p>
+         * <p>The available disk space. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -456,7 +456,25 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public Integer diskAvailable;
 
         /**
-         * <p>The used disk space, in GB.</p>
+         * <p>The disk encryption status of the user endpoint device. Valid values: Unsupported (encryption not supported), Unencrypted (not encrypted), Encrypting (encrypting), Encrypted (encrypted), and EncryptFailed (encryption failed). If the status is not reported, is null, or is unknown, Unencrypted is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unsupported</p>
+         */
+        @NameInMap("DiskEncryptStatus")
+        public String diskEncryptStatus;
+
+        /**
+         * <p>The reason why disk encryption failed or is not supported on the user endpoint device. This reason is returned only when DiskEncryptStatus is Unsupported or EncryptFailed. For other statuses, an empty string is returned. Maximum length: 512 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The current operating system version does not support BitLocker</p>
+         */
+        @NameInMap("DiskEncryptStatusReason")
+        public String diskEncryptStatusReason;
+
+        /**
+         * <p>The used disk space. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>103</p>
@@ -467,10 +485,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
         /**
          * <p>The office data protection status. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: Enabled.</li>
-         * <li><strong>Disabled</strong>: Disabled.</li>
-         * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
-         * <li><strong>Unauthorized</strong>: Unauthorized.</li>
+         * <li><strong>Enabled</strong>: enabled</li>
+         * <li><strong>Disabled</strong>: disabled</li>
+         * <li><strong>Unprovisioned</strong>: unprovisioned</li>
+         * <li><strong>Unauthorized</strong>: unauthorized</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -482,8 +500,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         /**
          * <p>The anti-intrusion status. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: Enabled.</li>
-         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><strong>Enabled</strong>: enabled</li>
+         * <li><strong>Disabled</strong>: disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -510,9 +528,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
         /**
          * <p>The Internet access status. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: Enabled.</li>
-         * <li><strong>Disabled</strong>: Disabled.</li>
-         * <li><strong>Unprovisioned</strong>: Unprovisioned.</li>
+         * <li><strong>Enabled</strong>: enabled</li>
+         * <li><strong>Disabled</strong>: disabled</li>
+         * <li><strong>Unprovisioned</strong>: unprovisioned</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -531,7 +549,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String innerIP;
 
         /**
-         * <p>Indicates whether the terminal is joined to an Active Directory (AD) domain.</p>
+         * <p>Indicates whether the endpoint has joined an Active Directory (AD) domain.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -555,7 +573,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public java.util.List<String> matchDeviceGroupIds;
 
         /**
-         * <p>The memory capacity of the endpoint device. Unit: GB.</p>
+         * <p>The memory capacity of the terminal device. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -578,7 +596,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String nacStatus;
 
         /**
-         * <p>The list of network interface controllers (NICs) of the endpoint device.</p>
+         * <p>The list of network interface controllers (NICs) of the terminal device.</p>
          */
         @NameInMap("NetInterfaceInfo")
         public java.util.List<GetUserDeviceResponseBodyDeviceNetInterfaceInfo> netInterfaceInfo;
@@ -598,7 +616,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String paStatus;
 
         /**
-         * <p>The list of running processes on the terminal.</p>
+         * <p>The list of running processes on the terminal device.</p>
          */
         @NameInMap("Processes")
         public java.util.List<GetUserDeviceResponseBodyDeviceProcesses> processes;
@@ -631,7 +649,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String provinceZh;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -640,10 +658,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
-         * <p>Specifies whether sharing is enabled for the device. Valid values:</p>
+         * <p>Indicates whether sharing is enabled for the device. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: Sharing is enabled.</li>
+         * <li><strong>false</strong>: Sharing is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -653,7 +671,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public Boolean sharingStatus;
 
         /**
-         * <p>The motherboard serial number.</p>
+         * <p>The serial number of the baseboard.</p>
          * 
          * <strong>example:</strong>
          * <p>PJGGU00WBD****</p>
@@ -671,7 +689,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String snBios;
 
         /**
-         * <p>The hard disk serial number.</p>
+         * <p>The serial number of the disk drive.</p>
          * 
          * <strong>example:</strong>
          * <p>WD-WXR1A99A****</p>
@@ -689,7 +707,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String snProcessor;
 
         /**
-         * <p>The system serial number.</p>
+         * <p>The serial number of the system.</p>
          * 
          * <strong>example:</strong>
          * <p>KVN9C9****</p>
@@ -698,7 +716,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String snSystem;
 
         /**
-         * <p>The logon IP address of the endpoint device.</p>
+         * <p>The logon IP address of the terminal device.</p>
          * 
          * <strong>example:</strong>
          * <p>106.14.XX.XX</p>
@@ -716,7 +734,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public Long terminalInfoCollectTime;
 
         /**
-         * <p>The last online time of the endpoint device. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The last online time of the terminal device. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-24 19:04:42</p>
@@ -737,7 +755,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
          * <p>The name of the office area.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Office Area</p>
+         * <p>Test office area</p>
          */
         @NameInMap("Workshop")
         public String workshop;
@@ -945,6 +963,22 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
         public Integer getDiskAvailable() {
             return this.diskAvailable;
+        }
+
+        public GetUserDeviceResponseBodyDevice setDiskEncryptStatus(String diskEncryptStatus) {
+            this.diskEncryptStatus = diskEncryptStatus;
+            return this;
+        }
+        public String getDiskEncryptStatus() {
+            return this.diskEncryptStatus;
+        }
+
+        public GetUserDeviceResponseBodyDevice setDiskEncryptStatusReason(String diskEncryptStatusReason) {
+            this.diskEncryptStatusReason = diskEncryptStatusReason;
+            return this;
+        }
+        public String getDiskEncryptStatusReason() {
+            return this.diskEncryptStatusReason;
         }
 
         public GetUserDeviceResponseBodyDevice setDiskUsed(Integer diskUsed) {

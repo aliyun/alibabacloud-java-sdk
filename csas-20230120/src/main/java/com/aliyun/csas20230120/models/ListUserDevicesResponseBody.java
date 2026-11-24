@@ -20,7 +20,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of endpoint devices.</p>
+     * <p>The total number of terminal devices.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
 
     public static class ListUserDevicesResponseBodyDevicesNetInterfaceInfo extends TeaModel {
         /**
-         * <p>The MAC address of the NIC.</p>
+         * <p>The MAC address of the network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>00:16:XX:XX:7c:46</p>
@@ -68,7 +68,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String mac;
 
         /**
-         * <p>The name of the NIC.</p>
+         * <p>The name of the network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>eth0</p>
@@ -123,7 +123,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String appVersion;
 
         /**
-         * <p>The auto-logon status of the client.</p>
+         * <p>The auto-login status of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -141,7 +141,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String CPU;
 
         /**
-         * <p>The city of the public IP address.</p>
+         * <p>The city to which the public IP address belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Hangzhou City</p>
@@ -168,7 +168,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String cityZh;
 
         /**
-         * <p>The continent of the public IP address.</p>
+         * <p>The continent to which the public IP address belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia</p>
@@ -195,7 +195,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String continentZh;
 
         /**
-         * <p>The country of the public IP address.</p>
+         * <p>The country to which the public IP address belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>China</p>
@@ -222,7 +222,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String countryZh;
 
         /**
-         * <p>The registration time of the endpoint device.</p>
+         * <p>The registration time of the endpoint device. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-17 18:46:55</p>
@@ -240,10 +240,10 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String department;
 
         /**
-         * <p>The ownership of the endpoint device. Valid values:</p>
+         * <p>The ownership of the terminal device. Valid values:</p>
          * <ul>
          * <li><strong>Personal</strong>: Personal device.</li>
-         * <li><strong>Company</strong>: Company device.</li>
+         * <li><strong>Company</strong>: Corporate device.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +268,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
          * <li><strong>Offline</strong>: Offline.</li>
          * <li><strong>LongTermOffline</strong>: Long-term offline.</li>
          * <li><strong>Locked</strong>: Locked.</li>
-         * <li><strong>Lost</strong>: Reported lost.</li>
+         * <li><strong>Lost</strong>: Reported as lost.</li>
          * <li><strong>Unbound</strong>: Unbound.</li>
          * </ul>
          * 
@@ -288,14 +288,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String deviceTag;
 
         /**
-         * <p>The operating system type of the endpoint device. Valid values:</p>
+         * <p>The terminal device operating system type. Valid values:</p>
          * <ul>
          * <li><strong>Windows</strong>: Windows.</li>
          * <li><strong>macOS</strong>: macOS.</li>
          * <li><strong>Linux</strong>: Linux.</li>
          * <li><strong>Android</strong>: Android.</li>
          * <li><strong>iOS</strong>: iOS.</li>
-         * <li><strong>Windows_Wuying</strong>: WUYING Workspace.</li>
+         * <li><strong>Windows_Wuying</strong>: Wuying cloud desktop.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -321,6 +321,24 @@ public class ListUserDevicesResponseBody extends TeaModel {
          */
         @NameInMap("Disk")
         public String disk;
+
+        /**
+         * <p>The disk encryption status of the user endpoint device. Valid values: Unsupported (encryption is not supported), Unencrypted (not encrypted), Encrypting (encrypting), Encrypted (encrypted), and EncryptFailed (encryption failed). If the status is not reported, null, or unknown, Unencrypted is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unsupported</p>
+         */
+        @NameInMap("DiskEncryptStatus")
+        public String diskEncryptStatus;
+
+        /**
+         * <p>The reason why disk encryption failed or is not supported on the user endpoint device. This reason is returned only when DiskEncryptStatus is Unsupported or EncryptFailed. For other statuses, an empty string is returned. Maximum length: 512 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The current operating system version does not support BitLocker.</p>
+         */
+        @NameInMap("DiskEncryptStatusReason")
+        public String diskEncryptStatusReason;
 
         /**
          * <p>The office data protection status. Valid values:</p>
@@ -380,7 +398,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String iaStatus;
 
         /**
-         * <p>The internal IP address of the endpoint device.</p>
+         * <p>The internal IP address of the terminal device.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -389,7 +407,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String innerIP;
 
         /**
-         * <p>Indicates whether the endpoint device is added to an Active Directory (AD) domain.</p>
+         * <p>Indicates whether the device is joined to an AD domain.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -398,7 +416,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public Boolean joinAdDomain;
 
         /**
-         * <p>The MAC address of the endpoint device.</p>
+         * <p>The MAC address of the terminal device.</p>
          * 
          * <strong>example:</strong>
          * <p>00:16:XX:XX:7c:46</p>
@@ -436,7 +454,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String nacStatus;
 
         /**
-         * <p>The list of network interface controllers (NICs) of the endpoint device.</p>
+         * <p>The list of network interfaces.</p>
          */
         @NameInMap("NetInterfaceInfo")
         public java.util.List<ListUserDevicesResponseBodyDevicesNetInterfaceInfo> netInterfaceInfo;
@@ -456,7 +474,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String paStatus;
 
         /**
-         * <p>The province of the public IP address.</p>
+         * <p>The province to which the public IP address belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
@@ -483,7 +501,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String provinceZh;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
@@ -523,7 +541,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String snBios;
 
         /**
-         * <p>The serial number of the hard disk.</p>
+         * <p>The serial number of the disk drive.</p>
          * 
          * <strong>example:</strong>
          * <p>WD-WXR1A99A****</p>
@@ -541,7 +559,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String snProcessor;
 
         /**
-         * <p>The system serial number (SN).</p>
+         * <p>The system serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>KVN9C9****</p>
@@ -550,7 +568,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String snSystem;
 
         /**
-         * <p>The logon IP address of the endpoint device.</p>
+         * <p>The logon IP address of the terminal device.</p>
          * 
          * <strong>example:</strong>
          * <p>11.49.XX.XX</p>
@@ -559,7 +577,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String srcIP;
 
         /**
-         * <p>The last online time of the endpoint device.</p>
+         * <p>The last online time of the terminal device, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-24 19:04:42</p>
@@ -764,6 +782,22 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
         public String getDisk() {
             return this.disk;
+        }
+
+        public ListUserDevicesResponseBodyDevices setDiskEncryptStatus(String diskEncryptStatus) {
+            this.diskEncryptStatus = diskEncryptStatus;
+            return this;
+        }
+        public String getDiskEncryptStatus() {
+            return this.diskEncryptStatus;
+        }
+
+        public ListUserDevicesResponseBodyDevices setDiskEncryptStatusReason(String diskEncryptStatusReason) {
+            this.diskEncryptStatusReason = diskEncryptStatusReason;
+            return this;
+        }
+        public String getDiskEncryptStatusReason() {
+            return this.diskEncryptStatusReason;
         }
 
         public ListUserDevicesResponseBodyDevices setDlpStatus(String dlpStatus) {

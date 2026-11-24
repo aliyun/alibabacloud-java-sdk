@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateProhibitedPolicyRequest extends TeaModel {
     /**
-     * <p>Specifies whether endpoint users are allowed to submit a filing request for this policy. Valid values:</p>
+     * <p>Specifies whether to allow endpoint users to submit exemption requests for the policy. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Filing is allowed. A filing entry is provided in the pop-up notification on the endpoint.</li>
-     * <li><strong>false</strong>: Filing is not allowed.</li>
+     * <li><strong>true</strong>: Exemption requests are allowed. The endpoint pop-up window provides an entry for submitting requests.</li>
+     * <li><strong>false</strong>: Exemption requests are not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     public String allowReport;
 
     /**
-     * <p>The description of the software prohibition policy. The description can contain Chinese characters, uppercase and lowercase letters, digits, spaces, periods (.), underscores (_), and hyphens (-). The description can be up to 128 characters in length and can be left empty.</p>
+     * <p>The description of the software prohibition policy. The description can contain Chinese characters, uppercase and lowercase letters, digits, spaces, periods (.), underscores (_), and hyphens (-). It can be up to 128 characters in length and can be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>No description</p>
@@ -29,8 +29,8 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether the policy is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enabled. The policy is delivered to endpoints and takes effect.</li>
-     * <li><strong>false</strong>: Disabled. The policy configuration is retained but not delivered to endpoints.</li>
+     * <li><strong>true</strong>: The policy is enabled and delivered to endpoints to take effect.</li>
+     * <li><strong>false</strong>: The policy is disabled. The configuration is retained but not delivered to endpoints.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,8 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly terminate running software processes. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The endpoint immediately terminates the running processes of the software when the policy is triggered.</li>
-     * <li><strong>false</strong>: Running processes are not terminated. Only subsequent launches are blocked.</li>
+     * <li><strong>true</strong>: The endpoint immediately terminates the running processes of the software when the policy is matched.</li>
+     * <li><strong>false</strong>: Running processes are not terminated. Only subsequent startups are blocked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,16 +53,16 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     public Boolean forceKill;
 
     /**
-     * <p>The Chinese text of the primary button in the pop-up notification on the endpoint.</p>
+     * <p>The Chinese text of the primary button in the endpoint pop-up window.</p>
      * 
      * <strong>example:</strong>
-     * <p>Submit Filing</p>
+     * <p>Submit request</p>
      */
     @NameInMap("MainButtonTextCh")
     public String mainButtonTextCh;
 
     /**
-     * <p>The English text of the primary button in the pop-up notification on the endpoint.</p>
+     * <p>The English text of the primary button in the endpoint pop-up window.</p>
      * 
      * <strong>example:</strong>
      * <p>Report</p>
@@ -71,10 +71,10 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     public String mainButtonTextEn;
 
     /**
-     * <p>The scope in which the policy takes effect. Valid values:</p>
+     * <p>The effective scope. Valid values:</p>
      * <ul>
-     * <li><strong>UserGroupAll</strong>: Takes effect for all users under the current Alibaba Cloud account. No user group needs to be specified.</li>
-     * <li><strong>UserGroupNormal</strong>: Takes effect only for users in the user groups specified by UserGroupIds.</li>
+     * <li><strong>UserGroupAll</strong>: applies to all users under the current Alibaba Cloud account. You do not need to specify user groups.</li>
+     * <li><strong>UserGroupNormal</strong>: applies only to users in the user groups specified by UserGroupIds.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,16 +84,16 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     public String matchMode;
 
     /**
-     * <p>The Chinese text of the secondary button in the pop-up notification on the endpoint.</p>
+     * <p>The Chinese text of the secondary button in the endpoint pop-up window.</p>
      * 
      * <strong>example:</strong>
-     * <p>Got It</p>
+     * <p>Got it</p>
      */
     @NameInMap("MinorButtonTextCh")
     public String minorButtonTextCh;
 
     /**
-     * <p>The English text of the secondary button in the pop-up notification on the endpoint.</p>
+     * <p>The English text of the secondary button in the endpoint pop-up window.</p>
      * 
      * <strong>example:</strong>
      * <p>I know</p>
@@ -102,10 +102,10 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     public String minorButtonTextEn;
 
     /**
-     * <p>Policy Name of the software prohibition policy. Policy Name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
+     * <p>Policy Name of the software prohibition policy. Policy Name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>ProhibitionPolicy</p>
+     * <p>Prohibition policy</p>
      */
     @NameInMap("Name")
     public String name;
@@ -113,8 +113,8 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     /**
      * <p>The object type. Valid values:</p>
      * <ul>
-     * <li><strong>App</strong>: Controls by prohibited software. The controlled objects are specified by SoftwareIds.</li>
-     * <li><strong>Tag</strong>: Controls by prohibited software tag. The controlled objects are specified by TagIds. All prohibited software under the specified tags is controlled.</li>
+     * <li><strong>App</strong>: manages prohibited software. The managed objects are specified by SoftwareIds.</li>
+     * <li><strong>Tag</strong>: manages prohibited software tags. The managed objects are specified by TagIds. All prohibited software under the tags are managed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,9 +136,9 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     /**
      * <p>The action to take. If this parameter is not specified, the original value is retained. Valid values:</p>
      * <ul>
-     * <li><strong>Ban</strong>: Blocks the software from running and displays a pop-up notification on the endpoint to alert the user.</li>
-     * <li><strong>BanSilent</strong>: Blocks the software from running without notifying the user (silent blocking).</li>
-     * <li><strong>Warn</strong>: Displays a pop-up notification on the endpoint to alert the user without blocking the software from running.</li>
+     * <li><strong>Ban</strong>: blocks the software from running and displays a pop-up window on the endpoint to notify the user.</li>
+     * <li><strong>BanSilent</strong>: blocks the software from running without notifying the user.</li>
+     * <li><strong>Warn</strong>: displays a pop-up window on the endpoint to notify the user without blocking the software from running.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The Chinese prompt content displayed in the pop-up notification on the endpoint.</p>
+     * <p>The Chinese prompt content in the endpoint pop-up window.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -166,7 +166,7 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     public String promptCh;
 
     /**
-     * <p>The English prompt content displayed in the pop-up notification on the endpoint.</p>
+     * <p>The English prompt content in the endpoint pop-up window.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -175,28 +175,28 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     public String promptEn;
 
     /**
-     * <p>The collection of prohibited software directly controlled by this policy.</p>
+     * <p>The collection of prohibited software directly managed by the policy.</p>
      */
     @NameInMap("SoftwareIds")
     public java.util.List<UpdateProhibitedPolicyRequestSoftwareIds> softwareIds;
 
     /**
-     * <p>The collection of prohibited software tag IDs controlled by this policy.</p>
+     * <p>The collection of prohibited software tag IDs managed by the policy.</p>
      */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
 
     /**
-     * <p>The Chinese title of the pop-up notification on the endpoint.</p>
+     * <p>The Chinese title of the endpoint pop-up window.</p>
      * 
      * <strong>example:</strong>
-     * <p>Software Prohibition Reminder</p>
+     * <p>Software prohibition reminder</p>
      */
     @NameInMap("TitleCh")
     public String titleCh;
 
     /**
-     * <p>The English title of the pop-up notification on the endpoint.</p>
+     * <p>The English title of the endpoint pop-up window.</p>
      * 
      * <strong>example:</strong>
      * <p>Software Blocked</p>
@@ -205,13 +205,13 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
     public String titleEn;
 
     /**
-     * <p>The collection of user group IDs for which the policy takes effect. Duplicate values are not allowed.</p>
+     * <p>The collection of user group IDs to which the policy applies. Duplicates are not allowed.</p>
      */
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>The list of exempted usernames. Duplicate values are not allowed.</p>
+     * <p>The list of exempted usernames. Duplicates are not allowed.</p>
      */
     @NameInMap("Whitelist")
     public java.util.List<String> whitelist;
@@ -399,10 +399,10 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
 
     public static class UpdateProhibitedPolicyRequestSoftwareIds extends TeaModel {
         /**
-         * <p>Indicates whether the prohibited software is a system built-in entry. Valid values:</p>
+         * <p>Specifies whether the prohibited software is built-in. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: A system built-in prohibited software entry shared across all Alibaba Cloud accounts. It cannot be modified or deleted.</li>
-         * <li><strong>false</strong>: A custom prohibited software entry under the current Alibaba Cloud account.</li>
+         * <li><strong>true</strong>: The software is built-in, shared by all Alibaba Cloud accounts, and cannot be modified or deleted.</li>
+         * <li><strong>false</strong>: The software is custom prohibited software under the current Alibaba Cloud account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -414,8 +414,8 @@ public class UpdateProhibitedPolicyRequest extends TeaModel {
         /**
          * <p>The ID of the prohibited software. You can obtain the value from the following operations:</p>
          * <ul>
-         * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Lists prohibited software.</li>
-         * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Creates custom prohibited software.</li>
+         * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: queries prohibited software in batches.</li>
+         * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: creates custom prohibited software.</li>
          * </ul>
          * 
          * <strong>example:</strong>

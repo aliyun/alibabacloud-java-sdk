@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "csas";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-hangzhou", "csas.aliyuncs.com"),
@@ -32,7 +35,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Appends associated terminal devices to a static device label in batches.</p>
+     * <p>Adds associated terminal devices to a static device tag in batches.</p>
      * 
      * @param request AddDeviceGroupMatchDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -73,7 +76,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Appends associated terminal devices to a static device label in batches.</p>
+     * <p>Adds associated terminal devices to a static device tag in batches.</p>
      * 
      * @param request AddDeviceGroupMatchDevicesRequest
      * @return AddDeviceGroupMatchDevicesResponse
@@ -85,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</p>
+     * <p>Adds entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. The quota is calculated independently for each combination of matching dimension and list type. For each combination, the whitelist supports up to 10,000 entries and the blacklist supports up to 1,000 entries. If the quota is exceeded after the addition, the entire batch fails.</p>
      * 
      * @param request AddVirusScanAdditionalListsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -126,7 +129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</p>
+     * <p>Adds entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. The quota is calculated independently for each combination of matching dimension and list type. For each combination, the whitelist supports up to 10,000 entries and the blacklist supports up to 1,000 entries. If the quota is exceeded after the addition, the entire batch fails.</p>
      * 
      * @param request AddVirusScanAdditionalListsRequest
      * @return AddVirusScanAdditionalListsResponse
@@ -244,7 +247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Appends domain name entries in batches to a specified domain name list (<code>ListId</code>). Domain names must be second-level or higher domain names. Wildcard domain names (<code>*.example.com</code>) are supported, but overly broad patterns such as <code>*.com</code> or <code>*.com.cn</code> are prohibited.</p>
+     * <p>Appends domain name entries to a specified domain name list (<code>ListId</code>) in batches. Domain names must be second-level or higher-level domain names. Wildcard domain names such as <code>*.example.com</code> are supported, but overly broad formats such as <code>*.com</code> and <code>*.com.cn</code> are prohibited.</p>
      * 
      * <b>summary</b> : 
      * <p>Inserts domain name entries into a domain name list in batches.</p>
@@ -292,7 +295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Appends domain name entries in batches to a specified domain name list (<code>ListId</code>). Domain names must be second-level or higher domain names. Wildcard domain names (<code>*.example.com</code>) are supported, but overly broad patterns such as <code>*.com</code> or <code>*.com.cn</code> are prohibited.</p>
+     * <p>Appends domain name entries to a specified domain name list (<code>ListId</code>) in batches. Domain names must be second-level or higher-level domain names. Wildcard domain names such as <code>*.example.com</code> are supported, but overly broad formats such as <code>*.com</code> and <code>*.com.cn</code> are prohibited.</p>
      * 
      * <b>summary</b> : 
      * <p>Inserts domain name entries into a domain name list in batches.</p>
@@ -307,10 +310,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Batch deletes domain name entries from a specified domain name list by entry IDs (<code>ItemIds</code>, obtained from the <code>ItemId</code> field returned by ListDomainItems).</p>
+     * <p>Deletes multiple domain name entries from a specified domain name list based on entry IDs (<code>ItemIds</code>, obtained from the <code>ItemId</code> returned by ListDomainItems).</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch deletes domain name entries from a domain name list.</p>
+     * <p>Deletes multiple domain name entries from a domain name list.</p>
      * 
      * @param request BatchDeleteDomainItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -355,10 +358,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Batch deletes domain name entries from a specified domain name list by entry IDs (<code>ItemIds</code>, obtained from the <code>ItemId</code> field returned by ListDomainItems).</p>
+     * <p>Deletes multiple domain name entries from a specified domain name list based on entry IDs (<code>ItemIds</code>, obtained from the <code>ItemId</code> returned by ListDomainItems).</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch deletes domain name entries from a domain name list.</p>
+     * <p>Deletes multiple domain name entries from a domain name list.</p>
      * 
      * @param request BatchDeleteDomainItemsRequest
      * @return BatchDeleteDomainItemsResponse
@@ -370,14 +373,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applications that are referenced by office network recognition or policies cannot be deleted. References:</p>
+     * <p>Deletion is not allowed when office area identification or policy references exist. References:</p>
      * <ul>
-     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications in batches.</li>
-     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal-facing access policies in batches.</li>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists private access policies.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes internal-facing applications in batches.</p>
+     * <p>Deletes multiple private access applications.</p>
      * 
      * @param request BatchDeletePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -414,14 +417,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applications that are referenced by office network recognition or policies cannot be deleted. References:</p>
+     * <p>Deletion is not allowed when office area identification or policy references exist. References:</p>
      * <ul>
-     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications in batches.</li>
-     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal-facing access policies in batches.</li>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists private access policies.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes internal-facing applications in batches.</p>
+     * <p>Deletes multiple private access applications.</p>
      * 
      * @param request BatchDeletePrivateAccessApplicationRequest
      * @return BatchDeletePrivateAccessApplicationResponse
@@ -433,7 +436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes internal network access policies in batches.</p>
+     * <p>Deletes multiple internal network access policies.</p>
      * 
      * @param request BatchDeletePrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -470,7 +473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes internal network access policies in batches.</p>
+     * <p>Deletes multiple internal network access policies.</p>
      * 
      * @param request BatchDeletePrivateAccessPolicyRequest
      * @return BatchDeletePrivateAccessPolicyResponse
@@ -482,7 +485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates user labels.</p>
+     * <p>Associates user tags.</p>
      * 
      * @param request BindSaseUserTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -523,7 +526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates user labels.</p>
+     * <p>Associates user tags.</p>
      * 
      * @param request BindSaseUserTagRequest
      * @return BindSaseUserTagResponse
@@ -535,7 +538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</p>
+     * <p>Cancels multiple active instant virus scan tasks in batches. After cancellation, endpoints no longer pull or execute the tasks, and scans already running on the endpoints are not interrupted.</p>
      * 
      * @param request CancelVirusScanTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -572,7 +575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</p>
+     * <p>Cancels multiple active instant virus scan tasks in batches. After cancellation, endpoints no longer pull or execute the tasks, and scans already running on the endpoints are not interrupted.</p>
      * 
      * @param request CancelVirusScanTasksRequest
      * @return CancelVirusScanTasksResponse
@@ -584,7 +587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</p>
+     * <p>Cancels multiple active on-demand vulnerability scanning nodes.</p>
      * 
      * @param request CancelVulScanTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -621,7 +624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</p>
+     * <p>Cancels multiple active on-demand vulnerability scanning nodes.</p>
      * 
      * @param request CancelVulScanTasksRequest
      * @return CancelVulScanTasksResponse
@@ -700,7 +703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a backend filing.</p>
+     * <p>Creates a backend report.</p>
      * 
      * @param request CreateBackendReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -757,7 +760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a backend filing.</p>
+     * <p>Creates a backend report.</p>
      * 
      * @param request CreateBackendReportRequest
      * @return CreateBackendReportResponse
@@ -893,7 +896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a device label.</p>
+     * <p>Creates a device tag.</p>
      * 
      * @param tmpReq CreateDeviceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -947,7 +950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a device label.</p>
+     * <p>Creates a device tag.</p>
      * 
      * @param request CreateDeviceGroupRequest
      * @return CreateDeviceGroupResponse
@@ -959,7 +962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. A maximum of 100 lists can be created for each list type per tenant.</p>
+     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a domain name list.</p>
@@ -998,7 +1001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. A maximum of 100 lists can be created for each list type per tenant.</p>
+     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a domain name list.</p>
@@ -1233,7 +1236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a traffic forwarding rule.</p>
+     * <p>Creates a forwarding rule.</p>
      * 
      * @param request CreateForwardStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1285,7 +1288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a traffic forwarding rule.</p>
+     * <p>Creates a forwarding rule.</p>
      * 
      * @param request CreateForwardStrategyRequest
      * @return CreateForwardStrategyResponse
@@ -1345,7 +1348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a diagnostic task for internal network access.</p>
+     * <p>Creates an internal network access diagnostic task.</p>
      * 
      * @param tmpReq CreatePADiagnosisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1419,7 +1422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a diagnostic task for internal network access.</p>
+     * <p>Creates an internal network access diagnostic task.</p>
      * 
      * @param request CreatePADiagnosisTaskRequest
      * @return CreatePADiagnosisTaskResponse
@@ -1745,7 +1748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a software ban policy.</p>
+     * <p>Creates a prohibited software policy.</p>
      * 
      * @param request CreateProhibitedPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1862,7 +1865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a software ban policy.</p>
+     * <p>Creates a prohibited software policy.</p>
      * 
      * @param request CreateProhibitedPolicyRequest
      * @return CreateProhibitedPolicyResponse
@@ -1874,7 +1877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom disabled software entry.</p>
+     * <p>Creates custom blocked software.</p>
      * 
      * @param request CreateProhibitedSoftwareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1931,7 +1934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom disabled software entry.</p>
+     * <p>Creates custom blocked software.</p>
      * 
      * @param request CreateProhibitedSoftwareRequest
      * @return CreateProhibitedSoftwareResponse
@@ -1943,7 +1946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom disabled software tag.</p>
+     * <p>Creates a custom prohibited software tag.</p>
      * 
      * @param request CreateProhibitedTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1979,7 +1982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom disabled software tag.</p>
+     * <p>Creates a custom prohibited software tag.</p>
      * 
      * @param request CreateProhibitedTagRequest
      * @return CreateProhibitedTagResponse
@@ -2140,8 +2143,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>After a task is created, its initial status is disabled.</li>
-     * <li>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</li>
-     * <li>SupportOs supports only a single operating system value.</li>
+     * <li>MatchMode determines how target parameters are specified. If MatchMode is set to UserGroupNormal, you must specify only UserGroupIds. If MatchMode is set to DeviceGroupNormal, you must specify only DeviceGroupIds. If MatchMode is set to DevTagNormal, you must specify only DevTags. Requests with parameters that do not match the specified MatchMode are rejected.</li>
+     * <li>SupportOs supports only a single operating system.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2252,8 +2255,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>After a task is created, its initial status is disabled.</li>
-     * <li>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</li>
-     * <li>SupportOs supports only a single operating system value.</li>
+     * <li>MatchMode determines how target parameters are specified. If MatchMode is set to UserGroupNormal, you must specify only UserGroupIds. If MatchMode is set to DeviceGroupNormal, you must specify only DeviceGroupIds. If MatchMode is set to DevTagNormal, you must specify only DevTags. Requests with parameters that do not match the specified MatchMode are rejected.</li>
+     * <li>SupportOs supports only a single operating system.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2422,7 +2425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</p>
+     * <p>Creates a scheduled virus scan policy that automatically delivers scan tasks to user endpoints within the effective scope based on the configured schedule.</p>
      * 
      * @param request CreateVirusScanScheduledStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2531,7 +2534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</p>
+     * <p>Creates a scheduled virus scan policy that automatically delivers scan tasks to user endpoints within the effective scope based on the configured schedule.</p>
      * 
      * @param request CreateVirusScanScheduledStrategyRequest
      * @return CreateVirusScanScheduledStrategyResponse
@@ -2957,10 +2960,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create a maximum of 500 user groups by default.</p>
+     * <p>By default, you can create up to 500 user groups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a digital watermarking embedding task.</p>
+     * <p>Creates a digital watermarking embedding node.</p>
      * 
      * @param tmpReq CreateWmEmbedTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3074,10 +3077,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create a maximum of 500 user groups by default.</p>
+     * <p>By default, you can create up to 500 user groups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a digital watermarking embedding task.</p>
+     * <p>Creates a digital watermarking embedding node.</p>
      * 
      * @param request CreateWmEmbedTaskRequest
      * @return CreateWmEmbedTaskResponse
@@ -3089,7 +3092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a digital watermarking extraction task.</p>
+     * <p>Creates a digital watermarking fetch node.</p>
      * 
      * @param tmpReq CreateWmExtractTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3169,7 +3172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a digital watermarking extraction task.</p>
+     * <p>Creates a digital watermarking fetch node.</p>
      * 
      * @param request CreateWmExtractTaskRequest
      * @return CreateWmExtractTaskResponse
@@ -5221,7 +5224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified device label.</p>
+     * <p>Queries the details of a specified device group.</p>
      * 
      * @param request GetDeviceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5253,7 +5256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified device label.</p>
+     * <p>Queries the details of a specified device group.</p>
      * 
      * @param request GetDeviceGroupRequest
      * @return GetDeviceGroupResponse
@@ -5357,7 +5360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a domain name list of a specified type (blacklist/whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
+     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a forwarding rule.</p>
@@ -5388,7 +5391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a domain name list of a specified type (blacklist/whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
+     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a forwarding rule.</p>
@@ -5403,7 +5406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the configuration details of a specified identity provider for your Alibaba Cloud account.</p>
+     * <p>Queries the details of a specified identity source configuration for the current Alibaba Cloud account.</p>
      * 
      * @param request GetIdpConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5431,7 +5434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the configuration details of a specified identity provider for your Alibaba Cloud account.</p>
+     * <p>Queries the details of a specified identity source configuration for the current Alibaba Cloud account.</p>
      * 
      * @param request GetIdpConfigRequest
      * @return GetIdpConfigResponse
@@ -5486,7 +5489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a private access diagnostic task.</p>
+     * <p>Queries the details of an internal network access diagnostic task.</p>
      * 
      * @param request GetPADiagnosisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5514,7 +5517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a private access diagnostic task.</p>
+     * <p>Queries the details of an internal network access diagnostic task.</p>
      * 
      * @param request GetPADiagnosisTaskRequest
      * @return GetPADiagnosisTaskResponse
@@ -5526,7 +5529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a private access application under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of a private access application within the current Alibaba Cloud account.</p>
      * 
      * @param request GetPrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5554,7 +5557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a private access application under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of a private access application within the current Alibaba Cloud account.</p>
      * 
      * @param request GetPrivateAccessApplicationRequest
      * @return GetPrivateAccessApplicationResponse
@@ -5606,7 +5609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified software prohibition policy.</p>
+     * <p>Queries the details of a specified prohibited software policy.</p>
      * 
      * @param request GetProhibitedPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5634,7 +5637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified software prohibition policy.</p>
+     * <p>Queries the details of a specified prohibited software policy.</p>
      * 
      * @param request GetProhibitedPolicyRequest
      * @return GetProhibitedPolicyResponse
@@ -5646,7 +5649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified prohibited software.</p>
+     * <p>Queries the details of the specified prohibited software.</p>
      * 
      * @param tmpReq GetProhibitedSoftwareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5680,7 +5683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified prohibited software.</p>
+     * <p>Queries the details of the specified prohibited software.</p>
      * 
      * @param request GetProhibitedSoftwareRequest
      * @return GetProhibitedSoftwareResponse
@@ -5776,7 +5779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of user terminal devices under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of user terminal devices in the current Alibaba Cloud account.</p>
      * 
      * @param request GetUserDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5804,7 +5807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of user terminal devices under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of user terminal devices in the current Alibaba Cloud account.</p>
      * 
      * @param request GetUserDeviceRequest
      * @return GetUserDeviceResponse
@@ -5912,7 +5915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</p>
+     * <p>Queries the global antivirus configuration for the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have a custom configuration record, the system default configurations are returned.</p>
      * 
      * @param request GetVirusScanGlobalConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5937,7 +5940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</p>
+     * <p>Queries the global antivirus configuration for the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have a custom configuration record, the system default configurations are returned.</p>
      * 
      * @param request GetVirusScanGlobalConfigRequest
      * @return GetVirusScanGlobalConfigResponse
@@ -5989,7 +5992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</p>
+     * <p>Queries the global vulnerability scanning configuration for the current Alibaba Cloud account.</p>
      * 
      * @param request GetVulScanGlobalConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6014,7 +6017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</p>
+     * <p>Queries the global vulnerability scanning configuration for the current Alibaba Cloud account.</p>
      * 
      * @param request GetVulScanGlobalConfigRequest
      * @return GetVulScanGlobalConfigResponse
@@ -6026,7 +6029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the complete configuration of a specified vulnerability scheduled scan policy.</p>
+     * <p>Queries the complete configuration of a specified scheduled vulnerability scanning policy.</p>
      * 
      * @param request GetVulScanScheduledStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6054,7 +6057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the complete configuration of a specified vulnerability scheduled scan policy.</p>
+     * <p>Queries the complete configuration of a specified scheduled vulnerability scanning policy.</p>
      * 
      * @param request GetVulScanScheduledStrategyRequest
      * @return GetVulScanScheduledStrategyResponse
@@ -6234,7 +6237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Immediately invalidates an approval.</p>
+     * <p>Immediately invalidates a report.</p>
      * 
      * @param request InvalidateApprovalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6266,7 +6269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Immediately invalidates an approval.</p>
+     * <p>Immediately invalidates a report.</p>
      * 
      * @param request InvalidateApprovalRequest
      * @return InvalidateApprovalResponse
@@ -6597,8 +6600,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Filters connectors by name, connection status, instance status, and connector ID, and returns a paginated list of matched connectors along with the total count.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries connectors in batches.</p>
+     * <p>Queries the details of connectors under the current Alibaba Cloud account.</p>
      * 
      * @param request ListConnectorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6625,8 +6631,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Filters connectors by name, connection status, instance status, and connector ID, and returns a paginated list of matched connectors along with the total count.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries connectors in batches.</p>
+     * <p>Queries the details of connectors under the current Alibaba Cloud account.</p>
      * 
      * @param request ListConnectorsRequest
      * @return ListConnectorsResponse
@@ -6638,7 +6647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of device groups under the current Alibaba Cloud account by using paging.</p>
+     * <p>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</p>
      * 
      * @param request ListDeviceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6682,7 +6691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of device groups under the current Alibaba Cloud account by using paging.</p>
+     * <p>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</p>
      * 
      * @param request ListDeviceGroupsRequest
      * @return ListDeviceGroupsResponse
@@ -6694,7 +6703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</p>
+     * <p>Queries the user terminal devices affected by a specified vulnerability and their remediation statuses by using paging in a paged query.</p>
      * 
      * @param request ListDevicesForVulnerabilityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6722,7 +6731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</p>
+     * <p>Queries the user terminal devices affected by a specified vulnerability and their remediation statuses by using paging in a paged query.</p>
      * 
      * @param request ListDevicesForVulnerabilityRequest
      * @return ListDevicesForVulnerabilityResponse
@@ -7261,7 +7270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries forwarding rules in batches.</p>
+     * <p>Lists forwarding rules.</p>
      * 
      * @param request ListForwardStrategiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7289,7 +7298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries forwarding rules in batches.</p>
+     * <p>Lists forwarding rules.</p>
      * 
      * @param request ListForwardStrategiesRequest
      * @return ListForwardStrategiesResponse
@@ -7493,10 +7502,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<code>NetType</code>) and instance ID list (<code>InstanceIds</code>), and use <code>CurrentPage</code> and <code>PageSize</code> for pagination.</p>
+     * <p>Queries the bandwidth configurations of available network instances within the current account. You can filter the results by network type (NetType) and instance IDs (InstanceIds), and paginate the results by using CurrentPage and PageSize.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</p>
+     * <p>Performs a paging query on the bandwidth configurations of VPC and Connector network instances connected to the current tenant.</p>
      * 
      * @param request ListNetBandwidthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7540,10 +7549,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<code>NetType</code>) and instance ID list (<code>InstanceIds</code>), and use <code>CurrentPage</code> and <code>PageSize</code> for pagination.</p>
+     * <p>Queries the bandwidth configurations of available network instances within the current account. You can filter the results by network type (NetType) and instance IDs (InstanceIds), and paginate the results by using CurrentPage and PageSize.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</p>
+     * <p>Performs a paging query on the bandwidth configurations of VPC and Connector network instances connected to the current tenant.</p>
      * 
      * @param request ListNetBandwidthRequest
      * @return ListNetBandwidthResponse
@@ -7557,10 +7566,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</li>
-     * <li>If OperationStatus is not specified, only successful operation records are returned.</li>
-     * <li>Results are sorted by operation time in descending order.</li>
+     * <li>If OperationStatus is not specified, only records of successful operations are returned.</li>
+     * <li>The returned results are sorted in descending order of operation time.</li>
      * <li>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</li>
-     * <li>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</li>
+     * <li>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\). Otherwise, an InvalidParameter error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7630,10 +7639,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</li>
-     * <li>If OperationStatus is not specified, only successful operation records are returned.</li>
-     * <li>Results are sorted by operation time in descending order.</li>
+     * <li>If OperationStatus is not specified, only records of successful operations are returned.</li>
+     * <li>The returned results are sorted in descending order of operation time.</li>
      * <li>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</li>
-     * <li>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</li>
+     * <li>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\). Otherwise, an InvalidParameter error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7849,7 +7858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of all private access applications in the current Alibaba Cloud account.</p>
+     * <p>Queries the information about all private access applications under the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7921,7 +7930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of all private access applications in the current Alibaba Cloud account.</p>
+     * <p>Queries the information about all private access applications under the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessApplicationsRequest
      * @return ListPrivateAccessApplicationsResponse
@@ -8540,13 +8549,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</li>
+     * <li>Pagination is implemented by using CurrentPage and PageSize. NextToken and MaxResults do not take effect.</li>
      * <li>SoftwareName supports fuzzy match.</li>
-     * <li>The Versions field (software version list) in the response is not returned. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</li>
+     * <li>The Versions field (software version list) in the response is not returned. For more information about how to view and manage software versions, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries software in the software library.</p>
+     * <p>Queries software in the software library in batches.</p>
      * 
      * @param request ListSoftwarelibSoftwareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8607,13 +8616,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</li>
+     * <li>Pagination is implemented by using CurrentPage and PageSize. NextToken and MaxResults do not take effect.</li>
      * <li>SoftwareName supports fuzzy match.</li>
-     * <li>The Versions field (software version list) in the response is not returned. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</li>
+     * <li>The Versions field (software version list) in the response is not returned. For more information about how to view and manage software versions, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries software in the software library.</p>
+     * <p>Queries software in the software library in batches.</p>
      * 
      * @param request ListSoftwarelibSoftwareRequest
      * @return ListSoftwarelibSoftwareResponse
@@ -8785,7 +8794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of user endpoint devices under the current Alibaba Cloud account.</p>
+     * <p>Queries the list of user terminal devices under the current Alibaba Cloud account.</p>
      * 
      * @param request ListUserDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8832,6 +8841,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deviceTypes)) {
             query.put("DeviceTypes", request.deviceTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskEncryptStatuses)) {
+            query.put("DiskEncryptStatuses", request.diskEncryptStatuses);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dlpStatuses)) {
@@ -8913,7 +8926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of user endpoint devices under the current Alibaba Cloud account.</p>
+     * <p>Queries the list of user terminal devices under the current Alibaba Cloud account.</p>
      * 
      * @param request ListUserDevicesRequest
      * @return ListUserDevicesResponse
@@ -9165,7 +9178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the virus scan blacklists and whitelists for a specified operating system, and returns the results grouped by matching dimension and list type. The blacklists and whitelists are global lists scoped to the Alibaba Cloud account and operating system dimensions, and take effect for all on-demand scans, scheduled scans, and real-time protection under the account.</p>
+     * <p>Queries the virus scan blacklists and whitelists for a specified operating system, and returns them grouped by match dimension and list type. The blacklists and whitelists are global lists at the Alibaba Cloud account and operating system dimensions, and take effect for all instant scans, scheduled scans, and real-time protection under the account.</p>
      * 
      * @param request ListVirusScanAdditionalListsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9193,7 +9206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the virus scan blacklists and whitelists for a specified operating system, and returns the results grouped by matching dimension and list type. The blacklists and whitelists are global lists scoped to the Alibaba Cloud account and operating system dimensions, and take effect for all on-demand scans, scheduled scans, and real-time protection under the account.</p>
+     * <p>Queries the virus scan blacklists and whitelists for a specified operating system, and returns them grouped by match dimension and list type. The blacklists and whitelists are global lists at the Alibaba Cloud account and operating system dimensions, and take effect for all instant scans, scheduled scans, and real-time protection under the account.</p>
      * 
      * @param request ListVirusScanAdditionalListsRequest
      * @return ListVirusScanAdditionalListsResponse
@@ -9941,7 +9954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds user labels.</p>
+     * <p>Disassociates user tags.</p>
      * 
      * @param request UnbindSaseUserTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9982,7 +9995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds user labels.</p>
+     * <p>Disassociates user tags.</p>
      * 
      * @param request UnbindSaseUserTagRequest
      * @return UnbindSaseUserTagResponse
@@ -10074,6 +10087,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified approval process under the current Alibaba Cloud account. You can modify the name, description, approval nodes, associated approval templates, approval type, and integration configurations with external approval platforms such as DingTalk and Lark. The approval process ID is specified by ProcessId, and other fields are optional. Fields that are not passed retain their original values.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates an approval process under the current Alibaba Cloud account.</p>
      * 
@@ -10155,6 +10171,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified approval process under the current Alibaba Cloud account. You can modify the name, description, approval nodes, associated approval templates, approval type, and integration configurations with external approval platforms such as DingTalk and Lark. The approval process ID is specified by ProcessId, and other fields are optional. Fields that are not passed retain their original values.</p>
+     * 
      * <b>summary</b> : 
      * <p>Updates an approval process under the current Alibaba Cloud account.</p>
      * 
@@ -11121,7 +11140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the Layer 7 access switch for an internal-facing application.</p>
+     * <p>Updates the Layer 7 access switch for an internal access application.</p>
      * 
      * @param request UpdatePrivateAccessApplicationL7SwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11159,6 +11178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TimeoutSec", request.timeoutSec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.urlAccessPaths)) {
+            bodyFlat.put("UrlAccessPaths", request.urlAccessPaths);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userMarkStatus)) {
             body.put("UserMarkStatus", request.userMarkStatus);
         }
@@ -11190,7 +11213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the Layer 7 access switch for an internal-facing application.</p>
+     * <p>Updates the Layer 7 access switch for an internal access application.</p>
      * 
      * @param request UpdatePrivateAccessApplicationL7SwitchRequest
      * @return UpdatePrivateAccessApplicationL7SwitchResponse
@@ -11202,7 +11225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update an internal network access policy for your Alibaba Cloud account.</p>
+     * <p>Modifies a private access policy under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdatePrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11323,7 +11346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update an internal network access policy for your Alibaba Cloud account.</p>
+     * <p>Modifies a private access policy under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdatePrivateAccessPolicyRequest
      * @return UpdatePrivateAccessPolicyResponse
@@ -11468,7 +11491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom prohibited software entry.</p>
+     * <p>Updates custom prohibited software.</p>
      * 
      * @param request UpdateProhibitedSoftwareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11529,7 +11552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom prohibited software entry.</p>
+     * <p>Updates custom prohibited software.</p>
      * 
      * @param request UpdateProhibitedSoftwareRequest
      * @return UpdateProhibitedSoftwareResponse
@@ -12096,7 +12119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</p>
+     * <p>Quarantines or marks a virus file on a specified user terminal device as trusted. The DevTag, FilePath, and FileMd5 parameters are used together to locate a virus file record. If the record does not exist, the call fails. Quarantine is an asynchronous operation. The server creates a processing task, which is then pulled and executed by the user terminal device. You can process the same virus file record only once within 1 minute.</p>
      * 
      * @param request UpdateVirusFileStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12144,7 +12167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</p>
+     * <p>Quarantines or marks a virus file on a specified user terminal device as trusted. The DevTag, FilePath, and FileMd5 parameters are used together to locate a virus file record. If the record does not exist, the call fails. Quarantine is an asynchronous operation. The server creates a processing task, which is then pulled and executed by the user terminal device. You can process the same virus file record only once within 1 minute.</p>
      * 
      * @param request UpdateVirusFileStatusRequest
      * @return UpdateVirusFileStatusResponse
@@ -12217,7 +12240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</p>
+     * <p>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter fully overwrites the existing exception user list of the policy with the provided list.</p>
      * 
      * @param request UpdateVirusScanScheduledStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12330,7 +12353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</p>
+     * <p>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter fully overwrites the existing exception user list of the policy with the provided list.</p>
      * 
      * @param request UpdateVirusScanScheduledStrategyRequest
      * @return UpdateVirusScanScheduledStrategyResponse
@@ -12396,7 +12419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</p>
+     * <p>Modifies the configuration of a specified scheduled vulnerability scan policy and returns the updated full configuration.</p>
      * 
      * @param request UpdateVulScanScheduledStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12477,7 +12500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</p>
+     * <p>Modifies the configuration of a specified scheduled vulnerability scan policy and returns the updated full configuration.</p>
      * 
      * @param request UpdateVulScanScheduledStrategyRequest
      * @return UpdateVulScanScheduledStrategyResponse

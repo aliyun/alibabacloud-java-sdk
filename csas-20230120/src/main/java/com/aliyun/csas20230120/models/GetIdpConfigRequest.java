@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIdpConfigRequest extends TeaModel {
     /**
-     * <p>ID of the identity provider configuration.</p>
+     * <p>The ID of the identity source configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

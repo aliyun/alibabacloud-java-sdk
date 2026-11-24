@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetVulScanScheduledStrategyRequest extends TeaModel {
     /**
-     * <p>The vulnerability scheduled scan policy ID. You can obtain the value from the following operations:</p>
+     * <p>The ID of the scheduled vulnerability scanning policy. You can obtain the value from the following operations:</p>
      * <ul>
-     * <li><a href="~~ListVulScanScheduledStrategies~~">ListVulScanScheduledStrategies</a>: Lists vulnerability scheduled scan policies.</li>
-     * <li><a href="~~CreateVulScanScheduledStrategy~~">CreateVulScanScheduledStrategy</a>: Creates a vulnerability scheduled scan policy.</li>
+     * <li><a href="~~ListVulScanScheduledStrategies~~">ListVulScanScheduledStrategies</a>: Queries scheduled vulnerability scanning policies.</li>
+     * <li><a href="~~CreateVulScanScheduledStrategy~~">CreateVulScanScheduledStrategy</a>: Creates a scheduled vulnerability scanning policy.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

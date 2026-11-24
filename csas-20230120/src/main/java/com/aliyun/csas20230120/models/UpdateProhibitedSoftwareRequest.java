@@ -35,10 +35,10 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the custom prohibited software to update. Only custom prohibited software under the current Alibaba Cloud account can be updated. Built-in prohibited software cannot be updated. You can obtain the value from the following operations:</p>
+     * <p>The ID of the custom prohibited software to update. You can update only custom prohibited software within the current Alibaba Cloud account. Built-in prohibited software cannot be updated. You can obtain the value from the following operations:</p>
      * <ul>
-     * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: queries prohibited software entries in batches.</li>
-     * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: creates a custom prohibited software entry.</li>
+     * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: List prohibited software.</li>
+     * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Create custom prohibited software.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +49,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
     public String softwareId;
 
     /**
-     * <p>The IDs of the custom prohibited software tags to associate. Duplicate values are not allowed.</p>
+     * <p>The IDs of the custom prohibited software tags to associate. Duplicate IDs are not allowed.</p>
      */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
@@ -123,7 +123,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
 
     public static class UpdateProhibitedSoftwareRequestLinuxProcesses extends TeaModel {
         /**
-         * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of this parameter and Process. The value can be up to 1024 characters in length.</p>
+         * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of the BundleId and Process parameters. The bundle ID can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>com.aliyun.security.sase</p>
@@ -132,7 +132,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
         public String bundleId;
 
         /**
-         * <p>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. The value can be up to 1024 characters in length.</p>
+         * <p>The command-line arguments used to start the process. If you specify this parameter, only processes whose command lines contain this content are matched. If you leave this parameter empty, the command line is not verified. The arguments can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>--start-minimized</p>
@@ -141,7 +141,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
         public String cmdline;
 
         /**
-         * <p>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. The value can be up to 1024 characters in length.</p>
+         * <p>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The directory can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>C:\\autotest</p>
@@ -150,7 +150,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
         public String directory;
 
         /**
-         * <p>The process name. The value can be up to 1024 characters in length.</p>
+         * <p>The name of the process. The name can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Everything.exe</p>
@@ -199,7 +199,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
 
     public static class UpdateProhibitedSoftwareRequestMacOSProcesses extends TeaModel {
         /**
-         * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of this parameter and Process. The value can be up to 1024 characters in length.</p>
+         * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of the BundleId and Process parameters. The bundle ID can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>com.autotest.update</p>
@@ -208,7 +208,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
         public String bundleId;
 
         /**
-         * <p>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. The value can be up to 1024 characters in length.</p>
+         * <p>The command-line arguments used to start the process. If you specify this parameter, only processes whose command lines contain this content are matched. If you leave this parameter empty, the command line is not verified. The arguments can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>--start-minimized</p>
@@ -217,7 +217,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
         public String cmdline;
 
         /**
-         * <p>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. The value can be up to 1024 characters in length.</p>
+         * <p>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The directory can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>C:\\autotest</p>
@@ -226,7 +226,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
         public String directory;
 
         /**
-         * <p>The process name. The value can be up to 1024 characters in length.</p>
+         * <p>The name of the process. The name can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Everything.exe</p>
@@ -275,7 +275,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
 
     public static class UpdateProhibitedSoftwareRequestWindowsProcesses extends TeaModel {
         /**
-         * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of this parameter and Process. The value can be up to 1024 characters in length.</p>
+         * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of the BundleId and Process parameters. The bundle ID can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>cn.apifox.app</p>
@@ -284,7 +284,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
         public String bundleId;
 
         /**
-         * <p>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. The value can be up to 1024 characters in length.</p>
+         * <p>The command-line arguments used to start the process. If you specify this parameter, only processes whose command lines contain this content are matched. If you leave this parameter empty, the command line is not verified. The arguments can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>--start-minimized</p>
@@ -293,7 +293,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
         public String cmdline;
 
         /**
-         * <p>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. The value can be up to 1024 characters in length.</p>
+         * <p>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The directory can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>C:\\autotest</p>
@@ -302,7 +302,7 @@ public class UpdateProhibitedSoftwareRequest extends TeaModel {
         public String directory;
 
         /**
-         * <p>The process name. The value can be up to 1024 characters in length.</p>
+         * <p>The name of the process. The name can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Everything.exe</p>

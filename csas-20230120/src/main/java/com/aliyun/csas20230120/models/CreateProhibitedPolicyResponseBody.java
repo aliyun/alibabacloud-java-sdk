@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProhibitedPolicyResponseBody extends TeaModel {
     /**
-     * <p>The details of the software prohibition policy.</p>
+     * <p>The details of the software blocking policy.</p>
      */
     @NameInMap("Policy")
     public CreateProhibitedPolicyResponseBodyPolicy policy;
@@ -42,7 +42,11 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
 
     public static class CreateProhibitedPolicyResponseBodyPolicySoftwareIds extends TeaModel {
         /**
-         * <p>Indicates whether the banned software is a system built-in banned software. Valid values:</p>
+         * <p>Specifies whether the prohibited software is built-in. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The software is built-in, shared by all Alibaba Cloud accounts, and cannot be modified or deleted.</li>
+         * <li><strong>false</strong>: The software is custom prohibited software under the current Alibaba Cloud account.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,10 +55,10 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The ID of the prohibited software. You can obtain the value from the following operations:</p>
+         * <p>The ID of the prohibited software. You can obtain the value from the following sources:</p>
          * <ul>
-         * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Lists prohibited software.</li>
-         * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Creates custom prohibited software.</li>
+         * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: queries prohibited software in batches.</li>
+         * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: creates custom prohibited software.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,10 +92,10 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
 
     public static class CreateProhibitedPolicyResponseBodyPolicy extends TeaModel {
         /**
-         * <p>Specifies whether end users are allowed to submit a report request for this policy. Valid values:</p>
+         * <p>Specifies whether to allow terminal users to submit an exception request for the policy. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Reporting is allowed. The pop-up window on the endpoint provides a reporting entry.</li>
-         * <li><strong>false</strong>: Reporting is not allowed.</li>
+         * <li><strong>true</strong>: Exception requests are allowed. The terminal pop-up window provides an entry for the request.</li>
+         * <li><strong>false</strong>: Exception requests are not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,7 +105,7 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public Boolean allowReport;
 
         /**
-         * <p>The time when the software prohibition policy was created, in the yyyy-MM-dd HH:mm:ss format. The time is displayed in UTC+8.</p>
+         * <p>The time when the software blocking policy was created. The time is in the yyyy-MM-dd HH:mm:ss format and displayed in the UTC+8 time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-29 11:26:02</p>
@@ -110,7 +114,7 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the software prohibition policy.</p>
+         * <p>The description of the software blocking policy.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -119,10 +123,10 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the policy is enabled. Valid values:</p>
+         * <p>Specifies whether the policy is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled. The policy is delivered to the endpoint and takes effect.</li>
-         * <li><strong>false</strong>: Disabled. The policy retains its configuration but is not delivered to the endpoint.</li>
+         * <li><strong>true</strong>: The policy is enabled, delivered to terminals, and takes effect.</li>
+         * <li><strong>false</strong>: The policy is disabled. The configuration is retained but not delivered to terminals.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,10 +136,10 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>Specifies whether to forcibly terminate running software processes. Valid values:</p>
+         * <p>Specifies whether to forcibly terminate running processes of the software. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The terminal immediately terminates the running process of the software when the policy is hit.</li>
-         * <li><strong>false</strong>: Running processes are not terminated. Only subsequent launches are blocked.</li>
+         * <li><strong>true</strong>: The terminal immediately terminates the running processes of the software when the policy is matched.</li>
+         * <li><strong>false</strong>: The terminal does not terminate running processes but only prevents subsequent startups.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,16 +149,16 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public Boolean forceKill;
 
         /**
-         * <p>The Chinese text of the primary button in the pop-up window on the endpoint.</p>
+         * <p>The Chinese text of the primary button in the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
-         * <p>Submit Filing</p>
+         * <p>Apply for exemption</p>
          */
         @NameInMap("MainButtonTextCh")
         public String mainButtonTextCh;
 
         /**
-         * <p>The English text of the primary button in the pop-up window on the endpoint.</p>
+         * <p>The English text of the primary button in the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>Report</p>
@@ -163,7 +167,7 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public String mainButtonTextEn;
 
         /**
-         * <p>The scope of the policy. Valid values:</p>
+         * <p>The effective scope. Valid values:</p>
          * <ul>
          * <li><strong>UserGroupAll</strong>: The policy takes effect for all users under the current Alibaba Cloud account. You do not need to specify user groups.</li>
          * <li><strong>UserGroupNormal</strong>: The policy takes effect only for users in the user groups specified by UserGroupIds.</li>
@@ -176,16 +180,16 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public String matchMode;
 
         /**
-         * <p>The Chinese text of the secondary button in the pop-up window on the endpoint.</p>
+         * <p>The Chinese text of the secondary button in the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
-         * <p>Got It</p>
+         * <p>Got it</p>
          */
         @NameInMap("MinorButtonTextCh")
         public String minorButtonTextCh;
 
         /**
-         * <p>The English text of the secondary button in the pop-up window on the endpoint.</p>
+         * <p>The English text of the secondary button in the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>I know</p>
@@ -203,7 +207,11 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The object type of the controlled target. Valid values:</p>
+         * <p>The object type of the managed object. Valid values:</p>
+         * <ul>
+         * <li><strong>App</strong>: Manages disable software. The managed objects are specified by SoftwareIds.</li>
+         * <li><strong>Tag</strong>: Manages disable software by label. The managed objects are specified by TagIds, and all disable software under the labels is managed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>App</p>
@@ -212,7 +220,7 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>The ID of the software prohibition policy.</p>
+         * <p>The ID of the software blocking policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pid-dcbfd33cb004****</p>
@@ -222,6 +230,11 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
 
         /**
          * <p>The action to take. Valid values:</p>
+         * <ul>
+         * <li><strong>Ban</strong>: blocks the software from running and displays a pop-up window on the terminal to notify the user.</li>
+         * <li><strong>BanSilent</strong>: blocks the software from running without notifying the user.</li>
+         * <li><strong>Warn</strong>: displays a pop-up window on the terminal to notify the user without blocking the software from running.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Ban</p>
@@ -239,7 +252,7 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The Chinese prompt content displayed in the pop-up window on the endpoint.</p>
+         * <p>The Chinese prompt content in the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -248,7 +261,7 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public String promptCh;
 
         /**
-         * <p>The English prompt content displayed in the pop-up window on the endpoint.</p>
+         * <p>The English prompt content in the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>L0 auto test prompt</p>
@@ -257,28 +270,28 @@ public class CreateProhibitedPolicyResponseBody extends TeaModel {
         public String promptEn;
 
         /**
-         * <p>The collection of banned software directly controlled by this policy.</p>
+         * <p>The collection of prohibited software directly managed by the policy.</p>
          */
         @NameInMap("SoftwareIds")
         public java.util.List<CreateProhibitedPolicyResponseBodyPolicySoftwareIds> softwareIds;
 
         /**
-         * <p>The collection of banned software tag IDs controlled by this policy.</p>
+         * <p>The collection of prohibited software tag IDs managed by the policy.</p>
          */
         @NameInMap("TagIds")
         public java.util.List<String> tagIds;
 
         /**
-         * <p>The Chinese title of the pop-up window on the endpoint.</p>
+         * <p>The Chinese title of the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
-         * <p>Software Ban Reminder</p>
+         * <p>Prohibited software reminder</p>
          */
         @NameInMap("TitleCh")
         public String titleCh;
 
         /**
-         * <p>The English title of the pop-up window on the endpoint.</p>
+         * <p>The English title of the terminal pop-up window.</p>
          * 
          * <strong>example:</strong>
          * <p>Software Blocked</p>

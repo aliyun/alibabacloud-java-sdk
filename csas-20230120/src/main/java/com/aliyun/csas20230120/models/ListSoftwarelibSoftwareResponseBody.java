@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
     /**
-     * <p>The software list.</p>
+     * <p>The list of software packages.</p>
      */
     @NameInMap("DataList")
     public java.util.List<ListSoftwarelibSoftwareResponseBodyDataList> dataList;
 
     /**
-     * <p>The maximum number of entries per page. This parameter is not returned by the current operation.</p>
+     * <p>The maximum number of entries returned on each page. This parameter is not returned by the current API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -20,7 +20,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. This parameter is not returned by the current operation.</p>
+     * <p>The query token. This parameter is not returned by the current API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>FFM+3L1WZbKngBeLWcDmQrzLuGDDwAw7JA5q2AjvTSJm9WyhQ0MwJoOWpky9ZhgcWfIgtGpZ+4NQX97+EIwsqUNQ==</p>
@@ -29,7 +29,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
@@ -133,7 +133,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Windows</strong>: Windows.</li>
          * <li><strong>Mac(Apple)</strong>: macOS with Apple silicon.</li>
-         * <li><strong>Mac(Intel)</strong>: macOS with Intel chips.</li>
+         * <li><strong>Mac(Intel)</strong>: macOS with Intel processors.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,10 +143,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String os;
 
         /**
-         * <p>The software publisher type. Valid values:</p>
+         * <p>The type of the software publisher. Valid values:</p>
          * <ul>
-         * <li><strong>local</strong>: local upload.</li>
-         * <li><strong>thirdparty</strong>: third-party link.</li>
+         * <li><strong>local</strong>: Local upload.</li>
+         * <li><strong>thirdparty</strong>: Third-party link.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,8 +194,8 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         /**
          * <p>The release status of the version. Valid values:</p>
          * <ul>
-         * <li><strong>published</strong>: published.</li>
-         * <li><strong>unpublished</strong>: unpublished.</li>
+         * <li><strong>published</strong>: Published.</li>
+         * <li><strong>unpublished</strong>: Unpublished.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The software version ID.</p>
+         * <p>The ID of the software version.</p>
          * 
          * <strong>example:</strong>
          * <p>softwarelib-version-21ae186e2ac9****</p>
@@ -362,7 +362,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String checkSoftwareName;
 
         /**
-         * <p>The software category ID.</p>
+         * <p>The ID of the software category.</p>
          * 
          * <strong>example:</strong>
          * <p>softwarelib-classify-61b7ccc63cae****</p>
@@ -380,7 +380,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The software description.</p>
+         * <p>The description of the software.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a demo software.</p>
@@ -389,7 +389,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The list of associated endpoint device IDs.</p>
+         * <p>The list of associated terminal device IDs.</p>
          */
         @NameInMap("DevTags")
         public java.util.List<String> devTags;
@@ -437,7 +437,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String macAppleVersion;
 
         /**
-         * <p>The maximum software version number for macOS with Intel chips.</p>
+         * <p>The maximum software version number for macOS with Intel processors.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -446,14 +446,14 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String macIntelVersion;
 
         /**
-         * <p>The policy match target type. Valid values:</p>
+         * <p>The target type for policy matching. Valid values:</p>
          * <ul>
-         * <li><strong>UserGroupAll</strong>: all users.</li>
-         * <li><strong>UserGroupNormal</strong>: specified user groups.</li>
-         * <li><strong>DevTagNormal</strong>: specified devices.</li>
-         * <li><strong>DeviceGroupNormal</strong>: specified device groups.</li>
-         * <li><strong>DevTagAll</strong>: all devices.</li>
-         * <li><strong>None</strong>: not configured.</li>
+         * <li><strong>UserGroupAll</strong>: All users.</li>
+         * <li><strong>UserGroupNormal</strong>: Specified user groups.</li>
+         * <li><strong>DevTagNormal</strong>: Specified devices.</li>
+         * <li><strong>DeviceGroupNormal</strong>: Specified device groups.</li>
+         * <li><strong>DevTagAll</strong>: All devices.</li>
+         * <li><strong>None</strong>: Not configured.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -481,7 +481,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String runAsAccount;
 
         /**
-         * <p>The software ID.</p>
+         * <p>The ID of the software.</p>
          * 
          * <strong>example:</strong>
          * <p>softwarelib-software-1da844a39729****</p>
@@ -490,7 +490,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String softwareId;
 
         /**
-         * <p>The software name.</p>
+         * <p>The name of the software.</p>
          * 
          * <strong>example:</strong>
          * <p>Thunder</p>
@@ -499,7 +499,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public String softwareName;
 
         /**
-         * <p>Indicates whether the built-in library source is deleted.</p>
+         * <p>Indicates whether the source in the built-in library is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -508,10 +508,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public Boolean sourceRemoved;
 
         /**
-         * <p>The software source. Valid values:</p>
+         * <p>The source of the software. Valid values:</p>
          * <ul>
-         * <li><strong>custom</strong>: custom software.</li>
-         * <li><strong>builtin</strong>: built-in software library.</li>
+         * <li><strong>custom</strong>: Custom software.</li>
+         * <li><strong>builtin</strong>: Built-in software library.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -527,7 +527,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         public java.util.List<String> userGroupIds;
 
         /**
-         * <p>The software version list. This field is not returned by the current operation. Call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a> to query software versions.</p>
+         * <p>The list of software versions. This field is not returned by the current API operation. For more information about how to view and manage software versions, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</p>
          */
         @NameInMap("Versions")
         public java.util.List<ListSoftwarelibSoftwareResponseBodyDataListVersions> versions;

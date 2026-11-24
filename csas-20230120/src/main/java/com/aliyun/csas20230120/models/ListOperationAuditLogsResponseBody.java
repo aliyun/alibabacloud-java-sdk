@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationAuditLogsResponseBody extends TeaModel {
     /**
-     * <p>The list of administrator operation audit logs, sorted by operation time in descending order.</p>
+     * <p>The list of administrator operation audit logs. The logs are sorted in descending order of operation time.</p>
      */
     @NameInMap("Logs")
     public java.util.List<ListOperationAuditLogsResponseBodyLogs> logs;
@@ -20,7 +20,7 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of logs that match the query conditions.</p>
+     * <p>The total number of logs that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -59,7 +59,7 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
 
     public static class ListOperationAuditLogsResponseBodyLogs extends TeaModel {
         /**
-         * <p>The post-operation snapshot. This value is recorded as-is by the audit framework without localization. This field is empty for historical logs that are not integrated with the audit framework.</p>
+         * <p>The snapshot after the operation. It is recorded as-is by the audit framework and is not localized. This field is empty for historical logs that are not connected to the audit framework.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;RequestId&quot;:&quot;01A03244-5BAD-5FAA-93D6-E4F4A1A2****&quot;}</p>
@@ -68,7 +68,7 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
         public String afterAction;
 
         /**
-         * <p>The pre-operation snapshot. This value is recorded as-is by the audit framework without localization. This field is empty for historical logs that are not integrated with the audit framework.</p>
+         * <p>The snapshot before the operation. It is recorded as-is by the audit framework and is not localized. This field is empty for historical logs that are not connected to the audit framework.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;pa-application-ea73352b4b75****&quot;</p>
@@ -77,7 +77,7 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
         public String beforeAction;
 
         /**
-         * <p>The error code when the operation failed. This field is empty when the operation succeeded.</p>
+         * <p>The error code returned when the operation fails. This field is empty when the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>ResourceNotFound</p>
@@ -86,7 +86,7 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message when the operation failed. This field is empty when the operation succeeded.</p>
+         * <p>The error message returned when the operation fails. This field is empty when the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>the specified resource is not found</p>
@@ -95,10 +95,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The event source type. Valid values:</p>
+         * <p>The source type of the event. Valid values:</p>
          * <ul>
-         * <li><strong>console</strong>: console call.</li>
-         * <li><strong>sdk</strong>: SDK call.</li>
+         * <li><strong>console</strong>: The event is triggered by a console call.</li>
+         * <li><strong>sdk</strong>: The event is triggered by an SDK call.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,10 +108,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>The operation function module. The return value is localized based on the request language.</p>
+         * <p>The operation feature module. The return value is localized based on the request language.</p>
          * 
          * <strong>example:</strong>
-         * <p>Office Data Protection</p>
+         * <p>Office data protection</p>
          */
         @NameInMap("OperationFunc")
         public String operationFunc;
@@ -120,7 +120,7 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
          * <p>The operation page. The return value is localized based on the request language.</p>
          * 
          * <strong>example:</strong>
-         * <p>Peripheral Management</p>
+         * <p>Peripheral management</p>
          */
         @NameInMap("OperationPage")
         public String operationPage;
@@ -153,7 +153,7 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
         public String operatorId;
 
         /**
-         * <p>Indicates whether the operation succeeded.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class RemoveDeviceGroupMatchDevicesRequest extends TeaModel {
     /**
-     * <p>The collection of terminal device IDs to be removed. At least one ID must be specified, and duplicate values are not allowed.</p>
+     * <p>The IDs of the terminal devices to remove. Specify at least one ID. Duplicate IDs are not allowed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DevTags")
     public java.util.List<String> devTags;
 
     /**
-     * <p>The device label ID.</p>
+     * <p>The ID of the device label.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

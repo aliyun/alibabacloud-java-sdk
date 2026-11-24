@@ -4,11 +4,17 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateEnterpriseAcceleratePolicyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the enterprise acceleration policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eap-0123456789abcdef</p>
+     */
     @NameInMap("EapId")
     public String eapId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2CABFEBB-0CE7-575E-833A-266F75D46713</p>

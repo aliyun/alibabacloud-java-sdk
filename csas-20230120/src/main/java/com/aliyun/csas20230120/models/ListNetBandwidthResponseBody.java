@@ -38,7 +38,7 @@ public class ListNetBandwidthResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class ListNetBandwidthResponseBody extends TeaModel {
 
     public static class ListNetBandwidthResponseBodyNetBandwidthList extends TeaModel {
         /**
-         * <p>The bandwidth value, in Mbps.</p>
+         * <p>The bandwidth value (Mbps).</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -102,7 +102,7 @@ public class ListNetBandwidthResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-01 10:20:30</p>
@@ -111,7 +111,7 @@ public class ListNetBandwidthResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the instance was last modified.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-02 15:00:00</p>

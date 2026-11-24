@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeletePrivateAccessApplicationRequest extends TeaModel {
     /**
-     * <p>The IDs of internal-facing access applications. You can specify up to 100 application IDs.</p>
+     * <p>The IDs of the private access applications. You can specify up to 100 private access application IDs.</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;

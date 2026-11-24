@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDeviceGroupShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the device label. The description can contain letters, digits, Chinese characters, spaces, periods (.), underscores (_), and hyphens (-). This parameter can be left empty.</p>
+     * <p>The description of the device tag. The description can contain Chinese characters, uppercase and lowercase letters, digits, spaces, periods (.), underscores (_), and hyphens (-). This parameter can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>Test device group description</p>
@@ -14,7 +14,7 @@ public class CreateDeviceGroupShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The operator of the dynamic device group rule.</p>
+     * <p>The operator for dynamic device group rules.</p>
      * 
      * <strong>example:</strong>
      * <p>AND</p>
@@ -24,16 +24,16 @@ public class CreateDeviceGroupShrinkRequest extends TeaModel {
     public String dynamicOperator;
 
     /**
-     * <p>The matching rule of the dynamic device label.</p>
+     * <p>The matching rule for the dynamic device tag.</p>
      */
     @NameInMap("DynamicRule")
     public String dynamicRuleShrink;
 
     /**
-     * <p>The type of the device label. Valid values:</p>
+     * <p>The type of the device tag. Valid values:</p>
      * <ul>
-     * <li><strong>static</strong>: static device label. After creation, manually add terminal devices by calling <a href="~~AddDeviceGroupMatchDevices~~">AddDeviceGroupMatchDevices</a>.</li>
-     * <li><strong>dynamic</strong>: dynamic device label. Members are automatically matched by the DynamicRule matching rule.</li>
+     * <li><strong>static</strong>: static device tag. After the tag is created, you can manually add terminal devices by calling the <a href="~~AddDeviceGroupMatchDevices~~">AddDeviceGroupMatchDevices</a> operation.</li>
+     * <li><strong>dynamic</strong>: dynamic device tag. Members are automatically matched based on the DynamicRule matching rule.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CreateDeviceGroupShrinkRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>The name of the device label. The name must be 1 to 128 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
+     * <p>The name of the device tag. The name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not allowed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

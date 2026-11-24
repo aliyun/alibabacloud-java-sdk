@@ -11,7 +11,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
     public java.util.List<ListPrivateAccessApplicationL7SwitchesResponseBodyL7Switches> l7Switches;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ED459CAD-8D3F-51B8-AEA5-CAABC0325022</p>
@@ -82,6 +82,36 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
 
     }
 
+    public static class ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths extends TeaModel {
+        @NameInMap("AllowMethods")
+        public java.util.List<String> allowMethods;
+
+        @NameInMap("Urls")
+        public java.util.List<String> urls;
+
+        public static ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths build(java.util.Map<String, ?> map) throws Exception {
+            ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths self = new ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths setAllowMethods(java.util.List<String> allowMethods) {
+            this.allowMethods = allowMethods;
+            return this;
+        }
+        public java.util.List<String> getAllowMethods() {
+            return this.allowMethods;
+        }
+
+        public ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths setUrls(java.util.List<String> urls) {
+            this.urls = urls;
+            return this;
+        }
+        public java.util.List<String> getUrls() {
+            return this.urls;
+        }
+
+    }
+
     public static class ListPrivateAccessApplicationL7SwitchesResponseBodyL7Switches extends TeaModel {
         /**
          * <p>The ID of the internal-facing application.</p>
@@ -93,7 +123,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
         public String applicationId;
 
         /**
-         * <p>The device tag mark switch. Valid values:</p>
+         * <p>The device tag marking switch. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -106,7 +136,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
         public String devTagMarkStatus;
 
         /**
-         * <p>The download audit switch for sensitive applications. Valid values:</p>
+         * <p>The sensitive application download audit switch. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -119,13 +149,13 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
         public String downloadAuditStatus;
 
         /**
-         * <p>The port ranges.</p>
+         * <p>The end port.</p>
          */
         @NameInMap("PortRanges")
         public java.util.List<ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesPortRanges> portRanges;
 
         /**
-         * <p>The source IP mark switch. Valid values:</p>
+         * <p>The source IP marking switch. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -159,8 +189,11 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
         @NameInMap("TimeoutSec")
         public Integer timeoutSec;
 
+        @NameInMap("UrlAccessPaths")
+        public java.util.List<ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths> urlAccessPaths;
+
         /**
-         * <p>The user mark switch. Valid values:</p>
+         * <p>The user marking switch. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -244,6 +277,14 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
         }
         public Integer getTimeoutSec() {
             return this.timeoutSec;
+        }
+
+        public ListPrivateAccessApplicationL7SwitchesResponseBodyL7Switches setUrlAccessPaths(java.util.List<ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths> urlAccessPaths) {
+            this.urlAccessPaths = urlAccessPaths;
+            return this;
+        }
+        public java.util.List<ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths> getUrlAccessPaths() {
+            return this.urlAccessPaths;
         }
 
         public ListPrivateAccessApplicationL7SwitchesResponseBodyL7Switches setUserMarkStatus(String userMarkStatus) {

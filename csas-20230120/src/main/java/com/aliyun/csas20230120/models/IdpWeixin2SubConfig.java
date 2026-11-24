@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IdpWeixin2SubConfig extends TeaModel {
     /**
+     * <p>The agent ID of the WeCom application.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000002</p>
      */
@@ -12,6 +14,8 @@ public class IdpWeixin2SubConfig extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The schema used to launch the application from the WeCom Android client.</p>
+     * 
      * <strong>example:</strong>
      * <p>wwautha1b2c3****</p>
      */
@@ -19,6 +23,8 @@ public class IdpWeixin2SubConfig extends TeaModel {
     public String appSchema;
 
     /**
+     * <p>The secret of the WeCom application.</p>
+     * 
      * <strong>example:</strong>
      * <p>s1e2c3r4e5****</p>
      */
@@ -26,6 +32,8 @@ public class IdpWeixin2SubConfig extends TeaModel {
     public String appSecret;
 
     /**
+     * <p>The WeCom enterprise ID (CorpId).</p>
+     * 
      * <strong>example:</strong>
      * <p>wwa1b2c3d4****</p>
      */
@@ -33,6 +41,8 @@ public class IdpWeixin2SubConfig extends TeaModel {
     public String corpId;
 
     /**
+     * <p>The AES encryption key for WeCom event callbacks.</p>
+     * 
      * <strong>example:</strong>
      * <p>a1e2s3k4e5****</p>
      */
@@ -40,6 +50,8 @@ public class IdpWeixin2SubConfig extends TeaModel {
     public String eventAesKey;
 
     /**
+     * <p>The label (callback URL) for WeCom event callbacks.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://auth.example.com/callback/wework/a1b2">https://auth.example.com/callback/wework/a1b2</a>****</p>
      */
@@ -47,6 +59,8 @@ public class IdpWeixin2SubConfig extends TeaModel {
     public String eventLabel;
 
     /**
+     * <p>The verification token for WeCom event callbacks.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1t2o3k4e5****</p>
      */
@@ -54,6 +68,8 @@ public class IdpWeixin2SubConfig extends TeaModel {
     public String eventVerifyToken;
 
     /**
+     * <p>The callback URL for WeCom logon authorization.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://auth.example.com/callback">https://auth.example.com/callback</a></p>
      */

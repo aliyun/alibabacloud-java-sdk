@@ -42,7 +42,7 @@ public class GetForwardStrategyResponseBody extends TeaModel {
 
     public static class GetForwardStrategyResponseBodyForwardStrategy extends TeaModel {
         /**
-         * <p>The policy description.</p>
+         * <p>The description of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>solemn_index</p>
@@ -62,7 +62,7 @@ public class GetForwardStrategyResponseBody extends TeaModel {
         /**
          * <p>The destination type. Valid values:</p>
          * <ul>
-         * <li><strong>Connector</strong>: connector.</li>
+         * <li><strong>Connector</strong>: Connector.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class GetForwardStrategyResponseBody extends TeaModel {
         public String destinationType;
 
         /**
-         * <p>The forwarding rule ID.</p>
+         * <p>The ID of the forwarding rule.</p>
          * 
          * <strong>example:</strong>
          * <p>fs-b87a2f8e863bf02c</p>
@@ -90,7 +90,7 @@ public class GetForwardStrategyResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The policy priority. The value 1 indicates the highest priority, and the value 100 indicates the lowest priority.</p>
+         * <p>The policy priority. A value of 1 indicates the highest priority, and a value of 100 indicates the lowest priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -99,7 +99,7 @@ public class GetForwardStrategyResponseBody extends TeaModel {
         public Long priority;
 
         /**
-         * <p>The policy status. Valid values:</p>
+         * <p>The status of the policy. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>

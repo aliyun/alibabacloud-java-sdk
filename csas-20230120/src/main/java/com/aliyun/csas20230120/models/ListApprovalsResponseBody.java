@@ -142,7 +142,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         /**
          * <p>The status of the approval progress node. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong>: Pending approval.</li>
+         * <li><strong>Pending</strong>: Pending.</li>
          * <li><strong>Approved</strong>: Approved.</li>
          * <li><strong>Rejected</strong>: Rejected.</li>
          * <li><strong>Revoked</strong>: Revoked.</li>
@@ -229,7 +229,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String approvalDetail;
 
         /**
-         * <p>The ID of the approval instance.</p>
+         * <p>The approval instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-872b5e911b35****</p>
@@ -304,7 +304,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String creatorUsername;
 
         /**
-         * <p>The effective status of the report. If the approval status is not Approved, an empty string is returned. Valid values:</p>
+         * <p>The validity status of the report. If the approval status is not Approved, an empty string is returned. Valid values:</p>
          * <ul>
          * <li>Enabled: Valid.</li>
          * <li>Expired: Invalid or expired.</li>
@@ -328,8 +328,8 @@ public class ListApprovalsResponseBody extends TeaModel {
         /**
          * <p>The type of the policy associated with the approval instance. Valid values:</p>
          * <ul>
-         * <li><strong>DomainBlacklist</strong>: Domain name blacklist.</li>
-         * <li><strong>DomainWhitelist</strong>: Domain name whitelist.</li>
+         * <li><strong>DomainBlacklist</strong>: Domain blacklist.</li>
+         * <li><strong>DomainWhitelist</strong>: Domain whitelist.</li>
          * <li><strong>SoftwareBlock</strong>: Software blocking.</li>
          * <li><strong>DeviceRegistration</strong>: Excess registration.</li>
          * <li><strong>AppUninstall</strong>: Endpoint uninstallation.</li>
@@ -388,7 +388,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String reportType;
 
         /**
-         * <p>The content of the template associated with the approval instance.</p>
+         * <p>The content of the schema associated with the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;form&quot;: {&quot;labelCol&quot;: 6,&quot;wrapperCol&quot;: 12}}</p>
@@ -397,7 +397,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String schemaContent;
 
         /**
-         * <p>The ID of the template associated with the approval instance.</p>
+         * <p>The ID of the schema associated with the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -406,7 +406,7 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String schemaId;
 
         /**
-         * <p>The name of the template associated with the approval instance.</p>
+         * <p>The name of the schema associated with the approval instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Template***</p>
@@ -415,11 +415,11 @@ public class ListApprovalsResponseBody extends TeaModel {
         public String schemaName;
 
         /**
-         * <p>The status of the approval instance. Valid values:</p>
+         * <p>The approval instance status. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong>: Pending approval.</li>
+         * <li><strong>Pending</strong>: Pending.</li>
          * <li><strong>Approved</strong>: Approved.</li>
-         * <li><strong>Rejected</strong>: Denied.</li>
+         * <li><strong>Rejected</strong>: Deny.</li>
          * <li><strong>Revoked</strong>: Revoked.</li>
          * <li><strong>Expired</strong>: Expired.</li>
          * <li><strong>Deleted</strong>: Deleted.</li>

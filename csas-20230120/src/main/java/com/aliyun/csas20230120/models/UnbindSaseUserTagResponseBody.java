@@ -7,10 +7,10 @@ public class UnbindSaseUserTagResponseBody extends TeaModel {
     /**
      * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: Success.</li>
-     * <li><strong>3xx</strong>: Redirection.</li>
-     * <li><strong>4xx</strong>: Request error.</li>
-     * <li><strong>5xx</strong>: Server error.</li>
+     * <li><strong>2xx</strong>: success</li>
+     * <li><strong>3xx</strong>: redirection</li>
+     * <li><strong>4xx</strong>: request error</li>
+     * <li><strong>5xx</strong>: server error</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class UnbindSaseUserTagResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F4A9C844-1B0A-59E8-966F-4945DFF3C88D</p>

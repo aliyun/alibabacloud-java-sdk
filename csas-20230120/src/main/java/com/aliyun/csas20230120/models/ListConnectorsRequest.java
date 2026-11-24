@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConnectorsRequest extends TeaModel {
     /**
-     * <p>The IDs of the connectors. You can specify up to 100 connector IDs.</p>
+     * <p>The IDs of the connectors. You can enter up to 100 connector IDs.</p>
      */
     @NameInMap("ConnectorIds")
     public java.util.List<String> connectorIds;
@@ -21,7 +21,7 @@ public class ListConnectorsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the connector. The name must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the connector. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>connector_name</p>
@@ -30,7 +30,7 @@ public class ListConnectorsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries per page in the Settings for paging in a paged query. Valid values: 1 to 1000.</p>
+     * <p>The Settings for the number of entries per page for paging in a paged query. Valid values: 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,8 @@ public class ListConnectorsRequest extends TeaModel {
     /**
      * <p>The connection status of the connector. Valid values:</p>
      * <ul>
-     * <li><strong>Online</strong>: Online.</li>
-     * <li><strong>Offline</strong>: Offline.</li>
+     * <li><strong>Online</strong>: online.</li>
+     * <li><strong>Offline</strong>: offline.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,10 +53,10 @@ public class ListConnectorsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The connector instance status. Valid values:</p>
+     * <p>The instance status of the connector. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: Enabled.</li>
-     * <li><strong>Disabled</strong>: Shutdown.</li>
+     * <li><strong>Enabled</strong>: enabled.</li>
+     * <li><strong>Disabled</strong>: shutdown.</li>
      * </ul>
      * 
      * <strong>example:</strong>

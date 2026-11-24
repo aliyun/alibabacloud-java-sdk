@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     /**
-     * <p>The IDs of applications associated with the internal network access policy. A single policy supports up to 100 application IDs.</p>
+     * <p>The IDs of the applications in the private access policy. A single policy supports up to 100 private access application IDs.</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
-     * <p>The application type for the internal network access policy. Valid values:</p>
+     * <p>The application type of the private access policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>Application</strong>: Application.</p>
-     * </li>
-     * <li><p><strong>Tag</strong>: Tag.</p>
-     * </li>
+     * <li><strong>Application</strong>: Application.</li>
+     * <li><strong>Tag</strong>: Tag.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,16 +24,16 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String applicationType;
 
     /**
-     * <p>This parameter specifies a collection of custom user groups for the private network access policy. It is required when the user group type is <strong>Custom</strong>. This collection is mutually exclusive with the user group ID collection, and you can specify a maximum of 10 custom user groups.</p>
+     * <p>The custom user groups in the private access policy. This parameter is required when the user group type is <strong>Custom</strong>. This parameter is mutually exclusive with the user group IDs. You can specify up to 10 custom user groups.</p>
      */
     @NameInMap("CustomUserAttributes")
     public java.util.List<UpdatePrivateAccessPolicyRequestCustomUserAttributes> customUserAttributes;
 
     /**
-     * <p>A description of the internal network access policy. The description must be 1 to 128 characters in length. It can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+     * <p>The description of the private access policy. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是一条内网访问策略</p>
+     * <p>This is a private access policy</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -44,12 +42,10 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The action taken when a device does not meet the security baseline. Valid values:</p>
+     * <p>The action to take when the security baseline is not met. Valid values:</p>
      * <ul>
-     * <li><p><strong>Block</strong>: Block access.</p>
-     * </li>
-     * <li><p><strong>Observe</strong>: Monitor access.</p>
-     * </li>
+     * <li><strong>Block</strong>: Blocks.</li>
+     * <li><strong>Observe</strong>: Observes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,12 +64,10 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String deviceAttributeId;
 
     /**
-     * <p>The method used to update the internal network access policy. Valid values:</p>
+     * <p>The modification type of the private access policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>Cover</strong> (default): Replace the existing application IDs, user group IDs, and custom user attributes with the values specified in <strong>ApplicationIds</strong>, <strong>UserGroupIds</strong>, and <strong>CustomUserAttributes</strong>.</p>
-     * </li>
-     * <li><p><strong>Append</strong>: Add the values specified in <strong>ApplicationIds</strong>, <strong>UserGroupIds</strong>, and <strong>CustomUserAttributes</strong> to the existing application IDs, user group IDs, and custom user attributes.</p>
-     * </li>
+     * <li><strong>Cover</strong> (default): Overwrites the original application IDs, user group IDs, and custom user groups with the values of the <strong>ApplicationIds</strong>, <strong>UserGroupIds</strong>, and <strong>CustomUserAttributes</strong> parameters.</li>
+     * <li><strong>Append</strong>: Appends the values of the <strong>ApplicationIds</strong>, <strong>UserGroupIds</strong>, and <strong>CustomUserAttributes</strong> parameters to the original application IDs, user group IDs, and custom user groups.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,16 +76,20 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("ModifyType")
     public String modifyType;
 
+    /**
+     * <p>The Policy Name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The action that the internal network access policy takes. Valid values:</p>
+     * <p>The action of the private access policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>Block</strong>: Block access.</p>
-     * </li>
-     * <li><p><strong>Allow</strong>: Allow access.</p>
-     * </li>
+     * <li><strong>Block</strong>: Blocks.</li>
+     * <li><strong>Allow</strong>: Allows.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,12 +99,10 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String policyAction;
 
     /**
-     * <p>The ID of the internal network access policy. Get this value from one of the following operations:</p>
+     * <p>The ID of the private access policy. You can obtain the value from the following operations:</p>
      * <ul>
-     * <li><p><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: List internal network access policies in batches.</p>
-     * </li>
-     * <li><p><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: Create an internal network access policy.</p>
-     * </li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Queries private access policies.</li>
+     * <li><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: Creates a private access policy.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -117,7 +113,7 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The priority of the internal network access policy. Priority 1 is the highest. Valid values: 1 to 1000. The maximum value is the total number of internal network access policies minus 1.</p>
+     * <p>The policy priority of the internal network access policy. A value of 1 indicates the highest priority. Valid values: 1 to 1000. The maximum value is the total number of internal network access policies minus one.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -126,12 +122,10 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The status of the internal network access policy. Valid values:</p>
+     * <p>The status of the private access policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enabled</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>Disabled</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,7 +135,7 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The IDs of tags associated with the internal network access policy. A single policy supports up to 100 tag IDs.</p>
+     * <p>The IDs of the tags in the private access policy. A single policy supports up to 100 private access tag IDs.</p>
      */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
@@ -156,7 +150,7 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String triggerTemplateId;
 
     /**
-     * <p>The IDs of trusted process groups.</p>
+     * <p>The IDs of the trusted process groups.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -165,12 +159,10 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public java.util.List<String> trustedProcessGroupIds;
 
     /**
-     * <p>The status of the trusted process feature. Valid values:</p>
+     * <p>The status of the trusted process switch. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enabled</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>Disabled</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -180,7 +172,7 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String trustedProcessStatus;
 
     /**
-     * <p>The IDs of trusted software.</p>
+     * <p>The IDs of the trusted software.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -189,18 +181,16 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public java.util.List<String> trustedSoftwareIds;
 
     /**
-     * <p>The IDs of user groups associated with the internal network access policy. This parameter is required when UserGroupMode is set to Normal. This parameter is mutually exclusive with <strong>CustomUserAttributes</strong>. A single policy supports up to 10,000 user groups. You can update up to 2,000 user group IDs at a time.</p>
+     * <p>The IDs of the user groups in the private access policy. This parameter is required when the user group type is <strong>Normal</strong>. This parameter is mutually exclusive with the custom user groups. A single policy supports up to 10,000 user groups, and you can modify up to 2,000 user group IDs at a time.</p>
      */
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>The user group type for the internal network access policy. Valid values:</p>
+     * <p>The user group type of the private access policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: Regular user group.</p>
-     * </li>
-     * <li><p><strong>Custom</strong>: Custom user group.</p>
-     * </li>
+     * <li><strong>Normal</strong>: Regular user group.</li>
+     * <li><strong>Custom</strong>: Custom user group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -210,7 +200,7 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String userGroupMode;
 
     /**
-     * <p>The start time of the zero-trust policy\&quot;s effective period, in seconds since the Unix epoch.</p>
+     * <p>The start time when the zero trust policy takes effect. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -219,12 +209,10 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public Long validFrom;
 
     /**
-     * <p>The status of the effective time feature. Valid values:</p>
+     * <p>The status of the effective period switch. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enabled</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>Disabled</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Shutdown.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -234,7 +222,7 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String validTimeStatus;
 
     /**
-     * <p>The end time of the zero-trust policy\&quot;s effective period, in seconds since the Unix epoch.</p>
+     * <p>The end time when the zero trust policy takes effect. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1764727544</p>
@@ -425,7 +413,7 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
 
     public static class UpdatePrivateAccessPolicyRequestCustomUserAttributes extends TeaModel {
         /**
-         * <p>The identity provider ID for the custom user attribute. This parameter is required when UserGroupType is <strong>department</strong>.</p>
+         * <p>The ID of the identity source for the custom user group. This parameter is required when the custom user group type is <strong>department</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -434,12 +422,10 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
         public Integer idpId;
 
         /**
-         * <p>The relation used to match the custom user attribute. Valid values:</p>
+         * <p>The relation of the custom user group. Valid values:</p>
          * <ul>
-         * <li><p><strong>Equal</strong>: Equal to.</p>
-         * </li>
-         * <li><p><strong>Unequal</strong>: Not equal to.</p>
-         * </li>
+         * <li><strong>Equal</strong>: Equal to.</li>
+         * <li><strong>Unequal</strong>: Not equal to.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -450,16 +436,12 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
         public String relation;
 
         /**
-         * <p>The type of the custom user attribute. Valid values:</p>
+         * <p>The type of the custom user group. Valid values:</p>
          * <ul>
-         * <li><p><strong>username</strong>: Username.</p>
-         * </li>
-         * <li><p><strong>department</strong>: Department.</p>
-         * </li>
-         * <li><p><strong>email</strong>: Email address.</p>
-         * </li>
-         * <li><p><strong>telephone</strong>: Phone number.</p>
-         * </li>
+         * <li><strong>username</strong>: Username.</li>
+         * <li><strong>department</strong>: Department.</li>
+         * <li><strong>email</strong>: Email address.</li>
+         * <li><strong>telephone</strong>: Mobile phone number.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -470,21 +452,17 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
         public String userGroupType;
 
         /**
-         * <p>The value of the custom user attribute.</p>
+         * <p>The value of the custom user group attribute.</p>
          * <ul>
-         * <li><p>If UserGroupType is <strong>username</strong>, this is the username. The value must be 1 to 128 characters in length. It can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
-         * </li>
-         * <li><p>If UserGroupType is <strong>department</strong>, this is the department name. Example: OU=Department 1,OU=SASE DingTalk.</p>
-         * </li>
-         * <li><p>If UserGroupType is <strong>email</strong>, this is the email address. Example: username\@example.com.</p>
-         * </li>
-         * <li><p>If UserGroupType is <strong>telephone</strong>, this is the phone number. Example: 13900001234.</p>
-         * </li>
+         * <li>If the user group type is <strong>username</strong>, this parameter specifies the username. The value must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</li>
+         * <li>If the user group type is <strong>department</strong>, this parameter specifies the department. Example: OU=Department 1,OU=SASE DingTalk.</li>
+         * <li>If the user group type is <strong>email</strong>, this parameter specifies the email address. Example: <a href="mailto:username@example.com">username@example.com</a>.</li>
+         * <li>If the user group type is <strong>telephone</strong>, this parameter specifies the mobile phone number. Example: 13900001234.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>OU=部门1,OU=SASE钉钉</p>
+         * <p>OU=Department 1,OU=SASE DingTalk</p>
          */
         @NameInMap("Value")
         public String value;

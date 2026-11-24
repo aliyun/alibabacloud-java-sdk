@@ -34,9 +34,9 @@ public class ExecutePeriod extends TeaModel {
     /**
      * <p>The execution cycle mode. Valid values:</p>
      * <ul>
-     * <li><strong>Once</strong>: The single execution mode. Used in combination with ExecuteMode=Once.</li>
-     * <li><strong>Interval</strong>: The periodic execution mode based on a specified frequency. Used in combination with ExecuteMode=Schedule.</li>
-     * <li><strong>Weekly</strong>: The weekly execution mode where you can select effective days. Used in combination with ExecuteMode=Schedule and EffectDay.</li>
+     * <li><strong>Once</strong>: Single execution mode. Used in combination with ExecuteMode=Once.</li>
+     * <li><strong>Interval</strong>: Periodic execution at a specified frequency. Used in combination with ExecuteMode=Schedule.</li>
+     * <li><strong>Weekly</strong>: Weekly execution on selected days. Used in combination with ExecuteMode=Schedule and EffectDay.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class ExecutePeriod extends TeaModel {
 
     public static class ExecutePeriodEffectDay extends TeaModel {
         /**
-         * <p>Specifies whether the policy takes effect on Friday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
+         * <p>Specifies whether the policy takes effect on Friday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -93,7 +93,7 @@ public class ExecutePeriod extends TeaModel {
         public Boolean friday;
 
         /**
-         * <p>Specifies whether the policy takes effect on Monday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
+         * <p>Specifies whether the policy takes effect on Monday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -102,7 +102,7 @@ public class ExecutePeriod extends TeaModel {
         public Boolean monday;
 
         /**
-         * <p>Specifies whether the policy takes effect on Saturday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
+         * <p>Specifies whether the policy takes effect on Saturday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -111,7 +111,7 @@ public class ExecutePeriod extends TeaModel {
         public Boolean saturday;
 
         /**
-         * <p>Specifies whether the policy takes effect on Sunday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
+         * <p>Specifies whether the policy takes effect on Sunday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -120,7 +120,7 @@ public class ExecutePeriod extends TeaModel {
         public Boolean sunday;
 
         /**
-         * <p>Specifies whether the policy takes effect on Thursday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
+         * <p>Specifies whether the policy takes effect on Thursday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -129,7 +129,7 @@ public class ExecutePeriod extends TeaModel {
         public Boolean thursday;
 
         /**
-         * <p>Specifies whether the policy takes effect on Tuesday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
+         * <p>Specifies whether the policy takes effect on Tuesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -138,7 +138,7 @@ public class ExecutePeriod extends TeaModel {
         public Boolean tuesday;
 
         /**
-         * <p>Specifies whether the policy takes effect on Wednesday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</p>
+         * <p>Specifies whether the policy takes effect on Wednesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

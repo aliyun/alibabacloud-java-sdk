@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProhibitedSoftwareRequest extends TeaModel {
     /**
-     * <p>The prohibited software ID.</p>
+     * <p>The ID of the prohibited software.</p>
      */
     @NameInMap("SoftwareId")
     public GetProhibitedSoftwareRequestSoftwareId softwareId;
@@ -25,10 +25,10 @@ public class GetProhibitedSoftwareRequest extends TeaModel {
 
     public static class GetProhibitedSoftwareRequestSoftwareId extends TeaModel {
         /**
-         * <p>Indicates whether the prohibited software is a system built-in prohibited software. Valid values:</p>
+         * <p>Specifies whether the prohibited software is a built-in prohibited software. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: A system built-in prohibited software that is shared across all Alibaba Cloud accounts and cannot be modified or deleted.</li>
-         * <li><strong>false</strong>: A custom prohibited software under the current Alibaba Cloud account.</li>
+         * <li><strong>true</strong>: The software is a built-in prohibited software. It is shared by all Alibaba Cloud accounts and cannot be modified or deleted.</li>
+         * <li><strong>false</strong>: The software is a custom prohibited software within the current Alibaba Cloud account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -38,9 +38,9 @@ public class GetProhibitedSoftwareRequest extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The prohibited software ID. You can obtain the value from the following operations:</p>
+         * <p>The ID of the prohibited software. You can obtain the value from the following operations:</p>
          * <ul>
-         * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Lists prohibited software.</li>
+         * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Queries prohibited software in batches.</li>
          * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Creates custom prohibited software.</li>
          * </ul>
          * 

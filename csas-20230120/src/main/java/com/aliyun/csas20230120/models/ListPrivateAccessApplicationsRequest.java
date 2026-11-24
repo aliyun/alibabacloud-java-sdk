@@ -7,8 +7,8 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     /**
      * <p>The access mode. Valid values:</p>
      * <ul>
-     * <li><strong>app</strong>: application access. Filters applications that support application access.</li>
-     * <li><strong>browser</strong>: browser access. Filters applications that support browser access.</li>
+     * <li><strong>app</strong>: Application access. Filters applications that support application access.</li>
+     * <li><strong>browser</strong>: Browser access. Filters applications that support browser access.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +27,13 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The IDs of the private access applications. You can specify up to 100 IDs.</p>
+     * <p>The IDs of the private access applications. You can enter up to 100 private access application IDs.</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
-     * <p>The ID of the connector. You can obtain the ID from the following operation: <a href="~~ListConnectors~~">ListConnectors</a>: List connectors.</p>
+     * <p>The ID of the connector. You can obtain the value from the following operation: <a href="~~ListConnectors~~">ListConnectors</a>: List connectors.</p>
      * 
      * <strong>example:</strong>
      * <p>connector-94db94e06b98****</p>
@@ -42,7 +42,7 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     public String connectorId;
 
     /**
-     * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page in a paged query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Filters applications by health check status. Valid values:</p>
+     * <p>Filters by health check status. Valid values:</p>
      * <ul>
      * <li>normal: The success rate of the last check is greater than or equal to 95%.</li>
      * <li>partialError: The success rate of the last check is greater than 0 and less than 95%.</li>
@@ -76,7 +76,7 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The Settings for the number of entries per page in a paging query. Valid values: 1 to 1000.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the private access policy. You can obtain the ID from the following operations:</p>
+     * <p>The ID of the private access policy. You can obtain the value from the following operations:</p>
      * <ul>
      * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: List private access policies.</li>
      * <li><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: Create a private access policy.</li>
@@ -101,8 +101,8 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     /**
      * <p>The status of the private access application. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: enabled.</li>
-     * <li><strong>Disabled</strong>: disabled.</li>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the private access tag. You can obtain the ID from the following operations:</p>
+     * <p>The ID of the private access tag. You can obtain the value from the following operations:</p>
      * <ul>
      * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: List private access tags.</li>
      * <li><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: Create a private access tag.</li>

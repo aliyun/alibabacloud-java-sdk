@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDeviceGroupResponseBody extends TeaModel {
     /**
-     * <p>The device label ID.</p>
+     * <p>The ID of the device tag.</p>
      * 
      * <strong>example:</strong>
      * <p>device-group-5191cf830a5e****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProhibitedSoftwareShrinkRequest extends TeaModel {
     /**
-     * <p>The prohibited software ID.</p>
+     * <p>The ID of the prohibited software.</p>
      */
     @NameInMap("SoftwareId")
     public String softwareIdShrink;

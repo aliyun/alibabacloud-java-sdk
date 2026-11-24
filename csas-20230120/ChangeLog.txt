@@ -1,3 +1,14 @@
+2026-11-24 Version: 1.30.1
+- Update API GetUserDevice: add response parameters Body.Device.DiskEncryptStatus.
+- Update API GetUserDevice: add response parameters Body.Device.DiskEncryptStatusReason.
+- Update API ListPrivateAccessApplicationL7Switches: add response parameters Body.L7Switches.$.UrlAccessPaths.
+- Update API ListUserDevices: add request parameters DiskEncryptStatuses.
+- Update API ListUserDevices: add response parameters Body.Devices.$.DiskEncryptStatus.
+- Update API ListUserDevices: add response parameters Body.Devices.$.DiskEncryptStatusReason.
+- Update API UpdatePrivateAccessApplicationL7Switch: add request parameters UrlAccessPaths.
+- Update API UpdatePrivateAccessApplicationL7Switch: add response parameters Body.L7Switch.UrlAccessPaths.
+
+
 2026-10-14 Version: 1.30.0
 - Support API DescribeApplicationHealthCheckReports.
 - Update API CreatePrivateAccessApplication: add request parameters HealthCheckConfig.

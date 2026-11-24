@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApprovalsRequest extends TeaModel {
     /**
-     * <p>The IDs of the approval instances.</p>
+     * <p>The instance IDs of the approval instances.</p>
      */
     @NameInMap("ApprovalIds")
     public java.util.List<String> approvalIds;
@@ -32,7 +32,7 @@ public class ListApprovalsRequest extends TeaModel {
      * <p>The department of the user who created the approval instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test Department</p>
+     * <p>Testing Department</p>
      */
     @NameInMap("CreatorDepartment")
     public String creatorDepartment;
@@ -65,7 +65,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String creatorUsername;
 
     /**
-     * <p>The page number of the current page for a paging query. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page for paging in a paged query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,11 +75,14 @@ public class ListApprovalsRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The list of effective statuses of reports. The list uses the flat serialization format and cannot contain duplicate values. Only records with the Approved approval status are matched. Valid values:</p>
+     * <p>The list of effect statuses for the report. The list uses the flat serialization format and cannot contain duplicate values. Only records with the Approved approval status are matched. Valid values:</p>
      * <ul>
      * <li>Enabled: Valid.</li>
      * <li>Expired: Invalid or expired.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Enabled&quot;]</p>
      */
     @NameInMap("EffectStatuses")
     public java.util.List<String> effectStatuses;
@@ -103,7 +106,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String operatorUsername;
 
     /**
-     * <p>The number of entries per page for a paging query. Valid values: 1 to 500.</p>
+     * <p>The Settings for the number of entries to return on each page for paging in a paged query. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -154,6 +157,9 @@ public class ListApprovalsRequest extends TeaModel {
      * <li>BackendReport: Backend report.
      * If you do not specify this parameter, only ApprovalReport is queried by default.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;BackendReport&quot;]</p>
      */
     @NameInMap("ReportTypes")
     public java.util.List<String> reportTypes;
@@ -177,7 +183,7 @@ public class ListApprovalsRequest extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>The statuses of the approval instances.</p>
+     * <p>The instance statuses of the approval instances.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;

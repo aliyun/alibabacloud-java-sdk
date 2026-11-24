@@ -4,24 +4,45 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateApprovalProcessRequest extends TeaModel {
+    /**
+     * <p>The approval type. Valid values: 0 (built-in approval), 1 (DingTalk approval), 2 (WeCom approval), and 3 (Lark approval). Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ApprovalType")
     public Integer approvalType;
 
     /**
-     * <p>The description of the approval process. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+     * <p>The description of the approval process. The description must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a test</p>
+     * <p>Office endpoint software installation and uninstallation approval process</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The event callback identifier. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter is used to generate the event callback URL for the external platform. You can pass a complete callback URL, and the server retains only the part after the callback path prefix.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://callback.example.com/sase/api/v1/approval/dingtalk/callback/9m4e2mr0ui3e8a21">https://callback.example.com/sase/api/v1/approval/dingtalk/callback/9m4e2mr0ui3e8a21</a>****</p>
+     */
     @NameInMap("EventLabel")
     public String eventLabel;
 
+    /**
+     * <p>The integration configuration for the external approval platform. This parameter is required when the approval type is 1 (DingTalk approval) or 3 (Lark approval). It includes integration parameters such as appKey and appSecret, and must be passed as a JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;appKey&quot;:&quot;dingn1a2b3c4d5e6f****&quot;,&quot;appSecret&quot;:&quot;f9c8e7d6a5b4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0****&quot;,&quot;eventVerifyToken&quot;:&quot;7a8b9c0d1e2f3a4b5c6d7e8f9a0b****&quot;,&quot;eventAesKey&quot;:&quot;1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t****&quot;}</p>
+     */
     @NameInMap("ExternalConfig")
     public String externalConfig;
 
+    /**
+     * <p>The external approval template configurations. Configure the approval template ID, external approval process ID, and field mappings based on the policy type. This parameter is used only when ApprovalType is set to 1 (DingTalk approval), 2 (WeCom approval), or 3 (Lark approval). If this parameter is not passed, the existing template associations of the approval process are cleared. The approval templates associated with business policies cannot be cleared.</p>
+     */
     @NameInMap("MatchSchemaConfigs")
     public UpdateApprovalProcessRequestMatchSchemaConfigs matchSchemaConfigs;
 
@@ -42,10 +63,10 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     public String processId;
 
     /**
-     * <p>The name of the approval process. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+     * <p>The name of the approval process. The name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
-     * <p>Test</p>
+     * <p>Endpoint software installation approval process</p>
      */
     @NameInMap("ProcessName")
     public String processName;
@@ -134,12 +155,30 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsAppUninstallSchemaConfigFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reason for reporting</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as approvalReason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approvalReason</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -175,12 +214,27 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsAppUninstallSchemaConfig extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsAppUninstallSchemaConfigFieldMap> fieldMap;
 
+        /**
+         * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -216,12 +270,30 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsDeviceRegistrationSchemaConfigFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Report domain name</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as report_domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>report_domain</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -257,12 +329,27 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsDeviceRegistrationSchemaConfig extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsDeviceRegistrationSchemaConfigFieldMap> fieldMap;
 
+        /**
+         * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -298,12 +385,30 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsDlpSendSchemaConfigFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>File name</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as fileName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileName</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -339,12 +444,27 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsDlpSendSchemaConfig extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsDlpSendSchemaConfigFieldMap> fieldMap;
 
+        /**
+         * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -380,12 +500,30 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsDomainBlacklistSchemaConfigFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Report website access</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as reportDomain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reportDomain</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -421,12 +559,27 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsDomainBlacklistSchemaConfig extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsDomainBlacklistSchemaConfigFieldMap> fieldMap;
 
+        /**
+         * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -462,12 +615,30 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsDomainWhitelistSchemaConfigFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Report website access</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as reportDomain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reportDomain</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -503,12 +674,27 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsDomainWhitelistSchemaConfig extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsDomainWhitelistSchemaConfigFieldMap> fieldMap;
 
+        /**
+         * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -544,12 +730,30 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsEndpointHardeningSchemaConfigFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Process name</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The system field identifier, such as processName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>processName</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -585,12 +789,27 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsEndpointHardeningSchemaConfig extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsEndpointHardeningSchemaConfigFieldMap> fieldMap;
 
+        /**
+         * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -626,12 +845,30 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsPeripheralBlockSchemaConfigFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operating system</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as devType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>devType</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -667,12 +904,27 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsPeripheralBlockSchemaConfig extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsPeripheralBlockSchemaConfigFieldMap> fieldMap;
 
+        /**
+         * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -708,12 +960,30 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reported application</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The system field identifier, such as applicationId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>applicationId</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -749,12 +1019,27 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap> fieldMap;
 
+        /**
+         * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -790,12 +1075,30 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareBlockSchemaConfigFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Report software</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The identifier of the system field, such as softwareName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>softwareName</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -831,12 +1134,27 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareBlockSchemaConfig extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareBlockSchemaConfigFieldMap> fieldMap;
 
+        /**
+         * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -872,12 +1190,30 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareHardeningSchemaConfigFieldMap extends TeaModel {
+        /**
+         * <p>The name of the control in the external approval form. This parameter is used to locate the form control when the approval type is 1 (DingTalk approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Process name</p>
+         */
         @NameInMap("DisplayField")
         public String displayField;
 
+        /**
+         * <p>The type and identifier of the external approval form control, in the format of Type%%%ControlID. This parameter is used to locate the form control when the approval type is 2 (WeCom approval) or 3 (Lark approval).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Textarea%%%widget-1a2b****</p>
+         */
         @NameInMap("DisplayFieldValue")
         public String displayFieldValue;
 
+        /**
+         * <p>The system field identifier, such as processName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>processName</p>
+         */
         @NameInMap("SystemField")
         public String systemField;
 
@@ -913,12 +1249,27 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareHardeningSchemaConfig extends TeaModel {
+        /**
+         * <p>The ID of the external approval process. When the approval type is 1 (DingTalk approval) or 3 (Lark approval), this parameter specifies the process code (processCode) of the external platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROC-1a2b3c4d5e6f****</p>
+         */
         @NameInMap("ExternalProcessId")
         public String externalProcessId;
 
+        /**
+         * <p>The mapping list between system fields and external approval form controls.</p>
+         */
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareHardeningSchemaConfigFieldMap> fieldMap;
 
+        /**
+         * <p>The ID of the approval template. The ID must be consistent with the template ID of the corresponding policy type in MatchSchemas. If this parameter is left empty, the approval template association is not saved for this policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SchemaId")
         public String schemaId;
 
@@ -954,33 +1305,63 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     }
 
     public static class UpdateApprovalProcessRequestMatchSchemaConfigs extends TeaModel {
+        /**
+         * <p>The approval template configuration for the application uninstallation policy.</p>
+         */
         @NameInMap("AppUninstallSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsAppUninstallSchemaConfig appUninstallSchemaConfig;
 
+        /**
+         * <p>The approval template configuration for the device registration policy.</p>
+         */
         @NameInMap("DeviceRegistrationSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsDeviceRegistrationSchemaConfig deviceRegistrationSchemaConfig;
 
+        /**
+         * <p>The approval template configuration for the file outbound sending policy.</p>
+         */
         @NameInMap("DlpSendSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsDlpSendSchemaConfig dlpSendSchemaConfig;
 
+        /**
+         * <p>The approval template configuration for the domain name blacklist policy.</p>
+         */
         @NameInMap("DomainBlacklistSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsDomainBlacklistSchemaConfig domainBlacklistSchemaConfig;
 
+        /**
+         * <p>The approval template configuration for the domain name whitelist policy.</p>
+         */
         @NameInMap("DomainWhitelistSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsDomainWhitelistSchemaConfig domainWhitelistSchemaConfig;
 
+        /**
+         * <p>The approval template configuration for the endpoint hardening policy.</p>
+         */
         @NameInMap("EndpointHardeningSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsEndpointHardeningSchemaConfig endpointHardeningSchemaConfig;
 
+        /**
+         * <p>The approval template configuration for the peripheral control policy.</p>
+         */
         @NameInMap("PeripheralBlockSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsPeripheralBlockSchemaConfig peripheralBlockSchemaConfig;
 
+        /**
+         * <p>The approval template configuration for the internal network access control policy.</p>
+         */
         @NameInMap("PrivateAccessBlockSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig privateAccessBlockSchemaConfig;
 
+        /**
+         * <p>The approval template configuration for the software blocking policy.</p>
+         */
         @NameInMap("SoftwareBlockSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareBlockSchemaConfig softwareBlockSchemaConfig;
 
+        /**
+         * <p>The approval template configuration for the software hardening policy.</p>
+         */
         @NameInMap("SoftwareHardeningSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareHardeningSchemaConfig softwareHardeningSchemaConfig;
 
@@ -1073,7 +1454,7 @@ public class UpdateApprovalProcessRequest extends TeaModel {
 
     public static class UpdateApprovalProcessRequestMatchSchemas extends TeaModel {
         /**
-         * <p>The ID of the device uninstall approval template.</p>
+         * <p>The ID of the application uninstallation approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -1091,7 +1472,7 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         public String deviceRegistrationSchemaId;
 
         /**
-         * <p>The ID of the file outgoing approval template.</p>
+         * <p>The ID of the file outbound sending approval template.</p>
          * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -1117,6 +1498,12 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("DomainWhitelistSchemaId")
         public String domainWhitelistSchemaId;
 
+        /**
+         * <p>The ID of the endpoint hardening approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("EndpointHardeningSchemaId")
         public String endpointHardeningSchemaId;
 
@@ -1129,6 +1516,12 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("PeripheralBlockSchemaId")
         public String peripheralBlockSchemaId;
 
+        /**
+         * <p>The ID of the internal network access control approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("PrivateAccessBlockSchemaId")
         public String privateAccessBlockSchemaId;
 
@@ -1141,6 +1534,12 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("SoftwareBlockSchemaId")
         public String softwareBlockSchemaId;
 
+        /**
+         * <p>The ID of the software hardening approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
+         */
         @NameInMap("SoftwareHardeningSchemaId")
         public String softwareHardeningSchemaId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationAuditLogsRequest extends TeaModel {
     /**
-     * <p>The page number of the current page in paging. The value starts from 1.</p>
+     * <p>The page number of the current page for a paged query. Pages start from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListOperationAuditLogsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end time of the query. This value is a UNIX timestamp in seconds. The value must be later than StartTime.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds. The value must be later than StartTime.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class ListOperationAuditLogsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The event source type. Valid values:</p>
+     * <p>The source type of the event. Valid values:</p>
      * <ul>
-     * <li><strong>console</strong>: console call.</li>
-     * <li><strong>sdk</strong>: SDK call.</li>
+     * <li><strong>console</strong>: The event is triggered by a console call.</li>
+     * <li><strong>sdk</strong>: The event is triggered by an SDK call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,29 +38,29 @@ public class ListOperationAuditLogsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The operation function module. The value is the English code of the function module. If other values are specified, no records are returned. Valid values:</p>
+     * <p>The operation feature module. The value must be the English code of the feature module. If you specify other values, no records are queried. Valid values:</p>
      * <ul>
-     * <li><strong>PrivateAccess</strong>: private access.</li>
-     * <li><strong>OfficeNetworkAccess</strong>: office network access.</li>
-     * <li><strong>AppAcceleration</strong>: application acceleration.</li>
-     * <li><strong>InternetAccess</strong>: Internet access.</li>
-     * <li><strong>OfficeDataProtection</strong>: office data protection.</li>
-     * <li><strong>IdentityAccessManagement</strong>: identity and access management.</li>
-     * <li><strong>DeviceManagement</strong>: device management.</li>
-     * <li><strong>ApprovalCenter</strong>: approval center.</li>
-     * <li><strong>SoftwareManagement</strong>: software management.</li>
-     * <li><strong>LogAnalysis</strong>: log analysis.</li>
-     * <li><strong>Setting</strong>: settings.</li>
-     * <li><strong>DigitalWatermark</strong>: digital watermarking.</li>
-     * <li><strong>DynamicDecision</strong>: dynamic decision.</li>
-     * <li><strong>InternetBehaviorManagement</strong>: Internet behavior management.</li>
-     * <li><strong>AgentOfficeSecurity</strong>: Agent office security.</li>
-     * <li><strong>NetworkAccess</strong>: network access.</li>
-     * <li><strong>RiskManagement</strong>: risk management.</li>
-     * <li><strong>EndpointProtection</strong>: endpoint protection.</li>
-     * <li><strong>Overview</strong>: overview page.</li>
-     * <li><strong>ITManagement</strong>: IT management.</li>
-     * <li><strong>InstanceManagement</strong>: instance management.</li>
+     * <li><strong>PrivateAccess</strong>: internal network access</li>
+     * <li><strong>OfficeNetworkAccess</strong>: office network access</li>
+     * <li><strong>AppAcceleration</strong>: application acceleration</li>
+     * <li><strong>InternetAccess</strong>: Internet access</li>
+     * <li><strong>OfficeDataProtection</strong>: office data protection</li>
+     * <li><strong>IdentityAccessManagement</strong>: identity and access management</li>
+     * <li><strong>DeviceManagement</strong>: endpoint management</li>
+     * <li><strong>ApprovalCenter</strong>: approval center</li>
+     * <li><strong>SoftwareManagement</strong>: software management</li>
+     * <li><strong>LogAnalysis</strong>: log analysis</li>
+     * <li><strong>Setting</strong>: settings</li>
+     * <li><strong>DigitalWatermark</strong>: digital watermarking</li>
+     * <li><strong>DynamicDecision</strong>: dynamic decision-making</li>
+     * <li><strong>InternetBehaviorManagement</strong>: Internet behavior management</li>
+     * <li><strong>AgentOfficeSecurity</strong>: agent office security</li>
+     * <li><strong>NetworkAccess</strong>: network access</li>
+     * <li><strong>RiskManagement</strong>: risk management</li>
+     * <li><strong>EndpointProtection</strong>: endpoint protection</li>
+     * <li><strong>Overview</strong>: overview page</li>
+     * <li><strong>ITManagement</strong>: IT management</li>
+     * <li><strong>InstanceManagement</strong>: instance management</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,10 +72,10 @@ public class ListOperationAuditLogsRequest extends TeaModel {
     /**
      * <p>The operation status. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong>: The operation succeeded. Equivalent values: true, 成功.</li>
-     * <li><strong>failure</strong>: The operation failed. Equivalent values: fail, failed, false, 失败.</li>
+     * <li><strong>success</strong>: The operation is successful. Equivalent values are true and Success.</li>
+     * <li><strong>failure</strong>: The operation fails. Equivalent values are fail, failed, false, and Failure.</li>
      * </ul>
-     * <p>If this parameter is not specified, only successful operation records are returned.</p>
+     * <p>If this parameter is not specified, only records of successful operations are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -84,10 +84,10 @@ public class ListOperationAuditLogsRequest extends TeaModel {
     public String operationStatus;
 
     /**
-     * <p>The operation type. The value must exactly match the original operation type recorded in the log. The OperationType value in the response is localized based on the request language and may differ from this filter value.</p>
+     * <p>The operation type. The value must be exactly the same as the original operation type recorded in the log. The OperationType in the returned result is localized based on the request language and may differ from this filter value.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sync classification rules</p>
+     * <p>Synchronize classification and grading rules</p>
      */
     @NameInMap("OperationType")
     public String operationType;
@@ -102,7 +102,7 @@ public class ListOperationAuditLogsRequest extends TeaModel {
     public String operatorId;
 
     /**
-     * <p>The number of entries per page. Settings: 1 to 100. Used in paging.</p>
+     * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class ListOperationAuditLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time of the query. This value is a UNIX timestamp in seconds. The value must be earlier than EndTime. The interval between StartTime and EndTime cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds. The value must be earlier than EndTime. The interval between StartTime and EndTime cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

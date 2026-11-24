@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel {
     /**
-     * <p>The Layer 7 access switch configuration of the internal-facing application after this update.</p>
+     * <p>The Layer 7 access switch configurations of the internal access application after the update.</p>
      */
     @NameInMap("L7Switch")
     public UpdatePrivateAccessApplicationL7SwitchResponseBodyL7Switch l7Switch;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
@@ -82,9 +82,39 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
 
     }
 
+    public static class UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths extends TeaModel {
+        @NameInMap("AllowMethods")
+        public java.util.List<String> allowMethods;
+
+        @NameInMap("Urls")
+        public java.util.List<String> urls;
+
+        public static UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths build(java.util.Map<String, ?> map) throws Exception {
+            UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths self = new UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths setAllowMethods(java.util.List<String> allowMethods) {
+            this.allowMethods = allowMethods;
+            return this;
+        }
+        public java.util.List<String> getAllowMethods() {
+            return this.allowMethods;
+        }
+
+        public UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths setUrls(java.util.List<String> urls) {
+            this.urls = urls;
+            return this;
+        }
+        public java.util.List<String> getUrls() {
+            return this.urls;
+        }
+
+    }
+
     public static class UpdatePrivateAccessApplicationL7SwitchResponseBodyL7Switch extends TeaModel {
         /**
-         * <p>The ID of the internal-facing application.</p>
+         * <p>The ID of the internal access application.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-application-e12860ef6c48****</p>
@@ -93,7 +123,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
         public String applicationId;
 
         /**
-         * <p>The device tag mark switch. Valid values:</p>
+         * <p>The device tag marking switch. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -106,7 +136,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
         public String devTagMarkStatus;
 
         /**
-         * <p>The sensitive application download audit switch. Valid values:</p>
+         * <p>The download audit switch for sensitive applications. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -119,13 +149,13 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
         public String downloadAuditStatus;
 
         /**
-         * <p>The collection of port ranges that are effective for Layer 7 access. This is the intersection of the ports specified in this request and the port ranges already configured for the internal-facing application. An empty collection is returned when Status is set to <strong>Disabled</strong>.</p>
+         * <p>The effective port ranges for Layer 7 access, which are the intersection of the ports specified in this request and the configured port ranges of the internal access application. If Status is set to <strong>Disabled</strong>, an empty set is returned.</p>
          */
         @NameInMap("PortRanges")
         public java.util.List<UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchPortRanges> portRanges;
 
         /**
-         * <p>The source IP mark switch. Valid values:</p>
+         * <p>The source IP marking switch. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -138,7 +168,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
         public String srcIpMarkStatus;
 
         /**
-         * <p>The master switch for Layer 7 access of the internal-facing application. Valid values:</p>
+         * <p>The master switch for the Layer 7 access switch of the internal access application. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -159,8 +189,11 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
         @NameInMap("TimeoutSec")
         public Integer timeoutSec;
 
+        @NameInMap("UrlAccessPaths")
+        public java.util.List<UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths> urlAccessPaths;
+
         /**
-         * <p>The user mark switch. Valid values:</p>
+         * <p>The user marking switch. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -173,7 +206,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
         public String userMarkStatus;
 
         /**
-         * <p>The host bypass prevention switch. Valid values:</p>
+         * <p>The Host bypass prevention switch. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong>: Enabled.</li>
          * <li><strong>Disabled</strong>: Disabled.</li>
@@ -244,6 +277,14 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
         }
         public Integer getTimeoutSec() {
             return this.timeoutSec;
+        }
+
+        public UpdatePrivateAccessApplicationL7SwitchResponseBodyL7Switch setUrlAccessPaths(java.util.List<UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths> urlAccessPaths) {
+            this.urlAccessPaths = urlAccessPaths;
+            return this;
+        }
+        public java.util.List<UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths> getUrlAccessPaths() {
+            return this.urlAccessPaths;
         }
 
         public UpdatePrivateAccessApplicationL7SwitchResponseBodyL7Switch setUserMarkStatus(String userMarkStatus) {

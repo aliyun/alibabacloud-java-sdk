@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConnectorClientRequest extends TeaModel {
     /**
-     * <p>The connector ID. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connector IDs.</p>
+     * <p>The connector ID. You can obtain the value by calling the <a href="~~ListConnectors~~">ListConnectors</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateConnectorClientRequest extends TeaModel {
     public String connectorId;
 
     /**
-     * <p>The unique identifier of the ConnectorClient device. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connector information.</p>
+     * <p>The unique identifier of the ConnectorClient device. You can obtain the value by calling the <a href="~~ListConnectors~~">ListConnectors</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,8 +27,8 @@ public class UpdateConnectorClientRequest extends TeaModel {
     /**
      * <p>The connection status of the ConnectorClient. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: connected.</li>
-     * <li><strong>Disabled</strong>: disconnected.</li>
+     * <li><strong>Enabled</strong>: Connected.</li>
+     * <li><strong>Disabled</strong>: Disconnected.</li>
      * </ul>
      * 
      * <strong>example:</strong>

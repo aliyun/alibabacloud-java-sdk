@@ -14,7 +14,7 @@ public class CreateProhibitedTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The disabled software tag.</p>
+     * <p>The prohibited software tag.</p>
      */
     @NameInMap("Tag")
     public CreateProhibitedTagResponseBodyTag tag;
@@ -42,7 +42,7 @@ public class CreateProhibitedTagResponseBody extends TeaModel {
 
     public static class CreateProhibitedTagResponseBodyTag extends TeaModel {
         /**
-         * <p>The time when the disabled software tag was created, in the yyyy-MM-dd HH:mm:ss format. The time is displayed in UTC+8.</p>
+         * <p>The time when the prohibited software tag was created. The time is in the yyyy-MM-dd HH:mm:ss format and uses the UTC+8 time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-19 10:24:31</p>
@@ -51,7 +51,7 @@ public class CreateProhibitedTagResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the disabled software tag.</p>
+         * <p>The description of the prohibited software tag.</p>
          * 
          * <strong>example:</strong>
          * <p>test template create get delete</p>
@@ -60,7 +60,7 @@ public class CreateProhibitedTagResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the disabled software tag.</p>
+         * <p>The name of the prohibited software tag.</p>
          * 
          * <strong>example:</strong>
          * <p>autotest_37bf6a18</p>
@@ -69,7 +69,7 @@ public class CreateProhibitedTagResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the disabled software tag.</p>
+         * <p>The ID of the prohibited software tag.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-4a4046838f77****</p>

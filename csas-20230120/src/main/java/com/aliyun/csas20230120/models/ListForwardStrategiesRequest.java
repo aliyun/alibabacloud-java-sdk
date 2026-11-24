@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListForwardStrategiesRequest extends TeaModel {
     /**
-     * <p>The page number of the current page in paging query. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page in a paged query. Valid values: 1 to 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,15 +14,15 @@ public class ListForwardStrategiesRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The list of access destination instance IDs.</p>
+     * <p>The IDs of the access destination instances.</p>
      */
     @NameInMap("DestinationIds")
     public java.util.List<String> destinationIds;
 
     /**
-     * <p>The type of the access destination. Valid values:</p>
+     * <p>The destination type. Valid values:</p>
      * <ul>
-     * <li><strong>Connector</strong>: connector.</li>
+     * <li><strong>Connector</strong>: Connector.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class ListForwardStrategiesRequest extends TeaModel {
     public String destinationType;
 
     /**
-     * <p>The list of forwarding rule IDs.</p>
+     * <p>The IDs of the forwarding rules.</p>
      */
     @NameInMap("ForwardIds")
     public java.util.List<String> forwardIds;
@@ -47,7 +47,7 @@ public class ListForwardStrategiesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries per page in paging query. Valid values: 1 to 1000.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

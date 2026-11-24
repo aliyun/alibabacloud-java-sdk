@@ -14,7 +14,7 @@ public class GetVirusScanGlobalConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The maximum size of a single virus file that can be uploaded, in KB. A value of 0 indicates no size limit.</p>
+     * <p>The maximum allowed upload size for a single virus file, in KB. A value of 0 indicates that the size is not limited.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -23,7 +23,7 @@ public class GetVirusScanGlobalConfigResponseBody extends TeaModel {
     public Long uploadFileMaxSize;
 
     /**
-     * <p>The maximum upload rate for virus files, in KB/s. A value of 0 indicates no rate limit.</p>
+     * <p>The maximum upload speed for virus files, in KB/s. A value of 0 indicates that the speed is not limited.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -32,16 +32,16 @@ public class GetVirusScanGlobalConfigResponseBody extends TeaModel {
     public Long uploadFileMaxSpeed;
 
     /**
-     * <p>The collection of file types that are prohibited from being uploaded. Files that match these types are not uploaded even if the upload feature is enabled. An empty list is returned if no file types are configured.</p>
+     * <p>The set of file types that are prohibited from upload. Matched files are not uploaded even if the upload feature is enabled. An empty list is returned if this parameter is not configured.</p>
      */
     @NameInMap("UploadFileSuffixBlacklist")
     public java.util.List<String> uploadFileSuffixBlacklist;
 
     /**
-     * <p>Indicates whether user terminal devices are allowed to upload detected virus files to the cloud for further analysis. Valid values:</p>
+     * <p>Specifies whether user terminal devices are allowed to upload detected virus files to the cloud for further analysis. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Upload is allowed.</li>
-     * <li><strong>false</strong>: Upload is not allowed.</li>
+     * <li><strong>true</strong>: Allowed.</li>
+     * <li><strong>false</strong>: Not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

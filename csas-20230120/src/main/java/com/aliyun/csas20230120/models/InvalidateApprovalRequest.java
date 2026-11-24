@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InvalidateApprovalRequest extends TeaModel {
     /**
-     * <p>The ID of the approval instance to immediately invalidate. You can call ListApprovals to query approval instance IDs. Only one approval instance ID under the current Alibaba Cloud account can be specified per request.</p>
+     * <p>The ID of the approval instance to be immediately invalidated. You can obtain the ID by calling the ListApprovals operation. You can specify only one approval instance ID under the current Alibaba Cloud account at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

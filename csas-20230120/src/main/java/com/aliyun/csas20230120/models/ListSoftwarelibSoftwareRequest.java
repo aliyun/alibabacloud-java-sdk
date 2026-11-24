@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSoftwarelibSoftwareRequest extends TeaModel {
     /**
-     * <p>The software category ID. You can call <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a> to obtain the value.</p>
+     * <p>The ID of the software category. For more information about how to configure software categories, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>softwarelib-classify-61b7ccc63cae****</p>
@@ -14,7 +14,7 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public String classifyId;
 
     /**
-     * <p>The page number of the current page displayed during paging in a paged query. Valid values: 1 to 10000.</p>
+     * <p>The page number of the current page for a paged query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The maximum number of entries per page. This parameter is not supported by the current operation. Use CurrentPage and PageSize for pagination.</p>
+     * <p>The maximum number of entries to return on each page. This parameter is not supported by the current API operation. Use CurrentPage and PageSize for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -33,7 +33,7 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. This parameter is not supported by the current operation. Use CurrentPage and PageSize for pagination.</p>
+     * <p>The query token. This parameter is not supported by the current API operation. Use CurrentPage and PageSize for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh27/Jy4SXvlU9WgqeV7az+t</p>
@@ -46,7 +46,7 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
      * <ul>
      * <li><strong>Windows</strong>: Windows.</li>
      * <li><strong>Mac(Apple)</strong>: macOS with Apple silicon.</li>
-     * <li><strong>Mac(Intel)</strong>: macOS with Intel chips.</li>
+     * <li><strong>Mac(Intel)</strong>: macOS with Intel processors.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public String os;
 
     /**
-     * <p>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 500.</p>
+     * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The software name. Fuzzy match is supported.</p>
+     * <p>The name of the software. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Thunder</p>
@@ -75,10 +75,10 @@ public class ListSoftwarelibSoftwareRequest extends TeaModel {
     public String softwareName;
 
     /**
-     * <p>The software source. Valid values:</p>
+     * <p>The source of the software. Valid values:</p>
      * <ul>
-     * <li><strong>custom</strong>: custom software.</li>
-     * <li><strong>builtin</strong>: built-in software library.</li>
+     * <li><strong>custom</strong>: Custom software.</li>
+     * <li><strong>builtin</strong>: Built-in software library.</li>
      * </ul>
      * 
      * <strong>example:</strong>
