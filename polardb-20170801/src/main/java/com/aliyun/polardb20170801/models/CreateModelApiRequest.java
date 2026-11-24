@@ -31,7 +31,7 @@ public class CreateModelApiRequest extends TeaModel {
     public String forceModel;
 
     /**
-     * <p>The gateway instance ID. You can obtain this ID from the GwClusterId parameter returned by the CreateGateway operation.</p>
+     * <p>The ID of the gateway instance. You can obtain this ID from the GwClusterId value returned by the CreateGateway operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,6 @@ public class CreateModelApiRequest extends TeaModel {
      * <li><strong>embedding</strong></li>
      * <li><strong>rerank</strong></li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -56,8 +55,25 @@ public class CreateModelApiRequest extends TeaModel {
     public String modelCategory;
 
     /**
+     * <p>The model name mappings, specified as a JSON array string. Each element is in the format of {&quot;Source&quot;:&quot;client model name&quot;,&quot;Target&quot;:&quot;upstream model name&quot;}. The Source parameter is matched in a case-insensitive manner and must be unique. The Target parameter retains its original case when forwarded. Both parameters cannot be empty and cannot contain leading or trailing spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Source&quot;:&quot;client-model-a&quot;,&quot;Target&quot;:&quot;upstream-model-a&quot;},{&quot;Source&quot;:&quot;client-model-b&quot;,&quot;Target&quot;:&quot;upstream-model-b&quot;}]</p>
+     */
+    @NameInMap("ModelMappings")
+    public String modelMappings;
+
+    /**
+     * <p>The intelligent routing candidate list, specified as a JSON object string. Currently, it only contains AllowedModels, which is a non-empty array of unique model names. The order of the array determines the candidate order. Do not pass the Enabled, cost, or quality tier parameters. Saving candidates does not enable the feature. You must first call the EnableModelRouting operation to obtain the gateway entitlements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;AllowedModels&quot;:[&quot;deepseek-v4-pro&quot;,&quot;glm-5.3&quot;,&quot;glm-5.3-flash&quot;]}</p>
+     */
+    @NameInMap("ModelRouting")
+    public String modelRouting;
+
+    /**
      * <p>The name of the model API.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -67,7 +83,6 @@ public class CreateModelApiRequest extends TeaModel {
 
     /**
      * <p>The API path prefix.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>/test</p>
@@ -83,7 +98,6 @@ public class CreateModelApiRequest extends TeaModel {
      * <li><strong>bailian</strong></li>
      * <li><strong>vllm</strong></li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>openai</p>
@@ -120,7 +134,6 @@ public class CreateModelApiRequest extends TeaModel {
 
     /**
      * <p>The list of routing rules, specified as a JSON array string.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -186,6 +199,22 @@ public class CreateModelApiRequest extends TeaModel {
     }
     public String getModelCategory() {
         return this.modelCategory;
+    }
+
+    public CreateModelApiRequest setModelMappings(String modelMappings) {
+        this.modelMappings = modelMappings;
+        return this;
+    }
+    public String getModelMappings() {
+        return this.modelMappings;
+    }
+
+    public CreateModelApiRequest setModelRouting(String modelRouting) {
+        this.modelRouting = modelRouting;
+        return this;
+    }
+    public String getModelRouting() {
+        return this.modelRouting;
     }
 
     public CreateModelApiRequest setName(String name) {

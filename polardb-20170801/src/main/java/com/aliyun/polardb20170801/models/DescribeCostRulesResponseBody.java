@@ -20,7 +20,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -29,7 +29,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</p>
+     * <p>The number of records per page. Valid values: 30, 50, and 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -47,7 +47,16 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
+    @NameInMap("TotalPages")
+    public Integer totalPages;
+
+    /**
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -100,6 +109,14 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeCostRulesResponseBody setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
+        return this;
+    }
+    public Integer getTotalPages() {
+        return this.totalPages;
+    }
+
     public DescribeCostRulesResponseBody setTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
@@ -110,7 +127,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
 
     public static class DescribeCostRulesResponseBodyItemsInputTokenTiers extends TeaModel {
         /**
-         * <p>The input cost points per million tokens for the tier.</p>
+         * <p>The input cost points per million tokens for this tier.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -179,7 +196,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String costRuleId;
 
         /**
-         * <p>The end time of the effective period. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * <p>The effective end time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-01T00:00:00Z</p>
@@ -188,7 +205,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String effectiveEndTime;
 
         /**
-         * <p>The start time of the effective period. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * <p>The effective start time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01T00:00:00Z</p>
@@ -197,7 +214,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String effectiveStartTime;
 
         /**
-         * <p>The type of the effective target.</p>
+         * <p>The effective target type.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -206,7 +223,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String effectiveTargetType;
 
         /**
-         * <p>The value of the effective target.</p>
+         * <p>The effective target value.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -224,7 +241,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String explicitCacheCostPointsPerMillion;
 
         /**
-         * <p>The time when the cost rule was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-04T16:09:29+08:00</p>
@@ -233,7 +250,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The time when the cost rule was last updated.</p>
+         * <p>The last update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>

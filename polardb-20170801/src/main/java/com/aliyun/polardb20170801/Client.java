@@ -374,7 +374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Adds a transparent acceleration path for a PolarFS instance. Before you call this operation, make sure that you have a running PolarDB cluster, a valid OSS bucket in the same region, and a PolarFS instance of the basic type with acceleration enabled. The bucket endpoint format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to instances of the cold type or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</p>
+     * <p>Adds a transparent acceleration path for a PolarFS instance. Before calling this operation, ensure that a running PolarDB cluster, a valid OSS bucket in the same region, and a basic PolarFS instance with acceleration enabled are available. The bucket address format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to cold instances or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds a transparent acceleration path.</p>
@@ -417,7 +417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Adds a transparent acceleration path for a PolarFS instance. Before you call this operation, make sure that you have a running PolarDB cluster, a valid OSS bucket in the same region, and a PolarFS instance of the basic type with acceleration enabled. The bucket endpoint format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to instances of the cold type or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</p>
+     * <p>Adds a transparent acceleration path for a PolarFS instance. Before calling this operation, ensure that a running PolarDB cluster, a valid OSS bucket in the same region, and a basic PolarFS instance with acceleration enabled are available. The bucket address format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to cold instances or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds a transparent acceleration path.</p>
@@ -432,14 +432,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation adds a new path policy—a directory quota rule—to a specified Polarlakebase instance.</li>
-     * <li>The <code>Quotas</code> parameter is a list. Each element represents a new quota rule. You can add up to 11 rules in a single request.</li>
-     * <li>Each rule must include the <code>Name</code> and <code>Include</code> fields. Other fields, such as <code>Description</code> and <code>Exclude</code>, are optional.</li>
-     * <li>To define the quota limit, specify at least one of the following parameters: <code>SizeLimit</code>, <code>FileCountLimit</code>, <code>AccessTTL</code>, or <code>ChangeTTL</code>.</li>
-     * <li>The <code>Priority</code> field specifies the rule priority. A larger value indicates higher priority. The default value is 0.</li>
-     * <li>The <code>Enabled</code> field determines whether the rule takes effect immediately. The default value is true.</li>
+     * <li>This operation adds a new PathPolicy (quota rule) to a specified Polarlakebase instance.</li>
+     * <li>The <code>Quotas</code> parameter is a list. Each element represents a rule to be added. You can add up to 11 rules at a time.</li>
+     * <li>Each rule must include the <code>Name</code> and <code>Include</code> fields. Other fields such as <code>Description</code> and <code>Exclude</code> are optional.</li>
+     * <li>You must specify at least one of the following fields to define the quota limit: <code>SizeLimit</code>, <code>FileCountLimit</code>, <code>AccessTTL</code>, and <code>ChangeTTL</code>.</li>
+     * <li>The <code>Priority</code> field specifies the priority of the rule. A larger value indicates a higher priority. Default value: 0.</li>
+     * <li>The <code>Enabled</code> field specifies whether the rule takes effect immediately. Default value: true, which indicates that the rule takes effect immediately.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -483,14 +483,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This operation adds a new path policy—a directory quota rule—to a specified Polarlakebase instance.</li>
-     * <li>The <code>Quotas</code> parameter is a list. Each element represents a new quota rule. You can add up to 11 rules in a single request.</li>
-     * <li>Each rule must include the <code>Name</code> and <code>Include</code> fields. Other fields, such as <code>Description</code> and <code>Exclude</code>, are optional.</li>
-     * <li>To define the quota limit, specify at least one of the following parameters: <code>SizeLimit</code>, <code>FileCountLimit</code>, <code>AccessTTL</code>, or <code>ChangeTTL</code>.</li>
-     * <li>The <code>Priority</code> field specifies the rule priority. A larger value indicates higher priority. The default value is 0.</li>
-     * <li>The <code>Enabled</code> field determines whether the rule takes effect immediately. The default value is true.</li>
+     * <li>This operation adds a new PathPolicy (quota rule) to a specified Polarlakebase instance.</li>
+     * <li>The <code>Quotas</code> parameter is a list. Each element represents a rule to be added. You can add up to 11 rules at a time.</li>
+     * <li>Each rule must include the <code>Name</code> and <code>Include</code> fields. Other fields such as <code>Description</code> and <code>Exclude</code> are optional.</li>
+     * <li>You must specify at least one of the following fields to define the quota limit: <code>SizeLimit</code>, <code>FileCountLimit</code>, <code>AccessTTL</code>, and <code>ChangeTTL</code>.</li>
+     * <li>The <code>Priority</code> field specifies the priority of the rule. A larger value indicates a higher priority. Default value: 0.</li>
+     * <li>The <code>Enabled</code> field specifies whether the rule takes effect immediately. Default value: true, which indicates that the rule takes effect immediately.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -630,7 +630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Answers a single-turn question based on a knowledge base.</p>
+     * <p>Performs single-turn question answering based on a knowledge base.</p>
      * 
      * @param request AnswerKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -702,7 +702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Answers a single-turn question based on a knowledge base.</p>
+     * <p>Performs single-turn question answering based on a knowledge base.</p>
      * 
      * @param request AnswerKnowledgeBaseRequest
      * @return AnswerKnowledgeBaseResponse
@@ -2024,9 +2024,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disables a PolarDB for AI task. Prerequisites: The Category of the target cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before disabling the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to disable the task, but you must still confirm that the task is enabled and its status is 1.</p>
+     * <p>Closes a PolarDB for AI task. Prerequisites: The category of the destination cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before you close the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to close the task. However, you must still confirm that the task is enabled and its status is 1.</p>
      * <h2>Prerequisites</h2>
-     * <p>In the detailed description of CloseAITask, supplement the prerequisite workflow (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be 1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</p>
+     * <p>Supplement the prerequisite workflow in the detailed description of CloseAITask (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be Status=1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables the PolarDB for AI feature.</p>
@@ -2081,9 +2081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disables a PolarDB for AI task. Prerequisites: The Category of the target cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before disabling the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to disable the task, but you must still confirm that the task is enabled and its status is 1.</p>
+     * <p>Closes a PolarDB for AI task. Prerequisites: The category of the destination cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before you close the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to close the task. However, you must still confirm that the task is enabled and its status is 1.</p>
      * <h2>Prerequisites</h2>
-     * <p>In the detailed description of CloseAITask, supplement the prerequisite workflow (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be 1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</p>
+     * <p>Supplement the prerequisite workflow in the detailed description of CloseAITask (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be Status=1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables the PolarDB for AI feature.</p>
@@ -2706,7 +2706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. The maas type is not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</p>
+     * <p>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. Clusters of the maas type are not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an AI node.</p>
@@ -2745,7 +2745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. The maas type is not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</p>
+     * <p>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. Clusters of the maas type are not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an AI node.</p>
@@ -3560,7 +3560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds an Agent to a Squad.</p>
+     * <p>Associates an agent with a squad.</p>
      * 
      * @param request CreateApplicationAgentRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3600,7 +3600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds an Agent to a Squad.</p>
+     * <p>Associates an agent with a squad.</p>
      * 
      * @param request CreateApplicationAgentRelationRequest
      * @return CreateApplicationAgentRelationResponse
@@ -4283,6 +4283,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCostRuleResponse createCostRuleWithOptions(CreateCostRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bypassQuotaCheck)) {
+            query.put("BypassQuotaCheck", request.bypassQuotaCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cacheCostPointsPerMillion)) {
             query.put("CacheCostPointsPerMillion", request.cacheCostPointsPerMillion);
         }
@@ -4317,6 +4321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputCostPointsPerMillion)) {
             query.put("InputCostPointsPerMillion", request.inputCostPointsPerMillion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputTokenTier)) {
+            query.put("InputTokenTier", request.inputTokenTier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputTokenTiers)) {
@@ -4930,10 +4938,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: This operation applies only to PolarDB on ENS clusters and does not apply to standard PolarDB clusters. The CreateDBClusterZonal operation is currently unavailable. To create an edge cluster, apply through the ENS or MyBase infrastructure, or call the CreateDBCluster operation with CloudProvider set to ENS. Then, call the DescribeDBClustersZonal operation to obtain the edge cluster ID. Usage notes: This operation applies only to PolarDB on ENS clusters. It outlines the concepts of edge clouds, activation methods, and how to obtain the edge cluster ID, noting that the CreateDBClusterZonal operation is unavailable and clusters must be created through alternative methods.</p>
+     * <p>Before you begin: This operation applies only to Edge Node Service (ENS) edge cloud clusters and is not applicable to standard PolarDB clusters. Currently, the CreateDBClusterZonal operation is unavailable. To create an edge cluster, apply through ENS or MyBase infrastructure, or call CreateDBCluster with CloudProvider set to ENS, and then call DescribeDBClustersZonal to obtain the edge cluster ID. Operation description: Prerequisites for edge cloud clusters: This API applies only to ENS edge cloud clusters and is not applicable to standard PolarDB clusters. It provides an overview of edge clouds, activation methods, and instructions on how to obtain the edge cluster ID, noting that the CreateDBClusterZonal API is currently unavailable and clusters must be created through alternative methods.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a custom cluster endpoint for an edge cluster.</p>
+     * <p>Creates a custom cluster endpoint for an edge cloud cluster.</p>
      * 
      * @param request CreateDBClusterEndpointZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5021,10 +5029,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: This operation applies only to PolarDB on ENS clusters and does not apply to standard PolarDB clusters. The CreateDBClusterZonal operation is currently unavailable. To create an edge cluster, apply through the ENS or MyBase infrastructure, or call the CreateDBCluster operation with CloudProvider set to ENS. Then, call the DescribeDBClustersZonal operation to obtain the edge cluster ID. Usage notes: This operation applies only to PolarDB on ENS clusters. It outlines the concepts of edge clouds, activation methods, and how to obtain the edge cluster ID, noting that the CreateDBClusterZonal operation is unavailable and clusters must be created through alternative methods.</p>
+     * <p>Before you begin: This operation applies only to Edge Node Service (ENS) edge cloud clusters and is not applicable to standard PolarDB clusters. Currently, the CreateDBClusterZonal operation is unavailable. To create an edge cluster, apply through ENS or MyBase infrastructure, or call CreateDBCluster with CloudProvider set to ENS, and then call DescribeDBClustersZonal to obtain the edge cluster ID. Operation description: Prerequisites for edge cloud clusters: This API applies only to ENS edge cloud clusters and is not applicable to standard PolarDB clusters. It provides an overview of edge clouds, activation methods, and instructions on how to obtain the edge cluster ID, noting that the CreateDBClusterZonal API is currently unavailable and clusters must be created through alternative methods.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a custom cluster endpoint for an edge cluster.</p>
+     * <p>Creates a custom cluster endpoint for an edge cloud cluster.</p>
      * 
      * @param request CreateDBClusterEndpointZonalRequest
      * @return CreateDBClusterEndpointZonalResponse
@@ -5130,15 +5138,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A DBLink provides connectivity between two PolarDB for PostgreSQL (Oracle-compatible) clusters, or between a PolarDB for PostgreSQL (Oracle-compatible) cluster and a self-managed PostgreSQL database on an Elastic Compute Service (ECS) instance. This lets you query data across clusters.</p>
+     * <p>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster and a self-managed PostgreSQL database on an ECS instance. You can use a DBLink to query data across clusters.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Each cluster supports a maximum of 10 DBLinks.</p>
-     * </li>
-     * <li><p>A DBLink consumes one DBLink quota from both the source cluster and the destination cluster.</p>
-     * </li>
-     * <li><p>The source cluster and the destination cluster or destination ECS instance must be in the same region.</p>
-     * </li>
+     * <li>You can create up to 10 DBLinks for a cluster.</li>
+     * <li>Both the source and destination clusters of a DBLink consume one DBLink quota.</li>
+     * <li>The source cluster and the destination cluster or destination ECS instance must be in the same region.</li>
      * </ul>
      * </blockquote>
      * 
@@ -5239,15 +5244,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A DBLink provides connectivity between two PolarDB for PostgreSQL (Oracle-compatible) clusters, or between a PolarDB for PostgreSQL (Oracle-compatible) cluster and a self-managed PostgreSQL database on an Elastic Compute Service (ECS) instance. This lets you query data across clusters.</p>
+     * <p>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster and a self-managed PostgreSQL database on an ECS instance. You can use a DBLink to query data across clusters.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Each cluster supports a maximum of 10 DBLinks.</p>
-     * </li>
-     * <li><p>A DBLink consumes one DBLink quota from both the source cluster and the destination cluster.</p>
-     * </li>
-     * <li><p>The source cluster and the destination cluster or destination ECS instance must be in the same region.</p>
-     * </li>
+     * <li>You can create up to 10 DBLinks for a cluster.</li>
+     * <li>Both the source and destination clusters of a DBLink consume one DBLink quota.</li>
+     * <li>The source cluster and the destination cluster or destination ECS instance must be in the same region.</li>
      * </ul>
      * </blockquote>
      * 
@@ -5634,12 +5636,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call DescribeDBClustersZonal to query edge clusters in ENS dedicated regions, or call CreateDBCluster with CloudProvider=ENS to create an edge cluster, and then call CreateDatabaseZonal.</p>
+     * <p>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call the DescribeDBClustersZonal operation to query edge clusters in ENS dedicated regions, or call the CreateDBCluster operation with CloudProvider set to ENS to create an edge cluster, and then call CreateDatabaseZonal.</p>
      * <h2>Before you begin</h2>
-     * <p>Append the complete dependency chain description for ENS cluster creation to the detailed_description of the CreateDatabaseZonal API. Specify that you must first use the ENS product API to create a VPC and a vSwitch in an edge region, then create an ENS cluster, and finally call CreateDatabaseZonal.</p>
+     * <p>Append the complete dependency chain for creating an ENS cluster to the detailed_description of the CreateDatabaseZonal API. Specify that you must first create a VPC and a vSwitch in an edge region by using the ENS API, then create an ENS cluster, and finally call CreateDatabaseZonal.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a database for an ApsaraDB for PolarDB edge cluster.</p>
+     * <p>Creates an ApsaraDB PolarDB edge database.</p>
      * 
      * @param request CreateDatabaseZonalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5719,12 +5721,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call DescribeDBClustersZonal to query edge clusters in ENS dedicated regions, or call CreateDBCluster with CloudProvider=ENS to create an edge cluster, and then call CreateDatabaseZonal.</p>
+     * <p>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call the DescribeDBClustersZonal operation to query edge clusters in ENS dedicated regions, or call the CreateDBCluster operation with CloudProvider set to ENS to create an edge cluster, and then call CreateDatabaseZonal.</p>
      * <h2>Before you begin</h2>
-     * <p>Append the complete dependency chain description for ENS cluster creation to the detailed_description of the CreateDatabaseZonal API. Specify that you must first use the ENS product API to create a VPC and a vSwitch in an edge region, then create an ENS cluster, and finally call CreateDatabaseZonal.</p>
+     * <p>Append the complete dependency chain for creating an ENS cluster to the detailed_description of the CreateDatabaseZonal API. Specify that you must first create a VPC and a vSwitch in an edge region by using the ENS API, then create an ENS cluster, and finally call CreateDatabaseZonal.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a database for an ApsaraDB for PolarDB edge cluster.</p>
+     * <p>Creates an ApsaraDB PolarDB edge database.</p>
      * 
      * @param request CreateDatabaseZonalRequest
      * @return CreateDatabaseZonalResponse
@@ -6472,7 +6474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the service activation status in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the VPC DescribeVpcs and DescribeVSwitches operations, query security groups by calling the ECS DescribeSecurityGroups operation, and query buckets by calling the OSS ListBuckets operation. If the resources do not exist, create them in the corresponding services first.</p>
+     * <p>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a knowledge space.</p>
@@ -6583,7 +6585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the service activation status in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the VPC DescribeVpcs and DescribeVSwitches operations, query security groups by calling the ECS DescribeSecurityGroups operation, and query buckets by calling the OSS ListBuckets operation. If the resources do not exist, create them in the corresponding services first.</p>
+     * <p>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a knowledge space.</p>
@@ -6745,6 +6747,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelCategory)) {
             query.put("ModelCategory", request.modelCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelMappings)) {
+            query.put("ModelMappings", request.modelMappings);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelRouting)) {
+            query.put("ModelRouting", request.modelRouting);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -7419,6 +7429,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>前提条件</h2>
+     * <ul>
+     * <li>已创建 PolarClaw 应用：技能将上传到该应用。可调用 DescribeApplications 并将 ApplicationTypes 设置为 polardb_polarclaw 查询应用列表，获取应用 ID。</li>
+     * <li>技能文件已存放在 OSS Bucket 中：OSSBucket 必须是真实存在、且与应用处于同一地域的 Bucket，Bucket 所在地域可通过 BucketRegionId 指定。</li>
+     * <li>OSSPrefix 为技能文件在 Bucket 中的对象前缀。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Uploads a skill.</p>
      * 
@@ -7487,6 +7505,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>前提条件</h2>
+     * <ul>
+     * <li>已创建 PolarClaw 应用：技能将上传到该应用。可调用 DescribeApplications 并将 ApplicationTypes 设置为 polardb_polarclaw 查询应用列表，获取应用 ID。</li>
+     * <li>技能文件已存放在 OSS Bucket 中：OSSBucket 必须是真实存在、且与应用处于同一地域的 Bucket，Bucket 所在地域可通过 BucketRegionId 指定。</li>
+     * <li>OSSPrefix 为技能文件在 Bucket 中的对象前缀。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Uploads a skill.</p>
      * 
@@ -7836,10 +7862,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the creation, modification, deletion, binding, and unbinding of resource control rules, but does not support querying Resource Control CPU utilization.</p>
+     * <p>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding rules, but does not support querying CPU utilization for Resource Control.</p>
      * <h3>Limits</h3>
      * <ul>
-     * <li>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
      * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
@@ -7849,7 +7875,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set the maximum CPU quota percentage available to the rule by using MaxCpu, or set the maximum number of CPU cores available to the rule by using CpuCount. When you create a rule, you must specify either MaxCpu or CpuCount, but not both.</p>
+     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can specify the maximum CPU quota percentage for the rule by using MaxCpu or the maximum number of CPU cores by using CpuCount.
+     * You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</p>
      * 
      * @param request CreateResourceControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7897,10 +7924,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the creation, modification, deletion, binding, and unbinding of resource control rules, but does not support querying Resource Control CPU utilization.</p>
+     * <p>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding rules, but does not support querying CPU utilization for Resource Control.</p>
      * <h3>Limits</h3>
      * <ul>
-     * <li>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
      * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
      * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
      * <li>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<blockquote>
@@ -7910,7 +7937,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set the maximum CPU quota percentage available to the rule by using MaxCpu, or set the maximum number of CPU cores available to the rule by using CpuCount. When you create a rule, you must specify either MaxCpu or CpuCount, but not both.</p>
+     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can specify the maximum CPU quota percentage for the rule by using MaxCpu or the maximum number of CPU cores by using CpuCount.
+     * You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</p>
      * 
      * @param request CreateResourceControlRequest
      * @return CreateResourceControlResponse
@@ -15183,10 +15211,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you begin: Log backup is enabled for the destination cluster, and the required physical logs are archived. First, call DescribeBackupLogs to query valid redo log backup IDs, and then call this operation by using the cluster ID and the redo log backup IDs.</p>
+     * <p>Before you begin: Log backup is enabled for the target cluster, and the required physical logs are archived. Invoke DescribeBackupLogs to query valid physical log backup IDs, and then invoke this operation with the cluster ID and log backup ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the download links of redo log backups.</p>
+     * <p>Queries the download links for physical log backups.</p>
      * 
      * @param request DescribeBackupLogDownloadLinksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15226,10 +15254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you begin: Log backup is enabled for the destination cluster, and the required physical logs are archived. First, call DescribeBackupLogs to query valid redo log backup IDs, and then call this operation by using the cluster ID and the redo log backup IDs.</p>
+     * <p>Before you begin: Log backup is enabled for the target cluster, and the required physical logs are archived. Invoke DescribeBackupLogs to query valid physical log backup IDs, and then invoke this operation with the cluster ID and log backup ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the download links of redo log backups.</p>
+     * <p>Queries the download links for physical log backups.</p>
      * 
      * @param request DescribeBackupLogDownloadLinksRequest
      * @return DescribeBackupLogDownloadLinksResponse
@@ -30522,6 +30550,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyCostRuleResponse modifyCostRuleWithOptions(ModifyCostRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bypassQuotaCheck)) {
+            query.put("BypassQuotaCheck", request.bypassQuotaCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cacheCostPointsPerMillion)) {
             query.put("CacheCostPointsPerMillion", request.cacheCostPointsPerMillion);
         }
@@ -34454,6 +34486,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ModelCategory", request.modelCategory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelMappings)) {
+            query.put("ModelMappings", request.modelMappings);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelRouting)) {
+            query.put("ModelRouting", request.modelRouting);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pathPrefix)) {
             query.put("PathPrefix", request.pathPrefix);
         }
@@ -35975,9 +36019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Registers an uploaded file to a knowledge base. Before you begin, activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</p>
+     * <p>Registers an uploaded file to a knowledge base. Before you begin: activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</p>
      * <h2>Before you begin</h2>
-     * <p>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the corresponding API operations for each step.</p>
+     * <p>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the API operations for each step.</p>
      * 
      * <b>summary</b> : 
      * <p>Registers an OSS file to a knowledge base.</p>
@@ -36020,9 +36064,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Registers an uploaded file to a knowledge base. Before you begin, activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</p>
+     * <p>Registers an uploaded file to a knowledge base. Before you begin: activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</p>
      * <h2>Before you begin</h2>
-     * <p>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the corresponding API operations for each step.</p>
+     * <p>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the API operations for each step.</p>
      * 
      * <b>summary</b> : 
      * <p>Registers an OSS file to a knowledge base.</p>
@@ -37120,6 +37164,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>前提条件</h2>
+     * <p>本接口用于重启边缘云（ENS）PolarDB 集群的节点。边缘云集群需通过 CreateDBCluster 创建，并将 CloudProvider 设置为 ENS；可通过 DescribeDBClustersZonal 查询当前账号下的边缘云集群及其节点，通过 DescribeEdgeCloudRegion 查询可用的边缘云地域、中心管控地域（CentralControlRegionId）及备用边缘云地域。</p>
+     * <h2>地域说明</h2>
+     * <p>本接口 spec 未声明、也不转发 RegionId 参数；但通过 SDK 或 OpenAPI 调用时仍需指定地域，请使用 DescribeEdgeCloudRegion 返回的中心管控地域 ID，以完成 endpoint 路由；未指定地域时 SDK 无法构建正确的区域化 endpoint。若研发确认该接口为非地域化接口、调用时无需地域路由，则以研发结论为准。</p>
+     * 
      * <b>summary</b> : 
      * <p>Restarts a node of an edge cluster for PolarDB on ENS.</p>
      * 
@@ -37176,6 +37226,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>前提条件</h2>
+     * <p>本接口用于重启边缘云（ENS）PolarDB 集群的节点。边缘云集群需通过 CreateDBCluster 创建，并将 CloudProvider 设置为 ENS；可通过 DescribeDBClustersZonal 查询当前账号下的边缘云集群及其节点，通过 DescribeEdgeCloudRegion 查询可用的边缘云地域、中心管控地域（CentralControlRegionId）及备用边缘云地域。</p>
+     * <h2>地域说明</h2>
+     * <p>本接口 spec 未声明、也不转发 RegionId 参数；但通过 SDK 或 OpenAPI 调用时仍需指定地域，请使用 DescribeEdgeCloudRegion 返回的中心管控地域 ID，以完成 endpoint 路由；未指定地域时 SDK 无法构建正确的区域化 endpoint。若研发确认该接口为非地域化接口、调用时无需地域路由，则以研发结论为准。</p>
+     * 
      * <b>summary</b> : 
      * <p>Restarts a node of an edge cluster for PolarDB on ENS.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AnswerKnowledgeBaseRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the knowledge base. To obtain the ID, first call CreateKnowledgeSpace to create a knowledge space, use the returned KnowledgeSpaceId to call CreateKnowledgeBase, and then use the KnowledgeBaseId returned by CreateKnowledgeBase. Separate multiple knowledge base IDs with commas.</p>
+     * <p>The unique identifier of the knowledge base. To obtain this ID, call CreateKnowledgeSpace to create a knowledge space, use the returned KnowledgeSpaceId to call CreateKnowledgeBase, and then use the KnowledgeBaseId returned by CreateKnowledgeBase. You can specify up to 50 knowledge base IDs separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Summarize this year\&quot;s financial report</p>
+     * <p>Summarize the financial report for this year</p>
      */
     @NameInMap("QueryText")
     public String queryText;
@@ -89,7 +89,7 @@ public class AnswerKnowledgeBaseRequest extends TeaModel {
     public String systemPrompt;
 
     /**
-     * <p>The number of results to recall.</p>
+     * <p>The number of results to recall during retrieval.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

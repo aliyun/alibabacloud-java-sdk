@@ -18,7 +18,7 @@ public class RegisterKnowledgeBaseFileRequest extends TeaModel {
     public String filePath;
 
     /**
-     * <p>The ID of the knowledge base. Create a knowledge space first, then create a knowledge base, and obtain this ID from the creation result.</p>
+     * <p>The knowledge base ID. Create a knowledge space first, then create a knowledge base, and obtain this ID from the creation result.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

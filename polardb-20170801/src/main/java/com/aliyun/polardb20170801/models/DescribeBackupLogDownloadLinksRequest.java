@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupLogDownloadLinksRequest extends TeaModel {
     /**
-     * <p>The redo log backup IDs.</p>
+     * <p>The physical log backup IDs.</p>
      * <blockquote>
-     * <p>First, invoke DescribeBackupLogs to obtain valid IDs. This parameter is required when you invoke the operation. If omitted, an InvalidArchiveLogIds.Malformed error (HTTP 400) is returned.</p>
+     * <p>Call DescribeBackupLogs to obtain valid IDs. This parameter is required when you call the operation. If you omit this parameter, the InvalidArchiveLogIds.Malformed error (HTTP 400) is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeBackupLogDownloadLinksRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>This parameter is required for the call. If omitted, an InvalidDBClusterId.Malformed error (HTTP 400) is returned.</p>
+     * <p>This parameter is required when you call the operation. If you omit this parameter, the InvalidDBClusterId.Malformed error (HTTP 400) is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeBackupLogDownloadLinksRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The validity period of the download links, in hours. Valid values: 1 to 596523.</p>
+     * <p>The validity period of the download link, in hours. Valid values: 1 to 596523.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

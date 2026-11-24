@@ -48,7 +48,6 @@ public class ModifyModelApiRequest extends TeaModel {
      * <li><strong>embedding</strong></li>
      * <li><strong>rerank</strong></li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -57,8 +56,34 @@ public class ModifyModelApiRequest extends TeaModel {
     public String modelCategory;
 
     /**
+     * <p>The model name mappings, specified as a JSON array string. Each element is in the format of {&quot;Source&quot;:&quot;client model name&quot;,&quot;Target&quot;:&quot;upstream model name&quot;}. If you do not specify this parameter, the current mappings are retained. If you specify &quot;[]&quot;, the mappings are cleared. The Source field is matched in a case-insensitive manner and must be unique.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Source&quot;:&quot;client-model-a&quot;,&quot;Target&quot;:&quot;upstream-model-a&quot;},{&quot;Source&quot;:&quot;client-model-b&quot;,&quot;Target&quot;:&quot;upstream-model-b&quot;}]</p>
+     */
+    @NameInMap("ModelMappings")
+    public String modelMappings;
+
+    /**
+     * <p>The intelligent routing candidate list, specified as a JSON object string in the format of {&quot;AllowedModels&quot;:[&quot;candidate model name&quot;]}. If you do not specify this parameter, the current list is retained. If you specify this parameter, the existing list is fully replaced with the new list. You cannot use an empty list to disable the feature. Saving candidates does not enable the feature. You must call EnableModelRouting first.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;AllowedModels&quot;:[&quot;deepseek-v4-pro&quot;,&quot;glm-5.3&quot;,&quot;glm-5.3-flash&quot;]}</p>
+     */
+    @NameInMap("ModelRouting")
+    public String modelRouting;
+
+    /**
+     * <p>The name of the model API. This parameter is modifiable. If you do not specify this parameter, the original name is retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jev-chat-api</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    /**
      * <p>The API path prefix.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>/test</p>
@@ -74,7 +99,6 @@ public class ModifyModelApiRequest extends TeaModel {
      * <li><strong>bailian</strong></li>
      * <li><strong>vllm</strong></li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>openai</p>
@@ -110,8 +134,7 @@ public class ModifyModelApiRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of routing rules, formatted as a JSON array string. Usage notes: Correct the value of FallbackMode in the RouteRules parameter example by replacing it with a valid value or removing the field, and add the list of valid values and their meanings for the FallbackMode subfield to the description of RouteRules.</p>
-     * <p>This parameter is required.</p>
+     * <p>The list of routing rules, specified as a JSON array string. Usage note: Correct the value of FallbackMode in the RouteRules parameter example by replacing it with a valid value or removing the field, and add the list of valid values and their descriptions for the FallbackMode subfield in the description of RouteRules.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -177,6 +200,30 @@ public class ModifyModelApiRequest extends TeaModel {
     }
     public String getModelCategory() {
         return this.modelCategory;
+    }
+
+    public ModifyModelApiRequest setModelMappings(String modelMappings) {
+        this.modelMappings = modelMappings;
+        return this;
+    }
+    public String getModelMappings() {
+        return this.modelMappings;
+    }
+
+    public ModifyModelApiRequest setModelRouting(String modelRouting) {
+        this.modelRouting = modelRouting;
+        return this;
+    }
+    public String getModelRouting() {
+        return this.modelRouting;
+    }
+
+    public ModifyModelApiRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ModifyModelApiRequest setPathPrefix(String pathPrefix) {

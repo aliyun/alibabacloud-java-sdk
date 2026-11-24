@@ -38,7 +38,7 @@ public class DescribeModelApisRequest extends TeaModel {
     public String modelCategory;
 
     /**
-     * <p>The name of the model API.</p>
+     * <p>The model API name.</p>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -104,7 +104,7 @@ public class DescribeModelApisRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The status of the model API.</p>
+     * <p>The model API status.</p>
      * 
      * <strong>example:</strong>
      * <p>Enable</p>

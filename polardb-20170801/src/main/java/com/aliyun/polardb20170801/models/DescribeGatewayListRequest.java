@@ -14,7 +14,7 @@ public class DescribeGatewayListRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The gateway description.</p>
+     * <p>The description of the gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

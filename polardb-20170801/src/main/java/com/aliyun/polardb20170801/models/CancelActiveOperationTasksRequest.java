@@ -11,7 +11,7 @@ public class CancelActiveOperationTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. This parameter is required. You can call the DescribeRegions operation to query the region ID. If you leave this parameter empty, the system queries scheduled tasks in all regions under the current account by default.</p>
+     * <p>The region ID. This parameter is required. You can call the DescribeRegions operation to query the region ID. If this parameter is left empty, scheduled tasks in all regions under the current account are queried by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class CancelActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The IDs of the O&amp;M events to cancel in batches. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the O&amp;M events to be canceled in batches. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

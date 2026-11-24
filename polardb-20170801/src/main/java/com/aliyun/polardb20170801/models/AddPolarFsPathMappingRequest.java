@@ -70,7 +70,7 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The AccessKey ID for the bucket.</p>
+         * <p>The AccessKey ID of the bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>LTAIExampleBucketAccessKeyId</p>
@@ -79,7 +79,7 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
         public String bucketAccessKeyId;
 
         /**
-         * <p>The AccessKey secret for the bucket.</p>
+         * <p>The AccessKey secret of the bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>ExampleBucketAccessKeySecret123</p>

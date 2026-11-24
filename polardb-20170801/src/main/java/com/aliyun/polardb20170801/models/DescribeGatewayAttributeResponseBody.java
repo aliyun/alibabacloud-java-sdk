@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeGatewayAttributeResponseBody extends TeaModel {
     /**
-     * <p>The specification code.</p>
+     * <p>The cumulative expiration time of the smart routing privilege in UTC and ISO 8601 format. This parameter may be omitted or null if smart routing is not enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-12-09T06:43:33Z</p>
+     */
+    @NameInMap("AutoExpireTime")
+    public String autoExpireTime;
+
+    /**
+     * <p>The instance type code.</p>
      * 
      * <strong>example:</strong>
      * <p>polar.app.g2.medium</p>
@@ -15,7 +24,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The creation time.</p>
-     * <p>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-02-24T11:57:54Z</p>
@@ -50,7 +59,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>The expiration time.</p>
      * <p>This parameter is empty when the billing method is Postpaid.</p>
-     * <p>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2027-04-22T16:00:00Z</p>
@@ -61,10 +70,8 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the cluster has expired. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The cluster has expired.</li>
+     * <li>false: The cluster has not expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +81,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public Boolean expired;
 
     /**
-     * <p>The gateway instance ID.</p>
+     * <p>The instance ID of the gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-xxxxxxx</p>
@@ -102,7 +109,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The last modification time.</p>
-     * <p>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-07T02:19:55Z</p>
@@ -151,16 +158,25 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public String runningVersion;
 
     /**
-     * <p>The application-level whitelist.</p>
+     * <p>The application-level IP whitelist.</p>
      */
     @NameInMap("SecurityIPArrays")
     public java.util.List<DescribeGatewayAttributeResponseBodySecurityIPArrays> securityIPArrays;
 
     /**
-     * <p>Indicates whether the semantic cache is enabled. If the semantic cache is disabled or has never been enabled, the value is false.</p>
+     * <p>Indicates whether semantic caching is enabled. If it is disabled or has never been enabled, the value is false.</p>
      */
     @NameInMap("SemanticCacheEnabled")
     public Boolean semanticCacheEnabled;
+
+    /**
+     * <p>Indicates whether smart routing is enabled for the instance. The value is returned by ApsaraDB based on the validity period of the privilege. A value of true does not indicate that the data plane is healthy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("SmartRoutingEnabled")
+    public Boolean smartRoutingEnabled;
 
     /**
      * <p>The application status. Valid values:</p>
@@ -196,6 +212,14 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public static DescribeGatewayAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGatewayAttributeResponseBody self = new DescribeGatewayAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGatewayAttributeResponseBody setAutoExpireTime(String autoExpireTime) {
+        this.autoExpireTime = autoExpireTime;
+        return this;
+    }
+    public String getAutoExpireTime() {
+        return this.autoExpireTime;
     }
 
     public DescribeGatewayAttributeResponseBody setClassCode(String classCode) {
@@ -334,6 +358,14 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         return this.semanticCacheEnabled;
     }
 
+    public DescribeGatewayAttributeResponseBody setSmartRoutingEnabled(Boolean smartRoutingEnabled) {
+        this.smartRoutingEnabled = smartRoutingEnabled;
+        return this;
+    }
+    public Boolean getSmartRoutingEnabled() {
+        return this.smartRoutingEnabled;
+    }
+
     public DescribeGatewayAttributeResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -360,7 +392,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
 
     public static class DescribeGatewayAttributeResponseBodyEndpoints extends TeaModel {
         /**
-         * <p>The endpoint address.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-xxxxx.polardbaigateway.pre.rds.aliyuncs.com</p>
@@ -369,7 +401,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The ID of the endpoint node.</p>
+         * <p>The ID of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -378,7 +410,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         public String endpointId;
 
         /**
-         * <p>The gateway instance ID.</p>
+         * <p>The instance ID of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-xxxxxxx</p>
@@ -387,10 +419,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
-         * <p>The type of the endpoint address. Valid values:</p>
+         * <p>The endpoint type. Valid values:</p>
          * <ul>
          * <li>Private: VPC address</li>
-         * <li>Public: Internet address</li>
+         * <li>Public: public network address</li>
          * </ul>
          * 
          * <strong>example:</strong>

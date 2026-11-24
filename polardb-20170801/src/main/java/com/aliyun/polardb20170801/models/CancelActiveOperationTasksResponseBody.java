@@ -14,7 +14,7 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The IDs of the O&amp;M events to cancel in batches. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the O&amp;M events to be canceled in batches. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>2355,2352</p>

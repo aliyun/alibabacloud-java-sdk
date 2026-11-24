@@ -20,7 +20,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of records on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -29,8 +29,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
-     * <p>Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -48,7 +47,16 @@ public class DescribeModelApisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
+    @NameInMap("TotalPages")
+    public Integer totalPages;
+
+    /**
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -101,6 +109,14 @@ public class DescribeModelApisResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeModelApisResponseBody setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
+        return this;
+    }
+    public Integer getTotalPages() {
+        return this.totalPages;
+    }
+
     public DescribeModelApisResponseBody setTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
@@ -134,6 +150,15 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>The ID of the gateway instance to which the model API belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-2ze3x6i1d7g5rto28</p>
+         */
+        @NameInMap("CustinsName")
+        public String custinsName;
+
+        /**
          * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +166,15 @@ public class DescribeModelApisResponseBody extends TeaModel {
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
+
+        /**
+         * <p>The modification time of the model API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-09T06:43:33Z</p>
+         */
+        @NameInMap("GmtModified")
+        public String gmtModified;
 
         /**
          * <p>The model API IDs.</p>
@@ -152,7 +186,25 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String modelApiId;
 
         /**
-         * <p>The name of the model API.</p>
+         * <p>The model name mappings, which is a JSON array string. Each element is in the format of {&quot;Source&quot;:&quot;client model name&quot;,&quot;Target&quot;:&quot;upstream model name&quot;}. If not configured, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Source&quot;:&quot;client-model-a&quot;,&quot;Target&quot;:&quot;upstream-model-a&quot;}]</p>
+         */
+        @NameInMap("ModelMappings")
+        public String modelMappings;
+
+        /**
+         * <p>The intelligent routing candidate list, which is a JSON object string in the format of {&quot;AllowedModels&quot;:[&quot;candidate model name&quot;]}. If not configured, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AllowedModels&quot;:[&quot;deepseek-v4-pro&quot;,&quot;glm-5.3&quot;,&quot;glm-5.3-flash&quot;]}</p>
+         */
+        @NameInMap("ModelRouting")
+        public String modelRouting;
+
+        /**
+         * <p>The model API name.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -185,7 +237,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of input tokens.</p>
+         * <p>The number of input points.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -194,7 +246,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String recordInput;
 
         /**
-         * <p>The number of output tokens.</p>
+         * <p>The number of output points.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -235,7 +287,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String routeRules;
 
         /**
-         * <p>The status of the model API.</p>
+         * <p>The model API status.</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -264,6 +316,14 @@ public class DescribeModelApisResponseBody extends TeaModel {
             return this.config;
         }
 
+        public DescribeModelApisResponseBodyItems setCustinsName(String custinsName) {
+            this.custinsName = custinsName;
+            return this;
+        }
+        public String getCustinsName() {
+            return this.custinsName;
+        }
+
         public DescribeModelApisResponseBodyItems setGmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
             return this;
@@ -272,12 +332,36 @@ public class DescribeModelApisResponseBody extends TeaModel {
             return this.gmtCreated;
         }
 
+        public DescribeModelApisResponseBodyItems setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
         public DescribeModelApisResponseBodyItems setModelApiId(String modelApiId) {
             this.modelApiId = modelApiId;
             return this;
         }
         public String getModelApiId() {
             return this.modelApiId;
+        }
+
+        public DescribeModelApisResponseBodyItems setModelMappings(String modelMappings) {
+            this.modelMappings = modelMappings;
+            return this;
+        }
+        public String getModelMappings() {
+            return this.modelMappings;
+        }
+
+        public DescribeModelApisResponseBodyItems setModelRouting(String modelRouting) {
+            this.modelRouting = modelRouting;
+            return this;
+        }
+        public String getModelRouting() {
+            return this.modelRouting;
         }
 
         public DescribeModelApisResponseBodyItems setName(String name) {

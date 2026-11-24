@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateCostRuleRequest extends TeaModel {
     /**
+     * <p>Specifies whether to bypass the quota check. This parameter is optional and has no default value. If omitted, it is not passed through. Both false and true are passed through as-is.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("BypassQuotaCheck")
+    public Boolean bypassQuotaCheck;
+
+    /**
      * <p>The cache read cost points per million tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +32,7 @@ public class CreateCostRuleRequest extends TeaModel {
     public String cacheCreationCostPointsPerMillion;
 
     /**
-     * <p>The effective start time in the yyyy-MM-dd HH:mm:ss format. If this parameter is not specified, the rule takes effect immediately.</p>
+     * <p>The effective start time in the yyyy-MM-dd HH:mm:ss format. If this parameter is not provided, the rule takes effect immediately.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-14 00:00:00</p>
@@ -87,7 +96,16 @@ public class CreateCostRuleRequest extends TeaModel {
     public String inputCostPointsPerMillion;
 
     /**
-     * <p>The tiered price for input tokens (non-cumulative). The value is a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]. If this parameter is specified, it takes precedence over InputCostPointsPerMillion. An empty array [] is not allowed.</p>
+     * <p>The input token tier. An empty string indicates the default tier. If this parameter is omitted, it is processed by the backend.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0-32K</p>
+     */
+    @NameInMap("InputTokenTier")
+    public String inputTokenTier;
+
+    /**
+     * <p>The tiered price for input tokens (non-cumulative). The value is a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]. If this parameter is provided, it takes precedence over InputCostPointsPerMillion. An empty array [] is not allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]</p>
@@ -145,6 +163,14 @@ public class CreateCostRuleRequest extends TeaModel {
     public static CreateCostRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCostRuleRequest self = new CreateCostRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCostRuleRequest setBypassQuotaCheck(Boolean bypassQuotaCheck) {
+        this.bypassQuotaCheck = bypassQuotaCheck;
+        return this;
+    }
+    public Boolean getBypassQuotaCheck() {
+        return this.bypassQuotaCheck;
     }
 
     public CreateCostRuleRequest setCacheCostPointsPerMillion(String cacheCostPointsPerMillion) {
@@ -217,6 +243,14 @@ public class CreateCostRuleRequest extends TeaModel {
     }
     public String getInputCostPointsPerMillion() {
         return this.inputCostPointsPerMillion;
+    }
+
+    public CreateCostRuleRequest setInputTokenTier(String inputTokenTier) {
+        this.inputTokenTier = inputTokenTier;
+        return this;
+    }
+    public String getInputTokenTier() {
+        return this.inputTokenTier;
     }
 
     public CreateCostRuleRequest setInputTokenTiers(String inputTokenTiers) {

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyCostRuleRequest extends TeaModel {
     /**
+     * <p>Specifies whether to bypass the quota check. This parameter is optional and has no default value. If omitted, it is not passed through. Both false and true are passed through as-is.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("BypassQuotaCheck")
+    public Boolean bypassQuotaCheck;
+
+    /**
      * <p>The cache cost points per million tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +32,7 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String cacheCreationCostPointsPerMillion;
 
     /**
-     * <p>The ID of the cost rule.</p>
+     * <p>The cost rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +79,7 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String inputCostPointsPerMillion;
 
     /**
-     * <p>The input token tiered price (non-cumulative) specified as a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]. A non-empty value replaces all existing tiers. If this parameter is not specified or is set to an empty string, the original tiers are retained. An empty array [] is not allowed.</p>
+     * <p>The tiered price for input tokens (non-cumulative). This parameter is a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]. If this parameter is not empty, all tiers are replaced. If this parameter is not specified or an empty string is passed, the original tiers are retained. An empty array [] is not allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]</p>
@@ -89,7 +98,7 @@ public class ModifyCostRuleRequest extends TeaModel {
     public String modelName;
 
     /**
-     * <p>The ID of the model service.</p>
+     * <p>The model service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,6 +137,14 @@ public class ModifyCostRuleRequest extends TeaModel {
     public static ModifyCostRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCostRuleRequest self = new ModifyCostRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCostRuleRequest setBypassQuotaCheck(Boolean bypassQuotaCheck) {
+        this.bypassQuotaCheck = bypassQuotaCheck;
+        return this;
+    }
+    public Boolean getBypassQuotaCheck() {
+        return this.bypassQuotaCheck;
     }
 
     public ModifyCostRuleRequest setCacheCostPointsPerMillion(String cacheCostPointsPerMillion) {

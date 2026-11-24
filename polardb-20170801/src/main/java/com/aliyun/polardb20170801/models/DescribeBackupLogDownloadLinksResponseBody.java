@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
     /**
-     * <p>The redo log backup details.</p>
+     * <p>The physical log backup details.</p>
      */
     @NameInMap("BackupLogDownloadLinkItem")
     public java.util.List<DescribeBackupLogDownloadLinksResponseBodyBackupLogDownloadLinkItem> backupLogDownloadLinkItem;
@@ -42,7 +42,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
 
     public static class DescribeBackupLogDownloadLinksResponseBodyBackupLogDownloadLinkItem extends TeaModel {
         /**
-         * <p>The redo log backup ID.</p>
+         * <p>The physical backup log ID.</p>
          * 
          * <strong>example:</strong>
          * <p>78167430</p>
@@ -51,13 +51,13 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
         public String backupLogId;
 
         /**
-         * <p>The public download link of the redo log backup.</p>
+         * <p>The Internet download link for the physical backup log.</p>
          */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
         /**
-         * <p>The error code for the single entry. Empty if the operation is successful.</p>
+         * <p>The error code for a single record. This parameter is empty if the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>BackupLogNotFound</p>
@@ -66,13 +66,13 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The internal network download link of the redo log backup.</p>
+         * <p>The internal network download link for the physical backup log.</p>
          */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
         /**
-         * <p>The expiration time of the download links, in UTC.</p>
+         * <p>The expiration time of the download link. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-23T03:00:00Z</p>
@@ -81,7 +81,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
         public String linkExpiredTime;
 
         /**
-         * <p>The error message for the single entry. Empty if the operation is successful.</p>
+         * <p>The error message for a single record. This parameter is empty if the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified archived log file does not exist or has been cleaned up.</p>

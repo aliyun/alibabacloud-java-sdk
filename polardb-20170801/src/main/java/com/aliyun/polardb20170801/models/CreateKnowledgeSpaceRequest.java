@@ -61,7 +61,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String embeddingModel;
 
     /**
-     * <p>Specifies whether to enforce ACL authentication for the knowledge space.</p>
+     * <p>Specifies whether to enable mandatory ACL authentication for the knowledge space.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -129,7 +129,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the reranking model.</p>
+     * <p>The name of the rerank model.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-rerank</p>
@@ -161,7 +161,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
      * <p>The sharding strategy. Valid values:</p>
      * <ul>
      * <li>hierarchical: The default value.</li>
-     * <li>hybrid.</li>
+     * <li>hybrid</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -172,7 +172,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String shardingStrategy;
 
     /**
-     * <p>The ID of the vSwitch for the automatic creation of the database.</p>
+     * <p>The ID of the vSwitch for automatic creation of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC for the automatic creation of the database.</p>
+     * <p>The ID of the VPC for automatic creation of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class CreateKnowledgeSpaceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The active zone for the automatic creation of the database.</p>
+     * <p>The active zone for automatic creation of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
