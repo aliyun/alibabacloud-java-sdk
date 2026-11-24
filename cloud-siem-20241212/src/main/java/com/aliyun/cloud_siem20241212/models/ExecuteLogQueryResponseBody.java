@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class ExecuteLogQueryResponseBody extends TeaModel {
     /**
      * <p>The query result.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>[]。</p>
      */
     @NameInMap("QueryResult")
     public java.util.List<?> queryResult;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNormalizationRuleShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to pack non-standard fields into the extended field extend_content. Valid values:</p>
+     * <p>Specifies whether to pack non-standard fields into the extend_content extension field. Valid values:</p>
      * <ul>
      * <li>enabled: Enabled.</li>
      * <li>disabled: Disabled.</li>
@@ -18,7 +18,7 @@ public class CreateNormalizationRuleShrinkRequest extends TeaModel {
     public String extendContentPacked;
 
     /**
-     * <p>The storage mode for extended fields. Valid values: flat, pack, reject.</p>
+     * <p>The storage mode for extension fields. Valid values: flat, pack, and reject.</p>
      * 
      * <strong>example:</strong>
      * <p>flat</p>
@@ -27,7 +27,7 @@ public class CreateNormalizationRuleShrinkRequest extends TeaModel {
     public String extendFieldStoreMode;
 
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -78,7 +78,7 @@ public class CreateNormalizationRuleShrinkRequest extends TeaModel {
     public String normalizationRuleFormat;
 
     /**
-     * <p>The list of normalization rule IDs.</p>
+     * <p>The IDs of the normalization rules.</p>
      */
     @NameInMap("NormalizationRuleIds")
     public String normalizationRuleIdsShrink;
@@ -109,8 +109,8 @@ public class CreateNormalizationRuleShrinkRequest extends TeaModel {
     /**
      * <p>The type of the normalization rule. Valid values:</p>
      * <ul>
-     * <li>predefined: predefined normalization rule.</li>
-     * <li>custom: custom normalization rule.</li>
+     * <li>predefined: Predefined normalization rule.</li>
+     * <li>custom: Custom normalization rule.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -149,8 +149,8 @@ public class CreateNormalizationRuleShrinkRequest extends TeaModel {
     /**
      * <p>The field used to sort the rule list. Valid values:</p>
      * <ul>
-     * <li>GmtModified: sorts by modification time.</li>
-     * <li>Id: sorts by rule ID (default).</li>
+     * <li>GmtModified: Sorts by modification time.</li>
+     * <li>Id: Sorts by rule ID. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,10 +169,10 @@ public class CreateNormalizationRuleShrinkRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. Select the region based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Assets are located outside China.</li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class CreateNormalizationRuleShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the member accounts in the resource folder.</p>
+     * <p>The ID of the member account in the resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -191,7 +191,7 @@ public class CreateNormalizationRuleShrinkRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The vendor ID associated with the normalization rule.</p>
+     * <p>The ID of the vendor associated with the normalization rule.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba_cloud</p>

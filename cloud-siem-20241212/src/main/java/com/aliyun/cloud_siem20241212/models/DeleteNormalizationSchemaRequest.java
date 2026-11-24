@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNormalizationSchemaRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -18,7 +18,7 @@ public class DeleteNormalizationSchemaRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The normalization schema ID.</p>
+     * <p>The ID of the normalization schema.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class DeleteNormalizationSchemaRequest extends TeaModel {
     public String normalizationSchemaId;
 
     /**
-     * <p>The normalization schema type. Valid values:</p>
+     * <p>The type of the normalization schema. Valid values:</p>
      * <ul>
-     * <li>log: log.</li>
-     * <li>entity: entity.</li>
+     * <li>log: Log.</li>
+     * <li>entity: Entity.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,10 +42,10 @@ public class DeleteNormalizationSchemaRequest extends TeaModel {
     public String normalizationSchemaType;
 
     /**
-     * <p>The region where the threat analysis data management center resides. Specify the management center based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets reside outside China.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DeleteNormalizationSchemaRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member to which the administrator switches the view.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExportTaskRequest extends TeaModel {
     /**
-     * <p>The export task parameters, which are concatenated based on query conditions in JSON format.</p>
+     * <p>The parameters of the export task. The parameters are concatenated based on query conditions and formatted in JSON.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -21,7 +21,7 @@ public class CreateExportTaskRequest extends TeaModel {
     /**
      * <p>The export type. Valid values:</p>
      * <ul>
-     * <li>incident_list: Event list.</li>
+     * <li>incident_list: incident list.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,13 +31,11 @@ public class CreateExportTaskRequest extends TeaModel {
     public String exportTaskType;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
-     * <li><strong>en</strong>: English.<blockquote>
-     * <p>Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
-     * </blockquote>
-     * </li>
+     * <li><strong>en</strong>: English.
+     * Note: This parameter is required. If it is not provided, the API returns a 400 error with the message &quot;The specified Lang can not be empty.&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,10 +45,10 @@ public class CreateExportTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</p>
+     * <p>The region of the data management center for Threat Analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets reside outside China.</li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +58,7 @@ public class CreateExportTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the member to which the administrator switches the view.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

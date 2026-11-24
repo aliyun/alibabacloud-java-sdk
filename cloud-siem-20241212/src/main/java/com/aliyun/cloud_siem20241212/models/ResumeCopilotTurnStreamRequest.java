@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeCopilotTurnStreamRequest extends TeaModel {
     /**
-     * <p>The conversation ID. This parameter is required for the second and subsequent turns in a multi-turn conversation.</p>
+     * <p>The conversation ID. This parameter is required for the second and subsequent turns in a multi-turn conversation scenario.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class ResumeCopilotTurnStreamRequest extends TeaModel {
     public java.util.Map<String, Long> cursorByRun;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -35,10 +35,10 @@ public class ResumeCopilotTurnStreamRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region where the data management center for threat analysis is located. You need to select the management center based on the region of your assets. Valid values:</p>
+     * <p>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: The asset belongs to the Chinese mainland and China (Hong Kong).</li>
-     * <li>ap-southeast-1: The asset belongs to a region outside the Chinese mainland.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</li>
+     * <li>ap-southeast-1: Assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListResponseRulesRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
+     * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Explicitly pass the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -18,7 +19,7 @@ public class ListResponseRulesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of data records to read in this request.</p>
+     * <p>The maximum number of data records to return for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -27,7 +28,7 @@ public class ListResponseRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that marks the current reading position. Leave this parameter empty to read from the beginning.</p>
+     * <p>The position from which to start reading. If you leave this parameter empty, the reading starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
@@ -36,7 +37,7 @@ public class ListResponseRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +47,7 @@ public class ListResponseRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,10 +57,10 @@ public class ListResponseRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the threat analysis data management center resides. Select the management center based on the region of your assets. Valid values:</p>
+     * <p>The region where the data management center for threat analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets belong to the Chinese mainland or Hong Kong (China).</li>
-     * <li>ap-southeast-1: Your assets belong to regions outside China.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</li>
+     * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,12 +72,12 @@ public class ListResponseRulesRequest extends TeaModel {
     /**
      * <p>The action type of the automatic response rule. Valid values:</p>
      * <ul>
-     * <li>doPlaybook: execute a playbook</li>
-     * <li>changeEventStatus: update event status</li>
-     * <li>changeThreatLevel: update event threat level</li>
-     * <li>addEventTag: add an event label</li>
-     * <li>deleteEventTag: delete an event label</li>
-     * <li>alertWhitelist: add alert to whitelist</li>
+     * <li>doPlaybook: Execute a playbook.</li>
+     * <li>changeEventStatus: Update the event status.</li>
+     * <li>changeThreatLevel: Update the event threat level.</li>
+     * <li>addEventTag: Add an event tag.</li>
+     * <li>deleteEventTag: Delete an event tag.</li>
+     * <li>alertWhitelist: Add an alert to the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,8 +98,8 @@ public class ListResponseRulesRequest extends TeaModel {
     /**
      * <p>The status of the automatic response rule. Valid values:</p>
      * <ul>
-     * <li>0: disabled</li>
-     * <li>100: enabled</li>
+     * <li>0: Disabled.</li>
+     * <li>100: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,8 +111,8 @@ public class ListResponseRulesRequest extends TeaModel {
     /**
      * <p>The type of the response rule. Valid values:</p>
      * <ul>
-     * <li>preset: predefined</li>
-     * <li>custom: custom</li>
+     * <li>preset: Preset.</li>
+     * <li>custom: Custom.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,9 +124,9 @@ public class ListResponseRulesRequest extends TeaModel {
     /**
      * <p>The trigger type of the automatic response rule. Valid values:</p>
      * <ul>
-     * <li>event: event occurred</li>
-     * <li>event_update: event updated</li>
-     * <li>alert: alert occurred</li>
+     * <li>event: Event occurrence.</li>
+     * <li>event_update: Event update.</li>
+     * <li>alert: Alert occurrence.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,7 +136,7 @@ public class ListResponseRulesRequest extends TeaModel {
     public String responseTriggerType;
 
     /**
-     * <p>The user ID that the administrator switches to when viewing from another member\&quot;s perspective.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -146,8 +147,8 @@ public class ListResponseRulesRequest extends TeaModel {
     /**
      * <p>The view type. Valid values:</p>
      * <ul>
-     * <li>0: the current Alibaba Cloud account view.</li>
-     * <li>1: the view of all accounts in the enterprise.</li>
+     * <li>0: The view of the current Alibaba Cloud account.</li>
+     * <li>1: The view of all accounts in the enterprise.</li>
      * </ul>
      * 
      * <strong>example:</strong>

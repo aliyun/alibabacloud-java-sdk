@@ -7,10 +7,8 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
     /**
      * <p>The source of the data. Valid values:</p>
      * <ul>
-     * <li><p>center</p>
-     * </li>
-     * <li><p>custom</p>
-     * </li>
+     * <li>center</li>
+     * <li>custom</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
     public String dataSourceFrom;
 
     /**
-     * <p>A list of data source IDs.</p>
+     * <p>The list of data source IDs.</p>
      */
     @NameInMap("DataSourceIds")
     public String dataSourceIdsShrink;
@@ -53,7 +51,7 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
     public String dataSourceRecognizer;
 
     /**
-     * <p>The IDs of associated data access instances.</p>
+     * <p>The IDs of the data ingestion tasks associated with the data source.</p>
      */
     @NameInMap("DataSourceReferences")
     public String dataSourceReferencesShrink;
@@ -76,10 +74,8 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
     /**
      * <p>The type of the data source. Valid values:</p>
      * <ul>
-     * <li><p>preset</p>
-     * </li>
-     * <li><p>custom</p>
-     * </li>
+     * <li>preset</li>
+     * <li>custom</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,12 +85,10 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +125,7 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
     public String logStoreName;
 
     /**
-     * <p>The user ID for data ingestion.</p>
+     * <p>The ID of the user for data ingestion.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -142,10 +136,8 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p>desc: descending.</p>
-     * </li>
-     * <li><p>asc: ascending.</p>
-     * </li>
+     * <li>desc: Descending order.</li>
+     * <li>asc: Ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,12 +147,10 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The region of the Management Hub. Select a region based on the location of your assets. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Assets are outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,7 +160,7 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member whose perspective the administrator assumes.</p>
+     * <p>The ID of the member whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -323,10 +313,8 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
         /**
          * <p>The source of the data. Valid values:</p>
          * <ul>
-         * <li><p>center</p>
-         * </li>
-         * <li><p>custom</p>
-         * </li>
+         * <li>center</li>
+         * <li>custom</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,10 +335,8 @@ public class CreateDataSourceShrinkRequest extends TeaModel {
         /**
          * <p>The status of the log storage. Valid values:</p>
          * <ul>
-         * <li><p>normal</p>
-         * </li>
-         * <li><p>abnormal</p>
-         * </li>
+         * <li>normal</li>
+         * <li>abnormal</li>
          * </ul>
          * 
          * <strong>example:</strong>

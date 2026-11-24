@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNormalizationRuleResponseBody extends TeaModel {
     /**
-     * <p>The normalization rule ID.</p>
+     * <p>The ID of the normalization rule.</p>
      * 
      * <strong>example:</strong>
      * <p>nr-z0b2ssjteut85uoh9nzp</p>
@@ -14,7 +14,7 @@ public class CreateNormalizationRuleResponseBody extends TeaModel {
     public String normalizationRuleId;
 
     /**
-     * <p>The request message ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>

@@ -14,7 +14,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String data;
 
     /**
-     * <p>The storage mode of extended fields. Valid values: flat, pack, and reject.</p>
+     * <p>The storage mode for extended fields. Valid values: flat, pack, and reject.</p>
      * 
      * <strong>example:</strong>
      * <p>flat</p>
@@ -28,7 +28,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
-     * <p>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message \&quot;The specified Lang can not be empty.\&quot; Explicitly specify the language code.</p>
+     * <p>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly pass the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -93,7 +93,7 @@ public class ValidateNormalizationRuleRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
      * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
      * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>

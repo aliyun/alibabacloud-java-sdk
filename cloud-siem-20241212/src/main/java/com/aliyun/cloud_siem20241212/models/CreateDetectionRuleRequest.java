@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDetectionRuleRequest extends TeaModel {
     /**
-     * <p>The ATT&amp;CK information of the alert.</p>
+     * <p>The ATT&amp;CK technique of the alert.</p>
      * 
      * <strong>example:</strong>
      * <p>Discovery</p>
@@ -15,12 +15,15 @@ public class CreateDetectionRuleRequest extends TeaModel {
 
     /**
      * <p>The MITRE ATT&amp;CK technique mapping.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo_attck_mapping</p>
      */
     @NameInMap("AlertAttCkMapping")
     public String alertAttCkMapping;
 
     /**
-     * <p>The alert description. Supports referencing query output fields using $$.</p>
+     * <p>The description of the alert. You can use $$ to reference query output fields.</p>
      * 
      * <strong>example:</strong>
      * <p>Alert from: $product_code$, detected network attack from $src_ip$, affected assets include: $dst_ip$</p>
@@ -46,12 +49,15 @@ public class CreateDetectionRuleRequest extends TeaModel {
 
     /**
      * <p>The alert level mapping.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>high</p>
      */
     @NameInMap("AlertLevelMapping")
     public String alertLevelMapping;
 
     /**
-     * <p>The alert name. Supports referencing query output fields using $$.</p>
+     * <p>The name of the alert. You can use $$ to reference query output fields.</p>
      * 
      * <strong>example:</strong>
      * <p>Detected high-frequency multi-type network attacks from $src_ip$</p>
@@ -63,9 +69,9 @@ public class CreateDetectionRuleRequest extends TeaModel {
      * <p>The ID of the alert template for the detection rule. Valid values:</p>
      * <ul>
      * <li>ALERT_ACTIVITY: other alerts.</li>
-     * <li>EDR_ALERT_ACTIVITY: endpoint detection and response alerts.</li>
+     * <li>EDR_ALERT_ACTIVITY: endpoint detection and response (EDR) alerts.</li>
      * <li>FIREWALL_ALERT_ACTIVITY: firewall alerts.</li>
-     * <li>WAF_ALERT_ACTIVITY: Web Application Firewall alerts.</li>
+     * <li>WAF_ALERT_ACTIVITY: Web Application Firewall (WAF) alerts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +99,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public Integer alertThresholdCount;
 
     /**
-     * <p>The list of alert threshold fields, separated by commas.</p>
+     * <p>The list of fields for the alert threshold. Separate multiple fields with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>alert_type,ip</p>
@@ -102,7 +108,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String alertThresholdGroup;
 
     /**
-     * <p>The length of the alert threshold period.</p>
+     * <p>The period length of the alert threshold.</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -121,6 +127,9 @@ public class CreateDetectionRuleRequest extends TeaModel {
 
     /**
      * <p>The alert type mapping.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>benign_type_mapping</p>
      */
     @NameInMap("AlertTypeMapping")
     public String alertTypeMapping;
@@ -247,10 +256,10 @@ public class CreateDetectionRuleRequest extends TeaModel {
      * <p>The event aggregation type. Valid values:</p>
      * <ul>
      * <li>none: no event is generated.</li>
-     * <li>graph_compute: graph computing (supported by predefined rules).</li>
-     * <li>expert: expert rule.</li>
-     * <li>passthrough: alert passthrough (one-to-one).</li>
-     * <li>window: same-type aggregation (window).</li>
+     * <li>graph_compute: graph computing, supported by predefined rules.</li>
+     * <li>expert: expert rules.</li>
+     * <li>passthrough: alert pass-through (one-to-one).</li>
+     * <li>window: homogeneous aggregation (window).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -260,12 +269,12 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String incidentAggregationType;
 
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
-     * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Pass the language code explicitly.</p>
+     * <p>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly pass the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -292,7 +301,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String logSchemaId;
 
     /**
-     * <p>The user-defined parameters of the playbook.</p>
+     * <p>The custom parameters of the playbook.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -314,10 +323,10 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+     * <p>The region of the data management center for Threat Analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Assets are located outside China.</li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -327,7 +336,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that the administrator switches to in order to view another member\&quot;s perspective.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -336,7 +345,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The scheduling start time, expressed as a 13-digit timestamp.</p>
+     * <p>The start time of the schedule. The value is a 13-digit timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1733269771123</p>
@@ -345,7 +354,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public Long scheduleBeginTime;
 
     /**
-     * <p>The scheduling cron expression. Required when ScheduleType is set to cron.</p>
+     * <p>The cron expression for scheduling. This parameter is required when ScheduleType is set to cron.</p>
      * 
      * <strong>example:</strong>
      * <p>0/5 * * * *</p>
@@ -354,7 +363,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String scheduleExpression;
 
     /**
-     * <p>The maximum number of retries on timeout. Valid values: 1 to 100.</p>
+     * <p>The maximum number of retries upon timeout. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -363,7 +372,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public Integer scheduleMaxRetries;
 
     /**
-     * <p>The maximum timeout duration, in seconds. Valid values: 60 to 1800.</p>
+     * <p>The maximum timeout period. Unit: seconds. Valid values: 60 to 1800.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

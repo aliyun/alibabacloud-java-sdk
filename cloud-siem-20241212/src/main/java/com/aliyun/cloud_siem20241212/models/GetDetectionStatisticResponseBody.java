@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDetectionStatisticResponseBody extends TeaModel {
     /**
-     * <p>The count results of detection rules.</p>
+     * <p>The detection rule counts.</p>
      */
     @NameInMap("DetectionStatistic")
     public GetDetectionStatisticResponseBodyDetectionStatistic detectionStatistic;
@@ -43,6 +43,9 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
     public static class GetDetectionStatisticResponseBodyDetectionStatistic extends TeaModel {
         /**
          * <p>The number of AI-powered aggregation rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("AiPoweredAggregationRuleCount")
         public Integer aiPoweredAggregationRuleCount;

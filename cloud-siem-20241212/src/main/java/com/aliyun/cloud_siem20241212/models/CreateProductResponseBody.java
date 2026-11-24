@@ -4,21 +4,9 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class CreateProductResponseBody extends TeaModel {
-    /**
-     * <p>The product ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>alibaba_cloud_sas</p>
-     */
     @NameInMap("ProductId")
     public String productId;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

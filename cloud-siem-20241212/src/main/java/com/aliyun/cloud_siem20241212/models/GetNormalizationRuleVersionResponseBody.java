@@ -4,18 +4,9 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class GetNormalizationRuleVersionResponseBody extends TeaModel {
-    /**
-     * <p>The version of the normalization rule.</p>
-     */
     @NameInMap("NormalizationRuleVersion")
     public GetNormalizationRuleVersionResponseBodyNormalizationRuleVersion normalizationRuleVersion;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,157 +32,51 @@ public class GetNormalizationRuleVersionResponseBody extends TeaModel {
     }
 
     public static class GetNormalizationRuleVersionResponseBodyNormalizationRuleVersion extends TeaModel {
-        /**
-         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The category ID of the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NETWORK_CATEGORY</p>
-         */
         @NameInMap("NormalizationCategoryId")
         public String normalizationCategoryId;
 
-        /**
-         * <p>The description of the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>normalization_rule_Z57np</p>
-         */
         @NameInMap("NormalizationRuleDescription")
         public String normalizationRuleDescription;
 
-        /**
-         * <p>The expression of the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <ul>
-         * <li>| pack-fields -include=\&quot;[\s\S]+\&quot; as extend_content</li>
-         * </ul>
-         */
         @NameInMap("NormalizationRuleExpression")
         public String normalizationRuleExpression;
 
-        /**
-         * <p>The format of the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SPL</p>
-         */
         @NameInMap("NormalizationRuleFormat")
         public String normalizationRuleFormat;
 
-        /**
-         * <p>The ID of the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nr-z0b2ssjteut85uoh9nzp</p>
-         */
         @NameInMap("NormalizationRuleId")
         public String normalizationRuleId;
 
-        /**
-         * <p>The name of the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>normalization_rule_Z57np</p>
-         */
         @NameInMap("NormalizationRuleName")
         public String normalizationRuleName;
 
-        /**
-         * <p>The status of the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>started</p>
-         */
         @NameInMap("NormalizationRuleStatus")
         public String normalizationRuleStatus;
 
-        /**
-         * <p>The type of the normalization rule. Valid values:</p>
-         * <ul>
-         * <li>predefined: predefined normalization rule.</li>
-         * <li>custom: custom normalization rule.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>predefined</p>
-         */
         @NameInMap("NormalizationRuleType")
         public String normalizationRuleType;
 
-        /**
-         * <p>The version of the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>V1</p>
-         */
         @NameInMap("NormalizationRuleVersion")
         public Integer normalizationRuleVersion;
 
-        /**
-         * <p>The version name of the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
-         */
         @NameInMap("NormalizationRuleVersionName")
         public String normalizationRuleVersionName;
 
-        /**
-         * <p>The ID of the normalization schema.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HTTP_ACTIVITY</p>
-         */
         @NameInMap("NormalizationSchemaId")
         public String normalizationSchemaId;
 
-        /**
-         * <p>The ID of the product.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_sas</p>
-         */
         @NameInMap("ProductId")
         public String productId;
 
-        /**
-         * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
-         * <ul>
-         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
-         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        /**
-         * <p>The ID of the vendor that corresponds to the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud</p>
-         */
         @NameInMap("VendorId")
         public String vendorId;
 

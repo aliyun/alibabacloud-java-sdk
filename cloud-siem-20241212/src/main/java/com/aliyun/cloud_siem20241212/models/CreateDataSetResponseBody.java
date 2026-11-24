@@ -4,18 +4,9 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class CreateDataSetResponseBody extends TeaModel {
-    /**
-     * <p>The result of the dataset creation.</p>
-     */
     @NameInMap("DataSetRecordStatistic")
     public CreateDataSetResponseBodyDataSetRecordStatistic dataSetRecordStatistic;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -41,21 +32,9 @@ public class CreateDataSetResponseBody extends TeaModel {
     }
 
     public static class CreateDataSetResponseBodyDataSetRecordStatistic extends TeaModel {
-        /**
-         * <p>The dataset ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dataset-qt0n8246gs9nackg****</p>
-         */
         @NameInMap("DataSetId")
         public String dataSetId;
 
-        /**
-         * <p>The number of new dataset records.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6</p>
-         */
         @NameInMap("NewDataSetRecordCount")
         public Integer newDataSetRecordCount;
 

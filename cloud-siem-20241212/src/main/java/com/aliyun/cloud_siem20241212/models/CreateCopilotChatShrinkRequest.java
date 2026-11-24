@@ -86,10 +86,10 @@ public class CreateCopilotChatShrinkRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The region of the data management center for threat analysis. Specify the management center based on the region where your assets reside. Valid values:</p>
+     * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located in regions outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class CreateCopilotChatShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the conversation turn to replace.</p>
+     * <p>The ID of the replaced conversation turn.</p>
      * 
      * <strong>example:</strong>
      * <p>dc18b894-19a3-45ee-8768-a59478e0****</p>
@@ -108,7 +108,7 @@ public class CreateCopilotChatShrinkRequest extends TeaModel {
     public String replaceTurnId;
 
     /**
-     * <p>The route target identifier.</p>
+     * <p>The target route identifier for execution.</p>
      * 
      * <strong>example:</strong>
      * <p>security-agent-route-****</p>
@@ -117,7 +117,7 @@ public class CreateCopilotChatShrinkRequest extends TeaModel {
     public String routeTarget;
 
     /**
-     * <p>The request source.</p>
+     * <p>The source of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>console</p>
@@ -144,7 +144,7 @@ public class CreateCopilotChatShrinkRequest extends TeaModel {
     public String thinkingMode;
 
     /**
-     * <p>The trace ID, which is used to query specific call information.</p>
+     * <p>The trace ID used to accurately query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>550e8400e29b41d4a71644665544****</p>

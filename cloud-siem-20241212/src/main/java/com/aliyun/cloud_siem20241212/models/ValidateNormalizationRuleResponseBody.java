@@ -86,7 +86,7 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
          * <li>OperationDenied.TheValueLessThanMin: The field value is less than the specified minimum value.</li>
          * <li>OperationDenied.TheValueMoreThanMax: The field value is greater than the specified maximum value.</li>
          * <li>OperationDenied.TheValueNotMatchRegularExpression: The field value fails the regular expression match.</li>
-         * <li>success: The validation is passed.</li>
+         * <li>success: The validation passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,11 +96,7 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The source of the normalized field. Valid values:</p>
-         * <ul>
-         * <li>preset: Built-in.</li>
-         * <li>custom: Custom.</li>
-         * </ul>
+         * <p>The source of the normalized field. Valid values: preset and custom.</p>
          * 
          * <strong>example:</strong>
          * <p>preset</p>
@@ -127,7 +123,7 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         public Boolean normalizationFieldRequired;
 
         /**
-         * <p>Specifies whether the normalized field name is built into the system.</p>
+         * <p>Indicates whether the normalized field name is built into the system.</p>
          */
         @NameInMap("NormalizationFieldReserved")
         public Boolean normalizationFieldReserved;
@@ -162,9 +158,9 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         /**
          * <p>The validation result. Valid values:</p>
          * <ul>
-         * <li>1: The validation is passed.</li>
+         * <li>1: The validation passed.</li>
          * <li>0: A warning is returned.</li>
-         * <li>1: The validation fails.</li>
+         * <li>1: The validation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

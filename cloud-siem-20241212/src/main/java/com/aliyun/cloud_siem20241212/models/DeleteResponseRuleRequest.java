@@ -7,10 +7,8 @@ public class DeleteResponseRuleRequest extends TeaModel {
     /**
      * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class DeleteResponseRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of data records to return in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -29,7 +27,7 @@ public class DeleteResponseRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. If you do not specify this parameter, the service returns the first page of results.</p>
+     * <p>The token that specifies the starting position for reading. Leave this parameter empty to start reading from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -38,12 +36,10 @@ public class DeleteResponseRuleRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the data management center for threat analysis. This must be the region where your assets are located. Valid values:</p>
+     * <p>The region where the data management center for threat analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li><p><code>cn-hangzhou</code>: for assets in the Chinese mainland or Hong Kong (China).</p>
-     * </li>
-     * <li><p><code>ap-southeast-1</code>: for assets in international regions.</p>
-     * </li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</li>
+     * <li>ap-southeast-1: Assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +49,7 @@ public class DeleteResponseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the automatic response rule to delete.</p>
+     * <p>The ID of the automated response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>403235</p>

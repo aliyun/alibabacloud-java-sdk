@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDefaultNormalizationRuleVersionRequest extends TeaModel {
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -18,7 +18,7 @@ public class SetDefaultNormalizationRuleVersionRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The normalization rule ID. Only custom-type normalization rules are supported. This operation does not support preset normalization rules.</p>
+     * <p>The ID of the normalization rule. This operation is supported only for custom normalization rules. Preset rules are not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>nr-z0b2ssjteut85uoh9nzp</p>
@@ -27,19 +27,19 @@ public class SetDefaultNormalizationRuleVersionRequest extends TeaModel {
     public String normalizationRuleId;
 
     /**
-     * <p>The normalization rule version.</p>
+     * <p>The version of the normalization rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>V1</p>
+     * <p>1</p>
      */
     @NameInMap("NormalizationRuleVersion")
     public Integer normalizationRuleVersion;
 
     /**
-     * <p>The region where the data management center of the threat analysis feature is located. Select the region based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets reside outside China.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class SetDefaultNormalizationRuleVersionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that the administrator uses to switch to the view of another member account.</p>
+     * <p>The ID of the user whose perspective the administrator assumes.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

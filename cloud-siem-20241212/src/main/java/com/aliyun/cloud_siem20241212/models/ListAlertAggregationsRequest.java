@@ -14,7 +14,7 @@ public class ListAlertAggregationsRequest extends TeaModel {
     public String aggregationType;
 
     /**
-     * <p>The end time of the alert.</p>
+     * <p>The time when the alert ended.</p>
      * 
      * <strong>example:</strong>
      * <p>1773936020000</p>
@@ -23,7 +23,7 @@ public class ListAlertAggregationsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -36,7 +36,7 @@ public class ListAlertAggregationsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to return for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -45,7 +45,7 @@ public class ListAlertAggregationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The token for the next query. If this is the first query or no subsequent query is required, you do not need to specify this parameter. If a subsequent query is required, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -74,15 +74,15 @@ public class ListAlertAggregationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query filter condition in JSON format. Valid values:</p>
+     * <p>The query filter conditions in JSON format. Valid values:</p>
      * <ul>
-     * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: The 100 queries with the longest execution duration.</li>
+     * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: The top 100 queries with the longest execution duration.</li>
      * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: Completed queries.</li>
      * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>: Running queries.</li>
-     * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: Custom execution duration queries. You can set the minimum and maximum execution duration. <strong>Min</strong> specifies the minimum execution duration. <strong>Max</strong> specifies the maximum execution duration. Unit: milliseconds (ms).<ul>
-     * <li>If only <strong>Min</strong> is set, queries with an execution duration greater than this value are returned.</li>
-     * <li>If only <strong>Max</strong> is set, queries with an execution duration less than this value are returned.</li>
-     * <li>If both <strong>Min</strong> and <strong>Max</strong> are set, queries with an execution duration greater than or equal to <strong>Min</strong> and less than or equal to <strong>Max</strong> are returned.</li>
+     * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: Custom execution duration queries. You can specify the minimum and maximum execution duration. <strong>Min</strong> specifies the minimum execution duration. <strong>Max</strong> specifies the maximum execution duration. Unit: milliseconds.<ul>
+     * <li>If only <strong>Min</strong> is specified, the system queries the queries whose execution duration is greater than the specified value.</li>
+     * <li>If only <strong>Max</strong> is specified, the system queries the queries whose execution duration is less than the specified value.</li>
+     * <li>If both <strong>Min</strong> and <strong>Max</strong> are specified, the system queries the queries whose execution duration is greater than or equal to the value of <strong>Min</strong> and less than or equal to the value of <strong>Max</strong>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -103,10 +103,10 @@ public class ListAlertAggregationsRequest extends TeaModel {
     public String queryViewId;
 
     /**
-     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
      * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
-     * <li>ap-southeast-1: The assets are located outside China.</li>
+     * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ListAlertAggregationsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID of the member to which the administrator switches the view.</p>
+     * <p>The ID of the member whose view the administrator assumes.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -141,7 +141,7 @@ public class ListAlertAggregationsRequest extends TeaModel {
      * <p>The time when the alert first occurred.</p>
      * 
      * <strong>example:</strong>
-     * <p>2026-02-04T08:36:26Z</p>
+     * <p>1791709871476</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

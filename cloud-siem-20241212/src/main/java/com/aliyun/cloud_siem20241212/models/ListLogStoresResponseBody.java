@@ -11,7 +11,7 @@ public class ListLogStoresResponseBody extends TeaModel {
     public java.util.List<String> logStores;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to return for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListLogStoresResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The token for the next query. If this is the first query or no subsequent query is required, you do not need to specify this parameter. If a subsequent query is required, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -29,7 +29,7 @@ public class ListLogStoresResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -38,7 +38,7 @@ public class ListLogStoresResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>57</p>

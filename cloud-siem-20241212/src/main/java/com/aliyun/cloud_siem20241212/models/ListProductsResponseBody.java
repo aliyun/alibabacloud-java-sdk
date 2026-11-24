@@ -4,45 +4,18 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
-    /**
-     * <p>The maximum number of entries to return in this request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>50</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The list of products.</p>
-     */
     @NameInMap("Products")
     public java.util.List<ListProductsResponseBodyProducts> products;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of records.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>57</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -92,137 +65,45 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyProducts extends TeaModel {
-        /**
-         * <p>The number of abnormal data ingestion entries.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("AbnormalDataIngestionCount")
         public Integer abnormalDataIngestionCount;
 
-        /**
-         * <p>The activation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
-         */
         @NameInMap("ActiveTime")
         public Long activeTime;
 
-        /**
-         * <p>Indicates whether data collection can be added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("AllowAddDataIngestion")
         public Boolean allowAddDataIngestion;
 
-        /**
-         * <p>The creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The accessed state of data ingestion. Valid values:</p>
-         * <ul>
-         * <li>enabled: Enabled.</li>
-         * <li>disabled: Disabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>enabled</p>
-         */
         @NameInMap("DataIngestionStatus")
         public Boolean dataIngestionStatus;
 
-        /**
-         * <p>The number of enabled data ingestion entries.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("EnabledDataIngestionCount")
         public Integer enabledDataIngestionCount;
 
-        /**
-         * <p>The product alias.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_sas</p>
-         */
         @NameInMap("ProductAlias")
         public String productAlias;
 
-        /**
-         * <p>The product ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_sas</p>
-         */
         @NameInMap("ProductId")
         public String productId;
 
-        /**
-         * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sas</p>
-         */
         @NameInMap("ProductName")
         public String productName;
 
-        /**
-         * <p>The product type. Valid values:</p>
-         * <ul>
-         * <li>preset</li>
-         * <li>custom</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>preset</p>
-         */
         @NameInMap("ProductType")
         public String productType;
 
-        /**
-         * <p>The total number of data ingestion entries.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("TotalDataIngestionCount")
         public Integer totalDataIngestionCount;
 
-        /**
-         * <p>The update time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        /**
-         * <p>The vendor ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vd-qlsw5eocx94w9</p>
-         */
         @NameInMap("VendorId")
         public String vendorId;
 
-        /**
-         * <p>The vendor name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>111</p>
-         */
         @NameInMap("VendorName")
         public String vendorName;
 

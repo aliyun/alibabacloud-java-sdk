@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataConnectorsResponseBody extends TeaModel {
     /**
-     * <p>The list of collectors.</p>
+     * <p>The list of data connectors.</p>
      */
     @NameInMap("DataConnector")
     public java.util.List<ListDataConnectorsResponseBodyDataConnector> dataConnector;
 
     /**
-     * <p>The maximum number of records returned in this query.</p>
+     * <p>The maximum number of entries returned in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token used to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
@@ -38,7 +38,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -56,7 +56,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>57</p>
@@ -127,7 +127,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
 
     public static class ListDataConnectorsResponseBodyDataConnector extends TeaModel {
         /**
-         * <p>The configuration item ID of the collector access object in the multi-cloud configuration.</p>
+         * <p>The ID of the configuration item for the data connector access object in the multi-cloud configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-smbc-prod-cloudtrail.s3.cn-north-1.amazonaws.com.cn_AKIAX4AUG6AYSJO7FAG4</p>
@@ -136,7 +136,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String authConfigId;
 
         /**
-         * <p>The cloud product to which the authentication configuration belongs.</p>
+         * <p>The cloud service to which the authentication configuration belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>salesForceRestAPI</p>
@@ -145,7 +145,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String authConfigProduct;
 
         /**
-         * <p>The cloud vendor to which the authentication configuration belongs.</p>
+         * <p>The cloud provider to which the authentication configuration belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>SALESFORCE</p>
@@ -157,13 +157,13 @@ public class ListDataConnectorsResponseBody extends TeaModel {
          * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-06-01T02:14:24Z</p>
+         * <p>1792515606000</p>
          */
         @NameInMap("CreationTime")
         public Long creationTime;
 
         /**
-         * <p>The collector configuration information.</p>
+         * <p>The configuration information of the data connector.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;endpoint\&quot;:\&quot;csrm-sentinel.s3.cn-north-1.amazonaws.com.cn_AKIARGUYUGSX6A6VUXQJ\&quot;,\&quot;bucket\&quot;:\&quot;csrm-sentinel\&quot;,\&quot;prefix\&quot;:\&quot;AliTest/\&quot;,\&quot;format\&quot;:{\&quot;type\&quot;:\&quot;JSON\&quot;},\&quot;encoding\&quot;:\&quot;UTF-8\&quot;}</p>
@@ -172,7 +172,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String dataConnectorConfig;
 
         /**
-         * <p>The collector ID.</p>
+         * <p>The data connector ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dc-07423146117d77db266f78bc41f4fd80</p>
@@ -181,7 +181,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String dataConnectorId;
 
         /**
-         * <p>The data connector name.</p>
+         * <p>The name of the data connector.</p>
          * 
          * <strong>example:</strong>
          * <p>dc-***</p>
@@ -190,7 +190,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String dataConnectorName;
 
         /**
-         * <p>The connector status.</p>
+         * <p>The enabled status of the data connector.</p>
          * 
          * <strong>example:</strong>
          * <p>enable</p>
@@ -199,7 +199,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String dataConnectorStatus;
 
         /**
-         * <p>The connector type.</p>
+         * <p>The type of the data connector.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -208,7 +208,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String dataConnectorType;
 
         /**
-         * <p>The destination data source ID. This parameter is required only for synchronization.</p>
+         * <p>The ID of the destination data source. This parameter is required only for synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>ds-t3ywipile7gctobaunx0</p>
@@ -217,7 +217,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String destDataSourceId;
 
         /**
-         * <p>The Simple Log Service project name.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-cloudsiem-channel-1371069058301795-cn-shanghai</p>
@@ -235,7 +235,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String logRegionId;
 
         /**
-         * <p>The Simple Log Service Logstore name.</p>
+         * <p>The name of the Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>ls-wecom-crontasklog-prod</p>
@@ -244,7 +244,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>The name of the SLS data import job for the collector.</p>
+         * <p>The name of the Simple Log Service (SLS) data import job for the data connector.</p>
          * 
          * <strong>example:</strong>
          * <p>1a2b3c4d5e6f7a8b9c0d1e2f3a4b****</p>
@@ -253,7 +253,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String slsIngestionJobName;
 
         /**
-         * <p>The status of the SLS data import job for the collector.</p>
+         * <p>The status of the Simple Log Service (SLS) data import job for the data connector.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -262,7 +262,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
         public String slsIngestionJobState;
 
         /**
-         * <p>The source data type.</p>
+         * <p>The type of the source data source.</p>
          * 
          * <strong>example:</strong>
          * <p>s3</p>
@@ -274,7 +274,7 @@ public class ListDataConnectorsResponseBody extends TeaModel {
          * <p>The update time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-01-04 22:31:54</p>
+         * <p>1792515606000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

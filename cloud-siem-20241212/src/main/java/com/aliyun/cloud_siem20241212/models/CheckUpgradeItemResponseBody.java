@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckUpgradeItemResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -42,7 +42,7 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
 
     public static class CheckUpgradeItemResponseBodyUpgradeItem extends TeaModel {
         /**
-         * <p>The check result of the check item. Example values: OK and FAIL.</p>
+         * <p>The check result of the check item. Possible values include OK and FAIL.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -60,7 +60,7 @@ public class CheckUpgradeItemResponseBody extends TeaModel {
         public String checkStatus;
 
         /**
-         * <p>The upgrade item ID.</p>
+         * <p>The ID of the upgrade item.</p>
          * 
          * <strong>example:</strong>
          * <p>incident_upgrade</p>

@@ -14,7 +14,7 @@ public class CreateResponseRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the automatic response rule.</p>
+     * <p>The ID of the automated response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>399827</p>

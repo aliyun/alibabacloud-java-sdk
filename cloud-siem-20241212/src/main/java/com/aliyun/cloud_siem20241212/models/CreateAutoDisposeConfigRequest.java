@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAutoDisposeConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automated analysis. Valid values:</p>
+     * <p>Specifies whether the user has enabled automatic analysis. Valid values:</p>
      * <ul>
-     * <li><p>enabled: Enables automated analysis.</p>
-     * </li>
-     * <li><p>disabled: Disables automated analysis.</p>
-     * </li>
+     * <li>enabled: Enabled.</li>
+     * <li>disabled: Disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,12 +19,10 @@ public class CreateAutoDisposeConfigRequest extends TeaModel {
     public String autoDecisionStatus;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +33,7 @@ public class CreateAutoDisposeConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The code of the cloud product.</p>
+     * <p>The code of the cloud service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

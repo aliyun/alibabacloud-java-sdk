@@ -5,47 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListVendorsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries to return in this request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>50</p>
-     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The pagination token for the next query. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of records.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>57</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The vendors.</p>
-     */
     @NameInMap("Vendors")
     public java.util.List<ListVendorsResponseBodyVendors> vendors;
 
@@ -95,52 +69,18 @@ public class ListVendorsResponseBody extends TeaModel {
     }
 
     public static class ListVendorsResponseBodyVendors extends TeaModel {
-        /**
-         * <p>The creation time. The value is a UNIX timestamp. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The update time. The value is a UNIX timestamp. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        /**
-         * <p>The vendor ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vd-qlsw5eocx94w9</p>
-         */
         @NameInMap("VendorId")
         public String vendorId;
 
-        /**
-         * <p>The vendor name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>111</p>
-         */
         @NameInMap("VendorName")
         public String vendorName;
 
-        /**
-         * <p>The vendor type. Valid values:</p>
-         * <ul>
-         * <li>preset</li>
-         * <li>custom</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>preset</p>
-         */
         @NameInMap("VendorType")
         public String vendorType;
 

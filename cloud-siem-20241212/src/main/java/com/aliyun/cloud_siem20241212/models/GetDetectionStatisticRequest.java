@@ -10,7 +10,7 @@ public class GetDetectionStatisticRequest extends TeaModel {
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
-     * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</p>
+     * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Specify a language code explicitly.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -19,10 +19,10 @@ public class GetDetectionStatisticRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class GetDetectionStatisticRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the user whose view the administrator assumes.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>

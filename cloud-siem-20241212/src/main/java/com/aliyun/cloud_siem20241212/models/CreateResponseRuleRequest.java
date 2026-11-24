@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResponseRuleRequest extends TeaModel {
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -18,7 +18,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of data records to read in this request.</p>
+     * <p>The maximum number of data records to return in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -27,7 +27,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the start position of the current read. Leave this parameter empty to start from the beginning.</p>
+     * <p>The token that marks the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -36,10 +36,10 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the data management center for Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Assets are located in the Chinese mainland or Hong Kong (China).</li>
-     * <li>ap-southeast-1: Assets are located in regions outside China.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</li>
+     * <li>ap-southeast-1: Assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The action configuration of the automatic response rule.</p>
+     * <p>The action configuration of the automated response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;actionType&quot;:&quot;doPlaybook&quot;,&quot;playbookName&quot;:&quot;block waf IP&quot;,&quot;playbookUuid&quot;:&quot;system_aliyun_waf_whole_process_book&quot;,&quot;disposeParam&quot;:{&quot;period&quot;:&quot;7d&quot;}}]</p>
@@ -58,14 +58,14 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseActionConfig;
 
     /**
-     * <p>The action type of the automatic response rule. Valid values:</p>
+     * <p>The action type of the automated response rule. Valid values:</p>
      * <ul>
-     * <li>doPlaybook: runs a playbook.</li>
-     * <li>changeEventStatus: updates the event status.</li>
-     * <li>changeThreatLevel: updates the threat level of an event.</li>
-     * <li>addEventTag: adds a tag to an event.</li>
-     * <li>deleteEventTag: deletes a tag from an event.</li>
-     * <li>alertWhitelist: adds an alert to the whitelist.</li>
+     * <li>doPlaybook: Executes a playbook.</li>
+     * <li>changeEventStatus: Updates the event status.</li>
+     * <li>changeThreatLevel: Updates the threat level of the event.</li>
+     * <li>addEventTag: Adds an event tag.</li>
+     * <li>deleteEventTag: Deletes an event tag.</li>
+     * <li>alertWhitelist: Adds an alert to the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseExecutionCondition;
 
     /**
-     * <p>The name of the automatic response rule.</p>
+     * <p>The name of the automated response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>Send Notification When Generating Urgent Incident</p>
@@ -93,7 +93,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseRuleName;
 
     /**
-     * <p>The execution priority of the automatic response rule.</p>
+     * <p>The execution priority of the automated response rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -102,17 +102,20 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseRulePriority;
 
     /**
-     * <p>The remarks for the response rule.</p>
+     * <p>The remarks of the response rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Automatic notification rule for high-risk alerts</p>
      */
     @NameInMap("ResponseRuleRemark")
     public String responseRuleRemark;
 
     /**
-     * <p>The trigger type of the automatic response rule. Valid values:</p>
+     * <p>The trigger type of the automated response rule. Valid values:</p>
      * <ul>
-     * <li>event: an event occurs.</li>
-     * <li>event_update: an event is updated.</li>
-     * <li>alert: an alert occurs.</li>
+     * <li>event: An event occurs.</li>
+     * <li>event_update: An event is updated.</li>
+     * <li>alert: An alert is triggered.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +125,7 @@ public class CreateResponseRuleRequest extends TeaModel {
     public String responseTriggerType;
 
     /**
-     * <p>The user ID that the administrator uses to switch to the view of another member account.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -133,8 +136,8 @@ public class CreateResponseRuleRequest extends TeaModel {
     /**
      * <p>The view type. Valid values:</p>
      * <ul>
-     * <li>0: the view of the current Alibaba Cloud account.</li>
-     * <li>1: the view of all accounts in the enterprise.</li>
+     * <li>0: The view of the current Alibaba Cloud account.</li>
+     * <li>1: The view of all accounts in the enterprise.</li>
      * </ul>
      * 
      * <strong>example:</strong>

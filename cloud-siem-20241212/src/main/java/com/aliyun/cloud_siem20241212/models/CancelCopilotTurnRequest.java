@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelCopilotTurnRequest extends TeaModel {
     /**
-     * <p>The session ID.</p>
+     * <p>The conversation ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CancelCopilotTurnRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the returned message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -28,10 +28,10 @@ public class CancelCopilotTurnRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region where the data management center for threat analysis is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+     * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
      * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Assets are located outside China.</li>
+     * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class CancelCopilotTurnRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The trace ID used to track service requests.</p>
+     * <p>The trace ID used to track the service request.</p>
      * 
      * <strong>example:</strong>
      * <p>550e8400e29b41d4a71644665544****</p>
@@ -50,7 +50,7 @@ public class CancelCopilotTurnRequest extends TeaModel {
     public String traceId;
 
     /**
-     * <p>The conversation turn ID, obtained from the streaming response of CreateCopilotChat.</p>
+     * <p>The turn ID, which is obtained from the streaming response of CreateCopilotChat.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

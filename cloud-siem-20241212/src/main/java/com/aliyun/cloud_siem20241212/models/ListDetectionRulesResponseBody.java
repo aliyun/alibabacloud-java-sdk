@@ -11,7 +11,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
     public java.util.List<ListDetectionRulesResponseBodyDetectionRules> detectionRules;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of results to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -29,7 +29,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number of the current page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -127,7 +127,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
     public static class ListDetectionRulesResponseBodyDetectionRulesEntityMappingsNormalizationFieldMappings extends TeaModel {
         /**
-         * <p>The mapping field.</p>
+         * <p>The mapped field.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -136,7 +136,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String mappingFieldName;
 
         /**
-         * <p>The normalized entity field.</p>
+         * <p>The standard field of the entity.</p>
          * 
          * <strong>example:</strong>
          * <p>src_ip</p>
@@ -145,7 +145,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String normalizationFieldName;
 
         /**
-         * <p>The data type of the normalized entity field.</p>
+         * <p>The data type of the standard field of the entity.</p>
          * 
          * <strong>example:</strong>
          * <p>vachar</p>
@@ -192,7 +192,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public java.util.List<ListDetectionRulesResponseBodyDetectionRulesEntityMappingsNormalizationFieldMappings> normalizationFieldMappings;
 
         /**
-         * <p>The entity type ID.</p>
+         * <p>The ID of the entity type.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -225,7 +225,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
     public static class ListDetectionRulesResponseBodyDetectionRulesPlaybook extends TeaModel {
         /**
-         * <p>The input parameter configuration for invoking the playbook.</p>
+         * <p>The input parameter configuration for calling the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -296,7 +296,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
     public static class ListDetectionRulesResponseBodyDetectionRules extends TeaModel {
         /**
-         * <p>The alert ATT&amp;CK technique.</p>
+         * <p>The ATT&amp;CK technique of the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>Discovery</p>
@@ -305,7 +305,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String alertAttCk;
 
         /**
-         * <p>The ATT&amp;CK technique mapping.</p>
+         * <p>The MITRE ATT&amp;CK technique mapping.</p>
          */
         @NameInMap("AlertAttCkMapping")
         public String alertAttCkMapping;
@@ -337,6 +337,9 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
         /**
          * <p>The alert level mapping.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AlertLevelMapping")
         public String alertLevelMapping;
@@ -351,12 +354,12 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String alertName;
 
         /**
-         * <p>The alert template ID of the detection rule. Valid values:</p>
+         * <p>The ID of the alert template for the detection rule. Valid values:</p>
          * <ul>
-         * <li>ALERT_ACTIVITY: other alerts.</li>
-         * <li>EDR_ALERT_ACTIVITY: endpoint detection and response alerts.</li>
-         * <li>FIREWALL_ALERT_ACTIVITY: firewall alerts.</li>
-         * <li>WAF_ALERT_ACTIVITY: web application firewall alerts.</li>
+         * <li>ALERT_ACTIVITY: other alerts</li>
+         * <li>EDR_ALERT_ACTIVITY: endpoint detection and response alerts</li>
+         * <li>FIREWALL_ALERT_ACTIVITY: firewall alerts</li>
+         * <li>WAF_ALERT_ACTIVITY: web application firewall alerts</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -366,7 +369,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String alertSchemaId;
 
         /**
-         * <p>The alert tactic phase.</p>
+         * <p>The tactic phase of the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>TA0042</p>
@@ -393,7 +396,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String alertThresholdGroup;
 
         /**
-         * <p>The alert threshold period length.</p>
+         * <p>The length of the alert threshold period.</p>
          * 
          * <strong>example:</strong>
          * <p>5m</p>
@@ -412,15 +415,18 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
         /**
          * <p>The alerting type mapping.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>进程异常行为</p>
          */
         @NameInMap("AlertTypeMapping")
         public String alertTypeMapping;
 
         /**
-         * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-03-21 13:47:01</p>
+         * <p>1794302020000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -486,9 +492,9 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         /**
          * <p>The status of the detection rule. Valid values:</p>
          * <ul>
-         * <li>enabled: Enabled.</li>
-         * <li>disabled: Disabled.</li>
-         * <li>testing: Testing.</li>
+         * <li>enabled: enabled</li>
+         * <li>disabled: disabled</li>
+         * <li>testing: testing</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -500,9 +506,9 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the detection rule. Valid values:</p>
          * <ul>
-         * <li>preset: preset detection rule.</li>
-         * <li>custom: custom detection rule.</li>
-         * <li>custom_template: rule template.</li>
+         * <li>preset: preset detection rule</li>
+         * <li>custom: custom detection rule</li>
+         * <li>custom_template: rule template</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -529,11 +535,11 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         /**
          * <p>The event aggregation type. Valid values:</p>
          * <ul>
-         * <li>none: No event is generated.</li>
-         * <li>graph_compute: Graph computing (supported by predefined rules).</li>
-         * <li>expert: Expert rule.</li>
-         * <li>passthrough: Alerting pass-through (one-to-one).</li>
-         * <li>window: Same-type aggregation (window).</li>
+         * <li>none: no event generation</li>
+         * <li>graph_compute: graph computing (supported by predefined rules)</li>
+         * <li>expert: expert rules</li>
+         * <li>passthrough: alerting pass-through (one-to-one)</li>
+         * <li>window: similar event aggregation (window)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -567,7 +573,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public ListDetectionRulesResponseBodyDetectionRulesPlaybook playbook;
 
         /**
-         * <p>The user-defined parameters of the playbook.</p>
+         * <p>The custom parameters of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -580,7 +586,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String playbookParameters;
 
         /**
-         * <p>The playbook UUID.</p>
+         * <p>The UUID of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>dde983ed-eb56-45ea-ac2e-3b12b2a9****</p>
@@ -589,7 +595,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String playbookUuid;
 
         /**
-         * <p>The scheduling start time (13-digit timestamp).</p>
+         * <p>The start time of the schedule. The value is a 13-digit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1733269771123</p>
@@ -598,7 +604,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public Long scheduleBeginTime;
 
         /**
-         * <p>The scheduling cron expression. This parameter is required when ScheduleType is set to cron.</p>
+         * <p>The cron expression for scheduling. This parameter is required when ScheduleType is set to cron.</p>
          * 
          * <strong>example:</strong>
          * <p>5m</p>
@@ -607,7 +613,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String scheduleExpression;
 
         /**
-         * <p>The maximum number of retries upon timeout. Valid values: 1 to 100.</p>
+         * <p>The maximum number of retries for a timeout. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -616,7 +622,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public Integer scheduleMaxRetries;
 
         /**
-         * <p>The maximum timeout period, in seconds. Valid values: 60 to 1800.</p>
+         * <p>The maximum timeout period in seconds. Valid values: 60 to 1800.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -625,10 +631,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public Integer scheduleMaxTimeout;
 
         /**
-         * <p>The scheduling type. Valid values:</p>
+         * <p>The schedule type. Valid values:</p>
          * <ul>
-         * <li>fixed_rate: fixed interval.</li>
-         * <li>cron: cron expression.</li>
+         * <li>fixed_rate: fixed interval</li>
+         * <li>cron: cron expression</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -638,7 +644,7 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String scheduleType;
 
         /**
-         * <p>The scheduling window length.</p>
+         * <p>The length of the schedule window.</p>
          * 
          * <strong>example:</strong>
          * <p>5m</p>
@@ -647,10 +653,10 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         public String scheduleWindow;
 
         /**
-         * <p>The update time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2023-04-16 10:51:00</p>
+         * <p>1794302022000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

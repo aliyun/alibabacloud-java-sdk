@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIncidentInvestigationResponseBody extends TeaModel {
     /**
-     * <p>The AI investigation details of the incident. This field is empty if no matching investigation record is found.</p>
+     * <p>The AI investigation details of the event. This parameter is empty if no matching investigation record is found.</p>
      */
     @NameInMap("IncidentInvestigation")
     public GetIncidentInvestigationResponseBodyIncidentInvestigation incidentInvestigation;
@@ -45,22 +45,22 @@ public class GetIncidentInvestigationResponseBody extends TeaModel {
          * <p>The name of the alert that triggered this AI investigation.</p>
          * 
          * <strong>example:</strong>
-         * <p>Webshell Alert</p>
+         * <p>Webshell alert</p>
          */
         @NameInMap("IncidentInvestigationAlertName")
         public String incidentInvestigationAlertName;
 
         /**
-         * <p>The judgment conclusion of the AI investigation, corresponding to ai_judgement_conclusion in the report.</p>
+         * <p>The judgment conclusion of the AI investigation, which corresponds to ai_judgement_conclusion in the report.</p>
          * 
          * <strong>example:</strong>
-         * <p>Insufficient evidence to confirm whether the attack chain is complete. Supplement correlated logs for further analysis</p>
+         * <p>Existing evidence is insufficient to confirm whether the attack chain is complete. Supplement associated logs for further analysis</p>
          */
         @NameInMap("IncidentInvestigationConclusion")
         public String incidentInvestigationConclusion;
 
         /**
-         * <p>The display ID of the AI investigation report. You can use this value as the IncidentInvestigationDisplayId parameter of this operation to query the report.</p>
+         * <p>The display ID of the AI investigation report. You can use it as the IncidentInvestigationDisplayId request parameter of this operation to query the report.</p>
          * 
          * <strong>example:</strong>
          * <p>755616bb5d63046c1e4f62ea872a****</p>
@@ -69,7 +69,7 @@ public class GetIncidentInvestigationResponseBody extends TeaModel {
         public String incidentInvestigationDisplayId;
 
         /**
-         * <p>The end time of the AI investigation, in seconds (UNIX timestamp). If the execution end time is not recorded, the last update time of the investigation record is used. This field is empty if neither time exists.</p>
+         * <p>The end time of the AI investigation. The value is a UNIX timestamp in seconds. If the execution end time is not recorded, the last update time of the investigation record is used. If neither is available, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1786195753</p>
@@ -78,7 +78,7 @@ public class GetIncidentInvestigationResponseBody extends TeaModel {
         public Long incidentInvestigationEndTime;
 
         /**
-         * <p>The unique ID of the AI investigation report. You can use this value as the IncidentInvestigationId parameter of this operation to query the report.</p>
+         * <p>The unique ID of the AI investigation report. You can use it as the IncidentInvestigationId request parameter of this operation to query the report.</p>
          * 
          * <strong>example:</strong>
          * <p>951a6a0b-14c7-4332-ace6-bff21c******</p>
@@ -87,25 +87,25 @@ public class GetIncidentInvestigationResponseBody extends TeaModel {
         public String incidentInvestigationId;
 
         /**
-         * <p>The output content of the AI investigation, in JSON-formatted string. This field can contain fields such as investigation_report (the investigation process and evidence body, which may use Markdown format). This field is empty if the corresponding output is not generated. Internal fields may change across report versions.</p>
+         * <p>The output content of the AI investigation, which is a JSON-formatted string. It may contain fields such as investigation_report (the investigation process and evidence body, which can be in Markdown format). This parameter is empty if no corresponding output is generated. Internal fields may change with report versions.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;investigation_report&quot;:&quot;### Investigation Results\nSuspicious file detected, but execution evidence is missing.&quot;}</p>
+         * <p>{&quot;investigation_report&quot;:&quot;### Investigation results\nA suspicious file was detected, but execution evidence is missing.&quot;}</p>
          */
         @NameInMap("IncidentInvestigationOutput")
         public String incidentInvestigationOutput;
 
         /**
-         * <p>The AI investigation report content, in JSON-formatted string. This field can contain fields such as judgement_category (judgment category), ai_judgement_conclusion (judgment conclusion), ai_summary (summary), attack process, and attack graph. The specific content may change across report versions.</p>
+         * <p>The content of the AI investigation report, which is a JSON-formatted string. It may contain fields such as judgement_category (judgment category), ai_judgement_conclusion (judgment conclusion), ai_summary (summary), attack process, and attack graph. The specific content may change with report versions.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;judgement_category&quot;:&quot;insufficient_information_to_evaluate&quot;,&quot;ai_judgement_conclusion&quot;:&quot;Insufficient evidence to confirm whether the attack chain is complete. Supplement correlated logs for further analysis.&quot;,&quot;ai_summary&quot;:&quot;Suspicious file detected. Insufficient evidence to confirm whether the attack was successful.&quot;}</p>
+         * <p>{&quot;judgement_category&quot;:&quot;insufficient_information_to_evaluate&quot;,&quot;ai_judgement_conclusion&quot;:&quot;Existing evidence is insufficient to confirm whether the attack chain is complete. Supplement associated logs for further analysis.&quot;,&quot;ai_summary&quot;:&quot;A suspicious file was detected. Existing evidence is insufficient to confirm whether the attack was successful.&quot;}</p>
          */
         @NameInMap("IncidentInvestigationReport")
         public String incidentInvestigationReport;
 
         /**
-         * <p>The start time of the AI investigation, in seconds (UNIX timestamp). If the execution start time is not recorded, the creation time of the investigation record is used. This field is empty if neither time exists.</p>
+         * <p>The start time of the AI investigation. The value is a UNIX timestamp in seconds. If the execution start time is not recorded, the creation time of the investigation record is used. If neither is available, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1786195533</p>
@@ -114,12 +114,12 @@ public class GetIncidentInvestigationResponseBody extends TeaModel {
         public Long incidentInvestigationStartTime;
 
         /**
-         * <p>The judgment category of the AI investigation report, corresponding to judgement_category in the report. This field does not indicate the execution status of the asynchronous task. Valid values:</p>
+         * <p>The judgment category of the AI investigation report, which corresponds to judgement_category in the report. It does not indicate the execution status of the asynchronous task. Valid values:</p>
          * <ul>
          * <li>real_attack: Real attack.</li>
          * <li>blocked: Risk blocked.</li>
          * <li>false_positive: Suspected false positive.</li>
-         * <li>insufficient_information_to_evaluate: Unable to determine.</li>
+         * <li>insufficient_information_to_evaluate: Insufficient information to evaluate.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,16 +129,16 @@ public class GetIncidentInvestigationResponseBody extends TeaModel {
         public String incidentInvestigationStatus;
 
         /**
-         * <p>The summary of the AI investigation report, corresponding to ai_summary in the investigation results.</p>
+         * <p>The summary of the AI investigation report, which corresponds to ai_summary in the investigation results.</p>
          * 
          * <strong>example:</strong>
-         * <p>Suspicious file detected. Insufficient evidence to confirm whether the attack was successful</p>
+         * <p>A suspicious file was detected. Existing evidence is insufficient to confirm whether the attack was successful</p>
          */
         @NameInMap("IncidentInvestigationSummary")
         public String incidentInvestigationSummary;
 
         /**
-         * <p>The globally unique UUID of the incident.</p>
+         * <p>The globally unique UUID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>9f00c254391400f6898c4d4fea******</p>

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetAlertResponseBody extends TeaModel {
     /**
-     * <p>If this value is true, the minor engine version is not the latest version.</p>
+     * <p>Indicates whether the minor version is not the latest version.</p>
      * <blockquote>
-     * <p>If the minor engine version of your server is not the latest version, the sampling logs may be inaccurate, which causes imprecise IP statistics. We recommend that you upgrade the minor engine version at your earliest convenience.</p>
+     * <p>If the minor version of your server is not the latest, the sampled logs may be inaccurate, resulting in inaccurate IP address statistics. Therefore, we recommend that you upgrade the minor version of your server as soon as possible.</p>
      * </blockquote>
      */
     @NameInMap("Alert")
     public GetAlertResponseBodyAlert alert;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -45,7 +45,7 @@ public class GetAlertResponseBody extends TeaModel {
 
     public static class GetAlertResponseBodyAlert extends TeaModel {
         /**
-         * <p>The alert content.</p>
+         * <p>The content of the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>{***}</p>
@@ -54,7 +54,7 @@ public class GetAlertResponseBody extends TeaModel {
         public String alertRecord;
 
         /**
-         * <p>The alert UUID.</p>
+         * <p>The UUID of the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_1175554881779200_e59368b3ce1690eae7978f7712a69050</p>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListLogStoresRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.
-     * Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.).</li>
+     * Note: This parameter is actually required. If it is not provided, the API returns a 400 error (The specified Lang can not be empty.).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class ListLogStoresRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the Simple Log Service project. The project name follows the naming convention aliyun-cloudsiem-data-{userId}-{regionId}. You can call the GetDataStorage operation and obtain a valid project name from the Data.LogProject field in the response.</p>
+     * <p>The name of the Simple Log Service project. The project name follows the naming convention aliyun-cloudsiem-data-{userId}-{regionId}. You can call the GetDataStorage operation and obtain a valid project name from the Data.LogProject field in the response. This parameter is actually required. You can call the GetDataStorage operation to obtain valid values.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
@@ -28,7 +28,7 @@ public class ListLogStoresRequest extends TeaModel {
     public String logProjectName;
 
     /**
-     * <p>The log storage region ID.</p>
+     * <p>The log storage region ID. This parameter is required when LogProjectName is provided, and the log storage region must be consistent with the log project. You can call the GetDataStorage operation to obtain valid values.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -37,7 +37,7 @@ public class ListLogStoresRequest extends TeaModel {
     public String logRegionId;
 
     /**
-     * <p>The user ID for data ingestion.</p>
+     * <p>The ID of the data ingestion user.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>
@@ -46,7 +46,7 @@ public class ListLogStoresRequest extends TeaModel {
     public Long logUserId;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to return for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -58,7 +58,7 @@ public class ListLogStoresRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The token for the next query. If this is the first query or no subsequent query is required, you do not need to specify this parameter. If a subsequent query is required, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -67,10 +67,10 @@ public class ListLogStoresRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+     * <p>The region of the data management center for threat analysis. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets are located in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets are located outside China.</li>
+     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class ListLogStoresRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that the administrator wants to switch to for viewing from another member\&quot;s perspective.</p>
+     * <p>The ID of the user whose perspective the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>173326*******</p>

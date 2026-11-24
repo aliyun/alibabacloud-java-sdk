@@ -17,13 +17,13 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
     public String apiVersion;
 
     /**
-     * <p>The list of conversation messages.</p>
+     * <p>The list of session messages.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListCopilotMessagesResponseBodyItems> items;
 
     /**
-     * <p>The maximum amount of data read in this query.</p>
+     * <p>The maximum amount of data read in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -32,7 +32,7 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token for the start of the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -108,7 +108,7 @@ public class ListCopilotMessagesResponseBody extends TeaModel {
          * <p>The sent content.</p>
          * 
          * <strong>example:</strong>
-         * <p>The correlation analysis of alerts and network logs has been completed</p>
+         * <p>The correlation analysis of alerts and network logs is complete</p>
          */
         @NameInMap("Content")
         public String content;

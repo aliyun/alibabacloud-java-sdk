@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIncidentsShrinkRequest extends TeaModel {
     /**
-     * <p>The alert ID.</p>
+     * <p>The ID of the alert.</p>
      * 
      * <strong>example:</strong>
      * <p>sas_71e24437d2797ce8fc59692905a4****</p>
@@ -20,7 +20,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public java.util.List<String> detectionRuleIds;
 
     /**
-     * <p>The end time timestamp, in milliseconds (ms).</p>
+     * <p>The timestamp of the end time, accurate to milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1749090526055</p>
@@ -29,7 +29,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The event name.</p>
+     * <p>The name of the incident.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS unusual log in</p>
@@ -38,12 +38,12 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String incidentName;
 
     /**
-     * <p>The event status. Valid values:</p>
+     * <p>The status of the incident. Valid values:</p>
      * <ul>
-     * <li>0: Unhandled.</li>
-     * <li>1: Handling.</li>
-     * <li>5: Handling failed.</li>
-     * <li>10: Handled.</li>
+     * <li>0: Unprocessed.</li>
+     * <li>1: Processing.</li>
+     * <li>5: Processing failed.</li>
+     * <li>10: Processed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer incidentStatus;
 
     /**
-     * <p>The list of event statuses.</p>
+     * <p>The list of incident statuses.</p>
      * 
      * <strong>example:</strong>
      * <p>[0,1,5]</p>
@@ -62,7 +62,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public java.util.List<String> incidentStatusList;
 
     /**
-     * <p>The event tags.</p>
+     * <p>The tags of the incident.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;data_source\&quot;:[\&quot;sas\&quot;]}]</p>
@@ -71,18 +71,18 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String incidentTags;
 
     /**
-     * <p>The list of event UUIDs, separated by commas (half-width).</p>
+     * <p>The list of incident UUIDs. Separate multiple UUIDs with commas.</p>
      */
     @NameInMap("IncidentUuids")
     public String incidentUuidsShrink;
 
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
-     * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Pass the language code explicitly.</p>
+     * <p>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Explicitly pass the language code.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -91,7 +91,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to read in this request.</p>
+     * <p>The maximum number of entries to return in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -100,7 +100,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token used to retrieve the next page of results. Leave this parameter empty for the first request or when there are no more pages. If more pages exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The token for the next query. You do not need to specify this parameter for the first query or when no subsequent query is required. If a subsequent query is required, set this parameter to the value of NextToken returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
@@ -122,9 +122,9 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String orderDirection;
 
     /**
-     * <p>The field used to sort the list. Valid values:</p>
+     * <p>The name of the field used to sort the list. Valid values:</p>
      * <ul>
-     * <li>GmtModified: The event update time (default).</li>
+     * <li>GmtModified: The time when the incident was updated. This is the default value.</li>
      * <li>ThreatScore: The threat score.</li>
      * </ul>
      * 
@@ -135,13 +135,13 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String orderFieldName;
 
     /**
-     * <p>The UID of the account responsible for the event.</p>
+     * <p>The UIDs of the accounts of the incident owners.</p>
      */
     @NameInMap("Owners")
     public java.util.List<String> owners;
 
     /**
-     * <p>The current page number for pagination.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to display per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -161,10 +161,10 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The location of the data management center for Cloud Threat Detection and Response (CTDR). Select the management center location based on the region where your assets reside. Valid values:</p>
+     * <p>The region of the data management center for Threat Analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Assets are located outside China.</li>
+     * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: The assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the asset associated with the event.</p>
+     * <p>The ID of the asset associated with the incident.</p>
      * 
      * <strong>example:</strong>
      * <p>6c740667-80b2-476d-8924-2e706feb****</p>
@@ -183,7 +183,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String relateAssetId;
 
     /**
-     * <p>The ID of the entity associated with the event.</p>
+     * <p>The ID of the entity associated with the incident.</p>
      * 
      * <strong>example:</strong>
      * <p>b920ed22259f5412099e97dfda96****</p>
@@ -192,7 +192,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String relateEntityId;
 
     /**
-     * <p>The user ID that the administrator uses to switch to another member\&quot;s view.</p>
+     * <p>The ID of the user whose view the administrator switches to.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -201,9 +201,9 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The view type. Valid values:</p>
+     * <p>The type of the view. Valid values:</p>
      * <ul>
-     * <li>0: The current Alibaba Cloud account view.</li>
+     * <li>0: The view of the current Alibaba Cloud account.</li>
      * <li>1: The view of all accounts in the enterprise.</li>
      * </ul>
      * 
@@ -214,7 +214,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The start time timestamp, in milliseconds (ms).</p>
+     * <p>The timestamp of the start time, accurate to milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1690102943000</p>

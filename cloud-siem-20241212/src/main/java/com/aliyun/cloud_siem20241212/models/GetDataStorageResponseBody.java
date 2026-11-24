@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataStorageResponseBody extends TeaModel {
     /**
-     * <p>The detailed information returned.</p>
+     * <p>The detailed response content.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;DataStorageRegionId&quot;:&quot;cn-shanghai&quot;,&quot;DataStorageTotalCapacity&quot;:1000,&quot;DataStorageUsedCapacity&quot;:41.2,&quot;LogProject&quot;:&quot;aliyun-cloudsiem-data-1234567890123456-cn-shanghai&quot;,&quot;SasLogStores&quot;:[{&quot;LogName&quot;:&quot;Client events&quot;,&quot;LogStoreName&quot;:&quot;aegis-log-client&quot;,&quot;LogDeliveryStatus&quot;:&quot;enable&quot;,&quot;LogStoreTtl&quot;:180,&quot;LogDeliveryUpdateTime&quot;:&quot;2026-10-19T14:00:00&quot;,&quot;LogDeliveryPermission&quot;:&quot;allow&quot;,&quot;LogDeliveryGroup&quot;:&quot;host&quot;,&quot;LogSearchConditions&quot;:&quot;[{\&quot;<strong>topic</strong>\&quot;:\&quot;aegis-log-client\&quot;}]&quot;,&quot;LogCode&quot;:&quot;aegis-log-client&quot;,&quot;LogStoreExisted&quot;:true,&quot;UsedCapacity&quot;:10.3,&quot;AccountDeliveries&quot;:[{&quot;AccountId&quot;:1234567890123456,&quot;AccountName&quot;:&quot;1234567890123456&quot;,&quot;LogDeliveryStatus&quot;:&quot;enable&quot;,&quot;LogDeliveryUpdateTime&quot;:&quot;2026-10-19T14:00:00Z&quot;,&quot;IsDaAccount&quot;:true}]}],&quot;NormalizationLogStores&quot;:[{&quot;LogStoreName&quot;:&quot;host-activity&quot;,&quot;LogStoreTtl&quot;:180,&quot;UsedCapacity&quot;:10.3}],&quot;UnusedLogStores&quot;:[{&quot;LogStoreName&quot;:&quot;cloud-siem&quot;,&quot;LogStoreTtl&quot;:180,&quot;UsedCapacity&quot;:10.3}],&quot;RecordLogStores&quot;:[{&quot;LogStoreName&quot;:&quot;alert-record&quot;,&quot;LogStoreTtl&quot;:180,&quot;UsedCapacity&quot;:10.3}],&quot;NormalizationLogViews&quot;:[{&quot;CategoryName&quot;:&quot;Endpoint security&quot;,&quot;ActivityName&quot;:&quot;Host activity&quot;,&quot;LogViewName&quot;:&quot;host_activity&quot;,&quot;LogStoreName&quot;:&quot;host-activity&quot;,&quot;DetectionRuleReferenceCount&quot;:1,&quot;DetectionRuleReferenceProductIds&quot;:[&quot;sas&quot;],&quot;LogSearchConditions&quot;:&quot;[{\&quot;SCHEMA\&quot;:\&quot;host-activity\&quot;}]&quot;,&quot;LogViewExisted&quot;:true}],&quot;ColdStorageUsedCapacity&quot;:0.0,&quot;DataStorageUsedCapacityDetail&quot;:&quot;{\&quot;purchasedHotStorageCapacity\&quot;:1000,\&quot;usedHotStorageCapacity\&quot;:41.2,\&quot;usedColdStorageCapacity\&quot;:0.0,\&quot;usedHotStorageCapacityDetail\&quot;:{\&quot;cn-shanghai\&quot;:41.2},\&quot;usedColdStorageCapacityDetail\&quot;:{\&quot;cn-shanghai\&quot;:0.0}}&quot;,&quot;DataStorageRegionPermission&quot;:&quot;allow&quot;,&quot;LogServiceDisabled&quot;:false,&quot;LogProjectStateChangeAllowed&quot;:true,&quot;LogProjectState&quot;:&quot;ACTIVE&quot;,&quot;DeliverySettings&quot;:{&quot;PrerequisiteEnabled&quot;:true,&quot;CanConfigure&quot;:true,&quot;Enabled&quot;:true,&quot;Initialized&quot;:true,&quot;DaAccountId&quot;:&quot;1234567890123456&quot;,&quot;TargetProject&quot;:&quot;aliyun-cloudsiem-data-1234567890123456-cn-shanghai&quot;,&quot;TargetRegion&quot;:&quot;cn-shanghai&quot;,&quot;ConfigurationVersion&quot;:1,&quot;Accounts&quot;:[{&quot;AccountId&quot;:&quot;1234567890123456&quot;,&quot;AccountName&quot;:&quot;1234567890123456&quot;,&quot;DaAccount&quot;:true,&quot;Authorized&quot;:true}],&quot;Types&quot;:[{&quot;LogCode&quot;:&quot;aegis-log-client&quot;,&quot;SelectedAccountIds&quot;:[&quot;1234567890123456&quot;],&quot;AutoIncludeNewAccounts&quot;:true,&quot;Executions&quot;:[]}]}}</p>
@@ -14,7 +14,7 @@ public class GetDataStorageResponseBody extends TeaModel {
     public GetDataStorageResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request message ID.</p>
      * 
      * <strong>example:</strong>
      * <p>81FB0DEA-52C1-55A0-8631-8E1B9A9D****</p>
@@ -45,7 +45,7 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataDeliverySettingsAccounts extends TeaModel {
         /**
-         * <p>The UID of the source Alibaba Cloud account, which is a decimal string.</p>
+         * <p>The UID of the source cloud account. The value is a decimal string.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
@@ -63,7 +63,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Specifies whether the account has the authorization required for log delivery. This parameter must be set to true when you add a selected member.</p>
+         * <p>Indicates whether the account has the authorization required for log delivery. This parameter must be set to true when you add a member.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -72,7 +72,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Boolean authorized;
 
         /**
-         * <p>Specifies whether the account is the current management and delivery target account, which is the current account.</p>
+         * <p>Indicates whether the account is the current management and delivery target account, which is the local account.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -121,7 +121,7 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataDeliverySettingsTypesExecutions extends TeaModel {
         /**
-         * <p>The UID of the source account for this delivery record, which is a decimal string.</p>
+         * <p>The UID of the source account for this delivery record. The value is a decimal string.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123457</p>
@@ -130,7 +130,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>A reserved compatibility field. The current implementation does not populate historical execution error codes, so this field is usually empty or not returned. If execution fails, read the error code returned by the corresponding write operation.</p>
+         * <p>A reserved compatibility field. The current implementation does not populate historical execution error codes. This field is usually empty or not returned. If execution fails, read the error code returned by the corresponding write operation.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -139,7 +139,12 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The recorded delivery status. RUNNING indicates that the status is recorded as enabled after the last successful operation. STOPPED indicates that the status is recorded as disabled. This field does not indicate real-time log arrival.</p>
+         * <p>The recorded delivery status. Valid values:</p>
+         * <ul>
+         * <li>RUNNING: The delivery is recorded as enabled after the last successful operation.</li>
+         * <li>STOPPED: The delivery is recorded as disabled.
+         * This field does not indicate real-time log arrival.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -148,7 +153,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last update time of the delivery status, which is a UNIX timestamp in milliseconds. This field is empty or not returned if the record has no update time.</p>
+         * <p>The time when the delivery status was last updated. The value is a UNIX timestamp in milliseconds. If the record has no update time, this field is empty or not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1792399200000</p>
@@ -197,7 +202,7 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataDeliverySettingsTypes extends TeaModel {
         /**
-         * <p>Specifies whether to automatically add subsequent new and available managed members to the selection scope of this log type.</p>
+         * <p>Indicates whether to automatically add subsequent new and available managed members to the selection scope of this log type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -206,7 +211,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Boolean autoIncludeNewAccounts;
 
         /**
-         * <p>The status list of existing source delivery records for this log type.</p>
+         * <p>The list of statuses for existing source delivery records of this log type.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -215,7 +220,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public java.util.List<GetDataStorageResponseBodyDataDeliverySettingsTypesExecutions> executions;
 
         /**
-         * <p>The unique identifier of the log type, which corresponds to UpdateDataStorageDelivery.LogCode.</p>
+         * <p>The unique identifier of the log type. This corresponds to UpdateDataStorageDelivery.LogCode.</p>
          * 
          * <strong>example:</strong>
          * <p>aegis-log-client</p>
@@ -224,7 +229,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logCode;
 
         /**
-         * <p>The array of UIDs of the selected source accounts for this log type, including the current account. The response is a JSON string array. When you write an array(simple) request, you must serialize it into comma-separated values.</p>
+         * <p>The array of UIDs of the source accounts selected for this log type, including the local account. The response is a JSON string array. When you write an array(simple) request, serialize the value as comma-separated values.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;1234567890123456&quot;]</p>
@@ -273,7 +278,7 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataDeliverySettings extends TeaModel {
         /**
-         * <p>The account directory of the current account and managed member accounts.</p>
+         * <p>The account directory of the current local account and managed members.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;AccountId&quot;:&quot;1234567890123456&quot;,&quot;AccountName&quot;:&quot;1234567890123456&quot;,&quot;DaAccount&quot;:true,&quot;Authorized&quot;:true}]</p>
@@ -282,7 +287,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public java.util.List<GetDataStorageResponseBodyDataDeliverySettingsAccounts> accounts;
 
         /**
-         * <p>Specifies whether the current account meets the conditions for delivery setting operations. This is determined based on authorization, target project availability, capacity orders, and the current account identity. The PrerequisiteEnabled parameter must also be met.</p>
+         * <p>Indicates whether the current account meets the conditions for configuring delivery settings. This is determined based on authorization, target project availability, capacity orders, and the current account identity. The PrerequisiteEnabled parameter must also be set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -291,7 +296,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Boolean canConfigure;
 
         /**
-         * <p>The current version of the delivery settings. When you modify multi-account configurations or specify member delivery, pass this value back as ConfigurationVersion. You must query this value again after each modification and cannot use a fixed example value.</p>
+         * <p>The version of the current delivery settings. When you modify multi-account configurations or specify member delivery, pass this value back as the ConfigurationVersion parameter. Query this value again after each modification. Do not use a fixed sample value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -300,7 +305,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Long configurationVersion;
 
         /**
-         * <p>The UID of the current management and delivery target account, which is a decimal string. This is also the current account that is permanently retained in the account selection list.</p>
+         * <p>The UID of the current management and delivery target account. The value is a decimal string. This account is also the fixed local account in the account selection list.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
@@ -309,7 +314,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String daAccountId;
 
         /**
-         * <p>The master switch for the saved multi-account centralized delivery. A value of true indicates that the switch is turned on. A value of false indicates that the switch is turned off.</p>
+         * <p>The master switch for saved multi-account centralized delivery. A value of true indicates that the switch is turned on. A value of false indicates that the switch is turned off.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -318,7 +323,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>Specifies whether the initialization of the account scope and automatic inclusion settings is completed when the feature is enabled for the first time.</p>
+         * <p>Indicates whether the initialization of the account scope and automatic inclusion settings upon the first enabling is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -327,7 +332,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Boolean initialized;
 
         /**
-         * <p>Specifies whether the prerequisite of enabling multi-account security management in Security Center is met.</p>
+         * <p>Indicates whether the prerequisite of enabling multi-account security management in Security Center is met.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -363,7 +368,14 @@ public class GetDataStorageResponseBody extends TeaModel {
         public java.util.List<GetDataStorageResponseBodyDataDeliverySettingsTypes> types;
 
         /**
-         * <p>The reason code for being unconfigurable. Valid values: DA_UNAUTHORIZED (the management account is not authorized), TARGET_PROJECT_UNAVAILABLE (the target project is unavailable), LOG_CAPACITY_UNAVAILABLE (no valid capacity order exists), and NOT_CURRENT_ACCOUNT (the operation is not performed by the current account). This field is empty or not returned if the conditions are met.</p>
+         * <p>The reason code for why the configuration is unavailable. Valid values:</p>
+         * <ul>
+         * <li>DA_UNAUTHORIZED: The management account is not authorized.</li>
+         * <li>TARGET_PROJECT_UNAVAILABLE: The target project is unavailable.</li>
+         * <li>LOG_CAPACITY_UNAVAILABLE: No valid capacity order exists.</li>
+         * <li>NOT_CURRENT_ACCOUNT: The operation is not performed by the current account.
+         * If the conditions are met, this parameter is empty or not returned.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DA_UNAUTHORIZED</p>
@@ -468,6 +480,24 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataNormalizationLogStores extends TeaModel {
         /**
+         * <p>Indicates whether automatic index discovery is enabled for the full-text index of the Logstore in Simple Log Service. This field is returned only when WithAutoKeyDetect=true is specified in the request, and is not returned if the read operation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AutoKeyDetect")
+        public Boolean autoKeyDetect;
+
+        /**
+         * <p>Indicates whether the corresponding Logstore in Simple Log Service exists. A value of true indicates that the Logstore exists. A value of false indicates that the Logstore is not created and delivery is not enabled. In this case, automatic index discovery cannot be configured. This field is returned only when WithAutoKeyDetect=true is specified in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("LogStoreExisted")
+        public Boolean logStoreExisted;
+
+        /**
          * <p>The name of the Logstore that stores normalized data.</p>
          * 
          * <strong>example:</strong>
@@ -477,7 +507,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>The storage duration of the normalized data.</p>
+         * <p>The storage duration for normalized data.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -486,7 +516,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer logStoreTtl;
 
         /**
-         * <p>The amount of hot storage used.</p>
+         * <p>The used capacity of hot storage.</p>
          * 
          * <strong>example:</strong>
          * <p>10.333</p>
@@ -497,6 +527,22 @@ public class GetDataStorageResponseBody extends TeaModel {
         public static GetDataStorageResponseBodyDataNormalizationLogStores build(java.util.Map<String, ?> map) throws Exception {
             GetDataStorageResponseBodyDataNormalizationLogStores self = new GetDataStorageResponseBodyDataNormalizationLogStores();
             return TeaModel.build(map, self);
+        }
+
+        public GetDataStorageResponseBodyDataNormalizationLogStores setAutoKeyDetect(Boolean autoKeyDetect) {
+            this.autoKeyDetect = autoKeyDetect;
+            return this;
+        }
+        public Boolean getAutoKeyDetect() {
+            return this.autoKeyDetect;
+        }
+
+        public GetDataStorageResponseBodyDataNormalizationLogStores setLogStoreExisted(Boolean logStoreExisted) {
+            this.logStoreExisted = logStoreExisted;
+            return this;
+        }
+        public Boolean getLogStoreExisted() {
+            return this.logStoreExisted;
         }
 
         public GetDataStorageResponseBodyDataNormalizationLogStores setLogStoreName(String logStoreName) {
@@ -527,7 +573,7 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataNormalizationLogViews extends TeaModel {
         /**
-         * <p>The log type of the normalized logs.</p>
+         * <p>The log type of the normalized log.</p>
          * 
          * <strong>example:</strong>
          * <p>API security risk log</p>
@@ -536,7 +582,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String activityName;
 
         /**
-         * <p>The category of the normalized logs.</p>
+         * <p>The category of the normalized log.</p>
          * 
          * <strong>example:</strong>
          * <p>Security Category</p>
@@ -545,7 +591,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String categoryName;
 
         /**
-         * <p>The number of times this normalized dataset is referenced in Threat Analysis and Response.</p>
+         * <p>The number of times the normalized dataset is referenced in the threat analysis integration center.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -554,7 +600,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer detectionRuleReferenceCount;
 
         /**
-         * <p>The list of products that reference this normalized dataset in Threat Analysis and Response.</p>
+         * <p>The list of products that reference the normalized dataset in the threat analysis integration center.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;sas&quot;]</p>
@@ -572,7 +618,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logSearchConditions;
 
         /**
-         * <p>The Logstore where Threat Analysis and Response stores normalized logs.</p>
+         * <p>The Logstore in threat analysis that stores normalized logs.</p>
          * 
          * <strong>example:</strong>
          * <p>risk-activity</p>
@@ -581,7 +627,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>Specifies whether the normalized dataset exists. Valid values:</p>
+         * <p>Indicates whether the normalized dataset exists. Valid values:</p>
          * <ul>
          * <li>true: The dataset exists.</li>
          * <li>false: The dataset does not exist.</li>
@@ -734,7 +780,7 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataSasLogStoresAccountDeliveries extends TeaModel {
         /**
-         * <p>The UID of the source cloud account. This field is an int64 number.</p>
+         * <p>The UID of the source Alibaba Cloud account for the logs. This field is an int64 number.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
@@ -743,7 +789,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The display name of the source account. If the name is not obtained, the account UID string is used.</p>
+         * <p>The display name of the source account. If the name is unavailable, the account UID string is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>
@@ -752,7 +798,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>Indicates whether the account is the current management or target account (the current account). A value of true indicates the current account. A value of false indicates a member source account.</p>
+         * <p>Indicates whether the account is the current management or target account. A value of true indicates the current account, and a value of false indicates a member source account.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -761,11 +807,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Boolean isDaAccount;
 
         /**
-         * <p>The recorded delivery status of the source account. Valid values:</p>
-         * <ul>
-         * <li>enable: Enabled.</li>
-         * <li>disable: Disabled.</li>
-         * </ul>
+         * <p>The recorded delivery status for the source account. Valid values: enable (enabled) and disable (disabled).</p>
          * 
          * <strong>example:</strong>
          * <p>enable</p>
@@ -774,7 +816,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logDeliveryStatus;
 
         /**
-         * <p>The last update time of the delivery status for the source account. If no record is generated, this field is empty or not returned.</p>
+         * <p>The last update time of the delivery status for the source account. This field is empty or not returned if no records are generated.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -832,13 +874,22 @@ public class GetDataStorageResponseBody extends TeaModel {
 
     public static class GetDataStorageResponseBodyDataSasLogStores extends TeaModel {
         /**
-         * <p>The delivery records of this log type expanded by source account, including the current account and member accounts with existing records.</p>
+         * <p>The delivery records of the log type expanded by source account, including the current account and member accounts with existing records.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;AccountId&quot;:1234567890123456,&quot;AccountName&quot;:&quot;1234567890123456&quot;,&quot;LogDeliveryStatus&quot;:&quot;enable&quot;,&quot;LogDeliveryUpdateTime&quot;:&quot;2026-10-19T14:00:00Z&quot;,&quot;IsDaAccount&quot;:true}]</p>
          */
         @NameInMap("AccountDeliveries")
         public java.util.List<GetDataStorageResponseBodyDataSasLogStoresAccountDeliveries> accountDeliveries;
+
+        /**
+         * <p>Indicates whether automatic index discovery is enabled for the full-text index of the Logstore in Simple Log Service. This field is returned only when WithAutoKeyDetect=true is specified in the request, and is not returned if the read operation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AutoKeyDetect")
+        public Boolean autoKeyDetect;
 
         /**
          * <p>The log code.</p>
@@ -863,7 +914,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logDeliveryGroup;
 
         /**
-         * <p>Specifies whether the log delivery switch can be operated. Log delivery is unavailable if the service is not purchased. Valid values:</p>
+         * <p>Specifies whether you are allowed to toggle the log delivery switch. Log delivery is unavailable if the service is not purchased. Valid values:</p>
          * <ul>
          * <li>allow: Allowed.</li>
          * <li>deny: Not allowed.</li>
@@ -878,8 +929,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         /**
          * <p>The log delivery status. Valid values:</p>
          * <ul>
-         * <li>enable: Log delivery is enabled.</li>
-         * <li>disable: Log delivery is disabled.</li>
+         * <li>enable: Delivery is enabled for the log.</li>
+         * <li>disable: Delivery is disabled for the log.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -907,7 +958,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logName;
 
         /**
-         * <p>The default query conditions for the log. When multiple logs are stored in a single Logstore, you must use query conditions to perform a log query for a specific log.</p>
+         * <p>The default query conditions for the log. When multiple logs are stored in a single Logstore, you must use query conditions to perform a log query.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;<strong>topic</strong>\&quot;:\&quot;sas-net-block\&quot;}]</p>
@@ -947,7 +998,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer logStoreTtl;
 
         /**
-         * <p>The amount of hot storage used.</p>
+         * <p>The used capacity of hot storage.</p>
          * 
          * <strong>example:</strong>
          * <p>10.333</p>
@@ -966,6 +1017,14 @@ public class GetDataStorageResponseBody extends TeaModel {
         }
         public java.util.List<GetDataStorageResponseBodyDataSasLogStoresAccountDeliveries> getAccountDeliveries() {
             return this.accountDeliveries;
+        }
+
+        public GetDataStorageResponseBodyDataSasLogStores setAutoKeyDetect(Boolean autoKeyDetect) {
+            this.autoKeyDetect = autoKeyDetect;
+            return this;
+        }
+        public Boolean getAutoKeyDetect() {
+            return this.autoKeyDetect;
         }
 
         public GetDataStorageResponseBodyDataSasLogStores setLogCode(String logCode) {
@@ -1078,7 +1137,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer logStoreTtl;
 
         /**
-         * <p>The amount of hot storage used.</p>
+         * <p>The used capacity of hot storage.</p>
          * 
          * <strong>example:</strong>
          * <p>10.333</p>
@@ -1128,7 +1187,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Double coldStorageUsedCapacity;
 
         /**
-         * <p>The storage region of user logs.</p>
+         * <p>The storage region for user-side logs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -1137,10 +1196,10 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageRegionId;
 
         /**
-         * <p>Specifies whether the storage region can be modified. By default, the region cannot be modified. You can contact the product manager to reset the region, and the region can be reset only once. Valid values:</p>
+         * <p>Indicates whether the storage region can be modified. By default, modification is not allowed. Contact the product manager to reset the region. The region can be reset only once. Valid values:</p>
          * <ul>
-         * <li>allow: The region can be modified.</li>
-         * <li>deny: The region cannot be modified.</li>
+         * <li>allow: The storage region can be modified.</li>
+         * <li>deny: The storage region cannot be modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1150,7 +1209,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageRegionPermission;
 
         /**
-         * <p>The storage capacity purchased for subscription.</p>
+         * <p>The storage capacity purchased in subscription scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1159,7 +1218,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Long dataStorageTotalCapacity;
 
         /**
-         * <p>The amount of storage used in user log management.</p>
+         * <p>The storage capacity used in user log management.</p>
          * 
          * <strong>example:</strong>
          * <p>100.0</p>
@@ -1168,7 +1227,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Double dataStorageUsedCapacity;
 
         /**
-         * <p>The storage usage details of the log management user.</p>
+         * <p>The details of storage usage by log management users.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;purchasedHotStorageCapacity\&quot;:1000,\&quot;usedHotStorageCapacity\&quot;:4.2,\&quot;usedHotStorageCapacityDetail\&quot;:{\&quot;ap-southeast-1\&quot;:4.2,\&quot;cn-shenzhen\&quot;:0.0,\&quot;cn-shanghai\&quot;:0.0}}</p>
@@ -1177,7 +1236,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageUsedCapacityDetail;
 
         /**
-         * <p>The multi-account delivery settings for the current storage resources. Returned when the query is successful. If the read operation fails, see DeliverySettingsError.</p>
+         * <p>The multi-account delivery settings for the current storage resource. This parameter is returned when the query is successful. If the read operation fails, refer to DeliverySettingsError.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;PrerequisiteEnabled&quot;:true,&quot;CanConfigure&quot;:true,&quot;Enabled&quot;:true,&quot;Initialized&quot;:true,&quot;DaAccountId&quot;:&quot;1234567890123456&quot;,&quot;TargetProject&quot;:&quot;aliyun-cloudsiem-data-1234567890123456-cn-shanghai&quot;,&quot;TargetRegion&quot;:&quot;cn-shanghai&quot;,&quot;ConfigurationVersion&quot;:1,&quot;Accounts&quot;:[{&quot;AccountId&quot;:&quot;1234567890123456&quot;,&quot;AccountName&quot;:&quot;1234567890123456&quot;,&quot;DaAccount&quot;:true,&quot;Authorized&quot;:true}],&quot;Types&quot;:[{&quot;LogCode&quot;:&quot;aegis-log-client&quot;,&quot;SelectedAccountIds&quot;:[&quot;1234567890123456&quot;],&quot;AutoIncludeNewAccounts&quot;:true,&quot;Executions&quot;:[]}]}</p>
@@ -1186,7 +1245,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public GetDataStorageResponseBodyDataDeliverySettings deliverySettings;
 
         /**
-         * <p>The read error code for the optional multi-account delivery settings. If the read operation fails, DELIVERY_SETTINGS_UNAVAILABLE is returned. If the read operation is successful, this field is empty or not returned, and does not affect other storage fields.</p>
+         * <p>The read fault code for optional multi-account delivery settings. If the read failed, DELIVERY_SETTINGS_UNAVAILABLE is returned. If the read is successful, this field is empty or not returned and does not affect other storage fields.</p>
          * 
          * <strong>example:</strong>
          * <p>DELIVERY_SETTINGS_UNAVAILABLE</p>
@@ -1195,7 +1254,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String deliverySettingsError;
 
         /**
-         * <p>The name of the Simple Log Service project where user logs are stored.</p>
+         * <p>The name of the Simple Log Service project that stores user logs.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-cloudsiem-data-171835723111****-cn-shanghai</p>
@@ -1213,7 +1272,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logProjectState;
 
         /**
-         * <p>Specifies whether the status of the log project can be changed.</p>
+         * <p>Indicates whether the status of the log project can be changed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1222,7 +1281,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Boolean logProjectStateChangeAllowed;
 
         /**
-         * <p>Specifies whether Simple Log Service is disabled.</p>
+         * <p>Indicates whether the log service is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1231,7 +1290,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Boolean logServiceDisabled;
 
         /**
-         * <p>The details of the Logstores for normalized data.</p>
+         * <p>The Logstore details for normalized data.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;LogStoreName&quot;:&quot;host-activity&quot;,&quot;LogStoreTtl&quot;:180,&quot;UsedCapacity&quot;:10.3}]</p>
@@ -1240,7 +1299,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public java.util.List<GetDataStorageResponseBodyDataNormalizationLogStores> normalizationLogStores;
 
         /**
-         * <p>The details of the normalized datasets.</p>
+         * <p>The details of normalized datasets.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;CategoryName&quot;:&quot;Endpoint security&quot;,&quot;ActivityName&quot;:&quot;Host activity&quot;,&quot;LogViewName&quot;:&quot;host_activity&quot;,&quot;LogStoreName&quot;:&quot;host-activity&quot;,&quot;DetectionRuleReferenceCount&quot;:1,&quot;DetectionRuleReferenceProductIds&quot;:[&quot;sas&quot;],&quot;LogSearchConditions&quot;:&quot;[{\&quot;SCHEMA\&quot;:\&quot;host-activity\&quot;}]&quot;,&quot;LogViewExisted&quot;:true}]</p>
@@ -1249,7 +1308,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public java.util.List<GetDataStorageResponseBodyDataNormalizationLogViews> normalizationLogViews;
 
         /**
-         * <p>The list of Record Logstores.</p>
+         * <p>The list of record Logstores.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;LogStoreName&quot;:&quot;alert-record&quot;,&quot;LogStoreTtl&quot;:180,&quot;UsedCapacity&quot;:10.3}]</p>
@@ -1258,7 +1317,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public java.util.List<GetDataStorageResponseBodyDataRecordLogStores> recordLogStores;
 
         /**
-         * <p>The storage details of raw logs in Security Center.</p>
+         * <p>The storage details of raw logs from Security Center.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;LogName&quot;:&quot;Client events&quot;,&quot;LogStoreName&quot;:&quot;aegis-log-client&quot;,&quot;LogDeliveryStatus&quot;:&quot;enable&quot;,&quot;LogStoreTtl&quot;:180,&quot;LogDeliveryUpdateTime&quot;:&quot;2026-10-19T14:00:00&quot;,&quot;LogDeliveryPermission&quot;:&quot;allow&quot;,&quot;LogDeliveryGroup&quot;:&quot;host&quot;,&quot;LogSearchConditions&quot;:&quot;[{\&quot;<strong>topic</strong>\&quot;:\&quot;aegis-log-client\&quot;}]&quot;,&quot;LogCode&quot;:&quot;aegis-log-client&quot;,&quot;LogStoreExisted&quot;:true,&quot;UsedCapacity&quot;:10.3,&quot;AccountDeliveries&quot;:[{&quot;AccountId&quot;:1234567890123456,&quot;AccountName&quot;:&quot;1234567890123456&quot;,&quot;LogDeliveryStatus&quot;:&quot;enable&quot;,&quot;LogDeliveryUpdateTime&quot;:&quot;2026-10-19T14:00:00Z&quot;,&quot;IsDaAccount&quot;:true}]}]</p>
@@ -1267,7 +1326,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public java.util.List<GetDataStorageResponseBodyDataSasLogStores> sasLogStores;
 
         /**
-         * <p>The list of legacy Logstores in SIEM V1.</p>
+         * <p>The list of legacy SIEM V1 Logstores.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;LogStoreName&quot;:&quot;cloud-siem&quot;,&quot;LogStoreTtl&quot;:180,&quot;UsedCapacity&quot;:10.3}]</p>

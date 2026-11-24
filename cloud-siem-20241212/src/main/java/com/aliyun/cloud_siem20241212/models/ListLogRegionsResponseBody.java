@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogRegionsResponseBody extends TeaModel {
     /**
-     * <p>A list of log storage region IDs.</p>
+     * <p>The list of log storage region IDs.</p>
      */
     @NameInMap("LogRegions")
     public java.util.List<String> logRegions;

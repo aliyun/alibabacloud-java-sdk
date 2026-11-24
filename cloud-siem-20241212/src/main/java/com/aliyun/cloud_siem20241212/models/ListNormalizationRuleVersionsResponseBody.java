@@ -4,45 +4,18 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
-    /**
-     * <p>The maximum number of entries to return.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>50</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>The list of normalization rule versions.</p>
-     */
     @NameInMap("NormalizationRuleVersions")
     public java.util.List<ListNormalizationRuleVersionsResponseBodyNormalizationRuleVersions> normalizationRuleVersions;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of records.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>57</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -92,50 +65,18 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
     }
 
     public static class ListNormalizationRuleVersionsResponseBodyNormalizationRuleVersions extends TeaModel {
-        /**
-         * <p>The creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The normalization rule expression.</p>
-         * 
-         * <strong>example:</strong>
-         * <ul>
-         * <li>| pack-fields -include=\&quot;[\s\S]+\&quot; as extend_content</li>
-         * </ul>
-         */
         @NameInMap("NormalizationRuleExpression")
         public String normalizationRuleExpression;
 
-        /**
-         * <p>The normalization rule ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nr-z0b2ssjteut85uoh9nzp</p>
-         */
         @NameInMap("NormalizationRuleId")
         public String normalizationRuleId;
 
-        /**
-         * <p>The normalization rule version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>V1</p>
-         */
         @NameInMap("NormalizationRuleVersion")
         public Integer normalizationRuleVersion;
 
-        /**
-         * <p>The update time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

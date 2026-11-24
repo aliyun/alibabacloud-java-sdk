@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelCopilotTurnResponseBody extends TeaModel {
     /**
-     * <p>The API version number. The value is 1.0.0.</p>
+     * <p>The API version number, which is &quot;1.0.0&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>v1.2</p>
@@ -23,7 +23,7 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The security operations Agent conversation turn.</p>
+     * <p>The conversation turn of the security operations agent.</p>
      */
     @NameInMap("Turn")
     public CancelCopilotTurnResponseBodyTurn turn;
@@ -68,7 +68,7 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
         public String clientMessageId;
 
         /**
-         * <p>The session ID.</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
@@ -77,7 +77,7 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>The creation time. The time follows the ISO 8601 standard in UTC.</p>
+         * <p>The creation time in ISO 8601 format and the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-23T02:13:49Z</p>
@@ -86,7 +86,7 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The conversation feedback information.</p>
+         * <p>The returned conversation information.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -95,7 +95,7 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
         public Long feedback;
 
         /**
-         * <p>The number of tokens used for input.</p>
+         * <p>The number of input tokens used.</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -113,7 +113,7 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
         public String modelId;
 
         /**
-         * <p>The number of tokens used for output.</p>
+         * <p>The number of output tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>856</p>
@@ -131,13 +131,13 @@ public class CancelCopilotTurnResponseBody extends TeaModel {
         public Long reasoningTokens;
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          */
         @NameInMap("RetryAllowed")
         public Boolean retryAllowed;
 
         /**
-         * <p>The status of the conversation turn.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

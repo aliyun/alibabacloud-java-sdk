@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "cloud-siem";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloud-siem", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -28,10 +31,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cancels a specified security operations Agent conversation turn. Before calling this operation, use CreateCopilotConversation to create a session and obtain the ConversationId, then use CreateCopilotChat to initiate a streaming conversation and obtain the TurnId from the response.</p>
+     * <p>Cancels a specified conversation turn of the security operations agent. Before calling this operation, call CreateCopilotConversation to create a conversation and obtain the ConversationId, and then call CreateCopilotChat to initiate a streaming conversation and obtain the TurnId from the response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Requests cancellation of a specified security operations Agent conversation turn and returns the turn status after the cancellation request is processed.</p>
+     * <p>Cancels a specified conversation turn of the security operations agent and returns the status of the turn after the cancellation request is processed.</p>
      * 
      * @param request CancelCopilotTurnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -79,10 +82,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cancels a specified security operations Agent conversation turn. Before calling this operation, use CreateCopilotConversation to create a session and obtain the ConversationId, then use CreateCopilotChat to initiate a streaming conversation and obtain the TurnId from the response.</p>
+     * <p>Cancels a specified conversation turn of the security operations agent. Before calling this operation, call CreateCopilotConversation to create a conversation and obtain the ConversationId, and then call CreateCopilotChat to initiate a streaming conversation and obtain the TurnId from the response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Requests cancellation of a specified security operations Agent conversation turn and returns the turn status after the cancellation request is processed.</p>
+     * <p>Cancels a specified conversation turn of the security operations agent and returns the status of the turn after the cancellation request is processed.</p>
      * 
      * @param request CancelCopilotTurnRequest
      * @return CancelCopilotTurnResponse
@@ -94,10 +97,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Checks the execution status of a specified upgrade item. You must specify the upgrade item ID (UpgradeItemId) when calling this operation. The response includes the checkpoint status (CheckStatus) and check result (CheckResult) of the upgrade item.</p>
+     * <p>Checks the execution status of a specified upgrade item. When you call this operation, you must specify the upgrade item ID (UpgradeItemId). The response includes the checkpoint status (CheckStatus) and check result (CheckResult) of the upgrade item.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks the status of a version upgrade item.</p>
+     * <p>Checks version upgrade items.</p>
      * 
      * @param request CheckUpgradeItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -141,10 +144,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Checks the execution status of a specified upgrade item. You must specify the upgrade item ID (UpgradeItemId) when calling this operation. The response includes the checkpoint status (CheckStatus) and check result (CheckResult) of the upgrade item.</p>
+     * <p>Checks the execution status of a specified upgrade item. When you call this operation, you must specify the upgrade item ID (UpgradeItemId). The response includes the checkpoint status (CheckStatus) and check result (CheckResult) of the upgrade item.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks the status of a version upgrade item.</p>
+     * <p>Checks version upgrade items.</p>
      * 
      * @param request CheckUpgradeItemRequest
      * @return CheckUpgradeItemResponse
@@ -156,10 +159,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig input parameter is a complex JSON configuration. Refer to the helper class in the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a> for configuration examples.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. Therefore, we provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an auto-dispose configuration.</p>
+     * <p>Creates the automatic disposition configuration for users.</p>
      * 
      * @param request CreateAutoDisposeConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -199,10 +202,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig input parameter is a complex JSON configuration. Refer to the helper class in the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a> for configuration examples.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. Therefore, we provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an auto-dispose configuration.</p>
+     * <p>Creates the automatic disposition configuration for users.</p>
      * 
      * @param request CreateAutoDisposeConfigRequest
      * @return CreateAutoDisposeConfigResponse
@@ -214,10 +217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Sends a message to a security operations Agent conversation and returns results as an SSE event stream.</p>
+     * <p>Sends a message to a security operations agent conversation and returns the results as a Server-Sent Events (SSE) event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sends a message to the security operations Agent and returns an event stream through SSE. The first request can implicitly create a conversation.</p>
+     * <p>Sends a message to the security operations agent and returns an event stream through Server-Sent Events (SSE). A conversation can be implicitly created in the same request during the first turn.</p>
      * 
      * @param tmpReq CreateCopilotChatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -319,10 +322,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Sends a message to a security operations Agent conversation and returns results as an SSE event stream.</p>
+     * <p>Sends a message to a security operations agent conversation and returns the results as a Server-Sent Events (SSE) event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sends a message to the security operations Agent and returns an event stream through SSE. The first request can implicitly create a conversation.</p>
+     * <p>Sends a message to the security operations agent and returns an event stream through Server-Sent Events (SSE). A conversation can be implicitly created in the same request during the first turn.</p>
      * 
      * @param request CreateCopilotChatRequest
      * @return CreateCopilotChatResponse
@@ -334,10 +337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a security operations Agent session.</p>
+     * <p>Creates a security operations agent session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a security operations Agent session that belongs to the current tenant and owner, and returns the session ID, status, and session configuration.</p>
+     * <p>Creates a security operations agent session that belongs to the current tenant and owner, and returns the session ID, status, and session configuration.</p>
      * 
      * @param request CreateCopilotConversationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -397,10 +400,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a security operations Agent session.</p>
+     * <p>Creates a security operations agent session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a security operations Agent session that belongs to the current tenant and owner, and returns the session ID, status, and session configuration.</p>
+     * <p>Creates a security operations agent session that belongs to the current tenant and owner, and returns the session ID, status, and session configuration.</p>
      * 
      * @param request CreateCopilotConversationRequest
      * @return CreateCopilotConversationResponse
@@ -411,16 +414,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Creates an access policy to ingest log data from a data source into threat analysis.
-     * Before you begin:</p>
-     * <ol>
-     * <li>Call the CreateDataSource operation to create a data source and obtain the data source ID (DataSourceId).</li>
-     * <li>Call the CreateNormalizationRule operation to create a normalization rule and obtain the normalization rule ID (NormalizationRuleId).</li>
-     * </ol>
-     * 
      * <b>summary</b> : 
-     * <p>Creates an access policy.</p>
+     * <p>创建数据源</p>
      * 
      * @param request CreateDataIngestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -507,16 +502,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Creates an access policy to ingest log data from a data source into threat analysis.
-     * Before you begin:</p>
-     * <ol>
-     * <li>Call the CreateDataSource operation to create a data source and obtain the data source ID (DataSourceId).</li>
-     * <li>Call the CreateNormalizationRule operation to create a normalization rule and obtain the normalization rule ID (NormalizationRuleId).</li>
-     * </ol>
-     * 
      * <b>summary</b> : 
-     * <p>Creates an access policy.</p>
+     * <p>创建数据源</p>
      * 
      * @param request CreateDataIngestionRequest
      * @return CreateDataIngestionResponse
@@ -528,7 +515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a dataset.</p>
+     * <p>创建数据集</p>
      * 
      * @param request CreateDataSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -601,7 +588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a dataset.</p>
+     * <p>创建数据集</p>
      * 
      * @param request CreateDataSetRequest
      * @return CreateDataSetResponse
@@ -613,7 +600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig input parameter is a complex JSON object. For a configuration example, see the supporting tool class in the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">demo</a>.</p>
+     * <p>The JsonConfig request parameter involves very complex JSON Configurations. We provide a supporting tool class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data source.</p>
@@ -727,7 +714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig input parameter is a complex JSON object. For a configuration example, see the supporting tool class in the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">demo</a>.</p>
+     * <p>The JsonConfig request parameter involves very complex JSON Configurations. We provide a supporting tool class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data source.</p>
@@ -994,10 +981,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a restrictive user-side storage.</p>
+     * <p>Creates restricted user-side storage.</p>
      * 
      * @param request CreateLogStoreRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1053,10 +1040,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a restrictive user-side storage.</p>
+     * <p>Creates restricted user-side storage.</p>
      * 
      * @param request CreateLogStoreRequest
      * @return CreateLogStoreResponse
@@ -1068,7 +1055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig is a complex JSON configuration. A supporting utility class is provided to assist with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a normalization rule.</p>
@@ -1181,7 +1168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig is a complex JSON configuration. A supporting utility class is provided to assist with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a normalization rule.</p>
@@ -1196,7 +1183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, we provide a supporting utility class. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a supporting utility class to help with specific configuration examples. For more information, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data source.</p>
@@ -1283,7 +1270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, we provide a supporting utility class. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a supporting utility class to help with specific configuration examples. For more information, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data source.</p>
@@ -1297,11 +1284,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex set of JSON Configurations. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Creates a product.</p>
+     * <p>创建产品</p>
      * 
      * @param request CreateProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1348,11 +1332,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex set of JSON Configurations. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Creates a product.</p>
+     * <p>创建产品</p>
      * 
      * @param request CreateProductRequest
      * @return CreateProductResponse
@@ -1364,10 +1345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a supporting tool with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter involves complex JSON configurations. A supporting utility class is provided to assist with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an automatic response rule.</p>
+     * <p>Creates an automated response rule.</p>
      * 
      * @param request CreateResponseRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1447,10 +1428,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a supporting tool with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter involves complex JSON configurations. A supporting utility class is provided to assist with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an automatic response rule.</p>
+     * <p>Creates an automated response rule.</p>
      * 
      * @param request CreateResponseRuleRequest
      * @return CreateResponseRuleResponse
@@ -1461,12 +1442,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Creates a vendor.
-     * Before you begin: You must have purchased the cloud-siem service and have a valid order before calling this operation. If you have not purchased the service or your order has expired, the API returns &quot;The order doesn\&quot;t exist or is expired.&quot; Purchase or renew the service before calling this operation.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Creates a vendor.</p>
+     * <p>创建厂商</p>
      * 
      * @param request CreateVendorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1509,12 +1486,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Creates a vendor.
-     * Before you begin: You must have purchased the cloud-siem service and have a valid order before calling this operation. If you have not purchased the service or your order has expired, the API returns &quot;The order doesn\&quot;t exist or is expired.&quot; Purchase or renew the service before calling this operation.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Creates a vendor.</p>
+     * <p>创建厂商</p>
      * 
      * @param request CreateVendorRequest
      * @return CreateVendorResponse
@@ -1525,11 +1498,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are sent only between 08:00 and 20:00. Each user can receive a maximum of two notifications per day.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a data ingestion policy.</p>
+     * <p>删除数据接入</p>
      * 
      * @param request DeleteDataIngestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1572,11 +1542,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are sent only between 08:00 and 20:00. Each user can receive a maximum of two notifications per day.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a data ingestion policy.</p>
+     * <p>删除数据接入</p>
      * 
      * @param request DeleteDataIngestionRequest
      * @return DeleteDataIngestionResponse
@@ -1588,7 +1555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a dataset.</p>
+     * <p>删除数据集</p>
      * 
      * @param request DeleteDataSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1632,7 +1599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a dataset.</p>
+     * <p>删除数据集</p>
      * 
      * @param request DeleteDataSetRequest
      * @return DeleteDataSetResponse
@@ -1703,12 +1670,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Deletes a specified data source.
-     * Before you begin: The calling account must have a valid SIEM data source management value-added feature subscription.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a data source.</p>
+     * <p>删除数据源</p>
      * 
      * @param request DeleteDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1751,12 +1714,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Deletes a specified data source.
-     * Before you begin: The calling account must have a valid SIEM data source management value-added feature subscription.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a data source.</p>
+     * <p>删除数据源</p>
      * 
      * @param request DeleteDataSourceRequest
      * @return DeleteDataSourceResponse
@@ -1768,7 +1727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a detection rule.</p>
+     * <p>删除检测规则</p>
      * 
      * @param request DeleteDetectionRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1812,7 +1771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a detection rule.</p>
+     * <p>删除检测规则</p>
      * 
      * @param request DeleteDetectionRuleRequest
      * @return DeleteDetectionRuleResponse
@@ -1824,10 +1783,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON Configurations. We provide a utility class as a supporting tool to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a LogStore.</p>
+     * <p>Deletes a Logstore.</p>
      * 
      * @param request DeleteLogStoreRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1883,10 +1842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON Configurations. We provide a utility class as a supporting tool to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a LogStore.</p>
+     * <p>Deletes a Logstore.</p>
      * 
      * @param request DeleteLogStoreRequest
      * @return DeleteLogStoreResponse
@@ -1897,11 +1856,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class that contains configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a normalization rule.</p>
+     * <p>删除标准化规则</p>
      * 
      * @param request DeleteNormalizationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1944,11 +1900,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class that contains configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a normalization rule.</p>
+     * <p>删除标准化规则</p>
      * 
      * @param request DeleteNormalizationRuleRequest
      * @return DeleteNormalizationRuleResponse
@@ -1959,11 +1912,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class with configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a normalization rule version.</p>
+     * <p>删除标准化规则版本</p>
      * 
      * @param request DeleteNormalizationRuleVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2010,11 +1960,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class with configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a normalization rule version.</p>
+     * <p>删除标准化规则版本</p>
      * 
      * @param request DeleteNormalizationRuleVersionRequest
      * @return DeleteNormalizationRuleVersionResponse
@@ -2026,7 +1973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON configuration. A utility class is provided to help you configure it. For specific configuration examples, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a normalization schema.</p>
@@ -2077,7 +2024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON configuration. A utility class is provided to help you configure it. For specific configuration examples, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a normalization schema.</p>
@@ -2091,11 +2038,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is provided to help you create the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a product.</p>
+     * <p>删除产品</p>
      * 
      * @param request DeleteProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2138,11 +2082,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is provided to help you create the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a product.</p>
+     * <p>删除产品</p>
      * 
      * @param request DeleteProductRequest
      * @return DeleteProductResponse
@@ -2154,10 +2095,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00.</p>
+     * <p>Notification delivery is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an automatic response rule.</p>
+     * <p>Deletes an automated response rule.</p>
      * 
      * @param request DeleteResponseRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2205,10 +2146,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00.</p>
+     * <p>Notification delivery is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an automatic response rule.</p>
+     * <p>Deletes an automated response rule.</p>
      * 
      * @param request DeleteResponseRuleRequest
      * @return DeleteResponseRuleResponse
@@ -2219,11 +2160,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day. These notifications are sent only between 08:00 and 20:00.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a vendor.</p>
+     * <p>删除厂商</p>
      * 
      * @param request DeleteVendorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2270,11 +2208,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day. These notifications are sent only between 08:00 and 20:00.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Deletes a vendor.</p>
+     * <p>删除厂商</p>
      * 
      * @param request DeleteVendorRequest
      * @return DeleteVendorResponse
@@ -2285,12 +2220,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Stops a collection policy.</p>
+     * <p>停止数据接入</p>
      * 
      * @param request DisableDataIngestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2333,12 +2264,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Stops a collection policy.</p>
+     * <p>停止数据接入</p>
      * 
      * @param request DisableDataIngestionRequest
      * @return DisableDataIngestionResponse
@@ -2349,11 +2276,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notification frequency is limited to a maximum of two per user per day. Notifications are sent only between 08:00 and 20:00.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Enables the data ingestion policy.</p>
+     * <p>启动数据接入</p>
      * 
      * @param request EnableDataIngestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2400,11 +2324,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notification frequency is limited to a maximum of two per user per day. Notifications are sent only between 08:00 and 20:00.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Enables the data ingestion policy.</p>
+     * <p>启动数据接入</p>
      * 
      * @param request EnableDataIngestionRequest
      * @return EnableDataIngestionResponse
@@ -2416,10 +2337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig input parameter is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. A supporting utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Manually handles alerts. Batch operations are supported.</p>
+     * <p>Manually handles alerts in batches.</p>
      * 
      * @param request ExecuteAutoDisposeRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2464,10 +2385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig input parameter is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. A supporting utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Manually handles alerts. Batch operations are supported.</p>
+     * <p>Manually handles alerts in batches.</p>
      * 
      * @param request ExecuteAutoDisposeRecordsRequest
      * @return ExecuteAutoDisposeRecordsResponse
@@ -2479,7 +2400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided. For specific configuration examples, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Executes a data query.</p>
@@ -2562,7 +2483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided. For specific configuration examples, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Executes a data query.</p>
@@ -2647,10 +2568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves alert details.</p>
+     * <p>Retrieves the details of an alert.</p>
      * 
      * @param request GetAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2698,10 +2619,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves alert details.</p>
+     * <p>Retrieves the details of an alert.</p>
      * 
      * @param request GetAlertRequest
      * @return GetAlertResponse
@@ -2713,10 +2634,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <code>JsonConfig</code> input parameter uses a complex JSON structure. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a> for a helper utility and configuration examples.</p>
+     * <p>The request parameter JsonConfig is a highly complex JSON configuration. To simplify this, we provide a utility class for specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the automatic response configuration.</p>
+     * <p>Retrieves the automatic disposal configuration for users.</p>
      * 
      * @param request GetAutoDisposeConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2752,10 +2673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <code>JsonConfig</code> input parameter uses a complex JSON structure. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a> for a helper utility and configuration examples.</p>
+     * <p>The request parameter JsonConfig is a highly complex JSON configuration. To simplify this, we provide a utility class for specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the automatic response configuration.</p>
+     * <p>Retrieves the automatic disposal configuration for users.</p>
      * 
      * @param request GetAutoDisposeConfigRequest
      * @return GetAutoDisposeConfigResponse
@@ -3019,7 +2940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the log storage region, project, capacity, Logstore, and multi-account delivery settings of the current account. Before you update the multi-account configuration, read Data.DeliverySettings.ConfigurationVersion and TargetProject, and pass them to the write operation as is. The capacity is measured in GB, and the TTL is measured in days. The account UID in DeliverySettings is a string. If the system fails to read the optional delivery settings, the cause is returned in DeliverySettingsError, and other storage information is still returned.</p>
+     * <p>Queries the log storage region, project, capacity, Logstore, and multi-account delivery settings of the current account. Before updating the multi-account configuration, retrieve Data.DeliverySettings.ConfigurationVersion and TargetProject, and pass them to the write API unchanged. Capacity is measured in GB, and TTL is measured in days. Account UIDs in DeliverySettings are strings. If reading optional delivery settings fails, the cause is returned in DeliverySettingsError, and other storage information is still returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of user logs in log management.</p>
@@ -3043,6 +2964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RoleFor", request.roleFor);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.withAutoKeyDetect)) {
+            body.put("WithAutoKeyDetect", request.withAutoKeyDetect);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -3062,7 +2987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the log storage region, project, capacity, Logstore, and multi-account delivery settings of the current account. Before you update the multi-account configuration, read Data.DeliverySettings.ConfigurationVersion and TargetProject, and pass them to the write operation as is. The capacity is measured in GB, and the TTL is measured in days. The account UID in DeliverySettings is a string. If the system fails to read the optional delivery settings, the cause is returned in DeliverySettingsError, and other storage information is still returned.</p>
+     * <p>Queries the log storage region, project, capacity, Logstore, and multi-account delivery settings of the current account. Before updating the multi-account configuration, retrieve Data.DeliverySettings.ConfigurationVersion and TargetProject, and pass them to the write API unchanged. Capacity is measured in GB, and TTL is measured in days. Account UIDs in DeliverySettings are strings. If reading optional delivery settings fails, the cause is returned in DeliverySettingsError, and other storage information is still returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of user logs in log management.</p>
@@ -3247,18 +3172,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the AI investigation results that have been generated for a specified incident. You can call ListIncidentInvestigations to obtain the report ID or display ID first, and then call this operation to query the details.
+     * <p>Queries the generated AI investigation results for a specified event. You can first call ListIncidentInvestigations to obtain the report ID or display ID, and then call this operation to query the details.
      * The query priority is as follows:</p>
      * <ol>
      * <li>If IncidentInvestigationId is specified, the query is performed by report ID.</li>
      * <li>If the report ID is not specified but IncidentInvestigationDisplayId is specified, the query is performed by display ID.</li>
-     * <li>If neither identifier is specified, the most recent successfully completed investigation result for the incident corresponding to IncidentUuid is returned, selected in descending order of investigation end time.
+     * <li>If neither identifier is specified, the most recent successfully completed investigation result for the event corresponding to IncidentUuid is returned, sorted in descending order by investigation end time.
      * If no matching investigation record is found, IncidentInvestigation is empty.
-     * IncidentInvestigationStatus indicates the judgment category in the report. Both IncidentInvestigationReport and IncidentInvestigationOutput are JSON-formatted strings that must be parsed before their fields can be used. Internal fields may change across report versions, and callers should handle missing fields gracefully. The examples show only partial report content.</li>
+     * IncidentInvestigationStatus indicates the judgment category in the report. Both IncidentInvestigationReport and IncidentInvestigationOutput are JSON-formatted strings. You must parse them in JSON format before using their fields. Internal fields may change with report versions, and callers must be compatible with missing fields. The examples show only part of the report content.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the AI investigation details of a specified incident, including the report ID, investigation time, judgment category, summary, conclusion, and report content.</p>
+     * <p>Queries the AI investigation details of a specified event, including the report identifiers, investigation time, judgment category, summary, conclusion, and report content.</p>
      * 
      * @param request GetIncidentInvestigationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3310,18 +3235,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the AI investigation results that have been generated for a specified incident. You can call ListIncidentInvestigations to obtain the report ID or display ID first, and then call this operation to query the details.
+     * <p>Queries the generated AI investigation results for a specified event. You can first call ListIncidentInvestigations to obtain the report ID or display ID, and then call this operation to query the details.
      * The query priority is as follows:</p>
      * <ol>
      * <li>If IncidentInvestigationId is specified, the query is performed by report ID.</li>
      * <li>If the report ID is not specified but IncidentInvestigationDisplayId is specified, the query is performed by display ID.</li>
-     * <li>If neither identifier is specified, the most recent successfully completed investigation result for the incident corresponding to IncidentUuid is returned, selected in descending order of investigation end time.
+     * <li>If neither identifier is specified, the most recent successfully completed investigation result for the event corresponding to IncidentUuid is returned, sorted in descending order by investigation end time.
      * If no matching investigation record is found, IncidentInvestigation is empty.
-     * IncidentInvestigationStatus indicates the judgment category in the report. Both IncidentInvestigationReport and IncidentInvestigationOutput are JSON-formatted strings that must be parsed before their fields can be used. Internal fields may change across report versions, and callers should handle missing fields gracefully. The examples show only partial report content.</li>
+     * IncidentInvestigationStatus indicates the judgment category in the report. Both IncidentInvestigationReport and IncidentInvestigationOutput are JSON-formatted strings. You must parse them in JSON format before using their fields. Internal fields may change with report versions, and callers must be compatible with missing fields. The examples show only part of the report content.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the AI investigation details of a specified incident, including the report ID, investigation time, judgment category, summary, conclusion, and report content.</p>
+     * <p>Queries the AI investigation details of a specified event, including the report identifiers, investigation time, judgment category, summary, conclusion, and report content.</p>
      * 
      * @param request GetIncidentInvestigationRequest
      * @return GetIncidentInvestigationResponse
@@ -3395,7 +3320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The request parameter JsonConfig contains highly complex JSON configurations. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig involves highly complex JSON configurations. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves normalization rule information.</p>
@@ -3446,7 +3371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The request parameter JsonConfig contains highly complex JSON configurations. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig involves highly complex JSON configurations. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves normalization rule information.</p>
@@ -3460,11 +3385,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a supporting utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Retrieves normalization rule version information.</p>
+     * <p>获取标准化规则指定版本信息</p>
      * 
      * @param request GetNormalizationRuleVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3511,11 +3433,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a supporting utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Retrieves normalization rule version information.</p>
+     * <p>获取标准化规则指定版本信息</p>
      * 
      * @param request GetNormalizationRuleVersionRequest
      * @return GetNormalizationRuleVersionResponse
@@ -3715,10 +3634,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class and configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To simplify this, we provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of alert groups.</p>
+     * <p>Retrieves a list of alert groups.</p>
      * 
      * @param request ListAlertAggregationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3798,10 +3717,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class and configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To simplify this, we provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of alert groups.</p>
+     * <p>Retrieves a list of alert groups.</p>
      * 
      * @param request ListAlertAggregationsRequest
      * @return ListAlertAggregationsResponse
@@ -4011,10 +3930,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the message list of a specified security operations Agent conversation.</p>
+     * <p>Queries the list of messages in a specified security operations agent session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries visible persisted messages in a specified security operations Agent session by paging, with configurable sorting direction.</p>
+     * <p>Performs a paging query on the persisted visible messages in a specified security operations agent session, and allows you to control the sorting direction.</p>
      * 
      * @param request ListCopilotMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4070,10 +3989,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the message list of a specified security operations Agent conversation.</p>
+     * <p>Queries the list of messages in a specified security operations agent session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries visible persisted messages in a specified security operations Agent session by paging, with configurable sorting direction.</p>
+     * <p>Performs a paging query on the persisted visible messages in a specified security operations agent session, and allows you to control the sorting direction.</p>
      * 
      * @param request ListCopilotMessagesRequest
      * @return ListCopilotMessagesResponse
@@ -4085,7 +4004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries collectors by paging.</p>
+     * <p>Performs a paging query to retrieve data connectors.</p>
      * 
      * @param tmpReq ListDataConnectorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4183,7 +4102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries collectors by paging.</p>
+     * <p>Performs a paging query to retrieve data connectors.</p>
      * 
      * @param request ListDataConnectorsRequest
      * @return ListDataConnectorsResponse
@@ -4194,12 +4113,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries data ingestion templates.</p>
+     * <p>查询接入模板</p>
      * 
      * @param request ListDataIngestionTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4258,12 +4173,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries data ingestion templates.</p>
+     * <p>查询接入模板</p>
      * 
      * @param request ListDataIngestionTemplatesRequest
      * @return ListDataIngestionTemplatesResponse
@@ -4453,7 +4364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of datasets.</p>
+     * <p>获取数据集列表</p>
      * 
      * @param tmpReq ListDataSetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4543,7 +4454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of datasets.</p>
+     * <p>获取数据集列表</p>
      * 
      * @param request ListDataSetsRequest
      * @return ListDataSetsResponse
@@ -4554,12 +4465,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries data source templates.</p>
+     * <p>查询数据源模板</p>
      * 
      * @param tmpReq ListDataSourceTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4616,12 +4523,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries data source templates.</p>
+     * <p>查询数据源模板</p>
      * 
      * @param request ListDataSourceTemplatesRequest
      * @return ListDataSourceTemplatesResponse
@@ -4633,8 +4536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</p>
+     * <p>Notification delivery is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of data sources.</p>
@@ -4759,8 +4661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</p>
+     * <p>Notification delivery is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of data sources.</p>
@@ -4775,11 +4676,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
+     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of detection rules.</p>
+     * <p>Queries a list of detection rules.</p>
      * 
      * @param tmpReq ListDetectionRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4791,6 +4691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.detectionRuleIds)) {
             request.detectionRuleIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.detectionRuleIds, "DetectionRuleIds", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.logSchemaIds)) {
+            request.logSchemaIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.logSchemaIds, "LogSchemaIds", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4850,6 +4754,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("LogSchemaId", request.logSchemaId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.logSchemaIdsShrink)) {
+            body.put("LogSchemaIds", request.logSchemaIdsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             body.put("MaxResults", request.maxResults);
         }
@@ -4901,11 +4809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
+     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of detection rules.</p>
+     * <p>Queries a list of detection rules.</p>
      * 
      * @param request ListDetectionRulesRequest
      * @return ListDetectionRulesResponse
@@ -4917,11 +4824,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</p>
+     * <p>Notification delivery is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of events.</p>
+     * <p>Retrieves a list of incidents.</p>
      * 
      * @param tmpReq ListIncidentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5049,11 +4955,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</p>
+     * <p>Notification delivery is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of events.</p>
+     * <p>Retrieves a list of incidents.</p>
      * 
      * @param request ListIncidentsRequest
      * @return ListIncidentsResponse
@@ -5139,7 +5044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The \<code>JsonConfig\\</code> request parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig involves complex JSON configurations. We provide a supporting utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves all regions.</p>
@@ -5178,7 +5083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The \<code>JsonConfig\\</code> request parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig involves complex JSON configurations. We provide a supporting utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves all regions.</p>
@@ -5193,11 +5098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</p>
+     * <p>Sending notifications is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00, and no notifications are sent at other times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of log stores.</p>
+     * <p>Retrieves a list of log stores.</p>
      * 
      * @param request ListLogStoresRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5257,11 +5161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</p>
+     * <p>Sending notifications is subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00, and no notifications are sent at other times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of log stores.</p>
+     * <p>Retrieves a list of log stores.</p>
      * 
      * @param request ListLogStoresRequest
      * @return ListLogStoresResponse
@@ -5502,11 +5405,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig input parameter is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of normalization rule versions.</p>
+     * <p>获取标准化规则版本列表</p>
      * 
      * @param request ListNormalizationRuleVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5557,11 +5457,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig input parameter is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of normalization rule versions.</p>
+     * <p>获取标准化规则版本列表</p>
      * 
      * @param request ListNormalizationRuleVersionsRequest
      * @return ListNormalizationRuleVersionsResponse
@@ -5695,7 +5592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, we provide a utility class. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of normalization schemas.</p>
@@ -5762,7 +5659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The request parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, we provide a utility class. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of normalization schemas.</p>
@@ -5842,11 +5739,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The input parameter JsonConfig is a highly complex JSON configuration. A utility class with specific configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of products.</p>
+     * <p>获取产品列表</p>
      * 
      * @param tmpReq ListProductsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5915,11 +5809,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The input parameter JsonConfig is a highly complex JSON configuration. A utility class with specific configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of products.</p>
+     * <p>获取产品列表</p>
      * 
      * @param request ListProductsRequest
      * @return ListProductsResponse
@@ -6083,11 +5974,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
+     * <p>Notification sending is limited by frequency and time. Each user can receive a maximum of two notifications per day between 08:00 and 20:00, and no notifications are sent at other times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries automatic response rules by paging.</p>
+     * <p>Queries automatic response rules by page.</p>
      * 
      * @param request ListResponseRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6167,11 +6057,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
+     * <p>Notification sending is limited by frequency and time. Each user can receive a maximum of two notifications per day between 08:00 and 20:00, and no notifications are sent at other times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries automatic response rules by paging.</p>
+     * <p>Queries automatic response rules by page.</p>
      * 
      * @param request ListResponseRulesRequest
      * @return ListResponseRulesResponse
@@ -6422,12 +6311,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of vendors.</p>
+     * <p>获取厂商列表</p>
      * 
      * @param tmpReq ListVendorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6492,12 +6377,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of vendors.</p>
+     * <p>获取厂商列表</p>
      * 
      * @param request ListVendorsRequest
      * @return ListVendorsResponse
@@ -6625,10 +6506,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resumes the SSE event stream for a security operations Agent conversation turn from a specified cursor.</p>
+     * <p>Resumes the event stream for a security operations agent conversation turn from a specified cursor.</p>
      * 
      * <b>summary</b> : 
-     * <p>Incrementally resumes the SSE event stream for a specified security operations Agent turn based on the run cursor.</p>
+     * <p>Resumes the Server-Sent Events (SSE) event stream for a specified security operations agent turn incrementally based on the run cursor.</p>
      * 
      * @param tmpReq ResumeCopilotTurnStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6686,10 +6567,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resumes the SSE event stream for a security operations Agent conversation turn from a specified cursor.</p>
+     * <p>Resumes the event stream for a security operations agent conversation turn from a specified cursor.</p>
      * 
      * <b>summary</b> : 
-     * <p>Incrementally resumes the SSE event stream for a specified security operations Agent turn based on the run cursor.</p>
+     * <p>Resumes the Server-Sent Events (SSE) event stream for a specified security operations agent turn incrementally based on the run cursor.</p>
      * 
      * @param request ResumeCopilotTurnStreamRequest
      * @return ResumeCopilotTurnStreamResponse
@@ -6701,8 +6582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
+     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</p>
      * 
      * <b>summary</b> : 
      * <p>Sets the default version of a normalization rule.</p>
@@ -6753,8 +6633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
+     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</p>
      * 
      * <b>summary</b> : 
      * <p>Sets the default version of a normalization rule.</p>
@@ -6769,8 +6648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
+     * <p>Notification delivery is subject to frequency and time limits. Each user can receive up to two notifications per day between 08:00 and 20:00, and no notifications are sent outside this time frame.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an alert.</p>
@@ -6825,8 +6703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time restrictions.
-     * Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</p>
+     * <p>Notification delivery is subject to frequency and time limits. Each user can receive up to two notifications per day between 08:00 and 20:00, and no notifications are sent outside this time frame.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an alert.</p>
@@ -7136,11 +7013,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits. A maximum of two notifications are sent to each user per day between 08:00 and 20:00.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a data ingestion policy.</p>
+     * <p>更新数据接入信息</p>
      * 
      * @param request UpdateDataIngestionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7195,11 +7069,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits. A maximum of two notifications are sent to each user per day between 08:00 and 20:00.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a data ingestion policy.</p>
+     * <p>更新数据接入信息</p>
      * 
      * @param request UpdateDataIngestionRequest
      * @return UpdateDataIngestionResponse
@@ -7210,11 +7081,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Frequency and time limits apply to notifications. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside of this time period.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a data ingestion template.</p>
+     * <p>更新接入模板</p>
      * 
      * @param request UpdateDataIngestionTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7269,11 +7137,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Frequency and time limits apply to notifications. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside of this time period.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a data ingestion template.</p>
+     * <p>更新接入模板</p>
      * 
      * @param request UpdateDataIngestionTemplateRequest
      * @return UpdateDataIngestionTemplateResponse
@@ -7284,11 +7149,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are limited by frequency and time. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time range.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a dataset.</p>
+     * <p>更新数据集</p>
      * 
      * @param request UpdateDataSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7356,11 +7218,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Notifications are limited by frequency and time. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time range.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a dataset.</p>
+     * <p>更新数据集</p>
      * 
      * @param request UpdateDataSetRequest
      * @return UpdateDataSetResponse
@@ -7372,7 +7231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00.</p>
+     * <p>Notifications are subject to frequency and time limits. Each user can receive up to two notifications per day between 08:00 and 20:00, and no notifications are sent outside this period.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates dataset records.</p>
@@ -7427,7 +7286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00.</p>
+     * <p>Notifications are subject to frequency and time limits. Each user can receive up to two notifications per day between 08:00 and 20:00, and no notifications are sent outside this period.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates dataset records.</p>
@@ -7441,11 +7300,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a data source.</p>
+     * <p>更新数据源</p>
      * 
      * @param request UpdateDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7529,11 +7385,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a data source.</p>
+     * <p>更新数据源</p>
      * 
      * @param request UpdateDataSourceRequest
      * @return UpdateDataSourceResponse
@@ -7544,11 +7397,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig input parameter accepts a complex JSON configuration. To simplify this process, a supporting tool class is available. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Modifies a data source template.</p>
+     * <p>修改数据源模板</p>
      * 
      * @param tmpReq UpdateDataSourceTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7627,11 +7477,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The JsonConfig input parameter accepts a complex JSON configuration. To simplify this process, a supporting tool class is available. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Modifies a data source template.</p>
+     * <p>修改数据源模板</p>
      * 
      * @param request UpdateDataSourceTemplateRequest
      * @return UpdateDataSourceTemplateResponse
@@ -7643,10 +7490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the log storage region or the global switch for multi-account centralized delivery. Submit these two types of operations separately. Before modifying the global switch, query GetDataStorage first and use the returned ConfigurationVersion and TargetProject. Do not copy the fixed version and account from the examples. The current V2 version does not support the legacy DeliveryStatus global switch. After writing, re-query GetDataStorage to obtain the latest configuration.</p>
+     * <p>Updates the log storage region or the global switch for multi-account centralized delivery. Submit these two operations separately. Before modifying the global switch, call GetDataStorage and use the returned ConfigurationVersion and TargetProject values. Do not copy the fixed version and account from the examples. The current V2 version does not support the legacy DeliveryStatus global switch. After the update, call GetDataStorage again to obtain the latest configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the log storage region in log management.</p>
+     * <p>Updates the log storage region in log management.</p>
      * 
      * @param request UpdateDataStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7706,10 +7553,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the log storage region or the global switch for multi-account centralized delivery. Submit these two types of operations separately. Before modifying the global switch, query GetDataStorage first and use the returned ConfigurationVersion and TargetProject. Do not copy the fixed version and account from the examples. The current V2 version does not support the legacy DeliveryStatus global switch. After writing, re-query GetDataStorage to obtain the latest configuration.</p>
+     * <p>Updates the log storage region or the global switch for multi-account centralized delivery. Submit these two operations separately. Before modifying the global switch, call GetDataStorage and use the returned ConfigurationVersion and TargetProject values. Do not copy the fixed version and account from the examples. The current V2 version does not support the legacy DeliveryStatus global switch. After the update, call GetDataStorage again to obtain the latest configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the log storage region in log management.</p>
+     * <p>Updates the log storage region in log management.</p>
      * 
      * @param request UpdateDataStorageRequest
      * @return UpdateDataStorageResponse
@@ -7721,7 +7568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the Cloud Threat Detection and Response (CTDR) data storage service is activated for your account and that the data storage order has not expired. Call the GetDataStorage operation to check the data storage order status.</p>
+     * <p>Before you call this operation, make sure that the Cloud Security Center (Cloud SIEM) data storage service is activated for your account and the data storage order has not expired. You can call the GetDataStorage operation to check the status of the data storage order.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the log delivery status.</p>
@@ -7798,7 +7645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that the Cloud Threat Detection and Response (CTDR) data storage service is activated for your account and that the data storage order has not expired. Call the GetDataStorage operation to check the data storage order status.</p>
+     * <p>Before you call this operation, make sure that the Cloud Security Center (Cloud SIEM) data storage service is activated for your account and the data storage order has not expired. You can call the GetDataStorage operation to check the status of the data storage order.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the log delivery status.</p>
@@ -7813,7 +7660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the storage duration for logs.</p>
+     * <p>Modifies the storage duration of logs.</p>
      * 
      * @param request UpdateDataStorageTtlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7869,7 +7716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the storage duration for logs.</p>
+     * <p>Modifies the storage duration of logs.</p>
      * 
      * @param request UpdateDataStorageTtlRequest
      * @return UpdateDataStorageTtlResponse
@@ -7881,7 +7728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a detection rule.</p>
@@ -8052,7 +7899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a detection rule.</p>
@@ -8067,7 +7914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter contains complex JSON configurations. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a normalization rule.</p>
@@ -8180,7 +8027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter contains complex JSON configurations. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a normalization rule.</p>
@@ -8272,11 +8119,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, a utility class is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a product.</p>
+     * <p>更新产品品</p>
      * 
      * @param request UpdateProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8327,11 +8171,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, a utility class is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a product.</p>
+     * <p>更新产品品</p>
      * 
      * @param request UpdateProductRequest
      * @return UpdateProductResponse
@@ -8343,7 +8184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig input parameter is a complex JSON configuration. To help you configure it, a supporting utility class with examples is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON configuration. We provide a utility class to help you with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an automated response rule.</p>
@@ -8426,7 +8267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig input parameter is a complex JSON configuration. To help you configure it, a supporting utility class with examples is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The JsonConfig request parameter is a complex JSON configuration. We provide a utility class to help you with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an automated response rule.</p>
@@ -8440,11 +8281,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The delivery of notifications is limited by frequency and time. A user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time period.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a vendor.</p>
+     * <p>更新厂商</p>
      * 
      * @param request UpdateVendorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8491,11 +8329,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The delivery of notifications is limited by frequency and time. A user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time period.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a vendor.</p>
+     * <p>更新厂商</p>
      * 
      * @param request UpdateVendorRequest
      * @return UpdateVendorResponse
@@ -8581,7 +8416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Validates normalization rules.</p>
@@ -8660,7 +8495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Validates normalization rules.</p>
