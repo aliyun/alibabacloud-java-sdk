@@ -367,9 +367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</li>
+     * <li>This API operation generates a temporary OSS upload credential so that the client can directly upload files to a specified OSS bucket.</li>
      * <li>The <code>FileExt</code> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</li>
-     * <li>The <code>FileType</code> parameter is optional and defaults to <code>Media</code>. It affects the path segment in the returned <code>ObjectKey</code>.</li>
+     * <li>The <code>FileType</code> parameter is optional. The default value is <code>Media</code>. This parameter affects the path segment in the returned <code>ObjectKey</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -423,9 +423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</li>
+     * <li>This API operation generates a temporary OSS upload credential so that the client can directly upload files to a specified OSS bucket.</li>
      * <li>The <code>FileExt</code> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</li>
-     * <li>The <code>FileType</code> parameter is optional and defaults to <code>Media</code>. It affects the path segment in the returned <code>ObjectKey</code>.</li>
+     * <li>The <code>FileType</code> parameter is optional. The default value is <code>Media</code>. This parameter affects the path segment in the returned <code>ObjectKey</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -497,7 +497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</li>
+     * <li>This operation supports two modes: creating a new media asset and overwriting an existing one.</li>
      * <li>When creating a new media asset, the <code>FileInfo</code> and <code>MediaMetaData</code> parameters are required.</li>
      * <li>When overwriting an existing media asset, you must set <code>Overwrite</code> to true and provide <code>MediaId</code>.</li>
      * <li>You can specify the credential type by using <code>CredentialType</code>. The default value is STS_TOKEN.</li>
@@ -570,7 +570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</li>
+     * <li>This operation supports two modes: creating a new media asset and overwriting an existing one.</li>
      * <li>When creating a new media asset, the <code>FileInfo</code> and <code>MediaMetaData</code> parameters are required.</li>
      * <li>When overwriting an existing media asset, you must set <code>Overwrite</code> to true and provide <code>MediaId</code>.</li>
      * <li>You can specify the credential type by using <code>CredentialType</code>. The default value is STS_TOKEN.</li>
@@ -931,6 +931,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateYikeLoginTokenResponse generateYikeLoginToken(GenerateYikeLoginTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateYikeLoginTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves an intelligent workflow task.</p>
+     * 
+     * @param request GetAIAppJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAIAppJobResponse
+     */
+    public GetAIAppJobResponse getAIAppJobWithOptions(GetAIAppJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyOutputs)) {
+            query.put("OnlyOutputs", request.onlyOutputs);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAIAppJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAIAppJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves an intelligent workflow task.</p>
+     * 
+     * @param request GetAIAppJobRequest
+     * @return GetAIAppJobResponse
+     */
+    public GetAIAppJobResponse getAIAppJob(GetAIAppJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAIAppJobWithOptions(request, runtime);
     }
 
     /**
@@ -1475,7 +1523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a video generation job.</p>
+     * <p>Queries a video generation task.</p>
      * 
      * @param request GetVideoGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1511,7 +1559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a video generation job.</p>
+     * <p>Queries a video generation task.</p>
      * 
      * @param request GetVideoGenerationJobRequest
      * @return GetVideoGenerationJobResponse
@@ -1986,7 +2034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation retrieves a list of all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
+     * <li>This operation retrieves all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
      * <li>If <code>ProductionId</code> is not provided, the default project of the current account is used.</li>
      * </ul>
      * 
@@ -2033,7 +2081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation retrieves a list of all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
+     * <li>This operation retrieves all media folders in a specified project (<code>ProductionId</code>). Pagination is supported by using the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
      * <li>If <code>ProductionId</code> is not provided, the default project of the current account is used.</li>
      * </ul>
      * 
@@ -2286,6 +2334,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchMediaResponse searchMedia(SearchMediaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchMediaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Starts an intelligent workflow.</p>
+     * 
+     * @param request SubmitAIAppJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitAIAppJobResponse
+     */
+    public SubmitAIAppJobResponse submitAIAppJobWithOptions(SubmitAIAppJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputs)) {
+            body.put("Inputs", request.inputs);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitAIAppJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitAIAppJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Starts an intelligent workflow.</p>
+     * 
+     * @param request SubmitAIAppJobRequest
+     * @return SubmitAIAppJobResponse
+     */
+    public SubmitAIAppJobResponse submitAIAppJob(SubmitAIAppJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitAIAppJobWithOptions(request, runtime);
     }
 
     /**

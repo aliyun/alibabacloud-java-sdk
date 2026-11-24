@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUploadMediaResponseBody extends TeaModel {
     /**
-     * <p>The unsigned OSS URL of the file. The format is <code>oss://bucket/objectKey</code>.</p>
+     * <p>The unsigned OSS URL of the file in the <code>oss://bucket/objectKey</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://yike-shared-ap-southeast-1-1/yike-v1/gi3dkn-gi3dkn/2026-11-18/08/video/b7e94fc0e1bf71f1bfa2f6e7c5486601aB3xYz01.mp4</p>
@@ -23,7 +23,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The OSS object key. The format is <code>yike-v1/uid segment-ws segment/date/hour/type/mediaId+random string+source suffix.file name extension</code>.</p>
+     * <p>The OSS object key in the <code>yike-v1/uid segment-ws segment/date/hour/type/mediaId+random string+source suffix.file name extension</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>yike-v1/gi3dkn-gi3dkn/2026-11-18/08/video/b7e94fc0e1bf71f1bfa2f6e7c5486601aB3xYz01.mp4</p>
@@ -41,7 +41,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The storage location identifier. The format is <code>bucket.endpoint</code>.</p>
+     * <p>The storage location identifier in the <code>bucket.endpoint</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>yike-shared-ap-southeast-1-1.oss-ap-southeast-1.aliyuncs.com</p>
@@ -50,7 +50,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     public String storageLocation;
 
     /**
-     * <p>The expiration time of the ticket. The time is in UTC and follows the ISO 8601 standard. This field is returned when UPLOAD_TICKET is used.</p>
+     * <p>The expiration time of the ticket in UTC and ISO 8601 format. This field is returned when <code>UPLOAD_TICKET</code> is used.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-11-18T12:00:00Z</p>
@@ -65,7 +65,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     public CreateUploadMediaResponseBodyUploadCredentials uploadCredentials;
 
     /**
-     * <p>The upload ticket. This field is returned when UPLOAD_TICKET is used. The ticket is a 27-character string in the format of UT1+region code+random string+check digit. A real credential is issued based on this ticket during a ticket exchange.</p>
+     * <p>The upload ticket. This field is returned when <code>UPLOAD_TICKET</code> is used. It is a 27-character string in the UT1+region code+random string+check digit format. A real credential is issued based on this ticket during a ticket exchange.</p>
      * 
      * <strong>example:</strong>
      * <p>UT1SGK7M2QX9R4T6V8W0Y3Z5ABC</p>
@@ -144,7 +144,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
 
     public static class CreateUploadMediaResponseBodyUploadCredentials extends TeaModel {
         /**
-         * <p>The temporary STS <code>AccessKey ID</code>. This field is returned when <code>STS_TOKEN</code> is used.</p>
+         * <p>The temporary STS AccessKey ID. This field is returned when <code>STS_TOKEN</code> is used.</p>
          * 
          * <strong>example:</strong>
          * <p>STS.NUgYrLnoC63mLqWeRtYuIoPaSdF</p>
@@ -153,7 +153,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
-         * <p>The temporary STS AccessKey secret. This field is returned when STS_TOKEN is used.</p>
+         * <p>The temporary STS AccessKey secret. This field is returned when <code>STS_TOKEN</code> is used.</p>
          * 
          * <strong>example:</strong>
          * <p>CVwjCkNzTMupZ8nRtYeXwQaBcDfGhIjK</p>
@@ -162,7 +162,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         public String accessKeySecret;
 
         /**
-         * <p>The OSS bucket. This field is returned when STS_TOKEN, POST_POLICY, or PRESIGNED_URL is used.</p>
+         * <p>The OSS bucket. This field is returned when <code>STS_TOKEN</code>, <code>POST_POLICY</code>, or <code>PRESIGNED_URL</code> is used.</p>
          * 
          * <strong>example:</strong>
          * <p>yike-shared-ap-southeast-1-1</p>
@@ -171,7 +171,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The expiration time of the credential. The time is in UTC and follows the ISO 8601 standard.</p>
+         * <p>The expiration time of the credential in UTC and ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-11-18T12:00:00Z</p>
@@ -180,7 +180,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         public String expiration;
 
         /**
-         * <p>The Base64-encoded PostObject policy. This field is returned when POST_POLICY is used.</p>
+         * <p>The Base64-encoded PostObject policy. This field is returned when <code>POST_POLICY</code> is used.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJleHBpcmF0aW9uIjoiMjAyNi0xMS0xOFQxMjowMDowMFoiLCJjb25kaXRpb25zIjpbXX0=</p>
@@ -189,7 +189,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         public String policy;
 
         /**
-         * <p>The AccessKey ID used for the signature. This field is returned when POST_POLICY is used.</p>
+         * <p>The AccessKey ID used for the signature. This field is returned when <code>POST_POLICY</code> is used.</p>
          * 
          * <strong>example:</strong>
          * <p>LTAI5tG8XkQmP2vR9wYzAbCd</p>
@@ -198,7 +198,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         public String postAccessKeyId;
 
         /**
-         * <p>The target endpoint for the POST request. This field is returned when POST_POLICY is used.</p>
+         * <p>The destination endpoint for the POST request. This field is returned when <code>POST_POLICY</code> is used.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://yike-shared-ap-southeast-1-1.oss-ap-southeast-1.aliyuncs.com">https://yike-shared-ap-southeast-1-1.oss-ap-southeast-1.aliyuncs.com</a></p>
@@ -216,7 +216,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The STS security token. This field is returned when STS_TOKEN is used.</p>
+         * <p>The STS security token. This field is returned when <code>STS_TOKEN</code> is used.</p>
          * 
          * <strong>example:</strong>
          * <p>CAISjgJ1q6Ft5B2yfSjIr5DDEOTM2pZ6g7oIExampleToken</p>
@@ -225,7 +225,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         public String securityToken;
 
         /**
-         * <p>The PostObject signature. This field is returned when POST_POLICY is used.</p>
+         * <p>The PostObject signature. This field is returned when <code>POST_POLICY</code> is used.</p>
          * 
          * <strong>example:</strong>
          * <p>vXkQ9dRt2mLpN8sYwZaBcDfEgHj=</p>
@@ -234,7 +234,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
         public String signature;
 
         /**
-         * <p>The pre-signed PUT URL. This field is returned when PRESIGNED_URL is used.</p>
+         * <p>The pre-signed PUT URL. This field is returned when <code>PRESIGNED_URL</code> is used.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://yike-shared-ap-southeast-1-1.oss-ap-southeast-1.aliyuncs.com/yike-v1/.../demo.mp4?Expires=1763467200&OSSAccessKeyId=STS.xxx&Signature=xxx">https://yike-shared-ap-southeast-1-1.oss-ap-southeast-1.aliyuncs.com/yike-v1/.../demo.mp4?Expires=1763467200&amp;OSSAccessKeyId=STS.xxx&amp;Signature=xxx</a></p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetVideoGenerationJobRequest extends TeaModel {
     /**
-     * <p>The client token.</p>
+     * <p>The idempotency parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>818**811</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -17,7 +17,7 @@ public class GetVideoGenerationJobRequest extends TeaModel {
      * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>68ca759e798b40b4903b255*******</p>
+     * <p>ag_68ca759b4903b255*******</p>
      */
     @NameInMap("JobId")
     public String jobId;
