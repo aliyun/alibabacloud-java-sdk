@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveMaterialDirectoryResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The name of the application. You can use this name to query the application.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -56,7 +56,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The error code. If the request succeeds, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
+     * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -74,7 +74,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>Indicates whether the move operation succeeded.</p>
+     * <p>Indicates whether the move operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class MoveMaterialDirectoryResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

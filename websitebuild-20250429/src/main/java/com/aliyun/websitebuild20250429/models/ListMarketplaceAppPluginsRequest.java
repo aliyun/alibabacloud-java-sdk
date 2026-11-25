@@ -8,7 +8,7 @@ public class ListMarketplaceAppPluginsRequest extends TeaModel {
      * <p>Filters the results by category.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;CateName\&quot;: u\&quot;\u57fa\u7840\u533b\u5b66\u7efc\u5408\&quot;, \&quot;CateId\&quot;: 1000675720, \&quot;Level\&quot;: 2, \&quot;Type\&quot;: \&quot;default\&quot;, \&quot;ParentId\&quot;: 1000675713}</p>
+     * <p>{&quot;CateName&quot;: u&quot;\u57fa\u7840\u533b\u5b66\u7efc\u5408&quot;, &quot;CateId&quot;: 1000675720, &quot;Level&quot;: 2, &quot;Type&quot;: &quot;default&quot;, &quot;ParentId&quot;: 1000675713}</p>
      */
     @NameInMap("Category")
     public String category;
@@ -17,7 +17,7 @@ public class ListMarketplaceAppPluginsRequest extends TeaModel {
      * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</p>
+     * <p>${&quot;wget JiexJPWT.popscan.xaliyun.com&quot;}</p>
      */
     @NameInMap("Keyword")
     public String keyword;

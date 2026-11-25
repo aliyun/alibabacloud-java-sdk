@@ -4,6 +4,9 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class PublishAppInstanceRequest extends TeaModel {
+    @NameInMap("ArtifactDigest")
+    public String artifactDigest;
+
     /**
      * <p>The business ID.</p>
      * 
@@ -12,6 +15,9 @@ public class PublishAppInstanceRequest extends TeaModel {
      */
     @NameInMap("BizId")
     public String bizId;
+
+    @NameInMap("CandidateId")
+    public String candidateId;
 
     /**
      * <p>The deployment channel.</p>
@@ -31,6 +37,12 @@ public class PublishAppInstanceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Ext")
+    public String ext;
+
+    @NameInMap("IdempotencyKey")
+    public String idempotencyKey;
+
     /**
      * <p>The logical version number.</p>
      * 
@@ -40,6 +52,18 @@ public class PublishAppInstanceRequest extends TeaModel {
     @NameInMap("LogicalNumber")
     public Integer logicalNumber;
 
+    @NameInMap("PlatformAppid")
+    public String platformAppid;
+
+    @NameInMap("PluginDeclarationHash")
+    public String pluginDeclarationHash;
+
+    @NameInMap("PrivacyDraftId")
+    public String privacyDraftId;
+
+    @NameInMap("PrivacyRevision")
+    public String privacyRevision;
+
     /**
      * <p>The publish number.</p>
      * 
@@ -48,6 +72,12 @@ public class PublishAppInstanceRequest extends TeaModel {
      */
     @NameInMap("PublishNumber")
     public String publishNumber;
+
+    @NameInMap("PublishOrderId")
+    public Long publishOrderId;
+
+    @NameInMap("UploadSequence")
+    public Long uploadSequence;
 
     /**
      * <p>The action.</p>
@@ -63,12 +93,28 @@ public class PublishAppInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PublishAppInstanceRequest setArtifactDigest(String artifactDigest) {
+        this.artifactDigest = artifactDigest;
+        return this;
+    }
+    public String getArtifactDigest() {
+        return this.artifactDigest;
+    }
+
     public PublishAppInstanceRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public PublishAppInstanceRequest setCandidateId(String candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    public String getCandidateId() {
+        return this.candidateId;
     }
 
     public PublishAppInstanceRequest setDeployChannel(String deployChannel) {
@@ -87,6 +133,22 @@ public class PublishAppInstanceRequest extends TeaModel {
         return this.description;
     }
 
+    public PublishAppInstanceRequest setExt(String ext) {
+        this.ext = ext;
+        return this;
+    }
+    public String getExt() {
+        return this.ext;
+    }
+
+    public PublishAppInstanceRequest setIdempotencyKey(String idempotencyKey) {
+        this.idempotencyKey = idempotencyKey;
+        return this;
+    }
+    public String getIdempotencyKey() {
+        return this.idempotencyKey;
+    }
+
     public PublishAppInstanceRequest setLogicalNumber(Integer logicalNumber) {
         this.logicalNumber = logicalNumber;
         return this;
@@ -95,12 +157,60 @@ public class PublishAppInstanceRequest extends TeaModel {
         return this.logicalNumber;
     }
 
+    public PublishAppInstanceRequest setPlatformAppid(String platformAppid) {
+        this.platformAppid = platformAppid;
+        return this;
+    }
+    public String getPlatformAppid() {
+        return this.platformAppid;
+    }
+
+    public PublishAppInstanceRequest setPluginDeclarationHash(String pluginDeclarationHash) {
+        this.pluginDeclarationHash = pluginDeclarationHash;
+        return this;
+    }
+    public String getPluginDeclarationHash() {
+        return this.pluginDeclarationHash;
+    }
+
+    public PublishAppInstanceRequest setPrivacyDraftId(String privacyDraftId) {
+        this.privacyDraftId = privacyDraftId;
+        return this;
+    }
+    public String getPrivacyDraftId() {
+        return this.privacyDraftId;
+    }
+
+    public PublishAppInstanceRequest setPrivacyRevision(String privacyRevision) {
+        this.privacyRevision = privacyRevision;
+        return this;
+    }
+    public String getPrivacyRevision() {
+        return this.privacyRevision;
+    }
+
     public PublishAppInstanceRequest setPublishNumber(String publishNumber) {
         this.publishNumber = publishNumber;
         return this;
     }
     public String getPublishNumber() {
         return this.publishNumber;
+    }
+
+    public PublishAppInstanceRequest setPublishOrderId(Long publishOrderId) {
+        this.publishOrderId = publishOrderId;
+        return this;
+    }
+    public Long getPublishOrderId() {
+        return this.publishOrderId;
+    }
+
+    public PublishAppInstanceRequest setUploadSequence(Long uploadSequence) {
+        this.uploadSequence = uploadSequence;
+        return this;
+    }
+    public Long getUploadSequence() {
+        return this.uploadSequence;
     }
 
     public PublishAppInstanceRequest setWeappAction(String weappAction) {

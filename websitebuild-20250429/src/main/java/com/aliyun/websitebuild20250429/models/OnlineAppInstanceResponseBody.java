@@ -14,7 +14,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The name of the application. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>stg.mlp_finance_cap_refund_hi</p>
@@ -32,7 +32,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic error code. This parameter is about to be deprecated.</p>
+     * <p>The dynamic error code. This parameter will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -44,7 +44,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
      * <p>The placeholder in the dynamic error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxx</p>
+     * <p>BizId</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
@@ -59,7 +59,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
      * <p>The application module.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;StorageSize\&quot;: \&quot;3.29 MB\&quot;, \&quot;FileNum\&quot;: 30}</p>
+     * <p>{}</p>
      */
     @NameInMap("Module")
     public java.util.Map<String, ?> module;
@@ -92,7 +92,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is processed synchronously.</p>
+     * <p>Indicates whether the operation is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

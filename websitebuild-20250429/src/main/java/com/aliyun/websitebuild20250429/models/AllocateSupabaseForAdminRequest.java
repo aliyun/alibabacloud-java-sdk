@@ -24,7 +24,7 @@ public class AllocateSupabaseForAdminRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>The field used for sorting.</p>
+     * <p>The sort column.</p>
      * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -33,7 +33,7 @@ public class AllocateSupabaseForAdminRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC, DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModuleDataComponentsValue extends TeaModel {
     /**
-     * <p>Component unique code (internal system identifier)</p>
+     * <p>The unique component code (internal system identifier).</p>
      * 
      * <strong>example:</strong>
      * <p>placeholder</p>
@@ -14,7 +14,7 @@ public class ModuleDataComponentsValue extends TeaModel {
     public String code;
 
     /**
-     * <p>Component display name (user-visible name)</p>
+     * <p>The display name of the component (user-visible name).</p>
      * 
      * <strong>example:</strong>
      * <p>placeholder</p>
@@ -23,22 +23,25 @@ public class ModuleDataComponentsValue extends TeaModel {
     public String name;
 
     /**
-     * <p>Component instance property configuration</p>
+     * <p>The instance property configuration of the component.</p>
      */
     @NameInMap("InstanceProperty")
     public java.util.List<ModuleDataComponentsValueInstanceProperty> instanceProperty;
 
     /**
-     * <p>Component instance property configuration</p>
+     * <p>The instance property configuration of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;Deployment region&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;China (Hong Kong)&quot;}]}}</p>
      */
     @NameInMap("Properties")
     public java.util.Map<String, ModuleDataComponentsValuePropertiesValue> properties;
 
     /**
-     * <p>Module property status</p>
+     * <p>The module property status.</p>
      * 
      * <strong>example:</strong>
-     * <p>placeholder</p>
+     * <p>1</p>
      */
     @NameInMap("ModuleAttrStatus")
     public Integer moduleAttrStatus;
@@ -90,7 +93,7 @@ public class ModuleDataComponentsValue extends TeaModel {
 
     public static class ModuleDataComponentsValueInstancePropertyValues extends TeaModel {
         /**
-         * <p>Property code (internal system identifier)</p>
+         * <p>The property code (internal system identifier).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -99,7 +102,7 @@ public class ModuleDataComponentsValue extends TeaModel {
         public String code;
 
         /**
-         * <p>Property value code (internal system value)</p>
+         * <p>The property value code (internal system value).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -108,7 +111,7 @@ public class ModuleDataComponentsValue extends TeaModel {
         public String value;
 
         /**
-         * <p>Property display name (user-visible name)</p>
+         * <p>The display name of the property (user-visible name).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -149,7 +152,7 @@ public class ModuleDataComponentsValue extends TeaModel {
 
     public static class ModuleDataComponentsValueInstanceProperty extends TeaModel {
         /**
-         * <p>Property code (internal system identifier)</p>
+         * <p>The property code (internal system identifier).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -158,7 +161,7 @@ public class ModuleDataComponentsValue extends TeaModel {
         public String code;
 
         /**
-         * <p>Property display name (user-visible name)</p>
+         * <p>The display name of the property (user-visible name).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -167,7 +170,7 @@ public class ModuleDataComponentsValue extends TeaModel {
         public String name;
 
         /**
-         * <p>Property value code (internal system value)</p>
+         * <p>The property value code (internal system value).</p>
          * 
          * <strong>example:</strong>
          * <p>placeholder</p>
@@ -176,7 +179,7 @@ public class ModuleDataComponentsValue extends TeaModel {
         public String value;
 
         /**
-         * <p>Module property value list</p>
+         * <p>The list of module property values.</p>
          */
         @NameInMap("Values")
         public java.util.List<ModuleDataComponentsValueInstancePropertyValues> values;

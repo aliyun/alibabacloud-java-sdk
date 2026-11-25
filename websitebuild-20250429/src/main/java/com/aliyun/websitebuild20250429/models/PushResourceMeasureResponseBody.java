@@ -23,7 +23,7 @@ public class PushResourceMeasureResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The application with this name is queried.</p>
+     * <p>The name of the application to query.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -50,7 +50,7 @@ public class PushResourceMeasureResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -83,10 +83,10 @@ public class PushResourceMeasureResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System error</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;

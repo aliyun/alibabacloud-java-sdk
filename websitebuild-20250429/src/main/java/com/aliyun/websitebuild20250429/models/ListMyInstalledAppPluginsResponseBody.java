@@ -403,7 +403,7 @@ public class ListMyInstalledAppPluginsResponseBody extends TeaModel {
          * <p>The category.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Depth\&quot;: 2, \&quot;ParentCategoryId\&quot;: 5260, \&quot;Name\&quot;: \&quot;2\&quot;, \&quot;CategoryId\&quot;: 5280, \&quot;CreateTime\&quot;: \&quot;2025-08-26 10:20:37\&quot;}</p>
+         * <p>{&quot;Depth&quot;: 2, &quot;ParentCategoryId&quot;: 5260, &quot;Name&quot;: &quot;2&quot;, &quot;CategoryId&quot;: 5280, &quot;CreateTime&quot;: &quot;2025-08-26 10:20:37&quot;}</p>
          */
         @NameInMap("Category")
         public String category;

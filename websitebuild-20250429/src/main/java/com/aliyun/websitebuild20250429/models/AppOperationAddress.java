@@ -12,12 +12,18 @@ public class AppOperationAddress extends TeaModel {
 
     /**
      * <p>The customer service design URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/customer-service/config">https://example.com/customer-service/config</a></p>
      */
     @NameInMap("AiCustomerConfigUrl")
     public String aiCustomerConfigUrl;
 
     /**
      * <p>The AI design URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/ai-design">https://example.com/ai-design</a></p>
      */
     @NameInMap("AiDesignUrl")
     public String aiDesignUrl;

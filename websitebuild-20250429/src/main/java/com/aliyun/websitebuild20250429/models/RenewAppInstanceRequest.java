@@ -14,7 +14,7 @@ public class RenewAppInstanceRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure request idempotence. You can generate the value from your client and make sure that it is unique across different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>fdfjafdfadfenjeora</p>
@@ -35,13 +35,13 @@ public class RenewAppInstanceRequest extends TeaModel {
      * <p>The extended information.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;deliveryNodeName\&quot;:\&quot;交付质检\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
+     * <p>{&quot;deliveryNodeName&quot;:&quot;Delivery quality inspection&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
-     * <p>The payment type.</p>
+     * <p>The payment method.</p>
      * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
@@ -50,13 +50,7 @@ public class RenewAppInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>Required. The unit of the subscription period. Valid values:</p>
-     * <ul>
-     * <li>Year: year</li>
-     * <li>Month: month</li>
-     * <li>Day: day</li>
-     * <li>Hour: hour.</li>
-     * </ul>
+     * <p>Required. The unit of the subscription period. Valid values: Year, Month, Day, and Hour.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>

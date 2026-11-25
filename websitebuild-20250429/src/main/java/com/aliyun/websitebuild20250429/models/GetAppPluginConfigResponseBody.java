@@ -38,7 +38,7 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -111,7 +111,7 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-28T02:25:41Z</p>
@@ -129,7 +129,7 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The specific component configuration in JSON string format. Refer to the toJsonString method of the subclasses related to com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</p>
+         * <p>The specific component configuration in JSON string format. Refer to the toJsonString method of the subclasses of the com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig utility class. Developers must inherit this component configuration class to implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin page.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -138,7 +138,7 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String pluginConfig;
 
         /**
-         * <p>The description of the plugin.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>a simple test plugin</p>
@@ -147,7 +147,7 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String pluginDesc;
 
         /**
-         * <p>The ID of the bound API gateway plugin.</p>
+         * <p>The ID of the associated API gateway plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
@@ -156,7 +156,7 @@ public class GetAppPluginConfigResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>The plugin name. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</p>
+         * <p>The plugin name. It must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</p>
          * 
          * <strong>example:</strong>
          * <p>tf_testaccapigatewayplugin29311</p>

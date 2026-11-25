@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppConversationsResponseBody extends TeaModel {
     /**
-     * <p>The detailed reasons for access denial.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -50,7 +50,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error arguments.</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -71,7 +71,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
     public ListAppConversationsResponseBodyModule module;
 
     /**
-     * <p>The token that is used to start the next query. If no next query is available, this parameter is empty.</p>
+     * <p>The token used to start the next query. If there is no next query, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -229,13 +229,13 @@ public class ListAppConversationsResponseBody extends TeaModel {
          * <p>aliyun_pk</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>2468****135790</p>
          */
         @NameInMap("AliyunPk")
         public String aliyunPk;
 
         /**
-         * <p>The bot ID.</p>
+         * <p>The ID of the bot.</p>
          * 
          * <strong>example:</strong>
          * <p>Zero2</p>
@@ -244,7 +244,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String botId;
 
         /**
-         * <p>The number of chat records.</p>
+         * <p>The chat records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -253,7 +253,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public Integer chatNum;
 
         /**
-         * <p>The conversation ID.</p>
+         * <p>The ID of the conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>799EAC1246C855CAC75B77955E43D841</p>
@@ -272,7 +272,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The update time in ISO 8601 format. The time zone is UTC (Z).</p>
+         * <p>The update time in ISO 8601 format, in the UTC (Z) time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
          * <p>The extended information in JSON string format.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;MD5\&quot;:\&quot;296f6c01e7fea2697ffe1cf41082b774\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
+         * <p>{&quot;MD5&quot;:&quot;296f6c01e7fea2697ffe1cf41082b774&quot;,&quot;driver&quot;:&quot;vhd&quot;,&quot;flag&quot;:&quot;12845825&quot;,&quot;imds_support&quot;:&quot;v1&quot;,&quot;io_optimized&quot;:true,&quot;nvme_supported&quot;:true,&quot;uefi_preferred&quot;:false}</p>
          */
         @NameInMap("MetaData")
         public String metaData;
@@ -300,7 +300,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String sectionId;
 
         /**
-         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>The ID of the site.</p>
          * 
          * <strong>example:</strong>
          * <p>1068725896006128</p>
@@ -318,7 +318,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -423,7 +423,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
 
     public static class ListAppConversationsResponseBodyModule extends TeaModel {
         /**
-         * <p>The request results.</p>
+         * <p>The results of the request.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListAppConversationsResponseBodyModuleData> data;
@@ -447,7 +447,7 @@ public class ListAppConversationsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The resource count that meets the conditional filters.</p>
+         * <p>The conditional resource count that meets the filter.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

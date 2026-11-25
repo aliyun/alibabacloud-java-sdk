@@ -21,6 +21,9 @@ public class TreeNode extends TeaModel {
 
     /**
      * <p>The completion time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1767323045000</p>
      */
     @NameInMap("FinishTime")
     public Long finishTime;

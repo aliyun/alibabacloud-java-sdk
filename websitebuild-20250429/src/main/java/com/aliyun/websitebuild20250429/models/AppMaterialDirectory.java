@@ -14,7 +14,7 @@ public class AppMaterialDirectory extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The list of subfolders.</p>
+     * <p>The list of child folders.</p>
      */
     @NameInMap("Children")
     public java.util.List<AppMaterialDirectory> children;
@@ -32,13 +32,13 @@ public class AppMaterialDirectory extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>图片管理</p>
+     * <p>Image Management</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The sort number.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retries are allowed. Valid values:</p>
+     * <p>Specifies whether to allow retries. Valid values:</p>
      * <ul>
      * <li>false: Retries are not allowed.</li>
      * <li>true: Retries are allowed.</li>
@@ -27,7 +27,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The application with this name is queried.</p>
+     * <p>The name of the application to query.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -36,7 +36,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic code. This field is not used and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -45,9 +45,9 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message. This parameter is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p>For example, if the <strong>ErrMessage</strong> parameter returns <strong>The Value of Input Parameter %s is not valid</strong> and the <strong>DynamicMessage</strong> parameter returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -87,16 +87,16 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -226,7 +226,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String blockedModels;
 
         /**
-         * <p>Grants specific permissions to processes in the container. Only NET_ADMIN and NET_RAW are supported.</p>
+         * <p>Grants specific permissions to processes in the container. Currently, only NET_ADMIN and NET_RAW are supported.</p>
          * <blockquote>
          * <p>NET_RAW is not supported by default. Submit a ticket to apply for this permission.</p>
          * </blockquote>
@@ -238,7 +238,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String capability;
 
         /**
-         * <p>The maximum number of requests per day.</p>
+         * <p>The daily request limit.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -247,7 +247,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public Integer dailyLimit;
 
         /**
-         * <p>The maximum number of tokens per day.</p>
+         * <p>The daily token limit.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -256,7 +256,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public Long dailyTokenLimit;
 
         /**
-         * <p>Indicates whether scheduled delivery of resource snapshots is enabled.</p>
+         * <p>Specifies whether to enable scheduled delivery of resource snapshots.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
@@ -273,7 +273,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
          * <p>The extended configuration in JSON format.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;deliveryNodeName\&quot;:\&quot;绑定域名及发布\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</p>
+         * <p>{&quot;deliveryNodeName&quot;:&quot;Bind domain name and publish&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</p>
          */
         @NameInMap("Extend")
         public String extend;
@@ -315,7 +315,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String ipBlacklist;
 
         /**
-         * <p>The IP whitelist. Separate multiple IP addresses with commas (,).</p>
+         * <p>The IP whitelist. Separate multiple IP addresses with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>121.41.11.161,10.200.255.60</p>
@@ -324,7 +324,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String ipWhitelist;
 
         /**
-         * <p>The maximum number of requests per minute.</p>
+         * <p>The number of requests per minute.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>

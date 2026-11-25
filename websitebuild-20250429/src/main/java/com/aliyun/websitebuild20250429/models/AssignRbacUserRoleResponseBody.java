@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignRbacUserRoleResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for access denial.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -45,7 +45,7 @@ public class AssignRbacUserRoleResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace %s in the ErrMessage response parameter.</p>
+     * <p>The dynamic error message used to replace %s in the ErrMessage response parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -60,7 +60,7 @@ public class AssignRbacUserRoleResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Indicates whether the deletion is successful.</p>
+     * <p>Indicates whether the deletion was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,7 +96,7 @@ public class AssignRbacUserRoleResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>The backup parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -14,8 +14,7 @@ public class ListAppDomainRedirectRecordsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The maximum number of results to return per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +23,7 @@ public class ListAppDomainRedirectRecordsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query. This parameter is empty if no next query is available.</p>
+     * <p>The token used to start the next query. If no more results are available, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>yPkgBbQln0gmUnIZSGizGw==</p>

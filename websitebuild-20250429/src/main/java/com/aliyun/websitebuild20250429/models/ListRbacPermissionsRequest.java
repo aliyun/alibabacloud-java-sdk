@@ -14,7 +14,7 @@ public class ListRbacPermissionsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The number of entries to return in each query.</p>
+     * <p>The number of results returned per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListRbacPermissionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query. This parameter is empty if no next query exists.</p>
+     * <p>The token used to start the next query. This parameter is empty if no next query exists.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>

@@ -47,7 +47,7 @@ public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>DtsJobId</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
@@ -196,6 +196,9 @@ public class GetAIStaffPreviewUrlResponseBody extends TeaModel {
     public static class GetAIStaffPreviewUrlResponseBodyModule extends TeaModel {
         /**
          * <p>The preview URL information, including fields such as previewUrl and sessionId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("UrlMap")
         public java.util.Map<String, String> urlMap;

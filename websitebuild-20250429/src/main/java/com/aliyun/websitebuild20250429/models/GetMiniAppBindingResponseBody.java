@@ -97,6 +97,9 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
 
         /**
          * <p>The extended information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;SERVER_DOMAIN&quot;:&quot;{&quot;requestDomains&quot;:[{&quot;domain&quot;:&quot;<a href="https://api.example.com%5C%22,%5C%22source%5C%22:%5C%22managed%5C%22%7D%5D,%5C%22wsRequestDomains%5C%22:%5B%5D,%5C%22uploadDomains%5C%22:%5B%5D,%5C%22downloadDomains%5C%22:%5B%5D,%5C%22udpDomains%5C%22:%5B%5D,%5C%22tcpDomains%5C%22:%5B%5D%7D%22%7D">https://api.example.com\&quot;,\&quot;source\&quot;:\&quot;managed\&quot;}],\&quot;wsRequestDomains\&quot;:[],\&quot;uploadDomains\&quot;:[],\&quot;downloadDomains\&quot;:[],\&quot;udpDomains\&quot;:[],\&quot;tcpDomains\&quot;:[]}&quot;}</a></p>
          */
         @NameInMap("SettingValues")
         public java.util.Map<String, String> settingValues;

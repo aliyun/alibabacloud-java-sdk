@@ -204,7 +204,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
          * <p>Indicates whether this entitlement item is currently available.</p>
          * 
          * <strong>example:</strong>
-         * <p>on</p>
+         * <p>true</p>
          */
         @NameInMap("Available")
         public Boolean available;
@@ -309,7 +309,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
          * <p>Indicates whether the instance is running.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>true</p>
          */
         @NameInMap("Running")
         public Boolean running;

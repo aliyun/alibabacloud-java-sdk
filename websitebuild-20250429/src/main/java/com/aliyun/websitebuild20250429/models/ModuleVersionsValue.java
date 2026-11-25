@@ -24,6 +24,9 @@ public class ModuleVersionsValue extends TeaModel {
 
     /**
      * <p>components</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Components")
     public java.util.Map<String, ModuleVersionsValueComponentsValue> components;

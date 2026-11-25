@@ -26,7 +26,7 @@ public class UpdateMiniAppBindingRequest extends TeaModel {
      * <p>The configuration key.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>SERVER_DOMAIN</p>
      */
     @NameInMap("SettingKey")
     public String settingKey;
@@ -35,7 +35,7 @@ public class UpdateMiniAppBindingRequest extends TeaModel {
      * <p>The configuration value.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>{&quot;requestDomains&quot;:[{&quot;domain&quot;:&quot;<a href="https://api.example.com%22%7D%5D,%22wsRequestDomains%22:%5B%5D,%22uploadDomains%22:%5B%5D,%22downloadDomains%22:%5B%5D,%22udpDomains%22:%5B%5D,%22tcpDomains%22:%5B%5D%7D">https://api.example.com&quot;}],&quot;wsRequestDomains&quot;:[],&quot;uploadDomains&quot;:[],&quot;downloadDomains&quot;:[],&quot;udpDomains&quot;:[],&quot;tcpDomains&quot;:[]}</a></p>
      */
     @NameInMap("SettingValue")
     public String settingValue;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppTokenServiceResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -32,7 +32,7 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic code. This parameter is not used and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -50,13 +50,13 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>Indicates whether the move was successful.</p>
      */
     @NameInMap("Module")
     public CreateAppTokenServiceResponseBodyModule module;
@@ -80,16 +80,16 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the processing is synchronous.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,10 +192,10 @@ public class CreateAppTokenServiceResponseBody extends TeaModel {
 
     public static class CreateAppTokenServiceResponseBodyModule extends TeaModel {
         /**
-         * <p>The migration extension information (optional).</p>
+         * <p>The optional migration extension information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;serviceApi\&quot;:\&quot;sendUserMsg\&quot;,\&quot;bizId\&quot;:\&quot;sp\&quot;}</p>
+         * <p>{&quot;serviceApi&quot;:&quot;sendUserMsg&quot;,&quot;bizId&quot;:&quot;sp&quot;}</p>
          */
         @NameInMap("ExtInfo")
         public String extInfo;

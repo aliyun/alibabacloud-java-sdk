@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckUserResourceMeasureResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for access denial.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -27,7 +27,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name, which is used to query the application.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -57,7 +57,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The returned error arguments.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -78,7 +78,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The root error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -87,7 +87,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The root error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>System exception</p>
@@ -96,7 +96,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>The backup parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -199,7 +199,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
 
     public static class CheckUserResourceMeasureResponseBodyModule extends TeaModel {
         /**
-         * <p>Returned only for APP_WORKSPACE: the target total for this check, which is the used quota in the saved configuration plus ResourceValue. If the compatible DesiredTotal is provided, this total is used directly. The used quota for questions is the sum of common and word-of-mouth questions in the saved configuration. The used quota for competitors is the number of competitors. This field is empty for APP and USER checks.</p>
+         * <p>The target total for the current check. This parameter is returned only for APP_WORKSPACE. It is the sum of the used quota in the saved configuration and ResourceValue. If the compatible DesiredTotal is provided, this total is used directly. The used quota for questions is the sum of common and word-of-mouth questions in the saved configuration, and the used quota for competitors is the number of competitors. This parameter is empty for APP or USER checks.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -208,7 +208,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         public Long desiredTotal;
 
         /**
-         * <p>The error code when the check fails. This field is null when the check passes.</p>
+         * <p>The error code returned when the check fails. This parameter is null when the check is passed.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -217,7 +217,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message when the check fails. This field is null when the check passes.</p>
+         * <p>The error message returned when the check fails. This parameter is null when the check is passed.</p>
          * 
          * <strong>example:</strong>
          * <p>stream push failed</p>
@@ -226,7 +226,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>Returned only for APP_WORKSPACE quantity dry runs: the maximum number of questions or competitors allowed by the current commodity edition, not the remaining quota. This field is empty for APP and USER checks or when the edition benefits cannot be determined.</p>
+         * <p>The maximum number of questions or competitors allowed by the current commodity version. This parameter is returned only for APP_WORKSPACE quantity dry runs and does not represent the remaining quota. This parameter is empty for APP or USER checks, or when the version benefits cannot be determined.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -253,7 +253,7 @@ public class CheckUserResourceMeasureResponseBody extends TeaModel {
         public String resourceCode;
 
         /**
-         * <p>Indicates whether a purchasable higher edition exists that can accommodate the DesiredTotal. This field is true only when the current edition capacity is insufficient and a higher edition meets the requirements. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</p>
+         * <p>Indicates whether a purchasable higher version exists that can accommodate the DesiredTotal. This parameter is true only when the current version capacity is insufficient and a higher version meets the requirements. Otherwise, it is false. This parameter may be empty for APP or USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

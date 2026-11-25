@@ -14,7 +14,7 @@ public class QueryRbacRolePermissionsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The field used for sorting.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -23,7 +23,7 @@ public class QueryRbacRolePermissionsRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC, DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
@@ -55,7 +55,7 @@ public class QueryRbacRolePermissionsRequest extends TeaModel {
      * <li>Organization administrator (preset role): 111111111</li>
      * <li>Permission management administrator (preset role): 111111112</li>
      * <li>Regular user (preset role): 111111113</li>
-     * <li>Custom role: the role ID of the custom role</li>
+     * <li>Custom role: the role ID corresponding to the custom role.</li>
      * </ul>
      * 
      * <strong>example:</strong>

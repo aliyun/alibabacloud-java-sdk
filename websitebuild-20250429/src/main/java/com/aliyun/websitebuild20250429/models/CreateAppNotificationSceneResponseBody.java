@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppNotificationSceneResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -50,7 +50,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -80,7 +80,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>System exception</p>
@@ -89,7 +89,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is processed synchronously.</p>
+     * <p>Specifies whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class CreateAppNotificationSceneResponseBody extends TeaModel {
 
     public static class CreateAppNotificationSceneResponseBodyModule extends TeaModel {
         /**
-         * <p>The ID of the newly created scenario.</p>
+         * <p>The ID of the created scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>16257</p>

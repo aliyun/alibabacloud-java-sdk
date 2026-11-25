@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppConversationMessagesResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Specifies whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -41,9 +41,9 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,14 +53,13 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The invalid parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The number of entries per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -75,7 +74,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
     public java.util.List<ListAppConversationMessagesResponseBodyModule> module;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results are available.</p>
+     * <p>The token used to start the next query. This parameter is empty if there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
@@ -105,13 +104,13 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>System exception.</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -257,10 +256,10 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String chatStatus;
 
         /**
-         * <p>The ID of the data API that is called.</p>
+         * <p>The ID of the called data API operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;DeviceName\&quot;: u\&quot;\u667a\u80fd\u63d2\u5ea716A\&quot;, \&quot;BlidMac\&quot;: \&quot;18bc5a53351c\&quot;, \&quot;DeviceModel\&quot;: \&quot;ABSP21-16M\&quot;, \&quot;DeviceCategory\&quot;: u\&quot;\u63d2\u5ea7\&quot;, \&quot;DeviceManufacturer\&quot;: \&quot;\&quot;, \&quot;DeviceType\&quot;: 140}</p>
+         * <p>{&quot;DeviceName&quot;: u&quot;\u667a\u80fd\u63d2\u5ea716A&quot;, &quot;BlidMac&quot;: &quot;18bc5a53351c&quot;, &quot;DeviceModel&quot;: &quot;ABSP21-16M&quot;, &quot;DeviceCategory&quot;: u&quot;\u63d2\u5ea7&quot;, &quot;DeviceManufacturer&quot;: &quot;&quot;, &quot;DeviceType&quot;: 140}</p>
          */
         @NameInMap("Content")
         public String content;
@@ -293,7 +292,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-28T02:25:41Z</p>
@@ -311,16 +310,16 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>The business extension metadata (in Map format, must be a JSON string).</p>
+         * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;appId\&quot;:\&quot;WS20260507200853000001\&quot;,\&quot;inputTokens\&quot;:1411,\&quot;outputTokens\&quot;:51}</p>
+         * <p>{&quot;appId&quot;:&quot;WS20260507200853000001&quot;,&quot;inputTokens&quot;:1411,&quot;outputTokens&quot;:51}</p>
          */
         @NameInMap("MetaData")
         public String metaData;
 
         /**
-         * <p><strong>[Deprecated]</strong> The region sequence number. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The region serial number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -331,17 +330,17 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         /**
          * <p>The role of the conversation participant. Valid values:</p>
          * <ul>
-         * <li><p>user: User.</p>
+         * <li><p>user: The user.</p>
          * </li>
-         * <li><p>assistant: Assistant.</p>
+         * <li><p>assistant: The assistant.</p>
          * </li>
-         * <li><p>system: System.</p>
+         * <li><p>system: The system.</p>
          * </li>
-         * <li><p>function: Function.</p>
+         * <li><p>function: The function.</p>
          * </li>
-         * <li><p>plugin: Plugin.</p>
+         * <li><p>plugin: The plug-in.</p>
          * </li>
-         * <li><p>tool: Tool.</p>
+         * <li><p>tool: The tool.</p>
          * </li>
          * </ul>
          * 
@@ -361,7 +360,7 @@ public class ListAppConversationMessagesResponseBody extends TeaModel {
         public String sectionId;
 
         /**
-         * <p>The site ID. You can obtain this value by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>865181640657408</p>

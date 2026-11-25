@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppCommoditySpecificationsV2ForPartnerRequest extends TeaModel {
     /**
-     * <p>The number of results per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -15,7 +14,7 @@ public class ListAppCommoditySpecificationsV2ForPartnerRequest extends TeaModel 
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. This parameter is empty when there is no next query.</p>
+     * <p>The token used to start the next query. This value is empty if there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>

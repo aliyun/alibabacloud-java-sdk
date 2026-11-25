@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppInstanceResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,7 +41,7 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic message. This parameter is currently not in use and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,7 +50,7 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -83,7 +83,7 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -201,10 +201,10 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
         public String bizId;
 
         /**
-         * <p>The application icon URL.</p>
+         * <p>The application icon.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://yzm.zshud.com:34901/cloud-phone/%E5%85%BB%E7%94%9F_1763631730804.png">https://yzm.zshud.com:34901/cloud-phone/养生_1763631730804.png</a></p>
+         * <p><a href="https://yzm.zshud.com:34901/cloud-phone/Wellness_1763631730804.png">https://yzm.zshud.com:34901/cloud-phone/Wellness_1763631730804.png</a></p>
          */
         @NameInMap("IconUrl")
         public String iconUrl;
@@ -219,7 +219,7 @@ public class UpdateAppInstanceResponseBody extends TeaModel {
         public String orderId;
 
         /**
-         * <p>The application thumbnail URL.</p>
+         * <p>The application thumbnail.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>

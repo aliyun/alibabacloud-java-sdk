@@ -83,7 +83,7 @@ public class RenewAppSandboxResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>Internal error.</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -193,6 +193,9 @@ public class RenewAppSandboxResponseBody extends TeaModel {
     public static class RenewAppSandboxResponseBodyModule extends TeaModel {
         /**
          * <p>The preview URLs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("PreviewUrls")
         public java.util.Map<String, String> previewUrls;

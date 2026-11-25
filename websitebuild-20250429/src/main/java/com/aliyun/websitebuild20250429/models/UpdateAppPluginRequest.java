@@ -17,7 +17,7 @@ public class UpdateAppPluginRequest extends TeaModel {
      * <p>The configuration form in React JSON Schema format.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;label&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Display name&quot;}}}</p>
      */
     @NameInMap("ConfigItems")
     public String configItems;
@@ -32,7 +32,7 @@ public class UpdateAppPluginRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The additional extension information in JSON format for subsequent parameter extensions.</p>
+     * <p>The additional extension information in JSON format to facilitate subsequent parameter extensions.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -50,7 +50,7 @@ public class UpdateAppPluginRequest extends TeaModel {
     public String hooks;
 
     /**
-     * <p>The description of the plugin.</p>
+     * <p>The description of the plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01ANcLnQ1bCX7tZPVMJ_!!6000000003429-2-tps-100-100.png">https://img.alicdn.com/imgextra/i4/O1CN01ANcLnQ1bCX7tZPVMJ_!!6000000003429-2-tps-100-100.png</a></p>
@@ -59,7 +59,7 @@ public class UpdateAppPluginRequest extends TeaModel {
     public String icon;
 
     /**
-     * <p>The ID of the gateway plugin.</p>
+     * <p>The ID of the gateway plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
@@ -68,7 +68,7 @@ public class UpdateAppPluginRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>The name of the plugin.</p>
+     * <p>The name of the plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>alisecguard</p>
@@ -77,7 +77,7 @@ public class UpdateAppPluginRequest extends TeaModel {
     public String pluginName;
 
     /**
-     * <p>The plugin version.</p>
+     * <p>The plug-in version.</p>
      * 
      * <strong>example:</strong>
      * <p>v2</p>

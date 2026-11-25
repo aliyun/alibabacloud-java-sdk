@@ -23,7 +23,7 @@ public class AppServiceAggregate extends TeaModel {
     public Integer deleted;
 
     /**
-     * <p>The end time. It is in ISO 8601 format and uses the UTC time zone (Z).</p>
+     * <p>The end time. The value is in ISO 8601 format and the time zone is UTC (Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-18T02:23:00Z</p>
@@ -59,7 +59,7 @@ public class AppServiceAggregate extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>The operation address of the application.</p>
+     * <p>The application operation address.</p>
      */
     @NameInMap("Group")
     public AppServiceGroup group;
@@ -89,13 +89,13 @@ public class AppServiceAggregate extends TeaModel {
     public java.util.List<TreeNode> nodeList;
 
     /**
-     * <p>Uniquely identifies an operation.</p>
+     * <p>The unique identifier for an operation.</p>
      */
     @NameInMap("OperationAddress")
     public AppOperationAddress operationAddress;
 
     /**
-     * <p>The configuration information of the application service.</p>
+     * <p>The application service configuration information.</p>
      */
     @NameInMap("Profile")
     public AppServiceProfile profile;
@@ -110,7 +110,10 @@ public class AppServiceAggregate extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>The description of the service type.</p>
+     * <p>The service type description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Website design service</p>
      */
     @NameInMap("ServiceTypeText")
     public String serviceTypeText;
@@ -125,7 +128,7 @@ public class AppServiceAggregate extends TeaModel {
     public String slug;
 
     /**
-     * <p>The start time. It is a UNIX timestamp in milliseconds.</p>
+     * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1754447102000</p>
@@ -150,6 +153,15 @@ public class AppServiceAggregate extends TeaModel {
      */
     @NameInMap("UserId")
     public String userId;
+
+    /**
+     * <p>Specifies whether the item is visible.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Visible")
+    public Boolean visible;
 
     public static AppServiceAggregate build(java.util.Map<String, ?> map) throws Exception {
         AppServiceAggregate self = new AppServiceAggregate();
@@ -298,6 +310,14 @@ public class AppServiceAggregate extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public AppServiceAggregate setVisible(Boolean visible) {
+        this.visible = visible;
+        return this;
+    }
+    public Boolean getVisible() {
+        return this.visible;
     }
 
 }

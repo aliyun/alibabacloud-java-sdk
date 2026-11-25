@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDistributionResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed cause of access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class CreateDistributionResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <p>Specifies whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.</li>
-     * <li>true: Retry is allowed.</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateDistributionResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>watermark</p>
@@ -84,7 +84,7 @@ public class CreateDistributionResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>System exception</p>
@@ -93,7 +93,7 @@ public class CreateDistributionResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is processed synchronously.</p>
+     * <p>Specifies whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -199,7 +199,7 @@ public class CreateDistributionResponseBody extends TeaModel {
          * <p>The file ID in the material center.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>material-file-demo-001</p>
          */
         @NameInMap("MaterialFileId")
         public String materialFileId;
@@ -208,16 +208,16 @@ public class CreateDistributionResponseBody extends TeaModel {
          * <p>The CDN URL of the image.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://another-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/file3%5C%5C%22%5C%5C%22%60curl">http://another-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/file3\\&quot;\\&quot;`curl</a> YFLd1vS4.popscan.xaliyun.com`\&quot;\&quot;</p>
+         * <p><a href="http://another-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/file3%5C%22%5C%22%60curl">http://another-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/file3\&quot;\&quot;`curl</a> YFLd1vS4.popscan.xaliyun.com`&quot;&quot;</p>
          */
         @NameInMap("OssUrl")
         public String ossUrl;
 
         /**
-         * <p>The sort order number.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
-         * <p>Desc</p>
+         * <p>1</p>
          */
         @NameInMap("SortOrder")
         public Integer sortOrder;
@@ -258,16 +258,16 @@ public class CreateDistributionResponseBody extends TeaModel {
          * <p>The AI adaptation status. Valid values: NONE, ADAPTING, DONE, and FAILED.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>DONE</p>
          */
         @NameInMap("AdaptStatus")
         public String adaptStatus;
 
         /**
-         * <p>The channel-adapted content body.</p>
+         * <p>The channel-adapted content.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Introduces the main features and usage of the website</p>
          */
         @NameInMap("AdaptedContent")
         public String adaptedContent;
@@ -276,13 +276,13 @@ public class CreateDistributionResponseBody extends TeaModel {
          * <p>The channel-adapted title.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Website features and user guide</p>
          */
         @NameInMap("AdaptedTitle")
         public String adaptedTitle;
 
         /**
-         * <p>The channel enumeration value.</p>
+         * <p>The channel enumeration.</p>
          * 
          * <strong>example:</strong>
          * <p>WECHAT</p>
@@ -291,10 +291,10 @@ public class CreateDistributionResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The publishing account snapshot. For overseas channels, this is the OWLAIS socialAccountNo.</p>
+         * <p>The snapshot of the publishing account. For overseas channels, this is the OWLAIS socialAccountNo.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>social-account-demo-001</p>
          */
         @NameInMap("ChannelAccount")
         public String channelAccount;
@@ -303,7 +303,7 @@ public class CreateDistributionResponseBody extends TeaModel {
          * <p>The display name of the publishing account.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Sample publishing account</p>
          */
         @NameInMap("ChannelAccountName")
         public String channelAccountName;
@@ -360,28 +360,28 @@ public class CreateDistributionResponseBody extends TeaModel {
         public String externalUrl;
 
         /**
-         * <p>The failure reason.</p>
+         * <p>The reason for the failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Publishing failed. Try again later</p>
          */
         @NameInMap("FailReason")
         public String failReason;
 
         /**
-         * <p>The channel-specific publish configuration in JSON format.</p>
+         * <p>The channel-specific publishing fields in JSON format.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>{}</p>
          */
         @NameInMap("PublishConfig")
         public String publishConfig;
 
         /**
-         * <p>The publish time, in millisecond timestamp.</p>
+         * <p>The publish time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>1767225600000</p>
          */
         @NameInMap("PublishedAt")
         public Long publishedAt;
@@ -550,16 +550,16 @@ public class CreateDistributionResponseBody extends TeaModel {
         public String batchId;
 
         /**
-         * <p>The creation time, in millisecond timestamp.</p>
+         * <p>The creation time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-11-03 02:05:01</p>
+         * <p>1767225600000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The list of channel drafts within the batch.</p>
+         * <p>The list of channel drafts in the batch.</p>
          */
         @NameInMap("Drafts")
         public java.util.List<CreateDistributionResponseBodyModuleDrafts> drafts;

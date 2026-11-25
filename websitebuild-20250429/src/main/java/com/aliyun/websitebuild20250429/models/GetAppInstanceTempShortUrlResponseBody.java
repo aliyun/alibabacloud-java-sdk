@@ -192,7 +192,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
 
     public static class GetAppInstanceTempShortUrlResponseBodyModule extends TeaModel {
         /**
-         * <p>The expiration time in UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</p>
+         * <p>The expiration time in UTC format yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSS&quot;Z&quot;.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>

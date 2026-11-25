@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRbacRoleHierarchyResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retries are allowed. Valid values:</p>
+     * <p>Specifies whether retries are allowed. Valid values:</p>
      * <ul>
      * <li>false: Retries are not allowed.</li>
      * <li>true: Retries are allowed.</li>
@@ -45,7 +45,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
      * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
@@ -63,7 +63,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The number of entries to return per query.</p>
+     * <p>The maximum number of entries to return in each query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>The request result.</p>
+         * <p>The request results.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListRbacRoleHierarchyResponseBodyModuleData> data;
@@ -366,7 +366,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is set to <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is set to <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>

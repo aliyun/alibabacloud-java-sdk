@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     /**
-     * <p>The detailed reasons for the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Specifies whether retries are allowed. Valid values:</p>
+     * <p>Indicates whether retries are allowed. Valid values:</p>
      * <ul>
      * <li>false: Retries are not allowed.</li>
      * <li>true: Retries are allowed.</li>
@@ -47,7 +47,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
     /**
      * <p>The dynamic error message, which is used to replace the <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         public String changeLog;
 
         /**
-         * <p>The creation time in UTC. The time is in the ISO 8601 format.</p>
+         * <p>The creation time in UTC. The time follows the ISO 8601 standard.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -279,10 +279,10 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         public String commitHash;
 
         /**
-         * <p>true</p>
+         * <p>Indicates whether the workspace contains uncommitted changes.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>true</p>
          */
         @NameInMap("IsDirty")
         public Boolean isDirty;
@@ -297,7 +297,7 @@ public class GetAppCodeWorkspaceDetailResponseBody extends TeaModel {
         public Integer maxLogicalNumber;
 
         /**
-         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>865181640657408</p>

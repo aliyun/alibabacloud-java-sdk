@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppChatMessagesResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -41,13 +41,13 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>DtsJobId</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
@@ -59,7 +59,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The maximum number of results per query. Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -74,7 +74,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
     public java.util.List<ListAppChatMessagesResponseBodyModule> module;
 
     /**
-     * <p>The token used to start the next query. This parameter is empty if there is no next query.</p>
+     * <p>The token used to start the next query. This parameter is empty if no subsequent query is available.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -229,7 +229,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
 
     public static class ListAppChatMessagesResponseBodyModule extends TeaModel {
         /**
-         * <p>The bot ID.</p>
+         * <p>The chatbot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Zero2</p>
@@ -238,7 +238,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         public String botId;
 
         /**
-         * <p>The unique ID of the utterance.</p>
+         * <p>The unique ID of the sentence.</p>
          * 
          * <strong>example:</strong>
          * <p>chat-xrz3etcl2bsygwlx8g</p>
@@ -259,7 +259,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
          * <p>The ID of the called data API.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;code\&quot;: \&quot;200\&quot;, \&quot;success\&quot;: True, \&quot;content\&quot;: True, \&quot;requestId\&quot;: \&quot;028993DE-097E-5F4E-AC48-64A2D5ED5F30\&quot;, \&quot;businessError\&quot;: False, \&quot;message\&quot;: \&quot;success\&quot;, \&quot;httpStatusCode\&quot;: 200}</p>
+         * <p>{&quot;code&quot;: &quot;200&quot;, &quot;success&quot;: True, &quot;content&quot;: True, &quot;requestId&quot;: &quot;028993DE-097E-5F4E-AC48-64A2D5ED5F30&quot;, &quot;businessError&quot;: False, &quot;message&quot;: &quot;success&quot;, &quot;httpStatusCode&quot;: 200}</p>
          */
         @NameInMap("Content")
         public String content;
@@ -293,7 +293,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The modification time. The time is in ISO 8601 format and the UTC time zone (Z).</p>
+         * <p>The update time in ISO 8601 format in the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -315,13 +315,13 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
          * <p>The business extension metadata. The value must be a JSON string in map format.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;appId\&quot;:\&quot;WS20260506101154000001\&quot;,\&quot;inputTokens\&quot;:1148,\&quot;outputTokens\&quot;:60}</p>
+         * <p>{&quot;appId&quot;:&quot;WS20260506101154000001&quot;,&quot;inputTokens&quot;:1148,&quot;outputTokens&quot;:60}</p>
          */
         @NameInMap("MetaData")
         public String metaData;
 
         /**
-         * <p><strong>[Deprecated]</strong> The region sequence number.</p>
+         * <p><strong>[Deprecated]</strong> The region sequence number. This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -332,17 +332,17 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         /**
          * <p>The role of the conversation participant. Valid values:</p>
          * <ul>
-         * <li><p>user: User</p>
+         * <li><p>user: user</p>
          * </li>
-         * <li><p>assistant: Assistant</p>
+         * <li><p>assistant: assistant</p>
          * </li>
-         * <li><p>system: System</p>
+         * <li><p>system: system</p>
          * </li>
-         * <li><p>function: Function</p>
+         * <li><p>function: function</p>
          * </li>
-         * <li><p>plugin: Plug-in</p>
+         * <li><p>plugin: plug-in</p>
          * </li>
-         * <li><p>tool: Tool</p>
+         * <li><p>tool: tool</p>
          * </li>
          * </ul>
          * 
@@ -362,7 +362,7 @@ public class ListAppChatMessagesResponseBody extends TeaModel {
         public String sectionId;
 
         /**
-         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>865181640657408</p>

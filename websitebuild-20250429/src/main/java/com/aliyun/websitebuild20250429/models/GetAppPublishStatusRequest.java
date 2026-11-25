@@ -14,13 +14,16 @@ public class GetAppPublishStatusRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The deployment ticket ID.</p>
+     * <p>The deployment order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4998717</p>
      */
     @NameInMap("DeployOrderId")
     public Long deployOrderId;
+
+    @NameInMap("PublishOrderId")
+    public Long publishOrderId;
 
     /**
      * <p>The website domain name.</p>
@@ -50,6 +53,14 @@ public class GetAppPublishStatusRequest extends TeaModel {
     }
     public Long getDeployOrderId() {
         return this.deployOrderId;
+    }
+
+    public GetAppPublishStatusRequest setPublishOrderId(Long publishOrderId) {
+        this.publishOrderId = publishOrderId;
+        return this;
+    }
+    public Long getPublishOrderId() {
+        return this.publishOrderId;
     }
 
     public GetAppPublishStatusRequest setWebsiteDomain(String websiteDomain) {

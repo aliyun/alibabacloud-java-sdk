@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckUserResourceMeasureRequest extends TeaModel {
     /**
-     * <p>The belong ID, such as the website ID or Alibaba Cloud user ID.</p>
+     * <p>The owner ID, which can be a website ID or an Alibaba Cloud user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -14,7 +14,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String belongId;
 
     /**
-     * <p>The belong ID type, such as siteId or uid.</p>
+     * <p>The owner ID type, such as siteId or uid.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -32,7 +32,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The optional compatible total for APP_WORKSPACE. Valid values: 0 to 100000. If provided, it takes precedence over ResourceValue and does not repeatedly add the used quota. For new calls, only ResourceValue is required. This field is not used for APP/USER.</p>
+     * <p>The desired total for APP_WORKSPACE. This is an optional compatible total with a range of 0 to 100,000. If provided, it takes precedence over ResourceValue and does not repeatedly add the used quota. For new calls, only ResourceValue is required. This field is not used for APP or USER.</p>
      * 
      * <strong>example:</strong>
      * <p>21</p>
@@ -50,7 +50,7 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String espBizId;
 
     /**
-     * <p>The order component information. If this field is empty, EspBizId and BizType cannot be empty.</p>
+     * <p>The order component information in JSON format. If this parameter is left empty, EspBizId and BizType cannot be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;siteversion&quot;:&quot;test&quot;}</p>
@@ -68,7 +68,11 @@ public class CheckUserResourceMeasureRequest extends TeaModel {
     public String resourceCode;
 
     /**
-     * <p>The resource value. Default is empty. Required only for feature resources. A value of 0 indicates not supported, and 1 indicates supported.</p>
+     * <p>The resource value. This parameter is left empty by default and is required only for feature resources. Valid values:</p>
+     * <ul>
+     * <li>0: Not supported.</li>
+     * <li>1: Supported.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryInspirationBalanceResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for the access denial.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Specifies whether retries are allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The name of the application to query.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -41,9 +41,9 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The invalid parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -92,7 +92,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Specifies whether the processing is synchronous.</p>
+     * <p>Indicates whether synchronous processing is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,7 +195,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
 
     public static class QueryInspirationBalanceResponseBodyModule extends TeaModel {
         /**
-         * <p>The remaining quota (totalQuota - totalUsed).</p>
+         * <p>The remaining quota, which is calculated by subtracting totalUsed from totalQuota.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -213,7 +213,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         public String remainingStr;
 
         /**
-         * <p>The total quota (the sum of initQuota of all valid accounts).</p>
+         * <p>The total quota, which is the sum of the initQuota values of all valid accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -231,7 +231,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         public String totalQuotaStr;
 
         /**
-         * <p>The consumed quota (the sum of used of all valid accounts).</p>
+         * <p>The used quota, which is the sum of the used values of all valid accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -240,7 +240,7 @@ public class QueryInspirationBalanceResponseBody extends TeaModel {
         public Long totalUsed;
 
         /**
-         * <p>The string format of the consumed quota.</p>
+         * <p>The string format of the used quota.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

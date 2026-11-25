@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppPluginResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for the access denial.</p>
+     * <p>The detailed reason why the access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppPluginResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retries are allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,9 +41,9 @@ public class GetAppPluginResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message returned by the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message returned by the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class GetAppPluginResponseBody extends TeaModel {
          * <p>The configuration form in React JSON Schema format.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;label&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Display name&quot;}}}</p>
          */
         @NameInMap("ConfigItems")
         public String configItems;
@@ -222,7 +222,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The application description.</p>
+         * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>/bak-&gt;serverless.handler(2020091300200279)</p>
@@ -231,27 +231,19 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The image display mode. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong> (None): The image is not displayed.</li>
-         * <li><strong>1</strong> (Always): The image is always displayed.</li>
-         * </ul>
+         * <p>Specifies whether the plug-in is displayed. Valid values: 0 (no) and 1 (yes).</p>
          * 
          * <strong>example:</strong>
-         * <p>always</p>
+         * <p>1</p>
          */
         @NameInMap("Display")
         public Integer display;
 
         /**
-         * <p>Indicates whether scheduled delivery of resource snapshots is enabled. Valid values:</p>
-         * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Disabled.</li>
-         * </ul>
+         * <p>Specifies whether the plug-in is enabled. Valid values: 0 (no) and 1 (yes).</p>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>1</p>
          */
         @NameInMap("Enabled")
         public Integer enabled;
@@ -284,7 +276,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-28T02:25:41Z</p>
@@ -311,7 +303,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public Integer hotCount;
 
         /**
-         * <p>The plugin description.</p>
+         * <p>The description of the plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>@lALPM2AwTOg9IUHNAUDNAUA</p>
@@ -320,7 +312,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String icon;
 
         /**
-         * <p>The ID of the associated API gateway plugin.</p>
+         * <p>The ID of the associated API gateway plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>
@@ -329,7 +321,7 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>The name of the plugin. The name must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</p>
+         * <p>The name of the plug-in. The name must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</p>
          * 
          * <strong>example:</strong>
          * <p>tf_testaccapigatewayplugin29311</p>
@@ -338,10 +330,10 @@ public class GetAppPluginResponseBody extends TeaModel {
         public String pluginName;
 
         /**
-         * <p>The URL of the image repository.</p>
+         * <p>The clone URL of the plug-in code repository.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p><a href="https://codeup.aliyun.com/example/demo-plugin.git">https://codeup.aliyun.com/example/demo-plugin.git</a></p>
          */
         @NameInMap("RepositoryUrl")
         public String repositoryUrl;
@@ -368,7 +360,7 @@ public class GetAppPluginResponseBody extends TeaModel {
          * <p>The category tags.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;Key\&quot;: \&quot;kubernetes.io/cluster-id\&quot;, \&quot;Value\&quot;: \&quot;cc67198b13db948c9848599654da5586e\&quot;}, {\&quot;Key\&quot;: \&quot;created-by\&quot;, \&quot;Value\&quot;: \&quot;alibabacloud-imagecache-controller\&quot;}]</p>
+         * <p>[{&quot;Key&quot;: &quot;kubernetes.io/cluster-id&quot;, &quot;Value&quot;: &quot;cc67198b13db948c9848599654da5586e&quot;}, {&quot;Key&quot;: &quot;created-by&quot;, &quot;Value&quot;: &quot;alibabacloud-imagecache-controller&quot;}]</p>
          */
         @NameInMap("Tags")
         public String tags;

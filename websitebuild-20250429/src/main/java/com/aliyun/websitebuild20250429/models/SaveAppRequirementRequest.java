@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveAppRequirementRequest extends TeaModel {
     /**
-     * <p>Conversation ID</p>
+     * <p>The conversation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5b7105a2-2999-430b-ba23-ba09149d5434</p>
@@ -14,7 +14,7 @@ public class SaveAppRequirementRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>Requirement document content</p>
+     * <p>The content of the requirement document.</p>
      * 
      * <strong>example:</strong>
      * <p>prd</p>

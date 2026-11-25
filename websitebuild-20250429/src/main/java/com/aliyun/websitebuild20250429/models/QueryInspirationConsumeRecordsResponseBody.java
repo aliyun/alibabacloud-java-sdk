@@ -231,7 +231,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
          * <p>The extended information in JSON string format.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;MD5\&quot;:\&quot;296f6c01e7fea2697ffe1cf41082b774\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
+         * <p>{&quot;MD5&quot;:&quot;296f6c01e7fea2697ffe1cf41082b774&quot;,&quot;driver&quot;:&quot;vhd&quot;,&quot;flag&quot;:&quot;12845825&quot;,&quot;imds_support&quot;:&quot;v1&quot;,&quot;io_optimized&quot;:true,&quot;nvme_supported&quot;:true,&quot;uefi_preferred&quot;:false}</p>
          */
         @NameInMap("MetaData")
         public String metaData;
@@ -358,7 +358,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
          * <p>The extended information in JSON string format.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;MD5\&quot;:\&quot;1042e65a2b7cdd3059b6a873ee1a3260\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</p>
+         * <p>{&quot;MD5&quot;:&quot;1042e65a2b7cdd3059b6a873ee1a3260&quot;,&quot;driver&quot;:&quot;vhd&quot;,&quot;flag&quot;:&quot;12845825&quot;,&quot;imds_support&quot;:&quot;v1&quot;,&quot;io_optimized&quot;:true,&quot;nvme_supported&quot;:true,&quot;uefi_preferred&quot;:false}</p>
          */
         @NameInMap("MetaData")
         public String metaData;

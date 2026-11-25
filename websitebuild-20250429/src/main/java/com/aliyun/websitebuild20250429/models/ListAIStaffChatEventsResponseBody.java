@@ -198,7 +198,7 @@ public class ListAIStaffChatEventsResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Recorded\&quot;: False}</p>
+         * <p>{&quot;Recorded&quot;: False}</p>
          */
         @NameInMap("Data")
         public String data;

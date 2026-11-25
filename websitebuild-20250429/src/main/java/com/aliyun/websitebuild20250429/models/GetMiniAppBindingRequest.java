@@ -26,7 +26,7 @@ public class GetMiniAppBindingRequest extends TeaModel {
      * <p>The list of extended information keys.</p>
      * 
      * <strong>example:</strong>
-     * <p>SERVER_DOMAIN</p>
+     * <p>[&quot;SERVER_DOMAIN&quot;]</p>
      */
     @NameInMap("SettingKeys")
     public java.util.List<String> settingKeys;

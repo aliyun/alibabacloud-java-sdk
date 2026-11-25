@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PushResourceMeasureRequest extends TeaModel {
     /**
-     * <p>The resource usage amount.</p>
+     * <p>The resource usage.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,7 +23,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String belongId;
 
     /**
-     * <p>The type of the owner ID (siteId or uid).</p>
+     * <p>The type of the owner ID, such as siteId or uid.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -32,7 +32,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String belongIdType;
 
     /**
-     * <p>The business ID associated with this push, such as a session ID, task ID, or file ID.</p>
+     * <p>The business ID associated with this push, such as the session ID, task ID, or file ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
@@ -41,19 +41,19 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The metering data used to flexibly push multiple data points such as the number of model calls and token usage. The value must be a JSON string.</p>
+     * <p>The metering data. The value must be a JSON string and is used to flexibly push multiple metrics such as model call counts and token usage.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;MD5\&quot;:\&quot;8ba46100bd898461f0f589704f2fad25\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;769\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:false,\&quot;uefi_preferred\&quot;:false}</p>
+     * <p>{&quot;MD5&quot;:&quot;8ba46100bd898461f0f589704f2fad25&quot;,&quot;driver&quot;:&quot;vhd&quot;,&quot;flag&quot;:&quot;769&quot;,&quot;imds_support&quot;:&quot;v1&quot;,&quot;io_optimized&quot;:true,&quot;nvme_supported&quot;:false,&quot;uefi_preferred&quot;:false}</p>
      */
     @NameInMap("MeasureData")
     public String measureData;
 
     /**
-     * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
+     * <p>The business extension metadata. The value must be a JSON string in map format.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;MD5\&quot;:\&quot;8ba46100bd898461f0f589704f2fad25\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;769\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:false,\&quot;uefi_preferred\&quot;:false}</p>
+     * <p>{&quot;MD5&quot;:&quot;8ba46100bd898461f0f589704f2fad25&quot;,&quot;driver&quot;:&quot;vhd&quot;,&quot;flag&quot;:&quot;769&quot;,&quot;imds_support&quot;:&quot;v1&quot;,&quot;io_optimized&quot;:true,&quot;nvme_supported&quot;:false,&quot;uefi_preferred&quot;:false}</p>
      */
     @NameInMap("MetaData")
     public String metaData;
@@ -68,7 +68,7 @@ public class PushResourceMeasureRequest extends TeaModel {
     public String resourceCode;
 
     /**
-     * <p>The usage time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>The usage time. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>yyyy-MM-dd HH:mm:ss</p>

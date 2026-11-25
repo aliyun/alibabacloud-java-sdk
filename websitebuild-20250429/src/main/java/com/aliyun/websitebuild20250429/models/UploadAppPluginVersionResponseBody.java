@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadAppPluginVersionResponseBody extends TeaModel {
     /**
-     * <p>The detailed reasons for access denial.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Specifies whether a retry is allowed. Valid values:</p>
+     * <p>Indicates whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false: A retry is not allowed.</li>
-     * <li>true: A retry is allowed.</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
      * <p>The dynamic message. This parameter is not used and can be ignored.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D</a></p>
+     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUEr****M4ev9SELNb&Signature=Bcj3eohy8nmlS****Gdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUEr****M4ev9SELNb&amp;Signature=Bcj3eohy8nmlS****Gdq7JZoLjM%3D</a></p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
@@ -93,7 +93,7 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Specifies whether synchronous processing is used.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -199,13 +199,13 @@ public class UploadAppPluginVersionResponseBody extends TeaModel {
          * <p>The commit ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>0123456789abcdef0123456789abcdef01234567</p>
          */
         @NameInMap("CommitSha")
         public String commitSha;
 
         /**
-         * <p>The ID of the bound API gateway plugin.</p>
+         * <p>The ID of the bound API gateway plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>1bae9ceaceea432d91c7069fab0dfc02</p>

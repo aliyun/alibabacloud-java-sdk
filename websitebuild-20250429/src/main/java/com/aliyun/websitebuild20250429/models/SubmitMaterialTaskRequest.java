@@ -8,7 +8,7 @@ public class SubmitMaterialTaskRequest extends TeaModel {
      * <p>The business group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>GROUP_1</p>
      */
     @NameInMap("BizGroupId")
     public String bizGroupId;

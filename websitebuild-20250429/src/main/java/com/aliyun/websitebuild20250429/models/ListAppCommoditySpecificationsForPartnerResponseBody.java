@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppCommoditySpecificationsForPartnerResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAppCommoditySpecificationsForPartnerResponseBody extends TeaMod
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAppCommoditySpecificationsForPartnerResponseBody extends TeaMod
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -41,9 +41,9 @@ public class ListAppCommoditySpecificationsForPartnerResponseBody extends TeaMod
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class ListAppCommoditySpecificationsForPartnerResponseBody extends TeaMod
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The returned object.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("Module")
     public ListAppCommoditySpecificationsForPartnerResponseBodyModule module;
@@ -83,16 +83,16 @@ public class ListAppCommoditySpecificationsForPartnerResponseBody extends TeaMod
     public String rootErrorCode;
 
     /**
-     * <p>The root error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Specifies whether to perform synchronous processing.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -196,6 +196,9 @@ public class ListAppCommoditySpecificationsForPartnerResponseBody extends TeaMod
     public static class ListAppCommoditySpecificationsForPartnerResponseBodyModule extends TeaModel {
         /**
          * <p>The domain name for container health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Versions")
         public java.util.Map<String, ModuleVersionsValue> versions;

@@ -41,6 +41,21 @@ public class UpdateMiniAppBindingResponseBody extends TeaModel {
     }
 
     public static class UpdateMiniAppBindingResponseBodyData extends TeaModel {
+        @NameInMap("PrivacyDraftId")
+        public String privacyDraftId;
+
+        @NameInMap("PrivacyRevision")
+        public String privacyRevision;
+
+        @NameInMap("ReadbackStatus")
+        public String readbackStatus;
+
+        @NameInMap("Revision")
+        public Long revision;
+
+        @NameInMap("Status")
+        public String status;
+
         /**
          * <p>Indicates whether the request is successful.</p>
          * 
@@ -53,6 +68,46 @@ public class UpdateMiniAppBindingResponseBody extends TeaModel {
         public static UpdateMiniAppBindingResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateMiniAppBindingResponseBodyData self = new UpdateMiniAppBindingResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateMiniAppBindingResponseBodyData setPrivacyDraftId(String privacyDraftId) {
+            this.privacyDraftId = privacyDraftId;
+            return this;
+        }
+        public String getPrivacyDraftId() {
+            return this.privacyDraftId;
+        }
+
+        public UpdateMiniAppBindingResponseBodyData setPrivacyRevision(String privacyRevision) {
+            this.privacyRevision = privacyRevision;
+            return this;
+        }
+        public String getPrivacyRevision() {
+            return this.privacyRevision;
+        }
+
+        public UpdateMiniAppBindingResponseBodyData setReadbackStatus(String readbackStatus) {
+            this.readbackStatus = readbackStatus;
+            return this;
+        }
+        public String getReadbackStatus() {
+            return this.readbackStatus;
+        }
+
+        public UpdateMiniAppBindingResponseBodyData setRevision(Long revision) {
+            this.revision = revision;
+            return this;
+        }
+        public Long getRevision() {
+            return this.revision;
+        }
+
+        public UpdateMiniAppBindingResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public UpdateMiniAppBindingResponseBodyData setSuccess(Boolean success) {

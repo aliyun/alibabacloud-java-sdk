@@ -41,7 +41,7 @@ public class AppMaterialFile extends TeaModel {
     public String deletedTime;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ddddwww</p>
@@ -80,7 +80,7 @@ public class AppMaterialFile extends TeaModel {
      * <p>The file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>文件名</p>
+     * <p>File name</p>
      */
     @NameInMap("Name")
     public String name;
@@ -95,7 +95,7 @@ public class AppMaterialFile extends TeaModel {
     public String status;
 
     /**
-     * <p>The storage size.</p>
+     * <p>The storage space size.</p>
      * 
      * <strong>example:</strong>
      * <p>23M</p>
@@ -104,7 +104,7 @@ public class AppMaterialFile extends TeaModel {
     public String storageSize;
 
     /**
-     * <p>The file name extension.</p>
+     * <p>The file extension.</p>
      * 
      * <strong>example:</strong>
      * <p>png</p>

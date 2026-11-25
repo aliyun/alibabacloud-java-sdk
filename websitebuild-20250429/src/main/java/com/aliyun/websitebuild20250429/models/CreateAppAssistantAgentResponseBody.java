@@ -14,7 +14,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Specifies whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -41,9 +41,9 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -83,16 +83,16 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -196,6 +196,9 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
     public static class CreateAppAssistantAgentResponseBodyModuleCredential extends TeaModel {
         /**
          * <p>The extended field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Extra")
         public java.util.Map<String, String> extra;
@@ -235,6 +238,9 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
     public static class CreateAppAssistantAgentResponseBodyModuleEmbedConfig extends TeaModel {
         /**
          * <p>The extended field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Extra")
         public java.util.Map<String, String> extra;
@@ -270,7 +276,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
 
     public static class CreateAppAssistantAgentResponseBodyModule extends TeaModel {
         /**
-         * <p>The agent ID returned by the platform.</p>
+         * <p>The ID of the agent returned by the platform.</p>
          * 
          * <strong>example:</strong>
          * <p>duanwei@qianrutest</p>
@@ -282,7 +288,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
          * <p>The name of the agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试业务空间</p>
+         * <p>Test workspace</p>
          */
         @NameInMap("AgentName")
         public String agentName;
@@ -310,6 +316,9 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
 
         /**
          * <p>The extended parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("ExtraParams")
         public java.util.Map<String, String> extraParams;
@@ -324,7 +333,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-28T02:25:41Z</p>
@@ -333,7 +342,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The application ID of the agent on the platform.</p>
+         * <p>The app ID of the agent platform.</p>
          * 
          * <strong>example:</strong>
          * <p>WA12313131313</p>
@@ -360,7 +369,7 @@ public class CreateAppAssistantAgentResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>1231313131</p>

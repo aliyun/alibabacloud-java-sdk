@@ -59,7 +59,7 @@ public class OfflineAppInstanceResponseBody extends TeaModel {
      * <p>Indicates whether the move succeeded.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;TotalPageNum\&quot;: 1, \&quot;ResultLimit\&quot;: False, \&quot;CurrentPageNum\&quot;: 0, \&quot;PageSize\&quot;: 0, \&quot;TotalItemNum\&quot;: 0}</p>
+     * <p>{&quot;TotalPageNum&quot;: 1, &quot;ResultLimit&quot;: False, &quot;CurrentPageNum&quot;: 0, &quot;PageSize&quot;: 0, &quot;TotalItemNum&quot;: 0}</p>
      */
     @NameInMap("Module")
     public java.util.Map<String, ?> module;

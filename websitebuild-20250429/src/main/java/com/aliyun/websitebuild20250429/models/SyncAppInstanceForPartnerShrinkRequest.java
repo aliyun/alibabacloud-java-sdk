@@ -38,7 +38,7 @@ public class SyncAppInstanceForPartnerShrinkRequest extends TeaModel {
     public String sourceBizId;
 
     /**
-     * <p>The source. Set this parameter to MARKET_CLOUD_DREAM.</p>
+     * <p>The source type. Valid value: MARKET_CLOUD_DREAM.</p>
      * 
      * <strong>example:</strong>
      * <p>MARKET_CLOUD_DREAM</p>

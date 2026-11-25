@@ -26,7 +26,7 @@ public class CreateLogoTaskRequest extends TeaModel {
      * <p>The task parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;ehpcutilParam\&quot;:\&quot;sched job_submit --commandline \\\&quot;/ehpcdata/data/usersTest/huangqiaoyi-1725933699384/huangqiaoyi-1725933699384.slurm\\\&quot; --runasuser TestGfjnSimworks\&quot;}</p>
+     * <p>{&quot;ehpcutilParam&quot;:&quot;sched job_submit --commandline \&quot;/ehpcdata/data/usersTest/huangqiaoyi-1725933699384/huangqiaoyi-1725933699384.slurm\&quot; --runasuser TestGfjnSimworks&quot;}</p>
      */
     @NameInMap("Parameters")
     public String parameters;

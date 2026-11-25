@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppConversationsRequest extends TeaModel {
     /**
-     * <p>The bot ID.</p>
+     * <p>The ID of the bot.</p>
      * 
      * <strong>example:</strong>
      * <p>Zero2</p>
@@ -14,7 +14,7 @@ public class ListAppConversationsRequest extends TeaModel {
     public String botId;
 
     /**
-     * <p>The end modification time in ISO 8601 format.</p>
+     * <p>The end time for the modification in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>20201212</p>
@@ -32,7 +32,7 @@ public class ListAppConversationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query. If no next query is available, this parameter is empty.</p>
+     * <p>The token used to start the next query. If there is no next query, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -50,7 +50,7 @@ public class ListAppConversationsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListAppConversationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The site ID.</p>
+     * <p>The ID of the site.</p>
      * 
      * <strong>example:</strong>
      * <p>1168642640022064</p>
@@ -68,7 +68,7 @@ public class ListAppConversationsRequest extends TeaModel {
     public String siteId;
 
     /**
-     * <p>The start modification time in ISO 8601 format.</p>
+     * <p>The start time for the modification in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>20200101</p>

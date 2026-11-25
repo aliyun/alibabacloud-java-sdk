@@ -34,8 +34,7 @@ public class QueryMaterialFileListShrinkRequest extends TeaModel {
     public Long maxFileSize;
 
     /**
-     * <p>The maximum number of entries to return for a single request.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of entries to return for a single request. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,7 +61,7 @@ public class QueryMaterialFileListShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The token that is used to start the next query. If no next query is available, this parameter is left empty.</p>
+     * <p>The token that is used to start the next query. If no next query exists, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -80,7 +79,7 @@ public class QueryMaterialFileListShrinkRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC, DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
@@ -113,7 +112,7 @@ public class QueryMaterialFileListShrinkRequest extends TeaModel {
     public String statusListShrink;
 
     /**
-     * <p>The list of file extensions.</p>
+     * <p>The list of file name extensions.</p>
      */
     @NameInMap("SuffixList")
     public String suffixListShrink;

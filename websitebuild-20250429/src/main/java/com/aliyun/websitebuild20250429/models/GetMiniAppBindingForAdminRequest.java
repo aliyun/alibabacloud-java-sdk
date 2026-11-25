@@ -26,7 +26,7 @@ public class GetMiniAppBindingForAdminRequest extends TeaModel {
      * <p>The mini program ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>wxaaa1111111aaa11a</p>
      */
     @NameInMap("PlatformAppid")
     public String platformAppid;

@@ -86,7 +86,7 @@ public class AppInstanceProfile extends TeaModel {
     public String customerService;
 
     /**
-     * <p>The code of the region where the application is deployed.</p>
+     * <p>The code of the application deployment area.</p>
      * 
      * <strong>example:</strong>
      * <p>HongKong</p>
@@ -110,7 +110,7 @@ public class AppInstanceProfile extends TeaModel {
     public AppInstanceProfileIndependentDeployment independentDeployment;
 
     /**
-     * <p>The ID of the associated Lingxiao instance.</p>
+     * <p>The associated Lingxiao instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>lx-1</p>
@@ -119,7 +119,7 @@ public class AppInstanceProfile extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether the current user is included in the grayscale whitelist for the ChatBI feature.</p>
+     * <p>Specifies whether the current user is included in the canary release whitelist for the ChatBI feature.</p>
      */
     @NameInMap("OpenChatBi")
     public Boolean openChatBi;
@@ -170,7 +170,7 @@ public class AppInstanceProfile extends TeaModel {
     public String seoSite;
 
     /**
-     * <p>Specifies whether to enable the watermark for shared rendering. A value of 1 indicates that the feature is enabled, and a value of 0 indicates that the feature is disabled. If this parameter is not configured, it is left empty.</p>
+     * <p>Specifies whether to enable the share rendering watermark. Valid values: 1 (enabled) and 0 (disabled). If not configured, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -188,7 +188,7 @@ public class AppInstanceProfile extends TeaModel {
     public String siteVersion;
 
     /**
-     * <p>The display name of the site version, which includes the deployment region.</p>
+     * <p>The display name of the site version, which includes the deployment area.</p>
      * 
      * <strong>example:</strong>
      * <p>Ultimate Edition [Hong Kong]</p>
@@ -224,7 +224,7 @@ public class AppInstanceProfile extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The upgrade status of the instance. DOING indicates that the upgrade is in progress, SUCC indicates that the upgrade is successful, and FAIL indicates that the upgrade failed.</p>
+     * <p>The upgrade status of the instance. Valid values: DOING (upgrading), SUCC (upgraded successfully), and FAIL (upgrade failed).</p>
      * 
      * <strong>example:</strong>
      * <p>SUCC</p>
@@ -447,13 +447,13 @@ public class AppInstanceProfile extends TeaModel {
 
     public static class AppInstanceProfileIndependentDeployment extends TeaModel {
         /**
-         * <p>Specifies whether retries are allowed after the independent server fails to be enabled.</p>
+         * <p>Specifies whether retries are allowed after the independent server fails to start.</p>
          */
         @NameInMap("CanRetry")
         public Boolean canRetry;
 
         /**
-         * <p>The code of the region where the independent server is deployed.</p>
+         * <p>The code of the deployment area for the independent server.</p>
          * 
          * <strong>example:</strong>
          * <p>HongKong</p>
@@ -462,7 +462,7 @@ public class AppInstanceProfile extends TeaModel {
         public String deployArea;
 
         /**
-         * <p>The type of the DNS record used when an independent IP address is bound to a domain name.</p>
+         * <p>The DNS record type used when binding a domain name to an independent IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>A</p>
@@ -471,7 +471,7 @@ public class AppInstanceProfile extends TeaModel {
         public String dnsRecordType;
 
         /**
-         * <p>The eligibility status of the independent server. UPGRADE_REQUIRED indicates that an upgrade is required, AVAILABLE indicates that the feature can be enabled, and UNAVAILABLE indicates that the feature is currently unavailable.</p>
+         * <p>The eligibility status of the independent server. Valid values: UPGRADE_REQUIRED (an upgrade is required), AVAILABLE (the feature can be enabled), and UNAVAILABLE (the feature is currently unavailable).</p>
          * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
@@ -480,7 +480,7 @@ public class AppInstanceProfile extends TeaModel {
         public String eligibility;
 
         /**
-         * <p>The status of the independent server. NOT_ENABLED indicates that the feature is not enabled, ENABLING indicates that the feature is being enabled, ACTIVE indicates that the feature is enabled, and FAILED indicates that the feature failed to be enabled.</p>
+         * <p>The status of the independent server. Valid values: NOT_ENABLED (not enabled), ENABLING (enabling), ACTIVE (enabled), and FAILED (failed to enable).</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>

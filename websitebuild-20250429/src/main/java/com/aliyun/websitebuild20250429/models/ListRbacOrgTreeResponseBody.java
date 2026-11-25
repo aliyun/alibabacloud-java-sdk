@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRbacOrgTreeResponseBody extends TeaModel {
     /**
-     * <p>The detailed cause of the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retries are allowed.</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,9 +41,9 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,8 +59,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The number of results returned per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The number of entries to return for each query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -75,7 +74,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public ListRbacOrgTreeResponseBodyModule module;
 
     /**
-     * <p>The token used to start the next query. This parameter is empty if no subsequent query is available.</p>
+     * <p>The token used to start the next query. If no next query is available, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -230,7 +229,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
 
     public static class ListRbacOrgTreeResponseBodyModuleData extends TeaModel {
         /**
-         * <p>The creation time. The time is in the ISO 8601 format and the UTC time zone.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and is in the UTC time zone (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-08T02:28:26Z</p>
@@ -239,10 +238,10 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The directory level.</p>
+         * <p>The folder level.</p>
          * 
          * <strong>example:</strong>
-         * <p>FirstChildDepth</p>
+         * <p>1</p>
          */
         @NameInMap("Depth")
         public Integer depth;
@@ -320,7 +319,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
 
     public static class ListRbacOrgTreeResponseBodyModuleNext extends TeaModel {
         /**
-         * <p>The creation date. The date is in the ISO 8601 format and the UTC time zone.</p>
+         * <p>The creation date. The date follows the ISO 8601 standard and is in the UTC time zone (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-15T02:29:22Z</p>
@@ -329,7 +328,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The category level. The root category level is 1.</p>
+         * <p>The category level. The root category is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -356,7 +355,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The request path of the API.</p>
+         * <p>The URI of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>/h6sRMdP&amp;LTdQz/44ImvD/JtjSeUza/wVcp1i/dsxnl0FlL0/bvL/d+0~V6Fi5+R/P8ebktwGxe/l&amp;AqBD_/Y+TstdpTo06U_Q/4i4:EDPGo/7.fIVgd.//AOJtXP5/X</p>

@@ -35,7 +35,7 @@ public class CreateAppChatRequest extends TeaModel {
      * <p>The list of conversation messages in JSON array format.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\r\n  {\r\n    \&quot;role\&quot;: \&quot;user\&quot;,\r\n    \&quot;content\&quot;: \&quot;Prove that there are only five platonic solids, namely the tetrahedron, octahedron, icosahedron, cube, and dodecahedron.\&quot;\r\n  }\r\n]</p>
+     * <p>[\r\n  {\r\n    &quot;role&quot;: &quot;user&quot;,\r\n    &quot;content&quot;: &quot;Prove that there are only five platonic solids, namely the tetrahedron, octahedron, icosahedron, cube, and dodecahedron.&quot;\r\n  }\r\n]</p>
      */
     @NameInMap("Messages")
     public String messages;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TranslateChannelDraftResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name used to query the application.</p>
+     * <p>The name of the application to query.</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -32,7 +32,7 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic code. This field is currently unused and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,9 +41,9 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message that is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> return parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The invalid parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Indicates whether the deletion was successful.</p>
+     * <p>Indicates whether the deletion is successful.</p>
      */
     @NameInMap("Module")
     public TranslateChannelDraftResponseBodyModule module;
@@ -195,10 +195,10 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
 
     public static class TranslateChannelDraftResponseBodyModuleCoverImages extends TeaModel {
         /**
-         * <p>The file ID in the material center.</p>
+         * <p>The ID of the file in the material center.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>material-file-demo-001</p>
          */
         @NameInMap("MaterialFileId")
         public String materialFileId;
@@ -213,10 +213,10 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
         public String ossUrl;
 
         /**
-         * <p>The sort order number.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
-         * <p>Desc</p>
+         * <p>1</p>
          */
         @NameInMap("SortOrder")
         public Integer sortOrder;
@@ -257,31 +257,31 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
          * <p>The AI adaptation status. Valid values: NONE, ADAPTING, DONE, and FAILED.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>DONE</p>
          */
         @NameInMap("AdaptStatus")
         public String adaptStatus;
 
         /**
-         * <p>The channel-adapted content body.</p>
+         * <p>The adapted content for the channel.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Introduces the main features and usage of the website</p>
          */
         @NameInMap("AdaptedContent")
         public String adaptedContent;
 
         /**
-         * <p>The channel-adapted title.</p>
+         * <p>The adapted title for the channel.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Website features and user guide</p>
          */
         @NameInMap("AdaptedTitle")
         public String adaptedTitle;
 
         /**
-         * <p>The channel enumeration value.</p>
+         * <p>The channel enumeration.</p>
          * 
          * <strong>example:</strong>
          * <p>WECHAT</p>
@@ -290,10 +290,10 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The publishing account snapshot.</p>
+         * <p>The snapshot of the publishing account.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>social-account-demo-001</p>
          */
         @NameInMap("ChannelAccount")
         public String channelAccount;
@@ -302,7 +302,7 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
          * <p>The display name of the publishing account.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>Sample publishing account</p>
          */
         @NameInMap("ChannelAccountName")
         public String channelAccountName;
@@ -317,7 +317,7 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
         public String channelName;
 
         /**
-         * <p>The channel type. Valid values: DOMESTIC, OVERSEA, and INTERNAL.</p>
+         * <p>The type of the channel. Valid values: DOMESTIC, OVERSEA, and INTERNAL.</p>
          * 
          * <strong>example:</strong>
          * <p>wechat</p>
@@ -326,7 +326,7 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
         public String channelType;
 
         /**
-         * <p>The list of channel cover images.</p>
+         * <p>The list of cover images for the channel.</p>
          */
         @NameInMap("CoverImages")
         public java.util.List<TranslateChannelDraftResponseBodyModuleCoverImages> coverImages;
@@ -368,19 +368,19 @@ public class TranslateChannelDraftResponseBody extends TeaModel {
         public String failReason;
 
         /**
-         * <p>The channel-specific publishing configuration in JSON format.</p>
+         * <p>The JSON string of channel-specific publishing fields.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>{}</p>
          */
         @NameInMap("PublishConfig")
         public String publishConfig;
 
         /**
-         * <p>The publishing time, in millisecond timestamp format.</p>
+         * <p>The publishing time. The value is a millisecond timestamp.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>1767225600000</p>
          */
         @NameInMap("PublishedAt")
         public Long publishedAt;

@@ -263,6 +263,9 @@ public class ListAppPluginConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The extension information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Extend")
         public java.util.Map<String, String> extend;

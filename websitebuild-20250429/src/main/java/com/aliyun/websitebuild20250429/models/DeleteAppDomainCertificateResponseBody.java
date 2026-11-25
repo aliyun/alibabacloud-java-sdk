@@ -14,7 +14,7 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Specifies whether retries are allowed. Valid values:</p>
+     * <p>Indicates whether retries are allowed. Valid values:</p>
      * <ul>
      * <li>false: Retries are not allowed.</li>
      * <li>true: Retries are allowed.</li>
@@ -27,7 +27,7 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The name of the application. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -36,7 +36,7 @@ public class DeleteAppDomainCertificateResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic code. This parameter is currently unused and can be ignored.</p>
+     * <p>The dynamic code. This field is currently unused and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>

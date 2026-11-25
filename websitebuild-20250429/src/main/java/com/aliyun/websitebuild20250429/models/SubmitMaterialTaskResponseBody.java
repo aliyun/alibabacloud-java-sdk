@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitMaterialTaskResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the permission check failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <p>Indicates whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.</li>
-     * <li>true: Retry is allowed.</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The application with this name is queried.</p>
+     * <p>The name of the application to query.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -54,13 +54,13 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The error code. The ErrorCode field is not returned if the request is successful. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
+     * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error code list in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -93,7 +93,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The root error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -102,7 +102,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The root error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>System exception</p>
@@ -111,7 +111,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -120,7 +120,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Indicates whether the request is processed synchronously.</p>
+     * <p>Indicates whether the task is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -250,7 +250,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
          * <p>The business group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>GROUP_1</p>
          */
         @NameInMap("BizGroupId")
         public String bizGroupId;

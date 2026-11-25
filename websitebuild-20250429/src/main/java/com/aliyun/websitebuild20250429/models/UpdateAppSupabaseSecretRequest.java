@@ -17,7 +17,7 @@ public class UpdateAppSupabaseSecretRequest extends TeaModel {
      * <p>The secret key.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>EXAMPLE_API_KEY</p>
      */
     @NameInMap("SecretKey")
     public String secretKey;

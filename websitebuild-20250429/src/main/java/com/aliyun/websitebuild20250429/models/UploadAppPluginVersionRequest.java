@@ -8,13 +8,13 @@ public class UploadAppPluginVersionRequest extends TeaModel {
      * <p>The changelog.</p>
      * 
      * <strong>example:</strong>
-     * <p>x x x</p>
+     * <p>Fixed an issue with reading plug-in configurations</p>
      */
     @NameInMap("Changelog")
     public String changelog;
 
     /**
-     * <p>The description. This parameter is optional. If this parameter is not empty, the description field in the primary table is updated accordingly.</p>
+     * <p>The description. This parameter is optional. If this parameter is not empty, the description in the main table is synchronously updated.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class UploadAppPluginVersionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The downloadable URL of the ZIP file. This parameter and OssKey are mutually exclusive.</p>
+     * <p>The downloadable ZIP link. This parameter is mutually exclusive with OssKey.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://sfile.chatglm.cn/chatglm4/file/a8/a87340a5ba.pdf">https://sfile.chatglm.cn/chatglm4/file/a8/a87340a5ba.pdf</a></p>
@@ -32,16 +32,16 @@ public class UploadAppPluginVersionRequest extends TeaModel {
     public String downloadUrl;
 
     /**
-     * <p>The extended JSON string. This parameter is optional and must be in the same format as the extend parameter synchronized from the sandbox. If this parameter is not empty, the extend field in the primary table is updated accordingly.</p>
+     * <p>The extended JSON. This parameter is optional and uses the same format as the extend synchronized to the sandbox. If this parameter is not empty, the extend in the main table is synchronously updated.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;deliveryNodeName&quot;:&quot;Delivery Quality Inspection&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</p>
+     * <p>{&quot;deliveryNodeName&quot;:&quot;Delivery quality inspection&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
-     * <p>The Object Storage Service (OSS) key after the file is directly uploaded from the frontend. This parameter and DownloadUrl are mutually exclusive.</p>
+     * <p>The Object Storage Service (OSS) key after frontend direct upload. This parameter is mutually exclusive with DownloadUrl.</p>
      * 
      * <strong>example:</strong>
      * <p>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</p>
@@ -50,7 +50,7 @@ public class UploadAppPluginVersionRequest extends TeaModel {
     public String ossKey;
 
     /**
-     * <p>The ID of the gateway plugin.</p>
+     * <p>The ID of the gateway plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>aliplayer-react</p>
@@ -59,7 +59,7 @@ public class UploadAppPluginVersionRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>The new version number. The version number must follow the Semantic Versioning (SemVer) specification and be greater than the current version.</p>
+     * <p>The new version number in SemVer format. The value must be greater than the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>v2</p>

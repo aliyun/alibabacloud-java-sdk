@@ -14,7 +14,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -59,8 +59,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The maximum number of results to return per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -75,7 +74,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
     public java.util.List<ListAppPluginsResponseBodyModule> module;
 
     /**
-     * <p>The token used to start the next query. This parameter is empty if no more results are available.</p>
+     * <p>The token used to start the next query. If no next query is available, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -242,7 +241,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
          * <p>The configuration form in React JSON Schema format.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;label&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Display name&quot;}}}</p>
          */
         @NameInMap("ConfigItems")
         public String configItems;
@@ -257,28 +256,27 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>Specifies whether to display the image. Valid values:</p>
+         * <p>Specifies whether the plugin is displayed. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong> (None): Not displayed.</li>
-         * <li><strong>1</strong> (Always): Always displayed.</li>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>always</p>
+         * <p>1</p>
          */
         @NameInMap("Display")
         public Integer display;
 
         /**
-         * <p>Specifies whether to enable scheduled delivery of resource snapshots.</p>
-         * <p>Valid values:</p>
+         * <p>Specifies whether the plugin is enabled. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Disabled.</li>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>1</p>
          */
         @NameInMap("Enabled")
         public Integer enabled;
@@ -303,7 +301,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The update time in ISO 8601 format in the UTC time zone.</p>
+         * <p>The modification time in ISO 8601 format in the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -340,10 +338,14 @@ public class ListAppPluginsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Indicates whether the item is deleted. Valid values: 0 (no) and 1 (yes).</p>
+         * <p>Specifies whether the plugin is deleted. Valid values:</p>
+         * <ul>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>0</p>
          */
         @NameInMap("IsDeleted")
         public Integer isDeleted;
@@ -352,7 +354,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
          * <p>The name of the plugin.</p>
          * 
          * <strong>example:</strong>
-         * <p>Filename</p>
+         * <p>File name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -370,7 +372,7 @@ public class ListAppPluginsResponseBody extends TeaModel {
          * <p>The category tags.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;Key\&quot;: \&quot;kubernetes.io/cluster-id\&quot;, \&quot;Value\&quot;: \&quot;cc67198b13db948c9848599654da5586e\&quot;}, {\&quot;Key\&quot;: \&quot;created-by\&quot;, \&quot;Value\&quot;: \&quot;alibabacloud-imagecache-controller\&quot;}]</p>
+         * <p>[{&quot;Key&quot;: &quot;kubernetes.io/cluster-id&quot;, &quot;Value&quot;: &quot;cc67198b13db948c9848599654da5586e&quot;}, {&quot;Key&quot;: &quot;created-by&quot;, &quot;Value&quot;: &quot;alibabacloud-imagecache-controller&quot;}]</p>
          */
         @NameInMap("Tags")
         public String tags;

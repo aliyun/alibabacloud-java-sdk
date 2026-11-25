@@ -191,6 +191,42 @@ public class PublishAppInstanceResponseBody extends TeaModel {
     }
 
     public static class PublishAppInstanceResponseBodyModule extends TeaModel {
+        @NameInMap("ArtifactDigest")
+        public String artifactDigest;
+
+        @NameInMap("AuditId")
+        public String auditId;
+
+        @NameInMap("CandidateId")
+        public String candidateId;
+
+        @NameInMap("CandidateStatus")
+        public String candidateStatus;
+
+        @NameInMap("CommitHash")
+        public String commitHash;
+
+        @NameInMap("PlatformAppid")
+        public String platformAppid;
+
+        @NameInMap("PluginDeclarationHash")
+        public String pluginDeclarationHash;
+
+        @NameInMap("PluginState")
+        public String pluginState;
+
+        @NameInMap("PrivacyDraftId")
+        public String privacyDraftId;
+
+        @NameInMap("PrivacyRevision")
+        public String privacyRevision;
+
+        @NameInMap("PublishEnv")
+        public String publishEnv;
+
+        @NameInMap("PublishNumber")
+        public String publishNumber;
+
         /**
          * <p>The publish order ID.</p>
          * 
@@ -200,9 +236,117 @@ public class PublishAppInstanceResponseBody extends TeaModel {
         @NameInMap("PublishOrderId")
         public Long publishOrderId;
 
+        @NameInMap("ReadbackStatus")
+        public String readbackStatus;
+
+        @NameInMap("SubmitIntentStatus")
+        public String submitIntentStatus;
+
+        @NameInMap("UpdatedAt")
+        public Long updatedAt;
+
+        @NameInMap("UploadSequence")
+        public Long uploadSequence;
+
         public static PublishAppInstanceResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             PublishAppInstanceResponseBodyModule self = new PublishAppInstanceResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public PublishAppInstanceResponseBodyModule setArtifactDigest(String artifactDigest) {
+            this.artifactDigest = artifactDigest;
+            return this;
+        }
+        public String getArtifactDigest() {
+            return this.artifactDigest;
+        }
+
+        public PublishAppInstanceResponseBodyModule setAuditId(String auditId) {
+            this.auditId = auditId;
+            return this;
+        }
+        public String getAuditId() {
+            return this.auditId;
+        }
+
+        public PublishAppInstanceResponseBodyModule setCandidateId(String candidateId) {
+            this.candidateId = candidateId;
+            return this;
+        }
+        public String getCandidateId() {
+            return this.candidateId;
+        }
+
+        public PublishAppInstanceResponseBodyModule setCandidateStatus(String candidateStatus) {
+            this.candidateStatus = candidateStatus;
+            return this;
+        }
+        public String getCandidateStatus() {
+            return this.candidateStatus;
+        }
+
+        public PublishAppInstanceResponseBodyModule setCommitHash(String commitHash) {
+            this.commitHash = commitHash;
+            return this;
+        }
+        public String getCommitHash() {
+            return this.commitHash;
+        }
+
+        public PublishAppInstanceResponseBodyModule setPlatformAppid(String platformAppid) {
+            this.platformAppid = platformAppid;
+            return this;
+        }
+        public String getPlatformAppid() {
+            return this.platformAppid;
+        }
+
+        public PublishAppInstanceResponseBodyModule setPluginDeclarationHash(String pluginDeclarationHash) {
+            this.pluginDeclarationHash = pluginDeclarationHash;
+            return this;
+        }
+        public String getPluginDeclarationHash() {
+            return this.pluginDeclarationHash;
+        }
+
+        public PublishAppInstanceResponseBodyModule setPluginState(String pluginState) {
+            this.pluginState = pluginState;
+            return this;
+        }
+        public String getPluginState() {
+            return this.pluginState;
+        }
+
+        public PublishAppInstanceResponseBodyModule setPrivacyDraftId(String privacyDraftId) {
+            this.privacyDraftId = privacyDraftId;
+            return this;
+        }
+        public String getPrivacyDraftId() {
+            return this.privacyDraftId;
+        }
+
+        public PublishAppInstanceResponseBodyModule setPrivacyRevision(String privacyRevision) {
+            this.privacyRevision = privacyRevision;
+            return this;
+        }
+        public String getPrivacyRevision() {
+            return this.privacyRevision;
+        }
+
+        public PublishAppInstanceResponseBodyModule setPublishEnv(String publishEnv) {
+            this.publishEnv = publishEnv;
+            return this;
+        }
+        public String getPublishEnv() {
+            return this.publishEnv;
+        }
+
+        public PublishAppInstanceResponseBodyModule setPublishNumber(String publishNumber) {
+            this.publishNumber = publishNumber;
+            return this;
+        }
+        public String getPublishNumber() {
+            return this.publishNumber;
         }
 
         public PublishAppInstanceResponseBodyModule setPublishOrderId(Long publishOrderId) {
@@ -211,6 +355,38 @@ public class PublishAppInstanceResponseBody extends TeaModel {
         }
         public Long getPublishOrderId() {
             return this.publishOrderId;
+        }
+
+        public PublishAppInstanceResponseBodyModule setReadbackStatus(String readbackStatus) {
+            this.readbackStatus = readbackStatus;
+            return this;
+        }
+        public String getReadbackStatus() {
+            return this.readbackStatus;
+        }
+
+        public PublishAppInstanceResponseBodyModule setSubmitIntentStatus(String submitIntentStatus) {
+            this.submitIntentStatus = submitIntentStatus;
+            return this;
+        }
+        public String getSubmitIntentStatus() {
+            return this.submitIntentStatus;
+        }
+
+        public PublishAppInstanceResponseBodyModule setUpdatedAt(Long updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public Long getUpdatedAt() {
+            return this.updatedAt;
+        }
+
+        public PublishAppInstanceResponseBodyModule setUploadSequence(Long uploadSequence) {
+            this.uploadSequence = uploadSequence;
+            return this;
+        }
+        public Long getUploadSequence() {
+            return this.uploadSequence;
         }
 
     }

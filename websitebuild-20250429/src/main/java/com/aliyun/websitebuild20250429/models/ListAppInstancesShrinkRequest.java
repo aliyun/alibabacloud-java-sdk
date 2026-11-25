@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListAppInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The application type. Valid values: </p>
+     * <p>The application type. Valid values:</p>
      * <ul>
-     * <li>PC_WebSite: web application. </li>
-     * <li>Mini_Program: mini program. 
-     * If this parameter is not specified or left empty, applications are not filtered by type. For compatibility, historical missing, NULL, or empty types are treated as PC_WebSite.</li>
+     * <li>PC_WebSite: web application.</li>
+     * <li>Mini_Program: mini program.
+     * If this parameter is not specified or is left empty, no filtering by type is performed. Historical missing, NULL, or empty types are compatible with PC_WebSite.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,6 +32,15 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
      */
     @NameInMap("BizIds")
     public String bizIdsShrink;
+
+    /**
+     * <p>Used only in the CONTENT_CREATION pattern: exact match for the fully attached domain name, mutually exclusive with Query. It does not include the protocol, port, or path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
+     */
+    @NameInMap("Domain")
+    public String domain;
 
     /**
      * <p>The expiration start time.</p>
@@ -61,7 +70,8 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>The maximum number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -70,7 +80,7 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query. This parameter is empty if no next query exists.</p>
+     * <p>The token for the next query. It is empty when there is no next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -118,16 +128,13 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
      * <p>The query parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;RequestId\&quot;:\&quot;\&quot;}</p>
+     * <p>{&quot;RequestId&quot;:&quot;&quot;}</p>
      */
     @NameInMap("Query")
     public String query;
 
     /**
-     * <p>The query mode. Valid values: </p>
-     * <ul>
-     * <li>CONTENT_CREATION: specifies a lightweight query for the content creation site selector. It queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</li>
-     * </ul>
+     * <p>The query mode. CONTENT_CREATION indicates a lightweight query for the content creation site selector, which queries only published sites and does not load aggregate information such as Profile, services, or AI Staff.</p>
      * 
      * <strong>example:</strong>
      * <p>CONTENT_CREATION</p>
@@ -136,7 +143,7 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
     public String queryMode;
 
     /**
-     * <p>The status range.</p>
+     * <p>The status scope.</p>
      */
     @NameInMap("StatusList")
     public String statusListShrink;
@@ -168,6 +175,14 @@ public class ListAppInstancesShrinkRequest extends TeaModel {
     }
     public String getBizIdsShrink() {
         return this.bizIdsShrink;
+    }
+
+    public ListAppInstancesShrinkRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
     }
 
     public ListAppInstancesShrinkRequest setEndTimeBegin(String endTimeBegin) {

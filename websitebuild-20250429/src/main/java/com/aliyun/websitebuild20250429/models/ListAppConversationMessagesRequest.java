@@ -14,8 +14,7 @@ public class ListAppConversationMessagesRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The number of entries per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -24,7 +23,7 @@ public class ListAppConversationMessagesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results are available.</p>
+     * <p>The token used to start the next query. This parameter is empty if there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
@@ -33,7 +32,7 @@ public class ListAppConversationMessagesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries per page (10-100).</p>
+     * <p>The number of entries per page. Valid values: 10 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +50,7 @@ public class ListAppConversationMessagesRequest extends TeaModel {
     public String siteId;
 
     /**
-     * <p>The creation time of the last entry on the previous page (ISO 8601 format).</p>
+     * <p>The creation time of the last entry on the previous page in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

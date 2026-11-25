@@ -1,3 +1,77 @@
+2026-11-25 Version: 2.38.10
+- Update API GetAppPublishStatus: add request parameters PublishOrderId.
+- Update API GetAppPublishStatus: add response parameters Body.Module.ArtifactDigest.
+- Update API GetAppPublishStatus: add response parameters Body.Module.AuditId.
+- Update API GetAppPublishStatus: add response parameters Body.Module.BindingId.
+- Update API GetAppPublishStatus: add response parameters Body.Module.CandidateId.
+- Update API GetAppPublishStatus: add response parameters Body.Module.CandidateStatus.
+- Update API GetAppPublishStatus: add response parameters Body.Module.CommitHash.
+- Update API GetAppPublishStatus: add response parameters Body.Module.PlatformAppid.
+- Update API GetAppPublishStatus: add response parameters Body.Module.PluginDeclarationHash.
+- Update API GetAppPublishStatus: add response parameters Body.Module.PluginState.
+- Update API GetAppPublishStatus: add response parameters Body.Module.PrivacyDraftId.
+- Update API GetAppPublishStatus: add response parameters Body.Module.PrivacyRevision.
+- Update API GetAppPublishStatus: add response parameters Body.Module.PublishDiagnostics.
+- Update API GetAppPublishStatus: add response parameters Body.Module.PublishEnv.
+- Update API GetAppPublishStatus: add response parameters Body.Module.ReadbackStatus.
+- Update API GetAppPublishStatus: add response parameters Body.Module.SubmitIntentStatus.
+- Update API GetAppPublishStatus: add response parameters Body.Module.UpdatedAt.
+- Update API GetAppPublishStatus: add response parameters Body.Module.UploadAttemptId.
+- Update API GetAppPublishStatus: add response parameters Body.Module.UploadLeaseState.
+- Update API GetAppPublishStatus: add response parameters Body.Module.UploadSequence.
+- Update API GetAppPublishStatus: add response parameters Body.Module.UploadTicketState.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.ArtifactDigest.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.AuditId.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.BindingId.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.CandidateId.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.CandidateStatus.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.PlatformAppid.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.PluginDeclarationHash.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.PluginState.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.PrivacyDraftId.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.PrivacyRevision.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.PublishDiagnostics.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.PublishEnv.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.ReadbackStatus.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.SubmitIntentStatus.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.UpdatedAt.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.UploadAttemptId.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.UploadLeaseState.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.UploadSequence.
+- Update API ListAppPublishHistory: add response parameters Body.Module.History.$.UploadTicketState.
+- Update API PublishAppInstance: add request parameters ArtifactDigest.
+- Update API PublishAppInstance: add request parameters CandidateId.
+- Update API PublishAppInstance: add request parameters Ext.
+- Update API PublishAppInstance: add request parameters IdempotencyKey.
+- Update API PublishAppInstance: add request parameters PlatformAppid.
+- Update API PublishAppInstance: add request parameters PluginDeclarationHash.
+- Update API PublishAppInstance: add request parameters PrivacyDraftId.
+- Update API PublishAppInstance: add request parameters PrivacyRevision.
+- Update API PublishAppInstance: add request parameters PublishOrderId.
+- Update API PublishAppInstance: add request parameters UploadSequence.
+- Update API PublishAppInstance: add response parameters Body.Module.ArtifactDigest.
+- Update API PublishAppInstance: add response parameters Body.Module.AuditId.
+- Update API PublishAppInstance: add response parameters Body.Module.CandidateId.
+- Update API PublishAppInstance: add response parameters Body.Module.CandidateStatus.
+- Update API PublishAppInstance: add response parameters Body.Module.CommitHash.
+- Update API PublishAppInstance: add response parameters Body.Module.PlatformAppid.
+- Update API PublishAppInstance: add response parameters Body.Module.PluginDeclarationHash.
+- Update API PublishAppInstance: add response parameters Body.Module.PluginState.
+- Update API PublishAppInstance: add response parameters Body.Module.PrivacyDraftId.
+- Update API PublishAppInstance: add response parameters Body.Module.PrivacyRevision.
+- Update API PublishAppInstance: add response parameters Body.Module.PublishEnv.
+- Update API PublishAppInstance: add response parameters Body.Module.PublishNumber.
+- Update API PublishAppInstance: add response parameters Body.Module.ReadbackStatus.
+- Update API PublishAppInstance: add response parameters Body.Module.SubmitIntentStatus.
+- Update API PublishAppInstance: add response parameters Body.Module.UpdatedAt.
+- Update API PublishAppInstance: add response parameters Body.Module.UploadSequence.
+- Update API UpdateMiniAppBinding: add response parameters Body.Data.PrivacyDraftId.
+- Update API UpdateMiniAppBinding: add response parameters Body.Data.PrivacyRevision.
+- Update API UpdateMiniAppBinding: add response parameters Body.Data.ReadbackStatus.
+- Update API UpdateMiniAppBinding: add response parameters Body.Data.Revision.
+- Update API UpdateMiniAppBinding: add response parameters Body.Data.Status.
+
+
 2026-11-05 Version: 2.38.9
 - Generated java 2025-04-29 for WebsiteBuild.
 

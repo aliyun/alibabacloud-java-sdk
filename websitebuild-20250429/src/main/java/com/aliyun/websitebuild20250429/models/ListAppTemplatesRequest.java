@@ -35,7 +35,7 @@ public class ListAppTemplatesRequest extends TeaModel {
      * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</p>
+     * <p>${&quot;wget JiexJPWT.popscan.xaliyun.com&quot;}</p>
      */
     @NameInMap("Keyword")
     public String keyword;

@@ -15,10 +15,10 @@ public class RewriteChannelTitleRequest extends TeaModel {
     public String draftId;
 
     /**
-     * <p>The user personalization requirement in free text. This parameter is optional.</p>
+     * <p>The custom requirement specified by the user. This parameter is optional and accepts free text.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>Highlight the main features and keep the title concise and clear</p>
      */
     @NameInMap("UserRequirement")
     public String userRequirement;

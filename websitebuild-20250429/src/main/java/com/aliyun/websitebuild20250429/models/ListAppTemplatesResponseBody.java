@@ -364,7 +364,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
          * <p>The repair action.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;memFrom\&quot;: \&quot;text\&quot;, \&quot;uid\&quot;: \&quot;text\&quot;, \&quot;labels\&quot;: \&quot;jsonb\&quot;, \&quot;content\&quot;: \&quot;text\&quot;, \&quot;fromId\&quot;: \&quot;text\&quot;, \&quot;uuid\&quot;: \&quot;text\&quot;}</p>
+         * <p>{&quot;memFrom&quot;: &quot;text&quot;, &quot;uid&quot;: &quot;text&quot;, &quot;labels&quot;: &quot;jsonb&quot;, &quot;content&quot;: &quot;text&quot;, &quot;fromId&quot;: &quot;text&quot;, &quot;uuid&quot;: &quot;text&quot;}</p>
          */
         @NameInMap("Metadata")
         public String metadata;
@@ -821,7 +821,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
          * <p>The fix details.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;knowledge_point\&quot;:\&quot;text\&quot;,\&quot;trunk_id\&quot;:\&quot;text\&quot;,\&quot;doc_name\&quot;:\&quot;text\&quot;,\&quot;knowledge_point_id\&quot;:\&quot;text\&quot;,\&quot;doc_id\&quot;:\&quot;text\&quot;,\&quot;trunk_content\&quot;:\&quot;text\&quot;}</p>
+         * <p>{&quot;knowledge_point&quot;:&quot;text&quot;,&quot;trunk_id&quot;:&quot;text&quot;,&quot;doc_name&quot;:&quot;text&quot;,&quot;knowledge_point_id&quot;:&quot;text&quot;,&quot;doc_id&quot;:&quot;text&quot;,&quot;trunk_content&quot;:&quot;text&quot;}</p>
          */
         @NameInMap("Metadata")
         public String metadata;

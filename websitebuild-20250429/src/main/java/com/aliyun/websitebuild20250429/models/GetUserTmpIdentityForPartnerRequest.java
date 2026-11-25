@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserTmpIdentityForPartnerRequest extends TeaModel {
     /**
-     * <p>The purpose of the authorization.</p>
+     * <p>The authorization purpose.</p>
      * 
      * <strong>example:</strong>
      * <p>BindDomain</p>
@@ -14,7 +14,7 @@ public class GetUserTmpIdentityForPartnerRequest extends TeaModel {
     public String authPurpose;
 
     /**
-     * <p>The business ID of the customer.</p>
+     * <p>The customer business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
@@ -23,10 +23,10 @@ public class GetUserTmpIdentityForPartnerRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Specifies whether fuzzy match is supported for port numbers. Set this parameter to <strong>1</strong> to enable fuzzy match. Other values or an empty value indicate that fuzzy match is not supported.</p>
+     * <p>Specifies whether fuzzy match is supported for port numbers. To enable fuzzy match, set this parameter to <strong>1</strong>. Any other value or an empty value indicates that fuzzy match is not supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;deliveryNodeName\&quot;:\&quot;视觉设计确认\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
+     * <p>{&quot;deliveryNodeName&quot;:&quot;Visual Design Confirmation&quot;,&quot;deliveryNodeStatus&quot;:&quot;Reject&quot;,&quot;deliveryOperatorRole&quot;:&quot;Customer&quot;}</p>
      */
     @NameInMap("Extend")
     public String extend;
@@ -34,7 +34,7 @@ public class GetUserTmpIdentityForPartnerRequest extends TeaModel {
     /**
      * <p>The service-linked role.</p>
      * <blockquote>
-     * <p>For information about the service-linked roles supported by ApsaraDB RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</p>
+     * <p>For more information about the service-linked roles supported by RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

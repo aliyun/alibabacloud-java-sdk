@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppPublishStatusResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -191,6 +191,15 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
     }
 
     public static class GetAppPublishStatusResponseBodyModule extends TeaModel {
+        @NameInMap("ArtifactDigest")
+        public String artifactDigest;
+
+        @NameInMap("AuditId")
+        public String auditId;
+
+        @NameInMap("BindingId")
+        public String bindingId;
+
         /**
          * <p>Indicates whether quick rollback is supported.</p>
          * 
@@ -200,8 +209,17 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         @NameInMap("CanQuickRevert")
         public String canQuickRevert;
 
+        @NameInMap("CandidateId")
+        public String candidateId;
+
+        @NameInMap("CandidateStatus")
+        public String candidateStatus;
+
+        @NameInMap("CommitHash")
+        public String commitHash;
+
         /**
-         * <p>The current step of the task.</p>
+         * <p>The current step number of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>PRE_CHECK</p>
@@ -263,8 +281,10 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The call is successful.</li>
-         * <li><code>false</code>: The call failed.</li>
+         * <li><p><code>true</code>: The call is successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The call fails.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,7 +294,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public Boolean isSuccess;
 
         /**
-         * <p>The additional description.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>common notify successfully.</p>
@@ -283,7 +303,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The sorting type, such as ASC or DESC.</p>
+         * <p>The sort order. Valid values: ASC and DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>
@@ -309,6 +329,27 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         @NameInMap("Percent")
         public Integer percent;
 
+        @NameInMap("PlatformAppid")
+        public String platformAppid;
+
+        @NameInMap("PluginDeclarationHash")
+        public String pluginDeclarationHash;
+
+        @NameInMap("PluginState")
+        public String pluginState;
+
+        @NameInMap("PrivacyDraftId")
+        public String privacyDraftId;
+
+        @NameInMap("PrivacyRevision")
+        public String privacyRevision;
+
+        @NameInMap("PublishDiagnostics")
+        public String publishDiagnostics;
+
+        @NameInMap("PublishEnv")
+        public String publishEnv;
+
         /**
          * <p>The publish number.</p>
          * 
@@ -328,7 +369,7 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public Long publishOrderId;
 
         /**
-         * <p>The scheduled publish time in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</p>
+         * <p>The scheduled publish time in UTC format yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSS&quot;Z&quot;.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -337,8 +378,11 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         @NameInMap("PublishTime")
         public String publishTime;
 
+        @NameInMap("ReadbackStatus")
+        public String readbackStatus;
+
         /**
-         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
@@ -367,9 +411,51 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         @NameInMap("Subchannel")
         public String subchannel;
 
+        @NameInMap("SubmitIntentStatus")
+        public String submitIntentStatus;
+
+        @NameInMap("UpdatedAt")
+        public Long updatedAt;
+
+        @NameInMap("UploadAttemptId")
+        public String uploadAttemptId;
+
+        @NameInMap("UploadLeaseState")
+        public String uploadLeaseState;
+
+        @NameInMap("UploadSequence")
+        public Long uploadSequence;
+
+        @NameInMap("UploadTicketState")
+        public String uploadTicketState;
+
         public static GetAppPublishStatusResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             GetAppPublishStatusResponseBodyModule self = new GetAppPublishStatusResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public GetAppPublishStatusResponseBodyModule setArtifactDigest(String artifactDigest) {
+            this.artifactDigest = artifactDigest;
+            return this;
+        }
+        public String getArtifactDigest() {
+            return this.artifactDigest;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setAuditId(String auditId) {
+            this.auditId = auditId;
+            return this;
+        }
+        public String getAuditId() {
+            return this.auditId;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setBindingId(String bindingId) {
+            this.bindingId = bindingId;
+            return this;
+        }
+        public String getBindingId() {
+            return this.bindingId;
         }
 
         public GetAppPublishStatusResponseBodyModule setCanQuickRevert(String canQuickRevert) {
@@ -378,6 +464,30 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
         public String getCanQuickRevert() {
             return this.canQuickRevert;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setCandidateId(String candidateId) {
+            this.candidateId = candidateId;
+            return this;
+        }
+        public String getCandidateId() {
+            return this.candidateId;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setCandidateStatus(String candidateStatus) {
+            this.candidateStatus = candidateStatus;
+            return this;
+        }
+        public String getCandidateStatus() {
+            return this.candidateStatus;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setCommitHash(String commitHash) {
+            this.commitHash = commitHash;
+            return this;
+        }
+        public String getCommitHash() {
+            return this.commitHash;
         }
 
         public GetAppPublishStatusResponseBodyModule setCurrentStep(String currentStep) {
@@ -476,6 +586,62 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             return this.percent;
         }
 
+        public GetAppPublishStatusResponseBodyModule setPlatformAppid(String platformAppid) {
+            this.platformAppid = platformAppid;
+            return this;
+        }
+        public String getPlatformAppid() {
+            return this.platformAppid;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setPluginDeclarationHash(String pluginDeclarationHash) {
+            this.pluginDeclarationHash = pluginDeclarationHash;
+            return this;
+        }
+        public String getPluginDeclarationHash() {
+            return this.pluginDeclarationHash;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setPluginState(String pluginState) {
+            this.pluginState = pluginState;
+            return this;
+        }
+        public String getPluginState() {
+            return this.pluginState;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setPrivacyDraftId(String privacyDraftId) {
+            this.privacyDraftId = privacyDraftId;
+            return this;
+        }
+        public String getPrivacyDraftId() {
+            return this.privacyDraftId;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setPrivacyRevision(String privacyRevision) {
+            this.privacyRevision = privacyRevision;
+            return this;
+        }
+        public String getPrivacyRevision() {
+            return this.privacyRevision;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setPublishDiagnostics(String publishDiagnostics) {
+            this.publishDiagnostics = publishDiagnostics;
+            return this;
+        }
+        public String getPublishDiagnostics() {
+            return this.publishDiagnostics;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setPublishEnv(String publishEnv) {
+            this.publishEnv = publishEnv;
+            return this;
+        }
+        public String getPublishEnv() {
+            return this.publishEnv;
+        }
+
         public GetAppPublishStatusResponseBodyModule setPublishNumber(String publishNumber) {
             this.publishNumber = publishNumber;
             return this;
@@ -498,6 +664,14 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
         public String getPublishTime() {
             return this.publishTime;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setReadbackStatus(String readbackStatus) {
+            this.readbackStatus = readbackStatus;
+            return this;
+        }
+        public String getReadbackStatus() {
+            return this.readbackStatus;
         }
 
         public GetAppPublishStatusResponseBodyModule setSiteId(String siteId) {
@@ -530,6 +704,54 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
         public String getSubchannel() {
             return this.subchannel;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setSubmitIntentStatus(String submitIntentStatus) {
+            this.submitIntentStatus = submitIntentStatus;
+            return this;
+        }
+        public String getSubmitIntentStatus() {
+            return this.submitIntentStatus;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setUpdatedAt(Long updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public Long getUpdatedAt() {
+            return this.updatedAt;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setUploadAttemptId(String uploadAttemptId) {
+            this.uploadAttemptId = uploadAttemptId;
+            return this;
+        }
+        public String getUploadAttemptId() {
+            return this.uploadAttemptId;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setUploadLeaseState(String uploadLeaseState) {
+            this.uploadLeaseState = uploadLeaseState;
+            return this;
+        }
+        public String getUploadLeaseState() {
+            return this.uploadLeaseState;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setUploadSequence(Long uploadSequence) {
+            this.uploadSequence = uploadSequence;
+            return this;
+        }
+        public Long getUploadSequence() {
+            return this.uploadSequence;
+        }
+
+        public GetAppPublishStatusResponseBodyModule setUploadTicketState(String uploadTicketState) {
+            this.uploadTicketState = uploadTicketState;
+            return this;
+        }
+        public String getUploadTicketState() {
+            return this.uploadTicketState;
         }
 
     }

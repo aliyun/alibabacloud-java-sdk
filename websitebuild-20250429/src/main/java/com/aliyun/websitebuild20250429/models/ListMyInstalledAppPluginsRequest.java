@@ -8,7 +8,7 @@ public class ListMyInstalledAppPluginsRequest extends TeaModel {
      * <p>Filters results by category.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;Status\&quot;: 0, \&quot;Name\&quot;: \&quot;UELBNUP\&quot;, \&quot;BizCode\&quot;: \&quot;\&quot;, \&quot;CategoryId\&quot;: 30000655368, \&quot;ParentCategoryId\&quot;: 30000655367}</p>
+     * <p>{&quot;Status&quot;: 0, &quot;Name&quot;: &quot;UELBNUP&quot;, &quot;BizCode&quot;: &quot;&quot;, &quot;CategoryId&quot;: 30000655368, &quot;ParentCategoryId&quot;: 30000655367}</p>
      */
     @NameInMap("Category")
     public String category;
@@ -17,7 +17,7 @@ public class ListMyInstalledAppPluginsRequest extends TeaModel {
      * <p>The search keyword. Matches against name or description.</p>
      * 
      * <strong>example:</strong>
-     * <p>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</p>
+     * <p>${&quot;wget JiexJPWT.popscan.xaliyun.com&quot;}</p>
      */
     @NameInMap("Keyword")
     public String keyword;

@@ -14,7 +14,7 @@ public class CreateAIStaffChatRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The chat ID. Pass in this parameter to resume a conversation after an interruption.</p>
+     * <p>The chat ID. Pass this parameter when resuming from an interruption.</p>
      * 
      * <strong>example:</strong>
      * <p>3b465fe1-6f06-4899-af9f-d43d9338df25</p>
@@ -38,7 +38,10 @@ public class CreateAIStaffChatRequest extends TeaModel {
     public java.util.List<CreateAIStaffChatRequestMessages> messages;
 
     /**
-     * <p>The additional information for the conversation.</p>
+     * <p>The additional conversation information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("MetaData")
     public java.util.Map<String, String> metaData;
@@ -93,7 +96,7 @@ public class CreateAIStaffChatRequest extends TeaModel {
          * <p>The message content.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;CodeRevision\&quot;: \&quot;1750040991876284109\&quot;}</p>
+         * <p>{&quot;CodeRevision&quot;: &quot;1750040991876284109&quot;}</p>
          */
         @NameInMap("Content")
         public String content;
@@ -108,7 +111,10 @@ public class CreateAIStaffChatRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The business extension metadata in Map format. The value must be a JSON string.</p>
+         * <p>The business extension metadata in map format. The value must be a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("MetaData")
         public java.util.Map<String, String> metaData;

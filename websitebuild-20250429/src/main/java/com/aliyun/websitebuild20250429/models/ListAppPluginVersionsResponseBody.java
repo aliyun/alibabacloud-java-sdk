@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppPluginVersionsResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for the access denial.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retries are allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,7 +41,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not used and can be ignored.</p>
+     * <p>The dynamic message. This parameter is currently unused and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -195,7 +195,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
          * <p>The version changelog.</p>
          * 
          * <strong>example:</strong>
-         * <p>x x x</p>
+         * <p>Fixed the plug-in configuration reading issue</p>
          */
         @NameInMap("Changelog")
         public String changelog;
@@ -204,7 +204,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
          * <p>The commit ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>0123456789abcdef0123456789abcdef01234567</p>
          */
         @NameInMap("CommitSha")
         public String commitSha;
@@ -246,7 +246,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The application instance version.</p>
+         * <p>The version of the application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>V2.0</p>
@@ -322,7 +322,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
          * <p>The version changelog.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Fixed the plug-in configuration reading issue</p>
          */
         @NameInMap("Changelog")
         public String changelog;
@@ -331,7 +331,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
          * <p>The commit ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>0123456789abcdef0123456789abcdef01234567</p>
          */
         @NameInMap("CommitSha")
         public String commitSha;
@@ -373,7 +373,7 @@ public class ListAppPluginVersionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The application instance version.</p>
+         * <p>The version of the application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>V2.0</p>

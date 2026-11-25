@@ -35,7 +35,7 @@ public class DispatchConsoleAPIForPartnerRequest extends TeaModel {
      * <p>The error parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\&quot;\&quot;]</p>
+     * <p>[&quot;&quot;]</p>
      */
     @NameInMap("Params")
     public String params;

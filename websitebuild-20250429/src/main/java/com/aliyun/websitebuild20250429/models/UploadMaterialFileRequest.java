@@ -25,7 +25,7 @@ public class UploadMaterialFileRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The file path.</p>
+     * <p>The path of the file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77">http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77</a></p>
@@ -34,7 +34,7 @@ public class UploadMaterialFileRequest extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>The file name.</p>
+     * <p>The name of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>Test file</p>

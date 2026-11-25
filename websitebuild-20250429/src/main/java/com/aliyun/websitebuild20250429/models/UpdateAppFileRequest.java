@@ -14,7 +14,7 @@ public class UpdateAppFileRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The session ID.</p>
+     * <p>The conversation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</p>

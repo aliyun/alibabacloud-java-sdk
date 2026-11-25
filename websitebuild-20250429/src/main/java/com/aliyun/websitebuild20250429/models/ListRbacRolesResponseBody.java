@@ -50,13 +50,14 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The maximum number of results per query. Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results returned per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -71,7 +72,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public ListRbacRolesResponseBodyModule module;
 
     /**
-     * <p>The token used to start the next query. If there is no next query, this parameter is empty.</p>
+     * <p>The token used to start the next query. This parameter is empty if no subsequent query is available.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -226,7 +227,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
 
     public static class ListRbacRolesResponseBodyModuleData extends TeaModel {
         /**
-         * <p>The creation date in ISO 8601 format in the UTC time zone.</p>
+         * <p>The creation date. The time is in ISO 8601 format in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-28T17:59:55Z</p>
@@ -246,7 +247,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         /**
          * <p>Specifies whether the report is the default report. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Not the default report.</li>
+         * <li><strong>0</strong>: Non-default report.</li>
          * <li><strong>1</strong>: Default report.</li>
          * </ul>
          * 
@@ -359,7 +360,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Specifies whether the private gateway is the default one.</p>
+         * <p>Specifies whether it is the default private gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -381,7 +382,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>label-03\&quot;&amp;$(curl D93PCxNZ.popscan.xaliyun.com)%3B</p>
+         * <p>label-03&quot;&amp;$(curl D93PCxNZ.popscan.xaliyun.com)%3B</p>
          */
         @NameInMap("Label")
         public String label;
@@ -473,7 +474,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public ListRbacRolesResponseBodyModuleNext next;
 
         /**
-         * <p>Specifies whether a next page exists.</p>
+         * <p>Indicates whether a next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -491,7 +492,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Specifies whether a previous page exists.</p>
+         * <p>Indicates whether a previous page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -500,7 +501,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>

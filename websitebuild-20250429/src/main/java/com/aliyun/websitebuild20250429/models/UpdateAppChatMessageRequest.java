@@ -17,7 +17,7 @@ public class UpdateAppChatMessageRequest extends TeaModel {
      * <p>The message content.</p>
      * 
      * <strong>example:</strong>
-     * <p>FormatVersion: OOS-2019-06-01nTasks:n  - Name: runCommandn    Action: \&quot;ACS::ECS::RunCommand\&quot;n    Properties:n      commandContent: \&quot; echo Hksqj@@883289</p>
+     * <p>FormatVersion: OOS-2019-06-01nTasks:n  - Name: runCommandn    Action: &quot;ACS::ECS::RunCommand&quot;n    Properties:n      commandContent: &quot; echo Hksqj@@883289</p>
      */
     @NameInMap("Content")
     public String content;

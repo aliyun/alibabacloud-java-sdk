@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     /**
-     * <p>The access denial details.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Specifies whether a retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The name of the app.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -80,10 +80,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>System error</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -273,7 +273,10 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>The business extension metadata. The value must be a JSON string in map format.</p>
+         * <p>The business extension metadata in map format. The value must be a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;appId&quot;:&quot;WS20260510153620000001&quot;,&quot;inputTokens&quot;:1120,&quot;outputTokens&quot;:32}</p>
          */
         @NameInMap("MetaData")
         public java.util.Map<String, ?> metaData;
@@ -281,18 +284,12 @@ public class ListAIStaffChatMessagesResponseBody extends TeaModel {
         /**
          * <p>The role of the conversation participant. Valid values:</p>
          * <ul>
-         * <li><p>user: User.</p>
-         * </li>
-         * <li><p>assistant: Assistant.</p>
-         * </li>
-         * <li><p>system: System.</p>
-         * </li>
-         * <li><p>function: Function.</p>
-         * </li>
-         * <li><p>plugin: Plug-in.</p>
-         * </li>
-         * <li><p>tool: Tool.</p>
-         * </li>
+         * <li>user: User.</li>
+         * <li>assistant: Assistant.</li>
+         * <li>system: System.</li>
+         * <li>function: Function.</li>
+         * <li>plugin: Plug-in.</li>
+         * <li>tool: Tool.</li>
          * </ul>
          * 
          * <strong>example:</strong>

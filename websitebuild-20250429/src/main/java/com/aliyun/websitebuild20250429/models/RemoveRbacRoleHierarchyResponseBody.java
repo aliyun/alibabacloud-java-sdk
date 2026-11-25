@@ -14,7 +14,7 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -92,7 +92,7 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the processing is synchronous.</p>
+     * <p>Indicates whether synchronous processing is used.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

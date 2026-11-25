@@ -23,7 +23,7 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token supports only ASCII characters and can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -53,13 +53,13 @@ public class UpdateAppInstanceRequest extends TeaModel {
      * <p>The extended information.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</p>
+     * <p>{&quot;user_device_id&quot;:&quot;6bef45cb0c76de284d24de074c088b73&quot;}\n</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
-     * <p>The application icon URL.</p>
+     * <p>The application icon.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1864953777494693/1753841032702_WX20250729-171155%402x.png">https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1864953777494693/1753841032702_WX20250729-171155%402x.png</a></p>
@@ -71,7 +71,7 @@ public class UpdateAppInstanceRequest extends TeaModel {
      * <p>The application name.</p>
      * 
      * <strong>example:</strong>
-     * <p>大角鹿</p>
+     * <p>Dajiaolu</p>
      */
     @NameInMap("Name")
     public String name;
@@ -86,7 +86,7 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The ID of the enterprise resource group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek3cqkrqibqkby</p>
@@ -110,7 +110,7 @@ public class UpdateAppInstanceRequest extends TeaModel {
     public java.util.List<UpdateAppInstanceRequestTags> tags;
 
     /**
-     * <p>The application thumbnail URL.</p>
+     * <p>The application thumbnail.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
@@ -229,8 +229,8 @@ public class UpdateAppInstanceRequest extends TeaModel {
 
     public static class UpdateAppInstanceRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Group</p>
@@ -239,8 +239,8 @@ public class UpdateAppInstanceRequest extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>

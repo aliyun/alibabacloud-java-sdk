@@ -230,6 +230,15 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
     }
 
     public static class ListAppPublishHistoryResponseBodyModuleHistory extends TeaModel {
+        @NameInMap("ArtifactDigest")
+        public String artifactDigest;
+
+        @NameInMap("AuditId")
+        public String auditId;
+
+        @NameInMap("BindingId")
+        public String bindingId;
+
         /**
          * <p>Specifies whether quick rollback is supported.</p>
          * 
@@ -238,6 +247,12 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
          */
         @NameInMap("CanQuickRevert")
         public String canQuickRevert;
+
+        @NameInMap("CandidateId")
+        public String candidateId;
+
+        @NameInMap("CandidateStatus")
+        public String candidateStatus;
 
         /**
          * <p>The commit hash of the code.</p>
@@ -357,6 +372,27 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         @NameInMap("Percent")
         public Integer percent;
 
+        @NameInMap("PlatformAppid")
+        public String platformAppid;
+
+        @NameInMap("PluginDeclarationHash")
+        public String pluginDeclarationHash;
+
+        @NameInMap("PluginState")
+        public String pluginState;
+
+        @NameInMap("PrivacyDraftId")
+        public String privacyDraftId;
+
+        @NameInMap("PrivacyRevision")
+        public String privacyRevision;
+
+        @NameInMap("PublishDiagnostics")
+        public String publishDiagnostics;
+
+        @NameInMap("PublishEnv")
+        public String publishEnv;
+
         /**
          * <p>The release number.</p>
          * 
@@ -376,7 +412,7 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         public Long publishOrderId;
 
         /**
-         * <p>The release time in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</p>
+         * <p>The release time in the UTC format yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSS&quot;Z&quot;.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -384,6 +420,9 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
          */
         @NameInMap("PublishTime")
         public String publishTime;
+
+        @NameInMap("ReadbackStatus")
+        public String readbackStatus;
 
         /**
          * <p>The list of release step codes.</p>
@@ -406,9 +445,51 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         @NameInMap("Subchannel")
         public String subchannel;
 
+        @NameInMap("SubmitIntentStatus")
+        public String submitIntentStatus;
+
+        @NameInMap("UpdatedAt")
+        public Long updatedAt;
+
+        @NameInMap("UploadAttemptId")
+        public String uploadAttemptId;
+
+        @NameInMap("UploadLeaseState")
+        public String uploadLeaseState;
+
+        @NameInMap("UploadSequence")
+        public Long uploadSequence;
+
+        @NameInMap("UploadTicketState")
+        public String uploadTicketState;
+
         public static ListAppPublishHistoryResponseBodyModuleHistory build(java.util.Map<String, ?> map) throws Exception {
             ListAppPublishHistoryResponseBodyModuleHistory self = new ListAppPublishHistoryResponseBodyModuleHistory();
             return TeaModel.build(map, self);
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setArtifactDigest(String artifactDigest) {
+            this.artifactDigest = artifactDigest;
+            return this;
+        }
+        public String getArtifactDigest() {
+            return this.artifactDigest;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setAuditId(String auditId) {
+            this.auditId = auditId;
+            return this;
+        }
+        public String getAuditId() {
+            return this.auditId;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setBindingId(String bindingId) {
+            this.bindingId = bindingId;
+            return this;
+        }
+        public String getBindingId() {
+            return this.bindingId;
         }
 
         public ListAppPublishHistoryResponseBodyModuleHistory setCanQuickRevert(String canQuickRevert) {
@@ -417,6 +498,22 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
         public String getCanQuickRevert() {
             return this.canQuickRevert;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setCandidateId(String candidateId) {
+            this.candidateId = candidateId;
+            return this;
+        }
+        public String getCandidateId() {
+            return this.candidateId;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setCandidateStatus(String candidateStatus) {
+            this.candidateStatus = candidateStatus;
+            return this;
+        }
+        public String getCandidateStatus() {
+            return this.candidateStatus;
         }
 
         public ListAppPublishHistoryResponseBodyModuleHistory setCommitHash(String commitHash) {
@@ -523,6 +620,62 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             return this.percent;
         }
 
+        public ListAppPublishHistoryResponseBodyModuleHistory setPlatformAppid(String platformAppid) {
+            this.platformAppid = platformAppid;
+            return this;
+        }
+        public String getPlatformAppid() {
+            return this.platformAppid;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setPluginDeclarationHash(String pluginDeclarationHash) {
+            this.pluginDeclarationHash = pluginDeclarationHash;
+            return this;
+        }
+        public String getPluginDeclarationHash() {
+            return this.pluginDeclarationHash;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setPluginState(String pluginState) {
+            this.pluginState = pluginState;
+            return this;
+        }
+        public String getPluginState() {
+            return this.pluginState;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setPrivacyDraftId(String privacyDraftId) {
+            this.privacyDraftId = privacyDraftId;
+            return this;
+        }
+        public String getPrivacyDraftId() {
+            return this.privacyDraftId;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setPrivacyRevision(String privacyRevision) {
+            this.privacyRevision = privacyRevision;
+            return this;
+        }
+        public String getPrivacyRevision() {
+            return this.privacyRevision;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setPublishDiagnostics(String publishDiagnostics) {
+            this.publishDiagnostics = publishDiagnostics;
+            return this;
+        }
+        public String getPublishDiagnostics() {
+            return this.publishDiagnostics;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setPublishEnv(String publishEnv) {
+            this.publishEnv = publishEnv;
+            return this;
+        }
+        public String getPublishEnv() {
+            return this.publishEnv;
+        }
+
         public ListAppPublishHistoryResponseBodyModuleHistory setPublishNumber(String publishNumber) {
             this.publishNumber = publishNumber;
             return this;
@@ -547,6 +700,14 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
             return this.publishTime;
         }
 
+        public ListAppPublishHistoryResponseBodyModuleHistory setReadbackStatus(String readbackStatus) {
+            this.readbackStatus = readbackStatus;
+            return this;
+        }
+        public String getReadbackStatus() {
+            return this.readbackStatus;
+        }
+
         public ListAppPublishHistoryResponseBodyModuleHistory setStepCodes(java.util.List<String> stepCodes) {
             this.stepCodes = stepCodes;
             return this;
@@ -569,6 +730,54 @@ public class ListAppPublishHistoryResponseBody extends TeaModel {
         }
         public String getSubchannel() {
             return this.subchannel;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setSubmitIntentStatus(String submitIntentStatus) {
+            this.submitIntentStatus = submitIntentStatus;
+            return this;
+        }
+        public String getSubmitIntentStatus() {
+            return this.submitIntentStatus;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setUpdatedAt(Long updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public Long getUpdatedAt() {
+            return this.updatedAt;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setUploadAttemptId(String uploadAttemptId) {
+            this.uploadAttemptId = uploadAttemptId;
+            return this;
+        }
+        public String getUploadAttemptId() {
+            return this.uploadAttemptId;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setUploadLeaseState(String uploadLeaseState) {
+            this.uploadLeaseState = uploadLeaseState;
+            return this;
+        }
+        public String getUploadLeaseState() {
+            return this.uploadLeaseState;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setUploadSequence(Long uploadSequence) {
+            this.uploadSequence = uploadSequence;
+            return this;
+        }
+        public Long getUploadSequence() {
+            return this.uploadSequence;
+        }
+
+        public ListAppPublishHistoryResponseBodyModuleHistory setUploadTicketState(String uploadTicketState) {
+            this.uploadTicketState = uploadTicketState;
+            return this;
+        }
+        public String getUploadTicketState() {
+            return this.uploadTicketState;
         }
 
     }

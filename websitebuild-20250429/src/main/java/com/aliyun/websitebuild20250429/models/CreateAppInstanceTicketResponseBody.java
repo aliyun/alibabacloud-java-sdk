@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppInstanceTicketResponseBody extends TeaModel {
     /**
-     * <p>The detailed reasons for access denial.</p>
+     * <p>The detailed reasons for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -41,7 +41,10 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter. If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERRROR</p>
@@ -192,7 +195,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
 
     public static class CreateAppInstanceTicketResponseBodyModule extends TeaModel {
         /**
-         * <p>The time when the access token expires.</p>
+         * <p>The expiration time of the access token.</p>
          * 
          * <strong>example:</strong>
          * <p>1768619049924</p>
@@ -201,7 +204,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenExpiresAt;
 
         /**
-         * <p>The time when the access token was issued.</p>
+         * <p>The issuance time of the access token.</p>
          * 
          * <strong>example:</strong>
          * <p>1768619049924</p>
@@ -210,7 +213,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String accessTokenIssuedAt;
 
         /**
-         * <p>The access token value.</p>
+         * <p>The value of the access token.</p>
          * 
          * <strong>example:</strong>
          * <p>be9750d595b6cd7c93a80b46</p>
@@ -231,7 +234,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
          * <p>The extended attributes.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;resourceGroupId\&quot;:\&quot;\&quot;,\&quot;page\&quot;:1,\&quot;size\&quot;:10,\&quot;selected\&quot;:\&quot;[\\\&quot;kvstore\\\&quot;]\&quot;}</p>
+         * <p>{&quot;resourceGroupId&quot;:&quot;&quot;,&quot;page&quot;:1,&quot;size&quot;:10,&quot;selected&quot;:&quot;[\&quot;kvstore\&quot;]&quot;}</p>
          */
         @NameInMap("Attributes")
         public String attributes;
@@ -264,7 +267,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String parentPk;
 
         /**
-         * <p>The time when the refresh token expires.</p>
+         * <p>The expiration time of the refresh token.</p>
          * 
          * <strong>example:</strong>
          * <p>1768619049924</p>
@@ -273,7 +276,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String refreshTokenExpiresAt;
 
         /**
-         * <p>The time when the refresh token was issued.</p>
+         * <p>The issuance time of the refresh token.</p>
          * 
          * <strong>example:</strong>
          * <p>1768619049924</p>
@@ -282,7 +285,7 @@ public class CreateAppInstanceTicketResponseBody extends TeaModel {
         public String refreshTokenIssuedAt;
 
         /**
-         * <p>The refresh token value.</p>
+         * <p>The value of the refresh token.</p>
          * 
          * <strong>example:</strong>
          * <p>be9750d595b6cd7c93a80b46</p>

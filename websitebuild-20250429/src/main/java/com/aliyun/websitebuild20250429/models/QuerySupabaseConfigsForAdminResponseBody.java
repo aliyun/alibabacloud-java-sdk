@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -27,7 +27,7 @@ public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The app name.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -196,7 +196,10 @@ public class QuerySupabaseConfigsForAdminResponseBody extends TeaModel {
 
     public static class QuerySupabaseConfigsForAdminResponseBodyModule extends TeaModel {
         /**
-         * <p>The scope. Valid values: subUser and owner.</p>
+         * <p>The mapping between Supabase configuration items and configuration values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;SMS_ALIYUN_SIGN_NAME&quot;:&quot;Sample signature&quot;}</p>
          */
         @NameInMap("Configs")
         public java.util.Map<String, ?> configs;

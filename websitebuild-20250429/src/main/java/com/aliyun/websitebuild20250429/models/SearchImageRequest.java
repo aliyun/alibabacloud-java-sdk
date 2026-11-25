@@ -25,9 +25,9 @@ public class SearchImageRequest extends TeaModel {
     /**
      * <p>The image category. Valid values:</p>
      * <ul>
-     * <li>normal: illustrations or article images.</li>
-     * <li>banner: background images or carousel images.</li>
-     * <li>goods: product or service images.</li>
+     * <li>normal: Illustrations and article images.</li>
+     * <li>banner: Background images and carousel images.</li>
+     * <li>goods: Product or service images.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,13 +37,15 @@ public class SearchImageRequest extends TeaModel {
     public String imageCategory;
 
     /**
-     * <p>The aspect ratio of the image. Valid values:
-     * &quot;16:9&quot;
-     * &quot;4:3&quot;
-     * &quot;2:1&quot;
-     * &quot;1:1&quot;
-     * &quot;3:4&quot;
-     * &quot;9:16&quot;.</p>
+     * <p>The aspect ratio of the image. Valid values:</p>
+     * <ul>
+     * <li>&quot;16:9&quot;</li>
+     * <li>&quot;4:3&quot;</li>
+     * <li>&quot;2:1&quot;</li>
+     * <li>&quot;1:1&quot;</li>
+     * <li>&quot;3:4&quot;</li>
+     * <li>&quot;9:16&quot;</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>16:9</p>
@@ -61,7 +63,7 @@ public class SearchImageRequest extends TeaModel {
     public Integer maxHeight;
 
     /**
-     * <p>The number of entries per page for paging queries. Maximum value: 100. Default value: 20.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -97,7 +99,7 @@ public class SearchImageRequest extends TeaModel {
     public Integer minWidth;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters do not take effect, and the TotalCount value in the response is invalid.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous call to this operation. You do not need to set this parameter for the first call. If NextToken is set, the PageSize and PageNumber request parameters become invalid, and the TotalCount value in the response is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
@@ -115,7 +117,7 @@ public class SearchImageRequest extends TeaModel {
     public String ossKey;
 
     /**
-     * <p>The number of returned results. Default value: 10.</p>
+     * <p>The number of results to return. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -124,7 +126,7 @@ public class SearchImageRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The start position of the returned results. Valid values: 0 to 499. Default value: 0.</p>
+     * <p>The starting position of the returned results. Valid values: 0 to 499. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -139,13 +141,10 @@ public class SearchImageRequest extends TeaModel {
     public java.util.List<String> tags;
 
     /**
-     * <p>The description text used to search for images.</p>
-     * <blockquote>
-     * <p>Maximum length: 512 characters.</p>
-     * </blockquote>
+     * <p>The descriptive text used to search for images. A maximum of 512 characters are supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>卫浴五金产品，表面采用拉丝不锈钢材质，整体色调为现代银灰色，呈现简约且富有质感的风格。产品包括淋浴花洒、水龙头及毛巾架等配件，均具备防锈、耐腐蚀性能，适用于潮湿环境。各部件连接处设计精密，配有隐藏式螺丝结构，提升整体美观度。水龙头和花洒喷头支持多模式出水，把手操作顺滑，符合人体工学设计。所有五金件通过国家节水认证，支持冷热水接入，安装方式为壁挂式。</p>
+     * <p>Bathroom hardware products, featuring a brushed stainless steel surface with an overall modern silver-gray tone, presenting a minimalist and textured style. The products include accessories such as showerheads, faucets, and towel racks, all of which are rust-proof and corrosion-resistant, making them suitable for humid environments. The joints between components are precisely designed with hidden screw structures to enhance overall aesthetics. The faucets and showerheads support multiple water flow modes, and the handles operate smoothly, conforming to ergonomic design. All hardware fittings have passed the national water-saving certification, support both cold and hot water connections, and are wall-mounted</p>
      */
     @NameInMap("Text")
     public String text;

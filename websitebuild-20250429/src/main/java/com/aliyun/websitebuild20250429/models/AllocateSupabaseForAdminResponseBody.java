@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission check failure.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -246,10 +246,10 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The extra information.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</p>
+         * <p>{&quot;appId&quot;:&quot;APP_NTJAK8P11SNZDJ3M6BWC&quot;}</p>
          */
         @NameInMap("Extra")
         public String extra;
@@ -273,10 +273,10 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String instanceCreateStatus;
 
         /**
-         * <p>The deletion flag.</p>
+         * <p>Indicates whether the instance is deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>0</p>
          */
         @NameInMap("IsDeleted")
         public Integer isDeleted;
@@ -291,7 +291,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String rdsDatabasePassword;
 
         /**
-         * <p>The read-only business schema name parsed by the Builder trusted binding. This name cannot be used as input for tenant switching.</p>
+         * <p>The read-only business schema name parsed by the Builder trusted binding. This parameter cannot be used as the input for switching tenants.</p>
          * 
          * <strong>example:</strong>
          * <p>tenant_00000000-0000-4000-8000-000000000001_schema</p>
@@ -309,10 +309,10 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String serviceKey;
 
         /**
-         * <p>The status. Valid values: 0 (Paused) and 1 (Running).</p>
+         * <p>The instance status. Valid values: 0: Paused. 1: Running.</p>
          * 
          * <strong>example:</strong>
-         * <p>NORMAL</p>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -381,7 +381,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String supabasePublicIp;
 
         /**
-         * <p>The public URL of Supabase.</p>
+         * <p>The public URL of the Supabase instance.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -399,7 +399,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The read-only tenant mode: schema indicates the legacy Builder pool, and db or agenticdb indicates the new platform. The history record can be empty.</p>
+         * <p>The read-only tenant mode. A value of schema indicates the legacy Builder pool, and a value of db or agenticdb indicates the new platform. Historical records can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>schema</p>

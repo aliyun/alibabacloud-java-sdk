@@ -14,7 +14,7 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Specifies whether retries are allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -32,7 +32,7 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>The dynamic code. This field is not used and can be ignored.</p>
+     * <p>The dynamic code. This field is currently unused and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -92,7 +92,7 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Specifies whether synchronous processing is used.</p>
+     * <p>Indicates whether the processing is synchronous.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

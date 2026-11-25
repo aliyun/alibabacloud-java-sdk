@@ -23,7 +23,10 @@ public class CreateAppInstanceTicketRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The user role that the ticket will assume.</p>
+     * <p>The user role assumed by the ticket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("Role")
     public String role;

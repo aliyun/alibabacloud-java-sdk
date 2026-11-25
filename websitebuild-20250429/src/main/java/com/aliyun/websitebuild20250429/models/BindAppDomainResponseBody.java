@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindAppDomainResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class BindAppDomainResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,9 +41,9 @@ public class BindAppDomainResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> in the <strong>ErrMessage</strong> error message of the response parameter.</p>
      * <blockquote>
-     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class BindAppDomainResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -65,7 +65,7 @@ public class BindAppDomainResponseBody extends TeaModel {
      * </li>
      * <li><p>ExperimentTool: experiment tool table</p>
      * </li>
-     * <li><p>DataDiagnosis: data diagnostics</p>
+     * <li><p>DataDiagnosis: data diagnosis</p>
      * </li>
      * </ul>
      */
@@ -73,7 +73,7 @@ public class BindAppDomainResponseBody extends TeaModel {
     public BindAppDomainResponseBodyModule module;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -279,7 +279,7 @@ public class BindAppDomainResponseBody extends TeaModel {
 
     public static class BindAppDomainResponseBodyModuleDnsConflict extends TeaModel {
         /**
-         * <p>Indicates whether automatic overwrite is supported. A value of true indicates the current Alibaba Cloud account, and a value of false indicates other accounts.</p>
+         * <p>Indicates whether automatic overwrite is supported. A value of true indicates that the domain name belongs to the current Alibaba Cloud account, and a value of false indicates that it belongs to another account.</p>
          */
         @NameInMap("CanAutoResolve")
         public Boolean canAutoResolve;
@@ -291,10 +291,10 @@ public class BindAppDomainResponseBody extends TeaModel {
         public Boolean hasConflict;
 
         /**
-         * <p>The user-facing prompt message. Different guidance text is generated based on the scenario.</p>
+         * <p>The user-facing prompt message, which generates different guidance text based on the scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>A conflicting DNS record (A 192.0.2.1) exists for the domain name <a href="http://www.example.com">www.example.com</a>. Delete the conflicting record from your DNS provider and try again</p>
+         * <p>The domain name <a href="http://www.example.com">www.example.com</a> has a conflicting DNS record (A 192.0.2.1). Delete the conflicting record from your DNS service provider and try again</p>
          */
         @NameInMap("Message")
         public String message;
@@ -346,13 +346,13 @@ public class BindAppDomainResponseBody extends TeaModel {
 
     public static class BindAppDomainResponseBodyModule extends TeaModel {
         /**
-         * <p>The DNS conflict information. This parameter is returned when a conflict is detected during synchronous verification.</p>
+         * <p>The DNS conflict information, which is returned when a conflict is detected during synchronous verification.</p>
          */
         @NameInMap("DnsConflict")
         public BindAppDomainResponseBodyModuleDnsConflict dnsConflict;
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppInstanceForPartnerResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for the access denial.</p>
+     * <p>The detailed reasons for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -41,19 +41,19 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message used to replace the <code>%s</code> placeholder in the error message of the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
      * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D</a></p>
+     * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUEr****M4ev9SELNb&Signature=Bcj3eohy8nmlS****Gdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUEr****M4ev9SELNb&amp;Signature=Bcj3eohy8nmlS****Gdq7JZoLjM%3D</a></p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The error arguments returned.</p>
+     * <p>The returned error arguments.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -222,7 +222,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String staffType;
 
         /**
-         * <p>The staff status.</p>
+         * <p>The status of the staff.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -274,7 +274,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>bill</p>
          * 
          * <strong>example:</strong>
-         * <p>bilingual</p>
+         * <p>true</p>
          */
         @NameInMap("Bilingual")
         public Boolean bilingual;
@@ -313,7 +313,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String colorStyle;
 
         /**
-         * <p>The enterprise name.</p>
+         * <p>The company name.</p>
          * 
          * <strong>example:</strong>
          * <p>bvt_test</p>
@@ -352,7 +352,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>The primary key.</p>
          * 
          * <strong>example:</strong>
-         * <p>m1zumwgy6u</p>
+         * <p>1001</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -608,7 +608,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
 
     public static class GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressActions extends TeaModel {
         /**
-         * <p>The operation key value, which uniquely identifies an operation.</p>
+         * <p>The action key, which uniquely identifies an operation.</p>
          * 
          * <strong>example:</strong>
          * <p>BeginDialogue</p>
@@ -617,7 +617,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String actionKey;
 
         /**
-         * <p>The operation display text, which is used to display the operation name in the interface.</p>
+         * <p>The display text for the action, which is used to show the action name in the interface.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -626,7 +626,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String actionText;
 
         /**
-         * <p>The enable status, which indicates whether the operation is available.</p>
+         * <p>The enabled status, which indicates whether the action is available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -635,7 +635,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The link URL to which you are redirected when you click the operation.</p>
+         * <p>The link URL to which you are redirected when you click the action.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -684,7 +684,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
 
     public static class GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressDashboardActions extends TeaModel {
         /**
-         * <p>The operation key value, which uniquely identifies an operation.</p>
+         * <p>The action key, which uniquely identifies an operation.</p>
          * 
          * <strong>example:</strong>
          * <p>CollectedNumber</p>
@@ -693,7 +693,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String actionKey;
 
         /**
-         * <p>The operation display text, which is used to display the operation name in the interface.</p>
+         * <p>The display text for the action, which is used to show the action name in the interface.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -702,7 +702,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String actionText;
 
         /**
-         * <p>The enable status, which indicates whether the operation is available.</p>
+         * <p>The enabled status, which indicates whether the action is available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -711,7 +711,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The link URL to which you are redirected when you click the operation.</p>
+         * <p>The link URL to which you are redirected when you click the action.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -784,7 +784,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String aiDesignUrl;
 
         /**
-         * <p>The application publish URL.</p>
+         * <p>The application publishing URL.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -793,7 +793,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String appPublishUrl;
 
         /**
-         * <p>The list of operation buttons on the overview page.</p>
+         * <p>The list of action buttons on the overview page.</p>
          */
         @NameInMap("DashboardActions")
         public java.util.List<GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressDashboardActions> dashboardActions;
@@ -808,7 +808,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String designUrl;
 
         /**
-         * <p>The logon URL of the application instance.</p>
+         * <p>The logon URL for the application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -817,7 +817,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String instanceLoginUrl;
 
         /**
-         * <p>The renewal purchase URL.</p>
+         * <p>The renewal URL.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -835,7 +835,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String serverDeliveryUrl;
 
         /**
-         * <p>The upgrade purchase URL.</p>
+         * <p>The upgrade URL.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -968,7 +968,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The temporary access URL of the image.</p>
+         * <p>The temporary access URL for the image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://static.yipigai.cn/timuocr/tmp_57bc9cb3be1075f4e5cdae87f5cbb86abc54a694aaf10965.jpg">https://static.yipigai.cn/timuocr/tmp_57bc9cb3be1075f4e5cdae87f5cbb86abc54a694aaf10965.jpg</a></p>
@@ -1034,13 +1034,13 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>The sequence number of the last node.</p>
          * 
          * <strong>example:</strong>
-         * <p>FinalStepNo</p>
+         * <p>3</p>
          */
         @NameInMap("FinalStepNo")
         public Integer finalStepNo;
 
         /**
-         * <p>The completion timestamp of the baseline instance. This value is returned when FinishStatus (the completion status of the baseline instance) is FINISH.</p>
+         * <p>The completion timestamp of the baseline instance. This value is returned when FinishStatus (the completion status of the baseline instance) is FINISH (completed).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-13T07:58:12Z</p>
@@ -1052,7 +1052,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>IsContainerNode</p>
          * 
          * <strong>example:</strong>
-         * <p>IsContainerNode</p>
+         * <p>true</p>
          */
         @NameInMap("IsContainerNode")
         public Boolean isContainerNode;
@@ -1111,7 +1111,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>The sequence number of the process node.</p>
          * 
          * <strong>example:</strong>
-         * <p>StepNo</p>
+         * <p>1</p>
          */
         @NameInMap("StepNo")
         public Integer stepNo;
@@ -1205,7 +1205,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
 
     public static class GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressActions extends TeaModel {
         /**
-         * <p>The operation key value, which uniquely identifies an operation.</p>
+         * <p>The action key, which uniquely identifies an operation.</p>
          * 
          * <strong>example:</strong>
          * <p>CollectedNumber</p>
@@ -1214,7 +1214,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String actionKey;
 
         /**
-         * <p>The operation display text, which is used to display the operation name in the interface.</p>
+         * <p>The display text for the action, which is used to show the action name in the interface.</p>
          * 
          * <strong>example:</strong>
          * <p>ActionText</p>
@@ -1223,7 +1223,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String actionText;
 
         /**
-         * <p>The enable status, which indicates whether the operation is available.</p>
+         * <p>The enabled status, which indicates whether the action is available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1232,7 +1232,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The link URL to which you are redirected when you click the operation.</p>
+         * <p>The link URL to which you are redirected when you click the action.</p>
          * 
          * <strong>example:</strong>
          * <p>Href</p>
@@ -1281,7 +1281,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
 
     public static class GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressDashboardActions extends TeaModel {
         /**
-         * <p>The operation key value, which uniquely identifies an operation.</p>
+         * <p>The action key, which uniquely identifies an operation.</p>
          * 
          * <strong>example:</strong>
          * <p>AbortDialogue</p>
@@ -1290,7 +1290,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String actionKey;
 
         /**
-         * <p>The operation display text, which is used to display the operation name in the interface.</p>
+         * <p>The display text for the action, which is used to show the action name in the interface.</p>
          * 
          * <strong>example:</strong>
          * <p>ActionText</p>
@@ -1299,7 +1299,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String actionText;
 
         /**
-         * <p>The enable status, which indicates whether the operation is available.</p>
+         * <p>The enabled status, which indicates whether the action is available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1308,7 +1308,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The link URL to which you are redirected when you click the operation.</p>
+         * <p>The link URL to which you are redirected when you click the action.</p>
          * 
          * <strong>example:</strong>
          * <p>Href</p>
@@ -1381,7 +1381,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String aiDesignUrl;
 
         /**
-         * <p>The application publish URL.</p>
+         * <p>The application publishing URL.</p>
          * 
          * <strong>example:</strong>
          * <p>AppPublishUrl</p>
@@ -1390,7 +1390,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String appPublishUrl;
 
         /**
-         * <p>The list of operation buttons on the overview page.</p>
+         * <p>The list of action buttons on the overview page.</p>
          */
         @NameInMap("DashboardActions")
         public java.util.List<GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressDashboardActions> dashboardActions;
@@ -1405,7 +1405,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String designUrl;
 
         /**
-         * <p>The logon URL of the application instance.</p>
+         * <p>The logon URL for the application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>InstanceLoginUrl</p>
@@ -1414,7 +1414,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String instanceLoginUrl;
 
         /**
-         * <p>The renewal purchase URL.</p>
+         * <p>The renewal URL.</p>
          * 
          * <strong>example:</strong>
          * <p>renewBuyUrl</p>
@@ -1432,7 +1432,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String serverDeliveryUrl;
 
         /**
-         * <p>The upgrade purchase URL.</p>
+         * <p>The upgrade URL.</p>
          * 
          * <strong>example:</strong>
          * <p>UpgradeBuyUrl</p>
@@ -1733,16 +1733,16 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String bizId;
 
         /**
-         * <p>The deletion indicator.</p>
+         * <p>The deletion flag.</p>
          * 
          * <strong>example:</strong>
-         * <p>fase</p>
+         * <p>0</p>
          */
         @NameInMap("Deleted")
         public Integer deleted;
 
         /**
-         * <p>The end time in ISO 8601 format in the UTC time zone.</p>
+         * <p>The end time. The value is in ISO 8601 format and the time zone is UTC (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-18T02:23:00Z</p>
@@ -1778,7 +1778,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The application operation address.</p>
+         * <p>The application operation URL.</p>
          */
         @NameInMap("Group")
         public GetAppInstanceForPartnerResponseBodyModuleAppServiceListGroup group;
@@ -1808,7 +1808,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public java.util.List<GetAppInstanceForPartnerResponseBodyModuleAppServiceListNodeList> nodeList;
 
         /**
-         * <p>The unique identifier of an operation.</p>
+         * <p>The unique identifier for an operation.</p>
          */
         @NameInMap("OperationAddress")
         public GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddress operationAddress;
@@ -1856,7 +1856,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String slug;
 
         /**
-         * <p>The start time. It is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1754447102000</p>
@@ -2046,7 +2046,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>aliyun_pk</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>8642****975310</p>
          */
         @NameInMap("AliyunPk")
         public String aliyunPk;
@@ -2088,10 +2088,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String grantAliyunPk;
 
         /**
-         * <p>The mobile phone number.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>138****8000</p>
          */
         @NameInMap("Mobile")
         public String mobile;
@@ -2210,7 +2210,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public GetAppInstanceForPartnerResponseBodyModulePartnerDetailBindData bindData;
 
         /**
-         * <p>The ID of the partner. This is an extended parameter.</p>
+         * <p>The partner ID. This is an extended parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -2219,7 +2219,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String partnerId;
 
         /**
-         * <p>Valid values: unknown, init, testing, and online.</p>
+         * <p>The status. Valid values: unknown, init, testing, and online.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -2278,7 +2278,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String applicationType;
 
         /**
-         * <p>The application type text description.</p>
+         * <p>The text description of the application type.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -2323,7 +2323,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String customerService;
 
         /**
-         * <p>The deployment area.</p>
+         * <p>The deployment region.</p>
          * 
          * <strong>example:</strong>
          * <p>ChineseMainland</p>
@@ -2380,13 +2380,13 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>The image list.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Image\&quot;: []}</p>
+         * <p>{&quot;Image&quot;: []}</p>
          */
         @NameInMap("ImageList")
         public String imageList;
 
         /**
-         * <p>The Lenovo instance ID.</p>
+         * <p>The linked instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -2395,7 +2395,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String lxInstanceId;
 
         /**
-         * <p>The order time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The order placement time. The format is yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-17 10:30:00</p>
@@ -2476,7 +2476,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String siteVersion;
 
         /**
-         * <p>The site version text description.</p>
+         * <p>The text description of the site version.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -2813,7 +2813,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String applicationType;
 
         /**
-         * <p>The application type text description.</p>
+         * <p>The text description of the application type.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -2858,7 +2858,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String customerService;
 
         /**
-         * <p>The deployment area.</p>
+         * <p>The deployment region.</p>
          * 
          * <strong>example:</strong>
          * <p>ChineseMainland</p>
@@ -2870,7 +2870,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>The domain name list.</p>
          * 
          * <strong>example:</strong>
-         * <p>[\&quot;activity.syruijia.top\&quot;, \&quot;admin.syruijia.top\&quot;, \&quot;api.syruijia.top\&quot;, \&quot;game-admin.syruijia.top\&quot;, \&quot;h5game.syruijia.top\&quot;, \&quot;home.syruijia.top\&quot;, \&quot;invite.syruijia.top\&quot;]</p>
+         * <p>[&quot;activity.syruijia.top&quot;, &quot;admin.syruijia.top&quot;, &quot;api.syruijia.top&quot;, &quot;game-admin.syruijia.top&quot;, &quot;h5game.syruijia.top&quot;, &quot;home.syruijia.top&quot;, &quot;invite.syruijia.top&quot;]</p>
          */
         @NameInMap("DomainList")
         public String domainList;
@@ -2915,13 +2915,13 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>The image list.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;Image\&quot;: []}</p>
+         * <p>{&quot;Image&quot;: []}</p>
          */
         @NameInMap("ImageList")
         public String imageList;
 
         /**
-         * <p>The Lenovo instance ID.</p>
+         * <p>The linked instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -2930,7 +2930,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String lxInstanceId;
 
         /**
-         * <p>The order time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The order placement time. The format is yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-17 10:30:00</p>
@@ -3011,7 +3011,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String siteVersion;
 
         /**
-         * <p>The site version text description.</p>
+         * <p>The text description of the site version.</p>
          * 
          * <strong>example:</strong>
          * <p>placeHolder</p>
@@ -3366,10 +3366,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String buildType;
 
         /**
-         * <p>Indicates whether the item is deleted.</p>
+         * <p>Indicates whether the application is deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>fase</p>
+         * <p>0</p>
          */
         @NameInMap("Deleted")
         public Integer deleted;
@@ -3411,7 +3411,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The end time in ISO 8601 format in the UTC time zone.</p>
+         * <p>The end time. The value is in ISO 8601 format and the time zone is UTC (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-23T15:01:25.891Z</p>
@@ -3525,7 +3525,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String slug;
 
         /**
-         * <p>The source type, such as MARKET_CLOUD_DREAM.</p>
+         * <p>The source. Valid value: MARKET_CLOUD_DREAM.</p>
          * 
          * <strong>example:</strong>
          * <p>MARKET_CLOUD_DREAM</p>
@@ -3534,7 +3534,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The start time in ISO 8601 format and the UTC time zone (Z).</p>
+         * <p>The start time in ISO 8601 format in the UTC (Z) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-22T02:23:00Z</p>
@@ -3840,7 +3840,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public GetAppInstanceForPartnerResponseBodyModuleAppDesignSpec appDesignSpec;
 
         /**
-         * <p>The application operation address.</p>
+         * <p>The application operation URL.</p>
          */
         @NameInMap("AppOperationAddress")
         public GetAppInstanceForPartnerResponseBodyModuleAppOperationAddress appOperationAddress;
@@ -3888,10 +3888,10 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String buildType;
 
         /**
-         * <p>Indicates whether the item is deleted.</p>
+         * <p>Indicates whether the application is deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>fase</p>
+         * <p>0</p>
          */
         @NameInMap("Deleted")
         public Integer deleted;
@@ -3933,7 +3933,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The end time in ISO 8601 format in the UTC time zone.</p>
+         * <p>The end time. The value is in ISO 8601 format and the time zone is UTC (Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-05T15:59:00Z</p>
@@ -3999,7 +3999,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
          * <p>The application icon.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://yzm.zshud.com:34901/cloud-phone/wellness_1763631730804.png">https://yzm.zshud.com:34901/cloud-phone/wellness_1763631730804.png</a></p>
+         * <p><a href="https://yzm.zshud.com:34901/cloud-phone/%E5%85%BB%E7%94%9F_1763631730804.png">https://yzm.zshud.com:34901/cloud-phone/%E5%85%BB%E7%94%9F_1763631730804.png</a></p>
          */
         @NameInMap("IconUrl")
         public String iconUrl;
@@ -4059,7 +4059,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String slug;
 
         /**
-         * <p>The source type, such as MARKET_CLOUD_DREAM.</p>
+         * <p>The source. Valid value: MARKET_CLOUD_DREAM.</p>
          * 
          * <strong>example:</strong>
          * <p>MARKET_CLOUD_DREAM</p>
@@ -4068,7 +4068,7 @@ public class GetAppInstanceForPartnerResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The start time in ISO 8601 format and the UTC time zone (Z).</p>
+         * <p>The start time in ISO 8601 format in the UTC (Z) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-24T10:10Z</p>

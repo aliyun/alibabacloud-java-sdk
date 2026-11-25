@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListMyAppPluginsRequest extends TeaModel {
     /**
-     * <p>The category used to filter results.</p>
+     * <p>Filters the results by category.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;Status\&quot;: 0, \&quot;Name\&quot;: \&quot;JGHDDLT\&quot;, \&quot;BizCode\&quot;: \&quot;\&quot;, \&quot;CategoryId\&quot;: 30000952447, \&quot;ParentCategoryId\&quot;: 30000952446}</p>
+     * <p>{&quot;Status&quot;: 0, &quot;Name&quot;: &quot;JGHDDLT&quot;, &quot;BizCode&quot;: &quot;&quot;, &quot;CategoryId&quot;: 30000952447, &quot;ParentCategoryId&quot;: 30000952446}</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The search keyword. The keyword matches the name or description.</p>
+     * <p>The search keyword, which matches the name or description.</p>
      * 
      * <strong>example:</strong>
-     * <p>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</p>
+     * <p>${&quot;wget JiexJPWT.popscan.xaliyun.com&quot;}</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -41,7 +41,7 @@ public class ListMyAppPluginsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The status used to filter results.</p>
+     * <p>Filters the results by status.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>

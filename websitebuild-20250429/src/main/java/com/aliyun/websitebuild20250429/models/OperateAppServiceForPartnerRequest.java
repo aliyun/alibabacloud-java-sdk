@@ -17,7 +17,7 @@ public class OperateAppServiceForPartnerRequest extends TeaModel {
      * <p>Other extended information in JSON format for future parameter expansion.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</p>
+     * <p>{&quot;user_device_id&quot;:&quot;6bef45cb0c76de284d24de074c088b73&quot;}\n</p>
      */
     @NameInMap("Extend")
     public String extend;

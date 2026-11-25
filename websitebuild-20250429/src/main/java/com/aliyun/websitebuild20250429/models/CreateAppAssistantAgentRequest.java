@@ -8,7 +8,7 @@ public class CreateAppAssistantAgentRequest extends TeaModel {
      * <p>The name of the agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试业务空间</p>
+     * <p>Test workspace</p>
      */
     @NameInMap("AgentName")
     public String agentName;

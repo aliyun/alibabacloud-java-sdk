@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason for access denial.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -41,10 +41,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
-     * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
-     * </blockquote>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter. If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -53,7 +50,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The returned error parameters.</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -92,7 +89,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>The reserved parameter.</p>
+     * <p>The backup parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -240,7 +237,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String dbPublicUrl;
 
         /**
-         * <p>The database type. Valid values: rds and polardb.</p>
+         * <p>The database type, such as RDS or PolarDB.</p>
          * 
          * <strong>example:</strong>
          * <p>ORACLE</p>
@@ -252,7 +249,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
          * <p>The extra information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</p>
+         * <p>{&quot;appId&quot;:&quot;APP_NTJAK8P11SNZDJ3M6BWC&quot;}</p>
          */
         @NameInMap("Extra")
         public String extra;
@@ -279,13 +276,13 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
          * <p>The deletion flag.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>0</p>
          */
         @NameInMap("IsDeleted")
         public Integer isDeleted;
 
         /**
-         * <p>The access password for the RDS database.</p>
+         * <p>The access password for the ApsaraDB RDS database.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -294,7 +291,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String rdsDatabasePassword;
 
         /**
-         * <p>The read-only business schema name parsed by the Builder trusted binding. This name cannot be used as input for tenant switching.</p>
+         * <p>The read-only business schema name parsed by Builder trusted binding. This name cannot be used as input for switching tenants.</p>
          * 
          * <strong>example:</strong>
          * <p>tenant_00000000-0000-4000-8000-000000000001_schema</p>
@@ -312,16 +309,16 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String serviceKey;
 
         /**
-         * <p>The status. Valid values: 0 (Paused) and 1 (Running).</p>
+         * <p>The status. Valid values: 0 (paused) and 1 (running).</p>
          * 
          * <strong>example:</strong>
-         * <p>RUNNING</p>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The Supabase Dashboard password.</p>
+         * <p>The password for the Supabase Dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -330,7 +327,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String supabaseDashboardPassword;
 
         /**
-         * <p>The Supabase Dashboard username.</p>
+         * <p>The username for the Supabase Dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -366,7 +363,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String supabaseKongUrl;
 
         /**
-         * <p>The private network endpoint of the Supabase instance.</p>
+         * <p>The private endpoint of the Supabase instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -375,7 +372,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String supabasePrivateIp;
 
         /**
-         * <p>The public network connection endpoint of the Supabase instance.</p>
+         * <p>The public endpoint of the Supabase instance.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -384,7 +381,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String supabasePublicIp;
 
         /**
-         * <p>The public URL of the Supabase instance.</p>
+         * <p>The public URL of Supabase.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>

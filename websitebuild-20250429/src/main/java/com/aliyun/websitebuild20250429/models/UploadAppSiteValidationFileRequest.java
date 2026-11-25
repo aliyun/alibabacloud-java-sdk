@@ -26,7 +26,7 @@ public class UploadAppSiteValidationFileRequest extends TeaModel {
      * <p>The file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;URI\&quot;: \&quot;oss://imm-test-co-cn-chengdu/zqh/input/Image/indexImage/nn1.jpg\&quot;, \&quot;LatLong\&quot;:\&quot;+39.998800,+116.480900\&quot;}</p>
+     * <p>{&quot;URI&quot;: &quot;oss://imm-test-co-cn-chengdu/zqh/input/Image/indexImage/nn1.jpg&quot;, &quot;LatLong&quot;:&quot;+39.998800,+116.480900&quot;}</p>
      */
     @NameInMap("File")
     public String file;

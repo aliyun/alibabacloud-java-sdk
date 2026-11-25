@@ -14,7 +14,7 @@ public class GetAppWorkspaceDirectoryRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The directory depth. If this parameter is set to null or 0, all levels are returned.</p>
+     * <p>The directory depth. If you set this parameter to null or 0, all levels are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

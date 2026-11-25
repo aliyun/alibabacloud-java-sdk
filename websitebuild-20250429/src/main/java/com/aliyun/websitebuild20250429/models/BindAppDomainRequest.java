@@ -14,11 +14,7 @@ public class BindAppDomainRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The domain hosting method. Valid values:</p>
-     * <ul>
-     * <li>CUSTOMER_ESA: Uses the customer\&quot;s own Edge Security Acceleration (ESA). Only supported when DomainType is set to CUSTOM.</li>
-     * </ul>
-     * <p>If this parameter is not specified, the original hosting process is used.</p>
+     * <p>The optional domain hosting method. A value of CUSTOMER_ESA indicates that the customer&quot;s own ESA is used. If you do not specify this parameter, the original hosting process is used. This parameter is supported only when DomainType is set to CUSTOM.</p>
      * 
      * <strong>example:</strong>
      * <p>CDN</p>
@@ -36,12 +32,7 @@ public class BindAppDomainRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The domain management type. Valid values:</p>
-     * <ul>
-     * <li>CUSTOM</li>
-     * <li>PLATFORM_PREFIX</li>
-     * </ul>
-     * <p>Default value: CUSTOM.</p>
+     * <p>The domain management type. Valid values: CUSTOM and PLATFORM_PREFIX. If you do not specify this parameter, CUSTOM is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>CUSTOM</p>
@@ -53,7 +44,7 @@ public class BindAppDomainRequest extends TeaModel {
      * <p>The extended information (OverwriteExistingRecord).</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;deliveryNodeName\&quot;:\&quot;Website acceptance\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</p>
+     * <p>{&quot;deliveryNodeName&quot;:&quot;Website acceptance&quot;,&quot;deliveryNodeStatus&quot;:&quot;Reject&quot;,&quot;deliveryOperatorRole&quot;:&quot;Customer&quot;}</p>
      */
     @NameInMap("Extend")
     public String extend;
