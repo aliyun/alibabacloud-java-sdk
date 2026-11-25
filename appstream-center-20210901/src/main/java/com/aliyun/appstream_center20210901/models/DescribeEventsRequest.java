@@ -151,7 +151,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The start time of the query. <strong>Required</strong>. Specify the time in the ISO 8601 standard: <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss</code>. You can include three digits for milliseconds and use <code>Z</code> or <code>±HH:mm</code> to specify the time zone. We recommend that you always include the time zone offset. The query includes this exact time, and the start time must be earlier than or equal to the <code>EndTime</code>. The service retains and retrieves only events that occurred within 30 days before the call time.</p>
+     * <p>The start time of the query. <strong>Required</strong>. Specify the time in the ISO 8601 standard: <code>yyyy-MM-dd\&quot;T\&quot;HH:mm:ss</code>. You can include three digits for milliseconds and use <code>Z</code> or <code>±HH:mm</code> to specify the time zone. We recommend that you always include the time zone offset. The query includes this exact time, and the start time must be earlier than or equal to the <code>EndTime</code>. The service retains and retrieves only events that occurred within 30 days before the call time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

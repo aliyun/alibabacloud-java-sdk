@@ -920,7 +920,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The expiration time of the app instance group. The time is displayed in the ISO 8601 date and time format, including milliseconds and time zone offset. Format template: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSSXXX.</p>
+         * <p>The expiration time of the app instance group. The time is displayed in the ISO 8601 date and time format, including milliseconds and time zone offset. Format template: yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSSXXX.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-27T16:00:00.000+00:00</p>
@@ -1073,7 +1073,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String scalingUsageThreshold;
 
         /**
-         * <p>The session disconnection retention period, in minutes. After an end user\&quot;s session is disconnected, the session is retained for the specified period before being logged off. To retain the session indefinitely, set this parameter to <code>-1</code>. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
+         * <p>The session disconnection retention period, in minutes. After an end user&quot;s session is disconnected, the session is retained for the specified period before being logged off. To retain the session indefinitely, set this parameter to <code>-1</code>. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>

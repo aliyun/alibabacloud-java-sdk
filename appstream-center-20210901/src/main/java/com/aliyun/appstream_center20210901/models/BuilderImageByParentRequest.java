@@ -192,7 +192,7 @@ public class BuilderImageByParentRequest extends TeaModel {
      * <p>The property key for the driver list is DRIVER_LIST, and the value is a JSON string of an array of driver IDs. We recommend that you specify drivers by using DriverIdList. <strong>If both DriverIdList and PropertyMap.DRIVER_LIST are specified, DriverIdList takes precedence.</strong> Specify other extended properties only when you have confirmed their purposes and values.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;DRIVER_LIST&quot;:&quot;[\&quot;6d4af751-f522-40d7-ab6c-4a0ae587****\&quot;,\&quot;b5bdf6c0-41de-4878-8963-e8324106****\&quot;]&quot;}</p>
+     * <p>{&quot;DRIVER_LIST&quot;:&quot;[&quot;6d4af751-f522-40d7-ab6c-4a0ae587****&quot;,&quot;b5bdf6c0-41de-4878-8963-e8324106****&quot;]&quot;}</p>
      */
     @NameInMap("PropertyMap")
     public java.util.Map<String, String> propertyMap;

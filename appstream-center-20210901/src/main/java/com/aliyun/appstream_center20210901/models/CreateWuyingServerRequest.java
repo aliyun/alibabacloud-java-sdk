@@ -170,6 +170,15 @@ public class CreateWuyingServerRequest extends TeaModel {
     public Float maxPrice;
 
     /**
+     * <p>模型和运行配置。创建 WuyingModelServer 产品时必填。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ModelId&quot;:&quot;demo-model&quot;,&quot;ModelAccessMethod&quot;:&quot;Lan&quot;,&quot;ServerRunConfig&quot;:{&quot;SettingMode&quot;:&quot;Basic&quot;,&quot;MaxModelLen&quot;:16384,&quot;MaxNumSeqs&quot;:4}}</p>
+     */
+    @NameInMap("ModelConfig")
+    public CreateWuyingServerRequestModelConfig modelConfig;
+
+    /**
      * <p>The type of the network policy (invitational preview).</p>
      * 
      * <strong>example:</strong>
@@ -193,7 +202,7 @@ public class CreateWuyingServerRequest extends TeaModel {
     /**
      * <p>The logon password of the workstation. <strong>This parameter is required when you create a workstation by calling this operation.</strong> If this parameter is not specified, InvalidParameter.password is returned.</p>
      * <p>The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Spaces, Chinese characters, backslashes, and double quotation marks are not supported. The supported special characters are:</p>
-     * <pre><code class="language-text">()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
+     * <pre><code class="language-text">()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/
      * </code></pre>
      * <p>The password of a Windows workstation cannot start with a forward slash /.</p>
      * 
@@ -232,6 +241,15 @@ public class CreateWuyingServerRequest extends TeaModel {
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
+
+    /**
+     * <p>工作站产品类型。创建无影 AI 模型工作站时传 WuyingModelServer。省略时默认使用 WuyingServer。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WuyingModelServer</p>
+     */
+    @NameInMap("ProductType")
+    public String productType;
 
     /**
      * <p>The ID of the discount.</p>
@@ -475,6 +493,14 @@ public class CreateWuyingServerRequest extends TeaModel {
         return this.maxPrice;
     }
 
+    public CreateWuyingServerRequest setModelConfig(CreateWuyingServerRequestModelConfig modelConfig) {
+        this.modelConfig = modelConfig;
+        return this;
+    }
+    public CreateWuyingServerRequestModelConfig getModelConfig() {
+        return this.modelConfig;
+    }
+
     public CreateWuyingServerRequest setNetworkStrategyType(String networkStrategyType) {
         this.networkStrategyType = networkStrategyType;
         return this;
@@ -513,6 +539,14 @@ public class CreateWuyingServerRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public CreateWuyingServerRequest setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
     }
 
     public CreateWuyingServerRequest setPromotionId(String promotionId) {
@@ -674,6 +708,141 @@ public class CreateWuyingServerRequest extends TeaModel {
         }
         public Integer getDataDiskSize() {
             return this.dataDiskSize;
+        }
+
+    }
+
+    public static class CreateWuyingServerRequestModelConfigServerRunConfig extends TeaModel {
+        /**
+         * <p>最大上下文，单位 Token。省略时使用所选规格的默认值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16384</p>
+         */
+        @NameInMap("MaxModelLen")
+        public Long maxModelLen;
+
+        /**
+         * <p>最大并发序列数。省略时使用所选规格的推荐值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("MaxNumSeqs")
+        public Integer maxNumSeqs;
+
+        /**
+         * <p>设置方式。Basic 为基本设置，CustomStartupCommand 为自定义启动命令。省略或传 null 时取 Basic。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
+         */
+        @NameInMap("SettingMode")
+        public String settingMode;
+
+        public static CreateWuyingServerRequestModelConfigServerRunConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateWuyingServerRequestModelConfigServerRunConfig self = new CreateWuyingServerRequestModelConfigServerRunConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWuyingServerRequestModelConfigServerRunConfig setMaxModelLen(Long maxModelLen) {
+            this.maxModelLen = maxModelLen;
+            return this;
+        }
+        public Long getMaxModelLen() {
+            return this.maxModelLen;
+        }
+
+        public CreateWuyingServerRequestModelConfigServerRunConfig setMaxNumSeqs(Integer maxNumSeqs) {
+            this.maxNumSeqs = maxNumSeqs;
+            return this;
+        }
+        public Integer getMaxNumSeqs() {
+            return this.maxNumSeqs;
+        }
+
+        public CreateWuyingServerRequestModelConfigServerRunConfig setSettingMode(String settingMode) {
+            this.settingMode = settingMode;
+            return this;
+        }
+        public String getSettingMode() {
+            return this.settingMode;
+        }
+
+    }
+
+    public static class CreateWuyingServerRequestModelConfig extends TeaModel {
+        /**
+         * <p>模型接入方式。Normal 为普通接入，Lan 为局域网接入，省略时取 Normal。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lan</p>
+         */
+        @NameInMap("ModelAccessMethod")
+        public String modelAccessMethod;
+
+        /**
+         * <p>模型目录中的真实模型 ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-model</p>
+         */
+        @NameInMap("ModelId")
+        public String modelId;
+
+        /**
+         * <p>租户自定义模型 ID，省略时使用真实模型 ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-model</p>
+         */
+        @NameInMap("ServedModelName")
+        public String servedModelName;
+
+        /**
+         * <p>模型运行配置。可传空对象以使用全部默认值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;SettingMode&quot;:&quot;Basic&quot;,&quot;MaxModelLen&quot;:16384,&quot;MaxNumSeqs&quot;:4}</p>
+         */
+        @NameInMap("ServerRunConfig")
+        public CreateWuyingServerRequestModelConfigServerRunConfig serverRunConfig;
+
+        public static CreateWuyingServerRequestModelConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateWuyingServerRequestModelConfig self = new CreateWuyingServerRequestModelConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWuyingServerRequestModelConfig setModelAccessMethod(String modelAccessMethod) {
+            this.modelAccessMethod = modelAccessMethod;
+            return this;
+        }
+        public String getModelAccessMethod() {
+            return this.modelAccessMethod;
+        }
+
+        public CreateWuyingServerRequestModelConfig setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        public CreateWuyingServerRequestModelConfig setServedModelName(String servedModelName) {
+            this.servedModelName = servedModelName;
+            return this;
+        }
+        public String getServedModelName() {
+            return this.servedModelName;
+        }
+
+        public CreateWuyingServerRequestModelConfig setServerRunConfig(CreateWuyingServerRequestModelConfigServerRunConfig serverRunConfig) {
+            this.serverRunConfig = serverRunConfig;
+            return this;
+        }
+        public CreateWuyingServerRequestModelConfigServerRunConfig getServerRunConfig() {
+            return this.serverRunConfig;
         }
 
     }

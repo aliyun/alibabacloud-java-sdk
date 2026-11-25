@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryModelUsageInfoResponseBody extends TeaModel {
     /**
-     * <p>The model usage summary corresponding to the selected business, statistical window, and model type. If no statistical results are available for <code>24h</code> or <code>1d</code> queries without specified start and end dates, each metric returns 0. If no statistical results are available for other windows or custom date ranges, no valid metric values are provided. In this case, do not treat it as zero usage.</p>
+     * <p>The model usage summary for the selected business, statistical window, and model type. If no statistical results are available for <code>24h</code> or <code>1d</code> queries without specified start and end dates, each metric returns 0. If no statistical results are available for other windows or custom date ranges, no valid metric values are provided. In this case, do not treat the usage as zero.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ActiveModelCount&quot;:10,&quot;CallCount&quot;:13280,&quot;PointsConsumption&quot;:120}</p>
@@ -14,7 +14,7 @@ public class QueryModelUsageInfoResponseBody extends TeaModel {
     public QueryModelUsageInfoResponseBodyData data;
 
     /**
-     * <p>The unique identifier of the current request, which is used to locate and troubleshoot request issues.</p>
+     * <p>The unique identifier of the request, which is used to locate and troubleshoot request issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -45,7 +45,7 @@ public class QueryModelUsageInfoResponseBody extends TeaModel {
 
     public static class QueryModelUsageInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The number of distinct models that have been called at least once within the query range. Unit: models. The value is deduplicated by model code. It may not be equal to <code>TotalCount</code> in the model usage list, because the latter may also include models that have not been called within the current query range.</p>
+         * <p>The number of distinct models that have been called at least once within the query range. Unit: models. The value is deduplicated by model code. It may not be equal to the <code>TotalCount</code> of the model usage list, which may also include models that have not been called within the current query range.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -91,6 +91,269 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vLLM</p>
+         */
+        @NameInMap("DefaultInferenceEngine")
+        public String defaultInferenceEngine;
+
+        /**
+         * <strong>example:</strong>
+         * <p>支持文本生成</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
+        @NameInMap("FirstTokenLatencySeconds")
+        public Double firstTokenLatencySeconds;
+
+        /**
+         * <strong>example:</strong>
+         * <p>m-example-image</p>
+         */
+        @NameInMap("ImageId")
+        public String imageId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;text&quot;]</p>
+         */
+        @NameInMap("InputModalities")
+        public java.util.List<String> inputModalities;
+
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        @NameInMap("MachineInputTokensPerSecond")
+        public Long machineInputTokensPerSecond;
+
+        /**
+         * <strong>example:</strong>
+         * <p>70</p>
+         */
+        @NameInMap("MachineOutputTokensPerSecond")
+        public Long machineOutputTokensPerSecond;
+
+        /**
+         * <strong>example:</strong>
+         * <p>32768</p>
+         */
+        @NameInMap("MaxModelLen")
+        public Long maxModelLen;
+
+        /**
+         * <strong>example:</strong>
+         * <p>65536</p>
+         */
+        @NameInMap("MaxModelLenMax")
+        public Long maxModelLenMax;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
+        @NameInMap("MaxModelLenMin")
+        public Long maxModelLenMin;
+
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
+        @NameInMap("MaxNumSeqsMax")
+        public Integer maxNumSeqsMax;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("MaxNumSeqsMin")
+        public Integer maxNumSeqsMin;
+
+        /**
+         * <strong>example:</strong>
+         * <p>demo-model</p>
+         */
+        @NameInMap("ModelId")
+        public String modelId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例模型</p>
+         */
+        @NameInMap("ModelName")
+        public String modelName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;text&quot;]</p>
+         */
+        @NameInMap("OutputModalities")
+        public java.util.List<String> outputModalities;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Recommended")
+        public Boolean recommended;
+
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
+        @NameInMap("RecommendedMaxNumSeqs")
+        public Integer recommendedMaxNumSeqs;
+
+        public static ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo self = new ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setDefaultInferenceEngine(String defaultInferenceEngine) {
+            this.defaultInferenceEngine = defaultInferenceEngine;
+            return this;
+        }
+        public String getDefaultInferenceEngine() {
+            return this.defaultInferenceEngine;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setFirstTokenLatencySeconds(Double firstTokenLatencySeconds) {
+            this.firstTokenLatencySeconds = firstTokenLatencySeconds;
+            return this;
+        }
+        public Double getFirstTokenLatencySeconds() {
+            return this.firstTokenLatencySeconds;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setInputModalities(java.util.List<String> inputModalities) {
+            this.inputModalities = inputModalities;
+            return this;
+        }
+        public java.util.List<String> getInputModalities() {
+            return this.inputModalities;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setMachineInputTokensPerSecond(Long machineInputTokensPerSecond) {
+            this.machineInputTokensPerSecond = machineInputTokensPerSecond;
+            return this;
+        }
+        public Long getMachineInputTokensPerSecond() {
+            return this.machineInputTokensPerSecond;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setMachineOutputTokensPerSecond(Long machineOutputTokensPerSecond) {
+            this.machineOutputTokensPerSecond = machineOutputTokensPerSecond;
+            return this;
+        }
+        public Long getMachineOutputTokensPerSecond() {
+            return this.machineOutputTokensPerSecond;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setMaxModelLen(Long maxModelLen) {
+            this.maxModelLen = maxModelLen;
+            return this;
+        }
+        public Long getMaxModelLen() {
+            return this.maxModelLen;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setMaxModelLenMax(Long maxModelLenMax) {
+            this.maxModelLenMax = maxModelLenMax;
+            return this;
+        }
+        public Long getMaxModelLenMax() {
+            return this.maxModelLenMax;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setMaxModelLenMin(Long maxModelLenMin) {
+            this.maxModelLenMin = maxModelLenMin;
+            return this;
+        }
+        public Long getMaxModelLenMin() {
+            return this.maxModelLenMin;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setMaxNumSeqsMax(Integer maxNumSeqsMax) {
+            this.maxNumSeqsMax = maxNumSeqsMax;
+            return this;
+        }
+        public Integer getMaxNumSeqsMax() {
+            return this.maxNumSeqsMax;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setMaxNumSeqsMin(Integer maxNumSeqsMin) {
+            this.maxNumSeqsMin = maxNumSeqsMin;
+            return this;
+        }
+        public Integer getMaxNumSeqsMin() {
+            return this.maxNumSeqsMin;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setOutputModalities(java.util.List<String> outputModalities) {
+            this.outputModalities = outputModalities;
+            return this;
+        }
+        public java.util.List<String> getOutputModalities() {
+            return this.outputModalities;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setRecommended(Boolean recommended) {
+            this.recommended = recommended;
+            return this;
+        }
+        public Boolean getRecommended() {
+            return this.recommended;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo setRecommendedMaxNumSeqs(Integer recommendedMaxNumSeqs) {
+            this.recommendedMaxNumSeqs = recommendedMaxNumSeqs;
+            return this;
+        }
+        public Integer getRecommendedMaxNumSeqs() {
+            return this.recommendedMaxNumSeqs;
+        }
+
+    }
+
     public static class ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels extends TeaModel {
         /**
          * <p>The number of vCPUs.</p>
@@ -100,6 +363,13 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
          */
         @NameInMap("Cpu")
         public String cpu;
+
+        /**
+         * <strong>example:</strong>
+         * <p>49152</p>
+         */
+        @NameInMap("EcsGpuMemory")
+        public Integer ecsGpuMemory;
 
         /**
          * <p>The number of GPUs.</p>
@@ -118,6 +388,13 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
          */
         @NameInMap("GpuMemory")
         public Long gpuMemory;
+
+        /**
+         * <strong>example:</strong>
+         * <p>RTX 5880</p>
+         */
+        @NameInMap("GpuSpec")
+        public String gpuSpec;
 
         /**
          * <p>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected at the same time, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</p>
@@ -182,6 +459,16 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         @NameInMap("NodeTypeName")
         public String nodeTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+         */
+        @NameInMap("RequestId")
+        public String requestId;
+
+        @NameInMap("WuyingServerModelMetaInfo")
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo wuyingServerModelMetaInfo;
+
         public static ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels build(java.util.Map<String, ?> map) throws Exception {
             ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels self = new ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels();
             return TeaModel.build(map, self);
@@ -193,6 +480,14 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels setEcsGpuMemory(Integer ecsGpuMemory) {
+            this.ecsGpuMemory = ecsGpuMemory;
+            return this;
+        }
+        public Integer getEcsGpuMemory() {
+            return this.ecsGpuMemory;
         }
 
         public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels setGpu(String gpu) {
@@ -209,6 +504,14 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         }
         public Long getGpuMemory() {
             return this.gpuMemory;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels setGpuSpec(String gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels setMaxCapacity(Integer maxCapacity) {
@@ -249,6 +552,22 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         }
         public String getNodeTypeName() {
             return this.nodeTypeName;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels setRequestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels setWuyingServerModelMetaInfo(ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo wuyingServerModelMetaInfo) {
+            this.wuyingServerModelMetaInfo = wuyingServerModelMetaInfo;
+            return this;
+        }
+        public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo getWuyingServerModelMetaInfo() {
+            return this.wuyingServerModelMetaInfo;
         }
 
     }

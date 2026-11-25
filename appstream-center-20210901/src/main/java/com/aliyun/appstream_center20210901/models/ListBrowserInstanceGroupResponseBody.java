@@ -903,7 +903,7 @@ public class ListBrowserInstanceGroupResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The creation time of the browser instance group. The time follows the RFC 3339 standard in the <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss.SSSXXX</code> format, which includes milliseconds and time zone offsets. The actual response uses the UTC offset <code>+00:00</code>.</p>
+         * <p>The creation time of the browser instance group. The time follows the RFC 3339 standard in the <code>yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSSXXX</code> format, which includes milliseconds and time zone offsets. The actual response uses the UTC offset <code>+00:00</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-21T07:00:39.000+00:00</p>

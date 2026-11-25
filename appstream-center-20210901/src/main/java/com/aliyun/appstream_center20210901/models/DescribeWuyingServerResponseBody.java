@@ -82,6 +82,262 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("Cpu")
+        public String cpu;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1.00</p>
+         */
+        @NameInMap("Gpu")
+        public String gpu;
+
+        /**
+         * <strong>example:</strong>
+         * <p>16384</p>
+         */
+        @NameInMap("GpuMemory")
+        public Integer gpuMemory;
+
+        /**
+         * <strong>example:</strong>
+         * <p>NVIDIA T4</p>
+         */
+        @NameInMap("GpuSpec")
+        public String gpuSpec;
+
+        /**
+         * <strong>example:</strong>
+         * <p>8192</p>
+         */
+        @NameInMap("Memory")
+        public Integer memory;
+
+        /**
+         * <strong>example:</strong>
+         * <p>appstreaming.general.4c8g</p>
+         */
+        @NameInMap("ServerInstanceType")
+        public String serverInstanceType;
+
+        public static DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo self = new DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo setCpu(String cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public String getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo setGpu(String gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+        public String getGpu() {
+            return this.gpu;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo setGpuMemory(Integer gpuMemory) {
+            this.gpuMemory = gpuMemory;
+            return this;
+        }
+        public Integer getGpuMemory() {
+            return this.gpuMemory;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo setGpuSpec(String gpuSpec) {
+            this.gpuSpec = gpuSpec;
+            return this;
+        }
+        public String getGpuSpec() {
+            return this.gpuSpec;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo setMemory(Integer memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Integer getMemory() {
+            return this.memory;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo setServerInstanceType(String serverInstanceType) {
+            this.serverInstanceType = serverInstanceType;
+            return this;
+        }
+        public String getServerInstanceType() {
+            return this.serverInstanceType;
+        }
+
+    }
+
+    public static class DescribeWuyingServerResponseBodyDataServerModelInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vLLM</p>
+         */
+        @NameInMap("InferenceEngine")
+        public String inferenceEngine;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;text&quot;]</p>
+         */
+        @NameInMap("InputModalities")
+        public java.util.List<String> inputModalities;
+
+        /**
+         * <strong>example:</strong>
+         * <p>16384</p>
+         */
+        @NameInMap("MaxModelLen")
+        public Long maxModelLen;
+
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("MaxNumSeqs")
+        public Integer maxNumSeqs;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Lan</p>
+         */
+        @NameInMap("ModelAccessMethod")
+        public String modelAccessMethod;
+
+        /**
+         * <strong>example:</strong>
+         * <p>demo-model</p>
+         */
+        @NameInMap("ModelId")
+        public String modelId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例模型</p>
+         */
+        @NameInMap("ModelName")
+        public String modelName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
+        @NameInMap("ModelServiceInferenceStatus")
+        public String modelServiceInferenceStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;text&quot;]</p>
+         */
+        @NameInMap("OutputModalities")
+        public java.util.List<String> outputModalities;
+
+        /**
+         * <strong>example:</strong>
+         * <p>demo-model</p>
+         */
+        @NameInMap("ServedModelName")
+        public String servedModelName;
+
+        public static DescribeWuyingServerResponseBodyDataServerModelInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeWuyingServerResponseBodyDataServerModelInfo self = new DescribeWuyingServerResponseBodyDataServerModelInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerModelInfo setInferenceEngine(String inferenceEngine) {
+            this.inferenceEngine = inferenceEngine;
+            return this;
+        }
+        public String getInferenceEngine() {
+            return this.inferenceEngine;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerModelInfo setInputModalities(java.util.List<String> inputModalities) {
+            this.inputModalities = inputModalities;
+            return this;
+        }
+        public java.util.List<String> getInputModalities() {
+            return this.inputModalities;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerModelInfo setMaxModelLen(Long maxModelLen) {
+            this.maxModelLen = maxModelLen;
+            return this;
+        }
+        public Long getMaxModelLen() {
+            return this.maxModelLen;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerModelInfo setMaxNumSeqs(Integer maxNumSeqs) {
+            this.maxNumSeqs = maxNumSeqs;
+            return this;
+        }
+        public Integer getMaxNumSeqs() {
+            return this.maxNumSeqs;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerModelInfo setModelAccessMethod(String modelAccessMethod) {
+            this.modelAccessMethod = modelAccessMethod;
+            return this;
+        }
+        public String getModelAccessMethod() {
+            return this.modelAccessMethod;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerModelInfo setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerModelInfo setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerModelInfo setModelServiceInferenceStatus(String modelServiceInferenceStatus) {
+            this.modelServiceInferenceStatus = modelServiceInferenceStatus;
+            return this;
+        }
+        public String getModelServiceInferenceStatus() {
+            return this.modelServiceInferenceStatus;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerModelInfo setOutputModalities(java.util.List<String> outputModalities) {
+            this.outputModalities = outputModalities;
+            return this;
+        }
+        public java.util.List<String> getOutputModalities() {
+            return this.outputModalities;
+        }
+
+        public DescribeWuyingServerResponseBodyDataServerModelInfo setServedModelName(String servedModelName) {
+            this.servedModelName = servedModelName;
+            return this;
+        }
+        public String getServedModelName() {
+            return this.servedModelName;
+        }
+
+    }
+
     public static class DescribeWuyingServerResponseBodyData extends TeaModel {
         /**
          * <p>The bandwidth. Unit: Mbit/s.</p>
@@ -205,6 +461,12 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
          */
         @NameInMap("PrivateIpSets")
         public java.util.List<DescribeWuyingServerResponseBodyDataPrivateIpSets> privateIpSets;
+
+        @NameInMap("ServerInstanceTypeInfo")
+        public DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo serverInstanceTypeInfo;
+
+        @NameInMap("ServerModelInfo")
+        public DescribeWuyingServerResponseBodyDataServerModelInfo serverModelInfo;
 
         /**
          * <p>The status of the development host.</p>
@@ -375,6 +637,22 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         }
         public java.util.List<DescribeWuyingServerResponseBodyDataPrivateIpSets> getPrivateIpSets() {
             return this.privateIpSets;
+        }
+
+        public DescribeWuyingServerResponseBodyData setServerInstanceTypeInfo(DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo serverInstanceTypeInfo) {
+            this.serverInstanceTypeInfo = serverInstanceTypeInfo;
+            return this;
+        }
+        public DescribeWuyingServerResponseBodyDataServerInstanceTypeInfo getServerInstanceTypeInfo() {
+            return this.serverInstanceTypeInfo;
+        }
+
+        public DescribeWuyingServerResponseBodyData setServerModelInfo(DescribeWuyingServerResponseBodyDataServerModelInfo serverModelInfo) {
+            this.serverModelInfo = serverModelInfo;
+            return this;
+        }
+        public DescribeWuyingServerResponseBodyDataServerModelInfo getServerModelInfo() {
+            return this.serverModelInfo;
         }
 
         public DescribeWuyingServerResponseBodyData setStatus(String status) {

@@ -817,7 +817,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The expiration time of the delivery group. The time is in ISO 8601 format, including milliseconds and time zone offset. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSSXXX.</p>
+         * <p>The expiration time of the delivery group. The time is in ISO 8601 format, including milliseconds and time zone offset. Format: yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSSXXX.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-24T16:00:00.000+00:00</p>

@@ -378,6 +378,164 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     }
 
+    public static class ListWuyingServerResponseBodyWuyingServerListServerModelInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vLLM</p>
+         */
+        @NameInMap("InferenceEngine")
+        public String inferenceEngine;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;text&quot;]</p>
+         */
+        @NameInMap("InputModalities")
+        public java.util.List<String> inputModalities;
+
+        /**
+         * <strong>example:</strong>
+         * <p>16384</p>
+         */
+        @NameInMap("MaxModelLen")
+        public Long maxModelLen;
+
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("MaxNumSeqs")
+        public Integer maxNumSeqs;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Lan</p>
+         */
+        @NameInMap("ModelAccessMethod")
+        public String modelAccessMethod;
+
+        /**
+         * <strong>example:</strong>
+         * <p>demo-model</p>
+         */
+        @NameInMap("ModelId")
+        public String modelId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例模型</p>
+         */
+        @NameInMap("ModelName")
+        public String modelName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
+        @NameInMap("ModelServiceInferenceStatus")
+        public String modelServiceInferenceStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;text&quot;]</p>
+         */
+        @NameInMap("OutputModalities")
+        public java.util.List<String> outputModalities;
+
+        /**
+         * <strong>example:</strong>
+         * <p>demo-model</p>
+         */
+        @NameInMap("ServedModelName")
+        public String servedModelName;
+
+        public static ListWuyingServerResponseBodyWuyingServerListServerModelInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListWuyingServerResponseBodyWuyingServerListServerModelInfo self = new ListWuyingServerResponseBodyWuyingServerListServerModelInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo setInferenceEngine(String inferenceEngine) {
+            this.inferenceEngine = inferenceEngine;
+            return this;
+        }
+        public String getInferenceEngine() {
+            return this.inferenceEngine;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo setInputModalities(java.util.List<String> inputModalities) {
+            this.inputModalities = inputModalities;
+            return this;
+        }
+        public java.util.List<String> getInputModalities() {
+            return this.inputModalities;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo setMaxModelLen(Long maxModelLen) {
+            this.maxModelLen = maxModelLen;
+            return this;
+        }
+        public Long getMaxModelLen() {
+            return this.maxModelLen;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo setMaxNumSeqs(Integer maxNumSeqs) {
+            this.maxNumSeqs = maxNumSeqs;
+            return this;
+        }
+        public Integer getMaxNumSeqs() {
+            return this.maxNumSeqs;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo setModelAccessMethod(String modelAccessMethod) {
+            this.modelAccessMethod = modelAccessMethod;
+            return this;
+        }
+        public String getModelAccessMethod() {
+            return this.modelAccessMethod;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo setModelServiceInferenceStatus(String modelServiceInferenceStatus) {
+            this.modelServiceInferenceStatus = modelServiceInferenceStatus;
+            return this;
+        }
+        public String getModelServiceInferenceStatus() {
+            return this.modelServiceInferenceStatus;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo setOutputModalities(java.util.List<String> outputModalities) {
+            this.outputModalities = outputModalities;
+            return this;
+        }
+        public java.util.List<String> getOutputModalities() {
+            return this.outputModalities;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo setServedModelName(String servedModelName) {
+            this.servedModelName = servedModelName;
+            return this;
+        }
+        public String getServedModelName() {
+            return this.servedModelName;
+        }
+
+    }
+
     public static class ListWuyingServerResponseBodyWuyingServerListSessions extends TeaModel {
         /**
          * <p>The start time of the session in ISO 8601 format.</p>
@@ -627,6 +785,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         @NameInMap("ServerInstanceTypeInfo")
         public ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo serverInstanceTypeInfo;
+
+        @NameInMap("ServerModelInfo")
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo serverModelInfo;
 
         /**
          * <p>The list of sessions.</p>
@@ -975,6 +1136,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo getServerInstanceTypeInfo() {
             return this.serverInstanceTypeInfo;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setServerModelInfo(ListWuyingServerResponseBodyWuyingServerListServerModelInfo serverModelInfo) {
+            this.serverModelInfo = serverModelInfo;
+            return this;
+        }
+        public ListWuyingServerResponseBodyWuyingServerListServerModelInfo getServerModelInfo() {
+            return this.serverModelInfo;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setSessions(java.util.List<ListWuyingServerResponseBodyWuyingServerListSessions> sessions) {

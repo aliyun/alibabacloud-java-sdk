@@ -86,6 +86,13 @@ public class ListWuyingServerRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <strong>example:</strong>
+     * <p>示例</p>
+     */
+    @NameInMap("ModelName")
+    public String modelName;
+
+    /**
      * <p>The internal IP address.</p>
      * 
      * <strong>example:</strong>
@@ -268,6 +275,14 @@ public class ListWuyingServerRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public ListWuyingServerRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public ListWuyingServerRequest setNetworkInterfaceIp(String networkInterfaceIp) {

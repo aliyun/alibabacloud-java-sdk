@@ -1782,12 +1782,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates one or more workstations.</p>
      * 
-     * @param request CreateWuyingServerRequest
+     * @param tmpReq CreateWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateWuyingServerResponse
      */
-    public CreateWuyingServerResponse createWuyingServerWithOptions(CreateWuyingServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateWuyingServerResponse createWuyingServerWithOptions(CreateWuyingServerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateWuyingServerShrinkRequest request = new CreateWuyingServerShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.modelConfig)) {
+            request.modelConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.modelConfig, "ModelConfig", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
             body.put("Amount", request.amount);
@@ -1842,6 +1848,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MaxPrice", request.maxPrice);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelConfigShrink)) {
+            body.put("ModelConfig", request.modelConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkStrategyType)) {
             body.put("NetworkStrategyType", request.networkStrategyType);
         }
@@ -1860,6 +1870,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
             body.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
@@ -7309,6 +7323,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizRegionId", request.bizRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             query.put("ChargeType", request.chargeType);
         }
@@ -7325,6 +7343,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GpuMemory", request.gpuMemory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuSpec)) {
+            query.put("GpuSpec", request.gpuSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeForModify)) {
             query.put("InstanceTypeForModify", request.instanceTypeForModify);
         }
@@ -7335,6 +7357,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.memory)) {
             query.put("Memory", request.memory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            query.put("ModelId", request.modelId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeInstanceType)) {
@@ -8289,6 +8315,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("ModelName", request.modelName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceIp)) {
@@ -9858,15 +9888,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Prerequisites</h2>
-     * <p>The caller must have the RAM permissions for the corresponding API operation. The query scope is limited to the model usage of the specified business for the current account. The returned results depend on the generated statistical data and do not represent that every call has been counted in real time.</p>
+     * <p>The caller must have the RAM permissions for the corresponding API operation. The query scope is limited to the model usage of the specified business for the current account. The returned results depend on the generated statistical data and do not indicate that every call is counted in real time.</p>
      * <h2>Time and missing data</h2>
      * <p>Time boundaries are uniformly based on Asia/Shanghai (UTC+8). For a custom range, set <code>StatDateType</code> to <code>1d</code> and specify both <code>StartDate</code> and <code>EndDate</code>. The range includes both the start and end dates, and the maximum span is 90 days. If statistical data is unavailable for some dates, only the existing data within the range is aggregated.
      * If no statistical results are available for <code>24h</code> or <code>1d</code> queries without specified dates, the summary API returns zero values and the list API returns an empty list. <strong>This does not mean that no actual calls were made.</strong> If no statistical results are available for other windows or custom date ranges, metrics or lists may be empty. Do not treat empty values as zeros.</p>
      * <h2>Combined calls</h2>
-     * <p>You can call <a href="~~QueryModelUsageInfo~~">QueryModelUsageInfo</a> to obtain summary metrics and <a href="~~QueryModelUsageList~~">QueryModelUsageList</a> to obtain model details. Both API operations can be called independently. When reconciling the summary and details, <code>BizType</code>, <code>StatDateType</code>, <code>StartDate</code>, <code>EndDate</code>, and <code>ModelType</code> must be consistent. <code>Keyword</code> takes effect only for the details API. Details filtered by keywords cannot be directly compared with unfiltered summary results.</p>
+     * <p>You can call <a href="~~QueryModelUsageInfo~~">QueryModelUsageInfo</a> to obtain summary metrics and <a href="~~QueryModelUsageList~~">QueryModelUsageList</a> to obtain model details. Both API operations can be called independently. When comparing summary and detail data, <code>BizType</code>, <code>StatDateType</code>, <code>StartDate</code>, <code>EndDate</code>, and <code>ModelType</code> must be consistent. <code>Keyword</code> applies only to the detail API. Details filtered by keywords cannot be directly compared with unfiltered summary results.</p>
      * <h2>Request example combinations</h2>
-     * <p>In the parameter table, <code>StatDateType=1d</code>, <code>StartDate=2026-08-01</code>, and <code>EndDate=2026-08-07</code> indicate querying the cumulative usage from August 1 to August 7, 2026 (including both the start and end dates), in the Asia/Shanghai (UTC+8) time zone. To query the usage for the last 7 days, change the value to <code>StatDateType=1w</code> and omit both date parameters.
-     * The number of calls, points, and model information in the examples are used to illustrate the meaning of the fields. They do not represent the actual usage of the current account and do not constitute a commitment to model specifications or pricing. The actual usage and available model information are subject to the API response.</p>
+     * <p>In the parameter table, <code>StatDateType=1d</code>, <code>StartDate=2026-08-01</code>, and <code>EndDate=2026-08-07</code> indicate querying the cumulative usage from August 1 to August 7, 2026 (inclusive), in the Asia/Shanghai (UTC+8) time zone. To query the last 7 days, change the value to <code>StatDateType=1w</code> and omit both date parameters.
+     * The number of calls, points, and model information in the examples are used to illustrate field meanings. They do not represent the actual usage of the current account and do not constitute a commitment to model specifications or pricing. The actual usage and available model information are subject to the API response.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the number of invoked models, total number of calls, and consumed points by business type, statistical window, and model type.</p>
@@ -9918,15 +9948,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Prerequisites</h2>
-     * <p>The caller must have the RAM permissions for the corresponding API operation. The query scope is limited to the model usage of the specified business for the current account. The returned results depend on the generated statistical data and do not represent that every call has been counted in real time.</p>
+     * <p>The caller must have the RAM permissions for the corresponding API operation. The query scope is limited to the model usage of the specified business for the current account. The returned results depend on the generated statistical data and do not indicate that every call is counted in real time.</p>
      * <h2>Time and missing data</h2>
      * <p>Time boundaries are uniformly based on Asia/Shanghai (UTC+8). For a custom range, set <code>StatDateType</code> to <code>1d</code> and specify both <code>StartDate</code> and <code>EndDate</code>. The range includes both the start and end dates, and the maximum span is 90 days. If statistical data is unavailable for some dates, only the existing data within the range is aggregated.
      * If no statistical results are available for <code>24h</code> or <code>1d</code> queries without specified dates, the summary API returns zero values and the list API returns an empty list. <strong>This does not mean that no actual calls were made.</strong> If no statistical results are available for other windows or custom date ranges, metrics or lists may be empty. Do not treat empty values as zeros.</p>
      * <h2>Combined calls</h2>
-     * <p>You can call <a href="~~QueryModelUsageInfo~~">QueryModelUsageInfo</a> to obtain summary metrics and <a href="~~QueryModelUsageList~~">QueryModelUsageList</a> to obtain model details. Both API operations can be called independently. When reconciling the summary and details, <code>BizType</code>, <code>StatDateType</code>, <code>StartDate</code>, <code>EndDate</code>, and <code>ModelType</code> must be consistent. <code>Keyword</code> takes effect only for the details API. Details filtered by keywords cannot be directly compared with unfiltered summary results.</p>
+     * <p>You can call <a href="~~QueryModelUsageInfo~~">QueryModelUsageInfo</a> to obtain summary metrics and <a href="~~QueryModelUsageList~~">QueryModelUsageList</a> to obtain model details. Both API operations can be called independently. When comparing summary and detail data, <code>BizType</code>, <code>StatDateType</code>, <code>StartDate</code>, <code>EndDate</code>, and <code>ModelType</code> must be consistent. <code>Keyword</code> applies only to the detail API. Details filtered by keywords cannot be directly compared with unfiltered summary results.</p>
      * <h2>Request example combinations</h2>
-     * <p>In the parameter table, <code>StatDateType=1d</code>, <code>StartDate=2026-08-01</code>, and <code>EndDate=2026-08-07</code> indicate querying the cumulative usage from August 1 to August 7, 2026 (including both the start and end dates), in the Asia/Shanghai (UTC+8) time zone. To query the usage for the last 7 days, change the value to <code>StatDateType=1w</code> and omit both date parameters.
-     * The number of calls, points, and model information in the examples are used to illustrate the meaning of the fields. They do not represent the actual usage of the current account and do not constitute a commitment to model specifications or pricing. The actual usage and available model information are subject to the API response.</p>
+     * <p>In the parameter table, <code>StatDateType=1d</code>, <code>StartDate=2026-08-01</code>, and <code>EndDate=2026-08-07</code> indicate querying the cumulative usage from August 1 to August 7, 2026 (inclusive), in the Asia/Shanghai (UTC+8) time zone. To query the last 7 days, change the value to <code>StatDateType=1w</code> and omit both date parameters.
+     * The number of calls, points, and model information in the examples are used to illustrate field meanings. They do not represent the actual usage of the current account and do not constitute a commitment to model specifications or pricing. The actual usage and available model information are subject to the API response.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the number of invoked models, total number of calls, and consumed points by business type, statistical window, and model type.</p>
@@ -9942,23 +9972,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Prerequisites</h2>
-     * <p>The caller must have the RAM permissions for the corresponding API operation. The query scope is limited to the model usage of the specified business under the current account. The returned results depend on the generated statistical data and do not indicate that every call has been counted in real time.</p>
+     * <p>The calling identity must have the RAM permissions for the corresponding API operation. The query scope is limited to the model usage of the specified business under the current account. The returned results depend on the generated statistical data and do not represent that every call has been counted in real time.</p>
      * <h2>Time and missing data</h2>
-     * <p>Time boundaries uniformly use the Asia/Shanghai (UTC+8) time zone. For a custom range, set <code>StatDateType</code> to <code>1d</code> and specify both <code>StartDate</code> and <code>EndDate</code>. The range includes both the start and end dates, and the maximum span is 90 days. If statistical data is unavailable for some dates, only the existing data within the range is aggregated.
-     * If no statistical results are available for <code>24h</code> or <code>1d</code> queries without specified dates, the aggregation API operation returns zero values and the list API operation returns an empty list. <strong>This does not mean that no actual calls were made.</strong> If no statistical results are available for other windows or custom date ranges, metrics or lists may be empty. Do not treat empty values as zeros.</p>
+     * <p>Time boundaries are uniformly based on Asia/Shanghai (UTC+8). To use a custom range, set StatDateType to 1d and specify both StartDate and EndDate. The range includes both the start and end dates, with a maximum span of 90 days. If statistical data is unavailable for some dates, only the existing data within the range is aggregated.
+     * When no date is specified for 24h or 1d queries and no statistical results are available, the aggregation API returns zero values and the list API returns an empty list. <strong>This does not mean that no actual calls were made.</strong> For other windows or custom date ranges where no statistical results are available, metrics or lists may be empty. Do not treat empty values as zeros.</p>
      * <h2>Combined calls</h2>
-     * <p>You can call <a href="~~QueryModelUsageInfo~~">QueryModelUsageInfo</a> to obtain aggregated metrics and <a href="~~QueryModelUsageList~~">QueryModelUsageList</a> to obtain model details. Both API operations can be called independently. When comparing aggregated metrics with details, <code>BizType</code>, <code>StatDateType</code>, <code>StartDate</code>, <code>EndDate</code>, and <code>ModelType</code> must remain consistent. <code>Keyword</code> takes effect only for the detail API operation. Details filtered by keyword cannot be directly compared with unfiltered aggregated results.</p>
+     * <p>You can call <a href="~~QueryModelUsageInfo~~">QueryModelUsageInfo</a> to obtain aggregated metrics and <a href="~~QueryModelUsageList~~">QueryModelUsageList</a> to obtain model details. Both API operations can be called independently. When comparing aggregated and detailed data, BizType, StatDateType, StartDate, EndDate, and ModelType must remain consistent. Keyword applies only to the detail API. Details filtered by keyword cannot be directly compared with unfiltered aggregated results.</p>
      * <h2>Pagination and metrics</h2>
-     * <p>Start with <code>PageNumber=1</code> and increment the page number as needed, keeping other filter conditions and sorting methods consistent. The model list may include models that have historical usage but zero calls in the current query range. All ratio fields are returned as decimals between 0 and 1. An empty metric indicates that it is incalculable or the data is unavailable, which is not equivalent to zero.
-     * When new statistical data is continuously generated, the count and sorting of different pagination requests may change. When comparing totals with details, ensure that the query conditions are consistent and consider the data update time difference between the two requests.</p>
+     * <p>Start with PageNumber=1 and increment the page number as needed, keeping other filter conditions and sorting methods consistent. The model list may include models that have historical usage but zero calls within the current query range. All ratio fields are returned as decimals between 0 and 1. An empty metric indicates that it is incalculable or the data is unavailable, which is not equivalent to zero.
+     * When new statistical data is continuously generated, the count and sorting of different pagination requests may change. When comparing totals and details, ensure that the query conditions are consistent and consider the data update time difference between the two requests.</p>
      * <h2>Request example combinations</h2>
-     * <p>In the parameter table, <code>StatDateType=1d</code>, <code>StartDate=2026-08-01</code>, and <code>EndDate=2026-08-07</code> indicate querying the cumulative usage from August 1 to August 7, 2026 (inclusive), in the Asia/Shanghai (UTC+8) time zone. To query the last 7 days, change it to <code>StatDateType=1w</code> and omit both date parameters.
-     * The call counts, points, and model information in the examples are used to illustrate field meanings. They do not represent the actual usage of the current account and do not constitute a commitment to model specifications or pricing. The actual usage and available model information are subject to the API operation response. Custom date queries do not provide <code>TtftP95Ms</code>. The example details show only some fields. Unshown fields do not indicate that they always return empty values.</p>
+     * <p>In the parameter table, StatDateType=1d, StartDate=2026-08-01, and EndDate=2026-08-07 indicate querying the cumulative usage from August 1 to August 7, 2026 (inclusive), in the Asia/Shanghai (UTC+8) time zone. To query the last 7 days, change to StatDateType=1w and omit both date parameters.
+     * The call counts, points, and model information in the examples are used to illustrate field meanings. They do not represent the actual usage of the current account and do not constitute a commitment to model specifications or pricing. Actual usage and available model information are subject to the API response. Custom date queries do not provide TtftP95Ms. The example details show only some fields. Unshown fields do not necessarily return empty values.</p>
      * <h2>Missing statistical records for a single model</h2>
-     * <p>If a model in the model list has no active statistical records within the selected statistical range, <code>CallCount</code>, <code>FailureCount</code>, and <code>PointsConsumption</code> return 0. The input and output point ratios, success rate, cache hit rate, and time to first token (TTFT) latency are empty. In this case, you cannot determine that the model was not actually invoked based solely on the zero values.</p>
+     * <p>If a model already in the model list has no active statistical records within the selected statistical range, CallCount, FailureCount, and PointsConsumption return 0. The input and output point ratios, success rate, cache hit rate, and time to first token latency are empty. In this case, you cannot determine that the model has no actual invoke operations based solely on the zero values.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the invoke count, consumed points, success rate, and time to first token (TTFT) latency of each model, supporting paging by business type, statistical window, and model type.</p>
+     * <p>Queries the invoke count, consumed points, success rate, and time to first token latency for each model by using paging, filtered by business type, statistical window, and model type.</p>
      * 
      * @param request QueryModelUsageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10027,23 +10057,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Prerequisites</h2>
-     * <p>The caller must have the RAM permissions for the corresponding API operation. The query scope is limited to the model usage of the specified business under the current account. The returned results depend on the generated statistical data and do not indicate that every call has been counted in real time.</p>
+     * <p>The calling identity must have the RAM permissions for the corresponding API operation. The query scope is limited to the model usage of the specified business under the current account. The returned results depend on the generated statistical data and do not represent that every call has been counted in real time.</p>
      * <h2>Time and missing data</h2>
-     * <p>Time boundaries uniformly use the Asia/Shanghai (UTC+8) time zone. For a custom range, set <code>StatDateType</code> to <code>1d</code> and specify both <code>StartDate</code> and <code>EndDate</code>. The range includes both the start and end dates, and the maximum span is 90 days. If statistical data is unavailable for some dates, only the existing data within the range is aggregated.
-     * If no statistical results are available for <code>24h</code> or <code>1d</code> queries without specified dates, the aggregation API operation returns zero values and the list API operation returns an empty list. <strong>This does not mean that no actual calls were made.</strong> If no statistical results are available for other windows or custom date ranges, metrics or lists may be empty. Do not treat empty values as zeros.</p>
+     * <p>Time boundaries are uniformly based on Asia/Shanghai (UTC+8). To use a custom range, set StatDateType to 1d and specify both StartDate and EndDate. The range includes both the start and end dates, with a maximum span of 90 days. If statistical data is unavailable for some dates, only the existing data within the range is aggregated.
+     * When no date is specified for 24h or 1d queries and no statistical results are available, the aggregation API returns zero values and the list API returns an empty list. <strong>This does not mean that no actual calls were made.</strong> For other windows or custom date ranges where no statistical results are available, metrics or lists may be empty. Do not treat empty values as zeros.</p>
      * <h2>Combined calls</h2>
-     * <p>You can call <a href="~~QueryModelUsageInfo~~">QueryModelUsageInfo</a> to obtain aggregated metrics and <a href="~~QueryModelUsageList~~">QueryModelUsageList</a> to obtain model details. Both API operations can be called independently. When comparing aggregated metrics with details, <code>BizType</code>, <code>StatDateType</code>, <code>StartDate</code>, <code>EndDate</code>, and <code>ModelType</code> must remain consistent. <code>Keyword</code> takes effect only for the detail API operation. Details filtered by keyword cannot be directly compared with unfiltered aggregated results.</p>
+     * <p>You can call <a href="~~QueryModelUsageInfo~~">QueryModelUsageInfo</a> to obtain aggregated metrics and <a href="~~QueryModelUsageList~~">QueryModelUsageList</a> to obtain model details. Both API operations can be called independently. When comparing aggregated and detailed data, BizType, StatDateType, StartDate, EndDate, and ModelType must remain consistent. Keyword applies only to the detail API. Details filtered by keyword cannot be directly compared with unfiltered aggregated results.</p>
      * <h2>Pagination and metrics</h2>
-     * <p>Start with <code>PageNumber=1</code> and increment the page number as needed, keeping other filter conditions and sorting methods consistent. The model list may include models that have historical usage but zero calls in the current query range. All ratio fields are returned as decimals between 0 and 1. An empty metric indicates that it is incalculable or the data is unavailable, which is not equivalent to zero.
-     * When new statistical data is continuously generated, the count and sorting of different pagination requests may change. When comparing totals with details, ensure that the query conditions are consistent and consider the data update time difference between the two requests.</p>
+     * <p>Start with PageNumber=1 and increment the page number as needed, keeping other filter conditions and sorting methods consistent. The model list may include models that have historical usage but zero calls within the current query range. All ratio fields are returned as decimals between 0 and 1. An empty metric indicates that it is incalculable or the data is unavailable, which is not equivalent to zero.
+     * When new statistical data is continuously generated, the count and sorting of different pagination requests may change. When comparing totals and details, ensure that the query conditions are consistent and consider the data update time difference between the two requests.</p>
      * <h2>Request example combinations</h2>
-     * <p>In the parameter table, <code>StatDateType=1d</code>, <code>StartDate=2026-08-01</code>, and <code>EndDate=2026-08-07</code> indicate querying the cumulative usage from August 1 to August 7, 2026 (inclusive), in the Asia/Shanghai (UTC+8) time zone. To query the last 7 days, change it to <code>StatDateType=1w</code> and omit both date parameters.
-     * The call counts, points, and model information in the examples are used to illustrate field meanings. They do not represent the actual usage of the current account and do not constitute a commitment to model specifications or pricing. The actual usage and available model information are subject to the API operation response. Custom date queries do not provide <code>TtftP95Ms</code>. The example details show only some fields. Unshown fields do not indicate that they always return empty values.</p>
+     * <p>In the parameter table, StatDateType=1d, StartDate=2026-08-01, and EndDate=2026-08-07 indicate querying the cumulative usage from August 1 to August 7, 2026 (inclusive), in the Asia/Shanghai (UTC+8) time zone. To query the last 7 days, change to StatDateType=1w and omit both date parameters.
+     * The call counts, points, and model information in the examples are used to illustrate field meanings. They do not represent the actual usage of the current account and do not constitute a commitment to model specifications or pricing. Actual usage and available model information are subject to the API response. Custom date queries do not provide TtftP95Ms. The example details show only some fields. Unshown fields do not necessarily return empty values.</p>
      * <h2>Missing statistical records for a single model</h2>
-     * <p>If a model in the model list has no active statistical records within the selected statistical range, <code>CallCount</code>, <code>FailureCount</code>, and <code>PointsConsumption</code> return 0. The input and output point ratios, success rate, cache hit rate, and time to first token (TTFT) latency are empty. In this case, you cannot determine that the model was not actually invoked based solely on the zero values.</p>
+     * <p>If a model already in the model list has no active statistical records within the selected statistical range, CallCount, FailureCount, and PointsConsumption return 0. The input and output point ratios, success rate, cache hit rate, and time to first token latency are empty. In this case, you cannot determine that the model has no actual invoke operations based solely on the zero values.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the invoke count, consumed points, success rate, and time to first token (TTFT) latency of each model, supporting paging by business type, statistical window, and model type.</p>
+     * <p>Queries the invoke count, consumed points, success rate, and time to first token latency for each model by using paging, filtered by business type, statistical window, and model type.</p>
      * 
      * @param request QueryModelUsageListRequest
      * @return QueryModelUsageListResponse

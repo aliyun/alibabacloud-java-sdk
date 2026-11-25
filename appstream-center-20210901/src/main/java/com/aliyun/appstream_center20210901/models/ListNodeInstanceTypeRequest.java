@@ -14,6 +14,13 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("BizType")
+    public Integer bizType;
+
+    /**
      * <p>The billing type.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +57,13 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     public Integer gpuMemory;
 
     /**
+     * <strong>example:</strong>
+     * <p>RTX 5880</p>
+     */
+    @NameInMap("GpuSpec")
+    public String gpuSpec;
+
+    /**
      * <p>The current specification of the instance for specification change.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +89,13 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
      */
     @NameInMap("Memory")
     public Integer memory;
+
+    /**
+     * <strong>example:</strong>
+     * <p>demo-model</p>
+     */
+    @NameInMap("ModelId")
+    public String modelId;
 
     /**
      * <p>The resource specification type to query. If this parameter is not specified, all specification types are returned.</p>
@@ -173,6 +194,14 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
         return this.bizRegionId;
     }
 
+    public ListNodeInstanceTypeRequest setBizType(Integer bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public Integer getBizType() {
+        return this.bizType;
+    }
+
     public ListNodeInstanceTypeRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
@@ -205,6 +234,14 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
         return this.gpuMemory;
     }
 
+    public ListNodeInstanceTypeRequest setGpuSpec(String gpuSpec) {
+        this.gpuSpec = gpuSpec;
+        return this;
+    }
+    public String getGpuSpec() {
+        return this.gpuSpec;
+    }
+
     public ListNodeInstanceTypeRequest setInstanceTypeForModify(String instanceTypeForModify) {
         this.instanceTypeForModify = instanceTypeForModify;
         return this;
@@ -227,6 +264,14 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public ListNodeInstanceTypeRequest setModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public String getModelId() {
+        return this.modelId;
     }
 
     public ListNodeInstanceTypeRequest setNodeInstanceType(String nodeInstanceType) {

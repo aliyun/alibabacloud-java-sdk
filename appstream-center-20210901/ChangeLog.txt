@@ -1,3 +1,19 @@
+2026-11-25 Version: 4.17.1
+- Update API CreateWuyingServer: add request parameters ModelConfig.
+- Update API CreateWuyingServer: add request parameters ProductType.
+- Update API DescribeWuyingServer: add response parameters Body.Data.ServerInstanceTypeInfo.
+- Update API DescribeWuyingServer: add response parameters Body.Data.ServerModelInfo.
+- Update API ListNodeInstanceType: add request parameters BizType.
+- Update API ListNodeInstanceType: add request parameters GpuSpec.
+- Update API ListNodeInstanceType: add request parameters ModelId.
+- Update API ListNodeInstanceType: add response parameters Body.NodeInstanceTypeModels.$.EcsGpuMemory.
+- Update API ListNodeInstanceType: add response parameters Body.NodeInstanceTypeModels.$.GpuSpec.
+- Update API ListNodeInstanceType: add response parameters Body.NodeInstanceTypeModels.$.RequestId.
+- Update API ListNodeInstanceType: add response parameters Body.NodeInstanceTypeModels.$.WuyingServerModelMetaInfo.
+- Update API ListWuyingServer: add request parameters ModelName.
+- Update API ListWuyingServer: add response parameters Body.WuyingServerList.$.ServerModelInfo.
+
+
 2026-11-20 Version: 4.17.0
 - Support API QueryModelUsageInfo.
 - Support API QueryModelUsageList.
