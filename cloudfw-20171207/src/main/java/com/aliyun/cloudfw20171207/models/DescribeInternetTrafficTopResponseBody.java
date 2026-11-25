@@ -14,7 +14,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
     public Integer dataCount;
 
     /**
-     * <p>The list of traffic data.</p>
+     * <p>The traffic data list.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetTrafficTopResponseBodyDataList> dataList;
@@ -29,7 +29,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
     public String dataType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
@@ -103,7 +103,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         public Boolean isSubscribed;
 
         /**
-         * <p>The list of labels.</p>
+         * <p>The label list.</p>
          */
         @NameInMap("LabelList")
         public java.util.List<String> labelList;

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateTrFirewallV2Request extends TeaModel {
     /**
-     * <p>The ID of the CEN instance. Create a CEN instance in the CEN console first and make sure that an Enterprise Edition transit router is created.</p>
+     * <p>The ID of the CEN instance. You must first create a CEN instance in the CEN console and ensure that an Enterprise Edition transit router is created.</p>
      * <blockquote>
-     * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</p>
+     * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters (400).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,11 +46,11 @@ public class CreateTrFirewallV2Request extends TeaModel {
     /**
      * <p>The deployment mode of the firewall service. Valid values:</p>
      * <ul>
-     * <li><strong>PrimaryStandby</strong>: primary/secondary mode</li>
-     * <li><strong>MultiPrimary</strong>: active-active mode</li>
+     * <li><strong>PrimaryStandby</strong>: active/standby mode.</li>
+     * <li><strong>MultiPrimary</strong>: active-active mode.</li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If the value is invalid, ErrorFwServiceMode (-360437) is returned. The MultiPrimary mode does not support specifying zones.</p>
+     * <p>Note: If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If the value is invalid, the API returns ErrorFwServiceMode (-360437). The MultiPrimary mode does not support specifying zones.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public java.util.List<String> firewallServiceZones;
 
     /**
-     * <p>The CIDR block of the subnet that stores the firewall elastic network interface (ENI) in the firewall VPC in automatic mode.</p>
+     * <p>The CIDR block of the subnet for the firewall elastic network interface (ENI) in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.1.0/24</p>
@@ -103,10 +103,10 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String firewallVswitchId;
 
     /**
-     * <p>The language of the response message. Valid values:</p>
+     * <p>The language of the message. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     /**
      * <p>The region ID of the Enterprise Edition transit router.</p>
      * <blockquote>
-     * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</p>
+     * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters (400).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -128,9 +128,15 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The routing mode. Valid values: managed (automatic mode), manual (manual mode for custom VPCs), and semi-managed (manual mode for managed VPCs).</p>
+     * <p>The routing mode. Valid values:</p>
      * <ul>
-     * <li><p>In managed mode, you only need to specify FirewallVpcCidr. The FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr parameters are deprecated (deprecated:true) and do not need to be specified.</p>
+     * <li><p>managed: automatic mode.</p>
+     * </li>
+     * <li><p>manual: manual mode for custom VPCs.</p>
+     * </li>
+     * <li><p>semi-managed: manual mode for managed VPCs.</p>
+     * </li>
+     * <li><p>In managed mode, you only need to specify FirewallVpcCidr. The FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr parameters are deprecated and do not need to be specified.</p>
      * </li>
      * <li><p>In manual mode, you must specify FirewallVpcId, FirewallVswitchId, TrAttachmentSlaveZone, and TrAttachmentMasterZone.</p>
      * </li>
@@ -138,7 +144,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</p>
+     * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters (400).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -148,7 +154,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String routeMode;
 
     /**
-     * <p>The primary CIDR block of the subnet used to connect to the TR in the firewall VPC in automatic mode.</p>
+     * <p>The primary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.3.0/24</p>
@@ -167,7 +173,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String trAttachmentMasterZone;
 
     /**
-     * <p>The secondary CIDR block of the subnet used to connect to the TR in the firewall VPC in automatic mode.</p>
+     * <p>The secondary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.16/28</p>
@@ -186,7 +192,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     public String trAttachmentSlaveZone;
 
     /**
-     * <p>The list of zone IDs used for the TR connection.</p>
+     * <p>The list of zone IDs used for the transit router connection.</p>
      */
     @NameInMap("TrAttachmentZones")
     public java.util.List<String> trAttachmentZones;
@@ -194,7 +200,7 @@ public class CreateTrFirewallV2Request extends TeaModel {
     /**
      * <p>The ID of the Enterprise Edition transit router instance. The transit router must belong to the CEN instance specified by CenId.</p>
      * <blockquote>
-     * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</p>
+     * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters (400).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

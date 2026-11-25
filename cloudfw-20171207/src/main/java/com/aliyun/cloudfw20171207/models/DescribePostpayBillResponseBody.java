@@ -23,7 +23,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
     public Float aggregateNatTraffic;
 
     /**
-     * <p>The aggregated sensitive data detection traffic. Unit: GB.</p>
+     * <p>The aggregated sensitive data leak detection traffic. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
     public Float aggregateVpcTraffic;
 
     /**
-     * <p>The list of bills.</p>
+     * <p>The bill list.</p>
      */
     @NameInMap("BillList")
     public java.util.List<DescribePostpayBillResponseBodyBillList> billList;
@@ -144,7 +144,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
 
     public static class DescribePostpayBillResponseBodyBillList extends TeaModel {
         /**
-         * <p>The end time. The time is a UNIX timestamp accurate to seconds, which represents an exact hour or day.</p>
+         * <p>The end time. The time is a UNIX timestamp in seconds and represents an exact hour or day.</p>
          * 
          * <strong>example:</strong>
          * <p>1733710015</p>
@@ -171,7 +171,16 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Float internetTraffic;
 
         /**
-         * <p>Indicates whether the fee is reduced. A value of 0 indicates that the fee is not reduced. A value greater than 0 indicates that the fee is reduced. If the fee is reduced, no bill is generated.</p>
+         * <p>Specifies whether the bill for the specified date is calculated based on the Agentic billing method. A value of true indicates the Agentic billing method. A value of false indicates the standard billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("IsAgenticBilling")
+        public Boolean isAgenticBilling;
+
+        /**
+         * <p>Specifies whether the fee is reduced or waived. A value of 0 indicates that the fee is not reduced or waived. A value greater than 0 indicates that the fee is reduced or waived, and no bill is generated.</p>
          * <blockquote>
          * <p>This parameter is valid only when you query hourly data.</p>
          * </blockquote>
@@ -183,7 +192,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Integer isDerated;
 
         /**
-         * <p>The usage duration of Simple Log Service. Unit: TB×h.</p>
+         * <p>The usage duration of Simple Log Service. Unit: TB × hours.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -219,7 +228,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Long sdl;
 
         /**
-         * <p>The sensitive data detection traffic. Unit: GB.</p>
+         * <p>The sensitive data leak detection traffic. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +237,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Float sdlTraffic;
 
         /**
-         * <p>The start time. The time is a UNIX timestamp accurate to seconds, which represents an exact hour or day.</p>
+         * <p>The start time. The time is a UNIX timestamp in seconds and represents an exact hour or day.</p>
          * 
          * <strong>example:</strong>
          * <p>1710206070000</p>
@@ -290,6 +299,14 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         }
         public Float getInternetTraffic() {
             return this.internetTraffic;
+        }
+
+        public DescribePostpayBillResponseBodyBillList setIsAgenticBilling(Boolean isAgenticBilling) {
+            this.isAgenticBilling = isAgenticBilling;
+            return this;
+        }
+        public Boolean getIsAgenticBilling() {
+            return this.isAgenticBilling;
         }
 
         public DescribePostpayBillResponseBodyBillList setIsDerated(Integer isDerated) {

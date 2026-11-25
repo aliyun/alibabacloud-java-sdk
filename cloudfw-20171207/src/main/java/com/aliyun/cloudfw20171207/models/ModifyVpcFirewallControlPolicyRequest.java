@@ -317,10 +317,10 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>The instance ID of the virtual private cloud (VPC) firewalls at the border. You can invoke the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain the ID.</p>
      * <ul>
      * <li><p>When the virtual private cloud (VPC) firewalls protect a CEN instance, set this parameter to the instance ID of the CEN instance.</p>
-     * <p>Example: cen-ervw0g12b5jbw*\<em>\</em>\*</p>
+     * <p>Example: cen-ervw0g12b5jbw****</p>
      * </li>
      * <li><p>When the virtual private cloud (VPC) firewalls protect an Express Connect circuit, set this parameter to the instance ID of the virtual private cloud (VPC) firewalls.</p>
-     * <p>Example: vfw-a42bbb7b887148c9*\<em>\</em>\*</p>
+     * <p>Example: vfw-a42bbb7b887148c9****</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

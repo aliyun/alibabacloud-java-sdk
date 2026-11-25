@@ -20,7 +20,7 @@ public class DeleteVpcFirewallConfigureRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of a member account of the current Alibaba Cloud account.</p>
+     * <p>The UID of the member accounts of the current Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -29,7 +29,7 @@ public class DeleteVpcFirewallConfigureRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The list of instance IDs of the virtual private cloud (VPC) firewalls to delete.</p>
+     * <p>The instance ID list of the virtual private cloud (VPC) firewalls at the border to be deleted.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VpcFirewallIdList")

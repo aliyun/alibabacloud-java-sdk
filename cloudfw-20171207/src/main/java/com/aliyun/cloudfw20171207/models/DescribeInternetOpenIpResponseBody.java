@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetOpenIpResponseBody extends TeaModel {
     /**
-     * <p>The data list.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetOpenIpResponseBodyDataList> dataList;
 
     /**
-     * <p>The paging information for the paged query.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public DescribeInternetOpenIpResponseBodyPageInfo pageInfo;
@@ -56,16 +56,16 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
 
     public static class DescribeInternetOpenIpResponseBodyDataList extends TeaModel {
         /**
-         * <p>The reason why no intelligent policies recommendation is available. Valid values:</p>
+         * <p>The reason why no intelligent policy is recommended. Valid values:</p>
          * <ul>
-         * <li>No intelligent policies recommendation is available.</li>
-         * <li>This feature is currently available only to selected users.</li>
-         * <li>The policy configuration has been modified. No intelligent policies recommendation is available.</li>
-         * <li>Intelligent policies have been configured. No new intelligent policies recommendation is available.</li>
+         * <li>No intelligent policy is currently recommended.</li>
+         * <li>This feature is currently available only to specific users.</li>
+         * <li>The policy configuration has been modified, and no intelligent policy is currently recommended.</li>
+         * <li>Intelligent policy has been configured, and no new intelligent policy is currently recommended.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>当前无智能策略推荐</p>
+         * <p>No intelligent policy is currently recommended</p>
          */
         @NameInMap("AclRecommendDetail")
         public String aclRecommendDetail;
@@ -107,10 +107,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Integer detailNum;
 
         /**
-         * <p>Indicates whether a recommended ACL exists. Valid values:</p>
+         * <p>Specifies whether an ACL is recommended. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: A recommended ACL exists.</li>
-         * <li><strong>false</strong>: No recommended ACL exists.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Boolean hasAclRecommend;
 
         /**
-         * <p>The inbound network throughput (total bytes sent). Unit: bytes.</p>
+         * <p>The inbound network throughput. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>235</p>
@@ -129,7 +129,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
-         * <p>The UID of the Cloud Firewall member account. For more information about member accounts, see multi-account management.</p>
+         * <p>The UID of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>14151892****7022</p>
@@ -138,7 +138,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Long memberUid;
 
         /**
-         * <p>The outbound network throughput (total bytes sent). Unit: bytes.</p>
+         * <p>The outbound network throughput. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1123</p>
@@ -147,7 +147,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
-         * <p>The port list.</p>
+         * <p>The list of ports.</p>
          */
         @NameInMap("PortList")
         public java.util.List<String> portList;
@@ -173,10 +173,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>3</strong>: high risk</li>
-         * <li><strong>2</strong>: medium risk</li>
-         * <li><strong>1</strong>: low risk</li>
-         * <li><strong>0</strong>: no risk.</li>
+         * <li><strong>3</strong>: High risk.</li>
+         * <li><strong>2</strong>: Medium risk.</li>
+         * <li><strong>1</strong>: Low risk.</li>
+         * <li><strong>0</strong>: No risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,16 +186,16 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>The risk reason.</p>
+         * <p>The reason for the risk.</p>
          * 
          * <strong>example:</strong>
-         * <p>历史流量均为黑流量</p>
+         * <p>All historical traffic is malicious traffic</p>
          */
         @NameInMap("RiskReason")
         public String riskReason;
 
         /**
-         * <p>The application list.</p>
+         * <p>The list of applications.</p>
          */
         @NameInMap("ServiceNameList")
         public java.util.List<String> serviceNameList;
@@ -219,7 +219,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Long totalBytes;
 
         /**
-         * <p>The total reply traffic over the last 7 days.</p>
+         * <p>The total response traffic in the last 7 days.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -228,7 +228,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Long totalReplyBytes;
 
         /**
-         * <p>For specific traffic information, refer to the TotalBytes field.</p>
+         * <p>For specific traffic information, see the TotalBytes field.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -237,7 +237,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public String trafficPercent1Day;
 
         /**
-         * <p>For specific traffic information, refer to the TotalBytes field.</p>
+         * <p>For specific traffic information, see the TotalBytes field.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -246,7 +246,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public String trafficPercent30Day;
 
         /**
-         * <p>For specific traffic information, refer to the TotalBytes field.</p>
+         * <p>For specific traffic information, see the TotalBytes field.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -255,7 +255,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public String trafficPercent7Day;
 
         /**
-         * <p>The reason why the protocol could not be identified when the identified protocol is Unknown.</p>
+         * <p>The reason why the protocol is not identified when the recognized protocol is Unknown.</p>
          */
         @NameInMap("UnknownReason")
         public java.util.List<String> unknownReason;
@@ -445,7 +445,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
 
     public static class DescribeInternetOpenIpResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The current page number in the paged query.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -454,7 +454,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries per page in the paged query.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

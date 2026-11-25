@@ -7,9 +7,9 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The action that Cloud Firewall performs on traffic in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>accept</strong>: allows the traffic</li>
-     * <li><strong>drop</strong>: denies the traffic</li>
-     * <li><strong>log</strong>: monitors the traffic</li>
+     * <li><strong>accept</strong>: Allows the traffic.</li>
+     * <li><strong>drop</strong>: Denies the traffic.</li>
+     * <li><strong>log</strong>: Monitors the traffic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -39,19 +39,15 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The destination port in the access control policy. Valid values:</p>
      * <ul>
-     * <li>If the protocol is ICMP, leave this parameter empty.</li>
-     * </ul>
-     * <blockquote>
-     * <p>Access control based on destination ports is not supported when the protocol is ICMP.</p>
+     * <li>If the protocol is ICMP, leave this parameter empty.<blockquote>
+     * <p>When the protocol is ICMP, access control based on the destination port is not supported.</p>
      * </blockquote>
-     * <ul>
-     * <li>If the protocol is TCP, UDP, or ANY and the destination Protocol Type (DestPortType) is group, leave this parameter empty.</li>
-     * </ul>
-     * <blockquote>
-     * <p>If you set DestPortType to group, you do not need to specify a destination port. All ports managed by this policy are included in the destination port address book.</p>
+     * </li>
+     * <li>If the protocol is TCP, UDP, or ANY, and the destination Protocol Type (DestPortType) is group, leave this parameter empty.<blockquote>
+     * <p>When the destination Protocol Type is set to group (destination port address book), you do not need to specify a destination port number. All ports managed by this access control policy are included in the destination port address book.</p>
      * </blockquote>
-     * <ul>
-     * <li>If the protocol is TCP, UDP, or ANY and the destination Protocol Type (DestPortType) is port, set this parameter to the destination port number.</li>
+     * </li>
+     * <li>If the protocol is TCP, UDP, or ANY, and the destination Protocol Type (DestPortType) is port, set this parameter to the destination port number.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +59,7 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The name of the destination port address book in the access control policy.</p>
      * <blockquote>
-     * <p>If you set DestPortType to group, you must specify the name of the destination port address book.</p>
+     * <p>If DestPortType is set to group, you must specify the name of the destination port address book.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,8 +71,8 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The type of the destination port in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>port</strong>: a port</li>
-     * <li><strong>group</strong>: a port address book</li>
+     * <li><strong>port</strong>: port.</li>
+     * <li><strong>group</strong>: port address book.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,18 +84,10 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The destination address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><p>If DestinationType is set to net, set Destination to the destination CIDR block.</p>
-     * <p>Example: 1.2.XX.XX/24</p>
-     * </li>
-     * <li><p>If DestinationType is set to group, set Destination to the name of the destination address book.</p>
-     * <p>Example: db_group</p>
-     * </li>
-     * <li><p>If DestinationType is set to domain, set Destination to the destination domain name.</p>
-     * <p>Example: *.aliyuncs.com</p>
-     * </li>
-     * <li><p>If DestinationType is set to location, set Destination to the destination region.</p>
-     * <p>Example: [&quot;BJ11&quot;, &quot;ZB&quot;\]</p>
-     * </li>
+     * <li>If DestinationType is set to net, Destination is the destination CIDR block. Example: 1.2.XX.XX/24.</li>
+     * <li>If DestinationType is set to group, Destination is the name of the destination address book. Example: db_group.</li>
+     * <li>If DestinationType is set to domain, Destination is the destination domain name. Example: *.aliyuncs.com.</li>
+     * <li>If DestinationType is set to location, Destination is the destination region. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -112,9 +100,9 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The type of the destination address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>net</strong>: a destination CIDR block</li>
-     * <li><strong>group</strong>: a destination address book</li>
-     * <li><strong>domain</strong>: a destination domain name</li>
+     * <li><strong>net</strong>: destination CIDR block.</li>
+     * <li><strong>group</strong>: destination address book.</li>
+     * <li><strong>domain</strong>: destination domain name.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -127,7 +115,7 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The traffic direction of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>out</strong>: outbound traffic</li>
+     * <li><strong>out</strong>: outbound traffic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -138,15 +126,15 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The domain name parse method of the access control policy. Valid values:</p>
+     * <p>The domain name parse pattern of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: FQDN-based parse</li>
-     * <li><strong>1</strong>: DNS-based dynamic parse</li>
-     * <li><strong>2</strong>: FQDN-based and DNS-based dynamic parse</li>
-     * </ul>
-     * <blockquote>
-     * <p>If the domain name identification mode includes FQDN, you can only configure the TCP protocol. The supported applications are HTTP, HTTPS, SMTP, SMTPS, SSL, IMAPS, and POPS.</p>
+     * <li><strong>0</strong>: FQDN-based resolution.</li>
+     * <li><strong>1</strong>: DNS-based dynamic resolution.</li>
+     * <li><strong>2</strong>: FQDN- and DNS-based dynamic resolution.<blockquote>
+     * <p>If the domain name identification mode includes FQDN, only the TCP protocol is allowed. The application can be HTTP, HTTPS, SMTP, SMTPS, SSL, IMAPS, or POPS.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -155,9 +143,9 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     public Integer domainResolveType;
 
     /**
-     * <p>The end time for the Policy Validity Period of the access control policy. The value is in the format of a UNIX timestamp in seconds. The time must be on the hour or half hour, and must be at least 30 minutes later than the start time.</p>
+     * <p>The end time of the Policy Validity Period of the access control policy. The value is in the UNIX timestamp format in seconds. The time must be on the hour or half-hour, and must be at least 30 minutes later than the start time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent, leave EndTime empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must have a value, and you must specify the Settings for the end time.</p>
+     * <p>If RepeatType is set to Permanent, EndTime is empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified, and you must configure the Settings for the end time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -169,7 +157,7 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The IP address version. Valid values:</p>
      * <ul>
-     * <li><strong>4</strong>: IPv4 (default)</li>
+     * <li><strong>4</strong>: IPv4 (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -181,8 +169,8 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese (default).</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -214,14 +202,14 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The protocol type of the traffic in the access control policy. Valid values:</p>
      * <ul>
-     * <li>ANY: all protocols</li>
+     * <li>ANY: all protocols.</li>
      * <li>TCP</li>
      * <li>UDP</li>
-     * <li>ICMP</li>
-     * </ul>
-     * <blockquote>
-     * <p>If the destination address is a threat intelligence address book or a cloud service address book of the domain name type, you can only configure the TCP protocol. The supported applications are HTTP, HTTPS, SMTP, SMTPS, and SSL.</p>
+     * <li>ICMP<blockquote>
+     * <p>If the destination address is a threat intelligence address book or a cloud service address book of the domain name type, only the TCP protocol is allowed. The application can be HTTP, HTTPS, SMTP, SMTPS, or SSL.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -233,8 +221,8 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the access control policy. By default, the policy is enabled after it is created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the access control policy</li>
-     * <li><strong>false</strong>: does not enable the access control policy</li>
+     * <li><strong>true</strong>: Enables the access control policy.</li>
+     * <li><strong>false</strong>: Does not enable the access control policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -246,16 +234,13 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The set of recurrence days for the Policy Validity Period of the access control policy.</p>
      * <ul>
-     * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, leave RepeatDays empty.
-     * Example: []</li>
-     * <li>If RepeatType is set to Weekly, RepeatDays cannot be empty.
-     * Example: [0, 6]<blockquote>
-     * <p>When the RepeatType Settings are Weekly, the values in RepeatDays cannot be duplicate.</p>
+     * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty set. Example: [].</li>
+     * <li>If RepeatType is set to Weekly, RepeatDays cannot be empty. Example: [0, 6].<blockquote>
+     * <p>When RepeatType is set to Weekly, the values in RepeatDays cannot be duplicated.</p>
      * </blockquote>
      * </li>
-     * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays cannot be empty.
-     * Example: [1, 31]<blockquote>
-     * <p>When the RepeatType Settings are Monthly, the values in RepeatDays cannot be duplicate.</p>
+     * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays cannot be empty. Example: [1, 31].<blockquote>
+     * <p>When RepeatType is set to Monthly, the values in RepeatDays cannot be duplicated.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -264,10 +249,10 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     public java.util.List<Long> repeatDays;
 
     /**
-     * <p>The recurrence end time for the Policy Validity Period of the access control policy. Example: 23:30. The time must be on the hour or half hour, and must be at least 30 minutes later than the recurrence start time.</p>
+     * <p>The recurrence end time of the Policy Validity Period of the access control policy. Example: 23:30. The time must be on the hour or half-hour, and must be at least 30 minutes later than the recurrence start time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent or None, leave RepeatEndTime empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must have a value, and you must specify the Settings for the recurrence end time.
-     * The time format is HH:mm (24-hour clock), such as 08:00 and 23:30.</p>
+     * <p>If RepeatType is set to Permanent or None, RepeatEndTime is empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must be specified, and you must configure the Settings for the recurrence end time.
+     * The time format is HH:mm (24-hour clock). Example: 08:00 or 23:30.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -277,10 +262,10 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     public String repeatEndTime;
 
     /**
-     * <p>The recurrence start time for the Policy Validity Period of the access control policy. Example: 08:00. The time must be on the hour or half hour, and must be at least 30 minutes earlier than the recurrence end time.</p>
+     * <p>The recurrence start time of the Policy Validity Period of the access control policy. Example: 08:00. The time must be on the hour or half-hour, and must be at least 30 minutes earlier than the recurrence end time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent or None, leave RepeatStartTime empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime must have a value, and you must specify the Settings for the recurrence start time.
-     * The time format is HH:mm (24-hour clock), such as 08:00 and 23:30.</p>
+     * <p>If RepeatType is set to Permanent or None, RepeatStartTime is empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime must be specified, and you must configure the Settings for the recurrence start time.
+     * The time format is HH:mm (24-hour clock). Example: 08:00 or 23:30.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -290,13 +275,13 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     public String repeatStartTime;
 
     /**
-     * <p>The recurrence type of the Policy Validity Period for the access control policy. Valid values:</p>
+     * <p>The recurrence type of the Policy Validity Period of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>Permanent</strong>: always (default)</li>
-     * <li><strong>None</strong>: a specific single time</li>
-     * <li><strong>Daily</strong>: every day</li>
-     * <li><strong>Weekly</strong>: every week</li>
-     * <li><strong>Monthly</strong>: every month</li>
+     * <li><strong>Permanent</strong>: always (default).</li>
+     * <li><strong>None</strong>: specified single time.</li>
+     * <li><strong>Daily</strong>: every day.</li>
+     * <li><strong>Weekly</strong>: every week.</li>
+     * <li><strong>Monthly</strong>: every month.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -308,12 +293,8 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The source address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><p>If <strong>SourceType</strong> is set to <code>net</code>, set Source to the source CIDR block.</p>
-     * <p>Example: 10.2.4.0/24</p>
-     * </li>
-     * <li><p>If <strong>SourceType</strong> is set to <code>group</code>, set Source to the name of the source address book.</p>
-     * <p>Example: db_group</p>
-     * </li>
+     * <li>If <strong>SourceType</strong> is set to <code>net</code>, Source is the source CIDR block. Example: 10.2.4.0/24.</li>
+     * <li>If <strong>SourceType</strong> is set to <code>group</code>, Source is the name of the source address book. Example: db_group.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -326,8 +307,8 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The type of the source address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>net</strong>: a source CIDR block</li>
-     * <li><strong>group</strong>: a source address book</li>
+     * <li><strong>net</strong>: source CIDR block.</li>
+     * <li><strong>group</strong>: source address book.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -338,9 +319,9 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The start time for the Policy Validity Period of the access control policy. The value is in the format of a UNIX timestamp in seconds. The time must be on the hour or half hour, and must be at least 30 minutes earlier than the end time.</p>
+     * <p>The start time of the Policy Validity Period of the access control policy. The value is in the UNIX timestamp format in seconds. The time must be on the hour or half-hour, and must be at least 30 minutes earlier than the end time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent, leave StartTime empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must have a value, and you must specify the Settings for the start time.</p>
+     * <p>If RepeatType is set to Permanent, StartTime is empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must be specified, and you must configure the Settings for the start time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

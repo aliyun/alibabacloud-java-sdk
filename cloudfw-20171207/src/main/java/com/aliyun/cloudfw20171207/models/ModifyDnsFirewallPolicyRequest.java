@@ -43,7 +43,7 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
      * <li>If <strong>DestinationType</strong> is set to net, <strong>Destination</strong> specifies the destination CIDR block. Example: 1.2.3.4/24.</li>
      * <li>If <strong>DestinationType</strong> is set to group, <strong>Destination</strong> specifies the name of the destination address book. Example: db_group.</li>
      * <li>If <strong>DestinationType</strong> is set to domain, <strong>Destination</strong> specifies the destination domain name. Example: *.aliyuncs.com.</li>
-     * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> specifies the destination area. For the positional encoding of specific areas, see the following section. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
+     * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> specifies the destination area (for specific area positional encoding, see below). Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,9 +55,9 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     /**
      * <p>The type of the destination address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>net</strong>: Destination CIDR block.</li>
-     * <li><strong>group</strong>: Destination address book.</li>
-     * <li><strong>domain</strong>: Destination domain name.</li>
+     * <li><strong>net</strong>: a destination CIDR block.</li>
+     * <li><strong>group</strong>: a destination address book.</li>
+     * <li><strong>domain</strong>: a destination domain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,8 +69,8 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,10 +89,10 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The status of the access control policy. By default, the policy is enabled after it is created. Valid values:</p>
+     * <p>Specifies whether the access control policy is enabled. By default, the policy is enabled after it is created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enables the access control policy.</li>
-     * <li><strong>false</strong>: Disables the access control policy.</li>
+     * <li><strong>true</strong>: enables the access control policy.</li>
+     * <li><strong>false</strong>: disables the access control policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,19 +105,12 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The source IP address of the requester.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>192.0.XX.XX</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    /**
      * <p>The type of the source address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>net</strong>: Source CIDR block.</li>
-     * <li><strong>group</strong>: Source address book.</li>
+     * <li><p><strong>net</strong>: a source CIDR block.</p>
+     * </li>
+     * <li><p><strong>group</strong>: a source address book.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -201,14 +194,6 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
-    }
-
-    public ModifyDnsFirewallPolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ModifyDnsFirewallPolicyRequest setSourceType(String sourceType) {

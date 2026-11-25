@@ -131,7 +131,16 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float internetTrafficBandwidth;
 
         /**
-         * <p>The monthly free quota for sensitive data detection. Unit: GB.</p>
+         * <p>Specifies whether Agentic billing is used on the date to which the bill belongs. A value of true indicates that Agentic billing is used. A value of false indicates that standard billing is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("IsAgenticBilling")
+        public Boolean isAgenticBilling;
+
+        /**
+         * <p>The monthly free quota for sensitive data detection traffic. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -149,7 +158,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float natTrafficBandwidth;
 
         /**
-         * <p>The timestamp when the total bandwidth (Internet, VPC, and NAT) reaches the maximum value on the day.</p>
+         * <p>The timestamp when the total bandwidth (Internet + VPC + NAT) reaches the maximum value on the day.</p>
          * 
          * <strong>example:</strong>
          * <p>1761588300</p>
@@ -251,6 +260,14 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         }
         public Float getInternetTrafficBandwidth() {
             return this.internetTrafficBandwidth;
+        }
+
+        public DescribePrepayBillTotalResponseBodyBillList setIsAgenticBilling(Boolean isAgenticBilling) {
+            this.isAgenticBilling = isAgenticBilling;
+            return this;
+        }
+        public Boolean getIsAgenticBilling() {
+            return this.isAgenticBilling;
         }
 
         public DescribePrepayBillTotalResponseBodyBillList setMonthlyRemainingFreeTraffic(Float monthlyRemainingFreeTraffic) {

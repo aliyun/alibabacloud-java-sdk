@@ -60,10 +60,10 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
      * <p>Valid values:</p>
      * <ul>
      * <li><p>If the VPC firewall protects a Cloud Enterprise Network (CEN) instance, the ID of the policy group is the ID of the CEN instance.</p>
-     * <p>Example: cen-ervw0g12b5jbw\<em>\</em>\<em>\</em></p>
+     * <p>Example: cen-ervw0g12b5jbw****</p>
      * </li>
      * <li><p>If the VPC firewall protects an Express Connect circuit, the ID of the policy group is the ID of the VPC firewall instance.</p>
-     * <p>Example: vfw-a42bbb7b887148c9\<em>\</em>\<em>\</em></p>
+     * <p>Example: vfw-a42bbb7b887148c9****</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

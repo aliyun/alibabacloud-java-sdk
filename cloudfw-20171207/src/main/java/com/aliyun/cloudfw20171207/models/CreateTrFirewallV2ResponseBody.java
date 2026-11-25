@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTrFirewallV2ResponseBody extends TeaModel {
     /**
-     * <p>The ID of the VPC firewall instance.</p>
+     * <p>The instance ID of the border virtual private cloud (VPC) firewalls.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-37e22bf0d9b34870****</p>

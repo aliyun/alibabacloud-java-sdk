@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRdAccountsRequest extends TeaModel {
     /**
-     * <p>The page number of the current page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The description of the Cloud Firewall member accounts.</p>
+     * <p>The description of Cloud Firewall member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>renewal</p>
@@ -32,7 +32,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String memberDesc;
 
     /**
-     * <p>The name of the Cloud Firewall member accounts.</p>
+     * <p>The name of Cloud Firewall member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>cloudfirewall_2</p>
@@ -41,7 +41,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String memberDisplayName;
 
     /**
-     * <p>The UID of the member accounts.</p>
+     * <p>The UID of member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>

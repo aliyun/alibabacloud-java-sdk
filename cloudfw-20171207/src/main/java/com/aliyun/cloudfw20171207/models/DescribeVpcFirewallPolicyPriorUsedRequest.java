@@ -23,10 +23,10 @@ public class DescribeVpcFirewallPolicyPriorUsedRequest extends TeaModel {
      * <p>Valid values:</p>
      * <ul>
      * <li><p>When a VPC border firewall protects a Cloud Enterprise Network (CEN) instance, the policy group ID is the instance ID of the CEN instance.</p>
-     * <p>Example: cen-ervw0g12b5jbw*\<em>\</em>\*</p>
+     * <p>Example: cen-ervw0g12b5jbw****</p>
      * </li>
      * <li><p>When a VPC border firewall protects an Express Connect circuit, the policy group ID is the instance ID of the VPC border firewall.</p>
-     * <p>Example: vfw-a42bbb7b887148c9*\<em>\</em>\*</p>
+     * <p>Example: vfw-a42bbb7b887148c9****</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

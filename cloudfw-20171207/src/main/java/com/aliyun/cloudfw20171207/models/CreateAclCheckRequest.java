@@ -16,13 +16,13 @@ public class CreateAclCheckRequest extends TeaModel {
 
     /**
      * <p>The list of ACL check names.</p>
-     * <p><strong>Note</strong>: This parameter is required in actual calls. Provide at least one check name. If no check name is provided, the API returns ErrorParameters (-200103).</p>
+     * <p><strong>Note</strong>: This parameter is required in actual calls. Provide at least one check name. If this parameter is not provided, the API returns ErrorParameters (-200103).</p>
      */
     @NameInMap("CheckNames")
     public java.util.List<String> checkNames;
 
     /**
-     * <p>The language type of the request and response messages.</p>
+     * <p>The language of the request and response messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

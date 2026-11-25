@@ -97,10 +97,10 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
          * <p>The access control policy group ID of the virtual private cloud (VPC) firewalls at the border. Valid values:</p>
          * <ul>
          * <li><p>If the virtual private cloud (VPC) firewalls at the border protect a Cloud Enterprise Network (CEN) instance, the policy group ID is the instance ID of the CEN instance.</p>
-         * <p>Example: cen-ervw0g12b5jbw*\<em>\</em>\*</p>
+         * <p>Example: cen-ervw0g12b5jbw****</p>
          * </li>
          * <li><p>If the virtual private cloud (VPC) firewalls at the border protect an Express Connect circuit, the policy group ID is the instance ID of the virtual private cloud (VPC) firewalls at the border.</p>
-         * <p>Example: vfw-a42bbb7b887148c9*\<em>\</em>\*</p>
+         * <p>Example: vfw-a42bbb7b887148c9****</p>
          * </li>
          * </ul>
          * 

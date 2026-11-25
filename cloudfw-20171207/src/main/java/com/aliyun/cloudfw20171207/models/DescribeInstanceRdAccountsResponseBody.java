@@ -42,7 +42,7 @@ public class DescribeInstanceRdAccountsResponseBody extends TeaModel {
 
     public static class DescribeInstanceRdAccountsResponseBodyAccounts extends TeaModel {
         /**
-         * <p>The ID of the member accounts.</p>
+         * <p>The ID of member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>171054237268****</p>
@@ -51,7 +51,7 @@ public class DescribeInstanceRdAccountsResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the member.</p>
+         * <p>The display name of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

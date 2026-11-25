@@ -47,7 +47,7 @@ public class ModifyIpsRulesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\&quot;4664138c-4f81-4650-9c8d-2230ea0d****\&quot;]</p>
+     * <p>[&quot;4664138c-4f81-4650-9c8d-2230ea0d****&quot;]</p>
      */
     @NameInMap("Rules")
     public String rules;

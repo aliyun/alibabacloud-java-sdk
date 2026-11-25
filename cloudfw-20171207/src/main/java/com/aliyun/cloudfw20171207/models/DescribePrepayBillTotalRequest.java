@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayBillTotalRequest extends TeaModel {
     /**
-     * <p>The bill type. This parameter is required. If it is not specified, an error is returned. Valid values:</p>
+     * <p>The bill type. This parameter is required. If you do not specify this parameter, an error is returned. Valid values:</p>
      * <ul>
      * <li>elastic_traffic: elastic traffic.</li>
      * <li>sdl: sensitive data leak detection traffic.</li>
@@ -42,8 +42,8 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     /**
      * <p>The language. Valid values:</p>
      * <ul>
-     * <li>zh</li>
-     * <li>en
+     * <li>zh: Chinese.</li>
+     * <li>en: English.
      * Default value: zh.</li>
      * </ul>
      * 

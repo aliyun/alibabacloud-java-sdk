@@ -217,7 +217,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
          * <li>If <strong>DestinationType</strong> is set to <strong>net</strong>, the destination address is a CIDR block. Example: 192.0.XX.XX/24.</li>
          * <li>If <strong>DestinationType</strong> is set to <strong>domain</strong>, the destination address is a domain name. Example: aliyuncs.com.</li>
          * <li>If <strong>DestinationType</strong> is set to <strong>group</strong>, the destination address is the name of an address book. Example: db_group.</li>
-         * <li>If <strong>DestinationType</strong> is set to <strong>location</strong>, the destination address is an area name. For more information about the area positional encoding, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
+         * <li>If <strong>DestinationType</strong> is set to <strong>location</strong>, the destination address is an area name. For more information about the area positional encoding, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -473,7 +473,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
          * <ul>
          * <li>If <strong>SourceType</strong> is set to <code>net</code>, the source address is a CIDR block. Example: 192.0.XX.XX/24.</li>
          * <li>If <strong>SourceType</strong> is set to <code>group</code>, the source address is the name of a source address book. Example: db_group.</li>
-         * <li>If <strong>SourceType</strong> is set to <code>location</code>, the source address is an area. For more information about the area positional encoding, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
+         * <li>If <strong>SourceType</strong> is set to <code>location</code>, the source address is an area. For more information about the area positional encoding, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -525,7 +525,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
 
         /**
          * <p>The quota consumed by the access control policy, which is the sum of the quota consumed by each policy.
-         * Quota consumed by a single policy = Number of source addresses (number of CIDR blocks or area) \* Number of destination addresses (number of CIDR blocks, area, or domain names) \* Number of port ranges \* Number of applications.</p>
+         * Quota consumed by a single policy = Number of source addresses (number of CIDR blocks or area) * Number of destination addresses (number of CIDR blocks, area, or domain names) * Number of port ranges * Number of applications.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

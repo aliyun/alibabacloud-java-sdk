@@ -43,7 +43,7 @@ public class DescribeInternetDropTrafficTrendRequest extends TeaModel {
     public String sourceCode;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The IP address of the access source.</p>
      * 
      * <strong>example:</strong>
      * <p>120.136.21.XXX</p>

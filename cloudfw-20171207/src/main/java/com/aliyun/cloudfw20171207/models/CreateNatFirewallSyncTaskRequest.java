@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNatFirewallSyncTaskRequest extends TeaModel {
     /**
-     * <p>The language of the response message.</p>
+     * <p>The language in which messages are received.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

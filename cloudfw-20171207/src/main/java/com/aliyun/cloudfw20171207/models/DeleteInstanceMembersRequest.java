@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceMembersRequest extends TeaModel {
     /**
-     * <p>The UIDs of the member accounts.</p>
+     * <p>The list of UIDs of the Cloud Firewall member accounts.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234123412341234</p>
+     * <p>[1234123412341234]</p>
      */
     @NameInMap("MemberUids")
     public java.util.List<Long> memberUids;

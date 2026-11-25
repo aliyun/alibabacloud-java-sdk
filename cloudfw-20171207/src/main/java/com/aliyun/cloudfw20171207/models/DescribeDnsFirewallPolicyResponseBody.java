@@ -248,7 +248,7 @@ public class DescribeDnsFirewallPolicyResponseBody extends TeaModel {
          * <ul>
          * <li>If <strong>SourceType</strong> is set to <code>net</code>, the source address is a CIDR block. Example: 192.0.XX.XX/24.</li>
          * <li>If <strong>SourceType</strong> is set to <code>group</code>, the source address is the name of the source address book. Example: db_group.</li>
-         * <li>If <strong>SourceType</strong> is set to <code>location</code>, the source address is an area. For more information about the specific area positional encoding, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
+         * <li>If <strong>SourceType</strong> is set to <code>location</code>, the source address is an area. For more information about the specific area positional encoding, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
          * </ul>
          * 
          * <strong>example:</strong>

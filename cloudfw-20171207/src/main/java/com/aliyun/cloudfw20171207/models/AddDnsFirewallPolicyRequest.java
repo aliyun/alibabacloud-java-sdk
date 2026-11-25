@@ -35,7 +35,7 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
      * <li>If <strong>DestinationType</strong> is set to net, <strong>Destination</strong> is the destination CIDR block. Example: 1.2.3.4/24.</li>
      * <li>If <strong>DestinationType</strong> is set to group, <strong>Destination</strong> is the name of the destination address book. Example: db_group.</li>
      * <li>If <strong>DestinationType</strong> is set to domain, <strong>Destination</strong> is the destination domain name. Example: *.aliyuncs.com.</li>
-     * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> is the destination area (for specific area positional encoding, see the following section). Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+     * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> is the destination area (for specific area positional encoding, see the following sections). Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -58,7 +58,7 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
     /**
      * <p>The traffic direction of the DNS firewall access control policy.</p>
      * <blockquote>
-     * <p>This parameter is not verified by the backend. When you create or modify a DNS firewall policy, the direction is always stored as <strong>out</strong> (outbound). If you pass <strong>in</strong>, no error is reported, but it does not take effect. DNS firewalls only support outbound policies.</p>
+     * <p>This parameter is not verified by the backend. When you create or modify a DNS firewall policy, the direction is always saved as <strong>out</strong> (outbound) in the database. If you pass <strong>in</strong>, no error is reported, but it does not take effect. DNS firewalls only support outbound policies.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The policy priority of the new DNS firewall policy. Valid values: 1 to 20000. A smaller value indicates a higher policy priority.</p>
+     * <p>The priority of the new DNS firewall policy. Valid values: 1 to 20000. A smaller value indicates a higher policy priority.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
      * <p>Specifies whether to enable the access control policy. By default, the policy is enabled after it is created. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: enables the access control policy.</li>
-     * <li><strong>false</strong>: disables the access control policy.</li>
+     * <li><strong>false</strong>: does not enable the access control policy.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -135,15 +135,6 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
      */
     @NameInMap("Source")
     public String source;
-
-    /**
-     * <p>The source IP address of the requester.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>140.205.118.97</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
 
     /**
      * <p>The type of the source address in the access control policy. Valid values:</p>
@@ -244,14 +235,6 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
-    }
-
-    public AddDnsFirewallPolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public AddDnsFirewallPolicyRequest setSourceType(String sourceType) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     /**
-     * <p>The page number of the current page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The language of the request and response.</p>
+     * <p>The language of the request and response messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -61,7 +61,7 @@ public class DescribeConfiguredDomainNamesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The source code.</p>
+     * <p>The tracing code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

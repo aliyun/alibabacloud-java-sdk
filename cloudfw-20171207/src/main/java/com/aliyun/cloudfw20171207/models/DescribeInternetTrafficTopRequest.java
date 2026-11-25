@@ -24,7 +24,7 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The end time. Use a UNIX timestamp in seconds.</p>
+     * <p>The end time. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String limit;
 
     /**
-     * <p>The rule defense result.</p>
+     * <p>The rule protection result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -79,7 +79,7 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String showCountryName;
 
     /**
-     * <p>The sort order.</p>
+     * <p>The sorting method.</p>
      * 
      * <strong>example:</strong>
      * <p>in_bytes</p>
@@ -107,7 +107,7 @@ public class DescribeInternetTrafficTopRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start time. Use a UNIX timestamp in seconds.</p>
+     * <p>The start time. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

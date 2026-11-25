@@ -41,7 +41,7 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region ID. This parameter is required. If this parameter is not specified, the MissingParameter.RegionNo (-200155, The required parameter \&quot;RegionNo\&quot; is not provided.) error is returned.</p>
+     * <p>The region ID. This parameter is required. If this parameter is not specified, the MissingParameter.RegionNo (-200155, The required parameter &quot;RegionNo&quot; is not provided.) error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

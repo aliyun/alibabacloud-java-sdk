@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetTimeTopResponseBody extends TeaModel {
     /**
-     * <p>The number of returned entries.</p>
+     * <p>The number of results.</p>
      * 
      * <strong>example:</strong>
      * <p>19</p>
@@ -14,7 +14,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
     public Integer dataCount;
 
     /**
-     * <p>The list of returned data.</p>
+     * <p>The returned data list.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetTimeTopResponseBodyDataList> dataList;
@@ -29,7 +29,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The traffic time. The value is a UNIX timestamp in seconds.</p>
+     * <p>The time of the traffic. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1734399660</p>
@@ -85,7 +85,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public String IP;
 
         /**
-         * <p>The inbound bandwidth. Unit: bit/s.</p>
+         * <p>The inbound traffic bandwidth rate. Unit: bps.</p>
          * 
          * <strong>example:</strong>
          * <p>187</p>
@@ -139,7 +139,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public Long newConn;
 
         /**
-         * <p>The outbound bandwidth. Unit: bit/s.</p>
+         * <p>The outbound traffic. Unit: bps.</p>
          * 
          * <strong>example:</strong>
          * <p>45</p>
@@ -211,7 +211,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
-         * <p>The total bandwidth. Unit: bit/s.</p>
+         * <p>The total bandwidth. Unit: bps.</p>
          * 
          * <strong>example:</strong>
          * <p>232</p>

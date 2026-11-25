@@ -19,7 +19,7 @@ public class ModifySlsDispatchStatusRequest extends TeaModel {
     public String dispatchValue;
 
     /**
-     * <p>Specifies whether to deliver logs. A value of \<code>true\\</code> enables delivery, and \<code>false\\</code> disables it.</p>
+     * <p>Specifies whether to deliver logs. A value of `true` enables delivery, and `false` disables it.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -49,7 +49,7 @@ public class ModifySlsDispatchStatusRequest extends TeaModel {
     public String newRegionId;
 
     /**
-     * <p>The site to modify. If the log version is 1, leave this parameter empty or set it to \<code>global\\</code>. If the log version is 2, set this parameter to \<code>cn\\</code> or \<code>intl\\</code>.</p>
+     * <p>The site to modify. If the log version is 1, leave this parameter empty or set it to `global`. If the log version is 2, set this parameter to `cn` or `intl`.</p>
      * 
      * <strong>example:</strong>
      * <p>cn</p>

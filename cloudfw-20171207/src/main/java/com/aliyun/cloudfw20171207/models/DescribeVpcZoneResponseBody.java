@@ -60,7 +60,7 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
         public String zoneId;
 
         /**
-         * <p>The type of the zone. The default value is \<code>AvailabilityZone\\</code>, which indicates a standard cloud zone.</p>
+         * <p>The type of the zone. The default value is `AvailabilityZone`, which indicates a standard cloud zone.</p>
          * 
          * <strong>example:</strong>
          * <p>AvailabilityZone</p>

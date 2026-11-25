@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyObjectGroupOperationRequest extends TeaModel {
     /**
-     * <p>The comment for the operation.</p>
+     * <p>The remark for the operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>Comment for batch whitelisting</p>
+     * <p>Remark for batch whitelisting</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -16,8 +16,8 @@ public class ModifyObjectGroupOperationRequest extends TeaModel {
     /**
      * <p>The traffic direction controlled by the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound</li>
-     * <li><strong>out</strong>: outbound</li>
+     * <li><strong>in</strong>: Inbound traffic.</li>
+     * <li><strong>out</strong>: Outbound traffic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,12 +48,12 @@ public class ModifyObjectGroupOperationRequest extends TeaModel {
     public java.util.List<String> objectList;
 
     /**
-     * <p>The operation to whitelist, remove from the whitelist, follow, or unfollow an object. Valid values:</p>
+     * <p>Specifies the operation to perform on the object, such as adding to the whitelist, removing from the whitelist, following, or unfollowing. Valid values:</p>
      * <ul>
-     * <li><strong>subscribe</strong>: follow</li>
-     * <li><strong>unsubscribe</strong>: unfollow</li>
-     * <li><strong>ignore</strong>: add to the whitelist</li>
-     * <li><strong>cancelIgnore</strong>: remove from the whitelist</li>
+     * <li><strong>subscribe</strong>: Follow.</li>
+     * <li><strong>unsubscribe</strong>: Unfollow.</li>
+     * <li><strong>ignore</strong>: Add to the whitelist.</li>
+     * <li><strong>cancelIgnore</strong>: Remove from the whitelist.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -64,12 +64,12 @@ public class ModifyObjectGroupOperationRequest extends TeaModel {
     public String objectOperation;
 
     /**
-     * <p>The type of the object to whitelist or follow for outbound connections. Valid values:</p>
+     * <p>The type of the object to add to the outbound connections whitelist or follow. Valid values:</p>
      * <ul>
-     * <li><strong>assetsIp</strong>: asset IP address</li>
-     * <li><strong>destinationIp</strong>: destination IP address</li>
-     * <li><strong>destinationPort</strong>: destination port</li>
-     * <li><strong>destinationDomain</strong>: destination domain name</li>
+     * <li><strong>assetsIp</strong>: Asset IP address.</li>
+     * <li><strong>destinationIp</strong>: Destination IP address.</li>
+     * <li><strong>destinationPort</strong>: Destination port.</li>
+     * <li><strong>destinationDomain</strong>: Destination domain name.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

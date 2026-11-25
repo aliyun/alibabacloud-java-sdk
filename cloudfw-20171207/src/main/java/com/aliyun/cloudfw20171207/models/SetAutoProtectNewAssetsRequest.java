@@ -6,7 +6,10 @@ import com.aliyun.tea.*;
 public class SetAutoProtectNewAssetsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic traffic redirection. Valid values:</p>
-     * <p><strong>true****false</strong></p>
+     * <ul>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,22 +19,17 @@ public class SetAutoProtectNewAssetsRequest extends TeaModel {
     public Boolean autoProtect;
 
     /**
-     * <p>The language. Valid values are zh (Chinese) and <strong>en</strong> (English). The default value is <strong>zh</strong>.</p>
+     * <p>The language type. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese. Default value.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
-
-    /**
-     * <p>The source IP address of the visitor.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>60.182.79.XXX</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
 
     public static SetAutoProtectNewAssetsRequest build(java.util.Map<String, ?> map) throws Exception {
         SetAutoProtectNewAssetsRequest self = new SetAutoProtectNewAssetsRequest();
@@ -52,14 +50,6 @@ public class SetAutoProtectNewAssetsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public SetAutoProtectNewAssetsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
 }
