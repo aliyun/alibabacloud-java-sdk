@@ -40,10 +40,10 @@ public class EcomVideoRecreationRequest extends TeaModel {
 
     public static class EcomVideoRecreationRequestInputProductInfo extends TeaModel {
         /**
-         * <p>The product category. Example: Women\&quot;s clothing/Sun-protective clothing.</p>
+         * <p>The product category. Example: Women&quot;s clothing/Sun-protective clothing.</p>
          * 
          * <strong>example:</strong>
-         * <p>Women\&quot;s clothing/sun protection clothing</p>
+         * <p>Women&quot;s clothing/sun protection clothing</p>
          */
         @NameInMap("Category")
         public String category;

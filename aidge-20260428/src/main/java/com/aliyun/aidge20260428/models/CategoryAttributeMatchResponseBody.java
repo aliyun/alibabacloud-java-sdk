@@ -156,13 +156,13 @@ public class CategoryAttributeMatchResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;\].</p>
+         * <p>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;].</p>
          */
         @NameInMap("SelectedValues")
         public java.util.List<String> selectedValues;
 
         /**
-         * <p>The list of selected attribute value IDs, such as [30127,30128\].</p>
+         * <p>The list of selected attribute value IDs, such as [30127,30128].</p>
          * 
          * <strong>example:</strong>
          * <p>[30127,30128]</p>

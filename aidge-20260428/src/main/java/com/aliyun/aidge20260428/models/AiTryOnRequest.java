@@ -46,7 +46,7 @@ public class AiTryOnRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://example.com/model.jpg%5C%5C">https://example.com/model.jpg\\</a></p>
+     * <p><a href="https://example.com/model.jpg%5C">https://example.com/model.jpg\</a></p>
      */
     @NameInMap("ModelImageUrl")
     public String modelImageUrl;
@@ -61,7 +61,7 @@ public class AiTryOnRequest extends TeaModel {
     public String modelTemplateUrl;
 
     /**
-     * <p>The URL of the posture template image. You can specify only one image. This image provides a reference for the person\&quot;s posture.
+     * <p>The URL of the posture template image. You can specify only one image. This image provides a reference for the person&quot;s posture.
      * This parameter is required for the posture fission scenario.
      * If this parameter is specified, the image is generated based on the template posture.
      * If this parameter is not specified, the posture in the scene image is used if a model scene image is provided. Otherwise, the posture in the model source image is preserved.

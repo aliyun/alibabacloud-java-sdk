@@ -74,7 +74,7 @@ public class CategoryAttributeMatchRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Women\&quot;s spring new clothing</p>
+     * <p>Women&quot;s spring new clothing</p>
      */
     @NameInMap("Title")
     public String title;

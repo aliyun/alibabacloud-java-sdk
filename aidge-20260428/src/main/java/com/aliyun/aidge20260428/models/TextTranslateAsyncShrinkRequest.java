@@ -14,7 +14,7 @@ public class TextTranslateAsyncShrinkRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The name of the caller\&quot;s business, which represents your identity and facilitates subsequent communication. If you are an internal Alibaba team, specify this parameter based on the actual scenario, such as BU name-product or BU name-chat. If you are an external partner, specify the full name of your company. The company name must be the same as the one used when you registered your Alibaba Cloud account.</p>
+     * <p>The name of the caller&quot;s business, which represents your identity and facilitates subsequent communication. If you are an internal Alibaba team, specify this parameter based on the actual scenario, such as BU name-product or BU name-chat. If you are an external partner, specify the full name of your company. The company name must be the same as the one used when you registered your Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>BUxxx-chat</p>

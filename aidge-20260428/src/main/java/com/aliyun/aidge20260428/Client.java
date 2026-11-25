@@ -1571,6 +1571,760 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h1>Product introduction</h1>
+     * <p>Generates e-commerce-ready image assets based on AI foundation models. A single prompt or a prompt combined with reference images can produce materials covering general, product, and apparel scenarios. Supports scene images, model images, detail images, selling point images, outpainting, product replacement, scene variation, subject extraction, and recoloring. Preserves the color, material, pattern, and text of the product during generation, and extends a single image into a complete set of ready-to-list advertising materials.</p>
+     * <h1>Scenarios</h1>
+     * <ul>
+     * <li><p><strong>General scenario display</strong>: Generate images from scratch using only a prompt, or provide a reference image to retain its composition and atmosphere. Extend an existing single image outward or resize it to the required aspect ratio to quickly obtain usable visuals even when materials are insufficient or unavailable.</p>
+     * </li>
+     * <li><p><strong>Product scenario display</strong>: Place products naturally into real-world usage scenarios such as indoor, outdoor, or handheld settings. Change scenes, replace products in the image, and zoom in to showcase materials and details. This allows a single product to have multiple sets of usable visuals without separate shooting and designing for each scene.</p>
+     * </li>
+     * <li><p><strong>Apparel scenario display</strong>: Dress real human models with clothing and accessories. Change models, poses, and scenes, zoom in on fabric stitching, extract single-item white background images, and batch recolor based on color cards. Generate on-body images, detail images, and multi-color materials for a single style without scheduling photoshoots or reshooting for each color.</p>
+     * </li>
+     * <li><p><strong>Multi-platform product image production</strong>: Input product information once to generate main images, scene images, detail images, selling point images, A+ content, and detail page illustrations. This saves the time spent on designing and revising images one by one.</p>
+     * </li>
+     * <li><p><strong>Holiday marketing and cross-market localization</strong>: Generate corresponding campaign main images and banners according to different countries, languages, holidays, and brand guidelines. Adjust visual elements, copy placement, and local aesthetics to suit the market. This helps cross-border sellers and brands cover multiple markets with the same set of products.</p>
+     * </li>
+     * </ul>
+     * <h1>Features</h1>
+     * <p>General image generation targets e-commerce product image production and covers ten capabilities: general generation, outpainting, scene generation, model generation, detail generation, selling point generation, product replacement, scene variation, subject extraction, and recoloring. A single prompt combined with a reference image can produce product images ready for listing and advertising. The platform provides a rich library of reference images and high-quality cases. For details, visit the <a href="https://ecoa.console.aliyun.com/content-generation?sceneType=CommerceVideoApparelShowcase">Aidge E-commerce Operations Assistant</a> to experience it.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Feature</strong></th>
+     * <th><strong>Scenario</strong></th>
+     * <th><strong>User input and specification method</strong></th>
+     * <th><strong>Scenario value</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><strong>General generation</strong></td>
+     * <td>General scenario</td>
+     * <td>Enter a prompt and provide a reference image to generate a new visual based on the reference image.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Plus mode supports 1 to 9 input images.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Lite mode supports 1 to 3 input images.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Supports user-uploaded prompts and image generation.</td>
+     * <td>Zero-barrier image creation: Generate usable visuals with a single prompt without relying on real-life photography.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Close to expectations: Retain the composition, atmosphere, and layout of the reference image to reduce trial and error and regeneration.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Batch creativity: Quickly generate multiple versions with the same prompt for easy selection and advertising testing.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>AI outpainting</strong></td>
+     * <td>General scenario</td>
+     * <td>Provide the original image to extend and complete the content outward, and obtain a larger, complete image.</td>
+     * <td>Flexible image sizing: Supports aspect ratios and custom sizes (such as 1920×1440). Adapts a single image for main images, detail pages, and off-site advertising without re-layout.</td>
+     * </tr>
+     * <tr>
+     * <td>Unchanged details: Text, portraits, and overall style remain unchanged. Reuse historical materials directly without reshooting or retouching.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Reasonable element layout: Intelligently rearranges based on text-image relationships rather than mechanically extending the image, and automatically leaves safe margins so that adding titles later does not cause cropping.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Scene image generation</strong></td>
+     * <td>General product scenario</td>
+     * <td>Provide a product image, optionally with a scene reference image, to generate a display image of the product placed in a real environment.</td>
+     * <td>Quick scene creation: Place a product from a white background image into real environments such as living rooms, kitchens, or outdoors to enhance the expressiveness of detail pages.</td>
+     * </tr>
+     * <tr>
+     * <td>No set construction for real-life photography: Save costs on set construction, props, and photography. Generate scene images for new products on the same day.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Scene reference: Attach a scene reference image to retain its lighting and furnishings, keeping the style consistent across multiple images.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Model image generation</strong></td>
+     * <td>Apparel scenario</td>
+     * <td>Provide clothing or accessory images and a model reference image to generate real human wearing effects.</td>
+     * <td>No real-life commercial photography: Generate real human wearing effects from a single apparel image, reducing costs for hiring models, photography, and reshooting.</td>
+     * </tr>
+     * <tr>
+     * <td>Intuitive on-body effects: Pattern, drape, and matching are clear at a glance, reducing misjudgments of size and style.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Quick model change: Generate different models, poses, and scenes for the same piece of clothing to batch produce materials.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Detail image generation</strong></td>
+     * <td>General product scenario, Apparel scenario</td>
+     * <td>General product: Provide a product image to focus on and zoom in on local structures, and obtain detail images that showcase materials and craftsmanship.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide an apparel image to zoom in on fabrics, stitching, and fasteners, and obtain close-up images that reflect texture and craftsmanship.</td>
+     * <td>Supplement detail pages with detail images and material close-ups, enhancing both product craftsmanship and apparel texture.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Zoom in on details: Directly generate close-ups of handles, rubber coatings, stitching, or fabrics and seams from a single product image without supplementary shooting.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Complete detail pages: Detail images seamlessly connect with main images and scene images, maintaining a unified style without discontinuity.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Reduce expectation gap: Clearly see materials and craftsmanship in advance, reducing returns and negative reviews caused by discrepancies between images and actual products for both general products and apparel.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Selling point image generation</strong></td>
+     * <td>General product scenario, Apparel scenario</td>
+     * <td>General product: Provide a product image (optionally with a layout reference image) to automatically arrange titles and selling point copy, and obtain an e-commerce selling point image with a complete design sense.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide an apparel image and a reference layout to generate title selling points around styling and usage scenarios, and obtain an apparel selling point display image.</td>
+     * <td>Single image with selling points: Generate titles, selling points, and layouts at once, ready for direct use in main images, detail pages, and information flow materials.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Layout reference: Attach a reference image to use the same style, maintaining visual consistency across the store for general products and apparel.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Speed up new product launches: Generate selling point images from a single product image or flat-lay image, saving time on design and copywriting scheduling.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Product replacement</strong></td>
+     * <td>General product scenario</td>
+     * <td>General product: Provide a base image and a new product image to replace the original object in the image, and obtain a scene image where the environment and lighting remain unchanged but the product is replaced.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide a styling base image and clothing or accessory images to replace single items, and obtain a style-change display image in the same scene.</td>
+     * <td>Direct scene reuse: Retain lighting, props, and composition, only changing the main product or styling item.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Batch style change: Share a single high-quality base image across a batch of SKUs, avoiding scene-by-scene shooting for each style.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Natural blending: Place according to the product\&quot;s own shape and size, without ghosting or discordant lighting.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Scene variation</strong></td>
+     * <td>General product scenario, Apparel scenario</td>
+     * <td>General product: Provide a single scene image to batch derive versions with different environments and angles, and obtain a set of multi-scene materials.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide a model styling image to generate versions with different scenes and poses, and obtain a set of apparel display images.</td>
+     * <td>Multiple scenes at once: Derive multiple sets of environments and matches from the same subject, preparing main images, detail pages, and ad placements at once.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Differentiated distribution: Generate different versions for multiple channels and stores to reduce the risk of duplicate materials.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Stable subject: The product does not deform or change color, and the multiple generated images still represent the same item.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Subject extraction</strong></td>
+     * <td>General product scenario, Apparel scenario</td>
+     * <td>General product: Provide a product image with a background to extract the subject and place it on a white background, and obtain a clean white-background main image.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide a model image to extract all clothing and shoes or accessories on the body, and obtain a pure white-background flat-lay display image.</td>
+     * <td>One-click white background image: Directly convert an image with a background into a white-background main image, meeting platform listing specifications.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Split one image into multiple products: Extract tops, bottoms, and shoes or accessories from a model image, avoiding flat-lay shooting for each item.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Reusable subject: The extracted product has clean edges and can continue to be used for other scene images and selling point images.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Recolor</strong></td>
+     * <td>General product scenario, Apparel scenario</td>
+     * <td>General product: Provide a product image and a reference color image to change only the surface color, and obtain multi-color product images of the same style.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide an apparel image and a reference color to replace the fabric color, and obtain a color-changed version that retains the pattern and details.</td>
+     * <td>Multiple colors from one image: Batch generate based on color cards or reference colors, avoiding color-by-color shooting for multiple SKUs and color schemes.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Try colors in advance: See the effect before deciding to produce, reducing the risk of new product launches and inventory preparation.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Texture preserved: Change only the color, keeping the material, texture, lighting, logo, and stitching intact.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h1>Effect comparison</h1>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Feature</strong></th>
+     * <th>Scenario</th>
+     * <th><strong>Short product description</strong></th>
+     * <th><strong>Original user prompt</strong></th>
+     * <th><strong>Original image</strong></th>
+     * <th><strong>Generated result image</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>General generation</td>
+     * <td>General scenario</td>
+     * <td>\-</td>
+     * <td>Generate a square high-end footwear brand product scene image, studio-grade commercial still life photography.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <ul>
+     * <li><p>Product: A pair of cream white low-top retro casual sneakers, featuring a fabric upper paired with light beige short suede, cream white leather heel, and light gum rubber outsole. Show fine fuzz, fabric texture, precise stitching, and natural lace structure, with realistic shoe proportions.</p>
+     * </li>
+     * <li><p>Scene and placement: Boutique footwear showroom style, warm gray background paired with light beige matte stone steps. The foreground main shoe is displayed at a three-quarter front angle, fully exposing the toe, side logo, and sole. The other paired shoe is placed on a higher step in the background to form layers without blocking the main subject. The sole naturally touches the surface, and the shadow conforms to real gravity and lighting.</p>
+     * </li>
+     * <li><p>Photography and lighting: 85mm lens perspective, large softbox lighting from the upper left, slight fill light on the right, and soft contour light outlining the heel. White materials are not overexposed, main shoe details are clear, and the background is soft. Cream white, warm gray, and light beige are the main colors, with brand gradient colors as accents.</p>
+     * </li>
+     * <li><p>Restrictions: No people, no ad copy, no prices, no watermarks. Avoid shoe deformation, floating, duplicate laces, plastic texture, and cluttered props. | \- | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/aec9a71d-a41b-48e4-b0b9-92e59827b324.png" alt="image.png"> |
+     * | AI outpainting | General scenario | Pink lip balm | Extend this product image to a 1920×1440 landscape format, continuing the original background, lighting, and texture to complete the surroundings. Keep the product, people, and existing text unchanged, do not add irrelevant objects, leave no splicing traces, and leave blank space around the edges for adding titles. | \- | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/5d321cfb-3def-46e2-98a5-ee2933c2028d.png" alt="EV0035-1.png"> |
+     * | Scene image generation | General product scenario | Transparent acrylic remote control storage rack | This is a remote control storage rack. Place it on a coffee table in a light-colored living room to show what the product looks like in the scene. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/1687aa20-3a3f-4c97-af9e-ced2215e62b5.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/592810f2-8977-4f59-b922-a719100993ca.png" alt="image.png"> |
+     * | Model image generation | Apparel scenario | Light yellow long-sleeve cardigan paired with a white inner top | Show an adult model naturally wearing the light yellow long-sleeve cardigan paired with a white inner top from Image 1, and take an apparel display photo in a bright, simple indoor setting. Stand naturally facing forward, with hands on both sides. Keep other matching items simple, and do not change the color, texture, and decorations of the original product. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/a238a8a0-7cee-4860-8b21-1162afbd4cb6.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/476ad957-86fe-4d4c-badf-a25e7093b523.png" alt="image.png"> |
+     * | Detail image generation | General product scenario | Green hexagonal rubber-coated dumbbell | This is a dumbbell. Zoom in on the texture of the handle and the surface. Refer to the windowing and detail layout in Image 2, and use the product angle from Image 1. Keep the product background as it is. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/075e7d34-58ce-40a5-8689-0f15d9620de6.png" alt="image.png">
+     * Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/49825bf2-058a-40f9-9f09-be7460db1285.png" alt="image.png">
+     * Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/3f484068-4e15-4096-9586-f750ce9513da.png" alt="image.png"> |
+     * |  | Apparel scenario | Olive green long-sleeve knit top | This is an olive green long-sleeve knit top. Show the neckline and knit texture. Refer to Image 2 to generate a detail image. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/63122cf3-a693-443f-a87c-9a292f984c8f.png" alt="image.png">
+     * Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/3b58612f-1b5d-4f93-ae28-cc2dc73149ba.png" alt="image.png">
+     * Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/21cbe9aa-1968-421d-829d-877e3b9277ad.png" alt="image.png"> |
+     * | Selling point image generation | General product scenario | Fog blue wall-mounted small drum washing machine | General product scenario:
+     * Create a selling point display image for the light lavender purple neckband earphones in Image 1. Retain the full view of the main subject, and place a partial zoom-in window on one side of the image without marking numbers or dimensions. The product should be easily recognizable to create an e-commerce selling point image with a complete design sense. Refer to the selling point image layout in Image 2, use the product from Image 1, and do not use the product, brand, and specific effects from the reference image. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/c621bf49-668b-4fd7-bc9f-fbeda55265e6.png" alt="image.png">
+     * Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/9d2efcbf-c061-4b84-8d88-194a6812b2e3.png" alt="image.png">
+     * Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/7c9a9ae8-61e5-452b-adbc-825575cc4e08.png" alt="image.png"> |
+     * |  | Apparel scenario | Off-white stand-collar knot-button vest | Create a product selling point image for this off-white stand-collar knot-button vest. Arrange the title and copy to make it look good overall. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/a7663e6d-6295-4f90-b61d-bbda22cfa524.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/85ba57f1-b944-4400-b48d-2fce030375e2.png" alt="image.png"> |
+     * | Product replacement | General product scenario | Base image: Silver-gray desktop laminator; New product: White desktop laser printer | Image 1 is the base image. Replace the round wall clock in it with the terracotta orange wall fan from Image 2. Place it in the original position according to the shape and natural size of the product in Image 2. Keep the surrounding environment and props, ensure natural lighting and placement, and avoid ghosting of the original object. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/d69cfa22-1486-4652-afa3-e90b44d9df4e.png" alt="image.png">
+     *  Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/dabd86e7-f80a-49a6-9f0d-d51f72634127.png" alt="image.png">
+     * Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/584ae607-dca6-4cff-993b-f6a07b3a1feb.png" alt="image.png"> |
+     * | Scene variation | General product scenario | Two-column four-tier rolling storage cabinet with dark brown wood top, silver frame, and off-white solid drawers | Perform scene variation on Image 1, keeping the original style of the image and the product unchanged. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/5559ee78-f354-4783-a039-23cdc80336f5.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/19e2bd71-278f-47d9-9f1f-de10b6279ca9.png" alt="image.png"> |
+     * |  | Apparel scenario | ### Dark blue top, off-white layered midi skirt, and floral sandals | Perform scene variation on Image 1, keeping the original style of the image and the product unchanged. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/0801afdd-f06b-46cb-a1b1-34c948c6eb25.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/e5755fdb-30ea-4d39-a8d2-a8afae4b0db0.png" alt="image.png"> |
+     * | Subject extraction | General product scenario | Gray cylindrical speaker | Extract the gray cylindrical speaker from the image separately and place it on a white background. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/fc77334b-e5c7-4709-abea-312c2566227a.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/8fe1d4e3-09d5-4edd-959b-f548d2ec51ce.png?x-oss-process=image/crop,x_157,y_141,w_718,h_787/ignore-error,1" alt="image.png"> |
+     * |  | Apparel scenario | ### White crop top, beige long pants, and white shoes | Extract the entire outfit on this model, display it flat-lay on a white background, keep the original color and style of each piece, and exclude the person and background. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/76b2536e-170c-4670-bf5e-e834d8f8539a.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/062f599e-6361-42ac-bb2b-dcf7df415dc1.png" alt="image.png"> |
+     * | Recolor | General product scenario | Caramel round soft-padded storage ottoman | Change the soft-padded surface of the storage ottoman in Image 1 to the light pink color of the bag in Image 2. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/b30e2889-bb74-4110-8a82-2021d74bee3c.png" alt="EV0340-8d60df612c02.png">
+     * Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/ce688dc4-475b-4780-a16f-45d50d540dd7.png" alt="BG05-38b5aadd7aac.png">
+     * Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/b02ed1e4-0474-4736-a214-b1592d77e183.png" alt="image.png"> |
+     * |  | Apparel scenario | Brown halter-neck long jumpsuit | Change the long jumpsuit in Image 1 to the light pink color of the bag in Image 2. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/72b0c388-bda6-4ead-ae1f-335f7500eb50.png" alt="image.png">
+     * Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/ce688dc4-475b-4780-a16f-45d50d540dd7.png" alt="BG05-38b5aadd7aac.png">Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/832390b2-5fdd-4f82-95e0-66b72131b04c.png" alt="image.png"> |</p>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates e-commerce-ready image assets based on AI foundation models. A single prompt or a prompt combined with reference images can produce materials covering general, product, and apparel scenarios. Supports scene images, model images, detail images, selling point images, outpainting, product replacement, scene variation, subject extraction, and recoloring. Preserves the color, material, pattern, and text of the product during generation, extending a single image into a complete set of ready-to-list advertising materials.</p>
+     * 
+     * @param tmpReq GeneralImageGenerationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GeneralImageGenerationResponse
+     */
+    public GeneralImageGenerationResponse generalImageGenerationWithOptions(GeneralImageGenerationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GeneralImageGenerationShrinkRequest request = new GeneralImageGenerationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.referenceUrl)) {
+            request.referenceUrlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.referenceUrl, "ReferenceUrl", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
+            query.put("JobType", request.jobType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.n)) {
+            query.put("N", request.n);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
+            query.put("Operation", request.operation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            query.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptExtend)) {
+            query.put("PromptExtend", request.promptExtend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ratio)) {
+            query.put("Ratio", request.ratio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.referenceUrlShrink)) {
+            query.put("ReferenceUrl", request.referenceUrlShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolution)) {
+            query.put("Resolution", request.resolution);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            query.put("Scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermark)) {
+            query.put("Watermark", request.watermark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GeneralImageGeneration"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GeneralImageGenerationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h1>Product introduction</h1>
+     * <p>Generates e-commerce-ready image assets based on AI foundation models. A single prompt or a prompt combined with reference images can produce materials covering general, product, and apparel scenarios. Supports scene images, model images, detail images, selling point images, outpainting, product replacement, scene variation, subject extraction, and recoloring. Preserves the color, material, pattern, and text of the product during generation, and extends a single image into a complete set of ready-to-list advertising materials.</p>
+     * <h1>Scenarios</h1>
+     * <ul>
+     * <li><p><strong>General scenario display</strong>: Generate images from scratch using only a prompt, or provide a reference image to retain its composition and atmosphere. Extend an existing single image outward or resize it to the required aspect ratio to quickly obtain usable visuals even when materials are insufficient or unavailable.</p>
+     * </li>
+     * <li><p><strong>Product scenario display</strong>: Place products naturally into real-world usage scenarios such as indoor, outdoor, or handheld settings. Change scenes, replace products in the image, and zoom in to showcase materials and details. This allows a single product to have multiple sets of usable visuals without separate shooting and designing for each scene.</p>
+     * </li>
+     * <li><p><strong>Apparel scenario display</strong>: Dress real human models with clothing and accessories. Change models, poses, and scenes, zoom in on fabric stitching, extract single-item white background images, and batch recolor based on color cards. Generate on-body images, detail images, and multi-color materials for a single style without scheduling photoshoots or reshooting for each color.</p>
+     * </li>
+     * <li><p><strong>Multi-platform product image production</strong>: Input product information once to generate main images, scene images, detail images, selling point images, A+ content, and detail page illustrations. This saves the time spent on designing and revising images one by one.</p>
+     * </li>
+     * <li><p><strong>Holiday marketing and cross-market localization</strong>: Generate corresponding campaign main images and banners according to different countries, languages, holidays, and brand guidelines. Adjust visual elements, copy placement, and local aesthetics to suit the market. This helps cross-border sellers and brands cover multiple markets with the same set of products.</p>
+     * </li>
+     * </ul>
+     * <h1>Features</h1>
+     * <p>General image generation targets e-commerce product image production and covers ten capabilities: general generation, outpainting, scene generation, model generation, detail generation, selling point generation, product replacement, scene variation, subject extraction, and recoloring. A single prompt combined with a reference image can produce product images ready for listing and advertising. The platform provides a rich library of reference images and high-quality cases. For details, visit the <a href="https://ecoa.console.aliyun.com/content-generation?sceneType=CommerceVideoApparelShowcase">Aidge E-commerce Operations Assistant</a> to experience it.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Feature</strong></th>
+     * <th><strong>Scenario</strong></th>
+     * <th><strong>User input and specification method</strong></th>
+     * <th><strong>Scenario value</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><strong>General generation</strong></td>
+     * <td>General scenario</td>
+     * <td>Enter a prompt and provide a reference image to generate a new visual based on the reference image.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Plus mode supports 1 to 9 input images.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Lite mode supports 1 to 3 input images.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Supports user-uploaded prompts and image generation.</td>
+     * <td>Zero-barrier image creation: Generate usable visuals with a single prompt without relying on real-life photography.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Close to expectations: Retain the composition, atmosphere, and layout of the reference image to reduce trial and error and regeneration.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Batch creativity: Quickly generate multiple versions with the same prompt for easy selection and advertising testing.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>AI outpainting</strong></td>
+     * <td>General scenario</td>
+     * <td>Provide the original image to extend and complete the content outward, and obtain a larger, complete image.</td>
+     * <td>Flexible image sizing: Supports aspect ratios and custom sizes (such as 1920×1440). Adapts a single image for main images, detail pages, and off-site advertising without re-layout.</td>
+     * </tr>
+     * <tr>
+     * <td>Unchanged details: Text, portraits, and overall style remain unchanged. Reuse historical materials directly without reshooting or retouching.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Reasonable element layout: Intelligently rearranges based on text-image relationships rather than mechanically extending the image, and automatically leaves safe margins so that adding titles later does not cause cropping.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Scene image generation</strong></td>
+     * <td>General product scenario</td>
+     * <td>Provide a product image, optionally with a scene reference image, to generate a display image of the product placed in a real environment.</td>
+     * <td>Quick scene creation: Place a product from a white background image into real environments such as living rooms, kitchens, or outdoors to enhance the expressiveness of detail pages.</td>
+     * </tr>
+     * <tr>
+     * <td>No set construction for real-life photography: Save costs on set construction, props, and photography. Generate scene images for new products on the same day.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Scene reference: Attach a scene reference image to retain its lighting and furnishings, keeping the style consistent across multiple images.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Model image generation</strong></td>
+     * <td>Apparel scenario</td>
+     * <td>Provide clothing or accessory images and a model reference image to generate real human wearing effects.</td>
+     * <td>No real-life commercial photography: Generate real human wearing effects from a single apparel image, reducing costs for hiring models, photography, and reshooting.</td>
+     * </tr>
+     * <tr>
+     * <td>Intuitive on-body effects: Pattern, drape, and matching are clear at a glance, reducing misjudgments of size and style.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Quick model change: Generate different models, poses, and scenes for the same piece of clothing to batch produce materials.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Detail image generation</strong></td>
+     * <td>General product scenario, Apparel scenario</td>
+     * <td>General product: Provide a product image to focus on and zoom in on local structures, and obtain detail images that showcase materials and craftsmanship.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide an apparel image to zoom in on fabrics, stitching, and fasteners, and obtain close-up images that reflect texture and craftsmanship.</td>
+     * <td>Supplement detail pages with detail images and material close-ups, enhancing both product craftsmanship and apparel texture.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Zoom in on details: Directly generate close-ups of handles, rubber coatings, stitching, or fabrics and seams from a single product image without supplementary shooting.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Complete detail pages: Detail images seamlessly connect with main images and scene images, maintaining a unified style without discontinuity.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Reduce expectation gap: Clearly see materials and craftsmanship in advance, reducing returns and negative reviews caused by discrepancies between images and actual products for both general products and apparel.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Selling point image generation</strong></td>
+     * <td>General product scenario, Apparel scenario</td>
+     * <td>General product: Provide a product image (optionally with a layout reference image) to automatically arrange titles and selling point copy, and obtain an e-commerce selling point image with a complete design sense.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide an apparel image and a reference layout to generate title selling points around styling and usage scenarios, and obtain an apparel selling point display image.</td>
+     * <td>Single image with selling points: Generate titles, selling points, and layouts at once, ready for direct use in main images, detail pages, and information flow materials.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Layout reference: Attach a reference image to use the same style, maintaining visual consistency across the store for general products and apparel.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Speed up new product launches: Generate selling point images from a single product image or flat-lay image, saving time on design and copywriting scheduling.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Product replacement</strong></td>
+     * <td>General product scenario</td>
+     * <td>General product: Provide a base image and a new product image to replace the original object in the image, and obtain a scene image where the environment and lighting remain unchanged but the product is replaced.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide a styling base image and clothing or accessory images to replace single items, and obtain a style-change display image in the same scene.</td>
+     * <td>Direct scene reuse: Retain lighting, props, and composition, only changing the main product or styling item.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Batch style change: Share a single high-quality base image across a batch of SKUs, avoiding scene-by-scene shooting for each style.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Natural blending: Place according to the product\&quot;s own shape and size, without ghosting or discordant lighting.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Scene variation</strong></td>
+     * <td>General product scenario, Apparel scenario</td>
+     * <td>General product: Provide a single scene image to batch derive versions with different environments and angles, and obtain a set of multi-scene materials.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide a model styling image to generate versions with different scenes and poses, and obtain a set of apparel display images.</td>
+     * <td>Multiple scenes at once: Derive multiple sets of environments and matches from the same subject, preparing main images, detail pages, and ad placements at once.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Differentiated distribution: Generate different versions for multiple channels and stores to reduce the risk of duplicate materials.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Stable subject: The product does not deform or change color, and the multiple generated images still represent the same item.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Subject extraction</strong></td>
+     * <td>General product scenario, Apparel scenario</td>
+     * <td>General product: Provide a product image with a background to extract the subject and place it on a white background, and obtain a clean white-background main image.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide a model image to extract all clothing and shoes or accessories on the body, and obtain a pure white-background flat-lay display image.</td>
+     * <td>One-click white background image: Directly convert an image with a background into a white-background main image, meeting platform listing specifications.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Split one image into multiple products: Extract tops, bottoms, and shoes or accessories from a model image, avoiding flat-lay shooting for each item.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Reusable subject: The extracted product has clean edges and can continue to be used for other scene images and selling point images.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Recolor</strong></td>
+     * <td>General product scenario, Apparel scenario</td>
+     * <td>General product: Provide a product image and a reference color image to change only the surface color, and obtain multi-color product images of the same style.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Apparel: Provide an apparel image and a reference color to replace the fabric color, and obtain a color-changed version that retains the pattern and details.</td>
+     * <td>Multiple colors from one image: Batch generate based on color cards or reference colors, avoiding color-by-color shooting for multiple SKUs and color schemes.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Try colors in advance: See the effect before deciding to produce, reducing the risk of new product launches and inventory preparation.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Texture preserved: Change only the color, keeping the material, texture, lighting, logo, and stitching intact.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h1>Effect comparison</h1>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Feature</strong></th>
+     * <th>Scenario</th>
+     * <th><strong>Short product description</strong></th>
+     * <th><strong>Original user prompt</strong></th>
+     * <th><strong>Original image</strong></th>
+     * <th><strong>Generated result image</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>General generation</td>
+     * <td>General scenario</td>
+     * <td>\-</td>
+     * <td>Generate a square high-end footwear brand product scene image, studio-grade commercial still life photography.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <ul>
+     * <li><p>Product: A pair of cream white low-top retro casual sneakers, featuring a fabric upper paired with light beige short suede, cream white leather heel, and light gum rubber outsole. Show fine fuzz, fabric texture, precise stitching, and natural lace structure, with realistic shoe proportions.</p>
+     * </li>
+     * <li><p>Scene and placement: Boutique footwear showroom style, warm gray background paired with light beige matte stone steps. The foreground main shoe is displayed at a three-quarter front angle, fully exposing the toe, side logo, and sole. The other paired shoe is placed on a higher step in the background to form layers without blocking the main subject. The sole naturally touches the surface, and the shadow conforms to real gravity and lighting.</p>
+     * </li>
+     * <li><p>Photography and lighting: 85mm lens perspective, large softbox lighting from the upper left, slight fill light on the right, and soft contour light outlining the heel. White materials are not overexposed, main shoe details are clear, and the background is soft. Cream white, warm gray, and light beige are the main colors, with brand gradient colors as accents.</p>
+     * </li>
+     * <li><p>Restrictions: No people, no ad copy, no prices, no watermarks. Avoid shoe deformation, floating, duplicate laces, plastic texture, and cluttered props. | \- | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/aec9a71d-a41b-48e4-b0b9-92e59827b324.png" alt="image.png"> |
+     * | AI outpainting | General scenario | Pink lip balm | Extend this product image to a 1920×1440 landscape format, continuing the original background, lighting, and texture to complete the surroundings. Keep the product, people, and existing text unchanged, do not add irrelevant objects, leave no splicing traces, and leave blank space around the edges for adding titles. | \- | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/5d321cfb-3def-46e2-98a5-ee2933c2028d.png" alt="EV0035-1.png"> |
+     * | Scene image generation | General product scenario | Transparent acrylic remote control storage rack | This is a remote control storage rack. Place it on a coffee table in a light-colored living room to show what the product looks like in the scene. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/1687aa20-3a3f-4c97-af9e-ced2215e62b5.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/592810f2-8977-4f59-b922-a719100993ca.png" alt="image.png"> |
+     * | Model image generation | Apparel scenario | Light yellow long-sleeve cardigan paired with a white inner top | Show an adult model naturally wearing the light yellow long-sleeve cardigan paired with a white inner top from Image 1, and take an apparel display photo in a bright, simple indoor setting. Stand naturally facing forward, with hands on both sides. Keep other matching items simple, and do not change the color, texture, and decorations of the original product. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/a238a8a0-7cee-4860-8b21-1162afbd4cb6.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/476ad957-86fe-4d4c-badf-a25e7093b523.png" alt="image.png"> |
+     * | Detail image generation | General product scenario | Green hexagonal rubber-coated dumbbell | This is a dumbbell. Zoom in on the texture of the handle and the surface. Refer to the windowing and detail layout in Image 2, and use the product angle from Image 1. Keep the product background as it is. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/075e7d34-58ce-40a5-8689-0f15d9620de6.png" alt="image.png">
+     * Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/49825bf2-058a-40f9-9f09-be7460db1285.png" alt="image.png">
+     * Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/3f484068-4e15-4096-9586-f750ce9513da.png" alt="image.png"> |
+     * |  | Apparel scenario | Olive green long-sleeve knit top | This is an olive green long-sleeve knit top. Show the neckline and knit texture. Refer to Image 2 to generate a detail image. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/63122cf3-a693-443f-a87c-9a292f984c8f.png" alt="image.png">
+     * Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/3b58612f-1b5d-4f93-ae28-cc2dc73149ba.png" alt="image.png">
+     * Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/21cbe9aa-1968-421d-829d-877e3b9277ad.png" alt="image.png"> |
+     * | Selling point image generation | General product scenario | Fog blue wall-mounted small drum washing machine | General product scenario:
+     * Create a selling point display image for the light lavender purple neckband earphones in Image 1. Retain the full view of the main subject, and place a partial zoom-in window on one side of the image without marking numbers or dimensions. The product should be easily recognizable to create an e-commerce selling point image with a complete design sense. Refer to the selling point image layout in Image 2, use the product from Image 1, and do not use the product, brand, and specific effects from the reference image. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/c621bf49-668b-4fd7-bc9f-fbeda55265e6.png" alt="image.png">
+     * Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/9d2efcbf-c061-4b84-8d88-194a6812b2e3.png" alt="image.png">
+     * Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/7c9a9ae8-61e5-452b-adbc-825575cc4e08.png" alt="image.png"> |
+     * |  | Apparel scenario | Off-white stand-collar knot-button vest | Create a product selling point image for this off-white stand-collar knot-button vest. Arrange the title and copy to make it look good overall. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/a7663e6d-6295-4f90-b61d-bbda22cfa524.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/85ba57f1-b944-4400-b48d-2fce030375e2.png" alt="image.png"> |
+     * | Product replacement | General product scenario | Base image: Silver-gray desktop laminator; New product: White desktop laser printer | Image 1 is the base image. Replace the round wall clock in it with the terracotta orange wall fan from Image 2. Place it in the original position according to the shape and natural size of the product in Image 2. Keep the surrounding environment and props, ensure natural lighting and placement, and avoid ghosting of the original object. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/d69cfa22-1486-4652-afa3-e90b44d9df4e.png" alt="image.png">
+     *  Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/dabd86e7-f80a-49a6-9f0d-d51f72634127.png" alt="image.png">
+     * Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/584ae607-dca6-4cff-993b-f6a07b3a1feb.png" alt="image.png"> |
+     * | Scene variation | General product scenario | Two-column four-tier rolling storage cabinet with dark brown wood top, silver frame, and off-white solid drawers | Perform scene variation on Image 1, keeping the original style of the image and the product unchanged. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/5559ee78-f354-4783-a039-23cdc80336f5.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/19e2bd71-278f-47d9-9f1f-de10b6279ca9.png" alt="image.png"> |
+     * |  | Apparel scenario | ### Dark blue top, off-white layered midi skirt, and floral sandals | Perform scene variation on Image 1, keeping the original style of the image and the product unchanged. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/0801afdd-f06b-46cb-a1b1-34c948c6eb25.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/e5755fdb-30ea-4d39-a8d2-a8afae4b0db0.png" alt="image.png"> |
+     * | Subject extraction | General product scenario | Gray cylindrical speaker | Extract the gray cylindrical speaker from the image separately and place it on a white background. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/fc77334b-e5c7-4709-abea-312c2566227a.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/8fe1d4e3-09d5-4edd-959b-f548d2ec51ce.png?x-oss-process=image/crop,x_157,y_141,w_718,h_787/ignore-error,1" alt="image.png"> |
+     * |  | Apparel scenario | ### White crop top, beige long pants, and white shoes | Extract the entire outfit on this model, display it flat-lay on a white background, keep the original color and style of each piece, and exclude the person and background. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/76b2536e-170c-4670-bf5e-e834d8f8539a.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/062f599e-6361-42ac-bb2b-dcf7df415dc1.png" alt="image.png"> |
+     * | Recolor | General product scenario | Caramel round soft-padded storage ottoman | Change the soft-padded surface of the storage ottoman in Image 1 to the light pink color of the bag in Image 2. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/b30e2889-bb74-4110-8a82-2021d74bee3c.png" alt="EV0340-8d60df612c02.png">
+     * Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/ce688dc4-475b-4780-a16f-45d50d540dd7.png" alt="BG05-38b5aadd7aac.png">
+     * Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/b02ed1e4-0474-4736-a214-b1592d77e183.png" alt="image.png"> |
+     * |  | Apparel scenario | Brown halter-neck long jumpsuit | Change the long jumpsuit in Image 1 to the light pink color of the bag in Image 2. | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/72b0c388-bda6-4ead-ae1f-335f7500eb50.png" alt="image.png">
+     * Image 1
+     * <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/ce688dc4-475b-4780-a16f-45d50d540dd7.png" alt="BG05-38b5aadd7aac.png">Image 2 | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/K4ny98ENKaeaonLb/img/832390b2-5fdd-4f82-95e0-66b72131b04c.png" alt="image.png"> |</p>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates e-commerce-ready image assets based on AI foundation models. A single prompt or a prompt combined with reference images can produce materials covering general, product, and apparel scenarios. Supports scene images, model images, detail images, selling point images, outpainting, product replacement, scene variation, subject extraction, and recoloring. Preserves the color, material, pattern, and text of the product during generation, extending a single image into a complete set of ready-to-list advertising materials.</p>
+     * 
+     * @param request GeneralImageGenerationRequest
+     * @return GeneralImageGenerationResponse
+     */
+    public GeneralImageGenerationResponse generalImageGeneration(GeneralImageGenerationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generalImageGenerationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p><em>Scenarios</em>*</p>
      * <ol>
      * <li>Inspection photo review: Screens store-submitted photos for recapture risks.</li>

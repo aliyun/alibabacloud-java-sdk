@@ -141,7 +141,7 @@ public class CategoryMatchResponseBody extends TeaModel {
          * <p>The matching reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>The core of the product is a cat collar with AirTag tracking functionality, which belongs to the \&quot;Location and Activity Trackers\&quot; category. The leaf node semantics precisely match its tracking function and cat-specific attributes</p>
+         * <p>The core of the product is a cat collar with AirTag tracking functionality, which belongs to the &quot;Location and Activity Trackers&quot; category. The leaf node semantics precisely match its tracking function and cat-specific attributes</p>
          */
         @NameInMap("Reason")
         public String reason;
