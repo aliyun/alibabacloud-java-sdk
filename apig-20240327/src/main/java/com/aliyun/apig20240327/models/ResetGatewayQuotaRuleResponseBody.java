@@ -17,7 +17,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
      * <p>The response data content.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;key\&quot;: \&quot;value\&quot;}</p>
+     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
      */
     @NameInMap("data")
     public ResetGatewayQuotaRuleResponseBodyData data;

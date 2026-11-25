@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateModelApiRequest extends TeaModel {
     /**
-     * <p>The API access prefix. The default value is / during creation. If omitted during an update, the original value is retained.</p>
+     * <p>The access prefix of the API. The default value is / when created. If omitted in an update request, the original value is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>/beta</p>
@@ -14,7 +14,7 @@ public class UpdateModelApiRequest extends TeaModel {
     public String basePath;
 
     /**
-     * <p>The description of the model API. If omitted during an update, the original value is retained.</p>
+     * <p>The description of the model API. If omitted in an update request, the original value is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>Model API for business integration</p>
@@ -23,7 +23,7 @@ public class UpdateModelApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable direct supply fallback. If omitted during an update, the original value is retained. Explicitly set to false to disable it.</p>
+     * <p>Specifies whether to enable the direct supply fallback. If omitted in an update request, the original value is retained. Set to false to explicitly disable it.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class UpdateModelApiRequest extends TeaModel {
     public Boolean directSupplyFallbackEnabled;
 
     /**
-     * <p>The IDs of the selected custom or default domain names of the instance. This parameter must be explicitly non-empty during creation. If omitted during an update, the original value is retained. When submitted, the entire list is replaced and cannot be empty.</p>
+     * <p>The IDs of the selected custom or instance default domain names. This parameter must be explicitly set to a non-empty value when creating an API. If omitted in an update request, the original value is retained. When submitted, the entire list is replaced and cannot be empty.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -41,13 +41,13 @@ public class UpdateModelApiRequest extends TeaModel {
     public java.util.List<String> domainIds;
 
     /**
-     * <p>Specifies whether to enable consumer API key authentication. If omitted during an update, the original value is retained. The type is fixed to Apikey or Custom.</p>
+     * <p>Specifies whether to enable consumer API key authentication. If omitted in an update request, the original value is retained. The type is fixed to Apikey or Custom.</p>
      */
     @NameInMap("enableAuth")
     public Boolean enableAuth;
 
     /**
-     * <p>The time to first byte.</p>
+     * <p>The first byte timeout.</p>
      * 
      * <strong>example:</strong>
      * <p>30000</p>
@@ -56,7 +56,7 @@ public class UpdateModelApiRequest extends TeaModel {
     public Integer firstByteTimeout;
 
     /**
-     * <p>The model selection. This parameter is required during creation. If omitted during an update, the original value is retained. When submitted, the entire selection is replaced.</p>
+     * <p>The model selection. This parameter is required when creating an API. If omitted in an update request, the original value is retained. When submitted, the entire selection is replaced.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -65,7 +65,7 @@ public class UpdateModelApiRequest extends TeaModel {
     public ModelSelection modelSelection;
 
     /**
-     * <p>Supported only by the new version of ModelAPI in minimalist mode: merges the actual source model IDs added to or removed from the model source in this request into the latest selection within the lock. This parameter is mutually exclusive with modelSelection and cannot be null or an empty delta. The standard update and publish process applies.</p>
+     * <p>Supported only by the new version of Model API in minimalist mode. Merges the actual source model IDs added or removed in this request into the latest locked selection. This parameter is mutually exclusive with modelSelection and cannot be null or an empty delta. The standard update and publish process applies.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -74,7 +74,7 @@ public class UpdateModelApiRequest extends TeaModel {
     public ModelSelectionDelta modelSelectionDelta;
 
     /**
-     * <p>The name of the model API. If omitted or set to null, the original value is retained. When submitted, the value is trimmed of leading and trailing whitespace, must be non-empty, contain a maximum of 128 UTF-8 bytes, and cannot contain @ or /. Renaming the API does not change the API ID or access prefix.</p>
+     * <p>The name of the model API. If omitted or set to null, the original value is retained. When submitted, the name is trimmed of leading and trailing whitespace, must not be empty, can be up to 128 UTF-8 bytes in length, and cannot contain the at sign (@) or forward slash (/). Renaming the API does not change the API ID or the access prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>beta-model-api</p>
@@ -83,7 +83,7 @@ public class UpdateModelApiRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The configurations for AI request logs and AI security protection. If omitted during an update, the original values are retained. When submitted, the inline policies of both types are entirely replaced. An empty array clears both types. Independent token quotas are not affected.</p>
+     * <p>The policy configurations for AI request logging and AI security protection only. If omitted in an update request, the original values are retained. When submitted, the inline policies of both types are entirely replaced. An empty array clears both types of policies. Independent token quotas are not affected.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>

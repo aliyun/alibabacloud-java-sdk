@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBatchImportTasksRequest extends TeaModel {
     /**
-     * <p>The end time of the creation time range. Specify the time in RFC 3339 format.</p>
+     * <p>The end time of the creation time range in RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-26T11:00:00Z</p>
@@ -32,7 +32,7 @@ public class ListBatchImportTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The start mark for the paging query.</p>
+     * <p>The starting token for the paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxx</p>
@@ -50,7 +50,7 @@ public class ListBatchImportTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListBatchImportTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time of the creation time range. Specify the time in RFC 3339 format.</p>
+     * <p>The start time of the creation time range in RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-26T10:00:00Z</p>

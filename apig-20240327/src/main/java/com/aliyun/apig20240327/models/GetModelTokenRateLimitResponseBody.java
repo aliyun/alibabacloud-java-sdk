@@ -23,7 +23,7 @@ public class GetModelTokenRateLimitResponseBody extends TeaModel {
     public GetModelTokenRateLimitResponseBodyData data;
 
     /**
-     * <p>The cause of the error. This parameter is omitted if the request is successful.</p>
+     * <p>The cause of the error. This field can be omitted if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified gateway does not exist.</p>
@@ -88,7 +88,7 @@ public class GetModelTokenRateLimitResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The maximum number of tokens per minute (TPM) for this consumer using this model.</p>
+         * <p>The maximum number of tokens per minute (TPM) allowed for this consumer to use this model.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -121,7 +121,7 @@ public class GetModelTokenRateLimitResponseBody extends TeaModel {
 
     public static class GetModelTokenRateLimitResponseBodyData extends TeaModel {
         /**
-         * <p>The most recent configuration revision successfully delivered to the control plane.</p>
+         * <p>The version of the configuration that was last successfully delivered to the control plane.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -157,7 +157,7 @@ public class GetModelTokenRateLimitResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The rule ID for the global model quota, which can be matched with the rule hits in the gateway throttling logs. This parameter is returned only when the global quota is configured.</p>
+         * <p>The rule ID for the global model quota, which can be matched with the rule hits in the gateway throttling logs. This field is returned only when a global quota is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>model-tpm/gw-example01/msc-example01/global</p>
@@ -175,7 +175,7 @@ public class GetModelTokenRateLimitResponseBody extends TeaModel {
         public Long globalTpm;
 
         /**
-         * <p>The actual model card ID (prefixed with msc-) or the logical model ID (prefixed with vm-).</p>
+         * <p>The physical model card ID that starts with msc- or the logical model ID that starts with vm-.</p>
          * 
          * <strong>example:</strong>
          * <p>msc-example01</p>
@@ -184,7 +184,7 @@ public class GetModelTokenRateLimitResponseBody extends TeaModel {
         public String modelId;
 
         /**
-         * <p>The saved revision of the model throttling configuration. Pass this value as expectedRevision in subsequent modification requests.</p>
+         * <p>The saved version of the model throttling configuration. Pass this value as expectedRevision in subsequent modification requests.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

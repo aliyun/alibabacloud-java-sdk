@@ -100,7 +100,7 @@ public class DeployHttpApiRequest extends TeaModel {
          * <p>The match condition configuration for API publishing.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</p>
+         * <p>{&quot;change_order_revision&quot;:&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter&quot;}</p>
          */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;

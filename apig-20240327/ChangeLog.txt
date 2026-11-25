@@ -1,3 +1,19 @@
+2026-11-25 Version: 12.14.0
+- Support API BatchDeleteHttpApiRoutes.
+- Support API BatchUndeployHttpApiRoutes.
+- Support API DetectHttpApiConflicts.
+- Update API CreateAiModelSource: add request parameters body.callNamePrefix.
+- Update API CreateAiModelSource: add response parameters Body.data.callNamePrefix.
+- Update API CreateAiModelSourceModel: add response parameters Body.data.callName.
+- Update API GetAiModelSource: add response parameters Body.data.callNamePrefix.
+- Update API GetAiModelSourceModel: add response parameters Body.data.callName.
+- Update API ListAiModelSourceModels: add response parameters Body.data.items.$.callName.
+- Update API ListAiModelSources: add response parameters Body.data.items.$.callNamePrefix.
+- Update API UpdateAiModelSource: add response parameters Body.data.callNamePrefix.
+- Update API UpdateAiModelSourceModel: add response parameters Body.data.callName.
+- Update API UpdateService: add request parameters body.apiKeyIndexToRemove.
+
+
 2026-11-24 Version: 12.13.0
 - Support API BatchDeployHttpApiRoutes.
 - Support API ListBatchImportTasks.

@@ -11,7 +11,7 @@ public class AuthorizeConsumerModelCardGrantsRequest extends TeaModel {
     public java.util.List<String> modelCardIds;
 
     /**
-     * <p>The actual model group IDs of the current instance. The modelCardIds parameter can be empty only when group licenses are granted. Group licenses allow zero intersection with the current API, but principal relationships with both target types empty cannot be saved.</p>
+     * <p>The actual model group IDs of the current instance. modelCardIds can be empty only when group licenses are granted. Group licenses allow zero intersection with the current API, but principal relationships with both target types empty cannot be saved.</p>
      */
     @NameInMap("modelGroupIds")
     public java.util.List<String> modelGroupIds;

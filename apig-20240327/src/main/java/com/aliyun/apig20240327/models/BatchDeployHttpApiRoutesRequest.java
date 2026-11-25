@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeployHttpApiRoutesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to publish routes asynchronously. Default value: true. If set to true, the acceptance results of the routes are returned. If set to false, the system waits for the batch processing to complete and returns the final results and statistics for each route.</p>
+     * <p>Specifies whether to publish routes asynchronously. Default value: true. An asynchronous publish returns the acceptance result of each route. If you set this parameter to false, the system waits for the batch processing to complete and returns the final result and statistics for each route.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class BatchDeployHttpApiRoutesRequest extends TeaModel {
     public Boolean async;
 
     /**
-     * <p>Specifies whether to publish all routes visible to the current user under the API. Default value: false. If you set this parameter to true, all visible routes are published and the routeIds parameter is ignored.</p>
+     * <p>Specifies whether to publish all routes visible to the current user under the API. Default value: false. If you set this parameter to true, all visible routes are targeted and routeIds is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,7 +23,7 @@ public class BatchDeployHttpApiRoutesRequest extends TeaModel {
     public Boolean deployAll;
 
     /**
-     * <p>The list of route IDs to publish. If deployAll is omitted or set to false, at least one route ID must be provided. If any route does not exist or belongs to another API, the entire batch request is rejected.</p>
+     * <p>The list of route IDs to publish. If deployAll is omitted or set to false, you must provide at least one route ID. If any route does not exist or belongs to another API, the entire batch request is rejected.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;hr-example001&quot;,&quot;hr-example002&quot;]</p>

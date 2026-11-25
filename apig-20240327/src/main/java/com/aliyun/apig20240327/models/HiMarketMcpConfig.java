@@ -29,7 +29,7 @@ public class HiMarketMcpConfig extends TeaModel {
      * <p>The MCP tool definitions.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;name\&quot;:\&quot;search\&quot;,\&quot;description\&quot;:\&quot;Search tool\&quot;}]</p>
+     * <p>[{&quot;name&quot;:&quot;search&quot;,&quot;description&quot;:&quot;Search tool&quot;}]</p>
      */
     @NameInMap("tools")
     public String tools;

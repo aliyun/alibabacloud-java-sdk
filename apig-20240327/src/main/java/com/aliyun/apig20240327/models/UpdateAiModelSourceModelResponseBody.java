@@ -287,6 +287,13 @@ public class UpdateAiModelSourceModelResponseBody extends TeaModel {
         public java.util.List<UpdateAiModelSourceModelResponseBodyDataAvailablePaths> availablePaths;
 
         /**
+         * <strong>example:</strong>
+         * <p>qwen-prod/qwen-plus</p>
+         */
+        @NameInMap("callName")
+        public String callName;
+
+        /**
          * <p>The credit pricing configuration of the model.</p>
          */
         @NameInMap("credit")
@@ -426,6 +433,14 @@ public class UpdateAiModelSourceModelResponseBody extends TeaModel {
         }
         public java.util.List<UpdateAiModelSourceModelResponseBodyDataAvailablePaths> getAvailablePaths() {
             return this.availablePaths;
+        }
+
+        public UpdateAiModelSourceModelResponseBodyData setCallName(String callName) {
+            this.callName = callName;
+            return this;
+        }
+        public String getCallName() {
+            return this.callName;
         }
 
         public UpdateAiModelSourceModelResponseBodyData setCredit(UpdateAiModelSourceModelResponseBodyDataCredit credit) {

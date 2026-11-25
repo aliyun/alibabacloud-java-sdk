@@ -14,7 +14,7 @@ public class ListGatewayWebsocketEventsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The query results.</p>
+     * <p>The query result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -32,7 +32,7 @@ public class ListGatewayWebsocketEventsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D0A6A1A0-8793-4C10-AB1A-2C03E770A912</p>
@@ -88,7 +88,7 @@ public class ListGatewayWebsocketEventsResponseBody extends TeaModel {
         public String basis;
 
         /**
-         * <p>Indicates whether there is a next page.</p>
+         * <p>Indicates whether more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -115,7 +115,7 @@ public class ListGatewayWebsocketEventsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The next pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>opaque-token-from-previous-page</p>

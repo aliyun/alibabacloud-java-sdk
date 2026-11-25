@@ -20,7 +20,7 @@ public class ListBatchImportTasksResponseBody extends TeaModel {
     public ListBatchImportTasksResponseBodyData data;
 
     /**
-     * <p>The maximum number of records returned in the current request.</p>
+     * <p>The maximum number of records returned in the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -38,7 +38,7 @@ public class ListBatchImportTasksResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next query. This parameter is empty if no more results are available.</p>
+     * <p>The starting token for the next query. This parameter is empty when no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxx</p>
@@ -128,7 +128,7 @@ public class ListBatchImportTasksResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The gateway instance ID associated with the task.</p>
+         * <p>The ID of the gateway instance associated with the task.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
@@ -173,7 +173,7 @@ public class ListBatchImportTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The total number of tasks.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -254,7 +254,7 @@ public class ListBatchImportTasksResponseBody extends TeaModel {
 
     public static class ListBatchImportTasksResponseBodyData extends TeaModel {
         /**
-         * <p>The list of tasks. Tasks are returned in descending order of creation time, with the latest tasks first.</p>
+         * <p>The list of tasks. The tasks are returned in descending order of creation time, with the latest tasks first.</p>
          */
         @NameInMap("items")
         public java.util.List<ListBatchImportTasksResponseBodyDataItems> items;
@@ -269,7 +269,7 @@ public class ListBatchImportTasksResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -278,7 +278,7 @@ public class ListBatchImportTasksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of tasks.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

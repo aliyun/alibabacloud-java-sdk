@@ -76,6 +76,13 @@ public class UpdateAiModelSourceResponseBody extends TeaModel {
 
     public static class UpdateAiModelSourceResponseBodyData extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>qwen-prod</p>
+         */
+        @NameInMap("callNamePrefix")
+        public String callNamePrefix;
+
+        /**
          * <p>The display name of the model source or model provider.</p>
          * 
          * <strong>example:</strong>
@@ -150,6 +157,14 @@ public class UpdateAiModelSourceResponseBody extends TeaModel {
         public static UpdateAiModelSourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateAiModelSourceResponseBodyData self = new UpdateAiModelSourceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateAiModelSourceResponseBodyData setCallNamePrefix(String callNamePrefix) {
+            this.callNamePrefix = callNamePrefix;
+            return this;
+        }
+        public String getCallNamePrefix() {
+            return this.callNamePrefix;
         }
 
         public UpdateAiModelSourceResponseBodyData setDisplayName(String displayName) {

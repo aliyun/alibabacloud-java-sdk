@@ -245,7 +245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants model card licenses to a consumer.</p>
+     * <p>Grants model card licenses to consumers.</p>
      * 
      * @param request AuthorizeConsumerModelCardGrantsRequest
      * @param headers map
@@ -291,7 +291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants model card licenses to a consumer.</p>
+     * <p>Grants model card licenses to consumers.</p>
      * 
      * @param request AuthorizeConsumerModelCardGrantsRequest
      * @return AuthorizeConsumerModelCardGrantsResponse
@@ -397,11 +397,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量删除HttpApi的路由</p>
+     * 
+     * @param request BatchDeleteHttpApiRoutesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchDeleteHttpApiRoutesResponse
+     */
+    public BatchDeleteHttpApiRoutesResponse batchDeleteHttpApiRoutesWithOptions(String httpApiId, BatchDeleteHttpApiRoutesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteAll)) {
+            body.put("deleteAll", request.deleteAll);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeIds)) {
+            body.put("routeIds", request.routeIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchDeleteHttpApiRoutes"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + "/routes/batch-delete"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeleteHttpApiRoutesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量删除HttpApi的路由</p>
+     * 
+     * @param request BatchDeleteHttpApiRoutesRequest
+     * @return BatchDeleteHttpApiRoutesResponse
+     */
+    public BatchDeleteHttpApiRoutesResponse batchDeleteHttpApiRoutes(String httpApiId, BatchDeleteHttpApiRoutesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchDeleteHttpApiRoutesWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Batch requests are processed individually after passing route ownership validation. If some routes fail to be published, other successfully published routes remain valid.</p>
      * 
      * <b>summary</b> : 
-     * <p>Publishes specified routes or all visible routes under the same HTTP API in batches.</p>
+     * <p>Publishes specified routes or all visible routes under the same HTTP API in a batch.</p>
      * 
      * @param request BatchDeployHttpApiRoutesRequest
      * @param headers map
@@ -446,7 +497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Batch requests are processed individually after passing route ownership validation. If some routes fail to be published, other successfully published routes remain valid.</p>
      * 
      * <b>summary</b> : 
-     * <p>Publishes specified routes or all visible routes under the same HTTP API in batches.</p>
+     * <p>Publishes specified routes or all visible routes under the same HTTP API in a batch.</p>
      * 
      * @param request BatchDeployHttpApiRoutesRequest
      * @return BatchDeployHttpApiRoutesResponse
@@ -648,6 +699,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.batchRemoveConsumerGroupConsumersWithOptions(consumerGroupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量下线HttpApi的路由</p>
+     * 
+     * @param request BatchUndeployHttpApiRoutesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchUndeployHttpApiRoutesResponse
+     */
+    public BatchUndeployHttpApiRoutesResponse batchUndeployHttpApiRoutesWithOptions(String httpApiId, BatchUndeployHttpApiRoutesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.async)) {
+            body.put("async", request.async);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeIds)) {
+            body.put("routeIds", request.routeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.undeployAll)) {
+            body.put("undeployAll", request.undeployAll);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchUndeployHttpApiRoutes"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + "/routes/batch-undeploy"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchUndeployHttpApiRoutesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量下线HttpApi的路由</p>
+     * 
+     * @param request BatchUndeployHttpApiRoutesRequest
+     * @return BatchUndeployHttpApiRoutesResponse
+     */
+    public BatchUndeployHttpApiRoutesResponse batchUndeployHttpApiRoutes(String httpApiId, BatchUndeployHttpApiRoutesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchUndeployHttpApiRoutesWithOptions(httpApiId, request, headers, runtime);
     }
 
     /**
@@ -968,6 +1074,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callNamePrefix)) {
+            body.put("callNamePrefix", request.callNamePrefix);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             body.put("displayName", request.displayName);
         }
@@ -1018,7 +1128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an in-source AI model.</p>
+     * <p>Creates an AI model in a model source.</p>
      * 
      * @param request CreateAiModelSourceModelRequest
      * @param headers map
@@ -1078,7 +1188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an in-source AI model.</p>
+     * <p>Creates an AI model in a model source.</p>
      * 
      * @param request CreateAiModelSourceModelRequest
      * @return CreateAiModelSourceModelResponse
@@ -2497,7 +2607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model creation API.</p>
+     * <p>Creates an API for model creation.</p>
      * 
      * @param request CreateModelApiRequest
      * @param headers map
@@ -2581,7 +2691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model creation API.</p>
+     * <p>Creates an API for model creation.</p>
      * 
      * @param request CreateModelApiRequest
      * @return CreateModelApiResponse
@@ -4317,7 +4427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
+     * <p>When you delete a published new-version model API, the system automatically stops the service and cleans up the dedicated resources of the API. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but it does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained if the deletion is in progress or fails. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a model API.</p>
@@ -4358,7 +4468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
+     * <p>When you delete a published new-version model API, the system automatically stops the service and cleans up the dedicated resources of the API. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but it does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained if the deletion is in progress or fails. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a model API.</p>
@@ -5095,6 +5205,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>检测HttpApi间的路由冲突</p>
+     * 
+     * @param request DetectHttpApiConflictsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetectHttpApiConflictsResponse
+     */
+    public DetectHttpApiConflictsResponse detectHttpApiConflictsWithOptions(String httpApiId, DetectHttpApiConflictsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.restApiConfig)) {
+            body.put("restApiConfig", request.restApiConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeId)) {
+            body.put("routeId", request.routeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetectHttpApiConflicts"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + "/detect-conflicts"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectHttpApiConflictsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检测HttpApi间的路由冲突</p>
+     * 
+     * @param request DetectHttpApiConflictsRequest
+     * @return DetectHttpApiConflictsResponse
+     */
+    public DetectHttpApiConflictsResponse detectHttpApiConflicts(String httpApiId, DetectHttpApiConflictsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.detectHttpApiConflictsWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Exports a specified HTTP API.</p>
      * 
      * @param request ExportHttpApiRequest
@@ -5314,7 +5475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries AI models in a model source.</p>
+     * <p>Queries AI models in a source.</p>
      * 
      * @param request GetAiModelSourceModelRequest
      * @param headers map
@@ -5342,7 +5503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries AI models in a model source.</p>
+     * <p>Queries AI models in a source.</p>
      * 
      * @param request GetAiModelSourceModelRequest
      * @return GetAiModelSourceModelResponse
@@ -6389,7 +6550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</p>
+     * <p>Retrieves the current half-open cycle Redis summary of the configured metering policy for the dedicated Professional AI gateway of the current user. It only supports the total number of instances and does not accept filtering by time range, model, connection, or SLS destination. A value of false for data_present indicates that no cycle data is available, and it is not padded with zero values.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the current cycle usage of the configured metering policy for a dedicated Professional AI gateway. Returns a specific error if cycle metering is not configured, and does not pad with zeros when no cycle data is available.</p>
@@ -6420,7 +6581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</p>
+     * <p>Retrieves the current half-open cycle Redis summary of the configured metering policy for the dedicated Professional AI gateway of the current user. It only supports the total number of instances and does not accept filtering by time range, model, connection, or SLS destination. A value of false for data_present indicates that no cycle data is available, and it is not padded with zero values.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the current cycle usage of the configured metering policy for a dedicated Professional AI gateway. Returns a specific error if cycle metering is not configured, and does not pad with zeros when no cycle data is available.</p>
@@ -6565,7 +6726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves API operation information.</p>
+     * <p>Retrieves the API operation information.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6591,7 +6752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves API operation information.</p>
+     * <p>Retrieves the API operation information.</p>
      * @return GetHttpApiOperationResponse
      */
     public GetHttpApiOperationResponse getHttpApiOperation(String httpApiId, String operationId) throws Exception {
@@ -6680,7 +6841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration delivery of a logical model.</p>
+     * <p>Queries the logical model configuration delivery.</p>
      * 
      * @param request GetLogicalModelDeploymentRequest
      * @param headers map
@@ -6708,7 +6869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration delivery of a logical model.</p>
+     * <p>Queries the logical model configuration delivery.</p>
      * 
      * @param request GetLogicalModelDeploymentRequest
      * @return GetLogicalModelDeploymentResponse
@@ -8757,7 +8918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of model card entitlements for consumers.</p>
+     * <p>Queries the list of consumer model card entitlements.</p>
      * 
      * @param request ListConsumerModelCardGrantsRequest
      * @param headers map
@@ -8807,7 +8968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of model card entitlements for consumers.</p>
+     * <p>Queries the list of consumer model card entitlements.</p>
      * 
      * @param request ListConsumerModelCardGrantsRequest
      * @return ListConsumerModelCardGrantsResponse
@@ -9591,7 +9752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Retrieves the historical events delivered by the dedicated Professional AI gateway of the current user to Simple Log Service (SLS). Standard user log delivery and the corresponding indexes must be enabled. The query time range is a left-closed and right-open interval. The time span cannot exceed 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results do not represent an online connection directory, and missing logs do not indicate that no calls occurred.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</p>
+     * <p>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. This operation supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</p>
      * 
      * @param request ListGatewayWebsocketEventsRequest
      * @param headers map
@@ -9660,7 +9821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Retrieves the historical events delivered by the dedicated Professional AI gateway of the current user to Simple Log Service (SLS). Standard user log delivery and the corresponding indexes must be enabled. The query time range is a left-closed and right-open interval. The time span cannot exceed 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results do not represent an online connection directory, and missing logs do not indicate that no calls occurred.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</p>
+     * <p>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. This operation supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</p>
      * 
      * @param request ListGatewayWebsocketEventsRequest
      * @return ListGatewayWebsocketEventsResponse
@@ -15986,6 +16147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.aiServiceConfig)) {
             body.put("aiServiceConfig", request.aiServiceConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKeyIndexToRemove)) {
+            body.put("apiKeyIndexToRemove", request.apiKeyIndexToRemove);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.apiKeyReferencesToAdd)) {

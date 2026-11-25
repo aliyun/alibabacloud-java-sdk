@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBatchExportTasksRequest extends TeaModel {
     /**
-     * <p>The end time of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+     * <p>The end time of the creation time range. Format: yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-26T11:00:00Z</p>
@@ -59,7 +59,7 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+     * <p>The start time of the creation time range. Format: yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-26T10:00:00Z</p>

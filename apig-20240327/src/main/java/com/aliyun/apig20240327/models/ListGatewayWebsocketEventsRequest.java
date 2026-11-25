@@ -14,7 +14,7 @@ public class ListGatewayWebsocketEventsRequest extends TeaModel {
     public String connectionId;
 
     /**
-     * <p>The end time. The value is a UNIX timestamp in seconds since the UTC epoch. Example: 1793919600.</p>
+     * <p>The end time. The value is a UNIX timestamp in seconds (since the UTC epoch), such as 1793919600.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListGatewayWebsocketEventsRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>opaque-token-from-previous-page</p>
@@ -69,7 +69,7 @@ public class ListGatewayWebsocketEventsRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The start time. The value is a UNIX timestamp in seconds since the UTC epoch. Example: 1793916000.</p>
+     * <p>The start time. The value is a UNIX timestamp in seconds (since the UTC epoch), such as 1793916000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

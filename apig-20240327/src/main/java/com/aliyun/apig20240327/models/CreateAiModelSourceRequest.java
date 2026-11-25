@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAiModelSourceRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>qwen-prod</p>
+     */
+    @NameInMap("callNamePrefix")
+    public String callNamePrefix;
+
+    /**
      * <p>The display name of the model source or model provider.</p>
      * <p>This parameter is required.</p>
      * 
@@ -56,6 +63,14 @@ public class CreateAiModelSourceRequest extends TeaModel {
     public static CreateAiModelSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAiModelSourceRequest self = new CreateAiModelSourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAiModelSourceRequest setCallNamePrefix(String callNamePrefix) {
+        this.callNamePrefix = callNamePrefix;
+        return this;
+    }
+    public String getCallNamePrefix() {
+        return this.callNamePrefix;
     }
 
     public CreateAiModelSourceRequest setDisplayName(String displayName) {

@@ -76,7 +76,7 @@ public class GetModelGroupResponseBody extends TeaModel {
 
     public static class GetModelGroupResponseBodyDataConfigurationDeployment extends TeaModel {
         /**
-         * <p>The operation ID of the group configuration task, which is used for tracking only. It cannot be used in GetLogicalModelDeployment or RetryLogicalModelDeployment.</p>
+         * <p>The operation ID of the group configuration task, which is used for tracking only. It cannot be used for GetLogicalModelDeployment or RetryLogicalModelDeployment.</p>
          * 
          * <strong>example:</strong>
          * <p>op-xxxxxxxx</p>
@@ -153,7 +153,7 @@ public class GetModelGroupResponseBody extends TeaModel {
         public Long desiredRevision;
 
         /**
-         * <p>The error message when entitlement fails. This parameter is not returned when no error occurs.</p>
+         * <p>The error message when entitlement fails. This field is not returned when no error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>Entitlement synchronization failed</p>
@@ -162,7 +162,7 @@ public class GetModelGroupResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The entitlement status. Valid values: Pending, Applying, Committed, and Failed. Committed only indicates that the control plane has successfully submitted and read back the status, and does not mean that all nodes have acknowledged it.</p>
+         * <p>The entitlement status. Valid values: Pending, Applying, Committed, and Failed. Committed indicates only that the control plane has successfully submitted and read back the status, and does not mean that all nodes have acknowledged it.</p>
          * 
          * <strong>example:</strong>
          * <p>Committed</p>
@@ -211,7 +211,7 @@ public class GetModelGroupResponseBody extends TeaModel {
 
     public static class GetModelGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The summary of the latest group configuration deployment, which is independent of API release and entitlement status. This parameter is not returned when no deployment task exists, and its return does not indicate success. It represents the current version only when the revision matches the current version. List operations do not guarantee that this parameter is populated.</p>
+         * <p>The summary of the latest group configuration deployment, which is independent of API publishing and entitlement status. This field is not returned when no deployment task exists, and its presence does not indicate success. It represents the current version only when the revision matches the current version. List operations do not guarantee that this field is populated.</p>
          */
         @NameInMap("configurationDeployment")
         public GetModelGroupResponseBodyDataConfigurationDeployment configurationDeployment;

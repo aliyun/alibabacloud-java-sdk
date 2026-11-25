@@ -775,7 +775,7 @@ public class AiServiceConfig extends TeaModel {
          * <p>The authentication key for Vertex AI.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;type\&quot;:\&quot;service_account\&quot;,\&quot;project_id\&quot;:\&quot;my-project\&quot;,\&quot;private_key\&quot;:\&quot;-----BEGIN PRIVATE KEY-----...\&quot;,\&quot;client_email\&quot;:\&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>\&quot;,\&quot;token_uri\&quot;:\&quot;<a href="https://oauth2.googleapis.com/token%5C%5C%22%7D">https://oauth2.googleapis.com/token\\&quot;}</a></p>
+         * <p>{&quot;type&quot;:&quot;service_account&quot;,&quot;project_id&quot;:&quot;my-project&quot;,&quot;private_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;client_email&quot;:&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>&quot;,&quot;token_uri&quot;:&quot;<a href="https://oauth2.googleapis.com/token%5C%22%7D">https://oauth2.googleapis.com/token\&quot;}</a></p>
          */
         @NameInMap("vertexAuthKey")
         public String vertexAuthKey;

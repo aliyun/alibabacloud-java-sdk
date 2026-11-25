@@ -281,7 +281,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
 
     public static class GetBatchExportTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The task creation time. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+         * <p>The task creation time. Format: yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-15T10:00:00Z</p>

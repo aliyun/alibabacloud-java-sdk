@@ -105,7 +105,7 @@ public class HttpApiRequestContract extends TeaModel {
          *     &quot;properties&quot;: {
          *         &quot;result&quot;: {
          *             &quot;type&quot;: &quot;string&quot;,
-         *             &quot;description&quot;: &quot;Operation result. \&quot;ok\&quot; indicates success.&quot;
+         *             &quot;description&quot;: &quot;Operation result. &quot;ok&quot; indicates success.&quot;
          *         }
          *     }
          * }</p>

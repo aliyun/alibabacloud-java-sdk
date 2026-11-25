@@ -36,7 +36,7 @@ public class UpdateAndAttachPolicyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;enable\&quot;:false}</p>
+     * <p>{&quot;enable&quot;:false}</p>
      */
     @NameInMap("config")
     public String config;
