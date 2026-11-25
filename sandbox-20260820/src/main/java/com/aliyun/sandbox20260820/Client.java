@@ -1347,7 +1347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the quota configuration list for the current account by using paging.</p>
+     * <p>Performs a paged query to retrieve the quota configurations for the current account.</p>
      * 
      * @param request ListQuotaRequest
      * @param headers map
@@ -1385,7 +1385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the quota configuration list for the current account by using paging.</p>
+     * <p>Performs a paged query to retrieve the quota configurations for the current account.</p>
      * 
      * @param request ListQuotaRequest
      * @return ListQuotaResponse

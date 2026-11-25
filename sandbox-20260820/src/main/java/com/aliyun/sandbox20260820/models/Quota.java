@@ -14,16 +14,16 @@ public class Quota extends TeaModel {
     public Integer cpuCores;
 
     /**
-     * <p>The concurrent quota for creating sandboxes from snapshots in a team. This indicates the maximum number of requests for creating sandboxes from snapshots that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits creating sandboxes from snapshots. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</p>
+     * <p>The team snapshot-based sandbox creation concurrency quota, in requests. This value represents the maximum number of snapshot-based sandbox creation requests that can be executed at the same time. When updating, omit this parameter or set it to null to retain the original configuration. Set it to a positive integer to specify an exclusive quota. Set it to 0 to prohibit snapshot-based sandbox creation. Set it to -1 to clear the exclusive quota and restore the remaining quota of the shared account. In query responses, this parameter is omitted if it is not configured. An explicit value of 0 is retained, and -1 is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
      */
-    @NameInMap("createSessionWithSnapshotConcurrency")
-    public Integer createSessionWithSnapshotConcurrency;
+    @NameInMap("createSandboxWithSnapshotConcurrency")
+    public Integer createSandboxWithSnapshotConcurrency;
 
     /**
-     * <p>The concurrent quota for creating snapshots in a team. This indicates the maximum number of snapshot creation requests that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits creating snapshots. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</p>
+     * <p>The team snapshot creation concurrency quota, in requests. This value represents the maximum number of snapshot creation requests that can be executed at the same time. When updating, omit this parameter or set it to null to retain the original configuration. Set it to a positive integer to specify an exclusive quota. Set it to 0 to prohibit snapshot creation. Set it to -1 to clear the exclusive quota and restore the remaining quota of the shared account. In query responses, this parameter is omitted if it is not configured. An explicit value of 0 is retained, and -1 is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class Quota extends TeaModel {
     public Integer createSnapshotConcurrency;
 
     /**
-     * <p>The quota for the number of running instances.</p>
+     * <p>The quota for active instances.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -50,7 +50,7 @@ public class Quota extends TeaModel {
     public Integer memoryGB;
 
     /**
-     * <p>The concurrent quota for sandbox hibernation in a team. This indicates the maximum number of sandbox hibernation requests that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits sandbox hibernation. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</p>
+     * <p>The team sandbox hibernation concurrency quota, in requests. This value represents the maximum number of sandbox hibernation requests that can be executed at the same time. When updating, omit this parameter or set it to null to retain the original configuration. Set it to a positive integer to specify an exclusive quota. Set it to 0 to prohibit sandbox hibernation. Set it to -1 to clear the exclusive quota and restore the remaining quota of the shared account. In query responses, this parameter is omitted if it is not configured. An explicit value of 0 is retained, and -1 is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class Quota extends TeaModel {
     public Integer pauseConcurrency;
 
     /**
-     * <p>The concurrent quota for resuming sandboxes in a team. This indicates the maximum number of sandbox resumption requests that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits resuming sandboxes. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</p>
+     * <p>The team sandbox wake-up concurrency quota, in requests. This value represents the maximum number of sandbox wake-up requests that can be executed at the same time. When updating, omit this parameter or set it to null to retain the original configuration. Set it to a positive integer to specify an exclusive quota. Set it to 0 to prohibit sandbox wake-up. Set it to -1 to clear the exclusive quota and restore the remaining quota of the shared account. In query responses, this parameter is omitted if it is not configured. An explicit value of 0 is retained, and -1 is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +68,7 @@ public class Quota extends TeaModel {
     public Integer resumeConcurrency;
 
     /**
-     * <p>The Team CPU creation rate, in cores per minute. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive rate. 0 prohibits adding new CPU capacity. -1 clears the exclusive rate and restores the remaining rate of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</p>
+     * <p>The team CPU creation rate, in cores per minute. When updating, omit this parameter or set it to null to retain the original configuration. Set it to a positive integer to specify an exclusive rate. Set it to 0 to prohibit new CPU capacity. Set it to -1 to clear the exclusive rate and restore the remaining rate of the shared account. In query responses, this parameter is omitted if it is not configured. An explicit value of 0 is retained, and -1 is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -77,7 +77,7 @@ public class Quota extends TeaModel {
     public Long scalingCpuCoresPerMinute;
 
     /**
-     * <p>The quota tag value. This value is the team ID, and quotas are calculated independently based on this dimension.</p>
+     * <p>The quota tag value, which represents the team ID. Quotas are independently calculated based on this dimension.</p>
      * 
      * <strong>example:</strong>
      * <p>7696f4cf-****</p>
@@ -98,12 +98,12 @@ public class Quota extends TeaModel {
         return this.cpuCores;
     }
 
-    public Quota setCreateSessionWithSnapshotConcurrency(Integer createSessionWithSnapshotConcurrency) {
-        this.createSessionWithSnapshotConcurrency = createSessionWithSnapshotConcurrency;
+    public Quota setCreateSandboxWithSnapshotConcurrency(Integer createSandboxWithSnapshotConcurrency) {
+        this.createSandboxWithSnapshotConcurrency = createSandboxWithSnapshotConcurrency;
         return this;
     }
-    public Integer getCreateSessionWithSnapshotConcurrency() {
-        return this.createSessionWithSnapshotConcurrency;
+    public Integer getCreateSandboxWithSnapshotConcurrency() {
+        return this.createSandboxWithSnapshotConcurrency;
     }
 
     public Quota setCreateSnapshotConcurrency(Integer createSnapshotConcurrency) {
