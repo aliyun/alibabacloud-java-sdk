@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetContextDatabaseCreditUsageSummaryByMemberRequest extends TeaModel {
     /**
-     * <p>The end time of the query range, exclusive. It must be later than StartTime. Use the ISO 8601 time format, such as 2026-10-08T00:00:00Z (UTC).</p>
+     * <p>The end time of the query interval, exclusive. It must be later than <code>StartTime</code>. Use the ISO 8601 time format, such as <code>2026-10-08T00:00:00Z</code> (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberRequest extends TeaMode
     public String endTime;
 
     /**
-     * <p>The billable item used to filter records. Valid values: KnowledgeBaseRead (knowledge base read), MemoryRead (memory base read), MemoryWrite (memory base write), KnowledgeBaseWriteToken (knowledge base write token), and ContextGrowth (context evolution). If omitted, all billable items that consume credits are included. Storage items or unlisted values return InvalidParameter.</p>
+     * <p>The billing item used to filter records. Supported values include KnowledgeBaseRead (knowledge base read), MemoryRead (memory read), MemoryWrite (memory write), KnowledgeBaseWriteToken (knowledge base write token), and ContextGrowth (context growth). If omitted, all billing items that consume credits are included. Specifying storage items or unlisted values returns an <code>InvalidParameter</code> error.</p>
      * 
      * <strong>example:</strong>
      * <p>MemoryWrite</p>
@@ -51,7 +51,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberRequest extends TeaMode
     public Integer pageSize;
 
     /**
-     * <p>The start time of the query range, inclusive. Use the ISO 8601 time format, such as 2026-10-01T00:00:00Z (UTC).</p>
+     * <p>The start time of the query interval, inclusive. Use the ISO 8601 time format, such as <code>2026-10-01T00:00:00Z</code> (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class GetContextDatabaseCreditUsageSummaryByMemberRequest extends TeaMode
     public String startTime;
 
     /**
-     * <p>The ID of the workspace to be analyzed. This parameter is required. The workspace must belong to the caller\&quot;s account. Locked workspaces can still be queried. Member IDs are unique only within their respective workspaces, and cross-workspace ranking is not supported.</p>
+     * <p>The ID of the workspace to be analyzed. This parameter is required. The workspace must belong to the caller&quot;s account. Locked workspaces can still be queried. Member IDs are unique only within their respective workspaces, and cross-workspace ranking is not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetContextDatabaseUsageResponseBody extends TeaModel {
     /**
-     * <p>The query dimension. A value of Workspace indicates a single workspace. A value of Account indicates all workspaces under the caller account.</p>
+     * <p>The query dimension. Valid values:</p>
+     * <ul>
+     * <li><code>Workspace</code>: A single workspace.</li>
+     * <li><code>Account</code>: All workspaces under the caller account.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Workspace</p>
@@ -23,13 +27,13 @@ public class GetContextDatabaseUsageResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The usage list. Returns all 7 metering items in a fixed order. If an item has no data within the query range, its usage is 0.</p>
+     * <p>The usage list. It returns all seven metering items in a fixed order. If an item has no data within the query range, its usage is 0.</p>
      */
     @NameInMap("Items")
     public java.util.List<GetContextDatabaseUsageResponseBodyItems> items;
 
     /**
-     * <p>The ID of the API request, which is used to troubleshoot invocation issues.</p>
+     * <p>The ID of the API request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000-0000-4000-8000-000000000001</p>
@@ -47,7 +51,7 @@ public class GetContextDatabaseUsageResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the queried workspace. This parameter has a value only when Dimension is Workspace. It is empty for the account dimension.</p>
+     * <p>The ID of the queried workspace. This field has a value only when <code>Dimension</code> is set to <code>Workspace</code>. It is empty for the account dimension.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-x9z4ctzed9gfu2w</p>
@@ -119,7 +123,7 @@ public class GetContextDatabaseUsageResponseBody extends TeaModel {
         public String item;
 
         /**
-         * <p>The usage of the item within the query range. The unit is specified by Unit. Invocations, tokens, and context evolution are accumulated over the range. Storage is calculated by averaging the usage snapshots of each workspace within the range and rounding to the nearest whole byte. For the account dimension, the average values of all workspaces are summed.</p>
+         * <p>The usage of the item within the query range. The unit is specified by <code>Unit</code>. The number of calls, tokens, and context evolutions are accumulated over the range. Storage is calculated by averaging the occupancy snapshots of each workspace within the range and rounding to the nearest integer byte. For the account dimension, the average values of all workspaces are summed.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -128,7 +132,13 @@ public class GetContextDatabaseUsageResponseBody extends TeaModel {
         public Long quantity;
 
         /**
-         * <p>The metering unit. A value of Count indicates the number of invocations. A value of Token indicates the number of tokens. A value of MicroCredit indicates one millionth of a credit. A value of Byte indicates bytes.</p>
+         * <p>The metering unit. Valid values:</p>
+         * <ul>
+         * <li><code>Count</code>: The number of calls.</li>
+         * <li><code>Token</code>: The number of tokens.</li>
+         * <li><code>MicroCredit</code>: One millionth of a credit.</li>
+         * <li><code>Byte</code>: Bytes.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Count</p>

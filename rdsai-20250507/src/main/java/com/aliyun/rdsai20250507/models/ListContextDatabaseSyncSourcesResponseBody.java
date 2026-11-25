@@ -255,7 +255,7 @@ public class ListContextDatabaseSyncSourcesResponseBody extends TeaModel {
          * <p>The list of data selection scopes.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Id&quot;:&quot;src-as1llqmkol****&quot;, &quot;ConnectionId&quot;:&quot;conn-as1llqmkol****&quot;, &quot;Name&quot;:&quot;R&amp;D team document scope&quot;, &quot;SourceConfig&quot;:&quot;{\&quot;folderIds\&quot;:[\&quot;<a href="https://alidocs.dingtalk.com/i/p/p2N9kLmQxYz****%5C%5C%22%5D,%5C%5C%22pageSize%5C%5C%22:50,%5C%5C%22maxDepth%5C%5C%22:5%7D%22%7D%5D">https://alidocs.dingtalk.com/i/p/p2N9kLmQxYz****\\&quot;],\\&quot;pageSize\\&quot;:50,\\&quot;maxDepth\\&quot;:5}&quot;}]</a></p>
+         * <p>[{&quot;Id&quot;:&quot;src-as1llqmkol****&quot;, &quot;ConnectionId&quot;:&quot;conn-as1llqmkol****&quot;, &quot;Name&quot;:&quot;R&amp;D team document scope&quot;, &quot;SourceConfig&quot;:&quot;{&quot;folderIds&quot;:[&quot;<a href="https://alidocs.dingtalk.com/i/p/p2N9kLmQxYz****%5C%22%5D,%5C%22pageSize%5C%22:50,%5C%22maxDepth%5C%22:5%7D%22%7D%5D">https://alidocs.dingtalk.com/i/p/p2N9kLmQxYz****\&quot;],\&quot;pageSize\&quot;:50,\&quot;maxDepth\&quot;:5}&quot;}]</a></p>
          */
         @NameInMap("Sources")
         public java.util.List<ListContextDatabaseSyncSourcesResponseBodyDataSources> sources;

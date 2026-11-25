@@ -122,7 +122,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
      * <p>The minor versions of each component in the RDS AI application instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;studio\&quot;:\&quot;20260602r1\&quot;,\&quot;storage\&quot;:\&quot;v1.48.9\&quot;,\&quot;auth\&quot;:\&quot;v2.188.1\&quot;,\&quot;kong\&quot;:\&quot;3.9.0\&quot;,\&quot;rest\&quot;:\&quot;v12.2.12\&quot;,\&quot;meta\&quot;:\&quot;v0.89.3\&quot;,\&quot;realtime-dev\&quot;:\&quot;v2.34.47\&quot;,\&quot;postgres\&quot;:\&quot;rds_postgres_1700_20260830\&quot;}</p>
+     * <p>{&quot;studio&quot;:&quot;20260602r1&quot;,&quot;storage&quot;:&quot;v1.48.9&quot;,&quot;auth&quot;:&quot;v2.188.1&quot;,&quot;kong&quot;:&quot;3.9.0&quot;,&quot;rest&quot;:&quot;v12.2.12&quot;,&quot;meta&quot;:&quot;v0.89.3&quot;,&quot;realtime-dev&quot;:&quot;v2.34.47&quot;,&quot;postgres&quot;:&quot;rds_postgres_1700_20260830&quot;}</p>
      */
     @NameInMap("MinorVersionDetail")
     public String minorVersionDetail;
@@ -131,7 +131,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
      * <p>The release notes for the minor version of the RDS AI application instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;20260915\&quot;:\&quot;realtime：1xxx；auth：2xxx；storage：3xxx\&quot;,\&quot;20260917\&quot;:\&quot;studio：4xxx；auth：5xxx\&quot;}</p>
+     * <p>{&quot;20260915&quot;:&quot;realtime：1xxx；auth：2xxx；storage：3xxx&quot;,&quot;20260917&quot;:&quot;studio：4xxx；auth：5xxx&quot;}</p>
      */
     @NameInMap("MinorVersionReleaseNotes")
     public String minorVersionReleaseNotes;

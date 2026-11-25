@@ -1,3 +1,7 @@
+2026-11-25 Version: 3.12.0
+- Support API ListLLMGatewayMetrics.
+
+
 2026-11-24 Version: 3.11.1
 - Update API ChatMessages: add request parameters Inputs.FlowId.
 - Update API GetConversations: add request parameters FlowId.

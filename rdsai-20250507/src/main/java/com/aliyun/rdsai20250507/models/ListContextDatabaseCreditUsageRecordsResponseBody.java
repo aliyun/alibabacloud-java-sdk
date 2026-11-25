@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListContextDatabaseCreditUsageRecordsResponseBody extends TeaModel {
     /**
-     * <p>The query dimension. Valid values: Workspace (a single workspace) and Account (all workspaces under the caller account).</p>
+     * <p>The query dimension. Valid values: Workspace indicates a single workspace, and Account indicates all workspaces under the caller account.</p>
      * 
      * <strong>example:</strong>
      * <p>Workspace</p>
@@ -65,7 +65,7 @@ public class ListContextDatabaseCreditUsageRecordsResponseBody extends TeaModel 
     public String startTime;
 
     /**
-     * <p>The total number of metering records that meet the filter conditions, which is not affected by pagination.</p>
+     * <p>The total number of metering records that match the filter conditions, which is not affected by pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -161,7 +161,7 @@ public class ListContextDatabaseCreditUsageRecordsResponseBody extends TeaModel 
 
     public static class ListContextDatabaseCreditUsageRecordsResponseBodyRecords extends TeaModel {
         /**
-         * <p>The credit consumption of this record. It is returned as a decimal string with up to 6 decimal places, where 1 credit equals 1 CNY. The amount is recorded at the time of metering and does not change with subsequent price adjustments. If unpriced, null is returned, which does not indicate zero consumption.</p>
+         * <p>The credit consumption of this record. It is returned as a decimal string with up to 6 decimal places. 1 credit = 1 CNY. The amount is recorded at the time of metering and does not change with subsequent price adjustments. It is null when unpriced, which does not indicate zero consumption.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0742</p>
@@ -179,7 +179,7 @@ public class ListContextDatabaseCreditUsageRecordsResponseBody extends TeaModel 
         public String item;
 
         /**
-         * <p>The member ID that generated this record. Historical or system records may not have a member ID, in which case null is returned.</p>
+         * <p>The ID of the member that generated this record. Historical or system records may not have a member ID, in which case null is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>mb-abcdefghijklmno</p>
@@ -188,7 +188,7 @@ public class ListContextDatabaseCreditUsageRecordsResponseBody extends TeaModel 
         public String memberId;
 
         /**
-         * <p>The usage of this record. The unit is specified by the Unit field in the same record.</p>
+         * <p>The usage of this record. The unit is specified by Unit in the same record.</p>
          * 
          * <strong>example:</strong>
          * <p>74200</p>
@@ -197,7 +197,7 @@ public class ListContextDatabaseCreditUsageRecordsResponseBody extends TeaModel 
         public Long quantity;
 
         /**
-         * <p>The request time when this metering record was generated, in ISO 8601 UTC time format ending with <code>Z</code>.</p>
+         * <p>The request time when this metering record was generated, in ISO 8601 UTC time format ending with Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-14T08:30:12Z</p>
@@ -206,7 +206,7 @@ public class ListContextDatabaseCreditUsageRecordsResponseBody extends TeaModel 
         public String requestTime;
 
         /**
-         * <p>The context growth sub-item. Recognized values include KnowledgeOrganization (knowledge organization), MemoryPromotion (memory promotion), KnowledgeReview (knowledge review), KnowledgeEvolution (knowledge evolution), and MemoryEvolution (memory evolution). For other billing items, missing sub-items, or unrecognized sub-items, null is returned.</p>
+         * <p>The context growth sub-item. Recognized values include KnowledgeOrganization (knowledge organization), MemoryPromotion (memory promotion), KnowledgeReview (knowledge review), KnowledgeEvolution (knowledge evolution), and MemoryEvolution (memory evolution). null is returned for other billing items, missing sub-items, or unrecognized sub-items.</p>
          * 
          * <strong>example:</strong>
          * <p>KnowledgeReview</p>
@@ -215,7 +215,7 @@ public class ListContextDatabaseCreditUsageRecordsResponseBody extends TeaModel 
         public String subItem;
 
         /**
-         * <p>The metering unit. Valid values: Count (number of times), Token (number of tokens), and MicroCredit (one millionth of a credit).</p>
+         * <p>The metering unit. Valid values: Count indicates the number of times, Token indicates the number of tokens, and MicroCredit indicates one millionth of a credit.</p>
          * 
          * <strong>example:</strong>
          * <p>MicroCredit</p>
@@ -224,7 +224,7 @@ public class ListContextDatabaseCreditUsageRecordsResponseBody extends TeaModel 
         public String unit;
 
         /**
-         * <p>The ID of the workspace to which this record belongs. Even if queried by account, each record still indicates the workspace it belongs to.</p>
+         * <p>The ID of the workspace to which this record belongs. Even if queried by account, each record still indicates its workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-x9z4ctzed9gfu2w</p>
