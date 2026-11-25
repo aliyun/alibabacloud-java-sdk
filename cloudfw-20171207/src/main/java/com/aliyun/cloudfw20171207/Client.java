@@ -4767,8 +4767,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>The QPS limit for a single user is 10 queries per second. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
+     * <h2>Rate limit</h2>
+     * <p>The rate limit for this API operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an ACL check.</p>
@@ -4799,8 +4799,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>The QPS limit for a single user is 10 queries per second. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
+     * <h2>Rate limit</h2>
+     * <p>The rate limit for this API operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an ACL check.</p>
@@ -11577,12 +11577,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if IP geolocation information is not required.</p>
-     * <h2>QPS limits</h2>
-     * <p>The QPS limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</p>
+     * <p>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if you do not need to return IP geolocation information.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the detailed data of intrusion prevention events.</p>
+     * <p>Queries the detailed data of intrusion prevention events.</p>
      * 
      * @param request DescribeRiskEventGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11710,12 +11710,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if IP geolocation information is not required.</p>
-     * <h2>QPS limits</h2>
-     * <p>The QPS limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</p>
+     * <p>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if you do not need to return IP geolocation information.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the detailed data of intrusion prevention events.</p>
+     * <p>Queries the detailed data of intrusion prevention events.</p>
      * 
      * @param request DescribeRiskEventGroupRequest
      * @return DescribeRiskEventGroupResponse
@@ -13197,7 +13197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a VPC firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall has not been created, you must first prepare an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</p>
+     * <p>Queries the details of a virtual private cloud (VPC) firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall is not created, you must first create an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a VPC firewall for a transit router.</p>
@@ -13236,7 +13236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a VPC firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall has not been created, you must first prepare an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</p>
+     * <p>Queries the details of a virtual private cloud (VPC) firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall is not created, you must first create an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a VPC firewall for a transit router.</p>

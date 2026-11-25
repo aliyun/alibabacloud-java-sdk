@@ -59,7 +59,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
 
     public static class DescribeRiskEventGroupResponseBodyDataListIPLocationInfo extends TeaModel {
         /**
-         * <p>The ID of the city.</p>
+         * <p>The city ID.</p>
          * 
          * <strong>example:</strong>
          * <p>510100</p>
@@ -68,7 +68,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String cityId;
 
         /**
-         * <p>The name of the city.</p>
+         * <p>The city name.</p>
          * 
          * <strong>example:</strong>
          * <p>Chengdu</p>
@@ -77,7 +77,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String cityName;
 
         /**
-         * <p>The ID of the country.</p>
+         * <p>The country ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -86,7 +86,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String countryId;
 
         /**
-         * <p>The name of the country.</p>
+         * <p>The country name.</p>
          * 
          * <strong>example:</strong>
          * <p>China</p>
@@ -153,7 +153,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String resourceInstanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>LD-shenzhen-zy****</p>
@@ -211,7 +211,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
 
     public static class DescribeRiskEventGroupResponseBodyDataListVpcDstInfo extends TeaModel {
         /**
-         * <p>The instance ID of the ECS instance.</p>
+         * <p>The ECS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-wz92jf4scg2zb74p****</p>
@@ -229,7 +229,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String ecsInstanceName;
 
         /**
-         * <p>The instance ID of the VPC-connected instance.</p>
+         * <p>The VPC-connected instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6e9a9zyokj2ywuo****</p>
@@ -238,7 +238,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String networkInstanceId;
 
         /**
-         * <p>The name of the VPC-connected instance.</p>
+         * <p>The VPC-connected instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC-SH-TX****</p>
@@ -304,7 +304,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
 
     public static class DescribeRiskEventGroupResponseBodyDataListVpcSrcInfo extends TeaModel {
         /**
-         * <p>The instance ID of the ECS instance.</p>
+         * <p>The ECS instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-wz92jf4scg2zb74p****</p>
@@ -322,7 +322,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String ecsInstanceName;
 
         /**
-         * <p>The instance ID of the VPC-connected instance.</p>
+         * <p>The VPC-connected instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6e9a9zyokj2ywuo****</p>
@@ -331,7 +331,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String networkInstanceId;
 
         /**
-         * <p>The name of the VPC-connected instance.</p>
+         * <p>The VPC-connected instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC-SH-TX****</p>
@@ -408,19 +408,19 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         /**
          * <p>The attack type of the intrusion prevention event. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: abnormal connection</li>
-         * <li><strong>2</strong>: execute commands</li>
-         * <li><strong>3</strong>: brute-force attacks</li>
-         * <li><strong>4</strong>: scan</li>
-         * <li><strong>5</strong>: other</li>
-         * <li><strong>6</strong>: information leak</li>
-         * <li><strong>7</strong>: DoS attack</li>
-         * <li><strong>8</strong>: overflow attack</li>
-         * <li><strong>9</strong>: web attack</li>
-         * <li><strong>10</strong>: trojan backdoor</li>
-         * <li><strong>11</strong>: virus worm</li>
-         * <li><strong>12</strong>: mining behavior</li>
-         * <li><strong>13</strong>: reverse shell</li>
+         * <li><strong>1</strong>: Abnormal connection.</li>
+         * <li><strong>2</strong>: Command execute.</li>
+         * <li><strong>3</strong>: Brute-force attacks.</li>
+         * <li><strong>4</strong>: Scan.</li>
+         * <li><strong>5</strong>: Other.</li>
+         * <li><strong>6</strong>: Information leak.</li>
+         * <li><strong>7</strong>: DoS attack.</li>
+         * <li><strong>8</strong>: Overflow attack.</li>
+         * <li><strong>9</strong>: Web attack.</li>
+         * <li><strong>10</strong>: Trojan backdoor.</li>
+         * <li><strong>11</strong>: Virus and worm.</li>
+         * <li><strong>12</strong>: Mining behavior.</li>
+         * <li><strong>13</strong>: Reverse shell.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,8 +441,8 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         /**
          * <p>The traffic direction of the intrusion prevention event. Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: inbound</li>
-         * <li><strong>out</strong>: outbound</li>
+         * <li><strong>in</strong>: Inbound.</li>
+         * <li><strong>out</strong>: Outbound.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -488,7 +488,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The time when the intrusion event first occurred. The value is a UNIX timestamp in seconds.</p>
+         * <p>The time when the intrusion event first occurred. The value is a UNIX timestamp accurate to seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1534408189</p>
@@ -497,13 +497,31 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public Integer firstEventTime;
 
         /**
+         * <p>The specific threat intelligence value matched by the event, such as an IP address, domain name, or URL. This parameter is returned only for events from the threat intelligence source and is empty for other sources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
+        @NameInMap("HitContent")
+        public String hitContent;
+
+        /**
+         * <p>The type of threat intelligence matched by the event. Valid values: ip, domain, and url. This parameter is returned only for events from the threat intelligence source and is empty for other sources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domain</p>
+         */
+        @NameInMap("HitType")
+        public String hitType;
+
+        /**
          * <p>The IP geolocation information. This struct contains the <strong>CityId</strong>, <strong>CityName</strong>, <strong>CountryId</strong>, and <strong>CountryName</strong> parameters.<br><strong>CityId</strong> indicates the ID of the city to which the IP address belongs. <strong>CityName</strong> indicates the name of the city to which the IP address belongs. <strong>CountryId</strong> indicates the ID of the country to which the IP address belongs. <strong>CountryName</strong> indicates the name of the country to which the IP address belongs.</p>
          */
         @NameInMap("IPLocationInfo")
         public DescribeRiskEventGroupResponseBodyDataListIPLocationInfo IPLocationInfo;
 
         /**
-         * <p>The time when the intrusion prevention event last occurred. The value is a UNIX timestamp in seconds.</p>
+         * <p>The time when the intrusion prevention event last occurred. The value is a UNIX timestamp accurate to seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1534408267</p>
@@ -512,7 +530,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public Integer lastEventTime;
 
         /**
-         * <p>The private IP information of the intrusion prevention event. This information is returned as an array of <strong>RegionNo</strong>, <strong>ResourceInstanceId</strong>, <strong>ResourceInstanceName</strong>, and <strong>ResourcePrivateIP</strong>.<br><strong>RegionNo</strong> indicates the region ID to which the IP address belongs. <strong>ResourceInstanceId</strong> indicates the instance ID to which the IP address belongs. <strong>ResourceInstanceName</strong> indicates the name of the instance to which the IP address belongs. <strong>ResourcePrivateIP</strong> indicates the IP address.</p>
+         * <p>The private IP address information of the intrusion prevention event. This information is returned as an array of <strong>RegionNo</strong>, <strong>ResourceInstanceId</strong>, <strong>ResourceInstanceName</strong>, and <strong>ResourcePrivateIP</strong>.<br><strong>RegionNo</strong> indicates the region ID to which the IP address belongs. <strong>ResourceInstanceId</strong> indicates the instance ID to which the IP address belongs. <strong>ResourceInstanceName</strong> indicates the name of the instance to which the IP address belongs. <strong>ResourcePrivateIP</strong> indicates the IP address.</p>
          */
         @NameInMap("ResourcePrivateIPList")
         public java.util.List<DescribeRiskEventGroupResponseBodyDataListResourcePrivateIPList> resourcePrivateIPList;
@@ -520,12 +538,12 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         /**
          * <p>The public IP address type of the intrusion prevention event. Valid values:</p>
          * <ul>
-         * <li><strong>EIP</strong>: elastic IP address (EIP)</li>
-         * <li><strong>EcsPublicIP</strong>: public IP addresses of Elastic Compute Service (ECS) instances</li>
-         * <li><strong>EcsEIP</strong>: EIP of an ECS instance</li>
-         * <li><strong>NatPublicIP</strong>: public IP address of a NAT gateway</li>
-         * <li><strong>NatEIP</strong>: EIP of a NAT gateway</li>
-         * <li><strong>SlbPublicIp</strong>: public IP address of an SLB instance</li>
+         * <li><strong>EIP</strong>: Elastic IP address.</li>
+         * <li><strong>EcsPublicIP</strong>: Public IP addresses of Elastic Compute Service (ECS) instances.</li>
+         * <li><strong>EcsEIP</strong>: EIP of an ECS instance.</li>
+         * <li><strong>NatPublicIP</strong>: Public IP address of a NAT gateway.</li>
+         * <li><strong>NatEIP</strong>: EIP of a NAT gateway.</li>
+         * <li><strong>SlbPublicIp</strong>: Public IP address of an SLB instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -546,8 +564,8 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         /**
          * <p>The defense status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: alert</li>
-         * <li><strong>2</strong>: block</li>
+         * <li><strong>1</strong>: Alert.</li>
+         * <li><strong>2</strong>: Block.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -559,9 +577,9 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         /**
          * <p>The source of the detection rule for the intrusion prevention event. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: basic protection</li>
-         * <li><strong>2</strong>: virtual patches</li>
-         * <li><strong>4</strong>: threat intelligence</li>
+         * <li><strong>1</strong>: Basic protection.</li>
+         * <li><strong>2</strong>: Virtual patches.</li>
+         * <li><strong>4</strong>: Threat intelligence.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -580,7 +598,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String srcIP;
 
         /**
-         * <p>The source IP address label, which serves as an identity to indicate whether the IP address is one of the back-to-origin IP addresses of cloud services.</p>
+         * <p>The source IP address label, which provides the identity of whether the IP address is one of the back-to-origin IP addresses of a cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>WAF Back-to-origin Address</p>
@@ -602,7 +620,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public java.util.List<String> srcPrivateIPList;
 
         /**
-         * <p>The intelligence labels for critical event protection.</p>
+         * <p>The intelligence tags label for critical event protection.</p>
          * 
          * <strong>example:</strong>
          * <p>test-tag</p>
@@ -611,13 +629,13 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The destination VPC information of the intrusion prevention event. This structure contains the <strong>EcsInstanceId</strong>, <strong>EcsInstanceName</strong>, <strong>NetworkInstanceId</strong>, <strong>NetworkInstanceName</strong>, and <strong>RegionNo</strong> parameters.<br><strong>EcsInstanceId</strong> indicates the instance ID of the ECS instance in the VPC. <strong>EcsInstanceName</strong> indicates the name of the ECS instance in the VPC. <strong>NetworkInstanceId</strong> indicates the instance ID of the VPC-connected instance. <strong>NetworkInstanceName</strong> indicates the name of the VPC-connected instance. <strong>RegionNo</strong> indicates the region ID to which the VPC-connected instance belongs.</p>
+         * <p>The destination VPC information of the intrusion prevention event. This structure contains the <strong>EcsInstanceId</strong>, <strong>EcsInstanceName</strong>, <strong>NetworkInstanceId</strong>, <strong>NetworkInstanceName</strong>, and <strong>RegionNo</strong> parameters.<br><strong>EcsInstanceId</strong> indicates the ECS instance ID in the VPC. <strong>EcsInstanceName</strong> indicates the name of the ECS instance in the VPC. <strong>NetworkInstanceId</strong> indicates the VPC-connected instance ID. <strong>NetworkInstanceName</strong> indicates the VPC-connected instance name. <strong>RegionNo</strong> indicates the region ID to which the VPC-connected instance belongs.</p>
          */
         @NameInMap("VpcDstInfo")
         public DescribeRiskEventGroupResponseBodyDataListVpcDstInfo vpcDstInfo;
 
         /**
-         * <p>The source VPC information of the intrusion prevention event. This structure contains the <strong>EcsInstanceId</strong>, <strong>EcsInstanceName</strong>, <strong>NetworkInstanceId</strong>, <strong>NetworkInstanceName</strong>, and <strong>RegionNo</strong> parameters.<br><strong>EcsInstanceId</strong> indicates the instance ID of the ECS instance in the VPC. <strong>EcsInstanceName</strong> indicates the name of the ECS instance in the VPC. <strong>NetworkInstanceId</strong> indicates the instance ID of the VPC-connected instance. <strong>NetworkInstanceName</strong> indicates the name of the VPC-connected instance. <strong>RegionNo</strong> indicates the region ID to which the VPC-connected instance belongs.</p>
+         * <p>The source VPC information of the intrusion prevention event. This structure contains the <strong>EcsInstanceId</strong>, <strong>EcsInstanceName</strong>, <strong>NetworkInstanceId</strong>, <strong>NetworkInstanceName</strong>, and <strong>RegionNo</strong> parameters.<br><strong>EcsInstanceId</strong> indicates the ECS instance ID in the VPC. <strong>EcsInstanceName</strong> indicates the name of the ECS instance in the VPC. <strong>NetworkInstanceId</strong> indicates the VPC-connected instance ID. <strong>NetworkInstanceName</strong> indicates the VPC-connected instance name. <strong>RegionNo</strong> indicates the region ID to which the VPC-connected instance belongs.</p>
          */
         @NameInMap("VpcSrcInfo")
         public DescribeRiskEventGroupResponseBodyDataListVpcSrcInfo vpcSrcInfo;
@@ -625,9 +643,9 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         /**
          * <p>The security level of the intrusion prevention event. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: low</li>
-         * <li><strong>2</strong>: medium</li>
-         * <li><strong>3</strong>: high</li>
+         * <li><strong>1</strong>: Low.</li>
+         * <li><strong>2</strong>: Medium.</li>
+         * <li><strong>3</strong>: High.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -711,6 +729,22 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         }
         public Integer getFirstEventTime() {
             return this.firstEventTime;
+        }
+
+        public DescribeRiskEventGroupResponseBodyDataList setHitContent(String hitContent) {
+            this.hitContent = hitContent;
+            return this;
+        }
+        public String getHitContent() {
+            return this.hitContent;
+        }
+
+        public DescribeRiskEventGroupResponseBodyDataList setHitType(String hitType) {
+            this.hitType = hitType;
+            return this;
+        }
+        public String getHitType() {
+            return this.hitType;
         }
 
         public DescribeRiskEventGroupResponseBodyDataList setIPLocationInfo(DescribeRiskEventGroupResponseBodyDataListIPLocationInfo IPLocationInfo) {

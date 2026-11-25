@@ -34,6 +34,23 @@ public class DescribeAclCheckRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The processing status. Valid values:</p>
+     * <ul>
+     * <li>Pending: Unprocessed.</li>
+     * <li>Success: Processed successfully.</li>
+     * <li>Processing: Processing.</li>
+     * <li>Ignored: Ignored.</li>
+     * <li>Failed: Processing failed.</li>
+     * <li>PendingOrFailed: Unprocessed or processing failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Pending</p>
+     */
+    @NameInMap("ProcessStatus")
+    public String processStatus;
+
+    /**
      * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -70,6 +87,14 @@ public class DescribeAclCheckRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeAclCheckRequest setProcessStatus(String processStatus) {
+        this.processStatus = processStatus;
+        return this;
+    }
+    public String getProcessStatus() {
+        return this.processStatus;
     }
 
     public DescribeAclCheckRequest setTaskId(String taskId) {

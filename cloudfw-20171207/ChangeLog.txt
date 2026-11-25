@@ -1,3 +1,13 @@
+2026-11-25 Version: 10.0.1
+- Update API DescribeAclCheck: add request parameters ProcessStatus.
+- Update API DescribeAclCheck: add response parameters Body.CheckRecord.Acls.$.ActionType.
+- Update API DescribeAclCheck: add response parameters Body.CheckRecord.Acls.$.ErrorMessage.
+- Update API DescribeAclCheck: add response parameters Body.CheckRecord.Acls.$.ProcessStatus.
+- Update API DescribeAclCheck: add response parameters Body.CheckRecord.Acls.$.RecommendOptions.
+- Update API DescribeRiskEventGroup: add response parameters Body.DataList.$.HitContent.
+- Update API DescribeRiskEventGroup: add response parameters Body.DataList.$.HitType.
+
+
 2026-11-25 Version: 10.0.0
 - Update API AddDnsFirewallPolicy: delete request parameters SourceIp.
 - Update API DescribePolicyAdvancedConfig: add response parameters Body.Eips.

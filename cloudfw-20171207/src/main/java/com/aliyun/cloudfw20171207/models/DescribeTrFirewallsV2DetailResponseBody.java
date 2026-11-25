@@ -14,7 +14,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the zone used for the firewall connection.</p>
+     * <p>The ID of the zone used for the firewall attachment.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
@@ -32,7 +32,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallDescription;
 
     /**
-     * <p>The ID of the firewall elastic network interface (ENI).</p>
+     * <p>The ID of the elastic network interface (ENI) of the firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-uf621u00nafypeex****</p>
@@ -41,7 +41,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallEniId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the firewall ENI belongs.</p>
+     * <p>The ID of the VPC where the ENI of the firewall resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zeppcci782zeh2bk****</p>
@@ -50,7 +50,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallEniVpcId;
 
     /**
-     * <p>The ID of the vSwitch to which the firewall ENI belongs.</p>
+     * <p>The ID of the vSwitch where the ENI of the firewall resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6ptq1kl1c1d9pw9****</p>
@@ -77,7 +77,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallName;
 
     /**
-     * <p>The deployment mode of the VPC firewall service for the transit router. Valid values: <strong>PrimaryStandby</strong> (primary/secondary mode) and <strong>MultiPrimary</strong> (active-active mode).</p>
+     * <p>The deployment mode of the transit router firewall service. Valid values: <strong>PrimaryStandby</strong> (primary/secondary mode) and <strong>MultiPrimary</strong> (active-active mode).</p>
      * 
      * <strong>example:</strong>
      * <p>PrimaryStandby</p>
@@ -86,7 +86,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallServiceMode;
 
     /**
-     * <p>The list of zone IDs used by the VPC firewall service for the transit router.</p>
+     * <p>The list of zone IDs used by the transit router firewall service.</p>
      */
     @NameInMap("FirewallServiceZones")
     public java.util.List<String> firewallServiceZones;
@@ -109,7 +109,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallStatus;
 
     /**
-     * <p>The CIDR block of the subnet that stores the firewall ENI in the firewall VPC in automatic mode.</p>
+     * <p>The subnet CIDR block that stores the firewall ENI in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.1.0/24</p>
@@ -120,9 +120,9 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     /**
      * <p>The status of the VPC firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>opened</strong>: The VPC firewall is enabled.</p>
+     * <li><p><strong>opened</strong>: enabled</p>
      * </li>
-     * <li><p><strong>closed</strong>: The VPC firewall is disabled.</p>
+     * <li><p><strong>closed</strong>: disabled</p>
      * </li>
      * <li><p><strong>notconfigured</strong>: The VPC firewall is not configured.</p>
      * </li>
@@ -146,7 +146,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallSwitchStatus;
 
     /**
-     * <p>The CIDR block of the firewall VPC in automatic mode.</p>
+     * <p>The VPC CIDR block of the firewall in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0/16</p>
@@ -175,9 +175,9 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     /**
      * <p>The routing mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>managed</strong>: Automatic mode.</p>
+     * <li><p><strong>managed</strong>: automatic mode</p>
      * </li>
-     * <li><p><strong>manual</strong>: Manual mode.</p>
+     * <li><p><strong>manual</strong>: manual mode</p>
      * </li>
      * </ul>
      * 
@@ -188,7 +188,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String routeMode;
 
     /**
-     * <p>The attachment ID used to connect to the transit router in the firewall VPC in automatic mode.</p>
+     * <p>The ID of the transit router attachment in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-attach-r1llaxxeha71jsm36v</p>
@@ -197,7 +197,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String trAttachmentId;
 
     /**
-     * <p>The primary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</p>
+     * <p>The primary subnet CIDR block used to connect to the transit router in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.2.0/24</p>
@@ -217,7 +217,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String trAttachmentMasterZone;
 
     /**
-     * <p>The secondary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</p>
+     * <p>The secondary subnet CIDR block used to connect to the transit router in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.3.0/24</p>
@@ -237,7 +237,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String trAttachmentSlaveZone;
 
     /**
-     * <p>The list of zones and vSwitch CIDR block information for the transit router connection.</p>
+     * <p>The list of zones and vSwitch CIDR blocks for the transit router attachment.</p>
      */
     @NameInMap("TrAttachmentZones")
     public java.util.List<DescribeTrFirewallsV2DetailResponseBodyTrAttachmentZones> trAttachmentZones;
@@ -454,7 +454,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
 
     public static class DescribeTrFirewallsV2DetailResponseBodyTrAttachmentZones extends TeaModel {
         /**
-         * <p>The CIDR block of the vSwitch for the transit router connection.</p>
+         * <p>The CIDR block of the vSwitch for the transit router attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.2.0/24</p>
@@ -463,7 +463,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         public String vSwitchCidr;
 
         /**
-         * <p>The zone ID of the vSwitch for the transit router connection.</p>
+         * <p>The zone ID of the vSwitch for the transit router attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
