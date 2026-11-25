@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     /**
-     * <p>The details about why the access was denied.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>
@@ -14,7 +14,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>A list of whitelist groups.</p>
+     * <p>The list of whitelist groups.</p>
      */
     @NameInMap("GroupList")
     public java.util.List<GetInstanceIpWhiteListResponseBodyGroupList> groupList;
@@ -29,13 +29,13 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A list of IP addresses in the whitelist.</p>
+     * <p>The list of IP addresses in the whitelist.</p>
      */
     @NameInMap("IpList")
     public java.util.List<String> ipList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1D1F6F4D-9203-53E7-84E9-5376B4657E63</p>
@@ -99,7 +99,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The list of IP addresses in the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>

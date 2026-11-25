@@ -7,9 +7,9 @@ public class ModifyInstancePayTypeRequest extends TeaModel {
     /**
      * <p>The subscription duration. This parameter is required when you change the billing method to subscription.</p>
      * <ul>
-     * <li><p>If \<code>PricingCycle\\</code> is \<code>Month\\</code>, the valid values are 1 to 9.</p>
+     * <li><p>If PricingCycle is set to Month, valid values are [1, 9].</p>
      * </li>
-     * <li><p>If \<code>PricingCycle\\</code> is \<code>Year\\</code>, the valid values are 1 to 3.</p>
+     * <li><p>If PricingCycle is set to Year, valid values are [1, 3].</p>
      * </li>
      * </ul>
      * 
@@ -20,7 +20,7 @@ public class ModifyInstancePayTypeRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,10 +38,8 @@ public class ModifyInstancePayTypeRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>PREPAY</strong>: subscription.</p>
-     * </li>
-     * <li><p><strong>POSTPAY</strong>: pay-as-you-go.</p>
-     * </li>
+     * <li><strong>PREPAY</strong>: subscription</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -52,11 +50,11 @@ public class ModifyInstancePayTypeRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration. This parameter is required when you change the billing method to subscription.</p>
+     * <p>The unit of the subscription duration. This parameter is required when you change the billing method to subscription. Valid values:</p>
      * <ul>
-     * <li><p>Month: The unit is month.</p>
+     * <li><p>Month: month</p>
      * </li>
-     * <li><p>Year: The unit is year.</p>
+     * <li><p>Year: year</p>
      * </li>
      * </ul>
      * 

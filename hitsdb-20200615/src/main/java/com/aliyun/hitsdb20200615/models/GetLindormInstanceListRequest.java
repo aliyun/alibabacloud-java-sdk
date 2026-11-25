@@ -11,7 +11,7 @@ public class GetLindormInstanceListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class GetLindormInstanceListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page for a paged query.</p>
+     * <p>The number of entries to return per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class GetLindormInstanceListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>A keyword for a fuzzy search on instance names.</p>
+     * <p>The keyword used to perform a fuzzy search by instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -38,7 +38,7 @@ public class GetLindormInstanceListRequest extends TeaModel {
     public String queryStr;
 
     /**
-     * <p>The ID of the region where the instance is located. Call <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> to obtain the region ID.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -47,7 +47,7 @@ public class GetLindormInstanceListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek3b63arvg27vi</p>
@@ -65,18 +65,13 @@ public class GetLindormInstanceListRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The type of the instance. Valid values:</p>
+     * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><p><strong>lindorm</strong>: a single-zone Lindorm instance.</p>
-     * </li>
-     * <li><p><strong>lindorm_multizone</strong>: a multi-zone Lindorm instance.</p>
-     * </li>
-     * <li><p><strong>serverless_lindorm</strong>: a Lindorm Serverless instance.</p>
-     * </li>
-     * <li><p><strong>lindorm_standalone</strong>: a Lindorm standalone instance.</p>
-     * </li>
-     * <li><p><strong>lts</strong>: the Lindorm Tunnel Service (LTS) type.</p>
-     * </li>
+     * <li><strong>lindorm</strong>: Lindorm single-zone instance</li>
+     * <li><strong>lindorm_multizone</strong>: Lindorm multi-zone instance</li>
+     * <li><strong>serverless_lindorm</strong>: Lindorm Serverless instance</li>
+     * <li><strong>lindorm_standalone</strong>: Lindorm single-node instance</li>
+     * <li><strong>lts</strong>: Lindorm Tunnel Service</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,29 +81,25 @@ public class GetLindormInstanceListRequest extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>The type of the engine supported by the instance that you want to query. Valid values:</p>
+     * <p>The data engine types supported by the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: search engine.</p>
-     * </li>
-     * <li><p><strong>2</strong>: LindormTSDB.</p>
-     * </li>
-     * <li><p><strong>4</strong>: LindormTable.</p>
-     * </li>
-     * <li><p><strong>8</strong>: file engine.</p>
-     * </li>
+     * <li><strong>1</strong>: Search engine</li>
+     * <li><strong>2</strong>: LindormTSDB</li>
+     * <li><strong>4</strong>: LindormTable</li>
+     * <li><strong>8</strong>: File engine</li>
      * </ul>
      * <blockquote>
-     * <p>For example, a value of 15 (8 + 4 + 2 + 1) indicates that the instance supports the file engine, LindormTable, LindormTSDB, and the search engine. A value of 6 (4 + 2) indicates that the instance supports LindormTSDB and LindormTable.</p>
+     * <p>For example, if the value is 15 (15 = 8 + 4 + 2 + 1), the instance supports the search engine, LindormTSDB, LindormTable, and file engine. If the value is 6 (6 = 4 + 2), the instance supports LindormTSDB and LindormTable.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>15</p>
+     * <p>6</p>
      */
     @NameInMap("SupportEngine")
     public Integer supportEngine;
 
     /**
-     * <p>A list of tags. You can specify up to 20 tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<GetLindormInstanceListRequestTag> tag;
@@ -224,9 +215,9 @@ public class GetLindormInstanceListRequest extends TeaModel {
 
     public static class GetLindormInstanceListRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key. Valid values of N: 1 to 20.</p>
          * <blockquote>
-         * <p>You can pass in keys for multiple tags. For example, the Key in the first pair represents the key for the first tag. The Key in the second pair represents the key for the second tag.</p>
+         * <p>You can specify multiple tag keys. For example, the first Key specifies the first tag key, and the second Key specifies the second tag key.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,9 +227,9 @@ public class GetLindormInstanceListRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value. Valid values of N: 1 to 20.</p>
          * <blockquote>
-         * <p>You can provide values for multiple tags. For example, the Value in the first pair is the value for the first tag. The Value in the second pair is the value for the second tag.</p>
+         * <p>You can specify multiple tag values. For example, the first Value specifies the first tag value, and the second Value specifies the second tag value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

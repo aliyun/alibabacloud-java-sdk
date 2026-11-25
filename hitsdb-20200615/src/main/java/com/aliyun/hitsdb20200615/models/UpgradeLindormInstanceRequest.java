@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeLindormInstanceRequest extends TeaModel {
     /**
-     * <p>The new storage capacity of the instance. Unit: GB. Valid values: <strong>480</strong> to <strong>1017600</strong>.</p>
+     * <p>The storage capacity of the instance after the specification change. Unit: GB. Valid values: <strong>480</strong> to <strong>1017600</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>480</p>
@@ -14,7 +14,7 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public Integer clusterStorage;
 
     /**
-     * <p>The new cold storage capacity of the instance. Unit: GB. Valid values: <strong>800</strong> to <strong>1000000</strong>.</p>
+     * <p>The cold storage capacity of the instance after the specification change. Unit: GB. Valid values: <strong>800</strong> to <strong>1000000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>
@@ -23,16 +23,16 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public Integer coldStorage;
 
     /**
-     * <p>The new storage capacity of a single core node in a multi-zone instance. Unit: GB. Valid values: 400 to 64000. <strong>This parameter is optional.</strong></p>
+     * <p>The storage capacity per core node of the instance after the specification change for a multi-zone instance. Valid values: 400 to 64000. Unit: GB. <strong>Specify this parameter if the target instance is a multi-zone instance.</strong></p>
      * 
      * <strong>example:</strong>
-     * <p>400GB</p>
+     * <p>400</p>
      */
     @NameInMap("CoreSingleStorage")
     public Integer coreSingleStorage;
 
     /**
-     * <p>The new number of file engine nodes. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
+     * <p>The number of file engine nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,8 +41,8 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public Integer filestoreNum;
 
     /**
-     * <p>The new specification of the file engine nodes. Valid value:</p>
-     * <p><strong>lindorm.c.xlarge</strong>: 4 CPU cores, 8 GB of memory (standard specification).</p>
+     * <p>The file engine node specifications of the instance after the specification change. Valid values:</p>
+     * <p><strong>indorm.c.xlarge</strong>: 4 cores and 8 GB of memory (standard specification).</p>
      * 
      * <strong>example:</strong>
      * <p>lindorm.c.xlarge</p>
@@ -51,7 +51,7 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public String filestoreSpec;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain this ID.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,9 +61,9 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new number of wide table engine nodes. Valid values: <strong>0</strong> to <strong>90</strong>.</p>
+     * <p>The number of LindormTable nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>90</strong>.</p>
      * <blockquote>
-     * <p>If you specify this parameter, the LindormSpec parameter is also required.</p>
+     * <p>This parameter must be specified together with the LindormSpec parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,16 +73,12 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public Integer lindormNum;
 
     /**
-     * <p>The new specification of the wide table engine nodes. Valid values:</p>
+     * <p>The LindormTable engine node specifications of the instance after the specification change. Valid values:</p>
      * <ul>
-     * <li><p><strong>lindorm.c.xlarge</strong>: 4 CPU cores, 8 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.c.2xlarge</strong>: 8 CPU cores, 16 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.c.4xlarge</strong>: 16 CPU cores, 32 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.c.8xlarge</strong>: 32 CPU cores, 64 GB of memory (dedicated specification).</p>
-     * </li>
+     * <li><strong>lindorm.c.xlarge</strong>: 4 cores and 8 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.c.2xlarge</strong>: 8 cores and 16 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.c.4xlarge</strong>: 16 cores and 32 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.c.8xlarge</strong>: 32 cores and 64 GB of memory (dedicated specification).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +88,7 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public String lindormSpec;
 
     /**
-     * <p>The new number of log nodes for a multi-zone instance. Valid values: 4 to 400. <strong>This parameter is optional.</strong></p>
+     * <p>The number of log nodes of the instance after the specification change for a multi-zone instance. Valid values: 4 to 400. <strong>Specify this parameter if the target instance is a multi-zone instance.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -101,23 +97,21 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public Integer logNum;
 
     /**
-     * <p>The new disk capacity of a single log node for a multi-zone instance. Unit: GB. Valid values: 400 to 64000. <strong>This parameter is optional.</strong></p>
+     * <p>The disk capacity per log node of the instance after the specification change for a multi-zone instance. Valid values: 400 to 64000. Unit: GB. <strong>Specify this parameter if the target instance is a multi-zone instance.</strong></p>
      * 
      * <strong>example:</strong>
-     * <p>400GB</p>
+     * <p>400</p>
      */
     @NameInMap("LogSingleStorage")
     public Integer logSingleStorage;
 
     /**
-     * <p>The new specification of the log nodes for a multi-zone instance. Valid values:</p>
+     * <p>The log node specifications of the instance after the specification change for a multi-zone instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>lindorm.sn1.large</strong>: 4 CPU cores, 8 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.sn1.2xlarge</strong>: 8 CPU cores, 16 GB of memory (dedicated specification).</p>
-     * </li>
+     * <li><strong>lindorm.sn1.large</strong>: 4 cores and 8 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.sn1.2xlarge</strong>: 8 cores and 16 GB of memory (dedicated specification).</li>
      * </ul>
-     * <p><strong>This parameter is optional.</strong></p>
+     * <p><strong>Specify this parameter if the target instance is a multi-zone instance.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>lindorm.sn1.large</p>
@@ -126,7 +120,7 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public String logSpec;
 
     /**
-     * <p>The new number of LTS nodes. Valid values: <strong>0</strong> to <strong>50</strong>.</p>
+     * <p>The number of LTS nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -135,12 +129,10 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public Integer ltsCoreNum;
 
     /**
-     * <p>The new specification of the LTS nodes. Valid values:</p>
+     * <p>The LTS node specifications of the instance after the specification change. Valid values:</p>
      * <ul>
-     * <li><p><strong>lindorm.g.xlarge</strong>: 4 CPU cores, 16 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.g.2xlarge</strong>: 8 CPU cores, 32 GB of memory (dedicated specification).</p>
-     * </li>
+     * <li><strong>lindorm.g.xlarge</strong>: 4 cores and 16 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.g.2xlarge</strong>: 8 cores and 32 GB of memory (dedicated specification).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -156,7 +148,7 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the instance is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to obtain the latest region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -175,7 +167,7 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The new number of search engine nodes. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
+     * <p>The number of search index engine nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -184,16 +176,12 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public Integer solrNum;
 
     /**
-     * <p>The new specification of the search engine nodes. Valid values:</p>
+     * <p>The search index engine node specifications of the instance after the specification change. Valid values:</p>
      * <ul>
-     * <li><p><strong>lindorm.g.xlarge</strong>: 4 CPU cores, 16 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.g.2xlarge</strong>: 8 CPU cores, 32 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.g.4xlarge</strong>: 16 CPU cores, 64 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.g.8xlarg</strong>e: 32 CPU cores, 128 GB of memory (dedicated specification).</p>
-     * </li>
+     * <li><strong>lindorm.g.xlarge</strong>: 4 cores and 16 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.g.2xlarge</strong>: 8 cores and 32 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.g.4xlarge</strong>: 16 cores and 64 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.g.8xlarg</strong>e: 32 cores and 128 GB of memory (dedicated specification).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -203,7 +191,7 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public String solrSpec;
 
     /**
-     * <p>The new number of stream engine nodes. Valid values: <strong>0</strong> to <strong>90</strong>.</p>
+     * <p>The number of stream engine nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>90</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -212,14 +200,11 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public Integer streamNum;
 
     /**
-     * <p>The new specification of the stream engine nodes. Valid values:</p>
+     * <p>The stream engine node specifications of the instance after the specification change. Valid values:</p>
      * <ul>
-     * <li><p><strong>lindorm.c.2xlarge</strong>: 8 CPU cores, 16 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.c.4xlarge</strong>: 16 CPU cores, 32 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.c.8xlarge</strong>: 32 CPU cores, 64 GB of memory (dedicated specification).</p>
-     * </li>
+     * <li><strong>lindorm.c.2xlarge</strong>: 8 cores and 16 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.c.4xlarge</strong>: 16 cores and 32 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.c.8xlarge</strong>: 32 cores and 64 GB of memory (dedicated specification).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -229,7 +214,7 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public String streamSpec;
 
     /**
-     * <p>The new number of time series engine nodes. Valid values: <strong>0</strong> to <strong>24</strong>.</p>
+     * <p>The number of LindormTSDB nodes of the instance after the specification change. Valid values: <strong>0</strong> to <strong>24</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -238,16 +223,12 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public Integer tsdbNum;
 
     /**
-     * <p>The new specification of the time series engine nodes. Valid values:</p>
+     * <p>The LindormTSDB engine node specifications of the instance after the specification change. Valid values:</p>
      * <ul>
-     * <li><p><strong>lindorm.g.xlarge</strong>: 4 CPU cores, 16 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.g.2xlarge</strong>: 8 CPU cores, 32 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.g.4xlarge</strong>: 16 CPU cores, 64 GB of memory (dedicated specification).</p>
-     * </li>
-     * <li><p><strong>lindorm.g.8xlarge</strong>: 32 CPU cores, 128 GB of memory (dedicated specification).</p>
-     * </li>
+     * <li><strong>lindorm.g.xlarge</strong>: 4 cores and 16 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.g.2xlarge</strong>: 8 cores and 32 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.g.4xlarge</strong>: 16 cores and 64 GB of memory (dedicated specification).</li>
+     * <li><strong>lindorm.g.8xlarge</strong>: 32 cores and 128 GB of memory (dedicated specification).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -257,7 +238,7 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public String tsdbSpec;
 
     /**
-     * <p>The type of the upgrade. For details about the supported types, see the description of the UpgradeType parameter in the &quot;Additional information about request parameters&quot; section.</p>
+     * <p>The type of specification change for the instance. For supported types, see the UpgradeType parameter description in the request parameters supplement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -267,7 +248,7 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     public String upgradeType;
 
     /**
-     * <p>The ID of the availability zone. You can call the <a href="https://help.aliyun.com/document_detail/426067.html">GetLindormInstance</a> operation to obtain this ID.</p>
+     * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/426067.html">GetLindormInstance</a> operation to query the zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceIpWhiteListRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. To obtain the ID, call the <a href="https://help.aliyun.com/document_detail/426068.html">GetLindormInstanceList</a> operation.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426068.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

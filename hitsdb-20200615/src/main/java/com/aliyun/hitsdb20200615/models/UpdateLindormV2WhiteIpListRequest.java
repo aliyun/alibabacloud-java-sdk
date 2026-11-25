@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLindormV2WhiteIpListRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the GetLindormV2InstanceList operation to obtain the instance ID.</p>
+     * <p>The instance ID. You can call the GetLindormV2InstanceList operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UpdateLindormV2WhiteIpListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the instance is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to obtain this ID.</p>
+     * <p>The ID of the region where the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -39,7 +39,7 @@ public class UpdateLindormV2WhiteIpListRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The list of IP whitelist groups.</p>
+     * <p>The list of whitelist groups.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("WhiteIpGroupList")
@@ -116,7 +116,7 @@ public class UpdateLindormV2WhiteIpListRequest extends TeaModel {
 
     public static class UpdateLindormV2WhiteIpListRequestWhiteIpGroupList extends TeaModel {
         /**
-         * <p>The name of the IP whitelist group.</p>
+         * <p>The name of the whitelist group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,9 +126,9 @@ public class UpdateLindormV2WhiteIpListRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP addresses to add to the IP whitelist.</p>
+         * <p>The IP addresses to be added to the whitelist.</p>
          * <blockquote>
-         * <p>The value 127.0.0.1 denies access from all IP addresses. For example, 192.168.0.0/24 allows all IP addresses in that range to access the Lindorm instance. Use a comma (,) to separate multiple IP addresses or CIDR blocks.</p>
+         * <p>127.0.0.1 indicates that access from all IP addresses is denied. For example, 192.168.0.0/24 indicates that access from all IP addresses in the 192.168.0.X CIDR block is allowed to the Lindorm instance. Separate multiple IP addresses with commas (,).</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

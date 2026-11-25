@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLindormInstanceResponseBody extends TeaModel {
     /**
-     * <p>The UID of the Alibaba Cloud account.</p>
+     * <p>The 16-character AliUid of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>164901546557****</p>
@@ -14,7 +14,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Long aliUid;
 
     /**
-     * <p>The ID of the vSwitch in the arbiter zone for the multi-zone instance. The vSwitch must be deployed in the zone that is specified by <code>ArbiterZoneId</code>.</p>
+     * <p>The ID of the vSwitch in the arbiter zone for a multi-zone instance. The vSwitch must belong to the zone specified by ArbiterZoneId.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6664pqjawb87k36****</p>
@@ -23,7 +23,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String arbiterVSwitchId;
 
     /**
-     * <p>The arbiter zone ID of the multi-zone instance.</p>
+     * <p>The ID of the arbiter zone for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-g</p>
@@ -34,10 +34,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     /**
      * <p>The deployment architecture. Valid values:</p>
      * <ul>
-     * <li><p><strong>1.0</strong>: single-zone deployment.</p>
-     * </li>
-     * <li><p><strong>2.0</strong>: multi-zone deployment.</p>
-     * </li>
+     * <li><strong>1.0</strong>: single-zone.</li>
+     * <li><strong>2.0</strong>: multi-zone.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,24 +45,22 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String archVersion;
 
     /**
-     * <p>The billable storage capacity of the archive storage. Unit: GB.</p>
+     * <p>The billable storage capacity of the archive storage type. Unit: GB.</p>
      * 
      * <strong>example:</strong>
-     * <p>0GB</p>
+     * <p>0</p>
      */
     @NameInMap("ArchiveStorage")
     public Integer archiveStorage;
 
     /**
-     * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
+     * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is returned only for subscription instances.</p>
+     * <p>This parameter is returned only when the billing method of the instance is subscription.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,7 +70,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The ID of the backup instance.</p>
+     * <p>The backup instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ld-xxxx</p>
@@ -83,25 +79,21 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String backupInstance;
 
     /**
-     * <p>The capacity of the cold storage.</p>
+     * <p>Storage capacity of storage capacity cloud storage.</p>
      * 
      * <strong>example:</strong>
-     * <p>0GB</p>
+     * <p>0</p>
      */
     @NameInMap("ColdStorage")
     public Integer coldStorage;
 
     /**
-     * <p>The disk type of the core nodes in a multi-zone instance. Valid values:</p>
+     * <p>The disk type of the core node for a multi-zone instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>cloud_efficiency</strong>: Standard.</p>
-     * </li>
-     * <li><p><strong>cloud_ssd</strong>: Performance.</p>
-     * </li>
-     * <li><p><strong>cloud_essd</strong>: ESSD.</p>
-     * </li>
-     * <li><p><strong>cloud_essd_pl0</strong>: ESSD PL0.</p>
-     * </li>
+     * <li><strong>cloud_efficiency</strong>: standard cloud storage.</li>
+     * <li><strong>cloud_ssd</strong>: performance cloud storage.</li>
+     * <li><strong>cloud_essd</strong>: enhanced performance cloud storage.</li>
+     * <li><strong>cloud_essd_pl0</strong>: performance cloud storage PL0.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,7 +103,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String coreDiskCategory;
 
     /**
-     * <p>The number of core nodes in the multi-zone instance.</p>
+     * <p>The number of core nodes for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -120,7 +112,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Integer coreNum;
 
     /**
-     * <p>The storage capacity of a single core node in the multi-zone instance.</p>
+     * <p>The disk capacity of a single core node for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -129,7 +121,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Integer coreSingleStorage;
 
     /**
-     * <p>The specification of the core nodes in the multi-zone instance.</p>
+     * <p>The core node specifications for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>lindorm.g.xlarge</p>
@@ -138,7 +130,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String coreSpec;
 
     /**
-     * <p>The time at which the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The creation time of the instance, represented as the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1627290664000</p>
@@ -147,7 +139,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Long createMilliseconds;
 
     /**
-     * <p>The time at which the instance was created. The time is displayed in the <strong>yyyy-MM-dd HH:mm:ss</strong> format.</p>
+     * <p>The time when the instance was created. The time is displayed in the <strong>yyyy-MM-dd HH:mm:ss</strong> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-07-26 17:10:26</p>
@@ -156,12 +148,10 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Indicates whether release protection is enabled for the instance. Valid values:</p>
+     * <p>Indicates whether deletion protection is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,20 +163,13 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     /**
      * <p>The storage type. Valid values:</p>
      * <ul>
-     * <li><p><strong>cloud_efficiency</strong>: Standard.</p>
-     * </li>
-     * <li><p><strong>cloud_ssd</strong>: Performance.</p>
-     * </li>
-     * <li><p><strong>cloud_essd</strong>: Enhanced SSD (ESSD).</p>
-     * </li>
-     * <li><p><strong>cloud_essd_pl0</strong>: ESSD PL0.</p>
-     * </li>
-     * <li><p><strong>capacity_cloud_storage</strong>: Capacity.</p>
-     * </li>
-     * <li><p><strong>local_ssd_pro</strong>: local SSD.</p>
-     * </li>
-     * <li><p><strong>local_hdd_pro</strong>: local HDD.</p>
-     * </li>
+     * <li><strong>cloud_efficiency</strong>: standard cloud storage.</li>
+     * <li><strong>cloud_ssd</strong>: performance cloud storage.</li>
+     * <li><strong>cloud_essd</strong>: enhanced performance cloud storage.</li>
+     * <li><strong>cloud_essd_pl0</strong>: performance cloud storage PL0.</li>
+     * <li><strong>capacity_cloud_storage</strong>: capacity cloud storage.</li>
+     * <li><strong>local_ssd_pro</strong>: local SSD.</li>
+     * <li><strong>local_hdd_pro</strong>: local HDD.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -205,7 +188,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String diskThreshold;
 
     /**
-     * <p>The disk usage.</p>
+     * <p>The disk space usage.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0%</p>
@@ -214,8 +197,11 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String diskUsage;
 
     /**
-     * <p>Indicates whether LBlob is enabled. Valid values:</p>
-     * <p>true: Enabled. false: Disabled.</p>
+     * <p>Indicates whether LBlob is enabled for the instance. Valid values:</p>
+     * <ul>
+     * <li>true: enabled.</li>
+     * <li>false: disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -224,12 +210,10 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Boolean enableBlob;
 
     /**
-     * <p>Indicates whether Change Data Capture (CDC) is enabled for the instance. Valid values:</p>
+     * <p>Indicates whether the data subscription feature is enabled for the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -241,10 +225,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the compute engine is enabled for the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -256,10 +238,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether Key Management Service (KMS) is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -269,9 +249,13 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Boolean enableKms;
 
     /**
-     * <p>Specifies whether the wide table engine supports the Thrift and CQL protocols. If this feature is disabled, you can call the SwitchLProxyService operation to enable it.</p>
-     * <p>true: Supported.</p>
-     * <p>false: Not supported.</p>
+     * <p>Indicates whether LindormTable supports the Thrift and CQL protocols. If not supported, you can call the SwitchLProxyService operation to enable or disable the support. Valid values:</p>
+     * <ul>
+     * <li><p>True: supported.</p>
+     * </li>
+     * <li><p>False: not supported.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -280,12 +264,10 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Boolean enableLProxy;
 
     /**
-     * <p>Indicates whether the LTS engine is enabled for the instance. Valid values:</p>
+     * <p>Indicates whether Lindorm Tunnel Service is enabled for the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -295,12 +277,11 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Boolean enableLTS;
 
     /**
-     * <p>Indicates whether LindormSQL V3.0, which is compatible with the MySQL protocol, is supported by the wide table engine.
-     * This feature is supported by default on instances created after October 24, 2023. For existing instances, contact technical support to enable this feature.</p>
+     * <p>Indicates whether LindormTable supports LindormSQL-V3, which is compatible with the MySQL protocol. Instances purchased after October 24, 2023 support this feature by default. For existing instances, contact technical support for evaluation before enabling this feature. Valid values:</p>
      * <ul>
-     * <li><p>true: Supported.</p>
+     * <li><p>True: supported.</p>
      * </li>
-     * <li><p>false: Not supported.</p>
+     * <li><p>False: not supported.</p>
      * </li>
      * </ul>
      * 
@@ -311,11 +292,11 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Boolean enableLsqlVersionV3;
 
     /**
-     * <p>Indicates whether the ML node is enabled. Valid values:</p>
+     * <p>Indicates whether the AI control node is enabled. Valid values:</p>
      * <ul>
-     * <li><p>true: Enabled.</p>
+     * <li><p>True: enabled.</p>
      * </li>
-     * <li><p>false: Disabled.</p>
+     * <li><p>False: disabled.</p>
      * </li>
      * </ul>
      * 
@@ -328,10 +309,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -341,7 +320,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Boolean enableSSL;
 
     /**
-     * <p>Indicates whether the History Server is enabled for the compute engine.</p>
+     * <p>Indicates whether History Server for the compute engine is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -350,11 +329,11 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Boolean enableShs;
 
     /**
-     * <p>Indicates whether Transparent Data Encryption (TDE) is enabled. Valid values:</p>
+     * <p>Indicates whether storage encryption is enabled. Valid values:</p>
      * <ul>
-     * <li><p>true: Enabled.</p>
+     * <li><p>true: enabled.</p>
      * </li>
-     * <li><p>false: Disabled.</p>
+     * <li><p>false: disabled.</p>
      * </li>
      * </ul>
      * 
@@ -365,12 +344,10 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Boolean enableStoreTDE;
 
     /**
-     * <p>Indicates whether the stream engine is enabled for the instance. Valid values:</p>
+     * <p>Indicates whether the streaming engine is enabled for the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -380,25 +357,21 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Boolean enableStream;
 
     /**
-     * <p>The information about the engines.</p>
+     * <p>The list of engine information.</p>
      */
     @NameInMap("EngineList")
     public java.util.List<GetLindormInstanceResponseBodyEngineList> engineList;
 
     /**
-     * <p>The types of the engines that are supported by the instance. The value of this parameter is the sum of the values of all supported engine types.</p>
+     * <p>The supported engine types. The return value is the sum of the values of the following engine types:</p>
      * <ul>
-     * <li><p>1: search engine</p>
-     * </li>
-     * <li><p>2: time series engine</p>
-     * </li>
-     * <li><p>4: wide table engine</p>
-     * </li>
-     * <li><p>8: file engine</p>
-     * </li>
+     * <li>1: search engine</li>
+     * <li>2: LindormTSDB</li>
+     * <li>4: LindormTable</li>
+     * <li>8: file engine</li>
      * </ul>
      * <blockquote>
-     * <p>For example, if the value of this parameter is 15, it indicates that the instance supports the search, time series, wide table, and file engines because 1 + 2 + 4 + 8 = 15. If the value of this parameter is 6, it indicates that the instance supports the time series and wide table engines because 2 + 4 = 6.</p>
+     * <p>For example, if the value of EngineType is 15 (15 = 8 + 4 + 2 + 1), the instance supports the search engine, LindormTSDB, LindormTable, and file engine. If the value of EngineType is 6 (6 = 4 + 2), the instance supports LindormTSDB and LindormTable.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -410,7 +383,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     /**
      * <p>The expiration time of the instance. The time is displayed in the <strong>yyyy-MM-dd HH:mm:ss</strong> format.</p>
      * <blockquote>
-     * <p>This parameter is returned only for subscription instances.</p>
+     * <p>This parameter is returned only when the billing method is subscription.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -420,7 +393,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>The expiration time of the instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the instance expires, represented as the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1629993600000</p>
@@ -438,7 +411,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String instanceAlias;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ld-bp1o3y0yme2i2****</p>
@@ -447,50 +420,29 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The status of the instance. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><p><strong>CREATING</strong>: The instance is being created.</p>
-     * </li>
-     * <li><p><strong>ACTIVATION</strong>: The instance is running.</p>
-     * </li>
-     * <li><p><strong>COLD_EXPANDING</strong>: The capacity of the cold storage is being expanded.</p>
-     * </li>
-     * <li><p><strong>MINOR_VERSION_TRANSITIONING</strong>: The minor version of the instance is being changed.</p>
-     * </li>
-     * <li><p><strong>RESIZING</strong>: The number of nodes is being changed.</p>
-     * </li>
-     * <li><p><strong>SHRINKING</strong>: The number of nodes is being changed.</p>
-     * </li>
-     * <li><p><strong>CLASS_CHANGING</strong>: The specification of the instance is being changed.</p>
-     * </li>
-     * <li><p><strong>SSL_SWITCHING</strong>: SSL is being enabled or disabled.</p>
-     * </li>
-     * <li><p><strong>CDC_OPENING</strong>: The CDC feature is being enabled.</p>
-     * </li>
-     * <li><p><strong>TRANSFER</strong>: Data is being migrated.</p>
-     * </li>
-     * <li><p><strong>DATABASE_TRANSFER</strong>: Data is being migrated.</p>
-     * </li>
-     * <li><p><strong>GUARD_CREATING</strong>: A disaster recovery instance is being created.</p>
-     * </li>
-     * <li><p><strong>BACKUP_RECOVERING</strong>: Data is being restored from a backup.</p>
-     * </li>
-     * <li><p><strong>DATABASE_IMPORTING</strong>: Data is being imported.</p>
-     * </li>
-     * <li><p><strong>NET_MODIFYING</strong>: The network type is being changed.</p>
-     * </li>
-     * <li><p><strong>NET_SWITCHING</strong>: The network is being switched.</p>
-     * </li>
-     * <li><p><strong>NET_CREATING</strong>: A network connection is being created.</p>
-     * </li>
-     * <li><p><strong>NET_DELETING</strong>: A network connection is being deleted.</p>
-     * </li>
-     * <li><p><strong>DELETING</strong>: The instance is being deleted.</p>
-     * </li>
-     * <li><p><strong>RESTARTING</strong>: The instance is being restarted.</p>
-     * </li>
-     * <li><p><strong>LOCKED</strong>: The instance is locked.</p>
-     * </li>
+     * <li><strong>CREATING</strong>: The instance is being created.</li>
+     * <li><strong>ACTIVATION</strong>: The instance is running.</li>
+     * <li><strong>COLD_EXPANDING</strong>: Capacity cloud storage expansion in progress.</li>
+     * <li><strong>MINOR_VERSION_TRANSING</strong>: The minor version is being upgraded.</li>
+     * <li><strong>RESIZING</strong>: The nodes are being scaled up.</li>
+     * <li><strong>SHRINKING</strong>: The nodes are being scaled down.</li>
+     * <li><strong>CLASS_CHANGING</strong>: Instance specification upgrade or downgrade in progress.</li>
+     * <li><strong>SSL_SWITCHING</strong>: The SSL certificate is being changed.</li>
+     * <li><strong>CDC_OPENING</strong>: The data subscription feature is being enabled.</li>
+     * <li><strong>TRANSFER</strong>: Data migration in progress.</li>
+     * <li><strong>DATABASE_TRANSFER</strong>: Data is being migrated to the database.</li>
+     * <li><strong>GUARD_CREATING</strong>: A disaster recovery instance is being created.</li>
+     * <li><strong>BACKUP_RECOVERING</strong>: The backup is being restored.</li>
+     * <li><strong>DATABASE_IMPORTING</strong>: Data import in progress.</li>
+     * <li><strong>NET_MODIFYING</strong>: The network is being modified.</li>
+     * <li><strong>NET_SWITCHING</strong>: The network is being switched between the internal network and the Internet.</li>
+     * <li><strong>NET_CREATING</strong>: A network connection is being created.</li>
+     * <li><strong>NET_DELETING</strong>: A network connection is being deleted.</li>
+     * <li><strong>DELETING</strong>: The instance is being deleted.</li>
+     * <li><strong>RESTARTING</strong>: The instance is being restarted.</li>
+     * <li><strong>LOCKED</strong>: The instance has expired and is locked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -509,12 +461,10 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String instanceStorage;
 
     /**
-     * <p>The disk type of the log nodes in the multi-zone instance. Valid values:</p>
+     * <p>The disk type of the log node for a multi-zone instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>cloud_efficiency</strong>: Standard.</p>
-     * </li>
-     * <li><p><strong>cloud_ssd</strong>: Performance.</p>
-     * </li>
+     * <li><strong>cloud_efficiency</strong>: standard cloud storage.</li>
+     * <li><strong>cloud_ssd</strong>: performance cloud storage.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -524,7 +474,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String logDiskCategory;
 
     /**
-     * <p>The number of log nodes in the multi-zone instance.</p>
+     * <p>The number of log nodes for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -533,7 +483,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Integer logNum;
 
     /**
-     * <p>The storage capacity of a single log node in the multi-zone instance.</p>
+     * <p>The disk capacity of a single log node for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>400GB</p>
@@ -542,7 +492,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public Integer logSingleStorage;
 
     /**
-     * <p>The specification of the log nodes in the multi-zone instance.</p>
+     * <p>The log node specifications for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>lindorm.sn1.large</p>
@@ -551,7 +501,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String logSpec;
 
     /**
-     * <p>The end time of the maintenance window.</p>
+     * <p>The end time of the maintenance window. The time is displayed in the HH:mmZ format. UTC time is used.</p>
      * 
      * <strong>example:</strong>
      * <p>20:00Z</p>
@@ -560,7 +510,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the maintenance window.</p>
+     * <p>The start time of the maintenance window. The time is displayed in the HH:mmZ format. UTC time is used.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00Z</p>
@@ -569,30 +519,19 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String maintainStartTime;
 
     /**
-     * <p>The combination of zones. For more information about the supported zone combinations, see the instance buy page.</p>
+     * <p>The multi-zone combination. You can go to the buy page to view the supported zone combinations. Valid values:</p>
      * <ul>
-     * <li><p><strong>ap-southeast-5abc-aliyun</strong>: Indonesia (Jakarta) Zone A, B, and C.</p>
-     * </li>
-     * <li><p><strong>cn-hangzhou-ehi-aliyun</strong>: China (Hangzhou) Zone E, H, and I.</p>
-     * </li>
-     * <li><p><strong>cn-beijing-acd-aliyun</strong>: China (Beijing) Zone A, C, and D.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1-abc-aliyun</strong>: Singapore Zone A, B, and C.</p>
-     * </li>
-     * <li><p><strong>cn-zhangjiakou-abc-aliyun</strong>: China (Zhangjiakou) Zone A, B, and C.</p>
-     * </li>
-     * <li><p><strong>cn-shanghai-efg-aliyun</strong>: China (Shanghai) Zone E, F, and G.</p>
-     * </li>
-     * <li><p><strong>cn-shanghai-abd-aliyun</strong>: China (Shanghai) Zone A, B, and D.</p>
-     * </li>
-     * <li><p><strong>cn-hangzhou-bef-aliyun</strong>: China (Hangzhou) Zone B, E, and F.</p>
-     * </li>
-     * <li><p><strong>cn-hangzhou-bce-aliyun</strong>: China (Hangzhou) Zone B, C, and E.</p>
-     * </li>
-     * <li><p><strong>cn-beijing-fgh-aliyun</strong>: China (Beijing) Zone F, G, and H.</p>
-     * </li>
-     * <li><p><strong>cn-shenzhen-abc-aliyun</strong>: China (Shenzhen) Zone A, B, and C.</p>
-     * </li>
+     * <li><strong>ap-southeast-5abc-aliyun</strong>: Indonesia (Jakarta) Zones A, B, and C.</li>
+     * <li><strong>cn-hangzhou-ehi-aliyun</strong>: China (Hangzhou) Zones E, H, and I.</li>
+     * <li><strong>cn-beijing-acd-aliyun</strong>: China (Beijing) Zones A, C, and D.</li>
+     * <li><strong>ap-southeast-1-abc-aliyun</strong>: Singapore Zones A, B, and C.</li>
+     * <li><strong>cn-zhangjiakou-abc-aliyun</strong>: China (Zhangjiakou) Zones A, B, and C.</li>
+     * <li><strong>cn-shanghai-efg-aliyun</strong>: China (Shanghai) Zones E, F, and G.</li>
+     * <li><strong>cn-shanghai-abd-aliyun</strong>: China (Shanghai) Zones A, B, and D.</li>
+     * <li><strong>cn-hangzhou-bef-aliyun</strong>: China (Hangzhou) Zones B, E, and F.</li>
+     * <li><strong>cn-hangzhou-bce-aliyun</strong>: China (Hangzhou) Zones B, C, and E.</li>
+     * <li><strong>cn-beijing-fgh-aliyun</strong>: China (Beijing) Zones F, G, and H.</li>
+     * <li><strong>cn-shenzhen-abc-aliyun</strong>: China (Shenzhen) Zones A, B, and C.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -613,10 +552,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>PREPAY</strong>: subscription</p>
-     * </li>
-     * <li><p><strong>POSTPAY</strong>: pay-as-you-go</p>
-     * </li>
+     * <li><strong>PREPAY</strong>: subscription.</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -626,7 +563,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String payType;
 
     /**
-     * <p>The ID of the vSwitch in the primary zone for the multi-zone instance. The vSwitch must be deployed in the zone that is specified by <code>PrimaryZoneId</code>.</p>
+     * <p>The ID of the vSwitch in the primary zone for a multi-zone instance. The vSwitch must belong to the zone specified by PrimaryZoneId.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6fdqa7c0pipnqzq****</p>
@@ -635,7 +572,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String primaryVSwitchId;
 
     /**
-     * <p>The primary zone ID of the multi-zone instance.</p>
+     * <p>The ID of the primary zone for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-e</p>
@@ -644,7 +581,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String primaryZoneId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -671,18 +608,13 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The type of the instance. Valid values:</p>
+     * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><p><strong>lindorm</strong>: a single-zone instance.</p>
-     * </li>
-     * <li><p><strong>lindorm_multizone</strong>: a multi-zone instance.</p>
-     * </li>
-     * <li><p><strong>serverless_lindorm</strong>: a serverless instance.</p>
-     * </li>
-     * <li><p><strong>lindorm_standalone</strong>: a single-node instance.</p>
-     * </li>
-     * <li><p><strong>lts</strong>: a Lindorm Tunnel Service (LTS) instance.</p>
-     * </li>
+     * <li><strong>lindorm</strong>: Lindorm single-zone instance.</li>
+     * <li><strong>lindorm_multizone</strong>: Lindorm multi-zone instance.</li>
+     * <li><strong>serverless_lindorm</strong>: Lindorm Serverless instance.</li>
+     * <li><strong>lindorm_standalone</strong>: Lindorm single-node instance.</li>
+     * <li><strong>lts</strong>: Lindorm Tunnel Service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -691,11 +623,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <p>The risk alert information for the single-zone deployment.</p>
+     */
     @NameInMap("SingleZoneRiskAlert")
     public GetLindormInstanceResponseBodySingleZoneRiskAlert singleZoneRiskAlert;
 
     /**
-     * <p>The ID of the vSwitch in the secondary zone for the multi-zone instance. The vSwitch must be deployed in the zone that is specified by <code>StandbyZoneId</code>.</p>
+     * <p>The ID of the vSwitch in the secondary zone for a multi-zone instance. The vSwitch must belong to the zone specified by StandbyZoneId.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zec0kcn08cgdtr6****</p>
@@ -704,7 +639,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String standbyVSwitchId;
 
     /**
-     * <p>The secondary zone ID of the multi-zone instance.</p>
+     * <p>The ID of the secondary zone for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-f</p>
@@ -731,7 +666,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     public String vswitchId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
@@ -1236,7 +1171,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         public String coreCount;
 
         /**
-         * <p>The number of vCPUs for the engine node.</p>
+         * <p>The number of CPUs for the engine node.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -1245,20 +1180,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         public String cpuCount;
 
         /**
-         * <p>The type of the engine. Valid values:</p>
+         * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><p><strong>lindorm</strong>: the wide table engine.</p>
-         * </li>
-         * <li><p><strong>tsdb</strong>: the time series engine.</p>
-         * </li>
-         * <li><p><strong>solr</strong>: the search engine.</p>
-         * </li>
-         * <li><p><strong>store</strong>: the file engine.</p>
-         * </li>
-         * <li><p><strong>bds</strong>: the LTS engine.</p>
-         * </li>
-         * <li><p><strong>compute</strong>: the compute engine.</p>
-         * </li>
+         * <li><strong>lindorm</strong>: LindormTable.</li>
+         * <li><strong>tsdb</strong>: LindormTSDB.</li>
+         * <li><strong>solr</strong>: search engine.</li>
+         * <li><strong>store</strong>: file engine.</li>
+         * <li><strong>bds</strong>: Lindorm Tunnel Service engine.</li>
+         * <li><strong>compute</strong>: compute engine.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1270,10 +1199,8 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the engine is of the latest version. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The engine is of the latest version.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The engine is not of the latest version.</p>
-         * </li>
+         * <li><strong>true</strong>: latest version.</li>
+         * <li><strong>false</strong>: not the latest version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1283,7 +1210,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         public Boolean isLastVersion;
 
         /**
-         * <p>The latest version of the engine.</p>
+         * <p>The latest version number of the engine.</p>
          * 
          * <strong>example:</strong>
          * <p>2.2.19.2</p>
@@ -1310,7 +1237,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         public String primaryCoreCount;
 
         /**
-         * <p>The specification of the engine nodes.</p>
+         * <p>The engine node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>lindorm.g.2xlarge</p>
@@ -1328,7 +1255,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         public String standbyCoreCount;
 
         /**
-         * <p>The version of the engine.</p>
+         * <p>The version number of the engine.</p>
          * 
          * <strong>example:</strong>
          * <p>2.2.3</p>
@@ -1432,15 +1359,39 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
 
     public static class GetLindormInstanceResponseBodySingleZoneRiskAlert extends TeaModel {
+        /**
+         * <p>The confirmation date for risk handling. The date is displayed in the yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-24</p>
+         */
         @NameInMap("ConfirmDate")
         public String confirmDate;
 
+        /**
+         * <p>The risk handling type for the single-zone deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NO_SET</p>
+         */
         @NameInMap("DispositionType")
         public String dispositionType;
 
+        /**
+         * <p>Indicates whether a risk alert for the single-zone deployment is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NeedAlert")
         public Boolean needAlert;
 
+        /**
+         * <p>The planned completion date for risk handling. The date is displayed in the yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-30</p>
+         */
         @NameInMap("PlannedCompletionDate")
         public String plannedCompletionDate;
 

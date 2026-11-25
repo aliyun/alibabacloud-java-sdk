@@ -7,7 +7,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token that is used to start the next query.</p>
      * <blockquote>
-     * <p>If not all results are returned in a query, the response includes this parameter. You can use the value of this parameter to start the next query.</p>
+     * <p>This parameter is returned if a query does not return all results. You can pass the value of this parameter in a subsequent query to continue the query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type. The value is fixed to <strong>ALIYUN::HITSDB::INSTANCE</strong>.</p>
+         * <p>The resource type. The value is fixed as <strong>ALIYUN::HITSDB::INSTANCE</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::HITSDB::INSTANCE</p>
@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -89,7 +89,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>2.2.8</p>

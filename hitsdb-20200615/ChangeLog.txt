@@ -1,3 +1,10 @@
+2026-11-25 Version: 5.12.0
+- Support API KillQuery.
+- Support API ListHBaseQuotas.
+- Support API SetHBaseQuotas.
+- Support API ShowProcessList.
+
+
 2026-08-14 Version: 5.11.1
 - Update API CheckLdpsColumnarIndexStatus: add response parameters Body.Mode.
 - Update API GetLindormInstance: add response parameters Body.SingleZoneRiskAlert.

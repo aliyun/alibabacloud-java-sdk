@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewLindormInstanceResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>
@@ -14,7 +14,7 @@ public class RenewLindormInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. This field may not be returned in a partially successful response.</p>
      * 
      * <strong>example:</strong>
      * <p>ld-bp1z3506imz2f****</p>
@@ -23,7 +23,7 @@ public class RenewLindormInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the order. You can find the order ID in the Order Management section of Expenses and Costs.</p>
+     * <p>The ID of the order. You can obtain the order ID in the Orders section of the Expenses and Costs console.</p>
      * 
      * <strong>example:</strong>
      * <p>213465921640411</p>

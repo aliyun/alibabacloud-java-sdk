@@ -14,7 +14,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public Long aliUid;
 
     /**
-     * <p>For a multi-zone instance, this is the ID of the virtual switch in the arbiter zone. The vSwitch must be in the zone specified by ArbiterZoneId.</p>
+     * <p>The vSwitch ID of the arbitration zone for a multi-zone instance. The vSwitch must be in the zone specified by ArbiterZoneId.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6664pqjawb87k36****</p>
@@ -23,7 +23,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String arbiterVSwitchId;
 
     /**
-     * <p>For a multi-zone instance, this is the ID of the arbiter zone.</p>
+     * <p>The zone ID of the arbitration zone for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-g</p>
@@ -32,15 +32,13 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String arbiterZoneId;
 
     /**
-     * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
+     * <p>Indicates whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is returned only for subscription instances.</p>
+     * <p>This parameter is returned only when the billing method of the instance is subscription.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,7 +48,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The cloud storage capacity in GB.</p>
+     * <p>The cloud storage capacity, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>480</p>
@@ -59,7 +57,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public Long cloudStorageSize;
 
     /**
-     * <p>The capacity of the storage-optimized cloud storage.</p>
+     * <p>The storage-optimized cloud storage capacity.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>
@@ -68,7 +66,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public Integer coldStorage;
 
     /**
-     * <p>The number of milliseconds between the instance creation time and 00:00:00 on January 1, 1970.</p>
+     * <p>The number of milliseconds between the instance creation time and 1970-01-01 00:00:00.</p>
      * 
      * <strong>example:</strong>
      * <p>1627290664000</p>
@@ -79,10 +77,8 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether deletion protection is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,12 +88,10 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String deletionProtection;
 
     /**
-     * <p>The storage class. Valid values:</p>
+     * <p>The storage type. Valid values:</p>
      * <ul>
-     * <li><p><strong>StandardStorage</strong>: Standard cloud storage.</p>
-     * </li>
-     * <li><p><strong>PerformanceStorage</strong>: Performance cloud storage.</p>
-     * </li>
+     * <li><strong>StandardStorage</strong>: standard cloud storage.</li>
+     * <li><strong>PerformanceStorage</strong>: performance cloud storage.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,12 +119,10 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String diskUsage;
 
     /**
-     * <p>Indicates whether the compute engine is enabled for the instance. Valid values:</p>
+     * <p>Indicates whether the compute engine is activated for the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: activated.</li>
+     * <li><strong>false</strong>: not activated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,7 +132,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public Boolean enableCompute;
 
     /**
-     * <p>Indicates whether the file engine is enabled.</p>
+     * <p>Indicates whether the file engine is activated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -149,7 +141,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String enableFs;
 
     /**
-     * <p>Indicates whether transparent data encryption (TDE) is enabled for storage.</p>
+     * <p>Indicates whether storage TDE encryption is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -164,7 +156,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public java.util.List<GetLindormV2InstanceDetailsResponseBodyEngineList> engineList;
 
     /**
-     * <p>The number of milliseconds between the instance expiration time and 00:00:00 on January 1, 1970.</p>
+     * <p>The number of milliseconds between the instance expires time and 1970-01-01 00:00:00.</p>
      * 
      * <strong>example:</strong>
      * <p>1629993600000</p>
@@ -173,7 +165,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public Long expiredMilliseconds;
 
     /**
-     * <p>The default initial password.</p>
+     * <p>The initial default password.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -191,7 +183,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String instanceAlias;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ld-bp1mq0tdzbx1m****</p>
@@ -202,48 +194,27 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><p><strong>CREATING</strong>: The instance is being created.</p>
-     * </li>
-     * <li><p><strong>ACTIVATION</strong>: The instance is running.</p>
-     * </li>
-     * <li><p><strong>COLD_EXPANDING</strong>: The storage-optimized cloud storage is being scaled out.</p>
-     * </li>
-     * <li><p><strong>MINOR_VERSION_TRANSING</strong>: The minor version is being upgraded.</p>
-     * </li>
-     * <li><p><strong>RESIZING</strong>: The nodes are being scaled out.</p>
-     * </li>
-     * <li><p><strong>SHRINKING</strong>: The nodes are being scaled in.</p>
-     * </li>
-     * <li><p><strong>CLASS_CHANGING</strong>: The instance specifications are being upgraded or downgraded.</p>
-     * </li>
-     * <li><p><strong>SSL_SWITCHING</strong>: The SSL certificate is being changed.</p>
-     * </li>
-     * <li><p><strong>CDC_OPENING</strong>: The data subscription feature is being enabled.</p>
-     * </li>
-     * <li><p><strong>TRANSFER</strong>: Data is being migrated.</p>
-     * </li>
-     * <li><p><strong>DATABASE_TRANSFER</strong>: Data is being migrated to the database.</p>
-     * </li>
-     * <li><p><strong>GUARD_CREATING</strong>: A disaster recovery instance is being created.</p>
-     * </li>
-     * <li><p><strong>BACKUP_RECOVERING</strong>: Data is being restored from a backup.</p>
-     * </li>
-     * <li><p><strong>DATABASE_IMPORTING</strong>: Data is being imported.</p>
-     * </li>
-     * <li><p><strong>NET_MODIFYING</strong>: The network is being modified.</p>
-     * </li>
-     * <li><p><strong>NET_SWITCHING</strong>: The network is being switched between the private network and the public network.</p>
-     * </li>
-     * <li><p><strong>NET_CREATING</strong>: A network connection is being created.</p>
-     * </li>
-     * <li><p><strong>NET_DELETING</strong>: A network connection is being deleted.</p>
-     * </li>
-     * <li><p><strong>DELETING</strong>: The instance is being deleted.</p>
-     * </li>
-     * <li><p><strong>RESTARTING</strong>: The instance is being restarted.</p>
-     * </li>
-     * <li><p><strong>LOCKED</strong>: The instance has expired and is locked.</p>
-     * </li>
+     * <li><strong>CREATING</strong>: the instance is being created.</li>
+     * <li><strong>ACTIVATION</strong>: the instance is running.</li>
+     * <li><strong>COLD_EXPANDING</strong>: the storage-optimized cloud storage is undergoing storage expansion.</li>
+     * <li><strong>MINOR_VERSION_TRANSING</strong>: a minor version upgrade is in progress.</li>
+     * <li><strong>RESIZING</strong>: nodes are being scaled out.</li>
+     * <li><strong>SHRINKING</strong>: nodes are being scaled in.</li>
+     * <li><strong>CLASS_CHANGING</strong>: instance specifications are being upgraded or the quota is being decreased.</li>
+     * <li><strong>SSL_SWITCHING</strong>: an SSL change is in progress.</li>
+     * <li><strong>CDC_OPENING</strong>: the Lindorm Tunnel Service feature is being activated.</li>
+     * <li><strong>TRANSFER</strong>: data migration is in progress.</li>
+     * <li><strong>DATABASE_TRANSFER</strong>: data is being migrated to a database.</li>
+     * <li><strong>GUARD_CREATING</strong>: a disaster recovery instance is being created.</li>
+     * <li><strong>BACKUP_RECOVERING</strong>: backup recovery is in progress.</li>
+     * <li><strong>DATABASE_IMPORTING</strong>: data import is in progress.</li>
+     * <li><strong>NET_MODIFYING</strong>: a network change is in progress.</li>
+     * <li><strong>NET_SWITCHING</strong>: the network is switching between the private network and the public network.</li>
+     * <li><strong>NET_CREATING</strong>: a network connection is being created.</li>
+     * <li><strong>NET_DELETING</strong>: a network connection is being deleted.</li>
+     * <li><strong>DELETING</strong>: the instance is being deleted.</li>
+     * <li><strong>RESTARTING</strong>: the instance is restarting.</li>
+     * <li><strong>LOCKED</strong>: the instance has expired and is locked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -253,9 +224,9 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>The instance type. Valid value:</p>
+     * <p>The instance form factor. Valid values:</p>
      * <ul>
-     * <li>basic: Production.</li>
+     * <li>basic: production type.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -265,7 +236,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The end time of the maintenance window.</p>
+     * <p>The end time of the maintenance window, in HH:mmZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>20:00Z</p>
@@ -274,7 +245,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the maintenance window.</p>
+     * <p>The start time of the maintenance window, in HH:mmZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>00:00Z</p>
@@ -294,10 +265,8 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>PREPAY</strong>: subscription.</p>
-     * </li>
-     * <li><p><strong>POSTPAY</strong>: pay-as-you-go.</p>
-     * </li>
+     * <li><strong>PREPAY</strong>: subscription.</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -307,7 +276,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String payType;
 
     /**
-     * <p>For a multi-zone instance, this is the ID of the virtual switch in the primary zone. The vSwitch must be in the zone specified by PrimaryZoneId.</p>
+     * <p>The vSwitch ID of the primary zone for a multi-zone instance. The vSwitch must be in the zone specified by PrimaryZoneId.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6fdqa7c0pipnqzq****</p>
@@ -316,7 +285,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String primaryVSwitchId;
 
     /**
-     * <p>For a multi-zone instance, this is the ID of the primary zone.</p>
+     * <p>The zone ID of the primary zone for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-e</p>
@@ -354,12 +323,9 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     /**
      * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><p><strong>lindorm_v2</strong>: Lindorm V2 single-zone instance.</p>
-     * </li>
-     * <li><p><strong>lindorm_v2_multizone</strong>: Lindorm V2 Multi-zone Deployment (Basic) instance.</p>
-     * </li>
-     * <li><p><strong>lindorm_v2_multizone_ha</strong>: Lindorm V2 multi-zone High-availability Edition instance.</p>
-     * </li>
+     * <li><strong>lindorm_v2</strong>: Lindorm V2 single-zone instance.</li>
+     * <li><strong>lindorm_v2_multizone</strong>: Lindorm V2 multi-zone Basic Edition instance.</li>
+     * <li><strong>lindorm_v2_multizone_ha</strong>: Lindorm V2 multi-zone High Availability Edition instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -369,7 +335,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>For a multi-zone instance, this is the ID of the virtual switch in the secondary zone. The vSwitch must be in the zone specified by StandbyZoneId.</p>
+     * <p>The vSwitch ID of the secondary zone for a multi-zone instance. The vSwitch must be in the zone specified by StandbyZoneId.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zec0kcn08cgdtr6****</p>
@@ -378,7 +344,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String standbyVSwitchId;
 
     /**
-     * <p>For a multi-zone instance, this is the ID of the secondary zone.</p>
+     * <p>The zone ID of the secondary zone for a multi-zone instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-f</p>
@@ -387,13 +353,13 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String standbyZoneId;
 
     /**
-     * <p>The instance storage usage.</p>
+     * <p>The instance storage usage level.</p>
      */
     @NameInMap("StorageUsage")
     public GetLindormV2InstanceDetailsResponseBodyStorageUsage storageUsage;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) where the instance resides.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1xxxxxxxxxxxxxxxxxx</p>
@@ -402,7 +368,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the virtual switch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1xxxxxxxxxxxxxxxxxx</p>
@@ -417,7 +383,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
     public java.util.List<GetLindormV2InstanceDetailsResponseBodyWhiteIpList> whiteIpList;
 
     /**
-     * <p>The deployment details of the engine in the zone.</p>
+     * <p>The details of engine deployment by zone.</p>
      * 
      * <strong>example:</strong>
      * <p>ZoneEngineInfoMap</p>
@@ -753,7 +719,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
 
     public static class GetLindormV2InstanceDetailsResponseBodyEngineListConnectAddressList extends TeaModel {
         /**
-         * <p>The endpoint.</p>
+         * <p>The connection address.</p>
          * 
          * <strong>example:</strong>
          * <p>ld-mxj9asg***-proxy-lindorm-vpc.lindorm.aliyuncs.com:33060</p>
@@ -771,12 +737,10 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The endpoint type.</p>
+         * <p>The connection address type. Valid values:</p>
          * <ul>
-         * <li><p>INTRANET: VPC private endpoint.</p>
-         * </li>
-         * <li><p>INTERNET: Public endpoint.</p>
-         * </li>
+         * <li>INTRANET: VPC private network address.</li>
+         * <li>INTERNET: public address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -827,7 +791,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The number of vCPUs for the node.</p>
+         * <p>The number of vCPU cores on the node.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -836,7 +800,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         public Integer cpuCoreCount;
 
         /**
-         * <p>Indicates whether a local disk is attached to the node.</p>
+         * <p>Indicates whether a local cloud disk is attached to the node.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -845,7 +809,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         public Boolean enableAttachLocalDisk;
 
         /**
-         * <p>The capacity of the local disk in GB.</p>
+         * <p>The local cloud disk capacity, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -854,12 +818,10 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         public Long localDiskCapacity;
 
         /**
-         * <p>The type of the local cloud disk.</p>
+         * <p>The local cloud disk type. Valid values:</p>
          * <ul>
-         * <li><p>cloud_essd: performance cloud disk</p>
-         * </li>
-         * <li><p>cloud_efficiency: standard cloud disk</p>
-         * </li>
+         * <li>cloud_essd: performance cloud disk.</li>
+         * <li>cloud_efficiency: standard cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -869,7 +831,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         public String localDiskCategory;
 
         /**
-         * <p>The memory size of the node in GiB.</p>
+         * <p>The memory size of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -879,78 +841,46 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The node specifications.</p>
-         * <p>If you select Performance cloud storage or Standard cloud storage, this parameter can be set to one of the following values:</p>
+         * <p>If you select performance cloud storage or standard cloud storage, valid values are:</p>
          * <ul>
-         * <li><p>lindorm.c.2xlarge: 8 vCPUs, 16 GB memory.</p>
-         * </li>
-         * <li><p>lindorm.g.2xlarge: 8 vCPUs, 32 GB memory.</p>
-         * </li>
-         * <li><p>lindorm.c.4xlarge: 16 vCPUs, 32 GB memory.</p>
-         * </li>
-         * <li><p>lindorm.g.4xlarge: 16 vCPUs, 64 GB memory.</p>
-         * </li>
-         * <li><p>lindorm.c.8xlarge: 32 vCPUs, 64 GB memory.</p>
-         * </li>
-         * <li><p>lindorm.g.8xlarge: 32 vCPUs, 128 GB memory.</p>
-         * </li>
-         * <li><p>lindorm.r.2xlarge: 8 vCPUs, 64 GB memory.</p>
-         * </li>
-         * <li><p>lindorm.r.4xlarge: 16 vCPUs, 128 GB memory.</p>
-         * </li>
-         * <li><p>lindorm.r.8xlarge: 32 vCPUs, 256 GB memory.</p>
-         * </li>
+         * <li>lindorm.c.2xlarge: 8 vCores and 16 GB memory.</li>
+         * <li>lindorm.g.2xlarge: 8 vCores and 32 GB memory.</li>
+         * <li>lindorm.c.4xlarge: 16 vCores and 32 GB memory.</li>
+         * <li>lindorm.g.4xlarge: 16 vCores and 64 GB memory.</li>
+         * <li>lindorm.c.8xlarge: 32 vCores and 64 GB memory.</li>
+         * <li>lindorm.g.8xlarge: 32 vCores and 128 GB memory.</li>
+         * <li>lindorm.r.2xlarge: 8 vCores and 64 GB memory.</li>
+         * <li>lindorm.r.4xlarge: 16 vCores and 128 GB memory.</li>
+         * <li>lindorm.r.8xlarge: 32 vCores and 256 GB memory.</li>
          * </ul>
-         * <p>If you select Local SSD, this parameter can be set to one of the following values:</p>
+         * <p>If you select local SSD storage, valid values are:</p>
          * <ul>
-         * <li><p>lindorm.i4.xlarge: 4 vCPUs, 32 GB memory (I4).</p>
-         * </li>
-         * <li><p>lindorm.i4.2xlarge: 8 vCPUs, 64 GB memory (I4).</p>
-         * </li>
-         * <li><p>lindorm.i4.4xlarge: 16 vCPUs, 128 GB memory (I4).</p>
-         * </li>
-         * <li><p>lindorm.i4.8xlarge: 32 vCPUs, 256 GB memory (I4).</p>
-         * </li>
-         * <li><p>lindorm.i3.xlarge: 4 vCPUs, 32 GB memory (I3).</p>
-         * </li>
-         * <li><p>lindorm.i3.2xlarge: 8 vCPUs, 64 GB memory (I3).</p>
-         * </li>
-         * <li><p>lindorm.i3.4xlarge: 16 vCPUs, 128 GB memory (I3).</p>
-         * </li>
-         * <li><p>lindorm.i3.8xlarge: 32 vCPUs, 256 GB memory (I3).</p>
-         * </li>
-         * <li><p>lindorm.i2.xlarge: 4 vCPUs, 32 GB memory (I2).</p>
-         * </li>
-         * <li><p>lindorm.i2.2xlarge: 8 vCPUs, 64 GB memory (I2).</p>
-         * </li>
-         * <li><p>lindorm.i2.4xlarge: 16 vCPUs, 128 GB memory (I2).</p>
-         * </li>
-         * <li><p>lindorm.i2.8xlarge: 32 vCPUs, 256 GB memory (I2).</p>
-         * </li>
+         * <li>lindorm.i4.xlarge: 4 vCores and 32 GB memory (I4).</li>
+         * <li>lindorm.i4.2xlarge: 8 vCores and 64 GB memory (I4).</li>
+         * <li>lindorm.i4.4xlarge: 16 vCores and 128 GB memory (I4).</li>
+         * <li>lindorm.i4.8xlarge: 32 vCores and 256 GB memory (I4).</li>
+         * <li>lindorm.i3.xlarge: 4 vCores and 32 GB memory (I3).</li>
+         * <li>lindorm.i3.2xlarge: 8 vCores and 64 GB memory (I3).</li>
+         * <li>lindorm.i3.4xlarge: 16 vCores and 128 GB memory (I3).</li>
+         * <li>lindorm.i3.8xlarge: 32 vCores and 256 GB memory (I3).</li>
+         * <li>lindorm.i2.xlarge: 4 vCores and 32 GB memory (I2).</li>
+         * <li>lindorm.i2.2xlarge: 8 vCores and 64 GB memory (I2).</li>
+         * <li>lindorm.i2.4xlarge: 16 vCores and 128 GB memory (I2).</li>
+         * <li>lindorm.i2.8xlarge: 32 vCores and 256 GB memory (I2).</li>
          * </ul>
-         * <p>If you select Big Data, this parameter can be set to one of the following values:</p>
+         * <p>If you select big data instance type, valid values are:</p>
          * <ul>
-         * <li><p>lindorm.sd3c.3xlarge: 14 vCPUs, 56 GB memory (D3C PRO).</p>
-         * </li>
-         * <li><p>lindorm.sd3c.7xlarge: 28 vCPUs, 112 GB memory (D3C PRO).</p>
-         * </li>
-         * <li><p>lindorm.sd3c.14xlarge: 56 vCPUs, 224 GB memory (D3C PRO).</p>
-         * </li>
-         * <li><p>lindorm.d2c.6xlarge: 24 vCPUs, 88 GB memory (D2C).</p>
-         * </li>
-         * <li><p>lindorm.d2c.12xlarge: 48 vCPUs, 176 GB memory (D2C).</p>
-         * </li>
-         * <li><p>lindorm.d2c.24xlarge: 96 vCPUs, 352 GB memory (D2C).</p>
-         * </li>
-         * <li><p>lindorm.d2s.5xlarge: 20 vCPUs, 88 GB memory (D2S).</p>
-         * </li>
-         * <li><p>lindorm.d2s.10xlarge: 40 vCPUs, 176 GB memory (D2S).</p>
-         * </li>
-         * <li><p>lindorm.d1.2xlarge: 8 vCPUs, 32 GB memory (D1NE).</p>
-         * </li>
-         * <li><p>lindorm.d1.4xlarge: 16 vCPUs, 64 GB memory (D1NE).</p>
-         * </li>
-         * <li><p>lindorm.d1.6xlarge: 24 vCPUs, 96 GB memory (D1NE).</p>
-         * </li>
+         * <li>lindorm.sd3c.3xlarge: 14 vCores and 56 GB memory (D3C PRO).</li>
+         * <li>lindorm.sd3c.7xlarge: 28 vCores and 112 GB memory (D3C PRO).</li>
+         * <li>lindorm.sd3c.14xlarge: 56 vCores and 224 GB memory (D3C PRO).</li>
+         * <li>lindorm.d2c.6xlarge: 24 vCores and 88 GB memory (D2C).</li>
+         * <li>lindorm.d2c.12xlarge: 48 vCores and 176 GB memory (D2C).</li>
+         * <li>lindorm.d2c.24xlarge: 96 vCores and 352 GB memory (D2C).</li>
+         * <li>lindorm.d2s.5xlarge: 20 vCores and 88 GB memory (D2S).</li>
+         * <li>lindorm.d2s.10xlarge: 40 vCores and 176 GB memory (D2S).</li>
+         * <li>lindorm.d1.2xlarge: 8 vCores and 32 GB memory (D1NE).</li>
+         * <li>lindorm.d1.4xlarge: 16 vCores and 64 GB memory (D1NE).</li>
+         * <li>lindorm.d1.6xlarge: 24 vCores and 96 GB memory (D1NE).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -969,7 +899,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         public Integer quantity;
 
         /**
-         * <p>The name of the node group. <strong>Required</strong>. This must be the same as the name used during creation.</p>
+         * <p>The node group name. <strong>Required.</strong> Must match the name specified at creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>job_debug</p>
@@ -978,7 +908,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
-         * <p>The unique ID that corresponds to the delivery group ID.</p>
+         * <p>The ID that uniquely corresponds to the delivery group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
@@ -1092,7 +1022,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
 
     public static class GetLindormV2InstanceDetailsResponseBodyEngineList extends TeaModel {
         /**
-         * <p>A list of engine endpoints.</p>
+         * <p>The list of engine connection addresses.</p>
          */
         @NameInMap("ConnectAddressList")
         public java.util.List<GetLindormV2InstanceDetailsResponseBodyEngineListConnectAddressList> connectAddressList;
@@ -1100,18 +1030,12 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         /**
          * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><p><strong>TABLE</strong>: LindormTable.</p>
-         * </li>
-         * <li><p><strong>TSDB</strong>: LindormTSDB.</p>
-         * </li>
-         * <li><p><strong>LSEARCH</strong>: Search engine.</p>
-         * </li>
-         * <li><p><strong>LTS</strong>: LTS engine.</p>
-         * </li>
-         * <li><p><strong>LVECTOR</strong>: Vector engine.</p>
-         * </li>
-         * <li><p><strong>LCOLUMN</strong>: Column store.</p>
-         * </li>
+         * <li><strong>TABLE</strong>: LindormTable.</li>
+         * <li><strong>TSDB</strong>: LindormTSDB.</li>
+         * <li><strong>LSEARCH</strong>: search index engine.</li>
+         * <li><strong>LTS</strong>: LTS timing engine.</li>
+         * <li><strong>LVECTOR</strong>: vector engine.</li>
+         * <li><strong>LCOLUMN</strong>: column store engine.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1121,12 +1045,10 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>Indicates whether the engine is the latest version. Valid values:</p>
+         * <p>Indicates whether the engine is running the latest version. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The engine is the latest version.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The engine is not the latest version.</p>
-         * </li>
+         * <li><strong>true</strong>: the latest version.</li>
+         * <li><strong>false</strong>: not the latest version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1145,7 +1067,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
         public String latestVersion;
 
         /**
-         * <p>A list of engine node groups.</p>
+         * <p>The list of engine node groups.</p>
          */
         @NameInMap("NodeGroup")
         public java.util.List<GetLindormV2InstanceDetailsResponseBodyEngineListNodeGroup> nodeGroup;
@@ -1216,7 +1138,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
 
     public static class GetLindormV2InstanceDetailsResponseBodyStorageUsage extends TeaModel {
         /**
-         * <p>The instance storage usage.</p>
+         * <p>The instance storage usage level.</p>
          */
         @NameInMap("CapacityByDiskCategory")
         public java.util.List<java.util.Map<String, ?>> capacityByDiskCategory;
@@ -1255,7 +1177,7 @@ public class GetLindormV2InstanceDetailsResponseBody extends TeaModel {
 
     public static class GetLindormV2InstanceDetailsResponseBodyWhiteIpList extends TeaModel {
         /**
-         * <p>The group name. The name can contain only letters, digits, and underscores (_).</p>
+         * <p>The group name. Only letters, digits, and underscores are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>swhy</p>

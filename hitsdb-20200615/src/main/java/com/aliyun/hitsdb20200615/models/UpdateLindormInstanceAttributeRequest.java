@@ -7,10 +7,8 @@ public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable deletion protection. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,11 +17,17 @@ public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
+    /**
+     * <p>The risk disposition type for a single zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PLAN_MIGRATION</p>
+     */
     @NameInMap("DispositionType")
     public String dispositionType;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>lindorm-test</p>
@@ -32,7 +36,7 @@ public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     public String instanceAlias;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +52,8 @@ public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The planned completion date for risk disposition, in the yyyy-MM-dd format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-10-01</p>
      */

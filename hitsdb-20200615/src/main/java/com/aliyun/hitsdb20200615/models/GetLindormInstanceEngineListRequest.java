@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLindormInstanceEngineListRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

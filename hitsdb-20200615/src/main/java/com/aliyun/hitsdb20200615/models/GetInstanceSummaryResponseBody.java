@@ -14,7 +14,7 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
     public Integer lockingCount;
 
     /**
-     * <p>An array of region summaries.</p>
+     * <p>The collection of region information.</p>
      */
     @NameInMap("RegionalSummary")
     public java.util.List<GetInstanceSummaryResponseBodyRegionalSummary> regionalSummary;
@@ -38,7 +38,7 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
     public Integer runningCount;
 
     /**
-     * <p>The total number of instances that are running or about to expire.</p>
+     * <p>The total number of running instances and instances that are about to expire.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
 
     public static class GetInstanceSummaryResponseBodyRegionalSummary extends TeaModel {
         /**
-         * <p>The number of instances in <code>{RegionId}</code> that are about to expire.</p>
+         * <p>The number of instances that are about to expire in {RegionId}.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -111,7 +111,7 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The number of running instances in <code>{RegionId}</code>.</p>
+         * <p>The number of running instances in {RegionId}.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -120,7 +120,7 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         public Integer runningCount;
 
         /**
-         * <p>The total number of instances in <code>{RegionId}</code> that are running or about to expire.</p>
+         * <p>The total number of running instances and instances that are about to expire in {RegionId}.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

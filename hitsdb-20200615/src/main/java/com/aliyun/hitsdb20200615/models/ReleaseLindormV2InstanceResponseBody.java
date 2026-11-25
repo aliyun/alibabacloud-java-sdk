@@ -14,7 +14,7 @@ public class ReleaseLindormV2InstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A7153E4-8354-497E-87E5-5D0EBEF5AEB1</p>

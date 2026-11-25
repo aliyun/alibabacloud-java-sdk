@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The token that is used to start the next query to return more results.</p>
      * <blockquote>
-     * <p>Do not specify this parameter for your first request. If the response returns a <strong>NextToken</strong>, more results are available. To retrieve the next page, include the returned <strong>NextToken</strong> value in your next request.</p>
+     * <p>You do not need to specify this parameter for the first query. If a query does not return all results, you can pass the <strong>NextToken</strong> value returned in the previous query to continue the query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the instance is located. Call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to get a list of available regions.</p>
+     * <p>The ID of the region where the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>A list of resource IDs.</p>
+     * <p>The list of resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -58,7 +58,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -150,9 +150,9 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * <blockquote>
-         * <p>Each tag is a key-value pair. This parameter specifies the key.</p>
+         * <p>You can specify multiple tag keys. For example, the Key in the first pair specifies the first tag key, and the Key in the second pair specifies the second tag key.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -162,9 +162,9 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * <blockquote>
-         * <p>Each tag is a key-value pair. This parameter specifies the value.</p>
+         * <p>You can specify multiple tag values. For example, the Value in the first pair specifies the first tag value, and the Value in the second pair specifies the second tag value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -11,7 +11,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The ID of the region where the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>A list of resource IDs.</p>
+     * <p>The list of resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -34,7 +34,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class TagResourcesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -134,7 +134,7 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <blockquote>
-         * <p>You can specify the keys for multiple tags. For example, the Key in the first pair is the key for the first tag, and the Key in the second pair is the key for the second tag.</p>
+         * <p>You can specify multiple tag keys. For example, the Key in the first pair specifies the key of the first tag, and the Key in the second pair specifies the key of the second tag.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -147,7 +147,7 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <blockquote>
-         * <p>You can specify the values for multiple tags. For example, the Value in the first pair is the value for the first tag, and the Value in the second pair is the value for the second tag.</p>
+         * <p>You can specify multiple tag values. For example, the Value in the first pair specifies the value of the first tag, and the Value in the second pair specifies the value of the second tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

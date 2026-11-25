@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLindormV2WhiteIpListResponseBody extends TeaModel {
     /**
-     * <p>Details about a failed permission check.</p>
+     * <p>The details of the failed permission check.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>

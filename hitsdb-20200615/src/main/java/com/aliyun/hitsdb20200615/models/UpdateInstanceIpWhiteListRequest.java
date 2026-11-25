@@ -14,7 +14,7 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     public Boolean delete;
 
     /**
-     * <p>The name of the whitelist group. If you leave this parameter empty, the default value user is used.</p>
+     * <p>The name of the whitelist group. Default value: user.</p>
      * 
      * <strong>example:</strong>
      * <p>test_group</p>
@@ -23,7 +23,7 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the ID.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     /**
      * <p>The IP addresses to add to the whitelist.</p>
      * <blockquote>
-     * <p>Set this parameter to 127.0.0.1 to deny access from all IP addresses. For example, 192.168.0.0/24 allows all IP addresses in the 192.168.0.0/24 CIDR block to access the Lindorm instance. Separate multiple IP addresses or CIDR blocks with a comma (,).</p>
+     * <p>A value of 127.0.0.1 indicates that access from all IP addresses is denied. For example, 192.168.0.0/24 allows access from all IP addresses in the 192.168.0.X CIDR block to the Lindorm instance. Separate multiple IP addresses with commas (,).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
