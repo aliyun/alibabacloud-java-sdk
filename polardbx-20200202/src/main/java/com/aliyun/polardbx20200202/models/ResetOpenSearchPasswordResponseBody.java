@@ -186,7 +186,7 @@ public class ResetOpenSearchPasswordResponseBody extends TeaModel {
          * <p>The additional information returned by the API operation. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>[Environment: huanghe]\nhuanghe 503_UC_OUTBOUND alert exceeds the threshold!\n\nFor details, see: <a href="https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE%5C%5Cn">https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE\\n</a></p>
+         * <p>[Environment: huanghe]\nhuanghe 503_UC_OUTBOUND alert exceeds the threshold!\n\nFor details, see: <a href="https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE%5Cn">https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE\n</a></p>
          */
         @NameInMap("Message")
         public String message;

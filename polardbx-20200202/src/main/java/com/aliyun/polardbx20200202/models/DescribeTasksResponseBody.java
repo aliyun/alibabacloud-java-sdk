@@ -93,7 +93,7 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     public static class DescribeTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The start time of the task. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+         * <p>The start time of the task. The format is yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-20T19:40:00Z</p>
@@ -111,7 +111,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The end time of the task. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+         * <p>The end time of the task. The format is yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-20T20:00:00Z</p>

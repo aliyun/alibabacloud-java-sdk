@@ -1,3 +1,9 @@
+2026-11-25 Version: 4.15.2
+- Update API DescribeSupabaseInstanceAttribute: add response parameters Body.Data.LatestMinorVersion.
+- Update API DescribeSupabaseInstanceAttribute: add response parameters Body.Data.WebAppsHttpUrl.
+- Update API DescribeSupabaseInstanceAttribute: add response parameters Body.Data.WebAppsUrl.
+
+
 2026-11-23 Version: 4.15.1
 - Update API DescribeContextDBInfo: add response parameters Body.Data.Instance.MinorVersion.
 

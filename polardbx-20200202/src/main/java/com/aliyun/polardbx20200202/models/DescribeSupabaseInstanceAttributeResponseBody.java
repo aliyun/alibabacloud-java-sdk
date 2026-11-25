@@ -65,7 +65,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The name of the authentication principal.</p>
+         * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -92,7 +92,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic message.</p>
+         * <p>The encoded diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The no permission type.</p>
+         * <p>The type of missing permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -259,7 +259,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeSupabaseInstanceAttributeResponseBodyDataNodes extends TeaModel {
         /**
-         * <p>The specification code.</p>
+         * <p>The class code.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx.supabase.x2.small</p>
@@ -335,7 +335,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeSupabaseInstanceAttributeResponseBodyData extends TeaModel {
         /**
-         * <p>The endpoints.</p>
+         * <p>The connection endpoints.</p>
          */
         @NameInMap("ConnAddrs")
         public java.util.List<DescribeSupabaseInstanceAttributeResponseBodyDataConnAddrs> connAddrs;
@@ -377,6 +377,15 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         public Boolean expired;
 
         /**
+         * <p>The latest minor engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb-2.6.0_xcluster8.4.21-20260716_pxbaas-20260915</p>
+         */
+        @NameInMap("LatestMinorVersion")
+        public String latestMinorVersion;
+
+        /**
          * <p>The lock mode.</p>
          * 
          * <strong>example:</strong>
@@ -386,7 +395,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The minor version.</p>
+         * <p>The minor engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>polardb-2.6.0_xcluster8.4.21-20260716_pxbaas-20260915</p>
@@ -446,7 +455,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The Supabase specification code.</p>
+         * <p>The Supabase class code.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx.supabase.x4.xlarge</p>
@@ -489,6 +498,24 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("VpcId")
         public String vpcId;
+
+        /**
+         * <p>The complete HTTP access URL for WebApps. This parameter is not returned if WebApps is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com:8000/apps/">http://example.com:8000/apps/</a></p>
+         */
+        @NameInMap("WebAppsHttpUrl")
+        public String webAppsHttpUrl;
+
+        /**
+         * <p>The complete HTTPS access URL for WebApps. This parameter is not returned if WebApps is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com:8443/apps/">https://example.com:8443/apps/</a></p>
+         */
+        @NameInMap("WebAppsUrl")
+        public String webAppsUrl;
 
         /**
          * <p>The zone ID.</p>
@@ -542,6 +569,14 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         }
         public Boolean getExpired() {
             return this.expired;
+        }
+
+        public DescribeSupabaseInstanceAttributeResponseBodyData setLatestMinorVersion(String latestMinorVersion) {
+            this.latestMinorVersion = latestMinorVersion;
+            return this;
+        }
+        public String getLatestMinorVersion() {
+            return this.latestMinorVersion;
         }
 
         public DescribeSupabaseInstanceAttributeResponseBodyData setLockMode(String lockMode) {
@@ -646,6 +681,22 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeSupabaseInstanceAttributeResponseBodyData setWebAppsHttpUrl(String webAppsHttpUrl) {
+            this.webAppsHttpUrl = webAppsHttpUrl;
+            return this;
+        }
+        public String getWebAppsHttpUrl() {
+            return this.webAppsHttpUrl;
+        }
+
+        public DescribeSupabaseInstanceAttributeResponseBodyData setWebAppsUrl(String webAppsUrl) {
+            this.webAppsUrl = webAppsUrl;
+            return this;
+        }
+        public String getWebAppsUrl() {
+            return this.webAppsUrl;
         }
 
         public DescribeSupabaseInstanceAttributeResponseBodyData setZoneId(String zoneId) {

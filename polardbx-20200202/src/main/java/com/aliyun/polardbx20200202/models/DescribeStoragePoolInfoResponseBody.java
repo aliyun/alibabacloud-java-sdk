@@ -89,7 +89,7 @@ public class DescribeStoragePoolInfoResponseBody extends TeaModel {
          * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;appId\&quot;:\&quot;APP_ETLUP1E5FMI5ND5IFO8W\&quot;}</p>
+         * <p>{&quot;appId&quot;:&quot;APP_ETLUP1E5FMI5ND5IFO8W&quot;}</p>
          */
         @NameInMap("Extra")
         public String extra;

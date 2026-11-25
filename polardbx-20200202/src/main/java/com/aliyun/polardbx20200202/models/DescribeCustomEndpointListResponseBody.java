@@ -42,7 +42,7 @@ public class DescribeCustomEndpointListResponseBody extends TeaModel {
 
     public static class DescribeCustomEndpointListResponseBodyDataEndpoints extends TeaModel {
         /**
-         * <p>[\&quot;pxc-i-vb1sqa7llp\&quot;,\&quot;pxc-i-bemprx50ad\&quot;]</p>
+         * <p>[&quot;pxc-i-vb1sqa7llp&quot;,&quot;pxc-i-bemprx50ad&quot;]</p>
          */
         @NameInMap("CnNames")
         public java.util.List<String> cnNames;

@@ -99,7 +99,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <p>The list of tags.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;TagKey\&quot;:\&quot;test\&quot;,\&quot;TagValue\&quot;:\&quot;test-value\&quot;}]</p>
+     * <p>[{&quot;TagKey&quot;:&quot;test&quot;,&quot;TagValue&quot;:&quot;test-value&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

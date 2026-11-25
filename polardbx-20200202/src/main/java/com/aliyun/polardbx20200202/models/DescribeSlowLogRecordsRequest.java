@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
-     * <p>The node type.</p>
+     * <p>The type of the node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String characterType;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb</p>
@@ -34,7 +34,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The node IDs. You can specify multiple node IDs separated by commas (<code>,</code>). This parameter is required when you query storage nodes.</p>
+     * <p>The IDs of the nodes. You can specify multiple node IDs and separate them with commas (<code>,</code>). This parameter is required when you query storage nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>pxc-i-mezcj4ejdz</p>
@@ -43,7 +43,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBNodeIds;
 
     /**
-     * <p>The start time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</p>
+     * <p>The start time of the query. Specify the time in the YYYY-MM-ddTHH:mmZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page. Default value: 100.</p>
+     * <p>The number of entries to return on each page. Default value: 100.</p>
      * <p>Limit: A maximum of 100 entries can be returned at a time.</p>
      * 
      * <strong>example:</strong>
@@ -82,11 +82,11 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of the query. Format: YYYY-MM-ddTHH:mmZ (UTC).</p>
+     * <p>The start time of the query. Specify the time in the YYYY-MM-ddTHH:mmZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-10-09T02:26</p>
+     * <p>2024-10-09T02:26Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

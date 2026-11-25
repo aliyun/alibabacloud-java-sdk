@@ -56,7 +56,7 @@ public class CreateContextDBResponseBody extends TeaModel {
 
     public static class CreateContextDBResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The description as above.</p>
+         * <p>The description is as stated above.</p>
          * 
          * <strong>example:</strong>
          * <p>polardbx:CreateContextDB</p>
@@ -183,7 +183,7 @@ public class CreateContextDBResponseBody extends TeaModel {
 
     public static class CreateContextDBResponseBodyData extends TeaModel {
         /**
-         * <p>The administrator key of the context service.</p>
+         * <p>The administrator key for the context service.</p>
          * 
          * <strong>example:</strong>
          * <p>ctx-admin-***</p>
@@ -210,7 +210,7 @@ public class CreateContextDBResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The name of the context service dashboard replica set.</p>
+         * <p>The name of the dashboard replica set for the context service.</p>
          * 
          * <strong>example:</strong>
          * <p>pxt-*********-d</p>
@@ -228,7 +228,7 @@ public class CreateContextDBResponseBody extends TeaModel {
         public String openSearchInstanceName;
 
         /**
-         * <p>The name of the context service replica set.</p>
+         * <p>The name of the service replica set for the context service.</p>
          * 
          * <strong>example:</strong>
          * <p>pxt-*********-s</p>

@@ -8412,7 +8412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</p>
+     * <p>Queries the details of slow SQL statements on the compute nodes and storage nodes of a PolarDB-X instance.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8476,7 +8476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</p>
+     * <p>Queries the details of slow SQL statements on the compute nodes and storage nodes of a PolarDB-X instance.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse

@@ -63,7 +63,7 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;attendHtapList\&quot;:[\&quot;pxc-hzruyzes08****\&quot;],\&quot;autoAttendHtap\&quot;:\&quot;true\&quot;,\&quot;delayExecutionStrategy\&quot;:1,\&quot;enableConsistentReplicaRead\&quot;:true,\&quot;enableHtap\&quot;:\&quot;true\&quot;,\&quot;masterReadWeight\&quot;:100,\&quot;storageDelayThreshold\&quot;:3}</p>
+         * <p>{&quot;attendHtapList&quot;:[&quot;pxc-hzruyzes08****&quot;],&quot;autoAttendHtap&quot;:&quot;true&quot;,&quot;delayExecutionStrategy&quot;:1,&quot;enableConsistentReplicaRead&quot;:true,&quot;enableHtap&quot;:&quot;true&quot;,&quot;masterReadWeight&quot;:100,&quot;storageDelayThreshold&quot;:3}</p>
          */
         @NameInMap("ConfigValue")
         public String configValue;

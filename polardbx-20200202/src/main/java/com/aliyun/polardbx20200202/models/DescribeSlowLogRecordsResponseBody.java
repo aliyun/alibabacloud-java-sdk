@@ -14,13 +14,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The list of slow log details.</p>
+     * <p>The details of the slow query logs.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeSlowLogRecordsResponseBodyItems> items;
 
     /**
-     * <p>The page number of the current query.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -110,7 +110,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeSlowLogRecordsResponseBodyItems extends TeaModel {
         /**
-         * <p>The compute node name. This field is available only for CN.</p>
+         * <p>The name of the compute node. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-i-xxxx</p>
@@ -119,7 +119,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String CNname;
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>dcdev</p>
@@ -128,7 +128,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The extension field. This field is available only for CN.</p>
+         * <p>The extended field. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>tddl:5.4.19-20240927</p>
@@ -137,7 +137,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String extension;
 
         /**
-         * <p>Indicates whether the execution failed. This field is available only for CN.</p>
+         * <p>Indicates whether the execution failed. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -146,7 +146,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String fail;
 
         /**
-         * <p>The number of rows fetched. This field is available only for CN.</p>
+         * <p>The number of fetched rows. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,7 +155,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String frows;
 
         /**
-         * <p>The client name and address that connects to the database.</p>
+         * <p>The name and address of the client that connects to the database.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>[</strong></strong>] @ [1XX.XX.XX.XX]</p>
@@ -164,7 +164,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String hostAddress;
 
         /**
-         * <p>The instance name. This field is available only for DN.</p>
+         * <p>The name of the instance. This field is available only for storage nodes (DN).</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-xdb-s-xxxx</p>
@@ -173,7 +173,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String insName;
 
         /**
-         * <p>Indicates whether the Prepare mode is used. This field is available only for CN.</p>
+         * <p>Indicates whether the Prepare mode is used. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -182,7 +182,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String isBind;
 
         /**
-         * <p>The lock duration. Unit: milliseconds (ms). This field is available only for DN.</p>
+         * <p>The lock duration. Unit: milliseconds. This field is available only for storage nodes (DN).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +191,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String lockTimeMS;
 
         /**
-         * <p>The parameters in Prepare mode. This field is available only for CN.</p>
+         * <p>The parameters in the Prepare mode. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;1&quot;]</p>
@@ -200,7 +200,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String params;
 
         /**
-         * <p>The number of rows scanned. This field is available only for DN.</p>
+         * <p>The number of scanned rows. This field is available only for storage nodes (DN).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -209,10 +209,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String parseRowCounts;
 
         /**
-         * <p>The timestamp. Format: YYYY-MM-ddTHH:mm.ss.SSSZ (UTC).</p>
+         * <p>The timestamp. Specify the time in the YYYY-MM-ddTHH:mm.ss.SSSZ format. The time must be in UTC.</p>
          * <ul>
-         * <li>In CN slow logs, this field indicates the execution start time.</li>
-         * <li>In DN slow logs, this field indicates the execution end time.</li>
+         * <li>In the slow query logs of compute nodes (CN), this field indicates the start time of the execution.</li>
+         * <li>In the slow query logs of storage nodes (DN), this field indicates the completion time of the execution.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String queryStartTime;
 
         /**
-         * <p>The execution duration of the SQL statement. Unit: seconds (s).</p>
+         * <p>The execution duration of the SQL statement. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3.000</p>
@@ -231,7 +231,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String queryTime;
 
         /**
-         * <p>The execution duration of the SQL statement. Unit: milliseconds (ms).</p>
+         * <p>The execution duration of the SQL statement. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000.000</p>
@@ -240,7 +240,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String queryTimeMS;
 
         /**
-         * <p>The number of rows returned. This field is available only for DN.</p>
+         * <p>The number of returned rows. This field is available only for storage nodes (DN).</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -249,7 +249,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String returnRowCounts;
 
         /**
-         * <p>The number of rows affected or returned. This field is available only for CN.</p>
+         * <p>The number of affected or returned rows. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -258,7 +258,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String rows;
 
         /**
-         * <p>The number of physical SQL statements. This field is available only for CN.</p>
+         * <p>The number of physical SQL statements. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -267,7 +267,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String SCNT;
 
         /**
-         * <p>The unique identity of the SQL statement in slow query log statistics.</p>
+         * <p>The unique identifier of the SQL statement in the slow query log statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>c8df07e5d45cd68da8b4771c2016e20b</p>
@@ -285,7 +285,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String SQLText;
 
         /**
-         * <p>The SQL type. This field is available only for CN.</p>
+         * <p>The type of the SQL statement. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>select</p>
@@ -294,7 +294,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String sqlType;
 
         /**
-         * <p>The kernel template ID. This field is available only for CN.</p>
+         * <p>The kernel template ID. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>af33ffee</p>
@@ -303,7 +303,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>Indicates whether the SQL statement is too long. This field is available only for CN.</p>
+         * <p>Indicates whether the SQL statement is too long. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -312,7 +312,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String tooLong;
 
         /**
-         * <p>The trace ID. This field is available only for CN.</p>
+         * <p>The trace ID. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>17a5c5c840006000</p>
@@ -321,7 +321,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String traceId;
 
         /**
-         * <p>The transaction policy. This field is available only for CN.</p>
+         * <p>The transaction policy. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>XA</p>
@@ -330,7 +330,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String transactionPolicy;
 
         /**
-         * <p>The transaction ID. This field is available only for CN.</p>
+         * <p>The transaction ID. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>17a5c5c840006000</p>
@@ -339,7 +339,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String trxId;
 
         /**
-         * <p>The workload type. This field is available only for CN.</p>
+         * <p>The workload type. This field is available only for compute nodes (CN).</p>
          * 
          * <strong>example:</strong>
          * <p>TP</p>
