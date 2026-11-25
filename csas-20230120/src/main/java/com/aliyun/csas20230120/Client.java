@@ -35,6 +35,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>批量添加设备归属标识</p>
+     * 
+     * @param request AddDeviceBelongIdentifiersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddDeviceBelongIdentifiersResponse
+     */
+    public AddDeviceBelongIdentifiersResponse addDeviceBelongIdentifiersWithOptions(AddDeviceBelongIdentifiersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identifiers)) {
+            bodyFlat.put("Identifiers", request.identifiers);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDeviceBelongIdentifiers"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDeviceBelongIdentifiersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量添加设备归属标识</p>
+     * 
+     * @param request AddDeviceBelongIdentifiersRequest
+     * @return AddDeviceBelongIdentifiersResponse
+     */
+    public AddDeviceBelongIdentifiersResponse addDeviceBelongIdentifiers(AddDeviceBelongIdentifiersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addDeviceBelongIdentifiersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Adds associated terminal devices to a static device tag in batches.</p>
      * 
      * @param request AddDeviceGroupMatchDevicesRequest
@@ -6647,6 +6696,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询设备归属标识</p>
+     * 
+     * @param request ListDeviceBelongIdentifiersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDeviceBelongIdentifiersResponse
+     */
+    public ListDeviceBelongIdentifiersResponse listDeviceBelongIdentifiersWithOptions(ListDeviceBelongIdentifiersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("CurrentPage", request.currentPage);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identifierIds)) {
+            bodyFlat.put("IdentifierIds", request.identifierIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identifierType)) {
+            body.put("IdentifierType", request.identifierType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDeviceBelongIdentifiers"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceBelongIdentifiersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询设备归属标识</p>
+     * 
+     * @param request ListDeviceBelongIdentifiersRequest
+     * @return ListDeviceBelongIdentifiersResponse
+     */
+    public ListDeviceBelongIdentifiersResponse listDeviceBelongIdentifiers(ListDeviceBelongIdentifiersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDeviceBelongIdentifiersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</p>
      * 
      * @param request ListDeviceGroupsRequest
@@ -9744,6 +9862,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyForwardStrategyBindingItemsResponse modifyForwardStrategyBindingItems(ModifyForwardStrategyBindingItemsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyForwardStrategyBindingItemsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量移除设备归属标识</p>
+     * 
+     * @param request RemoveDeviceBelongIdentifiersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveDeviceBelongIdentifiersResponse
+     */
+    public RemoveDeviceBelongIdentifiersResponse removeDeviceBelongIdentifiersWithOptions(RemoveDeviceBelongIdentifiersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identifierIds)) {
+            bodyFlat.put("IdentifierIds", request.identifierIds);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveDeviceBelongIdentifiers"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveDeviceBelongIdentifiersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量移除设备归属标识</p>
+     * 
+     * @param request RemoveDeviceBelongIdentifiersRequest
+     * @return RemoveDeviceBelongIdentifiersResponse
+     */
+    public RemoveDeviceBelongIdentifiersResponse removeDeviceBelongIdentifiers(RemoveDeviceBelongIdentifiersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeDeviceBelongIdentifiersWithOptions(request, runtime);
     }
 
     /**
