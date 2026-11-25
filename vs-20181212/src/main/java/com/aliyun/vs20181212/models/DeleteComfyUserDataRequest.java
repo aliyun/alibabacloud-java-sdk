@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteComfyUserDataRequest extends TeaModel {
     /**
-     * <p>The name of the file or directory to delete. If a path is passed, it is treated as a directory and must end with a forward slash (/).
-     * File name.</p>
+     * <p>The name of the file or directory to delete. To specify a directory, pass a path ending with a forward slash (/).</p>
      * 
      * <strong>example:</strong>
      * <p>mytest</p>

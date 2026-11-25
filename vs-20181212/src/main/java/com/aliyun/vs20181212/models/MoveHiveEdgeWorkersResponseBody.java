@@ -102,7 +102,7 @@ public class MoveHiveEdgeWorkersResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Error 1062 (23000): Duplicate entry \&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed-ew-1226d588c69449209ee9631\&quot; for key \&quot;PRIMARY\&quot;</p>
+         * <p>Error 1062 (23000): Duplicate entry &quot;hive-4fbf3928d40e43948b98acdb4fb5aaed-ew-1226d588c69449209ee9631&quot; for key &quot;PRIMARY&quot;</p>
          */
         @NameInMap("Message")
         public String message;

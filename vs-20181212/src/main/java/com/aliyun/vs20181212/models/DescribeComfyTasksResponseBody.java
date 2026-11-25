@@ -34,7 +34,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     /**
      * <p>The page size.</p>
      * <blockquote>
-     * <p>Only for recording queries.</p>
+     * <p>Only applicable to recording queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
 
     public static class DescribeComfyTasksResponseBodyTasks extends TeaModel {
         /**
-         * <p>The creation time, represented as a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780387493000</p>
@@ -139,7 +139,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The end time of the task, represented as a UNIX timestamp in milliseconds.</p>
+         * <p>The end time of the task. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780387494000</p>
@@ -157,13 +157,13 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String hiveId;
 
         /**
-         * <p>The task error message.</p>
+         * <p>The error message of the task.</p>
          */
         @NameInMap("TaskErrorMessage")
         public String taskErrorMessage;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>6c8234f4-d1e1-4cea-b08b-7926fbdea144</p>
@@ -172,7 +172,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task state.</p>
+         * <p>The state of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -181,16 +181,16 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String taskState;
 
         /**
-         * <p>The task state message.</p>
+         * <p>The state message of the task.</p>
          * 
          * <strong>example:</strong>
-         * <p>任务执行成功</p>
+         * <p>Task executed successfully</p>
          */
         @NameInMap("TaskStateMessage")
         public String taskStateMessage;
 
         /**
-         * <p>The last modified time, represented as a UNIX timestamp in milliseconds.</p>
+         * <p>The last modified time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780387494000</p>

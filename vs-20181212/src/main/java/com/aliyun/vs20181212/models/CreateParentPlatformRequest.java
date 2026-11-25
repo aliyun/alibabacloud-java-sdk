@@ -52,7 +52,7 @@ public class CreateParentPlatformRequest extends TeaModel {
      * <p>The description of the parent platform.</p>
      * 
      * <strong>example:</strong>
-     * <p>级联平台测试</p>
+     * <p>Cascade platform test</p>
      */
     @NameInMap("Description")
     public String description;
@@ -82,7 +82,7 @@ public class CreateParentPlatformRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>级联平台测试</p>
+     * <p>Cascade platform test</p>
      */
     @NameInMap("Name")
     public String name;

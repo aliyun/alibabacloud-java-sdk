@@ -48,7 +48,7 @@ public class SetVsStreamsNotifyUrlConfigRequest extends TeaModel {
     /**
      * <p>The URL to which live stream information is pushed.</p>
      * <blockquote>
-     * <p>This URL must start with http\:// or https\://.</p>
+     * <p>This URL must start with http:// or https://.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

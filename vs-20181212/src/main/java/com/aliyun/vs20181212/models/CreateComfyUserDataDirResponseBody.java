@@ -14,7 +14,7 @@ public class CreateComfyUserDataDirResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The description. If Status is Failed, this field contains the cause of the failure.</p>
+     * <p>The description. If Status is Failed, it includes the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>conn failed!</p>

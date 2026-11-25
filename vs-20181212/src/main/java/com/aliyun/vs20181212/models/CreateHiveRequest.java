@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateHiveRequest extends TeaModel {
     /**
-     * <p>A description of the cluster.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>G49单卡集群</p>
+     * <p>G49 single-GPU cluster</p>
      */
     @NameInMap("Description")
     public String description;

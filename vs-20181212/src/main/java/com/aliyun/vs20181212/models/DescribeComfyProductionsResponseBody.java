@@ -127,7 +127,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
 
     public static class DescribeComfyProductionsResponseBodyProductions extends TeaModel {
         /**
-         * <p>The ComfyTask ID.</p>
+         * <p>The ID of the ComfyTask.</p>
          * 
          * <strong>example:</strong>
          * <p>6c8234f4-d1e1-4cea-b08b-7926fbdea144</p>
@@ -136,7 +136,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         public String comfyTaskId;
 
         /**
-         * <p>The creation time. The time follows the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and includes the time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-06T20:20:26+08:00</p>
@@ -154,7 +154,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The production ID.</p>
+         * <p>The ID of the production.</p>
          * 
          * <strong>example:</strong>
          * <p>3e5bda20-5cd4-4d55-8d23-88d624a18caa</p>
@@ -163,7 +163,7 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         public String productionId;
 
         /**
-         * <p>The production status.</p>
+         * <p>The status of the production.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>

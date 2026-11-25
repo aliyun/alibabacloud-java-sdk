@@ -55,7 +55,7 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>publish_time_asc</p>
+     * <p>stream_name_desc</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;

@@ -23,7 +23,7 @@ public class DescribeComfyProductionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the specified ComfyTask.</p>
+     * <p>The ID of the ComfyTask.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

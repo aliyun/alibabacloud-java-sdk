@@ -22,7 +22,7 @@ public class DescribeStreamURLRequest extends TeaModel {
     /**
      * <p>The primary key associated with the playback domain name. This key is used to generate the authentication URL.</p>
      * <blockquote>
-     * <p>Call the <a href="https://next.api.aliyun.com/document/vs/2018-12-12/DescribeVsDomainConfigs">DescribeVsDomainConfigs</a> operation to query the \<code>AuthKey\\</code> information.</p>
+     * <p>Call the <a href="https://next.api.aliyun.com/document/vs/2018-12-12/DescribeVsDomainConfigs">DescribeVsDomainConfigs</a> operation to query the `AuthKey` information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeStreamURLRequest extends TeaModel {
     public String authKey;
 
     /**
-     * <p>The end time. This parameter applies to \<code>vod\\</code> streams.<br>
+     * <p>The end time. This parameter applies to `vod` streams.<br>
      * A UNIX timestamp. Unit: seconds.<br></p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class DescribeStreamURLRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The start time. This parameter applies to \<code>vod\\</code> streams.<br>
+     * <p>The start time. This parameter applies to `vod` streams.<br>
      * A UNIX timestamp. Unit: seconds.<br></p>
      * 
      * <strong>example:</strong>
@@ -101,11 +101,11 @@ public class DescribeStreamURLRequest extends TeaModel {
     public String transcode;
 
     /**
-     * <p>The type of the stream. The default value is \<code>live\\</code>. Valid values:</p>
+     * <p>The type of the stream. The default value is `live`. Valid values:</p>
      * <ul>
-     * <li><p>\<code>live\\</code>: a live stream.</p>
+     * <li><p>`live`: a live stream.</p>
      * </li>
-     * <li><p>\<code>vod\\</code>: a video-on-demand (VOD) stream, such as a historical stream from a Network Video Recorder (NVR).</p>
+     * <li><p>`vod`: a video-on-demand (VOD) stream, such as a historical stream from a Network Video Recorder (NVR).</p>
      * </li>
      * </ul>
      * 

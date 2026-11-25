@@ -14,7 +14,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The Settings for the number of entries per page during paging in a paged query.</p>
+     * <p>The Settings for the number of entries returned per page during paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
     public java.util.List<ListFilePushStatusesResponseBodyPushStatuses> pushStatuses;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -111,7 +111,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The start time of the push. The time is displayed in the ISO 8601 standard with time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
+         * <p>The start time of the push. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-26T16:32:20+08:00</p>
@@ -120,7 +120,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String pushTime;
 
         /**
-         * <p>The instance ID of the cloud application service.</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -133,8 +133,8 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
          * <ul>
          * <li>Created</li>
          * <li>Doing</li>
-         * <li>Success: final state.</li>
-         * <li>Failed: final state.</li>
+         * <li>Success: terminal state</li>
+         * <li>Failed: terminal state</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
-         * <p>The latest update time of the status. The time is displayed in the ISO 8601 standard with time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
+         * <p>The latest update time of the status. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-26T17:02:10+08:00</p>

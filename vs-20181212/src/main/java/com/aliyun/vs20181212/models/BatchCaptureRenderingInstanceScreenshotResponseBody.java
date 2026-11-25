@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaModel {
     /**
-     * <p>The data pre-check result.</p>
+     * <p>The data precheck result.</p>
      */
     @NameInMap("Datatest")
     public BatchCaptureRenderingInstanceScreenshotResponseBodyDatatest datatest;
@@ -129,7 +129,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
 
     public static class BatchCaptureRenderingInstanceScreenshotResponseBodyDatatest extends TeaModel {
         /**
-         * <p>The pre-check result.</p>
+         * <p>The precheck result.</p>
          */
         @NameInMap("Result")
         public BatchCaptureRenderingInstanceScreenshotResponseBodyDatatestResult result;
@@ -160,7 +160,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         public String errCode;
 
         /**
-         * <p>The reason for the failure.</p>
+         * <p>The error message for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Not Applied</p>
@@ -210,7 +210,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
 
     public static class BatchCaptureRenderingInstanceScreenshotResponseBodySuccessItems extends TeaModel {
         /**
-         * <p>The time when the screenshot was created. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
+         * <p>The time when the screenshot was created. The time follows the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-19T14:46:37+08:00</p>

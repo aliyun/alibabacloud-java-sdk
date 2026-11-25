@@ -20,7 +20,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The Settings for the number of entries returned on each page during paging for a paged query.</p>
+     * <p>Settings for the number of entries returned per page during paging for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of cloud applications that match the query conditions.</p>
+     * <p>The total number of matched cloud applications.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -178,8 +178,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
          * <ul>
          * <li>Created</li>
          * <li>Doing</li>
-         * <li>Success: This is a final state.</li>
-         * <li>Failed: This is a final state.</li>
+         * <li>Success: final state</li>
+         * <li>Failed: final state</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
-         * <p>The time when the status was last updated. The time is displayed in the ISO 8601 standard with a time zone offset, in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
+         * <p>The time when the status was last updated. The time is displayed in the ISO 8601 standard with time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-28T14:48:34+08:00</p>
@@ -207,7 +207,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The time when the application was uploaded. The time is displayed in the ISO 8601 standard with a time zone offset, in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
+         * <p>The time when the application was uploaded. The time is displayed in the ISO 8601 standard with time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-28T14:28:14+08:00</p>

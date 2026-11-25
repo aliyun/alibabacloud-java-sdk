@@ -14,7 +14,7 @@ public class DeleteComfyProductionResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The description.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

@@ -26,7 +26,7 @@ public class UploadFileRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>mytest</p>
+     * <p>mytest01</p>
      */
     @NameInMap("FileName")
     public String fileName;

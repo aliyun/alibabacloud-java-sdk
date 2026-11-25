@@ -1,3 +1,9 @@
+2026-11-25 Version: 3.12.0
+- Support API UpgradeRenderingServerImage.
+- Update API DescribeRenderingInstance: add response parameters Body.ImageId.
+- Update API ListCloudAppInstallations: add request parameters RenderingInstanceIds.
+
+
 2026-10-30 Version: 3.11.2
 - Update API CreateRenderingInstance: add response parameters Body.RenderingInstanceIds.
 

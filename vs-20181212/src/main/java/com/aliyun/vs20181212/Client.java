@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "vs";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("vs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -28,16 +31,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>HiveId</strong> is a required parameter that specifies the ID of the target cluster.</li>
-     * <li><strong>InstanceIds</strong> is a required parameter that specifies a list of instance IDs to add.</li>
-     * <li>Adding an instance that already exists in the target cluster returns an error message.</li>
-     * <li>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</li>
+     * <li><strong>HiveId</strong> is a required parameter that specifies the ID of the target cluster to which the workloads are bound.</li>
+     * <li><strong>InstanceIds</strong> is a required parameter that specifies the list of workload IDs to bind to the cluster.</li>
+     * <li>If you attempt to bind a workload ID that already exists in the target cluster, an error message is returned.</li>
+     * <li>After the binding operation succeeds, the returned lists of successful and failed workload instances help you identify which workloads were successfully bound and which were not, along with the reasons for failure.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds one or more instances to a specified cluster.</p>
+     * <p>Binds one or more workload instances to a specified cluster.</p>
      * 
      * @param tmpReq AddHiveEdgeWorkersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -79,16 +82,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>HiveId</strong> is a required parameter that specifies the ID of the target cluster.</li>
-     * <li><strong>InstanceIds</strong> is a required parameter that specifies a list of instance IDs to add.</li>
-     * <li>Adding an instance that already exists in the target cluster returns an error message.</li>
-     * <li>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</li>
+     * <li><strong>HiveId</strong> is a required parameter that specifies the ID of the target cluster to which the workloads are bound.</li>
+     * <li><strong>InstanceIds</strong> is a required parameter that specifies the list of workload IDs to bind to the cluster.</li>
+     * <li>If you attempt to bind a workload ID that already exists in the target cluster, an error message is returned.</li>
+     * <li>After the binding operation succeeds, the returned lists of successful and failed workload instances help you identify which workloads were successfully bound and which were not, along with the reasons for failure.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds one or more instances to a specified cluster.</p>
+     * <p>Binds one or more workload instances to a specified cluster.</p>
      * 
      * @param request AddHiveEdgeWorkersRequest
      * @return AddHiveEdgeWorkersResponse
@@ -532,9 +535,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Authentication</strong>: The request must include the <code>AliUid</code> parameter to authenticate and perform identity verification.</li>
-     * <li><strong>Instance specification</strong>: You can specify the instances to capture screenshots of by using <code>RenderingInstanceIds</code>.</li>
-     * <li><strong>Screenshot quality</strong>: You can configure the Settings for the screenshot image quality by using the <code>Quality</code> parameter. The default value is 75 if not configured, and the valid values range from 1 to 100.</li>
+     * <li><strong>Authenticate</strong>: The request must include the AliUid parameter for identity verification.</li>
+     * <li><strong>Instance specification</strong>: You can use the RenderingInstanceIds parameter to specify the instances for which you want to capture screenshots.</li>
+     * <li><strong>Screenshot quality</strong>: The Quality parameter specifies the screenshot quality settings. The default value is 75 if not configured. Valid values: 1 to 100.</li>
      * <li><strong>Response processing</strong>: The response includes lists of successful and failed instances along with their related information, such as download URLs and screenshot completion times.</li>
      * </ul>
      * 
@@ -583,9 +586,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Authentication</strong>: The request must include the <code>AliUid</code> parameter to authenticate and perform identity verification.</li>
-     * <li><strong>Instance specification</strong>: You can specify the instances to capture screenshots of by using <code>RenderingInstanceIds</code>.</li>
-     * <li><strong>Screenshot quality</strong>: You can configure the Settings for the screenshot image quality by using the <code>Quality</code> parameter. The default value is 75 if not configured, and the valid values range from 1 to 100.</li>
+     * <li><strong>Authenticate</strong>: The request must include the AliUid parameter for identity verification.</li>
+     * <li><strong>Instance specification</strong>: You can use the RenderingInstanceIds parameter to specify the instances for which you want to capture screenshots.</li>
+     * <li><strong>Screenshot quality</strong>: The Quality parameter specifies the screenshot quality settings. The default value is 75 if not configured. Valid values: 1 to 100.</li>
      * <li><strong>Response processing</strong>: The response includes lists of successful and failed instances along with their related information, such as download URLs and screenshot completion times.</li>
      * </ul>
      * 
@@ -1763,7 +1766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Enable the on-demand screenshot feature in the associated screenshot template.</p>
+     * <p>Enable the on-demand screenshot feature in the associated screenshot template in advance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1808,7 +1811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Enable the on-demand screenshot feature in the associated screenshot template.</p>
+     * <p>Enable the on-demand screenshot feature in the associated screenshot template in advance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1879,7 +1882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must first enable the on-demand snapshot feature in the associated snapshot template.</p>
+     * <p>You must enable the on-demand screenshot feature in the associated screenshot template in advance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1924,7 +1927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must first enable the on-demand snapshot feature in the associated snapshot template.</p>
+     * <p>You must enable the on-demand screenshot feature in the associated screenshot template in advance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1939,8 +1942,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>This operation is applicable only to workspaces whose access type is <strong>GB28181 pull streaming</strong> or <strong>ODCAP</strong>.</li>
+     * <li>Workspaces whose access type is <strong>RTMP push streaming</strong> <strong>do not support</strong> adding devices.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Add a new device.</p>
+     * <p>Adds a new device.</p>
      * 
      * @param request CreateDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2059,8 +2070,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>This operation is applicable only to workspaces whose access type is <strong>GB28181 pull streaming</strong> or <strong>ODCAP</strong>.</li>
+     * <li>Workspaces whose access type is <strong>RTMP push streaming</strong> <strong>do not support</strong> adding devices.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Add a new device.</p>
+     * <p>Adds a new device.</p>
      * 
      * @param request CreateDeviceRequest
      * @return CreateDeviceResponse
@@ -2292,7 +2311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation creates an empty cluster to manage workloads.</li>
      * </ul>
@@ -2334,7 +2353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation creates an empty cluster to manage workloads.</li>
      * </ul>
@@ -2492,7 +2511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for a cloud rendering resource instance.</p>
+     * <p>Creates a cloud application service instance.</p>
      * 
      * @param tmpReq CreateRenderingInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2570,7 +2589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for a cloud rendering resource instance.</p>
+     * <p>Creates a cloud application service instance.</p>
      * 
      * @param request CreateRenderingInstanceRequest
      * @return CreateRenderingInstanceResponse
@@ -3969,11 +3988,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Screenshot queries do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
+     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the download URL for user-generated results.</p>
+     * <p>Retrieves the download link for user-generated results.</p>
      * 
      * @param request DescribeComfyProductionDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4006,11 +4025,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Screenshot queries do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
+     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the download URL for user-generated results.</p>
+     * <p>Retrieves the download link for user-generated results.</p>
      * 
      * @param request DescribeComfyProductionDownloadUrlRequest
      * @return DescribeComfyProductionDownloadUrlResponse
@@ -4084,7 +4103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the waiting queue information of Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</p>
+     * <p>Queries the waiting queue information for Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</p>
      * 
      * @param request DescribeComfyTaskWaitingQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4116,7 +4135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the waiting queue information of Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</p>
+     * <p>Queries the waiting queue information for Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</p>
      * 
      * @param request DescribeComfyTaskWaitingQueueRequest
      * @return DescribeComfyTaskWaitingQueueResponse
@@ -4129,7 +4148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in a new request.</p>
+     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4186,7 +4205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in a new request.</p>
+     * <p>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -7538,7 +7557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the verification content.</p>
+     * <p>Queries the check content.</p>
      * 
      * @param request DescribeVsVerifyContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7574,7 +7593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the verification content.</p>
+     * <p>Queries the check content.</p>
      * 
      * @param request DescribeVsVerifyContentRequest
      * @return DescribeVsVerifyContentResponse
@@ -7640,7 +7659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Forbids pushing a specific stream. You can schedule a time to resume the stream.</p>
+     * <p>Disables the push of a specific stream and allows you to schedule a time to resume the stream.</p>
      * 
      * @param request ForbidVsStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7700,7 +7719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Forbids pushing a specific stream. You can schedule a time to resume the stream.</p>
+     * <p>Disables the push of a specific stream and allows you to schedule a time to resume the stream.</p>
      * 
      * @param request ForbidVsStreamRequest
      * @return ForbidVsStreamResponse
@@ -7976,14 +7995,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances. Paging is supported for paged query.</p>
+     * <p>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances, and supports paging for a paged query.</p>
      * 
-     * @param request ListCloudAppInstallationsRequest
+     * @param tmpReq ListCloudAppInstallationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCloudAppInstallationsResponse
      */
-    public ListCloudAppInstallationsResponse listCloudAppInstallationsWithOptions(ListCloudAppInstallationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListCloudAppInstallationsResponse listCloudAppInstallationsWithOptions(ListCloudAppInstallationsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListCloudAppInstallationsShrinkRequest request = new ListCloudAppInstallationsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.renderingInstanceIds)) {
+            request.renderingInstanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.renderingInstanceIds, "RenderingInstanceIds", "json");
+        }
+
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -8004,7 +8029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances. Paging is supported for paged query.</p>
+     * <p>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances, and supports paging for a paged query.</p>
      * 
      * @param request ListCloudAppInstallationsRequest
      * @return ListCloudAppInstallationsResponse
@@ -8017,11 +8042,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Specify at least one of the template ID and the templatetype.</p>
+     * <p>Specify at least one of the template ID and templatetype.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the patch list of a cloud application.</p>
+     * <p>Queries the list of patches for a cloud application.</p>
      * 
      * @param request ListCloudAppPatchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8078,11 +8103,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Specify at least one of the template ID and the templatetype.</p>
+     * <p>Specify at least one of the template ID and templatetype.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the patch list of a cloud application.</p>
+     * <p>Queries the list of patches for a cloud application.</p>
      * 
      * @param request ListCloudAppPatchesRequest
      * @return ListCloudAppPatchesResponse
@@ -8094,7 +8119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of cloud applications and supports paging and paged query.</p>
+     * <p>Queries a list of cloud applications and supports paging in a paged query.</p>
      * 
      * @param request ListCloudAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8122,7 +8147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of cloud applications and supports paging and paged query.</p>
+     * <p>Queries a list of cloud applications and supports paging in a paged query.</p>
      * 
      * @param request ListCloudAppsRequest
      * @return ListCloudAppsResponse
@@ -8246,7 +8271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the push status list of cloud application service instances for a file. Paging is supported for paged query.</p>
+     * <p>Queries the push status list for a file on cloud application service instances, and supports paging and paged query.</p>
      * 
      * @param request ListFilePushStatusesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8274,7 +8299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the push status list of cloud application service instances for a file. Paging is supported for paged query.</p>
+     * <p>Queries the push status list for a file on cloud application service instances, and supports paging and paged query.</p>
      * 
      * @param request ListFilePushStatusesRequest
      * @return ListFilePushStatusesResponse
@@ -8286,7 +8311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of uploaded files. The response includes the upload status of the files and supports paging for a paged query.</p>
+     * <p>Queries a list of uploaded files. The response includes the upload status of the files and supports paging and paged query.</p>
      * 
      * @param request ListFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8314,7 +8339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of uploaded files. The response includes the upload status of the files and supports paging for a paged query.</p>
+     * <p>Queries a list of uploaded files. The response includes the upload status of the files and supports paging and paged query.</p>
      * 
      * @param request ListFilesRequest
      * @return ListFilesResponse
@@ -10647,7 +10672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes pushing for a stream.</p>
+     * <p>Resumes the push of a specific stream.</p>
      * 
      * @param request ResumeVsStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10699,7 +10724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes pushing for a stream.</p>
+     * <p>Resumes the push of a specific stream.</p>
      * 
      * @param request ResumeVsStreamRequest
      * @return ResumeVsStreamResponse
@@ -12635,6 +12660,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeRenderingInstanceImageResponse upgradeRenderingInstanceImage(UpgradeRenderingInstanceImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeRenderingInstanceImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>升级云应用服务主机镜像</p>
+     * 
+     * @param tmpReq UpgradeRenderingServerImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeRenderingServerImageResponse
+     */
+    public UpgradeRenderingServerImageResponse upgradeRenderingServerImageWithOptions(UpgradeRenderingServerImageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpgradeRenderingServerImageShrinkRequest request = new UpgradeRenderingServerImageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.renderingInstanceIds)) {
+            request.renderingInstanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.renderingInstanceIds, "RenderingInstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.precheck)) {
+            query.put("Precheck", request.precheck);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceIdsShrink)) {
+            query.put("RenderingInstanceIds", request.renderingInstanceIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpgradeRenderingServerImage"),
+            new TeaPair("version", "2018-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeRenderingServerImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>升级云应用服务主机镜像</p>
+     * 
+     * @param request UpgradeRenderingServerImageRequest
+     * @return UpgradeRenderingServerImageResponse
+     */
+    public UpgradeRenderingServerImageResponse upgradeRenderingServerImage(UpgradeRenderingServerImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.upgradeRenderingServerImageWithOptions(request, runtime);
     }
 
     /**

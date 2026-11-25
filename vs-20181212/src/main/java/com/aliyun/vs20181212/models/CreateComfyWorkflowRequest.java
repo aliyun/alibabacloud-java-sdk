@@ -8,7 +8,7 @@ public class CreateComfyWorkflowRequest extends TeaModel {
      * <p>The description of the workflow.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a workflow for image-to-video</p>
+     * <p>This is an image-to-video workflow</p>
      */
     @NameInMap("Description")
     public String description;
@@ -18,7 +18,7 @@ public class CreateComfyWorkflowRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample workflow for image-to-video</p>
+     * <p>Sample image-to-video workflow</p>
      */
     @NameInMap("Name")
     public String name;

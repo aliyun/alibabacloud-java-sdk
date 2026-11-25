@@ -14,11 +14,20 @@ public class ResumeVsStreamRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>Controls the stream behavior. Valid values:</p>
+     * <ul>
+     * <li><strong>resume</strong>: Resumes the stream.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>resume</p>
+     */
     @NameInMap("ControlStreamAction")
     public String controlStreamAction;
 
     /**
-     * <p>Your accelerated domain name.</p>
+     * <p>The accelerated domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +39,7 @@ public class ResumeVsStreamRequest extends TeaModel {
     /**
      * <p>The stream type.</p>
      * <blockquote>
-     * <p>Only publisher is supported.</p>
+     * <p>Currently, only publisher is supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

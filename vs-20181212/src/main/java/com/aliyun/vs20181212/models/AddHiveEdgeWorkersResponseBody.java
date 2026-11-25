@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddHiveEdgeWorkersResponseBody extends TeaModel {
     /**
-     * <p>The number of instances that failed to be added.</p>
+     * <p>The number of failed instances.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,13 +14,13 @@ public class AddHiveEdgeWorkersResponseBody extends TeaModel {
     public Integer failedInstanceCount;
 
     /**
-     * <p>A list of instances that failed to be added.</p>
+     * <p>The list of failed instances.</p>
      */
     @NameInMap("FailedInstances")
     public java.util.List<AddHiveEdgeWorkersResponseBodyFailedInstances> failedInstances;
 
     /**
-     * <p>The request ID.</p>
+     * <p><strong>The request ID.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxx</p>
@@ -29,7 +29,7 @@ public class AddHiveEdgeWorkersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of instances that were successfully added.</p>
+     * <p>The number of successful instances.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -38,7 +38,7 @@ public class AddHiveEdgeWorkersResponseBody extends TeaModel {
     public Integer successInstanceCount;
 
     /**
-     * <p>A list of successfully added instances.</p>
+     * <p>The list of successful instances.</p>
      */
     @NameInMap("SuccessInstances")
     public java.util.List<AddHiveEdgeWorkersResponseBodySuccessInstances> successInstances;
@@ -90,7 +90,7 @@ public class AddHiveEdgeWorkersResponseBody extends TeaModel {
 
     public static class AddHiveEdgeWorkersResponseBodyFailedInstances extends TeaModel {
         /**
-         * <p>The instance ID.</p>
+         * <p>The workload ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ew-1226d588c69449209ee963161c067b04</p>
@@ -102,7 +102,7 @@ public class AddHiveEdgeWorkersResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Error 1062 (23000): Duplicate entry \&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed-ew-1226d588c69449209ee9631\&quot; for key \&quot;PRIMARY\&quot;</p>
+         * <p>Error 1062 (23000): Duplicate entry &quot;hive-4fbf3928d40e43948b98acdb4fb5aaed-ew-1226d588c69449209ee9631&quot; for key &quot;PRIMARY&quot;</p>
          */
         @NameInMap("Message")
         public String message;
@@ -141,7 +141,7 @@ public class AddHiveEdgeWorkersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>A message indicating the result of the operation.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>

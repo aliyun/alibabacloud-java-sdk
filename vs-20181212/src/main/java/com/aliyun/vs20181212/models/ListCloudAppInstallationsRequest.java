@@ -50,7 +50,7 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,10 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the patch package. This parameter is supported only in Windows scenarios. If you enter origin, only the original version is filtered.</p>
+     * <p>The ID of the patch package. This parameter is only supported in Windows scenarios. Valid values:</p>
+     * <ul>
+     * <li>origin: Only the original version is filtered.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
@@ -77,13 +80,22 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The cloud application service instance ID, which is used to query the cloud applications installed on the specified instance.</p>
+     * <p>The instance ID of the cloud application service. This parameter is used to query the cloud applications installed on the specified instance.</p>
      * 
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
      */
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
+
+    /**
+     * <p>The list of cloud application service instance IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;render-eb01436f39ac459a96ac566c418ca926&quot;]</p>
+     */
+    @NameInMap("RenderingInstanceIds")
+    public java.util.List<String> renderingInstanceIds;
 
     /**
      * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
@@ -169,6 +181,14 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     }
     public String getRenderingInstanceId() {
         return this.renderingInstanceId;
+    }
+
+    public ListCloudAppInstallationsRequest setRenderingInstanceIds(java.util.List<String> renderingInstanceIds) {
+        this.renderingInstanceIds = renderingInstanceIds;
+        return this;
+    }
+    public java.util.List<String> getRenderingInstanceIds() {
+        return this.renderingInstanceIds;
     }
 
     public ListCloudAppInstallationsRequest setStartTime(String startTime) {

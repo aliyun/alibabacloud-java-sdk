@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindParentPlatformDeviceResponseBody extends TeaModel {
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
