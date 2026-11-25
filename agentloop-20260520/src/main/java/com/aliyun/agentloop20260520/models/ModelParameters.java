@@ -89,7 +89,7 @@ public class ModelParameters extends TeaModel {
      * <p>The response content format, which defaults to text if not specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;type&quot;:&quot;json_schema&quot;,&quot;jsonSchema&quot;:{&quot;name&quot;:&quot;answer&quot;,&quot;strict&quot;:true,&quot;schema&quot;:&quot;{\&quot;type\&quot;:\&quot;object\&quot;,\&quot;properties\&quot;:{\&quot;answer\&quot;:{\&quot;type\&quot;:\&quot;string\&quot;}},\&quot;required\&quot;:[\&quot;answer\&quot;]}&quot;}}</p>
+     * <p>{&quot;type&quot;:&quot;json_schema&quot;,&quot;jsonSchema&quot;:{&quot;name&quot;:&quot;answer&quot;,&quot;strict&quot;:true,&quot;schema&quot;:&quot;{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;answer&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;answer&quot;]}&quot;}}</p>
      */
     @NameInMap("responseFormat")
     public ModelParametersResponseFormat responseFormat;
@@ -345,7 +345,7 @@ public class ModelParameters extends TeaModel {
          * <p>The JSON Schema constraint, which is required when the type is json_schema.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;answer&quot;,&quot;strict&quot;:true,&quot;schema&quot;:&quot;{\&quot;type\&quot;:\&quot;object\&quot;,\&quot;properties\&quot;:{\&quot;answer\&quot;:{\&quot;type\&quot;:\&quot;string\&quot;}},\&quot;required\&quot;:[\&quot;answer\&quot;]}&quot;}</p>
+         * <p>{&quot;name&quot;:&quot;answer&quot;,&quot;strict&quot;:true,&quot;schema&quot;:&quot;{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;answer&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;answer&quot;]}&quot;}</p>
          */
         @NameInMap("jsonSchema")
         public ModelParametersResponseFormatJsonSchema jsonSchema;

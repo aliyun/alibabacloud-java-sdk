@@ -83,7 +83,7 @@ public class CreateExperimentPlanRequest extends TeaModel {
      * <p>The custom query SQL clause in partial dataset mode. This parameter can be used when <code>selectedItemIds</code> is empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>status=\&quot;OK\&quot;</p>
+     * <p>status=&quot;OK&quot;</p>
      */
     @NameInMap("querySql")
     public String querySql;

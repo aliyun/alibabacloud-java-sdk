@@ -23,6 +23,13 @@ public class UpdateEvaluatorRequest extends TeaModel {
     public java.util.Map<String, ?> config;
 
     /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("createVersion")
+    public Boolean createVersion;
+
+    /**
      * <p>The evaluator description.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +55,20 @@ public class UpdateEvaluatorRequest extends TeaModel {
      */
     @NameInMap("properties")
     public java.util.Map<String, ?> properties;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]}]</p>
+     */
+    @NameInMap("skills")
+    public java.util.List<UpdateEvaluatorRequestSkills> skills;
+
+    /**
+     * <strong>example:</strong>
+     * <p>DRAFT</p>
+     */
+    @NameInMap("status")
+    public String status;
 
     /**
      * <p>The new version number. A new version is created when this parameter is specified.</p>
@@ -97,6 +118,14 @@ public class UpdateEvaluatorRequest extends TeaModel {
         return this.config;
     }
 
+    public UpdateEvaluatorRequest setCreateVersion(Boolean createVersion) {
+        this.createVersion = createVersion;
+        return this;
+    }
+    public Boolean getCreateVersion() {
+        return this.createVersion;
+    }
+
     public UpdateEvaluatorRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -121,6 +150,22 @@ public class UpdateEvaluatorRequest extends TeaModel {
         return this.properties;
     }
 
+    public UpdateEvaluatorRequest setSkills(java.util.List<UpdateEvaluatorRequestSkills> skills) {
+        this.skills = skills;
+        return this;
+    }
+    public java.util.List<UpdateEvaluatorRequestSkills> getSkills() {
+        return this.skills;
+    }
+
+    public UpdateEvaluatorRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
     public UpdateEvaluatorRequest setVersion(String version) {
         this.version = version;
         return this;
@@ -143,6 +188,130 @@ public class UpdateEvaluatorRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public static class UpdateEvaluatorRequestSkillsFiles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         * <h2>name: fact-check
+         * description: 核对回答中的事实依据</h2>
+         * <p>逐项核对回答中的事实，并列出依据。</p>
+         */
+        @NameInMap("content")
+        public String content;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SKILL.md</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        public static UpdateEvaluatorRequestSkillsFiles build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEvaluatorRequestSkillsFiles self = new UpdateEvaluatorRequestSkillsFiles();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEvaluatorRequestSkillsFiles setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public UpdateEvaluatorRequestSkillsFiles setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class UpdateEvaluatorRequestSkills extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>核对回答中的事实依据</p>
+         */
+        @NameInMap("description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>事实核查</p>
+         */
+        @NameInMap("displayName")
+        public String displayName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enable")
+        public Boolean enable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]</p>
+         */
+        @NameInMap("files")
+        public java.util.List<UpdateEvaluatorRequestSkillsFiles> files;
+
+        /**
+         * <strong>example:</strong>
+         * <p>fact-check</p>
+         */
+        @NameInMap("skillName")
+        public String skillName;
+
+        public static UpdateEvaluatorRequestSkills build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEvaluatorRequestSkills self = new UpdateEvaluatorRequestSkills();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEvaluatorRequestSkills setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public UpdateEvaluatorRequestSkills setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public UpdateEvaluatorRequestSkills setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public UpdateEvaluatorRequestSkills setFiles(java.util.List<UpdateEvaluatorRequestSkillsFiles> files) {
+            this.files = files;
+            return this;
+        }
+        public java.util.List<UpdateEvaluatorRequestSkillsFiles> getFiles() {
+            return this.files;
+        }
+
+        public UpdateEvaluatorRequestSkills setSkillName(String skillName) {
+            this.skillName = skillName;
+            return this;
+        }
+        public String getSkillName() {
+            return this.skillName;
+        }
+
     }
 
 }

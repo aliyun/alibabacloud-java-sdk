@@ -8,7 +8,7 @@ public class PreviewPipelineResponseBody extends TeaModel {
      * <p>The collection of sample rows. This array of maps includes only the first N rows (up to 5 rows by default) and does not reflect the complete write plan.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;type\&quot;: \&quot;saturation\&quot;, \&quot;value\&quot;: 0}, {\&quot;type\&quot;: \&quot;load\&quot;, \&quot;value\&quot;: 0}, {\&quot;type\&quot;: \&quot;latency\&quot;, \&quot;value\&quot;: 1}, {\&quot;type\&quot;: \&quot;error\&quot;, \&quot;value\&quot;: 0}]</p>
+     * <p>[{&quot;type&quot;: &quot;saturation&quot;, &quot;value&quot;: 0}, {&quot;type&quot;: &quot;load&quot;, &quot;value&quot;: 0}, {&quot;type&quot;: &quot;latency&quot;, &quot;value&quot;: 1}, {&quot;type&quot;: &quot;error&quot;, &quot;value&quot;: 0}]</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.Map<String, String>> data;

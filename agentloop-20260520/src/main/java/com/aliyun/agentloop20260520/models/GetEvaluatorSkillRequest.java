@@ -15,6 +15,13 @@ public class GetEvaluatorSkillRequest extends TeaModel {
     public String agentSpace;
 
     /**
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
+    @NameInMap("evaluatorVersion")
+    public String evaluatorVersion;
+
+    /**
      * <p>The skill version.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +41,14 @@ public class GetEvaluatorSkillRequest extends TeaModel {
     }
     public String getAgentSpace() {
         return this.agentSpace;
+    }
+
+    public GetEvaluatorSkillRequest setEvaluatorVersion(String evaluatorVersion) {
+        this.evaluatorVersion = evaluatorVersion;
+        return this;
+    }
+    public String getEvaluatorVersion() {
+        return this.evaluatorVersion;
     }
 
     public GetEvaluatorSkillRequest setVersion(String version) {

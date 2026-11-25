@@ -25,7 +25,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags. Up to 20 tag key-value pairs are supported at a time.</p>
+     * <p>The list of tags. You can specify up to 20 tag key-value pairs at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>[{
@@ -67,11 +67,11 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. Format requirements:</p>
+         * <p>The tag key. Format requirements are as follows:</p>
          * <ul>
          * <li>The length must be 1 to 128 characters.</li>
-         * <li>The key cannot contain &quot;http://&quot; or &quot;https://&quot;.</li>
-         * <li>The key cannot start with &quot;acs:&quot; or &quot;aliyun&quot;.</li>
+         * <li>It cannot contain &quot;http://&quot; or &quot;https://&quot;.</li>
+         * <li>It cannot start with &quot;acs:&quot; or &quot;aliyun&quot;.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -81,10 +81,10 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. Format requirements:</p>
+         * <p>The tag value. Format requirements are as follows:</p>
          * <ul>
          * <li>The length must be 1 to 128 characters.</li>
-         * <li>The value cannot contain &quot;http://&quot; or &quot;https://&quot;.</li>
+         * <li>It cannot contain &quot;http://&quot; or &quot;https://&quot;.</li>
          * </ul>
          * 
          * <strong>example:</strong>

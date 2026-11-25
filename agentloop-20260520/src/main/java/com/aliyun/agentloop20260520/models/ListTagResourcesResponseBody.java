@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The pagination token. An empty value indicates that no additional pages exist.</p>
+     * <p>The pagination token. If no next page exists, this value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJsYXN0SWQiOjEyMH0=</p>
@@ -94,7 +94,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value. If this parameter is omitted, the system matches resources that have the specified key. An empty string exactly matches an empty value. Null values are not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

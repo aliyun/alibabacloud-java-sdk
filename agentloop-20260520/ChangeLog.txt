@@ -1,3 +1,26 @@
+2026-11-25 Version: 2.7.0
+- Support API CreateMultiModalTask.
+- Support API UpdateEvaluatorVersionStatus.
+- Update API CreateEvaluator: add request parameters body.skills.
+- Update API CreateEvaluator: add request parameters body.status.
+- Update API CreateEvaluatorSkill: add request parameters body.evaluatorVersion.
+- Update API DeleteEvaluatorSkill: add request parameters evaluatorVersion.
+- Update API GetEvaluator: add response parameters Body.evaluator.selectable.
+- Update API GetEvaluator: add response parameters Body.evaluator.skills.
+- Update API GetEvaluator: add response parameters Body.evaluator.status.
+- Update API GetEvaluator: add response parameters Body.evaluator.versions.$.selectable.
+- Update API GetEvaluator: add response parameters Body.evaluator.versions.$.status.
+- Update API GetEvaluator: add response parameters Body.evaluator.versions.$.updatedAt.
+- Update API GetEvaluatorSkill: add request parameters evaluatorVersion.
+- Update API ListEvaluatorSkills: add request parameters evaluatorVersion.
+- Update API ListEvaluators: add response parameters Body.evaluators.$.selectable.
+- Update API ListEvaluators: add response parameters Body.evaluators.$.status.
+- Update API UpdateEvaluator: add request parameters body.createVersion.
+- Update API UpdateEvaluator: add request parameters body.skills.
+- Update API UpdateEvaluator: add request parameters body.status.
+- Update API UpdateEvaluatorSkill: add request parameters body.evaluatorVersion.
+
+
 2026-11-23 Version: 2.6.1
 - Generated java 2026-05-20 for AgentLoop.
 

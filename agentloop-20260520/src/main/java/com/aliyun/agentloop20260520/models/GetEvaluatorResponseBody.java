@@ -43,6 +43,89 @@ public class GetEvaluatorResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetEvaluatorResponseBodyEvaluatorSkills extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1770386951147366810</p>
+         */
+        @NameInMap("currentVersion")
+        public String currentVersion;
+
+        /**
+         * <strong>example:</strong>
+         * <p>核对回答中的事实依据</p>
+         */
+        @NameInMap("description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>事实核查</p>
+         */
+        @NameInMap("displayName")
+        public String displayName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enable")
+        public Boolean enable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>fact-check</p>
+         */
+        @NameInMap("skillName")
+        public String skillName;
+
+        public static GetEvaluatorResponseBodyEvaluatorSkills build(java.util.Map<String, ?> map) throws Exception {
+            GetEvaluatorResponseBodyEvaluatorSkills self = new GetEvaluatorResponseBodyEvaluatorSkills();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEvaluatorResponseBodyEvaluatorSkills setCurrentVersion(String currentVersion) {
+            this.currentVersion = currentVersion;
+            return this;
+        }
+        public String getCurrentVersion() {
+            return this.currentVersion;
+        }
+
+        public GetEvaluatorResponseBodyEvaluatorSkills setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetEvaluatorResponseBodyEvaluatorSkills setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public GetEvaluatorResponseBodyEvaluatorSkills setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public GetEvaluatorResponseBodyEvaluatorSkills setSkillName(String skillName) {
+            this.skillName = skillName;
+            return this;
+        }
+        public String getSkillName() {
+            return this.skillName;
+        }
+
+    }
+
     public static class GetEvaluatorResponseBodyEvaluatorVersions extends TeaModel {
         /**
          * <p>The version creation time, in seconds-level UNIX timestamp.</p>
@@ -52,6 +135,27 @@ public class GetEvaluatorResponseBody extends TeaModel {
          */
         @NameInMap("createdAt")
         public Long createdAt;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("selectable")
+        public Boolean selectable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLISHED</p>
+         */
+        @NameInMap("status")
+        public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1795478400</p>
+         */
+        @NameInMap("updatedAt")
+        public Long updatedAt;
 
         /**
          * <p>The version number.</p>
@@ -82,6 +186,30 @@ public class GetEvaluatorResponseBody extends TeaModel {
         }
         public Long getCreatedAt() {
             return this.createdAt;
+        }
+
+        public GetEvaluatorResponseBodyEvaluatorVersions setSelectable(Boolean selectable) {
+            this.selectable = selectable;
+            return this;
+        }
+        public Boolean getSelectable() {
+            return this.selectable;
+        }
+
+        public GetEvaluatorResponseBodyEvaluatorVersions setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetEvaluatorResponseBodyEvaluatorVersions setUpdatedAt(Long updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public Long getUpdatedAt() {
+            return this.updatedAt;
         }
 
         public GetEvaluatorResponseBodyEvaluatorVersions setVersion(String version) {
@@ -203,6 +331,27 @@ public class GetEvaluatorResponseBody extends TeaModel {
         public java.util.Map<String, ?> properties;
 
         /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("selectable")
+        public Boolean selectable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;displayName&quot;:&quot;事实核查&quot;,&quot;description&quot;:&quot;核对回答中的事实依据&quot;,&quot;enable&quot;:true,&quot;currentVersion&quot;:&quot;1770386951147366810&quot;}]</p>
+         */
+        @NameInMap("skills")
+        public java.util.List<GetEvaluatorResponseBodyEvaluatorSkills> skills;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLISHED</p>
+         */
+        @NameInMap("status")
+        public String status;
+
+        /**
          * <p>The evaluator type.</p>
          * 
          * <strong>example:</strong>
@@ -320,6 +469,30 @@ public class GetEvaluatorResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getProperties() {
             return this.properties;
+        }
+
+        public GetEvaluatorResponseBodyEvaluator setSelectable(Boolean selectable) {
+            this.selectable = selectable;
+            return this;
+        }
+        public Boolean getSelectable() {
+            return this.selectable;
+        }
+
+        public GetEvaluatorResponseBodyEvaluator setSkills(java.util.List<GetEvaluatorResponseBodyEvaluatorSkills> skills) {
+            this.skills = skills;
+            return this;
+        }
+        public java.util.List<GetEvaluatorResponseBodyEvaluatorSkills> getSkills() {
+            return this.skills;
+        }
+
+        public GetEvaluatorResponseBodyEvaluator setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetEvaluatorResponseBodyEvaluator setType(String type) {

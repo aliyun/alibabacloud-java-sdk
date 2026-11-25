@@ -574,6 +574,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("properties", request.properties);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.skills)) {
+            body.put("skills", request.skills);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             body.put("type", request.type);
         }
@@ -649,6 +657,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
             body.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluatorVersion)) {
+            body.put("evaluatorVersion", request.evaluatorVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.files)) {
@@ -869,6 +881,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createExperimentRunWithOptions(agentSpace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a synchronous multimodal evaluation on a single image or audio/video file and directly returns the score.</p>
+     * 
+     * @param request CreateMultiModalTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMultiModalTaskResponse
+     */
+    public CreateMultiModalTaskResponse createMultiModalTaskWithOptions(CreateMultiModalTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
+            body.put("agentSpace", request.agentSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.args)) {
+            body.put("args", request.args);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arn)) {
+            body.put("arn", request.arn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluatorRef)) {
+            body.put("evaluatorRef", request.evaluatorRef);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossRegion)) {
+            body.put("ossRegion", request.ossRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            body.put("taskName", request.taskName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMultiModalTask"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/media-processings"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMultiModalTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a synchronous multimodal evaluation on a single image or audio/video file and directly returns the score.</p>
+     * 
+     * @param request CreateMultiModalTaskRequest
+     * @return CreateMultiModalTaskResponse
+     */
+    public CreateMultiModalTaskResponse createMultiModalTask(CreateMultiModalTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMultiModalTaskWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1434,6 +1517,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
             query.put("agentSpace", request.agentSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluatorVersion)) {
+            query.put("evaluatorVersion", request.evaluatorVersion);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2104,6 +2191,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
             query.put("agentSpace", request.agentSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluatorVersion)) {
+            query.put("evaluatorVersion", request.evaluatorVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.version)) {
@@ -2913,6 +3004,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
             query.put("agentSpace", request.agentSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluatorVersion)) {
+            query.put("evaluatorVersion", request.evaluatorVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -3911,7 +4006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags.</p>
+     * <p>Disassociates tags.</p>
      * 
      * @param tmpReq UntagResourcesRequest
      * @param headers map
@@ -3967,7 +4062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags.</p>
+     * <p>Disassociates tags.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -4322,6 +4417,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("config", request.config);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createVersion)) {
+            body.put("createVersion", request.createVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
         }
@@ -4332,6 +4431,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.properties)) {
             body.put("properties", request.properties);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skills)) {
+            body.put("skills", request.skills);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.version)) {
@@ -4407,6 +4514,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("enable", request.enable);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluatorVersion)) {
+            body.put("evaluatorVersion", request.evaluatorVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.files)) {
             body.put("files", request.files);
         }
@@ -4441,6 +4552,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateEvaluatorSkillWithOptions(name, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Publishes a saved evaluator draft, takes a published version offline, or brings an offline version back online.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the status of an evaluator version.</p>
+     * 
+     * @param request UpdateEvaluatorVersionStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEvaluatorVersionStatusResponse
+     */
+    public UpdateEvaluatorVersionStatusResponse updateEvaluatorVersionStatusWithOptions(String agentSpace, String name, UpdateEvaluatorVersionStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedStatus)) {
+            body.put("expectedStatus", request.expectedStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionDescription)) {
+            body.put("versionDescription", request.versionDescription);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateEvaluatorVersionStatus"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/evaluators/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/version-status"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEvaluatorVersionStatusResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Publishes a saved evaluator draft, takes a published version offline, or brings an offline version back online.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the status of an evaluator version.</p>
+     * 
+     * @param request UpdateEvaluatorVersionStatusRequest
+     * @return UpdateEvaluatorVersionStatusResponse
+     */
+    public UpdateEvaluatorVersionStatusResponse updateEvaluatorVersionStatus(String agentSpace, String name, UpdateEvaluatorVersionStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateEvaluatorVersionStatusWithOptions(agentSpace, name, request, headers, runtime);
     }
 
     /**

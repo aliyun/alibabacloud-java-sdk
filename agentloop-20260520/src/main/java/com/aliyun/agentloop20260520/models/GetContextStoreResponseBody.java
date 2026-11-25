@@ -1002,7 +1002,7 @@ public class GetContextStoreResponseBody extends TeaModel {
          * <p>The subset of the pipeline where clause, which is pushed down to SQL.</p>
          * 
          * <strong>example:</strong>
-         * <p>appId = \&quot;crm-service\&quot;</p>
+         * <p>appId = &quot;crm-service&quot;</p>
          */
         @NameInMap("where")
         public String where;

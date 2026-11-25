@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
-     * <p>The pagination token. An empty value indicates that no additional pages exist.</p>
+     * <p>The pagination token. If no next page exists, this value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJuZXh0IjoiNDAifQ==</p>
@@ -33,7 +33,7 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag filter conditions. Multiple conditions are combined with the AND operator. At least one of resourceId and tag must be specified.</p>
+     * <p>The tag filter conditions. Multiple conditions are combined by using the AND operator. At least one of resourceId and tag must be specified.</p>
      */
     @NameInMap("tag")
     public String tagShrink;

@@ -26,7 +26,7 @@ public class Evaluator extends TeaModel {
      * <p>The evaluator-level data filter conditions. These take effect together with the task-level dataFilter.query.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;}</p>
+     * <p>{&quot;query&quot;:&quot;serviceName=&quot;checkout-service&quot;&quot;}</p>
      */
     @NameInMap("filters")
     public java.util.Map<String, ?> filters;

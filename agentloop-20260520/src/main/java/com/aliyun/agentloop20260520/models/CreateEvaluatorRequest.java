@@ -70,6 +70,20 @@ public class CreateEvaluatorRequest extends TeaModel {
     public java.util.Map<String, ?> properties;
 
     /**
+     * <strong>example:</strong>
+     * <p>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]}]</p>
+     */
+    @NameInMap("skills")
+    public java.util.List<CreateEvaluatorRequestSkills> skills;
+
+    /**
+     * <strong>example:</strong>
+     * <p>DRAFT</p>
+     */
+    @NameInMap("status")
+    public String status;
+
+    /**
      * <p>The evaluator type. Valid values:</p>
      * <ul>
      * <li>LLM: an inner join large language model evaluation evaluator.</li>
@@ -173,6 +187,22 @@ public class CreateEvaluatorRequest extends TeaModel {
         return this.properties;
     }
 
+    public CreateEvaluatorRequest setSkills(java.util.List<CreateEvaluatorRequestSkills> skills) {
+        this.skills = skills;
+        return this;
+    }
+    public java.util.List<CreateEvaluatorRequestSkills> getSkills() {
+        return this.skills;
+    }
+
+    public CreateEvaluatorRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
     public CreateEvaluatorRequest setType(String type) {
         this.type = type;
         return this;
@@ -203,6 +233,130 @@ public class CreateEvaluatorRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public static class CreateEvaluatorRequestSkillsFiles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         * <h2>name: fact-check
+         * description: 核对回答中的事实依据</h2>
+         * <p>逐项核对回答中的事实，并列出依据。</p>
+         */
+        @NameInMap("content")
+        public String content;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SKILL.md</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        public static CreateEvaluatorRequestSkillsFiles build(java.util.Map<String, ?> map) throws Exception {
+            CreateEvaluatorRequestSkillsFiles self = new CreateEvaluatorRequestSkillsFiles();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEvaluatorRequestSkillsFiles setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public CreateEvaluatorRequestSkillsFiles setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class CreateEvaluatorRequestSkills extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>核对回答中的事实依据</p>
+         */
+        @NameInMap("description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>事实核查</p>
+         */
+        @NameInMap("displayName")
+        public String displayName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enable")
+        public Boolean enable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]</p>
+         */
+        @NameInMap("files")
+        public java.util.List<CreateEvaluatorRequestSkillsFiles> files;
+
+        /**
+         * <strong>example:</strong>
+         * <p>fact-check</p>
+         */
+        @NameInMap("skillName")
+        public String skillName;
+
+        public static CreateEvaluatorRequestSkills build(java.util.Map<String, ?> map) throws Exception {
+            CreateEvaluatorRequestSkills self = new CreateEvaluatorRequestSkills();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEvaluatorRequestSkills setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateEvaluatorRequestSkills setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public CreateEvaluatorRequestSkills setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public CreateEvaluatorRequestSkills setFiles(java.util.List<CreateEvaluatorRequestSkillsFiles> files) {
+            this.files = files;
+            return this;
+        }
+        public java.util.List<CreateEvaluatorRequestSkillsFiles> getFiles() {
+            return this.files;
+        }
+
+        public CreateEvaluatorRequestSkills setSkillName(String skillName) {
+            this.skillName = skillName;
+            return this;
+        }
+        public String getSkillName() {
+            return this.skillName;
+        }
+
     }
 
 }

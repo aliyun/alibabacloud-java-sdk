@@ -697,7 +697,7 @@ public class GetPipelineResponseBody extends TeaModel {
          * 
          * <strong>example:</strong>
          * <ul>
-         * <li>| where intent = \&quot;refund\&quot;</li>
+         * <li>| where intent = &quot;refund&quot;</li>
          * </ul>
          */
         @NameInMap("expression")
@@ -911,7 +911,7 @@ public class GetPipelineResponseBody extends TeaModel {
          * <p>The data filter condition for the dataset.</p>
          * 
          * <strong>example:</strong>
-         * <p>status = \&quot;pending\&quot;</p>
+         * <p>status = &quot;pending&quot;</p>
          */
         @NameInMap("filter")
         public String filter;
@@ -1114,7 +1114,7 @@ public class GetPipelineResponseBody extends TeaModel {
          * <p>The dataset datasource config in the current AgentSpace.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = \&quot;pending\&quot;&quot;}</p>
+         * <p>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = &quot;pending&quot;&quot;}</p>
          */
         @NameInMap("dataset")
         public GetPipelineResponseBodySourceDataset dataset;

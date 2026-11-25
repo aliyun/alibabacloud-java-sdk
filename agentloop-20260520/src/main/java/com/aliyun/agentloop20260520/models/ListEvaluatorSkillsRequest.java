@@ -15,6 +15,13 @@ public class ListEvaluatorSkillsRequest extends TeaModel {
     public String agentSpace;
 
     /**
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
+    @NameInMap("evaluatorVersion")
+    public String evaluatorVersion;
+
+    /**
      * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +50,14 @@ public class ListEvaluatorSkillsRequest extends TeaModel {
     }
     public String getAgentSpace() {
         return this.agentSpace;
+    }
+
+    public ListEvaluatorSkillsRequest setEvaluatorVersion(String evaluatorVersion) {
+        this.evaluatorVersion = evaluatorVersion;
+        return this;
+    }
+    public String getEvaluatorVersion() {
+        return this.evaluatorVersion;
     }
 
     public ListEvaluatorSkillsRequest setMaxResults(Integer maxResults) {

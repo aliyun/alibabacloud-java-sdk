@@ -42,6 +42,13 @@ public class CreateEvaluatorSkillRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
+    @NameInMap("evaluatorVersion")
+    public String evaluatorVersion;
+
+    /**
      * <p>The list of skill files.</p>
      * <p>This parameter is required.</p>
      * 
@@ -105,6 +112,14 @@ public class CreateEvaluatorSkillRequest extends TeaModel {
     }
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    public CreateEvaluatorSkillRequest setEvaluatorVersion(String evaluatorVersion) {
+        this.evaluatorVersion = evaluatorVersion;
+        return this;
+    }
+    public String getEvaluatorVersion() {
+        return this.evaluatorVersion;
     }
 
     public CreateEvaluatorSkillRequest setFiles(java.util.List<CreateEvaluatorSkillRequestFiles> files) {

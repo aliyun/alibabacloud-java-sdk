@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all custom tags. Valid values: true, false, and an empty string. If this parameter is not specified or is set to an empty string, the value is treated as false. The value true takes effect only when the tagKey parameter is not specified or is an empty array.</p>
+     * <p>Specifies whether to disassociate all user-defined tags. Valid values: true, false, and an empty string. If this parameter is not specified or is set to an empty string, it is treated as false. The value true indicates that all tags are disassociated only when the tagKey parameter is not specified or is an empty array.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -24,7 +24,7 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     public String resourceIdShrink;
 
     /**
-     * <p>The resource type. Set the value to agentspace.</p>
+     * <p>The resource type. The value is fixed to agentspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tag keys to remove. You can specify up to 20 tag keys. The tag keys must be unique. If this parameter is not empty, it takes precedence over the all parameter.</p>
+     * <p>The list of tag keys to disassociate. You can specify up to 20 tag keys, and they must be unique. If this parameter is not empty, it takes precedence over the all parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;key1&quot;, &quot;key2&quot;, &quot;key3&quot;]</p>

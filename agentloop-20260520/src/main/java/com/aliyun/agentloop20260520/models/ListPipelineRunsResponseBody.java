@@ -123,7 +123,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>Failed to evaluate filter expression in node \&quot;node-1\&quot;: column \&quot;score\&quot; does not exist.</p>
+         * <p>Failed to evaluate filter expression in node &quot;node-1&quot;: column &quot;score&quot; does not exist.</p>
          */
         @NameInMap("errorMessage")
         public String errorMessage;

@@ -98,7 +98,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
      * <p>The custom query SQL clause in partial dataset mode.</p>
      * 
      * <strong>example:</strong>
-     * <p>status=\&quot;OK\&quot;</p>
+     * <p>status=&quot;OK&quot;</p>
      */
     @NameInMap("querySql")
     public String querySql;

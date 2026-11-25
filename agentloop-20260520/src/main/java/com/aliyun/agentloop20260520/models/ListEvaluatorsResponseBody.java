@@ -168,6 +168,20 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         public java.util.Map<String, ?> properties;
 
         /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("selectable")
+        public Boolean selectable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLISHED</p>
+         */
+        @NameInMap("status")
+        public String status;
+
+        /**
          * <p>The evaluator type.</p>
          * 
          * <strong>example:</strong>
@@ -252,6 +266,22 @@ public class ListEvaluatorsResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getProperties() {
             return this.properties;
+        }
+
+        public ListEvaluatorsResponseBodyEvaluators setSelectable(Boolean selectable) {
+            this.selectable = selectable;
+            return this;
+        }
+        public Boolean getSelectable() {
+            return this.selectable;
+        }
+
+        public ListEvaluatorsResponseBodyEvaluators setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListEvaluatorsResponseBodyEvaluators setType(String type) {

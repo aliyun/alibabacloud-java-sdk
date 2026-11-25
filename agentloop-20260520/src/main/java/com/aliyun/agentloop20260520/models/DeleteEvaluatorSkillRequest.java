@@ -14,6 +14,13 @@ public class DeleteEvaluatorSkillRequest extends TeaModel {
     @NameInMap("agentSpace")
     public String agentSpace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
+    @NameInMap("evaluatorVersion")
+    public String evaluatorVersion;
+
     public static DeleteEvaluatorSkillRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEvaluatorSkillRequest self = new DeleteEvaluatorSkillRequest();
         return TeaModel.build(map, self);
@@ -25,6 +32,14 @@ public class DeleteEvaluatorSkillRequest extends TeaModel {
     }
     public String getAgentSpace() {
         return this.agentSpace;
+    }
+
+    public DeleteEvaluatorSkillRequest setEvaluatorVersion(String evaluatorVersion) {
+        this.evaluatorVersion = evaluatorVersion;
+        return this;
+    }
+    public String getEvaluatorVersion() {
+        return this.evaluatorVersion;
     }
 
 }
