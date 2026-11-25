@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "PaiRecService";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("pairecservice", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -366,10 +369,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</p>
+     * <p>This operation allows you to check the status or performance of a specific recall management service by providing the recall management service ID and related parameters. Ensure that the <code>InstanceId</code> field is correct to point to the right instance. To test a specific version of the service, provide <code>RecallManagementServiceVersionId</code>. Additionally, you can further customize the request by using parameters such as <code>Recalls</code>, <code>ContextParams</code>, <code>ExposureList</code>, and <code>RetainFields</code> to more accurately simulate real-world scenarios.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether a specified recall management service is working properly.</p>
+     * <p>Checks whether the specified recall management service is working properly.</p>
      * 
      * @param request CheckRecallManagementServiceRequest
      * @param headers map
@@ -428,10 +431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</p>
+     * <p>This operation allows you to check the status or performance of a specific recall management service by providing the recall management service ID and related parameters. Ensure that the <code>InstanceId</code> field is correct to point to the right instance. To test a specific version of the service, provide <code>RecallManagementServiceVersionId</code>. Additionally, you can further customize the request by using parameters such as <code>Recalls</code>, <code>ContextParams</code>, <code>ExposureList</code>, and <code>RetainFields</code> to more accurately simulate real-world scenarios.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether a specified recall management service is working properly.</p>
+     * <p>Checks whether the specified recall management service is working properly.</p>
      * 
      * @param request CheckRecallManagementServiceRequest
      * @return CheckRecallManagementServiceResponse
@@ -1674,7 +1677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configure a feature consistency check task.</p>
+     * <p>Creates a feature consistency check job configuration.</p>
      * 
      * @param request CreateFeatureConsistencyCheckJobConfigRequest
      * @param headers map
@@ -1892,7 +1895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configure a feature consistency check task.</p>
+     * <p>Creates a feature consistency check job configuration.</p>
      * 
      * @param request CreateFeatureConsistencyCheckJobConfigRequest
      * @return CreateFeatureConsistencyCheckJobConfigResponse
@@ -6216,12 +6219,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation retrieves the details of a specific traffic control task, including but not limited to the task name, description, and status.</li>
-     * <li>TrafficControlTaskId and InstanceId are required parameters that specify the task ID and instance ID to query.</li>
-     * <li>Optional parameters such as Environment, Version, and ControlTargetFilter help refine the request to retrieve more specific task data or version information.</li>
-     * <li>Check the returned data structure, especially the TrafficControlTargets section, which contains multiple control targets and their related properties.</li>
+     * <li><code>TrafficControlTaskId</code> and <code>InstanceId</code> are required parameters used to specify the task ID and instance ID to query, respectively.</li>
+     * <li>Optional parameters such as <code>Environment</code>, <code>Version</code>, and <code>ControlTargetFilter</code> can help further refine the request to retrieve more specific task data or version information.</li>
+     * <li>Check the returned data structure, especially the <code>TrafficControlTargets</code> section, which contains multiple control targets and their related attributes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6275,12 +6278,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation retrieves the details of a specific traffic control task, including but not limited to the task name, description, and status.</li>
-     * <li>TrafficControlTaskId and InstanceId are required parameters that specify the task ID and instance ID to query.</li>
-     * <li>Optional parameters such as Environment, Version, and ControlTargetFilter help refine the request to retrieve more specific task data or version information.</li>
-     * <li>Check the returned data structure, especially the TrafficControlTargets section, which contains multiple control targets and their related properties.</li>
+     * <li><code>TrafficControlTaskId</code> and <code>InstanceId</code> are required parameters used to specify the task ID and instance ID to query, respectively.</li>
+     * <li>Optional parameters such as <code>Environment</code>, <code>Version</code>, and <code>ControlTargetFilter</code> can help further refine the request to retrieve more specific task data or version information.</li>
+     * <li>Check the returned data structure, especially the <code>TrafficControlTargets</code> section, which contains multiple control targets and their related attributes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6926,7 +6929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of engine configurations.</p>
+     * <p>Retrieves the engine configurations.</p>
      * 
      * @param request ListEngineConfigsRequest
      * @param headers map
@@ -6988,7 +6991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of engine configurations.</p>
+     * <p>Retrieves the engine configurations.</p>
      * 
      * @param request ListEngineConfigsRequest
      * @return ListEngineConfigsResponse
@@ -7429,10 +7432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <code>MaxcomputeSchema</code> parameter to specify a MaxCompute schema to further filter the results.</p>
+     * <p>By providing the instance ID (InstanceId) and the data source ID (ResourceId), you can retrieve a list of all data tables under the data source. The optional <code>MaxcomputeSchema</code> parameter allows you to specify the MaxCompute schema to further filter the results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all tables in a specified instance and data source.</p>
+     * <p>Queries all data tables under a specified instance and data source.</p>
      * 
      * @param request ListInstanceResourceTablesRequest
      * @param headers map
@@ -7444,6 +7447,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.maxcomputeSchema)) {
             query.put("MaxcomputeSchema", request.maxcomputeSchema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableType)) {
+            query.put("TableType", request.tableType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -7467,10 +7474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <code>MaxcomputeSchema</code> parameter to specify a MaxCompute schema to further filter the results.</p>
+     * <p>By providing the instance ID (InstanceId) and the data source ID (ResourceId), you can retrieve a list of all data tables under the data source. The optional <code>MaxcomputeSchema</code> parameter allows you to specify the MaxCompute schema to further filter the results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all tables in a specified instance and data source.</p>
+     * <p>Queries all data tables under a specified instance and data source.</p>
      * 
      * @param request ListInstanceResourceTablesRequest
      * @return ListInstanceResourceTablesResponse
@@ -8645,14 +8652,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</li>
-     * <li>You can filter the returned nodes and apply sorting by specifying different query parameters.</li>
-     * <li>Paged query is supported. You can also choose to return all data at once without paging.</li>
-     * <li>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</li>
+     * <li>This operation retrieves a list of traffic control nodes that meet specific conditional criteria.</li>
+     * <li>You can use different query parameters for filtering and sorting the returned list of nodes.</li>
+     * <li>Paged query is supported. You can also retrieve all data at once without paging.</li>
+     * <li>Note: <code>InstanceId</code> is required. All other parameters are options. Specify them as needed to obtain more accurate results.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries traffic control tasks that meet specified conditions.</p>
+     * <p>Queries the traffic control tasks that meet the specified conditions.</p>
      * 
      * @param request ListTrafficControlTasksRequest
      * @param headers map
@@ -8736,14 +8743,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</li>
-     * <li>You can filter the returned nodes and apply sorting by specifying different query parameters.</li>
-     * <li>Paged query is supported. You can also choose to return all data at once without paging.</li>
-     * <li>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</li>
+     * <li>This operation retrieves a list of traffic control nodes that meet specific conditional criteria.</li>
+     * <li>You can use different query parameters for filtering and sorting the returned list of nodes.</li>
+     * <li>Paged query is supported. You can also retrieve all data at once without paging.</li>
+     * <li>Note: <code>InstanceId</code> is required. All other parameters are options. Specify them as needed to obtain more accurate results.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries traffic control tasks that meet specified conditions.</p>
+     * <p>Queries the traffic control tasks that meet the specified conditions.</p>
      * 
      * @param request ListTrafficControlTasksRequest
      * @return ListTrafficControlTasksResponse
@@ -10112,11 +10119,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Call this operation to start a traffic control task by providing the <code>TrafficControlTargetId</code> and <code>InstanceId</code>.</p>
+     * <h2>Request description</h2>
+     * <p>You can call this operation to start a specific traffic shaping task by specifying the <code>TrafficControlTargetId</code> and <code>InstanceId</code> parameters. Ensure that you correctly specify the values of these two parameters in the request to prevent operation failures.</p>
      * 
      * <b>summary</b> : 
-     * <p>Starts a traffic control task for a specific traffic control target.</p>
+     * <p>Starts a traffic shaping task with the specified ID.</p>
      * 
      * @param request StartTrafficControlTargetRequest
      * @param headers map
@@ -10126,6 +10133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartTrafficControlTargetResponse startTrafficControlTargetWithOptions(String TrafficControlTargetId, StartTrafficControlTargetRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.environment)) {
+            body.put("Environment", request.environment);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
         }
@@ -10150,11 +10161,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Call this operation to start a traffic control task by providing the <code>TrafficControlTargetId</code> and <code>InstanceId</code>.</p>
+     * <h2>Request description</h2>
+     * <p>You can call this operation to start a specific traffic shaping task by specifying the <code>TrafficControlTargetId</code> and <code>InstanceId</code> parameters. Ensure that you correctly specify the values of these two parameters in the request to prevent operation failures.</p>
      * 
      * <b>summary</b> : 
-     * <p>Starts a traffic control task for a specific traffic control target.</p>
+     * <p>Starts a traffic shaping task with the specified ID.</p>
      * 
      * @param request StartTrafficControlTargetRequest
      * @return StartTrafficControlTargetResponse
@@ -10342,11 +10353,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This operation stops a traffic control task using the provided <code>TrafficControlTargetId</code> and <code>InstanceId</code>. Ensure that the parameter values are accurate to avoid stopping the wrong target or instance.</p>
+     * <h2>Request description</h2>
+     * <p>Call this operation to stop an ongoing traffic control task by specifying the <code>TrafficControlTargetId</code> and <code>InstanceId</code>. Ensure that the parameter values are accurate to avoid operating on the wrong target or instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a specific traffic control target.</p>
+     * <p>Stops a specified traffic control target.</p>
      * 
      * @param request StopTrafficControlTargetRequest
      * @param headers map
@@ -10356,6 +10367,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopTrafficControlTargetResponse stopTrafficControlTargetWithOptions(String TrafficControlTargetId, StopTrafficControlTargetRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.environment)) {
+            body.put("Environment", request.environment);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
         }
@@ -10380,11 +10395,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This operation stops a traffic control task using the provided <code>TrafficControlTargetId</code> and <code>InstanceId</code>. Ensure that the parameter values are accurate to avoid stopping the wrong target or instance.</p>
+     * <h2>Request description</h2>
+     * <p>Call this operation to stop an ongoing traffic control task by specifying the <code>TrafficControlTargetId</code> and <code>InstanceId</code>. Ensure that the parameter values are accurate to avoid operating on the wrong target or instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a specific traffic control target.</p>
+     * <p>Stops a specified traffic control target.</p>
      * 
      * @param request StopTrafficControlTargetRequest
      * @return StopTrafficControlTargetResponse
@@ -10470,7 +10485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Syncs the replay log for a feature consistency check job.</p>
+     * <p>Synchronizes the replay logs of a feature consistency check job.</p>
      * 
      * @param request SyncFeatureConsistencyCheckJobReplayLogRequest
      * @param headers map
@@ -10540,7 +10555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Syncs the replay log for a feature consistency check job.</p>
+     * <p>Synchronizes the replay logs of a feature consistency check job.</p>
      * 
      * @param request SyncFeatureConsistencyCheckJobReplayLogRequest
      * @return SyncFeatureConsistencyCheckJobReplayLogResponse

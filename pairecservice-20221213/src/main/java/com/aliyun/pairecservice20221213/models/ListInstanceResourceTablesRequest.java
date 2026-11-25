@@ -13,6 +13,15 @@ public class ListInstanceResourceTablesRequest extends TeaModel {
     @NameInMap("MaxcomputeSchema")
     public String maxcomputeSchema;
 
+    /**
+     * <p>The table type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ManagedTable</p>
+     */
+    @NameInMap("TableType")
+    public String tableType;
+
     public static ListInstanceResourceTablesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceResourceTablesRequest self = new ListInstanceResourceTablesRequest();
         return TeaModel.build(map, self);
@@ -24,6 +33,14 @@ public class ListInstanceResourceTablesRequest extends TeaModel {
     }
     public String getMaxcomputeSchema() {
         return this.maxcomputeSchema;
+    }
+
+    public ListInstanceResourceTablesRequest setTableType(String tableType) {
+        this.tableType = tableType;
+        return this;
+    }
+    public String getTableType() {
+        return this.tableType;
     }
 
 }

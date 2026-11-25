@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTrafficControlTaskResponseBody extends TeaModel {
     /**
-     * <p>The behavior table ID.</p>
+     * <p>The ID of the behavior table.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +62,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public java.util.List<String> effectiveSceneNames;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time. The format is YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-04-25</p>
@@ -71,7 +71,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Indicates whether the task has ever been published.</p>
+     * <p>Specifies whether it has ever been published.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -87,6 +87,24 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
      */
     @NameInMap("ExecutionTime")
     public String executionTime;
+
+    /**
+     * <p>The information about whether Flink jobs have expired in each environment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;&quot;}</p>
+     */
+    @NameInMap("FlinkJobOutdated")
+    public String flinkJobOutdated;
+
+    /**
+     * <p>The information about Flink jobs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;&quot;}</p>
+     */
+    @NameInMap("FlinkJobs")
+    public String flinkJobs;
 
     /**
      * <p>The Flink resource ID.</p>
@@ -107,7 +125,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String flinkResourceName;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The format is ISO 8601, with Z representing the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-11T02:27:38.208Z</p>
@@ -116,7 +134,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The last modification time.</p>
+     * <p>The update time. The format is ISO 8601, with Z representing the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-11T02:27:38.208Z</p>
@@ -125,7 +143,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The item conditions in array format.</p>
+     * <p>The item condition, set in array format.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
@@ -134,7 +152,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String itemConditionArray;
 
     /**
-     * <p>The item conditions in expression format.</p>
+     * <p>The item condition, set in expression format.</p>
      * 
      * <strong>example:</strong>
      * <p>status=1</p>
@@ -152,7 +170,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String itemConditionType;
 
     /**
-     * <p>The item table ID.</p>
+     * <p>The ID of the item table.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -179,7 +197,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String preExperimentIds;
 
     /**
-     * <p>The staging environment status.</p>
+     * <p>The status in the staging environment.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -197,7 +215,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String prodExperimentIds;
 
     /**
-     * <p>The production environment status.</p>
+     * <p>The status in the production environment.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -248,7 +266,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public java.util.List<Integer> serviceIds;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. The format is YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-25</p>
@@ -257,7 +275,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The behavior statistics conditions in array format.</p>
+     * <p>The array-format condition for behavior statistics.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;field&quot;:&quot;click&quot;,&quot;option&quot;:&quot;&lt;=&quot;,&quot;value&quot;:&quot;30&quot;}]</p>
@@ -266,7 +284,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String statisBehaviorConditionArray;
 
     /**
-     * <p>The behavior statistics conditions in expression format.</p>
+     * <p>The expression-format condition for behavior statistics.</p>
      * 
      * <strong>example:</strong>
      * <p>click=30</p>
@@ -275,7 +293,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String statisBehaviorConditionExpress;
 
     /**
-     * <p>The behavior statistics condition type.</p>
+     * <p>The condition type for behavior statistics.</p>
      * 
      * <strong>example:</strong>
      * <p>Array</p>
@@ -299,7 +317,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String trafficControlTaskId;
 
     /**
-     * <p>The target user group conditions in array format.</p>
+     * <p>The array-format condition of the target user group.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</p>
@@ -308,7 +326,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String userConditionArray;
 
     /**
-     * <p>The target user group conditions in expression format.</p>
+     * <p>The expression-format condition of the target user group.</p>
      * 
      * <strong>example:</strong>
      * <p>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</p>
@@ -317,7 +335,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String userConditionExpress;
 
     /**
-     * <p>The condition type for the target user group.</p>
+     * <p>The condition type of the target user group.</p>
      * 
      * <strong>example:</strong>
      * <p>Array</p>
@@ -326,7 +344,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     public String userConditionType;
 
     /**
-     * <p>The user table ID.</p>
+     * <p>The ID of the user table.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -417,6 +435,22 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     }
     public String getExecutionTime() {
         return this.executionTime;
+    }
+
+    public GetTrafficControlTaskResponseBody setFlinkJobOutdated(String flinkJobOutdated) {
+        this.flinkJobOutdated = flinkJobOutdated;
+        return this;
+    }
+    public String getFlinkJobOutdated() {
+        return this.flinkJobOutdated;
+    }
+
+    public GetTrafficControlTaskResponseBody setFlinkJobs(String flinkJobs) {
+        this.flinkJobs = flinkJobs;
+        return this;
+    }
+    public String getFlinkJobs() {
+        return this.flinkJobs;
     }
 
     public GetTrafficControlTaskResponseBody setFlinkResourceId(String flinkResourceId) {
@@ -651,7 +685,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         public java.util.List<Integer> setPoints;
 
         /**
-         * <p>The list of control target set values.</p>
+         * <p>The list of set values for the control target.</p>
          */
         @NameInMap("SetValues")
         public java.util.List<Long> setValues;
@@ -695,7 +729,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
 
     public static class GetTrafficControlTaskResponseBodyTrafficControlTargets extends TeaModel {
         /**
-         * <p>The end time.</p>
+         * <p>The end time. The format is YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-25</p>
@@ -713,7 +747,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         public String event;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The format is ISO 8601, with Z representing the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-25T06:04:28.441Z</p>
@@ -722,7 +756,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The update time. The format is ISO 8601, with Z representing the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-25T06:04:28.441Z</p>
@@ -731,7 +765,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>The item conditions in array format.</p>
+         * <p>The item condition, set in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
@@ -740,7 +774,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         public String itemConditionArray;
 
         /**
-         * <p>The item conditions in expression format.</p>
+         * <p>The item condition, set in expression format.</p>
          * 
          * <strong>example:</strong>
          * <p>status=1</p>
@@ -758,7 +792,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         public String itemConditionType;
 
         /**
-         * <p>The name of the control target.</p>
+         * <p>The control target.</p>
          * 
          * <strong>example:</strong>
          * <p>target-1</p>
@@ -767,7 +801,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether this is a new product regulation.</p>
+         * <p>Specifies whether the control applies to new products.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -776,7 +810,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         public Boolean newProductRegulation;
 
         /**
-         * <p>The recall Policy Name.</p>
+         * <p>The recall policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>recall-1</p>
@@ -785,13 +819,13 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         public String recallName;
 
         /**
-         * <p>The split configuration of the control target.</p>
+         * <p>The split parts of the control target.</p>
          */
         @NameInMap("SplitParts")
         public GetTrafficControlTaskResponseBodyTrafficControlTargetsSplitParts splitParts;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. The format is YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-25</p>

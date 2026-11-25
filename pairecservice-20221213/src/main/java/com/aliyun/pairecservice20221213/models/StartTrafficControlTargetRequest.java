@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class StartTrafficControlTargetRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The environment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Prod</p>
+     */
+    @NameInMap("Environment")
+    public String environment;
+
+    /**
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-1324***</p>
@@ -16,6 +25,14 @@ public class StartTrafficControlTargetRequest extends TeaModel {
     public static StartTrafficControlTargetRequest build(java.util.Map<String, ?> map) throws Exception {
         StartTrafficControlTargetRequest self = new StartTrafficControlTargetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartTrafficControlTargetRequest setEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    public String getEnvironment() {
+        return this.environment;
     }
 
     public StartTrafficControlTargetRequest setInstanceId(String instanceId) {

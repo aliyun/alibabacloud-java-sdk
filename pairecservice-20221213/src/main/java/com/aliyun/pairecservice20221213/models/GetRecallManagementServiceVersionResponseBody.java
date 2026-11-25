@@ -248,7 +248,7 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
          * <p>The feature expression.</p>
          * 
          * <strong>example:</strong>
-         * <p>city = \&quot;hangzhou\&quot;</p>
+         * <p>city = &quot;hangzhou&quot;</p>
          */
         @NameInMap("Expression")
         public String expression;

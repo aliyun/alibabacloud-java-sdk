@@ -1,3 +1,13 @@
+2026-11-25 Version: 7.3.1
+- Update API GetTrafficControlTask: add response parameters Body.FlinkJobOutdated.
+- Update API GetTrafficControlTask: add response parameters Body.FlinkJobs.
+- Update API ListInstanceResourceTables: add request parameters TableType.
+- Update API ListTrafficControlTasks: add response parameters Body.TrafficControlTasks.$.FlinkJobOutdated.
+- Update API ListTrafficControlTasks: add response parameters Body.TrafficControlTasks.$.FlinkJobs.
+- Update API StartTrafficControlTarget: add request parameters body.Environment.
+- Update API StopTrafficControlTarget: add request parameters body.Environment.
+
+
 2026-10-28 Version: 7.3.0
 - Support API CheckRecallManagementService.
 

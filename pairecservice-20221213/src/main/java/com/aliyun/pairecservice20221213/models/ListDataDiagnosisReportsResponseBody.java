@@ -415,7 +415,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
          * <p>The equivalent null value count.</p>
          * 
          * <strong>example:</strong>
-         * <p>\\N</p>
+         * <p>\N</p>
          */
         @NameInMap("DefaultNullCount")
         public String defaultNullCount;
@@ -424,7 +424,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
          * <p>The equivalent null value rate.</p>
          * 
          * <strong>example:</strong>
-         * <p>\\N</p>
+         * <p>\N</p>
          */
         @NameInMap("DefaultNullRate")
         public String defaultNullRate;

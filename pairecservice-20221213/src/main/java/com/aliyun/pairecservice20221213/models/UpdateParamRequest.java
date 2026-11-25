@@ -14,7 +14,7 @@ public class UpdateParamRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The parameter\&quot;s value.</p>
+     * <p>The parameter&quot;s value.</p>
      * 
      * <strong>example:</strong>
      * <p>house</p>

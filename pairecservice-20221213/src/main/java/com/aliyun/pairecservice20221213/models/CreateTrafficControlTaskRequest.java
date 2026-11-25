@@ -111,7 +111,7 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
      * <p>The conditions for items in array format.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
+     * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
      */
     @NameInMap("ItemConditionArray")
     public String itemConditionArray;
@@ -212,7 +212,7 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
      * <p>The conditions for statistical behaviors in array format.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;field\&quot;:\&quot;click\&quot;,\&quot;option\&quot;:\&quot;&lt;=\&quot;,\&quot;value\&quot;:\&quot;30\&quot;}]</p>
+     * <p>[{&quot;field&quot;:&quot;click&quot;,&quot;option&quot;:&quot;&lt;=&quot;,&quot;value&quot;:&quot;30&quot;}]</p>
      */
     @NameInMap("StatisBehaviorConditionArray")
     public String statisBehaviorConditionArray;
@@ -249,7 +249,7 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
      * <p>The conditions for the target users in array format.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;field\&quot;:\&quot;gender\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;male\&quot;}]</p>
+     * <p>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</p>
      */
     @NameInMap("UserConditionArray")
     public String userConditionArray;
@@ -545,7 +545,7 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
          * <p>The conditions for items in array format.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
+         * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
          */
         @NameInMap("ItemConditionArray")
         public String itemConditionArray;

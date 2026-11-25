@@ -14,7 +14,7 @@ public class ListInstanceResourceTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of tables.</p>
+     * <p>The list of data tables.</p>
      */
     @NameInMap("Tables")
     public java.util.List<ListInstanceResourceTablesResponseBodyTables> tables;

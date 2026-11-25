@@ -290,7 +290,7 @@ public class ShoppingAssistantResponseBody extends TeaModel {
          * <p>The response content.</p>
          * 
          * <strong>example:</strong>
-         * <p>Here are some light-colored long-sleeve shirts for you:\\n</p>
+         * <p>Here are some light-colored long-sleeve shirts for you:\n</p>
          */
         @NameInMap("Content")
         public String content;

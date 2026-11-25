@@ -9,13 +9,13 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;Value\&quot;:{\&quot;FloatFeature\&quot;:0.1}}]</p>
+     * <p>[{&quot;Value&quot;:{&quot;FloatFeature&quot;:0.1}}]</p>
      */
     @NameInMap("ContextFeatures")
     public String contextFeatures;
 
     /**
-     * <p>The feature consistency check job configuration ID. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
+     * <p>The ID of the feature consistency check job configuration. For information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String generatedFeatures;
 
     /**
-     * <p>The instance ID. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+     * <p>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The item ID from the log.</p>
+     * <p>The item ID in the log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String logItemId;
 
     /**
-     * <p>The request ID from the log.</p>
+     * <p>The request ID in the log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String logRequestId;
 
     /**
-     * <p>The request time from the log, provided as a UNIX epoch timestamp.</p>
+     * <p>The request time in the log (UNIX epoch timestamp).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public Long logRequestTime;
 
     /**
-     * <p>The user ID from the log.</p>
+     * <p>The user ID in the log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,13 +89,13 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>author__kv_city_expr_cnt_15d：北京市 | tem__min_age_15d:28</p>
+     * <p>author__kv_city_expr_cnt_15d:Beijing | tem__min_age_15d:28</p>
      */
     @NameInMap("RawFeatures")
     public String rawFeatures;
 
     /**
-     * <p>The scene name.</p>
+     * <p>The name of the scene.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

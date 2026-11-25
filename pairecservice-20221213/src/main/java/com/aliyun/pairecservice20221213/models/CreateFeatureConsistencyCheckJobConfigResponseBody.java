@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     /**
-     * <p>The feature consistency check job configuration ID.</p>
+     * <p>The ID of the feature consistency check job configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
